@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How to Connect Azure SRE Agent to Azure MCP"
-description: "This guide provides a detailed walkthrough for connecting an Azure SRE Agent to Azure MCP (Model Context Protocol). It covers prerequisites, step-by-step configuration, managing identity and role assignments, setting up subagents, testing the setup, and implementing security best practices to ensure secure and scalable Azure operations."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-connect-azure-sre-agent-to-azure-mcp/ba-p/4488905"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-connect-azure-sre-agent-to-azure-mcp/ba-p/4488905
+title: How to Connect Azure SRE Agent to Azure MCP
+author: dbandaru
+feed_name: Microsoft Tech Community
 date: 2026-01-23 20:35:55 +00:00
-permalink: "/2026-01-23-How-to-Connect-Azure-SRE-Agent-to-Azure-MCP.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Access Control", "AI", "AI Integration", "Automation", "Azure", "Azure MCP", "Azure Portal", "Azure Resources", "Azure Security", "Azure SRE Agent", "Cloud Infrastructure", "Community", "DevOps", "Identity Authentication", "Managed Identity", "MCP", "RBAC", "Resource Management", "Security", "Subagent Builder"]
-tags_normalized: ["access control", "ai", "ai integration", "automation", "azure", "azure mcp", "azure portal", "azure resources", "azure security", "azure sre agent", "cloud infrastructure", "community", "devops", "identity authentication", "managed identity", "mcp", "rbac", "resource management", "security", "subagent builder"]
+tags:
+- Access Control
+- AI Integration
+- Automation
+- Azure MCP
+- Azure Portal
+- Azure Resources
+- Azure Security
+- Azure SRE Agent
+- Cloud Infrastructure
+- Identity Authentication
+- Managed Identity
+- MCP
+- RBAC
+- Resource Management
+- Subagent Builder
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 dbandaru presents a practical guide on connecting the Azure SRE Agent to Azure MCP, with step-by-step instructions for secure configuration, managed identity, and automation best practices.<!--excerpt_end-->
 
 # How to Connect Azure SRE Agent to Azure MCP

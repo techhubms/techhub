@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Microsoft Fabric Data Warehouse: GigaOm Radar Leader and Outperformer"
-description: "This article outlines Microsoft Fabric Data Warehouse’s recognition as a leader and outperformer in the 2025 GigaOm Radar for Data Warehouses. It covers the platform's architecture, its unified approach to analytics and machine learning, technical highlights such as serverless scalability, and upcoming innovations designed for advanced analytics workloads."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-data-warehouse-named-a-leader-and-outperformer-in-gigaom-radar-for-data-warehouses/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-data-warehouse-named-a-leader-and-outperformer-in-gigaom-radar-for-data-warehouses/
+title: 'Microsoft Fabric Data Warehouse: GigaOm Radar Leader and Outperformer'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-21 10:55:05 +00:00
-permalink: "/2026-01-21-Microsoft-Fabric-Data-Warehouse-GigaOm-Radar-Leader-and-Outperformer.html"
-categories: ["Azure", "ML"]
-tags: ["Advanced Analytics", "Azure", "Data Architecture", "Data Science", "Data Warehouse", "Delta Lake", "GigaOm Radar", "Lakehouse", "Machine Learning", "Microsoft Fabric", "ML", "News", "OneLake", "Petabyte Scale", "Serverless", "Spark", "SQL Pools", "Streaming Analytics"]
-tags_normalized: ["advanced analytics", "azure", "data architecture", "data science", "data warehouse", "delta lake", "gigaom radar", "lakehouse", "machine learning", "microsoft fabric", "ml", "news", "onelake", "petabyte scale", "serverless", "spark", "sql pools", "streaming analytics"]
+tags:
+- Advanced Analytics
+- Data Architecture
+- Data Science
+- Data Warehouse
+- Delta Lake
+- GigaOm Radar
+- Lakehouse
+- Microsoft Fabric
+- OneLake
+- Petabyte Scale
+- Serverless
+- Spark
+- SQL Pools
+- Streaming Analytics
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces Microsoft Fabric Data Warehouse’s designation as a leader and outperformer in the 2025 GigaOm Radar, highlighting technical architecture and future roadmap.<!--excerpt_end-->
 
 # Microsoft Fabric Data Warehouse: GigaOm Radar Leader and Outperformer

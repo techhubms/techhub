@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "100 Essential Tips for Writing Better C# Code"
-description: "This video by Nick Chapsas presents 100 actionable tips and tricks for improving C# and .NET programming. Aimed at developers seeking to enhance code quality, maintainability, and efficiency, the video covers best practices, language features, and practical advice for writing better C# code."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=V2uRyxffnHA"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+external_url: https://www.youtube.com/watch?v=V2uRyxffnHA
+title: 100 Essential Tips for Writing Better C# Code
+author: Nick Chapsas
+feed_name: Nick Chapsas YouTube
 date: 2026-01-26 11:45:00 +00:00
-permalink: "/2026-01-26-100-Essential-Tips-for-Writing-Better-C-Code.html"
-categories: ["Coding"]
-tags: [".NET", "Best Practices", "C#", "C# Tricks", "Clean Code", "Code Quality", "Coding", "Coding Standards", "Developer Advice", "Object Oriented Programming", "Programming Tips", "Refactoring", "Software Engineering", "Videos"]
-tags_normalized: ["dotnet", "best practices", "csharp", "csharp tricks", "clean code", "code quality", "coding", "coding standards", "developer advice", "object oriented programming", "programming tips", "refactoring", "software engineering", "videos"]
+tags:
+- .NET
+- Best Practices
+- C#
+- C# Tricks
+- Clean Code
+- Code Quality
+- Coding Standards
+- Developer Advice
+- Object Oriented Programming
+- Programming Tips
+- Refactoring
+- Software Engineering
+section_names:
+- coding
 ---
-
 Nick Chapsas shares 100 top tips to help developers write better C# and .NET code, focusing on practical advice for improving code quality and efficiency.<!--excerpt_end-->
 
 {% youtube V2uRyxffnHA %}

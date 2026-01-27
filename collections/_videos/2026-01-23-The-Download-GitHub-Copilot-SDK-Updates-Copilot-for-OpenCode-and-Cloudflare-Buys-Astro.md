@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "The Download: GitHub Copilot SDK Updates, Copilot for OpenCode, and Cloudflare Buys Astro"
-description: "This episode of The Download, hosted by Christina Warren, covers Cloudflare’s acquisition of Astro Technology Company, the announcement of Game Off 2025 winners, and key updates for developers including the new GitHub Copilot SDK, enhanced Copilot CLI features, and the ability to use Copilot with OpenCode. The episode also spotlights a new GitHub project called Handy."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=lU9sVU6Arbs"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=lU9sVU6Arbs
+title: 'The Download: GitHub Copilot SDK Updates, Copilot for OpenCode, and Cloudflare Buys Astro'
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-23 18:47:03 +00:00
-permalink: "/2026-01-23-The-Download-GitHub-Copilot-SDK-Updates-Copilot-for-OpenCode-and-Cloudflare-Buys-Astro.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Astro Technology Company", "Cloudflare", "Coding", "Copilot CLI", "Copilot SDK", "Developer Tools", "DevNews", "DevOps", "Game Off", "GitHub", "GitHub Copilot", "Handy", "OpenCode", "Programming", "Project Spotlight", "Software Development", "Technical Preview", "TheDownload", "Videos"]
-tags_normalized: ["ai", "astro technology company", "cloudflare", "coding", "copilot cli", "copilot sdk", "developer tools", "devnews", "devops", "game off", "github", "github copilot", "handy", "opencode", "programming", "project spotlight", "software development", "technical preview", "thedownload", "videos"]
+tags:
+- Astro Technology Company
+- Cloudflare
+- Copilot CLI
+- Copilot SDK
+- Developer Tools
+- DevNews
+- Game Off
+- GitHub
+- Handy
+- OpenCode
+- Programming
+- Project Spotlight
+- Software Development
+- Technical Preview
+- TheDownload
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 Christina Warren from GitHub hosts this episode of The Download, spotlighting new GitHub Copilot developer tools, Cloudflare’s acquisition of Astro Technology, Game Off 2025 winners, and more for the developer community.<!--excerpt_end-->
 
 {% youtube lU9sVU6Arbs %}

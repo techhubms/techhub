@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building a TOTP Authenticator App on Azure Functions and Azure Key Vault"
-description: "This comprehensive guide by StephenMS explains how to build a custom TOTP (Time-based One-Time Password) authenticator app using Azure Functions for serverless backend operations and Azure Key Vault for secure secret management. It details the architecture, implementation, and testing of a 2FA TOTP solution, including CLI deployment steps, API endpoint creation, and a React-based frontend, with deep insights into modern cloud security practices."
-author: "StephenMS"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-a-totp-authenticator-app-on-azure-functions-and-azure/ba-p/4489332"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-a-totp-authenticator-app-on-azure-functions-and-azure/ba-p/4489332
+title: Building a TOTP Authenticator App on Azure Functions and Azure Key Vault
+author: StephenMS
+feed_name: Microsoft Tech Community
 date: 2026-01-26 16:19:38 +00:00
-permalink: "/2026-01-26-Building-a-TOTP-Authenticator-App-on-Azure-Functions-and-Azure-Key-Vault.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["API Development", "Authentication", "Azure", "Azure CLI", "Azure Functions", "Azure Key Vault", "CI/CD", "Cloud Security", "Coding", "Community", "HMAC SHA1", "JavaScript", "Managed Identities", "Node.js", "React", "RFC 6238", "Secrets Management", "Security", "Serverless", "Static Web Apps", "TOTP", "Two Factor Authentication", "VS Code"]
-tags_normalized: ["api development", "authentication", "azure", "azure cli", "azure functions", "azure key vault", "cislashcd", "cloud security", "coding", "community", "hmac sha1", "javascript", "managed identities", "nodedotjs", "react", "rfc 6238", "secrets management", "security", "serverless", "static web apps", "totp", "two factor authentication", "vs code"]
+tags:
+- API Development
+- Authentication
+- Azure CLI
+- Azure Functions
+- Azure Key Vault
+- CI/CD
+- Cloud Security
+- HMAC SHA1
+- JavaScript
+- Managed Identities
+- Node.js
+- React
+- RFC 6238
+- Secrets Management
+- Serverless
+- Static Web Apps
+- TOTP
+- Two Factor Authentication
+- VS Code
+section_names:
+- azure
+- coding
+- security
 ---
-
 StephenMS shows how to build a secure TOTP authenticator app using Azure Functions and Azure Key Vault, covering secure secret storage, API endpoints, and cloud-native best practices in authentication.<!--excerpt_end-->
 
 # Building a TOTP Authenticator App on Azure Functions and Azure Key Vault

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "What’s New in the GitHub Copilot CLI?"
-description: "A concise overview of the latest updates to GitHub Copilot CLI, highlighting new custom agent features, improved installation through Homebrew and Winget, and the introduction of the Copilot SDK technical preview. The video demonstrates how developers can automate workflows and build robust tools using these new capabilities."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/g5TzQPTyabU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/g5TzQPTyabU
+title: What’s New in the GitHub Copilot CLI?
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-26 16:01:04 +00:00
-permalink: "/2026-01-26-Whats-New-in-the-GitHub-Copilot-CLI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Automation", "CLI Tools", "Coding", "Copilot CLI", "Copilot SDK", "CopilotSDK", "Custom Agents", "Developer Tools", "Developer Workflow", "GitHub Copilot", "GitHub Copilot CLI", "Homebrew", "SDK", "Technical Preview", "Videos", "Winget"]
-tags_normalized: ["ai", "automation", "cli tools", "coding", "copilot cli", "copilot sdk", "copilotsdk", "custom agents", "developer tools", "developer workflow", "github copilot", "github copilot cli", "homebrew", "sdk", "technical preview", "videos", "winget"]
+tags:
+- Automation
+- CLI Tools
+- Copilot CLI
+- Copilot SDK
+- CopilotSDK
+- Custom Agents
+- Developer Tools
+- Developer Workflow
+- GitHub Copilot CLI
+- Homebrew
+- SDK
+- Technical Preview
+- Winget
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub shares the latest features in GitHub Copilot CLI, including new custom agent capabilities and the Copilot SDK preview, showing developers how to enhance and automate their workflows.<!--excerpt_end-->
 
 {% youtube g5TzQPTyabU %}

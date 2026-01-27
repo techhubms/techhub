@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Azure Weekly Update: AKS Deployment, NAT Gateway, Load Testing, GitHub Copilot SDK (23 Jan 2026)"
-description: "John Savill summarizes Azure updates for the week of January 23, 2026, covering new features and enhancements such as AKS deployment safeguards, StandardV2 NAT Gateway, User Delegated SAS extensions, new AFS region, ANF app volume group for Oracle, Load Testing regional expansion, App Testing reporting, and the GitHub Copilot SDK."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FfYk17LiOmM"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=FfYk17LiOmM
+title: 'Azure Weekly Update: AKS Deployment, NAT Gateway, Load Testing, GitHub Copilot SDK (23 Jan 2026)'
+author: John Savill's Technical Training
+feed_name: John Savill's Technical Training
 date: 2026-01-23 15:59:57 +00:00
-permalink: "/2026-01-23-Azure-Weekly-Update-AKS-Deployment-NAT-Gateway-Load-Testing-GitHub-Copilot-SDK-23-Jan-2026.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AKS", "AKS Deployment Safeguards", "ANF App Volume Group", "App Testing Reporting", "Azure", "Azure Cloud", "Azure File Share", "Azure Load Testing", "Azure Updates", "Cloud", "Cloud Infrastructure", "DevOps", "GitHub Copilot", "GitHub Copilot SDK", "Microsoft", "Microsoft Azure", "Oracle Data Protection", "StandardV2 NAT Gateway", "User Delegated SAS", "Videos"]
-tags_normalized: ["ai", "aks", "aks deployment safeguards", "anf app volume group", "app testing reporting", "azure", "azure cloud", "azure file share", "azure load testing", "azure updates", "cloud", "cloud infrastructure", "devops", "github copilot", "github copilot sdk", "microsoft", "microsoft azure", "oracle data protection", "standardv2 nat gateway", "user delegated sas", "videos"]
+tags:
+- AKS
+- AKS Deployment Safeguards
+- ANF App Volume Group
+- App Testing Reporting
+- Azure Cloud
+- Azure File Share
+- Azure Load Testing
+- Azure Updates
+- Cloud
+- Cloud Infrastructure
+- GitHub Copilot SDK
+- Microsoft
+- Microsoft Azure
+- Oracle Data Protection
+- StandardV2 NAT Gateway
+- User Delegated SAS
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 John Savill delivers this week's Azure update, highlighting key announcements in AKS, NAT Gateway, cloud security, Azure Load Testing, and the new GitHub Copilot SDK for developers.<!--excerpt_end-->
 
 {% youtube FfYk17LiOmM %}

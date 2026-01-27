@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "From Vibe Coding to Spec-Driven Development: Team Collaboration, CI/CD, and Advanced Patterns"
-description: "Part 4 of Hidde de Smet’s series explores how to apply AI-assisted, spec-driven development in real-world teams. It details collaborative team workflows, CI/CD automation using GitHub Actions and Azure DevOps, and key modern architectural patterns including modular monolith, BFF, event-driven, and microservices. Readers learn how to structure teams, automate code quality, and evolve architectures while keeping documentation, requirements, and AI in sync."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part4"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+external_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part4
+title: 'From Vibe Coding to Spec-Driven Development: Team Collaboration, CI/CD, and Advanced Patterns'
+author: Hidde de Smet
+feed_name: Hidde de Smet's Blog
 date: 2026-01-26 00:00:00 +00:00
-permalink: "/2026-01-26-From-Vibe-Coding-to-Spec-Driven-Development-Team-Collaboration-CICD-and-Advanced-Patterns.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI Assisted Development", "Architecture Decision Records", "Azure", "Azure DevOps", "Backend For Frontend", "Background Jobs", "Blogs", "Caching", "CI CD", "CI/CD", "Code Review", "Coding", "Copilot", "Development", "DevOps", "Event Driven Architecture", "Feature Flags", "GitHub", "GitHub Actions", "Microservices", "Mob Programming", "Modular Monolith", "Scaling", "Series", "Spec Kit", "Specification Driven Development", "Team Collaboration", "Vibe Coding"]
-tags_normalized: ["dotnet", "ai", "ai assisted development", "architecture decision records", "azure", "azure devops", "backend for frontend", "background jobs", "blogs", "caching", "ci cd", "cislashcd", "code review", "coding", "copilot", "development", "devops", "event driven architecture", "feature flags", "github", "github actions", "microservices", "mob programming", "modular monolith", "scaling", "series", "spec kit", "specification driven development", "team collaboration", "vibe coding"]
+tags:
+- .NET
+- AI Assisted Development
+- Architecture Decision Records
+- Azure DevOps
+- Backend For Frontend
+- Background Jobs
+- Caching
+- CI CD
+- CI/CD
+- Code Review
+- Copilot
+- Development
+- Event Driven Architecture
+- Feature Flags
+- GitHub
+- GitHub Actions
+- Microservices
+- Mob Programming
+- Modular Monolith
+- Scaling
+- Series
+- Spec Kit
+- Specification Driven Development
+- Team Collaboration
+- Vibe Coding
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 Hidde de Smet explains how teams can move from individual AI-powered workflows to collaborative, spec-driven development. Explore practical team setups, CI/CD integrations, and advanced architecture strategies to grow your next Microsoft-focused project.<!--excerpt_end-->
 
 # From Vibe Coding to Spec-Driven Development: Part 4 – Team Collaboration and Advanced Patterns

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Introducing the Azure Static Web Apps Skill for GitHub Copilot"
-description: "This article introduces the Azure Static Web Apps skill for GitHub Copilot, designed to streamline deployment workflows for modern web apps. It guides users through best practices for deploying frameworks like React, Vite, or Next.js to Azure Static Web Apps, covering configuration, CLI usage, troubleshooting, and CI/CD automation, all via conversational prompts in GitHub Copilot."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-the-azure-static-web-apps-skill-for-github-copilot/ba-p/4487920"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-the-azure-static-web-apps-skill-for-github-copilot/ba-p/4487920
+title: Introducing the Azure Static Web Apps Skill for GitHub Copilot
+author: dbandaru
+feed_name: Microsoft Tech Community
 date: 2026-01-26 21:18:03 +00:00
-permalink: "/2026-01-26-Introducing-the-Azure-Static-Web-Apps-Skill-for-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Skills", "AI", "Azure", "Azure CLI", "Azure Static Web Apps", "CLI Tools", "Coding", "Community", "Continuous Integration", "Deployment", "DevOps", "DevOps Automation", "Framework Detection", "GitHub Copilot", "Local Testing", "Next.js", "React", "Staticwebapp.config.json", "SWA CLI", "Vite"]
-tags_normalized: ["agent skills", "ai", "azure", "azure cli", "azure static web apps", "cli tools", "coding", "community", "continuous integration", "deployment", "devops", "devops automation", "framework detection", "github copilot", "local testing", "nextdotjs", "react", "staticwebappdotconfigdotjson", "swa cli", "vite"]
+tags:
+- Agent Skills
+- Azure CLI
+- Azure Static Web Apps
+- CLI Tools
+- Continuous Integration
+- Deployment
+- DevOps Automation
+- Framework Detection
+- Local Testing
+- Next.js
+- React
+- Staticwebapp.config.json
+- SWA CLI
+- Vite
+section_names:
+- ai
+- azure
+- coding
+- devops
+- github-copilot
 ---
-
 dbandaru introduces the Azure Static Web Apps skill for GitHub Copilot, showcasing how developers can deploy web apps to Azure using streamlined, guided workflows powered by AI and agent skills.<!--excerpt_end-->
 
 # Introducing the Azure Static Web Apps Skill for GitHub Copilot

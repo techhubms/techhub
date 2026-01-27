@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Understand How Purview Secures and Governs Your Entire Data Estate"
-description: "This episode of the Azure Essentials Show, hosted by Thomas and Darren from Microsoft Azure, explores the critical role of data security and governance as organizations face increasing volumes of data across various platforms and clouds. The discussion focuses on Microsoft Purview as a unified solution for securing, governing, and managing data. The episode walks through the Unified Catalog feature, demonstrating how it enables simplified data discovery, access management, and compliance. Viewers will learn best practices and access resources to implement effective data governance strategies with Microsoft Purview."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=U5nAmJv_Cn4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=U5nAmJv_Cn4
+title: Understand How Purview Secures and Governs Your Entire Data Estate
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2026-01-22 08:00:37 +00:00
-permalink: "/2026-01-22-Understand-How-Purview-Secures-and-Governs-Your-Entire-Data-Estate.html"
-categories: ["Azure", "Security"]
-tags: ["Access Management", "Azure", "Azure Essentials", "Cloud Security", "Compliance", "Data Compliance", "Data Discovery", "Data Governance", "Data Management", "Data Platform", "Data Security", "Governance Strategies", "Microsoft Azure", "Microsoft Purview", "Purview Demo", "Security", "Unified Catalog", "Videos"]
-tags_normalized: ["access management", "azure", "azure essentials", "cloud security", "compliance", "data compliance", "data discovery", "data governance", "data management", "data platform", "data security", "governance strategies", "microsoft azure", "microsoft purview", "purview demo", "security", "unified catalog", "videos"]
+tags:
+- Access Management
+- Azure Essentials
+- Cloud Security
+- Compliance
+- Data Compliance
+- Data Discovery
+- Data Governance
+- Data Management
+- Data Platform
+- Data Security
+- Governance Strategies
+- Microsoft Azure
+- Microsoft Purview
+- Purview Demo
+- Unified Catalog
+section_names:
+- azure
+- security
 ---
-
 Microsoft Developer presents an overview of how Microsoft Purview provides unified data security and governance, highlighting practical features and best practices to secure and manage organizational data.<!--excerpt_end-->
 
 {% youtube U5nAmJv_Cn4 %}

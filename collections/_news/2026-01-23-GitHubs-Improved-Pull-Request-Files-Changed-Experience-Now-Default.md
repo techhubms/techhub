@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "GitHub's Improved Pull Request “Files Changed” Experience Now Default"
-description: "This news post details the rollout of the improved GitHub pull request “Files Changed” page as the default experience for all users. It highlights enhancements in file review workflows, performance, accessibility features, and an experimental mode for handling large pull requests. The update includes usability improvements, new commenting capabilities, a more robust file tree, and fixes for several long-standing issues. The changes aim to streamline code review processes and enhance collaboration on GitHub projects."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-22-improved-pull-request-files-changed-page-on-by-default"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-22-improved-pull-request-files-changed-page-on-by-default
+title: GitHub's Improved Pull Request “Files Changed” Experience Now Default
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-23 02:26:39 +00:00
-permalink: "/2026-01-23-GitHubs-Improved-Pull-Request-Files-Changed-Experience-Now-Default.html"
-categories: ["DevOps"]
-tags: ["Accessibility", "Code Review", "Collaboration", "Collaboration Tools", "Commenting Workflow", "Developer Tools", "DevOps", "Experimental Features", "Files Changed", "GitHub", "Improvement", "News", "Performance Optimization", "Pull Requests", "UI Improvements"]
-tags_normalized: ["accessibility", "code review", "collaboration", "collaboration tools", "commenting workflow", "developer tools", "devops", "experimental features", "files changed", "github", "improvement", "news", "performance optimization", "pull requests", "ui improvements"]
+tags:
+- Accessibility
+- Code Review
+- Collaboration
+- Collaboration Tools
+- Commenting Workflow
+- Developer Tools
+- Experimental Features
+- Files Changed
+- GitHub
+- Improvement
+- Performance Optimization
+- Pull Requests
+- UI Improvements
+section_names:
+- devops
 ---
-
 Allison introduces the updated GitHub pull request “Files Changed” experience, covering major improvements for code review, accessibility, and performance.<!--excerpt_end-->
 
 # GitHub's Improved Pull Request “Files Changed” Experience Now Default

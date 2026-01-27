@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Maia 200: The AI Accelerator Built for Inference"
-description: "An in-depth introduction to Maia 200, Microsoft's custom inference accelerator designed to optimize AI token generation economics. The post explores the hardware architecture, performance benchmarks, datacenter deployment, SDK features, supported AI models, and integration with Azure, highlighting Maia 200’s significance for scalable cloud AI workloads."
-author: "Scott Guthrie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/
+title: 'Maia 200: The AI Accelerator Built for Inference'
+author: Scott Guthrie
+feed_name: The Azure Blog
 date: 2026-01-26 16:12:24 +00:00
-permalink: "/2026-01-26-Maia-200-The-AI-Accelerator-Built-for-Inference.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "AI Inference", "Azure", "Cloud Infrastructure", "Datacenter", "FP4 Tensor Cores", "FP8", "HBM3e Memory", "Inference Accelerator", "Large Language Models", "Low Level Programming", "Maia 200", "Microsoft Foundry", "Model Optimization", "News", "Performance Per Dollar", "PyTorch Integration", "SDK", "Server Architecture", "Synthetic Data", "Triton Compiler", "TSMC 3nm"]
-tags_normalized: ["ai", "ai plus machine learning", "ai inference", "azure", "cloud infrastructure", "datacenter", "fp4 tensor cores", "fp8", "hbm3e memory", "inference accelerator", "large language models", "low level programming", "maia 200", "microsoft foundry", "model optimization", "news", "performance per dollar", "pytorch integration", "sdk", "server architecture", "synthetic data", "triton compiler", "tsmc 3nm"]
+tags:
+- AI + Machine Learning
+- AI Inference
+- Cloud Infrastructure
+- Datacenter
+- FP4 Tensor Cores
+- FP8
+- HBM3e Memory
+- Inference Accelerator
+- Large Language Models
+- Low Level Programming
+- Maia 200
+- Microsoft Foundry
+- Model Optimization
+- Performance Per Dollar
+- PyTorch Integration
+- SDK
+- Server Architecture
+- Synthetic Data
+- Triton Compiler
+- TSMC 3nm
+section_names:
+- ai
+- azure
 ---
-
 Scott Guthrie introduces Maia 200, Microsoft's new AI inference accelerator, highlighting its architecture, datacenter deployment, Azure integration, and developer SDK for building the next generation of cloud-scale AI solutions.<!--excerpt_end-->
 
 # Maia 200: The AI Accelerator Built for Inference

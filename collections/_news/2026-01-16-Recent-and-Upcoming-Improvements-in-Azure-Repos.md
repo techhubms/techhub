@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Recent and Upcoming Improvements in Azure Repos"
-description: "This update summarizes key recent enhancements and future features in Azure Repos, including migrations for TFVC check-in policies, better pull request workflows, improved API support, and tooling integration through MCP Server. Developers and DevOps teams can expect smoother collaboration and improved repository management."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/whats-new-with-azure-repos/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/whats-new-with-azure-repos/
+title: Recent and Upcoming Improvements in Azure Repos
+author: Dan Hellem
+feed_name: Microsoft DevOps Blog
 date: 2026-01-16 19:34:04 +00:00
-permalink: "/2026-01-16-Recent-and-Upcoming-Improvements-in-Azure-Repos.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["AI", "Azure", "Azure & Cloud", "Azure DevOps", "Azure Repos", "Branching", "Code Review", "Coding", "Collaboration", "DevOps", "Git Policy", "GitHub Copilot", "GitHub Copilot Integration", "MCP Server", "News", "Notification Improvements", "Pull Requests", "Repository Management", "REST API", "TFVC", "VS Code"]
-tags_normalized: ["ai", "azure", "azure and cloud", "azure devops", "azure repos", "branching", "code review", "coding", "collaboration", "devops", "git policy", "github copilot", "github copilot integration", "mcp server", "news", "notification improvements", "pull requests", "repository management", "rest api", "tfvc", "vs code"]
+tags:
+- Azure & Cloud
+- Azure DevOps
+- Azure Repos
+- Branching
+- Code Review
+- Collaboration
+- Git Policy
+- GitHub Copilot
+- GitHub Copilot Integration
+- MCP Server
+- Notification Improvements
+- Pull Requests
+- Repository Management
+- REST API
+- TFVC
+- VS Code
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Dan Hellem outlines the latest updates and upcoming features in Azure Repos, offering practical guidance on streamlined repository management for developers and DevOps professionals.<!--excerpt_end-->
 
 # Recent and Upcoming Improvements in Azure Repos

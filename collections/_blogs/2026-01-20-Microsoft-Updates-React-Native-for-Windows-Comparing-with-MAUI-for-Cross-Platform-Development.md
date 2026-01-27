@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Microsoft Updates React Native for Windows: Comparing with MAUI for Cross-Platform Development"
-description: "This article by Tim Anderson examines the release of React Native Windows 0.81, highlights its new features such as Hermes debugger support for Windows, discusses technical nuances compared to mobile versions, and explores the ongoing discussion in the developer community about Microsoft's parallel support of both React Native and MAUI for cross-platform apps."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/20/microsoft-updates-react-native-for-windows-developers-ask-why-not-use-maui/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://devclass.com/2026/01/20/microsoft-updates-react-native-for-windows-developers-ask-why-not-use-maui/
+title: 'Microsoft Updates React Native for Windows: Comparing with MAUI for Cross-Platform Development'
+author: Tim Anderson
+feed_name: DevClass
 date: 2026-01-20 16:38:47 +00:00
-permalink: "/2026-01-20-Microsoft-Updates-React-Native-for-Windows-Comparing-with-MAUI-for-Cross-Platform-Development.html"
-categories: ["Coding"]
-tags: [".NET", "App Modernization", "Blogs", "C#", "C++", "Coding", "Component Architecture", "Cross Platform Development", "Desktop Applications", "Development", "Hermes", "JavaScript", "MAUI", "Microsoft Office", "Power Apps", "React", "React Native", "React Native Windows", "TypeScript"]
-tags_normalized: ["dotnet", "app modernization", "blogs", "csharp", "cplusplus", "coding", "component architecture", "cross platform development", "desktop applications", "development", "hermes", "javascript", "maui", "microsoft office", "power apps", "react", "react native", "react native windows", "typescript"]
+tags:
+- .NET
+- App Modernization
+- C#
+- C++
+- Component Architecture
+- Cross Platform Development
+- Desktop Applications
+- Development
+- Hermes
+- JavaScript
+- MAUI
+- Microsoft Office
+- Power Apps
+- React
+- React Native
+- React Native Windows
+- TypeScript
+section_names:
+- coding
 ---
-
 Tim Anderson explores Microsoft's update to React Native Windows 0.81, comparing it with MAUI and analyzing the implications for developers seeking cross-platform frameworks.<!--excerpt_end-->
 
 # Microsoft Updates React Native for Windows: Comparing with MAUI for Cross-Platform Development

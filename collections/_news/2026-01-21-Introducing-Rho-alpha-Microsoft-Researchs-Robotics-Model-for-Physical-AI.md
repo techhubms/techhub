@@ -1,20 +1,27 @@
----
-layout: "post"
+﻿---
+external_url: https://www.linkedin.com/posts/satyanadella_introducing-rho-alpha-the-new-robotics-model-activity-7419757666660466688-jSpD
 title: "Introducing Rho-alpha: Microsoft Research's Robotics Model for Physical AI"
-description: "Microsoft Research has unveiled Rho-alpha, a robotics model that transforms natural language instructions into precise, bimanual robotic manipulation. Rho-alpha integrates new sensing modalities and improves through human feedback, signaling a major stride in bringing physical AI out of the lab and into real-world applications like manufacturing and logistics."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_introducing-rho-alpha-the-new-robotics-model-activity-7419757666660466688-jSpD"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-21 15:55:22 +00:00
-permalink: "/2026-01-21-Introducing-Rho-alpha-Microsoft-Researchs-Robotics-Model-for-Physical-AI.html"
-categories: ["AI"]
-tags: ["AI", "AI in Robotics", "AI Models", "Automation", "Bimanual Manipulation", "Company News", "Human Feedback", "LinkedIn Post", "Machine Learning", "Microsoft Research", "Natural Language Processing", "News", "Physical AI", "Rho Alpha", "Robotics", "Sensing Modalities"]
-tags_normalized: ["ai", "ai in robotics", "ai models", "automation", "bimanual manipulation", "company news", "human feedback", "linkedin post", "machine learning", "microsoft research", "natural language processing", "news", "physical ai", "rho alpha", "robotics", "sensing modalities"]
+tags:
+- AI in Robotics
+- AI Models
+- Automation
+- Bimanual Manipulation
+- Company News
+- Human Feedback
+- LinkedIn Post
+- Machine Learning
+- Microsoft Research
+- Natural Language Processing
+- Physical AI
+- Rho Alpha
+- Robotics
+- Sensing Modalities
+section_names:
+- ai
 ---
-
 stclarke highlights Microsoft's announcement of the Rho-alpha robotics model, which advances physical AI by enabling robots to interpret natural language and perform complex manipulations with precision.<!--excerpt_end-->
 
 # Introducing Rho-alpha: Microsoft Research's Robotics Model for Physical AI

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "AI for Social Impact: Advancing AI Skills in Civil Society for Sustainable Growth"
-description: "This article highlights Microsoft Thailand's partnership with United Nations ESCAP, CCDKM at STOU, and depa to deliver the 'AI for Social Impact' training program. The initiative aims to boost generative AI and digital skills among civil society leaders and workers, using Microsoft tools such as Copilot, to advance sustainable development and bridge the digital divide in Thailand through hands-on education and upskilling."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/2026/01/14/ai-for-social-impact-microsoft-escap-ccdkm-stou-depa-advance-ai-skills-training-to-empower-civil-society-and-support-sustainable-digital-growth/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/asia/2026/01/14/ai-for-social-impact-microsoft-escap-ccdkm-stou-depa-advance-ai-skills-training-to-empower-civil-society-and-support-sustainable-digital-growth/
+title: 'AI for Social Impact: Advancing AI Skills in Civil Society for Sustainable Growth'
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-20 15:08:54 +00:00
-permalink: "/2026-01-20-AI-for-Social-Impact-Advancing-AI-Skills-in-Civil-Society-for-Sustainable-Growth.html"
-categories: ["AI"]
-tags: ["AI", "AI Education", "AI For Social Impact", "AI Skills Training", "CCDKM", "Civil Society", "Company News", "Depa", "Digital Literacy", "Digital Transformation", "ESCAP", "Generative AI", "Microsoft Copilot", "Microsoft Thailand", "News", "Prompt Engineering", "Sukhothai Thammathirat Open University", "Sustainable Growth"]
-tags_normalized: ["ai", "ai education", "ai for social impact", "ai skills training", "ccdkm", "civil society", "company news", "depa", "digital literacy", "digital transformation", "escap", "generative ai", "microsoft copilot", "microsoft thailand", "news", "prompt engineering", "sukhothai thammathirat open university", "sustainable growth"]
+tags:
+- AI Education
+- AI For Social Impact
+- AI Skills Training
+- CCDKM
+- Civil Society
+- Company News
+- Depa
+- Digital Literacy
+- Digital Transformation
+- ESCAP
+- Generative AI
+- Microsoft Copilot
+- Microsoft Thailand
+- Prompt Engineering
+- Sukhothai Thammathirat Open University
+- Sustainable Growth
+section_names:
+- ai
 ---
-
 stclarke covers Microsoft's collaboration with ESCAP, CCDKM, STOU, and depa to develop AI skills among civil society leaders in Thailand, focusing on responsible AI usage and digital empowerment.<!--excerpt_end-->
 
 # AI for Social Impact: Advancing AI Skills in Civil Society for Sustainable Growth

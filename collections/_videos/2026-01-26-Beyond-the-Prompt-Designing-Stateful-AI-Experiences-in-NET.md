@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Beyond the Prompt: Designing Stateful AI Experiences in .NET"
-description: "This session delves into advanced AI integration within .NET, focusing on the development of stateful AI systems using Azure AI Assistants. Participants will learn how to move from basic stateless prompt-response architectures to intelligent, context-aware conversational systems, exploring real-world .NET examples and best practices for deploying production-quality AI experiences."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VOELhSvlCaI"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=VOELhSvlCaI
+title: 'Beyond the Prompt: Designing Stateful AI Experiences in .NET'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2026-01-26 21:54:24 +00:00
-permalink: "/2026-01-26-Beyond-the-Prompt-Designing-Stateful-AI-Experiences-in-NET.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Integration", "Architecture", "Azure", "Azure AI Assistants", "Best Practices", "Coding", "Context Awareness", "Conversational AI", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnet10", "Dotnetdeveloper", "Dotnetten", "Intelligent Systems", "Microsoft", "Microsoft Azure", "Software Developer", "Stateful AI", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai integration", "architecture", "azure", "azure ai assistants", "best practices", "coding", "context awareness", "conversational ai", "demo", "developer", "developer community", "developer tools", "dotnet10", "dotnetdeveloper", "dotnetten", "intelligent systems", "microsoft", "microsoft azure", "software developer", "stateful ai", "videos"]
+tags:
+- .NET
+- AI Integration
+- Architecture
+- Azure AI Assistants
+- Best Practices
+- Context Awareness
+- Conversational AI
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnet10
+- Dotnetdeveloper
+- Dotnetten
+- Intelligent Systems
+- Microsoft
+- Microsoft Azure
+- Software Developer
+- Stateful AI
+section_names:
+- ai
+- azure
+- coding
 ---
-
 dotnet presents a technical session featuring Saeed Esmaeelinejad, Katie Savage, Maira Wenzel, and Scott Addie, exploring how to design stateful AI experiences in .NET with Azure AI Assistants.<!--excerpt_end-->
 
 {% youtube VOELhSvlCaI %}

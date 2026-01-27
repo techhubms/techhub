@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GPT-5.2-Codex is now available in GitHub Copilot for Multiple IDEs"
-description: "This announcement details the general availability of the GPT-5.2-Codex model in GitHub Copilot for users across various IDEs, including Visual Studio, JetBrains, Xcode, and Eclipse. It outlines access requirements, supported versions, administrative settings, and provides resources for learning more about Copilot model options."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-26-gpt-5-2-codex-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-26-gpt-5-2-codex-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+title: GPT-5.2-Codex is now available in GitHub Copilot for Multiple IDEs
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-26 18:18:00 +00:00
-permalink: "/2026-01-26-GPT-52-Codex-is-now-available-in-GitHub-Copilot-for-Multiple-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Models", "Ask Mode", "Copilot", "Copilot Chat", "Eclipse", "Edit Mode", "Enterprise Administration", "GitHub Copilot", "GPT 5.2 Codex", "IDE Integration", "JetBrains", "Model Picker", "News", "Software Development", "VS", "Xcode"]
-tags_normalized: ["agent mode", "ai", "ai models", "ask mode", "copilot", "copilot chat", "eclipse", "edit mode", "enterprise administration", "github copilot", "gpt 5dot2 codex", "ide integration", "jetbrains", "model picker", "news", "software development", "vs", "xcode"]
+tags:
+- Agent Mode
+- AI Models
+- Ask Mode
+- Copilot
+- Copilot Chat
+- Eclipse
+- Edit Mode
+- Enterprise Administration
+- GPT 5.2 Codex
+- IDE Integration
+- JetBrains
+- Model Picker
+- Software Development
+- VS
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on the release of GPT-5.2-Codex for Copilot users, explaining its availability in a range of development environments and providing essential details for both users and administrators.<!--excerpt_end-->
 
 # GPT-5.2-Codex is Now Available in GitHub Copilot for Multiple IDEs

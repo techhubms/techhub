@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Advanced Container Apps Networking: VNet Integration and Centralized Firewall Traffic Logging"
-description: "This article details a practical approach for securely managing Azure Container Apps traffic by integrating environments with Virtual Networks and routing through a dedicated firewall appliance. It provides a walkthrough for configuring user-defined routes, enhancing traffic inspection, logging, and compliance using both Azure-native and third-party security controls."
-author: "omidvahedv"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/advanced-container-apps-networking-vnet-integration-and/m-p/4488713#M22417"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure/advanced-container-apps-networking-vnet-integration-and/m-p/4488713#M22417
+title: 'Advanced Container Apps Networking: VNet Integration and Centralized Firewall Traffic Logging'
+author: omidvahedv
+feed_name: Microsoft Tech Community
 date: 2026-01-23 07:16:11 +00:00
-permalink: "/2026-01-23-Advanced-Container-Apps-Networking-VNet-Integration-and-Centralized-Firewall-Traffic-Logging.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Container Apps", "Azure Firewall", "Community", "Compliance", "Container Networking", "Egress Filtering", "Firewall Appliance", "Hybrid Architecture", "Network Architecture", "Network Security", "NSG", "Security", "Traffic Logging", "UDR", "User Defined Routes", "Virtual Network Integration"]
-tags_normalized: ["azure", "azure container apps", "azure firewall", "community", "compliance", "container networking", "egress filtering", "firewall appliance", "hybrid architecture", "network architecture", "network security", "nsg", "security", "traffic logging", "udr", "user defined routes", "virtual network integration"]
+tags:
+- Azure Container Apps
+- Azure Firewall
+- Compliance
+- Container Networking
+- Egress Filtering
+- Firewall Appliance
+- Hybrid Architecture
+- Network Architecture
+- Network Security
+- NSG
+- Traffic Logging
+- UDR
+- User Defined Routes
+- Virtual Network Integration
+section_names:
+- azure
+- security
 ---
-
 Omid Vahedv explores how to route Azure Container Apps traffic through a centralized firewall for advanced filtering, inspection, and compliance, guiding readers through deployment and configuration best practices.<!--excerpt_end-->
 
 # Advanced Container Apps Networking: VNet Integration and Centralized Firewall Traffic Logging

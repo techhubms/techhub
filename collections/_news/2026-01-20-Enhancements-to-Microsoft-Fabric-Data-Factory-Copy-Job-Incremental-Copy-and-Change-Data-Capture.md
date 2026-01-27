@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Enhancements to Microsoft Fabric Data Factory Copy Job: Incremental Copy and Change Data Capture"
-description: "This news update from the Microsoft Fabric Blog details recent enhancements to Copy job in Microsoft Fabric Data Factory, focusing on expanded incremental copy and change data capture (CDC) capabilities. The update introduces support for more data sources, multi-cloud CDC replication, and flexible column mapping options, streamlining data movement workflows across clouds and platforms."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-movement-across-multiple-clouds-with-copy-job-enhancements-on-incremental-copy-and-change-data-capture/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-movement-across-multiple-clouds-with-copy-job-enhancements-on-incremental-copy-and-change-data-capture/
+title: 'Enhancements to Microsoft Fabric Data Factory Copy Job: Incremental Copy and Change Data Capture'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-20 09:00:00 +00:00
-permalink: "/2026-01-20-Enhancements-to-Microsoft-Fabric-Data-Factory-Copy-Job-Incremental-Copy-and-Change-Data-Capture.html"
-categories: ["Azure", "ML"]
-tags: ["Amazon S3", "Azure", "Azure Data Explorer", "Change Data Capture", "Cloud Data Integration", "Column Mapping", "Copy Job", "Data Engineering", "Data Factory", "Data Movement", "Fabric Lakehouse", "Google Cloud Storage", "Incremental Copy", "Microsoft Fabric", "ML", "Multi Cloud", "News", "SAP Datasphere"]
-tags_normalized: ["amazon s3", "azure", "azure data explorer", "change data capture", "cloud data integration", "column mapping", "copy job", "data engineering", "data factory", "data movement", "fabric lakehouse", "google cloud storage", "incremental copy", "microsoft fabric", "ml", "multi cloud", "news", "sap datasphere"]
+tags:
+- Amazon S3
+- Azure Data Explorer
+- Change Data Capture
+- Cloud Data Integration
+- Column Mapping
+- Copy Job
+- Data Engineering
+- Data Factory
+- Data Movement
+- Fabric Lakehouse
+- Google Cloud Storage
+- Incremental Copy
+- Microsoft Fabric
+- Multi Cloud
+- SAP Datasphere
+section_names:
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team announces enhancements to Copy job in Microsoft Fabric Data Factory, adding multi-cloud incremental copy, CDC support, and advanced column mapping for streamlined data movement.<!--excerpt_end-->
 
 # Enhancements to Microsoft Fabric Data Factory Copy Job: Incremental Copy and Change Data Capture

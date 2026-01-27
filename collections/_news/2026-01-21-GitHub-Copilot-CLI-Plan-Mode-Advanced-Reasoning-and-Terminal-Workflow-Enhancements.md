@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot CLI: Plan Mode, Advanced Reasoning, and Terminal Workflow Enhancements"
-description: "This news update introduces major feature improvements to GitHub Copilot CLI, including collaborative plan mode, configurable reasoning with the latest GPT-5.2-Codex model, advanced terminal workflow controls, context management, memory, and a streamlined permission experience. Developers now have increased agency and transparency within their coding terminal."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go
+title: 'GitHub Copilot CLI: Plan Mode, Advanced Reasoning, and Terminal Workflow Enhancements'
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-21 21:44:44 +00:00
-permalink: "/2026-01-21-GitHub-Copilot-CLI-Plan-Mode-Advanced-Reasoning-and-Terminal-Workflow-Enhancements.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "Automation", "Client Apps", "Code Review", "Coding Agent", "Command Line", "Context Management", "Copilot", "Developer Tools", "Feedback", "GitHub CLI", "GitHub Copilot", "GitHub Copilot CLI", "GPT 5.2 Codex", "Improvement", "News", "Permissions", "Plan Mode", "Reasoning Models", "Session Memory", "Shell Mode", "Terminal Workflow"]
-tags_normalized: ["agentic ai", "ai", "automation", "client apps", "code review", "coding agent", "command line", "context management", "copilot", "developer tools", "feedback", "github cli", "github copilot", "github copilot cli", "gpt 5dot2 codex", "improvement", "news", "permissions", "plan mode", "reasoning models", "session memory", "shell mode", "terminal workflow"]
+tags:
+- Agentic AI
+- Automation
+- Client Apps
+- Code Review
+- Coding Agent
+- Command Line
+- Context Management
+- Copilot
+- Developer Tools
+- Feedback
+- GitHub CLI
+- GitHub Copilot CLI
+- GPT 5.2 Codex
+- Improvement
+- Permissions
+- Plan Mode
+- Reasoning Models
+- Session Memory
+- Shell Mode
+- Terminal Workflow
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details new features in GitHub Copilot CLI, including plan mode, advanced reasoning controls, and terminal workflow improvements, giving developers more power and flexibility in their coding environment.<!--excerpt_end-->
 
 # GitHub Copilot CLI: Plan before you build, steer as you go

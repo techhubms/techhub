@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Connect Azure SRE Agent to ServiceNow: End-to-End Incident Response"
-description: "This tutorial guides you step by step through connecting Azure SRE Agent to ServiceNow, enabling automated incident investigation, triage, and resolution in your Azure environment. You'll learn how to configure credentials, integrate both platforms, test the workflow with a new incident, and observe how the SRE Agent leverages AI to resolve it and write findings back to ServiceNow."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/connect-azure-sre-agent-to-servicenow-end-to-end-incident/ba-p/4487824"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/connect-azure-sre-agent-to-servicenow-end-to-end-incident/ba-p/4487824
+title: 'Connect Azure SRE Agent to ServiceNow: End-to-End Incident Response'
+author: dbandaru
+feed_name: Microsoft Tech Community
 date: 2026-01-20 20:07:59 +00:00
-permalink: "/2026-01-20-Connect-Azure-SRE-Agent-to-ServiceNow-End-to-End-Incident-Response.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Agent", "AKS", "Azure", "Azure Monitor", "Azure SRE Agent", "Cloud Automation", "Community", "DevOps", "Incident Automation", "Incident Management", "Incident Response", "Kubernetes", "Microsoft Azure", "Operations", "Root Cause Analysis", "ServiceNow Integration", "SRE", "Triage Automation", "Work Notes Automation"]
-tags_normalized: ["ai", "ai agent", "aks", "azure", "azure monitor", "azure sre agent", "cloud automation", "community", "devops", "incident automation", "incident management", "incident response", "kubernetes", "microsoft azure", "operations", "root cause analysis", "servicenow integration", "sre", "triage automation", "work notes automation"]
+tags:
+- AI Agent
+- AKS
+- Azure Monitor
+- Azure SRE Agent
+- Cloud Automation
+- Incident Automation
+- Incident Management
+- Incident Response
+- Kubernetes
+- Microsoft Azure
+- Operations
+- Root Cause Analysis
+- ServiceNow Integration
+- SRE
+- Triage Automation
+- Work Notes Automation
+section_names:
+- ai
+- azure
+- devops
 ---
-
 dbandaru demonstrates how to connect Azure SRE Agent to ServiceNow, automating incident detection and resolution through AI-driven workflows and seamless integration, with instructions for configuration and hands-on testing.<!--excerpt_end-->
 
 # Connect Azure SRE Agent to ServiceNow: End-to-End Incident Response

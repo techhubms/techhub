@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Security Strategies for Safeguarding Governmental Data"
-description: "This article by Tim Langan, Microsoft’s Deputy CISO for Government and Trust, shares practical cybersecurity guidance for government agencies. It covers the evolving threat landscape, proactive defense models like 'defend forward,' the role of Microsoft’s Cybersecurity Governance Council, secure development practices, and the importance of collaboration to accelerate secure solutions for public sector organizations."
-author: "Tim Langan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/26/security-strategies-for-safeguarding-governmental-data/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/26/security-strategies-for-safeguarding-governmental-data/
+title: Security Strategies for Safeguarding Governmental Data
+author: Tim Langan
+feed_name: Microsoft Security Blog
 date: 2026-01-26 17:00:00 +00:00
-permalink: "/2026-01-26-Security-Strategies-for-Safeguarding-Governmental-Data.html"
-categories: ["Security"]
-tags: ["Compliance", "Cyber Defense", "Cybersecurity Governance Council", "Defend Forward", "Deputy CISO", "Government Cybersecurity", "Microsoft Security", "News", "Proactive Security", "Public Sector", "Regulatory Requirements", "Secure By Design", "Secure Future Initiative", "Security", "Security Best Practices", "Security Posture", "Threat Intelligence"]
-tags_normalized: ["compliance", "cyber defense", "cybersecurity governance council", "defend forward", "deputy ciso", "government cybersecurity", "microsoft security", "news", "proactive security", "public sector", "regulatory requirements", "secure by design", "secure future initiative", "security", "security best practices", "security posture", "threat intelligence"]
+tags:
+- Compliance
+- Cyber Defense
+- Cybersecurity Governance Council
+- Defend Forward
+- Deputy CISO
+- Government Cybersecurity
+- Microsoft Security
+- Proactive Security
+- Public Sector
+- Regulatory Requirements
+- Secure By Design
+- Secure Future Initiative
+- Security Best Practices
+- Security Posture
+- Threat Intelligence
+section_names:
+- security
 ---
-
 Tim Langan, Deputy CISO for Government and Trust at Microsoft, explores strategies for government cyber defense, emphasizing proactive measures, cross-team collaboration, and secure development practices.<!--excerpt_end-->
 
 # Security Strategies for Safeguarding Governmental Data

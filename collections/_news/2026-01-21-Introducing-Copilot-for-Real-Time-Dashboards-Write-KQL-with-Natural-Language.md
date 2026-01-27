@@ -1,20 +1,23 @@
----
-layout: "post"
-title: "Introducing Copilot for Real-Time Dashboards: Write KQL with Natural Language"
-description: "This news article from Microsoft Fabric Blog introduces a new Copilot feature for Real-Time Dashboards, enabling users to convert natural language questions into Kusto Query Language (KQL) queries directly within the dashboard tile editing experience. The Copilot assistant pane helps both new and experienced users write, refine, and generate actionable queries quickly by leveraging AI during the editing workflow."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-copilot-for-real-time-dashboards-write-kql-with-natural-language/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-copilot-for-real-time-dashboards-write-kql-with-natural-language/
+title: 'Introducing Copilot for Real-Time Dashboards: Write KQL with Natural Language'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-21 10:00:00 +00:00
-permalink: "/2026-01-21-Introducing-Copilot-for-Real-Time-Dashboards-Write-KQL-with-Natural-Language.html"
-categories: ["AI"]
-tags: ["AI", "AI Assistant", "Copilot", "Dashboard Development", "KQL", "Kusto Query Language", "Microsoft Fabric", "Natural Language Processing", "News", "Productivity", "Query Authoring", "Real Time Dashboards"]
-tags_normalized: ["ai", "ai assistant", "copilot", "dashboard development", "kql", "kusto query language", "microsoft fabric", "natural language processing", "news", "productivity", "query authoring", "real time dashboards"]
+tags:
+- AI Assistant
+- Copilot
+- Dashboard Development
+- KQL
+- Kusto Query Language
+- Microsoft Fabric
+- Natural Language Processing
+- Productivity
+- Query Authoring
+- Real Time Dashboards
+section_names:
+- ai
 ---
-
 Microsoft Fabric Blog announces the integration of Copilot into Real-Time Dashboard tile editing, empowering users to generate KQL queries from natural language questions using AI.<!--excerpt_end-->
 
 # Introducing Copilot for Real-Time Dashboards: Write KQL with Natural Language

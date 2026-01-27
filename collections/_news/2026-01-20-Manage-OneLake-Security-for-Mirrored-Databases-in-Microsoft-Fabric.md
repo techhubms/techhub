@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Manage OneLake Security for Mirrored Databases in Microsoft Fabric"
-description: "This Microsoft Fabric news update details the introduction of granular, role-based access control for Mirrored Databases within OneLake. By supporting data access roles on all Mirrored item types, organizations can now control access at the table and folder level, enhancing security and collaboration across replicated data from transactional systems."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/manage-onelake-security-for-mirrored-databases-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/manage-onelake-security-for-mirrored-databases-preview/
+title: Manage OneLake Security for Mirrored Databases in Microsoft Fabric
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-20 11:00:00 +00:00
-permalink: "/2026-01-20-Manage-OneLake-Security-for-Mirrored-Databases-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Access Management", "Analytics Platform", "Azure", "Azure SQL", "Data Access Roles", "Data Governance", "Data Lake", "Data Replication", "Data Security", "Enterprise Security", "Microsoft Fabric", "Microsoft Learn", "Mirrored Databases", "ML", "News", "OneLake", "Role Based Access Control", "Security", "Shortcuts"]
-tags_normalized: ["access management", "analytics platform", "azure", "azure sql", "data access roles", "data governance", "data lake", "data replication", "data security", "enterprise security", "microsoft fabric", "microsoft learn", "mirrored databases", "ml", "news", "onelake", "role based access control", "security", "shortcuts"]
+tags:
+- Access Management
+- Analytics Platform
+- Azure SQL
+- Data Access Roles
+- Data Governance
+- Data Lake
+- Data Replication
+- Data Security
+- Enterprise Security
+- Microsoft Fabric
+- Microsoft Learn
+- Mirrored Databases
+- OneLake
+- Role Based Access Control
+- Shortcuts
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog explains how OneLake now allows fine-grained data access roles for Mirrored Databases. This upgrade helps organizations define roles at the table or folder level, enabling secure, efficient collaboration and governance across teams.<!--excerpt_end-->
 
 # Manage OneLake Security for Mirrored Databases in Microsoft Fabric

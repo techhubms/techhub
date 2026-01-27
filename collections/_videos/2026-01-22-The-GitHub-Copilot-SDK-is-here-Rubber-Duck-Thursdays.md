@@ -1,20 +1,22 @@
----
-layout: "post"
-title: "The GitHub Copilot SDK is here! - Rubber Duck Thursdays"
-description: "This video introduces the GitHub Copilot SDK, offering an overview for developers interested in enhancing their workflow with GitHub Copilot’s extensibility. The session covers what the SDK enables, intended use-cases, and how developers can integrate Copilot’s AI assistance into their tools and environments."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6yzGew8wA4A"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=6yzGew8wA4A
+title: The GitHub Copilot SDK is here! - Rubber Duck Thursdays
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-22 19:01:30 +00:00
-permalink: "/2026-01-22-The-GitHub-Copilot-SDK-is-here-Rubber-Duck-Thursdays.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "API", "Developer Tools", "Extension", "GitHub", "GitHub Copilot", "GitHub Copilot SDK", "Integration", "Productivity", "SDK", "Videos"]
-tags_normalized: ["ai", "api", "developer tools", "extension", "github", "github copilot", "github copilot sdk", "integration", "productivity", "sdk", "videos"]
+tags:
+- API
+- Developer Tools
+- Extension
+- GitHub
+- GitHub Copilot SDK
+- Integration
+- Productivity
+- SDK
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents an overview of the new GitHub Copilot SDK, showing developers how to leverage AI-powered code completion and integrate Copilot’s capabilities into custom workflows.<!--excerpt_end-->
 
 {% youtube 6yzGew8wA4A %}

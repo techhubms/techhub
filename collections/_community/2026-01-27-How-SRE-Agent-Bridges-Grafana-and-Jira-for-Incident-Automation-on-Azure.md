@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How SRE Agent Bridges Grafana and Jira for Incident Automation on Azure"
-description: "This post by dchelupati explains how to extend Azure SRE Agent’s capabilities beyond its built-in integrations by using the Model Context Protocol (MCP). Learn how to orchestrate incident diagnosis and response across Grafana, Jira, and Azure Container Apps—even with tools lacking native support—by deploying MCP servers as containers and wiring up custom workflows."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-sre-agent-pulls-logs-from-grafana-and-creates-jira-tickets/ba-p/4489527"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-sre-agent-pulls-logs-from-grafana-and-creates-jira-tickets/ba-p/4489527
+title: How SRE Agent Bridges Grafana and Jira for Incident Automation on Azure
+author: dchelupati
+feed_name: Microsoft Tech Community
 date: 2026-01-27 00:30:14 +00:00
-permalink: "/2026-01-27-How-SRE-Agent-Bridges-Grafana-and-Jira-for-Incident-Automation-on-Azure.html"
-categories: ["Azure", "DevOps"]
-tags: ["App Diagnostics", "Azure", "Azure Container Apps", "Azure Managed Grafana", "Azure Monitor", "Cloud Native", "Community", "DevOps", "DevOps Workflows", "Grafana", "Incident Automation", "Incident Management", "Jira", "LogQL", "Loki", "MCP", "Observability", "PagerDuty", "Root Cause Analysis", "Serverless", "ServiceNow", "SRE Agent"]
-tags_normalized: ["app diagnostics", "azure", "azure container apps", "azure managed grafana", "azure monitor", "cloud native", "community", "devops", "devops workflows", "grafana", "incident automation", "incident management", "jira", "logql", "loki", "mcp", "observability", "pagerduty", "root cause analysis", "serverless", "servicenow", "sre agent"]
+tags:
+- App Diagnostics
+- Azure Container Apps
+- Azure Managed Grafana
+- Azure Monitor
+- Cloud Native
+- DevOps Workflows
+- Grafana
+- Incident Automation
+- Incident Management
+- Jira
+- LogQL
+- Loki
+- MCP
+- Observability
+- PagerDuty
+- Root Cause Analysis
+- Serverless
+- ServiceNow
+- SRE Agent
+section_names:
+- azure
+- devops
 ---
-
 In this practical guide, dchelupati demonstrates how SRE Agent can automate incident diagnosis and ticket creation by connecting Azure Managed Grafana and Jira—even without native integrations—using MCP and Azure Container Apps.<!--excerpt_end-->
 
 # How SRE Agent Bridges Grafana and Jira for Incident Automation on Azure

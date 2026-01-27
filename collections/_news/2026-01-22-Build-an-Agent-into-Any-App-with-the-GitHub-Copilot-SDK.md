@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Build an Agent into Any App with the GitHub Copilot SDK"
-description: "This news post introduces the GitHub Copilot SDK, a technical preview that enables developers to embed Copilot's agentic workflows, tool orchestration, and AI-powered features into any application. Readers will learn how the SDK leverages the same core as Copilot CLI to provide model routing, context management, and seamless integration for custom agents and workflows in their favorite programming languages."
-author: "Mario Rodriguez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/
+title: Build an Agent into Any App with the GitHub Copilot SDK
+author: Mario Rodriguez
+feed_name: The GitHub Blog
 date: 2026-01-22 15:01:44 +00:00
-permalink: "/2026-01-22-Build-an-Agent-into-Any-App-with-the-GitHub-Copilot-SDK.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Agents", "Application Development", "Authentication", "Coding", "Company News", "Copilot CLI", "Custom Agents", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Copilot SDK", "MCP Server Integration", "News", "News & Insights", "Programming Integration", "SDK", "Streaming", "Tool Orchestration"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai agents", "application development", "authentication", "coding", "company news", "copilot cli", "custom agents", "github copilot", "github copilot cli", "github copilot sdk", "mcp server integration", "news", "news and insights", "programming integration", "sdk", "streaming", "tool orchestration"]
+tags:
+- Agentic Workflows
+- AI & ML
+- AI Agents
+- Application Development
+- Authentication
+- Company News
+- Copilot CLI
+- Custom Agents
+- GitHub Copilot CLI
+- GitHub Copilot SDK
+- MCP Server Integration
+- News & Insights
+- Programming Integration
+- SDK
+- Streaming
+- Tool Orchestration
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Mario Rodriguez announces the technical preview of the GitHub Copilot SDK, highlighting how developers can now integrate Copilot's agentic execution loop and AI-powered features into any application environment.<!--excerpt_end-->
 
 # Build an Agent into Any App with the GitHub Copilot SDK

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Demo: Using /delegate in the GitHub Copilot CLI"
-description: "This video demonstration by GitHub showcases the /delegate command in the GitHub Copilot CLI. The feature allows developers to offload resource-intensive tasks from a local machine to the cloud. Viewers learn how an agent can automate application upgrades, run tests, create pull requests, and relay logs during development workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=P2qK2BCdi-w"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=P2qK2BCdi-w
+title: 'Demo: Using /delegate in the GitHub Copilot CLI'
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-25 15:00:41 +00:00
-permalink: "/2026-01-25-Demo-Using-delegate-in-the-GitHub-Copilot-CLI.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "CLI Tools", "Cloud Automation", "Continuous Integration", "Copilot CLI", "Delegate", "Delegate Command", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "Next.js", "Pull Requests", "Remote Agent", "Software Workflow", "Streaming Logs", "Testing", "Videos"]
-tags_normalized: ["ai", "automation", "cli tools", "cloud automation", "continuous integration", "copilot cli", "delegate", "delegate command", "developer productivity", "devops", "github", "github copilot", "github copilot cli", "nextdotjs", "pull requests", "remote agent", "software workflow", "streaming logs", "testing", "videos"]
+tags:
+- Automation
+- CLI Tools
+- Cloud Automation
+- Continuous Integration
+- Copilot CLI
+- Delegate
+- Delegate Command
+- Developer Productivity
+- GitHub
+- GitHub Copilot CLI
+- Next.js
+- Pull Requests
+- Remote Agent
+- Software Workflow
+- Streaming Logs
+- Testing
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub presents a demo featuring the /delegate command in the Copilot CLI. Hosted by @shanselman, this video explains how developers can leverage AI-driven agents to automate upgrades and testing while maintaining control of their workflow.<!--excerpt_end-->
 
 {% youtube P2qK2BCdi-w %}

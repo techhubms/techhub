@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Giving Agents a Visual Voice: MCP Apps Support in VS Code"
-description: "This article introduces MCP Apps, a major new extension for the Model Context Protocol (MCP) that enables AI coding agents in Visual Studio Code to render interactive UI components directly in agent conversations. It covers hands-on demos, integration details, and the collaborative benefits for developers, teams, and extension authors."
-author: "Harald Kirschner, Connor Peet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2026/01/26/mcp-apps-support"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2026/01/26/mcp-apps-support
+title: 'Giving Agents a Visual Voice: MCP Apps Support in VS Code'
+author: Harald Kirschner, Connor Peet
+feed_name: Visual Studio Code Releases
 date: 2026-01-26 00:00:00 +00:00
-permalink: "/2026-01-26-Giving-Agents-a-Visual-Voice-MCP-Apps-Support-in-VS-Code.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Coding Agents", "Blog", "Code Profiling", "Coding", "Copilot Agents", "Developer Tools", "Feature Flags", "Flame Graphs", "Interactive UI", "MCP", "MCP Apps", "MCP Servers", "News", "Playwright", "Storybook", "VS Code", "VS Code Extensions", "Workflow Automation"]
-tags_normalized: ["ai", "ai coding agents", "blog", "code profiling", "coding", "copilot agents", "developer tools", "feature flags", "flame graphs", "interactive ui", "mcp", "mcp apps", "mcp servers", "news", "playwright", "storybook", "vs code", "vs code extensions", "workflow automation"]
+tags:
+- AI Coding Agents
+- Blog
+- Code Profiling
+- Copilot Agents
+- Developer Tools
+- Feature Flags
+- Flame Graphs
+- Interactive UI
+- MCP
+- MCP Apps
+- MCP Servers
+- Playwright
+- Storybook
+- VS Code
+- VS Code Extensions
+- Workflow Automation
+section_names:
+- ai
+- coding
 ---
-
 Harald Kirschner and Connor Peet present how VS Code now supports MCP Apps, giving AI coding agents the power to render interactive dashboards, forms, and visualizations in the editor.<!--excerpt_end-->
 
 # Giving Agents a Visual Voice: MCP Apps Support in VS Code

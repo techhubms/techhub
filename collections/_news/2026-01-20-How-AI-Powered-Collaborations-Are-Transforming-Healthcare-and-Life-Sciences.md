@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How AI-Powered Collaborations Are Transforming Healthcare and Life Sciences"
-description: "This article explores how AI-driven partnerships—especially those enabled by Microsoft for Startups and Microsoft Azure AI—are bringing measurable improvements to healthcare and life sciences. It highlights real-world collaborations between startups and enterprises, discussing how AI technologies are being built, validated, and scaled for clinical use, research automation, and national health interventions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/startups/blog/how-ai-powered-collaborations-are-transforming-healthcare-and-life-sciences/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/startups/blog/how-ai-powered-collaborations-are-transforming-healthcare-and-life-sciences/
+title: How AI-Powered Collaborations Are Transforming Healthcare and Life Sciences
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-20 15:33:59 +00:00
-permalink: "/2026-01-20-How-AI-Powered-Collaborations-Are-Transforming-Healthcare-and-Life-Sciences.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Platform", "Augmented Reality", "Azure", "Care Delivery Transformation", "Clinical Research", "Cloud Infrastructure", "Company News", "Data Automation", "Health", "Healthcare AI", "Healthcare Innovation", "Life Sciences", "Microsoft Azure AI", "Microsoft For Startups", "News", "Personalization At Scale", "Population Health", "Prior Authorization Automation", "Startup Collaboration"]
-tags_normalized: ["ai", "ai platform", "augmented reality", "azure", "care delivery transformation", "clinical research", "cloud infrastructure", "company news", "data automation", "health", "healthcare ai", "healthcare innovation", "life sciences", "microsoft azure ai", "microsoft for startups", "news", "personalization at scale", "population health", "prior authorization automation", "startup collaboration"]
+tags:
+- AI Platform
+- Augmented Reality
+- Care Delivery Transformation
+- Clinical Research
+- Cloud Infrastructure
+- Company News
+- Data Automation
+- Health
+- Healthcare AI
+- Healthcare Innovation
+- Life Sciences
+- Microsoft Azure AI
+- Microsoft For Startups
+- Personalization At Scale
+- Population Health
+- Prior Authorization Automation
+- Startup Collaboration
+section_names:
+- ai
+- azure
 ---
-
 stclarke shares compelling success stories highlighting how startups and enterprises, aided by Microsoft for Startups and Azure AI, are collaborating to deliver impactful AI solutions in healthcare and life sciences.<!--excerpt_end-->
 
 # How AI-Powered Collaborations Are Transforming Healthcare and Life Sciences

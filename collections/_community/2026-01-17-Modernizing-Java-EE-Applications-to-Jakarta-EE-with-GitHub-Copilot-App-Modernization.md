@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Modernizing Java EE Applications to Jakarta EE with GitHub Copilot App Modernization"
-description: "This article guides developers through the process of migrating Java EE applications to Jakarta EE using GitHub Copilot app modernization. It details the supported migration path, project analysis, automated transformation steps, build iteration, security checks, and developer responsibilities, highlighting how Copilot accelerates the transition while ensuring secure and compliant results."
-author: "ayangupta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-java-ee-applications-to-jakarta-ee-with-github/ba-p/4486471"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-java-ee-applications-to-jakarta-ee-with-github/ba-p/4486471
+title: Modernizing Java EE Applications to Jakarta EE with GitHub Copilot App Modernization
+author: ayangupta
+feed_name: Microsoft Tech Community
 date: 2026-01-17 12:52:07 +00:00
-permalink: "/2026-01-17-Modernizing-Java-EE-Applications-to-Jakarta-EE-with-GitHub-Copilot-App-Modernization.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "API Compatibility", "App Modernization", "Automated Refactoring", "CI/CD", "Cloud Development", "Community", "Compilation Fixes", "CVEs", "Dependency Management", "DevOps", "GitHub Copilot", "Gradle", "IntelliJ IDEA", "Jakarta EE", "Java EE", "Java Migration", "Maven", "Microsoft Learn", "Namespace Migration", "OpenRewrite", "VS Code"]
-tags_normalized: ["ai", "api compatibility", "app modernization", "automated refactoring", "cislashcd", "cloud development", "community", "compilation fixes", "cves", "dependency management", "devops", "github copilot", "gradle", "intellij idea", "jakarta ee", "java ee", "java migration", "maven", "microsoft learn", "namespace migration", "openrewrite", "vs code"]
+tags:
+- API Compatibility
+- App Modernization
+- Automated Refactoring
+- CI/CD
+- Cloud Development
+- Compilation Fixes
+- CVEs
+- Dependency Management
+- Gradle
+- IntelliJ IDEA
+- Jakarta EE
+- Java EE
+- Java Migration
+- Maven
+- Microsoft Learn
+- Namespace Migration
+- OpenRewrite
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 ayangupta outlines how GitHub Copilot app modernization streamlines the migration of Java EE applications to Jakarta EE, providing automated analysis, code transformations, and workflow guidance for developers.<!--excerpt_end-->
 
 # Modernizing Java EE Applications to Jakarta EE with GitHub Copilot App Modernization

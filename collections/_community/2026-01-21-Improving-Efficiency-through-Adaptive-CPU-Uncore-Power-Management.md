@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Improving Efficiency through Adaptive CPU Uncore Power Management"
-description: "This article examines how Microsoft Azure and Intel co-developed Efficiency Latency Control (ELC), a hardware/software co-design mechanism for dynamic CPU uncore frequency management. By tuning power usage in datacenter servers, Azure achieves both sustainable operations and scalable server deployments, ensuring performance needs are met cost-effectively."
-author: "PulkitMisra"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/improving-efficiency-through-adaptive-cpu-uncore-power/ba-p/4486456"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/improving-efficiency-through-adaptive-cpu-uncore-power/ba-p/4486456
+title: Improving Efficiency through Adaptive CPU Uncore Power Management
+author: PulkitMisra
+feed_name: Microsoft Tech Community
 date: 2026-01-21 16:00:00 +00:00
-permalink: "/2026-01-21-Improving-Efficiency-through-Adaptive-CPU-Uncore-Power-Management.html"
-categories: ["Azure"]
-tags: ["Azure", "Cloud Infrastructure", "Community", "CPU Frequency Scaling", "Datacenter Efficiency", "Efficiency Latency Control", "ELC", "Granite Rapids", "Hardware/software Co Design", "Intel Xeon 6", "Microsoft Azure", "Performance Per Watt", "Power Management", "Server Sustainability", "SPEC CPU", "Uncore Power Management"]
-tags_normalized: ["azure", "cloud infrastructure", "community", "cpu frequency scaling", "datacenter efficiency", "efficiency latency control", "elc", "granite rapids", "hardwareslashsoftware co design", "intel xeon 6", "microsoft azure", "performance per watt", "power management", "server sustainability", "spec cpu", "uncore power management"]
+tags:
+- Cloud Infrastructure
+- CPU Frequency Scaling
+- Datacenter Efficiency
+- Efficiency Latency Control
+- ELC
+- Granite Rapids
+- Hardware/software Co Design
+- Intel Xeon 6
+- Microsoft Azure
+- Performance Per Watt
+- Power Management
+- Server Sustainability
+- SPEC CPU
+- Uncore Power Management
+section_names:
+- azure
 ---
-
 PulkitMisra highlights how Microsoft Azure and Intel collaborated to improve datacenter power efficiency through adaptive CPU uncore management with Efficiency Latency Control (ELC).<!--excerpt_end-->
 
 # Improving Efficiency through Adaptive CPU Uncore Power Management

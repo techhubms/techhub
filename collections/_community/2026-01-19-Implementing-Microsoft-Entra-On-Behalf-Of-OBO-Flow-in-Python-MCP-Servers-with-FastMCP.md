@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Implementing Microsoft Entra On-Behalf-Of (OBO) Flow in Python MCP Servers with FastMCP"
-description: "This guide, authored by Pamela Fox, details how to enhance authentication in Python-based MCP servers using Microsoft Entra with the on-behalf-of (OBO) flow. The article covers Entra app registration, integrating FastMCP with Entra, leveraging the Graph API, and using OBO for secure delegated access, including practical code examples and workflow explanations."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/using-on-behalf-of-flow-for-entra-based-mcp-servers/ba-p/4486760"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/using-on-behalf-of-flow-for-entra-based-mcp-servers/ba-p/4486760
+title: Implementing Microsoft Entra On-Behalf-Of (OBO) Flow in Python MCP Servers with FastMCP
+author: Pamela_Fox
+feed_name: Microsoft Tech Community
 date: 2026-01-19 08:00:00 +00:00
-permalink: "/2026-01-19-Implementing-Microsoft-Entra-On-Behalf-Of-OBO-Flow-in-Python-MCP-Servers-with-FastMCP.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["Access Tokens", "Admin Consent", "Authentication", "Authorization", "Azure", "Azure Active Directory", "AzureProvider", "Coding", "Community", "Cosmos DB", "Dynamic Client Registration", "FastMCP", "Identity Management", "MCP", "Microsoft Entra ID", "Microsoft Graph API", "MSAL Python SDK", "OAuth2", "On Behalf Of Flow", "Python", "Security", "Service Principal"]
-tags_normalized: ["access tokens", "admin consent", "authentication", "authorization", "azure", "azure active directory", "azureprovider", "coding", "community", "cosmos db", "dynamic client registration", "fastmcp", "identity management", "mcp", "microsoft entra id", "microsoft graph api", "msal python sdk", "oauth2", "on behalf of flow", "python", "security", "service principal"]
+tags:
+- Access Tokens
+- Admin Consent
+- Authentication
+- Authorization
+- Azure Active Directory
+- AzureProvider
+- Cosmos DB
+- Dynamic Client Registration
+- FastMCP
+- Identity Management
+- MCP
+- Microsoft Entra ID
+- Microsoft Graph API
+- MSAL Python SDK
+- OAuth2
+- On Behalf Of Flow
+- Python
+- Service Principal
+section_names:
+- azure
+- coding
+- security
 ---
-
 Pamela Fox provides an in-depth walkthrough on enabling delegated access in Python MCP servers using Microsoft Entra with the on-behalf-of flow. This technical article guides developers through secure integration steps and code examples.<!--excerpt_end-->
 
 # Implementing Microsoft Entra On-Behalf-Of (OBO) Flow in Python MCP Servers with FastMCP

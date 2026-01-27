@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How AI and Microsoft Azure Are Transforming Legal Practice in India"
-description: "This news article explores the adoption of AI-powered solutions, particularly those built on Microsoft Azure services, in India’s legal sector. It highlights how SCC Online and law firm Trilegal leverage Azure OpenAI Service, Azure AI Search, and Cosmos DB to streamline legal research, document management, and access to justice, illustrating broader trends in legal technology and digital transformation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/2026/01/21/code-of-law-how-ai-is-helping-indias-lawyers-work-faster/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/asia/2026/01/21/code-of-law-how-ai-is-helping-indias-lawyers-work-faster/
+title: How AI and Microsoft Azure Are Transforming Legal Practice in India
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-21 15:34:04 +00:00
-permalink: "/2026-01-21-How-AI-and-Microsoft-Azure-Are-Transforming-Legal-Practice-in-India.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI in Law", "AI Powered Legal Research", "Azure", "Azure AI Search", "Azure OpenAI Service", "Case Management", "Company News", "Cosmos DB", "Digital Transformation", "Document Intelligence", "India Legal Sector", "Knowledge Management", "Legal Technology", "Legal Workflows", "Microsoft Azure", "News", "SCC Online", "Trilegal"]
-tags_normalized: ["ai", "ai in law", "ai powered legal research", "azure", "azure ai search", "azure openai service", "case management", "company news", "cosmos db", "digital transformation", "document intelligence", "india legal sector", "knowledge management", "legal technology", "legal workflows", "microsoft azure", "news", "scc online", "trilegal"]
+tags:
+- AI in Law
+- AI Powered Legal Research
+- Azure AI Search
+- Azure OpenAI Service
+- Case Management
+- Company News
+- Cosmos DB
+- Digital Transformation
+- Document Intelligence
+- India Legal Sector
+- Knowledge Management
+- Legal Technology
+- Legal Workflows
+- Microsoft Azure
+- SCC Online
+- Trilegal
+section_names:
+- ai
+- azure
 ---
-
 stclarke reports on the transformative impact of AI—specifically Microsoft Azure-based solutions—on India’s law firms and justice system, including the experiences of SCC Online and Trilegal.<!--excerpt_end-->
 
 # How AI and Microsoft Azure Are Transforming Legal Practice in India

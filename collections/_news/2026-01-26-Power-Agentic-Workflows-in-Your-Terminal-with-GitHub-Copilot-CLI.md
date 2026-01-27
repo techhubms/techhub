@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Power Agentic Workflows in Your Terminal with GitHub Copilot CLI"
-description: "This article showcases the capabilities of the GitHub Copilot CLI, demonstrating how developers can leverage Copilot's AI-powered assistance directly in their terminal. It walks through practical workflows such as repository setup, process management, troubleshooting, accessibility reviews, and automation, highlighting seamless integration with the broader Copilot ecosystem."
-author: "Dylan Birtolo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/
+title: Power Agentic Workflows in Your Terminal with GitHub Copilot CLI
+author: Dylan Birtolo
+feed_name: The GitHub Blog
 date: 2026-01-26 18:54:49 +00:00
-permalink: "/2026-01-26-Power-Agentic-Workflows-in-Your-Terminal-with-GitHub-Copilot-CLI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Accessibility Review", "Agentic Workflows", "AI", "AI & ML", "AI Assistant", "Authentication", "Automation", "Code Troubleshooting", "Coding", "Command Line", "Developer Workflow", "GitHub CLI", "GitHub Copilot", "GitHub Copilot CLI", "MCP Server", "News", "Process Automation", "Repository Management", "Scripting", "Terminal Tools"]
-tags_normalized: ["accessibility review", "agentic workflows", "ai", "ai and ml", "ai assistant", "authentication", "automation", "code troubleshooting", "coding", "command line", "developer workflow", "github cli", "github copilot", "github copilot cli", "mcp server", "news", "process automation", "repository management", "scripting", "terminal tools"]
+tags:
+- Accessibility Review
+- Agentic Workflows
+- AI & ML
+- AI Assistant
+- Authentication
+- Automation
+- Code Troubleshooting
+- Command Line
+- Developer Workflow
+- GitHub CLI
+- GitHub Copilot CLI
+- MCP Server
+- Process Automation
+- Repository Management
+- Scripting
+- Terminal Tools
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Dylan Birtolo demonstrates how the GitHub Copilot CLI empowers developers to interact with Copilot directly from the terminal, streamlining tasks like setup, troubleshooting, and automation through an agentic AI approach.<!--excerpt_end-->
 
 # Power Agentic Workflows in Your Terminal with GitHub Copilot CLI

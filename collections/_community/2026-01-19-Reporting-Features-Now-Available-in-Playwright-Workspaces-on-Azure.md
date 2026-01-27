@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Reporting Features Now Available in Playwright Workspaces on Azure"
-description: "This announcement details the introduction of enhanced reporting capabilities in Playwright Workspaces, a component of Azure App Testing. Developers can now leverage integrated test reports in the Azure portal, manage artifacts with bring-your-own-storage, and support collaboration and compliance for large-scale Playwright end-to-end testing workflows."
-author: "AbhinavPremsekhar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-reporting-in-playwright-workspaces/ba-p/4487059"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-reporting-in-playwright-workspaces/ba-p/4487059
+title: Reporting Features Now Available in Playwright Workspaces on Azure
+author: AbhinavPremsekhar
+feed_name: Microsoft Tech Community
 date: 2026-01-19 12:25:56 +00:00
-permalink: "/2026-01-19-Reporting-Features-Now-Available-in-Playwright-Workspaces-on-Azure.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure App Testing", "Azure Portal", "Azure Storage", "Bring Your Own Storage", "CI/CD", "Collaboration", "Community", "Data Governance", "Debugging", "DevOps", "Playwright Workspaces", "Software Testing", "Test Artifacts", "Test Automation", "Test Reporting", "Trace Viewer"]
-tags_normalized: ["azure", "azure app testing", "azure portal", "azure storage", "bring your own storage", "cislashcd", "collaboration", "community", "data governance", "debugging", "devops", "playwright workspaces", "software testing", "test artifacts", "test automation", "test reporting", "trace viewer"]
+tags:
+- Azure App Testing
+- Azure Portal
+- Azure Storage
+- Bring Your Own Storage
+- CI/CD
+- Collaboration
+- Data Governance
+- Debugging
+- Playwright Workspaces
+- Software Testing
+- Test Artifacts
+- Test Automation
+- Test Reporting
+- Trace Viewer
+section_names:
+- azure
+- devops
 ---
-
 AbhinavPremsekhar introduces new reporting features in Playwright Workspaces, enabling streamlined test report access, artifact control, and Azure-integrated debugging for development teams.<!--excerpt_end-->
 
 # Reporting Features Now Available in Playwright Workspaces on Azure

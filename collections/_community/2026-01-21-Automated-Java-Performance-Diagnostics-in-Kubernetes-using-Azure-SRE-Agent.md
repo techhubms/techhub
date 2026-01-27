@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Automated Java Performance Diagnostics in Kubernetes using Azure SRE Agent"
-description: "This article introduces the Azure Performance Diagnostics Tool for Java, powered by Azure SRE Agent. It explains how the tool automates performance diagnostics for Java applications running in Kubernetes environments, providing JVM-level insights and reducing troubleshooting time. The tool integrates with Azure’s SRE Agent to simplify and accelerate root cause detection for developers."
-author: "Mayunk_Jain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/automated-java-performance-diagnostics-in-kubernetes-using-azure/ba-p/4488027"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/automated-java-performance-diagnostics-in-kubernetes-using-azure/ba-p/4488027
+title: Automated Java Performance Diagnostics in Kubernetes using Azure SRE Agent
+author: Mayunk_Jain
+feed_name: Microsoft Tech Community
 date: 2026-01-21 06:46:50 +00:00
-permalink: "/2026-01-21-Automated-Java-Performance-Diagnostics-in-Kubernetes-using-Azure-SRE-Agent.html"
-categories: ["Azure", "DevOps"]
-tags: ["Application Monitoring", "Automation", "Azure", "Azure Performance Diagnostics Tool", "Azure SRE Agent", "Cloud Native", "Community", "Containers", "DevOps", "Diagnostics", "Garbage Collection", "Heap Usage", "Java", "JVM", "Kubernetes", "Root Cause Analysis", "Telemetry", "Thread Dumps"]
-tags_normalized: ["application monitoring", "automation", "azure", "azure performance diagnostics tool", "azure sre agent", "cloud native", "community", "containers", "devops", "diagnostics", "garbage collection", "heap usage", "java", "jvm", "kubernetes", "root cause analysis", "telemetry", "thread dumps"]
+tags:
+- Application Monitoring
+- Automation
+- Azure Performance Diagnostics Tool
+- Azure SRE Agent
+- Cloud Native
+- Containers
+- Diagnostics
+- Garbage Collection
+- Heap Usage
+- Java
+- JVM
+- Kubernetes
+- Root Cause Analysis
+- Telemetry
+- Thread Dumps
+section_names:
+- azure
+- devops
 ---
-
 Mayunk_Jain discusses how the Azure Performance Diagnostics Tool for Java, using Azure SRE Agent, streamlines troubleshooting Java apps on Kubernetes to improve reliability and developer productivity.<!--excerpt_end-->
 
 # Automated Java Performance Diagnostics in Kubernetes using Azure SRE Agent

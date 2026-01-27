@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Introducing Maia 200: The AI Accelerator Built for Inference"
-description: "This news update introduces the Maia 200 AI accelerator, a specialized chip designed by Microsoft for high-performance AI inference workloads in Azure. The content links to multiple in-depth resources discussing Maia 200's architecture, its application in the Azure cloud, related cooling innovations, and the broader move toward custom silicon for demanding AI tasks."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/january-2026-news"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/january-2026-news
+title: 'Introducing Maia 200: The AI Accelerator Built for Inference'
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-26 16:01:26 +00:00
-permalink: "/2026-01-26-Introducing-Maia-200-The-AI-Accelerator-Built-for-Inference.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Accelerator", "AI Hardware", "Azure", "Azure CPU", "Cloud Infrastructure", "Cobalt 200", "Custom Silicon", "Inference", "Liquid Cooling", "Maia 200", "Microfluidics", "Microsoft", "News", "System Architecture"]
-tags_normalized: ["ai", "ai accelerator", "ai hardware", "azure", "azure cpu", "cloud infrastructure", "cobalt 200", "custom silicon", "inference", "liquid cooling", "maia 200", "microfluidics", "microsoft", "news", "system architecture"]
+tags:
+- AI Accelerator
+- AI Hardware
+- Azure CPU
+- Cloud Infrastructure
+- Cobalt 200
+- Custom Silicon
+- Inference
+- Liquid Cooling
+- Maia 200
+- Microfluidics
+- Microsoft
+- System Architecture
+section_names:
+- ai
+- azure
 ---
-
 stclarke highlights Microsoft's introduction of the Maia 200 AI accelerator, designed for advanced inference workloads in Azure and supported by related resources on hardware innovation and system architecture.<!--excerpt_end-->
 
 # Introducing Maia 200: The AI Accelerator Built for Inference

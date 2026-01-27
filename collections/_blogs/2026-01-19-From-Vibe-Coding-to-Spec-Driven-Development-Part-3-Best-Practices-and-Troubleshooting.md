@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "From Vibe Coding to Spec-Driven Development: Part 3 – Best Practices and Troubleshooting"
-description: "This in-depth guide by Hidde de Smet (Part 3 of a five-part series) explores advanced practices for AI-assisted and specification-driven development. Topics include writing precise specs, debugging AI-generated code, iterative specification techniques, performance optimization, handling real-world edge cases, and automation tools. Real anecdotes and code samples provide actionable advice for developers integrating AI into their workflows."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part3"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+external_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part3
+title: 'From Vibe Coding to Spec-Driven Development: Part 3 – Best Practices and Troubleshooting'
+author: Hidde de Smet
+feed_name: Hidde de Smet's Blog
 date: 2026-01-19 00:00:00 +00:00
-permalink: "/2026-01-19-From-Vibe-Coding-to-Spec-Driven-Development-Part-3-Best-Practices-and-Troubleshooting.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Assisted Development", "Blogs", "CI/CD", "Code Automation", "Coding", "Concurrency", "Copilot", "Debugging", "Development", "DevOps", "DevOps Practices", "Edge Cases", "Git", "GitHub", "Iteration Patterns", "OWASP", "Performance Optimization", "Series", "Spec Kit", "Specification Driven Development", "Unit Testing", "Vibe Coding"]
-tags_normalized: ["ai", "ai assisted development", "blogs", "cislashcd", "code automation", "coding", "concurrency", "copilot", "debugging", "development", "devops", "devops practices", "edge cases", "git", "github", "iteration patterns", "owasp", "performance optimization", "series", "spec kit", "specification driven development", "unit testing", "vibe coding"]
+tags:
+- AI Assisted Development
+- CI/CD
+- Code Automation
+- Concurrency
+- Copilot
+- Debugging
+- Development
+- DevOps Practices
+- Edge Cases
+- Git
+- GitHub
+- Iteration Patterns
+- OWASP
+- Performance Optimization
+- Series
+- Spec Kit
+- Specification Driven Development
+- Unit Testing
+- Vibe Coding
+section_names:
+- ai
+- coding
+- devops
 ---
-
 Hidde de Smet delivers a comprehensive field guide for developers mastering AI-assisted and spec-driven development. This post, Part 3 of his series, dives into debugging, best practices, troubleshooting, and automation for production-ready workflows.<!--excerpt_end-->
 
 # From Vibe Coding to Spec-Driven Development: Part 3 - Best Practices and Troubleshooting

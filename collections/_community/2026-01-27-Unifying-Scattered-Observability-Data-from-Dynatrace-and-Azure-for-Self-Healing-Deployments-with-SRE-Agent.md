@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Unifying Scattered Observability Data from Dynatrace and Azure for Self-Healing Deployments with SRE Agent"
-description: "This article details how to automate deployment remediation in Azure Container Apps by integrating third-party observability data (Dynatrace) with Azure deployment history using Azure SRE Agent, Model Context Protocol (MCP), subagents, and scheduled tasks. Readers learn how to configure connectors, build specialized subagents for log analysis and remediation, set up weekly automation, and orchestrate autonomous rollbacks, all in a cloud-native, DevOps-driven workflow."
-author: "Vineela-Suri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unifying-scattered-observability-data-from-dynatrace-azure-for/ba-p/4489547"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unifying-scattered-observability-data-from-dynatrace-azure-for/ba-p/4489547
+title: Unifying Scattered Observability Data from Dynatrace and Azure for Self-Healing Deployments with SRE Agent
+author: Vineela-Suri
+feed_name: Microsoft Tech Community
 date: 2026-01-27 05:34:14 +00:00
-permalink: "/2026-01-27-Unifying-Scattered-Observability-Data-from-Dynatrace-and-Azure-for-Self-Healing-Deployments-with-SRE-Agent.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Container Apps", "Azure Monitor", "Azure SRE Agent", "Cloud Native", "Community", "Deployment Automation", "DevOps", "DevOps Workflow", "DQL", "Dynatrace", "Log Analysis", "MCP", "Observability", "Remediation", "Rollback", "Scheduled Tasks", "Self Healing", "Subagents"]
-tags_normalized: ["azure", "azure container apps", "azure monitor", "azure sre agent", "cloud native", "community", "deployment automation", "devops", "devops workflow", "dql", "dynatrace", "log analysis", "mcp", "observability", "remediation", "rollback", "scheduled tasks", "self healing", "subagents"]
+tags:
+- Azure Container Apps
+- Azure Monitor
+- Azure SRE Agent
+- Cloud Native
+- Deployment Automation
+- DevOps Workflow
+- DQL
+- Dynatrace
+- Log Analysis
+- MCP
+- Observability
+- Remediation
+- Rollback
+- Scheduled Tasks
+- Self Healing
+- Subagents
+section_names:
+- azure
+- devops
 ---
-
 Vineela-Suri shows how to build a self-healing deployment pipeline on Azure by integrating Dynatrace observability with Azure SRE Agent. The walkthrough demonstrates step-by-step configuration of connectors, subagents, and scheduled tasks for automatic log analysis and rollout/rollback in live cloud environments.<!--excerpt_end-->
 
 # Unifying Scattered Observability Data from Dynatrace and Azure for Self-Healing Deployments with SRE Agent

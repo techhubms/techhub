@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "The AI Agent Development Blueprint: From Design to Production with Microsoft Agent Framework"
-description: "This course provides a practical walkthrough of taking an AI Agent from design to production using the Microsoft Agent Framework and Microsoft Foundry. Key topics include agent design, development, evaluation, and deployment in a Microsoft ecosystem, with an emphasis on real-world code and best practices."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VdzgZiOq3Uc"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=VdzgZiOq3Uc
+title: 'The AI Agent Development Blueprint: From Design to Production with Microsoft Agent Framework'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2026-01-23 17:21:33 +00:00
-permalink: "/2026-01-23-The-AI-Agent-Development-Blueprint-From-Design-to-Production-with-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Deployment", "Agent Evaluation", "AI", "AI Agent Design", "AI Agent Development", "AI Agents", "AI Architecture", "AI Engineering", "Azure", "Cloud AI", "Cloud Computing", "Dev", "Development", "Foundry", "Microsoft", "Microsoft Agent Framework", "Microsoft Foundry", "Production AI", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent deployment", "agent evaluation", "ai", "ai agent design", "ai agent development", "ai agents", "ai architecture", "ai engineering", "azure", "cloud ai", "cloud computing", "dev", "development", "foundry", "microsoft", "microsoft agent framework", "microsoft foundry", "production ai", "tech", "technology", "videos"]
+tags:
+- Agent Deployment
+- Agent Evaluation
+- AI Agent Design
+- AI Agent Development
+- AI Agents
+- AI Architecture
+- AI Engineering
+- Cloud AI
+- Cloud Computing
+- Dev
+- Development
+- Foundry
+- Microsoft
+- Microsoft Agent Framework
+- Microsoft Foundry
+- Production AI
+- Tech
+- Technology
+section_names:
+- ai
+- azure
 ---
-
 In this video course, Microsoft Developer breaks down the end-to-end process of building, evaluating, and deploying AI Agents using the Microsoft Agent Framework and Foundry.<!--excerpt_end-->
 
 {% youtube VdzgZiOq3Uc %}

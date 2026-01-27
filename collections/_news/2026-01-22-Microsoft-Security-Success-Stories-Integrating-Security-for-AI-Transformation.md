@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Microsoft Security Success Stories: Integrating Security for AI Transformation"
-description: "This article highlights how Ford, Icertis, and TriNet leveraged Microsoft Security solutions to embed Zero Trust principles, automate defense mechanisms, and enable secure adoption of AI at scale. It details their transitions to unified security platforms, use of AI-driven automation, measurable operational benefits, and strategic impact on digital modernization."
-author: "Steve Dispensa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/22/microsoft-security-success-stories-why-integrated-security-is-the-foundation-of-ai-transformation/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/22/microsoft-security-success-stories-why-integrated-security-is-the-foundation-of-ai-transformation/
+title: 'Microsoft Security Success Stories: Integrating Security for AI Transformation'
+author: Steve Dispensa
+feed_name: Microsoft Security Blog
 date: 2026-01-22 17:00:00 +00:00
-permalink: "/2026-01-22-Microsoft-Security-Success-Stories-Integrating-Security-for-AI-Transformation.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI in Security", "Azure", "Cloud Security", "Data Governance", "Incident Response", "Microsoft 365 E5", "Microsoft Defender", "Microsoft Defender For Cloud", "Microsoft Entra", "Microsoft Purview", "Microsoft Security", "Microsoft Sentinel", "News", "Security", "Security Automation", "Security Copilot", "Zero Trust"]
-tags_normalized: ["ai", "ai in security", "azure", "cloud security", "data governance", "incident response", "microsoft 365 e5", "microsoft defender", "microsoft defender for cloud", "microsoft entra", "microsoft purview", "microsoft security", "microsoft sentinel", "news", "security", "security automation", "security copilot", "zero trust"]
+tags:
+- AI in Security
+- Cloud Security
+- Data Governance
+- Incident Response
+- Microsoft 365 E5
+- Microsoft Defender
+- Microsoft Defender For Cloud
+- Microsoft Entra
+- Microsoft Purview
+- Microsoft Security
+- Microsoft Sentinel
+- Security Automation
+- Security Copilot
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Steve Dispensa shares how Ford, Icertis, and TriNet transformed their security operations using Microsoft Security's integrated platform, combining Zero Trust, automation, and AI for resilience and innovation.<!--excerpt_end-->
 
 # Microsoft Security Success Stories: Integrating Security for AI Transformation

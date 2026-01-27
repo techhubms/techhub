@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Simplifying Image Signing with Notary Project and Artifact Signing (GA)"
-description: "This article explains how combining the CNCF Notary Project with Microsoft's Artifact Signing service (formerly Trusted Signing) streamlines secure image signing in Azure. It demonstrates how Notary Project, Notation, Ratify, and Artifact Signing enforce OCI artifact security in CI/CD pipelines and Kubernetes environments, with details for practical adoption."
-author: "YiZha"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplifying-image-signing-with-notary-project-and-artifact/ba-p/4487942"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplifying-image-signing-with-notary-project-and-artifact/ba-p/4487942
+title: Simplifying Image Signing with Notary Project and Artifact Signing (GA)
+author: YiZha
+feed_name: Microsoft Tech Community
 date: 2026-01-22 00:21:10 +00:00
-permalink: "/2026-01-22-Simplifying-Image-Signing-with-Notary-Project-and-Artifact-Signing-GA.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Artifact Signing", "Azure", "Azure Artifact Signing", "Azure Container Registry", "Azure Identities", "CI/CD", "Cloud Native", "Community", "Container Security", "DevOps", "Image Signing", "Kubernetes", "Managed Signing Service", "Notary Project", "Notation CLI", "OCI Artifacts", "Ratify", "Role Based Access Control", "Security", "Short Lived Certificates", "Trusted Signing"]
-tags_normalized: ["aks", "artifact signing", "azure", "azure artifact signing", "azure container registry", "azure identities", "cislashcd", "cloud native", "community", "container security", "devops", "image signing", "kubernetes", "managed signing service", "notary project", "notation cli", "oci artifacts", "ratify", "role based access control", "security", "short lived certificates", "trusted signing"]
+tags:
+- AKS
+- Artifact Signing
+- Azure Artifact Signing
+- Azure Container Registry
+- Azure Identities
+- CI/CD
+- Cloud Native
+- Container Security
+- Image Signing
+- Kubernetes
+- Managed Signing Service
+- Notary Project
+- Notation CLI
+- OCI Artifacts
+- Ratify
+- Role Based Access Control
+- Short Lived Certificates
+- Trusted Signing
+section_names:
+- azure
+- devops
+- security
 ---
-
 YiZha shares how integrating the Notary Project with Azure Artifact Signing (GA) improves the image signing process in cloud-native applications, simplifying secure deployment workflows for teams.<!--excerpt_end-->
 
 # Simplifying Image Signing with Notary Project and Artifact Signing (GA)

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Applying Context Windows, Plan Agent, and TDD with GitHub Copilot to Build a Countdown App"
-description: "Chris Reddington shares practical insights from developing a countdown app live with GitHub Copilot, demonstrating context window management, leveraging the Plan agent for clarifying requirements, adopting test-driven development (TDD), and modular design. The article offers strategies for effective AI-assisted app development using GitHub Copilot and custom agents, and reflects on the iterative and collaborative nature of building in front of a developer community."
-author: "Chris Reddington"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/application-development/context-windows-plan-agent-and-tdd-what-i-learned-building-a-countdown-app-with-github-copilot/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/developer-skills/application-development/context-windows-plan-agent-and-tdd-what-i-learned-building-a-countdown-app-with-github-copilot/
+title: Applying Context Windows, Plan Agent, and TDD with GitHub Copilot to Build a Countdown App
+author: Chris Reddington
+feed_name: The GitHub Blog
 date: 2026-01-20 17:00:00 +00:00
-permalink: "/2026-01-20-Applying-Context-Windows-Plan-Agent-and-TDD-with-GitHub-Copilot-to-Build-a-Countdown-App.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "Animation", "Application Development", "Coding", "Context Window Management", "Copilot Chat", "Countdown App", "Custom Agents", "Developer Skills", "Fireworks.js", "GitHub Copilot", "JavaScript", "News", "Open Source", "Plan Agent", "Rubber Duck Thursdays", "Software Architecture", "Tailwind CSS", "TDD", "Test Driven Development", "Tutorial", "TypeScript", "UI Performance", "Vite", "VS Code"]
-tags_normalized: ["ai", "ai agents", "animation", "application development", "coding", "context window management", "copilot chat", "countdown app", "custom agents", "developer skills", "fireworksdotjs", "github copilot", "javascript", "news", "open source", "plan agent", "rubber duck thursdays", "software architecture", "tailwind css", "tdd", "test driven development", "tutorial", "typescript", "ui performance", "vite", "vs code"]
+tags:
+- AI Agents
+- Animation
+- Application Development
+- Context Window Management
+- Copilot Chat
+- Countdown App
+- Custom Agents
+- Developer Skills
+- Fireworks.js
+- JavaScript
+- Open Source
+- Plan Agent
+- Rubber Duck Thursdays
+- Software Architecture
+- Tailwind CSS
+- TDD
+- Test Driven Development
+- Tutorial
+- TypeScript
+- UI Performance
+- Vite
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Chris Reddington guides readers through his journey of building a celebratory countdown app with GitHub Copilot. The piece highlights context window management, leveraging the Plan agent, and practicing TDD, offering actionable advice for developer workflows.<!--excerpt_end-->
 
 # Applying Context Windows, Plan Agent, and TDD with GitHub Copilot to Build a Countdown App

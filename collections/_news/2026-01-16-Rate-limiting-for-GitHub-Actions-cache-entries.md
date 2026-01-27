@@ -1,20 +1,24 @@
----
-layout: "post"
-title: "Rate limiting for GitHub Actions cache entries"
-description: "This update announces a new rate limit on GitHub Actions cache uploads: 200 uploads per minute per repository. The change aims to improve system stability by reducing cache thrash caused by high-frequency uploads of new cache entries. Downloads are unaffected."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-16-rate-limiting-for-actions-cache-entries"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-16-rate-limiting-for-actions-cache-entries
+title: Rate limiting for GitHub Actions cache entries
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-16 21:31:29 +00:00
-permalink: "/2026-01-16-Rate-limiting-for-GitHub-Actions-cache-entries.html"
-categories: ["DevOps"]
-tags: ["Actions", "Cache Management", "Caching", "CI/CD", "DevOps", "GitHub Actions", "Marketplace Actions", "News", "Rate Limiting", "Repository Management", "Retired", "System Stability", "Workflow Optimization"]
-tags_normalized: ["actions", "cache management", "caching", "cislashcd", "devops", "github actions", "marketplace actions", "news", "rate limiting", "repository management", "retired", "system stability", "workflow optimization"]
+tags:
+- Actions
+- Cache Management
+- Caching
+- CI/CD
+- GitHub Actions
+- Marketplace Actions
+- Rate Limiting
+- Repository Management
+- Retired
+- System Stability
+- Workflow Optimization
+section_names:
+- devops
 ---
-
 Allison details the new rate limit for GitHub Actions cache uploads, outlining its impact on repository workflows and system stability.<!--excerpt_end-->
 
 # Rate Limiting for GitHub Actions Cache Entries

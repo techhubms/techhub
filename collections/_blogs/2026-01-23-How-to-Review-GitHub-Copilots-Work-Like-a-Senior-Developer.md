@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "How to Review GitHub Copilot’s Work Like a Senior Developer"
-description: "This guide explores how to review GitHub Copilot's code suggestions with the same rigor as a senior developer reviewing a teammate's pull request. It focuses on evaluating the intent behind code, surfacing hidden assumptions, improving structure, and creating an iterative feedback loop for better outcomes with Copilot."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/how-to-review-github-copilots-work-like-a-senior-developer.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/how-to-review-github-copilots-work-like-a-senior-developer.html
+title: How to Review GitHub Copilot’s Work Like a Senior Developer
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2026-01-23 00:00:00 +00:00
-permalink: "/2026-01-23-How-to-Review-GitHub-Copilots-Work-Like-a-Senior-Developer.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI in Software Development", "Best Practices", "Blogs", "Code Quality", "Code Review", "Code Structure", "Coding", "Developer Productivity", "Developer Workflow", "Error Handling", "Feedback Loop", "GitHub Copilot", "Pull Request Review", "Refactoring", "Senior Developer Skills"]
-tags_normalized: ["ai", "ai in software development", "best practices", "blogs", "code quality", "code review", "code structure", "coding", "developer productivity", "developer workflow", "error handling", "feedback loop", "github copilot", "pull request review", "refactoring", "senior developer skills"]
+tags:
+- AI in Software Development
+- Best Practices
+- Code Quality
+- Code Review
+- Code Structure
+- Developer Productivity
+- Developer Workflow
+- Error Handling
+- Feedback Loop
+- Pull Request Review
+- Refactoring
+- Senior Developer Skills
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels outlines actionable strategies for reviewing GitHub Copilot's code output with a senior developer's mindset, emphasizing intent, assumptions, and iterative improvement.<!--excerpt_end-->
 
 # How to Review GitHub Copilot’s Work Like a Senior Developer

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Install and Use GitHub Copilot CLI Directly from the GitHub CLI"
-description: "This news update highlights the integration of GitHub Copilot CLI with the GitHub CLI. Developers can now seamlessly install and run the Copilot CLI using the 'gh copilot' command, streamlining developer workflows and providing quick access to AI-powered coding assistance directly from the terminal."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-21-install-and-use-github-copilot-cli-directly-from-the-github-cli"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-21-install-and-use-github-copilot-cli-directly-from-the-github-cli
+title: Install and Use GitHub Copilot CLI Directly from the GitHub CLI
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-21 20:02:42 +00:00
-permalink: "/2026-01-21-Install-and-Use-GitHub-Copilot-CLI-Directly-from-the-GitHub-CLI.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "CLI Extension", "Client Apps", "Command Line", "Copilot", "Copilot Integration", "Developer Productivity", "Developer Tools", "Gh Copilot", "GitHub CLI", "GitHub Copilot", "GitHub Copilot CLI", "Improvement", "Installation Guide", "News", "Terminal"]
-tags_normalized: ["ai", "ai assistant", "cli extension", "client apps", "command line", "copilot", "copilot integration", "developer productivity", "developer tools", "gh copilot", "github cli", "github copilot", "github copilot cli", "improvement", "installation guide", "news", "terminal"]
+tags:
+- AI Assistant
+- CLI Extension
+- Client Apps
+- Command Line
+- Copilot
+- Copilot Integration
+- Developer Productivity
+- Developer Tools
+- Gh Copilot
+- GitHub CLI
+- GitHub Copilot CLI
+- Improvement
+- Installation Guide
+- Terminal
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains how developers can now run 'gh copilot' to install and use the GitHub Copilot CLI directly from the GitHub CLI, simplifying access to AI-powered terminal assistance.<!--excerpt_end-->
 
 # Install and Use GitHub Copilot CLI Directly from the GitHub CLI

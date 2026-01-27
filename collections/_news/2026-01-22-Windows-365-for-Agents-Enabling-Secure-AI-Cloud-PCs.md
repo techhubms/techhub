@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Windows 365 for Agents: Enabling Secure AI Cloud PCs"
-description: "This article introduces Windows 365 for Agents, Microsoft's new evolution of the Cloud PC platform now supporting autonomous AI agents. It walks through the technical architecture, security model, workflow automation, and enterprise integration for running agent workloads on scalable Windows 365 Cloud PCs managed by Azure, Intune, and Entra ID."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.windows.com/windowsexperience/2026/01/22/windows-365-for-agents-the-cloud-pcs-next-chapter/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.windows.com/windowsexperience/2026/01/22/windows-365-for-agents-the-cloud-pcs-next-chapter/
+title: 'Windows 365 for Agents: Enabling Secure AI Cloud PCs'
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-22 18:33:27 +00:00
-permalink: "/2026-01-22-Windows-365-for-Agents-Enabling-Secure-AI-Cloud-PCs.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent 365", "AI", "AI Agents", "Automation", "Azure", "Azure Virtual Machines", "Cloud", "Cloud Architecture", "Cloud PC", "Company News", "Enterprise Security", "Human in The Loop", "Identity And Access Management", "Intune", "Microsoft Copilot Studio", "Microsoft Entra ID", "News", "Programmatic Control", "Security", "Windows 365"]
-tags_normalized: ["agent 365", "ai", "ai agents", "automation", "azure", "azure virtual machines", "cloud", "cloud architecture", "cloud pc", "company news", "enterprise security", "human in the loop", "identity and access management", "intune", "microsoft copilot studio", "microsoft entra id", "news", "programmatic control", "security", "windows 365"]
+tags:
+- Agent 365
+- AI Agents
+- Automation
+- Azure Virtual Machines
+- Cloud
+- Cloud Architecture
+- Cloud PC
+- Company News
+- Enterprise Security
+- Human in The Loop
+- Identity And Access Management
+- Intune
+- Microsoft Copilot Studio
+- Microsoft Entra ID
+- Programmatic Control
+- Windows 365
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke brings an in-depth look at Windows 365 for Agents, highlighting how Microsoft is evolving Cloud PC technology to securely support enterprise AI automation and agent-driven workflows.<!--excerpt_end-->
 
 # Windows 365 for Agents: The Cloud PC’s Next Chapter

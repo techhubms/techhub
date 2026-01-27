@@ -1,20 +1,30 @@
----
-layout: "post"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/21/new-era-of-agents-new-era-of-posture/
 title: "Securing AI Agents in the Cloud: Microsoft Defender's Approach"
-description: "This post by the Microsoft Defender Security Research Team explores the challenges and solutions for securing AI agents, focusing on how Microsoft Defender provides posture management across multi-cloud environments. It discusses the layered risks of AI agents, scenarios involving sensitive data, indirect prompt injection, coordinator agents, and outlines Defender's capabilities for mitigating these threats within complex architectures."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/21/new-era-of-agents-new-era-of-posture/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+author: Microsoft Defender Security Research Team
+feed_name: Microsoft Security Blog
 date: 2026-01-21 14:33:31 +00:00
-permalink: "/2026-01-21-Securing-AI-Agents-in-the-Cloud-Microsoft-Defenders-Approach.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Hardening", "AI", "AI Agents", "AI SPM", "Attack Surface", "Azure", "Azure AI", "Azure AI Foundry", "Cloud Security", "Defender For Cloud", "Microsoft Defender", "Multi Agent Systems", "News", "Prompt Injection", "Risk Factor", "Security", "Security Posture Management", "Sensitive Data Protection", "Threat Detection"]
-tags_normalized: ["agent hardening", "ai", "ai agents", "ai spm", "attack surface", "azure", "azure ai", "azure ai foundry", "cloud security", "defender for cloud", "microsoft defender", "multi agent systems", "news", "prompt injection", "risk factor", "security", "security posture management", "sensitive data protection", "threat detection"]
+tags:
+- Agent Hardening
+- AI Agents
+- AI SPM
+- Attack Surface
+- Azure AI
+- Azure AI Foundry
+- Cloud Security
+- Defender For Cloud
+- Microsoft Defender
+- Multi Agent Systems
+- Prompt Injection
+- Risk Factor
+- Security Posture Management
+- Sensitive Data Protection
+- Threat Detection
+section_names:
+- ai
+- azure
+- security
 ---
-
 The Microsoft Defender Security Research Team examines security challenges arising from autonomous AI agents and demonstrates how Microsoft Defender helps secure these systems. Key strategies and posture management capabilities for multi-cloud environments are highlighted.<!--excerpt_end-->
 
 # Securing AI Agents in the Cloud: Microsoft Defender's Approach

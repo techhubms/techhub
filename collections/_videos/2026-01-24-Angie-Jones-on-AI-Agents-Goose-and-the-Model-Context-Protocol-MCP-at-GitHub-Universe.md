@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Angie Jones on AI Agents, Goose, and the Model Context Protocol (MCP) at GitHub Universe"
-description: "In this GitHub Podcast episode, Abby interviews Angie Jones, VP of Engineering at Block, about the journey of Goose—Block’s open source AI agent that uses the Model Context Protocol (MCP). They discuss how Goose became a community-driven project, support for multimodels, and practical AI agent use cases across diverse job functions at Block. Angie also dives into topics like AI trust in codebases, developers’ reaction to AI hype, and her initiative to support aspiring AI builders."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ZtpJvs7X3So"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=ZtpJvs7X3So
+title: Angie Jones on AI Agents, Goose, and the Model Context Protocol (MCP) at GitHub Universe
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-24 15:01:06 +00:00
-permalink: "/2026-01-24-Angie-Jones-on-AI-Agents-Goose-and-the-Model-Context-Protocol-MCP-at-GitHub-Universe.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Agents", "AI Builder Fellowship", "Automation", "Block", "Coding", "Developer Tools", "DevOps", "Engineering Leadership", "GitHub", "Goose", "Issue Triage", "MCP", "Multimodel Support", "Open Source", "Sales Lead Segmentation", "Software Development", "Trust in AI", "Videos"]
-tags_normalized: ["ai", "ai agents", "ai builder fellowship", "automation", "block", "coding", "developer tools", "devops", "engineering leadership", "github", "goose", "issue triage", "mcp", "multimodel support", "open source", "sales lead segmentation", "software development", "trust in ai", "videos"]
+tags:
+- AI Agents
+- AI Builder Fellowship
+- Automation
+- Block
+- Developer Tools
+- Engineering Leadership
+- GitHub
+- Goose
+- Issue Triage
+- MCP
+- Multimodel Support
+- Open Source
+- Sales Lead Segmentation
+- Software Development
+- Trust in AI
+section_names:
+- ai
+- coding
+- devops
 ---
-
 GitHub hosts Angie Jones, VP of Engineering at Block, who shares insights on Goose, their open source AI agent, the MCP standard, and supporting the next generation of AI builders.<!--excerpt_end-->
 
 {% youtube ZtpJvs7X3So %}

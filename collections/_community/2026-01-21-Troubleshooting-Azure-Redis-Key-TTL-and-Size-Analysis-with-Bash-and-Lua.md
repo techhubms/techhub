@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Troubleshooting Azure Redis: Key TTL and Size Analysis with Bash and Lua"
-description: "This post, by LuisFilipe, presents practical Bash and Lua scripting techniques for collecting and analyzing key time-to-live (TTL) and value sizes in Azure Cache for Redis. Readers will learn how key expiration, TTL strategies, and key sizes impact performance and memory use, as well as how to safely run scripts for cache diagnostics."
-author: "LuisFilipe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-paas-blog/redis-keys-statistics/ba-p/4486079"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/redis-keys-statistics/ba-p/4486079
+title: 'Troubleshooting Azure Redis: Key TTL and Size Analysis with Bash and Lua'
+author: LuisFilipe
+feed_name: Microsoft Tech Community
 date: 2026-01-21 15:50:34 +00:00
-permalink: "/2026-01-21-Troubleshooting-Azure-Redis-Key-TTL-and-Size-Analysis-with-Bash-and-Lua.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure Cache For Redis", "Azure Managed Redis", "Bash Scripting", "Best Practices", "Cache Management", "Coding", "Community", "DevOps", "Key Size", "Linux", "Lua Scripting", "Memory Optimization", "Monitoring", "Performance Tuning", "Redis", "Redis CLI", "Troubleshooting", "TTL"]
-tags_normalized: ["azure", "azure cache for redis", "azure managed redis", "bash scripting", "best practices", "cache management", "coding", "community", "devops", "key size", "linux", "lua scripting", "memory optimization", "monitoring", "performance tuning", "redis", "redis cli", "troubleshooting", "ttl"]
+tags:
+- Azure Cache For Redis
+- Azure Managed Redis
+- Bash Scripting
+- Best Practices
+- Cache Management
+- Key Size
+- Linux
+- Lua Scripting
+- Memory Optimization
+- Monitoring
+- Performance Tuning
+- Redis
+- Redis CLI
+- Troubleshooting
+- TTL
+section_names:
+- azure
+- coding
+- devops
 ---
-
 LuisFilipe shares practical Bash and Lua scripts for collecting TTL and key size statistics in Azure Cache for Redis, detailing how to optimize memory, performance, and cache longevity.<!--excerpt_end-->
 
 # Troubleshooting Azure Redis: Key TTL and Size Analysis with Bash and Lua

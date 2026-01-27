@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Proactive Cloud Ops with SRE Agent: Scheduled Checks for Azure Optimization"
-description: "This article by dchelupati details a hands-on approach for continuously optimizing Azure cloud environments using the Azure SRE Agent. It covers integrating SRE Agent with Azure services, automating cost and security checks via GitHub and Teams, and importing custom organizational standards for proactive cloud governance."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-cloud-ops-with-sre-agent-scheduled-checks-for-cloud/ba-p/4487261"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-cloud-ops-with-sre-agent-scheduled-checks-for-cloud/ba-p/4487261
+title: 'Proactive Cloud Ops with SRE Agent: Scheduled Checks for Azure Optimization'
+author: dchelupati
+feed_name: Microsoft Tech Community
 date: 2026-01-19 22:26:20 +00:00
-permalink: "/2026-01-19-Proactive-Cloud-Ops-with-SRE-Agent-Scheduled-Checks-for-Azure-Optimization.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Automation", "Azure", "Azure Monitor", "Azure SRE Agent", "Cloud Governance", "Cloud Optimization", "Community", "Continuous Compliance", "Cost Management", "DevOps", "GitHub Integration", "Key Vault", "Microsoft Teams", "Observability", "Org Practices", "Resource Groups", "Resource Management", "Scheduled Triggers", "Security", "Security Best Practices"]
-tags_normalized: ["automation", "azure", "azure monitor", "azure sre agent", "cloud governance", "cloud optimization", "community", "continuous compliance", "cost management", "devops", "github integration", "key vault", "microsoft teams", "observability", "org practices", "resource groups", "resource management", "scheduled triggers", "security", "security best practices"]
+tags:
+- Automation
+- Azure Monitor
+- Azure SRE Agent
+- Cloud Governance
+- Cloud Optimization
+- Continuous Compliance
+- Cost Management
+- GitHub Integration
+- Key Vault
+- Microsoft Teams
+- Observability
+- Org Practices
+- Resource Groups
+- Resource Management
+- Scheduled Triggers
+- Security Best Practices
+section_names:
+- azure
+- devops
+- security
 ---
-
 dchelupati walks through setting up the Azure SRE Agent for proactive cloud operations, demonstrating how to automate cloud optimization across cost, security, and performance using continuous checks and integrations with GitHub and Teams.<!--excerpt_end-->
 
 # Proactive Cloud Ops with SRE Agent: Scheduled Checks for Azure Optimization

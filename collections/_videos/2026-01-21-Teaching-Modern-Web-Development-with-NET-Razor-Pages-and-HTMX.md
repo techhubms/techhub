@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Teaching Modern Web Development with .NET, Razor Pages, and HTMX"
-description: "This video explores an educational approach to web development using the Textbooker.pl app as a case study. It demonstrates how the .NET ecosystem, with Razor Pages and HTMX, streamlines teaching by unifying backend, frontend, and deployment. The focus is on creating interactive, modern applications with minimal JavaScript, enabling students to prioritize programming fundamentals. Hosted by Cam Soper and Scott Addie, with guests Tomasz Osmanowski, Michał Siegień, and Tymoteusz Bielski."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=OEfsOWjlPF0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=OEfsOWjlPF0
+title: Teaching Modern Web Development with .NET, Razor Pages, and HTMX
+author: dotnet
+feed_name: DotNet YouTube
 date: 2026-01-21 22:53:56 +00:00
-permalink: "/2026-01-21-Teaching-Modern-Web-Development-with-NET-Razor-Pages-and-HTMX.html"
-categories: ["Coding"]
-tags: [".NET", "App Architecture", "Backend", "C#", "Coding", "Demo", "Deployment", "Developer", "Developer Community", "Dotnet10", "Dotnetdeveloper", "Dotnetten", "Education", "Frontend", "Htmx", "Interactive Apps", "Microsoft", "Minimal JavaScript", "Modern Applications", "Razor", "Razor Pages", "Software Developer", "Teaching", "Technical Training", "Textbooker.pl", "Videos", "Web Development"]
-tags_normalized: ["dotnet", "app architecture", "backend", "csharp", "coding", "demo", "deployment", "developer", "developer community", "dotnet10", "dotnetdeveloper", "dotnetten", "education", "frontend", "htmx", "interactive apps", "microsoft", "minimal javascript", "modern applications", "razor", "razor pages", "software developer", "teaching", "technical training", "textbookerdotpl", "videos", "web development"]
+tags:
+- .NET
+- App Architecture
+- Backend
+- C#
+- Demo
+- Deployment
+- Developer
+- Developer Community
+- Dotnet10
+- Dotnetdeveloper
+- Dotnetten
+- Education
+- Frontend
+- Htmx
+- Interactive Apps
+- Microsoft
+- Minimal JavaScript
+- Modern Applications
+- Razor
+- Razor Pages
+- Software Developer
+- Teaching
+- Technical Training
+- Textbooker.pl
+- Web Development
+section_names:
+- coding
 ---
-
 In this video, dotnet (with guests Tomasz Osmanowski, Michał Siegień, and Tymoteusz Bielski) demonstrates how the .NET platform, Razor Pages, and HTMX can simplify and modernize web development education.<!--excerpt_end-->
 
 {% youtube OEfsOWjlPF0 %}

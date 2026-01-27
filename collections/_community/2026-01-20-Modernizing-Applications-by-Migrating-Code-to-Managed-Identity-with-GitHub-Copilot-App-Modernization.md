@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Modernizing Applications by Migrating Code to Managed Identity with GitHub Copilot App Modernization"
-description: "This article explains how developers can leverage GitHub Copilot App Modernization to migrate their applications from traditional credential-based authentication to Azure Managed Identity. It covers analysis, migration planning, automated code changes, build validation, security checks, and the responsibilities developers have throughout the process."
-author: "ayangupta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-applications-by-migrating-code-to-use-managed/ba-p/4486481"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-applications-by-migrating-code-to-use-managed/ba-p/4486481
+title: Modernizing Applications by Migrating Code to Managed Identity with GitHub Copilot App Modernization
+author: ayangupta
+feed_name: Microsoft Tech Community
 date: 2026-01-20 01:51:24 +00:00
-permalink: "/2026-01-20-Modernizing-Applications-by-Migrating-Code-to-Managed-Identity-with-GitHub-Copilot-App-Modernization.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
-tags: [".NET", "AI", "App Security", "Azure", "Azure Authentication", "Cloud Security", "Coding", "Community", "Configuration Refactoring", "Credential Migration", "Dependency Management", "GitHub Copilot", "GitHub Copilot App Modernization", "Identity Access", "IntelliJ IDEA", "Java", "Managed Identity", "SDK Upgrades", "Security", "Token Based Authentication", "VS Code"]
-tags_normalized: ["dotnet", "ai", "app security", "azure", "azure authentication", "cloud security", "coding", "community", "configuration refactoring", "credential migration", "dependency management", "github copilot", "github copilot app modernization", "identity access", "intellij idea", "java", "managed identity", "sdk upgrades", "security", "token based authentication", "vs code"]
+tags:
+- .NET
+- App Security
+- Azure Authentication
+- Cloud Security
+- Configuration Refactoring
+- Credential Migration
+- Dependency Management
+- GitHub Copilot App Modernization
+- Identity Access
+- IntelliJ IDEA
+- Java
+- Managed Identity
+- SDK Upgrades
+- Token Based Authentication
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
+- security
 ---
-
 Authored by ayangupta, this guide demonstrates how GitHub Copilot App Modernization assists developers in migrating applications to use Azure Managed Identity, automating code and configuration changes while improving security and operational practices.<!--excerpt_end-->
 
 # Modernizing Applications by Migrating Code to Managed Identity with GitHub Copilot App Modernization

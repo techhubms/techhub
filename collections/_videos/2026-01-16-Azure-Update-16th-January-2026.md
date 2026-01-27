@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Azure Update - 16th January 2026"
-description: "A concise video update by John Savill covering recent news and developments in the Azure ecosystem, including AKS Ubuntu 24.02, Cosmos DB Fabric mirroring, and insights about new videos and technologies. The episode also points viewers to several Azure and DevOps learning resources and addresses community questions."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0U9CjXk5o2E"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=0U9CjXk5o2E
+title: Azure Update - 16th January 2026
+author: John Savill's Technical Training
+feed_name: John Savill's Technical Training
 date: 2026-01-16 15:43:24 +00:00
-permalink: "/2026-01-16-Azure-Update-16th-January-2026.html"
-categories: ["Azure"]
-tags: ["AKS", "Azure", "Azure Certification", "Azure Cloud", "Azure News", "Azure Updates", "Cloud", "Cloud Computing", "Cosmos DB", "John Savill", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "PowerShell", "Private Networking", "Ubuntu 24.02", "Videos"]
-tags_normalized: ["aks", "azure", "azure certification", "azure cloud", "azure news", "azure updates", "cloud", "cloud computing", "cosmos db", "john savill", "microsoft", "microsoft azure", "microsoft fabric", "powershell", "private networking", "ubuntu 24dot02", "videos"]
+tags:
+- AKS
+- Azure Certification
+- Azure Cloud
+- Azure News
+- Azure Updates
+- Cloud
+- Cloud Computing
+- Cosmos DB
+- John Savill
+- Microsoft
+- Microsoft Azure
+- Microsoft Fabric
+- PowerShell
+- Private Networking
+- Ubuntu 24.02
+section_names:
+- azure
 ---
-
 John Savill delivers the January 16th, 2026 Azure Update, featuring news on AKS Ubuntu 24.02, Cosmos DB Fabric mirroring, and more. He shares helpful links for Azure and DevOps learning and certification resources.<!--excerpt_end-->
 
 {% youtube 0U9CjXk5o2E %}

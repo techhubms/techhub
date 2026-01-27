@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Azure Arc Server Jan 2026 Forum Recap"
-description: "This recap summarizes the January 2026 Azure Arc Server Forum featuring updates from the Azure Arc product group. Highlights include new Machine Management features in Azure Compute Hub, the Windows Server Hot Patch roadmap, TPM-based onboarding, and a review of SQL Server announcements. It also offers guidance on staying connected with the Azure Arc community."
-author: "Aurnov_Chattopadhyay"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-jan-2026-forum-recap/ba-p/4487829"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-jan-2026-forum-recap/ba-p/4487829
+title: Azure Arc Server Jan 2026 Forum Recap
+author: Aurnov_Chattopadhyay
+feed_name: Microsoft Tech Community
 date: 2026-01-20 18:51:56 +00:00
-permalink: "/2026-01-20-Azure-Arc-Server-Jan-2026-Forum-Recap.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Arc", "Azure Compute Hub", "Cloud Infrastructure", "Community", "Event Recap", "Hybrid Cloud", "Machine Management", "Multicloud", "Patch Management", "Product Roadmap", "Security Updates", "Server Management", "SQL Server", "TPM Onboarding", "Windows Server Hot Patch"]
-tags_normalized: ["azure", "azure arc", "azure compute hub", "cloud infrastructure", "community", "event recap", "hybrid cloud", "machine management", "multicloud", "patch management", "product roadmap", "security updates", "server management", "sql server", "tpm onboarding", "windows server hot patch"]
+tags:
+- Azure Arc
+- Azure Compute Hub
+- Cloud Infrastructure
+- Event Recap
+- Hybrid Cloud
+- Machine Management
+- Multicloud
+- Patch Management
+- Product Roadmap
+- Security Updates
+- Server Management
+- SQL Server
+- TPM Onboarding
+- Windows Server Hot Patch
+section_names:
+- azure
 ---
-
 Aurnov_Chattopadhyay presents a summary of the January 2026 Azure Arc Server Forum, highlighting key Azure Arc product updates, community resources, and the latest announcements for server and hybrid infrastructures.<!--excerpt_end-->
 
 # Azure Arc Server Jan 2026 Forum Recap

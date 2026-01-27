@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "When to Lead, When to Delegate to GitHub Copilot"
-description: "This post by Randy Pagels explores how developers can mindfully balance their responsibilities with the assistance of GitHub Copilot. It outlines when to rely on personal judgment versus when to leverage Copilot’s strengths in automating routine tasks, emphasizing a collaborative and iterative approach."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/when-to-lead-when-to-delegate-to-github-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/when-to-lead-when-to-delegate-to-github-copilot.html
+title: When to Lead, When to Delegate to GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2026-01-16 00:00:00 +00:00
-permalink: "/2026-01-16-When-to-Lead-When-to-Delegate-to-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Automated Testing", "Blogs", "Code Automation", "Code Collaboration", "Code Review", "Developer Productivity", "Development Workflow", "GitHub Copilot", "Programming Best Practices", "Refactoring", "Software Architecture", "Software Engineering"]
-tags_normalized: ["ai", "ai powered development", "automated testing", "blogs", "code automation", "code collaboration", "code review", "developer productivity", "development workflow", "github copilot", "programming best practices", "refactoring", "software architecture", "software engineering"]
+tags:
+- AI Powered Development
+- Automated Testing
+- Code Automation
+- Code Collaboration
+- Code Review
+- Developer Productivity
+- Development Workflow
+- Programming Best Practices
+- Refactoring
+- Software Architecture
+- Software Engineering
+section_names:
+- ai
+- github-copilot
 ---
-
 Randy Pagels discusses effective strategies for balancing human judgment and automation through GitHub Copilot, highlighting when to take the lead and when to delegate to maximize development workflow efficiency.<!--excerpt_end-->
 
 # When to Lead, When to Delegate to GitHub Copilot

@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Azure Boards Adds Custom Field Filters in Private Preview"
-description: "This announcement introduces a limited private preview for Azure Boards, letting users filter backlogs and Kanban boards by additional custom fields. The post explains how teams can enhance board views, the limitations of the feature, and how to join the private preview program, aiming for early feedback before general release."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-boards-additional-field-filters-private-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/azure-boards-additional-field-filters-private-preview/
+title: Azure Boards Adds Custom Field Filters in Private Preview
+author: Dan Hellem
+feed_name: Microsoft DevOps Blog
 date: 2026-01-19 20:22:53 +00:00
-permalink: "/2026-01-19-Azure-Boards-Adds-Custom-Field-Filters-in-Private-Preview.html"
-categories: ["Azure", "DevOps"]
-tags: ["Agile", "Azure", "Azure & Cloud", "Azure Boards", "Azure DevOps", "Backlog Management", "Customization", "DevOps", "Feature Announcement", "Field Filters", "Kanban", "News", "Private Preview", "Software Development Process", "Work Item Tracking"]
-tags_normalized: ["agile", "azure", "azure and cloud", "azure boards", "azure devops", "backlog management", "customization", "devops", "feature announcement", "field filters", "kanban", "news", "private preview", "software development process", "work item tracking"]
+tags:
+- Agile
+- Azure & Cloud
+- Azure Boards
+- Azure DevOps
+- Backlog Management
+- Customization
+- Feature Announcement
+- Field Filters
+- Kanban
+- Private Preview
+- Software Development Process
+- Work Item Tracking
+section_names:
+- azure
+- devops
 ---
-
 Dan Hellem introduces an Azure Boards private preview that enables filtering by additional custom fields on backlog and Kanban boards, offering teams more control and flexibility.<!--excerpt_end-->
 
 # Azure Boards Adds Custom Field Filters (Private Preview)

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Public Preview: User Delegation SAS for Azure Tables, Files, and Queues"
-description: "This announcement introduces the public preview of user delegation SAS for Azure Tables, Azure Files, and Azure Queues. Learn how user delegation SAS, tied to identities in Microsoft Entra ID, improves security and flexibility for delegated access across Azure Storage services, the steps to enable and use it, supported interfaces, and pricing details."
-author: "ellievail"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/announcing-public-preview-of-user-delegation-sas-for-azure/ba-p/4485693"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/announcing-public-preview-of-user-delegation-sas-for-azure/ba-p/4485693
+title: 'Public Preview: User Delegation SAS for Azure Tables, Files, and Queues'
+author: ellievail
+feed_name: Microsoft Tech Community
 date: 2026-01-16 13:54:12 +00:00
-permalink: "/2026-01-16-Public-Preview-User-Delegation-SAS-for-Azure-Tables-Files-and-Queues.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Azure", "Azure Files", "Azure Queues", "Azure Storage", "Azure Tables", "CLI", "Community", "Delegated Access", "Entra ID", "Identity", "PowerShell", "RBAC", "REST API", "SAS Token", "SDK", "Security", "User Delegation SAS"]
-tags_normalized: ["access control", "azure", "azure files", "azure queues", "azure storage", "azure tables", "cli", "community", "delegated access", "entra id", "identity", "powershell", "rbac", "rest api", "sas token", "sdk", "security", "user delegation sas"]
+tags:
+- Access Control
+- Azure Files
+- Azure Queues
+- Azure Storage
+- Azure Tables
+- CLI
+- Delegated Access
+- Entra ID
+- Identity
+- PowerShell
+- RBAC
+- REST API
+- SAS Token
+- SDK
+- User Delegation SAS
+section_names:
+- azure
+- security
 ---
-
 ellievail announces the public preview of user delegation SAS for Azure Tables, Files, and Queues, highlighting new security features for delegated access via Entra ID and Azure RBAC.<!--excerpt_end-->
 
 # Public Preview: User Delegation SAS for Azure Tables, Files, and Queues

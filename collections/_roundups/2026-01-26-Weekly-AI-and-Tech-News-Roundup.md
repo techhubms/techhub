@@ -1,17 +1,26 @@
----
-layout: "post"
-title: "Advances in AI Tooling, Platform Engineering, and Security Shape This Week’s Highlights"
-description: "This weekly roundup details new agent-based AI development tools—GitHub Copilot expands with its SDK, command-line features, and enterprise context, while Microsoft’s agent frameworks and Azure updates support automation across healthcare, legal, and retail scenarios. Machine learning platforms deliver better performance, and robotics see new model releases. SQL and Fabric introduce analytics and security updates. DevOps gains additional automation, traceability, and workflow capabilities. Security news addresses threats affecting developer tools, cloud AI, and supply chain, with new access controls and vulnerability management solutions improving enterprise protection."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+title: Advances in AI Tooling, Platform Engineering, and Security Shape This Week’s Highlights
+author: Tech Hub Team
 date: 2026-01-26 09:00:00 +00:00
-permalink: "/2026-01-26-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agentic SDK", "AI", "App Modernization", "Azure", "CI/CD", "Cloud Engineering", "Coding", "Developer Tools", "DevOps", "GitHub Copilot", "Kubernetes", "Machine Learning", "Microsoft Fabric", "ML", "Open Source", "Roundups", "Security", "Workflow Automation"]
-tags_normalized: ["agentic sdk", "ai", "app modernization", "azure", "cislashcd", "cloud engineering", "coding", "developer tools", "devops", "github copilot", "kubernetes", "machine learning", "microsoft fabric", "ml", "open source", "roundups", "security", "workflow automation"]
+tags:
+- Agentic SDK
+- App Modernization
+- CI/CD
+- Cloud Engineering
+- Developer Tools
+- Kubernetes
+- Microsoft Fabric
+- Open Source
+- Workflow Automation
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 Welcome to this week’s tech update, covering the latest tools and strategies affecting developer experience and enterprise IT. AI-driven agents now support production environments, with GitHub Copilot’s SDK and enhanced CLI, while Microsoft platforms automate workflows across sectors like healthcare and retail. Azure, machine learning, and Fabric updates drive improvements in performance, security, and modernization—helping teams with DevOps, supply chain enhancements, and up-to-date security. Below, we detail the week’s main releases and approaches influencing the current technology landscape.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -74,10 +83,10 @@ The GitHub Copilot SDK is now in technical preview, following a recent rollout f
 - [Bringing Work Context to Your Code with GitHub Copilot SDK](https://devblogs.microsoft.com/blog/bringing-work-context-to-your-code-in-github-copilot)
 - [Building Agentic Apps with the GitHub Copilot SDK: New Developer Paradigms](https://www.linkedin.com/posts/satyanadella_build-an-agent-into-any-app-with-the-github-activity-7420126187286568961-TdW7)
 - [Build an Agent into Any App with the GitHub Copilot SDK](https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/)
-- [Using the GitHub Copilot SDK with Python]({{ "/2026-01-22-Using-the-GitHub-Copilot-SDK-with-Python.html" | relative_url }})
-- [The GitHub Copilot SDK is here! - Rubber Duck Thursdays]({{ "/2026-01-22-The-GitHub-Copilot-SDK-is-here-Rubber-Duck-Thursdays.html" | relative_url }})
-- [Open Source Friday: Exploring the GitHub Copilot SDK]({{ "/2026-01-25-Open-Source-Friday-Exploring-the-GitHub-Copilot-SDK.html" | relative_url }})
-- [Add an AI Agent to Your Application with GitHub Copilot SDK]({{ "/2026-01-22-Add-an-AI-Agent-to-Your-Application-with-GitHub-Copilot-SDK.html" | relative_url }})
+- [Using the GitHub Copilot SDK with Python](/2026-01-22-Using-the-GitHub-Copilot-SDK-with-Python.html)
+- [The GitHub Copilot SDK is here! - Rubber Duck Thursdays](/2026-01-22-The-GitHub-Copilot-SDK-is-here-Rubber-Duck-Thursdays.html)
+- [Open Source Friday: Exploring the GitHub Copilot SDK](/2026-01-25-Open-Source-Friday-Exploring-the-GitHub-Copilot-SDK.html)
+- [Add an AI Agent to Your Application with GitHub Copilot SDK](/2026-01-22-Add-an-AI-Agent-to-Your-Application-with-GitHub-Copilot-SDK.html)
 
 ### GitHub Copilot CLI: Enhanced Terminal Workflows and Integration
 
@@ -86,9 +95,9 @@ GitHub Copilot CLI now offers new features for automatically using AI within the
 - [Install and Use GitHub Copilot CLI Directly from the GitHub CLI](https://github.blog/changelog/2026-01-21-install-and-use-github-copilot-cli-directly-from-the-github-cli)
 - [GitHub Copilot CLI: Plan Mode, Advanced Reasoning, and Terminal Workflow Enhancements](https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go)
 - [A Cheat Sheet to Slash Commands in GitHub Copilot CLI](https://github.blog/ai-and-ml/github-copilot/a-cheat-sheet-to-slash-commands-in-github-copilot-cli/)
-- [Demo: Using /delegate in the GitHub Copilot CLI]({{ "/2026-01-25-Demo-Using-delegate-in-the-GitHub-Copilot-CLI.html" | relative_url }})
-- [Demo: Using GitHub Copilot CLI and YOLO Mode]({{ "/2026-01-22-Demo-Using-GitHub-Copilot-CLI-and-YOLO-Mode.html" | relative_url }})
-- [Building with GitHub Copilot CLI: Rubber Duck Thursdays Live Coding Stream]({{ "/2026-01-21-Building-with-GitHub-Copilot-CLI-Rubber-Duck-Thursdays-Live-Coding-Stream.html" | relative_url }})
+- [Demo: Using /delegate in the GitHub Copilot CLI](/2026-01-25-Demo-Using-delegate-in-the-GitHub-Copilot-CLI.html)
+- [Demo: Using GitHub Copilot CLI and YOLO Mode](/2026-01-22-Demo-Using-GitHub-Copilot-CLI-and-YOLO-Mode.html)
+- [Building with GitHub Copilot CLI: Rubber Duck Thursdays Live Coding Stream](/2026-01-21-Building-with-GitHub-Copilot-CLI-Rubber-Duck-Thursdays-Live-Coding-Stream.html)
 
 ### Organizational and Work Context Integration
 
@@ -96,7 +105,7 @@ For distributed and enterprise development teams, Copilot now adds greater organ
 
 - [Bringing Work Context to Your Code with GitHub Copilot SDK](https://devblogs.microsoft.com/blog/bringing-work-context-to-your-code-in-github-copilot)
 - [Bringing Organizational Context to GitHub Copilot CLI with Work IQ](https://www.linkedin.com/posts/satyanadella_so-much-of-dev-work-happens-in-the-context-activity-7420485585376620544-vudJ)
-- [Bringing Work Context to Your Code in GitHub Copilot]({{ "/2026-01-23-Bringing-Work-Context-to-Your-Code-in-GitHub-Copilot.html" | relative_url }})
+- [Bringing Work Context to Your Code in GitHub Copilot](/2026-01-23-Bringing-Work-Context-to-Your-Code-in-GitHub-Copilot.html)
 
 ### App Modernization with GitHub Copilot
 
@@ -112,9 +121,9 @@ Copilot’s modernization tools support more automation for Java and Spring upgr
 
 GitHub Copilot continues to integrate with additional workflows. After last week’s news about Copilot support for OpenCode (including login and credential management across desktop, terminal, and IDE), current guides show practical setup steps for connecting Copilot to OpenCode and CI/CD tools. An in-depth look at Copilot’s Arm Cloud Migration Agent discusses how Copilot helps with container migration, indicating expanded applicability in infrastructure and cloud migrations. Community updates show more widespread adoption.
 
-- [How to use GitHub Copilot with OpenCode]({{ "/2026-01-25-How-to-use-GitHub-Copilot-with-OpenCode.html" | relative_url }})
-- [GitHub Copilot Arm Cloud Migration Agent Deep Dive]({{ "/2026-01-25-GitHub-Copilot-Arm-Cloud-Migration-Agent-Deep-Dive.html" | relative_url }})
-- [The Download: GitHub Copilot SDK Updates, Copilot for OpenCode, and Cloudflare Buys Astro]({{ "/2026-01-23-The-Download-GitHub-Copilot-SDK-Updates-Copilot-for-OpenCode-and-Cloudflare-Buys-Astro.html" | relative_url }})
+- [How to use GitHub Copilot with OpenCode](/2026-01-25-How-to-use-GitHub-Copilot-with-OpenCode.html)
+- [GitHub Copilot Arm Cloud Migration Agent Deep Dive](/2026-01-25-GitHub-Copilot-Arm-Cloud-Migration-Agent-Deep-Dive.html)
+- [The Download: GitHub Copilot SDK Updates, Copilot for OpenCode, and Cloudflare Buys Astro](/2026-01-23-The-Download-GitHub-Copilot-SDK-Updates-Copilot-for-OpenCode-and-Cloudflare-Buys-Astro.html)
 
 ### Advanced Workflow Guidance and Tutorials
 
@@ -123,7 +132,7 @@ Recent resources offer strategies for using Copilot throughout the development p
 - [Applying Context Windows, Plan Agent, and TDD with GitHub Copilot to Build a Countdown App](https://github.blog/developer-skills/application-development/context-windows-plan-agent-and-tdd-what-i-learned-building-a-countdown-app-with-github-copilot/)
 - [Introducing Copilot for Real-Time Dashboards: Write KQL with Natural Language](https://blog.fabric.microsoft.com/en-US/blog/introducing-copilot-for-real-time-dashboards-write-kql-with-natural-language/)
 - [How to Review GitHub Copilot’s Work Like a Senior Developer](https://www.cooknwithcopilot.com/blog/how-to-review-github-copilots-work-like-a-senior-developer.html)
-- [.NET AI Community Standup - Using the GitHub Copilot SDK in .NET Apps]({{ "/2026-01-22-NET-AI-Community-Standup-Using-the-GitHub-Copilot-SDK-in-NET-Apps.html" | relative_url }})
+- [.NET AI Community Standup - Using the GitHub Copilot SDK in .NET Apps](/2026-01-22-NET-AI-Community-Standup-Using-the-GitHub-Copilot-SDK-in-NET-Apps.html)
 
 ## AI
 
@@ -134,16 +143,16 @@ AI platform news this week highlights new agent orchestration tools and real-wor
 Microsoft’s Agent Framework (Python/.NET) reaches deeper into enterprise infrastructure, with Windows 365 for Agents providing secure, flexible cloud PCs for agent deployments beside human users. The new Agent 365 APIs and SDKs add robust and modular orchestration for scaling, policies, and automation. Integration with Azure, Entra ID, Intune, and added capabilities for credentials and observability all follow previous best-practices discussions. The Microsoft Foundry for VS Code introduces a workflow visualizer, resource tracking, and improved feedback loops for production-scale orchestration. Technical articles explore Foundry IQ for retrieval-augmented generation (RAG), context management, and troubleshooting memory, reinforcing the modular agent platform focus.
 
 - [Windows 365 for Agents: Enabling Secure AI Cloud PCs](https://blogs.windows.com/windowsexperience/2026/01/22/windows-365-for-agents-the-cloud-pcs-next-chapter/)
-- [The AI Agent Development Blueprint: From Design to Production with Microsoft Agent Framework]({{ "/2026-01-23-The-AI-Agent-Development-Blueprint-From-Design-to-Production-with-Microsoft-Agent-Framework.html" | relative_url }})
+- [The AI Agent Development Blueprint: From Design to Production with Microsoft Agent Framework](/2026-01-23-The-AI-Agent-Development-Blueprint-From-Design-to-Production-with-Microsoft-Agent-Framework.html)
 - [Microsoft Foundry for VS Code: January 2026 Update](https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-foundry-for-vs-code-january-2026-update/ba-p/4486132)
-- [Deep Dive into Foundry IQ and Azure AI Search]({{ "/2026-01-19-Deep-Dive-into-Foundry-IQ-and-Azure-AI-Search.html" | relative_url }})
+- [Deep Dive into Foundry IQ and Azure AI Search](/2026-01-19-Deep-Dive-into-Foundry-IQ-and-Azure-AI-Search.html)
 - [Context-Driven Development: Agent Skills for Microsoft Foundry and Azure](https://devblogs.microsoft.com/all-things-azure/context-driven-development-agent-skills-for-microsoft-foundry-and-azure/)
 
 ### Open Source Agent Interoperability and Best Practices
 
 Open source agentic frameworks are moving forward, as discussed previously with the Model Context Protocol (MCP) and agent modularity. Angie Jones’s talk covers using Goose to build interoperable and trusted agents for developers and non-developers, supporting community and production adoption. Goose shows how Azure’s approach to open APIs and context supports broader agent patterns.
 
-- [Angie Jones on AI Agents, Goose, and the Model Context Protocol (MCP) at GitHub Universe]({{ "/2026-01-24-Angie-Jones-on-AI-Agents-Goose-and-the-Model-Context-Protocol-MCP-at-GitHub-Universe.html" | relative_url }})
+- [Angie Jones on AI Agents, Goose, and the Model Context Protocol (MCP) at GitHub Universe](/2026-01-24-Angie-Jones-on-AI-Agents-Goose-and-the-Model-Context-Protocol-MCP-at-GitHub-Universe.html)
 
 ### Specification-Driven and Contextual AI Development Workflows
 
@@ -167,7 +176,7 @@ This week’s machine learning updates highlight improvements to developer toolk
 
 Building on last week’s news about ML in Fabric, these updates provide enhanced security and speed for Spark workloads via Private Endpoints, cost-saving autoscale features, and up to 4x Spark performance improvements with the Native Execution Engine. The GigaOm report recognizes Fabric’s unified feature set and includes new controls for cost, scaled SQL pool management, and additional ML connectors. Serverless processing and new OneLake capabilities support flexible analytics and engineering. Real-Time Dashboards have further speed optimizations, boosting streaming and IoT analytics up to 6x or 10x faster. Updated documentation and ongoing events keep users informed.
 
-- [Securely Scaling Spark Data Engineering in Microsoft Fabric]({{ "/2026-01-22-Securely-Scaling-Spark-Data-Engineering-in-Microsoft-Fabric.html" | relative_url }})
+- [Securely Scaling Spark Data Engineering in Microsoft Fabric](/2026-01-22-Securely-Scaling-Spark-Data-Engineering-in-Microsoft-Fabric.html)
 - [Microsoft Fabric Data Warehouse: GigaOm Radar Leader and Outperformer](https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-data-warehouse-named-a-leader-and-outperformer-in-gigaom-radar-for-data-warehouses/)
 - [Performance Improvements for Microsoft Fabric Real-Time Dashboards](https://blog.fabric.microsoft.com/en-US/blog/faster-smoother-more-delightful-real-time-dashboards-performance-improvements/)
 
@@ -254,7 +263,7 @@ SQLCon and FabCon announcements outline conference topics, training, and product
 
 Developer-focused updates enhance debugging, performance, and workflow management. New filters for Azure Boards (now in private preview) let backlog and Kanban boards filter by custom fields, supporting better UI and management options.
 
-- [Azure Weekly Update: AKS Deployment, NAT Gateway, Load Testing, GitHub Copilot SDK (23 Jan 2026)]({{ "/2026-01-23-Azure-Weekly-Update-AKS-Deployment-NAT-Gateway-Load-Testing-GitHub-Copilot-SDK-23-Jan-2026.html" | relative_url }})
+- [Azure Weekly Update: AKS Deployment, NAT Gateway, Load Testing, GitHub Copilot SDK (23 Jan 2026)](/2026-01-23-Azure-Weekly-Update-AKS-Deployment-NAT-Gateway-Load-Testing-GitHub-Copilot-SDK-23-Jan-2026.html)
 - [Azure Boards Adds Custom Field Filters in Private Preview](https://devblogs.microsoft.com/devops/azure-boards-additional-field-filters-private-preview/)
 
 ## Coding
@@ -266,7 +275,7 @@ Highlights this week include optimized patterns for .NET and SharePoint, new fea
 This week includes a guide on making `IEnumerable<T>` iteration in .NET allocation-free. Andrew Lock details compiler behavior and testing, explaining how Reflection.Emit/DynamicMethod avoids boxing overhead on older runtimes—useful for SDKs and instrumentation. Resources on modern web teaching (Razor Pages and HTMX) show how to build with less JavaScript, leveraging Razor’s separation of logic for maintainable courses and projects.
 
 - [Making foreach on an IEnumerable Allocation-Free in .NET with Reflection and Dynamic Methods](https://andrewlock.net/making-foreach-on-an-ienumerable-allocation-free-using-reflection-and-dynamic-methods/)
-- [Teaching Modern Web Development with .NET, Razor Pages, and HTMX]({{ "/2026-01-21-Teaching-Modern-Web-Development-with-NET-Razor-Pages-and-HTMX.html" | relative_url }})
+- [Teaching Modern Web Development with .NET, Razor Pages, and HTMX](/2026-01-21-Teaching-Modern-Web-Development-with-NET-Razor-Pages-and-HTMX.html)
 
 ### React Native Windows and Cross-Platform App Development
 
@@ -284,7 +293,7 @@ SharePoint site optimization advice covers scaling with site collections/hubs, f
 
 A tutorial shows how to use the "Report Issue" feature in VS Code for feature requests, including tips for improving the chance of getting changes reviewed, referencing feedback cycles as a means to better software.
 
-- [How to Request a VS Code Feature (The RIGHT Way)]({{ "/2026-01-23-How-to-Request-a-VS-Code-Feature-The-RIGHT-Way.html" | relative_url }})
+- [How to Request a VS Code Feature (The RIGHT Way)](/2026-01-23-How-to-Request-a-VS-Code-Feature-The-RIGHT-Way.html)
 
 ## DevOps
 
@@ -309,7 +318,7 @@ GitHub adds artifact metadata APIs and Unified Artifact Views to help with code/
 Enterprise admins can now use more precise budget controls that exclude cost center usage—supported by REST APIs for automation. User feedback feeds directly into policy and cost management improvements. New tutorials for beginners walk through `git switch`, `git add`, and `git commit`, highlighting the value of isolating changes and working with tracked project histories.
 
 - [Enterprise-Scoped Budgets Feature Update for GitHub Enterprise Customers](https://github.blog/changelog/2026-01-19-enterprise-scoped-budgets-that-exclude-cost-center-usage-in-public-preview)
-- [How to Switch Branches and Commit Changes in Git]({{ "/2026-01-21-How-to-Switch-Branches-and-Commit-Changes-in-Git.html" | relative_url }})
+- [How to Switch Branches and Commit Changes in Git](/2026-01-21-How-to-Switch-Branches-and-Commit-Changes-in-Git.html)
 
 ## Security
 
@@ -364,7 +373,7 @@ Microsoft’s Notary Project and Artifact Signing (now GA) tools provide managed
 A framework for 2026 outlines four priorities for identity and network access risk management: adaptive policies, governing users/agents, Zero Trust adoption, and credential controls. Platform integration (Defender, Purview, Verified ID) is central for compliance. Azure Essentials video content shows Purview’s main governance and audit features, complementing ongoing security automation content.
 
 - [4 Priorities for AI-Powered Identity and Network Access Security in 2026](https://www.microsoft.com/en-us/security/blog/2026/01/20/four-priorities-for-ai-powered-identity-and-network-access-security-in-2026/)
-- [Understand How Purview Secures and Governs Your Entire Data Estate]({{ "/2026-01-22-Understand-How-Purview-Secures-and-Governs-Your-Entire-Data-Estate.html" | relative_url }})
+- [Understand How Purview Secures and Governs Your Entire Data Estate](/2026-01-22-Understand-How-Purview-Secures-and-Governs-Your-Entire-Data-Estate.html)
 
 ### Other Security News
 

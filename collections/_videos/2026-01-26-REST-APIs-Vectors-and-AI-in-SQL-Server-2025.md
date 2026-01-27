@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "REST APIs, Vectors, and AI in SQL Server 2025"
-description: "Ben Weissman, a Microsoft MVP and Data Platform expert, explores the integration of REST APIs, vector data types, and AI features in SQL Server 2025 in this Data Exposed: MVP Edition episode. The discussion covers the technical implementation and practical uses of these new capabilities for developers working with data on the Microsoft platform."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QziYJ6Vz1xI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=QziYJ6Vz1xI
+title: REST APIs, Vectors, and AI in SQL Server 2025
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2026-01-26 20:38:14 +00:00
-permalink: "/2026-01-26-REST-APIs-Vectors-and-AI-in-SQL-Server-2025.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "Analytics", "Azure", "Azure SQL", "Business Intelligence", "Cloud Computing", "Coding", "Data Engineering", "Data Platform", "Data Warehousing", "Dev", "Developer Tools", "Development", "Machine Learning", "Microsoft", "Microsoft Azure", "ML", "MVP", "REST APIs", "SQL Server", "Tech", "Technology", "Vector Data", "Videos"]
-tags_normalized: ["ai", "analytics", "azure", "azure sql", "business intelligence", "cloud computing", "coding", "data engineering", "data platform", "data warehousing", "dev", "developer tools", "development", "machine learning", "microsoft", "microsoft azure", "ml", "mvp", "rest apis", "sql server", "tech", "technology", "vector data", "videos"]
+tags:
+- Analytics
+- Azure SQL
+- Business Intelligence
+- Cloud Computing
+- Data Engineering
+- Data Platform
+- Data Warehousing
+- Dev
+- Developer Tools
+- Development
+- Microsoft
+- Microsoft Azure
+- MVP
+- REST APIs
+- SQL Server
+- Tech
+- Technology
+- Vector Data
+section_names:
+- ai
+- azure
+- coding
+- ml
 ---
-
 In this Data Exposed: MVP Edition episode, Ben Weissman, a Microsoft MVP, discusses how REST APIs, vector data, and AI capabilities are shaping SQL Server 2025 and what this means for data professionals and developers.<!--excerpt_end-->
 
 {% youtube QziYJ6Vz1xI %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Modernizing Spring Framework Applications with GitHub Copilot App Modernization"
-description: "This guide details how to upgrade Java Spring Framework applications from version 5 to 6.x using GitHub Copilot app modernization. The process covers Jakarta namespace migration, aligning dependencies, updating build plugins, and automating code changes. Developers will also learn about security checks, behavioral changes, and responsibilities post-upgrade, aligning with Microsoft Learn’s recommended workflow."
-author: "ayangupta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-spring-framework-applications-with-github-copilot/ba-p/4486469"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-spring-framework-applications-with-github-copilot/ba-p/4486469
+title: Modernizing Spring Framework Applications with GitHub Copilot App Modernization
+author: ayangupta
+feed_name: Microsoft Tech Community
 date: 2026-01-20 02:11:43 +00:00
-permalink: "/2026-01-20-Modernizing-Spring-Framework-Applications-with-GitHub-Copilot-App-Modernization.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["AI", "API Migration", "App Modernization", "Automated Refactoring", "Azure", "Build Tooling", "Cloud Migration", "Community", "Continuous Integration", "CVE Checks", "Dependency Management", "DevOps", "GitHub Copilot", "Gradle", "IntelliJ IDEA", "Jakarta", "Java", "JUnit 5", "Maven", "Microsoft Learn", "OpenRewrite", "Spring 6", "Spring Framework", "VS Code"]
-tags_normalized: ["ai", "api migration", "app modernization", "automated refactoring", "azure", "build tooling", "cloud migration", "community", "continuous integration", "cve checks", "dependency management", "devops", "github copilot", "gradle", "intellij idea", "jakarta", "java", "junit 5", "maven", "microsoft learn", "openrewrite", "spring 6", "spring framework", "vs code"]
+tags:
+- API Migration
+- App Modernization
+- Automated Refactoring
+- Build Tooling
+- Cloud Migration
+- Continuous Integration
+- CVE Checks
+- Dependency Management
+- Gradle
+- IntelliJ IDEA
+- Jakarta
+- Java
+- JUnit 5
+- Maven
+- Microsoft Learn
+- OpenRewrite
+- Spring 6
+- Spring Framework
+- VS Code
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 ayangupta explains how GitHub Copilot app modernization can automate and streamline upgrading Spring Framework 5 applications to 6.x. The article covers project analysis, automated transformations, security audits, and what developers need to check for a successful migration.<!--excerpt_end-->
 
 # Modernizing Spring Framework Applications with GitHub Copilot App Modernization

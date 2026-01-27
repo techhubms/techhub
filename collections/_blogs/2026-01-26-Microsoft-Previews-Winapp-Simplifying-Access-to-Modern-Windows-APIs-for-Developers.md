@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Microsoft Previews Winapp: Simplifying Access to Modern Windows APIs for Developers"
-description: "This article introduces 'winapp,' a new Microsoft command-line tool aiming to streamline the process of accessing modern Windows APIs for developers using platforms other than Visual Studio. It covers the rationale, tool features, limitations, and community reactions to winapp's debut."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/26/microsoft-previews-command-line-tool-created-because-calling-modern-windows-apis-is-too-difficult/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://devclass.com/2026/01/26/microsoft-previews-command-line-tool-created-because-calling-modern-windows-apis-is-too-difficult/
+title: 'Microsoft Previews Winapp: Simplifying Access to Modern Windows APIs for Developers'
+author: Tim Anderson
+feed_name: DevClass
 date: 2026-01-26 16:54:13 +00:00
-permalink: "/2026-01-26-Microsoft-Previews-Winapp-Simplifying-Access-to-Modern-Windows-APIs-for-Developers.html"
-categories: ["Coding"]
-tags: ["App Packaging", "Blogs", "CLI Tool", "Coding", "Development", "Development Tools", "Electron", "Microsoft", "MSIX", "VS", "Winapp", "Windows", "Windows API", "Windows SDK", "WinUI"]
-tags_normalized: ["app packaging", "blogs", "cli tool", "coding", "development", "development tools", "electron", "microsoft", "msix", "vs", "winapp", "windows", "windows api", "windows sdk", "winui"]
+tags:
+- App Packaging
+- CLI Tool
+- Development
+- Development Tools
+- Electron
+- Microsoft
+- MSIX
+- VS
+- Winapp
+- Windows
+- Windows API
+- Windows SDK
+- WinUI
+section_names:
+- coding
 ---
-
 Tim Anderson explains Microsoft's introduction of 'winapp,' a command-line tool designed to ease the adoption of modern Windows APIs outside Visual Studio, and discusses its technical implications for developers.<!--excerpt_end-->
 
 # Microsoft Previews Winapp: Simplifying Access to Modern Windows APIs for Developers

@@ -1,20 +1,24 @@
----
-layout: "post"
-title: "How to use GitHub Copilot with OpenCode"
-description: "This video demonstrates how to connect your GitHub Copilot subscription to OpenCode, an open-source agent for terminal and desktop environments. It covers which Copilot subscription levels are supported and walks through the credential connection process, helping developers extend Copilot capabilities to new platforms."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/ljNeme8s86s"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/ljNeme8s86s
+title: How to use GitHub Copilot with OpenCode
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-25 16:01:08 +00:00
-permalink: "/2026-01-25-How-to-use-GitHub-Copilot-with-OpenCode.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Authentication", "Copilot Integration", "Desktop Agent", "Developer Tools", "Enterprise Development", "GitHub", "GitHub Copilot", "Open Source Software", "OpenCode", "Subscription Management", "Terminal Tools", "Videos"]
-tags_normalized: ["ai", "authentication", "copilot integration", "desktop agent", "developer tools", "enterprise development", "github", "github copilot", "open source software", "opencode", "subscription management", "terminal tools", "videos"]
+tags:
+- Authentication
+- Copilot Integration
+- Desktop Agent
+- Developer Tools
+- Enterprise Development
+- GitHub
+- Open Source Software
+- OpenCode
+- Subscription Management
+- Terminal Tools
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a guide to connecting GitHub Copilot with OpenCode, showing developers how to bring their Pro, Business, or Enterprise Copilot plans to this open-source agent.<!--excerpt_end-->
 
 {% youtube ljNeme8s86s %}

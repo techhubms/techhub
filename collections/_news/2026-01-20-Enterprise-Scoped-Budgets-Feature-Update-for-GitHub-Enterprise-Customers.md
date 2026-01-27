@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Enterprise-Scoped Budgets Feature Update for GitHub Enterprise Customers"
-description: "This news update explains a new GitHub Enterprise feature allowing administrators to configure enterprise-scoped budgets that specifically exclude cost center usage. This makes it easier for organizations to control and allocate spending, empowering certain parts of their enterprise to consume additional services while enforcing overall budget restrictions. The update also impacts how enterprises track changes through audit logs, and the new functionality is available via the REST API."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-19-enterprise-scoped-budgets-that-exclude-cost-center-usage-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-19-enterprise-scoped-budgets-that-exclude-cost-center-usage-in-public-preview
+title: Enterprise-Scoped Budgets Feature Update for GitHub Enterprise Customers
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-20 00:27:17 +00:00
-permalink: "/2026-01-20-Enterprise-Scoped-Budgets-Feature-Update-for-GitHub-Enterprise-Customers.html"
-categories: ["DevOps"]
-tags: ["Audit Logs", "Budget Management", "Cloud Billing", "Cost Centers", "DevOps", "DevOps Tooling", "Enterprise Administration", "Enterprise Budgets", "Enterprise Management Tools", "GitHub Enterprise", "Improvement", "Metered Products", "News", "REST API", "Spending Controls", "Spending Limits"]
-tags_normalized: ["audit logs", "budget management", "cloud billing", "cost centers", "devops", "devops tooling", "enterprise administration", "enterprise budgets", "enterprise management tools", "github enterprise", "improvement", "metered products", "news", "rest api", "spending controls", "spending limits"]
+tags:
+- Audit Logs
+- Budget Management
+- Cloud Billing
+- Cost Centers
+- DevOps Tooling
+- Enterprise Administration
+- Enterprise Budgets
+- Enterprise Management Tools
+- GitHub Enterprise
+- Improvement
+- Metered Products
+- REST API
+- Spending Controls
+- Spending Limits
+section_names:
+- devops
 ---
-
 Allison shares news about a GitHub Enterprise feature: administrators can now configure enterprise-scoped budgets that exclude cost center usage, simplifying enterprise spending control and budgeting.<!--excerpt_end-->
 
 # Enterprise-Scoped Budgets Excluding Cost Center Usage: GitHub Enterprise Update

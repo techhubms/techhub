@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Add an AI Agent to Your Application with GitHub Copilot SDK"
-description: "Explore how the GitHub Copilot SDK (technical preview) enables developers to easily integrate AI agents into their applications. This overview details the SDK's functionality—offering seamless setup with existing Copilot subscriptions or your own model key—and highlights how to define agent outcomes and capabilities within a few lines of code."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=hLzIAWIezBg"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=hLzIAWIezBg
+title: Add an AI Agent to Your Application with GitHub Copilot SDK
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-22 16:01:20 +00:00
-permalink: "/2026-01-22-Add-an-AI-Agent-to-Your-Application-with-GitHub-Copilot-SDK.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Integration", "AI", "AI Agent", "AI Integration", "Application Development", "Code", "Copilot", "Copilot Subscription", "Developer", "Developer Tools", "Git", "Git And GitHub", "GitHub", "GitHub Copilot", "GitHub Copilot SDK", "GitHub For Beginners", "GitHub Tutorial", "How To Use GitHub", "Model Key", "Programming", "SDK", "Software", "Software Development", "Technical Preview", "Videos"]
-tags_normalized: ["agent integration", "ai", "ai agent", "ai integration", "application development", "code", "copilot", "copilot subscription", "developer", "developer tools", "git", "git and github", "github", "github copilot", "github copilot sdk", "github for beginners", "github tutorial", "how to use github", "model key", "programming", "sdk", "software", "software development", "technical preview", "videos"]
+tags:
+- Agent Integration
+- AI Agent
+- AI Integration
+- Application Development
+- Code
+- Copilot
+- Copilot Subscription
+- Developer
+- Developer Tools
+- Git
+- Git And GitHub
+- GitHub
+- GitHub Copilot SDK
+- GitHub For Beginners
+- GitHub Tutorial
+- How To Use GitHub
+- Model Key
+- Programming
+- SDK
+- Software
+- Software Development
+- Technical Preview
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub introduces the Copilot SDK in technical preview, making it easier for developers to add powerful AI agents to applications. Learn from GitHub how the SDK simplifies integration with minimal code.<!--excerpt_end-->
 
 {% youtube hLzIAWIezBg %}

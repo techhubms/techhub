@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How Agentic AI Robots Are Transforming the Retail Store Experience"
-description: "This article examines how agentic AI robots, developed through collaboration between Microsoft and robotics companies like Richtech Robotics, are transforming retail operations and frontline customer experiences. It highlights use cases, technical advances with Microsoft Azure AI, and practical steps for retailers adopting adaptive intelligence at scale."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/01/20/frontier-transformation-in-retail-how-agentic-ai-robots-are-redefining-store-experiences/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/01/20/frontier-transformation-in-retail-how-agentic-ai-robots-are-redefining-store-experiences/
+title: How Agentic AI Robots Are Transforming the Retail Store Experience
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-21 18:27:55 +00:00
-permalink: "/2026-01-21-How-Agentic-AI-Robots-Are-Transforming-the-Retail-Store-Experience.html"
-categories: ["AI", "Azure"]
-tags: ["Adaptive Intelligence", "Agentic AI", "AI", "AI Co Innovation Labs", "AI Workforce", "Azure", "Azure AI", "Company News", "Conversational AI", "Customer Experience", "Frontier Transformation", "Industry Solutions", "Microsoft Azure AI", "News", "Retail Automation", "Retail Robotics", "Richtech Robotics", "Vision Models", "Voice Assistance"]
-tags_normalized: ["adaptive intelligence", "agentic ai", "ai", "ai co innovation labs", "ai workforce", "azure", "azure ai", "company news", "conversational ai", "customer experience", "frontier transformation", "industry solutions", "microsoft azure ai", "news", "retail automation", "retail robotics", "richtech robotics", "vision models", "voice assistance"]
+tags:
+- Adaptive Intelligence
+- Agentic AI
+- AI Co Innovation Labs
+- AI Workforce
+- Azure AI
+- Company News
+- Conversational AI
+- Customer Experience
+- Frontier Transformation
+- Industry Solutions
+- Microsoft Azure AI
+- Retail Automation
+- Retail Robotics
+- Richtech Robotics
+- Vision Models
+- Voice Assistance
+section_names:
+- ai
+- azure
 ---
-
 stclarke explores how Microsoft and partners like Richtech Robotics are leveraging agentic AI, powered by Azure, to enhance customer service and operational efficiency in the retail sector.<!--excerpt_end-->
 
 # How Agentic AI Robots Are Transforming the Retail Store Experience

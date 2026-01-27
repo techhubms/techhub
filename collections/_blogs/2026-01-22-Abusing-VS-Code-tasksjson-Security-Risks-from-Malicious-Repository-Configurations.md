@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Abusing VS Code tasks.json: Security Risks from Malicious Repository Configurations"
-description: "This article by Tim Anderson examines recent security threats where attackers embed malicious instructions into the tasks.json configuration file of Visual Studio Code repositories. It explains how these hidden tasks can execute code on a developer's machine, discusses the security model of VS Code, and outlines best practices developers can use to defend against this attack vector."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/22/vs-code-tasks-config-file-abused-to-run-malicious-code/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://devclass.com/2026/01/22/vs-code-tasks-config-file-abused-to-run-malicious-code/
+title: 'Abusing VS Code tasks.json: Security Risks from Malicious Repository Configurations'
+author: Tim Anderson
+feed_name: DevClass
 date: 2026-01-22 15:39:15 +00:00
-permalink: "/2026-01-22-Abusing-VS-Code-tasksjson-Security-Risks-from-Malicious-Repository-Configurations.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: ["Blogs", "Coding", "Command Line Tools", "Configuration Security", "Developer Workflows", "Development", "DevOps", "Ephemeral Environments", "GitHub", "Jamf", "Malicious Repositories", "Microsoft", "Remote Code Execution", "Sandboxing", "Security", "Security Best Practices", "Tasks.json", "VS Code", "VS Code Settings"]
-tags_normalized: ["blogs", "coding", "command line tools", "configuration security", "developer workflows", "development", "devops", "ephemeral environments", "github", "jamf", "malicious repositories", "microsoft", "remote code execution", "sandboxing", "security", "security best practices", "tasksdotjson", "vs code", "vs code settings"]
+tags:
+- Command Line Tools
+- Configuration Security
+- Developer Workflows
+- Development
+- Ephemeral Environments
+- GitHub
+- Jamf
+- Malicious Repositories
+- Microsoft
+- Remote Code Execution
+- Sandboxing
+- Security Best Practices
+- Tasks.json
+- VS Code
+- VS Code Settings
+section_names:
+- coding
+- devops
+- security
 ---
-
 Tim Anderson highlights how attackers weaponize VS Code's tasks.json configuration to execute malicious code, detailing the risks for developers and the security implications.<!--excerpt_end-->
 
 # Abusing VS Code tasks.json: Security Risks from Malicious Repository Configurations

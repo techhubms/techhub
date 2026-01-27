@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Bringing Work Context to Your Code with GitHub Copilot SDK"
-description: "This article introduces the GitHub Copilot SDK, which extends the Copilot CLI's agent capabilities for embedding into any application. It explores new possibilities for surfacing contextual information such as code owners, architecture diagrams, and design comparisons directly inside developer tools like VS Code, integrating work context from Microsoft 365 through Work IQ MCP."
-author: "Kayla Cinnamon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/bringing-work-context-to-your-code-in-github-copilot"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/bringing-work-context-to-your-code-in-github-copilot
+title: Bringing Work Context to Your Code with GitHub Copilot SDK
+author: Kayla Cinnamon
+feed_name: Microsoft Blog
 date: 2026-01-23 15:00:30 +00:00
-permalink: "/2026-01-23-Bringing-Work-Context-to-Your-Code-with-GitHub-Copilot-SDK.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Loop", "AI", "Architecture Diagrams", "Code Context", "Coding", "Contextual AI", "Copilot Integration", "Developer Productivity", "Extension Development", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Copilot SDK", "MCP", "MCP Server", "Microsoft 365", "News", "Plugin Development", "VS Code", "Work IQ"]
-tags_normalized: ["agent loop", "ai", "architecture diagrams", "code context", "coding", "contextual ai", "copilot integration", "developer productivity", "extension development", "github copilot", "github copilot cli", "github copilot sdk", "mcp", "mcp server", "microsoft 365", "news", "plugin development", "vs code", "work iq"]
+tags:
+- Agent Loop
+- Architecture Diagrams
+- Code Context
+- Contextual AI
+- Copilot Integration
+- Developer Productivity
+- Extension Development
+- GitHub Copilot CLI
+- GitHub Copilot SDK
+- MCP
+- MCP Server
+- Microsoft 365
+- Plugin Development
+- VS Code
+- Work IQ
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Kayla Cinnamon discusses how the new GitHub Copilot SDK allows developers to embed Copilot agent logic into applications, unlocking productivity through deeper work context integration with tools like VS Code and Microsoft 365 Work IQ MCP.<!--excerpt_end-->
 
 # Bringing Work Context to Your Code with GitHub Copilot SDK

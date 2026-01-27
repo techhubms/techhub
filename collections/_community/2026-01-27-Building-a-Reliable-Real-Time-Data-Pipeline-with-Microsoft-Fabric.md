@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Building a Reliable Real-Time Data Pipeline with Microsoft Fabric"
-description: "This comprehensive guide provides a practical roadmap for designing robust, real-time data pipelines utilizing Microsoft Fabric. It focuses on foundational elements such as data quality, replication lag management, operational readiness, capacity planning, and security, offering actionable recommendations based on real-world enterprise deployments."
-author: "NaufalPrawironegoro"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/building-a-reliable-real-time-data-pipeline-with-microsoft/ba-p/4489534"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/building-a-reliable-real-time-data-pipeline-with-microsoft/ba-p/4489534
+title: Building a Reliable Real-Time Data Pipeline with Microsoft Fabric
+author: NaufalPrawironegoro
+feed_name: Microsoft Tech Community
 date: 2026-01-27 01:34:03 +00:00
-permalink: "/2026-01-27-Building-a-Reliable-Real-Time-Data-Pipeline-with-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Bronze/Silver/Gold Layer", "Capacity Planning", "CDC Pipeline", "Change Data Capture", "Community", "Data Quality", "Data Retention", "Eventstream", "Logging", "Microsoft Fabric", "ML", "Network Security", "Operational Readiness", "Real Time Data", "Recovery Objectives", "Replication Lag", "Schema Drift"]
-tags_normalized: ["azure", "bronzeslashsilverslashgold layer", "capacity planning", "cdc pipeline", "change data capture", "community", "data quality", "data retention", "eventstream", "logging", "microsoft fabric", "ml", "network security", "operational readiness", "real time data", "recovery objectives", "replication lag", "schema drift"]
+tags:
+- Bronze/Silver/Gold Layer
+- Capacity Planning
+- CDC Pipeline
+- Change Data Capture
+- Data Quality
+- Data Retention
+- Eventstream
+- Logging
+- Microsoft Fabric
+- Network Security
+- Operational Readiness
+- Real Time Data
+- Recovery Objectives
+- Replication Lag
+- Schema Drift
+section_names:
+- azure
+- ml
 ---
-
 NaufalPrawironegoro shares engineering insights on building robust real-time data pipelines with Microsoft Fabric. Learn best practices for data quality, lag management, and operational foundations based on enterprise experiences.<!--excerpt_end-->
 
 # Building a Reliable Real-Time Data Pipeline with Microsoft Fabric

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Azure File Sync: Azure Arc Integration, Additional Regions, and Secure Syncing"
-description: "This post introduces new updates to Azure File Sync, including simplified deployment via Azure Arc integration, expansion to four new global regions, and improved security with managed identities through Microsoft Entra ID. It provides IT and DevOps professionals with guidance on leveraging Azure for secure, scalable hybrid file services, plus cost-saving details for Windows Server customers."
-author: "grace_kim"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-file-sync-azure-arc-integration-additional-regions-and/ba-p/4486050"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-file-sync-azure-arc-integration-additional-regions-and/ba-p/4486050
+title: 'Azure File Sync: Azure Arc Integration, Additional Regions, and Secure Syncing'
+author: grace_kim
+feed_name: Microsoft Tech Community
 date: 2026-01-16 18:02:58 +00:00
-permalink: "/2026-01-16-Azure-File-Sync-Azure-Arc-Integration-Additional-Regions-and-Secure-Syncing.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Authentication", "Azure", "Azure Arc", "Azure File Sync", "Azure Files", "CLI", "Cloud Storage", "Community", "DevOps", "Enterprise Storage", "File Server Modernization", "Hybrid Cloud", "Hybrid File Services", "Managed Identities", "Microsoft Entra ID", "PowerShell", "Regional Availability", "Secure Access", "Security", "Windows Server"]
-tags_normalized: ["authentication", "azure", "azure arc", "azure file sync", "azure files", "cli", "cloud storage", "community", "devops", "enterprise storage", "file server modernization", "hybrid cloud", "hybrid file services", "managed identities", "microsoft entra id", "powershell", "regional availability", "secure access", "security", "windows server"]
+tags:
+- Authentication
+- Azure Arc
+- Azure File Sync
+- Azure Files
+- CLI
+- Cloud Storage
+- Enterprise Storage
+- File Server Modernization
+- Hybrid Cloud
+- Hybrid File Services
+- Managed Identities
+- Microsoft Entra ID
+- PowerShell
+- Regional Availability
+- Secure Access
+- Windows Server
+section_names:
+- azure
+- devops
+- security
 ---
-
 grace_kim details new Azure File Sync capabilities, focusing on Azure Arc integration, regional expansion, and secure onboarding with managed identities—key for IT and DevOps teams modernizing enterprise file services.<!--excerpt_end-->
 
 # Azure File Sync: Azure Arc Integration, Additional Regions, and Secure Syncing

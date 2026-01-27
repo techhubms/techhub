@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "RAIDDR: Redefining Memory Reliability for Hyperscale Azure Infrastructure"
-description: "This article introduces RAIDDR, a Microsoft-developed error correction architecture designed to enhance memory reliability at datacenter scale. It explores the limitations of traditional ECC methods, details the host-based approach of RAIDDR, explains its basic and enhanced variants, and discusses its deployment within Azure silicon. The post also covers open-source licensing, technical details, and future industry adoption."
-author: "TerryGrunzke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/raiddr-redefining-memory-reliability/ba-p/4487951"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/raiddr-redefining-memory-reliability/ba-p/4487951
+title: 'RAIDDR: Redefining Memory Reliability for Hyperscale Azure Infrastructure'
+author: TerryGrunzke
+feed_name: Microsoft Tech Community
 date: 2026-01-20 23:42:19 +00:00
-permalink: "/2026-01-20-RAIDDR-Redefining-Memory-Reliability-for-Hyperscale-Azure-Infrastructure.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Silicon", "BCH Codes", "Cadence IP", "Cloud Architecture", "Cloud Infrastructure", "Community", "CRC", "Datacenter", "DIMMs", "Error Correction", "Hyperscale", "LPDDR5X", "Memory Controller", "Memory Reliability", "Microsoft Azure", "Open Source Hardware", "Parity", "RAIDDR", "SoC"]
-tags_normalized: ["azure", "azure silicon", "bch codes", "cadence ip", "cloud architecture", "cloud infrastructure", "community", "crc", "datacenter", "dimms", "error correction", "hyperscale", "lpddr5x", "memory controller", "memory reliability", "microsoft azure", "open source hardware", "parity", "raiddr", "soc"]
+tags:
+- Azure Silicon
+- BCH Codes
+- Cadence IP
+- Cloud Architecture
+- Cloud Infrastructure
+- CRC
+- Datacenter
+- DIMMs
+- Error Correction
+- Hyperscale
+- LPDDR5X
+- Memory Controller
+- Memory Reliability
+- Microsoft Azure
+- Open Source Hardware
+- Parity
+- RAIDDR
+- SoC
+section_names:
+- azure
 ---
-
 TerryGrunzke introduces RAIDDR, Microsoft's new open-licensed error correction architecture for memory reliability in hyperscale datacenters, with a deep dive into Azure integration and technical advantages.<!--excerpt_end-->
 
 # RAIDDR: Redefining Memory Reliability for Hyperscale Azure Infrastructure

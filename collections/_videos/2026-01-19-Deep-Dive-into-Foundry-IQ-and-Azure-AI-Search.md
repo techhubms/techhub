@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Deep Dive into Foundry IQ and Azure AI Search"
-description: "This video by John Savill offers a comprehensive walkthrough of Microsoft Foundry IQ, its advanced retrieval-augmented generation (RAG) architecture, and deep integration with Azure AI Search. It covers configuration of knowledge sources, reasoning capabilities, limits, output modes, and agentic RAG features, targeting technical professionals evaluating or deploying these Microsoft AI services."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=uDVkcZwB0EU"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=uDVkcZwB0EU
+title: Deep Dive into Foundry IQ and Azure AI Search
+author: John Savill's Technical Training
+feed_name: John Savill's Technical Training
 date: 2026-01-19 11:17:42 +00:00
-permalink: "/2026-01-19-Deep-Dive-into-Foundry-IQ-and-Azure-AI-Search.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic RAG", "Agents", "AI", "AI Models", "Azure", "Azure AI Search", "Azure Cloud", "Cloud", "Collections", "Embedding", "Foundry IQ", "Generative AI", "Graph", "Integration", "Knowledge Bases", "Large Language Models", "LLM", "Microsoft", "Microsoft Azure", "RAG", "Reasoning", "Resource Limits", "Retrieval Augmented Generation", "Search", "SLM", "Videos"]
-tags_normalized: ["agentic rag", "agents", "ai", "ai models", "azure", "azure ai search", "azure cloud", "cloud", "collections", "embedding", "foundry iq", "generative ai", "graph", "integration", "knowledge bases", "large language models", "llm", "microsoft", "microsoft azure", "rag", "reasoning", "resource limits", "retrieval augmented generation", "search", "slm", "videos"]
+tags:
+- Agentic RAG
+- Agents
+- AI Models
+- Azure AI Search
+- Azure Cloud
+- Cloud
+- Collections
+- Embedding
+- Foundry IQ
+- Generative AI
+- Graph
+- Integration
+- Knowledge Bases
+- Large Language Models
+- LLM
+- Microsoft
+- Microsoft Azure
+- RAG
+- Reasoning
+- Resource Limits
+- Retrieval Augmented Generation
+- Search
+- SLM
+section_names:
+- ai
+- azure
 ---
-
 John Savill's Technical Training presents an in-depth exploration of Microsoft Foundry IQ, detailing its AI-driven knowledge retrieval, reasoning processes, and integration with Azure AI Search for technical audiences.<!--excerpt_end-->
 
 {% youtube uDVkcZwB0EU %}

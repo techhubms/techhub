@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "Workspace-Level Surge Protection in Microsoft Fabric (Preview)"
-description: "This update introduces workspace-level surge protection controls in Microsoft Fabric, offering administrators more granular management over compute unit thresholds and resource usage across multiple workspaces. Mission-critical workspaces can now be prioritized, and surge protection rules can be customized to maintain balanced and reliable performance throughout an organization."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/surge-protection-gets-smarter-introducing-workspace-level-controls-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/surge-protection-gets-smarter-introducing-workspace-level-controls-preview/
+title: Workspace-Level Surge Protection in Microsoft Fabric (Preview)
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-26 09:00:00 +00:00
-permalink: "/2026-01-26-Workspace-Level-Surge-Protection-in-Microsoft-Fabric-Preview.html"
-categories: ["ML"]
-tags: ["Admin Controls", "Capacity Planning", "Compute Units", "Data Platform", "Metrics App", "Microsoft Fabric", "Mission Critical Mode", "ML", "News", "Performance Optimization", "Resource Allocation", "Surge Protection", "Throttling", "Workspace Management"]
-tags_normalized: ["admin controls", "capacity planning", "compute units", "data platform", "metrics app", "microsoft fabric", "mission critical mode", "ml", "news", "performance optimization", "resource allocation", "surge protection", "throttling", "workspace management"]
+tags:
+- Admin Controls
+- Capacity Planning
+- Compute Units
+- Data Platform
+- Metrics App
+- Microsoft Fabric
+- Mission Critical Mode
+- Performance Optimization
+- Resource Allocation
+- Surge Protection
+- Throttling
+- Workspace Management
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog details new workspace-level surge protection controls, enabling administrators to set compute thresholds, enforce blocking, and prioritize mission-critical workspaces for improved resource management.<!--excerpt_end-->
 
 # Workspace-Level Surge Protection in Microsoft Fabric (Preview)

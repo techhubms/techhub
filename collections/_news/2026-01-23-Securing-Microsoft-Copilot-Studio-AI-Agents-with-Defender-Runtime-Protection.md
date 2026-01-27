@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Securing Microsoft Copilot Studio AI Agents with Defender Runtime Protection"
-description: "This article, authored by the Microsoft Defender Security Research Team, examines real-time protection strategies for Microsoft Copilot Studio AI agents. It details emerging security threats, explores how malicious actors attempt to exploit generative orchestration, and demonstrates how Defender’s runtime checks block such attacks to ensure safe deployment of AI solutions."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/23/runtime-risk-realtime-defense-securing-ai-agents/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/23/runtime-risk-realtime-defense-securing-ai-agents/
+title: Securing Microsoft Copilot Studio AI Agents with Defender Runtime Protection
+author: Microsoft Defender Security Research Team
+feed_name: Microsoft Security Blog
 date: 2026-01-23 20:57:14 +00:00
-permalink: "/2026-01-23-Securing-Microsoft-Copilot-Studio-AI-Agents-with-Defender-Runtime-Protection.html"
-categories: ["AI", "Security"]
-tags: ["Agent Builder", "Agent Security", "AI", "AI Agents", "Cloud Apps Security", "Data Exfiltration", "Generative Orchestration", "Malicious Attack Prevention", "Microsoft Copilot Studio", "Microsoft Defender", "Microsoft Security", "News", "Prompt Injection", "Real Time Protection", "Runtime Security", "Security", "Threat Detection", "Webhook Integration"]
-tags_normalized: ["agent builder", "agent security", "ai", "ai agents", "cloud apps security", "data exfiltration", "generative orchestration", "malicious attack prevention", "microsoft copilot studio", "microsoft defender", "microsoft security", "news", "prompt injection", "real time protection", "runtime security", "security", "threat detection", "webhook integration"]
+tags:
+- Agent Builder
+- Agent Security
+- AI Agents
+- Cloud Apps Security
+- Data Exfiltration
+- Generative Orchestration
+- Malicious Attack Prevention
+- Microsoft Copilot Studio
+- Microsoft Defender
+- Microsoft Security
+- Prompt Injection
+- Real Time Protection
+- Runtime Security
+- Threat Detection
+- Webhook Integration
+section_names:
+- ai
+- security
 ---
-
 The Microsoft Defender Security Research Team shares in-depth guidance on securing Microsoft Copilot Studio AI agents at runtime, demonstrating how Defender’s real-time protection thwarts malicious prompt injections and data exfiltration attempts.<!--excerpt_end-->
 
 # Securing Microsoft Copilot Studio AI Agents with Defender Runtime Protection

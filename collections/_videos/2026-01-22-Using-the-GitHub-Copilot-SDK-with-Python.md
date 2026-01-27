@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Using the GitHub Copilot SDK with Python"
-description: "This demo, presented by Visual Studio Code and featuring Liam Hampton, shows how to connect applications to the GitHub Copilot Engine using the Copilot SDK. The video highlights integrating GitHub Copilot capabilities through a Python script, demonstrating practical steps to enable code suggestions and AI assistance within an iOS project."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/G6Ywhqv_7WQ"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/shorts/G6Ywhqv_7WQ
+title: Using the GitHub Copilot SDK with Python
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2026-01-22 21:20:00 +00:00
-permalink: "/2026-01-22-Using-the-GitHub-Copilot-SDK-with-Python.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "API Integration", "Code Suggestions", "Coding", "Coding Assistant", "Copilot SDK", "Demo", "Developer Tools", "GitHub Copilot", "Githubcopilotsdk", "Python", "SDK", "Shorts", "Shorts2026", "Software Engineering", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai development", "api integration", "code suggestions", "coding", "coding assistant", "copilot sdk", "demo", "developer tools", "github copilot", "githubcopilotsdk", "python", "sdk", "shorts", "shorts2026", "software engineering", "videos", "vs code"]
+tags:
+- AI Development
+- API Integration
+- Code Suggestions
+- Coding Assistant
+- Copilot SDK
+- Demo
+- Developer Tools
+- Githubcopilotsdk
+- Python
+- SDK
+- Shorts
+- Shorts2026
+- Software Engineering
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Visual Studio Code and Liam Hampton present a demo on integrating the GitHub Copilot Engine with Python, showcasing how developers can leverage the Copilot SDK within their projects.<!--excerpt_end-->
 
 {% youtube G6Ywhqv_7WQ %}

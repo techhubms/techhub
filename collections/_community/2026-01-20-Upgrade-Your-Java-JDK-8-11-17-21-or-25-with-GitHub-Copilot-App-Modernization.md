@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Upgrade Your Java JDK (8, 11, 17, 21, or 25) with GitHub Copilot App Modernization"
-description: "This post offers developers an overview of the modernization capabilities available in GitHub Copilot app modernization for upgrading Java projects—including JDK and framework upgrades, dependency management, and automated migrations. It outlines supported scenarios, prerequisites in VS Code or IntelliJ, the upgrade process, and the automated checks performed. Links to Microsoft Learn quickstart are provided for in-depth workflows."
-author: "ayangupta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/upgrade-your-java-jdk-8-11-17-21-or-25-with-github-copilot-app/ba-p/4486468"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/upgrade-your-java-jdk-8-11-17-21-or-25-with-github-copilot-app/ba-p/4486468
+title: Upgrade Your Java JDK (8, 11, 17, 21, or 25) with GitHub Copilot App Modernization
+author: ayangupta
+feed_name: Microsoft Tech Community
 date: 2026-01-20 02:12:24 +00:00
-permalink: "/2026-01-20-Upgrade-Your-Java-JDK-8-11-17-21-or-25-with-GitHub-Copilot-App-Modernization.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "App Modernization", "Automated Refactoring", "Cloud Development", "Code Upgrade", "Coding", "Community", "Continuous Integration", "Dependency Management", "GitHub Copilot", "Gradle", "IDE Extension", "IntelliJ IDEA", "Jakarta EE", "Java", "Java EE", "JDK Upgrade", "JUnit", "Maven", "OpenRewrite", "Spring Boot", "Spring Framework", "VS Code"]
-tags_normalized: ["ai", "app modernization", "automated refactoring", "cloud development", "code upgrade", "coding", "community", "continuous integration", "dependency management", "github copilot", "gradle", "ide extension", "intellij idea", "jakarta ee", "java", "java ee", "jdk upgrade", "junit", "maven", "openrewrite", "spring boot", "spring framework", "vs code"]
+tags:
+- App Modernization
+- Automated Refactoring
+- Cloud Development
+- Code Upgrade
+- Continuous Integration
+- Dependency Management
+- Gradle
+- IDE Extension
+- IntelliJ IDEA
+- Jakarta EE
+- Java
+- Java EE
+- JDK Upgrade
+- JUnit
+- Maven
+- OpenRewrite
+- Spring Boot
+- Spring Framework
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 ayangupta explains how GitHub Copilot app modernization automates Java JDK and framework upgrades, helping developers update dependencies and migrate build systems with minimal manual effort.<!--excerpt_end-->
 
 # Upgrade Your Java JDK (8, 11, 17, 21, or 25) with GitHub Copilot App Modernization

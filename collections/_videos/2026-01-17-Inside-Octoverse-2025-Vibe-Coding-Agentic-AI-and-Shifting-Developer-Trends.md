@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Inside Octoverse 2025: Vibe Coding, Agentic AI, and Shifting Developer Trends"
-description: "This podcast episode features a deep dive into GitHub’s 2025 Octoverse report, where Andrea and Kedasha interview Jeff Luszcz about monumental shifts in the software development world. They explore TypeScript’s rise, the influence of AI-powered tools like GitHub Copilot, the emergence of ‘vibe coding’ and agentic workflows, and security best practices with CodeQL and Dependabot. The discussion offers valuable insights for developers and teams into industry-wide changes, the future skills in demand, and the global expansion of open source contributions."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ve-tfDEQOG8"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=ve-tfDEQOG8
+title: 'Inside Octoverse 2025: Vibe Coding, Agentic AI, and Shifting Developer Trends'
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-17 15:01:38 +00:00
-permalink: "/2026-01-17-Inside-Octoverse-2025-Vibe-Coding-Agentic-AI-and-Shifting-Developer-Trends.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic Workflows", "AI", "AI Development", "COBOL", "CodeQL", "Coding", "Dependabot", "Developer Skills", "DevOps", "GitHub Copilot", "GitHub Octoverse", "Global Tech Trends", "Home Assistant", "Next.js", "Open Source", "Python", "Secret Scanning", "Security", "Security By Default", "TypeScript", "Vibe Coding", "Videos", "Vite", "VS Code"]
-tags_normalized: ["agentic workflows", "ai", "ai development", "cobol", "codeql", "coding", "dependabot", "developer skills", "devops", "github copilot", "github octoverse", "global tech trends", "home assistant", "nextdotjs", "open source", "python", "secret scanning", "security", "security by default", "typescript", "vibe coding", "videos", "vite", "vs code"]
+tags:
+- Agentic Workflows
+- AI Development
+- COBOL
+- CodeQL
+- Dependabot
+- Developer Skills
+- GitHub Octoverse
+- Global Tech Trends
+- Home Assistant
+- Next.js
+- Open Source
+- Python
+- Secret Scanning
+- Security By Default
+- TypeScript
+- Vibe Coding
+- Vite
+- VS Code
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
+- security
 ---
-
 GitHub hosts Andrea and Kedasha chat with Jeff Luszcz in this insightful episode, unraveling the core findings from the Octoverse 2025 report. Learn how AI, Copilot, and new coding trends are impacting developers worldwide.<!--excerpt_end-->
 
 {% youtube ve-tfDEQOG8 %}

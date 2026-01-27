@@ -1,20 +1,23 @@
----
-layout: "post"
-title: "Building with GitHub Copilot CLI: Rubber Duck Thursdays Live Coding Stream"
-description: "This session from GitHub's Rubber Duck Thursdays series features live coding and experimentation with the GitHub Copilot CLI. The hosts explore how to build agents from the command line and integrate these capabilities into development workflows through informal, practical demonstrations."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dGzIEn4MFMQ"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=dGzIEn4MFMQ
+title: 'Building with GitHub Copilot CLI: Rubber Duck Thursdays Live Coding Stream'
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-21 21:33:57 +00:00
-permalink: "/2026-01-21-Building-with-GitHub-Copilot-CLI-Rubber-Duck-Thursdays-Live-Coding-Stream.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Automation", "Command Line", "Copilot CLI", "Developer Tools", "GitHub", "GitHub Copilot", "Live Coding", "Programming", "Software Development", "Videos", "Workflow Integration"]
-tags_normalized: ["ai", "automation", "command line", "copilot cli", "developer tools", "github", "github copilot", "live coding", "programming", "software development", "videos", "workflow integration"]
+tags:
+- Automation
+- Command Line
+- Copilot CLI
+- Developer Tools
+- GitHub
+- Live Coding
+- Programming
+- Software Development
+- Workflow Integration
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub hosts a live coding stream exploring GitHub Copilot CLI, showcasing how to build and experiment with command-line agents in developer workflows.<!--excerpt_end-->
 
 {% youtube dGzIEn4MFMQ %}

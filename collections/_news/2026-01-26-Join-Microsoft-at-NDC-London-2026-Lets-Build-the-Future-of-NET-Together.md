@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Join Microsoft at NDC London 2026 – Let’s Build the Future of .NET Together"
-description: "This announcement highlights Microsoft's expanded technical presence at NDC London 2026, detailing technical sessions, hands-on workshops, and interactive opportunities with Microsoft engineers. Topics covered include .NET 10, AI-powered development, Azure services, GitHub Copilot, modernization strategies, and cloud-native architecture. Attendees can engage directly with experts to deepen their expertise in modern software engineering using Microsoft's ecosystem."
-author: ".NET Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/join-us-at-ndc-london-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/join-us-at-ndc-london-2026/
+title: Join Microsoft at NDC London 2026 – Let’s Build the Future of .NET Together
+author: .NET Team
+feed_name: Microsoft .NET Blog
 date: 2026-01-26 18:05:00 +00:00
-permalink: "/2026-01-26-Join-Microsoft-at-NDC-London-2026-Lets-Build-the-Future-of-NET-Together.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET 10", "Agentic AI", "AI", "AI Powered Development", "App Modernization", "ASP.NET Core", "Azure", "C#", "Cloud Native", "Coding", "Conferences", "Development Tools", "GitHub Copilot", "London", "Managed Instance", "Microsoft", "Modernization", "NDC", "NDC London", "News", "Performance Tuning", "SRE Agent", "Technical Sessions", "Workshops"]
-tags_normalized: ["dotnet", "dotnet 10", "agentic ai", "ai", "ai powered development", "app modernization", "aspdotnet core", "azure", "csharp", "cloud native", "coding", "conferences", "development tools", "github copilot", "london", "managed instance", "microsoft", "modernization", "ndc", "ndc london", "news", "performance tuning", "sre agent", "technical sessions", "workshops"]
+tags:
+- .NET
+- .NET 10
+- Agentic AI
+- AI Powered Development
+- App Modernization
+- ASP.NET Core
+- C#
+- Cloud Native
+- Conferences
+- Development Tools
+- London
+- Managed Instance
+- Microsoft
+- Modernization
+- NDC
+- NDC London
+- Performance Tuning
+- SRE Agent
+- Technical Sessions
+- Workshops
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
 ---
-
 The .NET Team invites developers to NDC London 2026 to explore the latest in .NET 10, Azure, AI-powered development, and GitHub Copilot, with technical sessions and 1:1 meetups.<!--excerpt_end-->
 
 # Join Microsoft at NDC London 2026 – Let’s Build the Future of .NET Together

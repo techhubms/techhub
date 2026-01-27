@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "4 Priorities for AI-Powered Identity and Network Access Security in 2026"
-description: "This article outlines four vital strategies for security and identity leaders facing the rise of AI-driven cyber threats in 2026. Focusing on AI-powered protection, agent governance, the unification of Zero Trust principles, and foundational identity security, it details how Microsoft Entra and Defender solutions address new challenges across identity and network layers."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/20/four-priorities-for-ai-powered-identity-and-network-access-security-in-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/20/four-priorities-for-ai-powered-identity-and-network-access-security-in-2026/
+title: 4 Priorities for AI-Powered Identity and Network Access Security in 2026
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-20 17:40:48 +00:00
-permalink: "/2026-01-20-4-Priorities-for-AI-Powered-Identity-and-Network-Access-Security-in-2026.html"
-categories: ["AI", "Security"]
-tags: ["Access Fabric", "Agent Governance", "AI", "AI Security", "Authentication", "Company News", "Conditional Access", "Cybersecurity", "Identity Management", "Microsoft Defender", "Microsoft Entra", "Network Security", "News", "Passkeys", "Phishing Protection", "Security", "Security Copilot", "Verified ID", "Zero Trust"]
-tags_normalized: ["access fabric", "agent governance", "ai", "ai security", "authentication", "company news", "conditional access", "cybersecurity", "identity management", "microsoft defender", "microsoft entra", "network security", "news", "passkeys", "phishing protection", "security", "security copilot", "verified id", "zero trust"]
+tags:
+- Access Fabric
+- Agent Governance
+- AI Security
+- Authentication
+- Company News
+- Conditional Access
+- Cybersecurity
+- Identity Management
+- Microsoft Defender
+- Microsoft Entra
+- Network Security
+- Passkeys
+- Phishing Protection
+- Security Copilot
+- Verified ID
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 stclarke highlights the 2026 priorities for security teams, sharing actionable guidance on AI-powered identity protection, agent management, and unified access strategies using Microsoft Entra and Defender.<!--excerpt_end-->
 
 # 4 Priorities for AI-Powered Identity and Network Access Security in 2026

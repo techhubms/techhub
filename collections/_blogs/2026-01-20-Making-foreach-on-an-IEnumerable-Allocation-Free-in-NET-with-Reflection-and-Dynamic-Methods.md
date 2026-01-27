@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Making foreach on an IEnumerable Allocation-Free in .NET with Reflection and Dynamic Methods"
-description: "This blog post by Andrew Lock explores how developers can eliminate heap allocations that occur when using foreach with IEnumerable in .NET. It examines allocation pitfalls, demonstrates benchmarking allocation differences, and provides advanced solutions using Reflection.Emit and DynamicMethod to create allocation-free enumeration patterns for both built-in and custom collections. The article includes detailed code examples, performance benchmarks across .NET versions, and practical considerations for when and where this optimization should be applied."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/making-foreach-on-an-ienumerable-allocation-free-using-reflection-and-dynamic-methods/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/making-foreach-on-an-ienumerable-allocation-free-using-reflection-and-dynamic-methods/
+title: Making foreach on an IEnumerable Allocation-Free in .NET with Reflection and Dynamic Methods
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2026-01-20 10:00:00 +00:00
-permalink: "/2026-01-20-Making-foreach-on-an-IEnumerable-Allocation-Free-in-NET-with-Reflection-and-Dynamic-Methods.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 9", ".NET Core", ".NET Framework", "BenchmarkDotNet", "Blogs", "Boxing", "C#", "Coding", "Custom Collections", "Datadog", "DynamicMethod", "Enumerator", "Generic Collections", "Heap Allocation", "IEnumerable", "IL Generation", "Performance", "Performance Optimization", "Reflection.Emit", "Stack Allocation", "Struct"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "dotnet core", "dotnet framework", "benchmarkdotnet", "blogs", "boxing", "csharp", "coding", "custom collections", "datadog", "dynamicmethod", "enumerator", "generic collections", "heap allocation", "ienumerable", "il generation", "performance", "performance optimization", "reflectiondotemit", "stack allocation", "struct"]
+tags:
+- .NET
+- .NET 10
+- .NET 9
+- .NET Core
+- .NET Framework
+- BenchmarkDotNet
+- Boxing
+- C#
+- Custom Collections
+- Datadog
+- DynamicMethod
+- Enumerator
+- Generic Collections
+- Heap Allocation
+- IEnumerable
+- IL Generation
+- Performance
+- Performance Optimization
+- Reflection.Emit
+- Stack Allocation
+- Struct
+section_names:
+- coding
 ---
-
 Andrew Lock explains how to make foreach iteration allocation-free on IEnumerable<T> in .NET, leveraging Reflection.Emit and DynamicMethod for advanced memory optimization, with benchmarks and implications for earlier and modern .NET runtimes.<!--excerpt_end-->
 
 # Making foreach on an IEnumerable Allocation-Free in .NET with Reflection and Dynamic Methods

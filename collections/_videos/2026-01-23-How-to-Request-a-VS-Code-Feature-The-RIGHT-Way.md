@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "How to Request a VS Code Feature (The RIGHT Way)"
-description: "This tutorial, presented by Reynald Adolphe, walks users through the exact process of submitting a feature request to the Visual Studio Code team directly from within VS Code. It covers best practices for making your request stand out and increasing the likelihood of your idea being noticed and considered."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0Nq_ZzSU7lA"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=0Nq_ZzSU7lA
+title: How to Request a VS Code Feature (The RIGHT Way)
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2026-01-23 15:00:02 +00:00
-permalink: "/2026-01-23-How-to-Request-a-VS-Code-Feature-The-RIGHT-Way.html"
-categories: ["Coding"]
-tags: ["Best Practices", "Code", "Code Editor", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Development Workflow", "Feature Request", "Microsoft", "Open Source", "Productivity", "Software Developer", "Videos", "VS Code"]
-tags_normalized: ["best practices", "code", "code editor", "coding", "demo", "developer", "developer community", "developer tools", "development workflow", "feature request", "microsoft", "open source", "productivity", "software developer", "videos", "vs code"]
+tags:
+- Best Practices
+- Code
+- Code Editor
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Development Workflow
+- Feature Request
+- Microsoft
+- Open Source
+- Productivity
+- Software Developer
+- VS Code
+section_names:
+- coding
 ---
-
 In this video, Reynald Adolphe demonstrates how to effectively request new features for Visual Studio Code directly from the editor, helping developers interact productively with the VS Code team.<!--excerpt_end-->
 
 {% youtube 0Nq_ZzSU7lA %}

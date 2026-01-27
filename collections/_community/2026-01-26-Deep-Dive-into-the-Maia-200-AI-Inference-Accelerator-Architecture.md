@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Deep Dive into the Maia 200 AI Inference Accelerator Architecture"
-description: "This comprehensive article authored by Saurabh Dighe and Artour Levin offers an in-depth overview of the Maia 200 architecture—Microsoft's custom AI inference accelerator for Azure. It discusses Maia 200’s silicon innovations, memory hierarchy, data movement infrastructure, developer SDK, and its impact on cloud-scale AI workloads."
-author: "sdighe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deep-dive-into-the-maia-200-architecture/ba-p/4489312"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deep-dive-into-the-maia-200-architecture/ba-p/4489312
+title: Deep Dive into the Maia 200 AI Inference Accelerator Architecture
+author: sdighe
+feed_name: Microsoft Tech Community
 date: 2026-01-26 16:01:04 +00:00
-permalink: "/2026-01-26-Deep-Dive-into-the-Maia-200-AI-Inference-Accelerator-Architecture.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Inference", "AI Infrastructure", "Azure", "Azure AI", "Cloud Accelerator", "Cluster Architecture", "Community", "Custom Silicon", "Data Movement", "Developer SDK", "DMA", "FP4", "High Bandwidth Memory", "Inference Hardware", "Maia 200", "Microsoft Collective Communication Library", "Model Deployment", "Network On Chip", "PyTorch", "Scale Up Interconnect", "Token Generation", "Triton Compiler"]
-tags_normalized: ["ai", "ai inference", "ai infrastructure", "azure", "azure ai", "cloud accelerator", "cluster architecture", "community", "custom silicon", "data movement", "developer sdk", "dma", "fp4", "high bandwidth memory", "inference hardware", "maia 200", "microsoft collective communication library", "model deployment", "network on chip", "pytorch", "scale up interconnect", "token generation", "triton compiler"]
+tags:
+- AI Inference
+- AI Infrastructure
+- Azure AI
+- Cloud Accelerator
+- Cluster Architecture
+- Custom Silicon
+- Data Movement
+- Developer SDK
+- DMA
+- FP4
+- High Bandwidth Memory
+- Inference Hardware
+- Maia 200
+- Microsoft Collective Communication Library
+- Model Deployment
+- Network On Chip
+- PyTorch
+- Scale Up Interconnect
+- Token Generation
+- Triton Compiler
+section_names:
+- ai
+- azure
 ---
-
 Saurabh Dighe presents a deep technical examination of Microsoft’s Maia 200 silicon, revealing its purpose-built innovations for AI inference at Azure scale and how its hardware and SDK empower developers and cloud AI workloads.<!--excerpt_end-->
 
 # Deep Dive into the Maia 200 AI Inference Accelerator Architecture

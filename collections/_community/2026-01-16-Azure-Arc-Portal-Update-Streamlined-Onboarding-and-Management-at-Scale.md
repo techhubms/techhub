@@ -1,20 +1,24 @@
----
-layout: "post"
-title: "Azure Arc Portal Update: Streamlined Onboarding and Management at Scale"
-description: "This article outlines the significant updates to the Azure Arc portal, which is designed to facilitate onboarding, management, and organization of hybrid and multi-cloud resources. Key improvements include a redesigned interface, a unified onboarding experience, and actionable dashboards that help IT pros manage Arc-enabled environments more effectively."
-author: "MarcoB"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-arc-portal-update-simplifying-onboarding-and-management-at/ba-p/4477355"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-arc-portal-update-simplifying-onboarding-and-management-at/ba-p/4477355
+title: 'Azure Arc Portal Update: Streamlined Onboarding and Management at Scale'
+author: MarcoB
+feed_name: Microsoft Tech Community
 date: 2026-01-16 22:44:00 +00:00
-permalink: "/2026-01-16-Azure-Arc-Portal-Update-Streamlined-Onboarding-and-Management-at-Scale.html"
-categories: ["Azure"]
-tags: ["Agent Connectivity", "Azure", "Azure Arc", "Azure Management", "Community", "Dashboards", "Hybrid Cloud", "Multi Cloud", "Onboarding", "Policy Compliance", "Portal Update", "Resource Management", "Secure Score"]
-tags_normalized: ["agent connectivity", "azure", "azure arc", "azure management", "community", "dashboards", "hybrid cloud", "multi cloud", "onboarding", "policy compliance", "portal update", "resource management", "secure score"]
+tags:
+- Agent Connectivity
+- Azure Arc
+- Azure Management
+- Dashboards
+- Hybrid Cloud
+- Multi Cloud
+- Onboarding
+- Policy Compliance
+- Portal Update
+- Resource Management
+- Secure Score
+section_names:
+- azure
 ---
-
 MarcoB presents an overview of the refreshed Azure Arc portal, highlighting streamlined onboarding and new dashboard features aimed at making multi-cloud resource management simpler and more actionable.<!--excerpt_end-->
 
 # Azure Arc Portal Update: Streamlined Onboarding and Management at Scale

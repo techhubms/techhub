@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Bringing Work Context to Your Code in GitHub Copilot"
-description: "This video introduces a new feature in GitHub Copilot that enables developers to access work data from Microsoft 365 via the Work IQ MCP server. The integration aims to enhance the coding experience by connecting organizational knowledge directly to code workflows, empowering developers to build more context-aware solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ASvjwef7K04"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=ASvjwef7K04
+title: Bringing Work Context to Your Code in GitHub Copilot
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2026-01-23 16:54:48 +00:00
-permalink: "/2026-01-23-Bringing-Work-Context-to-Your-Code-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Cloud Computing", "Cloud Integration", "Code Context", "Dev", "Developer Tools", "Development", "GitHub Copilot", "MCP Server", "Microsoft", "Microsoft 365", "Organizational Knowledge", "Preview Feature", "Productivity", "Tech", "Technology", "Videos", "Work IQ"]
-tags_normalized: ["ai", "cloud computing", "cloud integration", "code context", "dev", "developer tools", "development", "github copilot", "mcp server", "microsoft", "microsoft 365", "organizational knowledge", "preview feature", "productivity", "tech", "technology", "videos", "work iq"]
+tags:
+- Cloud Computing
+- Cloud Integration
+- Code Context
+- Dev
+- Developer Tools
+- Development
+- MCP Server
+- Microsoft
+- Microsoft 365
+- Organizational Knowledge
+- Preview Feature
+- Productivity
+- Tech
+- Technology
+- Work IQ
+section_names:
+- ai
+- github-copilot
 ---
-
 Microsoft Developer discusses how the integration of Work IQ MCP server with GitHub Copilot enables access to Microsoft 365 work context, enhancing developers’ coding workflow.<!--excerpt_end-->
 
 {% youtube ASvjwef7K04 %}

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: ".NET AI Community Standup - Using the GitHub Copilot SDK in .NET Apps"
-description: "An in-depth session featuring Steve Sanderson and Jon Galloway that explores the GitHub Copilot SDK and how to leverage it within .NET applications. The community standup discusses practical demos, integration strategies, and the benefits of AI-driven code assistance for .NET developers."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=aKUZCxTdDDg"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=aKUZCxTdDDg
+title: .NET AI Community Standup - Using the GitHub Copilot SDK in .NET Apps
+author: dotnet
+feed_name: DotNet YouTube
 date: 2026-01-22 00:03:56 +00:00
-permalink: "/2026-01-22-NET-AI-Community-Standup-Using-the-GitHub-Copilot-SDK-in-NET-Apps.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Enabled Development", "Code Generation", "Coding", "Community Standup", "Copilot", "Copilot Extensions", "Copilot SDK", "Developer Tools", "GitHub", "GitHub Copilot", "Jon Galloway", "SDK Integration", "Steve Sanderson", "Videos", "VS"]
-tags_normalized: ["dotnet", "ai", "ai enabled development", "code generation", "coding", "community standup", "copilot", "copilot extensions", "copilot sdk", "developer tools", "github", "github copilot", "jon galloway", "sdk integration", "steve sanderson", "videos", "vs"]
+tags:
+- .NET
+- AI Enabled Development
+- Code Generation
+- Community Standup
+- Copilot
+- Copilot Extensions
+- Copilot SDK
+- Developer Tools
+- GitHub
+- Jon Galloway
+- SDK Integration
+- Steve Sanderson
+- VS
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 dotnet presents a community standup with Steve Sanderson and Jon Galloway, delving into the GitHub Copilot SDK and how it enhances .NET development with AI-powered capabilities.<!--excerpt_end-->
 
 {% youtube aKUZCxTdDDg %}

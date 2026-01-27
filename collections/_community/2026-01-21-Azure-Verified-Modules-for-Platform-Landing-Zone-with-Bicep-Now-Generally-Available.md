@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure Verified Modules for Platform Landing Zone with Bicep Now Generally Available"
-description: "This detailed announcement shares the general availability of Azure Verified Modules (AVM) for Platform Landing Zones using Bicep, marking a shift towards consistent, modular, and robust infrastructure-as-code (IaC) practices in Azure. The post outlines the technical architecture behind AVM, highlights changes such as integration with deployment stacks, modern parameter files, improved policy management, and sets a clear timeline for deprecating the classic ALZ-Bicep approach. Developers and DevOps engineers get actionable insights on leveraging AVM for end-to-end customization, improved lifecycle management, and simplified upgrades."
-author: "ztrocinski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-tools-blog/release-of-bicep-azure-verified-modules-for-platform-landing/ba-p/4487932"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/release-of-bicep-azure-verified-modules-for-platform-landing/ba-p/4487932
+title: Azure Verified Modules for Platform Landing Zone with Bicep Now Generally Available
+author: ztrocinski
+feed_name: Microsoft Tech Community
 date: 2026-01-21 04:10:31 +00:00
-permalink: "/2026-01-21-Azure-Verified-Modules-for-Platform-Landing-Zone-with-Bicep-Now-Generally-Available.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["ALZ Accelerator", "ALZ Bicep", "Automation", "Azure", "Azure Landing Zones", "Azure Policy", "Azure Resource Manager", "Azure Verified Modules", "Bicep", "Coding", "Community", "Deployment Stacks", "DevOps", "Enterprise Governance", "IaC", "Logging", "Management Groups", "Migration Guide", "Module Architecture", "Networking", "Parameter Files", "Platform Landing Zone", "Security"]
-tags_normalized: ["alz accelerator", "alz bicep", "automation", "azure", "azure landing zones", "azure policy", "azure resource manager", "azure verified modules", "bicep", "coding", "community", "deployment stacks", "devops", "enterprise governance", "iac", "logging", "management groups", "migration guide", "module architecture", "networking", "parameter files", "platform landing zone", "security"]
+tags:
+- ALZ Accelerator
+- ALZ Bicep
+- Automation
+- Azure Landing Zones
+- Azure Policy
+- Azure Resource Manager
+- Azure Verified Modules
+- Bicep
+- Deployment Stacks
+- Enterprise Governance
+- IaC
+- Logging
+- Management Groups
+- Migration Guide
+- Module Architecture
+- Networking
+- Parameter Files
+- Platform Landing Zone
+section_names:
+- azure
+- coding
+- devops
+- security
 ---
-
 ztrocinski announces the general availability of Azure Verified Modules for Platform Landing Zone with Bicep, detailing its architecture, developer experience improvements, and migration plans for classic ALZ-Bicep users.<!--excerpt_end-->
 
 # Azure Verified Modules for Platform Landing Zone with Bicep Now Generally Available

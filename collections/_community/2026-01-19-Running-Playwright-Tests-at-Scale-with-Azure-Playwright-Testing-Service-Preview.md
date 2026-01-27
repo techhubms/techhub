@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Running Playwright Tests at Scale with Azure Playwright Testing Service (Preview)"
-description: "This in-depth guide by Adyshasnotes demonstrates how to use Azure Playwright Testing Service (Preview) for scalable, cloud-based end-to-end testing. Learn how to set up your workspace, configure your Playwright project in TypeScript, run UI and API tests on remote cloud browsers, and integrate test results with your CI/CD pipeline using Visual Studio or VS Code."
-author: "Adyshasnotes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-playwright-testing-service-preview-run-playwright-tests-on/ba-p/4487103"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-playwright-testing-service-preview-run-playwright-tests-on/ba-p/4487103
+title: Running Playwright Tests at Scale with Azure Playwright Testing Service (Preview)
+author: Adyshasnotes
+feed_name: Microsoft Tech Community
 date: 2026-01-19 11:44:18 +00:00
-permalink: "/2026-01-19-Running-Playwright-Tests-at-Scale-with-Azure-Playwright-Testing-Service-Preview.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Access Token", "API Testing", "Azure", "Azure Playwright Testing", "CI/CD", "Cloud Browsers", "Coding", "Community", "Debugging", "DevOps", "End To End Testing", "HTML Reports", "Node.js", "Playwright", "Test Automation", "Testing Pipeline", "TypeScript", "VS", "VS Code"]
-tags_normalized: ["access token", "api testing", "azure", "azure playwright testing", "cislashcd", "cloud browsers", "coding", "community", "debugging", "devops", "end to end testing", "html reports", "nodedotjs", "playwright", "test automation", "testing pipeline", "typescript", "vs", "vs code"]
+tags:
+- Access Token
+- API Testing
+- Azure Playwright Testing
+- CI/CD
+- Cloud Browsers
+- Debugging
+- End To End Testing
+- HTML Reports
+- Node.js
+- Playwright
+- Test Automation
+- Testing Pipeline
+- TypeScript
+- VS
+- VS Code
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Adyshasnotes walks you through leveraging Azure Playwright Testing Service (Preview) to execute Playwright tests on cloud-hosted browsers using TypeScript, with step-by-step setup focused on Visual Studio/VS Code for modern DevOps workflows.<!--excerpt_end-->
 
 # Azure Playwright Testing Service (Preview): Run Playwright Tests on Cloud Browsers

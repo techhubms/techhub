@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Scaling DNS on AKS with Cilium: NodeLocal DNSCache, LRP, and FQDN Policies"
-description: "This in-depth technical guide by Simone Rodigari explores how to deploy NodeLocal DNSCache in Azure Kubernetes Service (AKS) clusters with Cilium as the CNI. The article explains the reasons for adopting local DNS caching, Cilium-specific deployment with Local Redirect Policy, common network policy pitfalls, and considerations for FQDN-aware egress restrictions, including comparisons with the AKS-managed LocalDNS."
-author: "Simone_Rodigari"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/scaling-dns-on-aks-with-cilium-nodelocal-dnscache-lrp-and-fqdn/ba-p/4486323"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/scaling-dns-on-aks-with-cilium-nodelocal-dnscache-lrp-and-fqdn/ba-p/4486323
+title: 'Scaling DNS on AKS with Cilium: NodeLocal DNSCache, LRP, and FQDN Policies'
+author: Simone_Rodigari
+feed_name: Microsoft Tech Community
 date: 2026-01-23 17:28:47 +00:00
-permalink: "/2026-01-23-Scaling-DNS-on-AKS-with-Cilium-NodeLocal-DNSCache-LRP-and-FQDN-Policies.html"
-categories: ["Azure"]
-tags: ["AKS", "Azure", "Cilium", "Cilium LRP", "CiliumNetworkPolicy", "Community", "ConfigMap", "CoreDNS", "DaemonSet", "DNS", "Egress Control", "FQDN", "Hubble", "Kubernetes", "Linux Networking", "Local Redirect Policy", "Network Policy", "Network Security", "NodeLocal DNSCache", "RBAC"]
-tags_normalized: ["aks", "azure", "cilium", "cilium lrp", "ciliumnetworkpolicy", "community", "configmap", "coredns", "daemonset", "dns", "egress control", "fqdn", "hubble", "kubernetes", "linux networking", "local redirect policy", "network policy", "network security", "nodelocal dnscache", "rbac"]
+tags:
+- AKS
+- Cilium
+- Cilium LRP
+- CiliumNetworkPolicy
+- ConfigMap
+- CoreDNS
+- DaemonSet
+- DNS
+- Egress Control
+- FQDN
+- Hubble
+- Kubernetes
+- Linux Networking
+- Local Redirect Policy
+- Network Policy
+- Network Security
+- NodeLocal DNSCache
+- RBAC
+section_names:
+- azure
 ---
-
 Simone Rodigari provides a comprehensive guide for deploying NodeLocal DNSCache on AKS clusters using Cilium, highlighting how to optimize DNS resolution, avoid CoreDNS bottlenecks, and implement reliable FQDN-aware network policies.<!--excerpt_end-->
 
 # Scaling DNS on AKS with Cilium: NodeLocal DNSCache, LRP, and FQDN Policies

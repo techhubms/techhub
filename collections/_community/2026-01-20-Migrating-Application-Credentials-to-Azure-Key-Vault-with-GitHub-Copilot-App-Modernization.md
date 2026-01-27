@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Migrating Application Credentials to Azure Key Vault with GitHub Copilot App Modernization"
-description: "This detailed guide explores how GitHub Copilot app modernization assists developers in migrating credentials from application and configuration files to Azure Key Vault. It covers the detection of embedded secrets, recommended migration patterns, automated code transformations, security checks, and the best practices for integrating Key Vault into modernized apps using Azure SDKs and managed identities."
-author: "ayangupta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-application-credentials-to-azure-key-vault-with-github/ba-p/4486482"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-application-credentials-to-azure-key-vault-with-github/ba-p/4486482
+title: Migrating Application Credentials to Azure Key Vault with GitHub Copilot App Modernization
+author: ayangupta
+feed_name: Microsoft Tech Community
 date: 2026-01-20 01:55:03 +00:00
-permalink: "/2026-01-20-Migrating-Application-Credentials-to-Azure-Key-Vault-with-GitHub-Copilot-App-Modernization.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
-tags: [".NET", "AI", "App Modernization", "Azure", "Azure Key Vault", "Azure SDK", "Coding", "Community", "Configuration Security", "Credential Rotation", "Dependency Management", "DevSecOps", "GitHub Copilot", "IntelliJ IDEA", "Java", "Managed Identity", "Secret Management", "SecretClient", "Security", "VS Code"]
-tags_normalized: ["dotnet", "ai", "app modernization", "azure", "azure key vault", "azure sdk", "coding", "community", "configuration security", "credential rotation", "dependency management", "devsecops", "github copilot", "intellij idea", "java", "managed identity", "secret management", "secretclient", "security", "vs code"]
+tags:
+- .NET
+- App Modernization
+- Azure Key Vault
+- Azure SDK
+- Configuration Security
+- Credential Rotation
+- Dependency Management
+- DevSecOps
+- IntelliJ IDEA
+- Java
+- Managed Identity
+- Secret Management
+- SecretClient
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- github-copilot
+- security
 ---
-
 ayangupta presents a comprehensive walkthrough on using GitHub Copilot app modernization to migrate application secrets and credentials to Azure Key Vault, automating secure code changes and improving cloud security.<!--excerpt_end-->
 
 # Migrating Application Credentials to Azure Key Vault with GitHub Copilot App Modernization

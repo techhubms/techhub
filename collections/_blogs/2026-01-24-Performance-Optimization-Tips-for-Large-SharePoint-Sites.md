@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Performance Optimization Tips for Large SharePoint Sites"
-description: "This post provides a comprehensive, technical guide to improving performance in large SharePoint environments—particularly those in Microsoft 365. It covers best practices in information architecture, list and library optimization, SPFx customizations, search tuning, permissions, CDN use, ongoing monitoring, and large-scale cleanup strategies."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/performance-optimization-tips-for-large-sharepoint-sites/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/performance-optimization-tips-for-large-sharepoint-sites/
+title: Performance Optimization Tips for Large SharePoint Sites
+author: John Edward
+feed_name: Dellenny's Blog
 date: 2026-01-24 11:25:20 +00:00
-permalink: "/2026-01-24-Performance-Optimization-Tips-for-Large-SharePoint-Sites.html"
-categories: ["Coding"]
-tags: ["Azure Application Insights", "Blogs", "Coding", "Content Management", "Custom Web Parts", "Document Libraries", "Indexed Columns", "Information Architecture", "List View Threshold", "Metadata Navigation", "Microsoft 365", "Microsoft Graph", "Office 365 CDN", "Page Diagnostics", "Performance Optimization", "Permissions", "Search Performance", "SharePoint", "SharePoint Online", "SharePoint Server", "SPFx"]
-tags_normalized: ["azure application insights", "blogs", "coding", "content management", "custom web parts", "document libraries", "indexed columns", "information architecture", "list view threshold", "metadata navigation", "microsoft 365", "microsoft graph", "office 365 cdn", "page diagnostics", "performance optimization", "permissions", "search performance", "sharepoint", "sharepoint online", "sharepoint server", "spfx"]
+tags:
+- Azure Application Insights
+- Content Management
+- Custom Web Parts
+- Document Libraries
+- Indexed Columns
+- Information Architecture
+- List View Threshold
+- Metadata Navigation
+- Microsoft 365
+- Microsoft Graph
+- Office 365 CDN
+- Page Diagnostics
+- Performance Optimization
+- Permissions
+- Search Performance
+- SharePoint
+- SharePoint Online
+- SharePoint Server
+- SPFx
+section_names:
+- coding
 ---
-
 John Edward offers a hands-on technical guide for optimizing the performance of large SharePoint sites, detailing approaches to architecture, list management, customizations, and ongoing maintenance for Microsoft 365 and on-premises environments.<!--excerpt_end-->
 
 # Performance Optimization Tips for Large SharePoint Sites

@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "VS Code Live: Exploring MCP Apps Integration"
-description: "This video covers the introduction of Model Context Protocol (MCP) Apps in Visual Studio Code, providing insights into their features, integration, and how developers can use them to build and render UI more efficiently within VS Code. The session is presented by Den Delimarsky, Harald Kirschner, and James Montemagno, focusing on technical details and practical examples for developers interested in leveraging MCP Apps."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=HWmC3T5Wwqw"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=HWmC3T5Wwqw
+title: 'VS Code Live: Exploring MCP Apps Integration'
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2026-01-23 23:16:20 +00:00
-permalink: "/2026-01-23-VS-Code-Live-Exploring-MCP-Apps-Integration.html"
-categories: ["Coding"]
-tags: ["Code", "Code Demo", "Coding", "Demo", "Developer", "Developer Tools", "Mcp", "MCP Apps", "MCP Integration", "Microsoft", "Software Developer", "Software Development", "UI Development", "Videos", "VS Code"]
-tags_normalized: ["code", "code demo", "coding", "demo", "developer", "developer tools", "mcp", "mcp apps", "mcp integration", "microsoft", "software developer", "software development", "ui development", "videos", "vs code"]
+tags:
+- Code
+- Code Demo
+- Demo
+- Developer
+- Developer Tools
+- Mcp
+- MCP Apps
+- MCP Integration
+- Microsoft
+- Software Developer
+- Software Development
+- UI Development
+- VS Code
+section_names:
+- coding
 ---
-
 Den Delimarsky, Harald Kirschner, and James Montemagno introduce developers to MCP Apps integration in Visual Studio Code, covering technical workflows and new MCP features.<!--excerpt_end-->
 
 {% youtube HWmC3T5Wwqw %}

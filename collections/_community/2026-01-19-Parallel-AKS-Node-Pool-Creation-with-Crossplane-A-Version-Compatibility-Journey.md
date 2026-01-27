@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Parallel AKS Node Pool Creation with Crossplane: A Version Compatibility Journey"
-description: "This article explores the technical challenges and solutions for enabling parallel node pool creation in Azure Kubernetes Service (AKS) clusters managed by Crossplane. The author details the troubleshooting process, from identifying sequential provisioning bottlenecks to validating the problem using Terraform and ARM templates, ultimately culminating in the discovery that upgrading to Crossplane v2.1.3 and Azure Provider v2.2.0 allows for parallel provisioning of 30+ node pools in enterprise-scale scenarios."
-author: "sbalaji"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/parallel-aks-node-pool-creation-with-crossplane-a-version/ba-p/4477936"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/parallel-aks-node-pool-creation-with-crossplane-a-version/ba-p/4477936
+title: 'Parallel AKS Node Pool Creation with Crossplane: A Version Compatibility Journey'
+author: sbalaji
+feed_name: Microsoft Tech Community
 date: 2026-01-19 15:43:48 +00:00
-permalink: "/2026-01-19-Parallel-AKS-Node-Pool-Creation-with-Crossplane-A-Version-Compatibility-Journey.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "ARM Templates", "Automation", "Azure", "Azure CNI", "Azure Provider", "Cluster Provisioning", "Community", "Compositions", "CRD", "Crossplane", "DevOps", "Helm", "IaC", "Kubernetes", "Managed Identity", "Node Pools", "Resource References", "Terraform", "Upbound", "Version Compatibility"]
-tags_normalized: ["aks", "arm templates", "automation", "azure", "azure cni", "azure provider", "cluster provisioning", "community", "compositions", "crd", "crossplane", "devops", "helm", "iac", "kubernetes", "managed identity", "node pools", "resource references", "terraform", "upbound", "version compatibility"]
+tags:
+- AKS
+- ARM Templates
+- Automation
+- Azure CNI
+- Azure Provider
+- Cluster Provisioning
+- Compositions
+- CRD
+- Crossplane
+- Helm
+- IaC
+- Kubernetes
+- Managed Identity
+- Node Pools
+- Resource References
+- Terraform
+- Upbound
+- Version Compatibility
+section_names:
+- azure
+- devops
 ---
-
 sbalaji recounts a hands-on troubleshooting story addressing performance bottlenecks in AKS node pool creation with Crossplane, leading to a tested solution with newer provider versions for true parallel infrastructure provisioning.<!--excerpt_end-->
 
 # Parallel AKS Node Pool Creation with Crossplane: A Version Compatibility Journey

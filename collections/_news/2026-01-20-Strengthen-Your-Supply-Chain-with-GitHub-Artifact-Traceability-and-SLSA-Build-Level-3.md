@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Strengthen Your Supply Chain with GitHub Artifact Traceability and SLSA Build Level 3"
-description: "This update introduces new GitHub capabilities for linking build artifacts—including containers and binaries—to code repositories with contextual deployment and storage information. It explains how artifact metadata APIs increase code-to-cloud traceability, enhance supply chain visibility, and help organizations prioritize security work based on actual production risks, including integrations with Microsoft Defender for Cloud."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-20-strengthen-your-supply-chain-with-code-to-cloud-traceability-and-slsa-build-level-3-security"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-20-strengthen-your-supply-chain-with-code-to-cloud-traceability-and-slsa-build-level-3-security
+title: Strengthen Your Supply Chain with GitHub Artifact Traceability and SLSA Build Level 3
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-20 16:46:13 +00:00
-permalink: "/2026-01-20-Strengthen-Your-Supply-Chain-with-GitHub-Artifact-Traceability-and-SLSA-Build-Level-3.html"
-categories: ["DevOps", "Security"]
-tags: ["Actions", "API", "Application Security", "Artifact Attestation", "Artifact Metadata", "Build Provenance", "CI/CD", "Code Security", "Defender For Cloud", "Dependabot", "DevOps", "DevSecOps", "GitHub", "Improvement", "JFrog Artifactory", "News", "Runtime Risk", "Security", "Security Alerts", "SLSA", "Supply Chain Security"]
-tags_normalized: ["actions", "api", "application security", "artifact attestation", "artifact metadata", "build provenance", "cislashcd", "code security", "defender for cloud", "dependabot", "devops", "devsecops", "github", "improvement", "jfrog artifactory", "news", "runtime risk", "security", "security alerts", "slsa", "supply chain security"]
+tags:
+- Actions
+- API
+- Application Security
+- Artifact Attestation
+- Artifact Metadata
+- Build Provenance
+- CI/CD
+- Code Security
+- Defender For Cloud
+- Dependabot
+- DevSecOps
+- GitHub
+- Improvement
+- JFrog Artifactory
+- Runtime Risk
+- Security Alerts
+- SLSA
+- Supply Chain Security
+section_names:
+- devops
+- security
 ---
-
 Allison details new ways developers can use GitHub’s artifact metadata APIs to link and analyze build artifacts, improving supply chain security and enabling production-aware alerting—with built-in integrations for Microsoft Defender for Cloud.<!--excerpt_end-->
 
 # Strengthen Your Supply Chain with GitHub Artifact Traceability and SLSA Build Level 3

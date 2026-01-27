@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Resurgence of Multi‑Stage AiTM Phishing and BEC Campaign Abusing SharePoint"
-description: "This Microsoft Defender Security Research Team report details the discovery and mitigation of a sophisticated adversary-in-the-middle (AiTM) phishing and business email compromise (BEC) campaign targeting energy sector organizations. The campaign leveraged trusted SharePoint services and advanced persistence techniques. Thorough detection and remediation steps are outlined, including recommendations for Microsoft Defender XDR, Entra ID, and Sentinel users."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/21/multistage-aitm-phishing-bec-campaign-abusing-sharepoint/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/21/multistage-aitm-phishing-bec-campaign-abusing-sharepoint/
+title: Resurgence of Multi‑Stage AiTM Phishing and BEC Campaign Abusing SharePoint
+author: Microsoft Defender Security Research Team
+feed_name: Microsoft Security Blog
 date: 2026-01-22 05:14:14 +00:00
-permalink: "/2026-01-22-Resurgence-of-MultiStage-AiTM-Phishing-and-BEC-Campaign-Abusing-SharePoint.html"
-categories: ["Azure", "Security"]
-tags: ["Advanced Persistent Threat", "AiTM Phishing", "Azure", "Azure Active Directory", "Business Email Compromise", "Conditional Access", "Continuous Access Evaluation", "Defender For Cloud Apps", "Email Security", "Energy Sector Security", "Entra ID", "Inbox Rule Manipulation", "Microsoft Defender", "Microsoft Defender XDR", "Microsoft Sentinel", "Mitigation Guidance", "Multi Factor Authentication", "News", "Security", "Session Cookie Theft", "SharePoint", "Threat Detection"]
-tags_normalized: ["advanced persistent threat", "aitm phishing", "azure", "azure active directory", "business email compromise", "conditional access", "continuous access evaluation", "defender for cloud apps", "email security", "energy sector security", "entra id", "inbox rule manipulation", "microsoft defender", "microsoft defender xdr", "microsoft sentinel", "mitigation guidance", "multi factor authentication", "news", "security", "session cookie theft", "sharepoint", "threat detection"]
+tags:
+- Advanced Persistent Threat
+- AiTM Phishing
+- Azure Active Directory
+- Business Email Compromise
+- Conditional Access
+- Continuous Access Evaluation
+- Defender For Cloud Apps
+- Email Security
+- Energy Sector Security
+- Entra ID
+- Inbox Rule Manipulation
+- Microsoft Defender
+- Microsoft Defender XDR
+- Microsoft Sentinel
+- Mitigation Guidance
+- Multi Factor Authentication
+- Session Cookie Theft
+- SharePoint
+- Threat Detection
+section_names:
+- azure
+- security
 ---
-
 Microsoft Defender Security Research Team investigates a sophisticated AiTM phishing and BEC attack campaign leveraging SharePoint, providing in-depth insights, detection analytics, and actionable defense strategies for security practitioners.<!--excerpt_end-->
 
 # Resurgence of Multi‑Stage AiTM Phishing and BEC Campaign Abusing SharePoint

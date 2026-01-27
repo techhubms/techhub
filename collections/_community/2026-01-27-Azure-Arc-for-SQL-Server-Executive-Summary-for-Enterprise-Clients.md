@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Azure Arc for SQL Server: Executive Summary for Enterprise Clients"
-description: "This executive summary by NaufalPrawironegoro outlines key considerations and phased implementation steps for deploying Azure Arc with SQL Server in hybrid and multicloud environments. It covers licensing, network prerequisites, agent deployment, monitoring, security integration, and ongoing operational benefits for enterprise IT teams."
-author: "NaufalPrawironegoro"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-arc-for-sql-server-executive-summary-for-enterprise/ba-p/4489549"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-arc-for-sql-server-executive-summary-for-enterprise/ba-p/4489549
+title: 'Azure Arc for SQL Server: Executive Summary for Enterprise Clients'
+author: NaufalPrawironegoro
+feed_name: Microsoft Tech Community
 date: 2026-01-27 05:34:34 +00:00
-permalink: "/2026-01-27-Azure-Arc-for-SQL-Server-Executive-Summary-for-Enterprise-Clients.html"
-categories: ["Azure", "Security"]
-tags: ["Arc Agent", "Azure", "Azure Arc", "Azure Monitor", "Azure Policy", "Community", "Database Monitoring", "Hybrid Cloud", "Log Analytics Workspace", "Microsoft Defender For Cloud", "Multicloud Management", "Operational Visibility", "RBAC", "Resource Providers", "Security", "Security Assessment", "SQL Server", "WindowsAgent.SqlServer"]
-tags_normalized: ["arc agent", "azure", "azure arc", "azure monitor", "azure policy", "community", "database monitoring", "hybrid cloud", "log analytics workspace", "microsoft defender for cloud", "multicloud management", "operational visibility", "rbac", "resource providers", "security", "security assessment", "sql server", "windowsagentdotsqlserver"]
+tags:
+- Arc Agent
+- Azure Arc
+- Azure Monitor
+- Azure Policy
+- Database Monitoring
+- Hybrid Cloud
+- Log Analytics Workspace
+- Microsoft Defender For Cloud
+- Multicloud Management
+- Operational Visibility
+- RBAC
+- Resource Providers
+- Security Assessment
+- SQL Server
+- WindowsAgent.SqlServer
+section_names:
+- azure
+- security
 ---
-
 NaufalPrawironegoro provides enterprises with a step-by-step summary for implementing Azure Arc with SQL Server, focusing on hybrid and multicloud infrastructure management, compliance, and security.<!--excerpt_end-->
 
 # Azure Arc for SQL Server: Executive Summary for Enterprise Clients

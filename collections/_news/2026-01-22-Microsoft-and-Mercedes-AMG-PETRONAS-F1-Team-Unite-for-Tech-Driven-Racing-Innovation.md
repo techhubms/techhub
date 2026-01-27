@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft and Mercedes-AMG PETRONAS F1 Team Unite for Tech-Driven Racing Innovation"
-description: "Microsoft and the Mercedes-AMG PETRONAS F1 Team have announced a multiyear partnership focused on deploying Microsoft Azure, enterprise AI, and developer platforms like GitHub across every aspect of the team's racing operations. This collaboration will strengthen real-time data analysis, drive advanced engineering workflows, and accelerate innovation within Formula 1's evolving technical frontier."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2026/01/22/microsoft-and-mercedes-amg-petronas-f1-team-unite-to-drive-innovation-from-factory-to-circuit/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/2026/01/22/microsoft-and-mercedes-amg-petronas-f1-team-unite-to-drive-innovation-from-factory-to-circuit/
+title: Microsoft and Mercedes-AMG PETRONAS F1 Team Unite for Tech-Driven Racing Innovation
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-22 08:25:28 +00:00
-permalink: "/2026-01-22-Microsoft-and-Mercedes-AMG-PETRONAS-F1-Team-Unite-for-Tech-Driven-Racing-Innovation.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AKS", "Azure", "Cloud Computing", "Coding", "Collaboration", "Company News", "Data Analytics", "DevOps", "Digital Transformation", "Enterprise AI", "F1 Engineering", "GitHub", "High Performance Computing", "Mercedes AMG PETRONAS", "Microsoft Azure", "News", "Performance Analysis", "Racing Technology", "Real Time Decision Making", "Simulation", "Software Development"]
-tags_normalized: ["ai", "aks", "azure", "cloud computing", "coding", "collaboration", "company news", "data analytics", "devops", "digital transformation", "enterprise ai", "f1 engineering", "github", "high performance computing", "mercedes amg petronas", "microsoft azure", "news", "performance analysis", "racing technology", "real time decision making", "simulation", "software development"]
+tags:
+- AKS
+- Cloud Computing
+- Collaboration
+- Company News
+- Data Analytics
+- Digital Transformation
+- Enterprise AI
+- F1 Engineering
+- GitHub
+- High Performance Computing
+- Mercedes AMG PETRONAS
+- Microsoft Azure
+- Performance Analysis
+- Racing Technology
+- Real Time Decision Making
+- Simulation
+- Software Development
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 stclarke reports on the partnership between Microsoft and Mercedes-AMG PETRONAS F1 Team, highlighting the integration of Azure, AI, and GitHub for next-generation data-driven engineering and racing innovation.<!--excerpt_end-->
 
 # Microsoft and Mercedes-AMG PETRONAS F1 Team Unite for Tech-Driven Racing Innovation

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Modernizing Spring Boot Applications with GitHub Copilot App Modernization"
-description: "This article introduces developers to upgrading Spring Boot 2.x projects to the latest 3.x releases using GitHub Copilot app modernization. It covers key migration challenges, automation capabilities for dependency updates, Jakarta namespace alignment, and how the tool supports iterative upgrades, security validation, and final review responsibilities in Visual Studio Code or IntelliJ IDEA."
-author: "ayangupta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-spring-boot-applications-with-github-copilot-app/ba-p/4486466"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-spring-boot-applications-with-github-copilot-app/ba-p/4486466
+title: Modernizing Spring Boot Applications with GitHub Copilot App Modernization
+author: ayangupta
+feed_name: Microsoft Tech Community
 date: 2026-01-20 02:38:47 +00:00
-permalink: "/2026-01-20-Modernizing-Spring-Boot-Applications-with-GitHub-Copilot-App-Modernization.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "App Modernization", "Automated Refactoring", "Build Tools", "Coding", "Community", "CVE Validation", "Dependency Management", "GitHub Copilot", "IntelliJ IDEA", "Jakarta EE", "Java", "Java Development Kit", "JUnit 5", "Microsoft Learn", "Migration", "Plugin Updates", "Spring Boot", "Spring Framework", "VS Code"]
-tags_normalized: ["ai", "app modernization", "automated refactoring", "build tools", "coding", "community", "cve validation", "dependency management", "github copilot", "intellij idea", "jakarta ee", "java", "java development kit", "junit 5", "microsoft learn", "migration", "plugin updates", "spring boot", "spring framework", "vs code"]
+tags:
+- App Modernization
+- Automated Refactoring
+- Build Tools
+- CVE Validation
+- Dependency Management
+- IntelliJ IDEA
+- Jakarta EE
+- Java
+- Java Development Kit
+- JUnit 5
+- Microsoft Learn
+- Migration
+- Plugin Updates
+- Spring Boot
+- Spring Framework
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 ayangupta details how GitHub Copilot app modernization automates upgrading Spring Boot 2.x applications to 3.x, providing a guided path for code migration, dependency updates, and Java platform compatibility.<!--excerpt_end-->
 
 # Modernizing Spring Boot Applications with GitHub Copilot App Modernization

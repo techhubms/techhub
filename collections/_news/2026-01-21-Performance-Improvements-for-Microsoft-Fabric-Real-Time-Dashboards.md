@@ -1,20 +1,23 @@
----
-layout: "post"
-title: "Performance Improvements for Microsoft Fabric Real-Time Dashboards"
-description: "This Microsoft Fabric Blog post details significant performance upgrades to Real-Time Dashboards, focusing on faster load times, quicker data visualizations, and a smoother, more reliable user experience. The improvements are based on direct customer feedback and bring practical benefits to users working with live, high-volume data."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/faster-smoother-more-delightful-real-time-dashboards-performance-improvements/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/faster-smoother-more-delightful-real-time-dashboards-performance-improvements/
+title: Performance Improvements for Microsoft Fabric Real-Time Dashboards
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-21 09:00:00 +00:00
-permalink: "/2026-01-21-Performance-Improvements-for-Microsoft-Fabric-Real-Time-Dashboards.html"
-categories: ["ML"]
-tags: ["Analytics Engineering", "Business Intelligence", "Dashboard Load Time", "Data Exploration", "Data Visualization", "Live Data", "Microsoft Fabric", "ML", "News", "Performance Optimization", "Real Time Dashboards", "User Experience"]
-tags_normalized: ["analytics engineering", "business intelligence", "dashboard load time", "data exploration", "data visualization", "live data", "microsoft fabric", "ml", "news", "performance optimization", "real time dashboards", "user experience"]
+tags:
+- Analytics Engineering
+- Business Intelligence
+- Dashboard Load Time
+- Data Exploration
+- Data Visualization
+- Live Data
+- Microsoft Fabric
+- Performance Optimization
+- Real Time Dashboards
+- User Experience
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog discusses new performance enhancements to Real-Time Dashboards, highlighting real-world improvements in speed and responsiveness for users working with live analytics.<!--excerpt_end-->
 
 # Performance Improvements for Microsoft Fabric Real-Time Dashboards

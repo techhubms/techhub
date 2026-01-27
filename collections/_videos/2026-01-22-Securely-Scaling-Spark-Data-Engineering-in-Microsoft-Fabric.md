@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Securely Scaling Spark Data Engineering in Microsoft Fabric"
-description: "This episode of Data Exposed, hosted by Anna Hoffman and featuring Santhosh Kumar Ravindran, demonstrates how to securely connect Spark to on-premises and private data sources using Managed Private Endpoints in Microsoft Fabric. The presenters show how to enforce network restrictions with private link service connectivity, discuss Autoscale billing for Spark to optimize costs, and highlight the performance benefits of the Native Execution Engine—all without code changes. The discussion is aimed at data engineers concerned with both security and performance in analytics workloads."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4pv21r9AeU4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=4pv21r9AeU4
+title: Securely Scaling Spark Data Engineering in Microsoft Fabric
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2026-01-22 19:12:17 +00:00
-permalink: "/2026-01-22-Securely-Scaling-Spark-Data-Engineering-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Analytics", "Autoscale Billing", "Azure", "Cloud Computing", "Cloud Security", "Data Connectivity", "Data Engineering", "Data Exposed", "Dev", "Development", "Managed Private Endpoints", "Microsoft", "Microsoft Fabric", "ML", "Native Execution Engine", "Network Restrictions", "No Code Optimization", "Private Link", "Security", "Spark", "SQL", "Tech", "Technology", "Videos"]
-tags_normalized: ["analytics", "autoscale billing", "azure", "cloud computing", "cloud security", "data connectivity", "data engineering", "data exposed", "dev", "development", "managed private endpoints", "microsoft", "microsoft fabric", "ml", "native execution engine", "network restrictions", "no code optimization", "private link", "security", "spark", "sql", "tech", "technology", "videos"]
+tags:
+- Analytics
+- Autoscale Billing
+- Cloud Computing
+- Cloud Security
+- Data Connectivity
+- Data Engineering
+- Data Exposed
+- Dev
+- Development
+- Managed Private Endpoints
+- Microsoft
+- Microsoft Fabric
+- Native Execution Engine
+- Network Restrictions
+- No Code Optimization
+- Private Link
+- Spark
+- SQL
+- Tech
+- Technology
+section_names:
+- azure
+- ml
+- security
 ---
-
 In this Data Exposed episode, Anna Hoffman and Santhosh Kumar Ravindran show how data engineers can secure and scale Spark workloads in Microsoft Fabric, harnessing features like Managed Private Endpoints and the Native Execution Engine.<!--excerpt_end-->
 
 {% youtube 4pv21r9AeU4 %}

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Introducing Administration Client Support for the Azure Service Bus Emulator"
-description: "This post announces the new support for the Administration Client in the Azure Service Bus emulator, allowing developers to manage and modify Service Bus entities dynamically during local development. The update brings local workflows closer to real Azure usage and improves productivity in testing and application deployment scenarios."
-author: "Sannidhya_Glodha"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/introducing-administration-client-support-for-the-azure-service/ba-p/4486433"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/introducing-administration-client-support-for-the-azure-service/ba-p/4486433
+title: Introducing Administration Client Support for the Azure Service Bus Emulator
+author: Sannidhya_Glodha
+feed_name: Microsoft Tech Community
 date: 2026-01-16 17:36:47 +00:00
-permalink: "/2026-01-16-Introducing-Administration-Client-Support-for-the-Azure-Service-Bus-Emulator.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Administration Client", "Azure", "Azure Service Bus", "Coding", "Community", "Configuration", "Development Tools", "Docker", "Emulator", "Entity Management", "Local Development", "Messaging", "Queues", "SDK", "Service Bus Emulator", "Topics"]
-tags_normalized: ["dotnet", "administration client", "azure", "azure service bus", "coding", "community", "configuration", "development tools", "docker", "emulator", "entity management", "local development", "messaging", "queues", "sdk", "service bus emulator", "topics"]
+tags:
+- .NET
+- Administration Client
+- Azure Service Bus
+- Configuration
+- Development Tools
+- Docker
+- Emulator
+- Entity Management
+- Local Development
+- Messaging
+- Queues
+- SDK
+- Service Bus Emulator
+- Topics
+section_names:
+- azure
+- coding
 ---
-
 Sannidhya_Glodha details how the Azure Service Bus emulator now supports the Administration Client, enabling developers to create, update, and delete entities locally—making local testing workflows and management much more dynamic.<!--excerpt_end-->
 
 # Introducing Administration Client Support for the Azure Service Bus Emulator

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Five Reasons to Attend SQLCon: Deep SQL, Microsoft Fabric, and AI Insights in Atlanta"
-description: "This announcement highlights the upcoming SQLCon in Atlanta, co-located with FabCon, the Microsoft Fabric Community Conference. Attendees will gain deep technical expertise in SQL Server, Azure SQL, SQL in Fabric, Power BI, AI-driven data solutions, and more through hands-on workshops, engineering roadmap sessions, and networking with MVPs and Microsoft product teams."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/32624/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/32624/
+title: 'Five Reasons to Attend SQLCon: Deep SQL, Microsoft Fabric, and AI Insights in Atlanta'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-22 10:00:00 +00:00
-permalink: "/2026-01-22-Five-Reasons-to-Attend-SQLCon-Deep-SQL-Microsoft-Fabric-and-AI-Insights-in-Atlanta.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Atlanta", "Azure", "Azure SQL", "Community Event", "Data Analytics", "Data Engineering", "FabCon", "Governance", "Microsoft Fabric", "ML", "News", "Performance Tuning", "Power BI", "Product Roadmap", "SQL Database", "SQL Server", "SQLCon", "Workshops"]
-tags_normalized: ["ai", "atlanta", "azure", "azure sql", "community event", "data analytics", "data engineering", "fabcon", "governance", "microsoft fabric", "ml", "news", "performance tuning", "power bi", "product roadmap", "sql database", "sql server", "sqlcon", "workshops"]
+tags:
+- Atlanta
+- Azure SQL
+- Community Event
+- Data Analytics
+- Data Engineering
+- FabCon
+- Governance
+- Microsoft Fabric
+- Performance Tuning
+- Power BI
+- Product Roadmap
+- SQL Database
+- SQL Server
+- SQLCon
+- Workshops
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog invites practitioners to SQLCon in Atlanta, showcasing deep dives into SQL Server, Azure SQL, Fabric, Power BI, data engineering, and AI. Attendees can engage with the community, learn from product teams, and access hands-on workshops.<!--excerpt_end-->
 
 # Five Reasons to Attend SQLCon: Deep SQL, Microsoft Fabric, and AI Insights in Atlanta

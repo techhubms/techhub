@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Building Agentic Apps with the GitHub Copilot SDK: New Developer Paradigms"
-description: "This article discusses the emerging paradigm of agentic execution loops becoming core to modern app architecture, enabled by the GitHub Copilot SDK. It explains how developers can embed production-grade, multi-model orchestration and automation—including MCP integration, tool calling, and secure authentication—into applications, fundamentally shifting how software workflows are designed."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_build-an-agent-into-any-app-with-the-github-activity-7420126187286568961-TdW7"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.linkedin.com/posts/satyanadella_build-an-agent-into-any-app-with-the-github-activity-7420126187286568961-TdW7
+title: 'Building Agentic Apps with the GitHub Copilot SDK: New Developer Paradigms'
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-22 15:43:13 +00:00
-permalink: "/2026-01-22-Building-Agentic-Apps-with-the-GitHub-Copilot-SDK-New-Developer-Paradigms.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Execution Loop", "AI", "AI Integration", "Authentication", "Automation", "Autonomous Apps", "Company News", "Copilot CLI", "Developer Workflow", "GitHub Copilot", "GitHub Copilot SDK", "LinkedIn Post", "MCP Integration", "Multi Model Orchestration", "News", "Runtime Infrastructure", "Software Architecture", "Streaming", "Tool Integration"]
-tags_normalized: ["agentic execution loop", "ai", "ai integration", "authentication", "automation", "autonomous apps", "company news", "copilot cli", "developer workflow", "github copilot", "github copilot sdk", "linkedin post", "mcp integration", "multi model orchestration", "news", "runtime infrastructure", "software architecture", "streaming", "tool integration"]
+tags:
+- Agentic Execution Loop
+- AI Integration
+- Authentication
+- Automation
+- Autonomous Apps
+- Company News
+- Copilot CLI
+- Developer Workflow
+- GitHub Copilot SDK
+- LinkedIn Post
+- MCP Integration
+- Multi Model Orchestration
+- Runtime Infrastructure
+- Software Architecture
+- Streaming
+- Tool Integration
+section_names:
+- ai
+- github-copilot
 ---
-
 stclarke explores the transformative potential of the GitHub Copilot SDK, focusing on embedding agentic execution loops and autonomous workflows into applications—enabling a new class of developer experiences.<!--excerpt_end-->
 
 # Building Agentic Apps with the GitHub Copilot SDK: New Developer Paradigms

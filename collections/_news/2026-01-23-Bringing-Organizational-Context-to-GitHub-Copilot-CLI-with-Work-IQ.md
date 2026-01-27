@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Bringing Organizational Context to GitHub Copilot CLI with Work IQ"
-description: "Satya Nadella highlights how developers can now integrate team context and organizational knowledge directly into the GitHub Copilot CLI using Work IQ. This unlocks AI-powered workflows that understand specifications, decisions, and team dynamics by connecting data from tools like SharePoint and meeting transcripts. The post explores practical workflows, productivity gains, and how Work IQ makes AI agents more effective for development teams."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_so-much-of-dev-work-happens-in-the-context-activity-7420485585376620544-vudJ"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.linkedin.com/posts/satyanadella_so-much-of-dev-work-happens-in-the-context-activity-7420485585376620544-vudJ
+title: Bringing Organizational Context to GitHub Copilot CLI with Work IQ
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-23 16:15:20 +00:00
-permalink: "/2026-01-23-Bringing-Organizational-Context-to-GitHub-Copilot-CLI-with-Work-IQ.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI Agent", "Coding", "Collaborative Coding", "Company News", "Contextual Development", "Developer Tools", "Development Workflow", "Enterprise AI", "GitHub Copilot", "GitHub Copilot CLI", "LinkedIn Post", "Microsoft", "News", "Organizational Knowledge", "Satya Nadella", "SharePoint Integration", "Spec To Implementation", "Team Productivity", "Work IQ"]
-tags_normalized: ["agentic ai", "ai", "ai agent", "coding", "collaborative coding", "company news", "contextual development", "developer tools", "development workflow", "enterprise ai", "github copilot", "github copilot cli", "linkedin post", "microsoft", "news", "organizational knowledge", "satya nadella", "sharepoint integration", "spec to implementation", "team productivity", "work iq"]
+tags:
+- Agentic AI
+- AI Agent
+- Collaborative Coding
+- Company News
+- Contextual Development
+- Developer Tools
+- Development Workflow
+- Enterprise AI
+- GitHub Copilot CLI
+- LinkedIn Post
+- Microsoft
+- Organizational Knowledge
+- Satya Nadella
+- SharePoint Integration
+- Spec To Implementation
+- Team Productivity
+- Work IQ
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Satya Nadella introduces Work IQ for GitHub Copilot CLI, enabling developers to bring their team's context and organizational knowledge right into their development environment for more effective AI-powered workflows.<!--excerpt_end-->
 
 # Bringing Organizational Context to GitHub Copilot CLI with Work IQ

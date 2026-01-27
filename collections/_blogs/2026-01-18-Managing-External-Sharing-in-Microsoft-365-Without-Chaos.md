@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Managing External Sharing in Microsoft 365 Without Chaos"
-description: "This article by John Edward offers a comprehensive, step-by-step guide to managing external sharing within Microsoft 365, focusing on SharePoint, OneDrive, Teams, and Azure AD. It provides actionable recommendations, technical configuration steps, best practices, governance strategies, and crucial security controls to maintain a balance between collaboration and data protection, ensuring organizations avoid chaos and minimize risk."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/managing-external-sharing-in-microsoft-365-without-chaos/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/managing-external-sharing-in-microsoft-365-without-chaos/
+title: Managing External Sharing in Microsoft 365 Without Chaos
+author: John Edward
+feed_name: Dellenny's Blog
 date: 2026-01-18 12:41:44 +00:00
-permalink: "/2026-01-18-Managing-External-Sharing-in-Microsoft-365-Without-Chaos.html"
-categories: ["Security"]
-tags: ["Access Reviews", "Audit Logs", "Azure Active Directory", "Azure AD", "Blogs", "Collaboration Security", "Compliance", "Conditional Access", "Data Protection", "External Sharing", "Governance", "Guest Access", "Identity Governance", "IT Administration", "MFA", "Microsoft 365", "Microsoft Purview", "Microsoft Teams", "OneDrive For Business", "Security", "Security Best Practices", "SharePoint", "SharePoint Online"]
-tags_normalized: ["access reviews", "audit logs", "azure active directory", "azure ad", "blogs", "collaboration security", "compliance", "conditional access", "data protection", "external sharing", "governance", "guest access", "identity governance", "it administration", "mfa", "microsoft 365", "microsoft purview", "microsoft teams", "onedrive for business", "security", "security best practices", "sharepoint", "sharepoint online"]
+tags:
+- Access Reviews
+- Audit Logs
+- Azure Active Directory
+- Azure AD
+- Collaboration Security
+- Compliance
+- Conditional Access
+- Data Protection
+- External Sharing
+- Governance
+- Guest Access
+- Identity Governance
+- IT Administration
+- MFA
+- Microsoft 365
+- Microsoft Purview
+- Microsoft Teams
+- OneDrive For Business
+- Security Best Practices
+- SharePoint
+- SharePoint Online
+section_names:
+- security
 ---
-
 John Edward presents a clear and practical walkthrough for IT administrators and technical leads on managing external sharing in Microsoft 365, with a strong emphasis on balancing collaboration and security.<!--excerpt_end-->
 
 # Managing External Sharing in Microsoft 365 Without Chaos

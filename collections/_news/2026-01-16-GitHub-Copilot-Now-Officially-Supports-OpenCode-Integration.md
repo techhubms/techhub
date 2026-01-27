@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub Copilot Now Officially Supports OpenCode Integration"
-description: "GitHub Copilot has announced formal support for authentication with the OpenCode agent, allowing developers with paid Copilot subscriptions to use their credentials across both platforms. The integration streamlines development workflows by enabling Copilot's AI-powered assistance directly within OpenCode-supported environments, including terminal, IDE, and desktop applications."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-16-github-copilot-now-supports-opencode"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-16-github-copilot-now-supports-opencode
+title: GitHub Copilot Now Officially Supports OpenCode Integration
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-16 23:03:03 +00:00
-permalink: "/2026-01-16-GitHub-Copilot-Now-Officially-Supports-OpenCode-Integration.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "Authentication", "Coding Workflow", "Copilot", "Copilot Business", "Copilot Enterprise", "Copilot Pro", "Copilot Pro+", "Developer Tools", "Device Login", "GitHub Copilot", "IDE Integration", "News", "Open Source Agent", "OpenCode", "Partnerships", "Terminal Tools"]
-tags_normalized: ["ai", "ai integration", "authentication", "coding workflow", "copilot", "copilot business", "copilot enterprise", "copilot pro", "copilot proplus", "developer tools", "device login", "github copilot", "ide integration", "news", "open source agent", "opencode", "partnerships", "terminal tools"]
+tags:
+- AI Integration
+- Authentication
+- Coding Workflow
+- Copilot
+- Copilot Business
+- Copilot Enterprise
+- Copilot Pro
+- Copilot Pro+
+- Developer Tools
+- Device Login
+- IDE Integration
+- Open Source Agent
+- OpenCode
+- Partnerships
+- Terminal Tools
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on GitHub Copilot's newly announced support for OpenCode, letting subscribers use their Copilot credentials to access AI-powered coding assistance directly within OpenCode environments.<!--excerpt_end-->
 
 # GitHub Copilot Now Supports OpenCode

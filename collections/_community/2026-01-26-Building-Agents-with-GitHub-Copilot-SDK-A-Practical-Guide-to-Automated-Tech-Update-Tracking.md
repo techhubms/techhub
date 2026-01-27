@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Building Agents with GitHub Copilot SDK: A Practical Guide to Automated Tech Update Tracking"
-description: "This article by kinfey provides a comprehensive walkthrough for developers on how to leverage the GitHub Copilot SDK and CLI to build AI-driven agent systems. By using a case study focused on automating daily update tracking and technical blog generation for Microsoft's Agent Framework, the guide covers SDK core capabilities, a full CI/CD integration with GitHub Actions, technical best practices, and real-world use cases. The content demonstrates integrating AI capabilities programmatically, details both TypeScript and Python usage, and outlines architectural and implementation insights to help developers adopt agentic workflows with Copilot skills."
-author: "kinfey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-agents-with-github-copilot-sdk-a-practical-guide-to/ba-p/4488948"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-agents-with-github-copilot-sdk-a-practical-guide-to/ba-p/4488948
+title: 'Building Agents with GitHub Copilot SDK: A Practical Guide to Automated Tech Update Tracking'
+author: kinfey
+feed_name: Microsoft Tech Community
 date: 2026-01-26 08:00:00 +00:00
-permalink: "/2026-01-26-Building-Agents-with-GitHub-Copilot-SDK-A-Practical-Guide-to-Automated-Tech-Update-Tracking.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Framework", "AI", "AI Agents", "Automation", "CI/CD", "Coding", "Community", "Copilot Skills", "Custom Agents", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Copilot SDK", "MCP Integration", "Node.js", "PR Analysis", "Python", "Technical Blog Generation", "TypeScript"]
-tags_normalized: ["agent framework", "ai", "ai agents", "automation", "cislashcd", "coding", "community", "copilot skills", "custom agents", "devops", "devops automation", "github actions", "github copilot", "github copilot cli", "github copilot sdk", "mcp integration", "nodedotjs", "pr analysis", "python", "technical blog generation", "typescript"]
+tags:
+- Agent Framework
+- AI Agents
+- Automation
+- CI/CD
+- Copilot Skills
+- Custom Agents
+- DevOps Automation
+- GitHub Actions
+- GitHub Copilot CLI
+- GitHub Copilot SDK
+- MCP Integration
+- Node.js
+- PR Analysis
+- Python
+- Technical Blog Generation
+- TypeScript
+section_names:
+- ai
+- coding
+- devops
+- github-copilot
 ---
-
 kinfey demonstrates building automated technical update tracking agents using the GitHub Copilot SDK and CLI, sharing a real-world case study on powering daily blog post generation for Microsoft's Agent Framework. The guide includes architecture, code samples, and best practices.<!--excerpt_end-->
 
 # Building Agents with GitHub Copilot SDK: A Practical Guide to Automated Tech Update Tracking

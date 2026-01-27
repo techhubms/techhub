@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "A Cheat Sheet to Slash Commands in GitHub Copilot CLI"
-description: "This comprehensive guide explains how developers can streamline their workflow using slash commands in GitHub Copilot CLI. Covering command usage, configuration options, and practical scenarios, it details how to enhance productivity, security, and team compliance by leveraging explicit command-line controls for managing Copilot’s AI features directly from the terminal."
-author: "Jacklyn Carroll"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/a-cheat-sheet-to-slash-commands-in-github-copilot-cli/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/a-cheat-sheet-to-slash-commands-in-github-copilot-cli/
+title: A Cheat Sheet to Slash Commands in GitHub Copilot CLI
+author: Jacklyn Carroll
+feed_name: The GitHub Blog
 date: 2026-01-21 17:09:10 +00:00
-permalink: "/2026-01-21-A-Cheat-Sheet-to-Slash-Commands-in-GitHub-Copilot-CLI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Coding Assistant", "Auditable Actions", "CLI Productivity", "Code Automation", "Coding", "Context Management", "Copilot CLI", "Developer Tools", "GitHub", "GitHub CLI", "GitHub Copilot", "GitHub Copilot CLI", "Model Selection", "News", "Session Management", "Slash Commands", "Terminal Workflow", "Workflow Optimization"]
-tags_normalized: ["ai", "ai and ml", "ai coding assistant", "auditable actions", "cli productivity", "code automation", "coding", "context management", "copilot cli", "developer tools", "github", "github cli", "github copilot", "github copilot cli", "model selection", "news", "session management", "slash commands", "terminal workflow", "workflow optimization"]
+tags:
+- AI & ML
+- AI Coding Assistant
+- Auditable Actions
+- CLI Productivity
+- Code Automation
+- Context Management
+- Copilot CLI
+- Developer Tools
+- GitHub
+- GitHub CLI
+- GitHub Copilot CLI
+- Model Selection
+- Session Management
+- Slash Commands
+- Terminal Workflow
+- Workflow Optimization
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Jacklyn Carroll offers a detailed walkthrough for developers on using slash commands in GitHub Copilot CLI, highlighting time-saving tips, enhanced workflow control, and secure team collaboration.<!--excerpt_end-->
 
 # A Cheat Sheet to Slash Commands in GitHub Copilot CLI

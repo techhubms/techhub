@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Scalable Data Ingestion for Retail: Dynamic Partitioning and Source Detection with Microsoft Fabric"
-description: "This in-depth technical guide by NaufalPrawironegoro explores how retail organizations can leverage Microsoft Fabric, Delta Lake, and Azure Event Hubs to enable scalable and resilient data ingestion across hundreds of stores. The article covers strategies for automated CDC, partitioning, schema enforcement, monitoring, risk mitigation, and operational playbooks, ensuring analytics growth without manual reconfiguration."
-author: "NaufalPrawironegoro"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/a-technical-implementation-guide-for-multi-store-retail/ba-p/4488418"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/a-technical-implementation-guide-for-multi-store-retail/ba-p/4488418
+title: 'Scalable Data Ingestion for Retail: Dynamic Partitioning and Source Detection with Microsoft Fabric'
+author: NaufalPrawironegoro
+feed_name: Microsoft Tech Community
 date: 2026-01-22 08:39:19 +00:00
-permalink: "/2026-01-22-Scalable-Data-Ingestion-for-Retail-Dynamic-Partitioning-and-Source-Detection-with-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Event Hubs", "Capacity Planning", "Community", "Data Ingestion", "Debezium", "Delta Lake", "Dynamic Partitioning", "Lakehouse", "Microsoft Fabric", "ML", "Operational Procedures", "Partition Keys", "Pattern Based Detection", "PostgreSQL", "Retail Analytics", "Schema Standardization", "Streaming Data"]
-tags_normalized: ["azure", "azure event hubs", "capacity planning", "community", "data ingestion", "debezium", "delta lake", "dynamic partitioning", "lakehouse", "microsoft fabric", "ml", "operational procedures", "partition keys", "pattern based detection", "postgresql", "retail analytics", "schema standardization", "streaming data"]
+tags:
+- Azure Event Hubs
+- Capacity Planning
+- Data Ingestion
+- Debezium
+- Delta Lake
+- Dynamic Partitioning
+- Lakehouse
+- Microsoft Fabric
+- Operational Procedures
+- Partition Keys
+- Pattern Based Detection
+- PostgreSQL
+- Retail Analytics
+- Schema Standardization
+- Streaming Data
+section_names:
+- azure
+- ml
 ---
-
 NaufalPrawironegoro demonstrates an advanced architecture for multi-store retail data ingestion using Microsoft Fabric, Delta Lake, and Azure Event Hubs. The guide explains operational workflows, automation patterns, and best practices for seamless store onboarding.<!--excerpt_end-->
 
 # Scalable Data Ingestion for Retail: Dynamic Partitioning and Source Detection with Microsoft Fabric

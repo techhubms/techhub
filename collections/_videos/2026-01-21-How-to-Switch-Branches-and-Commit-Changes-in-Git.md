@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "How to Switch Branches and Commit Changes in Git"
-description: "This GitHub tutorial video introduces new users to switching branches using the git switch command, returning to the main branch, and editing feature branches. It covers editing files, checking the working state with git status, staging changes with git add, and committing updates with git commit."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/usaNdfT1hP8"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/usaNdfT1hP8
+title: How to Switch Branches and Commit Changes in Git
+author: GitHub
+feed_name: GitHub YouTube
 date: 2026-01-21 15:04:30 +00:00
-permalink: "/2026-01-21-How-to-Switch-Branches-and-Commit-Changes-in-Git.html"
-categories: ["DevOps"]
-tags: ["Branching", "Code Workflow", "DevOps", "Feature Branch", "Git", "Git Add", "Git Commit", "Git Switch", "GitHub", "GitHubForBeginners", "Main Branch", "Repository Management", "Source Control", "Version Control", "Videos"]
-tags_normalized: ["branching", "code workflow", "devops", "feature branch", "git", "git add", "git commit", "git switch", "github", "githubforbeginners", "main branch", "repository management", "source control", "version control", "videos"]
+tags:
+- Branching
+- Code Workflow
+- Feature Branch
+- Git
+- Git Add
+- Git Commit
+- Git Switch
+- GitHub
+- GitHubForBeginners
+- Main Branch
+- Repository Management
+- Source Control
+- Version Control
+section_names:
+- devops
 ---
-
 This beginner-friendly GitHub video teaches the basics of switching branches and committing changes in git, with guidance from the GitHub team.<!--excerpt_end-->
 
 {% youtube usaNdfT1hP8 %}

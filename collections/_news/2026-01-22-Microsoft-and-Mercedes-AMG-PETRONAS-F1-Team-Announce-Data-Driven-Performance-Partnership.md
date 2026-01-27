@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Microsoft and Mercedes-AMG PETRONAS F1 Team Announce Data-Driven Performance Partnership"
-description: "Microsoft has entered a multi-year partnership with the Mercedes-AMG PETRONAS Formula One Team to apply advanced technology and data analytics from factory to racetrack. By leveraging Microsoft’s cloud, AI, and analytics solutions, the F1 team will turn terabytes of real-time telemetry data into actionable insights, driving performance and competitive advantage both on the circuit and in business environments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_we-are-thrilled-to-announce-a-new-multi-year-activity-7420104610763317248-XAmj"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.linkedin.com/posts/satyanadella_we-are-thrilled-to-announce-a-new-multi-year-activity-7420104610763317248-XAmj
+title: Microsoft and Mercedes-AMG PETRONAS F1 Team Announce Data-Driven Performance Partnership
+author: stclarke
+feed_name: Microsoft News
 date: 2026-01-22 14:54:32 +00:00
-permalink: "/2026-01-22-Microsoft-and-Mercedes-AMG-PETRONAS-F1-Team-Announce-Data-Driven-Performance-Partnership.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Cloud Solutions", "Company News", "Data Analytics", "Formula 1", "LinkedIn Post", "Machine Learning", "Mercedes AMG PETRONAS F1", "Microsoft", "News", "Performance Optimization", "Racing Analytics", "Real Time Data", "Real Time Insights", "Sports Technology", "Telemetry", "Telemetry Pipeline"]
-tags_normalized: ["ai", "azure", "cloud solutions", "company news", "data analytics", "formula 1", "linkedin post", "machine learning", "mercedes amg petronas f1", "microsoft", "news", "performance optimization", "racing analytics", "real time data", "real time insights", "sports technology", "telemetry", "telemetry pipeline"]
+tags:
+- Cloud Solutions
+- Company News
+- Data Analytics
+- Formula 1
+- LinkedIn Post
+- Machine Learning
+- Mercedes AMG PETRONAS F1
+- Microsoft
+- Performance Optimization
+- Racing Analytics
+- Real Time Data
+- Real Time Insights
+- Sports Technology
+- Telemetry
+- Telemetry Pipeline
+section_names:
+- ai
+- azure
 ---
-
 stclarke highlights Microsoft's new partnership with the Mercedes-AMG PETRONAS F1 Team, focusing on how Microsoft's technology will enable real-time analytics and performance optimization through advanced data processing.<!--excerpt_end-->
 
 # Microsoft and Mercedes-AMG PETRONAS F1 Team: A Data-Driven Partnership

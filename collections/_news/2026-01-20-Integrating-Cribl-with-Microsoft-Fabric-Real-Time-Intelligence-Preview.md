@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Integrating Cribl with Microsoft Fabric Real-Time Intelligence (Preview)"
-description: "This article details the preview release of Cribl source integration with Microsoft Fabric Real-Time Intelligence (RTI). It walks through how organizations can ingest, route, and analyze real-time telemetry data from various sources using Cribl Stream and Fabric RTI Eventstream, streamlining real-time analytics and event-driven architectures within Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/expanding-real-time-intelligence-data-sources-with-cribl-source-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/expanding-real-time-intelligence-data-sources-with-cribl-source-preview/
+title: Integrating Cribl with Microsoft Fabric Real-Time Intelligence (Preview)
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-20 13:00:00 +00:00
-permalink: "/2026-01-20-Integrating-Cribl-with-Microsoft-Fabric-Real-Time-Intelligence-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Cloud Analytics", "Cribl", "Data Activator", "Data Ingestion", "Data Integration", "Event Driven Architecture", "Eventhouse", "Eventstream", "Kafka Integration", "Kusto Query Language", "Microsoft Fabric", "ML", "News", "Real Time Dashboard", "Real Time Intelligence", "Stream Analytics", "Telemetry Data"]
-tags_normalized: ["azure", "cloud analytics", "cribl", "data activator", "data ingestion", "data integration", "event driven architecture", "eventhouse", "eventstream", "kafka integration", "kusto query language", "microsoft fabric", "ml", "news", "real time dashboard", "real time intelligence", "stream analytics", "telemetry data"]
+tags:
+- Cloud Analytics
+- Cribl
+- Data Activator
+- Data Ingestion
+- Data Integration
+- Event Driven Architecture
+- Eventhouse
+- Eventstream
+- Kafka Integration
+- Kusto Query Language
+- Microsoft Fabric
+- Real Time Dashboard
+- Real Time Intelligence
+- Stream Analytics
+- Telemetry Data
+section_names:
+- azure
+- ml
 ---
-
 This news post from the Microsoft Fabric Blog explains how organizations can use the new Cribl source integration (Preview) to easily collect and analyze real-time data in Microsoft Fabric Real-Time Intelligence.<!--excerpt_end-->
 
 # Integrating Cribl with Microsoft Fabric Real-Time Intelligence (Preview)

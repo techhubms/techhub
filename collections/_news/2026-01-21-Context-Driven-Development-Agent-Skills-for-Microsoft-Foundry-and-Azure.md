@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Context-Driven Development: Agent Skills for Microsoft Foundry and Azure"
-description: "This article by Govind Kamtamneni introduces developers to the use of modular 'agent skills' for coding agents, focusing on the Microsoft Foundry platform and Azure. It details best practices for integrating specialized domain knowledge into AI-driven agents for greenfield enterprise service development, highlights the importance of skill selection, and explains configuration steps for various agent environments."
-author: "Govind Kamtamneni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/context-driven-development-agent-skills-for-microsoft-foundry-and-azure/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/context-driven-development-agent-skills-for-microsoft-foundry-and-azure/
+title: 'Context-Driven Development: Agent Skills for Microsoft Foundry and Azure'
+author: Govind Kamtamneni
+feed_name: Microsoft All Things Azure Blog
 date: 2026-01-21 13:57:59 +00:00
-permalink: "/2026-01-21-Context-Driven-Development-Agent-Skills-for-Microsoft-Foundry-and-Azure.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Skills", "AI", "AI Agents", "All Things Azure", "AZD Deployment", "Azure", "Azure AI", "Azure AI Search", "Coding", "Context7", "Cosmos DB", "FastAPI", "LLMs", "MCP Server", "Microsoft Foundry", "News", "Pydantic", "Python", "React Flow", "SDK Integration", "Software Architecture", "TypeScript"]
-tags_normalized: ["agent skills", "ai", "ai agents", "all things azure", "azd deployment", "azure", "azure ai", "azure ai search", "coding", "context7", "cosmos db", "fastapi", "llms", "mcp server", "microsoft foundry", "news", "pydantic", "python", "react flow", "sdk integration", "software architecture", "typescript"]
+tags:
+- Agent Skills
+- AI Agents
+- All Things Azure
+- AZD Deployment
+- Azure AI
+- Azure AI Search
+- Context7
+- Cosmos DB
+- FastAPI
+- LLMs
+- MCP Server
+- Microsoft Foundry
+- Pydantic
+- Python
+- React Flow
+- SDK Integration
+- Software Architecture
+- TypeScript
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Govind Kamtamneni explains how agent skills for Microsoft Foundry and Azure enable modular, context-driven agent development in enterprise environments, providing practical steps and technical insights.<!--excerpt_end-->
 
 # Context-Driven Development: Agent Skills for Microsoft Foundry and Azure
