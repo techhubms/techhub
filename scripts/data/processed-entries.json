@@ -24406,5 +24406,17 @@
     "timestamp": "2026-01-27 19:10:43 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned AI category because Copilot coding agents and their management are part of Microsoft's AI developer tooling (AI inclusion rules 1 and 2). Assigned GitHub Copilot because the content centrally features Copilot coding agents (GitHub Copilot inclusion rule 1). Assigned DevOps because it addresses improvements in repository workflow management, session/task organization, and integrates with CLI tools, supporting developer operations (DevOps inclusion rules 2 and 5). Coding category was not assigned as the content focuses on workflow and tooling enhancements, not direct programming or code-level practices. No generic exclusion rules apply."
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content focuses on the technical evolution of JavaScript and the creation of TypeScript, an open-source programming language developed by Microsoft. The discussion is about language/tooling choices for large scale software development, which directly aligns with Coding rules. No other category qualifies: the video does not address Microsoft cloud platforms (Azure), DevOps practices, AI, ML, or Security topics. The main focus is language design and developer tooling (Coding).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/NzaNeWeI31Y",
+    "timestamp": "2026-01-27 20:05:15 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the episode focuses on Microsoft's AI development tools, specifically Foundry, and covers AI model selection and evaluation (AI rules 1, 4, 5). Assigned ML category since it discusses evaluation metrics, custom dataset creation, and model comparison for machine learning (ML rules 1, 2, 3, 6, 9). Azure is included due to Azure AI project integration and usage of Microsoft's cloud resources (Azure rule 1, 3, 4). GitHub Copilot is included as the content demonstrates using Copilot to generate datasets and for model testing (GitHub Copilot rule 1, 4, and CRITICAL: must also assign AI).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=o5o_pmMXJUs",
+    "timestamp": "2026-01-27 20:05:42 +00:00"
   }
 ]
