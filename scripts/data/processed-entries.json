@@ -24364,5 +24364,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transforming-retry-after-headers-in-azure-apim-a-step-by-step/ba-p/4489762",
     "reason": "Succesfully added: Assigned Azure category because the content is focused exclusively on Azure API Management and customization of APIM policies (Azure rule 1, 4, and 5). Excluded AI, ML, Coding, Security, DevOps, and GitHub Copilot categories as the blog does not describe code-level implementations, AI/ML services, security controls, end-to-end development pipelines, or GitHub-related topics. The content is technical, in English, substantial in length, and not promotional or biographical. All generic exclusion rules were reviewed and do not apply."
+  },
+  {
+    "timestamp": "2026-01-27 17:08:22 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned the Coding category because the content specifically focuses on practical performance optimisation in .NET, particularly with ASP.NET Core (Coding rules 1 and 4). There is detailed discussion of developer tools (dotTrace, BenchmarkDotNet, dotMemory) and code optimisation processes relevant to Microsoft ecosystem developers. No other category qualifies because the focus is not on Azure, AI, ML, DevOps, or Microsoft Security technologies.",
+    "canonical_url": "https://www.stevejgordon.co.uk/talk-application-performance-optimisation-in-practice-60-mins"
+  },
+  {
+    "timestamp": "2026-01-27 17:09:02 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Included 'Azure' because Microsoft Dev Box is hosted and provisioned through Azure, with substantial focus on Azure resource configuration and management (Azure rules 1, 2, 4). Included 'DevOps' because the guide emphasizes automated image pipelines, environment consistency, developer onboarding automation, environment lifecycle management, and operational best practices—all central to DevOps (DevOps rules 3, 5, 6, 9). 'Security' is added due to the extensive treatment of Entra ID, Conditional Access, Intune baselines, zero-trust principles, VNET/private endpoints, least-privilege frameworks, and operational governance (Security rules 1, 2, 3, 4, 9). Did not include 'Coding', 'AI', 'ML', or 'GitHub Copilot' since there is no direct content about code development, AI services, ML workflows, or Copilot usage.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-adoption-guide-microsoft-dev-box/ba-p/4485682"
+  },
+  {
+    "timestamp": "2026-01-27 17:09:23 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: The content qualifies for the 'AI' category because it focuses on Microsoft’s infrastructure for AI workloads (AI Inclusion Rule 1: Microsoft AI Products/Services and 4: AI development with Microsoft technologies). It also qualifies for the 'Azure' category because Cobalt 200 and Maia platforms are deployed as part of Azure’s infrastructure and are fundamental to delivering Microsoft’s cloud services (Azure Inclusion Rule 1, 4, 5). No 'Coding', 'DevOps', 'ML', or 'Security' categories are assigned since the article does not discuss application development, DevOps practices, ML implementations, or specific security controls. The content is not excluded by any generic rule, as it is technical in nature, sufficiently detailed, and not business/productivity or biographical content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/silicon-to-systems-how-microsoft-engineers-ai-infrastructure/ba-p/4489525"
   }
 ]
