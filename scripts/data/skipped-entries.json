@@ -11523,5 +11523,11 @@
     "collection": "blogs",
     "reason": "No categories found: All generic exclusion rules were applied first, as required. The content focuses entirely on an AWS certification (AWS Certified AI Practitioner) and does not discuss any Microsoft technology, platform, or tool. There is no mention of Azure, Microsoft AI services (such as Azure OpenAI or Copilot Studio), .NET, or any Microsoft developer ecosystem. Per Multi-Platform Content Threshold and Category Inclusion Rules, Microsoft technologies must comprise at least 40% of the substantive content or be central to the solution. As the content is fully AWS-centric and contains no relevant Microsoft technology, no categories are assigned.",
     "timestamp": "2026-01-27 12:04:18 +00:00"
+  },
+  {
+    "timestamp": "2026-01-27 15:08:19 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/news-insights/policy-news-and-insights/help-shape-the-future-of-open-source-in-europe/",
+    "reason": "No categories found: No categories assigned. The content centers on open-source policy advocacy relating to the European Union's open digital ecosystem initiative, focusing on funding, strategy, and industry support for open source. There is no coverage of technical implementation or development with Microsoft technologies, nor any substantive information about GitHub's DevOps tools, Copilot, or integration with Microsoft products. The article discusses policy, industry trends, and community participation without addressing coding, Azure, DevOps, AI, ML, or security from a technical or developer perspective, which is required by category inclusion rules. This fits the 'Business Strategy and Executive Content' exclusion in Generic Exclusion Rules."
   }
 ]

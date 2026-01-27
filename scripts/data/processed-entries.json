@@ -24358,5 +24358,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the content is entirely about a new programming language feature in C# 15 and .NET 11, matching Coding rules 1 and 2. No other categories apply since AI, DevOps, Azure, ML, Security, or GitHub Copilot are not mentioned or discussed. Generic exclusion rules do not apply: the video is technical, not biographical, and is in English.",
     "timestamp": "2026-01-27 12:04:51 +00:00"
+  },
+  {
+    "timestamp": "2026-01-27 15:09:08 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transforming-retry-after-headers-in-azure-apim-a-step-by-step/ba-p/4489762",
+    "reason": "Succesfully added: Assigned Azure category because the content is focused exclusively on Azure API Management and customization of APIM policies (Azure rule 1, 4, and 5). Excluded AI, ML, Coding, Security, DevOps, and GitHub Copilot categories as the blog does not describe code-level implementations, AI/ML services, security controls, end-to-end development pipelines, or GitHub-related topics. The content is technical, in English, substantial in length, and not promotional or biographical. All generic exclusion rules were reviewed and do not apply."
   }
 ]
