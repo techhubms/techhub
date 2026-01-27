@@ -24316,5 +24316,11 @@
     "timestamp": "2026-01-26 23:03:45 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=VOELhSvlCaI",
     "reason": "Succesfully added: Assigned AI category because the session focuses on AI experiences and Azure AI Assistants (AI rules 1 and 4). Assigned Azure category due to explicit mention of using Azure AI services (Azure rule 1). Assigned Coding category because content centers on .NET development and practical architecture (Coding rules 1 and 4). No generic exclusion rules apply; the content is technical in scope, presented in English, with a clear developer focus."
+  },
+  {
+    "timestamp": "2026-01-27 01:32:59 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the workflow centers on Azure Container Apps, Azure Managed Grafana, and Azure-native deployment practices (Azure rule 1, 2, 5). Assigned DevOps because the article extensively discusses automated workflow orchestration for incident management, integration strategies, and tool chaining across DevOps-friendly systems (DevOps rules 3, 5, 6, 11). Coding was not assigned because there is no direct code walkthrough or programming language focus. AI, ML, and Security do not apply, as the article does not cover AI/ML features or Microsoft security technologies.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-sre-agent-pulls-logs-from-grafana-and-creates-jira-tickets/ba-p/4489527"
   }
 ]
