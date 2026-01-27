@@ -24322,5 +24322,11 @@
     "reason": "Succesfully added: Assigned Azure category because the workflow centers on Azure Container Apps, Azure Managed Grafana, and Azure-native deployment practices (Azure rule 1, 2, 5). Assigned DevOps because the article extensively discusses automated workflow orchestration for incident management, integration strategies, and tool chaining across DevOps-friendly systems (DevOps rules 3, 5, 6, 11). Coding was not assigned because there is no direct code walkthrough or programming language focus. AI, ML, and Security do not apply, as the article does not cover AI/ML features or Microsoft security technologies.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-sre-agent-pulls-logs-from-grafana-and-creates-jira-tickets/ba-p/4489527"
+  },
+  {
+    "timestamp": "2026-01-27 02:44:23 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/building-a-reliable-real-time-data-pipeline-with-microsoft/ba-p/4489534",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the guide is centered on using Microsoft Fabric, which is an Azure-based service (Azure category, rule 1). 'ML' is assigned because the content covers data pipeline architecture focusing on multi-layer (Bronze/Silver/Gold) validation, schema drift, data processing, and analytics engineering—all of which fall under ML/data engineering per the ML inclusion rules (ML rules 2, 3, and 4). AI is omitted since the article does not describe use of pre-built AI services, model integration, or platform-managed model deployment. 'Coding', 'DevOps', and 'Security' are not assigned because this guide is focused more on data engineering, operational practices, and architectural planning rather than directly on software development, deployment pipelines, or security implementation specifics. No generic exclusion rules apply: the post is technical, not biographical, not a sales pitch, not career advice, and fully in English. The community content is also well above the 200 word threshold."
   }
 ]
