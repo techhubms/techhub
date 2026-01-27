@@ -24346,5 +24346,11 @@
     "reason": "Succesfully added: Included the Azure category because the content is entirely focused on Azure Arc, a core Azure management technology, with substantial implementation detail (Azure rule 1, 4, 5). Assigned Security because of detailed coverage of Microsoft Defender for Cloud integration, vulnerability assessment, secure configuration, and ongoing monitoring practices (Security rule 1, 2, 5). Did not assign ML, Coding, AI, or DevOps because no significant data science, machine learning, application development, or DevOps-specific processes are described. The content is well within the scope, focuses on technical implementation for hybrid cloud infrastructure, and meets community content length requirements.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-arc-for-sql-server-executive-summary-for-enterprise/ba-p/4489549",
     "timestamp": "2026-01-27 06:06:16 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Coding' category because the post provides detailed coverage of System.Diagnostics.Metrics APIs, .NET/C# instrumentation techniques, and integration patterns (Coding rules 1, 2, 4, and 5). Assigned 'DevOps' because metrics, observability, and tooling (dotnet-counters, OpenTelemetry, Datadog) are essential DevOps practices for monitoring and operational insight (DevOps rules 3, 6, 7). AI, Azure, ML, and Security categories are not assigned as the article does not focus on Microsoft AI services, Azure-specific services, machine learning/data science, or security/identity topics.",
+    "collection": "blogs",
+    "timestamp": "2026-01-27 11:07:00 +00:00",
+    "canonical_url": "https://andrewlock.net/creating-and-consuming-metrics-with-system-diagnostics-metrics-apis/"
   }
 ]
