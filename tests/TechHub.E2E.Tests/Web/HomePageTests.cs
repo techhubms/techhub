@@ -152,10 +152,26 @@ public class HomePageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 
         if (count > 0)
         {
-            await itemLinks.First.ClickBlazorElementAsync();
+            var firstLink = itemLinks.First;
+            var target = await firstLink.GetAttributeAsync("target");
+            var isExternalLink = target == "_blank";
 
-            // Assert - Should navigate away from homepage
-            await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("^https://localhost:5003/?$"));
+            if (isExternalLink)
+            {
+                // External links open in new tab - verify the link has correct attributes
+                // and a valid href (we don't click because it would open a new tab to external site)
+                var href = await firstLink.GetAttributeAsync("href");
+                href.Should().NotBeNullOrWhiteSpace("External link should have a valid href");
+                href.Should().StartWith("http", "External link should have an absolute URL");
+            }
+            else
+            {
+                // Internal links should navigate within the current page
+                await firstLink.ClickBlazorElementAsync();
+
+                // Assert - Should navigate away from homepage
+                await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("^https://localhost:5003/?$"));
+            }
         }
     }
 
