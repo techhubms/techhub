@@ -1,0 +1,22 @@
+{
+  "Link": "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/",
+  "FeedName": "The GitHub Blog",
+  "Author": "Mario Rodriguez",
+  "Title": "Build an agent into any app with the GitHub Copilot SDK",
+  "OutputDir": "_news",
+  "EnhancedContent": "Building agentic workflows from scratch is hard.\n\nYou have to manage context across turns, orchestrate tools and commands, route between models, integrate MCP servers, and think through permissions, safety boundaries, and failure modes. Even before you reach your actual product logic, you’ve already built a small platform.\n\n[GitHub Copilot SDK](https://github.com/github/copilot-sdk?utm_source=blog-cli-sdk-repo-cta&amp;utm_medium=blog&amp;utm_campaign=cli-sdk-jan-2026) (now in technical preview) removes that burden. It allows you to take the same Copilot agentic core that powers GitHub Copilot CLI and embed it in any application.\n\nThis gives you programmatic access to the same production-tested execution loop that powers [GitHub Copilot CLI](https://github.com/features/copilot/cli?utm_source=blog-announcement-cli-sdk&amp;utm_medium=blog&amp;utm_campaign=cli-sdk-jan-2026). That means instead of wiring your own planner, tool loop, and runtime, you can embed that agentic loop directly into your application and build on top of it for any use case.\n\nYou also get Copilot CLI’s support for multiple AI models, custom tool definitions, MCP server integration, GitHub authentication, and real-time streaming.\n\n## What’s new in GitHub Copilot CLI\n\nCopilot CLI lets you plan projects or features, modify files, run commands, use custom agents, delegate tasks to the cloud, and more, all without leaving your terminal.\n\nSince we first introduced it, we’ve been expanding Copilot’s agentic workflows so it:\n\n- **Works the way you do** with persistent memory, infinite sessions, and intelligent compaction.\n- **Helps you think** with explore, plan, and review workflows where you can choose which model you want at each step.\n- **Executes on your behalf**with custom agents, agent skills, full MCP support, and async task delegation.\n\n## How does the SDK build on top of Copilot CLI?\n\nThe SDK takes the agentic power of Copilot CLI (the planning, tool use, and multi-turn execution loop) and makes it available in your favorite programming language. This makes it possible to integrate Copilot into any environment. You can build GUIs that use AI workflows, create personal tools that level up your productivity, or run custom internal agents in your enterprise workflows.\n\nOur teams have already used it to build things like:\n\n- YouTube chapter generators\n- Custom GUIs for their agents\n- Speech-to-command workflows to run apps on their desktops\n- Games where you can compete with AI\n- Summarizing tools\n- And more!\n\nThink of the Copilot SDK as an execution platform that lets you reuse the same agentic loop behind the Copilot CLI, while GitHub handles authentication, model management, MCP servers, custom agents, and chat sessions plus streaming. That means *you* are in control of what gets built on top of those building blocks.\n\n**Start building today**! Visit the [SDK repository to get started](https://github.com/github/copilot-sdk?utm_source=blog-cli-sdk-repo-cta&amp;utm_medium=blog&amp;utm_campaign=cli-sdk-jan-2026).",
+  "FeedLevelAuthor": "The GitHub Blog",
+  "Tags": [
+    "AI & ML",
+    "Company news",
+    "GitHub Copilot",
+    "GitHub Copilot CLI",
+    "GitHub Copilot SDK",
+    "News & insights",
+    "SDK"
+  ],
+  "Description": "Now in technical preview, the GitHub Copilot SDK can plan, invoke tools, edit files, and run commands as a programmable layer you can use in any application.\n\nThe post [Build an agent into any app with the GitHub Copilot SDK](https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2026-01-22 15:05:48",
+  "PubDate": "2026-01-22T15:01:44+00:00",
+  "FeedUrl": "https://github.blog/feed/"
+}

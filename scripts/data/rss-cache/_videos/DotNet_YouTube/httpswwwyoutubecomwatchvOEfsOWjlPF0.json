@@ -1,0 +1,26 @@
+{
+  "PubDate": "2026-01-21T22:53:56+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "ProcessedDate": "2026-01-22 00:05:16",
+  "EnhancedContent": null,
+  "Author": "dotnet",
+  "FeedLevelAuthor": "dotnet",
+  "Title": "Simplifying the Education Process: Teaching Modern Web Development with .NET, Razor Pages and HTMX",
+  "Tags": [
+    "demo",
+    "developer",
+    "developercommunity",
+    "dotnet",
+    "dotnet10",
+    "dotnetdeveloper",
+    "dotnetten",
+    "htmx",
+    "microsoft",
+    "razor",
+    "softwaredeveloper"
+  ],
+  "Link": "https://www.youtube.com/watch?v=OEfsOWjlPF0",
+  "FeedName": "DotNet YouTube",
+  "Description": "Teaching web development doesn't require complex architectures. Using Textbooker.pl app as our case study, we show how the .NET ecosystem simplifies the learning journey by integrating backend, frontend, and deployment into a single cohesive platform. Discover how Razor Pages and HTMX enable modern, interactive applications with minimal JavaScript, letting students focus on fundamentals, not frameworks.\n\n🎙️ Featuring: Tomasz Osmanowski, Michał Siegień, Tymoteusz Bielski\n\n🎙️ Hosted by: Cam Soper, Scott Addie\n\n#dotnet",
+  "OutputDir": "_videos"
+}

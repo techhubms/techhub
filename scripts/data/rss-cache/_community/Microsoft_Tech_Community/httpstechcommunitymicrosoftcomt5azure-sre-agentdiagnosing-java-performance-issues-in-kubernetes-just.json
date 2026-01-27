@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Description": "Manual troubleshooting is slow and painful—but what if you could automate it?\n\nIntroducing the **Azure Performance Diagnostics Tool for Java**, powered by **Azure SRE Agent**. It delivers **automated insights** into JVM health, thread dumps, and memory usage—so you can resolve issues in minutes, not hours.\n\n✅ Kubernetes-native ✅ Deep JVM visibility ✅ Faster root cause analysis\n\n👉 Learn more: [https://devblogs.microsoft.com/java/introducing-azure-performance-diagnostics-tool-for-java-automated-java-performance-analysis-in-kubernetes-via-azure-sre-agent/](https://devblogs.microsoft.com/java/introducing-azure-performance-diagnostics-tool-for-java-automated-java-performance-analysis-in-kubernetes-via-azure-sre-agent/)",
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2026-01-21T06:25:06+00:00",
+  "OutputDir": "_community",
+  "ProcessedDate": "2026-01-21 07:08:28",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Author": "Mayunk_Jain",
+  "Title": "Diagnosing Java performance issues in Kubernetes just got easier!",
+  "Tags": [],
+  "EnhancedContent": "Manual troubleshooting is slow and painful—but what if you could automate it?\n\nIntroducing the **Azure Performance Diagnostics Tool for Java**, powered by **Azure SRE Agent**. It delivers **automated insights** into JVM health, thread dumps, and memory usage—so you can resolve issues in minutes, not hours.\n\n✅ Kubernetes-native ✅ Deep JVM visibility ✅ Faster root cause analysis\n\n👉 Learn more: [https://devblogs.microsoft.com/java/introducing-azure-performance-diagnostics-tool-for-java-automated-java-performance-analysis-in-kubernetes-via-azure-sre-agent/](https://devblogs.microsoft.com/java/introducing-azure-performance-diagnostics-tool-for-java-automated-java-performance-analysis-in-kubernetes-via-azure-sre-agent/)",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-sre-agent/diagnosing-java-performance-issues-in-kubernetes-just-got-easier/m-p/4488015#M3"
+}

@@ -1,0 +1,23 @@
+{
+  "ProcessedDate": "2026-01-22 22:02:30",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "FeedName": "Visual Studio Code YouTube",
+  "Title": "Using the GitHub Copilot SDK with Python",
+  "PubDate": "2026-01-22T21:20:00+00:00",
+  "Link": "https://www.youtube.com/shorts/G6Ywhqv_7WQ",
+  "Author": "Visual Studio Code",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Visual Studio Code",
+  "OutputDir": "_videos",
+  "Tags": [
+    "demo",
+    "githubcopilot",
+    "githubcopilotsdk",
+    "shorts",
+    "shorts2026",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "Description": "Connect your apps to the underlying GitHub Copilot Engine using the SDKs. In this video Liam connects his project iOS app to GitHub Copilot using a Python script.\n\n🔗 Link: #githubcopilot #softwaredeveloper #python #copilotsdk\n\n🎙️ Featuring: Liam Hampton (https://www.linkedin.com/in/liam-conroy-hampton/)\n\n#githubcopilot #softwaredeveloper #python #copilotsdk"
+}

@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "FeedName": "GitHub YouTube",
+  "Author": "GitHub",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=dGzIEn4MFMQ",
+  "ProcessedDate": "2026-01-21 22:03:51",
+  "EnhancedContent": null,
+  "Title": "Rubber Duck Thursdays - Let's build with GitHub Copilot CLI",
+  "Description": "Join us for Rubber Duck Thursdays! A lighthearted and informal stream where we live code on some projects.\n\nThis week we'll explore how to build with agents from the command line and integrate them into our workflows. Come hang out as we experiment and see what's possible!",
+  "PubDate": "2026-01-21T21:33:57+00:00",
+  "FeedLevelAuthor": "GitHub",
+  "Tags": []
+}

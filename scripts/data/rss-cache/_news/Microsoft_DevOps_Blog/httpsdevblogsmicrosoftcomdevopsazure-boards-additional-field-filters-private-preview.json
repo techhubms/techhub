@@ -1,0 +1,19 @@
+{
+  "FeedName": "Microsoft DevOps Blog",
+  "Title": "Azure Boards additional field filters (private preview)",
+  "Description": "We’re introducing a limited private preview that allows you to add additional fields as filters on backlog and Kanban boards. This long-requested feature helps teams tailor their views, focus on the work that matters most, and provide feedback as we iterate toward general availability.\n\nThe post [Azure Boards additional field filters (private preview)](https://devblogs.microsoft.com/devops/azure-boards-additional-field-filters-private-preview/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "Link": "https://devblogs.microsoft.com/devops/azure-boards-additional-field-filters-private-preview/",
+  "ProcessedDate": "2026-01-19 21:01:50",
+  "Author": "Dan Hellem",
+  "Tags": [
+    "Agile",
+    "Azure & Cloud",
+    "Azure Boards",
+    "Community"
+  ],
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "PubDate": "2026-01-19T20:22:53+00:00",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "EnhancedContent": "We’re excited to announce a limited private preview that introduces the ability to add additional fields as filters on both the backlog and Kanban boards. This feature has been a [long-standing request](https://developercommunity.visualstudio.com/t/add-the-ability-to-filter-boards-by-custom-fields/606538) from the developer community, and we’re eager to get it into customers’ hands early through a private preview.\n\nToday, filter options are limited, hardcoded, and can vary slightly depending on the page you’re viewing.\n\n[![blog filters 1 image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABkEAAACmAQMAAABXzbp/AAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwaoL8AAHDZh6YAAAAAElFTkSuQmCC)](https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2026/01/blog-filters-1.webp)\n\nWith this new feature, you’ll continue to start with the same default filters you’re used to. In addition, you can now open the filter settings and add any field that is already displayed on backlog columns or Kanban cards.\n\nYour browser does not support the video tag.\n\nOnce you apply your changes, the selected fields immediately become available in the filters control.\n\n## 🔊 Limitations\n\nThere are a few limitations you should be aware of.\n\n#### Fields\n\n- Large text fields are not supported\n- Fields that always contain unique values, such as `Stack Rank`\n, are not available\n- Fields must be added as a backlog column or card field to be available as a filter\n\n#### Sharing behavior\n\n- If you share a filtered URL and the recipient does not have the same fields configured as filters, those fields will be ignored. To resolve this, add the field as a filter and open the URL again.\n\n#### Page support\n\n- This feature is currently available only on backlog and board pages\n- It is not yet supported on sprint backlogs, sprint boards, query results, or the work items hub\n\n## 🙋 Private preview process\n\nIf you’d like early access to this feature, please [send me an email](mailto:dahellem@microsoft.com) with your organization name in the format of `dev.azure.com/{organization}` . Once enabled, the feature will be available to all users within that organization.\n\nWe plan to accept organizations into the private preview until **February 6, 2026**. After that date, we will close enrollment to focus on collecting feedback, addressing issues, and validating the experience with those preview customers. Our intent is to incorporate what we learn and move quickly toward general availability.\n\nWe’re excited to move this feature through private preview and into general availability. It’s been a long time coming!",
+  "OutputDir": "_news"
+}

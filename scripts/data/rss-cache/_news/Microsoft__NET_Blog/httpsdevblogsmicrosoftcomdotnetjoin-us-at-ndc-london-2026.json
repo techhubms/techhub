@@ -1,0 +1,23 @@
+{
+  "Tags": [
+    ".NET",
+    "AI",
+    "ASP.NET Core",
+    "Azure",
+    "C#",
+    "conferences",
+    "London",
+    "NDC"
+  ],
+  "Description": "Meet the .NET team at NDC London 2026 to explore the latest in .NET 10, Azure, and AI-powered development through sessions and 1:1 meetups.\n\nThe post [Join Microsoft at NDC London 2026 – Let’s Build the Future of .NET Together](https://devblogs.microsoft.com/dotnet/join-us-at-ndc-london-2026/) appeared first on [.NET Blog](https://devblogs.microsoft.com/dotnet).",
+  "Author": ".NET Team",
+  "EnhancedContent": "NDC London is here, with pre-conference workshops running January 26–27 and the main conference running January 28–30. If you’re a .NET or Azure developer, this is the place to be. Whether you want to sharpen your cloud-native skills, get hands-on with AI-powered development, learn from Microsoft engineers, or simply connect with people who love shipping great software, NDC London always delivers. This year, Microsoft is showing up in a bigger, more meaningful way – and we can’t wait to meet you.\n\n## 🌟 Meet the Microsoft Speakers Shaping the Future of .NET\n\nExpect a strong lineup of Microsoft speakers and MVPs delivering deep technical talks across .NET, AI, cloud-native development, and app modernization. Fan favorites like Chris Ayers, Damian Brady, Gerald Versluis, Steve Sanderson, and more – all delivering deeply technical sessions spanning AI-assisted development, cloud-native architecture, and modern .NET patterns. Whether you’re interested in performance tuning, agentic AI, Aspire, or real-world modernization stories, this year’s Microsoft presence gives you direct access to the people building the tools you use every day.\n\n## 🏢 Visit the Microsoft Booth – Let’s Talk Modernization, AI, and What You’re Building\n\nMicrosoft will be on the show floor all three main conference days (January 28–30) with a staffed booth ready for real, technical conversations. Swing by Booth #11, located on the main floor of the expo space.\n\nHere’s why you’ll want to stop by:\n\n- Latest demos on the latest announcements and technologies.\n- 1:1 expert meetups with Microsoft speakers and engineers to talk through your modernization challenges, AI questions, or architectural patterns you’re exploring.\n- Swag and resources – distributed throughout the event (and yes, it will run out, so earlier is better).\n\nWe’ll also be sharing guidance on .NET 10, GitHub Copilot, modernization tooling, Azure SRE Agent, and Managed Instance on Azure App Service – all hot topics for teams looking to move faster and modernize intelligently.\n\n## 🎯 See You in London\n\nWhether you’re exploring cloud-native patterns, scaling legacy .NET apps, adopting AI copilots, or just want to connect with thousands of passionate developers, we want to meet you at NDC London.\n\nCome find us at Booth #11 January 28–30. We can’t wait to learn what you’re building – and help you build what’s next.",
+  "ProcessedDate": "2026-01-26 19:06:30",
+  "OutputDir": "_news",
+  "FeedUrl": "https://devblogs.microsoft.com/dotnet/feed/",
+  "FeedName": "Microsoft .NET Blog",
+  "PubDate": "2026-01-26T18:05:00+00:00",
+  "Title": "Join Microsoft at NDC London 2026 – Let’s Build the Future of .NET Together",
+  "FeedLevelAuthor": ".NET Blog",
+  "Link": "https://devblogs.microsoft.com/dotnet/join-us-at-ndc-london-2026/"
+}
