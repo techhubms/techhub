@@ -24424,5 +24424,17 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-january-2026-feature-summary/",
     "reason": "Succesfully added: Assigned Azure category due to comprehensive feature coverage across Microsoft Fabric and Azure-integrated services. Assigned AI category as multiple features involve AI (AI Auto-Summary, Osmos acquisition for agentic data engineering). ML category added based on substantial updates centered on data engineering, Lakehouse, and analytics (including real-time and batch processing, materialized views, and automation). Security category assigned due to granular role management APIs, mirrored item security, and immutable logs. DevOps included because of Git integration enhancements, CI/CD support, and automation features. Coding is not assigned independently, as the summary focuses on platform features and developer tooling rather than hands-on code samples or language/framework-specific guidance. Content qualifies for multiple categories by rule hierarchy, with Microsoft technologies central throughout.",
     "timestamp": "2026-01-27 21:04:12 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/semantic-kernel/build-ai-agents-with-github-copilot-sdk-and-microsoft-agent-framework/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the core focus is on building AI agents using Microsoft Agent Framework with GitHub Copilot SDK, satisfying AI rules 1, 2, and 4. Assigned GitHub Copilot category as it is about Copilot as a developer tool, with deep technical integration instructions (GitHub Copilot rules 1-4). Assigned Coding because the content includes .NET and Python programming, code examples, technical setup, and extensibility for agent-based development. Did not include Azure, ML, DevOps, or Security categories as there is no substantial architecture, ML, workflow automation, or security implementation focus beyond standard code and agent features.",
+    "timestamp": "2026-01-27 22:04:06 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-da-ea-fasv7-series-vms/ba-p/4488627",
+    "collection": "community",
+    "reason": "Succesfully added: Applied the Azure category because the content focuses entirely on the technical launch and features of new Azure Virtual Machines based on AMD ‘Turin’ processors (Azure rule 1 and 4). The post goes into depth on technical improvements, memory and CPU specs, network/storage enhancements, and usage for demanding workloads but does not provide technical content about coding, ML, or security beyond feature descriptions—so Coding, ML, and Security categories are not assigned. Customer testimonials and partner quotes center on performance but do not introduce new DevOps, AI, or code-based processes. No generic exclusion rules apply.",
+    "timestamp": "2026-01-27 22:05:00 +00:00"
   }
 ]
