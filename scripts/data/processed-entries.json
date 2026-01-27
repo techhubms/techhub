@@ -24328,5 +24328,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/building-a-reliable-real-time-data-pipeline-with-microsoft/ba-p/4489534",
     "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the guide is centered on using Microsoft Fabric, which is an Azure-based service (Azure category, rule 1). 'ML' is assigned because the content covers data pipeline architecture focusing on multi-layer (Bronze/Silver/Gold) validation, schema drift, data processing, and analytics engineering—all of which fall under ML/data engineering per the ML inclusion rules (ML rules 2, 3, and 4). AI is omitted since the article does not describe use of pre-built AI services, model integration, or platform-managed model deployment. 'Coding', 'DevOps', and 'Security' are not assigned because this guide is focused more on data engineering, operational practices, and architectural planning rather than directly on software development, deployment pipelines, or security implementation specifics. No generic exclusion rules apply: the post is technical, not biographical, not a sales pitch, not career advice, and fully in English. The community content is also well above the 200 word threshold."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: I assigned the AI category because the content focuses on a new AI inference accelerator, Maia 200, outlining both the hardware details and its critical role in AI token generation and large-scale model inference (AI inclusion rules 1 and 4). The Azure category is included as the Maia 200 is being integrated and managed through Azure datacenters, intended to power cloud AI workloads, and offers a native Azure developer experience (Azure inclusion rules 1, 4, and 5). Coding is not assigned because the post does not provide direct programming guidance but rather describes hardware and infrastructure. The ML category is not assigned since the primary focus is on AI infrastructure and not machine learning code, workflow, or analytics engineering. Security and DevOps categories are not included, as those aspects are only tangentially mentioned if at all. Special note: Maia 200's role for Microsoft 365 Copilot is referenced, but the post is about the accelerator's technical deployment for inference, not a business productivity tool, so no exclusions apply.",
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/",
+    "timestamp": "2026-01-27 06:05:04 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the content centers around Azure SRE Agent, Azure Container Apps, and deployment remediation in Azure environments. Assigned DevOps category due to the strong emphasis on automated deployment workflows, log analysis, rollback automation, MCP integration, and SRE practices, all of which are core DevOps topics. Did not assign AI, Coding, ML, Security, or GitHub Copilot because there is no substantive focus on AI/ML model building, programming frameworks, security threats or mitigations, or GitHub Copilot/AI code tooling. The article is a technical walkthrough of automated operations and observability integration in Azure, not a coding or AI/ML tutorial.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unifying-scattered-observability-data-from-dynatrace-azure-for/ba-p/4489547",
+    "timestamp": "2026-01-27 06:05:56 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Included the Azure category because the content is entirely focused on Azure Arc, a core Azure management technology, with substantial implementation detail (Azure rule 1, 4, 5). Assigned Security because of detailed coverage of Microsoft Defender for Cloud integration, vulnerability assessment, secure configuration, and ongoing monitoring practices (Security rule 1, 2, 5). Did not assign ML, Coding, AI, or DevOps because no significant data science, machine learning, application development, or DevOps-specific processes are described. The content is well within the scope, focuses on technical implementation for hybrid cloud infrastructure, and meets community content length requirements.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-arc-for-sql-server-executive-summary-for-enterprise/ba-p/4489549",
+    "timestamp": "2026-01-27 06:06:16 +00:00"
   }
 ]
