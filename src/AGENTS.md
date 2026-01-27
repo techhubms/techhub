@@ -126,7 +126,6 @@ src/
 ├── TechHub.Core/                      # Domain Models & Interfaces
 │   ├── Models/                        # Domain entities
 │   ├── Interfaces/                    # Repository interfaces
-│   ├── DTOs/                          # Data transfer objects
 │   └── TechHub.Core.csproj
 ├── TechHub.Infrastructure/            # Data Access Implementation
 │   ├── Repositories/                  # Repository implementations
@@ -232,9 +231,9 @@ The following warnings are intentionally suppressed because they represent delib
 **Code Structure Suppressions**:
 
 - **CA1805**: Explicit initialization - Sometimes improves clarity over implicit defaults
-- **CA1812**: Internal class never instantiated - DTOs are instantiated by JSON deserializer
+- **CA1812**: Internal class never instantiated - Models are instantiated by JSON deserializer
 - **CA1848**: LoggerMessage performance - Traditional logging is clearer, performance optimization not critical
-- **CA1852**: Seal internal types - JSON DTOs need to remain non-sealed for proper deserialization
+- **CA1852**: Seal internal types - JSON models need to remain non-sealed for proper deserialization
 
 **ASP.NET Core Suppressions**:
 

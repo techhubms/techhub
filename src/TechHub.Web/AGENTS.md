@@ -710,7 +710,7 @@ The component automatically generates `<picture>` elements with JPEG XL, WebP, a
 
 **🚫 NEVER**:
 
-- Store image paths in API models or DTOs
+- Store image paths in API models
 - Store image paths in appsettings.json
 - Use inline `style="background-image: url(...)"`
 - Mix thumbnail and full-size images (cards MUST use thumbnails)
@@ -1207,7 +1207,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 ```razor
 @code {
     // ❌ NEVER DO THIS - Conflicts with @section directive
-    private SectionDto section;
+    private Section section;
     
     // ERROR: The 'section' directive must appear at the start of the line
     <PageTitle>@section.Title - Tech Hub</PageTitle>
@@ -1218,7 +1218,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 | Avoid     | Use Instead      | Context                                                |
 |-----------|------------------|--------------------------------------------------------|
-| `section` | `sectionData`    | SectionDto objects in pages/components                 |
+| `section` | `sectionData`    | Section objects in pages/components                    |
 | `section` | `currentSection` | When emphasizing current vs. other sections            |
 | `code`    | `codeBlock`      | When working with code snippets (conflicts with @code) |
 | `page`    | `pageData`       | When working with page metadata (conflicts with @page) |
@@ -1230,7 +1230,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 ```razor
 @page "/{sectionName}"
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 
 @if (sectionData != null)
 {
@@ -1256,7 +1256,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     public string SectionName { get; set; } = null!;
     
     // ✅ CORRECT - Use 'sectionData' to avoid @section directive conflict
-    private SectionDto? sectionData;
+    private Section? sectionData;
     
     protected override async Task OnInitializedAsync()
     {
@@ -1283,7 +1283,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 - `@attribute` - Component attributes
 - `@typeparam` - Generic type parameters
 
-**Best Practice**: When working with DTO objects in Blazor components, append `Data` to the variable name (e.g., `sectionData`, `contentData`, `itemData`) to avoid conflicts and improve clarity.
+**Best Practice**: When working with model objects in Blazor components, append `Data` to the variable name (e.g., `sectionData`, `contentData`, `itemData`) to avoid conflicts and improve clarity.
 
 ### Client-Side Navigation Without Re-Renders
 
@@ -1441,7 +1441,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 ```razor
 @page "/{sectionName}"
 @page "/{sectionName}/{collectionName}"
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
 @rendermode InteractiveServer
@@ -1566,7 +1566,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 **Child Component Pattern (PageHeader.razor - in Shared/)**:
 
 ```razor
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 
 @* Reusable banner component for all pages *@
 <header class="section-header" style="@StyleAttribute">
@@ -1584,7 +1584,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 @code {
     // For section pages - provide Section
     [Parameter]
-    public SectionDto? Section { get; set; }
+    public Section? Section { get; set; }
     
     // For static pages - provide Title, Description, BackgroundCssClass
     [Parameter]
@@ -1615,7 +1615,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 **Component Parameters**:
 
-- **PageHeader**: `Section` (SectionDto) for section pages, or `Title`/`Description`/`BackgroundCssClass` for static pages
+- **PageHeader**: `Section` (Section) for section pages, or `Title`/`Description`/`BackgroundCssClass` for static pages
 - **CollectionNav**: `SectionName` (string), `SelectedCollection` (string), `OnCollectionChange` (EventCallback)
 - **CollectionContent**: `SectionName` (string), `CollectionName` (string)
 
@@ -1757,7 +1757,7 @@ public record RelatedArticle(string Url, string Title);
 
 @code {
     [Parameter, EditorRequired]
-    public required SectionDto Section { get; set; }
+    public required Section Section { get; set; }
 }
 ```
 
@@ -1787,7 +1787,7 @@ else
     [Parameter]
     public string Id { get; set; } = string.Empty;
     
-    private SectionDto? section;
+    private Section? section;
     private string? errorMessage;
     
     protected override async Task OnInitializedAsync()
@@ -2023,7 +2023,7 @@ Source: [ASP.NET Core Blazor project structure](https://github.com/dotnet/aspnet
 
 **Test Pattern**:
 
-- Arrange: Create test data (DTOs, models)
+- Arrange: Create test data (models)
 - Act: Render component with `RenderComponent<T>(parameters => ...)`
 - Assert: Use `Find()`, `FindAll()` and FluentAssertions
 
@@ -2103,7 +2103,7 @@ else if (data != null)
 }
 
 @code {
-    private List<ContentItemDto> visibleItems = new();
+    private List<ContentItem> visibleItems = new();
     private bool hasMore = true;
     private int currentPage = 1;
     private const int PageSize = 20;

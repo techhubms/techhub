@@ -22,7 +22,7 @@ public class SectionCache
     /// Get a section by name from the cache. Case-insensitive lookup.
     /// </summary>
     /// <param name="sectionName">The section name to look up</param>
-    /// <returns>The section DTO if found, otherwise null</returns>
+    /// <returns>The section if found, otherwise null</returns>
     public Section? GetSectionByName(string sectionName)
     {
         _sectionsByName.TryGetValue(sectionName, out var section);

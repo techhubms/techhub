@@ -667,7 +667,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
 
             if (!string.IsNullOrWhiteSpace(slug))
             {
-                queryParams.Add($"contentId={Uri.EscapeDataString(slug)}");
+                queryParams.Add($"slug={Uri.EscapeDataString(slug)}");
             }
 
             if (maxTags.HasValue)

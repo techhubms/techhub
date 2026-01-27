@@ -123,3 +123,5 @@ $RECYCLE.BIN/
 mono_crash.*
 
 .vscode/mcp.json
+
+techhub.db

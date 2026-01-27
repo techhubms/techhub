@@ -1,7 +1,7 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// Response DTO containing filtered content items and metadata
+/// Response containing filtered content items and metadata.
 /// </summary>
 public record FilterResponse
 {

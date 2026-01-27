@@ -24,7 +24,7 @@ This directory contains **unit and integration tests** for the Tech Hub Infrastr
 
 - ✅ **File parsing** (YAML front matter, markdown)
 - ✅ **Repository operations** (GetAll, GetById, filtering)
-- ✅ **Data transformations** (DTO mapping, normalization)
+- ✅ **Data transformations** (model mapping, normalization)
 - ✅ **Caching behavior** (when applicable)
 - ✅ **Error handling** (invalid files, missing data)
 - ✅ **Real file I/O** (read actual test files)

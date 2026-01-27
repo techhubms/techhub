@@ -5,9 +5,9 @@
 
 ## Overview
 
-This project contains domain models, DTOs, and interfaces with **zero external dependencies** (pure .NET). It defines the core business entities and contracts that all other layers depend on.
+This project contains domain models and interfaces with **zero external dependencies** (pure .NET). It defines the core business entities and contracts that all other layers depend on.
 
-**When to read this file**: When creating or modifying domain models, DTOs, repository interfaces, or understanding the core domain.
+**When to read this file**: When creating or modifying domain models, repository interfaces, or understanding the core domain.
 
 **Testing this code**: See [tests/TechHub.Core.Tests/AGENTS.md](../../tests/TechHub.Core.Tests/AGENTS.md) for unit testing patterns.
 
@@ -36,9 +36,6 @@ TechHub.Core/
 │   ├── TagCloudRequest.cs       # Tag cloud request
 │   ├── TagWithCount.cs          # Tag with count
 │   └── [Page-specific models]   # DXSpacePageData, FeaturesPageData, etc.
-├── Helpers/                      # Helper utilities
-│   ├── SectionPriorityHelper.cs # Primary section determination (to be migrated - see MIGRATION.md)
-│   └── MIGRATION.md             # SectionPriorityHelper migration plan
 ├── Interfaces/                   # Repository contracts
 │   ├── ISectionRepository.cs    # Section data access
 │   ├── IContentRepository.cs    # Content data access
@@ -198,7 +195,7 @@ The rest of the markdown content...
 
 ## Model Patterns
 
-**Use records for all models** (entities and DTOs merged into unified model layer).
+**Use records for all models** (unified model layer - no separate DTOs).
 
 **Model Structure**:
 

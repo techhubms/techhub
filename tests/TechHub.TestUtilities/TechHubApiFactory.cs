@@ -1,7 +1,14 @@
+using System.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.AspNetCore.TestHost;
+using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using TechHub.Core.Interfaces;
+using TechHub.Infrastructure.Data;
+using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.TestUtilities;
 
@@ -27,32 +34,129 @@ public abstract class TechHubApiFactoryBase : WebApplicationFactory<Program>
 
 /// <summary>
 /// Factory for integration tests.
-/// - Uses IntegrationTest environment (appsettings.IntegrationTest.json overrides base appsettings.json)
-/// - Uses production appsettings.json configuration
-/// - Mocks IContentRepository to avoid file system dependencies
-/// - Runs from bin directory with relative paths via appsettings.IntegrationTest.json
+/// - Uses IntegrationTest environment
+/// - Uses in-memory SQLite database seeded with TestCollections data
+/// - Provides isolated test database for each test run
+/// 
+/// SQLite Thread Safety:
+/// - One master connection is kept open to preserve in-memory database
+/// - IDbConnectionFactory creates new connections pointing to same in-memory DB
+/// - Repository is transient to ensure thread safety
 /// </summary>
-public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase
+public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IDisposable
 {
+    private SqliteConnection? _masterConnection;
+    private ILoggerFactory? _loggerFactory;
+    private string? _connectionString;
+    private bool _disposed;
+
     protected override void ConfigureTestSpecificServices(IWebHostBuilder builder)
     {
         // Use IntegrationTest environment for integration tests
         builder.UseEnvironment("IntegrationTest");
 
-        // Replace real content repository with mock for integration tests
-        // No file system access needed - mock provides all test data
-        builder.ConfigureServices(services =>
+        // Create logger for seeding output
+        _loggerFactory = LoggerFactory.Create(b =>
         {
-            // Remove the real ContentRepository registration
-            var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof(IContentRepository));
-            if (descriptor != null)
-            {
-                services.Remove(descriptor);
-            }
-
-            // Register stub repository with test data
-            services.AddSingleton<IContentRepository, StubContentRepository>();
+            b.AddConsole();
+            b.SetMinimumLevel(LogLevel.Information);
         });
+        var logger = _loggerFactory.CreateLogger<TechHubIntegrationTestApiFactory>();
+
+        // Create shared in-memory database with a name so multiple connections can access it
+        // Using Mode=Memory and Cache=Shared allows multiple connections to the same in-memory DB
+        _connectionString = $"Data Source=IntegrationTest_{Guid.NewGuid():N};Mode=Memory;Cache=Shared";
+        
+        logger.LogInformation("🗄️ Creating in-memory SQLite database: {ConnectionString}", _connectionString);
+        
+        // Master connection keeps the in-memory database alive
+        _masterConnection = new SqliteConnection(_connectionString);
+        _masterConnection.Open();
+
+        // Run migrations on the master connection
+        var migrationRunner = new MigrationRunner(
+            _masterConnection,
+            new SqliteDialect(),
+            NullLogger<MigrationRunner>.Instance);
+        migrationRunner.RunMigrationsAsync().GetAwaiter().GetResult();
+        logger.LogInformation("✅ Database migrations completed");
+
+        // Seed with TestCollections data
+        TestCollectionsSeeder.SeedFromFilesAsync(_masterConnection, logger: logger).GetAwaiter().GetResult();
+
+        // Capture connection string for factory
+        var connString = _connectionString;
+
+        // Replace database services with in-memory SQLite database
+        // Use ConfigureTestServices to ensure our registrations override the original ones
+        builder.ConfigureTestServices(services =>
+        {
+            // Remove ALL existing database registrations
+            RemoveAllServices<IDbConnectionFactory>(services);
+            RemoveAllServices<IDbConnection>(services);
+            RemoveAllServices<IContentRepository>(services);
+            RemoveAllServices<ISqlDialect>(services);
+
+            // Register SQLite dialect as singleton (stateless)
+            services.AddSingleton<ISqlDialect, SqliteDialect>();
+
+            // Register connection factory that creates new connections to the shared in-memory DB
+            services.AddSingleton<IDbConnectionFactory>(new SharedMemoryConnectionFactory(connString));
+
+            // Register transient connection - each request gets a new connection for thread safety
+            services.AddTransient<IDbConnection>(sp =>
+            {
+                var factory = sp.GetRequiredService<IDbConnectionFactory>();
+                return factory.CreateConnection();
+            });
+
+            // Register transient repository - SQLite is not thread-safe
+            services.AddTransient<IContentRepository, SqliteContentRepository>();
+        });
+    }
+
+    private static void RemoveAllServices<T>(IServiceCollection services)
+    {
+        var descriptors = services.Where(d => d.ServiceType == typeof(T)).ToList();
+        foreach (var descriptor in descriptors)
+        {
+            services.Remove(descriptor);
+        }
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        if (!_disposed)
+        {
+            if (disposing)
+            {
+                _masterConnection?.Dispose();
+                _loggerFactory?.Dispose();
+            }
+            _disposed = true;
+        }
+        base.Dispose(disposing);
+    }
+}
+
+/// <summary>
+/// Connection factory that creates new connections to a shared in-memory SQLite database.
+/// Each connection is opened and ready to use.
+/// </summary>
+internal class SharedMemoryConnectionFactory : IDbConnectionFactory
+{
+    private readonly string _connectionString;
+
+    public SharedMemoryConnectionFactory(string connectionString)
+    {
+        _connectionString = connectionString;
+    }
+
+    public IDbConnection CreateConnection()
+    {
+        var connection = new SqliteConnection(_connectionString);
+        connection.Open();
+        return connection;
     }
 }
 

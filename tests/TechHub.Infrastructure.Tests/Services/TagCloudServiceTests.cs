@@ -3,17 +3,18 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
+using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
-using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
 /// <summary>
 /// Unit tests for TagCloudService
 /// Tests tag cloud generation, quantile sizing, and scoping logic
-/// Uses StubContentRepository for lightweight test data
+/// Uses FileBasedContentRepository with TestCollections for test data
 /// </summary>
 public class TagCloudServiceTests
 {
@@ -39,18 +40,27 @@ public class TagCloudServiceTests
             }
         };
 
-        // Setup: Create mock IHostEnvironment
+        // Setup: Create FileBasedContentRepository pointing to TestCollections
+        var testCollectionsPath = "/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections";
+        
+        var settings = new AppSettings
+        {
+            Content = new ContentSettings
+            {
+                CollectionsPath = testCollectionsPath,
+                Sections = []
+            }
+        };
+
         var mockEnvironment = new Mock<IHostEnvironment>();
-        mockEnvironment.Setup(e => e.ContentRootPath).Returns("/tmp");
+        mockEnvironment.Setup(e => e.ContentRootPath).Returns(testCollectionsPath);
 
-        // Setup: Create MemoryCache
         var cache = new MemoryCache(new MemoryCacheOptions());
-
-        // Setup: Create real dependencies - no mocks for services
         var markdownService = new MarkdownService();
         var tagMatchingService = new TagMatchingService();
 
-        _repository = new StubContentRepository(
+        _repository = new FileBasedContentRepository(
+            Options.Create(settings),
             markdownService,
             tagMatchingService,
             mockEnvironment.Object,

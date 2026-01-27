@@ -60,7 +60,7 @@ public class RssServiceTests
     ];
 
     [Fact]
-    public async Task GenerateSectionFeedAsync_WithValidSection_ReturnsChannelDto()
+    public async Task GenerateSectionFeedAsync_WithValidSection_ReturnsChannel()
     {
         // Arrange
         var section = CreateTestSection();
@@ -155,7 +155,7 @@ public class RssServiceTests
     }
 
     [Fact]
-    public async Task GenerateCollectionFeedAsync_WithValidCollection_ReturnsChannelDto()
+    public async Task GenerateCollectionFeedAsync_WithValidCollection_ReturnsChannel()
     {
         // Arrange
         var collection = "news";

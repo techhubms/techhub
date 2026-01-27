@@ -156,8 +156,8 @@ public class ContentSyncService : IContentSyncService
         var markdownFilesList = GetMarkdownFiles();
         _logger.LogInformation("Found {Count} markdown files", markdownFilesList.Count);
         
-        // Create dictionary for file lookup by ID
-        var markdownFiles = markdownFilesList.ToDictionary(f => GetContentIdFromFile(f), f => f);
+        // Create dictionary for file lookup by slug
+        var markdownFiles = markdownFilesList.ToDictionary(f => GetContentSlugFromFile(f), f => f);
         
         // Compute hashes for all files
         var fileHashes = await ComputeFileHashesAsync(markdownFilesList, ct);
@@ -180,36 +180,24 @@ public class ContentSyncService : IContentSyncService
             newFiles.Count, potentiallyChanged.Count, deletedFiles.Count, unchanged.Count);
         
         // Process deletions
-        foreach (var id in deletedFiles)
+        foreach (var compositeId in deletedFiles)
         {
+            var parts = compositeId.Split(':');
+            var collectionName = parts[0];
+            var slug = parts[1];
             await _connection.ExecuteAsync(
-                "DELETE FROM content_items WHERE id = @Id",
-                new { Id = id });
+                "DELETE FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug",
+                new { CollectionName = collectionName, Slug = slug });
         }
         
-        // Process new and updated files in parallel batches
+        // Process new and updated files sequentially to avoid SQLite thread-safety issues
+        // SQLite does not support concurrent writes even with WAL mode in all configurations
         var filesToProcess = newFiles.Concat(potentiallyChanged).ToList();
-        var semaphore = new SemaphoreSlim(_options.MaxParallelFiles);
-        var tasks = new List<Task>();
         
         foreach (var id in filesToProcess)
         {
-            await semaphore.WaitAsync(ct);
-            
-            tasks.Add(Task.Run(async () =>
-            {
-                try
-                {
-                    await ProcessFileAsync(id, markdownFiles[id], fileHashes[id], ct);
-                }
-                finally
-                {
-                    semaphore.Release();
-                }
-            }, ct));
+            await ProcessFileAsync(id, markdownFiles[id], fileHashes[id], ct);
         }
-        
-        await Task.WhenAll(tasks);
         
         return (newFiles.Count, potentiallyChanged.Count, deletedFiles.Count, unchanged.Count);
     }
@@ -248,10 +236,10 @@ public class ContentSyncService : IContentSyncService
         
         foreach (var file in files)
         {
-            var id = GetContentIdFromFile(file);
+            var slug = GetContentSlugFromFile(file);
             var content = await File.ReadAllTextAsync(file.FullName, ct);
             var hash = ComputeSha256Hash(content);
-            hashes[id] = hash;
+            hashes[slug] = hash;
         }
         
         return hashes;
@@ -259,20 +247,26 @@ public class ContentSyncService : IContentSyncService
     
     private async Task<Dictionary<string, string>> GetDatabaseHashesAsync(CancellationToken ct)
     {
-        var rows = await _connection.QueryAsync<(string Id, string ContentHash)>(
-            "SELECT id, content_hash FROM content_items");
+        var rows = await _connection.QueryAsync<(string CollectionName, string Slug, string ContentHash)>(
+            "SELECT collection_name, slug, content_hash FROM content_items");
         
-        return rows.ToDictionary(r => r.Id, r => r.ContentHash);
+        // Use composite key "collection:slug" to allow same slug in different collections
+        return rows.ToDictionary(r => $"{r.CollectionName}:{r.Slug}", r => r.ContentHash);
     }
     
     private async Task ProcessFileAsync(
-        string id,
+        string compositeId,
         FileInfo file,
         string contentHash,
         CancellationToken ct)
     {
         try
         {
+            // Extract collection and slug from composite key "collection:slug"
+            var parts = compositeId.Split(':');
+            var collectionName = parts[0];
+            var slug = parts[1];
+            
             // Parse frontmatter and content
             var frontMatter = await _markdownService.ParseFrontMatterAsync(file.FullName, ct);
             var fileContent = await File.ReadAllTextAsync(file.FullName, ct);
@@ -281,7 +275,6 @@ public class ContentSyncService : IContentSyncService
             var (excerpt, content) = ExtractExcerptAndContent(fileContent);
             
             // Extract metadata from frontmatter and file path
-            var collectionName = GetCollectionNameFromPath(file);
             var subcollectionName = GetSubcollectionNameFromPath(file);
             var dateEpoch = GetDateEpochFromFrontMatter(frontMatter, file.Name);
             var sections = GetSectionsFromFrontMatter(frontMatter);
@@ -291,20 +284,19 @@ public class ContentSyncService : IContentSyncService
             // Upsert main content item
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
-                    id, title, content, excerpt, date_epoch, collection_name, subcollection_name,
+                    slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
                     primary_section_name, external_url, author, feed_name, ghes_support, draft, content_hash,
                     created_at, updated_at
                 ) VALUES (
-                    @Id, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
+                    @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
                     @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @ContentHash,
                     CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                 )
-                ON CONFLICT(id) DO UPDATE SET
+                ON CONFLICT(collection_name, slug) DO UPDATE SET
                     title = @Title,
                     content = @Content,
                     excerpt = @Excerpt,
                     date_epoch = @DateEpoch,
-                    collection_name = @CollectionName,
                     subcollection_name = @SubcollectionName,
                     primary_section_name = @PrimarySectionName,
                     external_url = @ExternalUrl,
@@ -316,7 +308,7 @@ public class ContentSyncService : IContentSyncService
                     updated_at = CURRENT_TIMESTAMP",
                 new
                 {
-                    Id = id,
+                    Slug = slug,
                     Title = frontMatter.GetValueOrDefault("title", "")?.ToString() ?? "",
                     Content = content,
                     Excerpt = excerpt,
@@ -327,24 +319,24 @@ public class ContentSyncService : IContentSyncService
                     ExternalUrl = frontMatter.GetValueOrDefault("canonical_url", null)?.ToString(),
                     Author = frontMatter.GetValueOrDefault("author", null)?.ToString(),
                     FeedName = frontMatter.GetValueOrDefault("feed", null)?.ToString(),
-                    GhesSupport = frontMatter.GetValueOrDefault("ghes_support", false),
-                    Draft = frontMatter.GetValueOrDefault("draft", false),
+                    GhesSupport = (frontMatter.GetValueOrDefault("ghes_support", false) is bool ghesSupport && ghesSupport) ? 1 : 0,
+                    Draft = ConvertBoolToInt(frontMatter, "draft"),
                     ContentHash = contentHash
                 });
             
             // Delete existing junction table entries
-            await _connection.ExecuteAsync("DELETE FROM content_tags WHERE content_id = @Id", new { Id = id });
-            await _connection.ExecuteAsync("DELETE FROM content_tags_expanded WHERE content_id = @Id", new { Id = id });
-            await _connection.ExecuteAsync("DELETE FROM content_sections WHERE content_id = @Id", new { Id = id });
-            await _connection.ExecuteAsync("DELETE FROM content_plans WHERE content_id = @Id", new { Id = id });
+            await _connection.ExecuteAsync("DELETE FROM content_tags WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
+            await _connection.ExecuteAsync("DELETE FROM content_tags_expanded WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
+            await _connection.ExecuteAsync("DELETE FROM content_sections WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
+            await _connection.ExecuteAsync("DELETE FROM content_plans WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
             
             // Insert tags and expanded tags
             foreach (var tag in tags)
             {
                 var tagNormalized = tag.ToLowerInvariant().Trim();
                 await _connection.ExecuteAsync(
-                    "INSERT INTO content_tags (content_id, tag, tag_normalized) VALUES (@Id, @Tag, @TagNormalized)",
-                    new { Id = id, Tag = tag, TagNormalized = tagNormalized });
+                    "INSERT INTO content_tags (collection_name, slug, tag, tag_normalized) VALUES (@CollectionName, @Slug, @Tag, @TagNormalized)",
+                    new { CollectionName = collectionName, Slug = slug, Tag = tag, TagNormalized = tagNormalized });
                 
                 // Expand tags into words for subset matching
                 var words = tag.Split(new[] { ' ', '-', '_' }, StringSplitOptions.RemoveEmptyEntries);
@@ -352,8 +344,8 @@ public class ContentSyncService : IContentSyncService
                 {
                     var wordNormalized = word.ToLowerInvariant().Trim();
                     await _connection.ExecuteAsync(
-                        "INSERT OR IGNORE INTO content_tags_expanded (content_id, tag_word) VALUES (@Id, @Word)",
-                        new { Id = id, Word = wordNormalized });
+                        "INSERT OR IGNORE INTO content_tags_expanded (collection_name, slug, tag_word) VALUES (@CollectionName, @Slug, @Word)",
+                        new { CollectionName = collectionName, Slug = slug, Word = wordNormalized });
                 }
             }
             
@@ -361,16 +353,16 @@ public class ContentSyncService : IContentSyncService
             foreach (var section in sections)
             {
                 await _connection.ExecuteAsync(
-                    "INSERT INTO content_sections (content_id, section_name) VALUES (@Id, @Section)",
-                    new { Id = id, Section = section });
+                    "INSERT INTO content_sections (collection_name, slug, section_name) VALUES (@CollectionName, @Slug, @Section)",
+                    new { CollectionName = collectionName, Slug = slug, Section = section });
             }
             
             // Insert plans
             foreach (var plan in plans)
             {
                 await _connection.ExecuteAsync(
-                    "INSERT INTO content_plans (content_id, plan_name) VALUES (@Id, @Plan)",
-                    new { Id = id, Plan = plan });
+                    "INSERT INTO content_plans (collection_name, slug, plan_name) VALUES (@CollectionName, @Slug, @Plan)",
+                    new { CollectionName = collectionName, Slug = slug, Plan = plan });
             }
         }
         catch (Exception ex)
@@ -380,10 +372,12 @@ public class ContentSyncService : IContentSyncService
         }
     }
     
-    private static string GetContentIdFromFile(FileInfo file)
+    private static string GetContentSlugFromFile(FileInfo file)
     {
-        // ID is the filename without extension
-        return Path.GetFileNameWithoutExtension(file.Name);
+        // Composite key: "collection:slug" to allow same slug in different collections
+        var collectionName = GetCollectionNameFromPath(file);
+        var slug = Path.GetFileNameWithoutExtension(file.Name);
+        return $"{collectionName}:{slug}";
     }
     
     private static string GetCollectionNameFromPath(FileInfo file)
@@ -547,6 +541,12 @@ public class ContentSyncService : IContentSyncService
             ON CONFLICT(key) DO UPDATE SET value = @Value, updated_at = CURRENT_TIMESTAMP",
             new { Key = "total_items", Value = totalItems.ToString() },
             transaction: transaction);
+    }
+
+    private static int ConvertBoolToInt(Dictionary<string, object> frontMatter, string key)
+    {
+        var value = frontMatter.GetValueOrDefault(key, false);
+        return (value is bool b && b) ? 1 : 0;
     }
 }
 

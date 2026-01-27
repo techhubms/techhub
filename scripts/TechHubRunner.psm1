@@ -291,6 +291,9 @@ function Run {
         # Fast recursive removal of bin/obj directories using native Linux find (faster than dotnet clean)
         bash -c "find '$workspaceRoot' -type d \( -name bin -o -name obj \) -exec rm -rf {} + 2>/dev/null"
         
+        # Also do a dotnet clean for any other cleanup
+        dotnet -clean $solutionPath
+
         Write-Success "Clean completed"
         return $true
     }

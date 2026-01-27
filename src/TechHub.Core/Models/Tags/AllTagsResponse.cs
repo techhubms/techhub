@@ -1,7 +1,7 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// Response DTO containing all tags with their usage counts
+/// Response containing all tags with their usage counts.
 /// </summary>
 public record AllTagsResponse
 {

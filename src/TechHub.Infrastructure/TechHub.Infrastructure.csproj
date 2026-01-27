@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     
     <!-- Infrastructure-specific suppressions -->
-    <!-- CA1054/CA1055/CA1056: URI parameters/returns/properties - we use strings for URLs for consistency with DTOs -->
+    <!-- CA1054/CA1055/CA1056: URI parameters/returns/properties - we use strings for URLs for consistency with models -->
     <NoWarn>$(NoWarn);CA1054;CA1055;CA1056</NoWarn>
   </PropertyGroup>
 

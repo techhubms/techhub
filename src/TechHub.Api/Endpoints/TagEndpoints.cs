@@ -33,7 +33,7 @@ public static class TagEndpoints
         [FromQuery(Name = "scope")] string scope,
         [FromQuery(Name = "section")] string? section,
         [FromQuery(Name = "collection")] string? collection,
-        [FromQuery(Name = "contentId")] string? contentId,
+        [FromQuery(Name = "slug")] string? slug,
         [FromQuery(Name = "maxTags")] int? maxTags,
         [FromQuery(Name = "minUses")] int? minUses,
         [FromQuery(Name = "lastDays")] int? lastDays,
@@ -74,12 +74,12 @@ public static class TagEndpoints
             });
         }
 
-        if (tagCloudScope == TagCloudScope.Content && string.IsNullOrWhiteSpace(contentId))
+        if (tagCloudScope == TagCloudScope.Content && string.IsNullOrWhiteSpace(slug))
         {
             return Results.BadRequest(new ProblemDetails
             {
-                Title = "Content ID required",
-                Detail = "Content ID is required for Content scope",
+                Title = "Content slug required",
+                Detail = "Content slug is required for Content scope",
                 Status = 400
             });
         }
@@ -93,7 +93,7 @@ public static class TagEndpoints
             Scope = tagCloudScope,
             SectionName = section,
             CollectionName = collection,
-            Slug = contentId,
+            Slug = slug,
             MaxTags = maxTags ?? config.DefaultMaxTags,
             MinUses = minUses ?? config.MinimumTagUses,
             LastDays = lastDays ?? config.DefaultDateRangeDays

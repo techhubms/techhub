@@ -18,13 +18,13 @@ public class PostgresDialect : ISqlDialect
     {
         return @"
             INSERT INTO content_items (
-                id, title, content, excerpt, date_epoch, collection_name, subcollection_name,
+                slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
                 primary_section_name, external_url, author, feed_name, ghes_support, draft, content_hash
             ) VALUES (
-                @Id, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
+                @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
                 @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @ContentHash
             )
-            ON CONFLICT(id) DO UPDATE SET
+            ON CONFLICT(slug) DO UPDATE SET
                 title = @Title,
                 content = @Content,
                 excerpt = @Excerpt,

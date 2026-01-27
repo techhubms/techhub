@@ -45,7 +45,7 @@ Represents a thematic grouping of content (e.g., AI, GitHub Copilot, Azure).
 }
 ```
 
-### Content Item (ContentItemDto)
+### Content Item (ContentItem)
 
 Represents individual content (articles, videos, blogs, etc.) in API responses.
 
@@ -504,7 +504,7 @@ Get detailed content item by section, collection, and content slug.
 
 **Response**: `200 OK` or `404 Not Found`
 
-**Response Body**: `ContentItemDetailDto` with full markdown content, metadata, and related items
+**Response Body**: `ContentItem` with full markdown content, metadata, and related items
 
 **Example**:
 

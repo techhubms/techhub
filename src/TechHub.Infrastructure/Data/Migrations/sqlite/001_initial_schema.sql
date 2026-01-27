@@ -5,7 +5,7 @@
 
 -- Main content table
 CREATE TABLE IF NOT EXISTS content_items (
-    id TEXT PRIMARY KEY,
+    slug TEXT NOT NULL,
     title TEXT NOT NULL,
     content TEXT NOT NULL,
     excerpt TEXT,
@@ -20,7 +20,8 @@ CREATE TABLE IF NOT EXISTS content_items (
     draft INTEGER NOT NULL DEFAULT 0,
     content_hash TEXT NOT NULL,
     created_at TEXT DEFAULT (datetime('now')),
-    updated_at TEXT DEFAULT (datetime('now'))
+    updated_at TEXT DEFAULT (datetime('now')),
+    PRIMARY KEY (collection_name, slug)
 );
 
 -- Collections lookup table
@@ -44,31 +45,39 @@ INSERT OR IGNORE INTO collections (name, is_internal, parent_name) VALUES
 
 -- Tags junction table
 CREATE TABLE IF NOT EXISTS content_tags (
-    content_id TEXT NOT NULL REFERENCES content_items(id) ON DELETE CASCADE,
+    collection_name TEXT NOT NULL,
+    slug TEXT NOT NULL,
     tag TEXT NOT NULL,
     tag_normalized TEXT NOT NULL,
-    PRIMARY KEY (content_id, tag)
+    PRIMARY KEY (collection_name, slug, tag),
+    FOREIGN KEY (collection_name, slug) REFERENCES content_items(collection_name, slug) ON DELETE CASCADE
 );
 
 -- Expanded tags for subset matching
 CREATE TABLE IF NOT EXISTS content_tags_expanded (
-    content_id TEXT NOT NULL REFERENCES content_items(id) ON DELETE CASCADE,
+    collection_name TEXT NOT NULL,
+    slug TEXT NOT NULL,
     tag_word TEXT NOT NULL,
-    PRIMARY KEY (content_id, tag_word)
+    PRIMARY KEY (collection_name, slug, tag_word),
+    FOREIGN KEY (collection_name, slug) REFERENCES content_items(collection_name, slug) ON DELETE CASCADE
 );
 
 -- Section names junction table
 CREATE TABLE IF NOT EXISTS content_sections (
-    content_id TEXT NOT NULL REFERENCES content_items(id) ON DELETE CASCADE,
+    collection_name TEXT NOT NULL,
+    slug TEXT NOT NULL,
     section_name TEXT NOT NULL,
-    PRIMARY KEY (content_id, section_name)
+    PRIMARY KEY (collection_name, slug, section_name),
+    FOREIGN KEY (collection_name, slug) REFERENCES content_items(collection_name, slug) ON DELETE CASCADE
 );
 
 -- Plans junction table
 CREATE TABLE IF NOT EXISTS content_plans (
-    content_id TEXT NOT NULL REFERENCES content_items(id) ON DELETE CASCADE,
+    collection_name TEXT NOT NULL,
+    slug TEXT NOT NULL,
     plan_name TEXT NOT NULL,
-    PRIMARY KEY (content_id, plan_name)
+    PRIMARY KEY (collection_name, slug, plan_name),
+    FOREIGN KEY (collection_name, slug) REFERENCES content_items(collection_name, slug) ON DELETE CASCADE
 );
 
 -- Sync metadata
@@ -80,27 +89,27 @@ CREATE TABLE IF NOT EXISTS sync_metadata (
 
 -- FTS5 virtual table for full-text search
 CREATE VIRTUAL TABLE IF NOT EXISTS content_fts USING fts5(
-    id, title, excerpt, content,
+    slug, title, excerpt, content,
     content='content_items',
     content_rowid='rowid'
 );
 
 -- Triggers to maintain FTS index
 CREATE TRIGGER IF NOT EXISTS content_ai AFTER INSERT ON content_items BEGIN
-    INSERT INTO content_fts(rowid, id, title, excerpt, content)
-    VALUES (new.rowid, new.id, new.title, new.excerpt, new.content);
+    INSERT INTO content_fts(rowid, slug, title, excerpt, content)
+    VALUES (new.rowid, new.slug, new.title, new.excerpt, new.content);
 END;
 
 CREATE TRIGGER IF NOT EXISTS content_ad AFTER DELETE ON content_items BEGIN
-    INSERT INTO content_fts(content_fts, rowid, id, title, excerpt, content)
-    VALUES ('delete', old.rowid, old.id, old.title, old.excerpt, old.content);
+    INSERT INTO content_fts(content_fts, rowid, slug, title, excerpt, content)
+    VALUES ('delete', old.rowid, old.slug, old.title, old.excerpt, old.content);
 END;
 
 CREATE TRIGGER IF NOT EXISTS content_au AFTER UPDATE ON content_items BEGIN
-    INSERT INTO content_fts(content_fts, rowid, id, title, excerpt, content)
-    VALUES ('delete', old.rowid, old.id, old.title, old.excerpt, old.content);
-    INSERT INTO content_fts(rowid, id, title, excerpt, content)
-    VALUES (new.rowid, new.id, new.title, new.excerpt, new.content);
+    INSERT INTO content_fts(content_fts, rowid, slug, title, excerpt, content)
+    VALUES ('delete', old.rowid, old.slug, old.title, old.excerpt, old.content);
+    INSERT INTO content_fts(rowid, slug, title, excerpt, content)
+    VALUES (new.rowid, new.slug, new.title, new.excerpt, new.content);
 END;
 
 -- Indexes
@@ -113,13 +122,13 @@ CREATE INDEX IF NOT EXISTS idx_collections_name ON collections(name);
 CREATE INDEX IF NOT EXISTS idx_collections_parent ON collections(parent_name);
 
 CREATE INDEX IF NOT EXISTS idx_tags_normalized ON content_tags(tag_normalized);
-CREATE INDEX IF NOT EXISTS idx_tags_content ON content_tags(content_id);
+CREATE INDEX IF NOT EXISTS idx_tags_content ON content_tags(slug);
 
 CREATE INDEX IF NOT EXISTS idx_tags_expanded_word ON content_tags_expanded(tag_word);
-CREATE INDEX IF NOT EXISTS idx_tags_expanded_content ON content_tags_expanded(content_id);
+CREATE INDEX IF NOT EXISTS idx_tags_expanded_content ON content_tags_expanded(slug);
 
 CREATE INDEX IF NOT EXISTS idx_sections_name ON content_sections(section_name);
-CREATE INDEX IF NOT EXISTS idx_sections_content ON content_sections(content_id);
+CREATE INDEX IF NOT EXISTS idx_sections_content ON content_sections(slug);
 
 CREATE INDEX IF NOT EXISTS idx_plans_name ON content_plans(plan_name);
-CREATE INDEX IF NOT EXISTS idx_plans_content ON content_plans(content_id);
+CREATE INDEX IF NOT EXISTS idx_plans_content ON content_plans(slug);

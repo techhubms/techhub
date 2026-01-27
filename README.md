@@ -134,7 +134,7 @@ app.MapDefaultEndpoints();     // Maps /health and /alive endpoints
 
 - `TechHub.Api/` - REST API backend (Minimal API, OpenAPI/Swagger)
 - `TechHub.Web/` - Blazor frontend (SSR + WebAssembly)
-- `TechHub.Core/` - Domain models, DTOs, interfaces
+- `TechHub.Core/` - Domain models, interfaces
 - `TechHub.Infrastructure/` - Repository implementations, services
 - `TechHub.AppHost/` - .NET Aspire orchestration
 

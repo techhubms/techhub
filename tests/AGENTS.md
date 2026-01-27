@@ -88,7 +88,7 @@ These apply to ALL tests across all layers:
 
 **Test Double** is the generic term for any pretend object used in place of a real object for testing purposes (like a stunt double in movies). There are several types:
 
-**Stub** provides canned answers to calls made during tests. Stubs use **state verification** - you check the final state after the test runs. Example: `StubContentRepository` returns predefined test data and you assert on the results.
+**Stub** provides canned answers to calls made during tests. Stubs use **state verification** - you check the final state after the test runs. Example: `FileBasedContentRepository` pointing to TestCollections returns predefined test data and you assert on the results.
 
 **Mock** is pre-programmed with expectations about which calls it should receive. Mocks use **behavior verification** - you verify that specific methods were called with expected parameters. Example: Using Moq to verify a method was called exactly once.
 
@@ -426,7 +426,7 @@ tests/
 - ✅ **Simple classes without dependencies** - Any class that's just logic (e.g., `MarkdownService`, `TagMatchingService`)
 - ✅ **Pure functions** - Methods with no side effects
 - ✅ **Stateless services** - Services with no mutable state
-- ✅ **Domain models** - Entities, value objects, DTOs
+- ✅ **Domain models** - Entities, value objects
 - ✅ **In-memory collections** - Lists, dictionaries, etc.
 
 **❌ When to Stub/Mock (ONLY These Cases)**:
@@ -459,16 +459,17 @@ tests/
 // ✅ CORRECT: Real service being tested
 var service = new TagCloudService(repository, options);
 
-// ✅ CORRECT: StubContentRepository provides canned data (filesystem boundary)
-var repository = new StubContentRepository(
-    markdownService,      // ✅ CORRECT: Real simple service
-    tagMatchingService,   // ✅ CORRECT: Real simple service  
-    environment,          // ✅ CORRECT: Real environment (or mock if needed)
-    cache                 // ✅ CORRECT: Real MemoryCache
+// ✅ CORRECT: FileBasedContentRepository with TestCollections provides canned data
+var repository = new FileBasedContentRepository(
+    Options.Create(settings),  // ✅ CORRECT: Points to TestCollections directory
+    markdownService,           // ✅ CORRECT: Real simple service
+    tagMatchingService,        // ✅ CORRECT: Real simple service  
+    environment,               // ✅ CORRECT: Real environment (or mock if needed)
+    cache                      // ✅ CORRECT: Real MemoryCache
 );
 ```
 
-**Why**: We stub `IContentRepository` because the real `FileBasedContentRepository` reads from filesystem. We use real `MarkdownService` and `TagMatchingService` because they're just simple classes with no filesystem/external access.
+**Why**: We use `FileBasedContentRepository` pointing to TestCollections because it provides consistent test data without manual file creation. We use real `MarkdownService` and `TagMatchingService` because they're just simple classes with no filesystem/external access.
 
 **Wrong Example** - Over-mocking:
 
@@ -489,7 +490,7 @@ mockMarkdownService.Setup(m => m.RenderToHtml(It.IsAny<string>()))
 ```text
 Does this class touch filesystem or external systems?
 │
-├─ YES → Stub it (e.g., IContentRepository → StubContentRepository)
+├─ YES → Use FileBasedContentRepository with TestCollections for IContentRepository
 │
 └─ NO → Use real implementation (e.g., MarkdownService)
     │
@@ -538,7 +539,7 @@ Does this class touch filesystem or external systems?
 **Domain Model Tests** ([TechHub.Core.Tests/AGENTS.md](TechHub.Core.Tests/AGENTS.md)):
 
 - Testing entity validation and business rules
-- Testing value objects and DTOs
+- Testing value objects and models
 - Testing domain model behavior
 
 **Repository & Service Tests** ([TechHub.Infrastructure.Tests/AGENTS.md](TechHub.Infrastructure.Tests/AGENTS.md)):

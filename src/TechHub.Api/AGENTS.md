@@ -95,7 +95,7 @@ group.MapGet("/{sectionUrl}/content", GetContentForSection)
     .WithDescription("Retrieves all content items (news, videos, blogs, etc.) for the specified section, sorted by date (newest first)")
     .WithTags("Content")
     .WithOpenApi()
-    .Produces<IReadOnlyList<ContentItemDto>>(StatusCodes.Status200OK)
+    .Produces<IReadOnlyList<ContentItem>>(StatusCodes.Status200OK)
     .Produces<ProblemDetails>(StatusCodes.Status404NotFound);
 ```
 

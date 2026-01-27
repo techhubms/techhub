@@ -1,7 +1,7 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// Request DTO for tag cloud calculation
+/// Request parameters for tag cloud calculation.
 /// </summary>
 public record TagCloudRequest
 {

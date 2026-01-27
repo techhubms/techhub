@@ -1,7 +1,7 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// Request DTO for content filtering operations
+/// Request parameters for content filtering operations.
 /// </summary>
 public record FilterRequest
 {

@@ -1,7 +1,7 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// DTO for collection reference information
+/// Represents a collection with its metadata.
 /// </summary>
 public record Collection
 {

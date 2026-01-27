@@ -4,76 +4,139 @@ Shared test infrastructure for all test projects in the Tech Hub solution.
 
 ## Purpose
 
-This project provides unified test utilities to avoid duplication across integration and E2E test projects.
+This project provides unified test utilities to avoid duplication across unit, integration, and E2E test projects.
 
-## TechHubApiFactory
+## Test Data Strategy
 
-Consolidated `WebApplicationFactory<Program>` for all API tests.
+Different test types use different data sources:
 
-**Usage**:
+| Test Type | Repository | Data Source | Database |
+|-----------|------------|-------------|----------|
+| **Unit Tests** | `FileBasedContentRepository` | TestCollections folder | None (in-memory cache) |
+| **Integration Tests** | `SqliteContentRepository` | TestCollections folder | SQLite in-memory |
+| **E2E Tests** | `SqliteContentRepository` | Production `collections/` | SQLite file (`techhub.db`) |
+
+### Unit Tests (Core/Infrastructure)
+
+Use `FileBasedContentRepository` pointing to `TestCollections/`:
 
 ```csharp
-// Integration tests (default - uses appsettings.IntegrationTest.json)
-public class MyTests : IClassFixture<TechHubApiFactory>
+var testCollectionsPath = "/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections";
+_repository = new FileBasedContentRepository(
+    Options.Create(new AppSettings { Content = new ContentSettings { CollectionsPath = testCollectionsPath } }),
+    markdownService, tagMatchingService, mockEnvironment.Object, cache);
+```
+
+**Why**: Fast, no database overhead, tests file parsing and business logic.
+
+### Integration Tests (API)
+
+Use `TechHubIntegrationTestApiFactory` with SQLite in-memory database:
+
+```csharp
+public class MyTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
     private readonly HttpClient _client;
+    public MyTests(TechHubIntegrationTestApiFactory factory) => _client = factory.CreateClient();
+}
+```
 
-    public MyTests(TechHubApiFactory factory)
+**Why**: Tests full API pipeline with real database operations, isolated per test run.
+
+### E2E Tests
+
+Use `TechHubE2ETestApiFactory` with Development environment:
+
+```csharp
+public class MyE2ETests
+{
+    private readonly HttpClient _client;
+    public MyE2ETests()
     {
+        var factory = new TechHubE2ETestApiFactory();
         _client = factory.CreateClient();
     }
 }
+```
 
-// E2E tests (workspace root for real content files)
-public class MyE2ETests : IClassFixture<TechHubApiFactory>
+**Why**: Tests against production-like configuration with real database file.
+
+## TechHubApiFactory Classes
+
+### TechHubIntegrationTestApiFactory
+
+- Uses **IntegrationTest** environment
+- Creates **in-memory SQLite database** for each factory instance
+- Seeds database from `TestCollections/` folder
+- Thread-safe: Master connection keeps DB alive, repository is transient
+- Logs seeding progress and record counts
+
+### TechHubE2ETestApiFactory
+
+- Uses **Development** environment
+- Uses real database file (`techhub.db`) with production content
+- No service overrides - uses production configuration
+
+## TestCollectionsSeeder
+
+Seeds database from markdown files using production `ContentSyncService`:
+
+```csharp
+// Basic usage
+await TestCollectionsSeeder.SeedFromFilesAsync(connection);
+
+// With custom path and logging
+await TestCollectionsSeeder.SeedFromFilesAsync(connection, customPath, logger);
+```
+
+**Features**:
+
+- Uses actual production sync logic for test consistency
+- Logs seeding progress: files synced, duration
+- Logs record counts for all database tables
+
+## DatabaseFixture
+
+Fixture for repository-level integration tests:
+
+```csharp
+public class MyRepoTests : IClassFixture<DatabaseFixture<MyRepoTests>>
 {
-    private readonly HttpClient _client;
-
-    public MyE2ETests()
+    public MyRepoTests(DatabaseFixture<MyRepoTests> fixture)
     {
-        var factory = TechHubApiFactory.ForE2ETests();
-        _client = factory.CreateClient();
+        var repository = new SqliteContentRepository(fixture.Connection, dialect, cache);
     }
 }
 ```
 
 **Features**:
 
-- **IntegrationTest environment**: Uses `appsettings.IntegrationTest.json` for test configuration
-- **Real data**: Both integration and E2E tests use actual content from `collections/` directory
-- **Workspace-aware**: E2E tests automatically find workspace root from test assembly location
-- **Minimal logging**: Suppresses verbose logs during tests (LogLevel.Warning minimum)
-
-**Key Differences**:
-
-- **Integration tests** (default): Run from bin directory, use relative paths to collections
-- **E2E tests** (`ForE2ETests()`): Set content root to workspace root, explicit path configuration
+- Creates in-memory SQLite database
+- Runs migrations automatically
+- Seeds from TestCollections
+- Logs database setup and record counts
 
 ## Configuration
 
-Tests use the **IntegrationTest** environment:
+### Integration Test Configuration
+
+Uses `appsettings.IntegrationTest.json`:
 
 - API: `src/TechHub.Api/appsettings.IntegrationTest.json`
 - Web: `src/TechHub.Web/appsettings.IntegrationTest.json`
+- Content path: `/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections`
 
-These files mimic Production configuration but with test-specific log paths (`/workspaces/techhub/.tmp/logs/*-integrationtest.log`).
+### E2E Test Configuration
+
+Uses `appsettings.Development.json`:
+
+- Content path: `/workspaces/techhub/collections`
+- Database: `/workspaces/techhub/techhub.db`
 
 ## Dependencies
 
 - **Microsoft.AspNetCore.Mvc.Testing**: WebApplicationFactory support
+- **Microsoft.Extensions.Logging**: Console logging for test output
 - **TechHub.Api**: API program for factory
 - **TechHub.Core**: Domain models and interfaces
-
-## Migration from Old Factories
-
-The following old factories have been consolidated:
-
-- ❌ **TechHub.Api.Tests/TechHubApiFactory.cs** → ✅ **TechHub.TestUtilities/TechHubApiFactory.cs**
-- ❌ **TechHub.E2E.Tests/Api/ApiTestFactory.cs** → ✅ **TechHub.TestUtilities/TechHubApiFactory.cs**
-
-**Key changes**:
-
-- Removed mocking infrastructure (both test types now use real data)
-- Removed `SetupDefaultSections()` and `SetupDefaultContent()` methods
-- Simplified to single boolean parameter: `useWorkspaceRoot`
-- All tests now run against actual content files for consistency
+- **TechHub.Infrastructure**: Repository and sync service implementations

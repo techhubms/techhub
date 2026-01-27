@@ -1,5 +1,6 @@
 using System.Data;
 using Microsoft.Data.Sqlite;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using TechHub.Infrastructure.Data;
 
@@ -14,15 +15,27 @@ namespace TechHub.TestUtilities;
 public class DatabaseFixture<T> : IDisposable
 {
     private readonly SqliteConnection _connection;
+    private readonly ILoggerFactory _loggerFactory;
     private bool _disposed;
 
     public IDbConnection Connection => _connection;
 
     public DatabaseFixture()
     {
+        // Create logger factory for seeding output
+        _loggerFactory = LoggerFactory.Create(builder =>
+        {
+            builder.AddConsole();
+            builder.SetMinimumLevel(LogLevel.Information);
+        });
+        
+        var logger = _loggerFactory.CreateLogger<DatabaseFixture<T>>();
+        
         // Create in-memory SQLite database (data lives only for the connection lifetime)
         _connection = new SqliteConnection("Data Source=:memory:");
         _connection.Open();
+        
+        logger.LogInformation("🗄️ Created in-memory SQLite database for {TestClass}", typeof(T).Name);
 
         // Run migrations to create schema
         var migrationRunner = new MigrationRunner(
@@ -31,6 +44,10 @@ public class DatabaseFixture<T> : IDisposable
             NullLogger<MigrationRunner>.Instance);
 
         migrationRunner.RunMigrationsAsync().GetAwaiter().GetResult();
+        logger.LogInformation("✅ Database migrations completed");
+
+        // Seed database with test markdown files using production sync logic
+        TestCollectionsSeeder.SeedFromFilesAsync(_connection, logger: logger).GetAwaiter().GetResult();
     }
 
     /// <summary>
@@ -66,6 +83,7 @@ public class DatabaseFixture<T> : IDisposable
             if (disposing)
             {
                 _connection?.Dispose();
+                _loggerFactory?.Dispose();
             }
 
             _disposed = true;

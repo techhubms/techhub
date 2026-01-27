@@ -1,7 +1,7 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// DTO for section information returned from API
+/// Represents a section with its collections and metadata.
 /// </summary>
 public record Section
 {

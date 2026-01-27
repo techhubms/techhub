@@ -364,8 +364,9 @@ public class FileBasedContentRepository : IContentRepository
         var primarySectionName = _frontMatterParser.GetValue<string>(frontMatter, "primary_section");
         if (string.IsNullOrEmpty(primarySectionName))
         {
-            // Fallback: compute at runtime if not in frontmatter (for backward compatibility)
-            primarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(sectionNames, derivedCollection);
+            throw new InvalidOperationException(
+                $"Content item is missing required 'primary_section' in frontmatter. " +
+                $"File: {filePath}, Title: '{title}', Collection: '{derivedCollection}'");
         }
 
         // Parse sidebar-info if present (dynamic JSON data for custom sidebars)

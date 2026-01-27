@@ -19,13 +19,13 @@
 
 **Purpose**: Database provider abstraction and project setup
 
-- [ ] T001 Add Npgsql NuGet package to src/TechHub.Infrastructure/TechHub.Infrastructure.csproj
-- [ ] T002 Add Dapper NuGet package to src/TechHub.Infrastructure/TechHub.Infrastructure.csproj (micro-ORM for efficient database queries)
-- [ ] T003 Add Microsoft.Data.Sqlite NuGet package to src/TechHub.Infrastructure/TechHub.Infrastructure.csproj
-- [ ] T004 Create ISqlDialect abstraction in src/TechHub.Core/Interfaces/ISqlDialect.cs
-- [ ] T005 [P] Create SqliteDialect implementation in src/TechHub.Infrastructure/Data/SqliteDialect.cs
-- [ ] T006 [P] Create PostgresDialect implementation in src/TechHub.Infrastructure/Data/PostgresDialect.cs
-- [ ] T007 Create database configuration section in src/TechHub.Api/appsettings.json and src/TechHub.Web/appsettings.json
+- [X] T001 Add Npgsql NuGet package to src/TechHub.Infrastructure/TechHub.Infrastructure.csproj
+- [X] T002 Add Dapper NuGet package to src/TechHub.Infrastructure/TechHub.Infrastructure.csproj (micro-ORM for efficient database queries)
+- [X] T003 Add Microsoft.Data.Sqlite NuGet package to src/TechHub.Infrastructure/TechHub.Infrastructure.csproj
+- [X] T004 Create ISqlDialect abstraction in src/TechHub.Core/Interfaces/ISqlDialect.cs
+- [X] T005 [P] Create SqliteDialect implementation in src/TechHub.Infrastructure/Data/SqliteDialect.cs
+- [X] T006 [P] Create PostgresDialect implementation in src/TechHub.Infrastructure/Data/PostgresDialect.cs
+- [X] T007 Create database configuration section in src/TechHub.Api/appsettings.json and src/TechHub.Web/appsettings.json
 
 ---
 
@@ -37,27 +37,27 @@
 
 ### Schema Creation
 
-- [ ] T008 Create SQL migration script for SQLite in src/TechHub.Infrastructure/Data/Migrations/sqlite/001_initial_schema.sql
-- [ ] T009 Create SQL migration script for PostgreSQL in src/TechHub.Infrastructure/Data/Migrations/postgres/001_initial_schema.sql
-- [ ] T010 Create migration runner service in src/TechHub.Infrastructure/Data/MigrationRunner.cs (executes SQL scripts automatically on startup)
+- [X] T008 Create SQL migration script for SQLite in src/TechHub.Infrastructure/Data/Migrations/sqlite/001_initial_schema.sql
+- [X] T009 Create SQL migration script for PostgreSQL in src/TechHub.Infrastructure/Data/Migrations/postgres/001_initial_schema.sql
+- [X] T010 Create migration runner service in src/TechHub.Infrastructure/Data/MigrationRunner.cs (executes SQL scripts automatically on startup)
 
 ### Repository Base
 
-- [ ] T011 Update IContentRepository interface in src/TechHub.Core/Interfaces/IContentRepository.cs per contracts/IContentRepository.cs
-- [ ] T012 Create ContentRepositoryBase abstract class in src/TechHub.Infrastructure/Data/ContentRepositoryBase.cs with shared Dapper logic
-- [ ] T013 Create InMemoryContentRepository for tests in tests/TechHub.TestUtilities/InMemoryContentRepository.cs <<< Do NOT do this! We have a repository for testing in our testutilities. if needed update that one
+- [X] T011 Update IContentRepository interface in src/TechHub.Core/Interfaces/IContentRepository.cs per contracts/IContentRepository.cs
+- [X] T012 Create ContentRepositoryBase abstract class in src/TechHub.Infrastructure/Data/ContentRepositoryBase.cs with shared Dapper logic
+- [X] T013 Skip - Use existing test repository in TechHub.TestUtilities
 
 ### Sync Infrastructure
 
-- [ ] T014 Create IContentSyncService interface in src/TechHub.Core/Interfaces/IContentSyncService.cs per contracts/IContentSyncService.cs
-- [ ] T015 Create SyncResult DTO in src/TechHub.Core/DTOs/SyncResult.cs
-- [ ] T016 Create ContentSyncService in src/TechHub.Infrastructure/Services/ContentSyncService.cs with hash-based diff logic
-- [ ] T017 Add ContentSync configuration section to appsettings.Development.json and appsettings.Production.json
+- [X] T014 Create IContentSyncService interface in src/TechHub.Core/Interfaces/IContentSyncService.cs per contracts/IContentSyncService.cs
+- [X] T015 Create SyncResult DTO in src/TechHub.Core/Models/SyncResult.cs
+- [X] T016 Create ContentSyncService in src/TechHub.Infrastructure/Services/ContentSyncService.cs with hash-based diff logic
+- [X] T017 Add ContentSync configuration section to appsettings.Development.json and appsettings.Production.json
 
 ### Testing Infrastructure
 
-- [ ] T018 Create DatabaseFixture<T> for integration tests in tests/TechHub.TestUtilities/DatabaseFixture.cs
-- [ ] T019 Create test data seeding helpers in tests/TechHub.TestUtilities/TestDataBuilder.cs
+- [X] T018 Create DatabaseFixture<T> for integration tests in tests/TechHub.TestUtilities/DatabaseFixture.cs
+- [X] T019 Create test data seeding helpers in tests/TechHub.TestUtilities/TestDataBuilder.cs
 
 **Checkpoint**: Foundation ready - user story implementation can now begin
 
@@ -73,15 +73,15 @@
 
 ### SQLite Implementation (Lower Risk Path)
 
-- [ ] T020 [P] [US8] Create SqliteContentRepository in src/TechHub.Infrastructure/Data/SqliteContentRepository.cs
-- [ ] T021 [P] [US8] Create SearchDTOs in src/TechHub.Core/DTOs/SearchDTOs.cs per contracts/SearchDTOs.cs
-- [ ] T022 [US8] Implement GetBySlugAsync in SqliteContentRepository using Dapper
-- [ ] T023 [US8] Implement GetAllAsync in SqliteContentRepository with keyset pagination
-- [ ] T024 [US8] Implement GetByCollectionAsync in SqliteContentRepository
-- [ ] T025 [US8] Implement GetBySectionAsync in SqliteContentRepository
-- [ ] T026 [US8] Update Program.cs in src/TechHub.Api/Program.cs to register SQLite provider when Database:Provider = "SQLite"
-- [ ] T027 [US8] Update Program.cs in src/TechHub.Web/Program.cs to register SQLite provider when Database:Provider = "SQLite"
-- [ ] T028 [US8] Add sync-on-startup to both Program.cs files (call ContentSyncService before app.Run())
+- [X] T020 [P] [US8] Create SqliteContentRepository in src/TechHub.Infrastructure/Repositories/SqliteContentRepository.cs
+- [X] T021 [P] [US8] Create SearchDTOs in src/TechHub.Core/Models/ (SearchRequest, SearchResults, FacetRequest, FacetResults, PaginationCursor)
+- [X] T022 [US8] Implement GetBySlugAsync in SqliteContentRepository using Dapper (inherited from ContentRepositoryBase)
+- [X] T023 [US8] Implement GetAllAsync in SqliteContentRepository (inherited from ContentRepositoryBase)
+- [X] T024 [US8] Implement GetByCollectionAsync in SqliteContentRepository (inherited from ContentRepositoryBase)
+- [X] T025 [US8] Implement GetBySectionAsync in SqliteContentRepository (inherited from ContentRepositoryBase)
+- [X] T026 [US8] Update Program.cs in src/TechHub.Api/Program.cs to register SQLite provider when Database:Provider = "SQLite"
+- [X] T027 [US8] Update Program.cs in src/TechHub.Web/Program.cs (Web uses API client, no direct DB access needed)
+- [X] T028 [US8] Add sync-on-startup to both Program.cs files (call ContentSyncService before app.Run())
 - [ ] T029 [US8] Create integration tests for SqliteContentRepository in tests/TechHub.Infrastructure.Tests/SqliteContentRepositoryTests.cs
 - [ ] T030 [US8] Verify sync skipping works when ContentSync:Enabled = false in tests/TechHub.Infrastructure.Tests/ContentSyncServiceTests.cs
 - [ ] T031 [US8] Verify hash-based incremental sync in tests/TechHub.Infrastructure.Tests/ContentSyncServiceTests.cs

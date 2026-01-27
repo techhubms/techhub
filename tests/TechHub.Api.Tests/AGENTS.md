@@ -67,7 +67,7 @@ Test classes use `IClassFixture<TechHubApiFactory>` to share the factory across 
 
 **Response Structure**:
 
-- Deserialize responses to DTOs
+- Deserialize responses to models
 - Verify expected properties are present
 - Validate collection counts and ordering
 
