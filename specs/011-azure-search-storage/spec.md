@@ -230,6 +230,45 @@ Users viewing an article see a "Related Articles" section showing similar conten
 3. **Given** I click a related article, **When** navigating, **Then** URL preserves any active filters as context
 4. **Given** an article is the only one on a niche topic, **When** viewing related content, **Then** broader related articles appear (same section/collection)
 
+**Related Articles Query Pattern (Phase 1 - Tag Overlap)**:
+
+```sql
+-- Find articles related to a given article by tag overlap
+-- Returns articles ranked by number of shared tags
+WITH source_tags AS (
+    SELECT tag_normalized FROM content_tags WHERE content_id = @article_id
+),
+related AS (
+    SELECT 
+        c.id,
+        c.title,
+        c.excerpt,
+        c.collection_name,
+        c.date_epoch,
+        COUNT(t.tag_normalized) AS shared_tag_count
+    FROM content_items c
+    JOIN content_tags t ON c.id = t.content_id
+    WHERE t.tag_normalized IN (SELECT tag_normalized FROM source_tags)
+      AND c.id != @article_id
+      AND c.draft = false
+    GROUP BY c.id, c.title, c.excerpt, c.collection_name, c.date_epoch
+)
+SELECT * FROM related
+ORDER BY shared_tag_count DESC, date_epoch DESC
+LIMIT 5;
+
+-- Fallback: If no tag overlap, return same section/collection
+-- (Only used when shared_tag_count query returns < 5 results)
+SELECT c.id, c.title, c.excerpt, c.collection_name, c.date_epoch
+FROM content_items c
+JOIN content_sections s ON c.id = s.content_id
+WHERE s.section_name = @source_section
+  AND c.id != @article_id
+  AND c.draft = false
+ORDER BY c.date_epoch DESC
+LIMIT 5;
+```
+
 ### User Story 7 - MCP Server for AI Agents (Priority: P2 - Phase 2)
 
 **Deferred to Phase 2**: MCP server benefits most from semantic search capabilities.
@@ -273,35 +312,83 @@ Developers can run the full application locally without any Azure connectivity u
 
 The database must support all content filtering and search scenarios with efficient indexing.
 
-**Simplified Data Model Notes**:
+**Field Mapping from ContentItemDto**:
 
-- **No `description` field** - We use `excerpt` exclusively for summaries
-- **Single date field** - `dateEpoch` (Unix timestamp); ISO format derived at query time
-- **ContentHash** - SHA256 of file content for incremental sync detection
-- **`external_url`** - Points to original source content; only NULL for roundups (we generate those)
-- **Junction tables** - For tags, sections, collections, AND authors (proper normalization, efficient faceting)
+The database schema maps directly to `ContentItemDto` fields. Key decisions:
+
+| ContentItemDto Field | Database Storage | Notes |
+| --- | --- | --- |
+| `Slug` | `content_items.id` | Primary key |
+| `Title` | `content_items.title` | Full-text searchable |
+| `Author` | `content_items.author` | Single string (multiple authors deferred) |
+| `DateEpoch` | `content_items.date_epoch` | Unix timestamp |
+| `DateIso` | Computed at query time | Derived from `date_epoch` |
+| `CollectionName` | `content_items.collection_name` | e.g., "videos", "ghc-features", "vscode-updates" |
+| `SubcollectionName` | `content_items.subcollection_name` | Optional subfolder identifier |
+| `FeedName` | `content_items.feed_name` | RSS source attribution |
+| `SectionNames` | `content_sections` junction | Many-to-many |
+| `PrimarySectionName` | `content_items.primary_section_name` | First section for navigation |
+| `Tags` | `content_tags` junction | Many-to-many |
+| `Excerpt` | `content_items.excerpt` | Markdown (rendered server-side) |
+| `Content` | `content_items.content` | Full markdown (rendered server-side) |
+| `ExternalUrl` | `content_items.external_url` | NULL only for roundups |
+| `Url` | Computed at query time | Built from collection/section/slug |
+| `Plans` | `content_plans` junction | GitHub Copilot plan tiers |
+| `GhesSupport` | `content_items.ghes_support` | Boolean flag |
+| `Draft` | `content_items.draft` | Boolean flag |
+| `GhcFeature` | Derived from collection | `collection_name = 'ghc-features'` |
+
+**IMPORTANT - No RenderedHtml Storage**:
+
+- Database stores **markdown only** (`excerpt` and `content` fields)
+- HTML rendering happens **server-side at request time** using existing markdown rendering pipeline
+- This keeps the database smaller and allows rendering updates without re-syncing
+
+**Author Handling (Phase 1)**:
+
+- Store author as single string field (current behavior)
+- Multiple authors in one field (e.g., "John Doe, Jane Smith") treated as single string
+- **Future enhancement**: Parse and normalize to junction table
+
+**Collection Naming Strategy**:
+
+Content from video subfolders gets its own collection name:
+
+| Source Directory | `collection_name` | Query Pattern |
+| --- | --- | --- |
+| `_videos/*.md` | `videos` | Direct match |
+| `_videos/ghc-features/*.md` | `ghc-features` | `collection_name = 'ghc-features'` |
+| `_videos/vscode-updates/*.md` | `vscode-updates` | `collection_name = 'vscode-updates'` |
+| Query "all videos" | - | `collection_name IN ('videos', 'ghc-features', 'vscode-updates')` |
 
 **Navigation Logic** (handled by frontend):
 
-- `collection_name` in `["videos", "roundups"]` → Internal URL: `/{sectionName}/{collectionName}/{slug}`
+- `collection_name` in `["videos", "ghc-features", "vscode-updates", "roundups"]` → Internal URL
 - All other collections → External URL: `external_url` with `target="_blank"`
 
 **Database Tables**:
 
 ```sql
--- Main content table
+-- Main content table (maps to ContentItemDto)
 CREATE TABLE content_items (
-    id              TEXT PRIMARY KEY,           -- Slug (e.g., "2024-06-19-copilot-tips")
-    title           TEXT NOT NULL,              -- Full-text searchable
-    content         TEXT NOT NULL,              -- Full article text
-    excerpt         TEXT,                       -- Summary for snippets
-    date_epoch      BIGINT NOT NULL,            -- Unix timestamp
-    external_url    TEXT,                       -- Original source URL (NULL only for roundups)
-    content_hash    TEXT NOT NULL,              -- SHA256 for change detection
-    created_at      TIMESTAMPTZ DEFAULT NOW(),
-    updated_at      TIMESTAMPTZ DEFAULT NOW(),
+    id                      TEXT PRIMARY KEY,           -- Slug (e.g., "2024-06-19-copilot-tips")
+    title                   TEXT NOT NULL,              -- Full-text searchable
+    content                 TEXT NOT NULL,              -- Full markdown text (rendered server-side)
+    excerpt                 TEXT,                       -- Markdown summary (rendered server-side)
+    date_epoch              BIGINT NOT NULL,            -- Unix timestamp
+    collection_name         TEXT NOT NULL,              -- e.g., "videos", "ghc-features", "blogs"
+    subcollection_name      TEXT,                       -- Optional subfolder identifier
+    primary_section_name    TEXT NOT NULL,              -- First section for navigation URLs
+    external_url            TEXT,                       -- Original source URL (NULL only for roundups)
+    author                  TEXT,                       -- Single author string (multiple authors deferred)
+    feed_name               TEXT,                       -- RSS source attribution
+    ghes_support            BOOLEAN NOT NULL DEFAULT FALSE,  -- GitHub Enterprise Server support
+    draft                   BOOLEAN NOT NULL DEFAULT FALSE,  -- Draft/unreleased content
+    content_hash            TEXT NOT NULL,              -- SHA256 for change detection
+    created_at              TIMESTAMPTZ DEFAULT NOW(),
+    updated_at              TIMESTAMPTZ DEFAULT NOW(),
     
-    -- Full-text search vector (PostgreSQL)
+    -- Full-text search vector (PostgreSQL only)
     search_vector   TSVECTOR GENERATED ALWAYS AS (
         setweight(to_tsvector('english', coalesce(title, '')), 'A') ||
         setweight(to_tsvector('english', coalesce(excerpt, '')), 'B') ||
@@ -309,33 +396,24 @@ CREATE TABLE content_items (
     ) STORED
 );
 
--- Authors lookup table (for normalization and faceting)
-CREATE TABLE authors (
-    id              SERIAL PRIMARY KEY,
-    name            TEXT NOT NULL UNIQUE,       -- e.g., "John Doe"
-    name_normalized TEXT NOT NULL               -- Lowercase for matching
-);
-
--- Content-Authors junction table (many-to-many, supports multiple authors)
-CREATE TABLE content_authors (
-    content_id      TEXT NOT NULL REFERENCES content_items(id) ON DELETE CASCADE,
-    author_id       INTEGER NOT NULL REFERENCES authors(id) ON DELETE CASCADE,
-    PRIMARY KEY (content_id, author_id)
-);
-
--- Collections lookup table (for normalization)
+-- Collections lookup table (for faceting and query optimization)
 CREATE TABLE collections (
     id              SERIAL PRIMARY KEY,
-    name            TEXT NOT NULL UNIQUE,       -- e.g., "videos", "blogs"
-    is_internal     BOOLEAN NOT NULL DEFAULT FALSE  -- videos, roundups = true
+    name            TEXT NOT NULL UNIQUE,       -- e.g., "videos", "ghc-features", "blogs"
+    is_internal     BOOLEAN NOT NULL DEFAULT FALSE,  -- videos, ghc-features, vscode-updates, roundups = true
+    parent_name     TEXT                        -- "videos" for ghc-features/vscode-updates, NULL otherwise
 );
 
--- Content-Collections junction table (content belongs to one collection, but normalized)
-CREATE TABLE content_collections (
-    content_id      TEXT NOT NULL REFERENCES content_items(id) ON DELETE CASCADE,
-    collection_id   INTEGER NOT NULL REFERENCES collections(id) ON DELETE CASCADE,
-    PRIMARY KEY (content_id)
-);
+-- Pre-populated collection data
+INSERT INTO collections (name, is_internal, parent_name) VALUES
+    ('news', false, NULL),
+    ('blogs', false, NULL),
+    ('community', false, NULL),
+    ('videos', true, NULL),
+    ('ghc-features', true, 'videos'),
+    ('vscode-updates', true, 'videos'),
+    ('roundups', true, NULL),
+    ('custom', true, NULL);
 
 -- Tags junction table (many-to-many)
 CREATE TABLE content_tags (
@@ -355,8 +433,15 @@ CREATE TABLE content_tags_expanded (
 -- Section names junction table (many-to-many)
 CREATE TABLE content_sections (
     content_id      TEXT NOT NULL REFERENCES content_items(id) ON DELETE CASCADE,
-    section_name    TEXT NOT NULL,              -- e.g., "ai", "github_copilot"
+    section_name    TEXT NOT NULL,              -- e.g., "ai", "github-copilot"
     PRIMARY KEY (content_id, section_name)
+);
+
+-- Plans junction table for GitHub Copilot features (many-to-many)
+CREATE TABLE content_plans (
+    content_id      TEXT NOT NULL REFERENCES content_items(id) ON DELETE CASCADE,
+    plan_name       TEXT NOT NULL,              -- e.g., "Free", "Pro", "Business", "Enterprise"
+    PRIMARY KEY (content_id, plan_name)
 );
 
 -- Sync metadata for tracking last sync state
@@ -368,15 +453,13 @@ CREATE TABLE sync_metadata (
 
 -- Indexes for performance
 CREATE INDEX idx_content_date ON content_items(date_epoch DESC);
+CREATE INDEX idx_content_collection ON content_items(collection_name);
+CREATE INDEX idx_content_draft ON content_items(draft) WHERE draft = true;
 CREATE INDEX idx_content_search ON content_items USING GIN(search_vector);
 CREATE INDEX idx_content_hash ON content_items(content_hash);
 
-CREATE INDEX idx_authors_name ON authors(name_normalized);
-CREATE INDEX idx_content_authors_author ON content_authors(author_id);
-CREATE INDEX idx_content_authors_content ON content_authors(content_id);
-
 CREATE INDEX idx_collections_name ON collections(name);
-CREATE INDEX idx_content_collections_collection ON content_collections(collection_id);
+CREATE INDEX idx_collections_parent ON collections(parent_name);
 
 CREATE INDEX idx_tags_normalized ON content_tags(tag_normalized);
 CREATE INDEX idx_tags_content ON content_tags(content_id);
@@ -386,20 +469,83 @@ CREATE INDEX idx_tags_expanded_content ON content_tags_expanded(content_id);
 
 CREATE INDEX idx_sections_name ON content_sections(section_name);
 CREATE INDEX idx_sections_content ON content_sections(content_id);
+
+CREATE INDEX idx_plans_name ON content_plans(plan_name);
+CREATE INDEX idx_plans_content ON content_plans(content_id);
 ```
 
-**Benefits of Junction Tables for Collections/Authors**:
+**Querying "All Videos" (Including Subcollections)**:
 
-- **Facet counts**: Fast `GROUP BY` on normalized IDs
-- **Data integrity**: Foreign key constraints
-- **Future flexibility**: Easy to add author metadata (bio, avatar) or collection config
-- **Query efficiency**: Integer joins faster than text comparisons
+```sql
+-- Get all video content (including ghc-features and vscode-updates)
+SELECT c.* FROM content_items c
+WHERE c.collection_name IN (
+    SELECT name FROM collections 
+    WHERE name = 'videos' OR parent_name = 'videos'
+);
 
-**SQLite Compatibility** (local dev fallback):
+-- Or using a simple list (faster):
+SELECT * FROM content_items
+WHERE collection_name IN ('videos', 'ghc-features', 'vscode-updates');
+```
 
-- Same schema structure, but without `TSVECTOR` (use `LIKE` for basic search)
-- No `GENERATED ALWAYS` - compute search text in application layer
-- Same junction tables work identically
+**Benefits of This Schema**:
+
+- **Facet counts**: Fast `GROUP BY` on collection_name, section_name
+- **Data integrity**: Foreign key constraints on junction tables
+- **Subcollection queries**: Easy to query "all videos" including ghc-features and vscode-updates
+- **Query efficiency**: Indexes on all filter columns
+- **Markdown storage**: Smaller database, rendering flexibility
+
+**SQLite Compatibility with FTS5** (local dev):
+
+SQLite FTS5 extension provides full-text search similar to PostgreSQL:
+
+```sql
+-- Create virtual FTS5 table for full-text search
+CREATE VIRTUAL TABLE content_fts USING fts5(
+    id,
+    title,
+    excerpt,
+    content,
+    content='content_items',
+    content_rowid='rowid'
+);
+
+-- Triggers to keep FTS index in sync
+CREATE TRIGGER content_ai AFTER INSERT ON content_items BEGIN
+    INSERT INTO content_fts(rowid, id, title, excerpt, content)
+    VALUES (new.rowid, new.id, new.title, new.excerpt, new.content);
+END;
+
+CREATE TRIGGER content_ad AFTER DELETE ON content_items BEGIN
+    INSERT INTO content_fts(content_fts, rowid, id, title, excerpt, content)
+    VALUES ('delete', old.rowid, old.id, old.title, old.excerpt, old.content);
+END;
+
+CREATE TRIGGER content_au AFTER UPDATE ON content_items BEGIN
+    INSERT INTO content_fts(content_fts, rowid, id, title, excerpt, content)
+    VALUES ('delete', old.rowid, old.id, old.title, old.excerpt, old.content);
+    INSERT INTO content_fts(rowid, id, title, excerpt, content)
+    VALUES (new.rowid, new.id, new.title, new.excerpt, new.content);
+END;
+
+-- Search query with FTS5
+SELECT c.*, bm25(content_fts) AS rank
+FROM content_items c
+JOIN content_fts ON c.id = content_fts.id
+WHERE content_fts MATCH 'agent framework'
+ORDER BY rank;
+```
+
+**DevContainer Setup for SQLite FTS5**:
+
+FTS5 is enabled by default in most SQLite builds. If needed, add to `.devcontainer/post-create.sh`:
+
+```bash
+# SQLite with FTS5 is already included in standard .NET SQLite packages
+# No additional installation required
+```
 
 ### FR-2: Tag Subset Matching Implementation
 
@@ -536,14 +682,23 @@ ORDER BY date_epoch DESC;
 
 ### FR-5: Content Repository Interface
 
+**Migration Strategy**: Direct replacement - no feature toggle.
+
+Since Tech Hub is not yet live, we'll replace `FileBasedContentRepository` directly with database implementations. No parallel running or migration period needed.
+
 Extend existing `IContentRepository` with search and facet operations:
 
 ```csharp
 public interface IContentRepository
 {
-    // Existing methods
-    Task<ContentItem?> GetByIdAsync(string id, CancellationToken ct = default);
-    Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken ct = default);
+    // Initialization (replaces file loading with DB query)
+    Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken ct = default);
+    
+    // Existing methods (now backed by database)
+    Task<ContentItem?> GetBySlugAsync(string collectionName, string slug, bool includeDraft = false, CancellationToken ct = default);
+    Task<IReadOnlyList<ContentItem>> GetAllAsync(bool includeDraft = false, CancellationToken ct = default);
+    Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(string collectionName, bool includeDraft = false, CancellationToken ct = default);
+    Task<IReadOnlyList<ContentItem>> GetBySectionAsync(string sectionName, bool includeDraft = false, CancellationToken ct = default);
     
     // New search methods
     Task<SearchResults<ContentItemDto>> SearchAsync(
@@ -560,10 +715,32 @@ public interface IContentRepository
         CancellationToken ct = default);
 }
 
-// Implementations:
-// - PostgresContentRepository (production, CI/CD)
-// - SqliteContentRepository (local dev fallback)
-// - InMemoryContentRepository (unit tests)
+// Implementations (using Dapper):
+// - PostgresContentRepository (production, CI/CD, E2E tests)
+// - SqliteContentRepository (local dev, integration tests)
+// - InMemoryContentRepository (unit tests - mock data)
+```
+
+**HTML Rendering Strategy**:
+
+Database stores markdown only. HTML rendering happens in the repository layer:
+
+```csharp
+// In repository implementation
+public async Task<ContentItem?> GetBySlugAsync(string collectionName, string slug, ...)
+{
+    var row = await _connection.QuerySingleOrDefaultAsync<ContentRow>(sql, new { collectionName, slug });
+    if (row is null) return null;
+    
+    return new ContentItem
+    {
+        Slug = row.Id,
+        Title = row.Title,
+        Excerpt = row.Excerpt,  // Markdown stored
+        RenderedHtml = _markdownRenderer.Render(row.Content),  // Rendered on demand
+        // ... other properties
+    };
+}
 ```
 
 ### FR-6: Incremental Content Sync Pipeline
@@ -707,10 +884,63 @@ public record SearchRequest
     public int Take { get; init; } = 20;
     public string OrderBy { get; init; } = "date_desc";  // Default: newest first
     
-    // Cursor-based pagination for infinite scroll (see 003-infinite-scroll spec)
-    public string? ContinuationToken { get; init; }  // Encoded cursor for next batch
+    // Cursor-based pagination for infinite scroll
+    public string? ContinuationToken { get; init; }  // Base64-encoded cursor
 }
 ```
+
+### Cursor-Based Pagination (Keyset Pagination)
+
+**Why Keyset Pagination over Offset**:
+
+| Approach | Performance | Consistency | Use Case |
+| --- | --- | --- | --- |
+| Offset (`LIMIT 20 OFFSET 100`) | O(n) - scans skipped rows | Inconsistent if data changes | Small datasets only |
+| Keyset (`WHERE date < cursor`) | O(1) - seeks directly | Consistent - cursor is stable | **Infinite scroll (use this)** |
+
+**Implementation**:
+
+The `ContinuationToken` is a Base64-encoded JSON object containing the sort key values of the last item:
+
+```csharp
+public record PaginationCursor
+{
+    public long DateEpoch { get; init; }      // Primary sort key
+    public string Id { get; init; } = "";     // Tiebreaker for items with same date
+}
+
+// Encoding
+public static string Encode(PaginationCursor cursor) =>
+    Convert.ToBase64String(JsonSerializer.SerializeToUtf8Bytes(cursor));
+
+// Decoding
+public static PaginationCursor? Decode(string? token) =>
+    string.IsNullOrEmpty(token) ? null :
+    JsonSerializer.Deserialize<PaginationCursor>(Convert.FromBase64String(token));
+```
+
+**SQL Query Pattern**:
+
+```sql
+-- First page (no cursor)
+SELECT * FROM content_items
+WHERE section_name = 'ai'
+ORDER BY date_epoch DESC, id DESC
+LIMIT 20;
+
+-- Subsequent pages (with cursor)
+SELECT * FROM content_items
+WHERE section_name = 'ai'
+  AND (date_epoch, id) < (@cursor_date, @cursor_id)
+ORDER BY date_epoch DESC, id DESC
+LIMIT 20;
+```
+
+**Edge Cases**:
+
+- **Data changes between pages**: Keyset pagination is stable - new items above cursor appear on refresh, deleted items below cursor are simply skipped
+- **Invalid cursor**: Return first page (graceful degradation)
+- **Last page detection**: Return fewer items than `Take`, or return `ContinuationToken = null`
 
 ### FacetResults
 
@@ -803,9 +1033,22 @@ public string GetLinkTarget(SearchResultItem item)
 
 - **PostgreSQL 16+** - Primary database (Azure PostgreSQL Flexible Server in cloud)
 - **Npgsql** - .NET PostgreSQL driver
-- **EF Core** - ORM with PostgreSQL provider (optional, may use Dapper for performance)
-- **SQLite** - Local development fallback
+- **Dapper** - Micro-ORM for database access (see decision below)
+- **SQLite** - Local development with FTS5 extension
 - **Docker** - Local PostgreSQL container (optional)
+
+**Decision: Dapper over EF Core**:
+
+| Factor | EF Core | Dapper | Decision |
+| --- | --- | --- | --- |
+| Read Performance | Good with `AsNoTracking()` | Excellent - minimal overhead | **Dapper** |
+| Change Tracking | Built-in (not needed) | None (we don't need it) | Dapper |
+| Query Flexibility | LINQ (less control) | Raw SQL (full control) | **Dapper** |
+| Complex Joins | Auto-generated SQL | Hand-crafted optimal SQL | **Dapper** |
+| Learning Curve | Higher | Lower | Dapper |
+| Our Use Case | Read-heavy, no tracking | Perfect fit | **Dapper** |
+
+**Rationale**: Tech Hub is read-heavy with no entity tracking needs. Content syncs from markdown files (write-once), and all queries are reads. Dapper's minimal overhead and direct SQL control align perfectly with our performance requirements.
 
 **Phase 2 (AI Search - Future)**:
 
@@ -822,10 +1065,41 @@ public string GetLinkTarget(SearchResultItem item)
 | CI/CD | $0 (Docker) | N/A |
 | Production | ~$15/mo (Azure PostgreSQL Basic) | +$75/mo (AI Search Basic) |
 
+## Database Size Estimates
+
+**Current Content (as of January 2026)**:
+
+| Collection | Files | Size |
+| --- | --- | --- |
+| news | 1,372 | 5.66 MB |
+| videos | 1,067 | 2.96 MB |
+| community | 897 | 3.83 MB |
+| blogs | 649 | 2.97 MB |
+| roundups | 28 | 1.23 MB |
+| **Total** | **4,013** | **16.65 MB** |
+
+**Database Size Projections**:
+
+| Component | Current (4K items) | Projected (6K items) |
+| --- | --- | --- |
+| Content table | ~20 MB | ~30 MB |
+| Tag junctions | ~3 MB | ~4.5 MB |
+| Expanded tags | ~2.5 MB | ~4 MB |
+| Section junctions | ~0.3 MB | ~0.5 MB |
+| Full-text index | ~6 MB | ~9 MB |
+| B-tree indexes | ~2 MB | ~3 MB |
+| **Total** | **~33 MB** | **~50 MB** |
+
+**Azure PostgreSQL Recommendations**:
+
+- **Basic Tier** (2 vCores, 5GB storage): ~$15/month - **SUFFICIENT for 6,000+ items**
+- Working set fits easily in memory (~15 MB hot data)
+- No need for General Purpose tier until 50,000+ items
+
 ## Assumptions
 
 1. PostgreSQL full-text search is sufficient for current search needs (semantic search deferred to Phase 2)
-2. SQLite provides adequate local development experience for most scenarios
+2. SQLite FTS5 provides adequate local development experience
 3. Hash-based change detection is reliable for incremental sync
 4. Content updates are infrequent enough that startup sync is acceptable
 5. 4000+ articles fit comfortably in PostgreSQL with proper indexing
@@ -883,3 +1157,15 @@ public string GetLinkTarget(SearchResultItem item)
 - Q: When content sync fails mid-way (corrupted file, DB connection lost), what should happen? → A: Transactional rollback + fail-fast startup (app won't start, immediate visibility)
 - Q: How should pagination work for search results? → A: Infinite scroll (see [003-infinite-scroll spec](../003-infinite-scroll/spec.md))
 - Q: What should be the default sort order? → A: Date descending (newest first) for all lists
+
+### Session 2026-01-27
+
+- Q: Should database schema match ContentItemDto fields? → A: Yes, schema now maps directly to ContentItemDto. RenderedHtml is NOT stored - markdown only, rendered server-side on demand.
+- Q: How to handle multiple authors in one field? → A: Keep single author string for Phase 1. Multiple authors (e.g., "John, Jane") treated as single string. Junction table deferred to future enhancement.
+- Q: Where does HTML rendering happen? → A: Server-side in repository layer. Database stores markdown (`excerpt`, `content`). Repository renders HTML when returning ContentItem.
+- Q: What pagination approach for infinite scroll? → A: Keyset pagination (cursor-based). ContinuationToken contains Base64-encoded JSON with (date_epoch, id) for stable, performant paging.
+- Q: EF Core or Dapper? → A: Dapper. Read-heavy workload, no change tracking needed, direct SQL control, minimal overhead.
+- Q: Feature toggle for filesystem vs database? → A: No toggle. Direct replacement since site is not live. No parallel running or migration period.
+- Q: How to handle alt-collection (ghc-features, vscode-updates)? → A: These become proper collection names. Query "all videos" uses `collection_name IN ('videos', 'ghc-features', 'vscode-updates')`.
+- Q: SQLite full-text search? → A: Use FTS5 extension (enabled by default in .NET SQLite). Provides similar capabilities to PostgreSQL tsvector.
+- Q: New API endpoints? → A: No new endpoints in Phase 1. Existing API moves to database backing. Search/facet endpoints added when UI features require them.

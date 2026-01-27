@@ -28,7 +28,7 @@
   min-height: 265px;
   display: flex;
   flex-direction: column;
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 
