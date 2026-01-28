@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Description": "Join us for Rubber Duck Thursdays! A lighthearted and informal stream where we live code on some projects.\n\nThis week we'll explore how to bring the power of GitHub Copilot CLI into your apps with GitHub Copilot SDK!",
+  "FeedName": "GitHub YouTube",
+  "ProcessedDate": "2026-01-28 12:02:58",
+  "EnhancedContent": null,
+  "Author": "GitHub",
+  "FeedLevelAuthor": "GitHub",
+  "PubDate": "2026-01-28T11:10:30+00:00",
+  "Title": "Rubber Duck Thursdays - Let's build with GitHub Copilot SDK",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=IKzfETGGt0E",
+  "Tags": []
+}

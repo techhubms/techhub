@@ -24466,5 +24466,11 @@
     "reason": "Succesfully added: Assigned Security category because the video centrally discusses authentication and security updates around passkey rollout in Microsoft Entra ID (formerly Azure Active Directory), meeting Security inclusion rule 1 (Microsoft Security Services), 3 (Identity and Access Management), and 4 (Cloud Security with Microsoft). Did not assign Azure category since the primary focus is identity and security authentication rather than direct Azure platform usage. Did not assign other categories as there is no coverage of AI, ML, Coding, DevOps, or GitHub Copilot. The explanation and rules are supported by the coverage of FIDO2, passkeys, and identity management as described in the chapter breakdown and video summary.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=hAm_DcqH0nY"
+  },
+  {
+    "timestamp": "2026-01-28 12:04:23 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the session centers on GitHub Copilot, an AI-powered developer tool (AI rule 2). 'GitHub Copilot' included because the content specifically demonstrates Copilot SDK and CLI integration (GitHub Copilot rules 1, 2, 3). 'Coding' assigned because the session involves live code development and SDK integration (Coding rules 2 and 5). Azure, DevOps, ML, and Security categories are not included since there is no mention or implication of those technologies or practices in the title or description. Generic exclusion rules do not apply since the content is technical, English, and not biographical, negative, or business-only.",
+    "canonical_url": "https://www.youtube.com/watch?v=IKzfETGGt0E",
+    "collection": "videos"
   }
 ]
