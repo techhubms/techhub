@@ -24526,5 +24526,17 @@
     "reason": "Succesfully added: Assigned AI category because the content centers on leveraging Copilot (which is an AI-powered tool) within the SQL Server Migration Assistant (AI rules 1, 2, and 4). Assigned Azure category since Azure SQL is a focus, and the broader context is Microsoft cloud database migration (Azure rules 1 and 4). Did not assign the GitHub Copilot category because the Copilot featured here is specific to SSMA and not GitHub Copilot as a coding assistant. Did not assign ML, Coding, DevOps, or Security because the episode does not cover custom code, data science, automation pipelines, or security architecture. All generic exclusion rules were checked and did not apply.",
     "collection": "videos",
     "timestamp": "2026-01-28 18:07:32 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/engineering-at-microsoft/diagnosing-instability-in-production-scale-agent-rl/",
+    "timestamp": "2026-01-28 19:08:23 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the post focuses on RL agent systems, tool use in long-horizon production AI, and detailed failure mode diagnostics, all within advanced AI domains (AI rule 1 and 4). Assigned ML because it covers RL theory, empirical analysis, custom diagnostics, on-policy methods, and engineering of ML infrastructure, which fits ML rules 1, 2, 5, and 10. Did not assign Azure or DevOps categories, as there is no substantive content about Azure services or deployment pipelines. Did not assign Security, as this work centers on reliability and monitoring, not security or compliance. Coding does not apply because this is not about programming language technique or framework/library engineering, but rather ML systems, production diagnostics, and tool-supported agent workflows."
+  },
+  {
+    "canonical_url": "https://harrybin.de/posts/github-copilot-context-extensions-compared/",
+    "timestamp": "2026-01-28 19:09:01 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned 'AI' because the entire article is about customizing and extending AI assistant functionality within developer workflows, focusing on implementation of AI-powered developer tools (AI inclusion rule 1, 2, 4, 5). Assigned 'GitHub Copilot' because it covers in-depth use cases, features, and configurations specific to GitHub Copilot (GitHub Copilot inclusion rules 1-4). No other categories were assigned because the content doesn’t directly cover programming language or framework implementation (so not 'Coding'), pipelines or CI/CD (not 'DevOps'), platform deployment details (not 'Azure'), machine learning solution engineering (not 'ML'), or enterprise security practices (not 'Security')."
   }
 ]
