@@ -24508,5 +24508,23 @@
     "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a cloud service and the management of identities is an Azure-centric administrative feature (Azure rule 1 and 4). Assigned Security category because the article covers identity governance and control, which are core security concerns (Security rule 1 and 3). Did not assign Coding, DevOps, AI, ML, or GitHub Copilot as the content is focused on administration, configuration, and governance rather than development, automation, machine learning, or AI. All generic exclusion rules were checked and do not apply, as the content is a technical announcement relevant to Azure/Fabric admins.",
     "collection": "news",
     "timestamp": "2026-01-28 17:12:17 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-ai-essentials-the-core-building-blocks-explained/",
+    "reason": "Succesfully added: Content is centrally about integrating Microsoft AI tooling (Microsoft.Extensions.AI, LLMs, .NET) into developer workflows, fulfilling AI category rules 1, 3, and 4. Coding is included due to in-depth C# and .NET code samples showing library usage and best practices (Coding rules 1, 2, and 4). No DevOps, Azure, ML, Security, or GitHub Copilot categories apply as there is no coverage or substantial detail about those areas. Tags include referenced technologies, frameworks, and major architectural patterns taught. All quality and inclusion/exclusion standards are satisfied.",
+    "collection": "news",
+    "timestamp": "2026-01-28 18:05:59 +00:00"
+  },
+  {
+    "canonical_url": "https://devclass.com/2026/01/28/typescript-inventor-anders-hejlsberg-ai-is-a-big-regurgitator-of-stuff-someone-has-done/",
+    "reason": "Succesfully added: I assigned the 'AI' category because the article discusses the practical and philosophical role of AI in software development, particularly in porting the TypeScript compiler and augmenting developer tooling (AI rules 1, 4, 5, 6). The 'Coding' category applies as the piece centers on programming languages, compiler engineering, and development practices involving C#, TypeScript, and Go (Coding rules 1, 2, 4). I did not assign the 'Azure', 'DevOps', 'ML', 'Security', or 'GitHub Copilot' categories because the article does not focus on cloud services, DevOps tooling, formal ML engineering, security, or GitHub Copilot directly—though GitHub and AI are referenced, the focus is on general AI in programming and not on Copilot's distinctive features. No generic exclusion rules are triggered: the content is technical, in English, not biographical, not business/executive strategy, and has sufficient depth.",
+    "collection": "blogs",
+    "timestamp": "2026-01-28 18:06:47 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=a0c1-24atRQ",
+    "reason": "Succesfully added: Assigned AI category because the content centers on leveraging Copilot (which is an AI-powered tool) within the SQL Server Migration Assistant (AI rules 1, 2, and 4). Assigned Azure category since Azure SQL is a focus, and the broader context is Microsoft cloud database migration (Azure rules 1 and 4). Did not assign the GitHub Copilot category because the Copilot featured here is specific to SSMA and not GitHub Copilot as a coding assistant. Did not assign ML, Coding, DevOps, or Security because the episode does not cover custom code, data science, automation pipelines, or security architecture. All generic exclusion rules were checked and did not apply.",
+    "collection": "videos",
+    "timestamp": "2026-01-28 18:07:32 +00:00"
   }
 ]

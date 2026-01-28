@@ -11565,5 +11565,11 @@
     "reason": "No categories found: All category arrays are left empty because the provided content is primarily event promotion and lacks substantive technical detail, as evidenced by the description. The description only announces the Agents League event, registration, community links, and a call to submit projects, without actual technical, developmental, or implementation guidance. This qualifies for exclusion under the 'Sales Pitches' and 'Promotional Content without Technical Depth' generic exclusion rule in Chapter 3. Additionally, there is no concrete technical content to analyze due to the absence of a 'content' field.",
     "collection": "videos",
     "timestamp": "2026-01-28 08:04:05 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/Hz7VzutvkSY",
+    "reason": "No categories found: All category arrays are empty due to generic exclusion rules (Chapter 3). The content is primarily focused on the social and psychological aspects of open source contribution—encouraging maintainers to ask questions in a supportive environment—without providing substantive technical implementation, engineering, or development content related to Microsoft technologies. Tags and description indicate a community/culture focus rather than anything technical about Microsoft, Azure, GitHub DevOps, Coding, Security, AI, or ML. No technical depth or actionable engineering guidance is present.",
+    "collection": "videos",
+    "timestamp": "2026-01-28 18:07:10 +00:00"
   }
 ]
