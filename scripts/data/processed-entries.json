@@ -24460,5 +24460,11 @@
     "reason": "Succesfully added: The content focuses on the technical architecture and developer implementation of hybrid AI solutions using Microsoft Foundry Local (for running SLMs), GitHub Copilot SDK (for AI agent orchestration and skills), and cloud-based LLMs. 'AI' is included due to the broad discussion of Microsoft AI platforms, hybrid orchestration, and Copilot SDK. 'GitHub Copilot' is included because the Copilot SDK, a development tool, is a core part of the workflow (per inclusion rule: 'GitHub Copilot' category is for SDK usage and agent development, not productivity applications). 'Coding' is assigned because the tutorial covers developer practices, agent automation logic, and Python code snippets. Azure and ML categories are NOT assigned because while Azure AI is cited as a resource, the content is not specifically about Azure platform features or custom ML/data science engineering. The content is highly technical, meets length/quality standards, and does not trigger generic exclusion rules.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/github-copilot-sdk-and-hybrid-ai-in-practice-automating-readme/ba-p/4489694",
     "timestamp": "2026-01-28 10:06:07 +00:00"
+  },
+  {
+    "timestamp": "2026-01-28 11:06:42 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the video centrally discusses authentication and security updates around passkey rollout in Microsoft Entra ID (formerly Azure Active Directory), meeting Security inclusion rule 1 (Microsoft Security Services), 3 (Identity and Access Management), and 4 (Cloud Security with Microsoft). Did not assign Azure category since the primary focus is identity and security authentication rather than direct Azure platform usage. Did not assign other categories as there is no coverage of AI, ML, Coding, DevOps, or GitHub Copilot. The explanation and rules are supported by the coverage of FIDO2, passkeys, and identity management as described in the chapter breakdown and video summary.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=hAm_DcqH0nY"
   }
 ]
