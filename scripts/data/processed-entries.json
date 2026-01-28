@@ -24436,5 +24436,11 @@
     "collection": "community",
     "reason": "Succesfully added: Applied the Azure category because the content focuses entirely on the technical launch and features of new Azure Virtual Machines based on AMD ‘Turin’ processors (Azure rule 1 and 4). The post goes into depth on technical improvements, memory and CPU specs, network/storage enhancements, and usage for demanding workloads but does not provide technical content about coding, ML, or security beyond feature descriptions—so Coding, ML, and Security categories are not assigned. Customer testimonials and partner quotes center on performance but do not introduce new DevOps, AI, or code-based processes. No generic exclusion rules apply.",
     "timestamp": "2026-01-27 22:05:00 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=LdTgUmm7ub8",
+    "reason": "Succesfully added: Assigned 'AI' category because the episode explores how generative AI and large models are transforming robotics (AI inclusion rules 1, 4, 5). 'Azure' is included because Azure AI and Microsoft cloud tools are referenced as key platforms for these solutions (Azure inclusion rule 1). Coding and ML categories were not assigned, as the focus is high-level integration and real-world deployment, not code-level or ML development specifics. Content does not qualify for exclusion based on any generic rule.",
+    "timestamp": "2026-01-28 00:06:16 +00:00",
+    "collection": "videos"
   }
 ]
