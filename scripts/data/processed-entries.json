@@ -24562,5 +24562,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on GitHub Copilot Chat and agent-based workflows (AI inclusion rules 1 and 2). Assigned 'GitHub Copilot' category because the announcement directly references GitHub Copilot Chat and its new capabilities with MCP Apps (GitHub Copilot rule 1). Did not assign 'Coding' or 'DevOps' as there is no explicit code-level or DevOps-centric information in the description. No generic exclusion rules apply since the content is technical, English, not promotional, and not business-productivity focused.",
     "timestamp": "2026-01-28 21:09:14 +00:00"
+  },
+  {
+    "timestamp": "2026-01-28 22:07:08 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the event centers on AI-assisted coding, agentic development, and showcasing AI features in Visual Studio Code (AI inclusion rules 1 and 4). 'Coding' is assigned because VS Code is a core Microsoft development tool and the event focuses on programming workflows, code editor advances, and developer customization (Coding rules 2 and 5). No exclusion rules apply; the content is in English, not biographical, and has substantial technical relevance.",
+    "canonical_url": "https://www.youtube.com/watch?v=tAezuMSJuFs"
   }
 ]

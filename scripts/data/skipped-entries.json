@@ -11571,5 +11571,23 @@
     "reason": "No categories found: All category arrays are empty due to generic exclusion rules (Chapter 3). The content is primarily focused on the social and psychological aspects of open source contribution—encouraging maintainers to ask questions in a supportive environment—without providing substantive technical implementation, engineering, or development content related to Microsoft technologies. Tags and description indicate a community/culture focus rather than anything technical about Microsoft, Azure, GitHub DevOps, Coding, Security, AI, or ML. No technical depth or actionable engineering guidance is present.",
     "collection": "videos",
     "timestamp": "2026-01-28 18:07:10 +00:00"
+  },
+  {
+    "timestamp": "2026-01-28 22:05:58 +00:00",
+    "collection": "news",
+    "reason": "No categories found: All content provided is a quarterly financial earnings press release with business outlook, financial performance, forward-looking statements, risk factors, and investor contact details. According to the Generic Exclusion Rules (Chapter 3), content focused on business strategy, executive reporting, financial performance, and investor communications without technical implementation details is to be excluded. There are no substantive discussions of Microsoft technology implementations, development topics, coding, DevOps, AI technical architecture, or product usage details. Although AI, Microsoft Cloud, and related terms are mentioned, they are used in the context of business/revenue performance, not hands-on technical content. Therefore, no categories apply.",
+    "canonical_url": "https://news.microsoft.com/source/2026/01/28/microsoft-cloud-and-ai-strength-drives-second-quarter-results-3/"
+  },
+  {
+    "timestamp": "2026-01-28 22:06:10 +00:00",
+    "collection": "news",
+    "reason": "No categories found: All content is focused on financial results, investor relations, and general company news. It does not contain technical information, developer-oriented implementation, or any substantive content related to the predefined Microsoft technology categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). According to the generic exclusion rules—specifically those for business strategy, executive, and investor content without technical depth—this type of content should be excluded and not assigned any categories.",
+    "canonical_url": "https://news.microsoft.com/source/2026/01/28/microsoft-earnings-press-release-available-on-investor-relations-website-28/"
+  },
+  {
+    "timestamp": "2026-01-28 22:06:23 +00:00",
+    "collection": "news",
+    "reason": "No categories found: No categories are assigned because the content is a financial news release focused on quarterly earnings, financial metrics, and business performance. It falls under the Generic Exclusion Rule for 'Business Strategy and Executive Content', as it targets investors and business analysts, contains high-level financial performance, and only references Microsoft's AI and cloud technologies in general business growth and financial impact terms, not in a technical, developer, or implementation context. There are no technical implementations, developer tools, coding practices, or architectural details that meet any inclusion category requirements.",
+    "canonical_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q2/press-release-webcast"
   }
 ]
