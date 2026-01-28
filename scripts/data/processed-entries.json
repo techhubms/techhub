@@ -24496,5 +24496,17 @@
     "timestamp": "2026-01-28 16:10:13 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=XmCSHr12CO0",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article is fundamentally about the GitHub Copilot CLI, an AI-powered developer tool (AI Rule 1, GitHub Copilot Rules 1, 2), and details how AI functionality is being brought into terminals. Assigned 'Coding' because the technical content covers custom TypeScript, React-based Ink integration, CLI rendering logic, and patterns directly relevant to developers (Coding Rules 2, 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' because the content does not address pipelines, cloud platforms, machine learning workflows, or security/identity topics.",
+    "collection": "news",
+    "timestamp": "2026-01-28 17:11:46 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/take-control-of-fabric-identities-limit-for-your-tenant-generally-available/",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a cloud service and the management of identities is an Azure-centric administrative feature (Azure rule 1 and 4). Assigned Security category because the article covers identity governance and control, which are core security concerns (Security rule 1 and 3). Did not assign Coding, DevOps, AI, ML, or GitHub Copilot as the content is focused on administration, configuration, and governance rather than development, automation, machine learning, or AI. All generic exclusion rules were checked and do not apply, as the content is a technical announcement relevant to Azure/Fabric admins.",
+    "collection": "news",
+    "timestamp": "2026-01-28 17:12:17 +00:00"
   }
 ]
