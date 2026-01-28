@@ -24544,5 +24544,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/automated-test-framework-missing-tests-in-test-explorer/ba-p/4490186",
     "reason": "Succesfully added: Assigned the Azure category because the content is focused on Logic Apps Standard, a core Azure integration service, and guides Azure-based development workflows (Azure rule 1). Assigned Coding because it describes editing csproj files, managing .NET package dependencies, and resolving developer issues in VS Code (Coding rules 1, 4, 5). Did not assign DevOps as the focus is on local test setup, not CI/CD or operations. Did not assign AI, ML, Security, or GitHub Copilot since none are relevant to the topic. All generic exclusion rules were checked: this is substantive, technical, community content (not promotional, biographical, or non-English).",
     "timestamp": "2026-01-28 20:05:23 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/32822/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a major Azure service, and the main topic involves connecting to and authenticating against Azure data sources (Azure rules 1 and 4). Assigned ML category because notebooks, code snippets, and data connections are centrally used for data engineering and analytics/ML workflows in Fabric (ML rules 1, 2, 3, and 7). Did NOT assign AI category because, while Fabric supports integration with AI and ML, this specific article focuses on data connectivity and engineering, not AI service usage or model development. Coding was not assigned because the article's code example is generic for data connectivity rather than illustrating language/framework-specific development or patterns.",
+    "timestamp": "2026-01-28 21:08:13 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-01-27-changes-to-github-dependabot-pull-request-comment-commands",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category as the content discusses workflow changes and automation within GitHub, a core DevOps platform, specifically regarding pull request management and workflow migration (DevOps rules 2, 5, and 6). The exclusion rules do not apply: the article is technical, not biographical, not question-only, and it targets technical aspects of development and process automation rather than business/user productivity. No other categories were assigned because the content does not focus on code, AI/ML, Azure, or security-specific implementation.",
+    "timestamp": "2026-01-28 21:08:35 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/ElbfEUBA8Pw",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on GitHub Copilot Chat and agent-based workflows (AI inclusion rules 1 and 2). Assigned 'GitHub Copilot' category because the announcement directly references GitHub Copilot Chat and its new capabilities with MCP Apps (GitHub Copilot rule 1). Did not assign 'Coding' or 'DevOps' as there is no explicit code-level or DevOps-centric information in the description. No generic exclusion rules apply since the content is technical, English, not promotional, and not business-productivity focused.",
+    "timestamp": "2026-01-28 21:09:14 +00:00"
   }
 ]

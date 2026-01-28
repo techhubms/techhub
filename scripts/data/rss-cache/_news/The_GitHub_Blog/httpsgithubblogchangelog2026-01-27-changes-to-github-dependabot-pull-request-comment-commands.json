@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "PubDate": "2026-01-27T19:35:52+00:00",
+  "Title": "Changes to GitHub Dependabot pull request comment commands",
+  "EnhancedContent": "As we [announced in October of 2025](https://github.blog/changelog/2025-10-07-upcoming-changes-to-github-dependabot-pull-request-comment-commands/), we deprecated several Dependabot-specific pull request comment commands today in favor of GitHub’s native pull request features and functionality.\n\nThis change is intended to reduce confusion, improve reliability, and encourage use of the GitHub platform’s built-in tools for working with pull requests.\n\n### Dependabot comment command deprecations\n\nThese comment commands are no longer supported:\n\n- `@dependabot merge`\n- `@dependabot cancel merge`\n- `@dependabot squash and merge`\n- `@dependabot close`\n- `@dependabot reopen`\n\n### Migration guidance\n\nPlease update your workflows to rely on GitHub’s native features. For merging, closing, or reopening pull requests, we recommend using GitHub’s built-in UI, the [GitHub CLI](https://cli.github.com/manual/gh_pr), and the [REST API endpoints for pull requests](https://docs.github.com/rest/pulls?apiVersion=2022-11-28).",
+  "ProcessedDate": "2026-01-28 21:06:11",
+  "Author": "Allison",
+  "Tags": [
+    "Retired",
+    "supply chain security"
+  ],
+  "Description": "As we announced in October of 2025, we deprecated several Dependabot-specific pull request comment commands today in favor of GitHub’s native pull request features and functionality. This change is intended…\n\nThe post [Changes to GitHub Dependabot pull request comment commands](https://github.blog/changelog/2026-01-27-changes-to-github-dependabot-pull-request-comment-commands) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-01-27-changes-to-github-dependabot-pull-request-comment-commands",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}
