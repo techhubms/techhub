@@ -24472,5 +24472,29 @@
     "reason": "Succesfully added: Categories assigned as follows: 'AI' because the session centers on GitHub Copilot, an AI-powered developer tool (AI rule 2). 'GitHub Copilot' included because the content specifically demonstrates Copilot SDK and CLI integration (GitHub Copilot rules 1, 2, 3). 'Coding' assigned because the session involves live code development and SDK integration (Coding rules 2 and 5). Azure, DevOps, ML, and Security categories are not included since there is no mention or implication of those technologies or practices in the title or description. Generic exclusion rules do not apply since the content is technical, English, and not biographical, negative, or business-only.",
     "canonical_url": "https://www.youtube.com/watch?v=IKzfETGGt0E",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned are 'AI' and 'GitHub Copilot.' 'AI' applies because this is about connecting Copilot (an AI-based tool) using agent protocols (AI rule 1, 2, 4). 'GitHub Copilot' applies as the update concerns Copilot CLI specifically and extends its developer-focused features and integrations (GitHub Copilot inclusion rules 1-4). No other categories apply, as this is about integration protocols, not coding, DevOps practices, Azure, ML, or security.",
+    "timestamp": "2026-01-28 16:08:49 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category since a core focus is the Innovation Graph's support for AI policy, research, and secure/resilient AI system development (AI rule 5). Assigned the 'DevOps' category because the Innovation Graph analyzes trends in collaborative public software engineering, global development activity, and open source project operation—all falling under DevOps practices (DevOps rules 3 and 11). Did not assign Azure, ML, Coding, Security, or GitHub Copilot as there is no direct focus on those topics; the article is not a technical AI/ML or cloud tutorial, nor is it specific to developer tooling or security implementation. The explanation follows the content's repeated emphasis on data-driven AI policy, research, collaboration, and the global software production process.",
+    "timestamp": "2026-01-28 16:09:10 +00:00",
+    "canonical_url": "https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Coding category was assigned because the post provides a technical investigation into .NET memory allocation, profiling, BenchmarkDotNet, and object model details, all of which match Coding rule 1 (Microsoft programming languages and frameworks) and Coding rule 4 (coding practices with Microsoft technologies). No other category qualifies: there is no Azure, DevOps, Security, AI, GitHub Copilot, or ML content present. ASP.NET Core is mentioned as background, but the focus is general .NET code and performance optimization.",
+    "timestamp": "2026-01-28 16:09:49 +00:00",
+    "canonical_url": "https://www.stevejgordon.co.uk/the-grand-mystery-of-the-missing-18-bytes",
+    "collection": "blogs"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' due to detailed discussion of GitHub Actions pipelines, CI/CD hardening, and team security sprints (DevOps rule 2, 5, 6). Assigned 'Security' because the episode is centered on open source security improvements, incident response, SBOMs, and vulnerability detection with Microsoft tooling (Security rules 1, 2, 5, 9). Assigned 'AI' because the maintainers discuss the use of AI, fuzzing, and GitHub Copilot for security (AI rule 2, 5). Included 'GitHub Copilot' because its usage is specifically discussed in the context of developer tools, per explicit inclusion rules. The content clearly centers on practical application, development workflows, and technical security enablement using GitHub technologies.",
+    "timestamp": "2026-01-28 16:10:13 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=XmCSHr12CO0",
+    "collection": "videos"
   }
 ]

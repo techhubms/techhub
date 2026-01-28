@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "GitHub Copilot CLI now implements the Agent Client Protocol (ACP), an industry-standard protocol for communication between AI agents and clients. This enables third-party tools, IDEs, and automation systems to integrate…\n\nThe post [ACP support in Copilot CLI is now in public preview](https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2026-01-28 16:06:32",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "Title": "ACP support in Copilot CLI is now in public preview",
+  "Link": "https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "GitHub Copilot CLI now implements the [Agent Client Protocol (ACP)](https://zed.dev/acp), an industry-standard protocol for communication between AI agents and clients. This enables third-party tools, IDEs, and automation systems to integrate directly with Copilot’s agentic capabilities through an extensible interface.\n\n## How it works\n\nYou can start Copilot in ACP mode via stdio: `copilot --acp`\n\nOr connect via TCP on a specific port: `copilot --acp --port 8080`\n\nACP clients can then:\n\n- Initialize a connection and discover agent capabilities.\n- Create isolated sessions with custom working directories.\n- Send prompts with text, images, and context resources.\n- Receive streaming updates as the agent works.\n- Respond to permission requests for tool execution.\n- Cancel operations and manage session lifecycle.\n\n## Use cases\n\n- IDE integrations: Build Copilot support into any editor or development environment.\n- CI/CD pipelines: Orchestrate agentic coding tasks in automated workflows.\n- Custom frontends: Create specialized interfaces for specific developer workflows.\n- Multi-agent systems: Coordinate Copilot with other AI agents using a standard protocol.\n\nLearn more in our [ACP documentation](https://docs.github.com/copilot) and join the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "PubDate": "2026-01-28T15:00:30+00:00"
+}
