@@ -449,6 +449,7 @@ public class SqliteContentRepository(
     /// <summary>
     /// Get tag counts using efficient SQL GROUP BY query.
     /// This is MUCH faster than loading all items and counting in memory.
+    /// Uses INNER JOIN instead of EXISTS for better performance with covering indexes.
     /// </summary>
     protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
         DateTimeOffset? dateFrom,
@@ -462,11 +463,29 @@ public class SqliteContentRepository(
         var sql = new StringBuilder();
         var parameters = new DynamicParameters();
 
-        sql.Append(@"
-            SELECT ct.tag AS Tag, COUNT(DISTINCT c.slug) AS Count
+        // Base query - use INNER JOIN with content_sections when filtering by section
+        // This leverages the idx_sections_name_covering index for optimal performance
+        var needsSectionJoin = !string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
+
+        if (needsSectionJoin)
+        {
+            sql.Append(@"
+            SELECT ct.tag AS Tag, COUNT(DISTINCT ct.slug) AS Count
+            FROM content_tags ct
+            INNER JOIN content_sections cs ON ct.collection_name = cs.collection_name AND ct.slug = cs.slug
+            INNER JOIN content_items c ON ct.collection_name = c.collection_name AND ct.slug = c.slug
+            WHERE c.draft = 0
+            AND cs.section_name = @sectionName");
+            parameters.Add("sectionName", sectionName);
+        }
+        else
+        {
+            sql.Append(@"
+            SELECT ct.tag AS Tag, COUNT(DISTINCT ct.slug) AS Count
             FROM content_tags ct
             INNER JOIN content_items c ON ct.collection_name = c.collection_name AND ct.slug = c.slug
             WHERE c.draft = 0");
+        }
 
         // Date range filtering
         if (dateFrom.HasValue)
@@ -481,23 +500,10 @@ public class SqliteContentRepository(
             parameters.Add("dateTo", dateTo.Value.ToUnixTimeSeconds());
         }
 
-        // Section filtering (skip "all" as it means no filter)
-        if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-        {
-            // Join with content_sections for section filtering
-            sql.Append(@" AND EXISTS (
-                SELECT 1 FROM content_sections cs
-                WHERE cs.collection_name = c.collection_name
-                AND cs.slug = c.slug
-                AND cs.section_name = @sectionName
-            )");
-            parameters.Add("sectionName", sectionName);
-        }
-
         // Collection filtering (skip "all" as it means no filter)
         if (!string.IsNullOrWhiteSpace(collectionName) && !collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            sql.Append(" AND c.collection_name = @collectionName");
+            sql.Append(" AND ct.collection_name = @collectionName");
             parameters.Add("collectionName", collectionName);
         }
 
@@ -506,7 +512,7 @@ public class SqliteContentRepository(
         // Filter by minimum uses
         if (minUses > 1)
         {
-            sql.Append(" HAVING COUNT(DISTINCT c.slug) >= @minUses");
+            sql.Append(" HAVING COUNT(DISTINCT ct.slug) >= @minUses");
             parameters.Add("minUses", minUses);
         }
 

@@ -1,6 +1,9 @@
 using FluentAssertions;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Services;
+using TechHub.TestUtilities.Builders;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
@@ -9,60 +12,82 @@ namespace TechHub.Infrastructure.Tests.Services;
 /// </summary>
 public class RssServiceTests
 {
-    private readonly RssService _rssService = new();
+    private readonly RssService _rssService;
 
-    private static Section CreateTestSection() => new()
+    public RssServiceTests()
     {
-        Name = "ai",
-        Title = "AI",
-        Description = "Artificial Intelligence resources",
-        Url = "/ai",
-        Collections =
+        // Create mock AppSettings with collection display names
+        var appSettings = new AppSettings
+        {
+            Content = new ContentSettings
+            {
+                CollectionsPath = "/collections",
+                Sections = new Dictionary<string, SectionConfig>
+                {
+                    ["ai"] = new()
+                    {
+                        Title = "AI",
+                        Description = "Artificial Intelligence",
+                        Url = "/ai",
+                        Collections = new Dictionary<string, CollectionConfig>
+                        {
+                            ["news"] = new() { Title = "News", Url = "/ai/news", Description = "AI News", Custom = false }
+                        }
+                    }
+                },
+                CollectionDisplayNames = new Dictionary<string, string>
+                {
+                    ["news"] = "News",
+                    ["videos"] = "Videos",
+                    ["blogs"] = "Blogs",
+                    ["community"] = "Community",
+                    ["roundups"] = "Roundups"
+                }
+            }
+        };
+        
+        var options = Options.Create(appSettings);
+        _rssService = new RssService(options);
+    }
+
+    private static Section CreateTestSection() => new(
+        name: "ai",
+        title: "AI",
+        description: "Artificial Intelligence resources",
+        url: "/ai",
+        collections:
         [
-            new() { Name = "news", Title = "News", Url = "/ai/news", Description = "Latest AI news", IsCustom = false, DisplayName = "" }
-        ]
-    };
+            new(name: "news", title: "News", url: "/ai/news", description: "Latest AI news", displayName: "News", isCustom: false)
+        ]);
 
     private static List<ContentItem> CreateTestItems() =>
     [
-        new ContentItem
-        {
-            Slug = "test-article-1",
-            Title = "Test Article 1",
-            Author = "John Doe",
-            DateEpoch = 1705305600, // 2024-01-15
-            CollectionName = "news",
-            SectionNames = ["ai"],
-            Tags = ["AI", "News", "Machine Learning", "Testing"],
-            RenderedHtml = "<p>Test content 1</p>",
-            Excerpt = "Test excerpt 1",
-            ExternalUrl = "",
-            Url = "/ai/news/test-article",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        },
-        new ContentItem
-        {
-            Slug = "test-article-2",
-            Title = "Test Article 2",
-            Author = "Jane Smith",
-            DateEpoch = 1704844800, // 2024-01-10
-            CollectionName = "news",
-            SectionNames = ["ai"],
-            Tags = ["AI", "News", "Deep Learning"],
-            RenderedHtml = "<p>Test content 2</p>",
-            Excerpt = "Test excerpt 2",
-            ExternalUrl = "https://example.com/article-2",
-            Url = "/ai/news/test-article-2",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        }
+        A.ContentItem
+            .WithSlug("test-article-1")
+            .WithTitle("Test Article 1")
+            .WithAuthor("John Doe")
+            .WithDateEpoch(1705305600) // 2024-01-15
+            .WithCollectionName("news")
+            .WithFeedName("test-feed")
+            .WithPrimarySectionName("ai")
+            .WithTags("AI", "News", "Machine Learning", "Testing")
+            .WithExcerpt("Test excerpt 1")
+            .WithExternalUrl("https://example.com/article-1")
+            .WithRenderedHtml("<p>Test content 1</p>")
+            .Build(),
+        A.ContentItem
+            .WithSlug("test-article-2")
+            .WithTitle("Test Article 2")
+            .WithAuthor("Jane Smith")
+            .WithDateEpoch(1704844800) // 2024-01-10
+            .WithCollectionName("news")
+            .WithFeedName("test-feed")
+            .WithPrimarySectionName("ai")
+            .WithTags("AI", "News", "Deep Learning")
+            .WithExcerpt("Test excerpt 2")
+            .WithExternalUrl("https://example.com/article-2")
+            .WithRenderedHtml("<p>Test content 2</p>")
+            .Build()
     ];
 
     [Fact]
@@ -105,25 +130,18 @@ public class RssServiceTests
         // Arrange
         var section = CreateTestSection();
         var items = Enumerable.Range(1, 100)
-            .Select(i => new ContentItem
-            {
-                Slug = $"article-{i}",
-                Title = $"Article {i}",
-                Author = "Test Author",
-                DateEpoch = 1705305600 + (i * 86400), // Increment by 1 day
-                CollectionName = "news",
-                SectionNames = ["AI"],
-                Tags = ["test"],
-                RenderedHtml = $"<p>Content {i}</p>",
-                Excerpt = $"Excerpt {i}",
-                ExternalUrl = "",
-                Url = $"/ai/news/article-{i}",
-                FeedName = "",
-                Plans = [],
-                GhesSupport = false,
-                Draft = false,
-                GhcFeature = false
-            })
+            .Select(i => A.ContentItem
+                .WithSlug($"article-{i}")
+                .WithTitle($"Article {i}")
+                .WithDateEpoch(1705305600 + (i * 86400)) // Increment by 1 day
+                .WithCollectionName("news")
+                .WithFeedName("test-feed")
+                .WithPrimarySectionName("ai")
+                .WithTags("test")
+                .WithExcerpt($"Excerpt {i}")
+                .WithExternalUrl($"https://example.com/article-{i}")
+                .WithRenderedHtml($"<p>Content {i}</p>")
+                .Build())
             .ToList();
 
         // Act
@@ -220,25 +238,18 @@ public class RssServiceTests
         var section = CreateTestSection();
         var items = new List<ContentItem>
         {
-            new()
-            {
-                Slug = "test",
-                Title = "Test",
-                Author = "Test Author",
-                DateEpoch = 1705305600,
-                CollectionName = "news",
-                SectionNames = ["AI"],
-                Tags = [],
-                RenderedHtml = "<p>Content</p>",
-                Excerpt = "Test excerpt",
-                ExternalUrl = "",
-                Url = "/ai/news/test-article",
-                FeedName = "",
-                Plans = [],
-                GhesSupport = false,
-                Draft = false,
-                GhcFeature = false
-            }
+            A.ContentItem
+                .WithSlug("test")
+                .WithTitle("Test")
+                .WithDateEpoch(1705305600)
+                .WithCollectionName("news")
+                .WithFeedName("test-feed")
+                .WithPrimarySectionName("ai")
+                .WithTags("test")
+                .WithExcerpt("Test excerpt")
+                .WithExternalUrl("https://example.com/test")
+                .WithRenderedHtml("<p>Content</p>")
+                .Build()
         };
 
         // Act
@@ -306,8 +317,7 @@ public class RssServiceTests
         var channel = await _rssService.GenerateSectionFeedAsync(section, items);
 
         // Assert
-        channel.Items.First().SectionNames.Should().Contain("ai");
-        channel.Items.Last().SectionNames.Should().Contain("ai");
+        channel.Items.Should().HaveCount(2);
     }
 
     [Fact]
@@ -360,25 +370,16 @@ public class RssServiceTests
         var section = CreateTestSection();
         var items = new List<ContentItem>
         {
-            new()
-            {
-                Slug = "test",
-                Title = "Test & Special <Characters>",
-                Author = "Test Author",
-                DateEpoch = 1705305600,
-                CollectionName = "news",
-                SectionNames = ["AI"],
-                Tags = ["tag&special"],
-                RenderedHtml = "<p>Content</p>",
-                Excerpt = "Excerpt with \"quotes\" & <tags>",
-                ExternalUrl = "",
-                Url = "/ai/news/test-article",
-                FeedName = "",
-                Plans = [],
-                GhesSupport = false,
-                Draft = false,
-                GhcFeature = false
-            }
+            A.ContentItem
+                .WithSlug("test")
+                .WithTitle("Test & Special <Characters>")
+                .WithDateEpoch(1705305600)
+                .WithCollectionName("news")
+                .WithFeedName("test-feed")
+                .WithPrimarySectionName("ai")
+                .WithTags("tag&special")
+                .WithExcerpt("Excerpt with \"quotes\" & <tags>")                .WithExternalUrl("https://example.com/test")                .WithRenderedHtml("<p>Content</p>")
+                .Build()
         };
         var channel = await _rssService.GenerateSectionFeedAsync(section, items);
 

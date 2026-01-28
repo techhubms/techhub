@@ -25,6 +25,7 @@ section_names:
 - github-copilot
 - security
 primary_section: github-copilot
+feed_name: TechHub
 ---
 XPRT Magazine 17 explores the evolution of platform engineering, democratization of AI, cloud-native development, and automation. This edition highlights practical solutions for cost management, DevOps, and documentation, with a strong focus on integrating AI and Copilot into modern workflows. The magazine brings together insights on security, productivity, and the future of development in the Microsoft ecosystem.
 <!--excerpt_end-->

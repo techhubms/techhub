@@ -22,7 +22,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s roundup, where the evolution of developer tooling, AI integration, and cloud modernization takes center stage. GitHub Copilot headlines with sweeping improvements in coding automation and workflow orchestration, including smarter Git operations, context-aware code review, and a powerful leap in rapid prototyping through the debut of GitHub Spark. The introduction of distributed custom instructions, advanced agent modes, and broader platform support signals Copilot’s transformation into an indispensable productivity engine for teams of every size.
 

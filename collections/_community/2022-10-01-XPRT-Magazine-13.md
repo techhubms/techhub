@@ -30,6 +30,7 @@ section_names:
 - devops
 - security
 primary_section: ai
+feed_name: TechHub
 ---
 This edition of XPRT Magazine is packed with knowledge sharing on engineering culture, accessibility, observability, cloud adoption, security, and modern .NET development. Explore practical guides, case studies, and innovation stories from Xpirit’s experts, with a focus on building inclusive, secure, and high-performing software.
 <!--excerpt_end-->

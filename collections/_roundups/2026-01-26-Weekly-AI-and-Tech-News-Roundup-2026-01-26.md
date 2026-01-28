@@ -20,7 +20,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s tech update, covering the latest tools and strategies affecting developer experience and enterprise IT. AI-driven agents now support production environments, with GitHub Copilot’s SDK and enhanced CLI, while Microsoft platforms automate workflows across sectors like healthcare and retail. Azure, machine learning, and Fabric updates drive improvements in performance, security, and modernization—helping teams with DevOps, supply chain enhancements, and up-to-date security. Below, we detail the week’s main releases and approaches influencing the current technology landscape.<!--excerpt_end-->
 

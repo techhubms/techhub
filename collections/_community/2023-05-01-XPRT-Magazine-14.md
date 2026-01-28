@@ -26,6 +26,7 @@ section_names:
 - devops
 - security
 primary_section: ai
+feed_name: TechHub
 ---
 XPRT Magazine 14 explores digital transformation, the rise of AI and ChatGPT, cloud security, Blazor migrations, CI/CD workflows, load testing, identity management, and more. This issue provides practical strategies and technical insights for navigating modern software engineering and security challenges.
 <!--excerpt_end-->

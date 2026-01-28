@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 ZomboBrain shares their recent experience using GitHub Copilot Pro within Visual Studio Code to improve their PowerShell scripting abilities. <!--excerpt_end--> One issue that has arisen during this process is the unexpected appearance of checkbox-like symbols in the code whenever a new task starts and ends, despite no actual checkboxes being intended in the script. The author points out this behavior as confusing and questions whether it is a known bug or some misconfiguration on their part.
 

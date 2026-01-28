@@ -21,7 +21,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week's tech roundup, where we outline new developments in AI-assisted programming and cloud services. This edition focuses on how GitHub Copilot is evolving—now offering unified agent management, expanded integrations with editors, workflow automation, and controls for enterprise usage. Companies benefit from these updates through more efficient development processes and systematic delivery pipelines. The newsletter also highlights certification opportunities and guides for responsible AI integration, increasing Copilot’s influence in modern development.
 

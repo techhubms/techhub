@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/EQH-V5jQ0aA
 title: Chat on Mobile
 author: Rob Bos
@@ -14,6 +14,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Chat on Mobile feature. Get coding assistance on-the-go with Copilot's mobile chat feature. This lets you summarize issues/pull requests/discussions, or ask broader questions about a repository for example.<!--excerpt_end-->
 

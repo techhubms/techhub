@@ -20,7 +20,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s Tech Roundup, where automation and AI innovation are reshaping the developer experience from code inception to deployment and security. Major updates to GitHub Copilot drive the conversation, with new AI-assisted code review features, cross-IDE coding agents, and enhanced contextual intelligence transforming how teams collaborate and maintain code quality. The Model Context Protocol’s wider adoption and real-time extensibility signal a new era of hands-on workflow automation, backed by deeper analytics and operational transparency.
 

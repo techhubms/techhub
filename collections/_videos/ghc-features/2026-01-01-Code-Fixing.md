@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Code Fixing
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Code Fixing feature. Quickly fix coding errors with '/fix' command<!--excerpt_end-->
 

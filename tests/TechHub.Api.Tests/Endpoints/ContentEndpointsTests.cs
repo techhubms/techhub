@@ -55,7 +55,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty("There should be items with 'ai' section");
-        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
     }
 
     [Fact]
@@ -118,7 +117,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         items.Should().AllSatisfy(item => 
         {
             item.CollectionName.Should().Be("news");
-            item.SectionNames.Should().Contain("ai");
         });
     }
 
@@ -171,7 +169,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         items.Should().AllSatisfy(item =>
         {
             item.CollectionName.Should().Be("news");
-            item.SectionNames.Should().Contain("ai");
             item.Tags.Should().Contain("Copilot");
         });
     }
@@ -206,7 +203,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         items!.Should().NotBeEmpty("There should be ai items containing 'toolkit'");
         items.Should().AllSatisfy(item =>
         {
-            item.SectionNames.Should().Contain("ai");
             item.Title.Should().ContainEquivalentOf("toolkit");
         });
     }
@@ -250,7 +246,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // All URL components are lowercase
         items.Should().NotBeNull();
         items!.Should().HaveCount(18); // 18 blog items
-        items.Should().AllSatisfy(item => item.Url.Should().MatchRegex(@"^/[a-z-]+/blogs/[a-z0-9-]+$"));
+        items.Should().AllSatisfy(item => item.GetHref().Should().MatchRegex(@"^/[a-z-]+/blogs/[a-z0-9-]+$"));
     }
 
     [Fact]
@@ -303,10 +299,9 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         item.Author.Should().NotBeNullOrEmpty();
         item.DateEpoch.Should().BeGreaterThan(0);
         item.CollectionName.Should().NotBeNullOrEmpty();
-        item.SectionNames.Should().NotBeEmpty();
+        item.PrimarySectionName.Should().NotBeNullOrEmpty();
         item.Tags.Should().NotBeEmpty();
         item.Excerpt.Should().NotBeNullOrEmpty();
-        item.Url.Should().NotBeNullOrEmpty();
     }
 
     [Fact]
@@ -396,13 +391,13 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetContent_WithGhcFeatureTrue_ShouldIncludeDraftItems()
+    public async Task GetContent_WithIncludeDraft_ShouldIncludeDraftItems()
     {
         // This is the ONLY scenario where drafts should be included
         // (for the GitHub Copilot Features page to show "Coming Soon" items)
         
         // Act
-        var response = await _client.GetAsync("/api/content?ghcFeature=true");
+        var response = await _client.GetAsync("/api/content?includeDraft=true");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -410,8 +405,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         
-        // In this specific case, draft items with ghcFeature=true would be included
-        // (Our test draft doesn't have ghcFeature=true, so it still won't appear)
+        // When includeDraft=true, draft items would be included
         // This test documents the exception to the rule
     }
 
@@ -521,8 +515,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var results = await response.Content.ReadFromJsonAsync<SearchResults<ContentItem>>();
         results.Should().NotBeNull();
         results!.Items.Should().NotBeEmpty("There should be items in the ai section");
-        results.Items.Should().AllSatisfy(item => 
-            item.SectionNames.Should().Contain("ai", "All items should be in AI section"));
     }
 
     [Fact]

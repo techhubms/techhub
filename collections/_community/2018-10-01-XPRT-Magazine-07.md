@@ -22,6 +22,7 @@ section_names:
 - devops
 - security
 primary_section: ai
+feed_name: TechHub
 ---
 XPRT Magazine 07 explores value stream management, Kubernetes metrics, AI in pop culture, property-based testing, Azure security as code, bots, containers, and more. This issue provides practical strategies and technical insights for building secure, scalable, and innovative solutions.
 <!--excerpt_end-->

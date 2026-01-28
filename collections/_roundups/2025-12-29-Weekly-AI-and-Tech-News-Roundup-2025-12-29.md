@@ -22,7 +22,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s roundup of tech updates, focusing on advances in AI agent frameworks, workflow automation, and practical security measures. GitHub Copilot and Microsoft’s Agent Framework continue to develop tools that help embed automation into everyday development work. Azure offers updated reliability features and more streamlined DevOps tools. Security takes priority with guidance on supply chain issues, and the coding and DevOps sections highlight ways to improve productivity, compliance, and sustainability for development teams.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Copilot Coding Agent in Pull Requests
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Copilot Coding Agent in Pull Requests feature. Autonomous agent that can implement entire issues by creating PRs<!--excerpt_end-->
 

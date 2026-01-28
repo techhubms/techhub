@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/z2_oa8nEw14
 title: Premium Requests
 author: Rob Bos
@@ -15,6 +15,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Premium Requests feature. What are GitHub Copilot Premium Requests and do their rate limits work? These chances will be in effect during the month of May. Read more info of the enforcements in the documentation.<!--excerpt_end-->
 

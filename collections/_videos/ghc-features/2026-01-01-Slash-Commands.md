@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Slash Commands
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Slash Commands feature. Enhance workflow with powerful slash commands<!--excerpt_end-->
 

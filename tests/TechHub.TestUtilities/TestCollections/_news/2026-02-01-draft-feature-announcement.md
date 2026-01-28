@@ -1,16 +1,19 @@
----
-title: "Coming Soon: Revolutionary AI Feature"
-author: "Test Author"
+﻿---
+title: 'Coming Soon: Revolutionary AI Feature'
+author: Test Author
 date: 2026-02-01
-primary_section: ai
-section_names: [ai, github-copilot]
-tags: [ai, copilot, draft]
-excerpt: "This is a draft article that should not appear in any API results unless explicitly requested. It represents unreleased content."
-external_url: "https://example.com/draft-feature"
-feed_name: "Test Feed"
+primary_section: github-copilot
+section_names:
+- ai
+- github-copilot
+tags:
+- copilot
+- draft
+excerpt: This is a draft article that should not appear in any API results unless explicitly requested. It represents unreleased content.
+external_url: https://example.com/draft-feature
+feed_name: Test Feed
 draft: true
 ---
-
 This is a draft article used for testing the draft filtering functionality.
 
 <!--excerpt_end-->

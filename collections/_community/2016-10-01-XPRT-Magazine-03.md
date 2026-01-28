@@ -22,6 +22,7 @@ section_names:
 - azure
 - devops
 primary_section: ai
+feed_name: TechHub
 ---
 XPRT Magazine 03 explores Azure Machine Learning, the Microsoft Bot Framework, containers on Microsoft platforms, DevOps, mobile innovation, testing, infrastructure as code, and more. This issue provides practical guidance and real-world examples for building intelligent, scalable, and modern solutions.
 <!--excerpt_end-->

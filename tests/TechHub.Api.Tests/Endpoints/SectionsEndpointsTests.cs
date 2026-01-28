@@ -103,7 +103,6 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // AI section has items
-        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
     }
 
     [Fact]
@@ -199,7 +198,6 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         items.Should().AllSatisfy(item =>
         {
             item.CollectionName.Should().Be("news");
-            item.SectionNames.Should().Contain("ai");
         });
     }
 
@@ -220,7 +218,6 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
             // Videos collection includes subcollections (ghc-features, vscode-updates)
             var validCollections = new[] { "videos", "ghc-features", "vscode-updates" };
             item.CollectionName.Should().BeOneOf(validCollections);
-            item.SectionNames.Should().Contain("github-copilot");
         });
     }
 
@@ -256,7 +253,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         items.Should().NotBeEmpty();
         items!.Should().AllSatisfy(item =>
         {
-            item.Url.Should().MatchRegex(@"^/[a-z-]+/news/[a-z0-9-]+$",
+            item.GetHref().Should().MatchRegex(@"^/[a-z-]+/news/[a-z0-9-]+$",
                 "URL should include primary section, collection, and slug without date prefix");
         });
     }

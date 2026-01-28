@@ -19,7 +19,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s technology roundup. In this edition, we highlight the recent developments in developer-focused AI, new advancements in open-source and cloud security, improved efficiency for data and machine learning pipelines, and an increased interest in automation within hybrid and agent-based workflows.
 

@@ -32,15 +32,20 @@ public interface IContentRepository
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetAllAsync(
         bool includeDraft = false,
+        int limit = 20,
+        int offset = 0,
         CancellationToken ct = default);
 
     /// <summary>
     /// Get all content items in a specific collection.
-    /// For "videos", returns all video subcollections (ghc-features, vscode-updates).
+    /// Optionally filter by subcollection (e.g., "ghc-features", "vscode-updates").
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
         string collectionName,
+        string? subcollectionName = null,
         bool includeDraft = false,
+        int limit = 20,
+        int offset = 0,
         CancellationToken ct = default);
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IContentRepository
     Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
         bool includeDraft = false,
+        int limit = 20,
+        int offset = 0,
         CancellationToken ct = default);
 
     // ==================== New Search Methods ====================

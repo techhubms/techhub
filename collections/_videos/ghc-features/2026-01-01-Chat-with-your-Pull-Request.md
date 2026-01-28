@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Chat with your Pull Request
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Chat with your Pull Request feature. Get AI insights and improvements on your pull requests<!--excerpt_end-->
 

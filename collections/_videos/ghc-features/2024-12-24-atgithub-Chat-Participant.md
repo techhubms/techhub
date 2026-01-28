@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/M_BNfo01YsQ
 title: '@github Chat Participant'
 author: Fokko Veegens
@@ -14,6 +14,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's @github Chat Participant feature. Use Copilot as a chat participant in GitHub discussions.<!--excerpt_end-->
 

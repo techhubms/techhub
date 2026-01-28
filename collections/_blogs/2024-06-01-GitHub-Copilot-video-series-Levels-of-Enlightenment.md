@@ -11,6 +11,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 Become more proficient with GitHub Copilot through Rob Bos's comprehensive "Levels of Enlightenment" video series. This 10-part collection shares valuable insights and lessons learned from extensive experience with the tool, helping developers progress from basic usage to advanced techniques.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/lI_5yc7zrDo
 title: Multi-file Edits
 author: Randy Pagels
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Multi-file Edits feature. Make changes across multiple files simultaneously with Copilot.<!--excerpt_end-->
 

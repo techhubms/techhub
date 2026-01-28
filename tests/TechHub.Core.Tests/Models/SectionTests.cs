@@ -1,5 +1,6 @@
 using FluentAssertions;
 using TechHub.Core.Models;
+using TechHub.TestUtilities.Builders;
 
 namespace TechHub.Core.Tests.Models;
 
@@ -10,25 +11,7 @@ public class SectionTests
 {
     private static Section CreateValidSection()
     {
-        return new Section
-        {
-            Name = "ai",
-            Title = "AI",
-            Description = "Artificial Intelligence resources",
-            Url = "/ai",
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/ai/news",
-                    Description = "Latest AI news",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
+        return A.Section.Build();
     }
 
     /// <summary>
@@ -38,11 +21,8 @@ public class SectionTests
     [Fact]
     public void Validate_ValidSection_PassesWithoutException()
     {
-        // Arrange
-        var section = CreateValidSection();
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var act = () => CreateValidSection();
 
         // Assert
         act.Should().NotThrow();
@@ -55,34 +35,17 @@ public class SectionTests
     [Fact]
     public void Validate_EmptyName_ThrowsArgumentException()
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = "",
-            Title = "Test",
-            Description = "Test description",
-            Url = "/test",
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/test/news",
-                    Description = "Test",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var collection = A.Collection.Build();
+        var act = () => A.Section
+            .WithName("")
+            .WithCollections(collection)
+            .Build();
 
         // Assert
         act.Should().Throw<ArgumentException>()
             .WithMessage("*name*")
-            .WithParameterName("Name");
+            .WithParameterName("name");
     }
 
     /// <summary>
@@ -92,33 +55,16 @@ public class SectionTests
     [Fact]
     public void Validate_WhitespaceName_ThrowsArgumentException()
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = "   ",
-            Title = "Test",
-            Description = "Test description",
-            Url = "/test",
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/test/news",
-                    Description = "Test",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var collection = A.Collection.Build();
+        var act = () => A.Section
+            .WithName("   ")
+            .WithCollections(collection)
+            .Build();
 
         // Assert
         act.Should().Throw<ArgumentException>()
-            .WithParameterName("Name");
+            .WithParameterName("name");
     }
 
     /// <summary>
@@ -133,34 +79,17 @@ public class SectionTests
     [InlineData("ai news")] // Space
     public void Validate_InvalidCharactersInName_ThrowsArgumentException(string invalidName)
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = invalidName,
-            Title = "Test",
-            Description = "Test description",
-            Url = "/test",
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/test/news",
-                    Description = "Test",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var collection = A.Collection.Build();
+        var act = () => A.Section
+            .WithName(invalidName)
+            .WithCollections(collection)
+            .Build();
 
         // Assert
         act.Should().Throw<ArgumentException>()
             .WithMessage("*lowercase*hyphen*")
-            .WithParameterName("Name");
+            .WithParameterName("name");
     }
 
     /// <summary>
@@ -174,29 +103,12 @@ public class SectionTests
     [InlineData("devops")]
     public void Validate_ValidLowercaseNames_Passes(string validName)
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = validName,
-            Title = "Test",
-            Description = "Test description",
-            Url = "/test",
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/test/news",
-                    Description = "Test",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var collection = A.Collection.Build();
+        var act = () => A.Section
+            .WithName(validName)
+            .WithCollections(collection)
+            .Build();
 
         // Assert
         act.Should().NotThrow();
@@ -209,34 +121,17 @@ public class SectionTests
     [Fact]
     public void Validate_EmptyTitle_ThrowsArgumentException()
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = "test",
-            Title = "",
-            Description = "Test description",
-            Url = "/test",
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/test/news",
-                    Description = "Test",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var collection = A.Collection.Build();
+        var act = () => A.Section
+            .WithTitle("")
+            .WithCollections(collection)
+            .Build();
 
         // Assert
         act.Should().Throw<ArgumentException>()
             .WithMessage("*title*")
-            .WithParameterName("Title");
+            .WithParameterName("title");
     }
 
     /// <summary>
@@ -246,34 +141,17 @@ public class SectionTests
     [Fact]
     public void Validate_EmptyUrl_ThrowsArgumentException()
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = "test",
-            Title = "Test",
-            Description = "Test description",
-            Url = "",
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/test/news",
-                    Description = "Test",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var collection = A.Collection.Build();
+        var act = () => A.Section
+            .WithUrl("")
+            .WithCollections(collection)
+            .Build();
 
         // Assert
         act.Should().Throw<ArgumentException>()
             .WithMessage("*URL*")
-            .WithParameterName("Url");
+            .WithParameterName("url");
     }
 
     /// <summary>
@@ -286,34 +164,17 @@ public class SectionTests
     [InlineData("azure/")] // Trailing slash
     public void Validate_InvalidUrlFormat_ThrowsArgumentException(string invalidUrl)
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = "test",
-            Title = "Test",
-            Description = "Test description",
-            Url = invalidUrl,
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/test/news",
-                    Description = "Test",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var collection = A.Collection.Build();
+        var act = () => A.Section
+            .WithUrl(invalidUrl)
+            .WithCollections(collection)
+            .Build();
 
         // Assert
         act.Should().Throw<ArgumentException>()
             .WithMessage("*start with '/'*")
-            .WithParameterName("Url");
+            .WithParameterName("url");
     }
 
     /// <summary>
@@ -326,29 +187,12 @@ public class SectionTests
     [InlineData("/machine-learning")]
     public void Validate_ValidUrlFormats_Passes(string validUrl)
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = "test",
-            Title = "Test",
-            Description = "Test description",
-            Url = validUrl,
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/test/news",
-                    Description = "Test",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var collection = A.Collection.Build();
+        var act = () => A.Section
+            .WithUrl(validUrl)
+            .WithCollections(collection)
+            .Build();
 
         // Assert
         act.Should().NotThrow();
@@ -361,23 +205,15 @@ public class SectionTests
     [Fact]
     public void Validate_EmptyCollections_ThrowsArgumentException()
     {
-        // Arrange
-        var section = new Section
-        {
-            Name = "test",
-            Title = "Test",
-            Description = "Test description",
-            Url = "/test",
-            Collections = []
-        };
-
-        // Act
-        var act = () => section.Validate();
+        // Arrange & Act
+        var act = () => A.Section
+            .WithCollections()
+            .Build();
 
         // Assert
         act.Should().Throw<ArgumentException>()
             .WithMessage("*at least one collection*")
-            .WithParameterName("Collections");
+            .WithParameterName("collections");
     }
 
     /// <summary>
@@ -387,47 +223,16 @@ public class SectionTests
     [Fact]
     public void Validate_MultipleCollections_Passes()
     {
-        // Arrange
-        var section = new Section
+        // Arrange & Act
+        var collections = new[]
         {
-            Name = "test",
-            Title = "Test",
-            Description = "Test description",
-            Url = "/test",
-            Collections =
-            [
-                new Collection
-                {
-                    Name = "news",
-                    Title = "News",
-                    Url = "/ai/news",
-                    Description = "Latest AI news",
-                    IsCustom = false,
-                    DisplayName = ""
-                },
-                new Collection
-                {
-                    Name = "blogs",
-                    Title = "Blogs",
-                    Url = "/ai/blogs",
-                    Description = "AI blog posts",
-                    IsCustom = false,
-                    DisplayName = ""
-                },
-                new Collection
-                {
-                    Name = "videos",
-                    Title = "Videos",
-                    Url = "/ai/videos",
-                    Description = "AI video content",
-                    IsCustom = false,
-                    DisplayName = ""
-                }
-            ]
+            A.Collection.WithName("news").Build(),
+            A.Collection.WithName("blogs").Build(),
+            A.Collection.WithName("videos").Build()
         };
-
-        // Act
-        var act = () => section.Validate();
+        var act = () => A.Section
+            .WithCollections(collections)
+            .Build();
 
         // Assert
         act.Should().NotThrow();
@@ -440,21 +245,13 @@ public class SectionTests
     [Fact]
     public void Section_InitOnlyProperties_CanBeSetDuringInitialization()
     {
-        // Arrange & Act
-        var section = new Section
-        {
-            Name = "test",
-            Title = "Test Title",
-            Description = "Test Description",
-            Url = "/test",
-            Collections = []
-        };
+        // Arrange & Act - should throw because empty collections
+        var act = () => A.Section
+            .WithCollections()
+            .Build();
 
-        // Assert
-        section.Title.Should().Be("Test Title");
-        section.Description.Should().Be("Test Description");
-        section.Name.Should().Be("test");
-        section.Url.Should().Be("/test");
+        // Assert - validation happens in constructor now
+        act.Should().Throw<ArgumentException>();
     }
 
     /// <summary>
@@ -464,16 +261,12 @@ public class SectionTests
     [Fact]
     public void Section_RequiredProperties_MustBeSet()
     {
-        // Arrange & Act - This compiles because all required properties are set
-        var section = new Section
-        {
-            Name = "test",
-            Title = "Test",
-            Description = "Test description",
-            Url = "/test",
-            Collections = []
-        };
+        // Arrange & Act - should throw because empty collections
+        var act = () => A.Section
+            .WithCollections()
+            .Build();
 
-        section.Should().NotBeNull();
+        // Assert - validation happens in constructor now
+        act.Should().Throw<ArgumentException>();
     }
 }

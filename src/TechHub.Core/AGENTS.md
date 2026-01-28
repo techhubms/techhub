@@ -144,7 +144,7 @@ TechHub.Core/
 - Metadata: `Slug`, `Title`, `Author`, `DateEpoch`
 - Categorization: `SectionNames`, `PrimarySectionName`, `CollectionName`, `Tags`
 - Display: `Excerpt`, `Url`, `ExternalUrl`
-- Feature flags: `Plans`, `GhesSupport`, `Draft`, `GhcFeature`
+- Feature flags: `Plans`, `GhesSupport`, `Draft`
 
 **Detail View Properties** (only for full content):
 

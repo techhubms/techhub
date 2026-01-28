@@ -140,3 +140,47 @@ Uses `appsettings.Development.json`:
 - **TechHub.Api**: API program for factory
 - **TechHub.Core**: Domain models and interfaces
 - **TechHub.Infrastructure**: Repository and sync service implementations
+
+## Test Builders (`A` Pattern)
+
+Use the `A` pattern for creating test data with sensible defaults:
+
+```csharp
+using TechHub.TestUtilities.Builders;
+
+// Simple usage - fully valid object with defaults
+var item = A.ContentItem.Build();
+
+// Override specific properties
+var news = A.ContentItem
+    .WithCollectionName("news")
+    .WithExternalUrl("https://example.com/news")
+    .Build();
+
+// Section and Collection builders
+var section = A.Section
+    .WithName("github-copilot")
+    .WithTitle("GitHub Copilot")
+    .Build();
+
+var collection = A.Collection
+    .WithName("videos")
+    .WithTitle("Videos")
+    .Build();
+```
+
+**Key Benefits**:
+- Sensible defaults for all required properties
+- Only specify what's different for your test
+- Fluent API with IntelliSense support
+- Guaranteed valid objects (constructor validation)
+
+**Default Values**:
+- `ContentItem`: roundups collection (no ExternalUrl required), ai section, valid slug/title/author
+- `Section`: ai section with blogs and news collections
+- `Collection`: blogs collection with standard properties
+
+**Available Builders**:
+- `A.ContentItem` - ContentItem objects
+- `A.Section` - Section objects
+- `A.Collection` - Collection objects

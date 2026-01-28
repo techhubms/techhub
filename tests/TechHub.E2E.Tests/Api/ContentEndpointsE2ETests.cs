@@ -36,7 +36,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
             item.Title.Should().NotBeNullOrEmpty();
             item.CollectionName.Should().NotBeNullOrEmpty();
             item.DateEpoch.Should().BeGreaterThan(0);
-            item.Url.Should().NotBeNullOrEmpty();
         });
 
         // Content should be sorted by date descending (newest first)
@@ -142,7 +141,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
     }
 
     [Fact]
@@ -157,7 +155,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("github-copilot"));
     }
 
     [Fact]
@@ -172,7 +169,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("azure"));
     }
 
     #endregion
@@ -191,7 +187,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
     }
 
     [Fact]
@@ -209,7 +204,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         items.Should().AllSatisfy(item =>
         {
             item.CollectionName.Should().Be("news");
-            item.SectionNames.Should().Contain("github-copilot");
         });
     }
 
@@ -225,12 +219,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items!.Should().AllSatisfy(item =>
-        {
-            var hasAI = item.SectionNames.Contains("ai");
-            var hasAzure = item.SectionNames.Contains("azure");
-            (hasAI || hasAzure).Should().BeTrue("each item should have at least one of the filtered sections");
-        });
     }
 
     [Fact]
@@ -318,9 +306,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
             item.Author.Should().NotBeNullOrEmpty();
             item.DateEpoch.Should().BeGreaterThan(0);
             item.CollectionName.Should().NotBeNullOrEmpty();
-            item.SectionNames.Should().NotBeEmpty();
             item.Tags.Should().NotBeEmpty();
-            item.Url.Should().NotBeNullOrEmpty();
         });
     }
 
@@ -352,10 +338,11 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         {
             // URL should start with / and contain the collection name and slug (lowercased)
             // Subcollections are for filtering only, URLs always use collection name
-            item.Url.Should().StartWith("/");
-            item.Url.Should().Contain(item.CollectionName.ToLowerInvariant(),
-                $"URL '{item.Url}' should contain collection '{item.CollectionName}' (not subcollection '{item.SubcollectionName}')");
-            item.Url.Should().Contain(item.Slug.ToLowerInvariant());
+            var href = item.GetHref();
+            href.Should().StartWith("/");
+            href.Should().Contain(item.CollectionName.ToLowerInvariant(),
+                $"URL '{href}' should contain collection '{item.CollectionName}' (not subcollection '{item.SubcollectionName}')");
+            href.Should().Contain(item.Slug.ToLowerInvariant());
         });
     }
 

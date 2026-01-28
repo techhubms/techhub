@@ -32,6 +32,15 @@ public class FileBasedContentRepositoryTests : BaseContentRepositoryTests
             Content = new ContentSettings
             {
                 CollectionsPath = testCollectionsPath,
+                CollectionDisplayNames = new Dictionary<string, string>
+                {
+                    ["blogs"] = "Blogs",
+                    ["videos"] = "Videos",
+                    ["news"] = "News",
+                    ["community"] = "Community",
+                    ["roundups"] = "Roundups",
+                    ["ghc-features"] = "GitHub Copilot Features"
+                },
                 Sections = [] // Empty for content tests
             }
         };

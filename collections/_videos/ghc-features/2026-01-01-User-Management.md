@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: User Management
 author: TBD
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's User Management feature. Assign licenses per user, team, or organization<!--excerpt_end-->
 

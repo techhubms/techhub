@@ -1,5 +1,6 @@
 using FluentAssertions;
 using TechHub.Core.Models;
+using TechHub.TestUtilities.Builders;
 
 namespace TechHub.Core.Tests.Models;
 
@@ -10,25 +11,17 @@ public class ContentItemTests
 {
     private static ContentItem CreateValidContentItem()
     {
-        return new ContentItem
-        {
-            Slug = "test-article",
-            Title = "Test Article",
-            Author = "Test Author",
-            DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
-            CollectionName = "news",
-            FeedName = "",
-            SectionNames = ["ai"],
-            Tags = ["AI", "News", "Machine Learning"],
-            RenderedHtml = "<p>Test content</p>",
-            Excerpt = "Test excerpt",
-            ExternalUrl = "",
-            Url = "/ai/news/test-article",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        return A.ContentItem
+            .WithSlug("test-article")
+            .WithTitle("Test Article")
+            .WithAuthor("Test Author")
+            .WithDateEpoch(1705305600)
+            .WithCollectionName("news")
+            .WithFeedName("test-feed")
+            .WithTags("AI", "News", "Machine Learning")
+            .WithExternalUrl("https://example.com")
+            .WithRenderedHtml("<p>Test content</p>")
+            .Build();
     }
 
     [Fact]
@@ -53,29 +46,12 @@ public class ContentItemTests
     [Fact]
     public void Validate_WithValidData_DoesNotThrow()
     {
-        // Arrange
-        var item = new ContentItem
-        {
-            Slug = "test-slug",
-            Title = "Test Title",
-            Author = "Test Author",
-            DateEpoch = 1704844800,
-            CollectionName = "news",
-            FeedName = "",
-            SectionNames = ["ai"],
-            Tags = ["test"],
-            RenderedHtml = "<p>Test</p>",
-            Excerpt = "Test excerpt",
-            ExternalUrl = "",
-            Url = "/ai/news/test-slug",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
-
-        // Act
-        var act = () => item.Validate();
+        // Arrange & Act
+        var act = () => A.ContentItem
+            .WithDateEpoch(1704844800)
+            .WithCollectionName("news")
+            .WithExternalUrl("https://example.com")
+            .Build();
 
         // Assert
         act.Should().NotThrow();
@@ -89,25 +65,14 @@ public class ContentItemTests
     public void ContentItem_InitOnlyProperties_CanBeSetDuringInitialization()
     {
         // Arrange & Act
-        var item = new ContentItem
-        {
-            Slug = "test-slug",
-            Title = "Test Title",
-            Author = "Test Author",
-            DateEpoch = 1705305600,
-            CollectionName = "news",
-            FeedName = "",
-            SectionNames = ["ai"],
-            Tags = ["test"],
-            RenderedHtml = "<p>Test</p>",
-            Excerpt = "Test excerpt",
-            ExternalUrl = "",
-            Url = "/ai/news/test-slug",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithSlug("test-slug")
+            .WithTitle("Test Title")
+            .WithAuthor("Test Author")
+            .WithDateEpoch(1705305600)
+            .WithCollectionName("news")
+            .WithExternalUrl("https://example.com")
+            .Build();
 
         // Assert
         item.Title.Should().Be("Test Title");
@@ -154,26 +119,26 @@ public class ContentItemTests
     public void GetHref_ReturnsUrl_ForInternalCollections()
     {
         // Arrange
-        var contentItem = CreateContentItemWithCollection("videos", url: "/ai/videos/test-video");
+        var contentItem = CreateContentItemWithCollection("videos");
 
         // Act
         var result = contentItem.GetHref();
 
         // Assert
-        result.Should().Be("/ai/videos/test-video");
+        result.Should().Be("/ai/videos/test-slug");
     }
 
     [Fact]
-    public void GetHref_ReturnsEmptyString_WhenExternalUrlIsEmpty()
+    public void GetHref_IgnoresExternalUrl_ForInternalCollections()
     {
-        // Arrange
-        var contentItem = CreateContentItemWithCollection("news", externalUrl: "");
+        // Arrange - internal collection ("videos") ignores externalUrl parameter
+        var contentItem = CreateContentItemWithCollection("videos", externalUrl: "https://ignored.com");
 
         // Act
         var result = contentItem.GetHref();
 
-        // Assert
-        result.Should().BeEmpty();
+        // Assert - should build URL from section/collection/slug, not use externalUrl
+        result.Should().Be("/ai/videos/test-slug");
     }
 
     [Fact]
@@ -285,26 +250,13 @@ public class ContentItemTests
     private static ContentItem CreateContentItemWithCollection(
         string collectionName,
         string externalUrl = "https://example.com",
-        string url = "/test/url",
         string title = "Test Title")
     {
-        return new ContentItem
-        {
-            Slug = "test-slug",
-            Title = title,
-            Author = "Test Author",
-            DateEpoch = 1704067200,
-            CollectionName = collectionName,
-            FeedName = "",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "Test excerpt",
-            ExternalUrl = externalUrl,
-            Url = url,
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        return A.ContentItem
+            .WithTitle(title)
+            .WithDateEpoch(1704067200)
+            .WithCollectionName(collectionName)
+            .WithExternalUrl(externalUrl)
+            .Build();
     }
 }

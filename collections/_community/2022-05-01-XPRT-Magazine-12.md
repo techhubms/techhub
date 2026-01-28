@@ -31,6 +31,7 @@ section_names:
 - security
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This edition of XPRT Magazine explores cloud-native microservices, IoT, engineering culture, and developer productivity. Discover hands-on guides, real-world case studies, and stories of innovation, resilience, and knowledge sharing in the Microsoft ecosystem.
 <!--excerpt_end-->

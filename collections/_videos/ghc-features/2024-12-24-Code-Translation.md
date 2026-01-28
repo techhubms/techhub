@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/UfQGauPcAgE
 title: Code Translation
 author: Fokko Veegens
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Code Translation feature. Translate code across different languages with ease using Copilot.<!--excerpt_end-->
 

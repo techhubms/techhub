@@ -23,6 +23,7 @@ section_names:
 - coding
 - security
 primary_section: coding
+feed_name: TechHub
 ---
 XPRT Magazine 06 explores OpenFaaS, DevOps mindset, Kubernetes, Blazor, ChatOps, browser security, mob programming, bots, and more. This issue provides practical strategies and technical insights for building modern, secure, and high-performing solutions.
 <!--excerpt_end-->

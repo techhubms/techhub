@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/UuIrbI-qX-0
 title: Fetch Webpage
 author: Fokko Veegens
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Fetch Webpage feature. Retrieve a web page as part of the context you provide with your prompt.<!--excerpt_end-->
 

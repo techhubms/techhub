@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Chat with Knowledge Bases
 author: TBD
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Chat with Knowledge Bases feature. Leverage organizational knowledge in your AI conversations<!--excerpt_end-->
 

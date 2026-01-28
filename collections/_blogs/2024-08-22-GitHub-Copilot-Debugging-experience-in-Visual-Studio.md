@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 Visual Studio's integration with GitHub Copilot Chat has been significantly enhanced to provide developers with powerful AI-assisted debugging capabilities. The new features move beyond code completions to offer in-depth analysis and explanations of how code works, directly within your debugging workflow.<!--excerpt_end-->
 

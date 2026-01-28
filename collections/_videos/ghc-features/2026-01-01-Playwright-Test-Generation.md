@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Playwright Test Generation
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Playwright Test Generation feature. Generate UI tests with Playwright from existing code<!--excerpt_end-->
 

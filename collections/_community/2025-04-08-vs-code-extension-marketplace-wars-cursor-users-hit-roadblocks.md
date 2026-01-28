@@ -16,6 +16,7 @@ tags:
 section_names:
 - devops
 primary_section: devops
+feed_name: TechHub
 ---
 Microsoft's stricter enforcement of its Visual Studio Code extension marketplace terms has left users of Cursor, an AI-powered coding editor, facing new roadblocks—especially with popular Microsoft extensions like C/C++. <!--excerpt_end-->
 

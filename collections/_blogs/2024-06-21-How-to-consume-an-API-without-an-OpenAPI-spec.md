@@ -14,6 +14,7 @@ section_names:
 - coding
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 When working with external APIs that lack SDKs or OpenAPI specifications, developers often face the tedious task of manually creating typed interfaces. Jesse Swart demonstrates how GitHub Copilot can dramatically simplify this process by generating complete TypeScript code from raw API documentation.<!--excerpt_end-->
 

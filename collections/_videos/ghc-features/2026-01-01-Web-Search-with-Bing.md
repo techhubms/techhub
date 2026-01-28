@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Web Search with Bing
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Web Search with Bing feature. Search the web directly from your coding environment<!--excerpt_end-->
 

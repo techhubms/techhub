@@ -296,6 +296,15 @@ public class ContentSyncService : IContentSyncService
             var tags = GetTagsFromFrontMatter(frontMatter);
             var plans = GetPlansFromFrontMatter(frontMatter);
             
+            // Validate primary_section is present in frontmatter
+            var primarySection = frontMatter.GetValueOrDefault("primary_section", null)?.ToString();
+            if (string.IsNullOrWhiteSpace(primarySection))
+            {
+                throw new InvalidOperationException(
+                    $"Missing required 'primary_section' in frontmatter for file: {file.FullName}. " +
+                    "Run ContentFixer to add missing frontmatter fields.");
+            }
+            
             // Upsert main content item
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
@@ -330,7 +339,7 @@ public class ContentSyncService : IContentSyncService
                     DateEpoch = dateEpoch,
                     CollectionName = collectionName,
                     SubcollectionName = subcollectionName,
-                    PrimarySectionName = ContentItem.ComputePrimarySectionName(sections),
+                    PrimarySectionName = primarySection,
                     ExternalUrl = frontMatter.GetValueOrDefault("external_url", null)?.ToString(),
                     Author = frontMatter.GetValueOrDefault("author", null)?.ToString(),
                     FeedName = frontMatter.GetValueOrDefault("feed_name", null)?.ToString(),

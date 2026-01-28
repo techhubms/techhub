@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: GitHub Spark
 author: TBD
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's GitHub Spark feature. Create micro web apps using natural language - no coding required<!--excerpt_end-->
 

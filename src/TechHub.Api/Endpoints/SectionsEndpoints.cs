@@ -114,7 +114,7 @@ internal static class SectionsEndpoints
 
         // Get all content for this section (filter by section.Name which matches ContentItem.SectionNames)
         // Exclude drafts from section content listings
-        var content = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false, cancellationToken);
+        var content = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false, limit: 1000, offset: 0, cancellationToken);
 
         return TypedResults.Ok(content.AsEnumerable());
     }
@@ -166,10 +166,12 @@ internal static class SectionsEndpoints
 
     /// <summary>
     /// GET /api/sections/{sectionName}/collections/{collectionName}/items - Get items in a collection within a section
+    /// Supports optional subcollection query parameter (e.g., ?subcollection=ghc-features)
     /// </summary>
     private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound>> GetSectionCollectionItems(
         string sectionName,
         string collectionName,
+        string? subcollection,
         ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
@@ -190,11 +192,25 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        // Get content filtered by both section and collection (exclude drafts)
-        var allContent = await contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
-        var sectionContent = allContent
-            .Where(c => c.SectionNames.Contains(section.Name, StringComparer.OrdinalIgnoreCase));
+        // Get content filtered by both section and collection, optionally by subcollection (exclude drafts)
+        // Use SearchAsync with section filter for combined filtering
+        var request = new SearchRequest
+        {
+            Sections = [section.Name],
+            Collections = [collectionName],
+            Take = 1000
+        };
+        var searchResults = await contentRepository.SearchAsync(request, cancellationToken);
+        var sectionContent = searchResults.Items;
+        
+        // Further filter by subcollection if specified (SearchRequest doesn't support subcollection filtering yet)
+        if (!string.IsNullOrWhiteSpace(subcollection))
+        {
+            sectionContent = sectionContent
+                .Where(c => c.SubcollectionName?.Equals(subcollection, StringComparison.OrdinalIgnoreCase) ?? false)
+                .ToList();
+        }
 
-        return TypedResults.Ok(sectionContent);
+        return TypedResults.Ok(sectionContent.AsEnumerable());
     }
 }

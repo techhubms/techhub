@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/OZKC2c9wD1Q
 title: Next Edit Suggestions
 author: Fokko Veegens
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Next Edit Suggestions feature. NES Looks ahead for you while editing and comes up with related changes.<!--excerpt_end-->
 

@@ -19,6 +19,7 @@ section_names:
 - coding
 - security
 primary_section: coding
+feed_name: TechHub
 ---
 Welcome to the very first XPRT Magazine! This issue features practical articles on API management, Azure Service Fabric, cross-platform mobile development with Ionic, hands-on HoloLens programming, DevOps, microservices, and more. Dive into real-world lessons, technical introductions, and innovative approaches from industry experts.
 <!--excerpt_end-->

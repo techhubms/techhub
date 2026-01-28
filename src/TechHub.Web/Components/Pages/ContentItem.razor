@@ -23,11 +23,10 @@
     <aside class="sidebar">
         @if (item != null)
         {
-            var navigationUrl = GetPrimarySectionUrl();
-            @* Tag cloud for this content item - navigate to primary section with tag filter *@
+            @* Tag cloud for this content item - navigate within current section with tag filter *@
             <SidebarTagCloud Scope="TagCloudScope.Content" SectionName="@SectionName" CollectionName="@CollectionName"
                 Slug="@Slug" Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
-                NavigationBaseUrl="@navigationUrl" />
+                NavigationBaseUrl="@($"/{SectionName.ToLowerInvariant()}")" />
             <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
         }
     </aside>
@@ -106,23 +105,6 @@
     private void ScrollToTop()
     {
         Navigation.NavigateTo(Navigation.Uri.Split('#')[0], forceLoad: false);
-    }
-
-    /// <summary>
-    /// Gets the URL for the primary section (used for tag click navigation)
-    /// Falls back to current section if primarySection is not available
-    /// </summary>
-    private string GetPrimarySectionUrl()
-    {
-        var primarySection = item?.PrimarySectionName;
-        if (!string.IsNullOrEmpty(primarySection))
-        {
-            // Convert display name to URL slug if needed
-            return $"/{SectionHelper.GetSectionUrl(primarySection)}";
-        }
-
-        // Fallback to current section
-        return $"/{SectionName.ToLowerInvariant()}";
     }
 
     private string FormatDate(long epochSeconds)

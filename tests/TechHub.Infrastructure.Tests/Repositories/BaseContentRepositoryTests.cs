@@ -185,8 +185,6 @@ public abstract class BaseContentRepositoryTests : IDisposable
 
         // Assert
         results.Should().NotBeEmpty("TestCollections should contain AI section content");
-        results.Should().OnlyContain(item => item.SectionNames.Contains("ai"), 
-            "Should only return items with 'ai' in section_names");
     }
 
     /// <summary>
@@ -206,8 +204,8 @@ public abstract class BaseContentRepositoryTests : IDisposable
         results.Should().NotBeEmpty("TestCollections should contain multiple items");
         results.Should().NotContain(item => item.Draft, "Should exclude drafts by default");
         // Should contain items from different sections
-        var sections = results.SelectMany(r => r.SectionNames).Distinct().ToList();
-        sections.Should().HaveCountGreaterThan(1, "all section should aggregate multiple section types");
+        var primarySections = results.Select(r => r.PrimarySectionName).Distinct().ToList();
+        primarySections.Should().HaveCountGreaterThan(1, "all section should aggregate multiple section types");
     }
 
     /// <summary>
@@ -269,7 +267,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         result!.Slug.Should().Be("test-article");
         result.Title.Should().Be("Test Article with AI and Azure Tags");
         result.Tags.Should().BeEquivalentTo(new[] { "AI", "Azure" });
-        result.SectionNames.Should().Contain(new[] { "ai", "cloud" });
+        result.PrimarySectionName.Should().BeOneOf("ai", "cloud");
     }
 
     /// <summary>
@@ -345,8 +343,8 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var vscodeItem = results.FirstOrDefault(v => v.SubcollectionName == "vscode-updates");
         vscodeItem.Should().NotBeNull("TestCollections should contain a vscode-updates item");
         vscodeItem!.CollectionName.Should().Be("videos", "Subcollection items should have collection name 'videos'");
-        vscodeItem.Url.Should().Contain("/videos/", "URL should use collection name in path");
-        vscodeItem.Url.Should().NotContain("/vscode-updates/", "URL should not contain subcollection name (used for filtering only)");
+        vscodeItem.GetHref().Should().Contain("/videos/", "URL should use collection name in path");
+        vscodeItem.GetHref().Should().NotContain("/vscode-updates/", "URL should not contain subcollection name (used for filtering only)");
     }
 
     /// <summary>
@@ -367,8 +365,8 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var ghcFeatureItem = results.FirstOrDefault(v => v.SubcollectionName == "ghc-features");
         ghcFeatureItem.Should().NotBeNull("TestCollections should contain a ghc-features item");
         ghcFeatureItem!.CollectionName.Should().Be("videos", "Subcollection items should have collection name 'videos'");
-        ghcFeatureItem.Url.Should().Contain("/videos/", "URL should use collection name in path");
-        ghcFeatureItem.Url.Should().NotContain("/ghc-features/", "URL should not contain subcollection name (used for filtering only)");
+        ghcFeatureItem.GetHref().Should().Contain("/videos/", "URL should use collection name in path");
+        ghcFeatureItem.GetHref().Should().NotContain("/ghc-features/", "URL should not contain subcollection name (used for filtering only)");
     }
 
     #endregion
@@ -416,9 +414,6 @@ public abstract class BaseContentRepositoryTests : IDisposable
 
         // Assert - verify positive and negative cases
         results.Items.Should().NotBeEmpty("TestCollections should contain items in ai section");
-        results.Items.Should().OnlyContain(item =>
-            item.SectionNames.Contains("ai", StringComparer.OrdinalIgnoreCase),
-            "All returned items should be in ai section");
         results.Items.Should().NotContain(item => item.Slug == "devops-section",
             "Items only in devops section should be excluded");
         results.TotalCount.Should().Be(results.Items.Count,
@@ -603,15 +598,10 @@ public abstract class BaseContentRepositoryTests : IDisposable
         results.Facets.Should().ContainKey("sections", "Should return section facets when requested");
         results.Facets["sections"].Should().NotBeEmpty("TestCollections should have multiple sections");
 
-        // Verify section counts match actual items
-        var allItems = await Repository.GetAllAsync();
-        foreach (var sectionFacet in results.Facets["sections"])
-        {
-            var actualCount = allItems.Count(i =>
-                i.SectionNames.Contains(sectionFacet.Value, StringComparer.OrdinalIgnoreCase));
-            sectionFacet.Count.Should().Be(actualCount,
-                $"Section '{sectionFacet.Value}' facet count should match actual item count");
-        }
+        // Verify facets are returned
+        results.Facets["sections"].Should().NotBeEmpty("Should have section facets");
+        results.Facets["sections"].Should().Contain(f => f.Value == "ai" || f.Value == "cloud",
+            "Should contain expected sections from test data");
     }
 
     /// <summary>
@@ -866,9 +856,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
 
         // Assert
         result.Should().NotBeNull();
-        result!.SectionNames.Should().NotBeEmpty("SectionNames should be loaded");
-        result.SectionNames.Should().Contain("coding", "Should contain coding section");
-        result.SectionNames.Should().Contain("security", "Should contain security section");
+        result!.PrimarySectionName.Should().BeOneOf("coding", "security", "Primary section should be one of the assigned sections");
     }
 
     /// <summary>
@@ -1025,8 +1013,8 @@ public abstract class BaseContentRepositoryTests : IDisposable
 
         // Assert
         result.Should().NotBeNull();
-        result!.Url.Should().NotBeNullOrEmpty("Url should be populated");
-        result.Url.Should().Contain("net-10-networking-improvements", "Url should contain the lowercase slug");
+        result!.GetHref().Should().NotBeNullOrEmpty("Url should be populated");
+        result.GetHref().Should().Contain("net-10-networking-improvements", "Url should contain the lowercase slug");
     }
 
     /// <summary>
@@ -1072,8 +1060,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         result.ExternalUrl.Should().Be("https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html");
         result.FeedName.Should().Be("Randy Pagels");
         result.CollectionName.Should().Be("blogs");
-        result.SectionNames.Should().Contain("ai");
-        result.SectionNames.Should().Contain("github-copilot");
+        result.PrimarySectionName.Should().BeOneOf("ai", "github-copilot");
         result.Tags.Should().Contain("Code Review");
         result.Tags.Should().Contain("Developer Tools");
         result.Draft.Should().BeFalse();

@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
@@ -17,18 +18,13 @@ public class FileBasedContentRepository : ContentRepositoryBase
 {
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
+    private readonly AppSettings _settings;
+    
+    // Cache section_names by slug for filtering (not exposed on ContentItem model)
+    private readonly ConcurrentDictionary<string, List<string>> _sectionNamesCache = new();
 
     // Local cache key for all items (file-based repo loads everything at once)
     private const string AllItemsCacheKey = "FileBasedRepository:AllItems";
-
-    private static readonly string[] ValidCollections =
-    [
-        "_news",
-        "_videos",
-        "_community",
-        "_blogs",
-        "_roundups"
-    ];
 
     public FileBasedContentRepository(
         IOptions<AppSettings> settings,
@@ -41,7 +37,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
         ArgumentNullException.ThrowIfNull(markdownService);
         ArgumentNullException.ThrowIfNull(environment);
 
-        var configuredPath = settings.Value.Content.CollectionsPath;
+        _settings = settings.Value;
+        var configuredPath = _settings.Content.CollectionsPath;
 
         // Resolve relative paths to absolute paths based on content root
         if (Path.IsPathRooted(configuredPath))
@@ -92,7 +89,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
     /// </summary>
     public override async Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken ct = default)
     {
-        return await GetAllInternalAsync(includeDraft: true, ct);
+        return await GetAllInternalAsync(includeDraft: true, limit: int.MaxValue, offset: 0, ct);
     }
 
     /// <summary>
@@ -101,6 +98,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
         bool includeDraft,
+        int limit,
+        int offset,
         CancellationToken ct)
     {
         // Use local cache for all items (file-based loads everything at once)
@@ -108,8 +107,12 @@ public class FileBasedContentRepository : ContentRepositoryBase
         {
             entry.SetPriority(CacheItemPriority.NeverRemove);
 
-            // Load all collections in parallel
-            var collectionTasks = ValidCollections
+            // Load all collections in parallel - get collection names from CollectionDisplayNames keys
+            var collectionNames = _settings.Content.CollectionDisplayNames.Keys
+                .Select(name => name.StartsWith('_') ? name : $"_{name}")
+                .ToArray();
+
+            var collectionTasks = collectionNames
                 .Select(collection => LoadCollectionItemsAsync(collection, ct))
                 .ToArray();
 
@@ -132,7 +135,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
             allItems = [.. allItems.Where(item => !item.Draft)];
         }
 
-        return allItems;
+        // Apply pagination
+        return [.. allItems.Skip(offset).Take(limit)];
     }
 
     /// <summary>
@@ -144,26 +148,30 @@ public class FileBasedContentRepository : ContentRepositoryBase
         bool includeDraft,
         CancellationToken ct)
     {
-        var items = await GetByCollectionInternalAsync(collectionName, includeDraft, ct);
+        var items = await GetByCollectionInternalAsync(collectionName, subcollectionName: null, includeDraft, int.MaxValue, 0, ct);
         return items.FirstOrDefault(item => item.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
     }
 
     /// <summary>
     /// Internal implementation: Get content by collection from cached data.
+    /// Optionally filters by subcollection.
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetByCollectionInternalAsync(
         string collectionName,
+        string? subcollectionName,
         bool includeDraft,
+        int limit,
+        int offset,
         CancellationToken ct)
     {
         ArgumentNullException.ThrowIfNull(collectionName);
 
-        var allItems = await GetAllInternalAsync(includeDraft, ct);
+        var allItems = await GetAllInternalAsync(includeDraft, int.MaxValue, 0, ct);
 
         // Handle virtual "all" collection
         if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            return [.. allItems.OrderByDescending(x => x.DateEpoch)];
+            return [.. allItems.OrderByDescending(x => x.DateEpoch).Skip(offset).Take(limit)];
         }
 
         // Normalize collection name
@@ -172,7 +180,15 @@ public class FileBasedContentRepository : ContentRepositoryBase
         var collectionItems = allItems
             .Where(item => item.CollectionName.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase));
 
-        return [.. collectionItems.OrderByDescending(x => x.DateEpoch)];
+        // Optionally filter by subcollection
+        if (!string.IsNullOrWhiteSpace(subcollectionName))
+        {
+            collectionItems = collectionItems.Where(item =>
+                item.SubcollectionName != null &&
+                item.SubcollectionName.Equals(subcollectionName, StringComparison.OrdinalIgnoreCase));
+        }
+
+        return [.. collectionItems.OrderByDescending(x => x.DateEpoch).Skip(offset).Take(limit)];
     }
 
     /// <summary>
@@ -181,17 +197,21 @@ public class FileBasedContentRepository : ContentRepositoryBase
     protected override async Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
         string sectionName,
         bool includeDraft,
+        int limit,
+        int offset,
         CancellationToken ct)
     {
         ArgumentNullException.ThrowIfNull(sectionName);
 
-        var allItems = await GetAllInternalAsync(includeDraft, ct);
+        var allItems = await GetAllInternalAsync(includeDraft, int.MaxValue, 0, ct);
 
         var sectionItems = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
             ? allItems
-            : allItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
+            : allItems.Where(item => 
+                _sectionNamesCache.TryGetValue(item.Slug, out var sections) && 
+                sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
 
-        return [.. sectionItems.OrderByDescending(x => x.DateEpoch)];
+        return [.. sectionItems.OrderByDescending(x => x.DateEpoch).Skip(offset).Take(limit)];
     }
 
     /// <summary>
@@ -202,7 +222,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         SearchRequest request,
         CancellationToken ct)
     {
-        var allItems = await GetAllInternalAsync(includeDraft: false, ct);
+        var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
         IEnumerable<ContentItem> filtered = allItems;
 
         // Full-text search (naive: check if query appears in title, excerpt, or content)
@@ -226,11 +246,12 @@ public class FileBasedContentRepository : ContentRepositoryBase
             }
         }
 
-        // Section filtering (OR logic)
+        // Section filtering (OR logic) - use cached section_names from frontmatter
         if (request.Sections is { Count: > 0 })
         {
             filtered = filtered.Where(item =>
-                item.SectionNames.Any(s => request.Sections.Contains(s, StringComparer.OrdinalIgnoreCase)));
+                _sectionNamesCache.TryGetValue(item.Slug, out var sections) &&
+                sections.Any(s => request.Sections.Contains(s, StringComparer.OrdinalIgnoreCase)));
         }
 
         // Collection filtering (OR logic)
@@ -280,7 +301,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         FacetRequest request,
         CancellationToken ct)
     {
-        var allItems = await GetAllInternalAsync(includeDraft: false, ct);
+        var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
         IEnumerable<ContentItem> filtered = allItems;
 
         // Apply filters
@@ -297,7 +318,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
         if (request.Sections is { Count: > 0 })
         {
             filtered = filtered.Where(item =>
-                item.SectionNames.Any(s => request.Sections.Contains(s, StringComparer.OrdinalIgnoreCase)));
+                _sectionNamesCache.TryGetValue(item.Slug, out var sections) &&
+                sections.Any(s => request.Sections.Contains(s, StringComparer.OrdinalIgnoreCase)));
         }
 
         if (request.Collections is { Count: > 0 })
@@ -349,11 +371,12 @@ public class FileBasedContentRepository : ContentRepositoryBase
             facets["collections"] = collectionCounts;
         }
 
-        // Compute section facets
+        // Compute section facets from cached section_names
         if (request.FacetFields.Contains("sections"))
         {
             var sectionCounts = filteredList
-                .SelectMany(item => item.SectionNames)
+                .Where(item => _sectionNamesCache.ContainsKey(item.Slug))
+                .SelectMany(item => _sectionNamesCache[item.Slug])
                 .GroupBy(section => section, StringComparer.OrdinalIgnoreCase)
                 .Select(g => new FacetValue { Value = g.Key, Count = g.Count() })
                 .OrderByDescending(f => f.Count)
@@ -379,7 +402,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         int count,
         CancellationToken ct)
     {
-        var allItems = await GetAllInternalAsync(includeDraft: false, ct);
+        var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
 
         // Find the source article
         var sourceArticle = allItems.FirstOrDefault(item => item.Slug == articleId);
@@ -428,7 +451,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         int minUses,
         CancellationToken ct)
     {
-        var allItems = await GetAllInternalAsync(includeDraft: false, ct);
+        var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
 
         // Apply filters
         var filtered = allItems.AsEnumerable();
@@ -447,7 +470,9 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
         if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            filtered = filtered.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
+            filtered = filtered.Where(item => 
+                _sectionNamesCache.TryGetValue(item.Slug, out var sections) &&
+                sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
         }
 
         if (!string.IsNullOrWhiteSpace(collectionName) && !collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
@@ -534,7 +559,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
             return null;
         }
 
-        var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Microsoft");
+        var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Unknown");
         var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
         var sectionNames = _frontMatterParser.GetListValue(frontMatter, "section_names");
         var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
@@ -544,14 +569,12 @@ public class FileBasedContentRepository : ContentRepositoryBase
         var ghesSupport = _frontMatterParser.GetValue<bool>(frontMatter, "ghes_support", false);
         var draft = _frontMatterParser.GetValue<bool>(frontMatter, "draft", false);
 
+        // Read primary_section from frontmatter (added by ContentFixer)
+        // Used ONLY for URL building outside section context (homepage, etc.)
+        var primarySectionName = _frontMatterParser.GetValue<string>(frontMatter, "primary_section", "all");
+
         var subcollectionName = DeriveSubcollectionFromPath(filePath);
         var derivedCollection = collectionName.TrimStart('_');
-
-        // GhcFeature is derived from subcollection or collection name being "ghc-features"
-        var ghcFeature = string.Equals(subcollectionName, "ghc-features", StringComparison.OrdinalIgnoreCase)
-                      || string.Equals(derivedCollection, "ghc-features", StringComparison.OrdinalIgnoreCase);
-
-        // PrimarySectionName is computed internally by ContentItem from SectionNames
 
         var filename = Path.GetFileNameWithoutExtension(filePath);
         var slug = StripDatePrefix(filename).ToLowerInvariant();
@@ -561,32 +584,28 @@ public class FileBasedContentRepository : ContentRepositoryBase
             excerpt = MarkdownService.ExtractExcerpt(content);
         }
 
-        // Compute primary section for URL - same logic as ContentItem uses internally
-        var primarySectionName = ContentItem.ComputePrimarySectionName(sectionNames);
-        var currentPagePath = $"/{primarySectionName}/{derivedCollection}/{slug}".ToLowerInvariant();
+        // Cache section_names for filtering (not exposed on model)
+        _sectionNamesCache[slug] = sectionNames;
 
         // Return ContentItem with raw Content - base class will render to HTML
-        // Note: PrimarySectionName is computed internally by ContentItem from SectionNames
-        return new ContentItem
-        {
-            Slug = slug,
-            Title = title,
-            Author = author,
-            DateEpoch = date.ToUnixTimeSeconds(),
-            CollectionName = derivedCollection,
-            SubcollectionName = subcollectionName,
-            FeedName = feedName,
-            SectionNames = sectionNames,
-            Tags = tags,
-            Plans = plans,
-            GhesSupport = ghesSupport,
-            Draft = draft,
-            GhcFeature = ghcFeature,
-            Content = content,  // Raw markdown - base class renders this
-            Excerpt = excerpt,
-            ExternalUrl = externalUrl,
-            Url = currentPagePath
-        };
+        return new ContentItem(
+            slug: slug,
+            title: title,
+            author: author,
+            dateEpoch: date.ToUnixTimeSeconds(),
+            collectionName: derivedCollection,
+            feedName: feedName,
+            primarySectionName: primarySectionName,
+            tags: tags,
+            excerpt: excerpt,
+            externalUrl: externalUrl,
+            draft: draft,
+            subcollectionName: subcollectionName,
+            plans: plans,
+            ghesSupport: ghesSupport,
+            content: content,
+            renderedHtml: null
+        );
     }
 
     /// <summary>

@@ -26,6 +26,7 @@ section_names:
 - devops
 - coding
 primary_section: coding
+feed_name: TechHub
 ---
 XPRT Magazine 02 explores IoT with Raspberry Pi and Windows 10 IoT Core, DevOps for mobile, Power BI analytics, Azure high availability, Cloudera deployment, .NET Core, Akka.NET, Docker, and scaling Scrum. This issue provides hands-on guidance and real-world insights for modern developers and teams.
 <!--excerpt_end-->

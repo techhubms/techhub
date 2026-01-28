@@ -42,7 +42,13 @@ public abstract class ContentRepositoryBase : IContentRepository
         // If RenderedHtml is already set, just clear Content to save memory
         if (item.RenderedHtml != null)
         {
-            return item with { Content = null };
+            // Use constructor to create new instance with Content cleared
+            return new ContentItem(
+                item.Slug, item.Title, item.Author, item.DateEpoch, item.CollectionName,
+                item.FeedName, item.PrimarySectionName, item.Tags, item.Excerpt,
+                item.ExternalUrl, item.Draft, item.SubcollectionName, item.Plans,
+                item.GhesSupport, null, item.RenderedHtml
+            );
         }
 
         // If no raw content to render, return as-is
@@ -53,10 +59,15 @@ public abstract class ContentRepositoryBase : IContentRepository
 
         // Render the markdown to HTML
         var processedMarkdown = MarkdownService.ProcessYouTubeEmbeds(item.Content);
-        var renderedHtml = MarkdownService.RenderToHtml(processedMarkdown, item.Url);
+        var renderedHtml = MarkdownService.RenderToHtml(processedMarkdown, item.GetHref());
 
         // Return with rendered HTML and clear Content to save memory
-        return item with { RenderedHtml = renderedHtml, Content = null };
+        return new ContentItem(
+            item.Slug, item.Title, item.Author, item.DateEpoch, item.CollectionName,
+            item.FeedName, item.PrimarySectionName, item.Tags, item.Excerpt,
+            item.ExternalUrl, item.Draft, item.SubcollectionName, item.Plans,
+            item.GhesSupport, null, renderedHtml
+        );
     }
 
     // ==================== Public Methods with Caching ====================
@@ -86,13 +97,15 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetAllAsync(
         bool includeDraft = false,
+        int limit = 20,
+        int offset = 0,
         CancellationToken ct = default)
     {
-        var cacheKey = $"all:{includeDraft}";
+        var cacheKey = $"all:{includeDraft}:{limit}:{offset}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
-            return await GetAllInternalAsync(includeDraft, ct);
+            entry.SetPriority(CacheItemPriority.Normal);
+            return await GetAllInternalAsync(includeDraft, limit, offset, ct);
         }) ?? [];
     }
 
@@ -102,14 +115,17 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
         string collectionName,
+        string? subcollectionName = null,
         bool includeDraft = false,
+        int limit = 20,
+        int offset = 0,
         CancellationToken ct = default)
     {
-        var cacheKey = $"collection:{collectionName}:{includeDraft}";
+        var cacheKey = $"collection:{collectionName}:{subcollectionName ?? "all"}:{includeDraft}:{limit}:{offset}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
-            return await GetByCollectionInternalAsync(collectionName, includeDraft, ct);
+            entry.SetPriority(CacheItemPriority.Normal);
+            return await GetByCollectionInternalAsync(collectionName, subcollectionName, includeDraft, limit, offset, ct);
         }) ?? [];
     }
 
@@ -120,13 +136,15 @@ public abstract class ContentRepositoryBase : IContentRepository
     public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
         bool includeDraft = false,
+        int limit = 20,
+        int offset = 0,
         CancellationToken ct = default)
     {
-        var cacheKey = $"section:{sectionName}:{includeDraft}";
+        var cacheKey = $"section:{sectionName}:{includeDraft}:{limit}:{offset}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
-            return await GetBySectionInternalAsync(sectionName, includeDraft, ct);
+            entry.SetPriority(CacheItemPriority.Normal);
+            return await GetBySectionInternalAsync(sectionName, includeDraft, limit, offset, ct);
         }) ?? [];
     }
 
@@ -215,14 +233,20 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     protected abstract Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
         bool includeDraft,
+        int limit,
+        int offset,
         CancellationToken ct);
 
     /// <summary>
     /// Internal implementation for getting content by collection.
+    /// Optionally filters by subcollection.
     /// </summary>
     protected abstract Task<IReadOnlyList<ContentItem>> GetByCollectionInternalAsync(
         string collectionName,
+        string? subcollectionName,
         bool includeDraft,
+        int limit,
+        int offset,
         CancellationToken ct);
 
     /// <summary>
@@ -231,6 +255,8 @@ public abstract class ContentRepositoryBase : IContentRepository
     protected abstract Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
         string sectionName,
         bool includeDraft,
+        int limit,
+        int offset,
         CancellationToken ct);
 
     /// <summary>

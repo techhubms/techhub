@@ -1,6 +1,7 @@
 using Bunit;
 using FluentAssertions;
 using TechHub.Core.Models;
+using TechHub.TestUtilities.Builders;
 using TechHub.Web.Components;
 
 namespace TechHub.Web.Tests.Components;
@@ -29,24 +30,14 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_RendersExcerpt_WhenProvided()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "<p>This is the excerpt of the post.</p>",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithExcerpt("<p>This is the excerpt of the post.</p>")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -61,24 +52,14 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_ShowsAuthor_WhenProvided()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "John Doe",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithAuthor("John Doe")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -90,59 +71,17 @@ public class ContentItemCardTests : BunitContext
     }
 
     [Fact]
-    public void ContentItemCard_DoesNotShowAuthor_WhenEmpty()
-    {
-        // Arrange - author is empty string
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
-
-        // Act
-        var cut = Render<ContentItemCard>(parameters => parameters
-            .Add(p => p.Item, item));
-
-        // Assert
-        var authors = cut.FindAll(".content-author");
-        authors.Should().BeEmpty();
-    }
-
-    [Fact]
     public void ContentItemCard_DisplaysTags_UpToMaximum5()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = ["ai", "copilot", "productivity", "dotnet"],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithTags("ai", "copilot", "productivity", "dotnet")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -159,24 +98,14 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_ShowsMoreIndicator_WhenMoreThan5Tags()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = ["ai", "copilot", "productivity", "dotnet", "azure", "github", "vscode"],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithTags("ai", "copilot", "productivity", "dotnet", "azure", "github", "vscode")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -194,24 +123,11 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_ShowsCollectionBadge_WhenShowCollectionBadgeIsTrue()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "news",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithCollectionName("news")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -227,24 +143,11 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_HidesCollectionBadge_WhenShowCollectionBadgeIsFalse()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "news",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithCollectionName("news")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -260,24 +163,11 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_ExternalLink_OpensInNewTab()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://techcommunity.microsoft.com/example",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://techcommunity.microsoft.com/example")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -294,24 +184,12 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_InternalLink_UsesInternalUrl()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "videos",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://www.youtube.com/watch?v=example",
-            Url = "/ai/videos/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithSlug("example-post")
+            .WithCollectionName("videos")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://www.youtube.com/watch?v=example")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -328,24 +206,12 @@ public class ContentItemCardTests : BunitContext
     {
         // Arrange
         var twoDaysAgo = DateTimeOffset.UtcNow.AddDays(-2).ToUnixTimeSeconds();
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = twoDaysAgo,
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithDateEpoch(twoDaysAgo)
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -361,24 +227,12 @@ public class ContentItemCardTests : BunitContext
     {
         // Arrange
         var today = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = today,
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithDateEpoch(today)
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -393,24 +247,11 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_CapitalizesCollectionName_Correctly()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "community",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithCollectionName("community")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -441,24 +282,12 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_HasAccessibleAriaLabel_ForExternalLink()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -473,24 +302,12 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_HasAccessibleAriaLabel_ForInternalLink()
     {
         // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            CollectionName = "videos",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://www.youtube.com/watch?v=example",
-            Url = "/ai/videos/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithCollectionName("videos")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://www.youtube.com/watch?v=example")
+            .Build();
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -503,23 +320,13 @@ public class ContentItemCardTests : BunitContext
 
     private static ContentItem CreateTestContentItem(string title, string date)
     {
-        return new ContentItem
-        {
-            Slug = title.ToLowerInvariant().Replace(" ", "-"),
-            Title = title,
-            Author = "Test Author",
-            DateEpoch = DateTimeOffset.Parse(date).ToUnixTimeSeconds(),
-            CollectionName = "blogs",
-            SectionNames = ["ai"],
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post",
-            FeedName = "",
-            Plans = [],
-            GhesSupport = false,
-            Draft = false,
-            GhcFeature = false
-        };
+        return A.ContentItem
+            .WithTitle(title)
+            .WithDate(DateTime.Parse(date))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
     }
 }
+

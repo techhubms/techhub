@@ -26,6 +26,7 @@ section_names:
 - github-copilot
 - security
 primary_section: github-copilot
+feed_name: TechHub
 ---
 Xpirit Magazine 16 explores the rapid evolution of AI, security, and cloud innovation. This issue features practical guides on prompt engineering, Blazor, OAuth PKCE, sustainable software, DDoS protection, Copilot adoption, and more—offering actionable insights for developers and technology leaders.
 <!--excerpt_end-->

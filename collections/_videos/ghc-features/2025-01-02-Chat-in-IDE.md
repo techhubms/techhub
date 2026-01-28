@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/TorMsn9bjLY
 title: Chat in IDE
 author: Liuba Gonta
@@ -14,6 +14,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Chat in IDE feature. Communicate with Copilot directly within your IDE for instant assistance. You can have multi turn conversations with Copilot on things in your code, or ask it questions on things surrounding your code, like 'how do I do this in Python', or 'how do I run the unit tests from my terminal'.<!--excerpt_end-->
 

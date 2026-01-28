@@ -26,7 +26,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week's tech roundup, where advancements in AI automation and modernization continue to impact cloud, developer, and enterprise ecosystems. GitHub Copilot continues its shift from a code completion solution to an agentic workflow platform, anchored on the Model Context Protocol (MCP) for open, reusable automation across IDE and CLI environments. The release of updated models, including GPT-5-Codex and Claude Opus 4.1, expands developer flexibility, while Copilot adds general availability for coding agents, CLI modernization, and improved support for SQL and enterprise applications—driving more collaborative and extensible development practices.
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/ri8EG4-rM9A
 title: Ice Breakers
 author: Randy Pagels
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Ice Breakers feature. Generate starter templates or boilerplate code to jump-start development.<!--excerpt_end-->
 

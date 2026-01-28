@@ -66,27 +66,16 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
         // Map collection configurations to Collection models
         // The key in the Collections dictionary is the collection name
         var collections = config.Collections
-            .Select(kvp => new Collection
+            .Select(kvp =>
             {
-                Title = kvp.Value.Title,
-                Name = kvp.Key, // Use the dictionary key as the collection name
-                Url = kvp.Value.Url,
-                Description = kvp.Value.Description,
-                IsCustom = kvp.Value.Custom,
                 // Look up display name from global config, fallback to collection title
-                DisplayName = collectionDisplayNames.TryGetValue(kvp.Key.ToLowerInvariant(), out var displayName)
-                    ? displayName
-                    : kvp.Value.Title
+                var displayName = collectionDisplayNames.TryGetValue(kvp.Key.ToLowerInvariant(), out var name)
+                    ? name
+                    : kvp.Value.Title;
+                return new Collection(kvp.Key, kvp.Value.Title, kvp.Value.Url, kvp.Value.Description, displayName, kvp.Value.Custom);
             })
             .ToList();
 
-        return new Section
-        {
-            Name = sectionName, // Use the section key as the name
-            Title = config.Title,
-            Description = config.Description,
-            Url = config.Url,
-            Collections = collections
-        };
+        return new Section(sectionName, config.Title, config.Description, config.Url, collections);
     }
 }

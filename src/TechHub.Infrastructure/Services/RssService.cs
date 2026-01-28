@@ -1,5 +1,7 @@
 using System.Text;
 using System.Xml;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
@@ -10,10 +12,17 @@ namespace TechHub.Infrastructure.Services;
 /// </summary>
 public class RssService : IRssService
 {
+    private readonly AppSettings _settings;
     private const string SiteTitle = "Tech Hub";
     private const string SiteUrl = "https://tech.hub.ms";
     private const string Language = "en-us";
     private const int MaxItemsInFeed = 50;
+
+    public RssService(IOptions<AppSettings> settings)
+    {
+        ArgumentNullException.ThrowIfNull(settings);
+        _settings = settings.Value;
+    }
 
     /// <inheritdoc/>
     public Task<RssChannel> GenerateSectionFeedAsync(
@@ -62,9 +71,13 @@ public class RssService : IRssService
 
         var rssItems = sortedItems.Select(CreateRssItem).ToList();
 
+        var collectionTitle = _settings.Content.CollectionDisplayNames.TryGetValue(collectionName, out var displayName)
+            ? displayName
+            : collectionName;
+
         var channel = new RssChannel
         {
-            Title = $"{SiteTitle} - {FormatCollectionTitle(collectionName)}",
+            Title = $"{SiteTitle} - {collectionTitle}",
             Description = $"Latest {collectionName} from {SiteTitle}",
             Link = $"{SiteUrl}/all/{collectionName}",
             Language = Language,
@@ -131,9 +144,10 @@ public class RssService : IRssService
                     xmlWriter.WriteElementString("author", item.Author);
                 }
 
-                foreach (var sectionName in item.SectionNames)
+                // Write tags as categories
+                foreach (var category in item.Categories)
                 {
-                    xmlWriter.WriteElementString("category", sectionName);
+                    xmlWriter.WriteElementString("category", category);
                 }
 
                 xmlWriter.WriteEndElement(); // </item>
@@ -150,35 +164,16 @@ public class RssService : IRssService
 
     private static RssItem CreateRssItem(ContentItem item)
     {
-        // External collections (news, blogs, community) link to original source
-        // Internal collections (videos, roundups, custom) link to our site
-        var isExternal = item.CollectionName is "news" or "blogs" or "community";
-        var link = isExternal && !string.IsNullOrWhiteSpace(item.ExternalUrl)
-            ? item.ExternalUrl
-            : $"{SiteUrl}/{item.CollectionName}/{item.Slug}";
-
         return new RssItem
         {
             Title = item.Title,
             Description = item.Excerpt,
-            Link = link,
-            Guid = link,
+            Link = item.GetHref(),
+            Guid = item.GetHref(),
             PubDate = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch),
             Author = item.Author,
-            SectionNames = item.SectionNames
+            Categories = item.Tags
         };
     }
 
-    private static string FormatCollectionTitle(string collectionName)
-    {
-        return collectionName switch
-        {
-            "news" => "News",
-            "videos" => "Videos",
-            "community" => "Community",
-            "blogs" => "Blogs",
-            "roundups" => "Roundups",
-            _ => collectionName.ToUpperInvariant()
-        };
-    }
 }

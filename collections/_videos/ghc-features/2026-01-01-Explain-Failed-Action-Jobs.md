@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Explain Failed Action Jobs
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Explain Failed Action Jobs feature. Get help understanding and fixing failed GitHub Actions<!--excerpt_end-->
 

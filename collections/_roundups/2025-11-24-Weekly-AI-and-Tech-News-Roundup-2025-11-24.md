@@ -21,7 +21,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week's technology news roundup. This edition focuses on agent-based automation, security improvements, and updates for developers. Recent releases include new agent-driven coding features, more IDE integrations, and expanded organizational controls within GitHub Copilot, further supporting productivity, code quality, and migration automation. On the AI and infrastructure front, Azure and Microsoft Fabric now provide updated compute options, streamlined data engineering tools, and more practical MLops, supporting reliable, scalable, and productive AI solutions.
 

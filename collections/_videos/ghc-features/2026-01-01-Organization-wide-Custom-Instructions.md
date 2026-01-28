@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Organization-wide Custom Instructions
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Organization-wide Custom Instructions feature. Set coding standards and guidelines applied across entire organization<!--excerpt_end-->
 

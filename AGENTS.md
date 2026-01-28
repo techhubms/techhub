@@ -29,40 +29,46 @@
 
 #### ✅ Always Do
 
-- [ ] Follow the 10-step workflow in order
-- [ ] Write tests BEFORE implementation (TDD)
-- [ ] Prefer tools in this order: MCP tools → Built-in tools → CLI
-- [ ] Check for errors after editing files (`get_errors` tool)
-- [ ] Run tests after code changes
-- [ ] Fix all linter issues
-- [ ] Read domain-specific AGENTS.md before editing code in that domain
-- [ ] Store temp files in `.tmp/`
-- [ ] Use PowerShell for scripts (save as `.ps1`, then execute)
-- [ ] Follow timezone standard: `Europe/Brussels`
-- [ ] Server-side render all content
-- [ ] Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
-- [ ] Be direct and concise - no filler phrases
+- [ ] Always follow the 10-step workflow in order
+- [ ] Always write tests BEFORE implementation (TDD)
+- [ ] Always prefer tools in this order: MCP tools → Built-in tools → CLI
+- [ ] Always check for errors after editing files (`get_errors` tool)
+- [ ] Always run tests after code changes
+- [ ] Always fix all linter issues
+- [ ] Always read domain-specific AGENTS.md before editing code in that domain
+- [ ] Always store temp files in `.tmp/`
+- [ ] Always use PowerShell for scripts (save as `.ps1`, then execute)
+- [ ] Always follow timezone standard: `Europe/Brussels`
+- [ ] Always server-side render all content
+- [ ] Always follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
+- [ ] Always be direct and concise - no filler phrases
+- [ ] Always use `Run` function (from TechHubRunner.psm1) for all build/test/run operations
+- [ ] Always monitor `Run` with `get_terminal_output` repeatedly until "This terminal is now free to use"
+- [ ] Always wait for "This terminal is now free to use" before executing ANY other commands in that terminal
 
 #### ⚠️ Ask First
 
-- [ ] Configuration changes (package.json, .csproj, appsettings.json)
-- [ ] Breaking changes to public APIs
-- [ ] Adding new dependencies
-- [ ] Cross-domain changes (API + Web + Infrastructure)
-- [ ] Significant refactoring
+- [ ] Ask first before making configuration changes (package.json, .csproj, appsettings.json)
+- [ ] Ask first before making breaking changes to public APIs
+- [ ] Ask first before adding new dependencies
+- [ ] Ask first before making cross-domain changes (API + Web + Infrastructure)
+- [ ] Ask first before making significant refactoring
 
 #### 🚫 Never Do
 
-- [ ] Skip the 10-step workflow
-- [ ] Write implementation before tests
-- [ ] Skip E2E tests for UI changes
-- [ ] Use `| head`, `| tail`, `Select-Object -Last` (blocks output)
-- [ ] Paste scripts into terminal (save as file first)
-- [ ] Commit secrets or API keys
-- [ ] Hardcode section/collection data
-- [ ] Assume UTC (use Europe/Brussels)
-- [ ] Swallow exceptions without logging
-- [ ] Rename identifiers without checking ALL occurrences
+- [ ] Never skip the 10-step workflow
+- [ ] Never write implementation before tests
+- [ ] Never skip E2E tests for UI changes
+- [ ] Never use `| head`, `| tail`, `Select-Object -Last` (blocks output)
+- [ ] Never paste scripts into terminal (save as file first)
+- [ ] Never commit secrets or API keys
+- [ ] Never hardcode section/collection data
+- [ ] Never assume UTC (use Europe/Brussels)
+- [ ] Never swallow exceptions without logging
+- [ ] Never rename identifiers without checking ALL occurrences
+- [ ] Never run `Start-Sleep` or other commands in terminal executing `Run` before it completes
+- [ ] Never execute multiple commands in same terminal before `Run` finishes
+- [ ] Never use `dotnet test` directly for E2E tests (use `Run -TestProject E2E.Tests` instead)
 
 **Step 1 Checklist**:
 
@@ -174,7 +180,6 @@
 **How to Verify**:
 
 - [ ] Start website: `Run -WithoutTests` (runs as background process)
-- [ ] Use `get_terminal_output` repeatedly until you see "This terminal is now free to use". Do NOT execute any other commands in the terminal until that moment.
 - [ ] Use Playwright MCP tools for browser testing
 - [ ] Document current behavior
 
@@ -197,7 +202,6 @@
 
 1. Start with clean slate:
    - [ ] Run ALL tests first: `Run`
-   - [ ] Use `get_terminal_output` repeatedly until you see "This terminal is now free to use". Do NOT execute any other commands in the terminal until that moment.
    - [ ] Fix any broken tests before proceeding
 
 2. Write failing tests:

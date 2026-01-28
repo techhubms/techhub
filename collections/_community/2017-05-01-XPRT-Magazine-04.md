@@ -25,6 +25,7 @@ section_names:
 - devops
 - security
 primary_section: coding
+feed_name: TechHub
 ---
 XPRT Magazine 04 explores serverless computing, Azure Functions, modern IT containerization, cloud-native Xamarin apps, Auth0 authentication, backup and restore in Azure Service Fabric, and more. This issue provides practical guidance for building scalable, resilient, and modern cloud solutions.
 <!--excerpt_end-->

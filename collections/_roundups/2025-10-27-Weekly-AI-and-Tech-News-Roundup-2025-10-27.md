@@ -22,7 +22,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s Tech Roundup, where updates in automation, developer capabilities, and security show how technology is evolving. GitHub Copilot introduces improvements in model speed, multi-model selection, and stronger IDE integration—helping developers work faster and with increased context. Step-by-step guides and community examples demonstrate how agentic workflows are becoming practical, with applications ranging from cloud migration to creative open-source solutions.
 

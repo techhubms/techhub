@@ -22,7 +22,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s technology roundup, where updated AI capabilities join improvements in developer tools, cloud infrastructure, and security. A key area is the ongoing integration of AI agents into developer workflows—GitHub Copilot now enables model selection, multi-agent orchestration, tailored automation, and added security options across platforms. Azure introduces new features for Kubernetes networking, service group management, and hybrid identity, helping organizations simplify operations and meet compliance benchmarks.
 

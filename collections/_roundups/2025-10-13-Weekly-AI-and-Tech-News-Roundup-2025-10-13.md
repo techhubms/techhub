@@ -22,7 +22,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to the weekly tech roundup, where AI agents and automation update how developers work across cloud platforms, coding tools, and data engineering. GitHub Copilot added more agent-driven capabilities, new model options, and deeper integrations with IDEs, terminals, and mobile—helping teams code, collaborate, and troubleshoot with improved speed. Updates to Visual Studio Code and Copilot CLI, alongside new tutorials, showcase how Copilot supports onboarding, accessibility, and community-driven automation efforts.
 

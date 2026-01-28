@@ -115,7 +115,7 @@
 
                                     @if (isAvailable)
                                     {
-                                        <a href="@feature.Url" class="card">
+                                        <a href="@feature.GetHref(SectionName)" class="card">
                                             <div class="card-header">
                                                 <h3 id="@featureId" class="card-title">@feature.Title</h3>
                                             </div>
@@ -155,6 +155,7 @@
 }
 
 @code {
+    private const string SectionName = "github-copilot";
     private FeaturesPageData? pageData;
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
     private List<TechHub.Core.Models.ContentItem> filteredVideoItems = new();

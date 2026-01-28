@@ -34,30 +34,26 @@ public class ContentItemsGridTests : BunitContext
         _sectionCache = new SectionCache();
         _sectionCache.Initialize(
         [
-            new Section
-            {
-                Name = "github-copilot",
-                Title = "GitHub Copilot",
-                Description = "GitHub Copilot content",
-                Url = "/github-copilot",
-                Collections =
+            new Section(
+                "github-copilot",
+                "GitHub Copilot",
+                "GitHub Copilot content",
+                "/github-copilot",
                 [
-                    new Collection { Name = "news", Title = "News", Url = "/github-copilot/news", Description = "News", DisplayName = "News" },
-                    new Collection { Name = "community", Title = "Community", Url = "/github-copilot/community", Description = "Community", DisplayName = "Community Posts" },
-                    new Collection { Name = "videos", Title = "Videos", Url = "/github-copilot/videos", Description = "Videos", DisplayName = "Videos" }
+                    new Collection("news", "News", "/github-copilot/news", "News", "News", false),
+                    new Collection("community", "Community", "/github-copilot/community", "Community", "Community Posts", false),
+                    new Collection("videos", "Videos", "/github-copilot/videos", "Videos", "Videos", false)
                 ]
-            },
-            new Section
-            {
-                Name = "all",
-                Title = "All",
-                Description = "All content",
-                Url = "/all",
-                Collections =
+            ),
+            new Section(
+                "all",
+                "All",
+                "All content",
+                "/all",
                 [
-                    new Collection { Name = "news", Title = "News", Url = "/all/news", Description = "All news", DisplayName = "News" }
+                    new Collection("news", "News", "/all/news", "All news", "News", false)
                 ]
-            }
+            )
         ]);
 
         Services.AddSingleton(_mockApiClient.Object);

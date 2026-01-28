@@ -11,5 +11,6 @@ public record RssItem
     public required string Guid { get; init; }
     public required DateTimeOffset PubDate { get; init; }
     public string? Author { get; init; }
-    public required IReadOnlyList<string> SectionNames { get; init; }
+    public IReadOnlyList<string> Categories { get; init; } = [];
+
 }

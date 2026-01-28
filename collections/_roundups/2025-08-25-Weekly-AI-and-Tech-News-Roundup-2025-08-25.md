@@ -25,7 +25,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s roundup, where AI, cloud platforms, and developer-focused tools continue to shape developer workflows. GitHub Copilot leads with new premium models, improved workflow automation, and enhanced customization for both individual and organizational users. Teams now have more tools to manage Copilot and adopt Spaces for context-driven collaboration, along with better diagnostics in Visual Studio and .NET environments.
 

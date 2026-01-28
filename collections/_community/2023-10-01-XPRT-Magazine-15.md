@@ -24,6 +24,7 @@ section_names:
 - devops
 - security
 primary_section: ai
+feed_name: TechHub
 ---
 Xpirit Magazine 15 brings together international voices to share knowledge on AI-driven content creation, sustainable software engineering, DevOps journeys, cloud security, value stream mapping, and more. This issue features hands-on guides, real-world stories, and technical deep-dives for modern software professionals.
 <!--excerpt_end-->

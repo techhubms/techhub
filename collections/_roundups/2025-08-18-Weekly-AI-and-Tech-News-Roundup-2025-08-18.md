@@ -25,7 +25,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 Welcome to this week’s tech roundup. AI integration, cloud platforms, and developer tools continue to advance rapidly, with plenty of practical news across the board. GitHub Copilot now uses OpenAI’s GPT-5 and its lighter “Mini” model for more thoughtful automation, smarter code suggestions, and secure, team-oriented workflows on Visual Studio, VS Code, JetBrains, Xcode, and Eclipse. A new Model Context Protocol (MCP) is building a standard for multi-context development automation, while Copilot is broadening—from in-editor repository chat to deep refactoring and modernization tools for businesses.
 

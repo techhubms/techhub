@@ -7,67 +7,158 @@ namespace TechHub.Core.Models;
 /// </summary>
 public record ContentItem
 {
-    public required string Slug { get; init; }
-    public required string Title { get; init; }
-    public required string Author { get; init; }
-    public required long DateEpoch { get; init; }
-    public required string CollectionName { get; init; }
-    public string? SubcollectionName { get; init; }
-    public required string FeedName { get; init; }
+    public string Slug { get; }
+    public string Title { get; }
+    public string Author { get; }
+    public long DateEpoch { get; }
+    public string CollectionName { get; }
+    public string? SubcollectionName { get; }
+    public string FeedName { get; }
     
     /// <summary>
-    /// Section names this content belongs to.
-    /// </summary>
-    public required IReadOnlyList<string> SectionNames { get; init; }
-    
-    /// <summary>
-    /// Primary section name - computed from SectionNames using priority order.
+    /// Primary section name - stored in frontmatter and database.
+    /// Computed from section_names using priority order during content sync.
     /// Priority: github-copilot > ai > ml > coding > azure > devops > security.
-    /// This is a computed property - no need to set it in frontmatter or database.
     /// </summary>
-    public string PrimarySectionName => ComputePrimarySectionName(SectionNames ?? []);
+    public string PrimarySectionName { get; }
     
-    public required IReadOnlyList<string> Tags { get; init; }
-    public required string Excerpt { get; init; }
-    public required string ExternalUrl { get; init; }
-    public required string Url { get; init; }
+    public IReadOnlyList<string> Tags { get; }
+    public string Excerpt { get; }
+    public string ExternalUrl { get; }
 
     /// <summary>
     /// Raw markdown content (from file or database).
     /// Used internally for rendering. Not serialized to API responses.
     /// </summary>
     [System.Text.Json.Serialization.JsonIgnore]
-    public string? Content { get; init; }
+    public string? Content { get; }
 
     /// <summary>
     /// Full rendered HTML content (only populated for detail views).
     /// Null for list views, populated for detail views.
     /// </summary>
-    public string? RenderedHtml { get; init; }
+    public string? RenderedHtml { get; }
 
     /// <summary>
     /// GitHub Copilot subscription plans this feature is available in (e.g., "Free", "Pro", "Business", "Pro+", "Enterprise")
     /// Used for filtering features by plan tier on the Features page
     /// </summary>
-    public required IReadOnlyList<string> Plans { get; init; }
+    public IReadOnlyList<string> Plans { get; }
 
     /// <summary>
     /// Indicates whether this feature is available in GitHub Enterprise Server (GHES)
     /// Used for filtering features with GHES support
     /// </summary>
-    public required bool GhesSupport { get; init; }
+    public bool GhesSupport { get; }
 
     /// <summary>
     /// Indicates whether this content is a draft (not yet released)
     /// Draft content shows as "Coming Soon" on the Features page
     /// </summary>
-    public required bool Draft { get; init; }
+    public bool Draft { get; }
 
-    /// <summary>
-    /// Indicates whether this is a GitHub Copilot feature (from ghc-features subcollection)
-    /// Used to identify content that should appear on the GitHub Copilot Features page
-    /// </summary>
-    public required bool GhcFeature { get; init; }
+
+
+    public ContentItem(
+        string slug,
+        string title,
+        string author,
+        long dateEpoch,
+        string collectionName,
+        string feedName,
+        string primarySectionName,
+        IReadOnlyList<string> tags,
+        string excerpt,
+        string externalUrl,
+        bool draft,
+        string? subcollectionName = null,
+        IReadOnlyList<string>? plans = null,
+        bool ghesSupport = false,
+        string? content = null,
+        string? renderedHtml = null)
+    {
+        // Validate all required properties
+        if (string.IsNullOrWhiteSpace(slug))
+            throw new ArgumentException("Content slug cannot be empty", nameof(slug));
+
+        if (string.IsNullOrWhiteSpace(title))
+            throw new ArgumentException("Content title cannot be empty", nameof(title));
+
+        if (string.IsNullOrWhiteSpace(author))
+            throw new ArgumentException("Content author cannot be empty", nameof(author));
+
+        if (dateEpoch <= 0)
+            throw new ArgumentException("Date epoch must be a valid Unix timestamp", nameof(dateEpoch));
+
+        if (string.IsNullOrWhiteSpace(collectionName))
+            throw new ArgumentException("Collection name cannot be empty", nameof(collectionName));
+
+        if (string.IsNullOrWhiteSpace(feedName))
+            throw new ArgumentException("Feed name cannot be empty", nameof(feedName));
+
+        if (string.IsNullOrWhiteSpace(primarySectionName))
+            throw new ArgumentException(
+                $"Primary section name is required. Slug: {slug}, Title: {title}, Collection: {collectionName}",
+                nameof(primarySectionName));
+
+        if (tags == null || tags.Count == 0)
+            throw new ArgumentException(
+                $"Tags cannot be empty. Slug: {slug}, Title: {title}",
+                nameof(tags));
+
+        ArgumentNullException.ThrowIfNull(excerpt);
+
+        if (excerpt.Length > 1000)
+            throw new ArgumentException("Excerpt should not exceed 1000 characters", nameof(excerpt));
+
+        // ExternalUrl is required for all collections except roundups
+        if (collectionName != "roundups" && string.IsNullOrWhiteSpace(externalUrl))
+            throw new ArgumentException(
+                $"ExternalUrl is required for collection '{collectionName}'. Slug: {slug}, Title: {title}",
+                nameof(externalUrl));
+
+        // Plans and GhesSupport are ONLY for ghc-features subcollection
+        if (subcollectionName == "ghc-features")
+        {
+            if (plans == null || plans.Count == 0)
+                throw new ArgumentException(
+                    $"Plans are required for ghc-features subcollection. Slug: {slug}, Title: {title}",
+                    nameof(plans));
+        }
+        else
+        {
+            // For non-ghc-features, Plans/GhesSupport should NOT be set
+            if (plans != null && plans.Count > 0)
+                throw new ArgumentException(
+                    $"Plans should only be set for ghc-features subcollection. Slug: {slug}, Subcollection: {subcollectionName}",
+                    nameof(plans));
+
+            if (ghesSupport)
+                throw new ArgumentException(
+                    $"GhesSupport should only be set for ghc-features subcollection. Slug: {slug}, Subcollection: {subcollectionName}",
+                    nameof(ghesSupport));
+        }
+
+        if (renderedHtml != null && string.IsNullOrWhiteSpace(renderedHtml))
+            throw new ArgumentException("Rendered HTML cannot be empty when set", nameof(renderedHtml));
+
+        Slug = slug;
+        Title = title;
+        Author = author;
+        DateEpoch = dateEpoch;
+        CollectionName = collectionName;
+        SubcollectionName = subcollectionName;
+        FeedName = feedName;
+        PrimarySectionName = primarySectionName;
+        Tags = tags;
+        Excerpt = excerpt;
+        ExternalUrl = externalUrl;
+        Content = content;
+        RenderedHtml = renderedHtml;
+        Plans = plans ?? Array.Empty<string>();
+        GhesSupport = ghesSupport;
+        Draft = draft;
+    }
 
     /// <summary>
     /// Determines if this item links to an external source (vs linking internally to our site).
@@ -78,10 +169,33 @@ public record ContentItem
         CollectionName is "news" or "blogs" or "community";
 
     /// <summary>
-    /// Gets the target URL for links (external URL for items that link externally, internal URL otherwise)
+    /// Gets the contextual href for this content item.
+    /// For items that link externally (news, blogs, community), returns the external URL.
+    /// For internal items, when sectionOverride is provided (e.g., "ai"), generates URL like /ai/collection/slug.
+    /// Otherwise uses PrimarySectionName: /primary-section/collection/slug.
+    /// This allows URLs to be contextual to the current section being browsed.
     /// </summary>
-    public string GetHref() =>
-        LinksExternally() ? ExternalUrl : Url;
+    /// <param name="sectionOverride">Optional section name to use instead of PrimarySectionName</param>
+    /// <returns>External URL for external links, or URL path like /section/collection/slug for internal links</returns>
+    public string GetHref(string? sectionOverride = null)
+    {
+        // For items that link externally, always return the external URL
+        if (LinksExternally())
+        {
+            return ExternalUrl;
+        }
+        
+        // For internal links, build contextual URL
+        var section = sectionOverride ?? PrimarySectionName;
+        
+        // Use subcollection in URL if present (e.g., /github-copilot/ghc-features/slug)
+        // Otherwise use collection (e.g., /ai/blogs/slug)
+        var collection = !string.IsNullOrWhiteSpace(SubcollectionName) 
+            ? SubcollectionName 
+            : CollectionName;
+        
+        return $"/{section}/{collection}/{Slug}".ToLowerInvariant();
+    }
 
     /// <summary>
     /// Gets the link target attribute (opens in new tab for items that link externally)
@@ -111,69 +225,6 @@ public record ContentItem
     /// Computed property: Date as DateTime (UTC)
     /// </summary>
     public DateTime DateUtc => DateTimeOffset.FromUnixTimeSeconds(DateEpoch).UtcDateTime;
-
-    /// <summary>
-    /// Validates that all required properties are correctly formatted (for detail views)
-    /// </summary>
-    public void Validate()
-    {
-        if (string.IsNullOrWhiteSpace(Slug))
-        {
-            throw new ArgumentException("Content slug cannot be empty", nameof(Slug));
-        }
-
-        if (string.IsNullOrWhiteSpace(Title))
-        {
-            throw new ArgumentException("Content title cannot be empty", nameof(Title));
-        }
-
-        if (DateEpoch <= 0)
-        {
-            throw new ArgumentException("Date epoch must be a valid Unix timestamp", nameof(DateEpoch));
-        }
-
-        if (SectionNames.Count == 0)
-        {
-            throw new ArgumentException("Content must have at least one section", nameof(SectionNames));
-        }
-
-        if (RenderedHtml != null && string.IsNullOrWhiteSpace(RenderedHtml))
-        {
-            throw new ArgumentException("Rendered HTML cannot be empty when set", nameof(RenderedHtml));
-        }
-
-        if (Excerpt.Length > 1000)
-        {
-            throw new ArgumentException("Excerpt should not exceed 1000 characters", nameof(Excerpt));
-        }
-    }
-
-    /// <summary>
-    /// Determines the primary section URL based on section names and collection.
-    /// Returns the PrimarySectionName property which is computed from SectionNames.
-    /// </summary>
-    public string GetPrimarySectionUrl()
-    {
-        return PrimarySectionName;
-    }
-
-    /// <summary>
-    /// Gets the content item URL within a specific section
-    /// </summary>
-    /// <param name="sectionUrl">The section URL path (e.g., "ai", "github-copilot" or "/ai", "/github-copilot")</param>
-    /// <returns>Full URL path for this item in the specified section</returns>
-    public string GetUrlInSection(string sectionUrl)
-    {
-        ArgumentNullException.ThrowIfNull(sectionUrl);
-
-        // Ensure section URL starts with slash
-        var normalizedSectionUrl = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
-
-        // If item has a subcollection, use that for the URL path (e.g., /github-copilot/vscode-updates/slug)
-        // Otherwise use the collection name (e.g., /github-copilot/videos/slug)
-        var pathSegment = SubcollectionName ?? CollectionName;
-        return $"{normalizedSectionUrl}/{pathSegment}/{Slug}";
-    }
 
     /// <summary>
     /// Section priority order (matches the menubar order).

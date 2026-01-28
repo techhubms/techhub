@@ -714,6 +714,54 @@ function Run {
             Write-Info "Local environment - using 8 threads for faster execution"
             $env:XUNIT_MAX_PARALLEL_THREADS = 8
         }
+        
+        # Phase 1: Run API Performance tests first (warmup + performance validation)
+        Write-Host ""
+        Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
+        Write-Host "  Phase 1: API Performance Tests (warmup + validation)" -ForegroundColor Cyan
+        Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
+        Write-Host ""
+        
+        $apiPerfTestArgs = @(
+            "test",
+            $e2eTestProjectPath,
+            "--configuration", $configuration,
+            "--no-build",
+            "--settings", (Join-Path $workspaceRoot ".runsettings"),
+            "--logger", "console;verbosity=detailed",
+            "--blame-hang-timeout", "1m",
+            "--filter", "FullyQualifiedName~ApiPerformanceE2ETests"
+        )
+        
+        $apiPerfSuccess = Invoke-ExternalCommand "dotnet" $apiPerfTestArgs
+        
+        if (-not $apiPerfSuccess) {
+            Write-Host ""
+            Write-Host "════════════════════════════════════════" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ API PERFORMANCE TESTS FAILED                              ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  API performance degradation detected or endpoints failing.  ║" -ForegroundColor Red
+            Write-Host "║  Fix API issues before running web tests.                    ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            return $false
+        }
+        
+        Write-Host ""
+        Write-Host "════════════════════════════════════════" -ForegroundColor Green
+        Write-Host ""
+        Write-Success "API Performance tests passed - APIs warmed up and validated"
+        Write-Host ""
+        
+        # Phase 2: Run remaining E2E tests (API + Web)
+        Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
+        Write-Host "  Phase 2: All E2E Tests (API + Web)" -ForegroundColor Cyan
+        Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
+        Write-Host ""
             
         $e2eTestArgs = @(
             "test",
@@ -750,7 +798,7 @@ function Run {
         Write-Host ""
         Write-Host "════════════════════════════════════════" -ForegroundColor Green
         Write-Host ""
-        Write-Success "E2E tests passed"
+        Write-Success "All E2E tests passed"
         return $true
     }
 

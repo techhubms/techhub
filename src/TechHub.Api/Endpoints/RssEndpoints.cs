@@ -50,18 +50,16 @@ internal static class RssEndpoints
         IContentRepository contentRepository,
         IRssService rssService)
     {
-        // Get all content items (exclude drafts from RSS feeds)
-        var allItems = await contentRepository.GetAllAsync(includeDraft: false);
+        // Get only the 50 most recent items for RSS feed (standard RSS practice)
+        var allItems = await contentRepository.GetAllAsync(includeDraft: false, limit: 50);
 
         // Create a virtual "Everything" section for the feed
-        var everythingSection = new Core.Models.Section
-        {
-            Name = "all",
-            Title = "Everything",
-            Url = "/",
-            Description = "All content from Tech Hub",
-            Collections = []
-        };
+        var everythingSection = new Core.Models.Section(
+            name: "all",
+            title: "Everything",
+            description: "All content from Tech Hub",
+            url: "/",
+            collections: []);
 
         var channel = await rssService.GenerateSectionFeedAsync(everythingSection, allItems);
         var xml = rssService.SerializeToXml(channel);
@@ -85,8 +83,8 @@ internal static class RssEndpoints
         }
 
         // Get content for this section using the section name (lowercase identifier)
-        // RSS feeds should exclude draft content
-        var items = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false);
+        // RSS feeds should exclude draft content and show only 50 most recent items
+        var items = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false, limit: 50);
         var channel = await rssService.GenerateSectionFeedAsync(section, items);
         var xml = rssService.SerializeToXml(channel);
 
@@ -95,9 +93,11 @@ internal static class RssEndpoints
 
     /// <summary>
     /// Gets RSS feed for a specific collection
+    /// Supports optional subcollection query parameter (e.g., ?subcollection=ghc-features)
     /// </summary>
     private static async Task<IResult> GetCollectionFeed(
         string collectionName,
+        string? subcollection,
         ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         IRssService rssService)
@@ -113,7 +113,7 @@ internal static class RssEndpoints
             return Results.NotFound();
         }
 
-        var items = await contentRepository.GetByCollectionAsync(collectionName, includeDraft: false);
+        var items = await contentRepository.GetByCollectionAsync(collectionName, subcollection, includeDraft: false, limit: 50, offset: 0);
         var channel = await rssService.GenerateCollectionFeedAsync(collectionName, items);
         var xml = rssService.SerializeToXml(channel);
 

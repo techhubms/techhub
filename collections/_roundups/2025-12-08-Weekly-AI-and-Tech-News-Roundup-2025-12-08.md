@@ -23,7 +23,8 @@ section_names:
 - coding
 - devops
 - security
-primary_section: all
+primary_section: github-copilot
+feed_name: TechHub
 ---
 This week's biggest updates include GitHub Copilot Custom Agents bringing DevOps and security automation to workflows with markdown-based definitions and vendor integrations like PagerDuty and JFrog, .NET 10's release at .NET Conf 2025 with support until 2028 featuring performance improvements and post-quantum cryptography, and Microsoft Foundry's expanded MCP platform with improved agent orchestration, compliance monitoring, and multi-cloud deployment capabilities. These three developments represent major shifts in AI-powered development tools, enterprise application frameworks, and intelligent agent ecosystems.<!--excerpt_end-->
 

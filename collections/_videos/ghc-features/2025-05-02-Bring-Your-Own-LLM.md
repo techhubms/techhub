@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/hFM9gtIzBMI
 title: Bring Your Own LLM
 author: Matt Olson
@@ -14,6 +14,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This video demonstrates GitHub Copilot's Bring Your Own LLM feature. A powerfull feature in the current insiders version of VS Code is to bring your own model to the chat conversation. You can use a local running model or connect with a remote model using your own API key.<!--excerpt_end-->
 

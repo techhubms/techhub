@@ -10,6 +10,7 @@ tags:
 section_names:
 - ml
 primary_section: ml
+feed_name: TechHub
 ---
 We build a Generatively Pretrained Transformer (GPT), following the paper "Attention is All You Need" and OpenAI's GPT-2 / GPT-3.<!--excerpt_end-->
 

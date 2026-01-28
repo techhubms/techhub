@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/xf6i-eOnQE4
 title: Model selection
 author: Liuba Gonta
@@ -17,6 +17,7 @@ section_names:
 - github-copilot
 - coding
 primary_section: github-copilot
+feed_name: TechHub
 ---
 In this comprehensive guide, Liuba explores the strategic use of different models in GitHub Copilot's chat interface through expert demonstrations. The video covers when and how to select the most appropriate model for various coding scenarios, providing practical insights that can improve your development workflow and code quality. Whether you're new to GitHub Copilot or looking to optimize your current usage, this tutorial offers valuable guidance on leveraging model selection effectively.<!--excerpt_end-->
 

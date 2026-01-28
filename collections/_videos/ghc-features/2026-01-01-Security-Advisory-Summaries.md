@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Security Advisory Summaries
 author: TBD
@@ -12,6 +12,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Security Advisory Summaries feature. AI-generated summaries of Dependabot security alerts<!--excerpt_end-->
 

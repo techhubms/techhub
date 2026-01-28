@@ -28,24 +28,15 @@ public class SectionTests : BunitContext
         var sectionCache = new SectionCache();
         sectionCache.Initialize(
         [
-            new TechHub.Core.Models.Section
-            {
-                Name = "ai",
-                Title = "Artificial Intelligence",
-                Description = "AI and machine learning content",
-                Url = "/ai",
-                Collections =
+            new TechHub.Core.Models.Section(
+                "ai",
+                "Artificial Intelligence",
+                "AI and machine learning content",
+                "/ai",
                 [
-                    new CollectionModel
-                    {
-                        Title = "News",
-                        Name = "news",
-                        Url = "/ai/news",
-                        Description = "Latest AI news",
-                        DisplayName = "News"
-                    }
+                    new CollectionModel("news", "News", "/ai/news", "Latest AI news", "News", false)
                 ]
-            }
+            )
         ]);
 
         mockApiClient
@@ -108,24 +99,15 @@ public class SectionTests : BunitContext
         var sectionCache = new SectionCache();
         sectionCache.Initialize(
         [
-            new TechHub.Core.Models.Section
-            {
-                Name = "ai",
-                Title = "Artificial Intelligence",
-                Description = "AI and machine learning content",
-                Url = "/ai",
-                Collections =
+            new TechHub.Core.Models.Section(
+                "ai",
+                "Artificial Intelligence",
+                "AI and machine learning content",
+                "/ai",
                 [
-                    new CollectionModel
-                    {
-                        Title = "News",
-                        Name = "news",
-                        Url = "/ai/news",
-                        Description = "Latest AI news",
-                        DisplayName = "News"
-                    }
+                    new CollectionModel("news", "News", "/ai/news", "Latest AI news", "News", false)
                 ]
-            }
+            )
         ]);
 
         mockApiClient

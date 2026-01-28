@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.RegularExpressions;
+using TechHub.Core.Models;
 using TechHub.Infrastructure.Services;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
@@ -79,21 +80,7 @@ internal sealed class Program
         ["events"] = ["Events"]
     };
 
-    /// <summary>
-    /// Section priority order (matches the menubar order).
-    /// These are lowercase section NAMES matching Section.Name and ContentItem.SectionNames.
-    /// Used to determine which section is "primary" when an item belongs to multiple sections.
-    /// </summary>
-    private static readonly string[] _sectionPriorityOrder =
-    [
-        "github-copilot",
-        "ai",
-        "ml",
-        "coding",
-        "azure",
-        "devops",
-        "security"
-    ];
+
 
     private static async Task<int> Main(string[] args)
     {
@@ -264,13 +251,13 @@ internal sealed class Program
         if (frontMatter.TryGetValue("tags", out var tagsObj))
         {
             var currentTags = GetListValue(frontMatter, "tags");
-            var sectionNames = GetListValue(frontMatter, "section_names");
+            var tagSectionNames = GetListValue(frontMatter, "section_names");
 
             // Build list of tags to remove based on actual section_names and collection
             var tagsToRemove = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
             // Add section display names for sections this item belongs to
-            foreach (var sectionName in sectionNames)
+            foreach (var sectionName in tagSectionNames)
             {
                 if (_sectionSlugToDisplayNames.TryGetValue(sectionName, out var displayNames))
                 {
@@ -396,11 +383,26 @@ internal sealed class Program
             changed = true;
         }
 
-        // 4j. Remove primary_section as a contentitem determines this dynamically
-        if (frontMatter.Remove("primary_section"))
+        // 4j. Add/update primary_section (computed from section_names using priority order)
+        var itemSectionNames = GetListValue(frontMatter, "section_names");
+        var computedPrimarySection = ContentItem.ComputePrimarySectionName(itemSectionNames);
+        
+        if (!frontMatter.TryGetValue("primary_section", out var existingPrimarySection) || 
+            existingPrimarySection?.ToString() != computedPrimarySection)
         {
+            frontMatter["primary_section"] = computedPrimarySection;
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("  ✓ Removed primary_section");
+            Console.WriteLine($"  ✓ Set primary_section = {computedPrimarySection}");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 4k. Add feed_name if missing (default to 'TechHub')
+        if (!frontMatter.ContainsKey("feed_name"))
+        {
+            frontMatter["feed_name"] = "TechHub";
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Added feed_name = TechHub");
             Console.ResetColor();
             changed = true;
         }
@@ -661,7 +663,7 @@ internal sealed class Program
 
     /// <summary>
     /// Determines the primary section name for a content item based on its section names and collection.
-    /// Uses the section priority order (matching the menubar order) to pick the highest-priority section.
+    /// Uses ContentItem.ComputePrimarySectionName with special handling for roundups.
     /// Special case: Roundups always belong to "all" section.
     /// </summary>
     /// <param name="sectionNames">List of lowercase section names (e.g., "ai", "github-copilot")</param>
@@ -675,21 +677,6 @@ internal sealed class Program
             return "all";
         }
 
-        if (sectionNames.Count == 0)
-        {
-            return "all";
-        }
-
-        // Find the first section that matches in priority order
-        foreach (var sectionName in _sectionPriorityOrder)
-        {
-            if (sectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
-            {
-                return sectionName; // Return lowercase name
-            }
-        }
-
-        // No match found, default to "all"
-        return "all";
+        return ContentItem.ComputePrimarySectionName(sectionNames);
     }
 }

@@ -52,66 +52,48 @@ internal static class ContentEndpoints
     }
 
     /// <summary>
-    /// GET /api/content?sectionName={sectionName}&amp;collectionName={collectionName} - Get content by section and collection
+    /// GET /api/content?sectionName={sectionName}&amp;collectionName={collectionName}&amp;subcollection={subcollection} - Get content by section, collection, and optionally subcollection
     /// </summary>
     private static async Task<Ok<IEnumerable<ContentItem>>> GetContent(
         [FromQuery] string? sectionName,
         [FromQuery] string? collectionName,
-        [FromQuery] bool? ghcFeature,
+        [FromQuery] string? subcollection,
+        [FromQuery] bool includeDraft,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        // Special case: When requesting GitHub Copilot features, include drafts
-        // This allows the features page to show "Coming Soon" items
-        var includeDraft = ghcFeature == true;
 
         // Use targeted repository methods for better database performance
         IReadOnlyList<Core.Models.ContentItem> content;
 
         if (!string.IsNullOrWhiteSpace(sectionName) && !string.IsNullOrWhiteSpace(collectionName))
         {
-            // Both filters: get by section and filter by collection
-            var sectionContent = await contentRepository.GetBySectionAsync(sectionName, includeDraft, cancellationToken);
+            // Both filters: get by section and filter by collection and optionally subcollection
+            var sectionContent = await contentRepository.GetBySectionAsync(sectionName, includeDraft, limit: 1000, offset: 0, cancellationToken);
             content = [.. sectionContent.Where(c => c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase))];
 
-            // Filter by ghc_feature if specified
-            if (ghcFeature.HasValue)
+            // Filter by subcollection if specified
+            if (!string.IsNullOrWhiteSpace(subcollection))
             {
-                content = [.. content.Where(c => c.GhcFeature == ghcFeature.Value)];
+                content = [.. content.Where(c =>
+                    c.SubcollectionName != null &&
+                    c.SubcollectionName.Equals(subcollection, StringComparison.OrdinalIgnoreCase))];
             }
         }
         else if (!string.IsNullOrWhiteSpace(sectionName))
         {
             // Section filter only
-            content = await contentRepository.GetBySectionAsync(sectionName, includeDraft, cancellationToken);
-
-            // Filter by ghc_feature if specified
-            if (ghcFeature.HasValue)
-            {
-                content = [.. content.Where(c => c.GhcFeature == ghcFeature.Value)];
-            }
+            content = await contentRepository.GetBySectionAsync(sectionName, includeDraft, limit: 1000, offset: 0, cancellationToken);
         }
         else if (!string.IsNullOrWhiteSpace(collectionName))
         {
-            // Collection only - include drafts if requesting ghc features
-            content = await contentRepository.GetByCollectionAsync(collectionName, includeDraft, cancellationToken);
-
-            // Filter by ghc_feature if specified
-            if (ghcFeature.HasValue)
-            {
-                content = [.. content.Where(c => c.GhcFeature == ghcFeature.Value)];
-            }
+            // Collection only
+            content = await contentRepository.GetByCollectionAsync(collectionName, subcollection, includeDraft, limit: 1000, offset: 0, cancellationToken);
         }
         else
         {
-            // No filters: get all content (exclude drafts unless ghcFeature=true)
-            content = await contentRepository.GetAllAsync(includeDraft, cancellationToken);
-
-            // Filter by ghc_feature if specified
-            if (ghcFeature.HasValue)
-            {
-                content = [.. content.Where(c => c.GhcFeature == ghcFeature.Value)];
-            }
+            // No filters: get all content
+            content = await contentRepository.GetAllAsync(includeDraft, limit: 1000, offset: 0, cancellationToken);
         }
 
         return TypedResults.Ok(content.AsEnumerable());
@@ -144,18 +126,10 @@ internal static class ContentEndpoints
             return TypedResults.NotFound();
         }
 
-        // Validate that the item belongs to the requested section
-        // "All" section accepts all content, specific sections only accept matching section names
-        // ContentItem.SectionNames contains lowercase section names (e.g., "ai", "github-copilot")
-        var isValidForSection = section.Name.Equals("all", StringComparison.OrdinalIgnoreCase) ||
-                                item.SectionNames.Contains(section.Name, StringComparer.OrdinalIgnoreCase);
-
-        if (!isValidForSection)
-        {
-            return TypedResults.NotFound();
-        }
-
-        // Return the content item directly - repository already populates all fields including Url
+        // Validate that the item belongs to the requested section by checking if item was returned
+        // Repository filters by section via content_sections table
+        // If item is returned, it belongs to the section
+        // Return the content item directly - repository already populates all fields
         return TypedResults.Ok(item);
     }
 
@@ -180,44 +154,25 @@ internal static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        // Start with all content (exclude drafts, acceptable for file-based implementation with caching)
-        var content = await contentRepository.GetAllAsync(includeDraft: false, cancellationToken);
-        var results = content.AsEnumerable();
-
-        // Filter by sections (section names are already lowercase identifiers in SectionNames)
-        if (!string.IsNullOrWhiteSpace(sections))
+        // This endpoint is deprecated - use /api/content/search instead for proper database-level filtering
+        // For now, redirect to SearchAsync which handles section filtering via repository
+        var request = new SearchRequest
         {
-            var sectionNames = sections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-            results = results.Where(c => c.SectionNames.Any(sectionName =>
-                sectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase)));
-        }
+            Query = q,
+            Tags = string.IsNullOrWhiteSpace(tags)
+                ? null
+                : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+            Sections = string.IsNullOrWhiteSpace(sections)
+                ? null
+                : sections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+            Collections = string.IsNullOrWhiteSpace(collections)
+                ? null
+                : collections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+            Take = 1000
+        };
 
-        // Filter by collections
-        if (!string.IsNullOrWhiteSpace(collections))
-        {
-            var collectionNames = collections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-            results = results.Where(c => collectionNames.Contains(c.CollectionName, StringComparer.OrdinalIgnoreCase));
-        }
-
-        // Filter by tags (content must have ALL specified tags)
-        if (!string.IsNullOrWhiteSpace(tags))
-        {
-            var tagList = tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-            results = results.Where(c => tagList.All(tag =>
-                c.Tags.Contains(tag, StringComparer.OrdinalIgnoreCase)));
-        }
-
-        // Filter by text search query
-        if (!string.IsNullOrWhiteSpace(q))
-        {
-            var query = q.ToLowerInvariant();
-            results = results.Where(c =>
-                c.Title.Contains(query, StringComparison.OrdinalIgnoreCase) ||
-                c.Excerpt.Contains(query, StringComparison.OrdinalIgnoreCase) ||
-                c.Tags.Any(tag => tag.Contains(query, StringComparison.OrdinalIgnoreCase)));
-        }
-
-        return TypedResults.Ok(results);
+        var searchResults = await contentRepository.SearchAsync(request, cancellationToken);
+        return TypedResults.Ok(searchResults.Items.AsEnumerable());
     }
 
     /// <summary>

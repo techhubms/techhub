@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Path-specific Custom Instructions
 author: TBD
@@ -13,6 +13,7 @@ section_names:
 - ai
 - github-copilot
 primary_section: github-copilot
+feed_name: TechHub
 ---
 This content demonstrates GitHub Copilot's Path-specific Custom Instructions feature. Define custom instructions for specific file paths or directories<!--excerpt_end-->
 
