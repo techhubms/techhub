@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/N64ozm3x88k
 title: Preview for Copilot Workspace
 author: Rob Bos
 date: 2024-05-09 13:02:12 +00:00
-ghc_feature: true
 ghes_support: false
 plans:
 - Pro+

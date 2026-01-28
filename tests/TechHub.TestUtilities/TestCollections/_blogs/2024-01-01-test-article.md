@@ -1,9 +1,9 @@
 ---
 title: "Test Article with AI and Azure Tags"
 date: 2024-01-01
-tags: ["AI", "Azure"]
+primary_section: ai
 section_names: ["ai", "cloud"]
-draft: false
+tags: ["AI", "Azure"]
 ---
 
 This is a test blog post for testing tag and section filtering.

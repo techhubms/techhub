@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/_L8MdrswPV0
 title: PR Body Generation in VS Code
 author: Rob Bos
 date: 2024-09-26 17:42:50 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

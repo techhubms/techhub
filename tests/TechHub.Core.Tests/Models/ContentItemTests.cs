@@ -16,15 +16,18 @@ public class ContentItemTests
             Title = "Test Article",
             Author = "Test Author",
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
-            DateIso = "2024-01-15",
             CollectionName = "news",
+            FeedName = "",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = ["AI", "News", "Machine Learning"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
-            ExternalUrl = null,
-            Url = "/ai/news/test-article"
+            ExternalUrl = "",
+            Url = "/ai/news/test-article",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
     }
 
@@ -55,15 +58,20 @@ public class ContentItemTests
         {
             Slug = "test-slug",
             Title = "Test Title",
+            Author = "Test Author",
             DateEpoch = 1704844800,
-            DateIso = "2024-01-10",
             CollectionName = "news",
+            FeedName = "",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt",
-            Url = "/ai/news/test-slug"
+            ExternalUrl = "",
+            Url = "/ai/news/test-slug",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -87,14 +95,18 @@ public class ContentItemTests
             Title = "Test Title",
             Author = "Test Author",
             DateEpoch = 1705305600,
-            DateIso = "2024-01-15",
             CollectionName = "news",
+            FeedName = "",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt",
-            Url = "/ai/news/test-slug"
+            ExternalUrl = "",
+            Url = "/ai/news/test-slug",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Assert
@@ -152,10 +164,10 @@ public class ContentItemTests
     }
 
     [Fact]
-    public void GetHref_ReturnsEmptyString_WhenExternalUrlIsNull()
+    public void GetHref_ReturnsEmptyString_WhenExternalUrlIsEmpty()
     {
         // Arrange
-        var contentItem = CreateContentItemWithCollection("news", externalUrl: null);
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "");
 
         // Act
         var result = contentItem.GetHref();
@@ -272,24 +284,27 @@ public class ContentItemTests
 
     private static ContentItem CreateContentItemWithCollection(
         string collectionName,
-        string? externalUrl = "https://example.com",
-        string? url = "/test/url",
-        string? title = "Test Title")
+        string externalUrl = "https://example.com",
+        string url = "/test/url",
+        string title = "Test Title")
     {
         return new ContentItem
         {
             Slug = "test-slug",
-            Title = title ?? "Test Title",
+            Title = title,
             Author = "Test Author",
             DateEpoch = 1704067200,
-            DateIso = "2024-01-01T00:00:00Z",
             CollectionName = collectionName,
+            FeedName = "",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "Test excerpt",
             ExternalUrl = externalUrl,
-            Url = url ?? "/test/url"
+            Url = url,
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
     }
 }

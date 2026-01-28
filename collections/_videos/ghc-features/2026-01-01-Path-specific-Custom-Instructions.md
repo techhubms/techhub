@@ -1,11 +1,10 @@
-﻿---
+---
 external_url: ''
 title: Path-specific Custom Instructions
 author: TBD
 date: 2026-01-01 00:00:00 +00:00
 ghes_support: true
 draft: true
-ghc_feature: true
 plans:
 - Pro
 - Business

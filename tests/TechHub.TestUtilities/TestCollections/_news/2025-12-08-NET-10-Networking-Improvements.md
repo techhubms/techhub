@@ -26,6 +26,7 @@ tags:
 - WebSockets
 - WebSocketStream
 - WinHttpHandler
+primary_section: coding
 section_names:
 - coding
 - security

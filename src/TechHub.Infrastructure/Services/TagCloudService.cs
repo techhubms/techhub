@@ -32,37 +32,45 @@ public class TagCloudService(
                 cancellationToken);
         }
 
-        // Get content items based on scope
-        var items = await GetItemsByScopeAsync(request, cancellationToken);
+        // Calculate date filter if LastDays is specified
+        DateTimeOffset? dateFrom = request.LastDays.HasValue
+            ? DateTimeOffset.UtcNow.AddDays(-request.LastDays.Value)
+            : null;
 
-        // Filter by date range if specified
-        if (request.LastDays.HasValue)
-        {
-            var cutoffEpoch = DateTimeOffset.UtcNow
-                .AddDays(-request.LastDays.Value)
-                .ToUnixTimeSeconds();
+        // Determine section/collection filters based on scope
+        // "all" is a virtual section/collection - means no filter
+        string? sectionFilter = request.Scope == TagCloudScope.Section &&
+                                !string.IsNullOrWhiteSpace(request.SectionName) &&
+                                !request.SectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
+            ? request.SectionName
+            : null;
 
-            items = [.. items.Where(item => item.DateEpoch >= cutoffEpoch)];
-        }
+        string? collectionFilter = request.Scope == TagCloudScope.Collection &&
+                                   !string.IsNullOrWhiteSpace(request.CollectionName) &&
+                                   !request.CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
+            ? request.CollectionName
+            : null;
 
-        // Count tag occurrences
-        var tagCounts = CountTags(items);
+        // Use efficient database-level GROUP BY query
+        var tagCounts = await _contentRepository.GetTagCountsAsync(
+            dateFrom: dateFrom,
+            dateTo: null,
+            sectionName: sectionFilter,
+            collectionName: collectionFilter,
+            maxTags: request.MaxTags,
+            minUses: request.MinUses,
+            ct: cancellationToken);
 
-        // Filter by minimum uses and get top tags
-        var filteredTags = tagCounts
-            .Where(kvp => kvp.Value >= request.MinUses)
-            .OrderByDescending(kvp => kvp.Value)
-            .ToList();
-
-        // Dynamic quantity: top MaxTags OR all tags with >= MinUses (whichever is fewer)
-        var tagsToInclude = filteredTags.Take(request.MaxTags).ToList();
-
-        if (tagsToInclude.Count == 0)
+        if (tagCounts.Count == 0)
         {
             return [];
         }
 
         // Apply quantile-based sizing
+        var tagsToInclude = tagCounts
+            .Select(t => new KeyValuePair<string, int>(t.Tag, t.Count))
+            .ToList();
+
         var tagCloudItems = ApplyQuantileSizing(tagsToInclude);
 
         return tagCloudItems;
@@ -76,44 +84,20 @@ public class TagCloudService(
         string? collectionName = null,
         CancellationToken cancellationToken = default)
     {
-        // Get items based on scope
-        IReadOnlyList<ContentItem> items;
-
-        if (!string.IsNullOrWhiteSpace(collectionName) && !string.IsNullOrWhiteSpace(sectionName))
-        {
-            // Collection scope: filter by collection AND section (exclude drafts)
-            var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
-            items = [.. allCollectionItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
-        }
-        else if (!string.IsNullOrWhiteSpace(sectionName))
-        {
-            // Section scope (exclude drafts)
-            items = await _contentRepository.GetBySectionAsync(sectionName, includeDraft: false, cancellationToken);
-        }
-        else
-        {
-            // Global scope
-            items = await _contentRepository.GetAllAsync(includeDraft: false, cancellationToken);
-        }
-
-        // Count tags
-        var tagCounts = CountTags(items);
-
-        // Create response with tags sorted by count (descending), then alphabetically
-        var tags = tagCounts
-            .OrderByDescending(kvp => kvp.Value)
-            .ThenBy(kvp => kvp.Key, StringComparer.OrdinalIgnoreCase)
-            .Select(kvp => new TagWithCount
-            {
-                Tag = kvp.Key,
-                Count = kvp.Value
-            })
-            .ToList();
+        // Use efficient database-level GROUP BY query (no maxTags limit, minUses = 1)
+        var tagCounts = await _contentRepository.GetTagCountsAsync(
+            dateFrom: null,
+            dateTo: null,
+            sectionName: sectionName,
+            collectionName: collectionName,
+            maxTags: null,
+            minUses: 1,
+            ct: cancellationToken);
 
         return new AllTagsResponse
         {
-            Tags = tags,
-            TotalCount = tags.Count
+            Tags = tagCounts.ToList(),
+            TotalCount = tagCounts.Count
         };
     }
 
@@ -142,65 +126,6 @@ public class TagCloudService(
                 Count = 1,
                 Size = TagSize.Medium
             })];
-    }
-
-    private async Task<IReadOnlyList<ContentItem>> GetItemsByScopeAsync(
-        TagCloudRequest request,
-        CancellationToken cancellationToken)
-    {
-        return request.Scope switch
-        {
-            TagCloudScope.Homepage => await _contentRepository.GetAllAsync(includeDraft: false, cancellationToken),
-
-            TagCloudScope.Section when !string.IsNullOrWhiteSpace(request.SectionName) =>
-                await _contentRepository.GetBySectionAsync(request.SectionName, includeDraft: false, cancellationToken),
-
-            TagCloudScope.Collection when !string.IsNullOrWhiteSpace(request.CollectionName) &&
-                                         !string.IsNullOrWhiteSpace(request.SectionName) =>
-                await GetCollectionItemsAsync(request.SectionName, request.CollectionName, cancellationToken),
-
-            _ => []
-        };
-    }
-
-    private async Task<IReadOnlyList<ContentItem>> GetCollectionItemsAsync(
-        string sectionName,
-        string collectionName,
-        CancellationToken cancellationToken)
-    {
-        // Handle "all" section - returns all content from the collection across all sections
-        // The "all" section is virtual and aggregates content from all real sections
-        if (sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-        {
-            return await _contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
-        }
-
-        // Handle regular sections - filter collection items by section (exclude drafts)
-        var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
-
-        return [.. allCollectionItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
-    }
-
-    private Dictionary<string, int> CountTags(IEnumerable<ContentItem> items)
-    {
-        var tagCounts = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
-
-        foreach (var item in items)
-        {
-            foreach (var tag in item.Tags)
-            {
-                if (tagCounts.TryGetValue(tag, out var count))
-                {
-                    tagCounts[tag] = count + 1;
-                }
-                else
-                {
-                    tagCounts[tag] = 1;
-                }
-            }
-        }
-
-        return tagCounts;
     }
 
     private List<TagCloudItem> ApplyQuantileSizing(List<KeyValuePair<string, int>> sortedTags)

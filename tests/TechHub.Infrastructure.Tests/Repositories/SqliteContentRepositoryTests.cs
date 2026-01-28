@@ -1,5 +1,7 @@
 using FluentAssertions;
 using Microsoft.Extensions.Caching.Memory;
+using Moq;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Repositories;
 using TechHub.TestUtilities;
@@ -9,7 +11,7 @@ namespace TechHub.Infrastructure.Tests.Repositories;
 /// <summary>
 /// Integration tests for SQLite content repository.
 /// Inherits common repository tests from BaseContentRepositoryTests.
-/// Tests SQLite-specific functionality: full-text search, faceting, and related articles.
+/// Tests SQLite-specific functionality like FTS5 full-text search.
 /// Uses in-memory SQLite database with migrations applied and TestCollections seeding.
 /// </summary>
 public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFixture<DatabaseFixture<SqliteContentRepositoryTests>>
@@ -24,7 +26,21 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
     {
         _fixture = fixture;
         _cache = new MemoryCache(new MemoryCacheOptions());
-        _repository = new SqliteContentRepository(_fixture.Connection, new Infrastructure.Data.SqliteDialect(), _cache);
+
+        // Create a mock markdown service for rendering
+        var mockMarkdownService = new Mock<IMarkdownService>();
+        mockMarkdownService.Setup(m => m.RenderToHtml(It.IsAny<string>(), It.IsAny<string>()))
+            .Returns<string, string>((content, _) => $"<p>{content}</p>");
+        mockMarkdownService.Setup(m => m.ProcessYouTubeEmbeds(It.IsAny<string>()))
+            .Returns<string>(content => content);
+        mockMarkdownService.Setup(m => m.ExtractExcerpt(It.IsAny<string>(), It.IsAny<int>()))
+            .Returns<string, int>((content, _) => content.Length > 100 ? content[..100] : content);
+
+        _repository = new SqliteContentRepository(
+            _fixture.Connection,
+            new Infrastructure.Data.SqliteDialect(),
+            _cache,
+            mockMarkdownService.Object);
     }
 
     public override void Dispose()
@@ -33,136 +49,26 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
         GC.SuppressFinalize(this);
     }
 
-    #region SearchAsync Tests (SQLite-specific: Full-text search)
+    #region SQLite-Specific Tests (FTS5 Full-Text Search)
 
+    /// <summary>
+    /// Test: Full-text search finds items by unique content keyword
+    /// Why: SQLite FTS5 provides fast full-text search that other repositories don't have
+    /// </summary>
     [Fact(Skip = "FTS5 external content table configuration needs investigation")]
     public async Task SearchAsync_FullTextSearch_FindsMatchingItems()
     {
-        // TODO: Implement using TestCollections data once FTS5 is configured
-        // This test requires manual data setup which is no longer allowed
-        // Need to add appropriate test files to TestCollections
-        Assert.True(true);
-    }
+        // Arrange - data already seeded from TestCollections
+        // Expected: _blogs/2024-01-11-fts-test.md contains "TechHubSpecialKeyword"
+        var request = new SearchRequest { Query = "TechHubSpecialKeyword" };
 
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task SearchAsync_TagFilter_FiltersCorrectly()
-    {
-        // TODO: Use existing TestCollections data to test tag filtering
-        // Expected: _blogs/2024-01-01-test-article.md has tags: [AI, Azure]
-        Assert.True(true);
-    }
+        // Act
+        var results = await Repository.SearchAsync(request);
 
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task SearchAsync_TagSubsetMatching_MatchesPartialTags()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task SearchAsync_SectionFilter_FiltersCorrectly()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task SearchAsync_DateRangeFilter_FiltersCorrectly()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task SearchAsync_Pagination_ReturnsCorrectCount()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task SearchAsync_IncludesFacets()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    #endregion
-
-    #region GetFacetsAsync Tests (SQLite-specific)
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetFacetsAsync_ReturnsTagCounts()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetFacetsAsync_FilteredByTags_ShowsIntersectionCounts()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetFacetsAsync_ReturnsCollectionCounts()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetFacetsAsync_ReturnsSectionCounts()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetFacetsAsync_ReturnsTotalCount()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    #endregion
-
-    #region GetRelatedAsync Tests (SQLite-specific)
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetRelatedAsync_BasedOnTagOverlap_ReturnsRelatedItems()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetRelatedAsync_NoSharedTags_ReturnsSameCollectionItems()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetRelatedAsync_ExcludesSourceItem()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetRelatedAsync_ExcludesDrafts()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
-    }
-
-    [Fact(Skip = "Requires manual data setup - convert to use TestCollections")]
-    public async Task GetRelatedAsync_RespectsCountLimit()
-    {
-        // TODO: Convert to use TestCollections data
-        Assert.True(true);
+        // Assert
+        results.Items.Should().NotBeEmpty("FTS should find item with unique keyword");
+        results.Items.Should().Contain(item => item.Slug == "fts-test",
+            "Should find the fts-test article by its unique content");
     }
 
     #endregion

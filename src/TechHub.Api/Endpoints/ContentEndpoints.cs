@@ -41,6 +41,13 @@ internal static class ContentEndpoints
             .WithDescription("Filter content by multiple criteria: sections, collections, tags, search query. Example: /api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot,azure")
             .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK);
 
+        // Database-optimized search endpoint with pagination
+        group.MapGet("/search", SearchContent)
+            .WithName("SearchContent")
+            .WithSummary("Database-optimized content search")
+            .WithDescription("Search content with database-level filtering and pagination. Supports: sections, collections, tags, date range, take limit. Example: /api/content/search?collections=roundups&take=1")
+            .Produces<SearchResults<ContentItem>>(StatusCodes.Status200OK);
+
         return endpoints;
     }
 
@@ -210,6 +217,46 @@ internal static class ContentEndpoints
                 c.Tags.Any(tag => tag.Contains(query, StringComparison.OrdinalIgnoreCase)));
         }
 
+        return TypedResults.Ok(results);
+    }
+
+    /// <summary>
+    /// GET /api/content/search - Database-optimized search with pagination
+    /// Uses repository's SearchAsync for database-level filtering and limiting.
+    /// Example: /api/content/search?collections=roundups&amp;take=1
+    /// </summary>
+    private static async Task<Ok<SearchResults<ContentItem>>> SearchContent(
+        [FromQuery] string? sections,
+        [FromQuery] string? collections,
+        [FromQuery] string? tags,
+        [FromQuery] string? q,
+        [FromQuery] int? take,
+        [FromQuery] int? lastDays,
+        [FromQuery] string? orderBy,
+        IContentRepository contentRepository,
+        CancellationToken cancellationToken)
+    {
+        // Build the search request with database-level filtering
+        var request = new SearchRequest
+        {
+            Query = q,
+            Tags = string.IsNullOrWhiteSpace(tags)
+                ? null
+                : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+            Sections = string.IsNullOrWhiteSpace(sections)
+                ? null
+                : sections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+            Collections = string.IsNullOrWhiteSpace(collections)
+                ? null
+                : collections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+            DateFrom = lastDays.HasValue
+                ? DateTimeOffset.UtcNow.AddDays(-lastDays.Value)
+                : null,
+            Take = take ?? 20,
+            OrderBy = orderBy ?? "date_desc"
+        };
+
+        var results = await contentRepository.SearchAsync(request, cancellationToken);
         return TypedResults.Ok(results);
     }
 }

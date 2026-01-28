@@ -77,4 +77,17 @@ public interface IContentRepository
         string articleId,
         int count = 5,
         CancellationToken ct = default);
+
+    /// <summary>
+    /// Get tag counts with optional filtering by date range, section, and collection.
+    /// Uses efficient database GROUP BY instead of loading all items.
+    /// </summary>
+    Task<IReadOnlyList<TagWithCount>> GetTagCountsAsync(
+        DateTimeOffset? dateFrom = null,
+        DateTimeOffset? dateTo = null,
+        string? sectionName = null,
+        string? collectionName = null,
+        int? maxTags = null,
+        int minUses = 1,
+        CancellationToken ct = default);
 }

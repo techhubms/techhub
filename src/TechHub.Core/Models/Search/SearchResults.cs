@@ -19,8 +19,9 @@ public record SearchResults<T>
     /// <summary>
     /// Facet counts for dynamic filtering.
     /// Shows how many items would match if user applies additional filters.
+    /// Null when IncludeFacets=false in the request (default).
     /// </summary>
-    public required FacetResults Facets { get; init; }
+    public FacetResults? Facets { get; init; }
 
     /// <summary>
     /// Continuation token for next page (keyset pagination).

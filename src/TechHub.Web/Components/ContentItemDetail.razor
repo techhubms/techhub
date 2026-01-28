@@ -7,7 +7,7 @@
             <h1 class="page-h1" tabindex="-1">@Item.Title</h1>
 
             <div class="article-metadata">
-                <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
+                <time datetime="@FormatDateIso(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>
                 @if (!string.IsNullOrWhiteSpace(Item.Author))
                 {
                     <span class="metadata-separator">•</span>
@@ -33,4 +33,7 @@
         var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
         return dateTime.ToString("MMMM d, yyyy");
     }
+
+    private static string FormatDateIso(long epochSeconds) =>
+        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("yyyy-MM-dd");
 }

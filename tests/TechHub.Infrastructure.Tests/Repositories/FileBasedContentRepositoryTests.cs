@@ -40,9 +40,6 @@ public class FileBasedContentRepositoryTests : BaseContentRepositoryTests
         var mockEnvironment = new Mock<IHostEnvironment>();
         mockEnvironment.Setup(e => e.ContentRootPath).Returns(testCollectionsPath);
 
-        // Setup: Create real TagMatchingService for accurate tag filtering in tests
-        var tagMatchingService = new TagMatchingService();
-
         // Setup: Create MemoryCache for caching
         var cache = new MemoryCache(new MemoryCacheOptions());
 
@@ -51,7 +48,6 @@ public class FileBasedContentRepositoryTests : BaseContentRepositoryTests
         _repository = new FileBasedContentRepository(
             Options.Create(settings),
             markdownService,
-            tagMatchingService,
             mockEnvironment.Object,
             cache
         );

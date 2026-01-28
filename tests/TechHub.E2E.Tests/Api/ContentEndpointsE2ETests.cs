@@ -317,7 +317,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
             item.Title.Should().NotBeNullOrEmpty();
             item.Author.Should().NotBeNullOrEmpty();
             item.DateEpoch.Should().BeGreaterThan(0);
-            item.DateIso.Should().NotBeNullOrEmpty();
             item.CollectionName.Should().NotBeNullOrEmpty();
             item.SectionNames.Should().NotBeEmpty();
             item.Tags.Should().NotBeEmpty();
@@ -338,9 +337,6 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
             // DateEpoch should be a reasonable Unix timestamp
             item.DateEpoch.Should().BeGreaterThan(1000000000); // After 2001
             item.DateEpoch.Should().BeLessThan(2000000000); // Before 2033
-
-            // DateIso should be parseable
-            DateTimeOffset.TryParse(item.DateIso, out _).Should().BeTrue();
         });
     }
 

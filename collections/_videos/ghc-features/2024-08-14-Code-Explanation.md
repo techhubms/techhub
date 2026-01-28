@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/1gyzoHTfxgQ
 title: Code Explanation
 author: Rob Bos
 date: 2024-08-14 19:59:33 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

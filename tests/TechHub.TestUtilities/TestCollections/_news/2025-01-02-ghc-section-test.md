@@ -1,6 +1,7 @@
 ---
 title: "GitHub Copilot Only Section Test"
 date: 2025-01-02
+primary_section: github-copilot
 section_names: [github-copilot]
 tags: [GitHub Copilot, Test]
 ---

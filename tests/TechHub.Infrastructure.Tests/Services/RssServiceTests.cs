@@ -36,11 +36,14 @@ public class RssServiceTests
             Tags = ["AI", "News", "Machine Learning", "Testing"],
             RenderedHtml = "<p>Test content 1</p>",
             Excerpt = "Test excerpt 1",
-            ExternalUrl = null,
-            DateIso = "2024-01-15",
-            PrimarySectionName = "ai",
-            Url = "/ai/news/test-article"
-            },
+            ExternalUrl = "",
+            Url = "/ai/news/test-article",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
+        },
         new ContentItem
         {
             Slug = "test-article-2",
@@ -53,9 +56,12 @@ public class RssServiceTests
             RenderedHtml = "<p>Test content 2</p>",
             Excerpt = "Test excerpt 2",
             ExternalUrl = "https://example.com/article-2",
-            DateIso = "2024-01-10",
-            PrimarySectionName = "ai",
-            Url = "/ai/news/test-article-2"
+            Url = "/ai/news/test-article-2",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         }
     ];
 
@@ -110,10 +116,13 @@ public class RssServiceTests
                 Tags = ["test"],
                 RenderedHtml = $"<p>Content {i}</p>",
                 Excerpt = $"Excerpt {i}",
-                ExternalUrl = null,
-                DateIso = "2024-01-15",
-                PrimarySectionName = "ai",
-                Url = $"/ai/news/article-{i}"
+                ExternalUrl = "",
+                Url = $"/ai/news/article-{i}",
+                FeedName = "",
+                Plans = [],
+                GhesSupport = false,
+                Draft = false,
+                GhcFeature = false
             })
             .ToList();
 
@@ -215,17 +224,20 @@ public class RssServiceTests
             {
                 Slug = "test",
                 Title = "Test",
+                Author = "Test Author",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
                 SectionNames = ["AI"],
                 Tags = [],
                 RenderedHtml = "<p>Content</p>",
                 Excerpt = "Test excerpt",
-                ExternalUrl = null,
-            DateIso = "2024-01-15",
-            PrimarySectionName = "ai",
-            Url = "/ai/news/test-article",
-                Author = null
+                ExternalUrl = "",
+                Url = "/ai/news/test-article",
+                FeedName = "",
+                Plans = [],
+                GhesSupport = false,
+                Draft = false,
+                GhcFeature = false
             }
         };
 
@@ -352,17 +364,20 @@ public class RssServiceTests
             {
                 Slug = "test",
                 Title = "Test & Special <Characters>",
+                Author = "Test Author",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
                 SectionNames = ["AI"],
                 Tags = ["tag&special"],
                 RenderedHtml = "<p>Content</p>",
                 Excerpt = "Excerpt with \"quotes\" & <tags>",
-                ExternalUrl = null,
-            DateIso = "2024-01-15",
-            PrimarySectionName = "ai",
-            Url = "/ai/news/test-article",
-                Author = null
+                ExternalUrl = "",
+                Url = "/ai/news/test-article",
+                FeedName = "",
+                Plans = [],
+                GhesSupport = false,
+                Draft = false,
+                GhcFeature = false
             }
         };
         var channel = await _rssService.GenerateSectionFeedAsync(section, items);

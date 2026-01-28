@@ -26,5 +26,11 @@ public interface IContentSyncService
     /// Uses hash comparison for fast detection.
     /// </summary>
     Task<bool> IsContentChangedAsync(CancellationToken ct = default);
+
+    /// <summary>
+    /// Check if the database has any content items.
+    /// Used to determine if sync should run (sync only when database is empty).
+    /// </summary>
+    Task<bool> HasContentAsync(CancellationToken ct = default);
 }
 

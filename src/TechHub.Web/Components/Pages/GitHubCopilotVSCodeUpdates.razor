@@ -33,7 +33,7 @@
                                 class="sidebar-content-button @(isActive ? "active" : "")">
                                 <span class="sidebar-content-button-title">@video.Title</span>
                                 <span class="sidebar-content-button-meta">
-                                    <time datetime="@video.DateIso">@FormatDate(video.DateEpoch)</time>
+                                    <time datetime="@FormatDateIso(video.DateEpoch)">@FormatDate(video.DateEpoch)</time>
                                 </span>
                             </a>
                         </li>
@@ -129,6 +129,9 @@
         var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
         return dateTime.ToString("MMMM d, yyyy");
     }
+
+    private static string FormatDateIso(long epochSeconds) =>
+        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("yyyy-MM-dd");
 
     private string GetPageTitle()
     {

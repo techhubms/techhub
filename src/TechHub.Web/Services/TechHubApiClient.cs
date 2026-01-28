@@ -200,7 +200,8 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         try
         {
             _logger.LogInformation("Fetching content for section: {SectionName}, collection: {CollectionName}",
-                sectionName ?? "(all)", collectionName);
+                string.IsNullOrEmpty(sectionName) ? "(all)" : sectionName,
+                string.IsNullOrEmpty(collectionName) ? "(all)" : collectionName);
 
             var url = string.IsNullOrWhiteSpace(sectionName)
                 ? $"/api/content?collectionName={Uri.EscapeDataString(collectionName)}"
@@ -216,7 +217,8 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch content for section {SectionName}, collection {CollectionName}",
-                sectionName ?? "(all)", collectionName);
+                string.IsNullOrEmpty(sectionName) ? "(all)" : sectionName,
+                string.IsNullOrEmpty(collectionName) ? "(all)" : collectionName);
             throw;
         }
     }
@@ -286,6 +288,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
 
     /// <summary>
     /// Get the latest items across all sections (for homepage sidebar)
+    /// Uses database-level limiting via SearchAsync for optimal performance.
     /// </summary>
     public virtual async Task<IEnumerable<ContentItem>?> GetLatestItemsAsync(
         int count = 10,
@@ -293,22 +296,112 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     {
         try
         {
-            _logger.LogInformation("Fetching latest {Count} items", count);
+            _logger.LogInformation("Fetching latest {Count} items via search endpoint", count);
 
-            // Use filter endpoint without filters to get all items
-            var allItems = await FilterContentAsync(cancellationToken: cancellationToken);
+            // Use the search endpoint with Take parameter for database-level limiting
+            var searchResults = await SearchContentAsync(take: count, cancellationToken: cancellationToken);
 
-            // Sort by published date descending and take the requested count
-            var latestItems = allItems?
-                .OrderByDescending(i => i.DateEpoch)
-                .Take(count);
-
-            _logger.LogInformation("Successfully fetched {Count} latest items", latestItems?.Count() ?? 0);
-            return latestItems;
+            _logger.LogInformation("Successfully fetched {Count} latest items", searchResults?.Items.Count ?? 0);
+            return searchResults?.Items;
         }
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch latest items");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get the latest roundup (for homepage sidebar)
+    /// Uses database-level limiting via SearchAsync for optimal performance.
+    /// </summary>
+    public virtual async Task<ContentItem?> GetLatestRoundupAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching latest roundup via search endpoint");
+
+            // Use the search endpoint with Collections=roundups and Take=1 for database-level limiting
+            var searchResults = await SearchContentAsync(
+                collections: "roundups",
+                take: 1,
+                cancellationToken: cancellationToken);
+
+            var latestRoundup = searchResults?.Items.Count > 0 ? searchResults.Items[0] : null;
+            _logger.LogInformation("Successfully fetched latest roundup: {Title}", latestRoundup?.Title ?? "none");
+            return latestRoundup;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch latest roundup");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Search content with database-level filtering and pagination.
+    /// This is the most efficient way to query content.
+    /// </summary>
+    public virtual async Task<SearchResults<ContentItem>?> SearchContentAsync(
+        string? sections = null,
+        string? collections = null,
+        string? tags = null,
+        string? query = null,
+        int? take = null,
+        int? lastDays = null,
+        string? orderBy = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var queryParams = new List<string>();
+            if (!string.IsNullOrEmpty(sections))
+            {
+                queryParams.Add($"sections={Uri.EscapeDataString(sections)}");
+            }
+
+            if (!string.IsNullOrEmpty(collections))
+            {
+                queryParams.Add($"collections={Uri.EscapeDataString(collections)}");
+            }
+
+            if (!string.IsNullOrEmpty(tags))
+            {
+                queryParams.Add($"tags={Uri.EscapeDataString(tags)}");
+            }
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                queryParams.Add($"q={Uri.EscapeDataString(query)}");
+            }
+
+            if (take.HasValue)
+            {
+                queryParams.Add($"take={take.Value}");
+            }
+
+            if (lastDays.HasValue)
+            {
+                queryParams.Add($"lastDays={lastDays.Value}");
+            }
+
+            if (!string.IsNullOrEmpty(orderBy))
+            {
+                queryParams.Add($"orderBy={Uri.EscapeDataString(orderBy)}");
+            }
+
+            var url = queryParams.Count > 0
+                ? $"/api/content/search?{string.Join("&", queryParams)}"
+                : "/api/content/search";
+
+            _logger.LogDebug("Calling search API: {Url}", url);
+            var results = await _httpClient.GetFromJsonAsync<SearchResults<ContentItem>>(url, cancellationToken);
+            return results;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to search content");
             throw;
         }
     }

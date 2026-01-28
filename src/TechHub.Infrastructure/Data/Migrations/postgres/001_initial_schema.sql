@@ -108,12 +108,15 @@ CREATE INDEX IF NOT EXISTS idx_collections_parent ON collections(parent_name);
 
 CREATE INDEX IF NOT EXISTS idx_tags_normalized ON content_tags(tag_normalized);
 CREATE INDEX IF NOT EXISTS idx_tags_content ON content_tags(collection_name, slug);
+CREATE INDEX IF NOT EXISTS idx_tags_tag_covering ON content_tags(tag, collection_name, slug);
 
 CREATE INDEX IF NOT EXISTS idx_tags_expanded_word ON content_tags_expanded(tag_word);
 CREATE INDEX IF NOT EXISTS idx_tags_expanded_content ON content_tags_expanded(collection_name, slug);
+CREATE INDEX IF NOT EXISTS idx_tags_expanded_word_covering ON content_tags_expanded(tag_word, collection_name, slug);
 
 CREATE INDEX IF NOT EXISTS idx_sections_name ON content_sections(section_name);
 CREATE INDEX IF NOT EXISTS idx_sections_content ON content_sections(collection_name, slug);
+CREATE INDEX IF NOT EXISTS idx_sections_name_covering ON content_sections(section_name, collection_name, slug);
 
 CREATE INDEX IF NOT EXISTS idx_plans_name ON content_plans(plan_name);
-CREATE INDEX IF NOT EXISTS idx_plans_content ON content_plans(slug);
+CREATE INDEX IF NOT EXISTS idx_plans_content ON content_plans(collection_name, slug);

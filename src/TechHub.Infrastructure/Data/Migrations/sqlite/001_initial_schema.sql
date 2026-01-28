@@ -115,6 +115,7 @@ END;
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_content_date ON content_items(date_epoch DESC);
 CREATE INDEX IF NOT EXISTS idx_content_collection ON content_items(collection_name);
+CREATE INDEX IF NOT EXISTS idx_content_section ON content_items(primary_section_name);
 CREATE INDEX IF NOT EXISTS idx_content_draft ON content_items(draft) WHERE draft = 1;
 CREATE INDEX IF NOT EXISTS idx_content_hash ON content_items(content_hash);
 
@@ -122,13 +123,16 @@ CREATE INDEX IF NOT EXISTS idx_collections_name ON collections(name);
 CREATE INDEX IF NOT EXISTS idx_collections_parent ON collections(parent_name);
 
 CREATE INDEX IF NOT EXISTS idx_tags_normalized ON content_tags(tag_normalized);
-CREATE INDEX IF NOT EXISTS idx_tags_content ON content_tags(slug);
+CREATE INDEX IF NOT EXISTS idx_tags_content ON content_tags(collection_name, slug);
+CREATE INDEX IF NOT EXISTS idx_tags_tag_covering ON content_tags(tag, collection_name, slug);
 
 CREATE INDEX IF NOT EXISTS idx_tags_expanded_word ON content_tags_expanded(tag_word);
-CREATE INDEX IF NOT EXISTS idx_tags_expanded_content ON content_tags_expanded(slug);
+CREATE INDEX IF NOT EXISTS idx_tags_expanded_content ON content_tags_expanded(collection_name, slug);
+CREATE INDEX IF NOT EXISTS idx_tags_expanded_word_covering ON content_tags_expanded(tag_word, collection_name, slug);
 
 CREATE INDEX IF NOT EXISTS idx_sections_name ON content_sections(section_name);
-CREATE INDEX IF NOT EXISTS idx_sections_content ON content_sections(slug);
+CREATE INDEX IF NOT EXISTS idx_sections_content ON content_sections(collection_name, slug);
+CREATE INDEX IF NOT EXISTS idx_sections_name_covering ON content_sections(section_name, collection_name, slug);
 
 CREATE INDEX IF NOT EXISTS idx_plans_name ON content_plans(plan_name);
-CREATE INDEX IF NOT EXISTS idx_plans_content ON content_plans(slug);
+CREATE INDEX IF NOT EXISTS idx_plans_content ON content_plans(collection_name, slug);

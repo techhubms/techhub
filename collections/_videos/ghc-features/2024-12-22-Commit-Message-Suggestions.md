@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/fO31a_OS2EA
 title: Commit Message Suggestions
 author: Rob Bos
 date: 2024-12-22 23:00:22 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

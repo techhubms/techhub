@@ -1,11 +1,10 @@
-﻿---
+---
 external_url: ''
 title: Explain Failed Action Jobs
 author: TBD
 date: 2026-08-29 09:39:31 +00:00
 ghes_support: false
 draft: true
-ghc_feature: true
 plans:
 - Free
 tags: []

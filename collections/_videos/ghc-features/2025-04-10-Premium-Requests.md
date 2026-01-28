@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/z2_oa8nEw14
 title: Premium Requests
 author: Rob Bos
 date: 2025-04-10 12:17:24 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

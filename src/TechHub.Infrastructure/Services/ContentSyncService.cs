@@ -49,7 +49,22 @@ public class ContentSyncService : IContentSyncService
             return await ForceSyncAsync(ct);
         }
         
-        return await IncrementalSyncAsync(ct);
+        // Skip sync if database already has content (fast startup)
+        // To resync: delete the database file and restart
+        if (await HasContentAsync(ct))
+        {
+            _logger.LogInformation("Content sync skipped: database already has content. Delete techhub.db to force resync.");
+            return new SyncResult(0, 0, 0, 0, TimeSpan.Zero);
+        }
+        
+        // Database is empty - do a full sync
+        return await ForceSyncAsync(ct);
+    }
+    
+    public async Task<bool> HasContentAsync(CancellationToken ct = default)
+    {
+        var count = await _connection.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM content_items");
+        return count > 0;
     }
     
     public async Task<SyncResult> ForceSyncAsync(CancellationToken ct = default)
@@ -315,10 +330,10 @@ public class ContentSyncService : IContentSyncService
                     DateEpoch = dateEpoch,
                     CollectionName = collectionName,
                     SubcollectionName = subcollectionName,
-                    PrimarySectionName = frontMatter.GetValueOrDefault("primary_section", null)?.ToString() ?? sections.FirstOrDefault() ?? "all",
-                    ExternalUrl = frontMatter.GetValueOrDefault("canonical_url", null)?.ToString(),
+                    PrimarySectionName = ContentItem.ComputePrimarySectionName(sections),
+                    ExternalUrl = frontMatter.GetValueOrDefault("external_url", null)?.ToString(),
                     Author = frontMatter.GetValueOrDefault("author", null)?.ToString(),
-                    FeedName = frontMatter.GetValueOrDefault("feed", null)?.ToString(),
+                    FeedName = frontMatter.GetValueOrDefault("feed_name", null)?.ToString(),
                     GhesSupport = (frontMatter.GetValueOrDefault("ghes_support", false) is bool ghesSupport && ghesSupport) ? 1 : 0,
                     Draft = ConvertBoolToInt(frontMatter, "draft"),
                     ContentHash = contentHash
@@ -376,14 +391,28 @@ public class ContentSyncService : IContentSyncService
     {
         // Composite key: "collection:slug" to allow same slug in different collections
         var collectionName = GetCollectionNameFromPath(file);
-        var slug = Path.GetFileNameWithoutExtension(file.Name);
+        // Strip date prefix from filename to create clean slug and lowercase for URL consistency
+        var filename = Path.GetFileNameWithoutExtension(file.Name);
+        var slug = StripDatePrefixFromSlug(filename).ToLowerInvariant();
         return $"{collectionName}:{slug}";
+    }
+    
+    /// <summary>
+    /// Strips YYYY-MM-DD- date prefix from filename to create clean slug.
+    /// </summary>
+    private static string StripDatePrefixFromSlug(string filename)
+    {
+        return System.Text.RegularExpressions.Regex.Replace(
+            filename,
+            @"^\d{4}-\d{2}-\d{2}-",
+            string.Empty);
     }
     
     private static string GetCollectionNameFromPath(FileInfo file)
     {
-        // Extract collection from path: collections/_videos/ghc-features/file.md → ghc-features
+        // Extract collection from path: collections/_videos/ghc-features/file.md → videos
         // or collections/_blogs/file.md → blogs
+        // NOTE: Subcollections don't change the collection name - they're just for filtering
         var pathParts = file.DirectoryName?.Split(Path.DirectorySeparatorChar) ?? [];
         
         // Find the collection directory (starts with _)
@@ -391,19 +420,8 @@ public class ContentSyncService : IContentSyncService
         if (collectionDir == null)
             throw new InvalidOperationException($"Cannot determine collection from path: {file.FullName}");
         
-        // Check if there's a subfolder (alt-collection)
-        var collectionIndex = Array.IndexOf(pathParts, collectionDir);
-        if (collectionIndex < pathParts.Length - 1)
-        {
-            // Has subfolder - use subfolder name as collection
-            var subfolder = pathParts[collectionIndex + 1];
-            if (!string.IsNullOrEmpty(subfolder) && subfolder != file.Name)
-            {
-                return subfolder; // e.g., "ghc-features"
-            }
-        }
-        
-        // No subfolder - use main collection name without underscore
+        // Always use the main collection name without underscore
+        // Subcollections (subfolders) are for filtering only, not for changing collection name
         return collectionDir[1..]; // Remove leading underscore
     }
     
@@ -546,7 +564,15 @@ public class ContentSyncService : IContentSyncService
     private static int ConvertBoolToInt(Dictionary<string, object> frontMatter, string key)
     {
         var value = frontMatter.GetValueOrDefault(key, false);
-        return (value is bool b && b) ? 1 : 0;
+        
+        // Handle various types YamlDotNet might return
+        return value switch
+        {
+            bool b => b ? 1 : 0,
+            string s => s.Equals("true", StringComparison.OrdinalIgnoreCase) ? 1 : 0,
+            int i => i != 0 ? 1 : 0,
+            _ => 0
+        };
     }
 }
 

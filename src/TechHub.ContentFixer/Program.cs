@@ -251,37 +251,6 @@ internal sealed class Program
             throw new InvalidOperationException("No categories or section_names found in frontmatter");
         }
 
-        // 1b. Compute and add primary_section based on section priority order
-        {
-            var sectionNames = GetListValue(frontMatter, "section_names");
-            var primarySection = GetPrimarySectionName(sectionNames, collection);
-
-            // Check if already set and matches
-            var existingPrimarySection = frontMatter.TryGetValue("primary_section", out var existing) ? existing?.ToString() : null;
-            if (existingPrimarySection != primarySection)
-            {
-                frontMatter["primary_section"] = primarySection;
-                if (existingPrimarySection != null)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"  ✓ Updated primary_section: {existingPrimarySection} → {primarySection}");
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"  ✓ Added primary_section: {primarySection}");
-                }
-                Console.ResetColor();
-                changed = true;
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine($"  ℹ primary_section already correct: {primarySection}");
-                Console.ResetColor();
-            }
-        }
-
         // 2. Remove tags_normalized
         if (frontMatter.Remove("tags_normalized"))
         {
@@ -423,6 +392,15 @@ internal sealed class Program
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("  ✓ Removed viewing_mode");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 4j. Remove primary_section as a contentitem determines this dynamically
+        if (frontMatter.Remove("primary_section"))
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Removed primary_section");
             Console.ResetColor();
             changed = true;
         }

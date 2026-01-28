@@ -15,27 +15,39 @@ This project contains domain models and interfaces with **zero external dependen
 
 ```text
 TechHub.Core/
-├── Models/                       # Domain models (unified layer - no separate DTOs)
-│   ├── Section.cs               # Section model
-│   ├── ContentItem.cs           # Content item (list + detail views)
-│   ├── CustomPage.cs            # Custom page (list + detail views)
-│   ├── CollectionReference.cs   # Collection reference
-│   ├── FilterRequest.cs         # Filter request parameters
-│   ├── FilterResponse.cs        # Filter response with items
-│   ├── FilterSummary.cs         # Filter summary metadata
-│   ├── RssChannel.cs            # RSS channel (feed metadata)
-│   ├── RssItem.cs               # RSS item (feed entry)
-│   ├── SearchRequest.cs         # Search request parameters
-│   ├── SearchResults.cs         # Search response with pagination
-│   ├── FacetRequest.cs          # Facet aggregation request
-│   ├── FacetResults.cs          # Facet aggregation response
-│   ├── FacetValue.cs            # Single facet value with count
+├── Models/                       # Domain models organized by feature
+│   ├── Core/                    # Core domain entities
+│   │   ├── Section.cs           # Section model (AI, Security, DevOps, etc.)
+│   │   ├── ContentItem.cs       # Content item (list + detail views)
+│   │   └── Collection.cs        # Collection definition
+│   ├── Facets/                  # Facet aggregation models
+│   │   ├── FacetRequest.cs      # Facet aggregation request
+│   │   ├── FacetResults.cs      # Facet aggregation response
+│   │   └── FacetValue.cs        # Single facet value with count
+│   ├── Filter/                  # Filtering models
+│   │   ├── FilterRequest.cs     # Filter request parameters
+│   │   ├── FilterResponse.cs    # Filter response with items
+│   │   └── FilterSummary.cs     # Filter summary metadata
+│   ├── PageData/                # Page-specific data models
+│   │   ├── DXSpacePageData.cs   # DX Space page data
+│   │   ├── FeaturesPageData.cs  # Features page data
+│   │   ├── GenAIPageData.cs     # GenAI page data
+│   │   ├── HandbookPageData.cs  # Handbook page data
+│   │   ├── LevelsPageData.cs    # Levels page data
+│   │   └── SDLCPageData.cs      # SDLC page data
+│   ├── Rss/                     # RSS feed models
+│   │   ├── RssChannel.cs        # RSS channel (feed metadata)
+│   │   └── RssItem.cs           # RSS item (feed entry)
+│   ├── Search/                  # Search models
+│   │   ├── SearchRequest.cs     # Search request parameters
+│   │   └── SearchResults.cs     # Search response with pagination
+│   ├── Tags/                    # Tag-related models
+│   │   ├── AllTagsResponse.cs   # Response for all tags API
+│   │   ├── TagCloudItem.cs      # Tag cloud item with size
+│   │   ├── TagCloudRequest.cs   # Tag cloud request parameters
+│   │   └── TagWithCount.cs      # Tag with usage count
 │   ├── PaginationCursor.cs      # Keyset pagination cursor
-│   ├── SyncResult.cs            # Content sync operation result
-│   ├── TagCloudItem.cs          # Tag cloud item
-│   ├── TagCloudRequest.cs       # Tag cloud request
-│   ├── TagWithCount.cs          # Tag with count
-│   └── [Page-specific models]   # DXSpacePageData, FeaturesPageData, etc.
+│   └── SyncResult.cs            # Content sync operation result
 ├── Interfaces/                   # Repository contracts
 │   ├── ISectionRepository.cs    # Section data access
 │   ├── IContentRepository.cs    # Content data access
@@ -74,7 +86,7 @@ TechHub.Core/
 - Clear intent (values set once at creation)
 - Works perfectly with record types
 
-**See**: [Models/Section.cs](Models/Section.cs) for implementation
+**See**: [Models/Core/Section.cs](Models/Core/Section.cs) for implementation
 
 ## Domain Model Patterns
 
@@ -103,14 +115,14 @@ TechHub.Core/
 
 **Pattern**: Single model serves both list and detail views.
 
-**ContentItem** ([Models/ContentItem.cs](Models/ContentItem.cs)):
+**ContentItem** ([Models/Core/ContentItem.cs](Models/Core/ContentItem.cs)):
 
 - Used for both list views (summary) and detail views (full HTML)
-- List views: `RenderedHtml` is null, `SidebarInfo` is null
+- List views: `RenderedHtml` is null
 - Detail views: `RenderedHtml` getter throws if accessed when null (fail-fast)
 - **Why**: Eliminates duplication, simpler serialization, type-safe
 
-**CustomPage** ([Models/CustomPage.cs](Models/CustomPage.cs)):
+**CustomPage** ([Models/Core/CustomPage.cs](Models/Core/CustomPage.cs)):
 
 - Same pattern: nullable `RenderedHtml` with throwing getter
 - List views skip HTML rendering for performance
@@ -125,11 +137,11 @@ TechHub.Core/
 
 ### Content Item Model
 
-**ContentItem** ([Models/ContentItem.cs](Models/ContentItem.cs)) represents content in both list and detail views:
+**ContentItem** ([Models/Core/ContentItem.cs](Models/Core/ContentItem.cs)) represents content in both list and detail views:
 
 **List View Properties** (always populated):
 
-- Metadata: `Slug`, `Title`, `Author`, `DateEpoch`, `DateIso`
+- Metadata: `Slug`, `Title`, `Author`, `DateEpoch`
 - Categorization: `SectionNames`, `PrimarySectionName`, `CollectionName`, `Tags`
 - Display: `Excerpt`, `Url`, `ExternalUrl`
 - Feature flags: `Plans`, `GhesSupport`, `Draft`, `GhcFeature`
@@ -137,7 +149,6 @@ TechHub.Core/
 **Detail View Properties** (only for full content):
 
 - `RenderedHtml` - Full HTML content (throws if accessed in list view)
-- `SidebarInfo` - JSON metadata (nullable)
 
 **Methods**:
 
@@ -207,15 +218,16 @@ The rest of the markdown content...
 
 **Key Models**:
 
-- `Section` - Section data with collections ([Models/Section.cs](Models/Section.cs))
-- `ContentItem` - Content item (list + detail) ([Models/ContentItem.cs](Models/ContentItem.cs))
-- `CustomPage` - Custom page (list + detail) ([Models/CustomPage.cs](Models/CustomPage.cs))
-- `CollectionReference` - Collection reference ([Models/CollectionReference.cs](Models/CollectionReference.cs))
-- `RssChannel` - RSS feed metadata ([Models/RssChannel.cs](Models/RssChannel.cs))
-- `RssItem` - RSS feed entry ([Models/RssItem.cs](Models/RssItem.cs))
-- `SearchRequest` - Search parameters ([Models/SearchRequest.cs](Models/SearchRequest.cs))
-- `SearchResults<T>` - Search response ([Models/SearchResults.cs](Models/SearchResults.cs))
-- `FacetResults` - Facet aggregations ([Models/FacetResults.cs](Models/FacetResults.cs))
+- `Section` - Section data with collections ([Models/Core/Section.cs](Models/Core/Section.cs))
+- `ContentItem` - Content item (list + detail) ([Models/Core/ContentItem.cs](Models/Core/ContentItem.cs))
+- `Collection` - Collection definition ([Models/Core/Collection.cs](Models/Core/Collection.cs))
+- `RssChannel` - RSS feed metadata ([Models/Rss/RssChannel.cs](Models/Rss/RssChannel.cs))
+- `RssItem` - RSS feed entry ([Models/Rss/RssItem.cs](Models/Rss/RssItem.cs))
+- `SearchRequest` - Search parameters ([Models/Search/SearchRequest.cs](Models/Search/SearchRequest.cs))
+- `SearchResults<T>` - Search response ([Models/Search/SearchResults.cs](Models/Search/SearchResults.cs))
+- `FacetResults` - Facet aggregations ([Models/Facets/FacetResults.cs](Models/Facets/FacetResults.cs))
+- `TagCloudItem` - Tag cloud display item ([Models/Tags/TagCloudItem.cs](Models/Tags/TagCloudItem.cs))
+- `TagWithCount` - Tag with usage count ([Models/Tags/TagWithCount.cs](Models/Tags/TagWithCount.cs))
 
 ## Repository Interfaces
 
@@ -258,7 +270,7 @@ The rest of the markdown content...
 
 **Example**: `GetUrlInSection("github-copilot")` → `"/github-copilot/blogs/2024-01-15-article"`
 
-**See**: [Models/ContentItem.cs](Models/ContentItem.cs) for implementation
+**See**: [Models/Core/ContentItem.cs](Models/Core/ContentItem.cs) for implementation
 
 ## Unix Epoch Timestamp Usage
 
@@ -310,7 +322,7 @@ public required long DateEpoch { get; init; }  // Seconds since Unix epoch
 - Collections: Check minimum count
 - Enums: Check allowed values
 
-**See**: [Models/ContentItem.cs](Models/ContentItem.cs) `Validate()` method for implementation
+**See**: [Models/Core/ContentItem.cs](Models/Core/ContentItem.cs) `Validate()` method for implementation
 
 ## Testing
 

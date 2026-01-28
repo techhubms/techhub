@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/UfQGauPcAgE
 title: Code Translation
 author: Fokko Veegens
 date: 2024-12-24 07:39:09 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

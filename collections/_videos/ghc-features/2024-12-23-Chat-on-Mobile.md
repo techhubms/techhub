@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/EQH-V5jQ0aA
 title: Chat on Mobile
 author: Rob Bos
 date: 2024-12-23 23:00:10 +00:00
-ghc_feature: true
 ghes_support: false
 plans:
 - Free

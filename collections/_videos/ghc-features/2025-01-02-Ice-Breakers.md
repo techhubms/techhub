@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/ri8EG4-rM9A
 title: Ice Breakers
 author: Randy Pagels
 date: 2025-01-02 11:21:13 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/EPXdLelATrE
 title: Code Completion
 author: Liuba Gonta
 date: 2025-01-02 11:20:08 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

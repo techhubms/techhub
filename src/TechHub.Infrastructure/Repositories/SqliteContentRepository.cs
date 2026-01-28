@@ -9,10 +9,14 @@ namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
 /// SQLite implementation of content repository using FTS5 for full-text search.
-/// Uses Dapper for database operations and extends ContentRepositoryBase (which handles caching).
+/// Uses Dapper for database operations and extends DatabaseContentRepositoryBase (which handles common SQL and caching).
 /// </summary>
-public class SqliteContentRepository(IDbConnection connection, ISqlDialect dialect, IMemoryCache cache)
-    : ContentRepositoryBase(connection, dialect, cache)
+public class SqliteContentRepository(
+    IDbConnection connection,
+    ISqlDialect dialect,
+    IMemoryCache cache,
+    IMarkdownService markdownService)
+    : DatabaseContentRepositoryBase(connection, dialect, cache, markdownService)
 {
     /// <summary>
     /// Full-text search using SQLite FTS5.
@@ -36,7 +40,6 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
                 c.date_epoch AS DateEpoch,
                 c.collection_name AS CollectionName,
                 c.subcollection_name AS SubcollectionName,
-                c.primary_section_name AS PrimarySectionName,
                 c.feed_name AS FeedName,
                 c.external_url AS ExternalUrl,
                 c.author AS Author,
@@ -136,30 +139,34 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
         // TODO: Implement continuation token-based pagination
         // For now, using simple offset (will be replaced with keyset pagination)
 
-        var items = await _connection.QueryAsync<ContentItem>(
+        var items = await Connection.QueryAsync<ContentItem>(
             new CommandDefinition(sql.ToString(), parameters, cancellationToken: ct));
 
-        var itemsWithRelated = await LoadRelatedDataAsync(items.ToList(), ct);
+        var hydratedItems = await HydrateRelationshipsAsync(items.ToList(), ct);
 
         // Get total count (without LIMIT/OFFSET)
         var countSql = GetCountSql(request);
-        var totalCount = await _connection.ExecuteScalarAsync<int>(
+        var totalCount = await Connection.ExecuteScalarAsync<int>(
             new CommandDefinition(countSql, parameters, cancellationToken: ct));
 
-        // Get facets for the current filter scope
-        var facets = await GetFacetsAsync(new FacetRequest
+        // Only compute facets if explicitly requested (expensive operation)
+        FacetResults? facets = null;
+        if (request.IncludeFacets)
         {
-            Tags = request.Tags,
-            Sections = request.Sections,
-            Collections = request.Collections,
-            DateFrom = request.DateFrom,
-            DateTo = request.DateTo,
-            FacetFields = new[] { "tags", "collections", "sections" }
-        }, ct);
+            facets = await GetFacetsAsync(new FacetRequest
+            {
+                Tags = request.Tags,
+                Sections = request.Sections,
+                Collections = request.Collections,
+                DateFrom = request.DateFrom,
+                DateTo = request.DateTo,
+                FacetFields = new[] { "tags", "collections", "sections" }
+            }, ct);
+        }
 
         return new SearchResults<ContentItem>
         {
-            Items = itemsWithRelated,
+            Items = hydratedItems,
             TotalCount = totalCount,
             Facets = facets,
             ContinuationToken = null // TODO: Implement continuation token
@@ -181,7 +188,7 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
 
         // Get total count
         var countSql = $"SELECT COUNT(DISTINCT c.slug) FROM content_items c {whereClause}";
-        var totalCount = await _connection.ExecuteScalarAsync<long>(
+        var totalCount = await Connection.ExecuteScalarAsync<long>(
             new CommandDefinition(countSql, parameters, cancellationToken: ct));
 
         // Get tag facets if requested
@@ -198,7 +205,7 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
 
             parameters.Add("maxFacetValues", request.MaxFacetValues);
 
-            var tags = await _connection.QueryAsync<FacetValue>(
+            var tags = await Connection.QueryAsync<FacetValue>(
                 new CommandDefinition(tagsSql, parameters, cancellationToken: ct));
 
             facets["tags"] = tags.ToList();
@@ -214,7 +221,7 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
                 GROUP BY c.collection_name
                 ORDER BY Count DESC, c.collection_name";
 
-            var collections = await _connection.QueryAsync<FacetValue>(
+            var collections = await Connection.QueryAsync<FacetValue>(
                 new CommandDefinition(collectionsSql, parameters, cancellationToken: ct));
 
             facets["collections"] = collections.ToList();
@@ -231,7 +238,7 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
                 GROUP BY cs.section_name
                 ORDER BY Count DESC, cs.section_name";
 
-            var sections = await _connection.QueryAsync<FacetValue>(
+            var sections = await Connection.QueryAsync<FacetValue>(
                 new CommandDefinition(sectionsSql, parameters, cancellationToken: ct));
 
             facets["sections"] = sections.ToList();
@@ -258,7 +265,7 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
         const string getTagsSql = @"
             SELECT tag FROM content_tags WHERE slug = @articleId";
 
-        var sourceTags = (await _connection.QueryAsync<string>(
+        var sourceTags = (await Connection.QueryAsync<string>(
             new CommandDefinition(getTagsSql, new { articleId }, cancellationToken: ct))).ToList();
 
         if (sourceTags.Count == 0)
@@ -273,7 +280,6 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
                     c.date_epoch AS DateEpoch,
                     c.collection_name AS CollectionName,
                     c.subcollection_name AS SubcollectionName,
-                    c.primary_section_name AS PrimarySectionName,
                     c.feed_name AS FeedName,
                     c.external_url AS ExternalUrl,
                     c.author AS Author,
@@ -286,10 +292,10 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
                 ORDER BY c.date_epoch DESC
                 LIMIT @count";
 
-            var fallbackItems = await _connection.QueryAsync<ContentItem>(
+            var fallbackItems = await Connection.QueryAsync<ContentItem>(
                 new CommandDefinition(fallbackSql, new { articleId, count }, cancellationToken: ct));
 
-            return await LoadRelatedDataAsync(fallbackItems.ToList(), ct);
+            return await HydrateRelationshipsAsync(fallbackItems.ToList(), ct);
         }
 
         // Find articles with tag overlap
@@ -302,7 +308,6 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
                 c.date_epoch AS DateEpoch,
                 c.collection_name AS CollectionName,
                 c.subcollection_name AS SubcollectionName,
-                c.primary_section_name AS PrimarySectionName,
                 c.feed_name AS FeedName,
                 c.external_url AS ExternalUrl,
                 c.author AS Author,
@@ -318,10 +323,10 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
             ORDER BY SharedTagCount DESC, c.date_epoch DESC
             LIMIT @count";
 
-        var items = await _connection.QueryAsync<ContentItem>(
+        var items = await Connection.QueryAsync<ContentItem>(
             new CommandDefinition(relatedSql, new { sourceTags, articleId, count }, cancellationToken: ct));
 
-        return await LoadRelatedDataAsync(items.ToList(), ct);
+        return await HydrateRelationshipsAsync(items.ToList(), ct);
     }
 
     /// <summary>
@@ -439,5 +444,84 @@ public class SqliteContentRepository(IDbConnection connection, ISqlDialect diale
         }
 
         return whereClauses;
+    }
+
+    /// <summary>
+    /// Get tag counts using efficient SQL GROUP BY query.
+    /// This is MUCH faster than loading all items and counting in memory.
+    /// </summary>
+    protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
+        DateTimeOffset? dateFrom,
+        DateTimeOffset? dateTo,
+        string? sectionName,
+        string? collectionName,
+        int? maxTags,
+        int minUses,
+        CancellationToken ct)
+    {
+        var sql = new StringBuilder();
+        var parameters = new DynamicParameters();
+
+        sql.Append(@"
+            SELECT ct.tag AS Tag, COUNT(DISTINCT c.slug) AS Count
+            FROM content_tags ct
+            INNER JOIN content_items c ON ct.collection_name = c.collection_name AND ct.slug = c.slug
+            WHERE c.draft = 0");
+
+        // Date range filtering
+        if (dateFrom.HasValue)
+        {
+            sql.Append(" AND c.date_epoch >= @dateFrom");
+            parameters.Add("dateFrom", dateFrom.Value.ToUnixTimeSeconds());
+        }
+
+        if (dateTo.HasValue)
+        {
+            sql.Append(" AND c.date_epoch <= @dateTo");
+            parameters.Add("dateTo", dateTo.Value.ToUnixTimeSeconds());
+        }
+
+        // Section filtering (skip "all" as it means no filter)
+        if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            // Join with content_sections for section filtering
+            sql.Append(@" AND EXISTS (
+                SELECT 1 FROM content_sections cs
+                WHERE cs.collection_name = c.collection_name
+                AND cs.slug = c.slug
+                AND cs.section_name = @sectionName
+            )");
+            parameters.Add("sectionName", sectionName);
+        }
+
+        // Collection filtering (skip "all" as it means no filter)
+        if (!string.IsNullOrWhiteSpace(collectionName) && !collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            sql.Append(" AND c.collection_name = @collectionName");
+            parameters.Add("collectionName", collectionName);
+        }
+
+        sql.Append(" GROUP BY ct.tag");
+
+        // Filter by minimum uses
+        if (minUses > 1)
+        {
+            sql.Append(" HAVING COUNT(DISTINCT c.slug) >= @minUses");
+            parameters.Add("minUses", minUses);
+        }
+
+        sql.Append(" ORDER BY Count DESC, ct.tag");
+
+        // Limit results
+        if (maxTags.HasValue)
+        {
+            sql.Append(" LIMIT @maxTags");
+            parameters.Add("maxTags", maxTags.Value);
+        }
+
+        var results = await Connection.QueryAsync<TagWithCount>(
+            new CommandDefinition(sql.ToString(), parameters, cancellationToken: ct));
+
+        return results.ToList();
     }
 }

@@ -39,6 +39,46 @@ await Page.WaitForFunctionAsync(
 
 **Use instead**: `WaitForFunctionAsync()`, `Expect().ToBeVisibleAsync()`, `Expect().ToHaveClassAsync()`, `WaitForSelectorAsync()`
 
+## Understanding Timeout Failures
+
+⚠️ **Timeouts are NOT performance issues**
+
+When Playwright tests fail with timeout errors, this does **NOT** indicate:
+
+- Server overload or slow response times
+- Performance problems with the application
+- Network latency issues
+
+**What timeouts actually mean**: Playwright couldn't find the expected element on the page within the configured timeout period. The browser keeps polling/retrying until the timeout is reached.
+
+**Root causes of timeout failures**:
+
+1. **Test bugs**: The test is looking for the wrong selector, element text, or attribute
+2. **Broken pages**: The application has a bug and isn't rendering the expected content
+3. **Changed DOM structure**: The page structure changed but tests weren't updated
+4. **Navigation issues**: The page redirected to an error page (e.g., `/not-found`)
+5. **State mismatches**: The test expects content that depends on data not present in test fixtures
+
+**How to debug timeout failures**:
+
+```powershell
+# Start servers without tests
+Run -WithoutTests
+
+# Then use Playwright MCP tools to:
+# 1. Navigate to the failing page
+# 2. Take a snapshot to see what's actually rendered
+# 3. Compare actual DOM structure with test expectations
+# 4. Check browser console for JavaScript errors
+```
+
+**Common fixes**:
+
+- Update selectors to match current DOM structure
+- Fix application bugs causing incorrect rendering
+- Add missing test data to fixtures
+- Update expected text/attributes to match current behavior
+
 ## Running Tests
 
 ### Recommended Approach

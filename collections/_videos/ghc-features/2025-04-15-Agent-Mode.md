@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/JtJ3_ATBsTY
 title: Agent Mode
 author: Fokko Veegens
 date: 2025-04-15 14:14:07 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

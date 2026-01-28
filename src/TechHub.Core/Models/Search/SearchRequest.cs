@@ -66,4 +66,11 @@ public record SearchRequest
     /// Null for first page.
     /// </summary>
     public string? ContinuationToken { get; init; }
+
+    /// <summary>
+    /// Whether to include facet aggregations in the response.
+    /// Default: false (skip expensive facet computation for simple queries).
+    /// Set to true when building a search page with faceted navigation.
+    /// </summary>
+    public bool IncludeFacets { get; init; } = false;
 }

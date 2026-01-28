@@ -1,11 +1,10 @@
-﻿---
+---
 external_url: ''
 title: Copilot Metrics API
 author: TBD
 date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
 draft: true
-ghc_feature: true
 plans:
 - Business
 tags: []

@@ -217,7 +217,9 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         items!.Should().NotBeEmpty(); // GitHub Copilot videos collection has items
         items.Should().AllSatisfy(item =>
         {
-            item.CollectionName.Should().Be("videos");
+            // Videos collection includes subcollections (ghc-features, vscode-updates)
+            var validCollections = new[] { "videos", "ghc-features", "vscode-updates" };
+            item.CollectionName.Should().BeOneOf(validCollections);
             item.SectionNames.Should().Contain("github-copilot");
         });
     }

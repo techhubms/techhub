@@ -9,7 +9,7 @@
         <div class="card-header">
             <h3 class="card-title">@Item.Title</h3>
             <div class="card-meta">
-                <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
+                <time datetime="@FormatDateIso(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>
                 @if (!string.IsNullOrWhiteSpace(Item.Author))
                 {
                     <span class="content-author">by @Item.Author</span>
@@ -70,6 +70,9 @@
 
         return dateTime.ToString("MMM d, yyyy");
     }
+
+    private static string FormatDateIso(long epochSeconds) =>
+        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("yyyy-MM-dd");
 
     private string CapitalizeCollection(string collection)
     {

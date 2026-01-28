@@ -21,9 +21,8 @@
     @* Sidebar (Left Column) *@
     <aside class="sidebar">
         @* Latest Roundup *@
-        @if (roundups != null && roundups.Any())
+        @if (latestRoundup != null)
         {
-            var latestRoundup = roundups.First();
             <div class="sidebar-section latest-roundup">
                 <h2 class="sidebar-h2">Latest Roundup</h2>
                 <a href="@latestRoundup.GetHref()"
@@ -33,7 +32,7 @@
                    data-enhance-nav="@latestRoundup.GetDataEnhanceNav()"
                    aria-label="@latestRoundup.GetAriaLabel()">
                     <span class="sidebar-featured-title">@latestRoundup.Title</span>
-                    <span class="sidebar-featured-date">@DateTime.Parse(latestRoundup.DateIso).ToString("MMM dd, yyyy")</span>
+                    <span class="sidebar-featured-date">@FormatDateShort(latestRoundup.DateEpoch)</span>
                 </a>
             </div>
         }
@@ -60,7 +59,7 @@
                                     <span
                                         class="sidebar-item-collection">@(GetCollectionTitle(item.CollectionName))</span>
                                     <span class="sidebar-content-button-meta-separator">•</span>
-                                    <span class="sidebar-item-date">@DateTime.Parse(item.DateIso).ToString("MMM dd, yyyy")</span>
+                                    <span class="sidebar-item-date">@FormatDateShort(item.DateEpoch)</span>
                                 </span>
                             </a>
                         </li>
@@ -104,7 +103,7 @@ new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon(
     ];
 
     private IEnumerable<TechHub.Core.Models.Section>? sections;
-    private IEnumerable<TechHub.Core.Models.ContentItem>? roundups;
+    private TechHub.Core.Models.ContentItem? latestRoundup;
     private IEnumerable<TechHub.Core.Models.ContentItem>? latestItems;
 
     private static RenderFragment GetNewsletterIcon() => @<svg width="16" height="16" viewBox="0 0 24 24"
@@ -117,18 +116,15 @@ protected override async Task OnInitializedAsync()
 {
 try
 {
-// Fetch all content in parallel
+// Fetch all content in parallel - using database-optimized endpoints
 var sectionsTask = ApiClient.GetAllSectionsAsync();
-var roundupsTask = ApiClient.GetContentAsync(sectionName: null, collectionName: "roundups");
-var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
+var roundupTask = ApiClient.GetLatestRoundupAsync(); // Uses SearchAsync with Take=1
+var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5); // Uses SearchAsync with Take=5
 
-await Task.WhenAll(sectionsTask, roundupsTask, latestItemsTask);
+await Task.WhenAll(sectionsTask, roundupTask, latestItemsTask);
 
 sections = await sectionsTask;
-// Get roundups and order by date descending to get the latest ones first
-var allRoundups = await roundupsTask;
-roundups = allRoundups?.OrderByDescending(r => r.DateEpoch);
-
+latestRoundup = await roundupTask;
 latestItems = await latestItemsTask;
 }
 catch (Exception ex)
@@ -136,4 +132,7 @@ catch (Exception ex)
 ErrorService.HandleError(ex, Navigation, Logger);
 }
 }
+
+    private static string FormatDateShort(long epochSeconds) =>
+        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("MMM dd, yyyy");
 }

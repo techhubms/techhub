@@ -33,16 +33,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "<p>This is the excerpt of the post.</p>",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -62,17 +65,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
             Author = "John Doe",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -85,10 +90,27 @@ public class ContentItemCardTests : BunitContext
     }
 
     [Fact]
-    public void ContentItemCard_DoesNotShowAuthor_WhenNotProvided()
+    public void ContentItemCard_DoesNotShowAuthor_WhenEmpty()
     {
-        // Arrange
-        var item = CreateTestContentItem("Example Post", "2024-01-15");
+        // Arrange - author is empty string
+        var item = new ContentItem
+        {
+            Slug = "example-post",
+            Title = "Example Post",
+            Author = "",
+            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            Tags = [],
+            Excerpt = "",
+            ExternalUrl = "https://example.com/post",
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
+        };
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
@@ -107,17 +129,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = ["ai", "copilot", "productivity", "dotnet"],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -139,17 +163,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = ["ai", "copilot", "productivity", "dotnet", "azure", "github", "vscode"],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -172,17 +198,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "news",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -203,17 +231,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "news",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -234,17 +264,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://techcommunity.microsoft.com/example",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -266,17 +298,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "videos",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://www.youtube.com/watch?v=example",
-            Url = "/ai/videos/example-post"
+            Url = "/ai/videos/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -298,17 +332,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = twoDaysAgo,
-            DateIso = "2024-01-15",
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -329,17 +365,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = today,
-            DateIso = "2024-01-15",
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -359,17 +397,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "community",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -405,17 +445,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -435,17 +477,19 @@ public class ContentItemCardTests : BunitContext
         {
             Slug = "example-post",
             Title = "Example Post",
-
-            Author = null,
+            Author = "Test Author",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
             CollectionName = "videos",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://www.youtube.com/watch?v=example",
-            Url = "/ai/videos/example-post"
+            Url = "/ai/videos/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
 
         // Act
@@ -457,23 +501,25 @@ public class ContentItemCardTests : BunitContext
         link.GetAttribute("aria-label").Should().Be("Example Post");
     }
 
-    private static ContentItem CreateTestContentItem(string title, string dateIso)
+    private static ContentItem CreateTestContentItem(string title, string date)
     {
         return new ContentItem
         {
             Slug = title.ToLowerInvariant().Replace(" ", "-"),
             Title = title,
-
-            Author = null,
-            DateEpoch = DateTimeOffset.Parse(dateIso).ToUnixTimeSeconds(),
-            DateIso = dateIso,
+            Author = "Test Author",
+            DateEpoch = DateTimeOffset.Parse(date).ToUnixTimeSeconds(),
             CollectionName = "blogs",
             SectionNames = ["ai"],
-            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            Url = "/ai/blogs/example-post",
+            FeedName = "",
+            Plans = [],
+            GhesSupport = false,
+            Draft = false,
+            GhcFeature = false
         };
     }
 }

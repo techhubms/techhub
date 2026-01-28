@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/IsEXdeTbi1I
 title: User Instructions
 author: Rob Bos
 date: 2024-08-15 14:57:39 +00:00
-ghc_feature: true
 ghes_support: true
 plans:
 - Free

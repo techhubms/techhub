@@ -1,26 +1,12 @@
 ---
-external_url: https://www.youtube.com/watch?v=dxDqelvVc2U
-title: 'Hands-On Lab: The Power of GitHub Copilot in Visual Studio Code'
-author: Visual Studio Code
-feed_name: Visual Studio Code YouTube
+title: "Hands-On Lab: The Power of GitHub Copilot in Visual Studio Code"
+author: "Visual Studio Code"
 date: 2026-01-05 13:01:17 +00:00
-tags:
-- Agentic Development
-- AI Coding Assistance
-- Cloud Development
-- Code Customization
-- Coding Workflows
-- Copilot Agent Mode
-- Copilot CLI
-- Custom Agents
-- Developer Productivity
-- GitHub Copilot Cloud Agent
-- MCP Servers
-- VS Code
-section_names:
-- ai
-- coding
-- github-copilot
+primary_section: ai
+section_names: ["ai", "coding", "github-copilot"]
+tags: ["Agentic Development", "AI Coding Assistance", "Cloud Development", "Code Customization", "Coding Workflows", "Copilot Agent Mode", "Copilot CLI", "Custom Agents", "Developer Productivity", "GitHub Copilot Cloud Agent", "MCP Servers", "VS Code"]
+external_url: https://www.youtube.com/watch?v=dxDqelvVc2U
+feed_name: "Visual Studio Code YouTube"
 ---
 Visual Studio Code presents a hands-on lab exploring advanced GitHub Copilot features, including agent mode and cloud-based AI agents, to enhance developer productivity and workflow customization.<!--excerpt_end-->
 

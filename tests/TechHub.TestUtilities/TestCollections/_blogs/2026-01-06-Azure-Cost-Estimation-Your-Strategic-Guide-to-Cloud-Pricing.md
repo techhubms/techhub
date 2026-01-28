@@ -1,35 +1,12 @@
 ---
-external_url: https://www.thomasmaurer.ch/2026/01/azure-cost-estimation-your-strategic-guide-to-cloud-pricing/
-title: 'Azure Cost Estimation: Your Strategic Guide to Cloud Pricing'
-author: Thomas Maurer
-feed_name: Thomas Maurer's Blog
+title: "Azure Cost Estimation: Your Strategic Guide to Cloud Pricing"
+author: "Thomas Maurer"
 date: 2026-01-06 06:23:00 +00:00
-tags:
-- Azure Advisor
-- Azure Cost Estimation
-- Azure Cost Management
-- Azure Essentials Show
-- Azure Migrate
-- Azure Monitor
-- Azure Pricing
-- Azure Pricing Calculator
-- Budgeting
-- Cloud
-- Cloud Architecture
-- Cloud Pricing
-- Cloud Strategy
-- Cost Management
-- Cost Optimization
-- Microsoft
-- Microsoft Azure
-- Microsoft Copilot in Azure
-- Pricing
-- Resource Configuration
-- Uncategorized
-- Usage Estimation
-- Video
-section_names:
-- azure
+primary_section: azure
+section_names: ["azure"]
+tags: ["Azure Advisor", "Azure Cost Estimation", "Azure Cost Management", "Azure Essentials Show", "Azure Migrate", "Azure Monitor", "Azure Pricing", "Azure Pricing Calculator", "Budgeting", "Cloud", "Cloud Architecture", "Cloud Pricing", "Cloud Strategy", "Cost Management", "Cost Optimization", "Microsoft", "Microsoft Azure", "Microsoft Copilot in Azure", "Pricing", "Resource Configuration", "Uncategorized", "Usage Estimation", "Video"]
+external_url: https://www.thomasmaurer.ch/2026/01/azure-cost-estimation-your-strategic-guide-to-cloud-pricing/
+feed_name: "Thomas Maurer"
 ---
 Thomas Maurer, joined by Britt from Microsoft Azure, explains essential strategies and tools to estimate and optimize cloud costs using Microsoft Azure’s pricing resources and cost management features.<!--excerpt_end-->
 

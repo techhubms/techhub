@@ -1,4 +1,3 @@
-using System.Text.Json;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
@@ -10,21 +9,19 @@ using TechHub.Infrastructure.Services;
 namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
-/// Repository for loading content from markdown files in collections directories
+/// Repository for loading content from markdown files in collections directories.
 /// Reads from: collections/_news/, collections/_videos/, collections/_blogs/, etc.
-/// Uses IMemoryCache for caching loaded content.
+/// Extends ContentRepositoryBase which handles caching logic.
 /// </summary>
-public class FileBasedContentRepository : IContentRepository
+public class FileBasedContentRepository : ContentRepositoryBase
 {
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
-    private readonly IMarkdownService _markdownService;
-    private readonly ITagMatchingService _tagMatchingService;
-    private readonly IMemoryCache _cache;
 
-    private const string CacheKey = "ContentRepository:AllItems";
+    // Local cache key for all items (file-based repo loads everything at once)
+    private const string AllItemsCacheKey = "FileBasedRepository:AllItems";
 
-    private static readonly string[] _validCollections =
+    private static readonly string[] ValidCollections =
     [
         "_news",
         "_videos",
@@ -36,28 +33,23 @@ public class FileBasedContentRepository : IContentRepository
     public FileBasedContentRepository(
         IOptions<AppSettings> settings,
         IMarkdownService markdownService,
-        ITagMatchingService tagMatchingService,
         IHostEnvironment environment,
         IMemoryCache cache)
+        : base(cache, markdownService)
     {
         ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(markdownService);
-        ArgumentNullException.ThrowIfNull(tagMatchingService);
         ArgumentNullException.ThrowIfNull(environment);
-        ArgumentNullException.ThrowIfNull(cache);
 
         var configuredPath = settings.Value.Content.CollectionsPath;
 
         // Resolve relative paths to absolute paths based on content root
-        // In Development/Test: ContentRootPath = /workspaces/techhub/src/TechHub.Api
-        // We need to go up to solution root to find collections/
         if (Path.IsPathRooted(configuredPath))
         {
             _basePath = configuredPath;
         }
         else
         {
-            // Navigate up from API project to solution root, then to collections
             var solutionRoot = FindSolutionRoot(environment.ContentRootPath);
             _basePath = Path.Combine(solutionRoot, configuredPath);
         }
@@ -72,9 +64,6 @@ public class FileBasedContentRepository : IContentRepository
         }
 
         _frontMatterParser = new FrontMatterParser();
-        _markdownService = markdownService;
-        _tagMatchingService = tagMatchingService;
-        _cache = cache;
     }
 
     /// <summary>
@@ -93,47 +82,43 @@ public class FileBasedContentRepository : IContentRepository
             directory = directory.Parent;
         }
 
-        // Fallback: assume startPath is already at solution root
         return startPath;
     }
 
+    // ==================== Overrides for ContentRepositoryBase ====================
+
     /// <summary>
-    /// Initialize the repository by loading all data from disk.
-    /// Should be called once at application startup.
-    /// Returns the loaded collection for logging purposes.
+    /// Initialize by pre-loading all content from disk.
     /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken cancellationToken = default)
+    public override async Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken ct = default)
     {
-        // Load all data into cache (include drafts for initialization)
-        return await GetAllAsync(includeDraft: true, cancellationToken);
+        return await GetAllInternalAsync(includeDraft: true, ct);
     }
 
     /// <summary>
-    /// Get all content items across all collections.
-    /// Uses IMemoryCache to cache loaded data. Cache never expires (content is static).
-    /// Returns items sorted by date (DateEpoch) in descending order (newest first).
+    /// Internal implementation: Load all content from markdown files.
+    /// Results are cached in the local AllItems cache.
     /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> GetAllAsync(
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default)
+    protected override async Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
+        bool includeDraft,
+        CancellationToken ct)
     {
-        var allItems = await _cache.GetOrCreateAsync(CacheKey, async entry =>
+        // Use local cache for all items (file-based loads everything at once)
+        var allItems = await Cache.GetOrCreateAsync(AllItemsCacheKey, async entry =>
         {
-            // Cache never expires - content is loaded once and never changes without restart
-            entry.SetPriority(Microsoft.Extensions.Caching.Memory.CacheItemPriority.NeverRemove);
+            entry.SetPriority(CacheItemPriority.NeverRemove);
 
-            // Load all collections in parallel for faster startup
-            var collectionTasks = _validCollections
-                .Select(collection => LoadCollectionItemsAsync(collection, cancellationToken))
+            // Load all collections in parallel
+            var collectionTasks = ValidCollections
+                .Select(collection => LoadCollectionItemsAsync(collection, ct))
                 .ToArray();
 
             var collectionResults = await Task.WhenAll(collectionTasks);
-            var allItems = collectionResults.SelectMany(items => items).ToList();
+            var items = collectionResults.SelectMany(i => i).ToList();
 
             // Filter out future-dated content UNLESS it's marked as draft
-            // Draft items are included regardless of date (for "Coming Soon" features)
             var currentEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            var cachedItems = allItems
+            var cachedItems = items
                 .Where(x => x.DateEpoch <= currentEpoch || x.Draft)
                 .OrderByDescending(x => x.DateEpoch)
                 .ToList();
@@ -141,7 +126,7 @@ public class FileBasedContentRepository : IContentRepository
             return (IReadOnlyList<ContentItem>)cachedItems;
         }) ?? [];
 
-        // Filter drafts if needed (after getting from cache)
+        // Filter drafts if needed
         if (!includeDraft)
         {
             allItems = [.. allItems.Where(item => !item.Draft)];
@@ -151,38 +136,39 @@ public class FileBasedContentRepository : IContentRepository
     }
 
     /// <summary>
-    /// Get content items filtered by collection name.
-    /// Filters from cached in-memory data.
-    /// Returns items sorted by date (DateEpoch) in descending order (newest first).
-    /// Special case: collectionName="all" returns all content across all collections.
-    /// Includes both root collection items and subcollection items (e.g., videos + ghc-features).
-    /// Draft items are excluded by default unless includeDraft=true.
+    /// Internal implementation: Get content by slug from cached data.
     /// </summary>
-    /// <param name="collectionName">Collection name to filter by</param>
-    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
-    /// <param name="cancellationToken">Cancellation token</param>
-    public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
+    protected override async Task<ContentItem?> GetBySlugInternalAsync(
         string collectionName,
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default)
+        string slug,
+        bool includeDraft,
+        CancellationToken ct)
+    {
+        var items = await GetByCollectionInternalAsync(collectionName, includeDraft, ct);
+        return items.FirstOrDefault(item => item.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
+    }
+
+    /// <summary>
+    /// Internal implementation: Get content by collection from cached data.
+    /// </summary>
+    protected override async Task<IReadOnlyList<ContentItem>> GetByCollectionInternalAsync(
+        string collectionName,
+        bool includeDraft,
+        CancellationToken ct)
     {
         ArgumentNullException.ThrowIfNull(collectionName);
 
-        // Load all items (from cache if available) - already filtered by includeDraft
-        var allItems = await GetAllAsync(includeDraft, cancellationToken);
+        var allItems = await GetAllInternalAsync(includeDraft, ct);
 
-        // Handle virtual "all" collection - return all content
+        // Handle virtual "all" collection
         if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            // Already filtered by includeDraft parameter in GetAllAsync
             return [.. allItems.OrderByDescending(x => x.DateEpoch)];
         }
 
-        // Normalize collection name (add _ prefix if missing)
+        // Normalize collection name
         var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
 
-        // Filter by collection (includes both root and subcollections)
-        // Already filtered by includeDraft parameter in GetAllAsync
         var collectionItems = allItems
             .Where(item => item.CollectionName.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase));
 
@@ -190,104 +176,323 @@ public class FileBasedContentRepository : IContentRepository
     }
 
     /// <summary>
-    /// Get content items filtered by section name.
-    /// Matches against the SectionNames property which contains lowercase section names like "ai", "github-copilot".
-    /// Filters from cached in-memory data.
-    /// Returns items sorted by date (DateEpoch) in descending order (newest first).
-    /// Special case: sectionName="all" returns all content across all sections.
+    /// Internal implementation: Get content by section from cached data.
     /// </summary>
-    /// <param name="sectionName">Section name (lowercase, e.g., "ai", "github-copilot") or "all" for all sections</param>
-    /// <param name="includeDraft">Include draft items (default: false)</param>
-    /// <param name="cancellationToken">Cancellation token</param>
-    public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
+    protected override async Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
         string sectionName,
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default)
+        bool includeDraft,
+        CancellationToken ct)
     {
         ArgumentNullException.ThrowIfNull(sectionName);
 
-        var allItems = await GetAllAsync(includeDraft, cancellationToken);
+        var allItems = await GetAllInternalAsync(includeDraft, ct);
 
-        // Filter by section
         var sectionItems = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
             ? allItems
             : allItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
 
-        // Already filtered by includeDraft parameter in GetAllAsync
         return [.. sectionItems.OrderByDescending(x => x.DateEpoch)];
     }
 
     /// <summary>
-    /// Get a single content item by slug within a collection.
-    /// Searches cached in-memory data.
-    /// Slug is the filename without extension (e.g., "2026-01-01-my-article" from "2026-01-01-my-article.md")
+    /// In-memory search implementation for file-based repository.
+    /// Filters cached content by query, tags, sections, collections, and date range.
     /// </summary>
-    public async Task<ContentItem?> GetBySlugAsync(
-        string collectionName,
-        string slug,
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default)
+    protected override async Task<SearchResults<ContentItem>> SearchInternalAsync(
+        SearchRequest request,
+        CancellationToken ct)
     {
-        var items = await GetByCollectionAsync(collectionName, includeDraft, cancellationToken);
-        return items.FirstOrDefault(item => item.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
-    }
+        var allItems = await GetAllInternalAsync(includeDraft: false, ct);
+        IEnumerable<ContentItem> filtered = allItems;
 
-    /// <summary>
-    /// Search content items by text query (title, excerpt, tags).
-    /// Searches cached in-memory data.
-    /// Case-insensitive search across multiple fields.
-    /// Returns items sorted by date (DateEpoch) in descending order (newest first).
-    /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> SearchAsync(
-        string query,
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default)
-    {
-        if (string.IsNullOrWhiteSpace(query))
+        // Full-text search (naive: check if query appears in title, excerpt, or content)
+        if (!string.IsNullOrWhiteSpace(request.Query))
         {
-            return [];
+            var query = request.Query.ToLowerInvariant();
+            filtered = filtered.Where(item =>
+                (item.Title?.Contains(query, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (item.Excerpt?.Contains(query, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (item.Content?.Contains(query, StringComparison.OrdinalIgnoreCase) ?? false));
         }
 
-        var allItems = await GetAllAsync(includeDraft, cancellationToken);
-        var lowerQuery = query.ToLowerInvariant();
+        // Tag filtering (AND logic)
+        if (request.Tags is { Count: > 0 })
+        {
+            foreach (var tag in request.Tags)
+            {
+                var normalizedTag = tag.ToLowerInvariant().Trim();
+                filtered = filtered.Where(item =>
+                    item.Tags.Any(t => t.ToLowerInvariant().Contains(normalizedTag)));
+            }
+        }
 
-        return [.. allItems
-            .Where(item =>
-                item.Title.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
-                item.Excerpt.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
-                item.Tags.Any(tag => tag.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase)))
-            .OrderByDescending(x => x.DateEpoch)];
+        // Section filtering (OR logic)
+        if (request.Sections is { Count: > 0 })
+        {
+            filtered = filtered.Where(item =>
+                item.SectionNames.Any(s => request.Sections.Contains(s, StringComparer.OrdinalIgnoreCase)));
+        }
+
+        // Collection filtering (OR logic)
+        if (request.Collections is { Count: > 0 })
+        {
+            filtered = filtered.Where(item =>
+                request.Collections.Contains(item.CollectionName, StringComparer.OrdinalIgnoreCase));
+        }
+
+        // Date range filtering
+        if (request.DateFrom.HasValue)
+        {
+            var fromEpoch = request.DateFrom.Value.ToUnixTimeSeconds();
+            filtered = filtered.Where(item => item.DateEpoch >= fromEpoch);
+        }
+
+        if (request.DateTo.HasValue)
+        {
+            var toEpoch = request.DateTo.Value.ToUnixTimeSeconds();
+            filtered = filtered.Where(item => item.DateEpoch <= toEpoch);
+        }
+
+        // Order by date descending
+        var orderedItems = filtered.OrderByDescending(item => item.DateEpoch).ToList();
+
+        // Apply pagination
+        var pagedItems = orderedItems.Take(request.Take).ToList();
+
+        return new SearchResults<ContentItem>
+        {
+            Items = pagedItems,
+            TotalCount = orderedItems.Count,
+            Facets = new FacetResults
+            {
+                Facets = new Dictionary<string, IReadOnlyList<FacetValue>>(),
+                TotalCount = orderedItems.Count
+            },
+            ContinuationToken = null
+        };
     }
 
     /// <summary>
-    /// Get all unique tags across all content.
-    /// Computes from cached in-memory data.
-    /// Returns normalized (lowercase) unique tags sorted alphabetically.
+    /// In-memory facet computation for file-based repository.
+    /// Computes facet counts from cached content.
     /// </summary>
-    public async Task<IReadOnlyList<string>> GetAllTagsAsync(
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default)
+    protected override async Task<FacetResults> GetFacetsInternalAsync(
+        FacetRequest request,
+        CancellationToken ct)
     {
-        var allItems = await GetAllAsync(includeDraft, cancellationToken);
+        var allItems = await GetAllInternalAsync(includeDraft: false, ct);
+        IEnumerable<ContentItem> filtered = allItems;
 
-        return [.. allItems
-            .SelectMany(item => item.Tags)
-            .Select(tag => tag.ToLowerInvariant())
-            .Distinct()
-            .OrderBy(tag => tag)];
+        // Apply filters
+        if (request.Tags is { Count: > 0 })
+        {
+            foreach (var tag in request.Tags)
+            {
+                var normalizedTag = tag.ToLowerInvariant().Trim();
+                filtered = filtered.Where(item =>
+                    item.Tags.Any(t => t.ToLowerInvariant().Contains(normalizedTag)));
+            }
+        }
+
+        if (request.Sections is { Count: > 0 })
+        {
+            filtered = filtered.Where(item =>
+                item.SectionNames.Any(s => request.Sections.Contains(s, StringComparer.OrdinalIgnoreCase)));
+        }
+
+        if (request.Collections is { Count: > 0 })
+        {
+            filtered = filtered.Where(item =>
+                request.Collections.Contains(item.CollectionName, StringComparer.OrdinalIgnoreCase));
+        }
+
+        if (request.DateFrom.HasValue)
+        {
+            var fromEpoch = request.DateFrom.Value.ToUnixTimeSeconds();
+            filtered = filtered.Where(item => item.DateEpoch >= fromEpoch);
+        }
+
+        if (request.DateTo.HasValue)
+        {
+            var toEpoch = request.DateTo.Value.ToUnixTimeSeconds();
+            filtered = filtered.Where(item => item.DateEpoch <= toEpoch);
+        }
+
+        var filteredList = filtered.ToList();
+        var facets = new Dictionary<string, IReadOnlyList<FacetValue>>();
+
+        // Compute tag facets
+        if (request.FacetFields.Contains("tags"))
+        {
+            var tagCounts = filteredList
+                .SelectMany(item => item.Tags)
+                .GroupBy(tag => tag, StringComparer.OrdinalIgnoreCase)
+                .Select(g => new FacetValue { Value = g.Key, Count = g.Count() })
+                .OrderByDescending(f => f.Count)
+                .ThenBy(f => f.Value, StringComparer.OrdinalIgnoreCase)
+                .Take(request.MaxFacetValues)
+                .ToList();
+
+            facets["tags"] = tagCounts;
+        }
+
+        // Compute collection facets
+        if (request.FacetFields.Contains("collections"))
+        {
+            var collectionCounts = filteredList
+                .GroupBy(item => item.CollectionName, StringComparer.OrdinalIgnoreCase)
+                .Select(g => new FacetValue { Value = g.Key, Count = g.Count() })
+                .OrderByDescending(f => f.Count)
+                .ThenBy(f => f.Value, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            facets["collections"] = collectionCounts;
+        }
+
+        // Compute section facets
+        if (request.FacetFields.Contains("sections"))
+        {
+            var sectionCounts = filteredList
+                .SelectMany(item => item.SectionNames)
+                .GroupBy(section => section, StringComparer.OrdinalIgnoreCase)
+                .Select(g => new FacetValue { Value = g.Key, Count = g.Count() })
+                .OrderByDescending(f => f.Count)
+                .ThenBy(f => f.Value, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            facets["sections"] = sectionCounts;
+        }
+
+        return new FacetResults
+        {
+            Facets = facets,
+            TotalCount = filteredList.Count
+        };
     }
+
+    /// <summary>
+    /// In-memory related articles computation for file-based repository.
+    /// Finds articles with overlapping tags, ranked by shared tag count.
+    /// </summary>
+    protected override async Task<IReadOnlyList<ContentItem>> GetRelatedInternalAsync(
+        string articleId,
+        int count,
+        CancellationToken ct)
+    {
+        var allItems = await GetAllInternalAsync(includeDraft: false, ct);
+
+        // Find the source article
+        var sourceArticle = allItems.FirstOrDefault(item => item.Slug == articleId);
+
+        if (sourceArticle == null || sourceArticle.Tags.Count == 0)
+        {
+            // Fallback: return most recent items from the same collection
+            return allItems
+                .Where(item => item.Slug != articleId &&
+                              item.CollectionName == sourceArticle?.CollectionName)
+                .OrderByDescending(item => item.DateEpoch)
+                .Take(count)
+                .ToList();
+        }
+
+        var sourceTags = new HashSet<string>(sourceArticle.Tags, StringComparer.OrdinalIgnoreCase);
+
+        // Find articles with tag overlap, ranked by shared tag count
+        var relatedItems = allItems
+            .Where(item => item.Slug != articleId)
+            .Select(item => new
+            {
+                Item = item,
+                SharedTagCount = item.Tags.Count(t => sourceTags.Contains(t))
+            })
+            .Where(x => x.SharedTagCount > 0)
+            .OrderByDescending(x => x.SharedTagCount)
+            .ThenByDescending(x => x.Item.DateEpoch)
+            .Take(count)
+            .Select(x => x.Item)
+            .ToList();
+
+        return relatedItems;
+    }
+
+    /// <summary>
+    /// Get tag counts from in-memory items using LINQ GROUP BY.
+    /// For file-based repository, this is efficient since items are already loaded.
+    /// </summary>
+    protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
+        DateTimeOffset? dateFrom,
+        DateTimeOffset? dateTo,
+        string? sectionName,
+        string? collectionName,
+        int? maxTags,
+        int minUses,
+        CancellationToken ct)
+    {
+        var allItems = await GetAllInternalAsync(includeDraft: false, ct);
+
+        // Apply filters
+        var filtered = allItems.AsEnumerable();
+
+        if (dateFrom.HasValue)
+        {
+            var fromEpoch = dateFrom.Value.ToUnixTimeSeconds();
+            filtered = filtered.Where(item => item.DateEpoch >= fromEpoch);
+        }
+
+        if (dateTo.HasValue)
+        {
+            var toEpoch = dateTo.Value.ToUnixTimeSeconds();
+            filtered = filtered.Where(item => item.DateEpoch <= toEpoch);
+        }
+
+        if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            filtered = filtered.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
+        }
+
+        if (!string.IsNullOrWhiteSpace(collectionName) && !collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            filtered = filtered.Where(item => item.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+        }
+
+        // Count tags using LINQ GROUP BY
+        var tagCounts = filtered
+            .SelectMany(item => item.Tags)
+            .GroupBy(tag => tag, StringComparer.OrdinalIgnoreCase)
+            .Select(g => new TagWithCount { Tag = g.Key, Count = g.Count() })
+            .Where(t => t.Count >= minUses)
+            .OrderByDescending(t => t.Count)
+            .ThenBy(t => t.Tag, StringComparer.OrdinalIgnoreCase);
+
+        var result = maxTags.HasValue
+            ? tagCounts.Take(maxTags.Value).ToList()
+            : tagCounts.ToList();
+
+        return result;
+    }
+
+    /// <summary>
+    /// For file-based repository, items are already hydrated from frontmatter.
+    /// Returns items as-is without additional processing.
+    /// </summary>
+    protected override Task<List<ContentItem>> HydrateRelationshipsAsync(
+        IList<ContentItem> items,
+        CancellationToken ct = default)
+    {
+        // File-based repo already has all data loaded from frontmatter - nothing to hydrate
+        return Task.FromResult(items.ToList());
+    }
+
+    // ==================== Private File Loading Methods ====================
 
     /// <summary>
     /// Load all items from a collection directory.
-    /// Helper method for initial data loading.
     /// </summary>
     private async Task<List<ContentItem>> LoadCollectionItemsAsync(
         string collectionName,
-        CancellationToken cancellationToken)
+        CancellationToken ct)
     {
-        // Normalize collection name (add _ prefix if missing)
         var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
-
         var collectionPath = Path.Combine(_basePath, normalizedCollection);
 
         if (!Directory.Exists(collectionPath))
@@ -297,284 +502,118 @@ public class FileBasedContentRepository : IContentRepository
 
         var markdownFiles = Directory.GetFiles(collectionPath, "*.md", SearchOption.AllDirectories);
 
-        // Load files in parallel for faster processing
         var itemTasks = markdownFiles
-            .Select(filePath => LoadContentItemAsync(filePath, normalizedCollection, cancellationToken))
+            .Select(filePath => LoadContentItemAsync(filePath, normalizedCollection, ct))
             .ToArray();
 
         var items = await Task.WhenAll(itemTasks);
-
-        // Filter out nulls (files that failed to parse or are invalid)
         return items.Where(item => item != null).ToList()!;
     }
 
     /// <summary>
-    /// Load a single content item from a markdown file
-    /// Parses frontmatter, extracts metadata, generates excerpt
+    /// Load a single content item from a markdown file.
     /// </summary>
     private async Task<ContentItem?> LoadContentItemAsync(
         string filePath,
         string collectionName,
-        CancellationToken cancellationToken)
+        CancellationToken ct)
     {
-        var fileContent = await File.ReadAllTextAsync(filePath, cancellationToken);
+        var fileContent = await File.ReadAllTextAsync(filePath, ct);
         var (frontMatter, content) = _frontMatterParser.Parse(fileContent);
 
-        // Extract required fields (title, date)
         var title = _frontMatterParser.GetValue<string>(frontMatter, "title");
         var dateStr = _frontMatterParser.GetValue<string>(frontMatter, "date");
 
         if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(dateStr))
         {
-            // Skip files without required frontmatter
             return null;
         }
 
-        // Parse date (supports various formats)
         if (!DateTimeOffset.TryParse(dateStr, out var date))
         {
             return null;
         }
 
-        // Extract optional fields
         var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Microsoft");
         var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
-
-        // Read section_names directly (ContentFixer has already normalized these to lowercase with hyphens)
         var sectionNames = _frontMatterParser.GetListValue(frontMatter, "section_names");
-
         var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
         var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "external_url", string.Empty);
         var feedName = _frontMatterParser.GetValue<string>(frontMatter, "feed_name", string.Empty);
-
-        // Parse GitHub Copilot features-specific fields
         var plans = _frontMatterParser.GetListValue(frontMatter, "plans");
         var ghesSupport = _frontMatterParser.GetValue<bool>(frontMatter, "ghes_support", false);
         var draft = _frontMatterParser.GetValue<bool>(frontMatter, "draft", false);
-        var ghcFeature = _frontMatterParser.GetValue<bool>(frontMatter, "ghc_feature", false);
 
-        // Derive subcollection from file path:
-        // - collections/_videos/file.md → subcollection: null
-        // - collections/_videos/vscode-updates/file.md → subcollection: "vscode-updates"
-        // - collections/_news/file.md → subcollection: null
         var subcollectionName = DeriveSubcollectionFromPath(filePath);
         var derivedCollection = collectionName.TrimStart('_');
 
-        // Read primary_section from frontmatter (computed by ContentFixer using priority order)
-        var primarySectionName = _frontMatterParser.GetValue<string>(frontMatter, "primary_section");
-        if (string.IsNullOrEmpty(primarySectionName))
-        {
-            throw new InvalidOperationException(
-                $"Content item is missing required 'primary_section' in frontmatter. " +
-                $"File: {filePath}, Title: '{title}', Collection: '{derivedCollection}'");
-        }
+        // GhcFeature is derived from subcollection or collection name being "ghc-features"
+        var ghcFeature = string.Equals(subcollectionName, "ghc-features", StringComparison.OrdinalIgnoreCase)
+                      || string.Equals(derivedCollection, "ghc-features", StringComparison.OrdinalIgnoreCase);
 
-        // Parse sidebar-info if present (dynamic JSON data for custom sidebars)
-        JsonElement? sidebarInfo = null;
-        if (frontMatter.TryGetValue("sidebar-info", out var sidebarData))
-        {
-            // Convert to JSON for flexible client-side consumption
-            var json = JsonSerializer.Serialize(sidebarData);
-            sidebarInfo = JsonSerializer.Deserialize<JsonElement>(json);
-        }
+        // PrimarySectionName is computed internally by ContentItem from SectionNames
 
-        // Generate slug from filename (without extension and without date prefix)
-        var fileName = Path.GetFileNameWithoutExtension(filePath);
-        var slug = StripDatePrefix(fileName);
+        var filename = Path.GetFileNameWithoutExtension(filePath);
+        var slug = StripDatePrefix(filename).ToLowerInvariant();
 
-        // Generate excerpt if not provided in frontmatter
         if (string.IsNullOrWhiteSpace(excerpt))
         {
-            excerpt = _markdownService.ExtractExcerpt(content);
+            excerpt = MarkdownService.ExtractExcerpt(content);
         }
 
-        // Process YouTube embeds and render markdown to HTML
-        var processedMarkdown = _markdownService.ProcessYouTubeEmbeds(content);
-
-        // Calculate URL using primary_section (read from frontmatter or computed above)
-        // URLs always use collection name, not subcollection (subcollections are for filtering only)
-        // e.g., /github-copilot/videos/slug (not /github-copilot/ghc-features/slug)
+        // Compute primary section for URL - same logic as ContentItem uses internally
+        var primarySectionName = ContentItem.ComputePrimarySectionName(sectionNames);
         var currentPagePath = $"/{primarySectionName}/{derivedCollection}/{slug}".ToLowerInvariant();
 
-        string renderedHtml;
-        try
-        {
-            renderedHtml = _markdownService.RenderToHtml(
-                processedMarkdown,
-                currentPagePath);
-        }
-        catch (Exception ex)
-        {
-            throw new InvalidOperationException(
-                $"Failed to render markdown for file: {filePath}. " +
-                $"Slug: '{slug}', Collection: '{collectionName}', Sections: [{string.Join(", ", sectionNames)}]",
-                ex);
-        }
-
-        var item = new ContentItem
+        // Return ContentItem with raw Content - base class will render to HTML
+        // Note: PrimarySectionName is computed internally by ContentItem from SectionNames
+        return new ContentItem
         {
             Slug = slug,
             Title = title,
             Author = author,
             DateEpoch = date.ToUnixTimeSeconds(),
-            DateIso = date.ToString("yyyy-MM-dd"),
             CollectionName = derivedCollection,
             SubcollectionName = subcollectionName,
             FeedName = feedName,
             SectionNames = sectionNames,
-            PrimarySectionName = primarySectionName,
             Tags = tags,
             Plans = plans,
             GhesSupport = ghesSupport,
             Draft = draft,
             GhcFeature = ghcFeature,
-            RenderedHtml = renderedHtml,
+            Content = content,  // Raw markdown - base class renders this
             Excerpt = excerpt,
             ExternalUrl = externalUrl,
-            Url = currentPagePath,
-            SidebarInfo = sidebarInfo
+            Url = currentPagePath
         };
-
-        return item;
     }
 
     /// <summary>
-    /// Strips YYYY-MM-DD- date prefix from slug if present.
-    /// Example: "2026-01-12-what-quantum-safe-is" → "what-quantum-safe-is"
+    /// Strips YYYY-MM-DD- date prefix from filename to create clean slug.
     /// </summary>
-    /// <param name="slug">Original slug from filename</param>
-    /// <returns>Slug with date prefix removed if it was present</returns>
-    private static string StripDatePrefix(string slug)
+    private static string StripDatePrefix(string filename)
     {
-        // Pattern matches YYYY-MM-DD- at the start of the string
-        // Example: 2026-01-12-slug-name → slug-name
         return System.Text.RegularExpressions.Regex.Replace(
-            slug,
+            filename,
             @"^\d{4}-\d{2}-\d{2}-",
             string.Empty);
     }
 
     /// <summary>
-    /// Filter content items by tags and/or date range with optional section/collection scoping
-    /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> FilterAsync(
-        FilterRequest request,
-        CancellationToken cancellationToken = default)
-    {
-        ArgumentNullException.ThrowIfNull(request);
-
-        // Start with all items or scoped items
-        IReadOnlyList<ContentItem> items;
-
-        if (!string.IsNullOrWhiteSpace(request.CollectionName) && !string.IsNullOrWhiteSpace(request.SectionName))
-        {
-            // Collection scope: filter by collection AND section (exclude drafts)
-            var collectionItems = await GetByCollectionAsync(request.CollectionName, includeDraft: false, cancellationToken);
-            items = [.. collectionItems.Where(item => item.SectionNames.Contains(request.SectionName, StringComparer.OrdinalIgnoreCase))];
-        }
-        else if (!string.IsNullOrWhiteSpace(request.SectionName))
-        {
-            // Section scope (exclude drafts)
-            items = await GetBySectionAsync(request.SectionName, includeDraft: false, cancellationToken);
-        }
-        else if (!string.IsNullOrWhiteSpace(request.CollectionName))
-        {
-            // Collection scope only (exclude drafts)
-            items = await GetByCollectionAsync(request.CollectionName, includeDraft: false, cancellationToken);
-        }
-        else
-        {
-            // No scope - all items (exclude drafts)
-            items = await GetAllAsync(includeDraft: false, cancellationToken);
-        }
-
-        // Apply tag filter if tags are specified
-        if (request.SelectedTags.Count > 0)
-        {
-            items = [.. items.Where(item => _tagMatchingService.MatchesAny(request.SelectedTags, item.Tags))];
-        }
-
-        // Apply date range filter
-        if (request.DateFrom.HasValue)
-        {
-            var fromEpoch = request.DateFrom.Value.ToUnixTimeSeconds();
-            items = [.. items.Where(item => item.DateEpoch >= fromEpoch)];
-        }
-
-        if (request.DateTo.HasValue)
-        {
-            var toEpoch = request.DateTo.Value.ToUnixTimeSeconds();
-            items = [.. items.Where(item => item.DateEpoch <= toEpoch)];
-        }
-
-        // Results are already sorted by DateEpoch descending from GetAllAsync
-        // If we filtered, maintain that order
-        return [.. items.OrderByDescending(x => x.DateEpoch)];
-    }
-
-    /// <summary>
-    /// Derive subcollection name from file path based on subfolder structure
-    /// - collections/_videos/file.md → null
-    /// - collections/_videos/vscode-updates/file.md → "vscode-updates"
-    /// - collections/_news/file.md → null
+    /// Derive subcollection name from file path based on subfolder structure.
     /// </summary>
     private string? DeriveSubcollectionFromPath(string filePath)
     {
-        // Normalize path separators
         var normalizedPath = filePath.Replace('\\', '/');
-
-        // Get the relative path from the base path
         var relativePath = Path.GetRelativePath(_basePath, normalizedPath).Replace('\\', '/');
-
-        // Split into segments: ["_videos", "vscode-updates", "file.md"] or ["_news", "file.md"]
         var segments = relativePath.Split('/', StringSplitOptions.RemoveEmptyEntries);
 
-        // If the file is in a subdirectory (segments.Length > 2), return subdirectory name as subcollection
-        // Otherwise return null
         if (segments.Length > 2)
         {
-            // Use the subdirectory name (e.g., "vscode-updates" from ["_videos", "vscode-updates", "file.md"])
             return segments[1];
         }
 
-        // File is in root of collection directory
         return null;
-    }
-
-    // ==================== Search Methods (Stub implementations) ====================
-    // These will be properly implemented when migrating to SQLite/PostgreSQL
-
-    /// <inheritdoc />
-    public Task<SearchResults<ContentItem>> SearchAsync(
-        SearchRequest request,
-        CancellationToken ct = default)
-    {
-        // Stub implementation - not supported for file-based repository
-        throw new NotSupportedException(
-            "SearchAsync is not supported by FileBasedContentRepository. " +
-            "Use SqliteContentRepository or PostgresContentRepository for search functionality.");
-    }
-
-    /// <inheritdoc />
-    public Task<FacetResults> GetFacetsAsync(
-        FacetRequest request,
-        CancellationToken ct = default)
-    {
-        // Stub implementation - not supported for file-based repository
-        throw new NotSupportedException(
-            "GetFacetsAsync is not supported by FileBasedContentRepository. " +
-            "Use SqliteContentRepository or PostgresContentRepository for facet functionality.");
-    }
-
-    /// <inheritdoc />
-    public Task<IReadOnlyList<ContentItem>> GetRelatedAsync(
-        string articleId,
-        int count = 5,
-        CancellationToken ct = default)
-    {
-        // Stub implementation - not supported for file-based repository
-        throw new NotSupportedException(
-            "GetRelatedAsync is not supported by FileBasedContentRepository. " +
-            "Use SqliteContentRepository or PostgresContentRepository for related articles functionality.");
     }
 }
