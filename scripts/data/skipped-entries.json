@@ -11559,5 +11559,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=mpfaA6THsr0",
     "collection": "videos",
     "timestamp": "2026-01-28 01:33:11 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/fNf2PcVJpyE",
+    "reason": "No categories found: All category arrays are left empty because the provided content is primarily event promotion and lacks substantive technical detail, as evidenced by the description. The description only announces the Agents League event, registration, community links, and a call to submit projects, without actual technical, developmental, or implementation guidance. This qualifies for exclusion under the 'Sales Pitches' and 'Promotional Content without Technical Depth' generic exclusion rule in Chapter 3. Additionally, there is no concrete technical content to analyze due to the absence of a 'content' field.",
+    "collection": "videos",
+    "timestamp": "2026-01-28 08:04:05 +00:00"
   }
 ]

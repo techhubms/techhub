@@ -24448,5 +24448,11 @@
     "canonical_url": "https://blogs.microsoft.com/blog/2026/01/27/how-microsoft-is-empowering-frontier-transformation-with-intelligence-trust/",
     "collection": "news",
     "timestamp": "2026-01-28 01:32:09 +00:00"
+  },
+  {
+    "timestamp": "2026-01-28 09:09:18 +00:00",
+    "canonical_url": "https://devclass.com/2026/01/28/webassembly-gaining-adoption-behind-the-scenes-as-technology-advances/",
+    "collection": "blogs",
+    "reason": "Succesfully added: Applied the 'Coding' category because the article substantially discusses programming technologies, language compilation targets, and .NET framework innovations (Coding rule 1, 2, 4). Microsoft .NET 10 and Uno Platform are central to the technical story, but there is not enough content about Azure cloud services, ML/AI, Security, or specific DevOps practices to assign those categories. The primary focus is on cross-platform development, language ecosystem, and runtime improvements, fulfilling Coding inclusion rules."
   }
 ]
