@@ -24454,5 +24454,11 @@
     "canonical_url": "https://devclass.com/2026/01/28/webassembly-gaining-adoption-behind-the-scenes-as-technology-advances/",
     "collection": "blogs",
     "reason": "Succesfully added: Applied the 'Coding' category because the article substantially discusses programming technologies, language compilation targets, and .NET framework innovations (Coding rule 1, 2, 4). Microsoft .NET 10 and Uno Platform are central to the technical story, but there is not enough content about Azure cloud services, ML/AI, Security, or specific DevOps practices to assign those categories. The primary focus is on cross-platform development, language ecosystem, and runtime improvements, fulfilling Coding inclusion rules."
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: The content focuses on the technical architecture and developer implementation of hybrid AI solutions using Microsoft Foundry Local (for running SLMs), GitHub Copilot SDK (for AI agent orchestration and skills), and cloud-based LLMs. 'AI' is included due to the broad discussion of Microsoft AI platforms, hybrid orchestration, and Copilot SDK. 'GitHub Copilot' is included because the Copilot SDK, a development tool, is a core part of the workflow (per inclusion rule: 'GitHub Copilot' category is for SDK usage and agent development, not productivity applications). 'Coding' is assigned because the tutorial covers developer practices, agent automation logic, and Python code snippets. Azure and ML categories are NOT assigned because while Azure AI is cited as a resource, the content is not specifically about Azure platform features or custom ML/data science engineering. The content is highly technical, meets length/quality standards, and does not trigger generic exclusion rules.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/github-copilot-sdk-and-hybrid-ai-in-practice-automating-readme/ba-p/4489694",
+    "timestamp": "2026-01-28 10:06:07 +00:00"
   }
 ]
