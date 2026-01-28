@@ -24538,5 +24538,11 @@
     "timestamp": "2026-01-28 19:09:01 +00:00",
     "collection": "blogs",
     "reason": "Succesfully added: Assigned 'AI' because the entire article is about customizing and extending AI assistant functionality within developer workflows, focusing on implementation of AI-powered developer tools (AI inclusion rule 1, 2, 4, 5). Assigned 'GitHub Copilot' because it covers in-depth use cases, features, and configurations specific to GitHub Copilot (GitHub Copilot inclusion rules 1-4). No other categories were assigned because the content doesn’t directly cover programming language or framework implementation (so not 'Coding'), pipelines or CI/CD (not 'DevOps'), platform deployment details (not 'Azure'), machine learning solution engineering (not 'ML'), or enterprise security practices (not 'Security')."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/automated-test-framework-missing-tests-in-test-explorer/ba-p/4490186",
+    "reason": "Succesfully added: Assigned the Azure category because the content is focused on Logic Apps Standard, a core Azure integration service, and guides Azure-based development workflows (Azure rule 1). Assigned Coding because it describes editing csproj files, managing .NET package dependencies, and resolving developer issues in VS Code (Coding rules 1, 4, 5). Did not assign DevOps as the focus is on local test setup, not CI/CD or operations. Did not assign AI, ML, Security, or GitHub Copilot since none are relevant to the topic. All generic exclusion rules were checked: this is substantive, technical, community content (not promotional, biographical, or non-English).",
+    "timestamp": "2026-01-28 20:05:23 +00:00"
   }
 ]
