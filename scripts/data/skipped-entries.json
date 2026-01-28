@@ -11541,5 +11541,23 @@
     "timestamp": "2026-01-27 19:09:36 +00:00",
     "collection": "news",
     "reason": "No categories found: No categories assigned. This content is a news announcement about the release of the 'Toxic Tangle' update for the game Grounded 2. It focuses on new gameplay content, features, and mechanics for an Xbox/PC game. There is no substantial technical depth related to Microsoft developer tools, coding practices, Azure, DevOps, AI, ML, or security. The article does not discuss game development, modding, or engine-level customization but is strictly an end-user update and promotional information about a consumer gaming product. According to the generic exclusion rules, such end-user product updates, especially gaming news without a developer focus or technology stack discussion, are excluded and do not fit any predefined categories."
+  },
+  {
+    "reason": "No categories found: Content excluded because the 'content' field is null, meaning there is no substantive content to evaluate. Without the main body text, it is impossible to determine whether the content meets inclusion rules for any categories. According to the workflow, category assignment requires meaningful content for analysis, and the absence of content here means all categories must be excluded.",
+    "canonical_url": "https://www.youtube.com/watch?v=IxUttNm8PbU",
+    "collection": "videos",
+    "timestamp": "2026-01-28 01:32:43 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the main content is not provided (the 'content' field is null), preventing a determination of substantive technical depth or which Microsoft technologies (if any) are featured in detail. The available description is high-level and conversational, mentioning AI broadly but lacking specific reference to eligible Microsoft AI platforms, architectural details, or development–oriented implementation. Generic exclusion rule (focus on available substantive technical content) applies, as the absence of main content makes it impossible to verify the 40% Microsoft technology threshold or to assess applicability of the 'AI', 'Azure', or other categories per inclusion rules.",
+    "canonical_url": "https://www.youtube.com/shorts/MFt-kbPZwIA",
+    "collection": "videos",
+    "timestamp": "2026-01-28 01:32:58 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is focused on Power Apps and Microsoft 365 in the context of business productivity and user/business process automation, not development. According to generic exclusion rules, content dealing primarily with business process automation, workflows, or non-development Microsoft 365 features is excluded. There is no discussion of low-code development implementation, code, or technical platform customization that would qualify for Coding, AI, DevOps, Azure, ML, Security, or GitHub Copilot categories. The central theme is workplace collaboration enhancement, not developer-centric development, architecture, or implementation.",
+    "canonical_url": "https://www.youtube.com/watch?v=mpfaA6THsr0",
+    "collection": "videos",
+    "timestamp": "2026-01-28 01:33:11 +00:00"
   }
 ]

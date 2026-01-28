@@ -24442,5 +24442,11 @@
     "reason": "Succesfully added: Assigned 'AI' category because the episode explores how generative AI and large models are transforming robotics (AI inclusion rules 1, 4, 5). 'Azure' is included because Azure AI and Microsoft cloud tools are referenced as key platforms for these solutions (Azure inclusion rule 1). Coding and ML categories were not assigned, as the focus is high-level integration and real-world deployment, not code-level or ML development specifics. Content does not qualify for exclusion based on any generic rule.",
     "timestamp": "2026-01-28 00:06:16 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article centrally discusses Microsoft's AI strategy, AI product layers (Work IQ, Fabric IQ, Foundry IQ), and platform-level AI governance (AI rule 1, 4, 5). Assigned Azure, as solutions like Azure AI, Azure OpenAI, Azure-based innovation labs, and product integrations anchor multiple customer stories (Azure rule 1, 4). Security is included due to extensive focus on governance, compliance, and control (Agent 365, observability) for enterprise AI and data (Security rules 1, 4, 7, 8). DevOps is included based on themes of operational automation, agent lifecycle, and scalable deployment (DevOps rules 1, 5, 6, 7) across customer examples. Did not assign Coding/ML because there is little direct coverage of code, development patterns, or detailed ML engineering; the focus is on solution deployment, AI adoption, platform strategy, and governance.",
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/01/27/how-microsoft-is-empowering-frontier-transformation-with-intelligence-trust/",
+    "collection": "news",
+    "timestamp": "2026-01-28 01:32:09 +00:00"
   }
 ]
