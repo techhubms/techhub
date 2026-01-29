@@ -24568,5 +24568,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' because the event centers on AI-assisted coding, agentic development, and showcasing AI features in Visual Studio Code (AI inclusion rules 1 and 4). 'Coding' is assigned because VS Code is a core Microsoft development tool and the event focuses on programming workflows, code editor advances, and developer customization (Coding rules 2 and 5). No exclusion rules apply; the content is in English, not biographical, and has substantial technical relevance.",
     "canonical_url": "https://www.youtube.com/watch?v=tAezuMSJuFs"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: Azure (because the focus is on Azure Application Gateway for Containers and AKS migration), DevOps (covers operational migration practices, deployment strategies, and platform responsibility transitions), and Security (due to detailed discussion of WAF integration, mutual TLS, Azure Policy, and security patching management). No other categories qualify – this content is not specifically about AI, ML, Coding (programming), or GitHub Copilot. Decision based on explicit content details and strict adherence to category inclusion rules from Chapter 4.",
+    "timestamp": "2026-01-29 00:07:39 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-ingress-to-gateway-api-a-pragmatic-path-forward-and-why-it/ba-p/4489779",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows:\n- AI: The post showcases use of GitHub Copilot (an AI-powered developer tool) to create custom agents for test automation (AI rule 2, GitHub Copilot content must include AI).\n- Azure: The central focus is on testing for Azure Logic Apps Standard workflows and Data Maps (Azure rule 1).\n- Coding: Coverage of MSTest (a .NET testing framework), C# SDK references, code/test generation, and reusable specs (Coding rules 1, 2, and 4).\n- DevOps: The agent profiles support batch project execution, continuous integration concepts, scenario-driven workflow, and project-wide automation (DevOps rules 1, 5, and 9). All generic exclusion rules were checked—content is technical, English, target audience is developers, and content focuses on implementation, not business/productivity. Microsoft technologies and tooling are central.",
+    "timestamp": "2026-01-29 00:08:05 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-unit-test-agent-profiles-for-logic-apps-data-maps/ba-p/4490216",
+    "collection": "community"
   }
 ]
