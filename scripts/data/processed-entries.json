@@ -24604,5 +24604,11 @@
     "canonical_url": "https://github.blog/changelog/2026-01-28-github-mcp-server-new-projects-tools-oauth-scope-filtering-and-new-features",
     "collection": "news",
     "timestamp": "2026-01-29 11:10:50 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=g-nfvnxLAVo",
+    "reason": "Succesfully added: Assigned the Coding category because the video centers on a nuanced or advanced C# language feature that directly affects .NET/C# coding practice (Coding rules 1 and 4). No Azure, AI, ML, DevOps, or Security topics are mentioned. The content is clearly technical, focused on programming, and not excluded by any generic exclusion rule.",
+    "timestamp": "2026-01-29 12:06:49 +00:00"
   }
 ]
