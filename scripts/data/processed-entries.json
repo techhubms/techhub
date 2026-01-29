@@ -24634,5 +24634,29 @@
     "reason": "Succesfully added: Assigned Security category because the content focuses on implementing network security controls (workspace-level IP firewall rules) within Microsoft Fabric, directly referencing Security category rule 1 (Microsoft Security Services), rule 4 (Cloud Security with Microsoft), and rule 9 (Security Architecture). Assigned Azure category as Microsoft Fabric is a core Azure service (Azure rule 1), and the security controls discussed are part of the Azure ecosystem. The article does not implement or discuss AI, ML, Coding, GitHub Copilot, or DevOps processes, so those categories were not included.",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-level-ip-firewall-rules-in-microsoft-fabric-preview/",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-29 17:12:52 +00:00",
+    "reason": "Succesfully added: Assigned the ML category because the on-premises data gateway is a core integration component for Power BI, data platform, and data connectivity scenarios, and is critical in analytics, BI, and data engineering workflows (ML rule 1 and 4). The improvements specifically target data pipeline and integration for analytics/BI use. Not assigned Azure because this is an on-premises tool, and no Azure-specific services are referenced. Other categories such as Coding, DevOps, AI, and Security are not a focus here. Tags extracted based on the technologies and features discussed.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-january-2026-release/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-29 17:13:10 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content discusses Microsoft's advancements in artificial intelligence, specifically multimodal reinforcement learning applied to the creation of medical imaging reports. The post is research-focused and directly explores AI technology developed by Microsoft, satisfying AI category inclusion rule 1 and 4. No other categories (e.g., Azure, Coding, ML) are assigned as the technical details, while data-driven, pertain primarily to application and research in AI, not custom ML model engineering or system development. There are no triggers for exclusion under generic rules.",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/unirg-scaling-medical-imaging-report-generation-with-multimodal-reinforcement-learning/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-29 17:13:33 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content is centered on GitHub Copilot, a developer AI tool (AI rule 2). Assigned 'GitHub Copilot' because the entire notice concerns API changes for the Copilot service (GitHub Copilot rules 1–4). No additional categories assigned since the main focus is API lifecycle management and usage metrics for Copilot, not direct coding/deployment (Coding, DevOps, Azure, ML, or Security rules do not apply).",
+    "canonical_url": "https://github.blog/changelog/2026-01-29-closing-down-notice-of-legacy-copilot-metrics-apis"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-01-29 17:14:03 +00:00",
+    "reason": "Succesfully added: Assigned the Security category because the content centers on technical security warnings, vulnerabilities, and risks in Ingress NGINX, including discussion of remote code execution issues and lack of patches (Security rules 1, 5, and 8). Assigned the DevOps category because the topic is directly related to Kubernetes operational practices, service migration, and infrastructure tooling (DevOps rules 6 and 7). No other category applies: it is not Microsoft-focused (so no Azure, Coding, AI, etc.), and the piece does not provide code-level guidance or ML/AI implementation. The content is technical, meets quality standards, and is not excluded by any generic rules.",
+    "canonical_url": "https://devclass.com/2026/01/29/kubernetes-leadership-warns-of-ingress-nginx-risks-but-has-also-hastened-its-deprecation/"
   }
 ]
