@@ -11601,5 +11601,11 @@
     "canonical_url": "https://news.xbox.com/en-us/2026/01/28/indie-selects-anniversary/",
     "timestamp": "2026-01-29 18:09:40 +00:00",
     "reason": "No categories found: Content does not qualify for any Tech Hub categories. After a thorough review, this content primarily celebrates the second anniversary of Xbox's Indie Selects, focusing on featured indie games, developer reflections, and a large sale event for Xbox indie titles. It is purely community- and consumer-oriented, highlighting gaming experiences, studio journeys, discount opportunities, and Xbox platform features. There is no substantial technical depth about Microsoft development, coding, DevOps, Azure, AI/ML, security, or developer tools. The news is not about development tools, APIs, SDKs, cloud services, or technical implementation, thus none of the category inclusion rules are met. The only Microsoft technology discussed is the gaming platform (Xbox), solely in the context of games as products for users, not technical game development or Azure cloud/gaming architecture. Per instructions, business/consumer content (such as sales, game spotlights, and product celebrations without technical context) is excluded."
+  },
+  {
+    "reason": "No categories found: Content excluded due to insufficient substantive content. The provided input only contains a generic title and description with no actual technical details, full content, or specifics about Microsoft technologies. With no main content text (content is null) and no technical tags, it is impossible to determine the relevant technology or development topic. According to the workflow, when there is no actionable technical content, no categories are assigned. (Generic exclusion: lack of substantive content).",
+    "timestamp": "2026-01-29 19:14:18 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=7uzabx0qIC0",
+    "collection": "videos"
   }
 ]
