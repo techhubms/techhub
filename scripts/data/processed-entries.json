@@ -24628,5 +24628,11 @@
     "canonical_url": "https://dotnetfoundation.org/news-events/detail/sponsor-spotlight-sentryblog1",
     "collection": "blogs",
     "reason": "Succesfully added: Assigned the Coding category because the content is focused on integrating structured logging with Sentry in .NET, MAUI, and ASP.NET Core applications (Coding rule 1: Microsoft programming languages and frameworks are central). The post details technical features relevant to development in the Microsoft ecosystem. No other categories qualify; AI is not discussed, there is no mention of Azure or DevOps practices, and the focus is on code-level instrumentation rather than security or ML."
+  },
+  {
+    "timestamp": "2026-01-29 16:11:13 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the content focuses on implementing network security controls (workspace-level IP firewall rules) within Microsoft Fabric, directly referencing Security category rule 1 (Microsoft Security Services), rule 4 (Cloud Security with Microsoft), and rule 9 (Security Architecture). Assigned Azure category as Microsoft Fabric is a core Azure service (Azure rule 1), and the security controls discussed are part of the Azure ecosystem. The article does not implement or discuss AI, ML, Coding, GitHub Copilot, or DevOps processes, so those categories were not included.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-level-ip-firewall-rules-in-microsoft-fabric-preview/",
+    "collection": "news"
   }
 ]
