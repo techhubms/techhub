@@ -24706,5 +24706,29 @@
     "timestamp": "2026-01-29 21:05:40 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/01/28/beyond-davos-2026-5-practices-to-align-ai-transformation-and-sustainability/",
     "reason": "Succesfully added: Applied AI category because the article centers on organizational AI transformation, specific Microsoft AI products (Azure OpenAI, Copilot), and responsible AI adoption in business and industry (AI inclusion rules 1, 4, and 5). Applied Azure category due to repeated discussion of Azure as the core platform enabling these solutions, with real customer examples built on Azure services (Azure inclusion rules 1 and 4). Did not assign GitHub Copilot, Coding, DevOps, ML, or Security because the content focuses on high-level strategy, real-world implementation, and sustainability—not direct software development, DevOps, or code-level engineering. All assignment decisions adhere to category rules and product distinctions, with no generic exclusions triggered."
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category due to substantial updates in AI Foundry and Azure AI AgentServer, including integration with OpenAI models (AI inclusion rules 1 and 4). Assigned Azure category because the content is centrally about Azure platform packages and services (Azure inclusion rule 1). Assigned Coding category for coverage of new SDKs, language-specific client and management libraries, and real-time programming models (Coding inclusion rules 1, 2, and 4). Did not assign DevOps, ML, or Security categories because the content primarily announces SDK releases and development tooling updates rather than addressing CI/CD, ML workflows, or security-focused features.",
+    "collection": "news",
+    "timestamp": "2026-01-29 22:05:25 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-january-2026/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the feature is for Microsoft Fabric's Data Factory, OneLake, and various Azure-connected data services (Azure rule 1, 2, 6, 7). Assigned Security category because the core topic is network security controls, outbound protection, data exfiltration prevention, and compliance features (Security rules 1, 4, 7, 9). AI, Coding, DevOps, ML, and GitHub Copilot categories are not included as the content does not discuss code development, ML/AI engineering, DevOps tooling, or GitHub Copilot. No generic exclusion rules applied: the content is technical, English-language, not a sales pitch or business strategy post, and is relevant for practitioners configuring Microsoft cloud services.",
+    "collection": "news",
+    "timestamp": "2026-01-29 22:05:54 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-data-factory/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content is about new features and improvements in GitHub Actions, a core DevOps automation and CI/CD tool (DevOps rule 2 and GitHub content rule 11). There is no significant coding (language/framework level) content, so Coding and AI categories were not assigned. GitHub Copilot was not mentioned, so that category was not included. Azure, ML, and Security are not central to the content. Tags were chosen to reflect workflow automation, editor improvements, and conditional logic updates.",
+    "collection": "news",
+    "timestamp": "2026-01-29 22:06:20 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-29-github-actions-smarter-editing-clearer-debugging-and-a-new-case-function"
+  },
+  {
+    "reason": "Succesfully added: Included 'GitHub Copilot' and 'AI' because the video is centered on using GitHub Copilot, explicitly referenced in the title, description, and tags (AI rule 2, GitHub Copilot rules 1, 2, 4). 'Coding' is included as the workshop focuses on hands-on application code conversion and developer workflow (Coding rules 1, 4, 5). Exclusion rules do not apply; content is technical, in English, educational, and not a sales pitch or biographical.",
+    "collection": "videos",
+    "timestamp": "2026-01-29 22:06:59 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/HPCQVTnlINs"
   }
 ]

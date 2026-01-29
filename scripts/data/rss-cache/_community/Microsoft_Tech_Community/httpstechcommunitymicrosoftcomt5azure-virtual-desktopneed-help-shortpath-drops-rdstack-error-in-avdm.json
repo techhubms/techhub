@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "I’m seeing persistent AVD connection issues and would appreciate guidance.\n\n- Frequent ShortpathTransportNetworkDrop (68) and ShortpathNetworkDrop (16644) errors\n- GetInputDeviceHandlesError (4463)\n- US based users and hostpool/sessionhost\n- Users experience instability and degraded performance",
+  "ProcessedDate": "2026-01-29 22:04:56",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Author": "Dfalz01",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Tags": [],
+  "PubDate": "2026-01-29T19:31:13+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/need-help-shortpath-drops-rdstack-error-in-avd/m-p/4490522#M13986",
+  "Title": "Need Help: Shortpath Drops & RDstack error in AVD",
+  "Description": "I’m seeing persistent AVD connection issues and would appreciate guidance.\n\n- Frequent ShortpathTransportNetworkDrop (68) and ShortpathNetworkDrop (16644) errors\n- GetInputDeviceHandlesError (4463)\n- US based users and hostpool/sessionhost\n- Users experience instability and degraded performance\n\n![]()"
+}
