@@ -24610,5 +24610,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=g-nfvnxLAVo",
     "reason": "Succesfully added: Assigned the Coding category because the video centers on a nuanced or advanced C# language feature that directly affects .NET/C# coding practice (Coding rules 1 and 4). No Azure, AI, ML, DevOps, or Security topics are mentioned. The content is clearly technical, focused on programming, and not excluded by any generic exclusion rule.",
     "timestamp": "2026-01-29 12:06:49 +00:00"
+  },
+  {
+    "timestamp": "2026-01-29 15:11:52 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/emea/2026/01/microsoft-and-sabc-plus-set-to-unlock-ai-and-digital-skills-for-millions-of-south-africans/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned only the 'AI' category. The content exclusively addresses increasing AI fluency and digital skills access in South Africa through a large-scale Microsoft partnership and learning platform implementation—not technical deep-dives, coding methodologies, or Azure technical usage. The focus is on AI literacy, credentialing, employability, and democratizing AI knowledge, making 'AI' category appropriate as per AI Category inclusion rule 5 (high-level AI usage, literacy, strategy, and Microsoft AI skills initiatives). Other categories such as Coding, DevOps, Azure, ML, and Security do not apply, as there is no discussion of software development, coding practices, DevOps methods, Azure services implementation, ML engineering, or security concepts within the article. The exclusion of other categories is justified as the initiative targets broad AI skills education and workforce readiness, not developer- or implementation-level technical content."
+  },
+  {
+    "timestamp": "2026-01-29 15:12:14 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_justreported-our-quarterly-results-we-activity-7422427227226742784-tAgT",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the content heavily emphasizes Microsoft's AI business, advancements in platform initiatives (Foundry, Agent Platform), and Copilot product proliferation. Assigned Azure because the post covers Azure cloud revenue statistics, AI workloads on Azure infrastructure, and cloud-integrated AI services. Did not assign GitHub Copilot, Coding, or DevOps categories as references to GitHub Copilot are limited to user/subscription statistics rather than developer tools or practices. ML, Security, and other technical categories are referenced (e.g., governance, identity, security) but not in sufficient technical depth for direct inclusion. The focus is on technology platform scaling, AI business metrics, and cloud infrastructure advancements, fitting squarely within AI and Azure categories."
+  },
+  {
+    "timestamp": "2026-01-29 15:12:36 +00:00",
+    "canonical_url": "https://dotnetfoundation.org/news-events/detail/sponsor-spotlight-sentryblog1",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned the Coding category because the content is focused on integrating structured logging with Sentry in .NET, MAUI, and ASP.NET Core applications (Coding rule 1: Microsoft programming languages and frameworks are central). The post details technical features relevant to development in the Microsoft ecosystem. No other categories qualify; AI is not discussed, there is no mention of Azure or DevOps practices, and the focus is on code-level instrumentation rather than security or ML."
   }
 ]

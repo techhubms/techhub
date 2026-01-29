@@ -11589,5 +11589,11 @@
     "collection": "news",
     "reason": "No categories found: No categories are assigned because the content is a financial news release focused on quarterly earnings, financial metrics, and business performance. It falls under the Generic Exclusion Rule for 'Business Strategy and Executive Content', as it targets investors and business analysts, contains high-level financial performance, and only references Microsoft's AI and cloud technologies in general business growth and financial impact terms, not in a technical, developer, or implementation context. There are no technical implementations, developer tools, coding practices, or architectural details that meet any inclusion category requirements.",
     "canonical_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q2/press-release-webcast"
+  },
+  {
+    "timestamp": "2026-01-29 15:12:55 +00:00",
+    "canonical_url": "https://dellenny.com/microsoft-365-copilot-and-copilot-studio-january-news-roundup/",
+    "collection": "blogs",
+    "reason": "No categories found: No categories have been assigned because the content is primarily about Microsoft 365 Copilot, Microsoft 365, and Copilot Studio in the context of business productivity and end-user tools, not developer tools. As per the 'Non-Development Microsoft Products' and 'Copilot Product Distinction' exclusion rules, content focused on Microsoft 365 Copilot, Copilot for Microsoft 365, and other productivity scenarios does not meet inclusion criteria for any technical category. The post emphasizes features for Excel, enterprise governance, educational access, and student offers, all centering on productivity use cases rather than software development, AI/ML engineering, or coding. The only developer-specific mention is the Copilot Studio extension for Visual Studio Code, but the coverage is general and does not include technical implementation or hands-on development content; it is mostly a product news announcement. Therefore, according to Generic Exclusion Rules and the Copilot Product Distinction, no categories apply."
   }
 ]

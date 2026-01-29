@@ -1,0 +1,14 @@
+{
+  "PubDate": "2026-01-29T14:44:53+00:00",
+  "FeedName": ".NET Foundation's Blog",
+  "Author": ".NET Foundation News and Blog",
+  "Title": "Sponsor Spotlight: Sentry",
+  "Link": "https://dotnetfoundation.org/news-events/detail/sponsor-spotlight-sentryblog1",
+  "EnhancedContent": "**Sentry connects logs to issues, traces, and session replays** Sentry is an application monitoring platform that helps you understand exactly what’s going wrong when your code breaks, and gives you the context you need to fix it fast (we support every major language and framework, including [.NET](https://docs.sentry.io/platforms/dotnet/), [MAUI](https://docs.sentry.io/platforms/dotnet/guides/maui/), and [ASP.NET Core](https://docs.sentry.io/platforms/dotnet/guides/aspnetcore/)). That means rich debugging context like stack traces, app and device state, and performance data all in one place. Now, with structured logging, you can also send your logs directly to Sentry and see them alongside errors, traces, session replays, and more. You can start sending logs to Sentry today with just a few lines of code.\n\n**Learn more:** [https://docs.sentry.io/platforms/dotnet/logs/](https://docs.sentry.io/platforms/dotnet/logs/)",
+  "Tags": [],
+  "Description": "Sentry connects logs to issues, traces, and session replays.",
+  "ProcessedDate": "2026-01-29 15:10:32",
+  "OutputDir": "_blogs",
+  "FeedLevelAuthor": ".NET Foundation News and Blog",
+  "FeedUrl": "https://dotnetfoundation.org/feeds/blog"
+}
