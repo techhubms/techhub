@@ -24658,5 +24658,23 @@
     "timestamp": "2026-01-29 17:14:03 +00:00",
     "reason": "Succesfully added: Assigned the Security category because the content centers on technical security warnings, vulnerabilities, and risks in Ingress NGINX, including discussion of remote code execution issues and lack of patches (Security rules 1, 5, and 8). Assigned the DevOps category because the topic is directly related to Kubernetes operational practices, service migration, and infrastructure tooling (DevOps rules 6 and 7). No other category applies: it is not Microsoft-focused (so no Azure, Coding, AI, etc.), and the piece does not provide code-level guidance or ML/AI implementation. The content is technical, meets quality standards, and is not excluded by any generic rules.",
     "canonical_url": "https://devclass.com/2026/01/29/kubernetes-leadership-warns-of-ingress-nginx-risks-but-has-also-hastened-its-deprecation/"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/29/new-microsoft-data-security-index-report-explores-secure-ai-adoption-to-protect-sensitive-data/",
+    "timestamp": "2026-01-29 18:10:03 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article deeply discusses generative AI, its adoption in organizations, and Microsoft’s AI-powered security solutions (AI Rule 1 and 4). Assigned Security because the primary focus is on data protection, risk management, Microsoft Purview, Defender, Security Copilot, and building secure AI adoption strategies (Security Rules 1, 2, 4, 6, 7, 9). Did not assign Azure, ML, Coding, or DevOps because content does not provide in-depth coverage of development, coding, Azure architecture, DevOps practices, or advanced machine learning engineering. All content was in English, provided substantial technical/organizational implementation guidance, and met quality standards."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-01-29-improved-search-for-github-issues-in-public-preview",
+    "timestamp": "2026-01-29 18:10:27 +00:00",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content focuses on improvements to GitHub's Issues feature, which supports development operations (DevOps rule 11: GitHub content that doesn't fit Copilot). No 'AI' category because, while semantic search employs natural language techniques, there is no explicit reference to Microsoft's AI platforms, services, or development tools as required for the AI category. No 'Coding' because no programming patterns or language-specific guidance are described. No 'Azure', 'Security', or 'ML' categories, as they are not discussed or implied in the content. The post is technical, directly relevant to developer workflow and toolchain improvement, and free of sales, biographical, or business/management focus according to Chapter 3 rules."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-netapp-files-elastic-zrs-service-level-file-storage-high/ba-p/4484235",
+    "timestamp": "2026-01-29 18:11:17 +00:00",
+    "reason": "Succesfully added: Category assignment follows Chapter 4 rules: The core topic is Azure NetApp Files Elastic Zone Redundant Storage—a cloud storage and high-availability feature specific to Azure (Azure rule 1, 2, 4, and 5). The content is deeply technical, centered on Azure platform implementation, use cases, and hands-on guidance for IT/developer adoption. There is no ML, AI, DevOps, Coding, Security, or GitHub Copilot focus (checked for each category per rules), so only the Azure category applies."
   }
 ]
