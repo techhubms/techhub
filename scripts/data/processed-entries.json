@@ -24730,5 +24730,11 @@
     "collection": "videos",
     "timestamp": "2026-01-29 22:06:59 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/HPCQVTnlINs"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/29/turning-threat-reports-detection-insights-ai/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the workflow centers on using Large Language Models and AI-driven automation for extracting, mapping, and analyzing threat detection insights (AI rules 1, 4, 5). Assigned 'Security' because the entire context is security operations—TTP extraction, detection engineering, and threat intelligence mapping against security frameworks like MITRE ATT&CK (Security rules 1, 3, 5, 9). Not assigning Azure, ML, or DevOps because there's no focus on Azure-specific services, data science/ML model development, or DevOps pipelines. 'Coding' does not apply, as it's not about software development or programming practices but rather security workflow automation.",
+    "timestamp": "2026-01-29 23:06:30 +00:00"
   }
 ]
