@@ -24598,5 +24598,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exploring-traffic-manager-integration-for-external-dns/ba-p/4485690",
     "collection": "community",
     "reason": "Succesfully added: Included the Azure category because the article focuses on Azure Traffic Manager, Azure DNS, and AKS (Azure rule 1 and 2). Included DevOps because it covers deployment workflows, automated resource management, DNS automation, and GitOps strategies (DevOps rules 6, 10, 11). Included Coding as it details Kubernetes annotations, Service YAML, webhook implementation, and a Go SDK solution (Coding rules 2, 4, 5). Did not assign Security, AI, ML, or GitHub Copilot because the article does not discuss these topics. The community content is well over 200 words of technical explanation and clearly meets content quality requirements."
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'DevOps' is included because the MCP Server tools enhance DevOps practices around project management, automation, and team workflows (DevOps rule 2 and 3). 'GitHub Copilot' is included due to new Copilot coding agent integrations, which are specifically for code development support (GitHub Copilot rules 1, 2, 4). As required, 'AI' is also included with 'GitHub Copilot' since Copilot is a Microsoft AI-powered developer tool (AI rule 2). No other categories apply, as the primary focus is on project/devops automation and Copilot integration; there is no Azure-specific deployment, security, or ML/data content. All generic exclusion rules were checked and did not apply.",
+    "canonical_url": "https://github.blog/changelog/2026-01-28-github-mcp-server-new-projects-tools-oauth-scope-filtering-and-new-features",
+    "collection": "news",
+    "timestamp": "2026-01-29 11:10:50 +00:00"
   }
 ]
