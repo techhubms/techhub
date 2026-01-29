@@ -24688,5 +24688,17 @@
     "timestamp": "2026-01-29 19:14:46 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-physical-server-discovery-serverdiscoveryservice/m-p/4490238#M733",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content is specifically focused on advancements in GitHub Actions, CI/CD workflows, and automation infrastructure. It covers technical aspects of runner configuration in development pipelines (DevOps rule 2 and 5). No other category applies: there's no direct Microsoft product, no AI or ML, no Coding (no programming language or .NET focus), and no Security details.",
+    "timestamp": "2026-01-29 20:05:52 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-29-arm64-standard-runners-are-now-available-in-private-repositories",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content directly discusses Copilot, an AI developer tool (AI rule 2). 'GitHub Copilot' is included because the release concerns Copilot-specific usage dashboards, APIs, and feature analytics (GitHub Copilot rules 1–4). 'DevOps' is included since the feature supports enterprise-level team collaboration, usage metrics, monitoring, compliance, and reporting—all core DevOps practices (DevOps rules 3, 5, 6, and 7). Coding and Azure categories do not directly apply since the content is not about development frameworks/languages or Azure-specific technologies. ML and Security categories do not apply, as there is no data science/ML implementation or security configuration focus.",
+    "timestamp": "2026-01-29 20:06:14 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-29-copilot-metrics-in-github-enterprise-cloud-with-data-residency-in-public-preview",
+    "collection": "news"
   }
 ]
