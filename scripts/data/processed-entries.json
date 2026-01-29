@@ -24700,5 +24700,11 @@
     "timestamp": "2026-01-29 20:06:14 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-01-29-copilot-metrics-in-github-enterprise-cloud-with-data-residency-in-public-preview",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-29 21:05:40 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/01/28/beyond-davos-2026-5-practices-to-align-ai-transformation-and-sustainability/",
+    "reason": "Succesfully added: Applied AI category because the article centers on organizational AI transformation, specific Microsoft AI products (Azure OpenAI, Copilot), and responsible AI adoption in business and industry (AI inclusion rules 1, 4, and 5). Applied Azure category due to repeated discussion of Azure as the core platform enabling these solutions, with real customer examples built on Azure services (Azure inclusion rules 1 and 4). Did not assign GitHub Copilot, Coding, DevOps, ML, or Security because the content focuses on high-level strategy, real-world implementation, and sustainability—not direct software development, DevOps, or code-level engineering. All assignment decisions adhere to category rules and product distinctions, with no generic exclusions triggered."
   }
 ]
