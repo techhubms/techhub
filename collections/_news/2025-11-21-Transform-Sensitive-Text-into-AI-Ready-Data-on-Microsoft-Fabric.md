@@ -23,6 +23,10 @@ tags:
 - Sensitive Data
 - Tonic Textual
 - Unstructured Data
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

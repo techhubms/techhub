@@ -10,6 +10,9 @@ plans:
 tags:
 - CLI
 - Commands
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

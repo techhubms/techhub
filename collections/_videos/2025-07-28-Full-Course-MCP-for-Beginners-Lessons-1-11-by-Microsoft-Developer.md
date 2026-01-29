@@ -14,6 +14,10 @@ tags:
 - Real World Case Studies
 - Scalability
 - VS Code
+- AI
+- Coding
+- Security
+- Videos
 section_names:
 - ai
 - coding

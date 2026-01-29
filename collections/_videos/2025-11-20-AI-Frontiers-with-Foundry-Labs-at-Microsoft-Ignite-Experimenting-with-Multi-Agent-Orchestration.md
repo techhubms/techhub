@@ -23,6 +23,9 @@ tags:
 - Planner Critic Architecture
 - Trellis
 - Weather Modeling
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -54,6 +54,8 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     /// </summary>
     public Task<Section?> GetByNameAsync(string name, CancellationToken cancellationToken = default)
     {
+        ArgumentNullException.ThrowIfNull(name);
+
         var section = _sections.FirstOrDefault(s => s.Name == name);
         return Task.FromResult(section);
     }

@@ -24,6 +24,9 @@ tags:
 - RFT
 - Signal Loop
 - SkilledByMTT
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -15,6 +15,8 @@ tags:
 - Tor
 - User Experience
 - VPN
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

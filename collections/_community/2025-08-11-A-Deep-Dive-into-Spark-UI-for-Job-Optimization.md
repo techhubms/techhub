@@ -20,6 +20,8 @@ tags:
 - Shuffle Operations
 - Spark UI
 - SQL Optimization
+- Machine Learning
+- Community
 section_names:
 - ml
 primary_section: ml

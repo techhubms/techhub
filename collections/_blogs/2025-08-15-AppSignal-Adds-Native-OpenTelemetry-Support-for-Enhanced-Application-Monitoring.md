@@ -26,6 +26,8 @@ tags:
 - Social X
 - Telemetry Data
 - Zero Configuration
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

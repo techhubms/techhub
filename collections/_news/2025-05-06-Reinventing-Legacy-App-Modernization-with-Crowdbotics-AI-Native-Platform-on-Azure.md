@@ -23,6 +23,9 @@ tags:
 - Mainframe Migration
 - Requirements Generation
 - Software Architecture
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

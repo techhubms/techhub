@@ -20,6 +20,9 @@ tags:
 - Secrets Management
 - Security Best Practices
 - Workflow Security
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

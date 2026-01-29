@@ -15,6 +15,9 @@ tags:
 - Machine Learning
 - Microsoft Developer Tools
 - Python
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

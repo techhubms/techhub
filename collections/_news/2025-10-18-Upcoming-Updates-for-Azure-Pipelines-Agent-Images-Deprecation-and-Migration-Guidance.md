@@ -21,6 +21,9 @@ tags:
 - Windows Server
 - Windows Server Deprecation
 - YAML Pipeline
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

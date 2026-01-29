@@ -19,6 +19,10 @@ tags:
 - Projects & Issues
 - Task Tracking
 - Workflow Improvement
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

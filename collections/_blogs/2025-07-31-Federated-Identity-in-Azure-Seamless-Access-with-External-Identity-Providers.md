@@ -25,6 +25,9 @@ tags:
 - SAML 2.0
 - Single Sign On
 - Solution Architecture
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

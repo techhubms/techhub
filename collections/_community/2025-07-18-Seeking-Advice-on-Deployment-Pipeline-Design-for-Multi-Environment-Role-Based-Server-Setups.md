@@ -16,6 +16,9 @@ tags:
 - Server Roles
 - Variable Groups
 - VM Tagging
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

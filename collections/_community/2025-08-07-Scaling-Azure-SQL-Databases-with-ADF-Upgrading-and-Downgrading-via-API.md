@@ -17,6 +17,8 @@ tags:
 - Resource Management
 - SQL Serverless
 - Transparent Data Encryption
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

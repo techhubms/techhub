@@ -50,9 +50,9 @@ public record SearchRequest
 
     /// <summary>
     /// Number of items to return per page.
-    /// Default: 20
+    /// Required - no default. API layer must set this explicitly.
     /// </summary>
-    public int Take { get; init; } = 20;
+    public required int Take { get; init; }
 
     /// <summary>
     /// Sort order for results.
@@ -72,5 +72,5 @@ public record SearchRequest
     /// Default: false (skip expensive facet computation for simple queries).
     /// Set to true when building a search page with faceted navigation.
     /// </summary>
-    public bool IncludeFacets { get; init; } = false;
+    public bool IncludeFacets { get; init; }
 }

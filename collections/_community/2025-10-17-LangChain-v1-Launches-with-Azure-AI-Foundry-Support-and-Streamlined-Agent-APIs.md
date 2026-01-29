@@ -21,6 +21,9 @@ tags:
 - Middleware
 - Multimodal AI
 - Python
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

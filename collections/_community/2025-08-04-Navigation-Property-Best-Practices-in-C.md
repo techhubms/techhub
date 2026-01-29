@@ -15,6 +15,9 @@ tags:
 - Navigation Property
 - Object Relational Mapping
 - ORM
+- Coding
+- Machine Learning
+- Community
 section_names:
 - coding
 - ml

@@ -19,6 +19,8 @@ tags:
 - Nexus
 - OpenSSH
 - RPM
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

@@ -19,6 +19,11 @@ tags:
 - React
 - TypeScript
 - Web Development
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

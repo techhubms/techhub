@@ -21,6 +21,8 @@ tags:
 - Natural Language Processing
 - Power Automate
 - Workflow Automation
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

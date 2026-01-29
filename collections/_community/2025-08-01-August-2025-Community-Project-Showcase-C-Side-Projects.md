@@ -20,6 +20,8 @@ tags:
 - Tray Application
 - Windows Service
 - WinForms
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

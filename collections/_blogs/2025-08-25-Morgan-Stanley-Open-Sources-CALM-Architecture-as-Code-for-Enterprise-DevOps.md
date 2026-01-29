@@ -23,6 +23,8 @@ tags:
 - Social LinkedIn
 - Social X
 - Software Delivery
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

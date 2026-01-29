@@ -19,6 +19,10 @@ tags:
 - IsAssignableFrom
 - O3
 - O3 High
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

@@ -20,6 +20,11 @@ tags:
 - Microsoft Purview
 - Performance Monitoring
 - Red Teaming
+- AI
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

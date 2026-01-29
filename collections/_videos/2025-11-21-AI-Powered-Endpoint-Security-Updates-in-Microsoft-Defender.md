@@ -22,6 +22,9 @@ tags:
 - Threat Detection
 - Threat Landscape
 - Windows 7 Support
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

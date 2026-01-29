@@ -23,6 +23,8 @@ tags:
 - Reinforcement Learning
 - Supervised Learning
 - Unsupervised Learning
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

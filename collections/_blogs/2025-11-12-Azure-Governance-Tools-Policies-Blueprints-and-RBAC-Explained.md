@@ -20,6 +20,9 @@ tags:
 - Resource Tagging
 - Role Based Access Control
 - Security Best Practices
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

@@ -26,6 +26,11 @@ tags:
 - Terraform
 - Traceability
 - Vault Radar
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

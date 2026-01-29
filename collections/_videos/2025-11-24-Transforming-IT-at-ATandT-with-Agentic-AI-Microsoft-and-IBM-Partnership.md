@@ -21,6 +21,9 @@ tags:
 - No Code Development
 - Productivity Improvement
 - Resilient Infrastructure
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

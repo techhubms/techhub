@@ -25,6 +25,9 @@ tags:
 - Security Architecture
 - Windows Server
 - Zero Trust
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

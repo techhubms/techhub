@@ -17,6 +17,9 @@ tags:
 - SSLmate
 - Token Validation
 - Typeform
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

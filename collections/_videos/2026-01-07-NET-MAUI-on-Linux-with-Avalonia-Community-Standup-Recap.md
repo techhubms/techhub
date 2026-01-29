@@ -22,6 +22,8 @@ tags:
 - Open Source
 - Software Developer
 - UI Frameworks
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

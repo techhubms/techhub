@@ -27,6 +27,9 @@ tags:
 - Security Mitigation
 - Social Engineering
 - Windows Security
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

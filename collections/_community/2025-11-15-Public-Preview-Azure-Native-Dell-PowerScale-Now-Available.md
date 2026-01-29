@@ -27,6 +27,8 @@ tags:
 - Public Preview
 - Scale Out Storage
 - Unstructured Data
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

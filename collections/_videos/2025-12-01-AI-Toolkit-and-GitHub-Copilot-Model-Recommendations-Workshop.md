@@ -21,6 +21,10 @@ tags:
 - Tech
 - Technology
 - Workshop
+- AI
+- Azure
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

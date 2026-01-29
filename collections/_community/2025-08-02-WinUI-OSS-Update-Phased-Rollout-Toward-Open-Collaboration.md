@@ -14,6 +14,8 @@ tags:
 - Phased Rollout
 - UI Development
 - WinUI
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

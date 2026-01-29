@@ -24,6 +24,10 @@ tags:
 - Preview Features
 - Telemetry Collection
 - Troubleshooting
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

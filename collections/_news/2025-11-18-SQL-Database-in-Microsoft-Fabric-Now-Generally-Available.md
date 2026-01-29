@@ -36,6 +36,11 @@ tags:
 - Streaming Data
 - T SQL
 - Vector Data
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

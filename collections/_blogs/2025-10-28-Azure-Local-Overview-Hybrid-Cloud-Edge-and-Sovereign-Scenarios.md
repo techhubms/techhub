@@ -23,6 +23,9 @@ tags:
 - Uncategorized
 - Virtual Machines
 - Workload Management
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

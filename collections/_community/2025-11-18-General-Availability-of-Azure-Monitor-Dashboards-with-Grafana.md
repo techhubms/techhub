@@ -23,6 +23,9 @@ tags:
 - Monitoring Solutions
 - OpenTelemetry
 - RBAC
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

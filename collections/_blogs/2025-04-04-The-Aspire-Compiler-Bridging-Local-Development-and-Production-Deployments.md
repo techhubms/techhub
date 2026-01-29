@@ -18,6 +18,10 @@ tags:
 - Publishing Pipeline
 - Software Development
 - Terraform
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

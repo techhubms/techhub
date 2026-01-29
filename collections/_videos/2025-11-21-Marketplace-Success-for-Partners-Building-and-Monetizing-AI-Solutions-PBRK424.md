@@ -22,6 +22,8 @@ tags:
 - Partner Success Stories
 - Revenue Opportunities
 - SMB
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

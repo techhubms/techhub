@@ -30,6 +30,11 @@ tags:
 - Software Supply Chain
 - SonarQube
 - Traceability
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- Blogs
 section_names:
 - ai
 - devops

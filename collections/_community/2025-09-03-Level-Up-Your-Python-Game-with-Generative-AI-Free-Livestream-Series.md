@@ -18,6 +18,9 @@ tags:
 - Multi Agent Workflows
 - Python
 - VS Code
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

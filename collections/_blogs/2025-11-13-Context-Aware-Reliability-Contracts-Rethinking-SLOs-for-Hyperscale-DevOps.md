@@ -45,6 +45,8 @@ tags:
 - Social LinkedIn
 - Social X
 - SRE
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

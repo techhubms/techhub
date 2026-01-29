@@ -20,6 +20,9 @@ tags:
 - Token Limits
 - Transparency
 - User Experience
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

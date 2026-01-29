@@ -19,6 +19,10 @@ tags:
 - Testing
 - Visual Studio 17.14
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

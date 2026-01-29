@@ -20,6 +20,8 @@ tags:
 - Natural Language Interfaces
 - Software Industry Trends
 - Uncategorized
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

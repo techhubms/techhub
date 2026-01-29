@@ -22,6 +22,10 @@ tags:
 - Policy Management
 - Security Best Practices
 - Terraform
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

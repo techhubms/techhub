@@ -24,6 +24,10 @@ tags:
 - Serverless GPU
 - Spring AI
 - Vector Database
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

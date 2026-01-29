@@ -19,6 +19,8 @@ tags:
 - System.Diagnostics.Metrics
 - Testing
 - Web API
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

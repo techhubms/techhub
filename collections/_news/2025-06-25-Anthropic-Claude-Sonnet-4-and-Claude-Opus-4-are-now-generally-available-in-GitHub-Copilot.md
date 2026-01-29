@@ -10,6 +10,9 @@ tags:
 - Claude Opus 4
 - Claude Sonnet 4
 - Software Development
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

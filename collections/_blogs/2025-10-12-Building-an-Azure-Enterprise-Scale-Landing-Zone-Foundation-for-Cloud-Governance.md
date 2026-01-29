@@ -24,6 +24,10 @@ tags:
 - Networking
 - Role Based Access Control
 - Terraform
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

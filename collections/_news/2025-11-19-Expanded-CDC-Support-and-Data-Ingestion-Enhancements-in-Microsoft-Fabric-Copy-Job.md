@@ -24,6 +24,9 @@ tags:
 - Oracle
 - SAP
 - Snowflake
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

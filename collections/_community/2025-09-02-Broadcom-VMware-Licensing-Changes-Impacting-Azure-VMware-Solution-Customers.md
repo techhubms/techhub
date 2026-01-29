@@ -19,6 +19,8 @@ tags:
 - Reserved Instance
 - VCF
 - VMware Cloud Foundation
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

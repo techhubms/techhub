@@ -23,6 +23,11 @@ tags:
 - VS Code
 - VS Code Extensions
 - Workspace Indexing
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

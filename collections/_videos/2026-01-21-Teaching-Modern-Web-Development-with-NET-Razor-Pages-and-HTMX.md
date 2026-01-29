@@ -30,6 +30,8 @@ tags:
 - Technical Training
 - Textbooker.pl
 - Web Development
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

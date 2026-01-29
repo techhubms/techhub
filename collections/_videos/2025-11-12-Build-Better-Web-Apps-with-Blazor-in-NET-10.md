@@ -23,6 +23,9 @@ tags:
 - VS
 - Web Development
 - WebAuthN
+- Coding
+- Security
+- Videos
 section_names:
 - coding
 - security

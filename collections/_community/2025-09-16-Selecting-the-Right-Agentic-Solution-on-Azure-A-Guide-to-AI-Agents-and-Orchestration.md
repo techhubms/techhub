@@ -23,6 +23,9 @@ tags:
 - Python
 - Role Based Access Control
 - Semantic Kernel
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

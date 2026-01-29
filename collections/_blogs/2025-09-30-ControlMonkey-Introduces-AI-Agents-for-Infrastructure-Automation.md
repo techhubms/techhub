@@ -23,6 +23,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Terraform
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

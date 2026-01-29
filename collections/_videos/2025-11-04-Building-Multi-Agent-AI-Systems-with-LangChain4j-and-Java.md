@@ -28,6 +28,8 @@ tags:
 - Text To Speech
 - TextToSpeech
 - Workflow Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

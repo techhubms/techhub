@@ -23,6 +23,10 @@ tags:
 - SAP BDC
 - SAP BTP
 - SAP Business Suite
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

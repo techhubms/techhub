@@ -20,6 +20,9 @@ tags:
 - SSH Ciphers
 - TLS Ciphers
 - Workflow Automation
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

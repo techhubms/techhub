@@ -20,6 +20,10 @@ tags:
 - Open Standards
 - Semantic Kernel
 - Tool Standardization
+- AI
+- Azure
+- Coding
+- Blogs
 section_names:
 - ai
 - azure

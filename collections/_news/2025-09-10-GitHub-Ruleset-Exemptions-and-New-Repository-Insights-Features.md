@@ -17,6 +17,8 @@ tags:
 - Repository Analytics
 - Repository Rulesets
 - Traffic Insights
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

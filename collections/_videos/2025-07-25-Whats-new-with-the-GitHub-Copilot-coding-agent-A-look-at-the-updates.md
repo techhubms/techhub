@@ -16,6 +16,9 @@ tags:
 - Screenshot Validation
 - Session Tracking
 - UI Validation
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

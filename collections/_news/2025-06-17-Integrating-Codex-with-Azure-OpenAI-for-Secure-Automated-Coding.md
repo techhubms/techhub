@@ -26,6 +26,11 @@ tags:
 - OpenAI
 - Python
 - Token Based Authentication
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

@@ -25,6 +25,10 @@ tags:
 - Security Posture Management
 - Threat Detection
 - Zero Trust
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

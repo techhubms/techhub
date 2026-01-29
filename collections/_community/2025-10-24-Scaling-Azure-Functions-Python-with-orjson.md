@@ -23,6 +23,9 @@ tags:
 - Serverless
 - Service Bus
 - Virtual Environment
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

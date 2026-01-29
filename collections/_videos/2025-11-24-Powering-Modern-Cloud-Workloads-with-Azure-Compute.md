@@ -22,6 +22,10 @@ tags:
 - MSIgnite
 - Performance Optimization
 - V4L Series
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

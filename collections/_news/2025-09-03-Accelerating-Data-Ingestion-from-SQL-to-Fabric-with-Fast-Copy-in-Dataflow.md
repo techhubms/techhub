@@ -19,6 +19,9 @@ tags:
 - Parallel Processing
 - Performance Optimization
 - SQL Database
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

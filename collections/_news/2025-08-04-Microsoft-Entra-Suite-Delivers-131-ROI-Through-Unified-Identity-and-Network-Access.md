@@ -17,6 +17,8 @@ tags:
 - ROI Study
 - Security Operations
 - Zero Trust
+- Security
+- News
 section_names:
 - security
 primary_section: security

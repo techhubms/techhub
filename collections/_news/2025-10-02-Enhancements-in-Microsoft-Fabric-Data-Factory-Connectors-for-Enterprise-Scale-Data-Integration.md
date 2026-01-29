@@ -22,6 +22,10 @@ tags:
 - Snowflake
 - TLS 1.3
 - Upsert
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

@@ -15,6 +15,9 @@ tags:
 - Terminal Auto Approval
 - VS Code
 - VS Code 1.102
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

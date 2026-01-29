@@ -25,6 +25,9 @@ tags:
 - RAG
 - Retrieval Augmented Generation
 - Unstructured Data
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

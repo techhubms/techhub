@@ -21,6 +21,9 @@ tags:
 - Proxy Access
 - Redirect Access
 - Warehouse
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

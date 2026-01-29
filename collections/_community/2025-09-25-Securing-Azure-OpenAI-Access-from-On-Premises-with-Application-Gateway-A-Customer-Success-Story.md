@@ -21,6 +21,10 @@ tags:
 - SSL Termination
 - Virtual Network
 - Web Application Firewall
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

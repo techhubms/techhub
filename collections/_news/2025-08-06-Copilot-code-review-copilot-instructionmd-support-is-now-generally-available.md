@@ -14,6 +14,9 @@ tags:
 - GitHub
 - Natural Language Instructions
 - Workflow Customization
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

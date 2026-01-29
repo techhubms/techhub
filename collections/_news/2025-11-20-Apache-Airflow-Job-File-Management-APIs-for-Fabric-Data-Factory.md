@@ -20,6 +20,9 @@ tags:
 - Service Oriented Architecture
 - Task Execution
 - Workflow Orchestration
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

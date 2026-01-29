@@ -22,6 +22,9 @@ tags:
 - Shortcut Workflow
 - Structured Data
 - Unstructured Data
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -22,6 +22,10 @@ tags:
 - Sales Tools
 - Scientific Research
 - Simulation
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

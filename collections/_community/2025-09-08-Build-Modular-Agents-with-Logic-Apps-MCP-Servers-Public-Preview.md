@@ -18,6 +18,9 @@ tags:
 - Modular Tools
 - Public Preview
 - Workflow Automation
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

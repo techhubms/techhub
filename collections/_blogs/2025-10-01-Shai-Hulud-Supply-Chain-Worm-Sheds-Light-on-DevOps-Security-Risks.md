@@ -28,6 +28,9 @@ tags:
 - Software Supply Chain
 - Supply Chain Attack
 - TruffleHog
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

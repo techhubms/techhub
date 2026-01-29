@@ -18,6 +18,10 @@ tags:
 - Refactoring
 - Software Maintenance
 - SQL
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

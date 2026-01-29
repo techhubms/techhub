@@ -20,6 +20,9 @@ tags:
 - Serverless
 - Subdomain Takeover
 - Web Apps
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

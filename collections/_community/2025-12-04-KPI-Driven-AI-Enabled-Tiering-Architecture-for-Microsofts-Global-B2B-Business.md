@@ -25,6 +25,10 @@ tags:
 - Sales Planning
 - Ward Clustering
 - XGBoost
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

@@ -23,6 +23,10 @@ tags:
 - Reasoning Models
 - TypeScript
 - Versioning
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

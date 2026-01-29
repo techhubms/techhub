@@ -17,6 +17,9 @@ tags:
 - Resource Optimization
 - Run Metrics
 - Spark Applications
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

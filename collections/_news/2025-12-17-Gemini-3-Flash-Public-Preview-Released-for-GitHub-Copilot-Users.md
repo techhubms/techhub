@@ -17,6 +17,9 @@ tags:
 - Model Picker
 - Public Preview
 - VS Code
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

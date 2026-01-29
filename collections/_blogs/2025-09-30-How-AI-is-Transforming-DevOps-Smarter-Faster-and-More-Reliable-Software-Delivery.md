@@ -20,6 +20,9 @@ tags:
 - Predictive Analytics
 - Resource Optimization
 - Software Delivery
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

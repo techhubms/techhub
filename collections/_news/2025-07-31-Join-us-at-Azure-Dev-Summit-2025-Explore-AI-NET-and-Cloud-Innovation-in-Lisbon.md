@@ -19,6 +19,11 @@ tags:
 - Generative AI
 - Microsoft AI
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

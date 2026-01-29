@@ -26,6 +26,9 @@ tags:
 - Responsible AI
 - REST API
 - Speech Services
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

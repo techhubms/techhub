@@ -20,6 +20,9 @@ tags:
 - Secure Deployment
 - Security Best Practices
 - Session Host Configuration
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

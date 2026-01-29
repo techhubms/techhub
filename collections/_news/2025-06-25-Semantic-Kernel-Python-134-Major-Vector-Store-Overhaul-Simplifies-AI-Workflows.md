@@ -18,6 +18,9 @@ tags:
 - Python
 - Semantic Kernel
 - Vector Store
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

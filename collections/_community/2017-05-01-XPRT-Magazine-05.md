@@ -17,6 +17,9 @@ tags:
 - Scrum
 - Testing
 - Web Applications
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

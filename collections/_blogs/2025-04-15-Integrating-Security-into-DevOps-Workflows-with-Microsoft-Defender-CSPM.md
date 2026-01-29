@@ -21,6 +21,10 @@ tags:
 - Security Gates
 - Terraform
 - Vulnerability Management
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

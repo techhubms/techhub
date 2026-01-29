@@ -19,6 +19,8 @@ tags:
 - REST API
 - Spending Controls
 - Spending Limits
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

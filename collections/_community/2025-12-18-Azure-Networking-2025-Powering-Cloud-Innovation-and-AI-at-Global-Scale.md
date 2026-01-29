@@ -20,6 +20,10 @@ tags:
 - Virtual WAN
 - VPN Gateway
 - Zero Trust
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -19,6 +19,10 @@ tags:
 - Project Sharing
 - Scripting
 - Workflow Improvement
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

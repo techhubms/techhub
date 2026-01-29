@@ -19,6 +19,9 @@ tags:
 - SaaS
 - Security Best Practices
 - Shared Responsibility Model
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

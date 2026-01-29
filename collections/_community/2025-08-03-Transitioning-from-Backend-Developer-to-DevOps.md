@@ -14,6 +14,8 @@ tags:
 - Engineering Practices
 - Infrastructure
 - Software Engineering
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

@@ -25,6 +25,9 @@ tags:
 - Scale Up Interconnect
 - Token Generation
 - Triton Compiler
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

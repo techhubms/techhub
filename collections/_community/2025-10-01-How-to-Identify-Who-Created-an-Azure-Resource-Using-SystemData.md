@@ -20,6 +20,10 @@ tags:
 - Systemdata
 - Troubleshooting
 - User Identity
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

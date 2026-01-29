@@ -21,6 +21,11 @@ tags:
 - Performance Optimization
 - Scalability
 - TCO
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

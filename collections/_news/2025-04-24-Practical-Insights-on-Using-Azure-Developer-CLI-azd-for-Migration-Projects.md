@@ -12,6 +12,10 @@ tags:
 - Azure SDK
 - Bicep
 - IaC
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

@@ -28,13 +28,13 @@ public class DatabaseFixture<T> : IDisposable
             builder.AddConsole();
             builder.SetMinimumLevel(LogLevel.Information);
         });
-        
+
         var logger = _loggerFactory.CreateLogger<DatabaseFixture<T>>();
-        
+
         // Create in-memory SQLite database (data lives only for the connection lifetime)
         _connection = new SqliteConnection("Data Source=:memory:");
         _connection.Open();
-        
+
         logger.LogInformation("🗄️ Created in-memory SQLite database for {TestClass}", typeof(T).Name);
 
         // Run migrations to create schema
@@ -47,7 +47,7 @@ public class DatabaseFixture<T> : IDisposable
         logger.LogInformation("✅ Database migrations completed");
 
         // Seed database with test markdown files using production sync logic
-        TestCollectionsSeeder.SeedFromFilesAsync(_connection, logger: logger).GetAwaiter().GetResult();
+        TestCollectionsSeeder.SeedFromFilesAsync(_connection, loggerFactory: _loggerFactory).GetAwaiter().GetResult();
     }
 
     /// <summary>

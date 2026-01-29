@@ -19,6 +19,10 @@ tags:
 - OIDC Authentication
 - Secret Management
 - Secureyourdata
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

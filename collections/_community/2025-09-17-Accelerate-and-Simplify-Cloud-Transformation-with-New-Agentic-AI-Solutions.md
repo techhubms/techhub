@@ -19,6 +19,10 @@ tags:
 - Migrate And Modernize Summit
 - Modernization Strategy
 - Windows Server Migration
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

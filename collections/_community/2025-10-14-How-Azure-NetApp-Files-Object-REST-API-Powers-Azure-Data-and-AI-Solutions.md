@@ -20,6 +20,10 @@ tags:
 - Power BI
 - Real Time Data Integration
 - S3 Compatibility
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

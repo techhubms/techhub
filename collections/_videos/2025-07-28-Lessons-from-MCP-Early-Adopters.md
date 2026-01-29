@@ -18,6 +18,8 @@ tags:
 - Production Systems
 - Prompt Management
 - Python
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

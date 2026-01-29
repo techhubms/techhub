@@ -19,6 +19,9 @@ tags:
 - MCP
 - Orchestration
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

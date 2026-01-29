@@ -14,6 +14,9 @@ tags:
 - GitHub REST API
 - Last Authenticated At
 - User Management
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

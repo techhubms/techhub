@@ -17,6 +17,9 @@ tags:
 - Programming Fundamentals
 - Software Development
 - Tech in Classrooms
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

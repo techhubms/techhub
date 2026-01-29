@@ -20,6 +20,11 @@ tags:
 - Project Aware AI
 - V17.14
 - VS
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

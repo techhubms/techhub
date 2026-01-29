@@ -18,6 +18,9 @@ tags:
 - Virtual Network
 - Zero Trust
 - Zero Trust Architecture
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

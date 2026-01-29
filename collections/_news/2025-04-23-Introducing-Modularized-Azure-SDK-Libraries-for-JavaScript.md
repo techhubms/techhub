@@ -21,6 +21,9 @@ tags:
 - Subpath Exports
 - Tree Shaking
 - TypeScript
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

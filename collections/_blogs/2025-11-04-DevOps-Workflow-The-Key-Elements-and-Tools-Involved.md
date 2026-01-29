@@ -38,6 +38,9 @@ tags:
 - Social X
 - Software Development
 - Vulnerability Scanning
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

@@ -18,6 +18,9 @@ tags:
 - Profiler Agent
 - Visual Studio Insiders
 - VS
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

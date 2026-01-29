@@ -17,6 +17,8 @@ tags:
 - Higher Education
 - Microsoft
 - Personalized Learning
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

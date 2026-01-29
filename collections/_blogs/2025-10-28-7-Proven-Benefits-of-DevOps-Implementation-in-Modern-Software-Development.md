@@ -40,6 +40,8 @@ tags:
 - Software Reliability
 - Software Scalability
 - Testing Automation
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

@@ -20,6 +20,8 @@ tags:
 - Remote Tab
 - VS Code
 - Watch Expressions
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

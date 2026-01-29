@@ -15,6 +15,8 @@ tags:
 - On Premises To Cloud
 - VMware Migration
 - Workload Migration
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

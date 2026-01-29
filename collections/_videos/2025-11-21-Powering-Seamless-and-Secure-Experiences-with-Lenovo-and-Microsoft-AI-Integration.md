@@ -20,6 +20,9 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Windows
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

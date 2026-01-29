@@ -14,6 +14,9 @@ tags:
 - MCP Server
 - Pull Requests
 - Software Development
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

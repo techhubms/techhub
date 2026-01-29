@@ -21,6 +21,9 @@ tags:
 - Threat Detection
 - Transparency Reports
 - Triage Automation
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

@@ -14,6 +14,9 @@ tags:
 - Microsoft
 - Tanner Gooding
 - Tensor Support
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

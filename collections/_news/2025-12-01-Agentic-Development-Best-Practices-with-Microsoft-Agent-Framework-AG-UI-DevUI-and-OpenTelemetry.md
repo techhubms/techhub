@@ -22,6 +22,9 @@ tags:
 - Observability
 - OpenTelemetry
 - Python
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

@@ -18,6 +18,10 @@ tags:
 - Python
 - Study Buddy Agent
 - VS Code
+- AI
+- GitHub Copilot
+- Machine Learning
+- Community
 section_names:
 - ai
 - github-copilot

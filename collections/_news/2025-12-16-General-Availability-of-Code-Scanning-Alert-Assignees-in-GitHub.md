@@ -20,6 +20,11 @@ tags:
 - Security Workflows
 - Vulnerability Remediation
 - Webhooks
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - devops

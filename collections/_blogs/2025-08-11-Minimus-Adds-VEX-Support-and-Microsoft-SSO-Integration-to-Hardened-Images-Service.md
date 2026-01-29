@@ -25,6 +25,9 @@ tags:
 - Threat Intelligence
 - VEX
 - Vulnerability Exploittability Exchange
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

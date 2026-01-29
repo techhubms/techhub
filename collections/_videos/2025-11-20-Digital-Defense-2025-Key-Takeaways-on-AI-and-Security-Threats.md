@@ -22,6 +22,9 @@ tags:
 - Social Engineering
 - Threat Actors
 - Threat Intelligence
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

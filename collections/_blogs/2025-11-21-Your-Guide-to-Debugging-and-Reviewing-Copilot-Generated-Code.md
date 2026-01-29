@@ -21,6 +21,11 @@ tags:
 - Static Analysis
 - Test Driven Development
 - Unit Tests
+- AI
+- Coding
+- GitHub Copilot
+- Security
+- Blogs
 section_names:
 - ai
 - coding

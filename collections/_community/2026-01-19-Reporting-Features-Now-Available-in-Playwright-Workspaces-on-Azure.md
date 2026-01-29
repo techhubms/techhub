@@ -19,6 +19,9 @@ tags:
 - Test Automation
 - Test Reporting
 - Trace Viewer
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

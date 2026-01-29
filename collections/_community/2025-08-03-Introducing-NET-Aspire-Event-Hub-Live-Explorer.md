@@ -16,6 +16,10 @@ tags:
 - Local Development
 - NuGet Package
 - Open Source
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

@@ -19,6 +19,10 @@ tags:
 - Productivity
 - Pull Requests
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

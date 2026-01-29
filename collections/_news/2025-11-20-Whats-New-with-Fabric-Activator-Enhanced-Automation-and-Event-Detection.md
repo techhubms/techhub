@@ -20,6 +20,9 @@ tags:
 - Teams Integration
 - User Data Functions
 - Workflows
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

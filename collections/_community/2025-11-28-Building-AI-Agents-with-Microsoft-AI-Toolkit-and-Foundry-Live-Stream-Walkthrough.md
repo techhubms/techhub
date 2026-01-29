@@ -19,6 +19,9 @@ tags:
 - Prototype Workflow
 - System Prompts
 - VS Code
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

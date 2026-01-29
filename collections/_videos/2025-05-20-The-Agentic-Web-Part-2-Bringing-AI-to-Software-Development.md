@@ -20,6 +20,8 @@ tags:
 - Microsoft Events
 - Microsoft Ignite
 - Software Development Lifecycle
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

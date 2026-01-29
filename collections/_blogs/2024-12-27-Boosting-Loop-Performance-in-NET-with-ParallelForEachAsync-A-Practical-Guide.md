@@ -17,6 +17,8 @@ tags:
 - Thread Safety
 - TPL Dataflow
 - WPF
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

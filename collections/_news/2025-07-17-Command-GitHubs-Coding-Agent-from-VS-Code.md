@@ -18,6 +18,10 @@ tags:
 - PR Workflow
 - Session Management
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

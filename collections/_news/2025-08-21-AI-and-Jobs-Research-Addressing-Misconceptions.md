@@ -20,6 +20,8 @@ tags:
 - Research Clarification
 - Societal Impact
 - Work Trend Index
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

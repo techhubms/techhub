@@ -20,6 +20,9 @@ tags:
 - Pull Request Automation
 - Software Development
 - Web Search Integration
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

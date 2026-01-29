@@ -20,6 +20,11 @@ tags:
 - Microsoft Azure
 - V0.1 MCP Registry
 - VS Code
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

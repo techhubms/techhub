@@ -20,6 +20,9 @@ tags:
 - Microsoft Azure
 - Model Fine Tuning
 - Open Source AI
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

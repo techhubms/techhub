@@ -23,6 +23,10 @@ tags:
 - Multi Cloud
 - RADIUS
 - Serverless Containers
+- Azure
+- Coding
+- Security
+- Videos
 section_names:
 - azure
 - coding

@@ -21,6 +21,9 @@ tags:
 - Performance Scaling
 - SQL Migration
 - SQL Server
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

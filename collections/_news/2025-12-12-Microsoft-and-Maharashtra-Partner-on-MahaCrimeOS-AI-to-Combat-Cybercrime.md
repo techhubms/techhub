@@ -23,6 +23,10 @@ tags:
 - Public Safety
 - Satya Nadella
 - Security Automation
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

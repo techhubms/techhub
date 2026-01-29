@@ -25,6 +25,9 @@ tags:
 - Slurm
 - Ubuntu 24.04
 - User Managed Identity
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

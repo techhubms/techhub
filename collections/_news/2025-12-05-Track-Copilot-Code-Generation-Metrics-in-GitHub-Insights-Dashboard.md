@@ -21,6 +21,9 @@ tags:
 - Programming Languages
 - Usage Metrics
 - User Roles
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

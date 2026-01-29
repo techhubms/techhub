@@ -16,6 +16,9 @@ tags:
 - Resource Loops
 - Sequential Deployment
 - Validation Errors
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

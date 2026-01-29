@@ -24,6 +24,9 @@ tags:
 - OpenTelemetry
 - Service Bus
 - VS Code
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

@@ -20,6 +20,9 @@ tags:
 - Operational Monitoring
 - Oracle Database@Azure
 - Security Information And Event Management
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -21,6 +21,10 @@ tags:
 - Operational Efficiency
 - Performance Optimization
 - Scaling
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

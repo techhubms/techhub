@@ -21,6 +21,10 @@ tags:
 - REST API
 - TFVC
 - VS Code
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

@@ -20,6 +20,10 @@ tags:
 - OCI
 - Oracle Database@Azure
 - Public Cloud
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

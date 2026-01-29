@@ -19,6 +19,11 @@ tags:
 - Microsoft Entra
 - OAuth2
 - Python
+- AI
+- Azure
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

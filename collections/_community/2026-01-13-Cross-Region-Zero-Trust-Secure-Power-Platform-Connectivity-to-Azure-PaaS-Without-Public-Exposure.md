@@ -27,6 +27,9 @@ tags:
 - Virtual Network
 - VNet Injection
 - Zero Trust
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

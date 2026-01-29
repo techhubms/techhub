@@ -16,6 +16,8 @@ tags:
 - GitHub Package Registry
 - npm
 - Workflow
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

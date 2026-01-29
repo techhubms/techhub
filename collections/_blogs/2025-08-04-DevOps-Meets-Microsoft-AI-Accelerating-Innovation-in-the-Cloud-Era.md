@@ -24,6 +24,12 @@ tags:
 - OpenAI Codex
 - Responsible AI
 - Software Delivery
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - azure

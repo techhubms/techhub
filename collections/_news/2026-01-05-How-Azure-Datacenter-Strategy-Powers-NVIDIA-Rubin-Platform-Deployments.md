@@ -25,6 +25,9 @@ tags:
 - Pod Exchange
 - Scalability
 - Thermal Management
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

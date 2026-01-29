@@ -22,6 +22,9 @@ tags:
 - Transparency Logs
 - Trusted Execution Environments
 - Zero Trust
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

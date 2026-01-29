@@ -16,6 +16,8 @@ tags:
 - Machine Learning
 - Model Confidence
 - OpenAI
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

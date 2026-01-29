@@ -23,6 +23,11 @@ tags:
 - Specification Templates
 - VS Code
 - Workflow Automation
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -25,6 +25,10 @@ tags:
 - Runbooks
 - ServiceNow
 - Site Reliability Engineering
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

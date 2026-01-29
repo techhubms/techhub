@@ -22,6 +22,9 @@ tags:
 - Selective Disclosure
 - SNARK
 - Zero Knowledge Proofs
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

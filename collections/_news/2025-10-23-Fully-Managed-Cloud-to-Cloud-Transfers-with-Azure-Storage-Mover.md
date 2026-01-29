@@ -24,6 +24,9 @@ tags:
 - SMB
 - Storage
 - Storage Migration
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

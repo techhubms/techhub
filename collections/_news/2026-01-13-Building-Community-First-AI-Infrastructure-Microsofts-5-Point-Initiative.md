@@ -20,6 +20,9 @@ tags:
 - Sustainability
 - Water Replenishment
 - Workforce Development
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

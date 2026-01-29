@@ -22,6 +22,8 @@ tags:
 - Research Collaboration
 - Topological Qubits
 - University Of Maryland
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

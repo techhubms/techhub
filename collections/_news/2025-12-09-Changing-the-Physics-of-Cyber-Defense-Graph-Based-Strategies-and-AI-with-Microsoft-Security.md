@@ -25,6 +25,10 @@ tags:
 - Security Hygiene
 - Telemetry
 - Threat Detection
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

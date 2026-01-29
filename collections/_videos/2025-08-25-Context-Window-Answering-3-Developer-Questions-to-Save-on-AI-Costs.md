@@ -18,6 +18,9 @@ tags:
 - Microsoft AI
 - Tech
 - Technology
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - Root Cause Analysis
 - Telemetry
 - Thread Dumps
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

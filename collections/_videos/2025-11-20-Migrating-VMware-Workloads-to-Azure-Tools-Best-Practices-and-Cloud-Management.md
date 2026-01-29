@@ -23,6 +23,10 @@ tags:
 - VMware
 - Windows Admin Center
 - Workload Migration
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

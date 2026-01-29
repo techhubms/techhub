@@ -23,6 +23,9 @@ tags:
 - Oss
 - OSS AI Summit
 - Python
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

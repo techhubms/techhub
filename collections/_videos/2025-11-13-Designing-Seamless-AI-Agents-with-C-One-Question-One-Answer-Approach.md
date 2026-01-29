@@ -19,6 +19,9 @@ tags:
 - Pair Programming
 - Single Response Model
 - User Experience
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

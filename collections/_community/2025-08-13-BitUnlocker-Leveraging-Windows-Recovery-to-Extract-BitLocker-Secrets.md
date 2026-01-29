@@ -26,6 +26,8 @@ tags:
 - Vulnerability Research
 - Windows Recovery Environment
 - WinRE
+- Security
+- Community
 section_names:
 - security
 primary_section: security

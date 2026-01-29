@@ -30,6 +30,8 @@ tags:
 - Vmware
 - VMware Cloud Foundation
 - Vsphere Kubernetes Service
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

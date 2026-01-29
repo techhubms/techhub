@@ -26,6 +26,9 @@ tags:
 - Support
 - Upstream Projects
 - Vulnerability Disclosure
+- Coding
+- Security
+- News
 section_names:
 - coding
 - security

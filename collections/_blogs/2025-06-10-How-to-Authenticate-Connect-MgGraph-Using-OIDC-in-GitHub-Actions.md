@@ -13,6 +13,10 @@ tags:
 - Microsoft Graph
 - OIDC
 - PowerShell
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

@@ -21,6 +21,10 @@ tags:
 - Session Configuration
 - Speech To Speech
 - Voice AI
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

@@ -16,6 +16,9 @@ tags:
 - Performance Improvement
 - Python Packages
 - Session Startup
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

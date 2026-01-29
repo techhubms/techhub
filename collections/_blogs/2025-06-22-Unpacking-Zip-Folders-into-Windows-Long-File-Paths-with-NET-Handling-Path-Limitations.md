@@ -19,6 +19,8 @@ tags:
 - Windows
 - Windows Registry
 - ZipFile
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

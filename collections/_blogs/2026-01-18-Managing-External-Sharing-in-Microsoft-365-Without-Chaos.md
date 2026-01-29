@@ -26,6 +26,8 @@ tags:
 - Security Best Practices
 - SharePoint
 - SharePoint Online
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

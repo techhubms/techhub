@@ -23,6 +23,10 @@ tags:
 - Software Supply Chain
 - Traceability
 - Video Interviews
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

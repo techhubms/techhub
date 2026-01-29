@@ -17,6 +17,8 @@ tags:
 - NoSQL
 - Partial Update
 - Sink Configuration
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

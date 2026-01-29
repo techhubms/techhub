@@ -20,6 +20,8 @@ tags:
 - Tamper Protection
 - Windows 11
 - Windows Security
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

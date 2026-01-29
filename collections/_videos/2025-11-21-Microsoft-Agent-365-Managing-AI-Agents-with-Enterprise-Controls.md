@@ -21,6 +21,9 @@ tags:
 - Microsoft 365 Integration
 - Microsoft Agent 365
 - MSIgnite
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

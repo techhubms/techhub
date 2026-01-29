@@ -21,6 +21,9 @@ tags:
 - Security Practices
 - Tech
 - Technology
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

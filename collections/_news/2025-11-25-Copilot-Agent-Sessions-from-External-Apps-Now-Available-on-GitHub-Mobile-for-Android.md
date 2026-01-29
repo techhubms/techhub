@@ -20,6 +20,9 @@ tags:
 - Mobile Development
 - Sharesheet
 - Workflow Automation
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

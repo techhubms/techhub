@@ -15,6 +15,8 @@ tags:
 - Web Design
 - Web Development
 - WebDevelopment
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

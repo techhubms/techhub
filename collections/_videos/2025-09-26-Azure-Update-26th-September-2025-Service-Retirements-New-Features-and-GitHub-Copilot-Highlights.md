@@ -28,6 +28,11 @@ tags:
 - NVv3 Retirement
 - PostgreSQL
 - Service Retirement
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

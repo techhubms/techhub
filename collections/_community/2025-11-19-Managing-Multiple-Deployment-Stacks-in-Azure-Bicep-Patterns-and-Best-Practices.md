@@ -19,6 +19,9 @@ tags:
 - Lifecycle Management
 - Modular Architecture
 - Resource Grouping
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

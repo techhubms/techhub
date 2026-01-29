@@ -24,6 +24,9 @@ tags:
 - SQL Database
 - Tempdb Spillover
 - Visualization
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

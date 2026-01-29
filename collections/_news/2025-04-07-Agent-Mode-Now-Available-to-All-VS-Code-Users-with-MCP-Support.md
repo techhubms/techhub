@@ -21,6 +21,9 @@ tags:
 - Tool Extensibility
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

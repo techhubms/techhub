@@ -20,6 +20,8 @@ tags:
 - MSIgnite
 - Prebuilt Agents
 - Self Learning Systems
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

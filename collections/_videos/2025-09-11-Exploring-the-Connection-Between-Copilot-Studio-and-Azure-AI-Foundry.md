@@ -17,6 +17,9 @@ tags:
 - Microsoft AI
 - Microsoft Developer
 - Scott Durow
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

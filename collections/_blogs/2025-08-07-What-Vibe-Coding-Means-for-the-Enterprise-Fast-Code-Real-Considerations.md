@@ -31,6 +31,11 @@ tags:
 - Technical Debt
 - Unit Testing
 - Vibe Coding
+- AI
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - coding

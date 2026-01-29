@@ -25,6 +25,10 @@ tags:
 - Sovereignty
 - Stanley Black & Decker
 - Trustworthy AI
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

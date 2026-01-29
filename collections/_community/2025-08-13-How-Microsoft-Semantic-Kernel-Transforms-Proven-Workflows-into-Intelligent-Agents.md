@@ -24,6 +24,9 @@ tags:
 - Python
 - Skill Plugins
 - Workflow Automation
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

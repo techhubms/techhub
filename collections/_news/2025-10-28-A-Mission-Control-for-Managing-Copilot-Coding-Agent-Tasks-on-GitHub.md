@@ -18,6 +18,11 @@ tags:
 - Task Management
 - Universe25
 - VS Code Insiders
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

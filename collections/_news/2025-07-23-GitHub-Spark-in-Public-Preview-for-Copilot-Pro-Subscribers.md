@@ -16,6 +16,9 @@ tags:
 - Prototyping
 - Public Preview
 - Software Engineering
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

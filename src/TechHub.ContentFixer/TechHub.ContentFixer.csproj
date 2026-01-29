@@ -10,8 +10,6 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <!-- Suppress CA1031 for utility tool - broad exception catching is appropriate here -->
-    <NoWarn>$(NoWarn);CA1031</NoWarn>
   </PropertyGroup>
 
 </Project>

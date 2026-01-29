@@ -32,6 +32,11 @@ tags:
 - Network Security Perimeter
 - Vcpu Options
 - Virtual Network Mesh
+- AI
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

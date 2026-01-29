@@ -21,6 +21,8 @@ tags:
 - Prompt Engineering
 - Prompt Template
 - Security Boundaries
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

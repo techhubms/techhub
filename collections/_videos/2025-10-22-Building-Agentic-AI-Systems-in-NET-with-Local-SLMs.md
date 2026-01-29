@@ -33,6 +33,9 @@ tags:
 - Smalllanguagemodels
 - Software Developer
 - State Management
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

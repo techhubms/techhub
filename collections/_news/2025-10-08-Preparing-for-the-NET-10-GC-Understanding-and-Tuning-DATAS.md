@@ -25,6 +25,8 @@ tags:
 - Server GC
 - Throughput
 - Tuning
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

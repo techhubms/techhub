@@ -18,6 +18,10 @@ tags:
 - GitHub
 - Workload Migration
 - X86
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

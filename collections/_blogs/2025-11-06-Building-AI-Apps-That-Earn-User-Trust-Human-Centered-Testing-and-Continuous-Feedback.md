@@ -31,6 +31,9 @@ tags:
 - Trustworthy AI
 - User Confidence
 - User Experience
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

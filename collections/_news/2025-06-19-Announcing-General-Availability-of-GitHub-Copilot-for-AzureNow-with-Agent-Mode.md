@@ -21,6 +21,13 @@ tags:
 - Infrastructure Management
 - VS
 - VS Code
+- AI
+- GitHub Copilot
+- Azure
+- DevOps
+- Coding
+- Security
+- News
 section_names:
 - ai
 - github-copilot

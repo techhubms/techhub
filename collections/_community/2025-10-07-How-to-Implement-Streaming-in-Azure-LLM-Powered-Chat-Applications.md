@@ -24,6 +24,10 @@ tags:
 - Server Sent Events
 - Streaming
 - WebSockets
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

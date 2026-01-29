@@ -17,6 +17,8 @@ tags:
 - Repository Health
 - Software Maintenance
 - Technical Debt
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

@@ -25,6 +25,9 @@ tags:
 - Redis
 - Scaling
 - Startup
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

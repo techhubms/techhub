@@ -15,6 +15,9 @@ tags:
 - SaaS Products
 - TFS
 - Work Item Integration
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

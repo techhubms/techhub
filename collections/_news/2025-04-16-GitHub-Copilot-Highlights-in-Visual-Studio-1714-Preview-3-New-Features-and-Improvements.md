@@ -18,6 +18,10 @@ tags:
 - Next Edit Suggestions
 - Preview Release
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

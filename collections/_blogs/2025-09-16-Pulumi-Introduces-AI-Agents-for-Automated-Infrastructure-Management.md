@@ -23,6 +23,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Task Automation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

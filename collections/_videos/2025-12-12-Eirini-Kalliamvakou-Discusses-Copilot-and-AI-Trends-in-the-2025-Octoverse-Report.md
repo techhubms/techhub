@@ -15,6 +15,10 @@ tags:
 - Research Insights
 - Software Development
 - Team Dynamics
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

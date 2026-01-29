@@ -19,6 +19,10 @@ tags:
 - Security Best Practices
 - Style Automation
 - Test Frameworks
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

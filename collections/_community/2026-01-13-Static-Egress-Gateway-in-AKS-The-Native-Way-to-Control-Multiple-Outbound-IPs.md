@@ -21,6 +21,11 @@ tags:
 - Static Egress Gateway
 - User Defined Routing
 - YADA Demo App
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

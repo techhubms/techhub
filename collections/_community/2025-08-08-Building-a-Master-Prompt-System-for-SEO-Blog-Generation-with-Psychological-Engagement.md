@@ -19,6 +19,8 @@ tags:
 - SEO Blog Writing
 - Storytelling
 - Structured Prompts
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

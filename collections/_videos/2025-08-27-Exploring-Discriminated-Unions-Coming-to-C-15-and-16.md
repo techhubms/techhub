@@ -17,6 +17,8 @@ tags:
 - Programming
 - Software Development
 - Union Types
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

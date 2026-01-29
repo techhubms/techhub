@@ -20,6 +20,9 @@ tags:
 - Resource Preemption
 - Scaling Strategies
 - SRE
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

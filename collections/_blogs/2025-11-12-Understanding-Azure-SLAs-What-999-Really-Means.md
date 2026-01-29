@@ -19,6 +19,8 @@ tags:
 - Redundancy
 - Service Level Agreement
 - SLA
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

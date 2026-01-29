@@ -14,6 +14,9 @@ tags:
 - TDD
 - Technical Debt
 - Testing
+- AI
+- Security
+- Community
 section_names:
 - ai
 - security

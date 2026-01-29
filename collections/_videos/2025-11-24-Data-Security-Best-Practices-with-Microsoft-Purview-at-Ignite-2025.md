@@ -23,6 +23,9 @@ tags:
 - Partner Engagement
 - Power Platform
 - Skilling Hub
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

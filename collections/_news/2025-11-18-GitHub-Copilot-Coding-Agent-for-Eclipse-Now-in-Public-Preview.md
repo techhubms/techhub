@@ -17,6 +17,9 @@ tags:
 - Public Preview
 - Pull Request Automation
 - Task Delegation
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

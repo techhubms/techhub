@@ -25,6 +25,10 @@ tags:
 - RAG
 - Semantic Search
 - Structured Data
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

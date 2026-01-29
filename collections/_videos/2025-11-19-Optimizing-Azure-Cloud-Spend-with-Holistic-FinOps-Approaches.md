@@ -20,6 +20,9 @@ tags:
 - Unifyyourdataplatform
 - Unit Economics
 - Virtual Tags
+- Azure
+- DevOps
+- Videos
 section_names:
 - azure
 - devops

@@ -18,6 +18,9 @@ tags:
 - Repo Scope
 - Scope Management
 - Token Permissions
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

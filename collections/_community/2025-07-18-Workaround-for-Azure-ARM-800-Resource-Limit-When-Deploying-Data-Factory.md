@@ -15,6 +15,10 @@ tags:
 - Deployment
 - IaC
 - Resource Limits
+- Azure
+- DevOps
+- Machine Learning
+- Community
 section_names:
 - azure
 - devops

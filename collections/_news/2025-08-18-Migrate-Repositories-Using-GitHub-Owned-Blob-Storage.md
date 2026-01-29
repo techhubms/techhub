@@ -18,6 +18,8 @@ tags:
 - GitLab Migration
 - Public Preview
 - Repository Migration
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

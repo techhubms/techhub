@@ -21,6 +21,9 @@ tags:
 - Pantone Palette Generator
 - Retrieval Augmented Generation
 - Trend Forecasting
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

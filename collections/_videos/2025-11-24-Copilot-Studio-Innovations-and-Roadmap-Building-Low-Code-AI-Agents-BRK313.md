@@ -28,6 +28,8 @@ tags:
 - Scoring Methods
 - Testing Tools
 - Zac Cadi
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

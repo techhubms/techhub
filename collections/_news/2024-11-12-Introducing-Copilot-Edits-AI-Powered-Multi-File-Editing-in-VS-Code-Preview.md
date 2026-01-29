@@ -19,6 +19,10 @@ tags:
 - Speculative Decoding
 - VS Code
 - Working Set
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

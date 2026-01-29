@@ -26,6 +26,9 @@ tags:
 - Microsoft Azure
 - SAP BDC
 - Ultra Disk
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

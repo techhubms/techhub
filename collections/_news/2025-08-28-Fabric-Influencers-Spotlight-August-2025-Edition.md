@@ -22,6 +22,8 @@ tags:
 - Pandas
 - Power BI
 - Translytical Task Flows
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

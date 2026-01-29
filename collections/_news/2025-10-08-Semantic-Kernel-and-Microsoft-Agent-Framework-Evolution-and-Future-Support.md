@@ -20,6 +20,10 @@ tags:
 - Open Source
 - Python
 - Semantic Kernel
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

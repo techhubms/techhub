@@ -16,6 +16,11 @@ tags:
 - Microsoft Graph
 - Resource Orchestration
 - VS Code Extension
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

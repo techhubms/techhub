@@ -22,6 +22,10 @@ tags:
 - Security Services
 - ThinkAgile
 - TruScale
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -18,6 +18,10 @@ tags:
 - Naming Conventions
 - Typo Detection
 - Variable Names
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

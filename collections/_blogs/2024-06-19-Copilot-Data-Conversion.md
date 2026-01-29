@@ -11,6 +11,10 @@ tags:
 - SQL
 - Table Designer
 - Test Automation
+- AI
+- GitHub Copilot
+- Coding
+- Blogs
 section_names:
 - ai
 - github-copilot

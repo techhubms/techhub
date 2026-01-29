@@ -20,6 +20,8 @@ tags:
 - Self Hosted Runner
 - Version Migration
 - Workflow
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -16,6 +16,9 @@ tags:
 - GitHub Model Integration
 - Interaction Service
 - Software Development
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

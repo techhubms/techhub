@@ -19,6 +19,10 @@ tags:
 - Live Coding
 - Productivity Tools
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

@@ -24,6 +24,10 @@ tags:
 - OpenTelemetry
 - Performance Troubleshooting
 - Prompt QL
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

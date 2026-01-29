@@ -19,6 +19,9 @@ tags:
 - Opentofu
 - State Management
 - Terraform
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

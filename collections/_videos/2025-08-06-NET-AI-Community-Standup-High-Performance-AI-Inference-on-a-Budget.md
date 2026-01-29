@@ -26,6 +26,10 @@ tags:
 - Production AI
 - Python Integration
 - Software Developer
+- AI
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - ai
 - coding

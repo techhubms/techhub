@@ -28,6 +28,10 @@ tags:
 - VPN Gateway
 - Web Application Firewall
 - Zone Redundancy
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

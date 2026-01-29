@@ -19,6 +19,9 @@ tags:
 - Orchestration
 - Stateful Applications
 - Workflow Automation
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

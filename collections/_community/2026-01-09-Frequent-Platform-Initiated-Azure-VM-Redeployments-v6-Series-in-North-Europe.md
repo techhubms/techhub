@@ -17,6 +17,8 @@ tags:
 - Unplanned Downtime
 - V6 Series
 - Virtual Machines
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

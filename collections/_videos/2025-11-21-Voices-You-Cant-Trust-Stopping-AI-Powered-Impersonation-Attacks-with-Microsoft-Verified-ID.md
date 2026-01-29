@@ -17,6 +17,9 @@ tags:
 - Social Engineering
 - Threat Protection
 - Verified ID
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

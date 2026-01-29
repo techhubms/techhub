@@ -14,6 +14,8 @@ tags:
 - Open Source
 - Software Design
 - State Machine
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

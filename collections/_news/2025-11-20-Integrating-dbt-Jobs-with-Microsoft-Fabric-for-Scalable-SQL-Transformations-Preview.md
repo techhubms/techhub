@@ -21,6 +21,9 @@ tags:
 - Operationalization
 - Scheduling
 - SQL Models
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

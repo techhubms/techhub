@@ -21,6 +21,8 @@ tags:
 - Unified Development
 - Utility Programs
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

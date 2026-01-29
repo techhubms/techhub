@@ -15,6 +15,8 @@ tags:
 - Windows 10
 - Workload Installation
 - Xbox Game Bar
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

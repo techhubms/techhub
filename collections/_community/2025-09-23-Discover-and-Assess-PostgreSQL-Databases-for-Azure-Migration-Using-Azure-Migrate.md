@@ -20,6 +20,8 @@ tags:
 - PaaS
 - PostgreSQL
 - VMware
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

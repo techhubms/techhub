@@ -22,6 +22,10 @@ tags:
 - Real Time Insights
 - Unifyyourdataplatform
 - Unity Catalog
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

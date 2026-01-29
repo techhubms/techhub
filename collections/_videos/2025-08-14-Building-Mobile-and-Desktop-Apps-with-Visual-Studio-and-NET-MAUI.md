@@ -22,6 +22,8 @@ tags:
 - UI Development
 - VS
 - XAML
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

@@ -25,6 +25,9 @@ tags:
 - Slurm
 - Squashfs
 - Srun
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

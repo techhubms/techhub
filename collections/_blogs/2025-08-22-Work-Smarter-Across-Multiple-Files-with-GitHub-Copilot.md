@@ -16,6 +16,9 @@ tags:
 - Multi File Context
 - Project Structure
 - Testing
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

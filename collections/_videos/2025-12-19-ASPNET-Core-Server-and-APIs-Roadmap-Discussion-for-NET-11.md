@@ -26,6 +26,8 @@ tags:
 - Mike Kistler
 - Server Architecture
 - Software Developer
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

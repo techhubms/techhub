@@ -16,6 +16,9 @@ tags:
 - SQLite
 - Team Collaboration
 - Versioning
+- DevOps
+- Security
+- Community
 section_names:
 - devops
 - security

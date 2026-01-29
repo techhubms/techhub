@@ -22,6 +22,8 @@ tags:
 - Software Planning
 - Spec Kit
 - SpecKit
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

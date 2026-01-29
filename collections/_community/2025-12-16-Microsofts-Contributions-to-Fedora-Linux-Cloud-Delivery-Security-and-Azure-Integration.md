@@ -25,6 +25,10 @@ tags:
 - Sigul
 - UEFI Signing
 - WSL
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

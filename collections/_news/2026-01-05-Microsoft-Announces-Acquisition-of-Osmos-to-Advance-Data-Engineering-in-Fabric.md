@@ -19,6 +19,10 @@ tags:
 - OneLake
 - Osmos
 - Power BI
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

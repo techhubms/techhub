@@ -26,6 +26,10 @@ tags:
 - Playwright Workspaces
 - Python SDK
 - Web UI Automation
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

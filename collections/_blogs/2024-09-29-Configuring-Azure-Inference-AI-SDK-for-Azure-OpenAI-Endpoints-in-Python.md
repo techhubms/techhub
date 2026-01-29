@@ -16,6 +16,10 @@ tags:
 - GitHub Models
 - GPT 4o
 - Python
+- AI
+- Azure
+- Coding
+- Blogs
 section_names:
 - ai
 - azure

@@ -16,6 +16,14 @@ tags:
 - Microsoft Agent Framework
 - Semantic Modeling
 - VS Code
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -63,7 +71,7 @@ The article describes processes for encoding your project’s coding standards, 
 
 This content moves ahead from last week’s coverage of agent and workflow sharing—such as repository-wide settings and Skills.md—by providing tools that enforce norms and support larger collaborative engineering teams.
 
-- [Scaling Context-Aware Workflows with GitHub Copilot in VS Code](/ai/videos/Scaling-Context-Aware-Workflows-with-GitHub-Copilot-in-VS-Code)
+- [Scaling Context-Aware Workflows with GitHub Copilot in VS Code](/ai/videos/scaling-context-aware-workflows-with-github-copilot-in-vs-code)
 
 ### Agentic AI, MCP Integration, and Spec-Driven Development
 
@@ -95,7 +103,7 @@ This article offers a follow-up to recent discussions about workflows and langua
 
 The video details the pattern: AI models are most effective with codebases that include clear type information, pushing developers to adopt languages that maximize AI’s benefit. It encourages teams to consider how language selection impacts tooling support and outcomes, especially with AI growing as a default part of the software development process.
 
-- [How AI Influences Programming Language Selection](/ai/videos/How-AI-Influences-Programming-Language-Selection)
+- [How AI Influences Programming Language Selection](/ai/videos/how-ai-influences-programming-language-selection)
 
 ## Azure
 
@@ -199,4 +207,4 @@ Privacy, regulatory policies, and provider stability are addressed, and step-by-
 
 This update fits with previous work to raise the bar for identity security, following MFA, strong authentication, and trusted publishing as mentioned previously.
 
-- [Account Recovery in Microsoft Entra ID Using Government IDs and Third-Party Identity Verification](/azure/videos/Account-Recovery-in-Microsoft-Entra-ID-Using-Government-IDs-and-Third-Party-Identity-Verification)
+- [Account Recovery in Microsoft Entra ID Using Government IDs and Third-Party Identity Verification](/azure/videos/account-recovery-in-microsoft-entra-id-using-government-ids-and-third-party-identity-verification)

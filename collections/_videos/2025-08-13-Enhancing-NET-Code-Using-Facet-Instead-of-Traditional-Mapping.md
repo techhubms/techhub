@@ -16,6 +16,8 @@ tags:
 - Object Mapping
 - Open Source
 - Typed Projections
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

@@ -21,6 +21,10 @@ tags:
 - Prototyping
 - Rapid Application Development
 - Team Collaboration
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

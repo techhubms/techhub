@@ -22,6 +22,10 @@ tags:
 - Reanimated 4
 - TypeScript 5.9
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

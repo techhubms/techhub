@@ -18,6 +18,9 @@ tags:
 - Repository Management
 - Weekly Issue Summaries
 - Workflow Automation
+- AI
+- DevOps
+- Videos
 section_names:
 - ai
 - devops

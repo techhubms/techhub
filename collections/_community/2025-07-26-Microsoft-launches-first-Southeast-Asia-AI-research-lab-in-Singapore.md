@@ -15,6 +15,8 @@ tags:
 - Southeast Asia
 - Talent Development
 - Technology
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

@@ -15,6 +15,8 @@ tags:
 - Language Features
 - Type System
 - Type Unions
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

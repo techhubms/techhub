@@ -16,6 +16,8 @@ tags:
 - Starlight
 - Technical Documentation
 - Tooling
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

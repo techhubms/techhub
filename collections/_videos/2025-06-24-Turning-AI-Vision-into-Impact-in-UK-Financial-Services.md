@@ -23,6 +23,8 @@ tags:
 - Responsible AI
 - Skilling
 - UK Market
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

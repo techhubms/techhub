@@ -21,6 +21,10 @@ tags:
 - Performance Testing
 - Resiliency
 - SQL Database
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

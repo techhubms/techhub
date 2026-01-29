@@ -19,6 +19,9 @@ tags:
 - Improvement
 - Installation Guide
 - Terminal
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

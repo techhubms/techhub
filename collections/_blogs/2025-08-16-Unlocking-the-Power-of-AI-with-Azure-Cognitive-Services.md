@@ -24,6 +24,9 @@ tags:
 - Speech API
 - Text Analytics
 - Vision API
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

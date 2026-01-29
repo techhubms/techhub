@@ -19,6 +19,11 @@ tags:
 - Repository Governance
 - Security Policies
 - Top Down Governance
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - devops

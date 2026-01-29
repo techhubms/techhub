@@ -33,6 +33,12 @@ tags:
 - Service Bus
 - VS Code
 - Webhook Authentication
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

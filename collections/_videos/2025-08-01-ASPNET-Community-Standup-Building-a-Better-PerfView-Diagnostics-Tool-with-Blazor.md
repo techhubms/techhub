@@ -22,6 +22,8 @@ tags:
 - Perfview
 - Software Developer
 - Thread Pool
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

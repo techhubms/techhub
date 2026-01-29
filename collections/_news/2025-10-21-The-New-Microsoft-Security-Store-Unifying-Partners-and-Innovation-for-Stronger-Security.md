@@ -21,6 +21,9 @@ tags:
 - Security Marketplace
 - Threat Protection
 - Zero Trust
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

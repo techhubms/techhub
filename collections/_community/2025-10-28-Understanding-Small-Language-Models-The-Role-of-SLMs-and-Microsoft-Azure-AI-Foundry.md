@@ -20,6 +20,8 @@ tags:
 - SLM
 - Small Language Models
 - Tokenization
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

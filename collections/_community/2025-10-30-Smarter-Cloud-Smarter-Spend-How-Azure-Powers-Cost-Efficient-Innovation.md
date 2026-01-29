@@ -20,6 +20,9 @@ tags:
 - FinOps
 - Microsoft Cost Management
 - Strategic Pricing
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

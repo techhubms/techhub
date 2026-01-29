@@ -35,6 +35,12 @@ tags:
 - Network Security
 - Service Bus
 - Terraform
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -29,6 +29,10 @@ tags:
 - Social X
 - Software Development Lifecycle
 - Techstrong Council
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

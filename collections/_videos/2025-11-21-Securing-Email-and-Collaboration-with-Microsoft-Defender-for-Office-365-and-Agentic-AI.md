@@ -22,6 +22,9 @@ tags:
 - SoC Automation
 - Social Engineering
 - Threat Remediation
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

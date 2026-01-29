@@ -23,6 +23,9 @@ tags:
 - Virtualization
 - VM Management
 - Windows Virtual Desktop
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

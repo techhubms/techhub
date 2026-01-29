@@ -18,6 +18,10 @@ tags:
 - Productivity Tools
 - Profiling
 - VS
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

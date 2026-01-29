@@ -23,6 +23,12 @@ tags:
 - Open Source
 - Red Hat
 - Virtualization
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

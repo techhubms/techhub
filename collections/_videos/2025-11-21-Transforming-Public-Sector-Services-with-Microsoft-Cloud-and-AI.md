@@ -26,6 +26,9 @@ tags:
 - Raleigh
 - San Francisco
 - Tomorrow.io
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

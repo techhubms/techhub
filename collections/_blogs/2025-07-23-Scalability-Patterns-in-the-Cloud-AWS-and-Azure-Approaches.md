@@ -20,6 +20,8 @@ tags:
 - Service Bus
 - Solution Architecture
 - Virtual Machine Scale Sets
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

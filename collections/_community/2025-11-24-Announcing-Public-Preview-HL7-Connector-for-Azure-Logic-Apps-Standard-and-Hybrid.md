@@ -19,6 +19,8 @@ tags:
 - MLLP Adapter
 - Schema Management
 - Standard Workflow
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

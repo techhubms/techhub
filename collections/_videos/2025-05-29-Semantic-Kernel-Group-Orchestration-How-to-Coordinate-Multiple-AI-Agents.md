@@ -19,6 +19,9 @@ tags:
 - Semantic Kernel
 - Team Based Problem Solving
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

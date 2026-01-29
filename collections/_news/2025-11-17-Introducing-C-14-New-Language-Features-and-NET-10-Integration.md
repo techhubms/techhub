@@ -23,6 +23,8 @@ tags:
 - Span Types
 - Static Extension
 - Unbound Generic Types
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

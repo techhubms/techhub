@@ -22,6 +22,10 @@ tags:
 - Visual Studio Subscription
 - Visual Studio Subscriptions
 - VS
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

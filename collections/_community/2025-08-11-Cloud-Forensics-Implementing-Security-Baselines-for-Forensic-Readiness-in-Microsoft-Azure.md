@@ -24,6 +24,9 @@ tags:
 - OS Disk Snapshots
 - Privileged Identity Management
 - RBAC
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

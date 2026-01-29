@@ -21,6 +21,8 @@ tags:
 - Test Automation
 - Unit Testing
 - VS
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

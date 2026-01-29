@@ -15,6 +15,10 @@ tags:
 - OneDevQuestion
 - Programming Productivity
 - Root Cause Analysis
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

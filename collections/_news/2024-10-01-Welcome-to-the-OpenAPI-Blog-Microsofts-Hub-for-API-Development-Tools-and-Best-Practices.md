@@ -20,6 +20,11 @@ tags:
 - Power Platform
 - Semantic Kernel
 - TypeSpec
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

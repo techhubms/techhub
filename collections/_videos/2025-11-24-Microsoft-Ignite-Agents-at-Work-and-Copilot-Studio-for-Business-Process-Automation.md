@@ -27,6 +27,8 @@ tags:
 - Reporting
 - Sales Development Agent
 - Security Integration
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

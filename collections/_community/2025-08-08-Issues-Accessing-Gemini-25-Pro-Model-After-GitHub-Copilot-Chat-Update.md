@@ -18,6 +18,9 @@ tags:
 - Software Bugs
 - Troubleshooting
 - VS Code
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

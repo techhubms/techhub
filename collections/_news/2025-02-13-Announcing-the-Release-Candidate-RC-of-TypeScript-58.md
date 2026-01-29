@@ -19,6 +19,8 @@ tags:
 - Performance Optimization
 - Release Candidate
 - TypeScript
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

@@ -20,6 +20,8 @@ tags:
 - SAML
 - Single Sign On
 - User Attributes
+- Security
+- Community
 section_names:
 - security
 primary_section: security

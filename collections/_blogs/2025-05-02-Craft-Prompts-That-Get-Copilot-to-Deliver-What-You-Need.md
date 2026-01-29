@@ -14,6 +14,9 @@ tags:
 - Prompt Engineering
 - Structured Prompt
 - Workflow Automation
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

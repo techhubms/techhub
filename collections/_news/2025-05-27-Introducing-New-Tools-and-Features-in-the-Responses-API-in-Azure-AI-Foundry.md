@@ -11,6 +11,9 @@ tags:
 - Chat Completions API
 - OpenAI
 - Responses API
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

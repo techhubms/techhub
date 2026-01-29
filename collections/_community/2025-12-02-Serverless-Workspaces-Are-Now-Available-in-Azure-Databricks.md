@@ -21,6 +21,11 @@ tags:
 - SQL
 - Unity Catalog
 - Workspace Configuration
+- AI
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

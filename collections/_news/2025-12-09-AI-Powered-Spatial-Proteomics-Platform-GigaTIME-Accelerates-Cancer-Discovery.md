@@ -20,6 +20,8 @@ tags:
 - Precision Oncology
 - Spatial Proteomics
 - Tumor Microenvironment
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

@@ -29,6 +29,12 @@ tags:
 - Onboard to Azure
 - PostgreSQL Flexible Server
 - WAF
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

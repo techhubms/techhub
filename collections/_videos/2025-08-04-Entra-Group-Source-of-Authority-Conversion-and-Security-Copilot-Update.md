@@ -24,6 +24,9 @@ tags:
 - Microsoft Security
 - Security Copilot
 - SOA Conversion
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

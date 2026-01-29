@@ -20,6 +20,10 @@ tags:
 - Semantic Kernel
 - Step By Step Guide
 - Tutorial
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

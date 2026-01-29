@@ -15,6 +15,9 @@ tags:
 - Security Culture
 - Security Tools
 - Vulnerabilities
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

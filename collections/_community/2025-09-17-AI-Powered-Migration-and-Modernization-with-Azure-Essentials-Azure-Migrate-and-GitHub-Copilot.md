@@ -24,6 +24,12 @@ tags:
 - Modernization
 - RBAC
 - Resiliency
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

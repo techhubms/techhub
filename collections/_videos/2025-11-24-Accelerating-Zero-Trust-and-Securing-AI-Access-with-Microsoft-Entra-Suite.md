@@ -20,6 +20,9 @@ tags:
 - ProtectcloudAIplatformandapps
 - Security Leadership
 - Zero Trust
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

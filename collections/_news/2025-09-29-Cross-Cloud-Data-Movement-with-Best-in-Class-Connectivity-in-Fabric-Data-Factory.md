@@ -24,6 +24,9 @@ tags:
 - OneLake
 - SQL Database
 - VNet Gateway
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

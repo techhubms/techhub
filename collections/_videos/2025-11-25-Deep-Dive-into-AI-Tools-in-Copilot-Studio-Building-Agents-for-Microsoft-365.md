@@ -23,6 +23,8 @@ tags:
 - RFI (request For Information)
 - Task Agents
 - Workflow Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

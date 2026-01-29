@@ -25,6 +25,10 @@ tags:
 - VS Code
 - VS Code Copilot
 - VS Code Insiders
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

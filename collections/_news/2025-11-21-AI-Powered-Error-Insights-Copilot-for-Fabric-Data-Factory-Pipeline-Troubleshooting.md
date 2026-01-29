@@ -20,6 +20,9 @@ tags:
 - Pipeline Monitoring
 - Pipeline Troubleshooting
 - Root Cause Analysis
+- AI
+- Machine Learning
+- News
 section_names:
 - ai
 - ml

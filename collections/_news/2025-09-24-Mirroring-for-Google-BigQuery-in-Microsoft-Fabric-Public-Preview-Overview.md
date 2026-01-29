@@ -21,6 +21,9 @@ tags:
 - Power BI
 - Real Time Data
 - Zero ETL
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

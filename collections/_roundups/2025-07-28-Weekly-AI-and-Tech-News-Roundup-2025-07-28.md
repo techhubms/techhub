@@ -14,6 +14,14 @@ tags:
 - TypeScript
 - VS Code
 - Workflow Automation
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -81,7 +89,7 @@ Copilot agents now support custom base branch selection in automated PRs, accomm
 
 - [Enhanced Git Workflow Prompt and Upcoming VS Code Terminal Auto-Approval Changes](https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html)
 - [Agents Page Update: Choose Base Branch for GitHub Copilot Coding Agent Tasks](https://github.blog/changelog/2025-07-23-agents-page-set-the-base-branch-for-github-copilot-coding-agent-tasks)
-- [What's new with the GitHub Copilot coding agent: A look at the updates](/ai/videos/Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates)
+- [What's new with the GitHub Copilot coding agent: A look at the updates](/ai/videos/whats-new-with-the-github-copilot-coding-agent-a-look-at-the-updates)
 
 ### Custom Instructions and Contextual Guidance
 
@@ -107,7 +115,7 @@ Test automation received a boost through Copilot’s integration with Azure DevO
 Copilot’s expanded code review capabilities deliver pre-commit feedback in VS Code and often automate actionable suggestions on GitHub.com, ensuring fast, quality-centric review cycles. This deep integration shortens feedback loops for teams without increasing manual review demands.
 
 - [From Manual Testing to AI-Generated Automation: Azure DevOps MCP & Playwright with GitHub Copilot](https://devblogs.microsoft.com/devops/from-manual-testing-to-ai-generated-automation-our-azure-devops-mcp-playwright-success-story/)
-- [Using GitHub Copilot for Code Reviews - From VS Code to GitHub.com](/ai/videos/Using-GitHub-Copilot-for-code-reviews-from-VS-Code-to-githubcom)
+- [Using GitHub Copilot for Code Reviews - From VS Code to GitHub.com](/ai/videos/using-github-copilot-for-code-reviews-from-vs-code-to-githubcom)
 
 ### Agent Mode, Ask Mode, and Integration Patterns
 
@@ -116,8 +124,8 @@ Developers can now toggle between Ask Mode (Q&A) and Agent Mode (automation, cod
 Copilot's coding agent continues to unify assignment, pull request, and hands-free code delegation within VS Code, pushing automation boundaries for everyday development.
 
 - [Ask Mode vs Agent Mode: Choosing the Right GitHub Copilot Experience for .NET Developers](https://devblogs.microsoft.com/dotnet/ask-mode-vs-agent-mode/)
-- [Coding Agent Integration in Visual Studio Code](/ai/videos/Coding-Agent-Integration-in-Visual-Studio-Code)
-- [Rubber Duck Thursday - Building an App with GitHub Copilot Agent Mode for the Competition](/ai/videos/Rubber-Duck-Thursday-Building-an-App-with-GitHub-Copilot-Agent-Mode-for-the-Competition)
+- [Coding Agent Integration in Visual Studio Code](/ai/videos/coding-agent-integration-in-visual-studio-code)
+- [Rubber Duck Thursday - Building an App with GitHub Copilot Agent Mode for the Competition](/ai/videos/rubber-duck-thursday-building-an-app-with-github-copilot-agent-mode-for-the-competition)
 
 ### Productivity Extensions and Platform-Wide Features
 
@@ -125,10 +133,10 @@ Copilot Spaces now ground AI suggestions in company standards, automating compli
 
 Workarounds for Copilot quota limits, prompt engineering best practices, improved model selection in the GitHub Mobile app, and stronger Eclipse support all demonstrate Copilot’s ongoing platform and device integration—making Copilot available to more workflows and environments each week.
 
-- [Turn Copilot into a subject matter expert with GitHub Copilot Spaces](/ai/videos/Turn-Copilot-into-a-subject-matter-expert-with-GitHub-Copilot-Spaces)
-- [Modernizing Legacy: COBOL to Cloud with GitHub Copilot](/ai/videos/Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot)
+- [Turn Copilot into a subject matter expert with GitHub Copilot Spaces](/ai/videos/turn-copilot-into-a-subject-matter-expert-with-github-copilot-spaces)
+- [Modernizing Legacy: COBOL to Cloud with GitHub Copilot](/ai/videos/modernizing-legacy-cobol-to-cloud-with-github-copilot)
 - [Limited to 300 Free Premium Requests by Your Org? Here’s an Expensive GitHub Copilot Workaround](https://r-vm.com/limited-to-300-free-premium-requests-by-your-org-heres-an-expensive-workaround.html)
-- [Vibe Coding PromptBoost.dev with GitHub Copilot in VS Code](/ai/videos/Vibe-Coding-PromptBoostdev-with-GitHub-Copilot-in-VS-Code)
+- [Vibe Coding PromptBoost.dev with GitHub Copilot in VS Code](/ai/videos/vibe-coding-promptboostdev-with-github-copilot-in-vs-code)
 - [GitHub Copilot in Eclipse—smarter, faster, and more integrated](https://github.blog/changelog/2025-07-22-github-copilot-in-eclipse-smarter-faster-and-more-integrated)
 - [Enhanced Model Selection in Copilot Chat on GitHub Mobile](https://github.blog/changelog/2025-07-25-enhanced-model-selection-experience-in-copilot-chat-on-github-mobile)
 - [Missing 'Enable Copilot' Checkbox in Word and PowerPoint Despite M365 Copilot License](https://www.reddit.com/r/microsoft/comments/1m9a3lz/do_you_have_the_enable_copilot_checkbox_in_your/)
@@ -168,11 +176,11 @@ Visual Studio’s planned AI upgrades will embed code generation and debugging d
 
 - [Visual Studio might be getting its biggest upgrade in years, and it'll include AI](https://www.reddit.com/r/VisualStudio/comments/1m81l7y/visual_studio_might_be_getting_its_biggest/)
 - [My free AI Course on GitHub is now in Video Format](https://www.reddit.com/r/AI_Agents/comments/1m5ucwp/my_free_ai_course_on_github_is_now_in_video_format/)
-- [Let's Learn Model Context Protocol with JavaScript and TypeScript](/ai/videos/Lets-Learn-Model-Context-Protocol-with-JavaScript-and-TypeScript)
-- [Getting Started with MCP (Model Context Protocol)](/ai/videos/Getting-Started-with-MCP-Model-Context-Protocol)
-- [Should I Add a Chatbot to My App? AI Guidance from Steve Sanderson](/2025-07-23-Should-I-Add-a-Chatbot-to-My-App-AI-Guidance-from-Steve-Sanderson.html)
-- [Open Source and AI Special with @francescociulla](/ai/videos/Open-Source-and-AI-Special-with-francescociulla)
-- [Should I add a chatbot to my app?](/ai/videos/Should-I-add-a-chatbot-to-my-app)
+- [Let's Learn Model Context Protocol with JavaScript and TypeScript](/ai/videos/lets-learn-model-context-protocol-with-javascript-and-typescript)
+- [Getting Started with MCP (Model Context Protocol)](/ai/videos/getting-started-with-mcp-model-context-protocol)
+- [Should I Add a Chatbot to My App? AI Guidance from Steve Sanderson](/should-i-add-a-chatbot-to-my-app-ai-guidance-from-steve-sanderson)
+- [Open Source and AI Special with @francescociulla](/ai/videos/open-source-and-ai-special-with-francescociulla)
+- [Should I add a chatbot to my app?](/ai/videos/should-i-add-a-chatbot-to-my-app)
 
 ### AI Research, Regional Expansion, and Community-Driven Insights
 
@@ -186,7 +194,7 @@ Community discussions surfaced: Azure Document Intelligence’s reliability with
 - [Microsoft supports making Europe’s languages and cultures more accessible in the digital realm](https://blogs.microsoft.com/on-the-issues/2025/07/20/eudigitalunlock/)
 - [Confidence Score Decline in Document Intelligence Custom Extraction Models with New Layouts](https://techcommunity.microsoft.com/t5/ai-azure-ai-services/doc-intelligence-custom-extraction-model-confidence-score/m-p/4435860#M1270)
 - [Agent feedback is the new User feedback](https://www.reddit.com/r/AI_Agents/comments/1m7ldl2/agent_feedback_is_the_new_user_feedback/)
-- [Choosing Your First AI Application](/ai/videos/Choosing-Your-First-AI-Application)
+- [Choosing Your First AI Application](/ai/videos/choosing-your-first-ai-application)
 
 ## Azure
 
@@ -230,7 +238,7 @@ Azure’s container services are now easier to choose and align with operational
 
 Feature updates improved networking, analytics, and encrypted storage. Community coverage of ARM template limitations and dynamic deployment chains highlights where scripting is necessary for strict ordering, echoing persistent challenges in resource provisioning.
 
-- [Azure Update – 25th July 2025: Latest Service Announcements and Enhancements](/azure/videos/Azure-Update-25th-July-2025-Latest-Service-Announcements-and-Enhancements)
+- [Azure Update – 25th July 2025: Latest Service Announcements and Enhancements](/azure/videos/azure-update-25th-july-2025-latest-service-announcements-and-enhancements)
 - [Implementing dependsOn Chain Inside Looped Resources in ARM Templates for Azure Backup](https://www.reddit.com/r/azuredevops/comments/1m6d7gm/implementing_dependson_chain_inside_looped/)
 
 ### Resilience and Availability Patterns
@@ -263,14 +271,14 @@ TypeScript 5.9 RC introduces ECMAScript `import defer`, Node.js 20 module compat
 PowerShell’s PlatyPS 1.0.0 swaps XML for fast, cross-platform Markdown doc authoring, making up-to-date, source-controlled help a reality for large teams. In .NET Aspire, new name/constant centralization patterns prevent errors and speed up large-scale project refactoring.
 
 - [Announcing Microsoft.PowerShell.PlatyPS 1.0.0: PowerShell Help Authoring Simplified](https://devblogs.microsoft.com/powershell/announcing-platyps-100/)
-- [.NET Aspire: Centralizing Project Names and Constants](/coding/videos/NET-Aspire-Centralizing-Project-Names-and-Constants)
+- [.NET Aspire: Centralizing Project Names and Constants](/coding/videos/net-aspire-centralizing-project-names-and-constants)
 
 ### IDE Experience and Community Engagement
 
 A proposed Visual Studio web browser/console extension could cut context-switching and boost web/React/.NET development. Community sessions like ‘Rubber Duck Thursdays’ facilitate hands-on peer learning, reinforcing last week’s focus on collaborative, real-time growth.
 
 - [Developing a Web Browser and Console Log Extension for Visual Studio](https://www.reddit.com/r/VisualStudio/comments/1m5pxx2/possible_new_web_browserconsole_extension/)
-- [Rubber Duck Thursdays - Build for the Love of Code](/coding/videos/Rubber-Duck-Thursdays-Build-for-the-Love-of-Code)
+- [Rubber Duck Thursdays - Build for the Love of Code](/coding/videos/rubber-duck-thursdays-build-for-the-love-of-code)
 
 ## DevOps
 
@@ -287,7 +295,7 @@ The Terraform Provider for Microsoft Fabric, with Fabric CLI and MCP server inte
 A GitHub App + JWT auth extension for Azure Pipelines centralizes API access, eliminates manual secrets, and raises security for status, checks, and releases. MCP server improvements enable secure remote deployment and OAuth, unlocking multi-tenant and project-specific automation while continuing last week’s automation theme.
 
 - [How to Streamline GitHub API Calls in Azure Pipelines Using a Custom DevOps Extension](https://github.blog/enterprise-software/ci-cd/how-to-streamline-github-api-calls-in-azure-pipelines/)
-- [Upgrading to GitHub's Remote MCP Server: From Docker Setup to OAuth Simplicity](/devops/videos/Upgrading-to-GitHubs-Remote-MCP-Server-From-Docker-Setup-to-OAuth-Simplicity)
+- [Upgrading to GitHub's Remote MCP Server: From Docker Setup to OAuth Simplicity](/devops/videos/upgrading-to-githubs-remote-mcp-server-from-docker-setup-to-oauth-simplicity)
 
 ### Advanced Context Switching, Multi-Org Workflows, and Pipeline Modernization
 
@@ -308,7 +316,7 @@ Operational tips covered managing Key Vault URIs and secret rotatability between
 A practical guide to GitHub Environments clarifies deployment strategies and secret management. Community sessions, like Open Source Friday Brasil, continue to lower contribution barriers—carrying on last week’s collaborative, open DevOps thread.
 
 - [Understanding GitHub Environments and Deployments: A Practical Overview](https://www.reddit.com/r/github/comments/1madm8p/i_finally_understand_what_are_github_environments/)
-- [Open Source Friday Brasil with Ana Carolyne from Codaqui](/devops/videos/Open-Source-Friday-Brasil-with-Ana-Carolyne-from-Codaqui)
+- [Open Source Friday Brasil with Ana Carolyne from Codaqui](/devops/videos/open-source-friday-brasil-with-ana-carolyne-from-codaqui)
 
 ### Sustaining Open Source and European Tech Funding
 

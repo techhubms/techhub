@@ -20,6 +20,8 @@ tags:
 - Scalability
 - Triggers
 - Workflow Automation
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

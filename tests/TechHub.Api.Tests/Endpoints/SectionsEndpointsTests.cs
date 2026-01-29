@@ -16,6 +16,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
 
     public SectionsEndpointsTests(TechHubIntegrationTestApiFactory factory)
     {
+        ArgumentNullException.ThrowIfNull(factory);
+
         _client = factory.CreateClient();
     }
 
@@ -242,19 +244,35 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     }
 
     [Fact]
-    public async Task GetSectionCollectionItems_GeneratesCorrectUrls()
+    public async Task GetSectionCollectionItems_GeneratesCorrectUrls_ForInternalCollections()
     {
-        // Act
+        // Act - Use videos collection in github-copilot section (links internally, not news/blogs/community which link externally)
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/items");
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+
+        // Assert - Internal collections generate URLs with primary section and slug WITHOUT date prefix
+        // All URL components are lowercase
+        items.Should().NotBeEmpty("github-copilot section should have videos");
+        items!.Should().AllSatisfy(item =>
+        {
+            item.GetHref().Should().MatchRegex(@"^/[a-z-]+/videos/[a-z0-9-]+$",
+                "URL should include primary section, collection, and slug without date prefix");
+        });
+    }
+
+    [Fact]
+    public async Task GetSectionCollectionItems_ReturnsExternalUrls_ForExternalCollections()
+    {
+        // Act - News collection links externally
         var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
-        // Assert - URLs use primary section and slug WITHOUT date prefix
-        // All URL components are lowercase
+        // Assert - External collections (news, blogs, community) return ExternalUrl
         items.Should().NotBeEmpty();
         items!.Should().AllSatisfy(item =>
         {
-            item.GetHref().Should().MatchRegex(@"^/[a-z-]+/news/[a-z0-9-]+$",
-                "URL should include primary section, collection, and slug without date prefix");
+            item.LinksExternally().Should().BeTrue("news items should link externally");
+            item.GetHref().Should().StartWith("https://", "external URLs should be full HTTPS URLs");
         });
     }
 
@@ -282,7 +300,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
 
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
-        
+
         // Should not include draft items
         items!.Should().NotContain(item => item.Draft, "section items endpoint should filter out drafts");
     }
@@ -298,7 +316,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
 
         var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
-        
+
         // Should not include draft news items
         items!.Should().NotContain(item => item.Draft, "section collection items endpoint should filter out drafts");
     }

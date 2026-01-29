@@ -22,6 +22,9 @@ tags:
 - Observability
 - Open Source Tools
 - Real Time Insights
+- Azure
+- DevOps
+- Videos
 section_names:
 - azure
 - devops

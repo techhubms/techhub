@@ -15,6 +15,9 @@ tags:
 - Software Development
 - Statically Typed Languages
 - TypeScript
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

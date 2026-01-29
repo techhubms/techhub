@@ -20,6 +20,9 @@ tags:
 - Network Security
 - Real Time Analytics
 - T SQL Notebooks
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - azure
 - ml

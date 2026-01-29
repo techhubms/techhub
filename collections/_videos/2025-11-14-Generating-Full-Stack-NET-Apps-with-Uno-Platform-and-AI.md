@@ -22,6 +22,9 @@ tags:
 - Single Codebase
 - Uno Platform
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

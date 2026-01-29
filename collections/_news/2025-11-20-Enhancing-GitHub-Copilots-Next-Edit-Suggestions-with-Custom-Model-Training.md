@@ -26,6 +26,10 @@ tags:
 - Supervised Fine Tuning
 - Synthetic Data
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

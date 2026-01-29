@@ -13,8 +13,17 @@ namespace TechHub.E2E.Tests.Web;
 /// - SidebarTocTests.cs: Table of contents behavior
 /// </summary>
 [Collection("Custom Pages TOC Tests")]
-public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class LevelsOfEnlightenmentTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private const string PageUrl = "/github-copilot/levels-of-enlightenment";
     private IBrowserContext? _context;
     private IPage? _page;
@@ -22,7 +31,7 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

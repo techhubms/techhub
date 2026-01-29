@@ -17,6 +17,9 @@ tags:
 - Software Distribution
 - Supply Chain Security
 - Tag Protection
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

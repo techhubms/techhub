@@ -37,6 +37,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Software Development Lifecycle
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

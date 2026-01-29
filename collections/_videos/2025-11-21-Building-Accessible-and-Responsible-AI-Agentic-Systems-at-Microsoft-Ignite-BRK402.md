@@ -21,6 +21,8 @@ tags:
 - Responsible AI
 - Risk Identification
 - Visual Accessibility
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

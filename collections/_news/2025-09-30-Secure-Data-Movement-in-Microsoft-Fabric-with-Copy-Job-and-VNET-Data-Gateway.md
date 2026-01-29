@@ -19,6 +19,10 @@ tags:
 - Private Network
 - Virtual Network Data Gateway
 - VNET
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

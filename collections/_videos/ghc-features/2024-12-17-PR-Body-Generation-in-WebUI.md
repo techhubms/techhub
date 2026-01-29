@@ -9,6 +9,9 @@ plans:
 tags:
 - Pull Request
 - Web UI
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

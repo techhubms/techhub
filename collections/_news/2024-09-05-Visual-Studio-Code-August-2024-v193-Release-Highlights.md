@@ -24,6 +24,11 @@ tags:
 - Unit Testing
 - V1.93
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -21,6 +21,8 @@ tags:
 - VET
 - Vocational Education And Training
 - Workforce Transformation
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

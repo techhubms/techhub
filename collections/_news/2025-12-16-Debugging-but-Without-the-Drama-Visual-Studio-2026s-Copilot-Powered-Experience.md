@@ -19,6 +19,10 @@ tags:
 - Software Development
 - Test Debugging
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

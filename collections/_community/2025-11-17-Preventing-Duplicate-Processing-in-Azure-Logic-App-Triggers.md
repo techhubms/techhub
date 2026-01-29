@@ -19,6 +19,9 @@ tags:
 - SharePoint
 - Trigger Management
 - Workflow Automation
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

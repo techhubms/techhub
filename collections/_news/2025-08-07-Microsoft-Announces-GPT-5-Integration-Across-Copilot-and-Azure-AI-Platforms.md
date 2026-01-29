@@ -22,6 +22,10 @@ tags:
 - Natural Language Processing
 - OpenAI
 - Productivity AI
+- AI
+- Azure
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

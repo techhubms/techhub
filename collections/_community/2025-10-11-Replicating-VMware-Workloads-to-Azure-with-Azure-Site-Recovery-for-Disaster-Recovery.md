@@ -20,6 +20,9 @@ tags:
 - SQL Server
 - VMware
 - Windows Server
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

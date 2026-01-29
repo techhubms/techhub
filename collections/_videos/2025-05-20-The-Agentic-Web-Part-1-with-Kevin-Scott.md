@@ -16,6 +16,8 @@ tags:
 - Microsoft Build
 - Microsoft Ignite
 - Technology Trends
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

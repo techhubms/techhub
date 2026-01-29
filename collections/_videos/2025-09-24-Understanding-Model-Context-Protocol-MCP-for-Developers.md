@@ -13,6 +13,9 @@ tags:
 - Microsoft
 - Productivity Tools
 - Software Development
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

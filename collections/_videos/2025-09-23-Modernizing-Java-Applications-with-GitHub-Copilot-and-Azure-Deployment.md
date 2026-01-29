@@ -25,6 +25,12 @@ tags:
 - Security Compliance
 - Tech
 - Technology
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

@@ -21,6 +21,10 @@ tags:
 - Microsoft Planetary Computer
 - Onboard to Azure
 - PostgreSQL
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

@@ -19,6 +19,9 @@ tags:
 - Land O’Lakes
 - Microsoft
 - Oz
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

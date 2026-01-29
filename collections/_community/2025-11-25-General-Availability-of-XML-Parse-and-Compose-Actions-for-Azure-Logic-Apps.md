@@ -23,6 +23,9 @@ tags:
 - XML Schema
 - XSD Schema
 - XSLT
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

@@ -29,6 +29,9 @@ tags:
 - Msft Ignite
 - Python
 - Real Time Business Context
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

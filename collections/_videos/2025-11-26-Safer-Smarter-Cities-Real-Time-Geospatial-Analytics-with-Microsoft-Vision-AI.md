@@ -29,6 +29,9 @@ tags:
 - Technical Session
 - Urban Safety
 - Vision AI
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

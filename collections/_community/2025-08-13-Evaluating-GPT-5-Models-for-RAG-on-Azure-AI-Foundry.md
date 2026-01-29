@@ -20,6 +20,9 @@ tags:
 - Relevance Metrics
 - Retrieval Augmented Generation
 - Synonyms Search
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

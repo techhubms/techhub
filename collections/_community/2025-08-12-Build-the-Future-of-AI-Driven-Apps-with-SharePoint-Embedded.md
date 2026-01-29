@@ -20,6 +20,9 @@ tags:
 - SharePoint Development
 - SharePoint Embedded
 - TechCon ATL
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

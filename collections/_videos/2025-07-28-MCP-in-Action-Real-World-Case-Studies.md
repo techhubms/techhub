@@ -13,6 +13,10 @@ tags:
 - Multi Agent Systems
 - OpenAI
 - VS Code
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

@@ -17,6 +17,14 @@ tags:
 - Microsoft Fabric
 - Open Source
 - VS Code
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -110,8 +118,8 @@ GPT-5 is now available across GitHub Copilot, enhancing code completion, context
 
 - [GPT-5 Comes to GitHub Copilot in Visual Studio](https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/)
 - [OpenAI GPT-5 Now Available to GitHub Copilot Users in Major IDEs](https://github.blog/changelog/2025-08-12-openai-gpt-5-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse)
-- [GPT-5 Now Available in GitHub Copilot: Advanced Features and How to Enable](/ai/videos/GPT-5-Now-Available-in-GitHub-Copilot-Advanced-Features-and-How-to-Enable)
-- [GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News](/ai/videos/GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News)
+- [GPT-5 Now Available in GitHub Copilot: Advanced Features and How to Enable](/ai/videos/gpt-5-now-available-in-github-copilot-advanced-features-and-how-to-enable)
+- [GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News](/ai/videos/gpt-5-and-claude-41-arrive-in-github-copilot-typescript-59-updates-and-community-news)
 
 ### Automation and Developer Workflows: From Natural Language to Real Code
 
@@ -125,7 +133,7 @@ Copilot combines GPT-5 and MCP for closer DevOps alignment. As shown this week, 
 
 New collaboration features in GitHub Copilot now allow repo chat, contextual Q&A, and Copilot Spaces with repository imports. Developers can interact with full repositories via chat, open pull requests and issues, and handle projects using AI suggestions—streamlining both onboarding and maintenance. These features come directly from community feedback wanting easier integration and more context-aware development.
 
-- [How to Chat with Your Repo & Create PRs with Copilot on GitHub](/ai/videos/How-to-Chat-with-Your-Repo-and-Create-PRs-with-Copilot-on-GitHub)
+- [How to Chat with Your Repo & Create PRs with Copilot on GitHub](/ai/videos/how-to-chat-with-your-repo-and-create-prs-with-copilot-on-github)
 - [Copilot Spaces Now Support Adding Entire Repositories](https://github.blog/changelog/2025-08-13-add-repositories-to-spaces)
 
 ### Advanced Protocol and IDE Integration: MCP and Semantic Search
@@ -140,21 +148,21 @@ MCP support now extends to JetBrains, Eclipse, and Xcode, enabling organizations
 Copilot now includes a “Do Epic Shit” chat mode (“Beast Mode”), organizing automation with step-by-step checklists that round out the original agent workflows. AI coding assistants built for platforms like Telerik and KendoUI now provide tailored completions for users working in those ecosystems.
 
 - [Do Epic Shit Chat Mode: Beast Mode for GitHub Copilot](https://harrybin.de/posts/do-epic-shit-chat-mode/)
-- [VS Code Live: Telerik & KendoUI AI Coding Assistants and Contextual AI Integration](/ai/videos/VS-Code-Live-Telerik-and-KendoUI-AI-Coding-Assistants-and-Contextual-AI-Integration)
+- [VS Code Live: Telerik & KendoUI AI Coding Assistants and Contextual AI Integration](/ai/videos/vs-code-live-telerik-and-kendoui-ai-coding-assistants-and-contextual-ai-integration)
 
 ### Modernization and Migration: AI-Driven Refactoring for Enterprise Stacks
 
 Copilot is now automating modernization for enterprise Java and .NET codebases. The App Modernization Extension, using OpenRewrite AI, plans migration, checks dependencies, scaffolds test suites, and confirms compliance automatically. This removes some pain from upgrading legacy applications, following last week’s in-depth guides and ongoing enterprise feedback.
 
 - [Modernizing Legacy Java Applications with GitHub Copilot App Modernization Upgrade](https://techcommunity.microsoft.com/t5/microsoft-developer-community/modernizing-legacy-java-project-using-github-copilot-app/ba-p/4440777)
-- [Modernizing and Upgrading Your .NET Apps with Visual Studio and Copilot-Powered AI Tools](/ai/videos/Modernizing-and-Upgrading-Your-NET-Apps-with-Visual-Studio-and-Copilot-Powered-AI-Tools)
+- [Modernizing and Upgrading Your .NET Apps with Visual Studio and Copilot-Powered AI Tools](/ai/videos/modernizing-and-upgrading-your-net-apps-with-visual-studio-and-copilot-powered-ai-tools)
 
 ### Streamlined and Secure: API, Secrets, and Admin Experience
 
 Copilot has upgraded its user management APIs to include a `last_authenticated_at` field, providing real-time compliance and licensing checks instead of slow CSV exports. AI secret scanning is now more accurate, identifying a wider variety of secret types—including custom tokens—and suggesting faster fixes, making pipelines more secure by default.
 
 - [GitHub Copilot User Management API Adds last_authenticated_at Field](https://github.blog/changelog/2025-08-13-added-last_authenticated_at-to-the-copilot-user-management-api)
-- [What is GitHub Secret Protection?](/ai/videos/What-is-GitHub-Secret-Protection-GitHub-Explained)
+- [What is GitHub Secret Protection?](/ai/videos/what-is-github-secret-protection-github-explained)
 
 ### Other GitHub Copilot News
 
@@ -164,7 +172,7 @@ The GPT-5 Mini version is now available for every Copilot plan, including free o
 
 Copilot’s platform is growing—Claude 4.1 joins GPT-5 to support code intelligence, along with more support for different runtimes and open models. Project management is tied into Microsoft’s Community Project (MCP). Copilot’s role in .NET and Visual Studio was a key focus at events like VS Live!, highlighting its growing reach.
 
-- [GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News](/ai/videos/GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News)
+- [GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News](/ai/videos/gpt-5-and-claude-41-arrive-in-github-copilot-typescript-59-updates-and-community-news)
 - [VS Live! Recap: Visual Studio, GitHub Copilot, and Azure AI Session Highlights](https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/)
 
 Practical tutorials this week included streamlining API integration with Copilot and tackling broken migrations using Copilot’s AI debugging tools—two useful areas for boosting day-to-day productivity.
@@ -191,8 +199,8 @@ GitHub CEO Thomas Dohmke has announced he’ll leave by late 2025 as Microsoft f
 Following the rollout of GPT-5 in Azure and Microsoft’s platform last week, broader support is available now through GitHub Copilot, Azure AI Foundry, VS Code, and other SDKs. GPT-5—including the “mini” version—is now Copilot’s default and helps power agent orchestration in Copilot Studio. Developers benefit from secure access controls, advanced model routing, easier local/cloud inference, and clear setup guides. The transition from preview options to default status, plus modular integrations and more stability, all point to GPT-5 becoming the new norm for production AI.
 
 - [GPT-5 Integrations for Microsoft Developers: GitHub Copilot, Azure AI, and VS Code](https://devblogs.microsoft.com/blog/gpt-5-for-microsoft-developers)
-- [Using GPT-5 with Azure AI Foundry, GitHub Copilot, and Copilot Studio in the Microsoft Ecosystem](/ai/videos/Using-GPT-5-with-Azure-AI-Foundry-GitHub-Copilot-and-Copilot-Studio-in-the-Microsoft-Ecosystem)
-- [GPT-5 for Developers](/ai/videos/GPT-5-for-Developers)
+- [Using GPT-5 with Azure AI Foundry, GitHub Copilot, and Copilot Studio in the Microsoft Ecosystem](/ai/videos/using-gpt-5-with-azure-ai-foundry-github-copilot-and-copilot-studio-in-the-microsoft-ecosystem)
+- [GPT-5 for Developers](/ai/videos/gpt-5-for-developers)
 - [Evaluating GPT-5 Models for RAG on Azure AI Foundry](https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-will-it-rag/ba-p/4442676)
 
 ### Advancements in Agentic AI and Enterprise Orchestration Patterns
@@ -201,8 +209,8 @@ Enterprise Agentic AI is moving forward with "Agent Factory," a new orchestratio
 
 - [Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry](https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/)
 - [Model Mondays S2E9: Models for AI Agents](https://techcommunity.microsoft.com/t5/educator-developer-blog/model-mondays-s2e9-models-for-ai-agents/ba-p/4443162)
-- [AI Agent's Toolbox: Building Intelligent Agents with Semantic Kernel, MCP Servers, and Python](/ai/videos/AI-Agents-Toolbox-Building-Intelligent-Agents-with-Semantic-Kernel-MCP-Servers-and-Python)
-- [Building AI Agents with Semantic Kernel, MCP Servers, and Python](/ai/videos/Building-AI-Agents-with-Semantic-Kernel-MCP-Servers-and-Python)
+- [AI Agent's Toolbox: Building Intelligent Agents with Semantic Kernel, MCP Servers, and Python](/ai/videos/ai-agents-toolbox-building-intelligent-agents-with-semantic-kernel-mcp-servers-and-python)
+- [Building AI Agents with Semantic Kernel, MCP Servers, and Python](/ai/videos/building-ai-agents-with-semantic-kernel-mcp-servers-and-python)
 
 ### The Rise and Evolution of Copilot Studio
 
@@ -216,10 +224,10 @@ Copilot Studio has matured into a no-code hub for building conversational automa
 
 The Model Context Protocol (MCP) is gaining traction as an open standard—offering new integrations with VS Code, Foundry Agent, and Sentry for secure, consistent AI workflows at scale. MCP is being positioned as a modern replacement for SQL in database tasks and as a core orchestration layer for agents. Sentry’s direct monitoring helps teams observe agent operations in real time.
 
-- [Exploring MCP Workflow for Database Management without SQL](/ai/videos/Exploring-MCP-Workflow-for-Database-Management-without-SQL)
-- [Boost Your Productivity with Visual Studio & Model Context Protocol (MCP) Servers](/ai/videos/Boost-Your-Productivity-with-Visual-Studio-and-Model-Context-Protocol-MCP-Servers)
-- [Introduction to Model Context Protocol (MCP) Servers: Building AI Integrations](/ai/videos/Introduction-to-Model-Context-Protocol-MCP-Servers-Building-AI-Integrations)
-- [Unlocking AI Interoperability with Model Context Protocol (MCP)](/ai/videos/Unlocking-AI-Interoperability-with-Model-Context-Protocol-MCP)
+- [Exploring MCP Workflow for Database Management without SQL](/ai/videos/exploring-mcp-workflow-for-database-management-without-sql)
+- [Boost Your Productivity with Visual Studio & Model Context Protocol (MCP) Servers](/ai/videos/boost-your-productivity-with-visual-studio-and-model-context-protocol-mcp-servers)
+- [Introduction to Model Context Protocol (MCP) Servers: Building AI Integrations](/ai/videos/introduction-to-model-context-protocol-mcp-servers-building-ai-integrations)
+- [Unlocking AI Interoperability with Model Context Protocol (MCP)](/ai/videos/unlocking-ai-interoperability-with-model-context-protocol-mcp)
 - [Integrate Intelligent Agents with MCP and Azure AI Foundry on App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/supercharge-your-app-service-apps-with-ai-foundry-agents/ba-p/4444310)
 - [Sentry Integrates MCP Server Monitoring into APM Platform for AI Workflows](https://devops.com/sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform/?utm_source=rss&utm_medium=rss&utm_campaign=sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform)
 
@@ -243,7 +251,7 @@ Developers working with unstructured data will find new options in Mistral Docum
 
 Microsoft has open sourced the Windows Subsystem for Linux (WSL) and introduced Windows AI Foundry to let anybody build custom AI workflows and run models locally. In Australia, a nationwide AI skills program is reaching millions for hands-on upskilling. Azure Cognitive Services has published new resources outlining real-world value. Collectively, these advances push hybrid and on-device AI, as well as open up more possibilities for developers at every level.
 
-- [MSBuild 2025 Highlights: Open Sourcing WSL and Windows AI Foundry](/ai/videos/MSBuild-2025-Highlights-Open-Sourcing-WSL-and-Windows-AI-Foundry)
+- [MSBuild 2025 Highlights: Open Sourcing WSL and Windows AI Foundry](/ai/videos/msbuild-2025-highlights-open-sourcing-wsl-and-windows-ai-foundry)
 - [Future Skills Organisation and Microsoft Launch Nationwide AI Skills Accelerator in Australia](https://news.microsoft.com/source/asia/features/fso-microsoft-skills-accelerator-ai/)
 - [Unlocking the Power of AI with Azure Cognitive Services](https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/)
 
@@ -261,12 +269,12 @@ AI-powered workflows are now common in Azure, Copilot, and OpenAI environments�
 - [Announcing the August Preview Model for PII Redaction in Azure AI Language](https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/announcing-the-text-pii-august-preview-model-release-in-azure-ai/ba-p/4441705)
 - [Azure Logic App AI-Powered Monitoring Solution: Automate, Analyze, and Act on Your Azure Data](https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/azure-logic-app-ai-powered-monitoring-solution-automate-analyze/ba-p/4442665)
 - [Azure AI Blogs Consolidate into New Azure AI Foundry Blog](https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/exciting-news-azure-ai-blogs-have-come-together-in-the-new-azure/ba-p/4443002)
-- [Build Next-Gen AI Apps with .NET and Azure](/ai/videos/Build-Next-Gen-AI-Apps-with-NET-and-Azure)
+- [Build Next-Gen AI Apps with .NET and Azure](/ai/videos/build-next-gen-ai-apps-with-net-and-azure)
 - [The Right Kind of AI for Infrastructure as Code](https://devops.com/the-right-kind-of-ai-for-infrastructure-as-code/?utm_source=rss&utm_medium=rss&utm_campaign=the-right-kind-of-ai-for-infrastructure-as-code)
 - [Copado Enhances AI Tools to Uncover Salesforce Code Relationships](https://devops.com/copado-extends-ai-reach-to-surface-relationships-between-salesforce-code/?utm_source=rss&utm_medium=rss&utm_campaign=copado-extends-ai-reach-to-surface-relationships-between-salesforce-code)
 - [Building Applications Locally with gpt-oss-20b and the AI Toolkit for VS Code](https://techcommunity.microsoft.com/t5/educator-developer-blog/building-application-with-gpt-oss-20b-with-ai-toolkit/ba-p/4441486)
 - [Deploying Lightweight AI Apps on Azure App Service Using GPT-OSS-20B and Flask](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-lightweight-ai-apps-on-azure-app-service-with-gpt-oss-20b/ba-p/4442885)
-- [Designing Empathetic AI Experiences: Trish Winter-Hunt on Content Design and Azure AI Foundry](/ai/videos/Designing-Empathetic-AI-Experiences-Trish-Winter-Hunt-on-Content-Design-and-Azure-AI-Foundry)
+- [Designing Empathetic AI Experiences: Trish Winter-Hunt on Content Design and Azure AI Foundry](/ai/videos/designing-empathetic-ai-experiences-trish-winter-hunt-on-content-design-and-azure-ai-foundry)
 - [Q1 2025 GitHub Innovation Graph Update: Trends in Data Visualization and AI Development](https://github.blog/news-insights/policy-news-and-insights/q1-2025-innovation-graph-update-bar-chart-races-data-visualization-on-the-rise-and-key-research/)
 - [Generative AI for Permitting: Accelerating Clean Energy with Microsoft](https://www.microsoft.com/en-us/garage/wall-of-fame/generative-ai-for-permitting/)
 - [Future Skills Organisation and Microsoft Launch Nationwide AI Skills Accelerator in Australia](https://news.microsoft.com/source/asia/features/fso-microsoft-skills-accelerator-ai/)
@@ -307,7 +315,7 @@ Microsoft Fabric's Copy Job feature now supports table-level incremental resets,
 
 Azure Essentials Show featured Databricks, highlighting unified analytics, ML lifecycle support, and integration across the Azure platform—useful for developers building new skills for Azure ML environments.
 
-- [Supercharge Data and AI Innovation with Azure Databricks](/ai/videos/Supercharge-Data-and-AI-Innovation-with-Azure-Databricks)
+- [Supercharge Data and AI Innovation with Azure Databricks](/ai/videos/supercharge-data-and-ai-innovation-with-azure-databricks)
 
 ### Enterprise ML Transformation and Modern DataOps
 
@@ -390,7 +398,7 @@ Azure has enabled automatic agent upgrades for Arc-enabled servers, tripled SQL 
 - [Expanding Global Reach and Enhanced Observability with Oracle Database@Azure](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650)
 - [Public Preview: Auto Agent Upgrade for Azure Arc-Enabled Servers](https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-auto-agent-upgrade-for-azure-arc-enabled-servers/ba-p/4442556)
 - [Simplified OneLake Capacity Costs: Updated Proxy Consumption Rates in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/onelake-costs-simplified-lowering-capacity-utilization-when-accessing-onelake/)
-- [Azure Update - 15th August 2025](/azure/videos/Azure-Update-15th-August-2025)
+- [Azure Update - 15th August 2025](/azure/videos/azure-update-15th-august-2025)
 - [Windows Server Datacenter: Azure Edition Preview Build 26461 in Azure](https://techcommunity.microsoft.com/t5/windows-server-insiders/windows-server-datacenter-azure-edition-preview-build-26461-now/m-p/4442961#M4197)
 - [Accelerating SAP Sybase ASE to Azure SQL Migration Using SSMA and Parallel BCP](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624)
 
@@ -425,7 +433,7 @@ Azure Storage remains central to large AI and LLM training projects, with new fe
 
 Development tooling improvements are ongoing, following last week’s CLI and naming convention updates.
 
-- [Azure Update - 15th August 2025](/azure/videos/Azure-Update-15th-August-2025)
+- [Azure Update - 15th August 2025](/azure/videos/azure-update-15th-august-2025)
 - [New Offerings in Azure Marketplace: July 23-31, 2025](https://techcommunity.microsoft.com/t5/marketplace-blog/new-in-azure-marketplace-july-23-31-2025/ba-p/4431277)
 - [General Availability: Enhanced Data Mapper Experience in Logic Apps (Standard)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/general-availability-enhanced-data-mapper-experience-in-logic/ba-p/4442296)
 
@@ -461,23 +469,23 @@ Step-by-step guides help teams get started with .NET Aspire for distributed syst
 
 A walkthrough from Andrew Lock shows how to run .NET in the browser without Blazor, using WebAssembly templates and JavaScript interop for high-performance client apps.
 
-- [Building Confident Application Systems with .NET Aspire: From Dev to Deployment](/azure/videos/Building-Confident-Application-Systems-with-NET-Aspire-From-Dev-to-Deployment)
-- [Building Mobile and Desktop Apps with Visual Studio and .NET MAUI](/coding/videos/Building-Mobile-and-Desktop-Apps-with-Visual-Studio-and-NET-MAUI)
+- [Building Confident Application Systems with .NET Aspire: From Dev to Deployment](/azure/videos/building-confident-application-systems-with-net-aspire-from-dev-to-deployment)
+- [Building Mobile and Desktop Apps with Visual Studio and .NET MAUI](/coding/videos/building-mobile-and-desktop-apps-with-visual-studio-and-net-maui)
 - [Running .NET in the Browser Without Blazor Using WASM](https://andrewlock.net/running-dotnet-in-the-browser-without-blazor/)
 
 ### Language Evolution and the Future of Web Development: C# 14, ASP.NET Core & Blazor in .NET 10
 
 A detailed look at C# 14 covers improved pattern matching, nullability support, and value types—making code safer and cleaner. Current .NET team previews for ASP.NET Core and Blazor in .NET 10 include modern security, diagnostics, WebAuthn support, integrated AI libraries, and faster project ramp-up with Aspire, helping developers stay current with critical web advances.
 
-- [Highlights and Upcoming Features in C#: A Deep Dive into C# 14](/coding/videos/Highlights-and-Upcoming-Features-in-C-A-Deep-Dive-into-C-14)
-- [The Future of Web Development with ASP.NET Core & Blazor in .NET 10](/ai/videos/The-Future-of-Web-Development-with-ASPNET-Core-and-Blazor-in-NET-10)
+- [Highlights and Upcoming Features in C#: A Deep Dive into C# 14](/coding/videos/highlights-and-upcoming-features-in-c-a-deep-dive-into-c-14)
+- [The Future of Web Development with ASP.NET Core & Blazor in .NET 10](/ai/videos/the-future-of-web-development-with-aspnet-core-and-blazor-in-net-10)
 
 ### Other Coding News
 
 VS Code’s “Beast mode” rolls out improvements for batch edits, UI adjustments, and workflow enhancements, with a video guide to help users get started. Additional tutorials show how to simplify .NET mapping with Facet, automate disk cleanup with PowerShell, and build STDIO/HTTP dual-transport MCP servers for flexible cloud and local deployments.
 
-- [VS Code Beast Mode Explained: Features and Usage](/coding/videos/VS-Code-Beast-Mode-Explained-Features-and-Usage)
-- [Enhancing .NET Code: Using Facet Instead of Traditional Mapping](/coding/videos/Enhancing-NET-Code-Using-Facet-Instead-of-Traditional-Mapping)
+- [VS Code Beast Mode Explained: Features and Usage](/coding/videos/vs-code-beast-mode-explained-features-and-usage)
+- [Enhancing .NET Code: Using Facet Instead of Traditional Mapping](/coding/videos/enhancing-net-code-using-facet-instead-of-traditional-mapping)
 - [Finding Large Directories and Recovering Lost Disk Space with PowerShell](https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117)
 - [Building a Dual-Transport MCP Server with .NET: STDIO and HTTP Support](https://techcommunity.microsoft.com/t5/microsoft-developer-community/one-mcp-server-two-transports-stdio-and-http/ba-p/4443915)
 

@@ -19,6 +19,10 @@ tags:
 - Programming Productivity
 - Project Wide Changes
 - Refactoring
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

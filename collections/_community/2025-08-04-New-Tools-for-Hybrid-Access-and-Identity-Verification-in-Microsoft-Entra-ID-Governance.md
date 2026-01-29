@@ -19,6 +19,9 @@ tags:
 - Microsoft Entra
 - On Premises Applications
 - Verified ID
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

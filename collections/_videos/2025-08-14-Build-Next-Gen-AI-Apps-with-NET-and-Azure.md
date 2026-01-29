@@ -17,6 +17,10 @@ tags:
 - Samples And Templates
 - Scalability
 - VS
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

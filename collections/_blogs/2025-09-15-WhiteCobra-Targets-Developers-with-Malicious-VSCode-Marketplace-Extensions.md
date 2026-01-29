@@ -29,6 +29,9 @@ tags:
 - Software Supply Chain
 - VS Code
 - WhiteCobra
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

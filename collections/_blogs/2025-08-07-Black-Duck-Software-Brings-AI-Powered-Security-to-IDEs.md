@@ -30,6 +30,11 @@ tags:
 - Software Security
 - Spotlight
 - VS
+- AI
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - coding

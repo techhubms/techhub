@@ -22,6 +22,10 @@ tags:
 - VS Code
 - VS Code Insiders
 - Xcode
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

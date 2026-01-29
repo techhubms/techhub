@@ -18,6 +18,8 @@ tags:
 - Programming Workflow
 - Software Engineering
 - Teammate Mindset
+- AI
+- GitHub Copilot
 external_url: https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html
 feed_name: Randy Pagels
 ---

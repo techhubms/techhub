@@ -22,6 +22,8 @@ tags:
 - Process Analytics
 - Process Insights
 - RPA
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

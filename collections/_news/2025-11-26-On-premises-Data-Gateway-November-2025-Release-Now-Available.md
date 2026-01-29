@@ -19,6 +19,8 @@ tags:
 - Power BI
 - Power BI Desktop
 - Report Publishing
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

@@ -23,6 +23,9 @@ tags:
 - Microsoft Education
 - Minecraft Education
 - Visual Studio Code For Education
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

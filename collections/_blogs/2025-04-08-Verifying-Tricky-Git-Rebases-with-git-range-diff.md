@@ -15,6 +15,9 @@ tags:
 - Minimal API
 - Range Diff
 - Version Control
+- DevOps
+- Coding
+- Blogs
 section_names:
 - devops
 - coding

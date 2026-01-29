@@ -22,6 +22,10 @@ tags:
 - Setuptools
 - Uv
 - Virtual Environments
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

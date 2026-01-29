@@ -14,6 +14,10 @@ tags:
 - Feature Update
 - Pro Code Review
 - Pull Requests
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

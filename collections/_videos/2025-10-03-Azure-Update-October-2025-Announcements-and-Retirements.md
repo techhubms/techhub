@@ -32,6 +32,11 @@ tags:
 - NVv4 VM
 - SQL Database
 - Traffic Manager
+- AI
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - Sonnet 4.5
 - Subscription
 - VS
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -13,6 +13,10 @@ tags:
 - Public Preview
 - Risk Mitigation
 - Software Development
+- AI
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - github-copilot

@@ -23,6 +23,12 @@ tags:
 - Oracle Database@Azure
 - Power BI
 - Terraform
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -21,6 +21,8 @@ tags:
 - Power Virtual Agents
 - Sales Automation
 - Workflow Automation
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

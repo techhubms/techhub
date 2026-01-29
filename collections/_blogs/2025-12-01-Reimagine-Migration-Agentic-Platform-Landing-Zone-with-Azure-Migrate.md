@@ -27,6 +27,10 @@ tags:
 - Scalability
 - Subscription Management
 - Workload Assessment
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

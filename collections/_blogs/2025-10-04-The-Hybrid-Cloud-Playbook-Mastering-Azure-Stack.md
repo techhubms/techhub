@@ -26,6 +26,11 @@ tags:
 - Terraform
 - Virtual Machines
 - Zero Trust
+- Azure
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - coding

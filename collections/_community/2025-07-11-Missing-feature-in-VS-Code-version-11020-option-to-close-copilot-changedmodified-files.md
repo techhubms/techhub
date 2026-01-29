@@ -14,6 +14,9 @@ tags:
 - User Feedback
 - User Interface
 - VS Code
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

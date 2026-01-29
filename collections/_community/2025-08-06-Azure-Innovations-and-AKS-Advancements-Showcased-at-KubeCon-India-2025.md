@@ -23,6 +23,11 @@ tags:
 - Prometheus
 - Web Application Firewall
 - Zero Trust
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

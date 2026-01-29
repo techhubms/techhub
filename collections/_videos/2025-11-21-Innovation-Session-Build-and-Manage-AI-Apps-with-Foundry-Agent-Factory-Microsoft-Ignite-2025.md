@@ -22,6 +22,11 @@ tags:
 - MSIgnite
 - Observability
 - Workflow Automation
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

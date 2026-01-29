@@ -18,6 +18,10 @@ tags:
 - ML.NET
 - Renaissance Texts
 - Vector Embeddings
+- Azure
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - azure
 - coding

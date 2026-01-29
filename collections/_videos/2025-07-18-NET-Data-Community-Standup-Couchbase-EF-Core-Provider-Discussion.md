@@ -18,6 +18,9 @@ tags:
 - NoSQL
 - Provider Development
 - Relational Databases
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - coding
 - ml

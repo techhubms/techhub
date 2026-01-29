@@ -20,6 +20,10 @@ tags:
 - Session Memory
 - State Management
 - Vector Embeddings
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

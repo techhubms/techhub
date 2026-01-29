@@ -17,6 +17,9 @@ tags:
 - Repository Automation
 - Task Delegation
 - YAML Frontmatter
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

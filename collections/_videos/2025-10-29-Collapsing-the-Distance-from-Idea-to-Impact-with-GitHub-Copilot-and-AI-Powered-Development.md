@@ -21,6 +21,9 @@ tags:
 - PyFluff Furby
 - Python
 - Software Engineering
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

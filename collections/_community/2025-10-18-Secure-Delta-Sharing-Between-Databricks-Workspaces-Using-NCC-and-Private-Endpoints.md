@@ -21,6 +21,10 @@ tags:
 - SQL
 - Unity Catalog
 - Workspace Metastore
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - azure
 - ml

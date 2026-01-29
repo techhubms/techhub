@@ -26,6 +26,10 @@ tags:
 - Site Management
 - Windows Recovery Environment
 - Workload Identity
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

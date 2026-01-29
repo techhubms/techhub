@@ -26,6 +26,11 @@ tags:
 - Microsoft Ignite
 - Operational Efficiency
 - Retrieval Augmented Generation
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

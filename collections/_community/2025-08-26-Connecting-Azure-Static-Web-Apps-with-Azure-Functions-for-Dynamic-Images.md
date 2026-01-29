@@ -18,6 +18,9 @@ tags:
 - Local Development
 - SkiaSharp
 - Staticwebapp.config.json
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

@@ -15,6 +15,8 @@ tags:
 - Type Checking
 - TypeScript
 - TypeScript 5.7
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

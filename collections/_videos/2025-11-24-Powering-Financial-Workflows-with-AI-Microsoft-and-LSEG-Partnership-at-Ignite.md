@@ -26,6 +26,8 @@ tags:
 - Teams
 - Unifyyourdataplatform
 - Workspace
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

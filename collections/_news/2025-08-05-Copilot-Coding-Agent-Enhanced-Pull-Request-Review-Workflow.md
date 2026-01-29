@@ -13,6 +13,10 @@ tags:
 - Pull Request
 - Repository Management
 - Write Access
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

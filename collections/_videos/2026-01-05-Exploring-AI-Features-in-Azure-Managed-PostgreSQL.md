@@ -24,6 +24,10 @@ tags:
 - Vector
 - Vector Database
 - VS Code Extension
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

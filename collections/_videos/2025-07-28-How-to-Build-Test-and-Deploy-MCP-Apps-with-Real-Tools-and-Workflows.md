@@ -19,6 +19,12 @@ tags:
 - Python
 - SDK
 - TypeScript
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

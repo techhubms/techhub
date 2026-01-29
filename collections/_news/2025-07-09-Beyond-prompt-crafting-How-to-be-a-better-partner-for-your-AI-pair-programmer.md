@@ -10,6 +10,9 @@ tags:
 - Code Quality
 - Coding Context
 - Developer Tools
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

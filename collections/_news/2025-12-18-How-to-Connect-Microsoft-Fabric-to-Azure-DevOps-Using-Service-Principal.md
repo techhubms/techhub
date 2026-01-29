@@ -18,6 +18,10 @@ tags:
 - OAuth 2.0
 - Service Principal
 - Workspace Automation
+- Azure
+- DevOps
+- Machine Learning
+- News
 section_names:
 - azure
 - devops

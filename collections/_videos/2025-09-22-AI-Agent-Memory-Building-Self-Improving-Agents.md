@@ -23,6 +23,10 @@ tags:
 - Tech
 - Technical Tutorial
 - Technology
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

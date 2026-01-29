@@ -20,6 +20,9 @@ tags:
 - Project Management
 - Prometheus
 - Pull Request Rules
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

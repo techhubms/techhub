@@ -22,6 +22,9 @@ tags:
 - Student Innovation
 - Wearable Tech
 - Wi R Protocol
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

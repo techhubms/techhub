@@ -22,6 +22,10 @@ tags:
 - Performance Optimization
 - Trusted Platform Module
 - Windows 11 Education
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

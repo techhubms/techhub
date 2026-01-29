@@ -24,6 +24,9 @@ tags:
 - Serverless Computing
 - Storage Tiers
 - Virtual Machines
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

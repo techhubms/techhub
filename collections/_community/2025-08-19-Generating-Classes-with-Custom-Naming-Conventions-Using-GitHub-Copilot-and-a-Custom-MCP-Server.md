@@ -24,6 +24,11 @@ tags:
 - VS
 - VS Code
 - Workspace Settings
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

@@ -17,6 +17,10 @@ tags:
 - Test Generation
 - Testing
 - Web Automation
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

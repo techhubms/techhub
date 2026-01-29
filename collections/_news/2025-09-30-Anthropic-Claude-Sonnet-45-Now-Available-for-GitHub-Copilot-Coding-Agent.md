@@ -18,6 +18,9 @@ tags:
 - Model Integration
 - Policy Enablement
 - SWE Bench
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

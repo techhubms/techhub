@@ -15,6 +15,9 @@ tags:
 - Terminal
 - VS Code
 - VS Code 1.108
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

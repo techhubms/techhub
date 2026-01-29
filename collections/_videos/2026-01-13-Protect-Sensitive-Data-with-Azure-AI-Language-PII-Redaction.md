@@ -28,6 +28,10 @@ tags:
 - Sensitive Data
 - Tech
 - Technology
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

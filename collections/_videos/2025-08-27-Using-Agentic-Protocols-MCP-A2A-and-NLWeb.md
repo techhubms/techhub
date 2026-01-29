@@ -21,6 +21,10 @@ tags:
 - Sample Code
 - Tech
 - Technology
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

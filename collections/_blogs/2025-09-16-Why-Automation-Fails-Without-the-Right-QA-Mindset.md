@@ -28,6 +28,8 @@ tags:
 - UI
 - User Experience
 - UX
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

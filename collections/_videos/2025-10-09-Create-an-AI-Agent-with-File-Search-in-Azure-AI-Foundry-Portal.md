@@ -23,6 +23,9 @@ tags:
 - Portal Tools
 - Tech
 - Technology
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

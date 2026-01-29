@@ -22,6 +22,9 @@ tags:
 - PromQL
 - RBAC
 - Resource Management
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

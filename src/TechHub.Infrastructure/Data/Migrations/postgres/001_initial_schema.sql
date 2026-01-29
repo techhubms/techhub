@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS content_items (
     feed_name TEXT,
     ghes_support BOOLEAN NOT NULL DEFAULT FALSE,
     draft BOOLEAN NOT NULL DEFAULT FALSE,
+    plans TEXT,
     content_hash TEXT NOT NULL,
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ DEFAULT NOW(),
@@ -80,15 +81,6 @@ CREATE TABLE IF NOT EXISTS content_sections (
     FOREIGN KEY (collection_name, slug) REFERENCES content_items(collection_name, slug) ON DELETE CASCADE
 );
 
--- Plans junction table
-CREATE TABLE IF NOT EXISTS content_plans (
-    collection_name TEXT NOT NULL,
-    slug TEXT NOT NULL,
-    plan_name TEXT NOT NULL,
-    PRIMARY KEY (collection_name, slug, plan_name),
-    FOREIGN KEY (collection_name, slug) REFERENCES content_items(collection_name, slug) ON DELETE CASCADE
-);
-
 -- Sync metadata
 CREATE TABLE IF NOT EXISTS sync_metadata (
     key TEXT PRIMARY KEY,
@@ -117,6 +109,3 @@ CREATE INDEX IF NOT EXISTS idx_tags_expanded_word_covering ON content_tags_expan
 CREATE INDEX IF NOT EXISTS idx_sections_name ON content_sections(section_name);
 CREATE INDEX IF NOT EXISTS idx_sections_content ON content_sections(collection_name, slug);
 CREATE INDEX IF NOT EXISTS idx_sections_name_covering ON content_sections(section_name, collection_name, slug);
-
-CREATE INDEX IF NOT EXISTS idx_plans_name ON content_plans(plan_name);
-CREATE INDEX IF NOT EXISTS idx_plans_content ON content_plans(collection_name, slug);

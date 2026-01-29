@@ -22,6 +22,9 @@ tags:
 - Prompt DLP
 - Secureyourdata
 - Security Insights
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

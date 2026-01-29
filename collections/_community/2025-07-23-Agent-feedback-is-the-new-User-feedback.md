@@ -19,6 +19,8 @@ tags:
 - Prompt Engineering
 - Software Development
 - User Feedback
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

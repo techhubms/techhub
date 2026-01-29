@@ -25,6 +25,9 @@ tags:
 - Ray
 - Retrieval Augmented Generation
 - Unified Storage Management
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -21,6 +21,12 @@ tags:
 - SQL Auditing
 - SQL Database
 - VS Code Integration
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

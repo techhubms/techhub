@@ -23,6 +23,9 @@ tags:
 - Slingshot
 - System Architecture
 - Technical Specification
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

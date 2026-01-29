@@ -18,6 +18,9 @@ tags:
 - Semi Structured Data
 - SQL Endpoint
 - T SQL
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

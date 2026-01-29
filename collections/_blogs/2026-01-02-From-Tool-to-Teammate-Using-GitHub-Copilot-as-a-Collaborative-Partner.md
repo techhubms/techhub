@@ -16,6 +16,9 @@ tags:
 - Programming Workflow
 - Software Engineering
 - Teammate Mindset
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

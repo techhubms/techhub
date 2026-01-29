@@ -17,6 +17,9 @@ tags:
 - Pass Through Authentication
 - Password Management
 - User Provisioning
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

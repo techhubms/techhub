@@ -18,6 +18,8 @@ tags:
 - Repository Management
 - Software Development
 - Team Workflow
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

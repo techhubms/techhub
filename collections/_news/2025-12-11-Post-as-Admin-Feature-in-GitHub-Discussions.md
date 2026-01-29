@@ -15,6 +15,8 @@ tags:
 - Official Responses
 - Open Source
 - Repository Administration
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

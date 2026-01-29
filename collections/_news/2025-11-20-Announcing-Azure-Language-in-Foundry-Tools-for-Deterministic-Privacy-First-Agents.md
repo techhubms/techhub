@@ -37,6 +37,9 @@ tags:
 - Sentiment Analysis
 - Slot Filling
 - Text Summarization
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

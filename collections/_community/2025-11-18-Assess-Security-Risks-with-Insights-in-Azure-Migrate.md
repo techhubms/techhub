@@ -20,6 +20,9 @@ tags:
 - Security Insights
 - Server Discovery
 - Vulnerability Assessment
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

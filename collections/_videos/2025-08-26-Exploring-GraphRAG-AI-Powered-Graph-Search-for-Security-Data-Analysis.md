@@ -25,6 +25,10 @@ tags:
 - Semantic Search
 - Tech
 - Technology
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

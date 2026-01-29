@@ -27,6 +27,10 @@ tags:
 - Tutorial
 - VS Code
 - Workflow Automation
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

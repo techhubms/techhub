@@ -21,6 +21,10 @@ tags:
 - Parquet
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- Machine Learning
+- Community
 section_names:
 - ai
 - coding

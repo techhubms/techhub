@@ -21,6 +21,8 @@ tags:
 - SignalR
 - SSE
 - WebSockets
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

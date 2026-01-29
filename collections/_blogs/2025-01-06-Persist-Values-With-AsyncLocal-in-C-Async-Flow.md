@@ -16,6 +16,8 @@ tags:
 - Structured Logging
 - Task Based Programming
 - Thread Context
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

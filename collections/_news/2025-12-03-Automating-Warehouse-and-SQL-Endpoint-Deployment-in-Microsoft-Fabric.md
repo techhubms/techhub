@@ -20,6 +20,10 @@ tags:
 - Microsoft Fabric
 - SQL Analytics Endpoint
 - SQLCMD Variables
+- Azure
+- DevOps
+- Machine Learning
+- News
 section_names:
 - azure
 - devops

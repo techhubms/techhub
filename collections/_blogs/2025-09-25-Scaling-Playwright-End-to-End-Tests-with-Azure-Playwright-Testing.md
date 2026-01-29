@@ -20,6 +20,10 @@ tags:
 - Test Automation
 - Testing
 - Testing Artifacts
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

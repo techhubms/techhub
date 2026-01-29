@@ -25,6 +25,9 @@ tags:
 - Threat Detection
 - XPIA
 - Zero Trust Security
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

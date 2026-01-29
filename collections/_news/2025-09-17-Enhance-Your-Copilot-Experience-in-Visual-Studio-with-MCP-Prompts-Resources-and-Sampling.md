@@ -31,6 +31,12 @@ tags:
 - Sampling
 - Server
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

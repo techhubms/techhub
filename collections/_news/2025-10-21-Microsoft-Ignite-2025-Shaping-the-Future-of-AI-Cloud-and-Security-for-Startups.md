@@ -21,6 +21,10 @@ tags:
 - Microsoft For Startups
 - Microsoft Ignite
 - Robotic AI
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

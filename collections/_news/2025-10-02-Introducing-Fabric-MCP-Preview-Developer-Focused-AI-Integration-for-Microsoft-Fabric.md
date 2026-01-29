@@ -24,6 +24,11 @@ tags:
 - SQL Server
 - VS Code
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

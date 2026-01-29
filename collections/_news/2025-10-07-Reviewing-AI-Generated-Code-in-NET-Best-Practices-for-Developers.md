@@ -20,6 +20,10 @@ tags:
 - Software Architecture
 - Test Coverage
 - Unit Testing
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

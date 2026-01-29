@@ -26,6 +26,10 @@ tags:
 - Serverless
 - Virtual Network
 - VNET Peering
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - azure
 - ml

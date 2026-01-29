@@ -28,6 +28,11 @@ tags:
 - Super User
 - UMAP
 - Workspaces
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

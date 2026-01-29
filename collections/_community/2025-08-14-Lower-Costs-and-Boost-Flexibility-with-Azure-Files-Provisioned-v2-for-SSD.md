@@ -24,6 +24,9 @@ tags:
 - SAP
 - SSD Storage
 - Storage Costs
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

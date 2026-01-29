@@ -19,6 +19,9 @@ tags:
 - REST API
 - Usage Statistics
 - User Engagement
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

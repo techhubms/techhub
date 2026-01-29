@@ -19,6 +19,10 @@ tags:
 - Platform Optimization
 - Reliability
 - Well Architected Framework
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

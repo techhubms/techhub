@@ -11,18 +11,22 @@ public record PaginationCursor
     /// <summary>
     /// Unix timestamp of the last item (primary sort key).
     /// </summary>
-    public long DateEpoch { get; init; }
+    public required long DateEpoch { get; init; }
 
     /// <summary>
     /// ID/slug of the last item (tiebreaker for items with same date).
     /// </summary>
-    public string Id { get; init; } = "";
+    public required string Id { get; init; }
 
     /// <summary>
     /// Encode cursor to Base64 string for URL transmission.
     /// </summary>
-    public static string Encode(PaginationCursor cursor) =>
-        Convert.ToBase64String(JsonSerializer.SerializeToUtf8Bytes(cursor));
+    public static string Encode(PaginationCursor cursor)
+    {
+        ArgumentNullException.ThrowIfNull(cursor);
+        
+        return Convert.ToBase64String(JsonSerializer.SerializeToUtf8Bytes(cursor));
+    }
 
     /// <summary>
     /// Decode cursor from Base64 string.
@@ -40,7 +44,9 @@ public record PaginationCursor
             return JsonSerializer.Deserialize<PaginationCursor>(
                 Convert.FromBase64String(token));
         }
+#pragma warning disable CA1031 // Do not catch general exception types - intentional for cursor decoding graceful degradation
         catch
+#pragma warning restore CA1031
         {
             return null; // Invalid cursor - graceful degradation to first page
         }

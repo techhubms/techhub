@@ -22,6 +22,10 @@ tags:
 - ROI Analysis
 - Security Practices
 - VMWare To Azure
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

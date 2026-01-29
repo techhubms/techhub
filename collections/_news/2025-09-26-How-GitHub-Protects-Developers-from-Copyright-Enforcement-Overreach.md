@@ -23,6 +23,8 @@ tags:
 - Terms Of Service
 - Transparency
 - U.S. Supreme Court
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

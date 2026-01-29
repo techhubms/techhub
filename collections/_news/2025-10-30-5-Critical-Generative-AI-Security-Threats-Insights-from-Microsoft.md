@@ -22,6 +22,10 @@ tags:
 - Phishing
 - Prompt Injection
 - Threat Detection
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

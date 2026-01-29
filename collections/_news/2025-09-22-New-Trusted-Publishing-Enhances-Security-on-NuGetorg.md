@@ -18,6 +18,10 @@ tags:
 - Security Best Practices
 - Trusted Publishing
 - Workflow Automation
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - coding
 - devops

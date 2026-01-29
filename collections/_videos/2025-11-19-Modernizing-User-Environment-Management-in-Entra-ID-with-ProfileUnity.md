@@ -22,6 +22,9 @@ tags:
 - ProfileUnity
 - User Data Synchronization
 - Zero Trust
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

@@ -28,6 +28,10 @@ tags:
 - Quantexa Unify
 - Real Time Intelligence
 - Statsig
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

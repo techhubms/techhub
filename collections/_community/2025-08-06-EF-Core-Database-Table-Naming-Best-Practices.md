@@ -18,6 +18,8 @@ tags:
 - PascalCase
 - Snake Case
 - Table Naming
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

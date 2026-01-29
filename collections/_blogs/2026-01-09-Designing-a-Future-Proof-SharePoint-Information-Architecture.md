@@ -19,6 +19,8 @@ tags:
 - Site Collections
 - Site Templates
 - Solution Architecture
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

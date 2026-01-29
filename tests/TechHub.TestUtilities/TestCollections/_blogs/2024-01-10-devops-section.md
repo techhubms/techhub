@@ -7,6 +7,8 @@ external_url: https://example.com/test
 primary_section: devops
 section_names:
 - devops
-tags: ["Test Tag"]
+tags:
+- Test Tag
+- DevOps
 ---
 Post in DevOps section for section filtering tests.

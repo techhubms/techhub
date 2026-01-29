@@ -20,6 +20,9 @@ tags:
 - Workloads Hub
 - Workspace Admin
 - Workspace Level Assignment
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml
@@ -43,7 +46,7 @@ Microsoft Fabric users now benefit from more flexible and efficient management o
 
 Admins can now access the [Workloads Hub](https://app.powerbi.com/workloadhub/) and assign additional workloads directly to the workspace, where their data and teams operate. This flexibility allows specific teams to innovate and build custom solutions without impacting the configuration of the entire tenant.
 
-![Assigning workloads in Fabric](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/Recording-2025-09-11-aadasdasdas.gif)
+![Assigning workloads in Fabric](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/recording-2025-09-11-aadasdasdas.gif)
 
 ## Available Additional Workloads
 

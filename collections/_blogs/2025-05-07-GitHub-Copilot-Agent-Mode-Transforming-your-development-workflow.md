@@ -15,6 +15,9 @@ tags:
 - Natural Language Interaction
 - Pair Programming
 - Programming Assistant
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

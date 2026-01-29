@@ -20,6 +20,9 @@ tags:
 - MSIgnite
 - ScalewithcloudandAIendpoints
 - Vulnerability Remediation
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

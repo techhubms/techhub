@@ -28,6 +28,10 @@ tags:
 - Scalability
 - Taiwan
 - Well Architected Framework
+- AI
+- Azure
+- DevOps
+- News
 section_names:
 - ai
 - azure

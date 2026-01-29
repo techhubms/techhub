@@ -19,6 +19,9 @@ tags:
 - Semantic Kernel
 - Token Efficiency
 - Tools
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

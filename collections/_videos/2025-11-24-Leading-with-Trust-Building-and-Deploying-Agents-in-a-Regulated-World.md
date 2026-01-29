@@ -24,6 +24,9 @@ tags:
 - Regulatory Navigator
 - Regulatory Templates
 - Responsible AI
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

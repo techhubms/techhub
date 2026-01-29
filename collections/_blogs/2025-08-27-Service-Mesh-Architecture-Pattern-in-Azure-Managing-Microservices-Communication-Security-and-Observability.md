@@ -27,6 +27,9 @@ tags:
 - Solution Architecture
 - Traffic Routing
 - Zero Trust Security
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

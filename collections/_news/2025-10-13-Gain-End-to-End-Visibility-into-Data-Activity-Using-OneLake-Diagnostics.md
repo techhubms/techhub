@@ -21,6 +21,10 @@ tags:
 - Security Monitoring
 - Spark
 - Workspace Monitoring
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

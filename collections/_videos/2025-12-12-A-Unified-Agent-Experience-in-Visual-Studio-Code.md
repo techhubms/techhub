@@ -15,6 +15,10 @@ tags:
 - Task Management
 - VS Code
 - VS Code Extensions
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

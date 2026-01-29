@@ -21,6 +21,10 @@ tags:
 - Profiler Agent
 - Project Upgrades
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

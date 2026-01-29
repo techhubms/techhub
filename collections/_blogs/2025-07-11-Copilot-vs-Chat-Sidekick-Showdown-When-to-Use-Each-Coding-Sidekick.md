@@ -14,6 +14,9 @@ tags:
 - Gemini
 - Inline Code Suggestions
 - Software Development
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

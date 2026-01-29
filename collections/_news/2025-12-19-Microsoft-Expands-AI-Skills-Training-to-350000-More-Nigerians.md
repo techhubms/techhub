@@ -20,6 +20,8 @@ tags:
 - Nigeria Digital Transformation
 - Public Sector Training
 - Skills Development
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

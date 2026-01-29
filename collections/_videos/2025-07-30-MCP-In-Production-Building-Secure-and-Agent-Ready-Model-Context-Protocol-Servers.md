@@ -24,6 +24,10 @@ tags:
 - Token Passthrough Vulnerability
 - Token Validation
 - VS Code Integration
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

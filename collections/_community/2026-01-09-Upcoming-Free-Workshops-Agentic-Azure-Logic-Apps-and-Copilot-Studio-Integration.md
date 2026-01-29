@@ -15,6 +15,9 @@ tags:
 - MCP Servers
 - Microsoft Azure
 - Workshops
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

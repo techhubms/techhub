@@ -17,6 +17,8 @@ tags:
 - Progress Bar
 - Terminal
 - Termix
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

@@ -22,6 +22,9 @@ tags:
 - Real Time Intelligence
 - Snapshot Mode
 - Streaming Data
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

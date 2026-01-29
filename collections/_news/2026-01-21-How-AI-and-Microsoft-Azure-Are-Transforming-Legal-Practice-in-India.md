@@ -21,6 +21,9 @@ tags:
 - Microsoft Azure
 - SCC Online
 - Trilegal
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

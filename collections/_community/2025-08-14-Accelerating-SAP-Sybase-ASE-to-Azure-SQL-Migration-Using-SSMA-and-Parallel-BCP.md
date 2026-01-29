@@ -23,6 +23,8 @@ tags:
 - SQL Server Migration Assistant
 - SSMA
 - Sybase ASE
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

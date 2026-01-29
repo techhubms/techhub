@@ -19,6 +19,10 @@ tags:
 - OpenTelemetry
 - Sampling
 - Telemetry
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

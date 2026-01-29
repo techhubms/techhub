@@ -26,6 +26,11 @@ tags:
 - Upgrade Assistant
 - VS
 - Windows
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - azure

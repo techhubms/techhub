@@ -19,6 +19,9 @@ tags:
 - OAuth
 - Permissions
 - Power Platform
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

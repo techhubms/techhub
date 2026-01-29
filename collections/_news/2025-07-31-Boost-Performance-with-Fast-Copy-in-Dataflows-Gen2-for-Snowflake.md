@@ -19,6 +19,8 @@ tags:
 - Performance Optimization
 - Production Workloads
 - Snowflake
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

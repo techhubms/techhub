@@ -20,6 +20,9 @@ tags:
 - Software Development
 - Software Engineering
 - Strong Typing
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

@@ -22,6 +22,8 @@ tags:
 - Vibecoding
 - VS Code
 - Web Browser Analogy
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

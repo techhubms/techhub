@@ -20,6 +20,9 @@ tags:
 - Software Development
 - VS
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

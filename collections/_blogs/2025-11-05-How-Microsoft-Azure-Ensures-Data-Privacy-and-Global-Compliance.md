@@ -25,6 +25,9 @@ tags:
 - Microsoft Purview
 - Secure Cloud
 - Zero Trust
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

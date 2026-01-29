@@ -23,6 +23,9 @@ tags:
 - Silicon
 - Virtual Machines
 - Workload Optimization
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

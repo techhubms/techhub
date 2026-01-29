@@ -19,6 +19,9 @@ tags:
 - Productivity
 - Solution Explorer
 - VS Code
+- Coding
+- DevOps
+- Community
 section_names:
 - coding
 - devops

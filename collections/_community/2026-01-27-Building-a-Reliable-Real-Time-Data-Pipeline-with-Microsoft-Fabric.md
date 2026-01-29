@@ -20,6 +20,9 @@ tags:
 - Recovery Objectives
 - Replication Lag
 - Schema Drift
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

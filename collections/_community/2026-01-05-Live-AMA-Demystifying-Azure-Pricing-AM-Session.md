@@ -16,6 +16,8 @@ tags:
 - Performance Tuning
 - Reservations
 - Savings Plans
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

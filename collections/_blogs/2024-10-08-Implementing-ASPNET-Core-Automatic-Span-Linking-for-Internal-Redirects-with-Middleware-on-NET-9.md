@@ -15,6 +15,9 @@ tags:
 - OpenTelemetry
 - Span Linking
 - Tracing
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

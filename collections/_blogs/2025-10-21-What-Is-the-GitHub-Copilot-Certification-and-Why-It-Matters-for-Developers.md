@@ -19,6 +19,9 @@ tags:
 - Responsible AI
 - Software Development
 - Workflow Efficiency
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

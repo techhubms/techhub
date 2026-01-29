@@ -19,6 +19,8 @@ tags:
 - PAYG
 - Red Hat
 - SUSE
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

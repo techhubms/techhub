@@ -23,6 +23,9 @@ tags:
 - Resource Kit
 - Success Stories
 - Video
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

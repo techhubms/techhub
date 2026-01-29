@@ -11,6 +11,9 @@ tags:
 - Developer Tools
 - Enhancements
 - Release Notes
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

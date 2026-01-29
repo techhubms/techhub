@@ -25,6 +25,9 @@ tags:
 - Practical AI
 - Software Developer
 - Software Engineering
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

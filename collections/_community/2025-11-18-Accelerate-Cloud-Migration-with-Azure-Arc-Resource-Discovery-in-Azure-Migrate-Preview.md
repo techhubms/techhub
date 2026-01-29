@@ -20,6 +20,8 @@ tags:
 - Reserved Instances
 - SQL Server
 - Sustainability Impact
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

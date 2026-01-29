@@ -23,6 +23,10 @@ tags:
 - Resiliency
 - Silicon Root Of Trust
 - Sustainability
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -23,6 +23,10 @@ tags:
 - Multi Billion Parameter Models
 - Performance Optimization
 - Supercomputing
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

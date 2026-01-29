@@ -14,6 +14,9 @@ tags:
 - Pro Tips
 - Prompt Engineering
 - Reflection
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

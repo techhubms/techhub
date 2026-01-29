@@ -25,6 +25,10 @@ tags:
 - Trace Capture
 - VS
 - Windows Development
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

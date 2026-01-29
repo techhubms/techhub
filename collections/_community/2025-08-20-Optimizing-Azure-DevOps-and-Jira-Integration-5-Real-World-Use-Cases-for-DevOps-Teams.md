@@ -19,6 +19,9 @@ tags:
 - Stakeholder Collaboration
 - Two Way Sync
 - Work Item Synchronization
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

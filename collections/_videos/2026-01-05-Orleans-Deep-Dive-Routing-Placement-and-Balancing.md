@@ -16,6 +16,8 @@ tags:
 - Placement
 - Routing
 - Scalability
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

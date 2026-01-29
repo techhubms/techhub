@@ -21,6 +21,10 @@ tags:
 - Release Notes Automation
 - Summarization
 - Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

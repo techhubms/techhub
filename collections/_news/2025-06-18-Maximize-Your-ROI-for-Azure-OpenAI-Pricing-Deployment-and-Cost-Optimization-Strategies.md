@@ -25,6 +25,11 @@ tags:
 - Pricing Models
 - Prompt Caching
 - Provisioned Throughput
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

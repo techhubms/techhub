@@ -21,6 +21,10 @@ tags:
 - Team Collaboration
 - Technology
 - TypeScript
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

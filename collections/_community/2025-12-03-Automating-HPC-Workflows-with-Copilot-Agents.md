@@ -21,6 +21,8 @@ tags:
 - Script Generation
 - Slurm
 - Validation
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

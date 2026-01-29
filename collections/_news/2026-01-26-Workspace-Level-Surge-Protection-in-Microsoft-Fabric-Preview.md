@@ -17,6 +17,8 @@ tags:
 - Surge Protection
 - Throttling
 - Workspace Management
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

@@ -26,6 +26,10 @@ tags:
 - Security Operations Center
 - Security Platform
 - SIEM
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

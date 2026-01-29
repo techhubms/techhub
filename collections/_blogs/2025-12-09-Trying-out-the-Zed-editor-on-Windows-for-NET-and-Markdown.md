@@ -20,6 +20,8 @@ tags:
 - VS Code
 - Windows
 - Zed Editor
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

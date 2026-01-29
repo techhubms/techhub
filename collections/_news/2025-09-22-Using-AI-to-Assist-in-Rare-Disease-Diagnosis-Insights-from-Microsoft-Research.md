@@ -21,6 +21,8 @@ tags:
 - Rare Diseases
 - Sensemaking
 - Whole Genome Sequencing
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

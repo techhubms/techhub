@@ -18,6 +18,9 @@ tags:
 - Project Onboarding
 - Software Development
 - Team Standards
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

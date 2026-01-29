@@ -17,6 +17,9 @@ tags:
 - Improvement
 - Inline Prompts
 - Prompt Blocks
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

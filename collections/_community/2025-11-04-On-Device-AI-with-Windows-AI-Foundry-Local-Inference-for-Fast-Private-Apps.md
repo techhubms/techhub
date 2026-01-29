@@ -22,6 +22,9 @@ tags:
 - Privacy
 - Python
 - Windows AI Foundry
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

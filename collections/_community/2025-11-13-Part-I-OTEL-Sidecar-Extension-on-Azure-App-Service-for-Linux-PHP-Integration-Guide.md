@@ -21,6 +21,10 @@ tags:
 - Sidecar Extension
 - Startup Script
 - Telemetry
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

@@ -22,6 +22,9 @@ tags:
 - Model Pricing
 - Reasoning
 - Technical Leadership
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

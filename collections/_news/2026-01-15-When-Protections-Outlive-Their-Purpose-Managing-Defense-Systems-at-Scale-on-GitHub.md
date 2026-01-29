@@ -21,6 +21,9 @@ tags:
 - Site Reliability
 - Technical Debt
 - Traffic Controls
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

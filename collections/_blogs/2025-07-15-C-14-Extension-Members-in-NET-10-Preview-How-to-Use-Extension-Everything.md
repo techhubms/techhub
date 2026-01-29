@@ -17,6 +17,8 @@ tags:
 - Static Extension Methods
 - Syntax Changes
 - VS
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

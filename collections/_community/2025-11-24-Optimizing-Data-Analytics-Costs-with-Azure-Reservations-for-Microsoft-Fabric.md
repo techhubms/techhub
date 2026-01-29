@@ -20,6 +20,9 @@ tags:
 - Real Time Analytics
 - Reservation Best Practices
 - SaaS
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

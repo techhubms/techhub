@@ -24,6 +24,9 @@ tags:
 - Security Dashboard For AI
 - Supply Chain Security
 - Threat Detection
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

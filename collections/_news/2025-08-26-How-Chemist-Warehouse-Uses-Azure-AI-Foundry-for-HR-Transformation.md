@@ -20,6 +20,9 @@ tags:
 - Microsoft Partner
 - Power Platform
 - Workforce Productivity
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

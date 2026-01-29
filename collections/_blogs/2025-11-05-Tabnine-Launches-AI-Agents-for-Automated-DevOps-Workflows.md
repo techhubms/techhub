@@ -30,6 +30,10 @@ tags:
 - Tabnine
 - Technical Debt
 - Workflow Automation
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

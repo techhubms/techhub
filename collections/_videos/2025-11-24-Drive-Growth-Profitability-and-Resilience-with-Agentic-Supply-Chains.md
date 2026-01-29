@@ -22,6 +22,10 @@ tags:
 - Predictive Analytics
 - Supply Chain
 - Unifyyourdataplatform
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

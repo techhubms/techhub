@@ -13,6 +13,9 @@ tags:
 - Productivity
 - Programming Workflow
 - Rubber Duck Thursdays
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

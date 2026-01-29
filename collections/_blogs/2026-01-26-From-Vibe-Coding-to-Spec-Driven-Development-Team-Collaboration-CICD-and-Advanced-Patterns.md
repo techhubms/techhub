@@ -30,6 +30,11 @@ tags:
 - Specification Driven Development
 - Team Collaboration
 - Vibe Coding
+- AI
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - azure

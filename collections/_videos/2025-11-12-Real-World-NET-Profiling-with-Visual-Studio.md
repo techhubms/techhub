@@ -19,6 +19,10 @@ tags:
 - Profiling Techniques
 - Software Development
 - VS
+- Coding
+- GitHub Copilot
+- Videos
+- AI
 section_names:
 - coding
 - github-copilot

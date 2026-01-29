@@ -24,6 +24,9 @@ tags:
 - Splunk
 - Splunk Observability
 - ThousandEyes
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

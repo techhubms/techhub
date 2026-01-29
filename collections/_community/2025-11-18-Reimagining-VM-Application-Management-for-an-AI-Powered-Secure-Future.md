@@ -23,6 +23,11 @@ tags:
 - Version Control
 - Virtual Machines
 - VM Scale Sets
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

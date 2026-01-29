@@ -10,15 +10,24 @@ namespace TechHub.E2E.Tests.Web;
 /// Tests for user story requirements: section ordering, URL structure, and navigation flow
 /// </summary>
 [Collection("Navigation Tests")]
-public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class NavigationTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public NavigationTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

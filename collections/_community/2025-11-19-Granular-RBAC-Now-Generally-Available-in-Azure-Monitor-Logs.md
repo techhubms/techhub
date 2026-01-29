@@ -25,6 +25,9 @@ tags:
 - Row Level Security
 - Table Level Security
 - Workspace Security
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

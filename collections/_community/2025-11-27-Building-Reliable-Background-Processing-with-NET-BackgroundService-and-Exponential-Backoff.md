@@ -19,6 +19,9 @@ tags:
 - Microservices
 - REST API
 - Retry Logic
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

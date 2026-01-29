@@ -17,6 +17,9 @@ tags:
 - Responsible AI
 - Software Delivery
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

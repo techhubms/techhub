@@ -24,6 +24,10 @@ tags:
 - Semantic Search
 - Telemetry
 - Tool Invocation
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

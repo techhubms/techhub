@@ -12,6 +12,9 @@ tags:
 - Code Review
 - Editing
 - IDE
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

@@ -19,6 +19,10 @@ tags:
 - Unit Testing
 - XML
 - XSLT
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

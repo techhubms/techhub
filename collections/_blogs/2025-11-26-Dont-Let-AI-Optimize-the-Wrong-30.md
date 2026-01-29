@@ -20,6 +20,9 @@ tags:
 - Security Automation
 - Software Lifecycle
 - Technology
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

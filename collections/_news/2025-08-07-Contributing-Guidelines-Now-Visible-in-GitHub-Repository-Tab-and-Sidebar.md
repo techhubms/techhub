@@ -15,6 +15,8 @@ tags:
 - Open Source
 - Repository Management
 - Repository Overview
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

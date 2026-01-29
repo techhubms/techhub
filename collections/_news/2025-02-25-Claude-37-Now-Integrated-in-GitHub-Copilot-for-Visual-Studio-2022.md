@@ -15,6 +15,10 @@ tags:
 - Model Picker
 - Sonnet Model
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

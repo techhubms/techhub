@@ -15,6 +15,10 @@ tags:
 - Terminal Automation
 - VS Code
 - VS Code Agents
+- AI
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - coding

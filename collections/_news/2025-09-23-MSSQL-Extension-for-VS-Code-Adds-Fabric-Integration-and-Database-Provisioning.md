@@ -20,6 +20,9 @@ tags:
 - VS Code
 - VS Code Extension
 - Workspace Authentication
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

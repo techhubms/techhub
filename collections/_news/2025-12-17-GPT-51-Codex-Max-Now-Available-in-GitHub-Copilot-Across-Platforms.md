@@ -22,6 +22,9 @@ tags:
 - VS
 - VS Code
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -21,6 +21,9 @@ tags:
 - Remote Proctoring
 - Responsible AI
 - Technical Assessment
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

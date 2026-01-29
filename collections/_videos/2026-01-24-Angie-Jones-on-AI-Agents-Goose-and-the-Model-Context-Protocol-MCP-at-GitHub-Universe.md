@@ -20,6 +20,10 @@ tags:
 - Sales Lead Segmentation
 - Software Development
 - Trust in AI
+- AI
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - coding

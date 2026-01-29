@@ -21,6 +21,8 @@ tags:
 - Snapshot Recovery
 - Storage
 - Virtual Machines
+- Azure
+- News
 section_names:
 - azure
 primary_section: azure

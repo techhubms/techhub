@@ -25,6 +25,12 @@ tags:
 - Single Sign On
 - SSO
 - Trial Account
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

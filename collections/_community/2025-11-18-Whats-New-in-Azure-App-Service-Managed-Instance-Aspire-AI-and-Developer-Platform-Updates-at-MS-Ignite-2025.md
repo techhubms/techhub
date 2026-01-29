@@ -36,6 +36,11 @@ tags:
 - SCM Advanced Tools
 - Small Language Models
 - Ubuntu
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

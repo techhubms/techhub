@@ -20,6 +20,9 @@ tags:
 - Performance Optimization
 - Self Hosted Models
 - Token Costs
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

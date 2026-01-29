@@ -24,6 +24,8 @@ tags:
 - SQL Server
 - Tech
 - Technology
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

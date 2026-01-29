@@ -18,6 +18,10 @@ tags:
 - SIEM
 - Threat Detection
 - XDR
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

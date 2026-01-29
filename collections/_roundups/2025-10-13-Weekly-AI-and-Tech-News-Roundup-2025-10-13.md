@@ -14,6 +14,14 @@ tags:
 - Open Source
 - Serverless Computing
 - Zero Trust
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -94,8 +102,8 @@ Features for model selection, enterprise policy controls, and extended feedback 
 Visual Studio Code continues with persistent chat and agentic automation. New capabilities—support for Claude Sonnet 4.5, GPT-5, Grok Code Fast 1—add persistent chat, Plan Mode, and the Copilot Coding Agent. Tutorials now cover MCP server integration and remote context management, showing the expanding registry/protocol ecosystem in ongoing developer resources.
 
 - [Grok Code Fast 1 Public Preview Launched for GitHub Copilot Plans](https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse)
-- [The Latest AI Features in Visual Studio Code](/ai/videos/The-Latest-AI-Features-in-Visual-Studio-Code)
-- [Enhancing Developer Workflows with MCP Servers and GitHub Copilot in VS Code](/ai/videos/Enhancing-Developer-Workflows-with-MCP-Servers-and-GitHub-Copilot-in-VS-Code)
+- [The Latest AI Features in Visual Studio Code](/ai/videos/the-latest-ai-features-in-visual-studio-code)
+- [Enhancing Developer Workflows with MCP Servers and GitHub Copilot in VS Code](/ai/videos/enhancing-developer-workflows-with-mcp-servers-and-github-copilot-in-vs-code)
 
 ### GitHub Copilot CLI: Terminal Improvements and Workflow Expansion
 
@@ -103,7 +111,7 @@ Expanding on last week’s improvements in model switching, image support, and p
 
 Additional interface features—edit diffs, colored markdown, compact rendering—support new workflows (tab cycling, multiline input, argument hints) built on previous additions like command forwarding, context alerts, and accessibility options. PowerShell parity supports reliability across platforms. Daily npm updates allow ongoing feedback, aligning with continued community-driven feature releases.
 
-- [An Introduction to the New GitHub Copilot CLI](/ai/videos/An-Introduction-to-the-New-GitHub-Copilot-CLI)
+- [An Introduction to the New GitHub Copilot CLI](/ai/videos/an-introduction-to-the-new-github-copilot-cli)
 - [GitHub Copilot CLI: Faster, More Concise, Streamlined Developer Experience](https://github.blog/changelog/2025-10-10-github-copilot-cli-faster-more-concise-and-prettier)
 
 ### Copilot-Aided Case Studies and Tutorials: Apps, Automations, and Real-World Workflows
@@ -116,9 +124,9 @@ An article on upgrading Blazor apps in .NET 10 highlights ongoing focus on moder
 
 - [Building Buzzword Bingo with GitHub Spark, Copilot, and Modern Dev Tools](https://harrybin.de/posts/github-spark-buzzword-bingo/)
 - [Vibe Coding a Podcast Analytics Dashboard with GitHub Copilot and AI](https://devblogs.microsoft.com/blog/complete-beginners-guide-to-vibe-coding-an-app-in-5-minutes)
-- [Generating Reliable Tests with AI and Copilot in Playwright](/ai/videos/Generating-Reliable-Tests-with-AI-and-Copilot-in-Playwright)
-- [VS Code Live: Leveraging GitHub Copilot and Agents in Jupyter Notebooks](/ai/videos/VS-Code-Live-Leveraging-GitHub-Copilot-and-Agents-in-Jupyter-Notebooks)
-- [Upgrading eShop with Blazor in .NET 10 Using GitHub Copilot](/ai/videos/Upgrading-eShop-with-Blazor-in-NET-10-Using-GitHub-Copilot)
+- [Generating Reliable Tests with AI and Copilot in Playwright](/ai/videos/generating-reliable-tests-with-ai-and-copilot-in-playwright)
+- [VS Code Live: Leveraging GitHub Copilot and Agents in Jupyter Notebooks](/ai/videos/vs-code-live-leveraging-github-copilot-and-agents-in-jupyter-notebooks)
+- [Upgrading eShop with Blazor in .NET 10 Using GitHub Copilot](/ai/videos/upgrading-eshop-with-blazor-in-net-10-using-github-copilot)
 - [How GitHub Copilot Automated Accessibility Governance at GitHub](https://github.blog/ai-and-ml/github-copilot/how-we-automated-accessibility-compliance-in-five-hours-with-github-copilot/)
 - [Completing Urgent Fixes Remotely Using GitHub Copilot Coding Agent and Mobile](https://github.blog/developer-skills/github/completing-urgent-fixes-anywhere-with-github-copilot-coding-agent-and-mobile/)
 
@@ -136,10 +144,10 @@ Education with Copilot expands through curriculum integration and feedback tools
 Examples from City Energy Analyst and MapYourGrid show Copilot supporting social impact and open source collaboration, continuing last week’s climate and community features. Podcast discussions highlight how AI is changing experimental workflows and automation skills, following ongoing learning and adaptation strategies.
 
 - [Study Buddy: Learning Data Science and Machine Learning with an AI Sidekick](https://techcommunity.microsoft.com/t5/microsoft-developer-community/study-buddy-learning-data-science-and-machine-learning-with-an/ba/p/4460144)
-- [ADHD, GitHub Copilot, and Neurodiversity: Real Talk with Mads Torgersen and Klaus Loffelmann](/ai/videos/ADHD-GitHub-Copilot-and-Neurodiversity-Real-Talk-with-Mads-Torgersen-and-Klaus-Loffelmann)
-- [Using GitHub Copilot to Advance Sustainable City Design with Open Source](/ai/videos/Using-GitHub-Copilot-to-Advance-Sustainable-City-Design-with-Open-Source)
-- [Using GitHub Copilot to Map Electricity Gaps in Zambia with MapYourGrid](/ai/videos/Using-GitHub-Copilot-to-Map-Electricity-Gaps-in-Zambia-with-MapYourGrid)
-- [How AI Is Changing the Way Developers Learn to Code: A Conversation with Scott Tolinski](/ai/videos/How-AI-Is-Changing-the-Way-Developers-Learn-to-Code-A-Conversation-with-Scott-Tolinski)
+- [ADHD, GitHub Copilot, and Neurodiversity: Real Talk with Mads Torgersen and Klaus Loffelmann](/ai/videos/adhd-github-copilot-and-neurodiversity-real-talk-with-mads-torgersen-and-klaus-loffelmann)
+- [Using GitHub Copilot to Advance Sustainable City Design with Open Source](/ai/videos/using-github-copilot-to-advance-sustainable-city-design-with-open-source)
+- [Using GitHub Copilot to Map Electricity Gaps in Zambia with MapYourGrid](/ai/videos/using-github-copilot-to-map-electricity-gaps-in-zambia-with-mapyourgrid)
+- [How AI Is Changing the Way Developers Learn to Code: A Conversation with Scott Tolinski](/ai/videos/how-ai-is-changing-the-way-developers-learn-to-code-a-conversation-with-scott-tolinski)
 
 ### Other GitHub Copilot News
 
@@ -147,7 +155,7 @@ New tutorials on prompt-driven code generation in VS Code expand last week’s w
 
 A key update announces that Claude Sonnet 3.5 will be deprecated from Copilot, starting a new round of model standardization and upgrades—continuing the process established by previous migration and selector guides.
 
-- [Build a Responsive UI through Prompt Driven Development with GitHub Copilot](/ai/videos/Build-a-Responsive-UI-through-Prompt-Driven-Development-with-GitHub-Copilot)
+- [Build a Responsive UI through Prompt Driven Development with GitHub Copilot](/ai/videos/build-a-responsive-ui-through-prompt-driven-development-with-github-copilot)
 - [Deprecation of Claude Sonnet 3.5 in GitHub Copilot: What You Need to Know](https://github.blog/changelog/2025-10-07-upcoming-deprecation-of-claude-sonnet-3-5)
 
 ## AI
@@ -176,7 +184,7 @@ Enterprise scenarios—including bots and compliance agents—have updated guide
 - [Enhancing Copilot Bots with Azure OpenAI Services](https://dellenny.com/enhancing-copilot-bots-with-azure-openai-services/)
 - [How Agentic AI Works and How to Build It in Azure](https://dellenny.com/how-agentic-ai-works-and-how-to-build-it-in-azure/)
 - [Semantic Kernel and Microsoft Agent Framework: Evolution and Future Support](https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-agent-framework/)
-- [Getting Started with the Microsoft Agent Framework in .NET](/ai/videos/Getting-Started-with-the-Microsoft-Agent-Framework-in-NET)
+- [Getting Started with the Microsoft Agent Framework in .NET](/ai/videos/getting-started-with-the-microsoft-agent-framework-in-net)
 
 ### Infrastructure Upgrades and Enterprise AI Adoption
 
@@ -224,7 +232,7 @@ Entry-level guides show how to build Azure AI Foundry agents using file search, 
 Copilot Studio’s use cases in financial services follow last week’s enterprise engagement stories.
 
 - [Curso gratuito: IA Generativa y Python - Serie de 9 transmisiones en vivo](https://techcommunity.microsoft.com/t5/microsoft-developer-community/curso-oficial-y-gratuito-de-genai-y-python/ba-p/4459466)
-- [Create an AI Agent with File Search in Azure AI Foundry (Portal)](/ai/videos/Create-an-AI-Agent-with-File-Search-in-Azure-AI-Foundry-Portal)
+- [Create an AI Agent with File Search in Azure AI Foundry (Portal)](/ai/videos/create-an-ai-agent-with-file-search-in-azure-ai-foundry-portal)
 - [Unlocking the Power of Conversational AI with Azure Bot Service](https://dellenny.com/unlocking-the-power-of-conversational-ai-with-azure-bot-service/)
 - [Noise-Free, Domain-Specific Voice Recognition with Azure Custom Speech](https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/)
 - [AMA: Building Smarter Voice Agents with Azure AI Foundry Voice Live API](https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-azure-ai-foundry-voice-live-api-build-smarter-faster-voice/ba-p/4460118)
@@ -328,19 +336,19 @@ Updates to Azure Migrate improve cost modeling and migration workflows for B-Ser
 
 A new video guides connecting Azure VNets to AWS, GCP, Oracle, and other clouds, extending previous coverage of hybrid/cloud edge developments. Disaster recovery documentation using Azure Site Recovery and VMware helps teams prepare backup and failover strategies for reliable operations.
 
-- [Hybrid Cloud Networking: Connecting Azure, AWS, GCP, and More](/azure/videos/Hybrid-Cloud-Networking-Connecting-Azure-AWS-GCP-and-More)
+- [Hybrid Cloud Networking: Connecting Azure, AWS, GCP, and More](/azure/videos/hybrid-cloud-networking-connecting-azure-aws-gcp-and-more)
 - [Replicating VMware Workloads to Azure with Azure Site Recovery for Disaster Recovery](https://techcommunity.microsoft.com/t5/azure/replicate-workload-from-vmware-to-azure-using-azure-site/m-p/4460851#M22268)
 
 ### Other Azure News
 
 Recent SQL database upgrades in Microsoft Fabric (Copilot, virtualization) continue changes in analytics and Power BI. Visual Studio subscription advice for Azure Dev/Test Benefit helps developers optimize workflow costs. Cost control reports advance FinOps resources. John Savill’s Azure update pulls together monitoring, AKS automation, and Copilot news for quick review. The Azure Pricing Calculator and tutorial help users plan and estimate resources. Azure CycleCloud’s academic HPC improvements build on previous work for cloud-based research and scaling.
 
-- [SQL Database Enhancements in Microsoft Fabric: Copilot, Data Virtualization, and More](/ai/videos/SQL-Database-Enhancements-in-Microsoft-Fabric-Copilot-Data-Virtualization-and-More)
+- [SQL Database Enhancements in Microsoft Fabric: Copilot, Data Virtualization, and More](/ai/videos/sql-database-enhancements-in-microsoft-fabric-copilot-data-virtualization-and-more)
 - [Understanding the Azure Dev/Test Benefit for Visual Studio Subscribers](https://devblogs.microsoft.com/visualstudio/visual-studio-dev-test-benefit-explained/)
 - [5 Azure Mistakes That Are Costing Businesses Thousands](https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/)
-- [Azure Update - 10th October 2025](/ai/videos/Azure-Update-10th-October-2025)
-- [Azure Pricing Calculator: Estimate Smarter, Plan Confidently](/azure/videos/Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently)
-- [Future-Proofing Academic Research: HPC Workflows and Secure Enclaves with Azure CycleCloud](/azure/videos/Future-Proofing-Academic-Research-HPC-Workflows-and-Secure-Enclaves-with-Azure-CycleCloud)
+- [Azure Update - 10th October 2025](/ai/videos/azure-update-10th-october-2025)
+- [Azure Pricing Calculator: Estimate Smarter, Plan Confidently](/azure/videos/azure-pricing-calculator-estimate-smarter-plan-confidently)
+- [Future-Proofing Academic Research: HPC Workflows and Secure Enclaves with Azure CycleCloud](/azure/videos/future-proofing-academic-research-hpc-workflows-and-secure-enclaves-with-azure-cyclecloud)
 
 ## Coding
 
@@ -406,7 +414,7 @@ Git Merge 2025 celebrated Git’s 20th anniversary at GitHub HQ, where contribut
 
 A new On .NET Live session explains how Pulumi brings .NET languages (C#/F#) to infrastructure automation across Azure, AWS, and Google Cloud. The episode covers configuration, CLI integration, and onboarding, providing a simple introduction to code-based infrastructure management.
 
-- [Infrastructure as Code with Pulumi Using .NET Languages](/coding/videos/Infrastructure-as-Code-with-Pulumi-Using-NET-Languages)
+- [Infrastructure as Code with Pulumi Using .NET Languages](/coding/videos/infrastructure-as-code-with-pulumi-using-net-languages)
 
 ### AI, Observability, and Supply Chain Intelligence in DevOps
 

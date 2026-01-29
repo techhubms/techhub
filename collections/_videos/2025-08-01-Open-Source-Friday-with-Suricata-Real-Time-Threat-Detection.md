@@ -21,6 +21,9 @@ tags:
 - Suricata
 - Suricata Update
 - Threat Detection
+- DevOps
+- Security
+- Videos
 section_names:
 - devops
 - security

@@ -18,6 +18,9 @@ tags:
 - Template Changes
 - User Authentication
 - WebAuthn
+- Coding
+- Security
+- Blogs
 section_names:
 - coding
 - security

@@ -15,6 +15,9 @@ tags:
 - Teams
 - TFS
 - Work Item Tracking
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

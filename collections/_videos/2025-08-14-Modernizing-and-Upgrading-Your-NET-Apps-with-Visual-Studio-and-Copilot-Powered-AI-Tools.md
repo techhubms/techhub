@@ -19,6 +19,9 @@ tags:
 - Migration Tools
 - Natural Language Programming
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

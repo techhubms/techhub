@@ -24,6 +24,9 @@ tags:
 - SHA 256
 - Stash Interchange
 - Version Control
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

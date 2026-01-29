@@ -20,6 +20,9 @@ tags:
 - Spatial Data
 - Spatial Joins
 - Tracking Analysis
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

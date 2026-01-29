@@ -18,6 +18,9 @@ tags:
 - Scaling
 - Summarization
 - Workflow Automation
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -14,6 +14,9 @@ tags:
 - Legacy Code
 - Project Adaptation
 - Software Engineering
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

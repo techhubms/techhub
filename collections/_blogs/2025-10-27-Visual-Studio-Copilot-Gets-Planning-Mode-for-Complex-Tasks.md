@@ -40,6 +40,11 @@ tags:
 - Visual Studio Copilot
 - VS
 - Workflow Efficiency
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

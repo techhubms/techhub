@@ -18,6 +18,9 @@ tags:
 - Windows 11 Migration
 - Windows Lifecycle
 - Windows Update
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

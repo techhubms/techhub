@@ -14,36 +14,67 @@ public record ContentItem
     public string CollectionName { get; }
     public string? SubcollectionName { get; }
     public string FeedName { get; }
-    
+
     /// <summary>
     /// Primary section name - stored in frontmatter and database.
     /// Computed from section_names using priority order during content sync.
     /// Priority: github-copilot > ai > ml > coding > azure > devops > security.
     /// </summary>
     public string PrimarySectionName { get; }
-    
-    public IReadOnlyList<string> Tags { get; }
+
+    public IReadOnlyList<string> Tags { get; private set; } = [];
     public string Excerpt { get; }
     public string ExternalUrl { get; }
 
     /// <summary>
     /// Raw markdown content (from file or database).
     /// Used internally for rendering. Not serialized to API responses.
+    /// Set to null when RenderedHtml is populated to save memory.
     /// </summary>
     [System.Text.Json.Serialization.JsonIgnore]
-    public string? Content { get; }
+    public string? Content { get; private set; }
 
     /// <summary>
     /// Full rendered HTML content (only populated for detail views).
     /// Null for list views, populated for detail views.
+    /// Setting this will null out Content to save memory.
     /// </summary>
-    public string? RenderedHtml { get; }
+    public string? RenderedHtml { get; private set; }
+
+    /// <summary>
+    /// Set the rendered HTML and null out the raw content to save memory.
+    /// </summary>
+    public void SetRenderedHtml(string renderedHtml)
+    {
+        if (string.IsNullOrWhiteSpace(renderedHtml))
+        {
+            throw new ArgumentException("Rendered HTML cannot be empty", nameof(renderedHtml));
+        }
+
+        RenderedHtml = renderedHtml;
+        Content = null; // Free up memory
+    }
+
+    /// <summary>
+    /// Set the tags for this content item.
+    /// </summary>
+    public void SetTags(IReadOnlyList<string> tags)
+    {
+        ArgumentNullException.ThrowIfNull(tags);
+
+        if (tags.Count == 0)
+        {
+            throw new ArgumentException("At least one tag must be provided", nameof(tags));
+        }
+
+        Tags = tags;
+    }
 
     /// <summary>
     /// GitHub Copilot subscription plans this feature is available in (e.g., "Free", "Pro", "Business", "Pro+", "Enterprise")
     /// Used for filtering features by plan tier on the Features page
     /// </summary>
-    public IReadOnlyList<string> Plans { get; }
+    public IReadOnlyList<string> Plans { get; init; }
 
     /// <summary>
     /// Indicates whether this feature is available in GitHub Enterprise Server (GHES)
@@ -57,8 +88,12 @@ public record ContentItem
     /// </summary>
     public bool Draft { get; }
 
-
-
+    /// <summary>
+    /// JSON deserialization constructor - used when deserializing from API responses.
+    /// Does not require the 'content' parameter since Content is [JsonIgnore].
+    /// Parameters must match the JSON property names exactly (case-insensitive).
+    /// </summary>
+    [System.Text.Json.Serialization.JsonConstructor]
     public ContentItem(
         string slug,
         string title,
@@ -71,76 +106,123 @@ public record ContentItem
         string excerpt,
         string externalUrl,
         bool draft,
-        string? subcollectionName = null,
-        IReadOnlyList<string>? plans = null,
-        bool ghesSupport = false,
-        string? content = null,
+        string? subcollectionName,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
         string? renderedHtml = null)
+        : this(slug, title, author, dateEpoch, collectionName, feedName, primarySectionName, excerpt, externalUrl, draft, "n/a", subcollectionName, plans?.Count > 0 ? string.Join(",", plans) : null, ghesSupport)
+    {
+        SetTags(tags);
+        if (renderedHtml != null)
+        {
+            SetRenderedHtml(renderedHtml);
+        }
+    }
+
+    /// <summary>
+    /// Full constructor with content - used when creating ContentItem from files or database.
+    /// </summary>
+    public ContentItem(
+        string slug,
+        string title,
+        string author,
+        long dateEpoch,
+        string collectionName,
+        string feedName,
+        string primarySectionName,
+        string excerpt,
+        string externalUrl,
+        bool draft,
+        string content,
+        string? subcollectionName,
+        string? plans,
+        bool ghesSupport)
     {
         // Validate all required properties
         if (string.IsNullOrWhiteSpace(slug))
+        {
             throw new ArgumentException("Content slug cannot be empty", nameof(slug));
+        }
 
         if (string.IsNullOrWhiteSpace(title))
+        {
             throw new ArgumentException("Content title cannot be empty", nameof(title));
+        }
 
         if (string.IsNullOrWhiteSpace(author))
+        {
             throw new ArgumentException("Content author cannot be empty", nameof(author));
+        }
 
         if (dateEpoch <= 0)
+        {
             throw new ArgumentException("Date epoch must be a valid Unix timestamp", nameof(dateEpoch));
+        }
 
         if (string.IsNullOrWhiteSpace(collectionName))
+        {
             throw new ArgumentException("Collection name cannot be empty", nameof(collectionName));
+        }
 
         if (string.IsNullOrWhiteSpace(feedName))
+        {
             throw new ArgumentException("Feed name cannot be empty", nameof(feedName));
+        }
 
         if (string.IsNullOrWhiteSpace(primarySectionName))
+        {
             throw new ArgumentException(
                 $"Primary section name is required. Slug: {slug}, Title: {title}, Collection: {collectionName}",
                 nameof(primarySectionName));
-
-        if (tags == null || tags.Count == 0)
-            throw new ArgumentException(
-                $"Tags cannot be empty. Slug: {slug}, Title: {title}",
-                nameof(tags));
+        }
 
         ArgumentNullException.ThrowIfNull(excerpt);
 
+        // Truncate long excerpts instead of throwing - database may have legacy data
         if (excerpt.Length > 1000)
-            throw new ArgumentException("Excerpt should not exceed 1000 characters", nameof(excerpt));
+        {
+            excerpt = excerpt[..1000];
+        }
 
         // ExternalUrl is required for all collections except roundups
         if (collectionName != "roundups" && string.IsNullOrWhiteSpace(externalUrl))
+        {
             throw new ArgumentException(
                 $"ExternalUrl is required for collection '{collectionName}'. Slug: {slug}, Title: {title}",
                 nameof(externalUrl));
+        }
 
         // Plans and GhesSupport are ONLY for ghc-features subcollection
+        var plansList = string.IsNullOrWhiteSpace(plans)
+            ? []
+            : plans.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
         if (subcollectionName == "ghc-features")
         {
-            if (plans == null || plans.Count == 0)
+            if (plansList.Length == 0)
+            {
                 throw new ArgumentException(
                     $"Plans are required for ghc-features subcollection. Slug: {slug}, Title: {title}",
                     nameof(plans));
+            }
         }
         else
         {
             // For non-ghc-features, Plans/GhesSupport should NOT be set
-            if (plans != null && plans.Count > 0)
+            if (plansList.Length > 0)
+            {
                 throw new ArgumentException(
                     $"Plans should only be set for ghc-features subcollection. Slug: {slug}, Subcollection: {subcollectionName}",
                     nameof(plans));
+            }
 
             if (ghesSupport)
+            {
                 throw new ArgumentException(
                     $"GhesSupport should only be set for ghc-features subcollection. Slug: {slug}, Subcollection: {subcollectionName}",
                     nameof(ghesSupport));
+            }
         }
-
-        if (renderedHtml != null && string.IsNullOrWhiteSpace(renderedHtml))
-            throw new ArgumentException("Rendered HTML cannot be empty when set", nameof(renderedHtml));
 
         Slug = slug;
         Title = title;
@@ -150,12 +232,11 @@ public record ContentItem
         SubcollectionName = subcollectionName;
         FeedName = feedName;
         PrimarySectionName = primarySectionName;
-        Tags = tags;
+        Tags = [];
         Excerpt = excerpt;
         ExternalUrl = externalUrl;
         Content = content;
-        RenderedHtml = renderedHtml;
-        Plans = plans ?? Array.Empty<string>();
+        Plans = plansList;
         GhesSupport = ghesSupport;
         Draft = draft;
     }
@@ -184,17 +265,14 @@ public record ContentItem
         {
             return ExternalUrl;
         }
-        
+
         // For internal links, build contextual URL
         var section = sectionOverride ?? PrimarySectionName;
-        
-        // Use subcollection in URL if present (e.g., /github-copilot/ghc-features/slug)
-        // Otherwise use collection (e.g., /ai/blogs/slug)
-        var collection = !string.IsNullOrWhiteSpace(SubcollectionName) 
-            ? SubcollectionName 
-            : CollectionName;
-        
-        return $"/{section}/{collection}/{Slug}".ToLowerInvariant();
+
+        // Always use collection name in URL, never subcollection
+        // Subcollections are for filtering only (e.g., ghc-features, vscode-updates)
+        // Example: ghc-features item has collection="videos", so URL is /section/videos/slug
+        return $"/{section}/{CollectionName}/{Slug}".ToLowerInvariant();
     }
 
     /// <summary>
@@ -230,7 +308,7 @@ public record ContentItem
     /// Section priority order (matches the menubar order).
     /// Used to determine which section is "primary" when an item belongs to multiple sections.
     /// </summary>
-    private static readonly string[] SectionPriorityOrder =
+    private static readonly string[] _sectionPriorityOrder =
     [
         "github-copilot",
         "ai",
@@ -257,7 +335,7 @@ public record ContentItem
         }
 
         // Find the first section that matches in priority order
-        foreach (var prioritySection in SectionPriorityOrder)
+        foreach (var prioritySection in _sectionPriorityOrder)
         {
             if (sectionNames.Contains(prioritySection, StringComparer.OrdinalIgnoreCase))
             {
@@ -265,7 +343,7 @@ public record ContentItem
             }
         }
 
-        // No priority match found, return first section or "all"
-        return sectionNames.FirstOrDefault()?.ToLowerInvariant() ?? "all";
+        // No priority match found, return first section (we already checked Count > 0 above)
+        return sectionNames[0].ToLowerInvariant();
     }
 }

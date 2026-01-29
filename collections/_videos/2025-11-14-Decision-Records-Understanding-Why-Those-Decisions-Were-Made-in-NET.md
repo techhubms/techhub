@@ -21,6 +21,8 @@ tags:
 - MAUI
 - Service Discovery
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

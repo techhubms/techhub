@@ -25,6 +25,12 @@ tags:
 - Security Integration
 - Virtual Registry
 - Vulnerability Prioritization
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

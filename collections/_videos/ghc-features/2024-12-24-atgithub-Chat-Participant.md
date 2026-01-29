@@ -10,6 +10,9 @@ tags:
 - Chat
 - Chat Participant
 - GitHub
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

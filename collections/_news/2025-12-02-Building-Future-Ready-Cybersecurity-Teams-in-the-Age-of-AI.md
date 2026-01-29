@@ -25,6 +25,9 @@ tags:
 - Talent Strategy
 - Threat Intelligence
 - Upskilling
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

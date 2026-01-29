@@ -22,6 +22,11 @@ tags:
 - Python
 - Software Engineering
 - SQL
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

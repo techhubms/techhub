@@ -19,6 +19,8 @@ tags:
 - Storage Blob Data Owner
 - Task Assignment
 - Workflow Automation
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

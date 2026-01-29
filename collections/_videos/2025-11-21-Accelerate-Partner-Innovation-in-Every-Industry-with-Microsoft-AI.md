@@ -26,6 +26,9 @@ tags:
 - Sunil Senan
 - Teleperformance
 - Virtual Stylist
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

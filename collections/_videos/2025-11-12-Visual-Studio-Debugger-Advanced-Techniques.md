@@ -23,6 +23,9 @@ tags:
 - Tracepoints
 - VS
 - Watch Window
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

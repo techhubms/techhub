@@ -24,6 +24,9 @@ tags:
 - Server Side Request Forgery
 - Tenzai
 - Vibe Coding
+- AI
+- Security
+- Blogs
 section_names:
 - ai
 - security

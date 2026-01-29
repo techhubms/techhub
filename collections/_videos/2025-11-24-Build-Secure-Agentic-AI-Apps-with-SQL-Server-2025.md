@@ -21,6 +21,9 @@ tags:
 - Service Management
 - SQL Server
 - Vectorization
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

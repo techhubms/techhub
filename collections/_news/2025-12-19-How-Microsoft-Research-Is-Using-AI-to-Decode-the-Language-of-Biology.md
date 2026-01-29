@@ -20,6 +20,8 @@ tags:
 - Precision Medicine
 - Project Ex Vivo
 - Protein Design
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

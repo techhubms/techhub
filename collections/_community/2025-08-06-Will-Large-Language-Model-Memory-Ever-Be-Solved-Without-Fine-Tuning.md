@@ -24,6 +24,8 @@ tags:
 - RWKV
 - Sparse Attention
 - Transformer Models
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

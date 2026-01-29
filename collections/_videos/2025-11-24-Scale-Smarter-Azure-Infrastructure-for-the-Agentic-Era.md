@@ -22,6 +22,12 @@ tags:
 - Red Hat Partnership
 - Reliability Engineering
 - SQL Server
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

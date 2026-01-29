@@ -26,6 +26,9 @@ tags:
 - Tech
 - Technology
 - Workshop
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -23,6 +23,8 @@ tags:
 - Sprint Management
 - Workflow Automation
 - Workflow Design
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

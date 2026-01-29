@@ -20,6 +20,9 @@ tags:
 - Prompt Engineering
 - Telemetry Management
 - VS Code
+- AI
+- DevOps
+- Videos
 section_names:
 - ai
 - devops

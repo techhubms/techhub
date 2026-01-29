@@ -39,6 +39,12 @@ tags:
 - SQL Server
 - VS
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

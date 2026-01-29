@@ -18,6 +18,9 @@ tags:
 - Request Limits
 - Student Subscriptions
 - VS Code
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

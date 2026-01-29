@@ -15,6 +15,8 @@ tags:
 - Resource Drift
 - Terraform
 - Version Control
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

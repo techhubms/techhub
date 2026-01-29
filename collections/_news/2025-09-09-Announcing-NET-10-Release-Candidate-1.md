@@ -27,6 +27,8 @@ tags:
 - Visual Studio Insiders
 - VS Code
 - Windows Forms
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

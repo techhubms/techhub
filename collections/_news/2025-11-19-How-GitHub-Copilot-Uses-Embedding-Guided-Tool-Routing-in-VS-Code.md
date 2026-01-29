@@ -22,6 +22,10 @@ tags:
 - Tool Selection
 - Virtual Tools
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -21,6 +21,11 @@ tags:
 - Managed Identity
 - Secret Management
 - Software Development
+- Azure
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - coding

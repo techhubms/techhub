@@ -21,6 +21,8 @@ tags:
 - Patient Care
 - Patient Data
 - Workflow Automation
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

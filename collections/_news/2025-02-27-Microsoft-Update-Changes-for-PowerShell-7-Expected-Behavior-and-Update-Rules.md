@@ -18,6 +18,8 @@ tags:
 - Windows Server Update Services
 - Windows Updates
 - WSUS
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

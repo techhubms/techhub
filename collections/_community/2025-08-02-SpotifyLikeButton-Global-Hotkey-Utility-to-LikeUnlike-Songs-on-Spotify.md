@@ -15,6 +15,8 @@ tags:
 - Spotify API
 - Waybar
 - Windows
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

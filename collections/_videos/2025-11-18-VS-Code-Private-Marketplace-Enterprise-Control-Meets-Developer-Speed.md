@@ -17,6 +17,11 @@ tags:
 - Security Policy
 - VS Code
 - VS Code Private Marketplace
+- Azure
+- Coding
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - coding

@@ -17,6 +17,11 @@ tags:
 - Semantic Kernel
 - SQL Optimization
 - VS Code
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

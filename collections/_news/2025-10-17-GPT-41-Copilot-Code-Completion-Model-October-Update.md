@@ -16,6 +16,9 @@ tags:
 - Inline Code Suggestions
 - Machine Learning
 - Software Development Tools
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -13,6 +13,14 @@ tags:
 - VS
 - VS Code
 - Workflow Automation
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -85,7 +93,7 @@ The Copilot CLI now supports the latest models (like OpenAI GPT-5.1 and Gemini 3
 - [GitHub Copilot CLI Introduces New AI Models, Enhanced Code Search, and Improved Image Support](https://github.blog/changelog/2025-11-18-github-copilot-cli-new-models-enhanced-code-search-and-better-image-support)
 - [GitHub Copilot Coding Agent for Eclipse Now in Public Preview](https://github.blog/changelog/2025-11-18-github-copilot-coding-agent-for-eclipse-now-in-public-preview)
 - [GitHub Copilot Isolated Subagents Now in Public Preview for JetBrains, Eclipse, and Xcode](https://github.blog/changelog/2025-11-18-isolated-subagents-for-jetbrains-eclipse-and-xcode-now-in-public-preview)
-- [How to Assign and Manage Copilot Agent Tasks from Anywhere](/ai/videos/How-to-Assign-and-Manage-Copilot-Agent-Tasks-from-Anywhere)
+- [How to Assign and Manage Copilot Agent Tasks from Anywhere](/ai/videos/how-to-assign-and-manage-copilot-agent-tasks-from-anywhere)
 
 ### Intelligent Code Suggestion, Planning, and Test Automation
 
@@ -97,7 +105,7 @@ Test automation with Copilot is now available for .NET in Visual Studio 2026 Ins
 - [GitHub Copilot Next Edit Suggestions (NES) Public Preview for Xcode and Eclipse](https://github.blog/changelog/2025-11-18-github-copilot-next-edit-suggestions-nes-now-in-public-preview-for-xcode-and-eclipse)
 - [Supercharge Your Test Coverage with GitHub Copilot Testing for .NET](https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet/)
 - [Plan Mode in GitHub Copilot Now Available in Public Preview for JetBrains, Eclipse, and Xcode](https://github.blog/changelog/2025-11-18-plan-mode-in-github-copilot-now-in-public-preview-in-jetbrains-eclipse-and-xcode)
-- [Using the Plan Agent in VS Code for Step-by-Step Task Planning](/ai/videos/Using-the-Plan-Agent-in-VS-Code-for-Step-by-Step-Task-Planning)
+- [Using the Plan Agent in VS Code for Step-by-Step Task Planning](/ai/videos/using-the-plan-agent-in-vs-code-for-step-by-step-task-planning)
 
 ### Enterprise Controls, Model Flexibility, and Security
 
@@ -120,7 +128,7 @@ New video tutorials cover assigning and monitoring agent tasks across multiple p
 - [Custom Agents in GitHub Copilot for JetBrains, Eclipse, and Xcode Now in Public Preview](https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview)
 - [GitHub Copilot Isolated Subagents Now in Public Preview for JetBrains, Eclipse, and Xcode](https://github.blog/changelog/2025-11-18-isolated-subagents-for-jetbrains-eclipse-and-xcode-now-in-public-preview)
 - [How to Write a Great agents.md: Lessons from 2,500 GitHub Repositories](https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/)
-- [How to Assign and Manage Copilot Agent Tasks from Anywhere](/ai/videos/How-to-Assign-and-Manage-Copilot-Agent-Tasks-from-Anywhere)
+- [How to Assign and Manage Copilot Agent Tasks from Anywhere](/ai/videos/how-to-assign-and-manage-copilot-agent-tasks-from-anywhere)
 
 ### Modernization, Migration, and DevOps Integration
 
@@ -131,9 +139,9 @@ Integration between Azure DevOps and Copilot strengthens automation for project 
 - [Modernizing .NET Applications with GitHub Copilot Agent Mode: A Step-by-Step Guide](https://devblogs.microsoft.com/dotnet/modernizing-dotnet-with-github-copilot-agent-mode/)
 - [Migrating .NET Framework Apps with GitHub Copilot in Visual Studio: Developer Feedback and Licensing Changes](https://devclass.com/2025/11/20/copilot-net-modernization-tool-a-huge-downgrade-devs-say-and-no-longer-free/)
 - [Azure DevOps and GitHub Repositories: Unlocking Agentic AI for Developer Teams](https://devblogs.microsoft.com/devops/azure-devops-and-github-repositories-next-steps-in-the-path-to-agentic-ai/)
-- [AI-Powered Hybrid DevOps with GitHub Copilot and Azure DevOps](/ai/videos/AI-Powered-Hybrid-DevOps-with-GitHub-Copilot-and-Azure-DevOps)
-- [Modernize Your Apps in Days with AI Agents in GitHub Copilot](/ai/videos/Modernize-Your-Apps-in-Days-with-AI-Agents-in-GitHub-Copilot)
-- [From Legacy to Modern .NET on Azure with Visual Studio 2026, Azure App Service, and GitHub Copilot](/ai/videos/From-Legacy-to-Modern-NET-on-Azure-with-Visual-Studio-2026-Azure-App-Service-and-GitHub-Copilot)
+- [AI-Powered Hybrid DevOps with GitHub Copilot and Azure DevOps](/ai/videos/ai-powered-hybrid-devops-with-github-copilot-and-azure-devops)
+- [Modernize Your Apps in Days with AI Agents in GitHub Copilot](/ai/videos/modernize-your-apps-in-days-with-ai-agents-in-github-copilot)
+- [From Legacy to Modern .NET on Azure with Visual Studio 2026, Azure App Service, and GitHub Copilot](/ai/videos/from-legacy-to-modern-net-on-azure-with-visual-studio-2026-azure-app-service-and-github-copilot)
 
 ### Productivity, Code Quality, and Workflow Best Practices
 
@@ -144,7 +152,7 @@ Security and workflow recommendations point to Copilot’s role alongside linter
 - [Top GitHub Copilot Shortcuts and Productivity Tips for VS Code](https://dellenny.com/turbocharge-your-coding-top-github-copilot-shortcuts-and-productivity-tips-for-vs-code/)
 - [Your Guide to Debugging and Reviewing Copilot-Generated Code](https://dellenny.com/your-guide-to-debugging-and-reviewing-copilot-generated-code/)
 - [Your Guide to Debugging and Reviewing Copilot-Generated Code](https://techcommunity.microsoft.com/t5/tools/your-guide-to-debugging-and-reviewing-copilot-generated-code/m-p/4472116#M182)
-- [Best Practices for Coding with GitHub Copilot in .NET](/ai/videos/Best-Practices-for-Coding-with-GitHub-Copilot-in-NET)
+- [Best Practices for Coding with GitHub Copilot in .NET](/ai/videos/best-practices-for-coding-with-github-copilot-in-net)
 - [Using the Cognitive Verifier Pattern with GitHub Copilot](https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-cognitive-verifier-pattern.html)
 
 ### AI Model Choice, Embedding-Guided Tooling, and Collaborative Development
@@ -156,7 +164,7 @@ Updates to embedding-guided tooling and routing in VS Code further extend Copilo
 - [Auto Model Selection for GitHub Copilot in JetBrains, Xcode, and Eclipse](https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview)
 - [Gemini 3 Pro Model Now Available in GitHub Copilot Public Preview](https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot)
 - [How GitHub Copilot Uses Embedding-Guided Tool Routing in VS Code](https://github.blog/ai-and-ml/github-copilot/how-were-making-github-copilot-smarter-with-fewer-tools/)
-- [How Copilot Spaces gives your AI the right project context](/ai/videos/How-Copilot-Spaces-gives-your-AI-the-right-project-context)
+- [How Copilot Spaces gives your AI the right project context](/ai/videos/how-copilot-spaces-gives-your-ai-the-right-project-context)
 
 ### AI-Enhanced Code Quality, Review Workflows, and Developer Collaboration
 
@@ -165,9 +173,9 @@ Linter support in Copilot’s code review toolkit continues earlier efforts arou
 Recent sessions at GitHub Universe and Ignite add case studies and guidance focused on developer productivity and automation across the SDLC. Coverage on MCP-backed policy and context management links to previous enterprise-level updates.
 
 - [Linter Integration Arrives in Copilot Code Review Public Preview](https://github.blog/changelog/2025-11-20-linter-integration-with-copilot-code-review-now-in-public-preview)
-- [Scaling Code Quality in the Age of AI](/ai/videos/Scaling-Code-Quality-in-the-Age-of-AI)
-- [Redefining the SDLC with GitHub Copilot and Context-Driven AI](/ai/videos/Redefining-the-SDLC-with-GitHub-Copilot-and-Context-Driven-AI)
-- [Reimagining Software Development with GitHub Copilot and AI Agents](/ai/videos/Reimagining-Software-Development-with-GitHub-Copilot-and-AI-Agents)
+- [Scaling Code Quality in the Age of AI](/ai/videos/scaling-code-quality-in-the-age-of-ai)
+- [Redefining the SDLC with GitHub Copilot and Context-Driven AI](/ai/videos/redefining-the-sdlc-with-github-copilot-and-context-driven-ai)
+- [Reimagining Software Development with GitHub Copilot and AI Agents](/ai/videos/reimagining-software-development-with-github-copilot-and-ai-agents)
 
 ### Copilot for Data, Natural Language Automation, and Operations
 
@@ -178,7 +186,7 @@ Integration with Azure DevOps, including PagerDuty and Datadog, keeps the focus 
 - [Copilot and Query Editor Now Generally Available in SQL Database on Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/copilot-and-query-editor-in-sql-database-in-fabric-ga-update/)
 - [Natural Language to Generate and Explain Pipeline Expressions with Copilot (Preview)](https://blog.fabric.microsoft.com/en-US/blog/preview-natural-language-to-generate-and-explain-pipeline-expressions-with-copilot/)
 - [Copilot-Assisted Real-Time Data Exploration in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/copilot-assisted-real-time-data-exploration-preview/)
-- [Ship Faster with Azure and GitHub Copilot: End-to-End DevOps with AI Agents](/ai/videos/Ship-Faster-with-Azure-and-GitHub-Copilot-End-to-End-DevOps-with-AI-Agents)
+- [Ship Faster with Azure and GitHub Copilot: End-to-End DevOps with AI Agents](/ai/videos/ship-faster-with-azure-and-github-copilot-end-to-end-devops-with-ai-agents)
 
 ### Other GitHub Copilot News
 
@@ -186,7 +194,7 @@ Further updates to developer tools follow last week’s introduction of the Rapt
 
 Additional resources support Copilot adoption, code review, and debugging, ensuring developers remain current as Copilot evolves. These tools help teams maintain quality and productivity as they bring automation and AI deeper into daily development.
 
-- [The Download: Git 2.52, Gemini 3, GitHub Copilot Updates & Agent 365](/ai/videos/The-Download-Git-252-Gemini-3-GitHub-Copilot-Updates-and-Agent-365)
+- [The Download: Git 2.52, Gemini 3, GitHub Copilot Updates & Agent 365](/ai/videos/the-download-git-252-gemini-3-github-copilot-updates-and-agent-365)
 
 Additional resources have been shared to help teams adjust to Copilot’s expanding features and agent-based automation, from debugging guides to new feedback channels. These tools will be key for organizations standardizing AI-powered workflows.
 
@@ -209,9 +217,9 @@ Microsoft Foundry and Azure ML are focusing on seamless model development and pr
 
 Windows ML updates show ongoing work to enable local AI inference using ONNX Runtime, supporting privacy and low-latency requirements, following previous guidance for regulated environments.
 
-- [Training and Deploying Reasoning Models with Microsoft Foundry and Azure ML](/ai/videos/Training-and-Deploying-Reasoning-Models-with-Microsoft-Foundry-and-Azure-ML)
+- [Training and Deploying Reasoning Models with Microsoft Foundry and Azure ML](/ai/videos/training-and-deploying-reasoning-models-with-microsoft-foundry-and-azure-ml)
 - [Debugging and Optimizing RAG Agents in Microsoft Foundry](https://devblogs.microsoft.com/foundry/how-to-debug-and-optimize-rag-agents-in-azure-ai-foundry/)
-- [Deploying Local AI Models in Enterprise with Windows ML](/ai/videos/Deploying-Local-AI-Models-in-Enterprise-with-Windows-ML)
+- [Deploying Local AI Models in Enterprise with Windows ML](/ai/videos/deploying-local-ai-models-in-enterprise-with-windows-ml)
 
 ### Microsoft Fabric: Enhanced AI and Data Engineering Capabilities
 
@@ -231,7 +239,7 @@ Following up on historical dataset modernization, this week’s content provides
 Further coverage shows Azure Databricks and SAP Business Data Cloud links for modern analytics, with stories about Delta Sharing, agent-based automation, and Power BI integrations that help connect disparate data sources and expand AI development.
 
 - [Continuous Data Quality Optimization for Better AI Output](https://dellenny.com/continuous-data-quality-optimization-for-ai-the-essential-guide/)
-- [Modern Data Analytics and AI with SAP Databricks on Azure](/ai/videos/Modern-Data-Analytics-and-AI-with-SAP-Databricks-on-Azure)
+- [Modern Data Analytics and AI with SAP Databricks on Azure](/ai/videos/modern-data-analytics-and-ai-with-sap-databricks-on-azure)
 
 ## Coding
 
@@ -244,7 +252,7 @@ After last week’s release of .NET 10, C# 14 and F# 10 introduce updated langua
 F# 10 introduces better warning suppression, enhanced property accessor features, and improved computation expressions and scripting performance. These changes support current tooling and offer hints at the direction for .NET 11’s continued compiler improvements.
 
 - [Introducing C# 14: New Language Features and .NET 10 Integration](https://devblogs.microsoft.com/dotnet/introducing-csharp-14/)
-- [What's New in C# 14 and .NET 10](/coding/videos/Whats-New-in-C-14-and-NET-10)
+- [What's New in C# 14 and .NET 10](/coding/videos/whats-new-in-c-14-and-net-10)
 - [Introducing F# 10: Language Features, Performance, and Tooling in .NET 10](https://devblogs.microsoft.com/dotnet/introducing-fsharp-10/)
 
 ### Visual Studio Family: Modernization, Productivity, and Secure Extension Management
@@ -260,8 +268,8 @@ Visual Studio Code 1.106 debuts the Private Marketplace, giving organizations be
 
 Windows updates this week address the needs of developers with tools for managing large projects. The Advanced Settings page and long path support resolve issues in handling more complex codebases. Integration with Git directly in File Explorer underlines Windows’ continuing commitment to supporting version control at the OS level.
 
-- [What's New in Windows Settings for Developers: Advanced Settings, Long Path Support, and Git Integration](/coding/videos/Whats-New-in-Windows-Settings-for-Developers-Advanced-Settings-Long-Path-Support-and-Git-Integration)
-- [What's New in Windows Settings for Developers: Advanced Settings, Long File Paths, and Git Integration](/coding/videos/Whats-New-in-Windows-Settings-for-Developers-Advanced-Settings-Long-File-Paths-and-Git-Integration)
+- [What's New in Windows Settings for Developers: Advanced Settings, Long Path Support, and Git Integration](/coding/videos/whats-new-in-windows-settings-for-developers-advanced-settings-long-path-support-and-git-integration)
+- [What's New in Windows Settings for Developers: Advanced Settings, Long File Paths, and Git Integration](/coding/videos/whats-new-in-windows-settings-for-developers-advanced-settings-long-file-paths-and-git-integration)
 
 ### Git 2.52: Version Control, Performance, and Migration
 
@@ -273,7 +281,7 @@ Git 2.52 brings further improvements for managing large and legacy repositories.
 
 Uno Platform continues the trend of AI-driven cross-platform development. Hot Design and Hot Reload for Studio, support for .NET 10, and Figma integration make it easier for designers and developers to work together and move from design to code more efficiently.
 
-- [Building Cross-Platform .NET Apps with Uno Platform and Contextual AI](/ai/videos/Building-Cross-Platform-NET-Apps-with-Uno-Platform-and-Contextual-AI)
+- [Building Cross-Platform .NET Apps with Uno Platform and Contextual AI](/ai/videos/building-cross-platform-net-apps-with-uno-platform-and-contextual-ai)
 
 ### Other Coding News
 
@@ -281,9 +289,9 @@ VS Code’s accessibility improvements build on earlier work, helping developers
 
 The .NET Conf Student Zone 2025 showcases the ongoing commitment to practical education, supporting upskilling with hands-on content.
 
-- [Accessibility in Visual Studio Code: Insights from Megan Rogge](/coding/videos/Accessibility-in-Visual-Studio-Code-Insights-from-Megan-Rogge)
+- [Accessibility in Visual Studio Code: Insights from Megan Rogge](/coding/videos/accessibility-in-visual-studio-code-insights-from-megan-rogge)
 - [Enhance Design-to-Code Collaboration with GitHub's Annotation Toolkit](https://github.blog/enterprise-software/collaboration/level-up-design-to-code-collaboration-with-githubs-open-source-annotation-toolkit/)
-- [.NET Conf Student Zone 2025](/ai/videos/NET-Conf-Student-Zone-2025)
+- [.NET Conf Student Zone 2025](/ai/videos/net-conf-student-zone-2025)
 
 ## DevOps
 
@@ -304,15 +312,15 @@ New guides detail CI/CD automation in Microsoft Fabric and how to unify .NET bui
 
 - [Automating Microsoft Fabric Deployments with Azure DevOps and Python](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-code-to-cloud-python-driven-microsoft-fabric-deployments/ba-p/4470447)
 - [Reinventing .NET Build and Release: Unified Build Approach](https://devblogs.microsoft.com/dotnet/reinventing-how-dotnet-builds-and-ships-again/)
-- [CVS Health’s Migration: Transforming Developer Experience with GitHub Actions](/devops/videos/CVS-Healths-Migration-Transforming-Developer-Experience-with-GitHub-Actions)
+- [CVS Health’s Migration: Transforming Developer Experience with GitHub Actions](/devops/videos/cvs-healths-migration-transforming-developer-experience-with-github-actions)
 - [Azure DevOps to GitHub Migration Playbook: A Step-by-Step Guide for Agentic DevOps](https://devblogs.microsoft.com/all-things-azure/azure-devops-to-github-migration-playbook-unlocking-agentic-devops/)
 
 ### Visual Studio Code: Private Marketplace and IT Governance
 
 The VS Code Private Marketplace provides better governance for organizations. Sessions on deployment and AI oversight reinforce responsible adoption and management, echoing previous efforts to streamline onboarding while maintaining control.
 
-- [VS Code Private Marketplace: Enterprise Control Meets Developer Speed](/azure/videos/VS-Code-Private-Marketplace-Enterprise-Control-Meets-Developer-Speed)
-- [Visual Studio Code Deployment and AI Governance for IT Pros](/ai/videos/Visual-Studio-Code-Deployment-and-AI-Governance-for-IT-Pros)
+- [VS Code Private Marketplace: Enterprise Control Meets Developer Speed](/azure/videos/vs-code-private-marketplace-enterprise-control-meets-developer-speed)
+- [Visual Studio Code Deployment and AI Governance for IT Pros](/ai/videos/visual-studio-code-deployment-and-ai-governance-for-it-pros)
 
 ### Observability, Monitoring, and Security in DevOps Pipelines
 
@@ -333,7 +341,7 @@ Coverage includes GenAI hackathons, the use of MLflow and Kubeflow, and observab
 New Azure DevOps integrations with Jira Service Management create connected, transparent lifecycle management, while coverage of outage response emphasizes best practices for reliability.
 
 - [Integrating Azure DevOps with Jira Service Management: Practical Approaches and Real-World Scenarios](https://techcommunity.microsoft.com/t5/azure/integrating-azure-devops-with-jira-service-management-real-world/m-p/4471605#M22340)
-- [Anatomy of an Outage: Evolving Transparency in Microsoft Engineering Teams](/azure/videos/Anatomy-of-an-Outage-Evolving-Transparency-in-Microsoft-Engineering-Teams)
+- [Anatomy of an Outage: Evolving Transparency in Microsoft Engineering Teams](/azure/videos/anatomy-of-an-outage-evolving-transparency-in-microsoft-engineering-teams)
 
 ### Other DevOps News
 
@@ -368,41 +376,41 @@ Microsoft also detailed its defense against a recent 15 Tbps DDoS attack, highli
 
 Microsoft Entra now manages “Agent ID” for non-human actors, supporting identity lifecycle management and mitigation for issues like prompt injection.
 
-- [Microsoft Entra: What's New in Secure Access on the AI Frontier](/ai/videos/Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier)
+- [Microsoft Entra: What's New in Secure Access on the AI Frontier](/ai/videos/microsoft-entra-whats-new-in-secure-access-on-the-ai-frontier)
 
 Best practices for securing AI agents with Microsoft Defender and in Microsoft Foundry add practical strategies for real-world risk management.
 
-- [Secure Your AI Agents with Microsoft Defender: Best Practices from Ignite 2025](/ai/videos/Secure-Your-AI-Agents-with-Microsoft-Defender-Best-Practices-from-Ignite-2025)
-- [Securing AI Agents in Microsoft Foundry with Microsoft Security](/ai/videos/Securing-AI-Agents-in-Microsoft-Foundry-with-Microsoft-Security)
+- [Secure Your AI Agents with Microsoft Defender: Best Practices from Ignite 2025](/ai/videos/secure-your-ai-agents-with-microsoft-defender-best-practices-from-ignite-2025)
+- [Securing AI Agents in Microsoft Foundry with Microsoft Security](/ai/videos/securing-ai-agents-in-microsoft-foundry-with-microsoft-security)
 
 Oasis introduces more comprehensive credential management for non-person entities in the Microsoft environment.
 
-- [Power Agentic Access: Governing Non-Human Identities with Oasis | Microsoft Ignite 2025](/ai/videos/Power-Agentic-Access-Governing-Non-Human-Identities-with-Oasis-Microsoft-Ignite-2025)
+- [Power Agentic Access: Governing Non-Human Identities with Oasis | Microsoft Ignite 2025](/ai/videos/power-agentic-access-governing-non-human-identities-with-oasis-microsoft-ignite-2025)
 
 Zenity's integration provides runtime monitoring and incident response support for agent workflows in Copilot, Studio, and Foundry.
 
-- [Securing the AI Agents with Zenity and Microsoft](/ai/videos/Securing-the-AI-Agents-with-Zenity-and-Microsoft)
+- [Securing the AI Agents with Zenity and Microsoft](/ai/videos/securing-the-ai-agents-with-zenity-and-microsoft)
 
 ### Microsoft Defender for Cloud and End-to-End Application Security
 
 Defender for Cloud expands support for risk management and AI-powered threat detection, including pipelines, with integration for live risk assessments and artifact tracking. Defender’s connection with GitHub Advanced Security aids in automating secure development practices.
 
-- [Defending Cloud Platforms: Unified Security with Microsoft Defender](/ai/videos/Defending-Cloud-Platforms-Unified-Security-with-Microsoft-Defender)
-- [Unified Application Security with Microsoft Defender for Cloud](/ai/videos/Unified-Application-Security-with-Microsoft-Defender-for-Cloud)
+- [Defending Cloud Platforms: Unified Security with Microsoft Defender](/ai/videos/defending-cloud-platforms-unified-security-with-microsoft-defender)
+- [Unified Application Security with Microsoft Defender for Cloud](/ai/videos/unified-application-security-with-microsoft-defender-for-cloud)
 - [Runtime Security and AI Fixes: Integrating GitHub Advanced Security with Defender for Cloud](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/security-where-it-matters-runtime-context-and-ai-fixes-now/ba-p/4470794)
 - [Unified Code-to-Cloud Artifact Risk Visibility with Microsoft Defender for Cloud in GitHub](https://github.blog/changelog/2025-11-18-unified-code-to-cloud-artifact-risk-visibility-with-microsoft-defender-for-cloud-now-in-public-preview)
 
 Security Copilot’s expanded role now includes Microsoft 365 E5, offering SIEM and XDR coverage plus automated PR remediation with Copilot Autofix. New artifact tracking and shielding cover legacy environments as well.
 
 - [AI-Driven Security Agents Now in Microsoft 365 E5: Security Copilot Integration and Expansion](https://www.microsoft.com/en-us/security/blog/2025/11/18/agents-built-into-your-workflow-get-security-copilot-with-microsoft-365-e5/)
-- [Security Copilot: Automating and Accelerating Defense with Agentic Workflows](/ai/videos/Security-Copilot-Automating-and-Accelerating-Defense-with-Agentic-Workflows)
-- [AI-Powered Endpoint Security Updates in Microsoft Defender](/ai/videos/AI-Powered-Endpoint-Security-Updates-in-Microsoft-Defender)
+- [Security Copilot: Automating and Accelerating Defense with Agentic Workflows](/ai/videos/security-copilot-automating-and-accelerating-defense-with-agentic-workflows)
+- [AI-Powered Endpoint Security Updates in Microsoft Defender](/ai/videos/ai-powered-endpoint-security-updates-in-microsoft-defender)
 
 ### Comprehensive Governance for Data, Secrets, and Identity
 
 Secrets management and identity rotation benefit from new technical guides for secure Azure Authentication and OIDC, bringing programmatic security best practices into DevOps pipelines.
 
-- [Secure Secrets, Certificate, and Access Management for Azure](/azure/videos/Secure-Secrets-Certificate-and-Access-Management-for-Azure)
+- [Secure Secrets, Certificate, and Access Management for Azure](/azure/videos/secure-secrets-certificate-and-access-management-for-azure)
 
 Microsoft Fabric has introduced finer-grained data permissions, offering write access at the folder and table levels, as well as assignment capabilities in the UI.
 
@@ -431,19 +439,19 @@ MLSecOps and prompt security guidance now includes support for PromptGuard 2, Co
 
 Sentinel’s Data Lake feature supports larger-scale case management, while custom agent tools and marketplace integrations provide flexible automation paths. Blink micro-agents and Copilot support remediation action; SAP support adds industry application.
 
-- [Power Agentic Defense with Microsoft Sentinel: Scalable Security Operations with AI, Data Lake, and Graph Intelligence](/ai/videos/Power-Agentic-Defense-with-Microsoft-Sentinel-Scalable-Security-Operations-with-AI-Data-Lake-and-Graph-Intelligence)
-- [Sentinel Alert to Autonomous Action: Controlled AI Response Framework](/ai/videos/Sentinel-Alert-to-Autonomous-Action-Controlled-AI-Response-Framework)
-- [Microsoft Sentinel Solution for SAP: Automated Asset Classification and Incident Response](/security/videos/Microsoft-Sentinel-Solution-for-SAP-Automated-Asset-Classification-and-Incident-Response)
+- [Power Agentic Defense with Microsoft Sentinel: Scalable Security Operations with AI, Data Lake, and Graph Intelligence](/ai/videos/power-agentic-defense-with-microsoft-sentinel-scalable-security-operations-with-ai-data-lake-and-graph-intelligence)
+- [Sentinel Alert to Autonomous Action: Controlled AI Response Framework](/ai/videos/sentinel-alert-to-autonomous-action-controlled-ai-response-framework)
+- [Microsoft Sentinel Solution for SAP: Automated Asset Classification and Incident Response](/security/videos/microsoft-sentinel-solution-for-sap-automated-asset-classification-and-incident-response)
 
 Privacy programs benefit from Copilot integration, automating many aspects of policy compliance.
 
-- [Use AI Agents to Scale Privacy Programs with Microsoft Sentinel](/ai/videos/Use-AI-Agents-to-Scale-Privacy-Programs-with-Microsoft-Sentinel)
+- [Use AI Agents to Scale Privacy Programs with Microsoft Sentinel](/ai/videos/use-ai-agents-to-scale-privacy-programs-with-microsoft-sentinel)
 
 ### Policy, Compliance, and Governance Workflows
 
 Azure Policy now includes Service Groups, in-guest policies, and natural language authoring via Copilot, bringing automated compliance workflow support to more teams.
 
-- [Build Secure Applications with Azure Policy and Service Groups](/ai/videos/Build-Secure-Applications-with-Azure-Policy-and-Service-Groups)
+- [Build Secure Applications with Azure Policy and Service Groups](/ai/videos/build-secure-applications-with-azure-policy-and-service-groups)
 
 CIS Benchmarks are built-in and available for Azure-endorsed Linux, supporting compliance in hybrid and multi-cloud environments.
 
@@ -453,7 +461,7 @@ CIS Benchmarks are built-in and available for Azure-endorsed Linux, supporting c
 
 Continuous integration for security tools connects policy and evidence tracking throughout the code lifecycle, continuing recent efforts at automation and visibility.
 
-- [Elevate DevEx 2.0 with Continuous Security Across the SDLC](/ai/videos/Elevate-DevEx-20-with-Continuous-Security-Across-the-SDLC)
+- [Elevate DevEx 2.0 with Continuous Security Across the SDLC](/ai/videos/elevate-devex-20-with-continuous-security-across-the-sdlc)
 
 Lifecycle coverage for .NET apps emphasizes paying for support after EOL, helping teams plan for service windows closing.
 
@@ -469,28 +477,28 @@ Developments in adversarial AI defense, led by Microsoft and NVIDIA, continue to
 
 Updates in email and collaboration security, including Defender for Office 365 and agent-based controls, offer additional automation for new threat types.
 
-- [Securing Email and Collaboration with Microsoft Defender for Office 365 and Agentic AI](/2025-11-21-Securing-Email-and-Collaboration-with-Microsoft-Defender-for-Office-365-and-AI.html)
+- [Securing Email and Collaboration with Microsoft Defender for Office 365 and Agentic AI](/securing-email-and-collaboration-with-microsoft-defender-for-office-365-and-ai)
 
 Endpoint and Windows security updates offer improvements in device administration, quantum-ready certificates, and patching, making security easier to manage in production.
 
-- [Inside Windows Security from Client to Cloud: Innovations in Windows 11 and Windows 365 | BRK258](/security/videos/Inside-Windows-Security-from-Client-to-Cloud-Innovations-in-Windows-11-and-Windows-365-BRK258)
+- [Inside Windows Security from Client to Cloud: Innovations in Windows 11 and Windows 365 | BRK258](/security/videos/inside-windows-security-from-client-to-cloud-innovations-in-windows-11-and-windows-365-brk258)
 
 Further resources for this week span cross-platform security integration, data protection, and modern architecture best practices:
 
-- [Secure the Modern Enterprise with Varonis and Microsoft Integration](/ai/videos/Secure-the-Modern-Enterprise-with-Varonis-and-Microsoft-Integration)
-- [Bolster Your Data Security in the AI Era with Microsoft and Netskope](/security/videos/Bolster-Your-Data-Security-in-the-AI-Era-with-Microsoft-and-Netskope)
-- [Level up Microsoft security for insider threats](/security/videos/Level-up-Microsoft-security-for-insider-threats)
-- [Blueprint for Building the SOC of the Future](/ai/videos/Blueprint-for-Building-the-SOC-of-the-Future)
-- [Preventing Data Exfiltration with Microsoft Purview's Layered Protection Strategy](/ai/videos/Preventing-Data-Exfiltration-with-Microsoft-Purviews-Layered-Protection-Strategy)
-- [Comprehensive Data Security and Governance in AI Workloads with Microsoft Purview](/ai/videos/Comprehensive-Data-Security-and-Governance-in-AI-Workloads-with-Microsoft-Purview)
-- [Envision Next Generation DLP with Microsoft Purview and Copilot](/ai/videos/Envision-Next-Generation-DLP-with-Microsoft-Purview-and-Copilot)
-- [Data Protection in the Age of the Adversary: Accelerating Microsoft Purview Adoption](/ai/videos/Data-Protection-in-the-Age-of-the-Adversary-Accelerating-Microsoft-Purview-Adoption)
-- [Maximizing Microsoft Purview Data Security Solutions: Best Practices and Implementation Stories](/security/videos/Maximizing-Microsoft-Purview-Data-Security-Solutions-Best-Practices-and-Implementation-Stories)
-- [Enhancing Data Security Investigations with Microsoft Purview and AI](/ai/videos/Enhancing-Data-Security-Investigations-with-Microsoft-Purview-and-AI)
-- [End-to-End Security for AI Platforms, Apps, and Agents](/ai/videos/End-to-End-Security-for-AI-Platforms-Apps-and-Agents)
-- [NIST Zero Trust with Forescout and Microsoft](/security/videos/NIST-Zero-Trust-with-Forescout-and-Microsoft)
-- [Active Directory Disaster Recovery: Modern Approaches for Secure Forest Restoration](/2025-11-19-Active-Directory-Disaster-Recovery-Modern-Approaches-for-Secure-Forest-Estoration.html)
-- [Building Secure-By-Design Environments with Azure Capabilities](/azure/videos/Building-Secure-By-Design-Environments-with-Azure-Capabilities)
+- [Secure the Modern Enterprise with Varonis and Microsoft Integration](/ai/videos/secure-the-modern-enterprise-with-varonis-and-microsoft-integration)
+- [Bolster Your Data Security in the AI Era with Microsoft and Netskope](/security/videos/bolster-your-data-security-in-the-ai-era-with-microsoft-and-netskope)
+- [Level up Microsoft security for insider threats](/security/videos/level-up-microsoft-security-for-insider-threats)
+- [Blueprint for Building the SOC of the Future](/ai/videos/blueprint-for-building-the-soc-of-the-future)
+- [Preventing Data Exfiltration with Microsoft Purview's Layered Protection Strategy](/ai/videos/preventing-data-exfiltration-with-microsoft-purviews-layered-protection-strategy)
+- [Comprehensive Data Security and Governance in AI Workloads with Microsoft Purview](/ai/videos/comprehensive-data-security-and-governance-in-ai-workloads-with-microsoft-purview)
+- [Envision Next Generation DLP with Microsoft Purview and Copilot](/ai/videos/envision-next-generation-dlp-with-microsoft-purview-and-copilot)
+- [Data Protection in the Age of the Adversary: Accelerating Microsoft Purview Adoption](/ai/videos/data-protection-in-the-age-of-the-adversary-accelerating-microsoft-purview-adoption)
+- [Maximizing Microsoft Purview Data Security Solutions: Best Practices and Implementation Stories](/security/videos/maximizing-microsoft-purview-data-security-solutions-best-practices-and-implementation-stories)
+- [Enhancing Data Security Investigations with Microsoft Purview and AI](/ai/videos/enhancing-data-security-investigations-with-microsoft-purview-and-ai)
+- [End-to-End Security for AI Platforms, Apps, and Agents](/ai/videos/end-to-end-security-for-ai-platforms-apps-and-agents)
+- [NIST Zero Trust with Forescout and Microsoft](/security/videos/nist-zero-trust-with-forescout-and-microsoft)
+- [Active Directory Disaster Recovery: Modern Approaches for Secure Forest Restoration](/active-directory-disaster-recovery-modern-approaches-for-secure-forest-estoration)
+- [Building Secure-By-Design Environments with Azure Capabilities](/azure/videos/building-secure-by-design-environments-with-azure-capabilities)
 - [Managing .NET Support Lifecycles: Why Paying for Post-EOL Support Is Practical](https://andrewlock.net/companies-using-dotnet-need-to-suck-it-up-and-pay-for-support/)
 - [Setting Up Security Policies in Microsoft 365 Trial Tenants](https://dellenny.com/how-to-set-up-basic-security-policies-in-a-microsoft-365-trial-tenant/)
 - [Setting Up Ransomware Protection in Windows 11: Step-by-Step Guide](https://dellenny.com/setting-up-ransomware-protection-in-windows-11-a-simple-and-complete-guide/)

@@ -23,6 +23,10 @@ tags:
 - Scalability
 - Tool Integration
 - VS
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

@@ -17,6 +17,8 @@ tags:
 - TypeScript
 - Union Types
 - VS Live
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

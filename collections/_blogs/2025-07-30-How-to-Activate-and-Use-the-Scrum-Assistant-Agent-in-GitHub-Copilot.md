@@ -23,6 +23,10 @@ tags:
 - Team Collaboration
 - User Stories
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - devops

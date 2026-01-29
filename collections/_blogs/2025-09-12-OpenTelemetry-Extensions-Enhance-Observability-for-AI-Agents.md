@@ -29,6 +29,9 @@ tags:
 - Telemetry Data
 - Time Series Analysis
 - Time Series Data Analysis
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

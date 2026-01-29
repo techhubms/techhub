@@ -32,6 +32,8 @@ tags:
 - Telemetry Automation
 - Telemetry Management
 - Telemetry Orchestration
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

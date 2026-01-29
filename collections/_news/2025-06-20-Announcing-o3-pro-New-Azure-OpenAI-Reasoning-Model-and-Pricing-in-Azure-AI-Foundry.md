@@ -19,6 +19,9 @@ tags:
 - Responses API
 - Responsible AI
 - Structured Output
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

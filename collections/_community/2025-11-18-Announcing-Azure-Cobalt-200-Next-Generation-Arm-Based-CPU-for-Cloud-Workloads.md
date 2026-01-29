@@ -24,6 +24,9 @@ tags:
 - System On Chip
 - TSMC 3nm
 - Virtual Machines
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

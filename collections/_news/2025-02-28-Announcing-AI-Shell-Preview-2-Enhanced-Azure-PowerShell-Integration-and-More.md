@@ -20,6 +20,11 @@ tags:
 - OpenAI Compatible Models
 - PowerShell
 - Windows Terminal
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

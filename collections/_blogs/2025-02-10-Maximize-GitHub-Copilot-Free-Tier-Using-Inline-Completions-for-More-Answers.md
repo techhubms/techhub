@@ -17,6 +17,9 @@ tags:
 - Neovim
 - Productivity Tips
 - VS Code
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

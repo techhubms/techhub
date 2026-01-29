@@ -19,6 +19,9 @@ tags:
 - Sync Reliability
 - Windows Integration
 - Workspace Management
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

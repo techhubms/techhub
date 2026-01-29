@@ -20,6 +20,10 @@ tags:
 - Terraform
 - Version Control
 - Virtual Network
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

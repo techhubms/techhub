@@ -15,6 +15,10 @@ tags:
 - Public Spaces
 - Role Based Access Control
 - Workflow Integration
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

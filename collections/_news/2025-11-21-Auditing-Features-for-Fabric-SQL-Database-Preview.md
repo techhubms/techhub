@@ -18,6 +18,10 @@ tags:
 - Role Based Access
 - SOX
 - T SQL
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

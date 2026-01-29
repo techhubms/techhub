@@ -28,6 +28,9 @@ tags:
 - Social X
 - Synthetic Data
 - Synthetic Data Testing
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

@@ -23,6 +23,10 @@ tags:
 - SKU Awareness
 - Streaming Data
 - Troubleshooting
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

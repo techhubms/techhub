@@ -21,6 +21,9 @@ tags:
 - UI Simplification
 - User Experience
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

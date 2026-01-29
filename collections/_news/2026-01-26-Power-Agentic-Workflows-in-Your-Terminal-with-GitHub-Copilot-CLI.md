@@ -21,6 +21,10 @@ tags:
 - Repository Management
 - Scripting
 - Terminal Tools
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

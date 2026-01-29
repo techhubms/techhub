@@ -20,6 +20,8 @@ tags:
 - Software Development
 - Source Generators
 - Sourcegenerators
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

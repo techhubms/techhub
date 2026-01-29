@@ -19,6 +19,10 @@ tags:
 - Pipelines
 - Repository Structure
 - YAML Pipelines
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

@@ -16,6 +16,10 @@ tags:
 - Pulumi
 - Service Discovery
 - Terraform
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

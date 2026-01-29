@@ -12,6 +12,11 @@ tags:
 - MCP
 - Productivity
 - Use Cases
+- AI
+- GitHub Copilot
+- DevOps
+- Coding
+- News
 section_names:
 - ai
 - github-copilot

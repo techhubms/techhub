@@ -18,6 +18,8 @@ tags:
 - OpenAI
 - Power Platform
 - Release Announcement
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

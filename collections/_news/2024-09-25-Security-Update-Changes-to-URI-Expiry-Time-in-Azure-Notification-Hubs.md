@@ -15,6 +15,9 @@ tags:
 - Push Notifications
 - Security Update
 - URI Expiry
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

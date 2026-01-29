@@ -20,6 +20,11 @@ tags:
 - Terraform
 - Thought Leadership
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

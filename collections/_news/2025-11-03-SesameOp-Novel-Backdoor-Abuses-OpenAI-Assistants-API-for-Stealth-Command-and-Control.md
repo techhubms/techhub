@@ -21,6 +21,9 @@ tags:
 - SesameOp
 - Threat Intelligence
 - VS
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

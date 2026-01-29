@@ -24,6 +24,10 @@ tags:
 - Security Store
 - SIEM
 - Threat Hunting
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

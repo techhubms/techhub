@@ -16,6 +16,9 @@ tags:
 - Software Delivery
 - Software Dependencies
 - Supply Chain Security
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security
@@ -63,7 +66,7 @@ Security posture is never static; it’s an evolving effort that requires vigila
 
 I have made **all my slides** from the session available in PDF format for anyone who wishes to explore the details and access all links discussed during the presentation:
 
-- [Slides: DevCon Romania 2024 - Protect yourself against supply chain attacks (PDF)](/slides/20241107_DevCon.ro-Protect-yourself-against-supply-chain-attacks.pdf)
+- [Slides: DevCon Romania 2024 - Protect yourself against supply chain attacks (PDF)](/slides/20241107_devcon.ro-protect-yourself-against-supply-chain-attacks.pdf)
 
 ## Stay Connected
 

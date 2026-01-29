@@ -15,6 +15,9 @@ tags:
 - Microservices
 - Secrets Management
 - SecureString
+- DevOps
+- Security
+- Community
 section_names:
 - devops
 - security

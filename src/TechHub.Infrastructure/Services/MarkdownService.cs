@@ -41,24 +41,29 @@ public class MarkdownService : IMarkdownService
     /// Parse YAML frontmatter from markdown file
     /// Reads file and extracts frontmatter metadata
     /// </summary>
-    public async Task<Dictionary<string, object>> ParseFrontMatterAsync(
+    public async Task<Dictionary<string, object?>> ParseFrontMatterAsync(
         string filePath,
         CancellationToken cancellationToken = default)
     {
         var content = await File.ReadAllTextAsync(filePath, cancellationToken);
         var parser = new FrontMatterParser();
-        var (frontMatter, _) = parser.Parse(content);
-        return frontMatter;
+        var result = parser.Parse(content);
+        return result.FrontMatter;
     }
 
     /// <summary>
     /// Convert markdown to HTML
     /// </summary>
     /// <param name="markdown">Raw markdown content</param>
-    /// <param name="currentPagePath">Current page path for fixing hash-only links (needed for Blazor routing)</param>
     /// <returns>Rendered HTML with properly formatted links</returns>
-    public string RenderToHtml(string markdown, string? currentPagePath = null)
+    /// <remarks>
+    /// Hash-only links (#section) are preserved as-is and handled client-side by JavaScript
+    /// in nav-helpers.js which converts them to full URL navigation.
+    /// </remarks>
+    public string RenderToHtml(string markdown)
     {
+        ArgumentNullException.ThrowIfNull(markdown);
+
         if (string.IsNullOrWhiteSpace(markdown))
         {
             return string.Empty;
@@ -66,12 +71,6 @@ public class MarkdownService : IMarkdownService
 
         try
         {
-            // Preprocess: Rewrite hash-only links for Blazor routing
-            if (!string.IsNullOrEmpty(currentPagePath))
-            {
-                markdown = PreprocessMarkdownLinks(markdown, currentPagePath);
-            }
-
             // Render markdown to HTML using shared pipeline
             var html = Markdown.ToHtml(markdown, _pipeline);
 
@@ -85,58 +84,9 @@ public class MarkdownService : IMarkdownService
             // Add context to Markdig exceptions to help identify problematic content
             var preview = markdown.Length > 200 ? markdown[..200] + "..." : markdown;
             throw new InvalidOperationException(
-                $"Failed to render markdown to HTML. CurrentPagePath: '{currentPagePath}'. Markdown preview: {preview}",
+                $"Failed to render markdown to HTML. Markdown preview: {preview}",
                 ex);
         }
-    }
-
-    /// <summary>
-    /// Preprocess markdown to rewrite hash-only links before rendering
-    /// </summary>
-    private static string PreprocessMarkdownLinks(string markdown, string? currentPagePath)
-    {
-        // Pattern to match markdown links: [text](url) or [text](url "title")
-        var linkPattern = @"\[([^\]]+)\]\(([^\s)]+)(?:\s+""([^""]*)"")?\)";
-
-        return System.Text.RegularExpressions.Regex.Replace(markdown, linkPattern, match =>
-        {
-            var text = match.Groups[1].Value;
-            var url = match.Groups[2].Value;
-            var title = match.Groups[3].Success ? match.Groups[3].Value : null;
-
-            // Rewrite URL (only hash-only links)
-            var rewrittenUrl = RewriteUrl(url, currentPagePath);
-
-            // Rebuild markdown link
-            var result = $"[{text}]({rewrittenUrl}";
-            if (!string.IsNullOrEmpty(title))
-            {
-                result += $" \"{title}\"";
-            }
-
-            result += ")";
-
-            return result;
-        });
-    }
-
-    /// <summary>
-    /// Rewrite hash-only links to include current page path (for Blazor routing)
-    /// </summary>
-    private static string RewriteUrl(string url, string? currentPagePath)
-    {
-        // Hash-only links (#heading) - prepend current page path
-        if (url.StartsWith('#') && !string.IsNullOrEmpty(currentPagePath))
-        {
-            return $"{currentPagePath}{url}";
-        }
-
-        // Note: .html link rewriting is handled by ContentFixer at build time
-        // ContentFixer looks up actual article location by slug and rewrites to /section/collection/slug
-        // This ensures links always point to the correct section/collection
-
-        // No changes needed
-        return url;
     }
 
     /// <summary>
@@ -212,6 +162,8 @@ public class MarkdownService : IMarkdownService
     /// <returns>Excerpt text (plain text, not HTML)</returns>
     public string ExtractExcerpt(string markdown, int maxLength = 1000)
     {
+        ArgumentNullException.ThrowIfNull(markdown);
+
         if (string.IsNullOrWhiteSpace(markdown))
         {
             return string.Empty;
@@ -249,6 +201,8 @@ public class MarkdownService : IMarkdownService
     /// <returns>HTML with YouTube embeds replaced with iframe HTML</returns>
     public string ProcessYouTubeEmbeds(string html)
     {
+        ArgumentNullException.ThrowIfNull(html);
+
         if (string.IsNullOrWhiteSpace(html))
         {
             return string.Empty;

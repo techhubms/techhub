@@ -19,6 +19,8 @@ tags:
 - SharePoint
 - SharePoint Search
 - User Training
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

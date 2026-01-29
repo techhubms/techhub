@@ -25,6 +25,8 @@ tags:
 - ORM
 - Performance
 - Trade Offs
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

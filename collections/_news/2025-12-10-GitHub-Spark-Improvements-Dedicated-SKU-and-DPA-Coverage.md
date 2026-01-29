@@ -20,6 +20,9 @@ tags:
 - SKU Billing
 - UI Enhancement
 - Visual App Quality
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

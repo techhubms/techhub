@@ -24,6 +24,8 @@ tags:
 - Template
 - WASM
 - WebAssembly
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

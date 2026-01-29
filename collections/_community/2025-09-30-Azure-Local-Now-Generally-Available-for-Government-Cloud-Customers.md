@@ -25,6 +25,9 @@ tags:
 - Trusted Launch
 - Virtual Machines
 - Vtpm
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

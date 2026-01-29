@@ -23,6 +23,11 @@ tags:
 - Networking
 - Parameter Files
 - Platform Landing Zone
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

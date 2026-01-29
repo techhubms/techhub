@@ -20,6 +20,8 @@ tags:
 - Software Ecosystem
 - Sponsorship
 - Tidelift
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

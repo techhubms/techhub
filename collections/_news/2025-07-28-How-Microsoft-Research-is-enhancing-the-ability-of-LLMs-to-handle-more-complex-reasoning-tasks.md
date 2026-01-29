@@ -16,6 +16,8 @@ tags:
 - Microsoft Research
 - Natural Language Processing
 - Problem Solving
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

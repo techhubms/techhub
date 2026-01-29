@@ -19,6 +19,10 @@ tags:
 - Test Automation
 - Test Coverage
 - Unit Testing
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

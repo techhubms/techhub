@@ -24,6 +24,11 @@ tags:
 - SAP Integration
 - SQL Server
 - Zero ETL
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

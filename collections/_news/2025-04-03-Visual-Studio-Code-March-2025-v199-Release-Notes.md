@@ -20,6 +20,9 @@ tags:
 - Source Control
 - Terminal IntelliSense
 - VS Code
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

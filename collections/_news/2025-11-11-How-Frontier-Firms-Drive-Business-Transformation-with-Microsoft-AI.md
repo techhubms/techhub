@@ -23,6 +23,9 @@ tags:
 - Manufacturing
 - Microsoft AI
 - Retail AI
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

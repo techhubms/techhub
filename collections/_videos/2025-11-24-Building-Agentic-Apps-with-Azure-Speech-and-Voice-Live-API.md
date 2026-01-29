@@ -24,6 +24,9 @@ tags:
 - Real Time Voice
 - Voice Assistant
 - Voice Live API
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

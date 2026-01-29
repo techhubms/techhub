@@ -20,6 +20,10 @@ tags:
 - Prompt Engineering
 - Subagents
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

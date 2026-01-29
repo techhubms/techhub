@@ -22,6 +22,9 @@ tags:
 - MSIgnite
 - Multi Agent Systems
 - Service Delivery
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

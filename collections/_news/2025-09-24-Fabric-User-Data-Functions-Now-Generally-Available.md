@@ -20,6 +20,10 @@ tags:
 - Python
 - User Data Functions
 - VS Code
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

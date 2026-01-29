@@ -25,6 +25,11 @@ tags:
 - SLA Monitoring
 - Spark Streaming
 - VS Code Devcontainer
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

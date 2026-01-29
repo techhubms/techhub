@@ -18,6 +18,9 @@ tags:
 - RSS Subscription
 - Tech Community
 - Technical Blogging
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

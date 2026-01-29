@@ -23,6 +23,9 @@ tags:
 - OpenAI
 - Platform as A Service
 - Workflow Automation
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

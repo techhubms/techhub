@@ -19,6 +19,9 @@ tags:
 - Regulatory Standards
 - Security Best Practices
 - Security Compliance
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

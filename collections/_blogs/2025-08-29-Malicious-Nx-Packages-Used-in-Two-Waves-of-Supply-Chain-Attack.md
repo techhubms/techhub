@@ -28,6 +28,10 @@ tags:
 - Token Leakage
 - Trusted Publisher
 - Wiz
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

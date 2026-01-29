@@ -34,6 +34,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Vibecoding
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

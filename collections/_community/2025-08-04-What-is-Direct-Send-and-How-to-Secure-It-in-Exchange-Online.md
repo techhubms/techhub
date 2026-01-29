@@ -16,6 +16,8 @@ tags:
 - PowerShell
 - Threat Explorer
 - Transport Rules
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -15,6 +15,8 @@ tags:
 - Programming
 - Social Network Features
 - UI Design
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

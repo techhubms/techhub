@@ -19,6 +19,10 @@ tags:
 - Web Development
 - Work From Home
 - YAML Pipelines
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

@@ -18,6 +18,9 @@ tags:
 - Platform Diffusion
 - Project Red Dog
 - Satya Nadella
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

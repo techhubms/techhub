@@ -20,6 +20,10 @@ tags:
 - Deployment Automation
 - Production Rollback
 - Restoration Workflow
+- Azure
+- DevOps
+- Machine Learning
+- Community
 section_names:
 - azure
 - devops

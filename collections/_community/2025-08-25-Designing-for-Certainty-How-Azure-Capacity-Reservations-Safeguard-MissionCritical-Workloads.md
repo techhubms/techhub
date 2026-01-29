@@ -20,6 +20,9 @@ tags:
 - VM SKU
 - Workload Placement
 - Zonal Reservations
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

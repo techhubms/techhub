@@ -21,6 +21,9 @@ tags:
 - TLS
 - Trusted Root CA
 - Validity Period
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

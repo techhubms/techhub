@@ -22,6 +22,9 @@ tags:
 - PSTN Connectivity
 - Service Provisioning
 - Unified Communications
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

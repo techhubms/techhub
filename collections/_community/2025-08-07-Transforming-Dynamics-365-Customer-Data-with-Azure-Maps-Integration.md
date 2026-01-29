@@ -25,6 +25,8 @@ tags:
 - Sales Productivity
 - Service Management
 - Spatial Analytics
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

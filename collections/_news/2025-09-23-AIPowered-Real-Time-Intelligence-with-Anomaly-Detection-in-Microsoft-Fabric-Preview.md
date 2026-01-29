@@ -18,6 +18,10 @@ tags:
 - Real Time Intelligence
 - Streaming Data
 - Teams Integration
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

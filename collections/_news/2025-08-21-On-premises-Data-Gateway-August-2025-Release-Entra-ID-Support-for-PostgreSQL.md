@@ -19,6 +19,10 @@ tags:
 - PostgreSQL
 - Power BI
 - Power BI Desktop
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

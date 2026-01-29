@@ -22,6 +22,9 @@ tags:
 - Scout
 - Student Support
 - UNSW
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -26,6 +26,10 @@ tags:
 - Microsoft Sentinel
 - Operational Technology
 - Real Time Intelligence
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

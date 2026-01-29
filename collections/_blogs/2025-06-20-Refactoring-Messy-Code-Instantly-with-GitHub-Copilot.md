@@ -14,6 +14,9 @@ tags:
 - Developer Productivity
 - Software Engineering
 - Workflow Optimization
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

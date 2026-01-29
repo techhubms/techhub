@@ -14,6 +14,8 @@ tags:
 - Model Context
 - Real Time Processing
 - Semantic Kernel
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

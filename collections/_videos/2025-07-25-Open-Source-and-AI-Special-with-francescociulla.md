@@ -15,6 +15,9 @@ tags:
 - Practical AI
 - Relevant Skills
 - Software Development
+- AI
+- DevOps
+- Videos
 section_names:
 - ai
 - devops

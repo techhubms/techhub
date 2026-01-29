@@ -18,6 +18,10 @@ tags:
 - Migration
 - PowerShell
 - Resiliency
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

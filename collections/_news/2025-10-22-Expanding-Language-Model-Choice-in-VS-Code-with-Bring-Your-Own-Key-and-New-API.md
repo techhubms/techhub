@@ -22,6 +22,10 @@ tags:
 - OpenAI Compatible
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding
@@ -74,7 +78,7 @@ Developers can integrate their own models by referencing the [Language Model Cha
 
 Support is available for custom OpenAI-compatible providers using the dedicated OpenAI Compatible provider within VS Code Insiders. This allows configuration for any compatible endpoint and explicit model/tool mapping via the `github.copilot.chat.customOAIModels` setting.
 
-![Managing OpenAI-Compatible Models in VS Code](/assets/blogs/2025/10/22/manage-openai-compatible.png)
+![Managing OpenAI-Compatible Models in VS Code](/assets/blogs/manage-openai-compatible.png)
 
 ## Looking Ahead
 

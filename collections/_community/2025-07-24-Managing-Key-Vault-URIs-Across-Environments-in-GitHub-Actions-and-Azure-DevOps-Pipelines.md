@@ -17,6 +17,10 @@ tags:
 - Secrets Management
 - Service Principal
 - YAML Pipelines
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

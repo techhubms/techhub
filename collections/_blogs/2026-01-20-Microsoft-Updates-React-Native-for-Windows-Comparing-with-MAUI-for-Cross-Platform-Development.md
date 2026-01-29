@@ -22,6 +22,8 @@ tags:
 - React Native
 - React Native Windows
 - TypeScript
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

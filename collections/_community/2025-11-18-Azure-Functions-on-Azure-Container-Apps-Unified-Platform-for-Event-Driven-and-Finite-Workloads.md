@@ -22,6 +22,11 @@ tags:
 - Queue Storage
 - Serverless
 - Stream Processing
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Community
 section_names:
 - azure
 - coding

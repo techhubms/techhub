@@ -22,6 +22,8 @@ tags:
 - Update Management
 - Version Control
 - Virtualization
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

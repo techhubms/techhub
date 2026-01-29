@@ -16,6 +16,8 @@ tags:
 - Disaster Recovery
 - Microsoft
 - Microsoft Azure
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

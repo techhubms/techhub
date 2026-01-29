@@ -23,6 +23,9 @@ tags:
 - Risk Management
 - Security Dashboard
 - Threat Protection
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

@@ -15,6 +15,9 @@ tags:
 - Test Management
 - Test Plan
 - Test Results
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

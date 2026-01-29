@@ -16,6 +16,10 @@ tags:
 - Public Preview
 - SCIM
 - User Management
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

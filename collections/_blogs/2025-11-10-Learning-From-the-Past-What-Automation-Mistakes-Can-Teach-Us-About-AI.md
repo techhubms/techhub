@@ -25,6 +25,9 @@ tags:
 - Social X
 - Technology Adoption
 - Techstrong Council
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

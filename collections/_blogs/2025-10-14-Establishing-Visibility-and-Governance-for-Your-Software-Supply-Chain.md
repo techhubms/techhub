@@ -39,6 +39,9 @@ tags:
 - VEX
 - Vulnerability Management
 - Vulnerability Prioritization
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

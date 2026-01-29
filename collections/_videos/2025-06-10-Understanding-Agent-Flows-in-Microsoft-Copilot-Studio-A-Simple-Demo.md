@@ -20,6 +20,8 @@ tags:
 - Power Platform
 - Task Automation
 - Workflow Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

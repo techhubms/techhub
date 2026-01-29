@@ -13,17 +13,17 @@ public class ContentItemBuilder
     private string _author = "Test Author";
     private long _dateEpoch = 1735689600; // 2025-01-01 00:00:00 UTC
     private string _collectionName = "news";
-    private string? _subcollectionName;
+    private string? _subcollectionName = null;
     private string _primarySectionName = "github-copilot";
     private string _feedName = "Test Feed";
     private IReadOnlyList<string> _tags = ["AI", "GitHub Copilot", "Test Tag"];
     private string _excerpt = "Test excerpt";
     private string _externalUrl = "https://dummy";
-    private string? _content;
-    private string? _renderedHtml;
-    private IReadOnlyList<string>? _plans;
-    private bool _ghesSupport;
-    private bool _draft;
+    private string _content = "# Test Content\n\nTest markdown content.";
+    private string? _renderedHtml = null;
+    private IReadOnlyList<string>? _plans = [];
+    private bool _ghesSupport = false;
+    private bool _draft = false;
 
     public ContentItemBuilder WithSlug(string slug)
     {
@@ -97,8 +97,9 @@ public class ContentItemBuilder
         return this;
     }
 
-    public ContentItemBuilder WithContent(string? content)
+    public ContentItemBuilder WithContent(string content)
     {
+        ArgumentNullException.ThrowIfNull(content);
         _content = content;
         return this;
     }
@@ -129,7 +130,12 @@ public class ContentItemBuilder
 
     public ContentItem Build()
     {
-        return new ContentItem(
+        // Convert plans list to CSV string for constructor
+        var plansString = _plans != null && _plans.Count > 0
+            ? string.Join(",", _plans)
+            : null;
+
+        var contentItem = new ContentItem(
             slug: _slug,
             title: _title,
             author: _author,
@@ -137,15 +143,22 @@ public class ContentItemBuilder
             collectionName: _collectionName,
             feedName: _feedName,
             primarySectionName: _primarySectionName,
-            tags: _tags,
             excerpt: _excerpt,
             externalUrl: _externalUrl,
             draft: _draft,
-            subcollectionName: _subcollectionName,
-            plans: _plans,
-            ghesSupport: _ghesSupport,
             content: _content,
-            renderedHtml: _renderedHtml
+            subcollectionName: _subcollectionName,
+            plans: plansString,
+            ghesSupport: _ghesSupport
         );
+
+        contentItem.SetTags(_tags);
+
+        if (_renderedHtml != null)
+        {
+            contentItem.SetRenderedHtml(_renderedHtml);
+        }
+
+        return contentItem;
     }
 }

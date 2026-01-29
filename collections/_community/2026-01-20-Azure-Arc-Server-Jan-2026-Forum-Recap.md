@@ -19,6 +19,8 @@ tags:
 - SQL Server
 - TPM Onboarding
 - Windows Server Hot Patch
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -23,6 +23,9 @@ tags:
 - Semantic Kernel
 - Stateful Agents
 - Tool Integration
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

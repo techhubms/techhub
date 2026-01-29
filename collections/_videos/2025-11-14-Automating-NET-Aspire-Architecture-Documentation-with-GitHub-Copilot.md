@@ -22,6 +22,11 @@ tags:
 - Playwright MCP
 - Pull Requests
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

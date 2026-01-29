@@ -9,6 +9,9 @@ plans:
 tags:
 - Web Scraping
 - Web UI
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

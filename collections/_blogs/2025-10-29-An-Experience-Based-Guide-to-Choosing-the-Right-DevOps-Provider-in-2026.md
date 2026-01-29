@@ -45,6 +45,9 @@ tags:
 - Vendor Evaluation
 - Vendor Management
 - Vulnerability Scanning
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

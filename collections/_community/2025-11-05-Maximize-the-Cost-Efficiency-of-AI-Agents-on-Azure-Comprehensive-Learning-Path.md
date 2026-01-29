@@ -19,6 +19,9 @@ tags:
 - Operational Efficiency
 - Reference Architectures
 - ROI Forecasting
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -17,6 +17,9 @@ tags:
 - Subscription
 - Usage Quotas
 - Workspace Context
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

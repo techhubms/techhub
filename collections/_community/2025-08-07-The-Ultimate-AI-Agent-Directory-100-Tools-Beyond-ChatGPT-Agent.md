@@ -24,6 +24,10 @@ tags:
 - Productivity Tools
 - Robotic Process Automation
 - Semantic Kernel
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

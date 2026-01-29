@@ -32,6 +32,9 @@ tags:
 - VS Code AI Tools
 - VS Code Copilot Alternatives
 - VS Code Extension
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

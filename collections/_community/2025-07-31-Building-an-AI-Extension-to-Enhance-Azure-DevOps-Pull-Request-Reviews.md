@@ -25,6 +25,11 @@ tags:
 - Pull Request Reviews
 - Security Review
 - Work Item Management
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -13,6 +13,14 @@ tags:
 - Multicloud
 - VS
 - Workflow Orchestration
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -113,8 +121,8 @@ CLI releases reinforce the transition from preview to general availability, repl
 Security and analytics improvements add detailed permission controls and dashboards for usage tracking, helping teams manage resources and promote transparency. Context truncation alerts and improved command forwarding strengthen developer tool reliability. Tutorials and practical guides support smooth onboarding for agentic workflows.
 
 - [GitHub Copilot CLI: Enhanced Model Selection, Image Recognition, and Streamlined UI Improvements](https://github.blog/changelog/2025-10-03-github-copilot-cli-enhanced-model-selection-image-support-and-streamlined-ui)
-- [Full Demo: Mastering GitHub Copilot CLI for Terminal-Based Development](/ai/videos/Full-Demo-Mastering-GitHub-Copilot-CLI-for-Terminal-Based-Development)
-- [The Coding Buddy That Lives in Your Command Line: GitHub Copilot CLI](/ai/videos/The-Coding-Buddy-That-Lives-in-Your-Command-Line-GitHub-Copilot-CLI)
+- [Full Demo: Mastering GitHub Copilot CLI for Terminal-Based Development](/ai/videos/full-demo-mastering-github-copilot-cli-for-terminal-based-development)
+- [The Coding Buddy That Lives in Your Command Line: GitHub Copilot CLI](/ai/videos/the-coding-buddy-that-lives-in-your-command-line-github-copilot-cli)
 
 ### GitHub Copilot Coding Agent
 
@@ -151,11 +159,11 @@ Documentation and prompt engineering updates build on last week’s adoption of 
 
 Spec-driven development merges Markdown for code and documentation, continuing from previous experimental workflow showcases. Tutorials and videos highlight Copilot’s broader utility for planning, brainstorming, and creative work.
 
-- [Advanced Techniques for Documenting Code with GitHub Copilot](/ai/videos/Advanced-Techniques-for-Documenting-Code-with-GitHub-Copilot)
+- [Advanced Techniques for Documenting Code with GitHub Copilot](/ai/videos/advanced-techniques-for-documenting-code-with-github-copilot)
 - [Supercharge Your Prompts with .prompt.md](https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html)
 - [Using GitHub Copilot for Multiple Tasks in Parallel](https://harrybin.de/posts/parallel-github-copilot-workflow/)
 - [Spec-driven Development with Markdown and GitHub Copilot: An Experimental AI Coding Workflow](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/)
-- [Prompting for More Than Code with GitHub Copilot](/ai/videos/Prompting-for-More-Than-Code-with-GitHub-Copilot)
+- [Prompting for More Than Code with GitHub Copilot](/ai/videos/prompting-for-more-than-code-with-github-copilot)
 
 ### GitHub Copilot Workflow Analytics and Registry Support
 
@@ -164,7 +172,7 @@ Copilot’s Premium Requests Analytics Dashboard, now generally available, provi
 Model Context Protocol (MCP) Registry use continues to expand, building on last week’s guides concerning protocol development and integration. Teams increasingly experiment with open protocol customization for reusable agentic workflows.
 
 - [Premium Requests Analytics Dashboard for GitHub Copilot: General Availability](https://github.blog/changelog/2025-09-30-premium-requests-analytics-page-is-now-generally-available)
-- [The Origins & Evolution of the GitHub MCP Registry with Toby Padilla](/ai/videos/The-Origins-and-Evolution-of-the-GitHub-MCP-Registry-with-Toby-Padilla)
+- [The Origins & Evolution of the GitHub MCP Registry with Toby Padilla](/ai/videos/the-origins-and-evolution-of-the-github-mcp-registry-with-toby-padilla)
 
 ### Other GitHub Copilot News
 
@@ -172,7 +180,7 @@ Visual Studio Code introduces updates for background coding agents, building on 
 
 Workshops like "How to Master GitHub Copilot" offer hands-on training for MCP integration, modernization, and cloud deployment, supporting community learning as Copilot’s feature set expands.
 
-- [VS Code: Background Coding Agents and GitHub Copilot Enhancements](/ai/videos/VS-Code-Background-Coding-Agents-and-GitHub-Copilot-Enhancements)
+- [VS Code: Background Coding Agents and GitHub Copilot Enhancements](/ai/videos/vs-code-background-coding-agents-and-github-copilot-enhancements)
 
 - [How to Master GitHub Copilot: Build, Prompt, Deploy Smarter](https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba/p/4456660)
 
@@ -190,7 +198,7 @@ Case studies such as automated audit workflows for KPMG Clara and voice-assisted
 - [Introducing Microsoft Agent Framework: The Open-Source Engine for Agentic AI Apps](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/)
 - [Introducing Microsoft Agent Framework: Streamlining Multi-Agent AI Systems with Azure AI Foundry](https://azure.microsoft.com/en-us/blog/introducing-microsoft-agent-framework/)
 - [Introducing Microsoft Agent Framework: Simplifying AI Agent Development for .NET Developers](https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview/)
-- [Agent Framework: Building Blocks for the Next Generation of AI Agents](/ai/videos/Agent-Framework-Building-Blocks-for-the-Next-Generation-of-AI-Agents)
+- [Agent Framework: Building Blocks for the Next Generation of AI Agents](/ai/videos/agent-framework-building-blocks-for-the-next-generation-of-ai-agents)
 - [Microsoft Agent Framework Powers Multi-Agent Systems in Azure AI Foundry](https://www.linkedin.com/posts/satyanadella_introducing-microsoft-agent-framework-microsoft-activity-7379202146988318720-WDPf)
 
 ### Model Context Protocol (MCP) and Secure AI Integrations in Microsoft Fabric
@@ -201,7 +209,7 @@ Reviews of MCP’s effects show protocol-driven reduction of fragmentation and s
 
 - [Introducing Fabric MCP (Preview): Developer-Focused AI Integration for Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-mcp-public-preview/)
 - [How Model Context Protocol (MCP) Is Transforming AI-Driven Development Productivity](https://devops.com/how-model-context-protocol-mcp-is-fueling-the-next-era-of-developer-productivity/)
-- [How to find the right MCP server in seconds with GitHub MCP registry](/ai/videos/How-to-find-the-right-MCP-server-in-seconds-with-GitHub-MCP-registry)
+- [How to find the right MCP server in seconds with GitHub MCP registry](/ai/videos/how-to-find-the-right-mcp-server-in-seconds-with-github-mcp-registry)
 
 ### Grok 4: Advanced Reasoning Models in Azure AI Foundry
 
@@ -236,15 +244,15 @@ Tutorials and documentation emphasize automation for diagrams and onboarding in 
 Discussions on agentic AI concepts and workflow adoption revisit last week’s conversations around code ownership and community trust. New guides and videos analyze the software development lifecycle in the context of agent use, with hands-on coverage explaining how Azure AI Foundry and agent architecture tools lower costs and facilitate deployment.
 
 - [How AI Is Changing the SDLC: Trust, Ownership, and Community in Modern Software Development](https://www.arresteddevops.com/ai-sdlc/)
-- [Why is everyone suddenly talking about AI agents?](/ai/videos/Why-is-everyone-suddenly-talking-about-AI-agents)
-- [Understanding AI Agents: Turning Plain Language into Code Execution](/ai/videos/Understanding-AI-Agents-Turning-Plain-Language-into-Code-Execution)
-- [What is an AI Agent?](/ai/videos/What-is-an-AI-Agent)
+- [Why is everyone suddenly talking about AI agents?](/ai/videos/why-is-everyone-suddenly-talking-about-ai-agents)
+- [Understanding AI Agents: Turning Plain Language into Code Execution](/ai/videos/understanding-ai-agents-turning-plain-language-into-code-execution)
+- [What is an AI Agent?](/ai/videos/what-is-an-ai-agent)
 
 ### Retrieval Augmented Generation (RAG) and Document Processing Workflows
 
 This week introduces a practical RAG workflow guide integrating OpenAI and Azure SQL based on last week’s enterprise data-to-chat tutorials. Logic Apps add features for metadata chunking, helping automate compliance in contract review and documentation workflows.
 
-- [Azure SQL DB & OpenAI: Building Powerful RAG Applications](/ai/videos/Azure-SQL-DB-and-OpenAI-Building-Powerful-RAG-Applications)
+- [Azure SQL DB & OpenAI: Building Powerful RAG Applications](/ai/videos/azure-sql-db-and-openai-building-powerful-rag-applications)
 - [Enhancing Logic Apps with Parse & Chunk with Metadata for AI-Powered Document Processing](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-parse-chunk-with-metadata-in-logic-apps-build-context/ba/p/4458438)
 
 ### Azure AI in Enterprise Workflows: Supply Chain & Scalable Cloud Infrastructure
@@ -266,7 +274,7 @@ Visual Studio Code’s Bring Your Own Key (BYOK) support for model provider APIs
 
 Weekly Foundry Fridays AMA sessions grow community involvement, sharing technical best practices within Azure AI Foundry—videos are available for those seeking guidance on complex topics.
 
-- [Enhancements to BYOK in Visual Studio Code: Model Provider Integration](/ai/videos/Enhancements-to-BYOK-in-Visual-Studio-Code-Model-Provider-Integration)
+- [Enhancements to BYOK in Visual Studio Code: Model Provider Integration](/ai/videos/enhancements-to-byok-in-visual-studio-code-model-provider-integration)
 - [Foundry Fridays: Weekly Azure AI Foundry AMA Series](https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-fridays-your-front-row-seat-to-azure-ai-innovation/ba/p/4456956)
 
 ## ML
@@ -336,7 +344,7 @@ Fabric CLI v1.1.0 is open source, offering new features like JSON output, worksp
 
 October’s Azure Update shares upcoming service retirements plus new features for Compute Gallery, SQL Database, and Traffic Manager. Guidance supports planning for lifecycle and resilience. The Azure Essentials guide offers practical advice on optimizing cloud and AI costs based on previous frameworks (CAF/WAF) and governance.
 
-- [Azure Update - October 2025 Announcements and Retirements](/ai/videos/Azure-Update-October-2025-Announcements-and-Retirements)
+- [Azure Update - October 2025 Announcements and Retirements](/ai/videos/azure-update-october-2025-announcements-and-retirements)
 - [Maximizing Cost Efficiency with Azure Essentials for Cloud and AI Investments](https://techcommunity.microsoft.com/t5/azure-governance-and-management/cloud-and-ai-cost-efficiency-a-strategic-imperative-for-long/ba/p/4455955)
 
 ### Azure Containerization and Storage Updates
@@ -344,7 +352,7 @@ October’s Azure Update shares upcoming service retirements plus new features f
 Guides explain Azure Container Storage v2 and provide platform choices among AKS, App Service, and Azure Container Apps, supporting broader orchestration and deployment approaches. Note: Storage v2 requires redeployment for changes, with no direct migration path—continuing infrastructure planning updates.
 
 - [Choosing the Right Azure Containerisation Strategy: AKS, App Service, or Container Apps?](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/choosing-the-right-azure-containerisation-strategy-aks-app/ba/p/4456645)
-- [Azure Container Storage v2 Overview](/azure/videos/Azure-Container-Storage-v2-Overview)
+- [Azure Container Storage v2 Overview](/azure/videos/azure-container-storage-v2-overview)
 
 ### Governance, Policy as Code, and Developer Security
 
@@ -369,7 +377,7 @@ Azure Local is now generally available for government users, continuing support 
 - [Oracle Database 19c Now Supported on Exadata Exascale with Oracle Database@Azure and New UAE Regions](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba/p/4458643)
 - [Microsoft at Oracle AI World 2025: AI, Multicloud, and Data Transformation with Azure](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-is-headed-to-oracle-ai-world-2025-in-las-vegas/ba/p/4457390)
 - [The Hybrid Cloud Playbook: Mastering Azure Stack](https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/)
-- [HPE Solutions and Azure Edge Architecture for AI-Ready SQL Server 2025 Workloads](/ai/videos/HPE-Solutions-and-Azure-Edge-Architecture-for-AI-Ready-SQL-Server-2025-Workloads)
+- [HPE Solutions and Azure Edge Architecture for AI-Ready SQL Server 2025 Workloads](/ai/videos/hpe-solutions-and-azure-edge-architecture-for-ai-ready-sql-server-2025-workloads)
 
 ### Event-Driven Architectures and Automation
 
@@ -420,19 +428,19 @@ Visual Studio 2026 Insiders now offers a native preview for TypeScript 7, follow
 Razor tooling updates improve Hot Reload and editing within the ASP.NET Community Standup, reflecting ongoing efforts for more responsive development and real-time feedback, with fewer build interruptions—continuing the consistent expansion of Visual Studio features.
 
 - [TypeScript 7 Native Preview Now Available in Visual Studio 2026 Insiders](https://devblogs.microsoft.com/blog/typescript-7-native-preview-in-visual-studio-2026)
-- [ASP.NET Community Standup - Razor Reloaded](/coding/videos/ASPNET-Community-Standup-Razor-Reloaded)
+- [ASP.NET Community Standup - Razor Reloaded](/coding/videos/aspnet-community-standup-razor-reloaded)
 
 ### Coding Agents and Workflow Automation in Visual Studio Code
 
 Coding agent integration in VS Code is further refined to improve speed and accuracy, building on last week’s MCP-based automation and collaborative development advances. Feedback mechanisms allow developers to directly influence future improvements, promoting real-world, robust workflow automation.
 
-- [Latest Updates to Coding Agent Integration in Visual Studio Code](/coding/videos/Latest-Updates-to-Coding-Agent-Integration-in-Visual-Studio-Code)
+- [Latest Updates to Coding Agent Integration in Visual Studio Code](/coding/videos/latest-updates-to-coding-agent-integration-in-visual-studio-code)
 
 ### Modern ASP.NET API Architecture with FastEndpoints and the REPR Pattern
 
 Guidance for ASP.NET API design now favors the REPR (Request, Endpoint, Response) pattern with FastEndpoints, stepping away from the older controller structure featured last week. Marcel Medina’s tutorial provides clear, testable examples that support migration and database management, focusing on maintainable, scalable solutions.
 
-- [Simplifying ASP.NET API Design with the REPR Pattern and FastEndpoints](/coding/videos/Simplifying-ASPNET-API-Design-with-the-REPR-Pattern-and-FastEndpoints)
+- [Simplifying ASP.NET API Design with the REPR Pattern and FastEndpoints](/coding/videos/simplifying-aspnet-api-design-with-the-repr-pattern-and-fastendpoints)
 
 ### Other Coding News
 
@@ -501,7 +509,7 @@ GitHub’s web interface adds interactive, one-click merge conflict resolution, 
 
 MapYourGrid continues to invite users to contribute to an open energy infrastructure map using GitHub, offering opportunities for climate action through technical collaboration.
 
-- [MapYourGrid: Contributing to an Open Map of the World's Energy Grid](/devops/videos/MapYourGrid-Contributing-to-an-Open-Map-of-the-Worlds-Energy-Grid)
+- [MapYourGrid: Contributing to an Open Map of the World's Energy Grid](/devops/videos/mapyourgrid-contributing-to-an-open-map-of-the-worlds-energy-grid)
 
 ## Security
 
@@ -522,7 +530,7 @@ Microsoft Sentinel evolves into an agentic SIEM, integrating unified data lakes,
 - [Empowering Defenders in the Era of Agentic AI with Microsoft Sentinel](https://www.microsoft.com/en-us/security/blog/2025/09/30/empowering-defenders-in-the-era-of-agentic-ai-with-microsoft-sentinel/)
 - [Securing AI Workloads with Microsoft Defender for Cloud, Purview, and Sentinel in Azure Landing Zones](https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-ai-workloads-with-microsoft-defender-for-cloud-purview/ba/p/4457345)
 - [Outbound Access Protection for Spark Now Generally Available in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-spark-is-now-generally-available/)
-- [Data Security and Governance Announcements with Talhah Mir at Microsoft Ignite](/security/videos/Data-Security-and-Governance-Announcements-with-Talhah-Mir-at-Microsoft-Ignite)
+- [Data Security and Governance Announcements with Talhah Mir at Microsoft Ignite](/security/videos/data-security-and-governance-announcements-with-talhah-mir-at-microsoft-ignite)
 
 ### Cloud Identity and Access Management (IAM)
 
@@ -536,7 +544,7 @@ Microsoft Entra decouples identity and security management from Azure, supportin
 GitHub secret scanning now validates credentials for Azure, MongoDB, and Meta, automating leak detection and incident response. Microsoft and HashiCorp’s best practices for Vault, Terraform, and Azure Verified Modules address identity-aware credential management, audit requirements, and privilege escalation risks in agent-based environments—continuing last week’s updates on managed identity and rotation.
 
 - [GitHub Secret Scanning Now Validates Azure, MongoDB, and Meta Credentials](https://github.blog/changelog/2025-09-30-secret-scanning-adds-validators-for-mongodb-meta-and-microsoft-azure)
-- [Securing AI Deployments with HashiCorp Vault & Azure](/ai/videos/Securing-AI-Deployments-with-HashiCorp-Vault-and-Azure)
+- [Securing AI Deployments with HashiCorp Vault & Azure](/ai/videos/securing-ai-deployments-with-hashicorp-vault-and-azure)
 
 ### Advanced Security Analysis and Developer Tutorials
 

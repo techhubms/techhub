@@ -20,6 +20,9 @@ tags:
 - Privacy
 - Regulatory Compliance
 - Security Administration
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

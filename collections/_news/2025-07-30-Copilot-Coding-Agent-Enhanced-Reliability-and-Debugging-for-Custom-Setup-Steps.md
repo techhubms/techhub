@@ -14,6 +14,10 @@ tags:
 - GitHub Actions
 - Pro/Enterprise Features
 - Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

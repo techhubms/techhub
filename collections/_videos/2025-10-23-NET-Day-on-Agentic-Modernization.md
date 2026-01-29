@@ -18,6 +18,12 @@ tags:
 - Managed Instance
 - Microsoft Agent Framework
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

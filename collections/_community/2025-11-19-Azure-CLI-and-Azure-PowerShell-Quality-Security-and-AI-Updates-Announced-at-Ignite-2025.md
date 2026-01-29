@@ -25,6 +25,12 @@ tags:
 - Release Notes
 - Security Vulnerabilities
 - What If Analysis
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -21,6 +21,8 @@ tags:
 - Sentinel
 - UAE Central
 - UAE North
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

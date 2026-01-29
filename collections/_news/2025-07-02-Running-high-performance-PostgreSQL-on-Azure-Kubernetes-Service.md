@@ -22,6 +22,9 @@ tags:
 - SQL
 - Storage
 - Storage Benchmarking
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -27,6 +27,11 @@ tags:
 - Resource Management
 - Resource Manager
 - SDK
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

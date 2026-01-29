@@ -22,6 +22,11 @@ tags:
 - Quota Groups
 - RBAC
 - SMB To Blob
+- AI
+- Azure
+- Security
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

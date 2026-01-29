@@ -16,6 +16,8 @@ tags:
 - Rebase
 - Stacked Branches
 - Update Refs
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

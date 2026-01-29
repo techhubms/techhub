@@ -27,6 +27,9 @@ tags:
 - Semantic Kernel
 - Testing
 - Workflow Automation
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

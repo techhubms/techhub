@@ -22,6 +22,9 @@ tags:
 - Unified Build
 - Virtual Monolithic Repository
 - VMR
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

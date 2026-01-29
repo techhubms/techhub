@@ -17,6 +17,10 @@ tags:
 - Repository Configuration
 - Software Development
 - Task Delegation
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

@@ -11,6 +11,10 @@ tags:
 - Machine Learning Tools
 - Prompt Engineering
 - Software Practices
+- AI
+- GitHub Copilot
+- Coding
+- Blogs
 section_names:
 - ai
 - github-copilot

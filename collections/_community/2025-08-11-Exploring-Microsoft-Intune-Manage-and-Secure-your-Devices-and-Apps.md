@@ -19,6 +19,9 @@ tags:
 - Microsoft Defender
 - Microsoft Intune
 - Remote Work Security
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

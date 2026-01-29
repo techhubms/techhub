@@ -20,6 +20,10 @@ tags:
 - Serverless Architecture
 - Session Management
 - State Management
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

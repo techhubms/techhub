@@ -20,6 +20,10 @@ tags:
 - Microsoft Azure
 - Multi Agent Systems
 - Service Desk Automation
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

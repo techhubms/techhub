@@ -15,6 +15,8 @@ tags:
 - Professional Code
 - Refactoring
 - Software Methodology
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

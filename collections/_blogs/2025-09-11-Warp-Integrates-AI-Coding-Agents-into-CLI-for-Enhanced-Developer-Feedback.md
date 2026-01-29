@@ -21,6 +21,10 @@ tags:
 - Social X
 - Software Engineering
 - Warp
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

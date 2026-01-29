@@ -20,6 +20,8 @@ tags:
 - Source Control
 - Tutorial
 - Version Control
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

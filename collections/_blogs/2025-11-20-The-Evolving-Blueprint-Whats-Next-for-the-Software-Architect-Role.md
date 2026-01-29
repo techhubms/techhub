@@ -19,6 +19,11 @@ tags:
 - Solution Architecture
 - System Design
 - Zero Trust
+- AI
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - azure

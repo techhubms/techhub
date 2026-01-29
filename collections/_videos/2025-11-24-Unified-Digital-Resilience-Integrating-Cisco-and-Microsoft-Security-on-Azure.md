@@ -22,6 +22,10 @@ tags:
 - Security Response
 - Threat Modeling
 - Unified Threat Detection
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

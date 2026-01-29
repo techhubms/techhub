@@ -19,6 +19,9 @@ tags:
 - NuGet Packages
 - Storage
 - TransferManager
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

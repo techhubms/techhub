@@ -19,6 +19,10 @@ tags:
 - OneLake
 - Real Time Data
 - Unified Data Platform
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

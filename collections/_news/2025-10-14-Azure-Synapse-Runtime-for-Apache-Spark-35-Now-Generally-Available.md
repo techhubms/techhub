@@ -18,6 +18,9 @@ tags:
 - Release Notes
 - Spark Runtime
 - Starter Pools
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

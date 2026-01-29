@@ -17,6 +17,10 @@ tags:
 - Mobile Apps
 - Technical Debt
 - Testing
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

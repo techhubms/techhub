@@ -23,6 +23,10 @@ tags:
 - Security Compliance
 - Sovereign Cloud
 - Sovereign Landing Zone
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

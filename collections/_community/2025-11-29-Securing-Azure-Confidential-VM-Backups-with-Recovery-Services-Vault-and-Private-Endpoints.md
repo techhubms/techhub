@@ -26,6 +26,10 @@ tags:
 - REST API
 - Terraform
 - Zone Redundant Storage
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

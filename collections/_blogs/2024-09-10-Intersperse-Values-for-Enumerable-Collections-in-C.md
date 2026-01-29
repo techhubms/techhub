@@ -15,6 +15,8 @@ tags:
 - Separator
 - Standard Library
 - Yield
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

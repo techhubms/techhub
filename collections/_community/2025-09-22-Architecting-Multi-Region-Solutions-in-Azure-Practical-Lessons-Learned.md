@@ -24,6 +24,10 @@ tags:
 - Resilience
 - Scalability
 - Virtual Networks
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

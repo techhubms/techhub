@@ -22,6 +22,8 @@ tags:
 - Open Cloud Automation
 - Reliability
 - Subscription Management
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

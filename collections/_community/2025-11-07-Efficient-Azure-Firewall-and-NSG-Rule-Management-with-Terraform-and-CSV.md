@@ -20,6 +20,10 @@ tags:
 - Rule Management
 - Terraform
 - VS Code Extensions
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

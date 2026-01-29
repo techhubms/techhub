@@ -22,6 +22,10 @@ tags:
 - Health Technology
 - Real Time Applications
 - TypeAgent
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

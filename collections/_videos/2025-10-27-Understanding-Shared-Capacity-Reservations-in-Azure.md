@@ -20,6 +20,8 @@ tags:
 - Resource Management
 - Savings Plans
 - Subscription Management
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

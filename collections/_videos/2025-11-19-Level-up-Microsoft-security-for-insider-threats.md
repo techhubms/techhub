@@ -21,6 +21,8 @@ tags:
 - Security Operations
 - Telemetry
 - Threat Detection
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

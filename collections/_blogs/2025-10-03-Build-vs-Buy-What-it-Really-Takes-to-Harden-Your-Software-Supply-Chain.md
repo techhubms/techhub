@@ -34,6 +34,9 @@ tags:
 - SolarWinds
 - Supply Chain Security
 - Threat Mitigation
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

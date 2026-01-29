@@ -22,6 +22,9 @@ tags:
 - Management And Governance
 - Microsoft Partners
 - Migration
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

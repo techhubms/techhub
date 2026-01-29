@@ -18,6 +18,12 @@ tags:
 - Legacy Codebase
 - Security Fixes
 - Upgrade Automation
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

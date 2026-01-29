@@ -22,6 +22,10 @@ tags:
 - Serverless Data
 - SQL Optimization
 - SSMS Integration
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

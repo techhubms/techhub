@@ -19,6 +19,9 @@ tags:
 - Security Campaigns
 - Security Dashboard
 - Webhooks
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

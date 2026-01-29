@@ -22,6 +22,12 @@ tags:
 - Reasoning Models
 - VS
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

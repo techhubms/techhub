@@ -16,6 +16,11 @@ tags:
 - Real Time Streaming
 - Server Sent Events
 - VS Code
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

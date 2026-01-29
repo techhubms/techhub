@@ -18,6 +18,8 @@ tags:
 - Cost Management Tools
 - Microsoft Copilot
 - Resource Configuration
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

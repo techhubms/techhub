@@ -21,6 +21,11 @@ tags:
 - SignalR
 - Streaming Responses
 - WebSockets
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

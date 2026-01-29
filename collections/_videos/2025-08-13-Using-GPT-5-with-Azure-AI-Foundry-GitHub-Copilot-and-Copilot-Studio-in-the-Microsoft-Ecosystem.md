@@ -19,6 +19,10 @@ tags:
 - LLM
 - Microsoft Copilot
 - Microsoft Ecosystem
+- AI
+- Azure
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

@@ -17,6 +17,9 @@ tags:
 - Private Preview
 - Software Development Process
 - Work Item Tracking
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

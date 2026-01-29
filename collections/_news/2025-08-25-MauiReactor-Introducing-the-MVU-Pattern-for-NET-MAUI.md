@@ -22,6 +22,8 @@ tags:
 - Testing
 - UI Development
 - XAML
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

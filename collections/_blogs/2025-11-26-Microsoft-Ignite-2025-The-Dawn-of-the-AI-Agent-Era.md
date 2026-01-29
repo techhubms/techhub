@@ -24,6 +24,11 @@ tags:
 - PowerPoint
 - Teams
 - Word
+- AI
+- Azure
+- Machine Learning
+- Security
+- Blogs
 section_names:
 - ai
 - azure

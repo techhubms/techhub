@@ -23,6 +23,9 @@ tags:
 - Resilience
 - Retry Policy
 - Solution Architecture
+- Azure
+- Coding
+- Blogs
 section_names:
 - azure
 - coding

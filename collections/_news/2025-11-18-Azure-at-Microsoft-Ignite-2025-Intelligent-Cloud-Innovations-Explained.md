@@ -31,6 +31,12 @@ tags:
 - OneLake
 - Purview
 - SQL Server
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

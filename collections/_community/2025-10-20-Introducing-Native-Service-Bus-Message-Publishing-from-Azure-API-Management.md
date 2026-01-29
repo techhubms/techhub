@@ -25,6 +25,10 @@ tags:
 - Secure API
 - Service Bus
 - Throttling
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

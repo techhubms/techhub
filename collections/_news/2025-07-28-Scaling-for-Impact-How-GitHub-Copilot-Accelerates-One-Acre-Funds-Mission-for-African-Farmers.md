@@ -17,6 +17,10 @@ tags:
 - Social Impact
 - Software Development
 - Technology Adoption
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

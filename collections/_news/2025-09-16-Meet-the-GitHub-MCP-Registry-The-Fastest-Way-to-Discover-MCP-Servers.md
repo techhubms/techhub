@@ -20,6 +20,10 @@ tags:
 - Open Source
 - Registry Integration
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

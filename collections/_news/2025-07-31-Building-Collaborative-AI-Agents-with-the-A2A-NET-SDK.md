@@ -22,6 +22,10 @@ tags:
 - Real Time Streaming
 - Semantic Kernel
 - Task Based Communication
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

@@ -18,6 +18,8 @@ tags:
 - LTS Release
 - Productivity
 - Refactoring
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

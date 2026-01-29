@@ -16,6 +16,8 @@ tags:
 - Performance
 - Sealed Classes
 - Software Engineering
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

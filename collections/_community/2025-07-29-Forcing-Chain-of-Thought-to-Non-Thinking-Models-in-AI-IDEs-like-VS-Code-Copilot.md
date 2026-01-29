@@ -14,6 +14,9 @@ tags:
 - Prompt Engineering
 - Sonnet 4
 - VS Code
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

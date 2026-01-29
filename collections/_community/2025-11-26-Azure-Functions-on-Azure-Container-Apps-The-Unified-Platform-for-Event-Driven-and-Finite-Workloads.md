@@ -26,6 +26,12 @@ tags:
 - Service Bus
 - Timer Trigger
 - Traffic Splitting
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

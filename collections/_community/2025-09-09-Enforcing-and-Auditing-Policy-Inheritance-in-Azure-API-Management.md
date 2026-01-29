@@ -16,6 +16,9 @@ tags:
 - Policy Enforcement
 - Policy Inheritance
 - Security Controls
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -24,6 +24,9 @@ tags:
 - Multicloud
 - Responsible AI
 - Transparency
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

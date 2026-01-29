@@ -16,6 +16,8 @@ tags:
 - Microsoft Developer
 - OneDevQuestion
 - Scott Durow
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

@@ -21,6 +21,10 @@ tags:
 - Python
 - Tool Calling
 - VS Code
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

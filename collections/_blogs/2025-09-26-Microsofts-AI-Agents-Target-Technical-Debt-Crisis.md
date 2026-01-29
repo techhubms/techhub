@@ -29,6 +29,12 @@ tags:
 - Social X
 - Technical Debt
 - Technical Debt Modernization
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - azure

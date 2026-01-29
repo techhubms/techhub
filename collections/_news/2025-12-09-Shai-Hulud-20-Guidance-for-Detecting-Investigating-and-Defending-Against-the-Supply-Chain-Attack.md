@@ -25,6 +25,10 @@ tags:
 - Supply Chain Attack
 - Threat Intelligence
 - TruffleHog
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

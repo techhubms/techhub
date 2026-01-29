@@ -15,6 +15,9 @@ tags:
 - Microsoft Fabric
 - Resource Management
 - Terraform
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

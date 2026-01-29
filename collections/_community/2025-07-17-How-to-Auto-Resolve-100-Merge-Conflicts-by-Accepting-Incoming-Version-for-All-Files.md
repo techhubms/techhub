@@ -15,6 +15,8 @@ tags:
 - Source Control
 - Version Control
 - VS
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

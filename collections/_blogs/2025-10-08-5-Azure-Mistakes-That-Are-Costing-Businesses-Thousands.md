@@ -19,6 +19,9 @@ tags:
 - Resource Management
 - Savings Plans
 - Tagging Policy
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

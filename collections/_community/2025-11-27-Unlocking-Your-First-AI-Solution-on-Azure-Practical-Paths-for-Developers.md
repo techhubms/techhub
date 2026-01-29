@@ -19,6 +19,9 @@ tags:
 - Prompt Engineering
 - Startup Technology
 - UnifyCloud
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

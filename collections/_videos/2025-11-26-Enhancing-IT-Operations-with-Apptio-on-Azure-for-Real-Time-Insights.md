@@ -21,6 +21,9 @@ tags:
 - Operational Efficiency
 - Real Time Insights
 - Resource Optimization
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

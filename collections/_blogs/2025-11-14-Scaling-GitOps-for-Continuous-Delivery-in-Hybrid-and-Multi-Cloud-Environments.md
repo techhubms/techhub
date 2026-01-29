@@ -49,6 +49,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Vault
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

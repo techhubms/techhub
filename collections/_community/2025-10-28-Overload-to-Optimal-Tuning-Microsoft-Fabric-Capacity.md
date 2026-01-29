@@ -21,6 +21,9 @@ tags:
 - Spark
 - Spark UI
 - Table Compaction
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

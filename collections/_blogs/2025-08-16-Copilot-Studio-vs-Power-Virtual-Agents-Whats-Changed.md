@@ -25,6 +25,8 @@ tags:
 - Natural Language Understanding
 - Orchestration
 - Power Virtual Agents
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

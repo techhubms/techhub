@@ -15,6 +15,9 @@ tags:
 - Operational Analytics
 - Real Time Intelligence
 - Streaming Data
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

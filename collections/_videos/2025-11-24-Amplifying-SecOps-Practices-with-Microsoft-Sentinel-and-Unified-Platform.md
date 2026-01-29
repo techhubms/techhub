@@ -29,6 +29,10 @@ tags:
 - Sentinel Graph
 - Tab
 - Threat Detection
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

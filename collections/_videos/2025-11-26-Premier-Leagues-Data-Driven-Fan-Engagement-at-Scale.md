@@ -27,6 +27,10 @@ tags:
 - Unify Your Data Platform
 - Unify Your Data Platform:microsoft Fabric
 - Video Analytics
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

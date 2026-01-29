@@ -17,6 +17,9 @@ tags:
 - User Permissions
 - Visual Studio Enterprise
 - Visual Studio Licensing
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

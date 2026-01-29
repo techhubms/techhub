@@ -28,6 +28,10 @@ tags:
 - Query Planning
 - Rag
 - Semantic Search
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

@@ -21,6 +21,10 @@ tags:
 - Product Update
 - Secret Scanning
 - Token Validation
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

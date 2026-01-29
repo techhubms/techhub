@@ -35,6 +35,8 @@ tags:
 - Social Facebook
 - Social LinkedIn
 - Social X
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

@@ -24,6 +24,9 @@ tags:
 - Partner Ecosystem
 - Power Platform
 - Private Offers
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

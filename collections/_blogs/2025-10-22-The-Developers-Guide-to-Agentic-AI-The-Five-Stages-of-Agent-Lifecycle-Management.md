@@ -38,6 +38,9 @@ tags:
 - Social X
 - Stanford SIRIUS
 - Stanford SIRIUS Framework
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

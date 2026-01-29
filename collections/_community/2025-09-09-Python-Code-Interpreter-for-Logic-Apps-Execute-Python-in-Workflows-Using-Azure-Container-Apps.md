@@ -19,6 +19,10 @@ tags:
 - Python Code Interpreter
 - Visualization
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

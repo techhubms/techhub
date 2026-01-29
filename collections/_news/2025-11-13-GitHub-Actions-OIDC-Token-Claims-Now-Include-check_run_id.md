@@ -19,6 +19,8 @@ tags:
 - OpenID Connect
 - Token Claims
 - Workflow Security
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

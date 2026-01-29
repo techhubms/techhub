@@ -23,6 +23,9 @@ tags:
 - Security Governance
 - Security Operations
 - Threat Intelligence
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

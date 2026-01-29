@@ -18,6 +18,8 @@ tags:
 - PowerShell Help
 - PowerShell PlatyPS
 - VS Code
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

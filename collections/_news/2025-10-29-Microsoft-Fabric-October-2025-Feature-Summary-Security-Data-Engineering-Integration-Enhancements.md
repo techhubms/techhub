@@ -25,6 +25,10 @@ tags:
 - Spark
 - SQL
 - Workspace Level Private Link
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

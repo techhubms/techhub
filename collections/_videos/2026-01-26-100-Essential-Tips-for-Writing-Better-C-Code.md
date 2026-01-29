@@ -17,6 +17,8 @@ tags:
 - Programming Tips
 - Refactoring
 - Software Engineering
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

@@ -20,6 +20,11 @@ tags:
 - Secure Variables
 - User Data Functions
 - Variable Libraries
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

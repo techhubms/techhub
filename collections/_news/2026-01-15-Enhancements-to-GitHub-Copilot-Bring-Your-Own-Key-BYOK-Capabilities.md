@@ -21,6 +21,9 @@ tags:
 - Responses API
 - Streaming Responses
 - Xai
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -16,6 +16,8 @@ tags:
 - Local Tools
 - NuGet
 - Tool Execution
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

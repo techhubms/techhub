@@ -18,6 +18,8 @@ tags:
 - Source Control
 - Version Control
 - Workflow Tips
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

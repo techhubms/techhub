@@ -20,6 +20,10 @@ tags:
 - Notion
 - Provider Integration
 - Secret Scanning
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

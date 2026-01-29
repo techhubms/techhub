@@ -19,6 +19,8 @@ tags:
 - Storage as A Service
 - VMware Integration
 - VNet Peering
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

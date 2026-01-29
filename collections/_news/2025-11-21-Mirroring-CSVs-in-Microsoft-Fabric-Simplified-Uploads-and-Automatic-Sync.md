@@ -21,6 +21,9 @@ tags:
 - Parquet Files
 - Primary Key
 - SQL Analytics Endpoint
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

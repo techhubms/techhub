@@ -9,6 +9,9 @@ tags:
 - Context Expansion
 - External Systems
 - MCP Server
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

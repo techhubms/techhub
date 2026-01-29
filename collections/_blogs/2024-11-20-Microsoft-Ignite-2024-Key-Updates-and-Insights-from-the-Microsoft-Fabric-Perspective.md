@@ -19,6 +19,10 @@ tags:
 - Real Time Intelligence
 - Semantic Models
 - Streaming Data
+- AI
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - azure

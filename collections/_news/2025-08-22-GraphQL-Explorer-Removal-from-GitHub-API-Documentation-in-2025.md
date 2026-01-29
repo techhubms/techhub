@@ -15,6 +15,8 @@ tags:
 - GraphQL Explorer
 - Platform Update
 - Schema Introspection
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

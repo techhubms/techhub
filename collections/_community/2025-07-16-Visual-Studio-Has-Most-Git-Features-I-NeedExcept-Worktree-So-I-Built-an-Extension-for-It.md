@@ -15,6 +15,9 @@ tags:
 - Version Control
 - VS
 - VS Extensibility SDK
+- Coding
+- DevOps
+- Community
 section_names:
 - coding
 - devops

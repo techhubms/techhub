@@ -14,6 +14,10 @@ tags:
 - Pipeline
 - Postman
 - PowerShell
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

@@ -38,6 +38,9 @@ tags:
 - Social Facebook
 - Social LinkedIn
 - Social X
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

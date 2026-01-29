@@ -19,6 +19,9 @@ tags:
 - ServiceMonitor.exe
 - Troubleshooting
 - Windows Containers
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

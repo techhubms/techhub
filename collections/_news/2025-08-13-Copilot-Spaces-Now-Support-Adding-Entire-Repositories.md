@@ -15,6 +15,9 @@ tags:
 - GitHub
 - Navigation Improvements
 - Repository Management
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

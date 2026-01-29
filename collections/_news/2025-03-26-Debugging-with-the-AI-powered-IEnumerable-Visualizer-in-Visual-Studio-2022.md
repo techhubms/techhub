@@ -19,6 +19,10 @@ tags:
 - Query Refinement
 - Syntax Highlighting
 - VS
+- AI
+- GitHub Copilot
+- Coding
+- News
 section_names:
 - ai
 - github-copilot

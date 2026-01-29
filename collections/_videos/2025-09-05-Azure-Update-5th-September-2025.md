@@ -24,6 +24,8 @@ tags:
 - Microsoft Azure
 - Microsoft Basic
 - MySQL Maintenance
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

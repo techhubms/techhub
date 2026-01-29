@@ -19,6 +19,9 @@ tags:
 - Regression Analysis
 - Ticket Triage
 - VS
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

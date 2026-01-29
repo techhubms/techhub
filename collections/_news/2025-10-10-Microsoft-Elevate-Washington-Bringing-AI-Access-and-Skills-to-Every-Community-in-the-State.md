@@ -21,6 +21,8 @@ tags:
 - Public Education
 - Teams For Education
 - Washington State
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

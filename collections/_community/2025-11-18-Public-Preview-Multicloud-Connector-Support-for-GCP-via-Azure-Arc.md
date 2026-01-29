@@ -23,6 +23,10 @@ tags:
 - Resource Graph
 - Security Monitoring
 - VM Management
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

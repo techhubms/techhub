@@ -21,6 +21,9 @@ tags:
 - Resource Management
 - SMB
 - Step By Step Demo
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

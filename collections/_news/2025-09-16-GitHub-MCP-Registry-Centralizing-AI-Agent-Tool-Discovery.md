@@ -18,6 +18,9 @@ tags:
 - Open Source
 - Registry
 - Tool Discovery
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

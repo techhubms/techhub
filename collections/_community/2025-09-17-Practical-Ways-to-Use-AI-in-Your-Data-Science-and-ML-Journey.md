@@ -18,6 +18,10 @@ tags:
 - Python
 - Study Plans
 - VS Code
+- AI
+- GitHub Copilot
+- Machine Learning
+- Community
 section_names:
 - ai
 - github-copilot

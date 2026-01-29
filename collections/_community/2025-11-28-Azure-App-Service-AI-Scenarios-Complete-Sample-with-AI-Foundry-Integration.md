@@ -27,6 +27,11 @@ tags:
 - RBAC
 - Reasoning Models
 - Security Best Practices
+- AI
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - ai
 - azure

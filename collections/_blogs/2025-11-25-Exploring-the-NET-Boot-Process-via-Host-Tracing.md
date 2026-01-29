@@ -26,6 +26,8 @@ tags:
 - SDK
 - TPA
 - Trusted Platform Assemblies
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

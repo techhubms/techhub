@@ -22,6 +22,9 @@ tags:
 - Sentiment Analysis
 - Text Summarization
 - Translation
+- AI
+- Machine Learning
+- News
 section_names:
 - ai
 - ml

@@ -23,6 +23,9 @@ tags:
 - Model Routing
 - SLM
 - Solution Architecture
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

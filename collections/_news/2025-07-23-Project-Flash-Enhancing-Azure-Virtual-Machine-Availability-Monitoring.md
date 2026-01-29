@@ -22,6 +22,9 @@ tags:
 - Resource Health
 - Root Cause Analysis
 - Service Health
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

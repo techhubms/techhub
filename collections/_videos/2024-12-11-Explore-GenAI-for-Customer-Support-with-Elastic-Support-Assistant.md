@@ -17,6 +17,9 @@ tags:
 - MSIgnite
 - RAG Architecture
 - Support Automation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

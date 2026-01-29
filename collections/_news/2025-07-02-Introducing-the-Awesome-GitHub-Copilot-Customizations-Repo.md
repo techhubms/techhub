@@ -20,6 +20,11 @@ tags:
 - Tailwind CSS
 - VS Code
 - Workflow Customization
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

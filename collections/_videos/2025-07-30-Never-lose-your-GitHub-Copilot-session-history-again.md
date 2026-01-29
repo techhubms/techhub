@@ -14,6 +14,9 @@ tags:
 - Session History
 - Software Development
 - Version Control
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

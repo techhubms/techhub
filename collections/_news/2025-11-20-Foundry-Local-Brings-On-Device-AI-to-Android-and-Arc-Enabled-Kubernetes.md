@@ -30,6 +30,10 @@ tags:
 - Speech API
 - Whisper Speech To Text
 - Windows ML
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

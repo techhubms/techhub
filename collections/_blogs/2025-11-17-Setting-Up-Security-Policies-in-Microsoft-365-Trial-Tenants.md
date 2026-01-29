@@ -27,6 +27,8 @@ tags:
 - Security Defaults
 - Threat Protection
 - Trial Tenant
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

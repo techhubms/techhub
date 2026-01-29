@@ -28,6 +28,10 @@ tags:
 - STUDIOSP78 V1
 - Technical
 - Voice Technology
+- AI
+- Azure
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

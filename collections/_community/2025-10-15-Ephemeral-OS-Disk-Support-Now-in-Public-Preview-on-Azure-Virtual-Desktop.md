@@ -19,6 +19,8 @@ tags:
 - Session Hosts
 - Stateless Workloads
 - Virtual Machines
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

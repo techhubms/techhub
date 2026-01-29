@@ -17,6 +17,9 @@ tags:
 - Sdlc
 - Software Development Lifecycle
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

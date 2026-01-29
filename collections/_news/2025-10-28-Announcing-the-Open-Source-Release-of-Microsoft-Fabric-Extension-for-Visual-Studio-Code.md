@@ -16,6 +16,10 @@ tags:
 - VS Code
 - VS Code Extension
 - Workspace Management
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

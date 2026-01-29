@@ -24,6 +24,11 @@ tags:
 - VM Lifecycle Management
 - VMSS
 - Zone Aligned Architecture
+- Azure
+- Coding
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - coding

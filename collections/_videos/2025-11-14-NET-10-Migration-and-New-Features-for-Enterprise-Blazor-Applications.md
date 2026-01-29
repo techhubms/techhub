@@ -22,6 +22,8 @@ tags:
 - Secure Authentication
 - VS
 - Web Development
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

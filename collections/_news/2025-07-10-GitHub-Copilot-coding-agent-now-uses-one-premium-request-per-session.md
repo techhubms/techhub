@@ -10,6 +10,9 @@ tags:
 - Developer Productivity
 - Feature Implementation
 - Tech Debt
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

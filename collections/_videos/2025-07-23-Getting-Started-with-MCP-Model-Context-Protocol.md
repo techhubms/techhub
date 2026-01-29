@@ -16,6 +16,9 @@ tags:
 - MCP
 - Microsoft
 - Nick Chapsas
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

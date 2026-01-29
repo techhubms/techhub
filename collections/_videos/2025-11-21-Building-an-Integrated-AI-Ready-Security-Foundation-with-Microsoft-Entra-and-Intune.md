@@ -23,6 +23,9 @@ tags:
 - Phased Rollout
 - Security Governance
 - Zero Trust
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

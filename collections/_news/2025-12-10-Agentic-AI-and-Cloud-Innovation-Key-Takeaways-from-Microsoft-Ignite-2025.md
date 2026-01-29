@@ -28,6 +28,13 @@ tags:
 - RBAC
 - Semantic Intelligence
 - Vector Indexing
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -22,6 +22,9 @@ tags:
 - Pod Sandboxing
 - SELinux
 - Workload Isolation
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

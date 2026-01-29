@@ -14,6 +14,9 @@ tags:
 - Microsoft Azure
 - Precomputed Queries
 - Query Performance
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

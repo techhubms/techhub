@@ -25,6 +25,10 @@ tags:
 - SLES
 - Ubuntu
 - VM Deployment
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

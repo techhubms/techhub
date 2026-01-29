@@ -22,6 +22,9 @@ tags:
 - Scientific Computing
 - Scientific Discovery
 - Specialized AI Agents
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

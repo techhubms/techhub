@@ -13,6 +13,9 @@ tags:
 - Dev Workflow
 - Developer Tools
 - Prompt Engineering
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

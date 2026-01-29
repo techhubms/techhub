@@ -15,6 +15,9 @@ tags:
 - Semantic Models
 - SQL
 - Versioning
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml
@@ -49,7 +52,7 @@ The transition to decoupled semantic models is structured in two phases:
 - Existing Mirrored artifacts will have their default semantic models decoupled.
 - Further details for this phase will be released soon.
 
-![Screenshot illustrating the decoupling process](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/Screenshot-2025-07-23-142007-300x156.png)
+![Screenshot illustrating the decoupling process](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/screenshot-2025-07-23-142007-300x156.png)
 
 ## Impact on Customers
 

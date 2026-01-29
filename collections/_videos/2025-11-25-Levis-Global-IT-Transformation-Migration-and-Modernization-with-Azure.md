@@ -25,6 +25,11 @@ tags:
 - SAP
 - SQL Server
 - Windows Server
+- AI
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

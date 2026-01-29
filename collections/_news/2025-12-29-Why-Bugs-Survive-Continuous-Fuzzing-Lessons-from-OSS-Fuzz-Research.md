@@ -21,6 +21,9 @@ tags:
 - Security Testing
 - Value Coverage
 - Vulnerability Research
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

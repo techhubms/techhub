@@ -18,6 +18,10 @@ tags:
 - Permissions
 - Prompt Injection
 - Security Principles
+- AI
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - github-copilot

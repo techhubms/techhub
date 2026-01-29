@@ -20,6 +20,9 @@ tags:
 - Outbound Network Segmentation
 - Subnet
 - Virtual Network Integration
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

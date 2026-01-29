@@ -14,6 +14,10 @@ tags:
 - Prompt Engineering
 - Software Development
 - Unit Testing
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

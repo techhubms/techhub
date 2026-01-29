@@ -19,6 +19,10 @@ tags:
 - Operational Insights
 - Platform Engineering
 - Streamlined Workflows
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

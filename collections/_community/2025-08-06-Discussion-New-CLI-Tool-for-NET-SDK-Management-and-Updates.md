@@ -23,6 +23,8 @@ tags:
 - VS
 - Windows
 - Winget
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

@@ -23,6 +23,9 @@ tags:
 - Technical Debt
 - Upskilling
 - Workforce Development
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

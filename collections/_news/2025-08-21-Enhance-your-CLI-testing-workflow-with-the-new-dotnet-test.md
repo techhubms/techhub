@@ -23,6 +23,9 @@ tags:
 - Testing Frameworks
 - Visual Basic
 - VSTest
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

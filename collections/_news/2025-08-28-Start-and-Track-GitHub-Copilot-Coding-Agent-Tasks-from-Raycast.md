@@ -19,6 +19,9 @@ tags:
 - Raycast
 - Task Management
 - Workflow Integration
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -16,6 +16,9 @@ tags:
 - NuGet Package
 - OpenAPI
 - Swagger
+- Coding
+- Security
+- Community
 section_names:
 - coding
 - security

@@ -19,6 +19,8 @@ tags:
 - OneDrive
 - Sensitivity Labels
 - SharePoint
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

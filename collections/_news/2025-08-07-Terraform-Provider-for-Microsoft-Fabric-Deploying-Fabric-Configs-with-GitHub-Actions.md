@@ -25,6 +25,11 @@ tags:
 - Terraform Provider
 - Terraform Workflow
 - YAML Pipelines
+- Azure
+- Coding
+- Machine Learning
+- DevOps
+- News
 section_names:
 - azure
 - coding

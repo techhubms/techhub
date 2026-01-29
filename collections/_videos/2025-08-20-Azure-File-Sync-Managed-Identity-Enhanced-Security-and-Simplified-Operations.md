@@ -27,6 +27,9 @@ tags:
 - Storage Services
 - Storage Sync Service
 - System Assigned Identity
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

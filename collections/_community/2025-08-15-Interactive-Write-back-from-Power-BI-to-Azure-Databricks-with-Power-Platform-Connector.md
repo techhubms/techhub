@@ -23,6 +23,9 @@ tags:
 - Real Time Data
 - Spark
 - Workflows
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

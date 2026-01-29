@@ -26,6 +26,10 @@ tags:
 - Purview
 - Threat Protection
 - Workflow Orchestration
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

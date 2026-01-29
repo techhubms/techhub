@@ -4,15 +4,23 @@ using TechHub.E2E.Tests.Helpers;
 namespace TechHub.E2E.Tests.Web;
 
 [Collection("About Page Tests")]
-public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class AboutPageTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
+    public AboutPageTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

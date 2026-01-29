@@ -12,6 +12,10 @@ tags:
 - Programming
 - Software Development
 - VS Code
+- AI
+- GitHub Copilot
+- Coding
+- Videos
 section_names:
 - ai
 - github-copilot

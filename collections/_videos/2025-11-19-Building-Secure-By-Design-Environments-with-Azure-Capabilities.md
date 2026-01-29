@@ -22,6 +22,9 @@ tags:
 - ProtectcloudAIplatformandapps
 - Security By Design
 - Security Standards
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

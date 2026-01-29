@@ -19,6 +19,10 @@ tags:
 - Sampling
 - VS Code
 - Workspace Automation
+- AI
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - coding

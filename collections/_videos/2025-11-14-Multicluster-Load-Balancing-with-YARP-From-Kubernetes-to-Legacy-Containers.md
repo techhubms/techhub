@@ -19,6 +19,9 @@ tags:
 - Traffic Management
 - Windows Containers
 - YARP
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

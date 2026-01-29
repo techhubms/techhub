@@ -20,6 +20,9 @@ tags:
 - Text To Speech
 - Voice Enabled Applications
 - Voice Live API
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -24,6 +24,11 @@ tags:
 - Software Development
 - Tech
 - Technology
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

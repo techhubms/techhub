@@ -24,6 +24,10 @@ tags:
 - VS
 - VS Code
 - Workflow Optimization
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

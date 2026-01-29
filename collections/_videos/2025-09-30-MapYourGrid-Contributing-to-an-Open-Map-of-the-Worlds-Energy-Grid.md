@@ -23,6 +23,8 @@ tags:
 - Software
 - Software Development
 - Version Control
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

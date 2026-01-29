@@ -14,6 +14,10 @@ tags:
 - Error Handling
 - JavaScript
 - OpenWeatherMap API
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

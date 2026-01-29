@@ -33,6 +33,11 @@ tags:
 - User Stories
 - Vibe Coding
 - Workflow Automation
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

@@ -23,6 +23,10 @@ tags:
 - Pipeline Expression Builder
 - Pipeline Expressions
 - Vacuum Activity
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

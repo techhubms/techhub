@@ -20,6 +20,9 @@ tags:
 - Security Automation
 - Security Operations
 - Threat Intelligence
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

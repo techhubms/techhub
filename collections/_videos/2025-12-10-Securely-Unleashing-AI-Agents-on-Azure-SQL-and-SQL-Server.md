@@ -20,6 +20,11 @@ tags:
 - Schema Understanding
 - Security Boundaries
 - SQL Server
+- AI
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

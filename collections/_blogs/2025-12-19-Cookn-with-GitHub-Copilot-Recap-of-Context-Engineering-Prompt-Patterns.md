@@ -16,6 +16,10 @@ tags:
 - Prompt Engineering
 - Reflection Pattern
 - Refusal Breaker
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

@@ -35,6 +35,10 @@ tags:
 - Social X
 - TruffleHog
 - Zero Trust
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

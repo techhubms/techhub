@@ -24,6 +24,10 @@ tags:
 - Product Lifecycle Management
 - Robotics
 - Simulation
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

@@ -19,6 +19,10 @@ tags:
 - Software Development
 - Software Sustainability
 - TypeScript
+- AI
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - coding

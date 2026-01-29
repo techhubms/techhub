@@ -31,6 +31,11 @@ tags:
 - Terraform
 - Typescript
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

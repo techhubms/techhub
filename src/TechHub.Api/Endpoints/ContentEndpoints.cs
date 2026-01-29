@@ -8,7 +8,7 @@ namespace TechHub.Api.Endpoints;
 /// <summary>
 /// API endpoints for advanced content filtering and search
 /// </summary>
-internal static class ContentEndpoints
+public static class ContentEndpoints
 {
     /// <summary>
     /// Maps all content-related endpoints to the application
@@ -19,12 +19,14 @@ internal static class ContentEndpoints
             .WithTags("Content")
             .WithDescription("Endpoints for advanced content filtering and search");
 
-        // Get content by section and collection
+        // Get content by section with optional collection/subcollection filtering
         group.MapGet("", GetContent)
             .WithName("GetContent")
-            .WithSummary("Get content by section and collection")
-            .WithDescription("Get all content items for a specific section and collection. Example: /api/content?sectionName=AI&collectionName=news")
-            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK);
+            .WithSummary("Get content by section with optional collection filtering")
+            .WithDescription("Get content items for a section. Filter hierarchy: sectionName (required) → collectionName (optional) → subcollection (optional). " +
+                "Example: /api/content?sectionName=github-copilot&collectionName=news&limit=20&offset=0")
+            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK)
+            .Produces<string>(StatusCodes.Status400BadRequest);
 
         // Get individual content detail
         group.MapGet("/{sectionName}/{collectionName}/{slug}", GetContentDetail)
@@ -52,49 +54,36 @@ internal static class ContentEndpoints
     }
 
     /// <summary>
-    /// GET /api/content?sectionName={sectionName}&amp;collectionName={collectionName}&amp;subcollection={subcollection} - Get content by section, collection, and optionally subcollection
+    /// GET /api/content?sectionName={sectionName}&amp;collectionName={collectionName}&amp;subcollection={subcollection}
+    /// Get content by section, optionally filtered by collection and subcollection.
+    /// Filter hierarchy: section (required) → collection (optional) → subcollection (optional)
     /// </summary>
-    private static async Task<Ok<IEnumerable<ContentItem>>> GetContent(
-        [FromQuery] string? sectionName,
-        [FromQuery] string? collectionName,
-        [FromQuery] string? subcollection,
-        [FromQuery] bool includeDraft,
+    private static async Task<Results<Ok<IEnumerable<ContentItem>>, BadRequest<string>>> GetContent(
         IContentRepository contentRepository,
-        CancellationToken cancellationToken)
+        [FromQuery] string sectionName,
+        [FromQuery] string? collectionName = null,
+        [FromQuery] string? subcollection = null,
+        [FromQuery] int limit = 1000,
+        [FromQuery] int offset = 0,
+        [FromQuery] bool includeDraft = false,
+        CancellationToken cancellationToken = default)
     {
+        // Validate filter hierarchy: subcollection requires collection
+        if (!string.IsNullOrWhiteSpace(subcollection) && string.IsNullOrWhiteSpace(collectionName))
+        {
+            return TypedResults.BadRequest("Cannot filter by subcollection without specifying collectionName. " +
+                "Filter hierarchy: sectionName (required) → collectionName (optional) → subcollection (optional)");
+        }
 
-        // Use targeted repository methods for better database performance
-        IReadOnlyList<Core.Models.ContentItem> content;
-
-        if (!string.IsNullOrWhiteSpace(sectionName) && !string.IsNullOrWhiteSpace(collectionName))
-        {
-            // Both filters: get by section and filter by collection and optionally subcollection
-            var sectionContent = await contentRepository.GetBySectionAsync(sectionName, includeDraft, limit: 1000, offset: 0, cancellationToken);
-            content = [.. sectionContent.Where(c => c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase))];
-
-            // Filter by subcollection if specified
-            if (!string.IsNullOrWhiteSpace(subcollection))
-            {
-                content = [.. content.Where(c =>
-                    c.SubcollectionName != null &&
-                    c.SubcollectionName.Equals(subcollection, StringComparison.OrdinalIgnoreCase))];
-            }
-        }
-        else if (!string.IsNullOrWhiteSpace(sectionName))
-        {
-            // Section filter only
-            content = await contentRepository.GetBySectionAsync(sectionName, includeDraft, limit: 1000, offset: 0, cancellationToken);
-        }
-        else if (!string.IsNullOrWhiteSpace(collectionName))
-        {
-            // Collection only
-            content = await contentRepository.GetByCollectionAsync(collectionName, subcollection, includeDraft, limit: 1000, offset: 0, cancellationToken);
-        }
-        else
-        {
-            // No filters: get all content
-            content = await contentRepository.GetAllAsync(includeDraft, limit: 1000, offset: 0, cancellationToken);
-        }
+        // Use database-level filtering for optimal performance
+        var content = await contentRepository.GetBySectionAsync(
+            sectionName,
+            limit,
+            offset,
+            collectionName,
+            subcollection,
+            includeDraft,
+            cancellationToken);
 
         return TypedResults.Ok(content.AsEnumerable());
     }

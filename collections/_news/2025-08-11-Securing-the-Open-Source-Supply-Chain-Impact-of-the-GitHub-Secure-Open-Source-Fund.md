@@ -26,6 +26,10 @@ tags:
 - Supply Chain Security
 - Threat Modeling
 - Vulnerability Remediation
+- AI
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - devops

@@ -19,6 +19,9 @@ tags:
 - Silicon Security
 - Trusted Execution Environments
 - Zero Trust
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

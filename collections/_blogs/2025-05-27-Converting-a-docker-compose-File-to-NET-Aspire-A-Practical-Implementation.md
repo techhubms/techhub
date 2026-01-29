@@ -20,6 +20,8 @@ tags:
 - Listmonk
 - NuGet Packages
 - PostgreSQL
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

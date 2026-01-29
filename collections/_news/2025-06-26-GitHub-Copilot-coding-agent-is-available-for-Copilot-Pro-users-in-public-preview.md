@@ -9,6 +9,9 @@ tags:
 - Coding Agent
 - Copilot Pro
 - Public Preview
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

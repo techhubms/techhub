@@ -19,6 +19,10 @@ tags:
 - Microsoft Fabric
 - Tenant Management
 - Terraform
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

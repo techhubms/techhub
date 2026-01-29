@@ -20,6 +20,9 @@ tags:
 - Parse Document With Metadata
 - RAG (retrieval Augmented Generation)
 - Vector Search
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

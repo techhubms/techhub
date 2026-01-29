@@ -25,6 +25,10 @@ tags:
 - Secrets Rotation
 - Service Principals
 - Tokens
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

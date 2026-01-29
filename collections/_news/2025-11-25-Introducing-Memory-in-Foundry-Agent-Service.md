@@ -29,6 +29,9 @@ tags:
 - Stateful Agents
 - Text Embedding 3 Small
 - User Profile Extraction
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

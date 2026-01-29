@@ -20,6 +20,9 @@ tags:
 - Salesforce Integration
 - SAP Integration
 - ServiceNow Integration
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

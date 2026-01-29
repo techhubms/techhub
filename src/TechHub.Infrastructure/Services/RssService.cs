@@ -14,7 +14,6 @@ public class RssService : IRssService
 {
     private readonly AppSettings _settings;
     private const string SiteTitle = "Tech Hub";
-    private const string SiteUrl = "https://tech.hub.ms";
     private const string Language = "en-us";
     private const int MaxItemsInFeed = 50;
 
@@ -44,7 +43,7 @@ public class RssService : IRssService
         {
             Title = $"{SiteTitle} - {section.Title}",
             Description = section.Description,
-            Link = $"{SiteUrl}{section.Url}",
+            Link = $"{_settings.BaseUrl}{section.Url}",
             Language = Language,
             LastBuildDate = sortedItems.FirstOrDefault() != null
                 ? DateTimeOffset.FromUnixTimeSeconds(sortedItems.First().DateEpoch)
@@ -79,7 +78,7 @@ public class RssService : IRssService
         {
             Title = $"{SiteTitle} - {collectionTitle}",
             Description = $"Latest {collectionName} from {SiteTitle}",
-            Link = $"{SiteUrl}/all/{collectionName}",
+            Link = $"{_settings.BaseUrl}/all/{collectionName}",
             Language = Language,
             LastBuildDate = sortedItems.FirstOrDefault() != null
                 ? DateTimeOffset.FromUnixTimeSeconds(sortedItems.First().DateEpoch)
@@ -162,18 +161,25 @@ public class RssService : IRssService
         return stringWriter.ToString();
     }
 
-    private static RssItem CreateRssItem(ContentItem item)
+    private RssItem CreateRssItem(ContentItem item)
     {
+        var href = item.GetHref();
+        
+        // For internal items (relative URLs), prepend base URL
+        if (!item.LinksExternally())
+        {
+            href = $"{_settings.BaseUrl}{href}";
+        }
+        
         return new RssItem
         {
             Title = item.Title,
             Description = item.Excerpt,
-            Link = item.GetHref(),
-            Guid = item.GetHref(),
+            Link = href,
+            Guid = href,
             PubDate = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch),
             Author = item.Author,
             Categories = item.Tags
         };
     }
-
 }

@@ -36,21 +36,21 @@ The Tech Hub uses a **4-tier documentation hierarchy** with clear purposes:
 
 ### ✅ Always Do
 
-- **Keep docs/ MINIMAL** - Only functional documentation (WHAT the system does)
-- **Describe patterns, not implementations** - Name the pattern, explain key decisions, reference actual code
-- **Update docs when behavior changes** - Not optional, part of "task complete"
-- **Search before assuming docs don't exist** - Use `grep_search` to find relevant docs
-- **Use framework-agnostic language** - Docs must survive tech stack changes
-- **Cross-reference related files** - Maintain connections between documents
-- **Show structure, not full code** - If code is needed, show signatures/patterns only
-- **Verify all links** work correctly
-- **Follow writing-style-guidelines.md** for technical writing
+- **Always keep docs/ MINIMAL** - Only functional documentation (WHAT the system does)
+- **Always describe patterns, not implementations** - Name the pattern, explain key decisions, reference actual code
+- **Always update docs when behavior changes** - Not optional, part of "task complete"
+- **Always search before assuming docs don't exist** - Use `grep_search` to find relevant docs
+- **Always use framework-agnostic language** - Docs must survive tech stack changes
+- **Always cross-reference related files** - Maintain connections between documents
+- **Always show structure, not full code** - If code is needed, show signatures/patterns only
+- **Always verify all links** work correctly
+- **Always follow writing-style-guidelines.md** for technical writing
 
 ### ⚠️ Ask First
 
-- **Adding new functional documentation files** - Ensure they belong in docs/, not elsewhere
-- **Major restructuring** of documentation hierarchy
-- **Significant terminology changes** - May affect multiple files
+- **Ask first before adding new functional documentation files** - Ensure they belong in docs/, not elsewhere
+- **Ask first before major restructuring** of documentation hierarchy
+- **Ask first before significant terminology changes** - May affect multiple files
 
 ### 🚫 Never Do
 
@@ -524,19 +524,19 @@ Tech Hub implements these best practices through:
 
 ### ✅ Always Do
 
-- Run tests after changes
-- Fix linting errors
-- Update documentation
+- **Always run tests after changes**
+- **Always fix linting errors**
+- **Always update documentation**
 
 ### ⚠️ Ask First
 
-- Breaking API changes
-- Adding dependencies
+- **Ask first before breaking API changes**
+- **Ask first before adding dependencies**
 
 ### 🚫 Never Do
 
-- Never commit with errors
-- Never skip tests
+- **Never commit with errors**
+- **Never skip tests**
 
 ## Commands
 ```bash

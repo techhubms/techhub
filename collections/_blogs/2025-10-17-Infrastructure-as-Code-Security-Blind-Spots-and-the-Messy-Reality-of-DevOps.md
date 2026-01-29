@@ -22,6 +22,10 @@ tags:
 - Techstrong Council
 - Terraform
 - Version Control
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

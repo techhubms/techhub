@@ -17,6 +17,8 @@ tags:
 - Resource Management
 - REST API
 - Tenant Level Resources
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

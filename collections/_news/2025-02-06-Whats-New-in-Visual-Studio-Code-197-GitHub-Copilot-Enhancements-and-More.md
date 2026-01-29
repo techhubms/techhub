@@ -30,6 +30,11 @@ tags:
 - Version 1.97
 - VS Code
 - Workspace Index
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -24,6 +24,11 @@ tags:
 - SAST
 - SBOM
 - Security Alignment
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -17,6 +17,8 @@ tags:
 - Open Source
 - Software Maintenance
 - Sustainability
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

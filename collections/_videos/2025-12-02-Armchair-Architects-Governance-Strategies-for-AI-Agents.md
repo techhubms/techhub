@@ -20,6 +20,10 @@ tags:
 - Microsoft Purview
 - Model Routing
 - Responsible AI
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

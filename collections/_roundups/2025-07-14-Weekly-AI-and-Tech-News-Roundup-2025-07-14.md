@@ -15,6 +15,14 @@ tags:
 - Semantic Kernel
 - TypeScript
 - Zero Trust
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -81,7 +89,7 @@ Open-sourcing the Chat extension and fully supporting MCP signal Copilot’s mov
 - [New Copilot Chat features now generally available on GitHub](https://github.blog/changelog/2025-07-09-new-copilot-chat-features-now-generally-available-on-github)
 - [Automating My Git Workflow in VS Code with Copilot Chat, Custom Prompts, and Terminal Auto-Approval](https://r-vm.com/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval.html)
 - [VS Code June 2025 (version 1.102)](https://www.reddit.com/r/GithubCopilot/comments/1lwk6ba/vs_code_june_2025_version_1102/)
-- [MCP Support Now Generally Available in Visual Studio Code](/ai/videos/MCP-Support-Now-Generally-Available-in-Visual-Studio-Code)
+- [MCP Support Now Generally Available in Visual Studio Code](/ai/videos/mcp-support-now-generally-available-in-visual-studio-code)
 
 ### Mobile Review, Agentic Tasks, and Cost Predictability
 
@@ -175,8 +183,8 @@ AI’s reach in healthcare is expanding—startups innovate in clinical automati
 
 Choice of AI plumbing matters: MCP (Model Context Protocol) stands out for Azure workflow integration; A2A supports modular, agent-centric tasks. Workshops and technical guides are demystifying adoption, from C# training to executive playbooks—supporting smarter, lower-risk project deployment. The maturing MCP ecosystem, highlighted last week, is quickly broadening developer access.
 
-- [Choosing Between MCP and A2A for AI Applications](/ai/videos/Choosing-Between-MCP-and-A2A-for-AI-Applications)
-- [Let's Learn MCP: C#](/ai/videos/Lets-Learn-MCP-CSharp)
+- [Choosing Between MCP and A2A for AI Applications](/ai/videos/choosing-between-mcp-and-a2a-for-ai-applications)
+- [Let's Learn MCP: C#](/ai/videos/lets-learn-mcp-csharp)
 - [Choosing the right AI path for your business - A practical guide for leaders](https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/09/choosing-the-right-ai-path-for-your-business-a-practical-guide-for-business-leaders/)
 
 ## Azure
@@ -204,8 +212,8 @@ Azure Update features improved security: Trusted Launch for VM Scale Sets, firew
 
 Stories of data modernization and SDK upgrades from last week are extended here, with more focus on incremental, user-centric improvements.
 
-- [Azure Update - 11th July 2025](/ai/videos/Azure-Update-11th-July-2025)
-- [Multi-Cloud Storage Migration with Azure Storage Mover](/azure/videos/Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover)
+- [Azure Update - 11th July 2025](/ai/videos/azure-update-11th-july-2025)
+- [Multi-Cloud Storage Migration with Azure Storage Mover](/azure/videos/multi-cloud-storage-migration-with-azure-storage-mover)
 
 ## Coding
 
@@ -245,7 +253,7 @@ Critical July patches for Azure DevOps Server resolve multi-repo trigger bugs in
 Momentum on extensibility and easier onboarding—highlighted last week—remains, with CLI and MCP tools driving productivity and security.
 
 - [July Patches for Azure DevOps Server Now Available](https://devblogs.microsoft.com/devops/july-patches-for-azure-devops-server-2/)
-- [VS Code Live - Let it Cook: Building a Universal MCP Install Link](/devops/videos/VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link)
+- [VS Code Live - Let it Cook: Building a Universal MCP Install Link](/devops/videos/vs-code-live-let-it-cook-building-a-universal-mcp-install-link)
 
 ## Security
 

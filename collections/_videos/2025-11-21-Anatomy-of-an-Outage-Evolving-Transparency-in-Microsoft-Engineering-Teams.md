@@ -21,6 +21,10 @@ tags:
 - Shared Responsibility Model
 - Status Page
 - Transparency
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

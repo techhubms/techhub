@@ -16,6 +16,8 @@ tags:
 - Satellite Assemblies
 - SatelliteResourceLanguages
 - System.CommandLine
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

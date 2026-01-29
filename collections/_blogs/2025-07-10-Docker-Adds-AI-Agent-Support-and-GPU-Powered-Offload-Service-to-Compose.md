@@ -27,6 +27,8 @@ tags:
 - Port Forwarding
 - Remote Build
 - Spring AI
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

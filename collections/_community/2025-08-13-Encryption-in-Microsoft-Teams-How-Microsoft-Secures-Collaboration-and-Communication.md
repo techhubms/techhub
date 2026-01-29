@@ -24,6 +24,8 @@ tags:
 - SharePoint
 - TLS
 - Zero Trust
+- Security
+- Community
 section_names:
 - security
 primary_section: security

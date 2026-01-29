@@ -25,6 +25,9 @@ tags:
 - Network Isolation
 - Private Endpoint
 - WAF
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

@@ -23,6 +23,8 @@ tags:
 - SQL Modernization
 - Storage Spaces Direct
 - VMware Migration
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

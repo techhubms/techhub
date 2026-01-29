@@ -24,6 +24,9 @@ tags:
 - Teamcenter
 - Virtual Network
 - VNet Peering
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

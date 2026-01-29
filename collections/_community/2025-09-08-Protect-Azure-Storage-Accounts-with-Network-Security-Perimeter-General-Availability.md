@@ -20,6 +20,9 @@ tags:
 - Resource Profiles
 - Transition Mode
 - Virtual Network
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

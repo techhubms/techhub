@@ -17,6 +17,9 @@ tags:
 - O1 Preview
 - O3 Mini
 - Prompt Engineering
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

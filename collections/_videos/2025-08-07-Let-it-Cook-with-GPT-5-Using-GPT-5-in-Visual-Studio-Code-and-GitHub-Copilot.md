@@ -25,6 +25,10 @@ tags:
 - VS Code
 - VS Code Extensions
 - Workflow Customization
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

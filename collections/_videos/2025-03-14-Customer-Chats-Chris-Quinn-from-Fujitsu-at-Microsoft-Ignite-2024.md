@@ -18,6 +18,11 @@ tags:
 - Microsoft Ignite
 - Microsoft Strategic Partner
 - Security Best Practices
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

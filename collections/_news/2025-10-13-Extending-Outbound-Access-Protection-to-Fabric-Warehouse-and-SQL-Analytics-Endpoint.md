@@ -19,6 +19,10 @@ tags:
 - Role Based Access Control
 - SQL Analytics Endpoint
 - Workspace Protection
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

@@ -25,6 +25,11 @@ tags:
 - Resource Management
 - SDK
 - System Events
+- AI
+- Azure
+- Coding
+- Security
+- News
 section_names:
 - ai
 - azure

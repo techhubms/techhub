@@ -23,6 +23,8 @@ tags:
 - Windows 10
 - Windows 11
 - Xbox Development
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

@@ -25,6 +25,8 @@ tags:
 - Slack Integration
 - SSO
 - Trello Integration
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

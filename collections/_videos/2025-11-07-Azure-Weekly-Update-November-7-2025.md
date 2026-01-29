@@ -26,6 +26,10 @@ tags:
 - SQL Database
 - SSMS
 - Virtual Machines
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

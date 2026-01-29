@@ -14,6 +14,9 @@ tags:
 - Path Scoped Instructions
 - Pull Requests
 - Repository Guidance
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

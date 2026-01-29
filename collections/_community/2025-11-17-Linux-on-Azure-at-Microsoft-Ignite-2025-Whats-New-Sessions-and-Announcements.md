@@ -21,6 +21,10 @@ tags:
 - Pod Sandboxing
 - PostgreSQL
 - Session Guide
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

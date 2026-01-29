@@ -22,6 +22,10 @@ tags:
 - Security Automation
 - Taskflow Agent
 - Vulnerability Detection
+- AI
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - devops

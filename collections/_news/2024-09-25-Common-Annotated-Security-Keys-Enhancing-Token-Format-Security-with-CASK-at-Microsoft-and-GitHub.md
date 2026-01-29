@@ -24,6 +24,10 @@ tags:
 - Static Analysis
 - Test Keys
 - Token Detection
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

@@ -21,6 +21,9 @@ tags:
 - Retail Technology
 - Retail Value Chain
 - User Experience Integration
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

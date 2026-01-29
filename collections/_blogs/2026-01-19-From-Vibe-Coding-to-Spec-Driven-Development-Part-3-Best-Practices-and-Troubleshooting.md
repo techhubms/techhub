@@ -24,6 +24,10 @@ tags:
 - Specification Driven Development
 - Unit Testing
 - Vibe Coding
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

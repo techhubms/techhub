@@ -21,6 +21,9 @@ tags:
 - QNN Execution Provider
 - ScalewithcloudandAIendpoints
 - Windows ML
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

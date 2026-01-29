@@ -21,6 +21,9 @@ tags:
 - Non Human Identities
 - Posture Management
 - Security Best Practices
+- AI
+- Security
+- Community
 section_names:
 - ai
 - security

@@ -25,6 +25,9 @@ tags:
 - Schema Compliance
 - Silver Layer
 - Time Series Validation
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

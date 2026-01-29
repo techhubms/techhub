@@ -26,6 +26,11 @@ tags:
 - T SQL
 - Telemetry
 - VS Code
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

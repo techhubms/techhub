@@ -22,6 +22,10 @@ tags:
 - Real Time Intelligence
 - SaaS
 - Streaming Analytics
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

@@ -18,6 +18,9 @@ tags:
 - OpenTelemetry
 - Smee.io
 - Webhooks
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

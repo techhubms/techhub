@@ -26,6 +26,10 @@ tags:
 - Software Supply Chain
 - Vulnerabilities
 - Vulnerable Code
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

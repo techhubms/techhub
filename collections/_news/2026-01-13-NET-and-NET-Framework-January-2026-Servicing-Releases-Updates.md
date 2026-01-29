@@ -22,6 +22,8 @@ tags:
 - Versioning
 - WinForms
 - WPF
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

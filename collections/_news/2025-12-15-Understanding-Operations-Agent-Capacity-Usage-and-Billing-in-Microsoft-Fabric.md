@@ -24,6 +24,10 @@ tags:
 - Power Automate
 - Real Time Intelligence
 - Usage Reporting
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

@@ -24,6 +24,10 @@ tags:
 - Power BI
 - Spark
 - T SQL
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

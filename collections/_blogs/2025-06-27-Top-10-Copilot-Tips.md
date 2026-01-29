@@ -17,6 +17,10 @@ tags:
 - Type Hints
 - VS Code
 - Workspace Context
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

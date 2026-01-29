@@ -17,6 +17,9 @@ tags:
 - Member Privileges
 - OAuth Apps
 - Organization Settings
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

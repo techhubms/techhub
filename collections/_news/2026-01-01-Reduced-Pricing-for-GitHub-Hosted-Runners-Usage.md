@@ -19,6 +19,8 @@ tags:
 - Public Repositories
 - Release Notes
 - Workflow
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -17,6 +17,10 @@ tags:
 - SPDX
 - Supply Chain Security
 - YAML Workflows
+- DevOps
+- Security
+- Coding
+- Blogs
 section_names:
 - devops
 - security

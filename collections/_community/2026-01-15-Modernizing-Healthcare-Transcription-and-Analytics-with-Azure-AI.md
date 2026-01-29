@@ -21,6 +21,10 @@ tags:
 - Real Time Transcription
 - Speech Service
 - Text Analytics For Health
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

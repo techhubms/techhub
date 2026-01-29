@@ -28,6 +28,10 @@ tags:
 - Python 3.10
 - Trusted Launch
 - VMSS
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

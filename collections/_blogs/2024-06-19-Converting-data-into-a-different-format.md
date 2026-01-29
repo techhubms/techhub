@@ -9,6 +9,9 @@ tags:
 - Programming
 - SQL
 - Tutorials
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

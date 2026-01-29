@@ -20,6 +20,10 @@ tags:
 - Security Automation
 - Session BRK112
 - Vulnerability Management
+- AI
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - devops

@@ -18,6 +18,10 @@ tags:
 - Microsoft Cognitive Services
 - Model Evaluation
 - Model Generalization
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

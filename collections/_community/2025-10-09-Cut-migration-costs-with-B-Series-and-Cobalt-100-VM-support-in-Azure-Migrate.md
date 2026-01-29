@@ -18,6 +18,8 @@ tags:
 - Energy Efficiency
 - VM Cost Optimization
 - Workload Assessment
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

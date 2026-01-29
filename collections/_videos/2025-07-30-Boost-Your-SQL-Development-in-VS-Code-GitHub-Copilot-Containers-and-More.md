@@ -28,6 +28,11 @@ tags:
 - SQL Development
 - SQL Server
 - VS Code
+- AI
+- GitHub Copilot
+- Coding
+- Azure
+- Videos
 section_names:
 - ai
 - github-copilot

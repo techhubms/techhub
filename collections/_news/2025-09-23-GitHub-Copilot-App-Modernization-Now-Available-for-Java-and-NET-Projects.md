@@ -20,6 +20,11 @@ tags:
 - Java
 - Modernization Tools
 - Software Migration
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

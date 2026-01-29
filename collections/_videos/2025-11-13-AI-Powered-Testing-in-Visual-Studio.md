@@ -22,6 +22,9 @@ tags:
 - Test Data Generation
 - Testing Workflow
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

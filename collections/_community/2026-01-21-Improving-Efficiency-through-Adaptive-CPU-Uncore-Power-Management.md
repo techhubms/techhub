@@ -19,6 +19,8 @@ tags:
 - Server Sustainability
 - SPEC CPU
 - Uncore Power Management
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

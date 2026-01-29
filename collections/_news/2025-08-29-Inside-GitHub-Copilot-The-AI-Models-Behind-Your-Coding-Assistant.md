@@ -22,6 +22,9 @@ tags:
 - Model Selection
 - OpenAI
 - Productivity Tools
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

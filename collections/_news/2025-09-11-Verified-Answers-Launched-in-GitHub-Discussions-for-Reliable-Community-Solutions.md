@@ -18,6 +18,8 @@ tags:
 - LLM Integration
 - Repository Administration
 - Verified Answers
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

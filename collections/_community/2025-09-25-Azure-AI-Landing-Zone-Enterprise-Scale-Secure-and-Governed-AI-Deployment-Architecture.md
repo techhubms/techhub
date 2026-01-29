@@ -29,6 +29,10 @@ tags:
 - Virtual Network Peering
 - Web Application Firewall
 - Zero Trust
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

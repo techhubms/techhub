@@ -21,6 +21,8 @@ tags:
 - Software Engineering
 - Tool Migration
 - Workflow Automation
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

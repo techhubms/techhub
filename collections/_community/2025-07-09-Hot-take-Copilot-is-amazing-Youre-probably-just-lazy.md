@@ -16,6 +16,10 @@ tags:
 - Software Maintenance
 - Solution Architecture
 - Testability
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

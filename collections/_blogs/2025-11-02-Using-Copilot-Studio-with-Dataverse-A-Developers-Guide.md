@@ -21,6 +21,8 @@ tags:
 - Permissions
 - Power Automate
 - Power Platform
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

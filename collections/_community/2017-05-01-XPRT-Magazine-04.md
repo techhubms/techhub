@@ -19,6 +19,11 @@ tags:
 - Technical Introduction
 - Windows Containers
 - Xamarin
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

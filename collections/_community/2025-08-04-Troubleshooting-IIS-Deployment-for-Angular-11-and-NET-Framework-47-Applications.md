@@ -16,6 +16,9 @@ tags:
 - Production Build
 - Site Configuration
 - Web.config
+- Coding
+- DevOps
+- Community
 section_names:
 - coding
 - devops

@@ -23,6 +23,9 @@ tags:
 - Microsoft Foundry
 - Observability
 - Orchestration
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

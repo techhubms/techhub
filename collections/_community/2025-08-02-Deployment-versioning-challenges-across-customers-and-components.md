@@ -15,6 +15,8 @@ tags:
 - Release Management
 - Versioning
 - Visualization
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

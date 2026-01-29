@@ -19,6 +19,10 @@ tags:
 - Microsoft Fabric
 - OneLake Catalog
 - Sensitivity Labels
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

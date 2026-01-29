@@ -21,6 +21,12 @@ tags:
 - Observability
 - Policy Enforcement
 - VS Code
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - azure

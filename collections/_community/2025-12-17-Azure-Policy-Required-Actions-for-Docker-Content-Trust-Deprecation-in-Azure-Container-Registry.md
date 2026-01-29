@@ -18,6 +18,10 @@ tags:
 - Policy Definition
 - Security Compliance
 - Trustpolicy
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

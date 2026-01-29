@@ -15,6 +15,10 @@ tags:
 - GitHub
 - Pull Requests
 - Repository Workflows
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

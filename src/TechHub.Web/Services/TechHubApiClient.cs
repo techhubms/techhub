@@ -6,12 +6,19 @@ namespace TechHub.Web.Services;
 /// Typed HTTP client for calling Tech Hub API endpoints.
 /// Public to allow mocking in unit tests (virtual methods require public class for Moq proxies).
 /// </summary>
-#pragma warning disable CA1515 // Public type in non-public assembly - required for unit test mocking
-public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> logger) : ITechHubApiClient
-#pragma warning restore CA1515
+public class TechHubApiClient : ITechHubApiClient
 {
-    private readonly HttpClient _httpClient = httpClient;
-    private readonly ILogger<TechHubApiClient> _logger = logger;
+    private readonly HttpClient _httpClient;
+    private readonly ILogger<TechHubApiClient> _logger;
+
+    public TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> logger)
+    {
+        ArgumentNullException.ThrowIfNull(httpClient);
+        ArgumentNullException.ThrowIfNull(logger);
+
+        _httpClient = httpClient;
+        _logger = logger;
+    }
 
     /// <summary>
     /// Get all sections with their collections

@@ -26,6 +26,9 @@ tags:
 - SDK
 - Terraform
 - VS Code
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

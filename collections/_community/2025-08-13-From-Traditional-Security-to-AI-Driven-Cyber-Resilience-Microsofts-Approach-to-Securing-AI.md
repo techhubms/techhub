@@ -24,6 +24,9 @@ tags:
 - Non Human Identities
 - Privileged Identity Management
 - Red Teaming
+- AI
+- Security
+- Community
 section_names:
 - ai
 - security

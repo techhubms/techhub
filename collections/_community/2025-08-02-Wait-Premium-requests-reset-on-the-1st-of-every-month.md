@@ -14,6 +14,9 @@ tags:
 - Request Limits
 - Subscription
 - User Experience
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

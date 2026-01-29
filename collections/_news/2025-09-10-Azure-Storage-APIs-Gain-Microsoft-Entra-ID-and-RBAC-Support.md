@@ -21,6 +21,10 @@ tags:
 - REST API
 - Security Best Practices
 - Storage
+- Azure
+- Coding
+- Security
+- News
 section_names:
 - azure
 - coding

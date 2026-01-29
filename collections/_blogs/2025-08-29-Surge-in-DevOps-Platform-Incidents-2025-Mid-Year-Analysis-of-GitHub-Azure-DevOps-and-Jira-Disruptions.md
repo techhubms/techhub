@@ -36,6 +36,10 @@ tags:
 - Social X
 - Source Code Theft
 - Test Plans
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

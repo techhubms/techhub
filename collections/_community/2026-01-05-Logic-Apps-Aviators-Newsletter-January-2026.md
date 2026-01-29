@@ -24,6 +24,11 @@ tags:
 - Service Bus
 - Testing Automation
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

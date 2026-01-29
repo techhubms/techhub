@@ -19,6 +19,10 @@ tags:
 - Server Development
 - Templates
 - VS Code
+- AI
+- GitHub Copilot
+- Coding
+- News
 section_names:
 - ai
 - github-copilot

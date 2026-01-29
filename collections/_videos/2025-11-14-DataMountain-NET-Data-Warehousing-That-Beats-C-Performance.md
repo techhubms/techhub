@@ -19,6 +19,9 @@ tags:
 - Spans
 - SQL Performance
 - Vectors
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - coding
 - ml

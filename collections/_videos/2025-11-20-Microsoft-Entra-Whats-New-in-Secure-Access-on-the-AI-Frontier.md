@@ -24,6 +24,10 @@ tags:
 - Security Architecture
 - Unified Platform
 - Zero Trust
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

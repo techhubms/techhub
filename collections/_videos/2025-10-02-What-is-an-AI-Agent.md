@@ -16,6 +16,8 @@ tags:
 - Seth Juarez
 - Shorts
 - Software Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

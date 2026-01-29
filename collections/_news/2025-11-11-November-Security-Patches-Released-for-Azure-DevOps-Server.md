@@ -20,6 +20,10 @@ tags:
 - SHA 256
 - TFVC Proxy
 - VSBuildV1
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

@@ -21,6 +21,8 @@ tags:
 - Software Developer
 - Software Development
 - VS Code
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

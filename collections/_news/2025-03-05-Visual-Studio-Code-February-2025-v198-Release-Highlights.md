@@ -20,6 +20,11 @@ tags:
 - TypeScript 5.8
 - V1.98
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

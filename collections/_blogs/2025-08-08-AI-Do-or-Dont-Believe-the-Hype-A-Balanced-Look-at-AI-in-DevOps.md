@@ -25,6 +25,9 @@ tags:
 - SRE
 - Stack Overflow Survey
 - Test Generation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

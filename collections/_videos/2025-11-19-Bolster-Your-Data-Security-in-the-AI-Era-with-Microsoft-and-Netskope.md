@@ -22,6 +22,8 @@ tags:
 - Security Integration
 - SSE
 - Unified Security
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

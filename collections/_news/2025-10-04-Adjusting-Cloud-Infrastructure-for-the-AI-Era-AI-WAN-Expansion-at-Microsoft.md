@@ -19,6 +19,9 @@ tags:
 - Network Capacity
 - Networking Technology
 - Optical Fiber Expansion
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

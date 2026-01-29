@@ -23,6 +23,10 @@ tags:
 - Precision@K
 - Recall@K
 - Sampling
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

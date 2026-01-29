@@ -19,6 +19,10 @@ tags:
 - Python
 - React
 - YAML
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

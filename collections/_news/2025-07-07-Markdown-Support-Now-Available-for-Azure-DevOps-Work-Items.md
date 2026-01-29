@@ -17,6 +17,9 @@ tags:
 - REST API
 - User Feedback
 - Work Items
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

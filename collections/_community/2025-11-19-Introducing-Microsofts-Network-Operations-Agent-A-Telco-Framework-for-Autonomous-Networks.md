@@ -25,6 +25,11 @@ tags:
 - Real Time Telemetry
 - Security Compliance
 - Telecom Automation
+- AI
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -21,6 +21,10 @@ tags:
 - Operational Excellence
 - Secure Databases
 - Vector Search
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

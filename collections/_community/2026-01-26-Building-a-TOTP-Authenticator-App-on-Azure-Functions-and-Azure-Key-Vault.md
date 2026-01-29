@@ -24,6 +24,10 @@ tags:
 - TOTP
 - Two Factor Authentication
 - VS Code
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - azure
 - coding

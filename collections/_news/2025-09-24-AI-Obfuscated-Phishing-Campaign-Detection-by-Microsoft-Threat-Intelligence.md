@@ -20,6 +20,9 @@ tags:
 - Security Copilot
 - SVG Payload
 - Threat Intelligence
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

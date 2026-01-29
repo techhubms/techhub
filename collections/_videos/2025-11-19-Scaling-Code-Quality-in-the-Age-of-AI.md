@@ -20,6 +20,12 @@ tags:
 - Quality Assurance
 - Security Standards
 - Software Engineering
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - coding

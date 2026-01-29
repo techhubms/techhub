@@ -29,6 +29,9 @@ tags:
 - NVIDIA
 - Token Economics
 - Vera Rubin
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

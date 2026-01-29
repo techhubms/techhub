@@ -26,6 +26,11 @@ tags:
 - Relevance Evaluator
 - Retrieval Augmented Generation
 - XDCG
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

@@ -28,6 +28,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Software Development Workflow
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

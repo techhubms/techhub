@@ -1,17 +1,17 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using Microsoft.AspNetCore.Mvc.Testing;
 using TechHub.Core.Models;
+using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
 
-public class CustomPagesEndpointsTests : IClassFixture<WebApplicationFactory<Program>>
+public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
-    private readonly WebApplicationFactory<Program> _factory;
+    private readonly TechHubIntegrationTestApiFactory _factory;
     private readonly HttpClient _client;
 
-    public CustomPagesEndpointsTests(WebApplicationFactory<Program> factory)
+    public CustomPagesEndpointsTests(TechHubIntegrationTestApiFactory factory)
     {
         _factory = factory;
         _client = _factory.CreateClient();

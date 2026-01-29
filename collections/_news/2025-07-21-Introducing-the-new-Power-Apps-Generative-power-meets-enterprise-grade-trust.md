@@ -15,6 +15,8 @@ tags:
 - Microsoft
 - Power Apps
 - Power Platform
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

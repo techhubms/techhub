@@ -22,6 +22,9 @@ tags:
 - Skype For Business Server
 - Software Defined Networking
 - Sovereign Cloud
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

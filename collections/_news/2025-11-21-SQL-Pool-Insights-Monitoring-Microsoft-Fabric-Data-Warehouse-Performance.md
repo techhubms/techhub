@@ -21,6 +21,9 @@ tags:
 - SQL Pool Insights
 - SQL Pools
 - Telemetry
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

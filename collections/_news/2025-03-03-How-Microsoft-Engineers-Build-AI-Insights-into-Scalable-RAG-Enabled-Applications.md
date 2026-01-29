@@ -21,6 +21,9 @@ tags:
 - Retrieval Augmented Generation
 - Scalable
 - VS
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

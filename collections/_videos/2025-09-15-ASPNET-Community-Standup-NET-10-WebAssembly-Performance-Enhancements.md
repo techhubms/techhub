@@ -24,6 +24,8 @@ tags:
 - Web Development
 - Webassembly
 - WebAssembly Performance
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

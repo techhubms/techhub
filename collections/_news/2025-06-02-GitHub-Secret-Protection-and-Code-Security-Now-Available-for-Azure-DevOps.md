@@ -17,6 +17,10 @@ tags:
 - Secret Protection
 - Secret Scanning
 - Security Overview
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

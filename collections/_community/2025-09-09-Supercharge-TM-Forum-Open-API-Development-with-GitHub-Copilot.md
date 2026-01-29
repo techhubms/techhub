@@ -20,6 +20,10 @@ tags:
 - TM Forum Open API
 - TMF629
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

@@ -17,6 +17,9 @@ tags:
 - Self Review
 - VS
 - WebStorm
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

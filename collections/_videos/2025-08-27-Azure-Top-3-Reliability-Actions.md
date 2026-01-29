@@ -20,6 +20,8 @@ tags:
 - Regions
 - Reliability
 - Resilience
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

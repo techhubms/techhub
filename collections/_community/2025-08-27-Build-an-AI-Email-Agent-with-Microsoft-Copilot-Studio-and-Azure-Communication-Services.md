@@ -20,6 +20,10 @@ tags:
 - Microsoft Teams
 - Python
 - VS Code
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

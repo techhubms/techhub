@@ -22,6 +22,9 @@ tags:
 - Performance Optimization
 - Schema Inference
 - SQL Views
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

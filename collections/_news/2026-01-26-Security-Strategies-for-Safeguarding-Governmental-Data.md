@@ -20,6 +20,8 @@ tags:
 - Security Best Practices
 - Security Posture
 - Threat Intelligence
+- Security
+- News
 section_names:
 - security
 primary_section: security

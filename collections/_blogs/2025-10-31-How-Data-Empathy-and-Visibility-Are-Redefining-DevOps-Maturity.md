@@ -21,6 +21,9 @@ tags:
 - Team Collaboration
 - Uplevel
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

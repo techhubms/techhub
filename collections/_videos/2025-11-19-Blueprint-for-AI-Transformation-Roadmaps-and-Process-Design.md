@@ -17,6 +17,10 @@ tags:
 - Process Blueprint
 - SharePoint Integration
 - Workflow Documentation
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

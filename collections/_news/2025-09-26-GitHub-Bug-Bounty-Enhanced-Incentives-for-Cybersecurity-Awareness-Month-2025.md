@@ -24,6 +24,10 @@ tags:
 - Shilpa Kumari
 - Vulnerability Disclosure
 - Vulnerability Research
+- GitHub Copilot
+- Security
+- News
+- AI
 section_names:
 - github-copilot
 - security

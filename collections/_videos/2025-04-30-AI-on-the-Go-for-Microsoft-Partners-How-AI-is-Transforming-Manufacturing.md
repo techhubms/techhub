@@ -19,6 +19,8 @@ tags:
 - Microsoft
 - Microsoft Cloud
 - Partner Ecosystem
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

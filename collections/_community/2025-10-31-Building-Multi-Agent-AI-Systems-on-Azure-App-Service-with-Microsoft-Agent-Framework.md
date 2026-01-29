@@ -20,6 +20,9 @@ tags:
 - Service Bus
 - WebJobs
 - Workflow Orchestration
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

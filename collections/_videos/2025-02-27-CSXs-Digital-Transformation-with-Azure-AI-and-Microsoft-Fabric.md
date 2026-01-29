@@ -21,6 +21,10 @@ tags:
 - Predictive Maintenance
 - Rail Industry
 - Safety
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

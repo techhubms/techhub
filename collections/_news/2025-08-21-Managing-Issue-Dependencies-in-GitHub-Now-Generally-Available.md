@@ -16,6 +16,8 @@ tags:
 - Team Collaboration
 - Webhooks
 - Workflow Automation
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

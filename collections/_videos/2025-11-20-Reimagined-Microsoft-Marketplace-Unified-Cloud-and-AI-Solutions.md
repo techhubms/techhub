@@ -22,6 +22,9 @@ tags:
 - Spend Optimization
 - Tech Procurement
 - Voice Infrastructure
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

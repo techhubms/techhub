@@ -22,6 +22,10 @@ tags:
 - NSG
 - Service Principal
 - Tenant Restriction
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - azure
 - coding

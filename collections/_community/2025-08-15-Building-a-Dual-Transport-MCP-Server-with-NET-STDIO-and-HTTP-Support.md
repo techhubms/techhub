@@ -23,6 +23,9 @@ tags:
 - STDIO Transport
 - WebApplication
 - WebApplicationBuilder
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

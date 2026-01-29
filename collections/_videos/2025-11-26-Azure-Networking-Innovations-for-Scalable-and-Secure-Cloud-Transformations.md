@@ -20,6 +20,9 @@ tags:
 - Networking Foundations
 - Resilient Infrastructure
 - Scalable Networking
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

@@ -20,6 +20,10 @@ tags:
 - Private Preview
 - Resource Deployment
 - What If
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

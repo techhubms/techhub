@@ -14,6 +14,9 @@ tags:
 - Open Standards
 - Registry Standard
 - VS Code
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

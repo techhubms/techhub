@@ -26,6 +26,10 @@ tags:
 - Schema Abstraction
 - SQL Server
 - T SQL
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

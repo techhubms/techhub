@@ -20,6 +20,9 @@ tags:
 - Microsoft Cloud Platform
 - Protocols
 - Tasks
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

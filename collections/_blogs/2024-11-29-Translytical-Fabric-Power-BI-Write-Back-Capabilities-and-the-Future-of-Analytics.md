@@ -19,6 +19,9 @@ tags:
 - User Data Functions
 - VertiPaq
 - Write Back
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - azure
 - ml

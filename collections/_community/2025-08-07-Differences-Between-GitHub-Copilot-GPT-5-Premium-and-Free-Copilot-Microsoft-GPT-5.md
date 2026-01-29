@@ -17,6 +17,9 @@ tags:
 - Rate Limits
 - Repo Awareness
 - VS Code Integration
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

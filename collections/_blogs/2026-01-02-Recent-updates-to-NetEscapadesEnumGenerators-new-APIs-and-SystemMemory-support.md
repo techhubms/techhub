@@ -20,6 +20,8 @@ tags:
 - Source Generators
 - StringComparison
 - System.Memory
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

@@ -17,6 +17,8 @@ tags:
 - Programmatic Access
 - REST API
 - Usage Tracking
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -19,6 +19,10 @@ tags:
 - Process Automation
 - Semantic Kernel
 - Vector Data
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

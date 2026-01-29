@@ -24,6 +24,12 @@ tags:
 - MCP
 - Microsoft Teams
 - Python Code Interpreter
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

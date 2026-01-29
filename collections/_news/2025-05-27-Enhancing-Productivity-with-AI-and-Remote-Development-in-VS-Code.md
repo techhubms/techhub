@@ -20,6 +20,11 @@ tags:
 - VS Code
 - VS Code Extensions
 - WSL
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

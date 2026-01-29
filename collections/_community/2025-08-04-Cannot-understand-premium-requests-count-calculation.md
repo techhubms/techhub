@@ -14,6 +14,9 @@ tags:
 - Request Limits
 - Subscription
 - Usage Quota
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

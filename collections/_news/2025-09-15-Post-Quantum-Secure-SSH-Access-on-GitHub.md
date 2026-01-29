@@ -20,6 +20,9 @@ tags:
 - Security Best Practices
 - Sntrup761x25519 Sha512
 - SSH
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

@@ -21,6 +21,10 @@ tags:
 - Real Time Data
 - Supply Chain
 - Time Series Analysis
+- AI
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - azure

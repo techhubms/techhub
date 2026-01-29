@@ -23,6 +23,8 @@ tags:
 - Predictive Maintenance
 - Transformer Monitoring
 - Utility Industry
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

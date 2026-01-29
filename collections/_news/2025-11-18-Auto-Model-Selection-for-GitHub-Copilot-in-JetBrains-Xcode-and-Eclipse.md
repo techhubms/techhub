@@ -21,6 +21,9 @@ tags:
 - Model Picker
 - Sonnet 4.5
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

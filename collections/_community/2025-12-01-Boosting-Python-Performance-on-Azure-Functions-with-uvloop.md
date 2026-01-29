@@ -20,6 +20,9 @@ tags:
 - Serverless Architecture
 - Throughput
 - Uvloop
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

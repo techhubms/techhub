@@ -16,6 +16,10 @@ tags:
 - Model Management
 - Task Lists
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

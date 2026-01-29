@@ -16,6 +16,8 @@ tags:
 - Software Engineering
 - SRE
 - Tracing
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

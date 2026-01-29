@@ -20,6 +20,9 @@ tags:
 - Security Groups
 - Tenant Management
 - User Lifecycle
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

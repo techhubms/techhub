@@ -33,6 +33,11 @@ tags:
 - Stateless Server
 - Streamable HTTP
 - TypeScript
+- AI
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - ai
 - azure

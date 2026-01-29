@@ -25,6 +25,9 @@ tags:
 - Software Delivery
 - Testing Automation
 - Workflow Orchestration
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

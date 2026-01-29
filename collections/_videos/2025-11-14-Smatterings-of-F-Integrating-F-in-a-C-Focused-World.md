@@ -15,6 +15,8 @@ tags:
 - Programming Concepts
 - Programming Languages
 - Software Development
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

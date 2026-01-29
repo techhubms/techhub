@@ -20,6 +20,10 @@ tags:
 - SIEM
 - Threat Detection
 - Tool Consolidation
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

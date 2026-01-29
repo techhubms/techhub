@@ -16,10 +16,13 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public class FileBasedContentRepository : ContentRepositoryBase
 {
+    // Tag split separators (same as ContentSyncService)
+    private static readonly char[] TagSplitSeparators = [' ', '-', '_'];
+
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
     private readonly AppSettings _settings;
-    
+
     // Cache section_names by slug for filtering (not exposed on ContentItem model)
     private readonly ConcurrentDictionary<string, List<string>> _sectionNamesCache = new();
 
@@ -193,9 +196,12 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
     /// <summary>
     /// Internal implementation: Get content by section from cached data.
+    /// Optionally filter by collection and subcollection.
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
         string sectionName,
+        string? collectionName,
+        string? subcollectionName,
         bool includeDraft,
         int limit,
         int offset,
@@ -205,13 +211,28 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
         var allItems = await GetAllInternalAsync(includeDraft, int.MaxValue, 0, ct);
 
-        var sectionItems = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
+        IEnumerable<ContentItem> filtered = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
             ? allItems
-            : allItems.Where(item => 
-                _sectionNamesCache.TryGetValue(item.Slug, out var sections) && 
+            : allItems.Where(item =>
+                _sectionNamesCache.TryGetValue(item.Slug, out var sections) &&
                 sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
 
-        return [.. sectionItems.OrderByDescending(x => x.DateEpoch).Skip(offset).Take(limit)];
+        // Filter by collection if specified
+        if (!string.IsNullOrWhiteSpace(collectionName))
+        {
+            filtered = filtered.Where(item =>
+                item.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+        }
+
+        // Filter by subcollection if specified
+        if (!string.IsNullOrWhiteSpace(subcollectionName))
+        {
+            filtered = filtered.Where(item =>
+                item.SubcollectionName != null &&
+                item.SubcollectionName.Equals(subcollectionName, StringComparison.OrdinalIgnoreCase));
+        }
+
+        return [.. filtered.OrderByDescending(x => x.DateEpoch).Skip(offset).Take(limit)];
     }
 
     /// <summary>
@@ -222,6 +243,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
         SearchRequest request,
         CancellationToken ct)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
         IEnumerable<ContentItem> filtered = allItems;
 
@@ -240,9 +263,9 @@ public class FileBasedContentRepository : ContentRepositoryBase
         {
             foreach (var tag in request.Tags)
             {
-                var normalizedTag = tag.ToLowerInvariant().Trim();
+                var normalizedTag = tag.Trim();
                 filtered = filtered.Where(item =>
-                    item.Tags.Any(t => t.ToLowerInvariant().Contains(normalizedTag)));
+                    item.Tags.Any(t => t.Contains(normalizedTag, StringComparison.OrdinalIgnoreCase)));
             }
         }
 
@@ -301,6 +324,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
         FacetRequest request,
         CancellationToken ct)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
         IEnumerable<ContentItem> filtered = allItems;
 
@@ -309,9 +334,9 @@ public class FileBasedContentRepository : ContentRepositoryBase
         {
             foreach (var tag in request.Tags)
             {
-                var normalizedTag = tag.ToLowerInvariant().Trim();
+                var normalizedTag = tag.Trim();
                 filtered = filtered.Where(item =>
-                    item.Tags.Any(t => t.ToLowerInvariant().Contains(normalizedTag)));
+                    item.Tags.Any(t => t.Contains(normalizedTag, StringComparison.OrdinalIgnoreCase)));
             }
         }
 
@@ -344,12 +369,39 @@ public class FileBasedContentRepository : ContentRepositoryBase
         var facets = new Dictionary<string, IReadOnlyList<FacetValue>>();
 
         // Compute tag facets
+        // Expand tags into words for substring matching (like content_tags_expanded table)
+        // For example, "GitHub Copilot" becomes "github" and "copilot" separately
         if (request.FacetFields.Contains("tags"))
         {
-            var tagCounts = filteredList
-                .SelectMany(item => item.Tags)
-                .GroupBy(tag => tag, StringComparer.OrdinalIgnoreCase)
-                .Select(g => new FacetValue { Value = g.Key, Count = g.Count() })
+            var tagWordToSlugs = new Dictionary<string, HashSet<string>>(StringComparer.OrdinalIgnoreCase);
+            
+            foreach (var item in filteredList)
+            {
+                foreach (var tag in item.Tags)
+                {
+                    // Split tag into words (same logic as ContentSyncService)
+                    var words = tag.Split(TagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (var word in words)
+                    {
+                        var wordNormalized = word.Trim();
+                        if (string.IsNullOrWhiteSpace(wordNormalized))
+                        {
+                            continue;
+                        }
+
+                        if (!tagWordToSlugs.TryGetValue(wordNormalized, out var slugs))
+                        {
+                            slugs = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+                            tagWordToSlugs[wordNormalized] = slugs;
+                        }
+
+                        slugs.Add(item.Slug);
+                    }
+                }
+            }
+
+            var tagCounts = tagWordToSlugs
+                .Select(kvp => new FacetValue { Value = kvp.Key, Count = kvp.Value.Count })
                 .OrderByDescending(f => f.Count)
                 .ThenBy(f => f.Value, StringComparer.OrdinalIgnoreCase)
                 .Take(request.MaxFacetValues)
@@ -398,35 +450,26 @@ public class FileBasedContentRepository : ContentRepositoryBase
     /// Finds articles with overlapping tags, ranked by shared tag count.
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetRelatedInternalAsync(
-        string articleId,
+        IReadOnlyList<string> sourceTags,
+        string excludeSlug,
         int count,
         CancellationToken ct)
     {
-        var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
-
-        // Find the source article
-        var sourceArticle = allItems.FirstOrDefault(item => item.Slug == articleId);
-
-        if (sourceArticle == null || sourceArticle.Tags.Count == 0)
+        if (sourceTags.Count == 0)
         {
-            // Fallback: return most recent items from the same collection
-            return allItems
-                .Where(item => item.Slug != articleId &&
-                              item.CollectionName == sourceArticle?.CollectionName)
-                .OrderByDescending(item => item.DateEpoch)
-                .Take(count)
-                .ToList();
+            return [];
         }
 
-        var sourceTags = new HashSet<string>(sourceArticle.Tags, StringComparer.OrdinalIgnoreCase);
+        var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
+        var sourceTagSet = new HashSet<string>(sourceTags, StringComparer.OrdinalIgnoreCase);
 
         // Find articles with tag overlap, ranked by shared tag count
         var relatedItems = allItems
-            .Where(item => item.Slug != articleId)
+            .Where(item => item.Slug != excludeSlug)
             .Select(item => new
             {
                 Item = item,
-                SharedTagCount = item.Tags.Count(t => sourceTags.Contains(t))
+                SharedTagCount = item.Tags.Count(t => sourceTagSet.Contains(t))
             })
             .Where(x => x.SharedTagCount > 0)
             .OrderByDescending(x => x.SharedTagCount)
@@ -470,7 +513,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
         if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            filtered = filtered.Where(item => 
+            filtered = filtered.Where(item =>
                 _sectionNamesCache.TryGetValue(item.Slug, out var sections) &&
                 sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
         }
@@ -491,7 +534,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
         var result = maxTags.HasValue
             ? tagCounts.Take(maxTags.Value).ToList()
-            : tagCounts.ToList();
+            : [.. tagCounts];
 
         return result;
     }
@@ -546,66 +589,67 @@ public class FileBasedContentRepository : ContentRepositoryBase
         var fileContent = await File.ReadAllTextAsync(filePath, ct);
         var (frontMatter, content) = _frontMatterParser.Parse(fileContent);
 
-        var title = _frontMatterParser.GetValue<string>(frontMatter, "title");
-        var dateStr = _frontMatterParser.GetValue<string>(frontMatter, "date");
+        var title = FrontMatterParser.GetValue<string>(frontMatter, "title");
+        var dateStr = FrontMatterParser.GetValue<string>(frontMatter, "date");
 
         if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(dateStr))
         {
-            return null;
+            throw new ArgumentException(
+                $"Content item in collection '{collectionName}' is missing required frontmatter fields. " +
+                $"File: {filePath}");
         }
 
         if (!DateTimeOffset.TryParse(dateStr, out var date))
         {
-            return null;
+            throw new ArgumentException(
+                $"Content item in collection '{collectionName}' has invalid date format in frontmatter. " +
+                $"File: {filePath}, Date: {dateStr}");
         }
 
-        var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Unknown");
-        var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
-        var sectionNames = _frontMatterParser.GetListValue(frontMatter, "section_names");
-        var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
-        var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "external_url", string.Empty);
-        var feedName = _frontMatterParser.GetValue<string>(frontMatter, "feed_name", string.Empty);
-        var plans = _frontMatterParser.GetListValue(frontMatter, "plans");
-        var ghesSupport = _frontMatterParser.GetValue<bool>(frontMatter, "ghes_support", false);
-        var draft = _frontMatterParser.GetValue<bool>(frontMatter, "draft", false);
-
-        // Read primary_section from frontmatter (added by ContentFixer)
-        // Used ONLY for URL building outside section context (homepage, etc.)
-        var primarySectionName = _frontMatterParser.GetValue<string>(frontMatter, "primary_section", "all");
-
-        var subcollectionName = DeriveSubcollectionFromPath(filePath);
-        var derivedCollection = collectionName.TrimStart('_');
+        var author = FrontMatterParser.GetValue<string>(frontMatter, "author", "Unknown");
+        var sectionNames = FrontMatterParser.GetListValue(frontMatter, "section_names");
+        var tags = FrontMatterParser.GetListValue(frontMatter, "tags");
+        var externalUrl = FrontMatterParser.GetValue<string>(frontMatter, "external_url", string.Empty);
+        var feedName = FrontMatterParser.GetValue<string>(frontMatter, "feed_name", string.Empty);
+        var plans = FrontMatterParser.GetListValue(frontMatter, "plans");
+        var ghesSupport = FrontMatterParser.GetValue<bool>(frontMatter, "ghes_support", false);
+        var draft = FrontMatterParser.GetValue<bool>(frontMatter, "draft", false);
+        var primarySectionName = FrontMatterParser.GetValue<string>(frontMatter, "primary_section", "all");
+        var excerpt = MarkdownService.ExtractExcerpt(content);
 
         var filename = Path.GetFileNameWithoutExtension(filePath);
         var slug = StripDatePrefix(filename).ToLowerInvariant();
 
-        if (string.IsNullOrWhiteSpace(excerpt))
-        {
-            excerpt = MarkdownService.ExtractExcerpt(content);
-        }
-
         // Cache section_names for filtering (not exposed on model)
         _sectionNamesCache[slug] = sectionNames;
 
+        // Convert plans list to CSV for constructor
+        var plansString = plans.Count > 0 ? string.Join(",", plans) : null;
+
         // Return ContentItem with raw Content - base class will render to HTML
-        return new ContentItem(
+        var item = new ContentItem(
             slug: slug,
             title: title,
             author: author,
             dateEpoch: date.ToUnixTimeSeconds(),
-            collectionName: derivedCollection,
+            collectionName: collectionName.TrimStart('_'),
             feedName: feedName,
             primarySectionName: primarySectionName,
-            tags: tags,
             excerpt: excerpt,
             externalUrl: externalUrl,
             draft: draft,
-            subcollectionName: subcollectionName,
-            plans: plans,
-            ghesSupport: ghesSupport,
             content: content,
-            renderedHtml: null
+            subcollectionName: DeriveSubcollectionFromPath(filePath),
+            plans: plansString,
+            ghesSupport: ghesSupport
         );
+
+        if (tags.Count > 0)
+        {
+            item.SetTags(tags);
+        }
+
+        return item;
     }
 
     /// <summary>

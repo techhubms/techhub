@@ -34,6 +34,9 @@ tags:
 - Token Deprecation
 - Trusted Publishing
 - WebAuthn
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

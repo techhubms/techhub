@@ -21,6 +21,9 @@ tags:
 - Real Time Data
 - Reinforcement Learning
 - Xai
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

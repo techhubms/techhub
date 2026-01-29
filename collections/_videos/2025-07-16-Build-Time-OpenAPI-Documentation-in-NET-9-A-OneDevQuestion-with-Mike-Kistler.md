@@ -16,6 +16,8 @@ tags:
 - OpenAPI
 - Spectral
 - Web API
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

@@ -20,6 +20,9 @@ tags:
 - Subagents
 - Technical Documentation
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

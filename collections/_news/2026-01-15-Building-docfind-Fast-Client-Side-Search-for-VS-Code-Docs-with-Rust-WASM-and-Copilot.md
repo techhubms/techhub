@@ -21,6 +21,10 @@ tags:
 - VS Code
 - Wasm Bindgen
 - WebAssembly
+- AI
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - coding

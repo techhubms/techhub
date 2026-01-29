@@ -24,6 +24,10 @@ tags:
 - Repository Knowledge
 - Repository Memory
 - Software Engineering
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

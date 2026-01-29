@@ -14,6 +14,9 @@ tags:
 - Scheduled Tasks
 - SYSTEM User
 - Windows
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

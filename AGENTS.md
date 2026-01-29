@@ -29,46 +29,49 @@
 
 #### ✅ Always Do
 
-- [ ] Always follow the 10-step workflow in order
-- [ ] Always write tests BEFORE implementation (TDD)
-- [ ] Always prefer tools in this order: MCP tools → Built-in tools → CLI
-- [ ] Always check for errors after editing files (`get_errors` tool)
-- [ ] Always run tests after code changes
-- [ ] Always fix all linter issues
-- [ ] Always read domain-specific AGENTS.md before editing code in that domain
-- [ ] Always store temp files in `.tmp/`
-- [ ] Always use PowerShell for scripts (save as `.ps1`, then execute)
-- [ ] Always follow timezone standard: `Europe/Brussels`
-- [ ] Always server-side render all content
-- [ ] Always follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
-- [ ] Always be direct and concise - no filler phrases
-- [ ] Always use `Run` function (from TechHubRunner.psm1) for all build/test/run operations
-- [ ] Always monitor `Run` with `get_terminal_output` repeatedly until "This terminal is now free to use"
-- [ ] Always wait for "This terminal is now free to use" before executing ANY other commands in that terminal
+- **Always follow the 10-step workflow in order**
+- **Always complete step checklists before moving to the next step**
+- **Always write tests BEFORE implementation** (TDD)
+- **Always prefer tools in this order**: MCP tools → Built-in tools → CLI
+- **Always check for errors after editing files** (`get_errors` tool)
+- **Always run tests after code changes**
+- **Always fix all linter issues**
+- **Always read domain-specific AGENTS.md before making any changes in that domain**
+- **Always store temp files in `.tmp/`**
+- **Always use PowerShell for scripts** (save as `.ps1`, then execute)
+- **Always follow timezone standard**: `Europe/Brussels`
+- **Always server-side render all content**
+- **Always follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)**
+- **Always be direct and concise** - no filler phrases
+- **Always use `Run` function** (from TechHubRunner.psm1) for all build/test/run operations
+- **Always monitor `Run` with `get_terminal_output`** repeatedly until "This terminal is now free to use"
+- **Always wait for "This terminal is now free to use"** before executing ANY other commands in that terminal
 
 #### ⚠️ Ask First
 
-- [ ] Ask first before making configuration changes (package.json, .csproj, appsettings.json)
-- [ ] Ask first before making breaking changes to public APIs
-- [ ] Ask first before adding new dependencies
-- [ ] Ask first before making cross-domain changes (API + Web + Infrastructure)
-- [ ] Ask first before making significant refactoring
+- **Ask first before making configuration changes** (package.json, .csproj, appsettings.json)
+- **Ask first before making breaking changes to public APIs**
+- **Ask first before adding new dependencies**
+- **Ask first before making cross-domain changes** (API + Web + Infrastructure)
+- **Ask first before making significant refactoring**
 
 #### 🚫 Never Do
 
-- [ ] Never skip the 10-step workflow
-- [ ] Never write implementation before tests
-- [ ] Never skip E2E tests for UI changes
-- [ ] Never use `| head`, `| tail`, `Select-Object -Last` (blocks output)
-- [ ] Never paste scripts into terminal (save as file first)
-- [ ] Never commit secrets or API keys
-- [ ] Never hardcode section/collection data
-- [ ] Never assume UTC (use Europe/Brussels)
-- [ ] Never swallow exceptions without logging
-- [ ] Never rename identifiers without checking ALL occurrences
-- [ ] Never run `Start-Sleep` or other commands in terminal executing `Run` before it completes
-- [ ] Never execute multiple commands in same terminal before `Run` finishes
-- [ ] Never use `dotnet test` directly for E2E tests (use `Run -TestProject E2E.Tests` instead)
+- **Never skip the 10-step workflow**
+- **Never write implementation before tests**
+- **Never skip E2E tests for UI changes**
+- **Never use `| head`, `| tail`, `Select-Object -Last`** (blocks output)
+- **Never paste scripts into terminal** (save as file first)
+- **Never commit secrets or API keys**
+- **Never hardcode section/collection data**
+- **Never assume UTC** (use Europe/Brussels)
+- **Never swallow exceptions without logging**
+- **Never rename identifiers without checking ALL occurrences**
+- **Never run `Start-Sleep` or other commands in terminal executing `Run`** before it completes
+- **Never execute multiple commands in same terminal before `Run` finishes**
+- **Never use `dotnet test` directly for tests**: Use `Run` instead or `Run -TestProject E2E.Tests` if you want to scope to a certain project or even add `-TestName` too
+- **Never use `isBackground: true` for test runs**: Tests complete within 60 seconds - use `isBackground: false` to wait synchronously
+- **Never create new terminals for each command**: Reuse existing terminals instead of spawning orphaned processes
 
 **Step 1 Checklist**:
 
@@ -85,9 +88,9 @@
 **Actions**:
 
 1. Read relevant documentation:
-   - [ ] This file for workflow
-   - [ ] [README.md](README.md) for project overview, terminology, running
-   - [ ] Domain AGENTS.md for the area you're working in:
+   - This file for workflow
+   - [README.md](README.md) for project overview, terminology, running
+   - Domain AGENTS.md for the area you're working in:
      - [src/AGENTS.md](src/AGENTS.md) - .NET patterns and conventions
      - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - API patterns
      - [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - Blazor patterns
@@ -95,9 +98,9 @@
      - [scripts/AGENTS.md](scripts/AGENTS.md) - PowerShell scripts
 
 2. Scan the code:
-   - [ ] Use `read_file` to examine relevant files
-   - [ ] Use `grep_search` or `semantic_search` to find related patterns
-   - [ ] Check existing tests to understand expected behavior
+   - Use `read_file` to examine relevant files
+   - Use `grep_search` or `semantic_search` to find related patterns
+   - Check existing tests to understand expected behavior
 
 **Key Rules**:
 
@@ -121,15 +124,15 @@
 **Actions**:
 
 1. Break down the task:
-   - [ ] Identify logical steps
-   - [ ] List files that need modification
-   - [ ] Determine tests needed
-   - [ ] Identify documentation updates
+   - Identify logical steps
+   - List files that need modification
+   - Determine tests needed
+   - Identify documentation updates
 
 2. Communicate:
-   - [ ] Explain plan to user
-   - [ ] Wait for confirmation if changes are significant
-   - [ ] Use `manage_todo_list` for complex multi-step work
+   - Explain plan to user
+   - Wait for confirmation if changes are significant
+   - Use `manage_todo_list` for complex multi-step work
 
 **Step 3 Checklist**:
 
@@ -147,9 +150,9 @@
 
 **Actions**:
 
-- [ ] Use **context7 MCP tool** for framework/library documentation
-- [ ] Research best practices if needed
-- [ ] Verify information from official sources
+- Use **context7 MCP tool** for framework/library documentation
+- Research best practices if needed
+- Verify information from official sources
 
 **When to Research**:
 
@@ -179,9 +182,9 @@
 
 **How to Verify**:
 
-- [ ] Start website: `Run -WithoutTests` (runs as background process)
-- [ ] Use Playwright MCP tools for browser testing
-- [ ] Document current behavior
+- Start website: `Run -WithoutTests` (runs as background process)
+- Use Playwright MCP tools for browser testing
+- Document current behavior
 
 **See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and-testing-the-website)** for complete instructions.
 
@@ -201,13 +204,13 @@
 **Actions**:
 
 1. Start with clean slate:
-   - [ ] Run ALL tests first: `Run`
-   - [ ] Fix any broken tests before proceeding
+   - Run ALL tests first: `Run`
+   - Fix any broken tests before proceeding
 
 2. Write failing tests:
-   - [ ] For bugs: Write test that reproduces the bug
-   - [ ] For features: Write tests defining expected behavior
-   - [ ] Run tests - verify they fail for the right reason
+   - For bugs: Write test that reproduces the bug
+   - For features: Write tests defining expected behavior
+   - Run tests - verify they fail for the right reason
 
 **Test Types Required**:
 
@@ -240,14 +243,14 @@
 **Actions**:
 
 1. Write minimal code:
-   - [ ] Write ONLY enough code to make tests pass
-   - [ ] Follow existing patterns and conventions
-   - [ ] Use `replace_string_in_file` for edits
+   - Write ONLY enough code to make tests pass
+   - Follow existing patterns and conventions
+   - Use `replace_string_in_file` for edits
 
 2. Check quality:
-   - [ ] Run `get_errors` after each file edit
-   - [ ] Fix all linting/compilation errors
-   - [ ] Run tests frequently
+   - Run `get_errors` after each file edit
+   - Fix all linting/compilation errors
+   - Run tests frequently
 
 **Running the Website**:
 
@@ -273,14 +276,14 @@ See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and
 **Actions**:
 
 1. Run full test suite:
-   - [ ] `Run` to run all tests
-   - [ ] Or `Run -TestProject <name>` for scoped testing
-   - [ ] ALL tests must pass
+   - `Run` to run all tests
+   - Or `Run -TestProject <name>` for scoped testing
+   - ALL tests must pass
 
 2. Check quality:
-   - [ ] Use `get_errors` for linting/compilation
-   - [ ] Verify code follows conventions
-   - [ ] Check error handling and logging
+   - Use `get_errors` for linting/compilation
+   - Verify code follows conventions
+   - Check error handling and logging
 
 **Step 8 Checklist**:
 
@@ -299,10 +302,10 @@ See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and
 
 **What to Update**:
 
-- [ ] Domain AGENTS.md if behavior changed
-- [ ] [docs/](docs/) if features changed
-- [ ] [README.md](README.md) if developer-facing changes
-- [ ] Code comments for complex logic
+- Domain AGENTS.md if behavior changed
+- [docs/](docs/) if features changed
+- [README.md](README.md) if developer-facing changes
+- Code comments for complex logic
 
 **How to Find Docs**:
 
@@ -333,10 +336,10 @@ See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and
 
 **What to Report**:
 
-- [ ] Concise summary of changes
-- [ ] Links to modified files
-- [ ] Confirmation that tests pass
-- [ ] Any important notes or caveats
+- Concise summary of changes
+- Links to modified files
+- Confirmation that tests pass
+- Any important notes or caveats
 
 **File Link Format**: Use `[path/file.ts](path/file.ts)` - NO backticks around file names.
 
@@ -365,7 +368,7 @@ Run -TestProject E2E.Tests  # Run E2E tests
 Run -StopServers            # CI/CD mode
 ```
 
-**🚨 E2E Tests**: NEVER run `dotnet test` directly for E2E - use `Run` instead.
+**🚨 Never use `dotnet test` directly for tests**: Use `Run` instead or `Run -TestProject E2E.Tests` if you want to scope to a certain project or even add `-TestName` too
 
 ### Documentation Map
 
@@ -388,3 +391,34 @@ Run -StopServers            # CI/CD mode
 1. **MCP tools** (highest): Playwright MCP, context7 MCP
 2. **Built-in tools**: `replace_string_in_file`, `read_file`, `grep_search`
 3. **CLI** (lowest): GitHub CLI (`gh`), other commands when tools don't support the operation
+
+### Terminal Usage
+
+**🚨 CRITICAL**: Follow these rules to avoid resource waste and orphaned processes.
+
+**isBackground Usage**:
+
+- `isBackground: true` → Long-running processes (servers, watch mode) - spawns new terminal
+- `isBackground: false` → Completing commands (tests, builds) - blocks until done, returns full output
+
+**Terminal Reuse**:
+
+- **ALWAYS reuse existing terminals** for sequential commands
+- **NEVER create new terminals** for each test run
+- The `Run` command already manages server processes - just wait for completion
+
+**Examples**:
+
+```typescript
+// ✅ CORRECT - Test runs
+run_in_terminal("Run -TestProject Infrastructure.Tests", isBackground: false)
+// Blocks until complete (typically < 60s), returns full output when done
+
+// ✅ CORRECT - Starting servers
+run_in_terminal("Run -WithoutTests", isBackground: true)
+// Returns immediately with terminal ID, process runs indefinitely
+
+// ❌ WRONG - Don't use background mode for tests
+run_in_terminal("Run -TestProject Tests", isBackground: true)
+get_terminal_output(id)  // Unnecessary polling
+```

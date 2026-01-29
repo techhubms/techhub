@@ -21,6 +21,11 @@ tags:
 - Open Source
 - VS Code Integration
 - Workspace Automation
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

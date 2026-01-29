@@ -18,6 +18,9 @@ tags:
 - Power BI Desktop
 - Release Notes
 - Scripted Updates
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

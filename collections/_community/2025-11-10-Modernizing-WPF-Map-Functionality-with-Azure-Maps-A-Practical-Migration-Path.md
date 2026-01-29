@@ -21,6 +21,9 @@ tags:
 - Windows Development
 - WPF
 - XAML
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

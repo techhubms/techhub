@@ -22,6 +22,10 @@ tags:
 - Security Dashboard
 - Sensitive Data Protection
 - Unified Security Ecosystem
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

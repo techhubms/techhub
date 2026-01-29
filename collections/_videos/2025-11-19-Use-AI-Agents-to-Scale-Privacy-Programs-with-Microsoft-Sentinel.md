@@ -20,6 +20,9 @@ tags:
 - Risk Assessment
 - Secureyourdata
 - Security Automation
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

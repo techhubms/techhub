@@ -15,6 +15,8 @@ tags:
 - Project Naming
 - Service References
 - Shared Libraries
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

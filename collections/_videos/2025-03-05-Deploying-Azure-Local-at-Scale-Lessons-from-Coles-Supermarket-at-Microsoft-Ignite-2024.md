@@ -21,6 +21,9 @@ tags:
 - Node Management
 - Retail Technology
 - Workload Deployment
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

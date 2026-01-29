@@ -17,6 +17,9 @@ tags:
 - LinkedIn Post
 - Natural Language
 - Software Development
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -23,6 +23,8 @@ tags:
 - Scenario Modeling
 - Thomas Maurer
 - Video
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

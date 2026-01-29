@@ -22,6 +22,10 @@ tags:
 - Self Hosted Runners
 - Universe25
 - YAML
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

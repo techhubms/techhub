@@ -15,6 +15,12 @@ tags:
 - Unit Testing
 - Value Stream
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

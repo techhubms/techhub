@@ -20,6 +20,9 @@ tags:
 - Redis
 - SEV SNP
 - Virtual Machines
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

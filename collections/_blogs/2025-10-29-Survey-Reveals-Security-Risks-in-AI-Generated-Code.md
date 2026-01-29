@@ -22,6 +22,10 @@ tags:
 - Software Vulnerabilities
 - Technical Debt
 - Vulnerabilities
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

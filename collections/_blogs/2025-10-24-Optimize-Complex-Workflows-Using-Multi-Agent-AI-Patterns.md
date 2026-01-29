@@ -24,6 +24,9 @@ tags:
 - SLM
 - Thomas Maurer
 - Workflow Optimization
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

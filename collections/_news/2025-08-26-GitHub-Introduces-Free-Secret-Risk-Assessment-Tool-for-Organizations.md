@@ -14,6 +14,9 @@ tags:
 - Secret Scanning
 - Security Tools
 - Token Exposure
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

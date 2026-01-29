@@ -22,6 +22,11 @@ tags:
 - Version Control
 - VS Code
 - Workflow
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

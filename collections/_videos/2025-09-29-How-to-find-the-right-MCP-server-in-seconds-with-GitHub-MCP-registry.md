@@ -20,6 +20,9 @@ tags:
 - Terraform
 - Tool Integration
 - Workflows
+- AI
+- DevOps
+- Videos
 section_names:
 - ai
 - devops

@@ -18,6 +18,10 @@ tags:
 - Secure Coding
 - Software Development
 - Software Innovation
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

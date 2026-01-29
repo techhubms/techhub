@@ -16,6 +16,11 @@ tags:
 - Prompt Engineering
 - Scalability
 - Security Best Practices
+- AI
+- Azure
+- Security
+- Coding
+- Videos
 section_names:
 - ai
 - azure

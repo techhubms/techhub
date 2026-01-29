@@ -21,6 +21,8 @@ tags:
 - Mobile Development
 - RC1
 - Release Candidate
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

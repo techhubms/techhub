@@ -19,6 +19,10 @@ tags:
 - Security Operations Center
 - SOC
 - Threat Investigation
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

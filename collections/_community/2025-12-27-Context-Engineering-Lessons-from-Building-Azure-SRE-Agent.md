@@ -19,6 +19,10 @@ tags:
 - Prompt Engineering
 - Site Reliability Engineering
 - Tool Chaining
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

@@ -18,6 +18,10 @@ tags:
 - Prompt Engineering
 - Template
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

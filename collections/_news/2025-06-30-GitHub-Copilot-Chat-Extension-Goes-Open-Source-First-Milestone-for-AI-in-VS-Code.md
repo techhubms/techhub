@@ -19,6 +19,10 @@ tags:
 - Transparency
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

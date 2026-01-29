@@ -20,6 +20,9 @@ tags:
 - Operational Excellence
 - Terraform
 - Well Architected Framework
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

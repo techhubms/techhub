@@ -14,6 +14,9 @@ tags:
 - Subscription
 - Usage Patterns
 - User Feedback
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

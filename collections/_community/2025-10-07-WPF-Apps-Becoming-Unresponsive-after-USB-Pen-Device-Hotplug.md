@@ -21,6 +21,8 @@ tags:
 - WM TABLET DELETED
 - WPF
 - WPF Performance
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

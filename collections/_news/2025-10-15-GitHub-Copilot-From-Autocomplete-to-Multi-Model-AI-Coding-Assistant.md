@@ -20,6 +20,10 @@ tags:
 - Multi Model AI
 - Pull Request Automation
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

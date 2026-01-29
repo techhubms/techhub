@@ -15,6 +15,8 @@ tags:
 - Partial Responses
 - Query Optimization
 - Rate Limiting
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

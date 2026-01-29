@@ -24,6 +24,9 @@ tags:
 - Sustainability
 - Virtual Machines
 - Well Architected Framework
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

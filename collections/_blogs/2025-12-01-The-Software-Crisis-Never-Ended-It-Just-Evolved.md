@@ -21,6 +21,9 @@ tags:
 - Spiral Model
 - Uncategorized
 - Waterfall Model
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

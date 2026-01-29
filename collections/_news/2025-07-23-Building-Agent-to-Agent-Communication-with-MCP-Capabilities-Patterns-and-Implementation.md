@@ -15,6 +15,8 @@ tags:
 - Resumable Streams
 - Sampling
 - Session Resumption
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

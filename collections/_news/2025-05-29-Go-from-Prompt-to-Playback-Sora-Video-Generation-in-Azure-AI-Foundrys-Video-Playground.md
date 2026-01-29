@@ -17,6 +17,9 @@ tags:
 - Sora
 - Video Generation
 - VS Code
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

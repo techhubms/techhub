@@ -19,6 +19,9 @@ tags:
 - Model Selection
 - OneDevQuestion
 - Seth Juarez
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

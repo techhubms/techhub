@@ -10,6 +10,9 @@ tags:
 - Playwright MCP
 - Public Preview
 - Web Browsing
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

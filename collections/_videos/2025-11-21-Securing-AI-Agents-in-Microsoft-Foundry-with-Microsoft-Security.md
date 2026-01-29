@@ -25,6 +25,9 @@ tags:
 - OWASP
 - ProtectcloudAIplatformandapps
 - Security Posture
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

@@ -22,6 +22,8 @@ tags:
 - TypeScript 5.7
 - V8 Compile Cache
 - VS Code
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

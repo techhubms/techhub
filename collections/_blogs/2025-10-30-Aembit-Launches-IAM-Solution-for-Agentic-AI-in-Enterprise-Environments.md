@@ -22,6 +22,9 @@ tags:
 - Policy Enforcement
 - Runtime Security
 - Workload IAM
+- AI
+- Security
+- Blogs
 section_names:
 - ai
 - security

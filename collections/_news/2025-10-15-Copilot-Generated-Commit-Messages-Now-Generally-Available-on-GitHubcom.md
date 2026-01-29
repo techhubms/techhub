@@ -15,6 +15,10 @@ tags:
 - Feature Release
 - GitHub Enterprise Cloud
 - GitHub.com
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

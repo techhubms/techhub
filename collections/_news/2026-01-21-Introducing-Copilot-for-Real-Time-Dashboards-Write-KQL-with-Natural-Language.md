@@ -15,6 +15,8 @@ tags:
 - Productivity
 - Query Authoring
 - Real Time Dashboards
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

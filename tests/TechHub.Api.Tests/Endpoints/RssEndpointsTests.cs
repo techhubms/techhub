@@ -8,9 +8,16 @@ namespace TechHub.Api.Tests.Endpoints;
 /// <summary>
 /// Integration tests for RSS feed endpoints (uses real data, no mocks)
 /// </summary>
-public class RssEndpointsTests(TechHubIntegrationTestApiFactory factory) : IClassFixture<TechHubIntegrationTestApiFactory>
+public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
-    private readonly HttpClient _client = factory.CreateClient();
+    private readonly HttpClient _client;
+
+    public RssEndpointsTests(TechHubIntegrationTestApiFactory factory)
+    {
+        ArgumentNullException.ThrowIfNull(factory);
+
+        _client = factory.CreateClient();
+    }
 
     [Fact]
     public async Task GetAllContentFeed_ReturnsValidRss()
@@ -19,6 +26,12 @@ public class RssEndpointsTests(TechHubIntegrationTestApiFactory factory) : IClas
         var response = await _client.GetAsync("/api/rss/all");
 
         // Assert
+        if (response.StatusCode != HttpStatusCode.OK)
+        {
+            var errorContent = await response.Content.ReadAsStringAsync();
+            throw new Exception($"Expected OK but got {response.StatusCode}. Response: {errorContent}");
+        }
+        
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         response.Content.Headers.ContentType?.ToString().Should().Be("application/rss+xml; charset=utf-8");
 

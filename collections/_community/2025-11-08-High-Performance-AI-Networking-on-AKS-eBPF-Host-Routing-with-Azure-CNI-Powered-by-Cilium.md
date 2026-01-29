@@ -21,6 +21,11 @@ tags:
 - Security Safeguards
 - TCP Benchmarking
 - Ubuntu 24.04
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

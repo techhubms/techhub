@@ -24,6 +24,10 @@ tags:
 - Visual Basic
 - VSTest
 - YAML Pipelines
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

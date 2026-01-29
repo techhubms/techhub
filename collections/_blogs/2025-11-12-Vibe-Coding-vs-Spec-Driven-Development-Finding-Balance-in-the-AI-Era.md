@@ -19,6 +19,9 @@ tags:
 - Technical Debt
 - Vibe Coding
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

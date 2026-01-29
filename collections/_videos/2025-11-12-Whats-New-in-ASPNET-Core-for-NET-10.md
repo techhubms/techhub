@@ -19,6 +19,8 @@ tags:
 - Performance Improvements
 - Validation
 - Web Application Development
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

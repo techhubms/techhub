@@ -20,6 +20,9 @@ tags:
 - Tamper Proof Logs
 - Workspace Administration
 - Write Once Read Many
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

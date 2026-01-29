@@ -18,6 +18,8 @@ tags:
 - Software Development
 - Team Planning
 - Workflow Automation
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

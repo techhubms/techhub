@@ -22,6 +22,9 @@ tags:
 - Test Run Hub
 - UX
 - Workflow Management
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

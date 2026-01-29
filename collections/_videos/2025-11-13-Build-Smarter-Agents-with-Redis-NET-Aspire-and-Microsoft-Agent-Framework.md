@@ -23,6 +23,10 @@ tags:
 - Session Management
 - Vector Store
 - VS
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

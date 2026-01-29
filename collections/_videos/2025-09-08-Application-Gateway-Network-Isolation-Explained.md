@@ -18,6 +18,9 @@ tags:
 - Network Architecture
 - Network Isolation
 - Security Best Practices
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

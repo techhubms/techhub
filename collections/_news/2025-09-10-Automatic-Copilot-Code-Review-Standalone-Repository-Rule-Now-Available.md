@@ -16,6 +16,10 @@ tags:
 - Pull Requests
 - Repository Rules
 - Rule Configuration
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

@@ -18,6 +18,9 @@ tags:
 - SIEM Integration
 - Threat Detection
 - User Education
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

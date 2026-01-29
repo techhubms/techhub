@@ -23,6 +23,10 @@ tags:
 - Token Generation
 - Visual Studio Copilot
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -24,6 +24,8 @@ tags:
 - MCP
 - Microsoft
 - Software Development
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

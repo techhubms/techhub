@@ -20,6 +20,10 @@ tags:
 - ServiceNow
 - Workflow Automation
 - Workflow Development
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

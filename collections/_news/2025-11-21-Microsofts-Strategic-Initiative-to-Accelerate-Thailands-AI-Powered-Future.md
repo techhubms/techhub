@@ -22,6 +22,9 @@ tags:
 - OECD
 - SCBX
 - Thailand
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

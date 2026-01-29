@@ -24,6 +24,8 @@ tags:
 - Read AzureAZs.ps1
 - Regional Mapping
 - Subscriptions
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

@@ -20,6 +20,9 @@ tags:
 - Python
 - Saturation Boost
 - Web Application
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

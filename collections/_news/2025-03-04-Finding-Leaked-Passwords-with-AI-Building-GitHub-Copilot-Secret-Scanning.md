@@ -18,6 +18,11 @@ tags:
 - Resource Management
 - Secret Scanning
 - Security Alerts
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - devops

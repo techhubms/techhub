@@ -18,6 +18,11 @@ tags:
 - Real Time Security
 - Security Enforcement
 - Token Revocation
+- Azure
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - coding

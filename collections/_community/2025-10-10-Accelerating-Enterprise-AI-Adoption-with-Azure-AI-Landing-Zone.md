@@ -24,6 +24,9 @@ tags:
 - Terraform
 - WAF
 - Well Architected Framework
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

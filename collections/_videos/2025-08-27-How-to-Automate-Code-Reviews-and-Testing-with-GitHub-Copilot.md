@@ -16,6 +16,10 @@ tags:
 - Repository Management
 - Security Scanning
 - Software Development
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

@@ -22,6 +22,9 @@ tags:
 - Test Generation
 - Troubleshooting
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

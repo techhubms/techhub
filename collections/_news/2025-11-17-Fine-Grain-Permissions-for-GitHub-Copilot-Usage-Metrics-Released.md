@@ -14,6 +14,9 @@ tags:
 - Metrics
 - Permission Management
 - User Access
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

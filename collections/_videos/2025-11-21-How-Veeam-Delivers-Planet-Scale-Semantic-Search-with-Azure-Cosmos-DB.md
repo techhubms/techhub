@@ -25,6 +25,10 @@ tags:
 - System Architecture
 - Unifyyourdataplatform
 - Vector Search
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

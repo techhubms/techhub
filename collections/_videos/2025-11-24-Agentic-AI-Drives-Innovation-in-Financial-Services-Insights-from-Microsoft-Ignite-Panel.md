@@ -22,6 +22,8 @@ tags:
 - Risk Intelligence
 - Technical Debt
 - Unified Experience Strategy
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

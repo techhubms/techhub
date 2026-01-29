@@ -17,6 +17,11 @@ tags:
 - Tool Limit Increase
 - VS Code
 - VS Code 1.103
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

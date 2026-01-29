@@ -19,6 +19,10 @@ tags:
 - Software Development
 - Testing
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

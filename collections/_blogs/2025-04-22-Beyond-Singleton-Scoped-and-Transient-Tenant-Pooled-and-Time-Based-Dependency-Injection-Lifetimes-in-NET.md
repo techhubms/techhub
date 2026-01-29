@@ -18,6 +18,8 @@ tags:
 - Tenant Scoped
 - Time Based Services
 - Transient
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

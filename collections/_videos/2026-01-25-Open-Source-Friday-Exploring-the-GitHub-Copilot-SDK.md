@@ -18,6 +18,10 @@ tags:
 - SDK
 - Technical Preview
 - Tool Integration
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

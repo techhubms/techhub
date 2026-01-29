@@ -28,6 +28,8 @@ tags:
 - STRIDE
 - Threat Modeling
 - Zero Trust
+- Security
+- News
 section_names:
 - security
 primary_section: security

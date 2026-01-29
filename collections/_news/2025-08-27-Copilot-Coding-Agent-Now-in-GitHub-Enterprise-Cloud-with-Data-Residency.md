@@ -14,6 +14,9 @@ tags:
 - GitHub Enterprise Cloud
 - Issue Assignment
 - Pull Requests
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

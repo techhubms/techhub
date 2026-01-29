@@ -22,6 +22,10 @@ tags:
 - Security Operations
 - SIEM
 - XDR
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

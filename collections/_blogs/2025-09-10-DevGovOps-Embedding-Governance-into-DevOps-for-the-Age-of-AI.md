@@ -33,6 +33,10 @@ tags:
 - Social X
 - Software Supply Chain
 - Software Supply Chain Compliance
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

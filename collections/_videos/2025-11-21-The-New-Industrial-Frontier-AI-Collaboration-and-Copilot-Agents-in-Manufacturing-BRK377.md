@@ -20,6 +20,9 @@ tags:
 - Robotics
 - Sensors
 - Virtual Support Agents
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

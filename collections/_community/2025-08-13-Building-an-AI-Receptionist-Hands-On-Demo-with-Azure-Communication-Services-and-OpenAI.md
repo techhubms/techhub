@@ -19,6 +19,10 @@ tags:
 - Scheduling Automation
 - SMS Automation
 - Webhook
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

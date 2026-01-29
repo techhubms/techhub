@@ -26,6 +26,8 @@ tags:
 - S3
 - SMB
 - Storage
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

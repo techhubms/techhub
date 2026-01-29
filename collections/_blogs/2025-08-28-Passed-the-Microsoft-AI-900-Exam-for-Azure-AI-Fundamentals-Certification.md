@@ -22,6 +22,9 @@ tags:
 - Microsoft Azure
 - Microsoft Certified
 - Natural Language Processing
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

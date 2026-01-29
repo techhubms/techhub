@@ -17,6 +17,9 @@ tags:
 - Plugin Development
 - Python Plugin
 - Semantic Kernel
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

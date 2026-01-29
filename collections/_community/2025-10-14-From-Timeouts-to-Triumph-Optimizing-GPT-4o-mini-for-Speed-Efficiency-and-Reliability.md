@@ -21,6 +21,9 @@ tags:
 - Throttling
 - Timeout Handling
 - Token Optimization
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

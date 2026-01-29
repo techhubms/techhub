@@ -21,6 +21,8 @@ tags:
 - WinUI 3
 - XAML
 - XAML Studio
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

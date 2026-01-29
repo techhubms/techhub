@@ -23,6 +23,10 @@ tags:
 - Session Management
 - Shell Commands
 - Usage Statistics
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

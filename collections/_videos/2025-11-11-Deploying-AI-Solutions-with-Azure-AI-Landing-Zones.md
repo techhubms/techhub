@@ -19,6 +19,11 @@ tags:
 - IT Governance
 - Landing Zone Automation
 - Microsoft Azure
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

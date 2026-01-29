@@ -20,6 +20,10 @@ tags:
 - Modernize Agent
 - Performance Optimization
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

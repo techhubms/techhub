@@ -19,6 +19,9 @@ tags:
 - Task Assignment
 - Team Boards
 - Work Item Visibility
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

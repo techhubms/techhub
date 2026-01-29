@@ -20,6 +20,10 @@ tags:
 - Persistent Volume
 - Pwru
 - Retina
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

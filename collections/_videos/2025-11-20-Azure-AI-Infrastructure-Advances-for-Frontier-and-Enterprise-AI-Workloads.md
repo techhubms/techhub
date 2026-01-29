@@ -27,6 +27,9 @@ tags:
 - NVIDIA Grace Blackwell
 - Quantum 2 InfiniBand
 - Silicon Optimization
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

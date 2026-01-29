@@ -21,6 +21,9 @@ tags:
 - Richtech Robotics
 - Vision Models
 - Voice Assistance
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

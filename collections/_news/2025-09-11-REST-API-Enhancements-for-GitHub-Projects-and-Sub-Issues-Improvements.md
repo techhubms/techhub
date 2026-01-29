@@ -21,6 +21,8 @@ tags:
 - Projects API
 - REST API
 - Sub Issues
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

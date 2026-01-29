@@ -17,6 +17,8 @@ tags:
 - Program.cs
 - Startup
 - Urls
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

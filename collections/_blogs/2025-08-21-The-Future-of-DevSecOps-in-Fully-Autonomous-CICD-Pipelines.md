@@ -21,6 +21,10 @@ tags:
 - Threat Detection
 - Vulnerability Management
 - Zero Trust Architecture
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

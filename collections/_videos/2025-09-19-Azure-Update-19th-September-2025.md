@@ -33,6 +33,10 @@ tags:
 - Service Retirement
 - SQL Hub
 - Virtual Machines
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

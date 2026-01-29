@@ -21,6 +21,9 @@ tags:
 - Parallel Storage
 - Simulation
 - Turin
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

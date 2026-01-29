@@ -36,6 +36,9 @@ tags:
 - Tool Adoption
 - Vibecoding
 - Vibecoding Risks
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

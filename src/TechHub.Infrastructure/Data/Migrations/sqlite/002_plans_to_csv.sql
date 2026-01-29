@@ -1,0 +1,5 @@
+-- Migration: Convert plans from junction table to CSV field
+-- Date: 2026-01-29
+-- Reason: Plans only used on one page (ghc-features), simpler as CSV
+-- Note: Column already exists in 001_initial_schema.sql, skipping ADD COLUMN
+-- Note: content_plans table was already dropped in a previous migration, no data migration needed

@@ -17,6 +17,9 @@ tags:
 - OneLake
 - Retail Automation
 - Workflow Automation
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

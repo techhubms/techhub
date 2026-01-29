@@ -17,6 +17,8 @@ tags:
 - GitHub
 - Public Preview
 - Repository Insights
+- AI
+- GitHub Copilot
 primary_section: github-copilot
 section_names:
 - ai

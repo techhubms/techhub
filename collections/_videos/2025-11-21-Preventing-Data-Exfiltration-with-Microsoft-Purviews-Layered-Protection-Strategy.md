@@ -23,6 +23,9 @@ tags:
 - Sensitive Data
 - Unified Data Protection
 - Unmanaged Devices
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

@@ -19,6 +19,8 @@ tags:
 - Spot Instances
 - VM Sizing
 - Workload Planning
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

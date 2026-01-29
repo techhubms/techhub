@@ -24,6 +24,9 @@ tags:
 - Semantic Search
 - Technical Demo
 - TomTom
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

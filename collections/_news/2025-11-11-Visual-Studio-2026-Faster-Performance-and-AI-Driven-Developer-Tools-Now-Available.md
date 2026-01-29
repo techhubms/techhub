@@ -18,6 +18,9 @@ tags:
 - Profiler Agent
 - User Experience
 - VS
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

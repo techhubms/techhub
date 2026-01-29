@@ -26,6 +26,10 @@ tags:
 - Stable Channel
 - Support
 - VS
+- AI
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - coding

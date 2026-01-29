@@ -21,6 +21,10 @@ tags:
 - Observability
 - Telemetry
 - Token Quotas
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

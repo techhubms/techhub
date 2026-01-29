@@ -21,6 +21,11 @@ tags:
 - Public Preview
 - Semantic Kernel
 - VS Code
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

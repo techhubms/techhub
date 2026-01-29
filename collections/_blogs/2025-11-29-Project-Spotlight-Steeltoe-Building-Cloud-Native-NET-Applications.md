@@ -17,6 +17,8 @@ tags:
 - Spring Cloud
 - Steeltoe
 - Web Applications
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

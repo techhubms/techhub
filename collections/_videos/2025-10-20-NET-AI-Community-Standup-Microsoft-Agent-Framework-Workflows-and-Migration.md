@@ -27,6 +27,10 @@ tags:
 - Software Developer
 - Workflow Automation
 - Workflows
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

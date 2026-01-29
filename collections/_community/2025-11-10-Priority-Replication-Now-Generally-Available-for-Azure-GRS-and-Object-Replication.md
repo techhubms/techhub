@@ -18,6 +18,8 @@ tags:
 - Object Replication
 - Replication Metrics
 - SLA
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -19,6 +19,9 @@ tags:
 - Security Review
 - VS Code
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

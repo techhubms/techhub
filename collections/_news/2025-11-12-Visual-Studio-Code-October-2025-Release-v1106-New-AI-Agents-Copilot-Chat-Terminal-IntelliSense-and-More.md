@@ -20,6 +20,11 @@ tags:
 - Terminal IntelliSense
 - VS Code
 - VS Code 1.106
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

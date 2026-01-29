@@ -28,6 +28,10 @@ tags:
 - OpenAI
 - OpenAI SDK
 - VS Code
+- AI
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - coding

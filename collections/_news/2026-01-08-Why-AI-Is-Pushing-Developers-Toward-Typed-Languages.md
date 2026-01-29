@@ -25,6 +25,9 @@ tags:
 - Typed Languages
 - TypeScript
 - Typst
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

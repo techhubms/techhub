@@ -30,6 +30,9 @@ tags:
 - Tech
 - Technology
 - Workflow Automation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

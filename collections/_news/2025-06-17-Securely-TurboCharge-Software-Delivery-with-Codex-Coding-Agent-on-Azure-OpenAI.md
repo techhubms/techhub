@@ -24,6 +24,12 @@ tags:
 - OpenAI
 - Private Networking
 - Refactoring
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

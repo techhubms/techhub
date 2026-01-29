@@ -27,6 +27,11 @@ tags:
 - Saga Pattern
 - Sam's Club
 - Service Architecture
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Videos
 section_names:
 - azure
 - coding

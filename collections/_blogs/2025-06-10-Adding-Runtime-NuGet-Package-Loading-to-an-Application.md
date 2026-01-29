@@ -16,6 +16,8 @@ tags:
 - NuGet
 - Razor Pages
 - Runtime Extensibility
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

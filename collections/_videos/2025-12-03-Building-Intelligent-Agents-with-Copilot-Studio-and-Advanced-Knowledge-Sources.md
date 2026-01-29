@@ -31,6 +31,8 @@ tags:
 - Session BRK318
 - Visualization
 - Workflow Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

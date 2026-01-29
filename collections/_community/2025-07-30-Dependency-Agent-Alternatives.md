@@ -18,6 +18,9 @@ tags:
 - Log Analytics
 - Observability
 - VM Insights
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

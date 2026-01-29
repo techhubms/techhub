@@ -19,6 +19,11 @@ tags:
 - Package Vulnerabilities
 - VS
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

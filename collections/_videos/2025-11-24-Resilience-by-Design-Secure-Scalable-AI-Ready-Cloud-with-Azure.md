@@ -20,6 +20,10 @@ tags:
 - Shared Responsibility
 - Threat Detection
 - VM Backup
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

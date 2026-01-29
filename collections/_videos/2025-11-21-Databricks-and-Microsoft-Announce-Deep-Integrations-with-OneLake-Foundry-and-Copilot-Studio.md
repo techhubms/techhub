@@ -22,6 +22,10 @@ tags:
 - Other
 - SAP On Azure
 - Unity Catalog
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

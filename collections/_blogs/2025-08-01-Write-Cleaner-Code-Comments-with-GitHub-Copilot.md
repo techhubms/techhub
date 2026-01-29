@@ -17,6 +17,10 @@ tags:
 - Documentation
 - Edit Mode
 - Inline Comments
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

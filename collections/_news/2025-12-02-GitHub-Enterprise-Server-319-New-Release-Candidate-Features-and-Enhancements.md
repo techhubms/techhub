@@ -19,6 +19,9 @@ tags:
 - SHA Pinning
 - TLS Ciphers
 - Version Control
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

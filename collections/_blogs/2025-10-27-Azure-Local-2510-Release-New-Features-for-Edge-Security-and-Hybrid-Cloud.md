@@ -21,6 +21,9 @@ tags:
 - Trusted VM
 - Virtualization
 - Well Architected Framework
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

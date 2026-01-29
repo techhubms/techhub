@@ -14,6 +14,9 @@ tags:
 - Instruction Files
 - Prompt Engineering
 - Software Development
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

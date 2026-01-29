@@ -20,6 +20,9 @@ tags:
 - Programming Languages & Frameworks
 - Static Typing
 - Typescript
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

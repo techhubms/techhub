@@ -16,6 +16,8 @@ tags:
 - Repository Management
 - Retired
 - Workflow Optimization
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

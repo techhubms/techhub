@@ -18,6 +18,10 @@ tags:
 - Secrets Management
 - Secure Applications
 - Security Best Practices
+- Azure
+- Coding
+- Security
+- Videos
 section_names:
 - azure
 - coding

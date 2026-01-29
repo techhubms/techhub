@@ -15,6 +15,9 @@ tags:
 - Machine Learning
 - Reinforcement Learning
 - Software Development
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

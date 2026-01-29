@@ -31,6 +31,9 @@ tags:
 - Power Platform Monitor
 - Production Deployment
 - Source Control
+- AI
+- DevOps
+- Videos
 section_names:
 - ai
 - devops

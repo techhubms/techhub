@@ -24,6 +24,9 @@ tags:
 - Semantic Kernel
 - Tech
 - Technology
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

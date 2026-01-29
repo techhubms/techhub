@@ -20,6 +20,9 @@ tags:
 - Private Link
 - WAF Policy
 - Web Application Firewall
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

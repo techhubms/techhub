@@ -22,6 +22,10 @@ tags:
 - Phishing
 - Security Copilot
 - Zero Trust
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -18,6 +18,10 @@ tags:
 - Service Principal
 - Spark Job Definition
 - Workspace Identity
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

@@ -32,6 +32,9 @@ tags:
 - Social LinkedIn
 - Social X
 - System Initiative
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

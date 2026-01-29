@@ -19,6 +19,9 @@ tags:
 - Test Automation
 - Test Generation
 - VS Code
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

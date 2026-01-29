@@ -25,6 +25,9 @@ tags:
 - Tech Demo
 - Technology
 - Warp
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

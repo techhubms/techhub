@@ -25,6 +25,9 @@ tags:
 - Talhah Mir
 - Threat Protection
 - Yaki Faitelson
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

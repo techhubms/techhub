@@ -24,6 +24,10 @@ tags:
 - Pet Planner Workshop
 - Tech
 - Technology
+- AI
+- Azure
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

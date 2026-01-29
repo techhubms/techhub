@@ -27,6 +27,10 @@ tags:
 - Security Assessment
 - Security Recommendations
 - Tab
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

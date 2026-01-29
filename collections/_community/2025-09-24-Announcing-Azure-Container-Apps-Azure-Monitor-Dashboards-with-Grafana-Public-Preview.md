@@ -20,6 +20,9 @@ tags:
 - RBAC
 - Serverless
 - Visualization
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

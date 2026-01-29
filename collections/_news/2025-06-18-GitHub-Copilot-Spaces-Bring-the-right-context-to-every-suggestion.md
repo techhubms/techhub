@@ -11,6 +11,9 @@ tags:
 - GitHub Copilot Spaces
 - Space Setup
 - Team Workflows
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

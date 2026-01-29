@@ -18,6 +18,10 @@ tags:
 - SDK
 - Technical Preview
 - Winget
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

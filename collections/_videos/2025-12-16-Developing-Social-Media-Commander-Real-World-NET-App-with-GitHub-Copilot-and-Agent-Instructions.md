@@ -29,6 +29,12 @@ tags:
 - Tech
 - Technology
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

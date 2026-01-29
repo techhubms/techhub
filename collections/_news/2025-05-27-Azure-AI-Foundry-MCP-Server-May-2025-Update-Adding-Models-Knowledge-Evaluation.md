@@ -16,6 +16,9 @@ tags:
 - Knowledge Management
 - MCP Server
 - Natural Language Interactions
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

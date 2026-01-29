@@ -24,6 +24,9 @@ tags:
 - Open Specification
 - Polyglot Notebook
 - Software Developer
+- Coding
+- Security
+- Videos
 section_names:
 - coding
 - security

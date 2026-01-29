@@ -27,6 +27,11 @@ tags:
 - Terraform
 - VS Code
 - VS Code Extension
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

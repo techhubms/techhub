@@ -25,6 +25,8 @@ tags:
 - Microsoft Azure
 - Microsoft Defender For Cloud
 - Microsoft Sentinel
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

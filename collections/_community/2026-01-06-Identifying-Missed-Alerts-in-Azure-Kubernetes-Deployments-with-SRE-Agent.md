@@ -24,6 +24,10 @@ tags:
 - Monitoring
 - Subagent
 - Synthetic Tests
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

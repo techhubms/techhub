@@ -23,6 +23,10 @@ tags:
 - Responsible AI
 - SAP
 - Security Standards
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

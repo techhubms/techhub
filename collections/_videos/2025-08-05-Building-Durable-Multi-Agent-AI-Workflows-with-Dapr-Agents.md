@@ -28,6 +28,11 @@ tags:
 - Tech
 - Technology
 - Virtual Actor Model
+- AI
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

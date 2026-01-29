@@ -21,6 +21,8 @@ tags:
 - News & Insights
 - Service Outage
 - TLS Certificate
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

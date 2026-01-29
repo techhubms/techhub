@@ -21,6 +21,10 @@ tags:
 - Recovery Services Vault
 - Vault Soft Delete
 - Zonal Architecture
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

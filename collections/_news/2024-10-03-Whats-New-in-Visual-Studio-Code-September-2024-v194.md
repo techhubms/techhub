@@ -23,6 +23,11 @@ tags:
 - TypeScript 5.6
 - V1.94
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

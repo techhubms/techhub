@@ -17,6 +17,9 @@ tags:
 - Pre Purchase Plan
 - Subscription Management
 - Volume Discount
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

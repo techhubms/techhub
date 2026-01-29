@@ -23,6 +23,9 @@ tags:
 - Ransomware
 - Security Best Practices
 - Storm 0501
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

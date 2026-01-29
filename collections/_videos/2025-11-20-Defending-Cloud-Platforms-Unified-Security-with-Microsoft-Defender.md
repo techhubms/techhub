@@ -22,6 +22,10 @@ tags:
 - Risk Prioritization
 - Security Automation
 - Security Posture Management
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

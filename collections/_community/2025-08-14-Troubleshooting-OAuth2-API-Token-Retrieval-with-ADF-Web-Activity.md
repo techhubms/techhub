@@ -17,6 +17,9 @@ tags:
 - REST API
 - Token Acquisition
 - Web Activity
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

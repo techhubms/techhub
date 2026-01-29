@@ -10,14 +10,25 @@ namespace TechHub.Infrastructure.Data;
 /// Executes SQL migration scripts automatically on application startup.
 /// Runs all migration scripts in sequential order based on filename (001_, 002_, etc.).
 /// </summary>
-public class MigrationRunner(
-    IDbConnection connection,
-    ISqlDialect dialect,
-    ILogger<MigrationRunner> logger)
+public class MigrationRunner
 {
-    private readonly IDbConnection _connection = connection ?? throw new ArgumentNullException(nameof(connection));
-    private readonly ISqlDialect _dialect = dialect ?? throw new ArgumentNullException(nameof(dialect));
-    private readonly ILogger<MigrationRunner> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+    private readonly IDbConnection _connection;
+    private readonly ISqlDialect _dialect;
+    private readonly ILogger<MigrationRunner> _logger;
+
+    public MigrationRunner(
+        IDbConnection connection,
+        ISqlDialect dialect,
+        ILogger<MigrationRunner> logger)
+    {
+        ArgumentNullException.ThrowIfNull(connection);
+        ArgumentNullException.ThrowIfNull(dialect);
+        ArgumentNullException.ThrowIfNull(logger);
+
+        _connection = connection;
+        _dialect = dialect;
+        _logger = logger;
+    }
 
     /// <summary>
     /// Run all pending migrations for the configured database provider.
@@ -38,7 +49,7 @@ public class MigrationRunner(
 
         // Get all migration scripts sorted by filename
         var migrationScripts = assembly.GetManifestResourceNames()
-            .Where(name => name.StartsWith(migrationPrefix) && name.EndsWith(".sql"))
+            .Where(name => name.StartsWith(migrationPrefix, StringComparison.Ordinal) && name.EndsWith(".sql", StringComparison.Ordinal))
             .OrderBy(name => name)
             .ToList();
 

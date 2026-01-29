@@ -28,11 +28,11 @@ namespace TechHub.ContentFixer;
 /// - Remove {% raw %} and {% endraw %} tags
 /// - Process {{ "/path" | relative_url }} filters
 /// - Keep {% youtube VIDEO_ID %} tags intact (will be processed at runtime)
-/// - Remove section/collection names from tags ONLY for sections/collections this item belongs to
-///   (e.g., if section_names contains "ai", remove "AI" tag; if collection is "blogs", remove "Blogs" tag)
-/// - Special rule: If "GitHub Copilot" is in tags, also remove "AI" tag
+/// - Add section/collection display names as tags for sections/collections this item belongs to
+///   (e.g., if section_names contains "ai", add "AI" tag; if collection is "blogs", add "Blogs" tag)
+///   This ensures filtering by tag includes items in those sections/collections.
 /// </summary>
-internal sealed class Program
+public sealed class Program
 {
     private static readonly Dictionary<string, string> _sectionMapping = new()
     {
@@ -80,8 +80,6 @@ internal sealed class Program
         ["events"] = ["Events"]
     };
 
-
-
     private static async Task<int> Main(string[] args)
     {
         var dryRun = args.Contains("--dry-run");
@@ -126,6 +124,7 @@ internal sealed class Program
                     skipped++;
                 }
             }
+#pragma warning disable CA1031 // Do not catch general exception types - intentional for top-level error handling in Main
             catch (Exception ex)
             {
                 errors++;
@@ -183,15 +182,20 @@ internal sealed class Program
         Console.ResetColor();
 
         var content = await File.ReadAllTextAsync(filePath);
+
+        ArgumentException.ThrowIfNullOrWhiteSpace(content);
+
         var parser = new FrontMatterParser();
-        Dictionary<string, object> frontMatter;
+        Dictionary<string, object?> frontMatter;
         string markdownContent;
 
         try
         {
             (frontMatter, markdownContent) = parser.Parse(content);
         }
+#pragma warning disable CA1031 // Do not catch general exception types - intentional for parser error handling
         catch (Exception ex)
+#pragma warning restore CA1031
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"  ✗ Parser exception: {ex.Message}");
@@ -247,56 +251,58 @@ internal sealed class Program
             changed = true;
         }
 
-        // 3. Remove section/collection names from tags (only for sections/collections this item belongs to)
-        if (frontMatter.TryGetValue("tags", out var tagsObj))
+        // 3. Add section/collection display names as tags (for sections/collections this item belongs to)
+        if (!frontMatter.TryGetValue("tags", out var tagsObj))
         {
-            var currentTags = GetListValue(frontMatter, "tags");
-            var tagSectionNames = GetListValue(frontMatter, "section_names");
+            frontMatter["tags"] = new List<string>();
+        }
+        
+        var currentTags = GetListValue(frontMatter, "tags");
+        var tagSectionNames = GetListValue(frontMatter, "section_names");
+        var tagsToAdd = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
-            // Build list of tags to remove based on actual section_names and collection
-            var tagsToRemove = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-
-            // Add section display names for sections this item belongs to
-            foreach (var sectionName in tagSectionNames)
+        // Add section display names for sections this item belongs to
+        foreach (var sectionName in tagSectionNames)
+        {
+            if (_sectionSlugToDisplayNames.TryGetValue(sectionName, out var displayNames))
             {
-                if (_sectionSlugToDisplayNames.TryGetValue(sectionName, out var displayNames))
+                foreach (var displayName in displayNames)
                 {
-                    foreach (var displayName in displayNames)
-                    {
-                        tagsToRemove.Add(displayName);
-                    }
+                    // Only add primary display name (first in list)
+                    tagsToAdd.Add(displayNames[0]);
+                    break;
                 }
             }
+        }
 
-            // Add collection display names for the collection this item belongs to
-            if (_collectionToDisplayNames.TryGetValue(collection, out var collectionDisplayNames))
+        // Add collection display names for the collection this item belongs to
+        if (_collectionToDisplayNames.TryGetValue(collection, out var collectionDisplayNames))
+        {
+            // Only add primary display name (first in list)
+            if (collectionDisplayNames.Count > 0)
             {
-                foreach (var displayName in collectionDisplayNames)
-                {
-                    tagsToRemove.Add(displayName);
-                }
+                tagsToAdd.Add(collectionDisplayNames[0]);
             }
+        }
 
-            // Special rule: If "GitHub Copilot" is in tags, also remove "AI"
-            if (currentTags.Any(t => t.Equals("GitHub Copilot", StringComparison.OrdinalIgnoreCase)))
-            {
-                tagsToRemove.Add("AI");
-            }
+        // Special rule: If "GitHub Copilot" is being added, also add "AI"
+        if (tagsToAdd.Any(t => t.Equals("GitHub Copilot", StringComparison.OrdinalIgnoreCase)))
+        {
+            tagsToAdd.Add("AI");
+        }
 
-            var filteredTags = currentTags
-                .Where(tag => !tagsToRemove.Contains(tag))
-                .ToList();
-
-            var removedCount = currentTags.Count - filteredTags.Count;
-            if (removedCount > 0)
-            {
-                var removedTags = currentTags.Where(tag => tagsToRemove.Contains(tag)).ToList();
-                frontMatter["tags"] = filteredTags;
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"  ✓ Removed {removedCount} section/collection tags: {string.Join(", ", removedTags)}");
-                Console.ResetColor();
-                changed = true;
-            }
+        // Add tags that aren't already present (case-insensitive check)
+        var existingTagsLower = new HashSet<string>(currentTags.Select(t => t.ToLowerInvariant()));
+        var newTags = tagsToAdd.Where(t => !existingTagsLower.Contains(t.ToLowerInvariant())).ToList();
+        
+        if (newTags.Count > 0)
+        {
+            var updatedTags = currentTags.Concat(newTags).ToList();
+            frontMatter["tags"] = updatedTags;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"  ✓ Added {newTags.Count} section/collection tags: {string.Join(", ", newTags)}");
+            Console.ResetColor();
+            changed = true;
         }
 
         // 4. Remove excerpt_separator
@@ -386,8 +392,8 @@ internal sealed class Program
         // 4j. Add/update primary_section (computed from section_names using priority order)
         var itemSectionNames = GetListValue(frontMatter, "section_names");
         var computedPrimarySection = ContentItem.ComputePrimarySectionName(itemSectionNames);
-        
-        if (!frontMatter.TryGetValue("primary_section", out var existingPrimarySection) || 
+
+        if (!frontMatter.TryGetValue("primary_section", out var existingPrimarySection) ||
             existingPrimarySection?.ToString() != computedPrimarySection)
         {
             frontMatter["primary_section"] = computedPrimarySection;
@@ -424,6 +430,17 @@ internal sealed class Program
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("  ✓ Fixed .html links");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 6b. Fix internal URLs - remove dates from path and lowercase
+        var originalContentBeforeUrlFix = markdownContent;
+        markdownContent = FixInternalUrls(markdownContent);
+        if (markdownContent != originalContentBeforeUrlFix)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Fixed internal URLs (removed dates, lowercased)");
             Console.ResetColor();
             changed = true;
         }
@@ -478,7 +495,7 @@ internal sealed class Program
         return displayName.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal);
     }
 
-    private static List<string> GetListValue(Dictionary<string, object> frontMatter, string key)
+    private static List<string> GetListValue(Dictionary<string, object?> frontMatter, string key)
     {
         if (!frontMatter.TryGetValue(key, out var value))
         {
@@ -493,7 +510,7 @@ internal sealed class Program
         };
     }
 
-    private static string ReplaceTemplateVariables(string content, Dictionary<string, object> frontMatter, string? description)
+    private static string ReplaceTemplateVariables(string content, Dictionary<string, object?> frontMatter, string? description)
     {
         // Step 1: Remove {% raw %} and {% endraw %} tags (used to escape GitHub Actions syntax)
         content = Regex.Replace(content, @"\{%\s*(?:raw|endraw)\s*%\}", string.Empty);
@@ -543,7 +560,7 @@ internal sealed class Program
         return content;
     }
 
-    private static string ConvertToString(object value)
+    private static string ConvertToString(object? value)
     {
         return value switch
         {
@@ -554,7 +571,7 @@ internal sealed class Program
         };
     }
 
-    private static string SerializeFrontMatter(Dictionary<string, object> frontMatter)
+    private static string SerializeFrontMatter(Dictionary<string, object?> frontMatter)
     {
         var serializer = new SerializerBuilder()
             .WithNamingConvention(UnderscoredNamingConvention.Instance)
@@ -600,7 +617,9 @@ internal sealed class Program
 
                 map[slug] = new ArticleInfo(primarySection, collection);
             }
+#pragma warning disable CA1031 // Do not catch general exception types - intentional for skipping unparseable files
             catch
+#pragma warning restore CA1031
             {
                 // Skip files that can't be parsed
             }
@@ -660,6 +679,54 @@ internal sealed class Program
     }
 
     private sealed record ArticleInfo(string PrimarySectionName, string CollectionName);
+
+    /// <summary>
+    /// Fix internal URLs by removing date segments from the path and lowercasing everything.
+    /// Examples:
+    /// - /blog/2025/04/01/Title → /github-copilot/blogs/title
+    /// - /AI/videos/Video-Title → /ai/videos/video-title
+    /// - /github-copilot/blogs/Title → /github-copilot/blogs/title
+    /// Does NOT modify:
+    /// - External URLs (containing ://)
+    /// - Relative paths (starting with ..)
+    /// - Anchor links (starting with #)
+    /// </summary>
+    private static string FixInternalUrls(string markdown)
+    {
+        // Pattern to match markdown links with internal URLs: [text](/path/to/resource) or [text](/path "title")
+        var linkPattern = @"\[([^\]]+)\]\((/[^\s)""#]+)(?:\s+""([^""]*)"")?\)";
+
+        return Regex.Replace(markdown, linkPattern, match =>
+        {
+            var text = match.Groups[1].Value;
+            var url = match.Groups[2].Value;
+            var title = match.Groups[3].Success ? match.Groups[3].Value : null;
+
+            // Remove date segments from path: /collection/YYYY/MM/DD/slug → /collection/slug
+            // Also handle: /collection/YYYY-MM-DD-slug → /collection/slug
+            var urlWithoutDates = Regex.Replace(url, @"/\d{4}/\d{2}/\d{2}/", "/");
+            urlWithoutDates = Regex.Replace(urlWithoutDates, @"/\d{4}-\d{2}-\d{2}-", "/");
+
+            // Remove .html extension if present
+            if (urlWithoutDates.EndsWith(".html", StringComparison.OrdinalIgnoreCase))
+            {
+                urlWithoutDates = urlWithoutDates[..^5];
+            }
+
+            // Lowercase the entire URL for consistency
+            var fixedUrl = urlWithoutDates.ToLowerInvariant();
+
+            // Rebuild markdown link
+            var result = $"[{text}]({fixedUrl}";
+            if (!string.IsNullOrEmpty(title))
+            {
+                result += $" \"{title}\"";
+            }
+
+            result += ")";
+            return result;
+        });
+    }
 
     /// <summary>
     /// Determines the primary section name for a content item based on its section names and collection.

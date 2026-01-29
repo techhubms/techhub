@@ -22,6 +22,10 @@ tags:
 - Repository Automation
 - Session View
 - Software Development
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

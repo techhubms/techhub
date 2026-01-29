@@ -24,6 +24,12 @@ tags:
 - Personal Access Token
 - Repository Management
 - Source Code Migration
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

@@ -25,6 +25,11 @@ tags:
 - Monitoring
 - Networking
 - Policy as Code
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

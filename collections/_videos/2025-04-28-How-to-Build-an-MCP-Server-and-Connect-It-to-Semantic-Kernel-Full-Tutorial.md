@@ -22,6 +22,9 @@ tags:
 - SemanticKernelClient
 - Server Setup
 - Tutorial
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

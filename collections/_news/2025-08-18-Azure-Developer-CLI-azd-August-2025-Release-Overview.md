@@ -35,6 +35,13 @@ tags:
 - Threat Detection
 - Typescript
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

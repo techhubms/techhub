@@ -20,6 +20,8 @@ tags:
 - Pay as You Go Pricing
 - Security Updates
 - Upgrade Best Practices
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

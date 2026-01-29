@@ -42,6 +42,11 @@ tags:
 - Social Facebook
 - Social LinkedIn
 - Social X
+- AI
+- DevOps
+- Machine Learning
+- Security
+- Blogs
 section_names:
 - ai
 - devops

@@ -15,6 +15,9 @@ tags:
 - SQL
 - SQL Server
 - Static Code Analysis
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - coding
 - ml

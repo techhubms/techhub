@@ -22,6 +22,10 @@ tags:
 - Threat Detection
 - Threat Hunting
 - XDR
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

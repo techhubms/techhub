@@ -9,8 +9,17 @@ namespace TechHub.E2E.Tests.Web;
 /// These tests document and verify the expected behavior of URL-based navigation
 /// </summary>
 [Collection("URL Routing Tests")]
-public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class UrlRoutingTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public UrlRoutingTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
@@ -19,7 +28,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

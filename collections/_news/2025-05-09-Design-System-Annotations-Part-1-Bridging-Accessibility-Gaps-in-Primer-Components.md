@@ -18,6 +18,8 @@ tags:
 - Primer
 - User Experience
 - Web Standards
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -25,6 +25,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Team Collaboration
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

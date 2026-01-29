@@ -26,6 +26,10 @@ tags:
 - Managed Identity
 - Python
 - VNET
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

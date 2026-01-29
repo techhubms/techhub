@@ -23,6 +23,8 @@ tags:
 - Public Preview
 - Ultra Disk
 - Virtualization
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

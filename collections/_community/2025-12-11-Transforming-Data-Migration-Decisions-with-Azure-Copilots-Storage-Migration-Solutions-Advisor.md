@@ -25,6 +25,9 @@ tags:
 - Partner Solutions
 - SMB
 - Storage Migration Solutions Advisor
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

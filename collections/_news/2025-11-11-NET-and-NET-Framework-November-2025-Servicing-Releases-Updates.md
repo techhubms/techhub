@@ -19,6 +19,8 @@ tags:
 - Runtime
 - SDK
 - Servicing Release
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

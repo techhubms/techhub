@@ -17,6 +17,9 @@ tags:
 - MCP
 - Public Preview
 - VS Code
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

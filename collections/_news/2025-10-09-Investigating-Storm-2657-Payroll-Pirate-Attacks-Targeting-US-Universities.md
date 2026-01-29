@@ -27,6 +27,9 @@ tags:
 - Threat Hunting
 - University Security
 - Workday
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

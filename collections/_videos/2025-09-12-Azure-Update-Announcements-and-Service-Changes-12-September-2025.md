@@ -25,6 +25,9 @@ tags:
 - Resource Migration
 - Standard HDD Retirement
 - VM SKU Updates
+- Azure
+- DevOps
+- Videos
 section_names:
 - azure
 - devops

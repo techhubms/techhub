@@ -21,6 +21,9 @@ tags:
 - Retrieval Augmented Generation
 - Semantic Kernel
 - Vector Databases
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

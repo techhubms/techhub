@@ -18,6 +18,8 @@ tags:
 - Organization Management
 - Platform Governance
 - Rulesets
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

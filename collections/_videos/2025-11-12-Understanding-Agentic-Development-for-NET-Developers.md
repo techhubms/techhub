@@ -20,6 +20,9 @@ tags:
 - MAUI
 - Planning And Reasoning
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

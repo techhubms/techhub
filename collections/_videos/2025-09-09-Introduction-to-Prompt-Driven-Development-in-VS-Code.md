@@ -26,6 +26,10 @@ tags:
 - VS Code
 - VS Code Features
 - Web Development
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

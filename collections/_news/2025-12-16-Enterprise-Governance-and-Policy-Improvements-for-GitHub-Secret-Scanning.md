@@ -19,6 +19,9 @@ tags:
 - Secret Scanning
 - Security Governance
 - Security Manager Role
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

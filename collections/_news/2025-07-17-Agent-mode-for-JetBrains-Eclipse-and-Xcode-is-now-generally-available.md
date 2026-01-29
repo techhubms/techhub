@@ -15,6 +15,9 @@ tags:
 - IDE Integration
 - JetBrains
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

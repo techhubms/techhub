@@ -22,6 +22,8 @@ tags:
 - Serverless Containers
 - Vcpu Scaling
 - Virtual Networks
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

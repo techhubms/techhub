@@ -24,6 +24,9 @@ tags:
 - Synchronization
 - T3 Chat Cloneathon
 - Web Development
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

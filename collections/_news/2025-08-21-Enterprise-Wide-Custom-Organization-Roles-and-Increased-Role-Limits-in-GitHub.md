@@ -17,6 +17,8 @@ tags:
 - Permissions
 - Public Preview
 - Role Management
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

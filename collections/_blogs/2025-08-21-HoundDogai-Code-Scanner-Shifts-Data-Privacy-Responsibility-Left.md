@@ -29,6 +29,10 @@ tags:
 - Social X
 - Static Code Analysis
 - VS Code
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

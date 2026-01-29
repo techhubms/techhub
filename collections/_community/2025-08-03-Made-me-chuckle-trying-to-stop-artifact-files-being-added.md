@@ -13,6 +13,9 @@ tags:
 - Software Development
 - Source Control
 - Version Control
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

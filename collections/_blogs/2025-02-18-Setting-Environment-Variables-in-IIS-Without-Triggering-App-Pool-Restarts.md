@@ -19,6 +19,8 @@ tags:
 - W3SVC
 - Windows
 - Worker Process
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

@@ -22,6 +22,10 @@ tags:
 - Responsible AI
 - Risk Management
 - Security Integrations
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

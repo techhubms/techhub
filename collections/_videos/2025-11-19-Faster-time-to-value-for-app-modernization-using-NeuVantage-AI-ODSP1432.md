@@ -24,6 +24,10 @@ tags:
 - Replatform
 - Terraform
 - Workflow Automation
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

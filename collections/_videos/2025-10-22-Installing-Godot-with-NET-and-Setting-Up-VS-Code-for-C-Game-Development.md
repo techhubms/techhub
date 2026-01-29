@@ -20,6 +20,8 @@ tags:
 - SDK Installation
 - VS Code
 - VS Code Extensions
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

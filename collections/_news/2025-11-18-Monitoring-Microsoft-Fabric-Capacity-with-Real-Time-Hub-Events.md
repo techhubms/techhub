@@ -23,6 +23,9 @@ tags:
 - Real Time Hub
 - Schema Reference
 - Teams Notification
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

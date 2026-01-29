@@ -19,6 +19,10 @@ tags:
 - Python
 - Secret Management
 - Secrets Retrieval
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - azure
 - ml

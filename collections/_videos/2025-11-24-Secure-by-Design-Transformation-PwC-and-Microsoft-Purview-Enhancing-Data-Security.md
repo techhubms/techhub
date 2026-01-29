@@ -21,6 +21,8 @@ tags:
 - PwC
 - Secure By Design
 - Security Gaps
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

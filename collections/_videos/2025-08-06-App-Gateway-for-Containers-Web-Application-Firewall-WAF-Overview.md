@@ -25,6 +25,9 @@ tags:
 - Security Configuration
 - WAF
 - Web Application Firewall
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

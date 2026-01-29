@@ -21,6 +21,11 @@ tags:
 - Oracle Data Protection
 - StandardV2 NAT Gateway
 - User Delegated SAS
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - Security Updates
 - Upgrade Guidance
 - Windows Server Subscription
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

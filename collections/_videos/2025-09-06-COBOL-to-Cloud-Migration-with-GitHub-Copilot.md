@@ -15,6 +15,11 @@ tags:
 - Microsoft
 - Reverse Engineering
 - Test Generation
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

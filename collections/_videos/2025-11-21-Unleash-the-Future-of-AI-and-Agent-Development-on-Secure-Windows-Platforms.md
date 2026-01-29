@@ -23,6 +23,10 @@ tags:
 - ScalewithcloudandAIendpoints
 - Secure Deployment
 - Windows AI
+- AI
+- Coding
+- Security
+- Videos
 section_names:
 - ai
 - coding

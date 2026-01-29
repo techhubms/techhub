@@ -11,6 +11,9 @@ tags:
 - Code Completion
 - IDE
 - Suggestions
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

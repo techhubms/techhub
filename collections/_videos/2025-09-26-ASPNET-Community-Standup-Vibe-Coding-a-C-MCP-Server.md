@@ -20,6 +20,8 @@ tags:
 - Server Development
 - Vibe Coding
 - Vibecoding
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

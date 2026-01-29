@@ -22,6 +22,10 @@ tags:
 - Pro Plan
 - Refactoring
 - Terminal Development
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

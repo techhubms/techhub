@@ -19,6 +19,10 @@ tags:
 - OAuth
 - Power Apps
 - Teams Integration
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

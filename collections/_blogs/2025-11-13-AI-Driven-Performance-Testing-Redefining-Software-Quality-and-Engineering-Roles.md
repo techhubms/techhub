@@ -46,6 +46,9 @@ tags:
 - SRE Automation
 - Testing Lifecycle
 - Testing Transformation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

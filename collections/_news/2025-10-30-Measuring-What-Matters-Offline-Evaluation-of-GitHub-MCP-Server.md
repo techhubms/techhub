@@ -21,6 +21,10 @@ tags:
 - MCP
 - Offline Evaluation
 - Tool Selection
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

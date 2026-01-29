@@ -16,6 +16,8 @@ tags:
 - REST API
 - Token Management
 - UI/UX Design
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

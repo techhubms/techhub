@@ -17,6 +17,8 @@ tags:
 - Repository Management
 - User Experience
 - Web Performance
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

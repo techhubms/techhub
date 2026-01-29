@@ -25,6 +25,9 @@ tags:
 - Trusted Launch
 - Unified Kernel Images
 - Vtpm
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -27,6 +27,9 @@ tags:
 - Responsible AI
 - Skill Enablement
 - Video
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

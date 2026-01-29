@@ -20,6 +20,10 @@ tags:
 - Microsoft.Extensions.AI.Evaluation
 - NLP Metrics
 - Testing
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

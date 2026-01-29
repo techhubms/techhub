@@ -17,6 +17,9 @@ tags:
 - Role Based Access Control
 - Subscription Ownership
 - Subscription Transfer
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

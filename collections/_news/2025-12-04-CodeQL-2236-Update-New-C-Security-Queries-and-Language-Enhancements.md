@@ -26,6 +26,10 @@ tags:
 - Static Analysis
 - Swift 6.2.1
 - TypeScript
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - coding
 - devops

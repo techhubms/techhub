@@ -19,6 +19,10 @@ tags:
 - Network Security
 - Private Endpoints
 - Vnet Integration
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

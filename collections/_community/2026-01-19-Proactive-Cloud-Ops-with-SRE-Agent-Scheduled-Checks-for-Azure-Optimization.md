@@ -21,6 +21,10 @@ tags:
 - Resource Management
 - Scheduled Triggers
 - Security Best Practices
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

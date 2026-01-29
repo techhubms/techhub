@@ -15,6 +15,8 @@ tags:
 - Service Level Agreements
 - Technical Guidance
 - Technical Support
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

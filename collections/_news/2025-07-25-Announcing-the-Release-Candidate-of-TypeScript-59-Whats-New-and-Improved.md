@@ -19,6 +19,8 @@ tags:
 - Type Inference
 - TypeScript
 - TypeScript 5.9
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

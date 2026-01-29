@@ -21,6 +21,9 @@ tags:
 - Microsoft Foundry
 - Microsoft Ignite
 - Workflow Automation
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

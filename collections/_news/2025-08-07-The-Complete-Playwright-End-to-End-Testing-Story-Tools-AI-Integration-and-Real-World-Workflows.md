@@ -25,6 +25,12 @@ tags:
 - TypeScript
 - UI Mode
 - VS Code Extension
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

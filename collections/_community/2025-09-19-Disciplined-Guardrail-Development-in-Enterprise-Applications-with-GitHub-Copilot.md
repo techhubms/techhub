@@ -19,6 +19,11 @@ tags:
 - LLM Integration
 - Project Structure
 - Requirements Definition
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

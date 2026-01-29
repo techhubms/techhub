@@ -111,26 +111,26 @@ public partial class SidebarTagCloud : ComponentBase
     [Parameter]
     public int LastDays { get; set; } = 90;
 
-    private IReadOnlyList<TagCloudItem>? tags;
-    private HashSet<string> selectedTagsInternal = [];
-    private bool isLoading = true;
-    private bool hasError;
-    private bool hasInitialized; // Track if we've loaded tags to prevent double-load flicker
+    private IReadOnlyList<TagCloudItem>? _tags;
+    private HashSet<string> _selectedTagsInternal = [];
+    private bool _isLoading = true;
+    private bool _hasError;
+    private bool _hasInitialized; // Track if we've loaded tags to prevent double-load flicker
 
     protected override async Task OnInitializedAsync()
     {
         // Prevent double initialization when transitioning from SSR to interactive mode
-        if (hasInitialized)
+        if (_hasInitialized)
         {
             return;
         }
 
-        hasInitialized = true;
+        _hasInitialized = true;
 
         // Initialize selected tags from parameter (deduplicate and normalize)
         if (SelectedTags != null)
         {
-            selectedTagsInternal = new HashSet<string>(
+            _selectedTagsInternal = new HashSet<string>(
                 SelectedTags.Select(t => t.Trim().ToLowerInvariant()),
                 StringComparer.OrdinalIgnoreCase);
         }
@@ -159,17 +159,17 @@ public partial class SidebarTagCloud : ComponentBase
                 .ToHashSet(StringComparer.OrdinalIgnoreCase);
 
             // Only update if different to avoid unnecessary re-renders
-            if (!selectedTagsInternal.SetEquals(normalizedTags))
+            if (!_selectedTagsInternal.SetEquals(normalizedTags))
             {
-                selectedTagsInternal = normalizedTags;
+                _selectedTagsInternal = normalizedTags;
                 Logger.LogDebug("Synced selected tags from parameter: {Tags}",
-                    string.Join(", ", selectedTagsInternal));
+                    string.Join(", ", _selectedTagsInternal));
             }
         }
-        else if (selectedTagsInternal.Count > 0)
+        else if (_selectedTagsInternal.Count > 0)
         {
             // Parameter is null but we have selections - clear them
-            selectedTagsInternal.Clear();
+            _selectedTagsInternal.Clear();
             Logger.LogDebug("Cleared selected tags (parameter is null)");
         }
     }
@@ -178,13 +178,13 @@ public partial class SidebarTagCloud : ComponentBase
     {
         try
         {
-            isLoading = true;
-            hasError = false;
+            _isLoading = true;
+            _hasError = false;
 
             Logger.LogInformation("Loading tag cloud for scope: {Scope}, section: {SectionName}, collection: {CollectionName}",
                 Scope, SectionName ?? "(none)", CollectionName ?? "(none)");
 
-            tags = await ApiClient.GetTagCloudAsync(
+            _tags = await ApiClient.GetTagCloudAsync(
                 Scope,
                 SectionName,
                 CollectionName,
@@ -193,7 +193,7 @@ public partial class SidebarTagCloud : ComponentBase
                 MinUses,
                 LastDays);
 
-            Logger.LogInformation("Successfully loaded {Count} tags", tags?.Count ?? 0);
+            Logger.LogInformation("Successfully loaded {Count} tags", _tags?.Count ?? 0);
         }
         // Suppress CA1031: Catching all exceptions is appropriate for component error handling
         // We log the error and set hasError flag to show error UI to user
@@ -201,13 +201,13 @@ public partial class SidebarTagCloud : ComponentBase
         catch (Exception ex)
         {
             Logger.LogError(ex, "Failed to load tag cloud for scope {Scope}", Scope);
-            hasError = true;
-            tags = null;
+            _hasError = true;
+            _tags = null;
         }
 #pragma warning restore CA1031
         finally
         {
-            isLoading = false;
+            _isLoading = false;
         }
     }
 
@@ -237,14 +237,14 @@ public partial class SidebarTagCloud : ComponentBase
 
         // Toggle selection
 #pragma warning disable CA1868 // Unnecessary call to 'Contains(item)'
-        if (selectedTagsInternal.Contains(normalizedTag))
+        if (_selectedTagsInternal.Contains(normalizedTag))
         {
-            selectedTagsInternal.Remove(normalizedTag);
+            _selectedTagsInternal.Remove(normalizedTag);
             Logger.LogDebug("Deselected tag: {Tag}", normalizedTag);
         }
         else
         {
-            selectedTagsInternal.Add(normalizedTag);
+            _selectedTagsInternal.Add(normalizedTag);
             Logger.LogDebug("Selected tag: {Tag}", normalizedTag);
         }
 #pragma warning restore CA1868 // Unnecessary call to 'Contains(item)'
@@ -253,7 +253,7 @@ public partial class SidebarTagCloud : ComponentBase
         UpdateUrlWithTags();
 
         // Raise event with current selection
-        await OnSelectionChanged.InvokeAsync([.. selectedTagsInternal]);
+        await OnSelectionChanged.InvokeAsync([.. _selectedTagsInternal]);
     }
 
     private void UpdateUrlWithTags()
@@ -261,7 +261,7 @@ public partial class SidebarTagCloud : ComponentBase
         var currentUri = new Uri(NavigationManager.Uri);
         var basePath = currentUri.GetLeftPart(UriPartial.Path);
 
-        if (selectedTagsInternal.Count == 0)
+        if (_selectedTagsInternal.Count == 0)
         {
             // No tags selected - navigate to URL without tags parameter
             NavigationManager.NavigateTo(basePath, replace: true);
@@ -269,7 +269,7 @@ public partial class SidebarTagCloud : ComponentBase
         else
         {
             // Build URL with tags parameter
-            var tagsParam = string.Join(",", selectedTagsInternal.Select(t => Uri.EscapeDataString(t.ToLowerInvariant())));
+            var tagsParam = string.Join(",", _selectedTagsInternal.Select(t => Uri.EscapeDataString(t.ToLowerInvariant())));
             var targetUrl = $"{basePath}?tags={tagsParam}";
             NavigationManager.NavigateTo(targetUrl, replace: true);
         }

@@ -21,6 +21,10 @@ tags:
 - RBAC
 - Resource Specific Tables
 - Web Application Firewall
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

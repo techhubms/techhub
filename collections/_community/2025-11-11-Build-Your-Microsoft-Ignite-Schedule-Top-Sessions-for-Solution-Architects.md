@@ -19,6 +19,11 @@ tags:
 - Solution Architecture
 - SQL Server
 - Windows Server
+- AI
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

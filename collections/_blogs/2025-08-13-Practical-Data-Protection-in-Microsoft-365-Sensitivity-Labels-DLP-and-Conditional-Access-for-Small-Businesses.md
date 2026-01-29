@@ -20,6 +20,8 @@ tags:
 - Security Policy
 - Sensitivity Labels
 - Small Business IT
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

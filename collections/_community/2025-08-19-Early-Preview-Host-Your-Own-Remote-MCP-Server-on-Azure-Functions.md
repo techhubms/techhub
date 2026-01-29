@@ -24,6 +24,9 @@ tags:
 - Stateless Servers
 - Streamable HTTP
 - VS Code
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

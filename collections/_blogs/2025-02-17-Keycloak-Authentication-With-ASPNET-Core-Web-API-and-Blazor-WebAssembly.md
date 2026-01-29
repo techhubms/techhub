@@ -21,6 +21,9 @@ tags:
 - OAuth2
 - OpenID Connect
 - Web API
+- Coding
+- Security
+- Blogs
 section_names:
 - coding
 - security

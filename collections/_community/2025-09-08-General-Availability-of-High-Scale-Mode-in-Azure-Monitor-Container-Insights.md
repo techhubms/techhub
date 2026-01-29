@@ -19,6 +19,9 @@ tags:
 - Monitoring
 - Observability
 - Scalability
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

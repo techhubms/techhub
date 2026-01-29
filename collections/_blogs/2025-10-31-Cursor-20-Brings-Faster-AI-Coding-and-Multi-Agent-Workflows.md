@@ -32,6 +32,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Software Development Tools
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

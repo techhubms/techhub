@@ -17,6 +17,8 @@ tags:
 - VirtualDesktopCmd
 - Windows 11
 - Workspace Customization
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

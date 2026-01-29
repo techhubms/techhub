@@ -16,6 +16,8 @@ tags:
 - SSRF
 - Vulnerability
 - Web Application Security
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

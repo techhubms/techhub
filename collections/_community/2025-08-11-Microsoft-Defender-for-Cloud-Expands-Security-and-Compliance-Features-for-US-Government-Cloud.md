@@ -25,6 +25,9 @@ tags:
 - Threat Protection
 - U.S. Government Cloud
 - Vulnerability Management
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

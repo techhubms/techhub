@@ -23,6 +23,10 @@ tags:
 - Sideline Technology
 - Sports Technology
 - SurfaceCopilot+ PC
+- AI
+- Azure
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

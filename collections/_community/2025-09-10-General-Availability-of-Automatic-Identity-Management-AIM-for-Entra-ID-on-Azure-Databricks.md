@@ -17,6 +17,9 @@ tags:
 - Microsoft Entra
 - Nested Groups
 - User Provisioning
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

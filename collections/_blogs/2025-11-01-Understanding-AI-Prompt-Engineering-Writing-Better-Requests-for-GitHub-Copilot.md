@@ -19,6 +19,9 @@ tags:
 - Prompt Examples
 - Prompt Strategy
 - Python
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

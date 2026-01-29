@@ -13,6 +13,9 @@ tags:
 - Side Projects
 - Software Development
 - Summer Event
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -18,6 +18,9 @@ tags:
 - Pull Requests
 - Repository Management
 - Vanessa Kalu
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

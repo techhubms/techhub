@@ -23,6 +23,8 @@ tags:
 - Windows 11
 - Zero Trust
 - ZT DNS
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

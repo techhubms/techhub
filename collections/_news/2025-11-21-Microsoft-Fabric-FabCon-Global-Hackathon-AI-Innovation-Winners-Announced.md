@@ -23,6 +23,10 @@ tags:
 - Python
 - RAG
 - Real Time Intelligence
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

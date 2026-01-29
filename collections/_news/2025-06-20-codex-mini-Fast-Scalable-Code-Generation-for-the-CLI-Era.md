@@ -22,6 +22,10 @@ tags:
 - Streaming Outputs
 - Terminal Tools
 - Token Context
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

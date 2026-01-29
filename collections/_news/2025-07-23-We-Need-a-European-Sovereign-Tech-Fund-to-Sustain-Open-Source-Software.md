@@ -22,6 +22,9 @@ tags:
 - Sovereign Tech Fund
 - Supply Chain
 - Supply Chain Security
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

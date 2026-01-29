@@ -15,6 +15,9 @@ tags:
 - Software Development
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

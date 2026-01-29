@@ -23,6 +23,9 @@ tags:
 - Power Fx
 - WASM
 - WebAssembly
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

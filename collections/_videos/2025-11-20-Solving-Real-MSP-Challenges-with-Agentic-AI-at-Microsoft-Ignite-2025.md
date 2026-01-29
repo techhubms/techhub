@@ -23,6 +23,8 @@ tags:
 - StreamOne
 - Supply Chain
 - TD SYNNEX
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

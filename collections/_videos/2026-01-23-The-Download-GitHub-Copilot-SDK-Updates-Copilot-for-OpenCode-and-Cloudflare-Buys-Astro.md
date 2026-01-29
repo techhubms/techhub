@@ -20,6 +20,11 @@ tags:
 - Software Development
 - Technical Preview
 - TheDownload
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

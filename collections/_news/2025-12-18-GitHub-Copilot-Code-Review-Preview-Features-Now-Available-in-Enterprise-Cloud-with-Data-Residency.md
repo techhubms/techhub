@@ -17,6 +17,9 @@ tags:
 - GitHub Enterprise Cloud
 - Improvement
 - Pull Requests
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

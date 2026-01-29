@@ -18,6 +18,9 @@ tags:
 - Context Engineering
 - Developer Tools
 - Pair Programming
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

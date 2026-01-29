@@ -25,6 +25,11 @@ tags:
 - Purview DSPM
 - Security Copilot
 - Task Adherence Evaluation
+- AI
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - azure

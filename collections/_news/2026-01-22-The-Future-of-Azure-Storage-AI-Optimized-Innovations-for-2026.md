@@ -21,6 +21,10 @@ tags:
 - Model Training
 - Partner Ecosystem
 - Storage
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

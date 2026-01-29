@@ -20,6 +20,10 @@ tags:
 - Vibecoding
 - Video Interviews
 - Vulnerability Detection
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

@@ -21,6 +21,10 @@ tags:
 - Sunset Notice
 - Tool Invocation
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

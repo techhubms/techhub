@@ -17,6 +17,10 @@ tags:
 - Next Edit Suggestions
 - VS Code
 - VS Code Dev Days
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding
@@ -64,7 +68,7 @@ These features, combined with GitHub Copilot, provide powerful assistance in cod
 - **Virtual options:** For those unable to attend in person, special online editions are offered in multiple languages with demos and interactive sessions.
 - **How to register:** Visit [aka.ms/VSCode/DevDays](https://aka.ms/VSCode/DevDays) to sign up for events near you or participate virtually.
 
-![Promotional banner for VS Code Dev Days, featuring event details and a screenshot of Visual Studio Code with GitHub Copilot integration](/assets/blogs/2025/08/27/VSCode-Dev-Days-banner.jpg)
+![Promotional banner for VS Code Dev Days, featuring event details and a screenshot of Visual Studio Code with GitHub Copilot integration](/assets/blogs/vscode-dev-days-banner.jpg)
 
 ### Virtual Editions Schedule
 

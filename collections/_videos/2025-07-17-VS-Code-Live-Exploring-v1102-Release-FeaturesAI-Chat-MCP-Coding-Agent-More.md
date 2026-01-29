@@ -15,6 +15,9 @@ tags:
 - Open Source
 - VS Code
 - VS Code V1.102
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

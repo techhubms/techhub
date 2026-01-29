@@ -25,6 +25,9 @@ tags:
 - Tokens
 - Workflows
 - WSE 3
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

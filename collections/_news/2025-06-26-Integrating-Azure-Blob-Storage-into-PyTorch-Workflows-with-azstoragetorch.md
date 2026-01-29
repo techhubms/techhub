@@ -18,6 +18,9 @@ tags:
 - Python
 - Pytorch
 - Storage
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

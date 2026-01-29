@@ -6,6 +6,12 @@ namespace TechHub.Core.Configuration;
 public class AppSettings
 {
     public required ContentSettings Content { get; init; }
+    
+    /// <summary>
+    /// Base URL for the site (e.g., "https://tech.hub.ms" or "https://localhost:7245")
+    /// Used for RSS feeds and absolute URL generation
+    /// </summary>
+    public required string BaseUrl { get; init; }
 }
 
 /// <summary>

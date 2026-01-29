@@ -15,6 +15,8 @@ tags:
 - Microsoft Customer Agreement
 - Migration Planning
 - Workload Assessment
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

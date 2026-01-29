@@ -5,7 +5,7 @@
 <nav class="sidebar-section" aria-label="Filter by tags">
     <h2 class="sidebar-h2">@Title</h2>
 
-    @if (isLoading)
+    @if (_isLoading)
     {
         @* Skeleton loader - subtle placeholder during initial load *@
         <div class="tag-cloud" aria-label="Loading tags">
@@ -15,14 +15,14 @@
             }
         </div>
     }
-    else if (hasError)
+    else if (_hasError)
     {
         <p class="sidebar-text error">Error loading tags</p>
     }
-    else if (tags != null && tags.Count > 0)
+    else if (_tags != null && _tags.Count > 0)
     {
         <div class="tag-cloud">
-            @foreach (var tagItem in tags)
+            @foreach (var tagItem in _tags)
             {
                 var sizeClass = tagItem.Size switch
                 {
@@ -32,7 +32,7 @@
                     _ => ""
                 };
 
-                var isSelected = selectedTagsInternal.Contains(tagItem.Tag.Trim().ToLowerInvariant());
+                var isSelected = _selectedTagsInternal.Contains(tagItem.Tag.Trim().ToLowerInvariant());
                 var cssClass = $"tag-cloud-item {sizeClass} {(isSelected ? "selected" : "")}".Trim();
 
                 <button type="button" class="@cssClass" @onclick="() => HandleTagClick(tagItem.Tag)">

@@ -20,6 +20,10 @@ tags:
 - V17.13
 - Variable Analysis
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

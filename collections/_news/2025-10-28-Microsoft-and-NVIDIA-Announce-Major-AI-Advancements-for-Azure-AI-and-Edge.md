@@ -28,6 +28,9 @@ tags:
 - NVIDIA RTX PRO 6000
 - NVIDIA Run:ai
 - Supercomputing
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

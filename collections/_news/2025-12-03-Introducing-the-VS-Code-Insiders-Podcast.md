@@ -20,6 +20,8 @@ tags:
 - Software Engineering
 - VS Code
 - VS Code Insiders
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

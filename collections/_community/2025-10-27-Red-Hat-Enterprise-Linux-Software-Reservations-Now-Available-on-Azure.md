@@ -18,6 +18,8 @@ tags:
 - Software Reservations
 - Virtual Machines
 - Workload Optimization
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

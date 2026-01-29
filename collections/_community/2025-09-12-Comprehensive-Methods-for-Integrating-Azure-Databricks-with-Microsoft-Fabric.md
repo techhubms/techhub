@@ -21,6 +21,9 @@ tags:
 - Power BI
 - Trusted Workspace Access
 - Unity Catalog
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

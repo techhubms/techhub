@@ -35,6 +35,9 @@ tags:
 - Social X
 - Tool Interoperability
 - Vibe Coding
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

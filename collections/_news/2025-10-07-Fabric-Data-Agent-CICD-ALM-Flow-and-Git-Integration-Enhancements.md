@@ -19,6 +19,10 @@ tags:
 - Production Workspace
 - Source Control
 - Version Control
+- Azure
+- DevOps
+- Machine Learning
+- News
 section_names:
 - azure
 - devops

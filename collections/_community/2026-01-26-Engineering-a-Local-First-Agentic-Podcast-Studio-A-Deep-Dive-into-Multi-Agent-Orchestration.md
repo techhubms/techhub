@@ -28,6 +28,11 @@ tags:
 - VibeVoice
 - WorkflowBuilder
 - WorkshopForAgentic
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

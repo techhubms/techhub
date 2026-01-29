@@ -25,6 +25,10 @@ tags:
 - Voice Live API
 - WebRTC
 - WebSocket
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

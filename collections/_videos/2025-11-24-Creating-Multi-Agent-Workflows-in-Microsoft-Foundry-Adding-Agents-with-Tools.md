@@ -24,6 +24,9 @@ tags:
 - Technology
 - Workflow Automation
 - Workflow Tracing
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

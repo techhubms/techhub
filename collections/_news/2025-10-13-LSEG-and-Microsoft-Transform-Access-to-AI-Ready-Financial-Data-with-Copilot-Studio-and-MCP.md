@@ -21,6 +21,8 @@ tags:
 - Microsoft 365 Copilot
 - Open Source
 - Workflow Automation
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

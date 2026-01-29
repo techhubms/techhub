@@ -24,6 +24,8 @@ tags:
 - Windows
 - Workflow Templates
 - YAML Anchors
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

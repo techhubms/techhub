@@ -19,6 +19,10 @@ tags:
 - Technical Writing
 - Usage Examples
 - XML Documentation
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

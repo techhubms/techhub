@@ -22,6 +22,10 @@ tags:
 - SMB Shares
 - Windows Clients
 - Zero Trust
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

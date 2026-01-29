@@ -25,6 +25,10 @@ tags:
 - RAG
 - Semantic Search
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

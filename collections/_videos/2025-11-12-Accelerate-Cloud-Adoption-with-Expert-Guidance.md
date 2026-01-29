@@ -21,6 +21,9 @@ tags:
 - Ravi Mangipudi
 - Sprint Deployment
 - Thomas Maurer
+- Azure
+- DevOps
+- Videos
 section_names:
 - azure
 - devops

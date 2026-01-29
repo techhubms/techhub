@@ -19,6 +19,9 @@ tags:
 - Spark Connector
 - SQL Security
 - SQL Server On Azure VM
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

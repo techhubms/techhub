@@ -26,6 +26,10 @@ tags:
 - Role Based Access Control
 - Schema Versioning
 - Security Permissions
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

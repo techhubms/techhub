@@ -24,6 +24,10 @@ tags:
 - SDK Release
 - Search Indexes
 - Vector Search
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

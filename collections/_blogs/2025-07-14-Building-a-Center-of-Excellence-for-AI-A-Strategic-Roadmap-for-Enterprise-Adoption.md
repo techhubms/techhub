@@ -22,6 +22,8 @@ tags:
 - Governance
 - MLOps
 - Organizational Change
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

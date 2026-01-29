@@ -20,6 +20,8 @@ tags:
 - Public Preview
 - Repository Administration
 - Settings
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

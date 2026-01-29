@@ -21,6 +21,10 @@ tags:
 - Security Best Practices
 - Service Principal
 - Workload Identity Federation
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

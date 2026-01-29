@@ -16,6 +16,8 @@ tags:
 - Windows
 - WindowSubClassHelper.cs
 - XAML
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

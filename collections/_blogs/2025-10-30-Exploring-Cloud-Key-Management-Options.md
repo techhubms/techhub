@@ -40,6 +40,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Thales CipherTrust
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

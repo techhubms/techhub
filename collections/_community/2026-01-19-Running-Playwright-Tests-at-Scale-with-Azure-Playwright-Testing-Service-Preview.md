@@ -20,6 +20,10 @@ tags:
 - TypeScript
 - VS
 - VS Code
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

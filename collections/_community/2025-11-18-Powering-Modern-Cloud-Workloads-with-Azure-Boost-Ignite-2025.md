@@ -24,6 +24,9 @@ tags:
 - RDMA
 - TDISP
 - Virtualization
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

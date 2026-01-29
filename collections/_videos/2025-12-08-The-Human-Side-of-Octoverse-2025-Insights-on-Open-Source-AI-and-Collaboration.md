@@ -16,6 +16,9 @@ tags:
 - Open Source
 - Open Source Ecosystem
 - Software Development
+- AI
+- DevOps
+- Videos
 section_names:
 - ai
 - devops

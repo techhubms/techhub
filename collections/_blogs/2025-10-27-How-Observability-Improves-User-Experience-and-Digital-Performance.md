@@ -41,6 +41,8 @@ tags:
 - Uptime Monitoring
 - User Experience
 - User Satisfaction
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

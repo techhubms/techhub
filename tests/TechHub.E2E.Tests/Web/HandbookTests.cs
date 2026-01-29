@@ -12,8 +12,17 @@ namespace TechHub.E2E.Tests.Web;
 /// - SidebarTocTests.cs: Table of contents behavior
 /// </summary>
 [Collection("Custom Pages TOC Tests")]
-public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class HandbookTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public HandbookTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private const string PageUrl = "/github-copilot/handbook";
     private IBrowserContext? _context;
     private IPage? _page;
@@ -21,7 +30,7 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

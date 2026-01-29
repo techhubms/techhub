@@ -34,6 +34,12 @@ tags:
 - Stable Diffusion
 - StableDiffusion
 - Version Compatibility
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

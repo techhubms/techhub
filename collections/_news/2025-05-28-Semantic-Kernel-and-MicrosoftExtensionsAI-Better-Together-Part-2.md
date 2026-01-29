@@ -26,6 +26,9 @@ tags:
 - Samples
 - Semantic Kernel
 - Tools
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

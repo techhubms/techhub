@@ -18,6 +18,11 @@ tags:
 - VS Code
 - VS Code Extension
 - Workspace Management
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- News
 section_names:
 - azure
 - coding
@@ -37,20 +42,20 @@ The Microsoft Fabric Blog announces the general availability of the Fabric VS Co
   - Leverage item definitions to script, update, and deploy Fabric items directly from VS Code.
   - Items supporting [item definition APIs](https://learn.microsoft.com/rest/api/fabric/articles/item-management/definitions/item-definition-overview#definition-details-for-supported-item-types) can be managed as files for efficient automation.
 
-  ![Import and export Notebook item definition](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/08/Import-and-export-Notebook-item-definition.gif)
+  ![Import and export Notebook item definition](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/08/import-and-export-notebook-item-definition.gif)
   
 - **Git Integration (Azure DevOps Only):**
   - Directly clone Git-enabled Fabric workspaces and use VS Code’s source control experience.
   - Track changes, push updates, and leverage version control for workspace items.
   - Learn more about [Git integration in Microsoft Fabric](https://learn.microsoft.com/fabric/cicd/git-integration/git-integration-process).
 
-  ![Git integration with User data functions item](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/08/Git-integration-UDF.gif)
+  ![Git integration with User data functions item](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/08/git-integration-udf.gif)
 
 - **Multi-Workspace Viewing and Filtering:**
   - View and filter multiple Fabric workspaces in the Fabric extension for comprehensive management.
   - Maintain context across projects and reduce the friction of workspace switching.
 
-  ![View all Fabric workspaces](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/08/View-all-Fabric-workspaces-1024x576.png)
+  ![View all Fabric workspaces](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/08/view-all-fabric-workspaces-1024x576.png)
 
 - **SQL Database Integration:**
   - Open and work with Fabric SQL databases within VS Code via integration with the Microsoft MSSQL extension.

@@ -41,6 +41,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Token Smuggling
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

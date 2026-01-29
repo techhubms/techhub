@@ -22,6 +22,9 @@ tags:
 - V3.0.0
 - Windows Server
 - YAML
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

@@ -20,6 +20,9 @@ tags:
 - Solution Architecture
 - Version Control
 - YAML
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

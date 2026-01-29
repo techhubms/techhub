@@ -21,6 +21,9 @@ tags:
 - Windows Server
 - Windows Subsystem For Linux
 - WSL
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

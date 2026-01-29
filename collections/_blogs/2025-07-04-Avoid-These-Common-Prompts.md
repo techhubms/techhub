@@ -14,6 +14,9 @@ tags:
 - Programming Best Practices
 - Prompt Engineering
 - Unit Test Generation
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

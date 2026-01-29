@@ -23,6 +23,12 @@ tags:
 - Team Learning
 - WireMock
 - Xpirit USA
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

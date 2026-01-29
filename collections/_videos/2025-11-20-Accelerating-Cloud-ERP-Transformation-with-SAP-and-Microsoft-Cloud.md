@@ -26,6 +26,9 @@ tags:
 - Teams Integration
 - Unifyyourdataplatform
 - Zero Copy Access
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

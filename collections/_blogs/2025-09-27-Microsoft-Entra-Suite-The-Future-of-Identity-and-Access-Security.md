@@ -22,6 +22,8 @@ tags:
 - Passwordless
 - Verified ID
 - Zero Trust
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

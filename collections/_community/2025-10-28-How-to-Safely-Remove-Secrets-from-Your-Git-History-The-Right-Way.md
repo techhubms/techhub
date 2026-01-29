@@ -19,6 +19,9 @@ tags:
 - Team Coordination
 - Token Rotation
 - Version Control
+- DevOps
+- Security
+- Community
 section_names:
 - devops
 - security

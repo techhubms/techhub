@@ -23,6 +23,10 @@ tags:
 - Real World Impact
 - Scalability
 - Serverless
+- AI
+- Azure
+- DevOps
+- News
 section_names:
 - ai
 - azure

@@ -16,6 +16,10 @@ tags:
 - PR Summary
 - Pull Request Review
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

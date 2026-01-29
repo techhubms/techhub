@@ -16,6 +16,10 @@ tags:
 - Secret Rotation
 - Secure First Initiative
 - Security Best Practices
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

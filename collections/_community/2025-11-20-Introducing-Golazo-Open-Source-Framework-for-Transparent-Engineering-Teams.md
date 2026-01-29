@@ -22,6 +22,8 @@ tags:
 - Team Retrospectives
 - Transparent Workflow
 - Workflow Boards
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

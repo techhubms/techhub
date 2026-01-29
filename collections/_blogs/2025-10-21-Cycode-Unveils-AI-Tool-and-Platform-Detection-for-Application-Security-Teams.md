@@ -24,6 +24,11 @@ tags:
 - Social X
 - Software Bill Of Materials
 - Vulnerability Assessment
+- AI
+- DevOps
+- Machine Learning
+- Security
+- Blogs
 section_names:
 - ai
 - devops

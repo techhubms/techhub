@@ -21,6 +21,9 @@ tags:
 - Virtual Appliance
 - Virtual Network
 - VPN Gateway
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

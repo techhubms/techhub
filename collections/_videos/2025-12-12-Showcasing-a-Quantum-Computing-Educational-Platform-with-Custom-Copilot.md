@@ -17,6 +17,10 @@ tags:
 - Quantum Computing
 - Real Time Feedback
 - Simulator
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

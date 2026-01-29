@@ -20,6 +20,8 @@ tags:
 - PostgreSQL
 - Python
 - Real Time Monitoring
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

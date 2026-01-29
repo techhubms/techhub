@@ -28,6 +28,10 @@ tags:
 - Tutorials
 - Windows Performance
 - Workload Deployment
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

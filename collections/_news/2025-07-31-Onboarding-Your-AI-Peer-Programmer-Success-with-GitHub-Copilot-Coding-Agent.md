@@ -19,6 +19,10 @@ tags:
 - Project Onboarding
 - Repositories
 - Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

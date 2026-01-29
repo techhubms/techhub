@@ -22,6 +22,9 @@ tags:
 - PromQL
 - Virtual Machines
 - Windows
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

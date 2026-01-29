@@ -16,6 +16,8 @@ tags:
 - Role Assignments
 - SharePoint Administrator
 - User Administrator
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -20,6 +20,9 @@ tags:
 - SQL Analytics Endpoint
 - SQL Permissions
 - Workspace Roles
+- Machine Learning
+- Security
+- News
 section_names:
 - ml
 - security

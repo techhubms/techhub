@@ -28,6 +28,8 @@ tags:
 - WebSocketStream
 - Windows Forms
 - WPF
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

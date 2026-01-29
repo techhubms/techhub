@@ -29,6 +29,11 @@ tags:
 - Power BI
 - Real Time Analytics
 - Zero ETL
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

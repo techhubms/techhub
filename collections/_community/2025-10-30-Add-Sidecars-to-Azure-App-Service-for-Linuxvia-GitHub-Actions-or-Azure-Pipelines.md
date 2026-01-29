@@ -23,6 +23,10 @@ tags:
 - Telemetry
 - VSTS
 - YAML Templates
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

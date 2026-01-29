@@ -24,6 +24,11 @@ tags:
 - Softwaredevelopers
 - VS
 - VS Code
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

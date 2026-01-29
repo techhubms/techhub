@@ -23,6 +23,9 @@ tags:
 - Trustworthy AI
 - Unified Data
 - Workflow Automation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

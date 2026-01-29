@@ -22,6 +22,10 @@ tags:
 - RBAC
 - REST API
 - Streamlit
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

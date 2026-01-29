@@ -9,6 +9,9 @@ plans:
 tags:
 - Code
 - Templates
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

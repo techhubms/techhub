@@ -25,6 +25,9 @@ tags:
 - Synthetic Data
 - Triton Compiler
 - TSMC 3nm
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

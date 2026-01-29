@@ -21,6 +21,11 @@ tags:
 - IssueOps
 - Mobile Code Review
 - Pull Requests
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

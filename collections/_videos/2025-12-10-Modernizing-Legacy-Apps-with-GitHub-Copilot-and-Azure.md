@@ -18,6 +18,12 @@ tags:
 - Outdated Libraries
 - Secure Development
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

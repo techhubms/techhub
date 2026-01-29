@@ -24,6 +24,9 @@ tags:
 - Windows Recovery Environment
 - Windows Server
 - WinRE
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

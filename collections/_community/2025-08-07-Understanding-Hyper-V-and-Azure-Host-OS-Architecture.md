@@ -20,6 +20,8 @@ tags:
 - VMCS
 - Windows Server
 - X86 Virtualization
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -22,6 +22,8 @@ tags:
 - Stack Overflow For Teams
 - Stack Overflow Internal
 - Trusted Solutions
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

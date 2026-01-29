@@ -26,6 +26,9 @@ tags:
 - Productivity Gains
 - Regulatory Compliance
 - Semantic Kernel
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

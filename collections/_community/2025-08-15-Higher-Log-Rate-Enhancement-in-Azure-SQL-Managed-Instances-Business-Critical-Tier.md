@@ -20,6 +20,8 @@ tags:
 - Service Tier Improvement
 - Transaction Processing
 - Vcore Scaling
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

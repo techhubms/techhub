@@ -15,6 +15,9 @@ tags:
 - Microsoft Foundry
 - Unified Interface
 - VS Code
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

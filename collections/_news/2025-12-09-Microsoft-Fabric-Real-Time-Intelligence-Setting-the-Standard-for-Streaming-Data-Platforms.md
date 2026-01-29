@@ -24,6 +24,10 @@ tags:
 - Semantic Models
 - Stream Analytics
 - Streaming Data
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

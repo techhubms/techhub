@@ -23,6 +23,8 @@ tags:
 - S/MIME
 - SMIMECertificateIssuingCA
 - Windows
+- Security
+- Community
 section_names:
 - security
 primary_section: security

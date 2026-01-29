@@ -24,17 +24,19 @@ public class FrontMatterParser
     /// </summary>
     /// <param name="markdownContent">Full markdown file content with frontmatter</param>
     /// <returns>Tuple of (frontmatter dictionary, content body)</returns>
-    public (Dictionary<string, object> FrontMatter, string Content) Parse(string markdownContent)
+    public (Dictionary<string, object?> FrontMatter, string Content) Parse(string markdownContent)
     {
+        ArgumentNullException.ThrowIfNull(markdownContent);
+
         if (string.IsNullOrWhiteSpace(markdownContent))
         {
-            return (new Dictionary<string, object>(), string.Empty);
+            return (new Dictionary<string, object?>(), string.Empty);
         }
 
         // Frontmatter must start with ---
         if (!markdownContent.TrimStart().StartsWith("---", StringComparison.Ordinal))
         {
-            return (new Dictionary<string, object>(), markdownContent);
+            return (new Dictionary<string, object?>(), markdownContent);
         }
 
         var lines = markdownContent.Split('\n');
@@ -76,19 +78,19 @@ public class FrontMatterParser
         }
 
         // Parse YAML frontmatter
-        var frontMatter = new Dictionary<string, object>();
+        var frontMatter = new Dictionary<string, object?>();
         if (yamlLines.Count > 0)
         {
             var yaml = string.Join('\n', yamlLines);
             try
             {
-                var parsed = _deserializer.Deserialize<Dictionary<string, object>>(yaml);
+                var parsed = _deserializer.Deserialize<Dictionary<string, object?>>(yaml);
                 frontMatter = parsed ?? [];
             }
             catch (YamlDotNet.Core.YamlException)
             {
                 // If YAML parsing fails, return empty frontmatter and original content
-                return (new Dictionary<string, object>(), markdownContent);
+                return (new Dictionary<string, object?>(), markdownContent);
             }
         }
 
@@ -99,7 +101,7 @@ public class FrontMatterParser
     /// <summary>
     /// Get a frontmatter value by key, or return default if not found
     /// </summary>
-    public T GetValue<T>(Dictionary<string, object> frontMatter, string key, T defaultValue = default!)
+    public static T GetValue<T>(Dictionary<string, object?> frontMatter, string key, T defaultValue = default!)
     {
         ArgumentNullException.ThrowIfNull(frontMatter);
         if (!frontMatter.TryGetValue(key, out var value))
@@ -107,13 +109,13 @@ public class FrontMatterParser
             return defaultValue;
         }
 
-        return (T)Convert.ChangeType(value, typeof(T), System.Globalization.CultureInfo.InvariantCulture);
+        return value == null ? defaultValue : (T)Convert.ChangeType(value, typeof(T), System.Globalization.CultureInfo.InvariantCulture);
     }
 
     /// <summary>
     /// Get a list value from frontmatter (e.g., tags, sections, etc)
     /// </summary>
-    public List<string> GetListValue(Dictionary<string, object> frontMatter, string key)
+    public static List<string> GetListValue(Dictionary<string, object?> frontMatter, string key)
     {
         ArgumentNullException.ThrowIfNull(frontMatter);
         if (!frontMatter.TryGetValue(key, out var value))

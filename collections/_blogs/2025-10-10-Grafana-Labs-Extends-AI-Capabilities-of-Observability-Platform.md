@@ -38,6 +38,9 @@ tags:
 - Social X
 - Telemetry Data Analysis
 - TraceQL
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

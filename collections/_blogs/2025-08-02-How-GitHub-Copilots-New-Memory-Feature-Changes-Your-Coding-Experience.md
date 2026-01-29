@@ -20,6 +20,9 @@ tags:
 - Privacy Controls
 - User Data Management
 - Workflow Automation
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

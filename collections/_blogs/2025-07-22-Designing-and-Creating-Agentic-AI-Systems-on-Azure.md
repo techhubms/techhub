@@ -34,6 +34,9 @@ tags:
 - Semantic Search
 - Tree Of Thought
 - Workflow Orchestration
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - Security Configuration
 - Token Security
 - Validity Checks
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

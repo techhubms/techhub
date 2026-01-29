@@ -20,6 +20,9 @@ tags:
 - Regulated Industries
 - Security Architecture
 - Zero Trust
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

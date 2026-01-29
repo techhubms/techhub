@@ -22,6 +22,11 @@ tags:
 - Prompt Engineering
 - Semantic Kernel
 - Test Automation
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

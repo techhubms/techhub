@@ -25,6 +25,8 @@ tags:
 - OpenAI
 - Policy
 - Telemetry
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

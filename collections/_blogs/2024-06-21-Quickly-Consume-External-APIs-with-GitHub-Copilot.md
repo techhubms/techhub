@@ -9,6 +9,10 @@ tags:
 - API Integration
 - Developer Tools
 - OpenWeather
+- AI
+- GitHub Copilot
+- Coding
+- Blogs
 section_names:
 - ai
 - github-copilot

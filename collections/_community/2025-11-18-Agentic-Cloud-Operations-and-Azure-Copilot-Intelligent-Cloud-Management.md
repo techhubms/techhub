@@ -26,6 +26,11 @@ tags:
 - Resiliency
 - Troubleshooting
 - Well Architected Framework
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

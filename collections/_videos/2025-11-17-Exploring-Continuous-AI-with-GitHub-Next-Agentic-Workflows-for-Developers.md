@@ -24,6 +24,9 @@ tags:
 - Performance Optimization
 - Software Development
 - Test Coverage
+- AI
+- DevOps
+- Videos
 section_names:
 - ai
 - devops

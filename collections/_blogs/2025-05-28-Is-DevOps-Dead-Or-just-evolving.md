@@ -15,6 +15,8 @@ tags:
 - Software Delivery
 - Software Teams
 - Team Ownership
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

@@ -20,6 +20,9 @@ tags:
 - Security Monitoring
 - Security Posture
 - Shadow AI
+- AI
+- Security
+- Blogs
 section_names:
 - ai
 - security

@@ -23,6 +23,10 @@ tags:
 - Responsible AI
 - Serverless
 - TypeScript
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

@@ -22,6 +22,9 @@ tags:
 - New Zealand
 - Public Sector
 - Sustainability
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

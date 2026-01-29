@@ -26,6 +26,10 @@ tags:
 - Red Teaming
 - Retrieval Augmented Generation
 - RLHF
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

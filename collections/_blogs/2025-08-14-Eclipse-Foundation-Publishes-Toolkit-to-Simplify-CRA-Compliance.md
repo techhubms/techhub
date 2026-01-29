@@ -31,6 +31,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Software Supply Chain Security
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

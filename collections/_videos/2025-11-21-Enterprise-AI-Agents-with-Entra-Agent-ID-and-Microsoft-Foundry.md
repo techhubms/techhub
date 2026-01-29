@@ -21,6 +21,10 @@ tags:
 - Networking
 - Tenant Management
 - Tool Integration
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

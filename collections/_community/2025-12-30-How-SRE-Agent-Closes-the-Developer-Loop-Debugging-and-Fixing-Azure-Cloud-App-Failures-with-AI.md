@@ -25,6 +25,12 @@ tags:
 - Resource Mapping
 - Virtual Network
 - VS Code Copilot
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

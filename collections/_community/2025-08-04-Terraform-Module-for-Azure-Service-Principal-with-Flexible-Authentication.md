@@ -15,6 +15,11 @@ tags:
 - Service Principal
 - Storage Account
 - Terraform
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

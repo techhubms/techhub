@@ -26,6 +26,10 @@ tags:
 - Scalability
 - Solution Architecture
 - Write Model
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

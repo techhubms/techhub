@@ -19,6 +19,8 @@ tags:
 - Validation
 - VS Code
 - WebAuthN
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

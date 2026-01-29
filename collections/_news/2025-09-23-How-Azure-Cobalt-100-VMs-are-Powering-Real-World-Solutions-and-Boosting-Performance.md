@@ -22,6 +22,8 @@ tags:
 - Snowflake
 - Temenos
 - Virtual Machines
+- Azure
+- News
 section_names:
 - azure
 primary_section: azure

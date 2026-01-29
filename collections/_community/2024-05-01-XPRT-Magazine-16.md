@@ -18,6 +18,13 @@ tags:
 - PKCE
 - Prompt Engineering
 - SQL Merge
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

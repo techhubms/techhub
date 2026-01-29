@@ -19,6 +19,10 @@ tags:
 - Smart Labels
 - Test Automation
 - User Journey Recording
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

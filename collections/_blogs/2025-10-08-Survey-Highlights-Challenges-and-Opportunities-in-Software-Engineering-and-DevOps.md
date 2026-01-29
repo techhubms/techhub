@@ -21,6 +21,9 @@ tags:
 - Software Engineering
 - Technical Debt
 - Tool Integration
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

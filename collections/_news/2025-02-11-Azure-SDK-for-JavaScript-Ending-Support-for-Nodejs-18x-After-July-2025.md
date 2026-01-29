@@ -15,6 +15,9 @@ tags:
 - npm Engines
 - SDK Support Policy
 - Typescript
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

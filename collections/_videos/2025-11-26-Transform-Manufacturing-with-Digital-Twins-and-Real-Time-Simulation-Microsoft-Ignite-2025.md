@@ -31,6 +31,9 @@ tags:
 - Technical
 - Traffic Data Processing
 - Transform Manufacturing With Digital Twins And Real Time Simulation | STUDIOSP64
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

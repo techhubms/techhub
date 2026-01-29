@@ -17,6 +17,10 @@ tags:
 - Microsoft Entra
 - Observability
 - OpenTelemetry
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

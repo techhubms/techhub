@@ -29,6 +29,10 @@ tags:
 - Secrets Management
 - Serverless
 - V1 To V2 Migration
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

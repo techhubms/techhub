@@ -30,6 +30,10 @@ tags:
 - Social Facebook
 - Social LinkedIn
 - Social X
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

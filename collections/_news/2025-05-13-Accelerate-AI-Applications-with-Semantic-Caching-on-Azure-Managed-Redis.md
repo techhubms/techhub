@@ -20,6 +20,10 @@ tags:
 - Vector Embeddings
 - Vector Search
 - Zone Redundancy
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

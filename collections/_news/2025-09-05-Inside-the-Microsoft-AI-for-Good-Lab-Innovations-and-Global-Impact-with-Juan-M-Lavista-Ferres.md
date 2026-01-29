@@ -21,6 +21,8 @@ tags:
 - Microsoft
 - Project SPARROW
 - Synthetic Aperture Radar
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

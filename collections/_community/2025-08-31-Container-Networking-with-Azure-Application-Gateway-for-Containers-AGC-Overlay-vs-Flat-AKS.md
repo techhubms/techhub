@@ -21,6 +21,11 @@ tags:
 - Overlay Networking
 - Subnet Design
 - YAML
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

@@ -25,6 +25,9 @@ tags:
 - Supply Chain
 - Training
 - Workforce Attrition
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

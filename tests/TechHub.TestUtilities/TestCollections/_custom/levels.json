@@ -1,0 +1,68 @@
+{
+    "title": "GitHub Copilot: Levels of Enlightenment",
+    "description": "Journey through the stages of GitHub Copilot mastery",
+    "intro": "Want to master GitHub Copilot? Go through this journey of discovery through \"Levels of Enlightenment\" - a series of nine practical insights gained from over a year of using the AI pair programmer. Each level represents an \"aha\" moment that dramatically improved productivity when working with Copilot.",
+    "overview": {
+        "content": "After using GitHub Copilot extensively, we documented the critical insights that helped us extract maximum value from this AI tool. Each level builds upon the previous one, creating a structured learning path that can significantly enhance your Copilot skills.",
+        "imageUrl": "https://devopsjournal.io/images/2024/20240607/20240607_1_Overview.png",
+        "imageAlt": "Overview of all 9 levels of enlightenment"
+    },
+    "levels": [
+        {
+            "number": 1,
+            "title": "Explain what you want to achieve",
+            "description": "The first level focuses on being more descriptive with GitHub Copilot. By changing the way you write code and comments to be more explicit about your goals, the quality of Copilot's suggestions improves dramatically. This level teaches you to think about the end result rather than focusing on implementation details.",
+            "youtubeId": "vdGW48mJgUA"
+        },
+        {
+            "number": 2,
+            "title": "Know your context",
+            "description": "Understanding how GitHub Copilot uses context is crucial for getting better results. This level explores how Copilot interprets your code environment and how you can optimize your workspace to provide the AI with the most relevant information for generating accurate suggestions.",
+            "youtubeId": "FlfgYQ9NCao"
+        },
+        {
+            "number": 3,
+            "title": "Copy method calls as comments",
+            "description": "This practical technique shows how changing your workflow between method calls and implementations can significantly speed up your coding. By using method calls as comments, you can quickly generate appropriate implementation code with Copilot's help.",
+            "youtubeId": "tzwT4VcXhg8"
+        },
+        {
+            "number": 4,
+            "title": "Top-down programming instead of bottom-up",
+            "description": "This level demonstrates the benefits of approaching code implementation from a top-down perspective rather than bottom-up when working with GitHub Copilot. By starting with high-level structures and then drilling down into details, you can leverage Copilot more effectively.",
+            "youtubeId": "ispTBp9FfFY"
+        },
+        {
+            "number": 5,
+            "title": "Typos in your prompt do not matter",
+            "description": "An important realization that can speed up your interaction with Copilot: you don't need to worry much about typos in your prompts. This level shows how Copilot's understanding is robust enough to handle imperfect input, saving you time spent on precision typing.",
+            "youtubeId": "b_UG94dxD04"
+        },
+        {
+            "number": 6,
+            "title": "Use the chat",
+            "description": "This level focuses on leveraging the Chat functionality rather than relying solely on inline suggestions. By directly communicating your needs through chat, you can often get more comprehensive and accurate results faster, allowing you to focus on your core objectives rather than syntax details.",
+            "youtubeId": "iSPN97vtNzU"
+        },
+        {
+            "number": 7,
+            "title": "#file is your biggest friend",
+            "description": "One of the most powerful techniques: using #file and #selection references to provide specific context to GitHub Copilot. This level teaches you how to explicitly include relevant code context in your prompts instead of relying on the editor to guess what's important.",
+            "youtubeId": "xVsfgeB4jQI"
+        },
+        {
+            "number": 8,
+            "title": "Accept the truth",
+            "description": "This philosophical level addresses the nature of Large Language Models. Understanding that Copilot is both non-deterministic and not 100% correct is essential. You remain the pilot, guiding the code in the right direction and taking responsibility for the final product.",
+            "youtubeId": "B7suezj2c9U"
+        },
+        {
+            "number": 9,
+            "title": "Be smart",
+            "description": "The final level encourages creative thinking about how to use GitHub Copilot. Instead of just using it to write code faster, consider novel use cases and ways to let Copilot handle more complex tasks. Use it for exploration and discovering new approaches to problems.",
+            "youtubeId": "FdLHeCxygFQ"
+        }
+    ],
+    "conclusion": "By progressing through these nine levels of enlightenment, you can transform your experience with GitHub Copilot from a helpful code completion tool to a powerful AI partner that significantly enhances your development workflow. Each insight builds on the previous ones, creating a compounding effect that maximizes your productivity.",
+    "playlistUrl": "https://www.youtube.com/playlist?list=PLXVVwOM8uv2y0Yo6H8qu9giWWWlZLzu8K"
+}

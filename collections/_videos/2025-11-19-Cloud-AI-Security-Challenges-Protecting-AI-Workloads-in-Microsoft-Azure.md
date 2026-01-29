@@ -27,6 +27,10 @@ tags:
 - Virtual WAN
 - VPN
 - WAF
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

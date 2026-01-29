@@ -15,6 +15,8 @@ tags:
 - Sealed Secrets
 - Secret Management
 - Tooling
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

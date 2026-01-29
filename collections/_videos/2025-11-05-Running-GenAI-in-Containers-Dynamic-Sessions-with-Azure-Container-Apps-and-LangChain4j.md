@@ -30,6 +30,10 @@ tags:
 - Session Pools
 - Stateful Containers
 - StatefulContainers
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

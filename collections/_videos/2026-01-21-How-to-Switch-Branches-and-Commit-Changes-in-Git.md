@@ -18,6 +18,8 @@ tags:
 - Repository Management
 - Source Control
 - Version Control
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

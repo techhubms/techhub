@@ -24,6 +24,9 @@ tags:
 - Survey Analysis
 - Technical Debt
 - Vulnerability Detection
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

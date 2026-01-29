@@ -18,6 +18,8 @@ tags:
 - On Premises Integration
 - Passkeys
 - Passwordless Authentication
+- Security
+- Community
 section_names:
 - security
 primary_section: security

@@ -27,6 +27,9 @@ tags:
 - Static Code Analyzer Agent
 - Terraform
 - Terragrunt
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

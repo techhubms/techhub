@@ -21,6 +21,9 @@ tags:
 - VNet Injection
 - VNet Integration
 - Zone Redundancy
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

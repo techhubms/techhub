@@ -24,6 +24,9 @@ tags:
 - SPECstorage Solution
 - Storage Optimization
 - Virtual Networks
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

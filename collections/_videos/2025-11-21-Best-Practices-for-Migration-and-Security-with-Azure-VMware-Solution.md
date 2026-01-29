@@ -23,6 +23,9 @@ tags:
 - SQL Server
 - VMware
 - Windows Server
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

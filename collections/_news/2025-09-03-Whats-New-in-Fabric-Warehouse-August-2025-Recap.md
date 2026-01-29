@@ -22,6 +22,13 @@ tags:
 - SQL Analytics Endpoint
 - T SQL
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

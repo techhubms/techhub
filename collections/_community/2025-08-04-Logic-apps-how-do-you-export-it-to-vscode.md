@@ -15,6 +15,9 @@ tags:
 - Source Code Management
 - VS Code
 - Workflow Automation
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

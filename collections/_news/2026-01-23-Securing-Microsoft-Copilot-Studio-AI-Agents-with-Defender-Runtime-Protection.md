@@ -20,6 +20,9 @@ tags:
 - Runtime Security
 - Threat Detection
 - Webhook Integration
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

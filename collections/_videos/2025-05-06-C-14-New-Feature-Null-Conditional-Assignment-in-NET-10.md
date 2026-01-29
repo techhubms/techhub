@@ -21,6 +21,8 @@ tags:
 - NullConditional
 - Safer Coding
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

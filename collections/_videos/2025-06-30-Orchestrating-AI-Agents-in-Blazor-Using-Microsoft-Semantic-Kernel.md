@@ -24,6 +24,9 @@ tags:
 - Orchestration Service
 - ProcessRuntime
 - Semantic Kernel
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

@@ -12,6 +12,9 @@ tags:
 - Issue Management
 - Model Selection
 - Productivity Tools
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

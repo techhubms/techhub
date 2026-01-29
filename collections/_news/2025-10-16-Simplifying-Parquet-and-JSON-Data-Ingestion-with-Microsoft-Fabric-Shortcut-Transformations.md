@@ -20,6 +20,9 @@ tags:
 - Parquet
 - Schema Inference
 - Shortcut Transformations
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

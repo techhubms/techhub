@@ -21,6 +21,9 @@ tags:
 - Tokens
 - Trusted Publishing
 - Two Factor Authentication
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

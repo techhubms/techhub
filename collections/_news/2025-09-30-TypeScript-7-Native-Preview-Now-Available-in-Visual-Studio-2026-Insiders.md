@@ -17,6 +17,8 @@ tags:
 - TypeScript Native Preview
 - Visual Studio Insiders
 - VS
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

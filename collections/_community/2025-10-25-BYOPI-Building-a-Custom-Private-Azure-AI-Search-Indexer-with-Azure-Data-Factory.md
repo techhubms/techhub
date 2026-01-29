@@ -24,6 +24,10 @@ tags:
 - Self Hosted Integration Runtime
 - SQL Server
 - VNet
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

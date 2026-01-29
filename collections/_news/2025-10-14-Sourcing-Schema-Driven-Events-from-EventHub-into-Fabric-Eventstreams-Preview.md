@@ -20,6 +20,9 @@ tags:
 - Real Time Intelligence
 - Schema Registry
 - Type Safety
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

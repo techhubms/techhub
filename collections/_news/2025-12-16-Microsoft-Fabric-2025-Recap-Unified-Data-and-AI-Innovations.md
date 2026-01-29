@@ -27,6 +27,13 @@ tags:
 - SQL Server
 - Terraform
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

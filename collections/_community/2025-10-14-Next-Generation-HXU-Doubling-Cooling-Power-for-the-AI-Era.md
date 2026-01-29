@@ -21,6 +21,10 @@ tags:
 - Predictive Maintenance
 - Redundancy
 - Telemetry
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

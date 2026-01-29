@@ -16,6 +16,8 @@ tags:
 - Retired
 - Software Development
 - Team Collaboration
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -22,6 +22,9 @@ tags:
 - Ubuntu 24.04
 - Version Requirement
 - Workflow Reliability
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

@@ -14,6 +14,9 @@ tags:
 - Memory System
 - Prompt Engineering
 - Refactoring
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

@@ -24,6 +24,10 @@ tags:
 - Vllm
 - Workspace Configuration
 - YAML
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

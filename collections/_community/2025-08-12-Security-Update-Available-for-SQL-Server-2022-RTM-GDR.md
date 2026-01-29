@@ -19,6 +19,8 @@ tags:
 - SQL Server
 - SQL Server Patching
 - Vulnerability Management
+- Security
+- Community
 section_names:
 - security
 primary_section: security

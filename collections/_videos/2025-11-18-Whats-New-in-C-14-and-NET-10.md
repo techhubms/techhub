@@ -16,6 +16,8 @@ tags:
 - Microsoft
 - Programming Languages
 - Release Highlights
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

@@ -21,6 +21,9 @@ tags:
 - Physical AI
 - Robotics Simulation
 - RTX PRO 6000 Blackwell
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

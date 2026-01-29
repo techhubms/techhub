@@ -22,6 +22,9 @@ tags:
 - Social X
 - Software Delivery
 - Toolchain Integrations
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

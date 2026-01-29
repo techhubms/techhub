@@ -25,6 +25,9 @@ tags:
 - OpenAI
 - Playwright MCP
 - Workflow Designer
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

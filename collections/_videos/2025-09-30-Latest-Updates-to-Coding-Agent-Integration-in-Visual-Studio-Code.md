@@ -14,6 +14,8 @@ tags:
 - Programming Environment
 - Software Engineering
 - VS Code
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

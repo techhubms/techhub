@@ -18,6 +18,10 @@ tags:
 - Oracle Database@Azure
 - Power BI
 - Real Time Analytics
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

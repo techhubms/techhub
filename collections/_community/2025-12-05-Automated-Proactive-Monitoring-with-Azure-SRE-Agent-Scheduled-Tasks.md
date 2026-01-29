@@ -21,6 +21,10 @@ tags:
 - Proactive Monitoring
 - Scheduled Tasks
 - Security Posture
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

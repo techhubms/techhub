@@ -20,15 +20,24 @@ namespace TechHub.E2E.Tests.Web;
 /// - Tab order is logical and predictable
 /// </summary>
 [Collection("Tab Ordering Tests")]
-public class TabOrderingTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class TabOrderingTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public TabOrderingTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

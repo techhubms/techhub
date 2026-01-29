@@ -19,6 +19,8 @@ tags:
 - Resource Group
 - Spending Alerts
 - Virtual Machine
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

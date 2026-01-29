@@ -22,6 +22,9 @@ tags:
 - SymphonyAI
 - Unified Data Models
 - Unified Namespace
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

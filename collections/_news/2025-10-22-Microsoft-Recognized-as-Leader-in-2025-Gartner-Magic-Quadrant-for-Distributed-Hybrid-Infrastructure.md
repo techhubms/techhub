@@ -24,6 +24,8 @@ tags:
 - Microsoft Defender For Cloud
 - Multicloud
 - Sovereign Cloud
+- Azure
+- News
 section_names:
 - azure
 primary_section: azure

@@ -15,6 +15,10 @@ tags:
 - GitHub
 - Human in The Loop
 - Productivity Tools
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

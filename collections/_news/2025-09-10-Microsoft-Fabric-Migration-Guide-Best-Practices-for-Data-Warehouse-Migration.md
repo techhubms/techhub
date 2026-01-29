@@ -18,6 +18,9 @@ tags:
 - Performance Optimization
 - SQL Pools
 - Warehouse Architecture
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

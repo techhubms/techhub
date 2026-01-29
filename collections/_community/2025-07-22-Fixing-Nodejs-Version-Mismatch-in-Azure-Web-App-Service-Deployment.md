@@ -15,6 +15,9 @@ tags:
 - Version Management
 - YAML
 - Yarn
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

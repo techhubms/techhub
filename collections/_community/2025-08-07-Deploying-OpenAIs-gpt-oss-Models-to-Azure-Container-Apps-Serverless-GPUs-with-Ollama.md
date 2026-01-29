@@ -24,6 +24,9 @@ tags:
 - Scalable AI
 - Serverless GPU
 - T4 GPU
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

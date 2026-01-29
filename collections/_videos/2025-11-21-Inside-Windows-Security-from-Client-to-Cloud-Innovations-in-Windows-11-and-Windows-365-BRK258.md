@@ -22,6 +22,8 @@ tags:
 - Windows 11
 - Windows 365
 - Windows Hello
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

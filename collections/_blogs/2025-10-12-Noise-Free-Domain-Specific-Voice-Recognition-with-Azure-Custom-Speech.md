@@ -21,6 +21,9 @@ tags:
 - Speech SDK
 - Speech To Text
 - Voice Recognition
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

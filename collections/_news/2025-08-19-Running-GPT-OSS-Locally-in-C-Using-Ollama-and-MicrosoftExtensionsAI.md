@@ -22,6 +22,9 @@ tags:
 - OpenAI
 - Private AI
 - Streaming Response
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

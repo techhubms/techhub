@@ -16,6 +16,10 @@ tags:
 - SXkills Directory
 - VS Code
 - VS Code Insiders
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

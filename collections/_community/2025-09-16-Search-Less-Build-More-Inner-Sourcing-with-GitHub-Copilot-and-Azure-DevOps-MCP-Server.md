@@ -19,6 +19,11 @@ tags:
 - Organization Standards
 - Platform Engineering
 - Repository Search
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

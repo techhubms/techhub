@@ -20,6 +20,9 @@ tags:
 - VS
 - VS Settings
 - Winget
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

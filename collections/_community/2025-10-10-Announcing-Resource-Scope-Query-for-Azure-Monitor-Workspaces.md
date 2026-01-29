@@ -24,6 +24,10 @@ tags:
 - Resource Permissions
 - Resource Scope Query
 - Workspace Permissions
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

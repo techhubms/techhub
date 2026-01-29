@@ -19,6 +19,8 @@ tags:
 - SQL Server On Azure
 - Windows Server Migration
 - Workload Migration
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

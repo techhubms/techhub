@@ -117,7 +117,7 @@ csharp_prefer_braces = true:warning
 csharp_prefer_simple_using_statement = true:suggestion
 csharp_style_namespace_declarations = file_scoped:warning
 csharp_style_prefer_method_group_conversion = true:suggestion
-csharp_style_prefer_primary_constructors = true:warning
+csharp_style_prefer_primary_constructors = false:warning  # We explicitly avoid primary constructors
 csharp_style_prefer_top_level_statements = false:warning
 
 # Expression-level preferences
@@ -172,43 +172,42 @@ dotnet_diagnostic.IDE0080.severity = warning
 dotnet_diagnostic.IDE0100.severity = warning
 
 ##############################
+# ⚠️ TEMPORARILY DISABLED FOR BASELINE ANALYSIS
 # Roslynator Analyzers - Dead Code Detection ONLY
-# Keep most Roslynator rules at 'none' severity - we rely on Microsoft.CodeAnalysis.NetAnalyzers
-# Only enable specific dead code detection rules that add value beyond built-in analyzers
+# Microsoft.CodeAnalysis.NetAnalyzers is our primary analyzer
+# Roslynator is ONLY used for additional dead code detection not covered by Microsoft analyzers
+# All other Roslynator rules are disabled to avoid duplicate warnings
 ##############################
 
-# Enable dead code detection
-dotnet_analyzer.roslynator.suppress_unity_script_methods = false
+# ROSLYNATOR REMOVED - using only built-in .NET analyzers
+# Disable ALL Roslynator categories by default to prevent duplicates with Microsoft analyzers
+# dotnet_analyzer_diagnostic.category-roslynator.severity = none
 
-# RCS1163: Unused parameter (more comprehensive than IDE0060)
-dotnet_diagnostic.RCS1163.severity = warning
-
-# RCS1213: Remove unused member declaration (catches public unused members in sealed classes)
-dotnet_diagnostic.RCS1213.severity = warning
-
-# RCS1175: Unused 'this' parameter (extension methods)
-dotnet_diagnostic.RCS1175.severity = warning
-
-# RCS1018: Add accessibility modifiers
-dotnet_diagnostic.RCS1018.severity = none  # Handled by IDE analyzers
-
-# Suppress all other Roslynator rules - we use Microsoft.CodeAnalysis.NetAnalyzers for everything else
-dotnet_analyzer_diagnostic.category-roslynator.severity = none
-
-# Re-enable only the dead code rules above
-dotnet_diagnostic.RCS1163.severity = warning
-dotnet_diagnostic.RCS1213.severity = warning  
-dotnet_diagnostic.RCS1175.severity = warning
+# Enable ONLY specific dead code detection rules that add value beyond Microsoft analyzers
+# dotnet_diagnostic.RCS1163.severity = warning  # Unused parameter (more comprehensive than IDE0060)
+# dotnet_diagnostic.RCS1213.severity = warning  # Remove unused member declaration (public unused in sealed classes)
+# dotnet_diagnostic.RCS1175.severity = warning  # Unused 'this' parameter (extension methods)
 
 ##############################
 # File-specific overrides
 ##############################
 
+# TechHub.Core Models: CA1812 (internal class never instantiated), CA1852 (seal types)
+# Models and configs are instantiated by JSON deserializer or IOptions
+# [src/TechHub.Core/Models/**/*.cs]
+# dotnet_diagnostic.CA1812.severity = none
+# dotnet_diagnostic.CA1852.severity = none
+
+# TechHub.ContentFixer: CA1031 (catching generic Exception)
+# Utility tool needs generic exception handling for user-friendly CLI error messages
+# [src/TechHub.ContentFixer/**/*.cs]
+# dotnet_diagnostic.CA1031.severity = none
+
 # Minimal API Endpoints: Suppress unused parameter warnings
 # These are dependency-injected parameters reserved for future implementation
-[src/TechHub.Api/Endpoints/*.cs]
-dotnet_diagnostic.RCS1163.severity = none
-dotnet_diagnostic.IDE0060.severity = none
+# [src/TechHub.Api/Endpoints/*.cs]
+# dotnet_diagnostic.RCS1163.severity = none
+# dotnet_diagnostic.IDE0060.severity = none
 
 # IDE0046: Convert to conditional expression (suggestion only)
 dotnet_diagnostic.IDE0046.severity = suggestion
@@ -227,31 +226,86 @@ dotnet_diagnostic.IDE0305.severity = warning
 
 ##############################
 # Code Analysis Rules - Suppressions
+# ⚠️ IMPORTANT: Keep these suppressions in sync with Directory.Build.props
+# Any suppression added here MUST also be added to Directory.Build.props (and vice versa)
+# This ensures VS Code Problems tab, dotnet build, and CI/CD all report the same issues
 ##############################
 
-# CA2234: Pass System.Uri instead of string (18 occurrences)
-# Suppressed: HttpClient methods accept both Uri and string, string is more convenient
-dotnet_diagnostic.CA2234.severity = none
+# CA1308: ToLowerInvariant - intentional for tag/search normalization (lowercase is conventional)
+dotnet_diagnostic.CA1308.severity = none
 
-# CA1711: Rename DevEx to not end in Ex (2 occurrences)
-# Suppressed: DevEx is the established name for Developer Experience
-dotnet_diagnostic.CA1711.severity = none
+# CA1848: LoggerMessage - performance optimization not critical, traditional logging is clearer
+dotnet_diagnostic.CA1848.severity = none
 
-# CA1024: Method vs property (2 occurrences)
-# Suppressed: Intentional design - methods perform operations, not simple accessors
-dotnet_diagnostic.CA1024.severity = none
+# CA2007: ConfigureAwait - not necessary for ASP.NET Core (no SynchronizationContext)
+dotnet_diagnostic.CA2007.severity = none
 
-# CA1515: Public types visibility (2 occurrences)
-# Suppressed: Public types required for dependency injection in Blazor
-dotnet_diagnostic.CA1515.severity = none
+# CS1591: Missing XML comment - not enforcing XML docs on all public members
+dotnet_diagnostic.CS1591.severity = none
 
-# CA1303: Localization warnings (24 occurrences in ContentFixer)
-# Suppressed: ContentFixer is internal CLI tooling, not user-facing software requiring localization
+# CA1303: Localization warnings - this is not a localized application
 dotnet_diagnostic.CA1303.severity = none
 
-# CA1031: Catching generic Exception (4 occurrences in ContentFixer)
-# Suppressed: ContentFixer needs generic exception handling for user-friendly CLI error messages
-dotnet_diagnostic.CA1031.severity = none
+# CA1002: List vs Collection - internal API, List is more practical for LINQ operations
+dotnet_diagnostic.CA1002.severity = none
+
+# CA1054: URI parameters should use System.Uri - we use strings for routing paths and JSON serialization
+dotnet_diagnostic.CA1054.severity = none
+
+# CA1056: URI properties should use System.Uri - we use strings for routing paths and JSON serialization
+dotnet_diagnostic.CA1056.severity = none
+
+# CA2234: Pass System.Uri instead of string - HttpClient accepts both, string is more convenient
+dotnet_diagnostic.CA2234.severity = none
+
+# IDE0211: Top-level statements vs Program.Main - causes circular warnings, rely on style preference instead
+dotnet_diagnostic.IDE0211.severity = none
+
+# CA1711: Rename Collection - established domain name for content collections
+dotnet_diagnostic.CA1711.severity = none
+
+# CA1515: Make types internal - web application, not a library, public is fine
+dotnet_diagnostic.CA1515.severity = none
+
+# REMAINING SUPPRESSIONS DISABLED FOR ANALYSIS
+# CA1720: Identifier contains type name - 'Guid' in RSS feeds is the RSS standard, not System.Guid
+# dotnet_diagnostic.CA1720.severity = none
+
+# CA1822: Member does not access instance data - we prefer instance methods for consistency and testability
+# dotnet_diagnostic.CA1822.severity = none
+
+# CA1002: List vs Collection - internal API, List is more practical for LINQ operations
+# dotnet_diagnostic.CA1002.severity = none
+
+# CA1303: Localization warnings - this is not a localized application
+# dotnet_diagnostic.CA1303.severity = none
+
+# CA1515: Public types in non-public assembly - web application classes, required for DI
+# dotnet_diagnostic.CA1515.severity = none
+
+# CA1056: URI properties should use System.Uri instead of string - we use strings for JSON serialization
+# dotnet_diagnostic.CA1056.severity = none
+
+# CA2234: Pass System.Uri instead of string - HttpClient accepts both, string is more convenient
+# dotnet_diagnostic.CA2234.severity = none
+
+# CA1711: Rename DevEx to not end in Ex - DevEx is the established name for Developer Experience
+# dotnet_diagnostic.CA1711.severity = none
+
+# CA1024: Method vs property - intentional design - methods perform operations
+# dotnet_diagnostic.CA1024.severity = none
+
+# CA1031: Catching generic Exception - suppressed in exception handler middleware and utility tools
+# dotnet_diagnostic.CA1031.severity = suggestion  # warning in most code, but can be suppressed locally
+
+# IDE0290: Use primary constructor - we prefer traditional constructors with explicit null checks
+# dotnet_diagnostic.IDE0290.severity = none
+
+# IDE0211: Top-level statements vs Program.Main - we prefer explicit Program class
+# dotnet_diagnostic.IDE0211.severity = none
+
+# CS1570: Malformed XML in doc comment - minor formatting issues don't affect functionality
+# dotnet_diagnostic.CS1570.severity = none
 
 ##############################
 # C# Formatting Rules
@@ -366,14 +420,6 @@ dotnet_naming_style.begins_with_underscore.required_prefix = _
 dotnet_naming_style.begins_with_underscore.required_suffix =
 dotnet_naming_style.begins_with_underscore.word_separator =
 dotnet_naming_style.begins_with_underscore.capitalization = camel_case
-
-##############################
-# Code Analysis Suppressions
-##############################
-
-# CA1056: Properties should use System.Uri instead of string
-# Suppressed: NavigationBaseUrl uses string for simplicity and URL construction
-dotnet_diagnostic.CA1056.severity = none
 
 ##############################
 # JSON, YAML, XML files

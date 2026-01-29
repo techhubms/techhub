@@ -26,6 +26,8 @@ tags:
 - Planning
 - Roadmap
 - Softaredeveloper
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

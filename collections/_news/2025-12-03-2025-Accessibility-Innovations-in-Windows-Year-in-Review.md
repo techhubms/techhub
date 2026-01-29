@@ -26,6 +26,10 @@ tags:
 - Voice Typing
 - Windows Accessibility
 - Windows Insider
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

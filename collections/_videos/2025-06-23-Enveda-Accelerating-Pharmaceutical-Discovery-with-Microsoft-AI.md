@@ -17,6 +17,8 @@ tags:
 - Microsoft Cloud
 - Pharmaceutical Innovation
 - Viswa Colluru
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

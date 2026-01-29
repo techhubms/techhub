@@ -24,6 +24,12 @@ tags:
 - Python
 - Rapid Onboarding
 - VS Code For The Web
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

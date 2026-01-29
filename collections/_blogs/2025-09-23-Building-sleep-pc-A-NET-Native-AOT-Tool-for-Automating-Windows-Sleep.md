@@ -25,6 +25,8 @@ tags:
 - Task.Delay
 - Win32 API
 - Windows
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

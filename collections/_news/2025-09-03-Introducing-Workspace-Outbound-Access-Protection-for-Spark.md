@@ -16,6 +16,10 @@ tags:
 - Spark
 - Trusted Workspace Access
 - Workspace Outbound Access Protection
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

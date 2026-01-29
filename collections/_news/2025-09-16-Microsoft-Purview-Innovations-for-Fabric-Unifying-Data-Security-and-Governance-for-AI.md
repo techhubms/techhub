@@ -20,6 +20,11 @@ tags:
 - Microsoft Purview
 - Power BI
 - Unified Catalog
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -21,6 +21,8 @@ tags:
 - Microsoft AI
 - Patient Care
 - Workflow Automation
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

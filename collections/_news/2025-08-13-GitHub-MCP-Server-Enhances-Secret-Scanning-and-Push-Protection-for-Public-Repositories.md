@@ -19,6 +19,9 @@ tags:
 - Secret Scanning
 - Tool Call Security
 - Workflow Automation
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

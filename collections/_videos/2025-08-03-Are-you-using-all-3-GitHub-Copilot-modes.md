@@ -15,6 +15,9 @@ tags:
 - GitHub
 - Programming
 - Programming Tools
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

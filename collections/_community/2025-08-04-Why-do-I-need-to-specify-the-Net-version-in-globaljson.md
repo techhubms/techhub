@@ -15,6 +15,8 @@ tags:
 - Project Configuration
 - SDK Version
 - Target Framework
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

@@ -22,6 +22,9 @@ tags:
 - Population Health
 - Prior Authorization Automation
 - Startup Collaboration
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

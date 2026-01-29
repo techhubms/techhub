@@ -19,6 +19,12 @@ tags:
 - Performance Optimization
 - Real Time Streaming
 - Scaling Strategies
+- AI
+- Azure
+- Security
+- DevOps
+- Coding
+- Videos
 section_names:
 - ai
 - azure

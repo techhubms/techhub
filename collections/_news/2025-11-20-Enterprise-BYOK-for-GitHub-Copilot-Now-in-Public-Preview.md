@@ -21,6 +21,10 @@ tags:
 - Organization Admin
 - VS Code
 - Xai
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

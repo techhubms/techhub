@@ -17,6 +17,9 @@ tags:
 - User Control
 - VS Code
 - Workspace Integration
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

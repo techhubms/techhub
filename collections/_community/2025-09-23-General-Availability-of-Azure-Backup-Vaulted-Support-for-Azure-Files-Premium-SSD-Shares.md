@@ -25,6 +25,9 @@ tags:
 - SMB File Shares
 - SSD
 - Windows Workloads
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

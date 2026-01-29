@@ -11,6 +11,8 @@ tags:
 - Decision Making
 - Leadership
 - Practical Guide
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

@@ -20,6 +20,10 @@ tags:
 - Server Sent Events
 - Traffic Management
 - Web Application Firewall
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

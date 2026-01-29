@@ -21,6 +21,8 @@ tags:
 - Python
 - Vocational Education
 - Work Trend Index
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

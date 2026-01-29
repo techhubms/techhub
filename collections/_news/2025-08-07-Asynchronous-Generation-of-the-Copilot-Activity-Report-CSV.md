@@ -14,6 +14,9 @@ tags:
 - Reliability
 - Report Generation
 - Scalability
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

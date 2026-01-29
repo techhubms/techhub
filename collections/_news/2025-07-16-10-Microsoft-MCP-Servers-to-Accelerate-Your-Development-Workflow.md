@@ -18,6 +18,11 @@ tags:
 - SQL Server
 - VS
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

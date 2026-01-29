@@ -24,6 +24,9 @@ tags:
 - Resource Health
 - Root Cause Analysis
 - Virtual Machines
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - SQL Analytics Endpoint
 - VARBINARY(MAX)
 - VARCHAR(MAX)
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

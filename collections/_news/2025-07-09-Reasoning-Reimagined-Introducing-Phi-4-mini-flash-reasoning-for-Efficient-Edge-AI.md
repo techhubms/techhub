@@ -21,6 +21,9 @@ tags:
 - Real Time Applications
 - Responsible AI
 - SambaY Architecture
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

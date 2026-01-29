@@ -20,6 +20,9 @@ tags:
 - Python
 - Training
 - TypeScript
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

@@ -21,6 +21,9 @@ tags:
 - NVLink
 - Token Throughput
 - Vllm
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -18,6 +18,9 @@ tags:
 - LLMs
 - OpenAI Compatible
 - Personal Access Token
+- AI
+- DevOps
+- News
 section_names:
 - ai
 - devops

@@ -24,6 +24,11 @@ tags:
 - Refactoring
 - Software Developer
 - VS Code
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

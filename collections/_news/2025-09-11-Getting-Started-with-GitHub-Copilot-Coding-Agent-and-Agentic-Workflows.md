@@ -18,6 +18,11 @@ tags:
 - Pull Request Automation
 - Test Automation
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

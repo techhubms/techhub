@@ -21,6 +21,11 @@ tags:
 - Software Engineering
 - Sustainable Software
 - Usability Analysis
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

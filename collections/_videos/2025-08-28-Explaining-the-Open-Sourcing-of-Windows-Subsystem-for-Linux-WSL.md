@@ -19,6 +19,8 @@ tags:
 - Virtual Machines
 - Windows Subsystem For Linux
 - WSL
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

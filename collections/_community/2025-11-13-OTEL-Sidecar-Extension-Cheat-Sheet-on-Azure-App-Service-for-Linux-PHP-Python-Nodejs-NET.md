@@ -26,6 +26,11 @@ tags:
 - SCM DO BUILD DURING DEPLOYMENT
 - Startup Commands
 - Tracing
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

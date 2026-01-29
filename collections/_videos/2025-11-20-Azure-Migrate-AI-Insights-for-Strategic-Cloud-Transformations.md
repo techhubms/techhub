@@ -27,6 +27,9 @@ tags:
 - TCO Insights
 - Wave Planning
 - Windows Server
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

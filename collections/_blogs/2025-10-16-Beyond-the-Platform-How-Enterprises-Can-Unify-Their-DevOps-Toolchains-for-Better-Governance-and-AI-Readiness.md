@@ -26,6 +26,10 @@ tags:
 - Social X
 - Software Delivery Lifecycle
 - Sponsored Content
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

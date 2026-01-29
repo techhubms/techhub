@@ -21,6 +21,8 @@ tags:
 - StandardV2
 - Virtual Network
 - Zone Redundancy
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

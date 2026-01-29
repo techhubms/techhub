@@ -144,7 +144,7 @@ public class FrontMatterParserTests
     public void GetValue_ExistingKey_ReturnsTypedValue()
     {
         // Arrange: Frontmatter with various types
-        var frontMatter = new Dictionary<string, object>
+        var frontMatter = new Dictionary<string, object?>
         {
             { "title", "Test" },
             { "count", 42 },
@@ -152,9 +152,9 @@ public class FrontMatterParserTests
         };
 
         // Act: Retrieve typed values
-        var title = _parser.GetValue<string>(frontMatter, "title");
-        var count = _parser.GetValue<int>(frontMatter, "count");
-        var enabled = _parser.GetValue<bool>(frontMatter, "enabled");
+        var title = FrontMatterParser.GetValue<string>(frontMatter, "title");
+        var count = FrontMatterParser.GetValue<int>(frontMatter, "count");
+        var enabled = FrontMatterParser.GetValue<bool>(frontMatter, "enabled");
 
         // Assert: Correct types returned
         title.Should().Be("Test");
@@ -170,11 +170,11 @@ public class FrontMatterParserTests
     public void GetValue_MissingKey_ReturnsDefault()
     {
         // Arrange: Empty frontmatter
-        var frontMatter = new Dictionary<string, object>();
+        var frontMatter = new Dictionary<string, object?>();
 
         // Act: Access non-existent keys with defaults
-        var title = _parser.GetValue(frontMatter, "title", "Default Title");
-        var count = _parser.GetValue(frontMatter, "count", 0);
+        var title = FrontMatterParser.GetValue(frontMatter, "title", "Default Title");
+        var count = FrontMatterParser.GetValue(frontMatter, "count", 0);
 
         // Assert: Default values returned
         title.Should().Be("Default Title");
@@ -189,7 +189,7 @@ public class FrontMatterParserTests
     public void GetListValue_VariousFormats_ReturnsList()
     {
         // Arrange: Different list representations in YAML
-        var frontMatter = new Dictionary<string, object>
+        var frontMatter = new Dictionary<string, object?>
         {
             { "tags_array", new List<object> { "ai", "ml" } },
             { "tags_single", "azure" },
@@ -197,9 +197,9 @@ public class FrontMatterParserTests
         };
 
         // Act: Parse different list formats
-        var arrayList = _parser.GetListValue(frontMatter, "tags_array");
-        var singleList = _parser.GetListValue(frontMatter, "tags_single");
-        var missingList = _parser.GetListValue(frontMatter, "tags_missing");
+        var arrayList = FrontMatterParser.GetListValue(frontMatter, "tags_array");
+        var singleList = FrontMatterParser.GetListValue(frontMatter, "tags_single");
+        var missingList = FrontMatterParser.GetListValue(frontMatter, "tags_missing");
 
         // Assert: All converted to List<string>
         arrayList.Count.Should().Be(2);

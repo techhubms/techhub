@@ -14,6 +14,8 @@ tags:
 - Models
 - Protocol Architecture
 - Tools
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

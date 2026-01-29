@@ -22,6 +22,10 @@ tags:
 - Security Alerts
 - Unknown Secrets
 - YAML
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

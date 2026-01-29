@@ -23,6 +23,8 @@ tags:
 - Scope Management
 - Service Groups
 - Subscription
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

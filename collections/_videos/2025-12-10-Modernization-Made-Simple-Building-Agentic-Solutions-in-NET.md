@@ -17,6 +17,9 @@ tags:
 - Programming Demo
 - Software Modernization
 - Tool Orchestration
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

@@ -23,6 +23,9 @@ tags:
 - SEV SNP
 - Virtualization Based Security
 - Windows VBS
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

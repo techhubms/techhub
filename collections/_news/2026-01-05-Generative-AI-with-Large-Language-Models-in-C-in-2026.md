@@ -26,6 +26,10 @@ tags:
 - Semantic Kernel
 - Tokenization
 - Vector Databases
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

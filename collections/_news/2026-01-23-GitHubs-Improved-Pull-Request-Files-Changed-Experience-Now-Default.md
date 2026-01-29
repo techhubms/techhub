@@ -18,6 +18,8 @@ tags:
 - Performance Optimization
 - Pull Requests
 - UI Improvements
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

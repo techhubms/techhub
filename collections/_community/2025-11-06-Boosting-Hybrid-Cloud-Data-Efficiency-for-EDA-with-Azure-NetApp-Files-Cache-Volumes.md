@@ -22,6 +22,8 @@ tags:
 - Semiconductor Design
 - SnapMirror
 - Snapshot
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

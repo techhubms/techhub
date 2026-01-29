@@ -42,6 +42,13 @@ tags:
 - VMware
 - WAF
 - ZRS Disk
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

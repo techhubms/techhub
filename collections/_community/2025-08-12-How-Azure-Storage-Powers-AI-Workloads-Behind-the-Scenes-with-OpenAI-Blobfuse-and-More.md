@@ -21,6 +21,9 @@ tags:
 - Microsoft AI
 - OpenAI
 - Role Based Access Control
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

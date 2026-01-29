@@ -20,6 +20,9 @@ tags:
 - Performance Tuning
 - Spark SQL
 - Table Properties
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

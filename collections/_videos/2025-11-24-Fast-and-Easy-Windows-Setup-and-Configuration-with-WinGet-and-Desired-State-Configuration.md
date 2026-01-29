@@ -24,6 +24,9 @@ tags:
 - Windows Configuration
 - WinGet
 - Winget Studio
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

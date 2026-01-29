@@ -21,6 +21,9 @@ tags:
 - Path Specific Instructions
 - Style Conventions
 - Team Standards
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

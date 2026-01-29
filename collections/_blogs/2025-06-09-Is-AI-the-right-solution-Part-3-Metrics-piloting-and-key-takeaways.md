@@ -17,6 +17,8 @@ tags:
 - ROI
 - Series
 - Success Metrics
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

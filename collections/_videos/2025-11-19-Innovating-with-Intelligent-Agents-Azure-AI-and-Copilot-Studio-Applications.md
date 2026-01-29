@@ -22,6 +22,9 @@ tags:
 - Operational Intelligence
 - Recommendations
 - User Validation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

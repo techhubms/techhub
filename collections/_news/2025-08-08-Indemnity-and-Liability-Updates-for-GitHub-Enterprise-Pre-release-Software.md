@@ -15,6 +15,8 @@ tags:
 - Risk Management
 - Software Agreements
 - Volume Licensing
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

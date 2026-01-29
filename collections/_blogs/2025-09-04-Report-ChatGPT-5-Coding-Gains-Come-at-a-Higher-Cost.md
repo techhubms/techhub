@@ -23,6 +23,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Sonar Report
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

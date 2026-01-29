@@ -16,6 +16,8 @@ tags:
 - User Interface
 - VS
 - WebView2
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

@@ -24,6 +24,9 @@ tags:
 - SharePoint Integration
 - Snowflake Integration
 - Unified Data Platform
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

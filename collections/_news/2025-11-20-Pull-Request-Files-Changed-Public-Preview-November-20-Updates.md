@@ -17,6 +17,8 @@ tags:
 - Pull Requests
 - UI Enhancement
 - Version Control
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

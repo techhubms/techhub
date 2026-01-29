@@ -21,6 +21,9 @@ tags:
 - ScalewithcloudandAIendpoints
 - Smart Eyewear
 - TeamViewer
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -15,6 +15,9 @@ tags:
 - Inline Code
 - Workflow Automation
 - Workflow Optimization
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

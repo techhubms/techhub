@@ -19,6 +19,8 @@ tags:
 - NuGet
 - Open Source
 - Web API
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

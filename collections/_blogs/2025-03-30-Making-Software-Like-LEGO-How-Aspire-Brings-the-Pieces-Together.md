@@ -22,6 +22,9 @@ tags:
 - System Modeling
 - Vertical Platforms
 - Web Development
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

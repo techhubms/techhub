@@ -30,6 +30,8 @@ tags:
 - Power Platform
 - Process Automation
 - Scale
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

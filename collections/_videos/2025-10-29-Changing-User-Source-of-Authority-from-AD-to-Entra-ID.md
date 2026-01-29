@@ -22,6 +22,9 @@ tags:
 - Migration
 - Technical Training
 - User Source Of Authority
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

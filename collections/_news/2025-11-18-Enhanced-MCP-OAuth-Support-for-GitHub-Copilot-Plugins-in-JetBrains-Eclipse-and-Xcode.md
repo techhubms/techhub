@@ -21,6 +21,9 @@ tags:
 - OAuth 2.1
 - Plugin Development
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -24,6 +24,10 @@ tags:
 - Security Best Practices
 - Terminal Productivity
 - Workflow Automation
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

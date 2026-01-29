@@ -22,6 +22,8 @@ tags:
 - Single Sign On
 - Technical Training
 - User Management
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

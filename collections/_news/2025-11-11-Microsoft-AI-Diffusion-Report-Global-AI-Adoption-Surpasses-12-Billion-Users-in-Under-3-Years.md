@@ -18,6 +18,8 @@ tags:
 - Microsoft
 - Skills Development
 - Technology Adoption
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

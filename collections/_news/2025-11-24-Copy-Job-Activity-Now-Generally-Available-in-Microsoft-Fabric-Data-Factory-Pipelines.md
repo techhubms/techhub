@@ -21,6 +21,9 @@ tags:
 - Pipeline Automation
 - Pipeline Scheduling
 - Telemetry
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -15,6 +15,8 @@ tags:
 - Scaling Strategies
 - Serverless Computing
 - Spring Boot
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -20,6 +20,10 @@ tags:
 - Premium V4 Plan
 - Python
 - Real Time Streaming
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

@@ -14,6 +14,9 @@ tags:
 - Overlapping Styles
 - Project Maintenance
 - Project Summary
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

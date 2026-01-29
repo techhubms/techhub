@@ -24,6 +24,8 @@ tags:
 - Service Degradation
 - Site Reliability
 - Third Party Dependencies
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

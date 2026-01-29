@@ -118,14 +118,14 @@ public class ContentItemTests
     [Fact]
     public void GetHref_ReturnsUrl_ForInternalCollections()
     {
-        // Arrange
+        // Arrange - videos is an internal collection (doesn't link externally)
         var contentItem = CreateContentItemWithCollection("videos");
 
         // Act
         var result = contentItem.GetHref();
 
-        // Assert
-        result.Should().Be("/ai/videos/test-slug");
+        // Assert - uses default section (github-copilot) and the collection/slug
+        result.Should().Be("/github-copilot/videos/test-slug");
     }
 
     [Fact]
@@ -137,8 +137,8 @@ public class ContentItemTests
         // Act
         var result = contentItem.GetHref();
 
-        // Assert - should build URL from section/collection/slug, not use externalUrl
-        result.Should().Be("/ai/videos/test-slug");
+        // Assert - should build URL from section/collection/slug (uses default section github-copilot), not use externalUrl
+        result.Should().Be("/github-copilot/videos/test-slug");
     }
 
     [Fact]

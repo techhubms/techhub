@@ -25,6 +25,11 @@ tags:
 - SIEM
 - Threat Intelligence
 - Zero Trust
+- AI
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

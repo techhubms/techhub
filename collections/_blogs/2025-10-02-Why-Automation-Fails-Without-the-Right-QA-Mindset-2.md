@@ -29,6 +29,8 @@ tags:
 - Test Automation
 - Test Maintainability
 - User Experience Testing
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

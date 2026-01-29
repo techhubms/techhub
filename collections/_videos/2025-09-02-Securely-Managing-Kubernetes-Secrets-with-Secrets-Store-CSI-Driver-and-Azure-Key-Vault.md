@@ -22,6 +22,10 @@ tags:
 - Secrets Store CSI Driver
 - Tech
 - Technology
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

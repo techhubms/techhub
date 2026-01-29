@@ -21,6 +21,8 @@ tags:
 - Role Based Access Control
 - Savings Plan
 - Service Principal
+- Azure
+- News
 section_names:
 - azure
 primary_section: azure

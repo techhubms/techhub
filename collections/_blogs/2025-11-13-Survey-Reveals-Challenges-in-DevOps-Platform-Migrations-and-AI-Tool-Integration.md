@@ -20,6 +20,10 @@ tags:
 - Survey
 - Tool Sprawl
 - Workflow Optimization
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

@@ -18,6 +18,8 @@ tags:
 - Startups
 - Team Structure
 - Trust
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

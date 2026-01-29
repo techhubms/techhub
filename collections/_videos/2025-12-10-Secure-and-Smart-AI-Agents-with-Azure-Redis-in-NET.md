@@ -17,6 +17,11 @@ tags:
 - Microsoft Azure
 - Redis Integration
 - Security Enhancement
+- AI
+- Azure
+- Coding
+- Security
+- Videos
 section_names:
 - ai
 - azure

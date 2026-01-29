@@ -20,6 +20,10 @@ tags:
 - PowerShell
 - Server Management
 - Windows Admin Center
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

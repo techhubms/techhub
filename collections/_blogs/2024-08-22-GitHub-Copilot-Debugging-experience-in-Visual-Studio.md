@@ -8,6 +8,9 @@ tags:
 - Development Tools
 - Microsoft
 - VS
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

@@ -24,6 +24,10 @@ tags:
 - Technology
 - VS Code
 - VS Code Extensions
+- AI
+- Azure
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

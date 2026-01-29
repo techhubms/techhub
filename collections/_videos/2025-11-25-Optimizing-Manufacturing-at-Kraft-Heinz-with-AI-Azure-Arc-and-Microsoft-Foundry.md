@@ -22,6 +22,9 @@ tags:
 - MSIgnite
 - Real Time Recommendations
 - Supply Chain Automation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

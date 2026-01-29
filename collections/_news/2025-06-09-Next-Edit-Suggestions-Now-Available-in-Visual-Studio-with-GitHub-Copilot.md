@@ -17,6 +17,10 @@ tags:
 - Productivity
 - Simona Liao
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

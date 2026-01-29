@@ -14,6 +14,9 @@ tags:
 - Mcp
 - Microsoft
 - Software Developer
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

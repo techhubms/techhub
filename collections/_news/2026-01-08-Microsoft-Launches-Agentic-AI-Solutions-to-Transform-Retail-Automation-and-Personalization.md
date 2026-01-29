@@ -20,6 +20,8 @@ tags:
 - Retail Technology
 - Shopify Integration
 - Store Operations
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

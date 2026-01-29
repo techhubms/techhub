@@ -26,6 +26,9 @@ tags:
 - NIST AI RMF
 - Security Architecture
 - Threat Intelligence
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

@@ -16,6 +16,8 @@ tags:
 - Static Sites
 - Utilities
 - Web Hosting
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

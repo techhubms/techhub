@@ -20,6 +20,8 @@ tags:
 - No Code
 - Personalization
 - Power Platform
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

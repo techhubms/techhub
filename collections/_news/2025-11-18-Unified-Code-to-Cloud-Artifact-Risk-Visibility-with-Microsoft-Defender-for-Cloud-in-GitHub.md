@@ -20,6 +20,10 @@ tags:
 - Runtime Risk
 - Security Campaigns
 - Supply Chain Security
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

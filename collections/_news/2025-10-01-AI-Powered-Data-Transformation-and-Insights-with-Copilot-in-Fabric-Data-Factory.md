@@ -20,6 +20,9 @@ tags:
 - Pipeline Orchestration
 - Power Query
 - Productivity Tools
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -22,6 +22,10 @@ tags:
 - Interaction Service
 - OpenTelemetry
 - YARP Integration
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - User Experience
 - VDI Migration
 - Windows 365
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

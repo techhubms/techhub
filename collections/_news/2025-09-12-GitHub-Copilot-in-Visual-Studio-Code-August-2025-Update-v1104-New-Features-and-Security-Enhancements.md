@@ -20,6 +20,12 @@ tags:
 - Terminal Auto Approve
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - coding

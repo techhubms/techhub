@@ -19,6 +19,9 @@ tags:
 - Table Level Locking
 - Transaction Management
 - Write Conflicts
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

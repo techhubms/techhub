@@ -24,6 +24,9 @@ tags:
 - Predictive Analytics
 - Public Cloud
 - Sovereign Cloud
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

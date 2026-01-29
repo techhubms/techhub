@@ -1075,7 +1075,11 @@ public static class BlazorHelpers
 /// <summary>
 /// Custom exception for assertion failures with better error messages
 /// </summary>
-public class AssertionException(string message) : Exception(message)
+public class AssertionException : Exception
 {
+    public AssertionException(string message) : base(message)
+    {
+        ArgumentNullException.ThrowIfNull(message);
+    }
 }
 

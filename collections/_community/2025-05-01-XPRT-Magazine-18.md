@@ -17,6 +17,13 @@ tags:
 - Octopus Deploy
 - Prompt Engineering
 - Semantic Kernel
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

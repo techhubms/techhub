@@ -20,6 +20,9 @@ tags:
 - PowerPoint
 - Word
 - Workplace Efficiency
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

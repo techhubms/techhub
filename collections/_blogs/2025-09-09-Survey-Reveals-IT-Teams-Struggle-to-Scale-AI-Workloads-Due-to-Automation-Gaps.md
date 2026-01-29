@@ -33,6 +33,9 @@ tags:
 - Social X
 - Terraform
 - Terraform Automation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

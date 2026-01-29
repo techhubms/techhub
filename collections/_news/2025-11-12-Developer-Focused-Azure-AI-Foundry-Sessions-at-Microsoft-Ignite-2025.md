@@ -22,6 +22,9 @@ tags:
 - Multi Agent Systems
 - Responsible AI
 - VS Code
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

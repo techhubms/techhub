@@ -22,6 +22,9 @@ tags:
 - Scaling
 - Serverless
 - Windows Containers
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

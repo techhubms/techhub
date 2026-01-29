@@ -21,6 +21,10 @@ tags:
 - MSIgnite
 - Security Automation
 - Workflow Editor
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

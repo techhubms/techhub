@@ -6,9 +6,16 @@ namespace TechHub.Web.Middleware;
 /// Middleware that rejects URLs containing date-prefixed slugs (YYYY-MM-DD-slug format).
 /// This ensures old URL formats return 404 instead of being processed.
 /// </summary>
-public partial class RejectDatePrefixedSlugsMiddleware(RequestDelegate next)
+public partial class RejectDatePrefixedSlugsMiddleware
 {
-    private readonly RequestDelegate _next = next;
+    private readonly RequestDelegate _next;
+
+    public RejectDatePrefixedSlugsMiddleware(RequestDelegate next)
+    {
+        ArgumentNullException.ThrowIfNull(next);
+
+        _next = next;
+    }
 
     // Regex to match date prefix pattern: /YYYY-MM-DD-
     // Matches paths like: /ai/videos/2026-01-12-slug or /github-copilot/vscode-updates/2026-01-12-slug

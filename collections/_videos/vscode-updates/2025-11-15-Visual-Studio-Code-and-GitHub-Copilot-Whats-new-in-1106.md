@@ -15,6 +15,9 @@ tags:
 - Terminal Profiles
 - VS Code
 - VS Code 1.106
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

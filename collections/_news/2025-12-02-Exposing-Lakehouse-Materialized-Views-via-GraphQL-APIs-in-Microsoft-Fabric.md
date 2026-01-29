@@ -18,6 +18,10 @@ tags:
 - Retail Data
 - Schema Support
 - Spark SQL
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

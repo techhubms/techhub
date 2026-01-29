@@ -26,6 +26,9 @@ tags:
 - Spacelift Intent
 - Terraform
 - Vibecoding
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

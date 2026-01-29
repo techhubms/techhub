@@ -21,6 +21,8 @@ tags:
 - Multi Agent Systems
 - Scott Durow
 - UI Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

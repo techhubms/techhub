@@ -23,6 +23,9 @@ tags:
 - Role Management
 - Secret Scanning
 - Security Manager
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

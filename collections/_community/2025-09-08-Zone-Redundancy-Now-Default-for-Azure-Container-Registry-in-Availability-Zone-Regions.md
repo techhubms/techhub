@@ -15,6 +15,8 @@ tags:
 - High Availability
 - Microsoft Azure
 - Zone Redundancy
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

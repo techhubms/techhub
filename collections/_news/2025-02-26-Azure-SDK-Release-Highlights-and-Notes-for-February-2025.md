@@ -23,6 +23,10 @@ tags:
 - Platform Support
 - Python
 - SDK
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

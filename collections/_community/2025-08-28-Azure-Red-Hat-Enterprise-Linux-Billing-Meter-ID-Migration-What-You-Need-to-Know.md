@@ -19,6 +19,8 @@ tags:
 - RHEL
 - Vcpu Based Pricing
 - Virtual Machines
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

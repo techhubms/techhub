@@ -22,6 +22,10 @@ tags:
 - Sentiment Analysis
 - Translation
 - Workflow Automation
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

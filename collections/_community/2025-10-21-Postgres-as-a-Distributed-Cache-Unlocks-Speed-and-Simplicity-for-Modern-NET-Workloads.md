@@ -20,6 +20,8 @@ tags:
 - SQL Server
 - UNLOGGED Tables
 - Write Ahead Logging
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

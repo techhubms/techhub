@@ -26,6 +26,8 @@ tags:
 - Scaling
 - Storage Solutions
 - Virtual Machines
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

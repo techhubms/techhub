@@ -20,6 +20,8 @@ tags:
 - User Sessions
 - Windows 10 Enterprise Multi Session
 - Windows 11 Enterprise Multi Session
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

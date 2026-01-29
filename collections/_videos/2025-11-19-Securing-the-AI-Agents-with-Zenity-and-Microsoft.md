@@ -23,6 +23,9 @@ tags:
 - Security Solutions
 - Threat Graph
 - Zenity
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

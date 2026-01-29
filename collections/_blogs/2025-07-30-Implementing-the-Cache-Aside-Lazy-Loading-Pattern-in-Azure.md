@@ -27,6 +27,9 @@ tags:
 - TTL
 - Write Behind Caching
 - Write Through Caching
+- Azure
+- Coding
+- Blogs
 section_names:
 - azure
 - coding

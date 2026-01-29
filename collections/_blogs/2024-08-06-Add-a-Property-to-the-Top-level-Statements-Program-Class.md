@@ -15,6 +15,8 @@ tags:
 - Program Structure
 - Static Properties
 - Top Level Statements
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

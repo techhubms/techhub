@@ -17,6 +17,9 @@ tags:
 - Model Policies
 - Retired
 - VS Code
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

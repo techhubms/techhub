@@ -25,6 +25,11 @@ tags:
 - Vector Data Types
 - VS Code
 - VS Code Extensions
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

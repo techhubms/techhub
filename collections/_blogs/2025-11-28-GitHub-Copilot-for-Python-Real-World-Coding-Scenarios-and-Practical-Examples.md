@@ -24,6 +24,9 @@ tags:
 - Unit Testing
 - Unittest
 - Web Development
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

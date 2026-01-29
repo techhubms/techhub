@@ -17,6 +17,8 @@ tags:
 - ROI Assessment
 - Series
 - Strategic Alignment
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

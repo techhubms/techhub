@@ -22,6 +22,11 @@ tags:
 - Token Authentication
 - VS Code Extension
 - WebSockets
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

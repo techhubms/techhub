@@ -16,6 +16,9 @@ tags:
 - Monitoring
 - No Code Data Engineering
 - Pipeline Automation
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

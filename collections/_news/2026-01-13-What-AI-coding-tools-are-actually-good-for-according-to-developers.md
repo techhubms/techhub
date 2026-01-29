@@ -19,6 +19,9 @@ tags:
 - Productivity
 - Software Development
 - Telemetry
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

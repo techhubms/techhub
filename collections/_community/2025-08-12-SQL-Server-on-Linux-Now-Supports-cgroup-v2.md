@@ -23,6 +23,9 @@ tags:
 - SQL Server
 - SQL Server CU 20
 - SQL Server On Linux
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

@@ -21,6 +21,9 @@ tags:
 - Resource Group
 - Session Pool Deployment
 - Shell Session Pools
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -21,6 +21,12 @@ tags:
 - Legacy Migration
 - Mermaid Diagrams
 - Upgrade Planning
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

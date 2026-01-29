@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview
 title: Commit-by-Commit Review and Enhanced Filtering in GitHub Pull Request Files Changed Experience
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - UI Improvements
 - Version Control
 - Workflow
+- DevOps
 primary_section: devops
 section_names:
 - devops

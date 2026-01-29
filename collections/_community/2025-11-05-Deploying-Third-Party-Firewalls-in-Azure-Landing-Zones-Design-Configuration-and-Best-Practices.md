@@ -26,6 +26,9 @@ tags:
 - User Defined Routes
 - Virtual Network
 - Zero Trust
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

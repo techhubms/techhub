@@ -28,6 +28,8 @@ tags:
 - OpenAI
 - RAG
 - Retrieval Augmented Generation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

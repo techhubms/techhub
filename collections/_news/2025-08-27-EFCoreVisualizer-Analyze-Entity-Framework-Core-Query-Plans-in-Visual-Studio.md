@@ -24,6 +24,8 @@ tags:
 - SQLite
 - Visual Studio Extension
 - VS
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

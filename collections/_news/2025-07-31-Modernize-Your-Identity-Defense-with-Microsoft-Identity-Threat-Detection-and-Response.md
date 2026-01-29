@@ -15,6 +15,8 @@ tags:
 - Microsoft Security Operations
 - SOC
 - Threat Detection
+- Security
+- News
 section_names:
 - security
 primary_section: security

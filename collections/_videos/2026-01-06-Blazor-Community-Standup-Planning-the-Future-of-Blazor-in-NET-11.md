@@ -20,6 +20,8 @@ tags:
 - Open Source
 - Software Developer
 - Web Development
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

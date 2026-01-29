@@ -26,6 +26,8 @@ tags:
 - Teams Integration
 - Windows 365
 - Workflow Automation
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

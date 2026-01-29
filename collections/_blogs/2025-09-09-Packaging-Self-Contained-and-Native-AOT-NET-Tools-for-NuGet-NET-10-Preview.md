@@ -21,6 +21,8 @@ tags:
 - SDK Preview
 - Self Contained Packaging
 - Spectre.Console
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

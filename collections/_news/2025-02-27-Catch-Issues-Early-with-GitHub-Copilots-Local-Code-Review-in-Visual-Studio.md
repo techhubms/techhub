@@ -16,6 +16,11 @@ tags:
 - Security Issues
 - Source Control
 - VS
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

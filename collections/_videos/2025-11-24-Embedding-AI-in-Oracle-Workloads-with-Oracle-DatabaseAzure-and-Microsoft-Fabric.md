@@ -21,6 +21,11 @@ tags:
 - Operational Analytics
 - Oracle Database@Azure
 - Vectorization
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

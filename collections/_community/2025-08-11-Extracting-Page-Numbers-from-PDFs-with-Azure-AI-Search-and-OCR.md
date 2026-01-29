@@ -25,6 +25,9 @@ tags:
 - Search Pipeline
 - Skillset
 - Text Merger
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

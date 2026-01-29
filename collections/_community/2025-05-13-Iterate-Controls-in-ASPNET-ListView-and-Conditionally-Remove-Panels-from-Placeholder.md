@@ -15,6 +15,8 @@ tags:
 - Panel
 - Placeholder
 - Webforms
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

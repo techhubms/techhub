@@ -59,21 +59,12 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-// Note: OpenTelemetry is configured by AddServiceDefaults()
-
 // Add memory caching
 builder.Services.AddMemoryCache();
 
-// Configure AppSettings from appsettings.json
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
-
-// Configure FilteringOptions from appsettings.json
 builder.Services.Configure<FilteringOptions>(builder.Configuration.GetSection("AppSettings:Filtering"));
-
-// Configure DatabaseOptions from appsettings.json
 builder.Services.Configure<DatabaseOptions>(builder.Configuration.GetSection("Database"));
-
-// Configure ContentSyncOptions from appsettings.json
 builder.Services.Configure<ContentSyncOptions>(builder.Configuration.GetSection("ContentSync"));
 builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("AppSettings:Content"));
 
@@ -84,25 +75,16 @@ var connectionString = builder.Configuration["Database:ConnectionString"] ?? "Da
 if (databaseProvider.Equals("SQLite", StringComparison.OrdinalIgnoreCase))
 {
     builder.Services.AddSingleton<ISqlDialect, SqliteDialect>();
-    
-    // Register connection factory for thread-safe concurrent operations
     builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFactory(connectionString));
-    
-    // Register singleton connection for services that don't need concurrency
-    builder.Services.AddSingleton<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-    
-    builder.Services.AddSingleton<IContentRepository, SqliteContentRepository>();
+    builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
+    builder.Services.AddTransient<IContentRepository, SqliteContentRepository>();
 }
 else if (databaseProvider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCase))
 {
     builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
-    
-    // Register connection factory for thread-safe concurrent operations
     builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionFactory(connectionString));
-    
-    // Register singleton connection for services that don't need concurrency
-    builder.Services.AddSingleton<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-    
+    builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
+
     // TODO: Create PostgresContentRepository
     throw new NotImplementedException("PostgreSQL repository not yet implemented");
 }
@@ -111,16 +93,16 @@ else
     throw new InvalidOperationException($"Unsupported database provider: {databaseProvider}");
 }
 
-// Register services
-builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
-builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
-builder.Services.AddSingleton<IRssService, RssService>();
-builder.Services.AddSingleton<IContentSyncService, ContentSyncService>();
-builder.Services.AddSingleton<MigrationRunner>();
+// Register singleton services
+builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>(); // Caches config at startup
 
-// Register filtering services
-builder.Services.AddSingleton<ITagCloudService, TagCloudService>();
-builder.Services.AddSingleton<ITagMatchingService, TagMatchingService>();
+// Register transient services
+builder.Services.AddTransient<IMarkdownService, MarkdownService>();
+builder.Services.AddTransient<IRssService, RssService>();
+builder.Services.AddTransient<ITagCloudService, TagCloudService>();
+builder.Services.AddTransient<ITagMatchingService, TagMatchingService>();
+builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
+builder.Services.AddTransient<MigrationRunner>();
 
 // Add CORS
 builder.Services.AddCors(options =>
@@ -136,8 +118,6 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline
 
 // Global exception handler (must be first)
 app.UseMiddleware<ExceptionHandlerMiddleware>();
@@ -170,57 +150,56 @@ app.MapTagEndpoints();
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
 
-// Run database migrations
-var migrationRunner = app.Services.GetRequiredService<MigrationRunner>();
-await migrationRunner.RunMigrationsAsync();
-app.Logger.LogInformation("✅ Database migrations completed");
+// Run startup operations in a scope (scoped services require a scope)
+using (var startupScope = app.Services.CreateScope())
+{
+    var services = startupScope.ServiceProvider;
 
-// Synchronize content from markdown files to database
-var contentSyncService = app.Services.GetRequiredService<IContentSyncService>();
-var syncResult = await contentSyncService.SyncAsync();
-app.Logger.LogInformation("✅ Content sync: {Added} added, {Updated} updated, {Deleted} deleted, {Unchanged} unchanged ({Duration}ms)",
-    syncResult.Added, syncResult.Updated, syncResult.Deleted, syncResult.Unchanged, syncResult.Duration.TotalMilliseconds);
+    // Run database migrations
+    var migrationRunner = services.GetRequiredService<MigrationRunner>();
+    await migrationRunner.RunMigrationsAsync();
+    app.Logger.LogInformation("✅ Database migrations completed");
 
-// Log database record counts for verification
-await LogDatabaseRecordCountsAsync(app);
+    // Synchronize content from markdown files to database
+    var contentSyncService = services.GetRequiredService<IContentSyncService>();
+    var syncResult = await contentSyncService.SyncAsync();
+    app.Logger.LogInformation("✅ Content sync: {Added} added, {Updated} updated, {Deleted} deleted, {Unchanged} unchanged ({Duration}ms)",
+        syncResult.Added, syncResult.Updated, syncResult.Deleted, syncResult.Unchanged, syncResult.Duration.TotalMilliseconds);
 
-// Preload all content into cache BEFORE starting server
-// This blocks server startup until cache is warm, ensuring blazingly fast first request
-var contentRepository = app.Services.GetRequiredService<IContentRepository>();
-var loadedItems = await contentRepository.InitializeAsync();
-app.Logger.LogInformation("✅ Repository initialized with {Count} content items", loadedItems.Count);
+    // Log database record counts for verification
+    await LogDatabaseRecordCountsAsync(app, services);
+
+    // Preload all content into cache BEFORE starting server
+    // This blocks server startup until cache is warm, ensuring blazingly fast first request
+    var contentRepository = services.GetRequiredService<IContentRepository>();
+    var loadedItems = await contentRepository.InitializeAsync();
+    app.Logger.LogInformation("✅ Repository initialized with {Count} content items", loadedItems.Count);
+}
 
 await app.RunAsync();
 
 // Logs record counts for all database tables for verification and debugging.
-static async Task LogDatabaseRecordCountsAsync(WebApplication app)
+static async Task LogDatabaseRecordCountsAsync(WebApplication app, IServiceProvider services)
 {
-    using var connection = app.Services.GetRequiredService<IDbConnectionFactory>().CreateConnection();
-    
+    using var connection = services.GetRequiredService<IDbConnectionFactory>().CreateConnection();
+
     var tables = new (string TableName, string Description)[]
     {
         ("content_items", "content items"),
         ("content_tags", "tags"),
         ("content_sections", "section mappings"),
-        ("content_plans", "plan mappings"),
         ("content_tags_expanded", "expanded tags"),
-        ("collections", "collections")
+        ("collections", "collections"),
+        ("sync_metadata", "sync metadata entries")
     };
 
     app.Logger.LogInformation("📊 Database record counts:");
-    
+
     foreach (var (tableName, description) in tables)
     {
-        try
-        {
-            using var command = connection.CreateCommand();
-            command.CommandText = $"SELECT COUNT(*) FROM {tableName}";
-            var count = Convert.ToInt32(command.ExecuteScalar(), System.Globalization.CultureInfo.InvariantCulture);
-            app.Logger.LogInformation("   - {TableName}: {Count} {Description}", tableName, count, description);
-        }
-        catch (Exception)
-        {
-            // Table might not exist (e.g., before migrations run) - skip logging
-        }
+        using var command = connection.CreateCommand();
+        command.CommandText = $"SELECT COUNT(*) FROM {tableName}";
+        var count = Convert.ToInt32(command.ExecuteScalar(), System.Globalization.CultureInfo.InvariantCulture);
+        app.Logger.LogInformation("   - {TableName}: {Count} {Description}", tableName, count, description);
     }
 }

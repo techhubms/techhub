@@ -34,6 +34,11 @@ tags:
 - Regex
 - T SQL
 - Virtual Machine Retirement
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Videos
 section_names:
 - azure
 - coding

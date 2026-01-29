@@ -20,6 +20,9 @@ tags:
 - Prompt Engineering
 - Risk Assessment
 - UX Engineering
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

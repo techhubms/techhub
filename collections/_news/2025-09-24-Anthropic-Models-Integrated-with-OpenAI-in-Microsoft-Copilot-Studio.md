@@ -21,6 +21,8 @@ tags:
 - Power Platform Admin Center
 - Prompt Engineering
 - Workflow Automation
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

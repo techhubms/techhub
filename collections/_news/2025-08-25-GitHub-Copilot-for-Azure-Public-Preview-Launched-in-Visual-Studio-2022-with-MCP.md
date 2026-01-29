@@ -25,6 +25,11 @@ tags:
 - Microsoft
 - Visual Studio Extensions
 - VS
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

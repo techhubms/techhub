@@ -20,6 +20,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Synthetic Monitoring
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

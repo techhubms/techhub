@@ -23,6 +23,9 @@ tags:
 - Social X
 - Task Automation
 - Workflow Automation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

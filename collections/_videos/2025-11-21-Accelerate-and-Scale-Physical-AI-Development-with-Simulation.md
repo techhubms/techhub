@@ -22,6 +22,9 @@ tags:
 - Robotics Development
 - Simulation
 - Synthetic Data
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

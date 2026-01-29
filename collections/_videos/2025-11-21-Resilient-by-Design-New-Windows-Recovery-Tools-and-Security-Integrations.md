@@ -22,6 +22,8 @@ tags:
 - Windows Recovery Tools
 - Windows Resiliency
 - WinRE
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

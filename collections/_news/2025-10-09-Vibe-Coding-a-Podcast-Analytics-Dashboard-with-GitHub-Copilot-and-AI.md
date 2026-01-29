@@ -24,6 +24,11 @@ tags:
 - Vite
 - VS Code
 - VS Code Agent Mode
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

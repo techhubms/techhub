@@ -25,6 +25,9 @@ tags:
 - SSRF
 - WireServer
 - Zero Trust
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -20,6 +20,8 @@ tags:
 - Private Cloud
 - Storage Optimization
 - VMware Cloud Foundation
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

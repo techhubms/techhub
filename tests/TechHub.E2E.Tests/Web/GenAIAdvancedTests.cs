@@ -14,8 +14,17 @@ namespace TechHub.E2E.Tests.Web;
 /// - HighlightingTests.cs: Code syntax highlighting
 /// </summary>
 [Collection("Custom Pages TOC Tests")]
-public class GenAIAdvancedTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class GenAIAdvancedTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public GenAIAdvancedTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private const string PageUrl = "/ai/genai-advanced";
     private IBrowserContext? _context;
     private IPage? _page;
@@ -23,7 +32,7 @@ public class GenAIAdvancedTests(PlaywrightCollectionFixture fixture) : IAsyncLif
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

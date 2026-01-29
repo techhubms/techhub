@@ -21,6 +21,10 @@ tags:
 - Public Sector Innovation
 - Service Delivery
 - Sustainability
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

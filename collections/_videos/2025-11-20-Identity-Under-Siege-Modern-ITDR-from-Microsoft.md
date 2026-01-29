@@ -22,6 +22,9 @@ tags:
 - Security Automation
 - Threat Protection
 - Zero Trust
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

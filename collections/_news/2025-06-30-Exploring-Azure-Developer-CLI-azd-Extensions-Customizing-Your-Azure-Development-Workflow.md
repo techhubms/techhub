@@ -26,6 +26,10 @@ tags:
 - Typescript
 - VS Code
 - Workflow Automation
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

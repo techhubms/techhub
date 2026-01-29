@@ -21,6 +21,9 @@ tags:
 - Retrieval Augmented Generation
 - Semantic Search
 - Workflow Automation
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

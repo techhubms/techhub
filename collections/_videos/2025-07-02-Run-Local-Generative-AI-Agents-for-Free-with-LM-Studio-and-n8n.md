@@ -34,6 +34,9 @@ tags:
 - SelfHostedAI
 - Windows
 - Workflow Automation
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

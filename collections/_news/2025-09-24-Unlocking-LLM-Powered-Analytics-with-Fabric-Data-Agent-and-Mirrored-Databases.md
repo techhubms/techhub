@@ -20,6 +20,10 @@ tags:
 - Natural Language Queries
 - NL2SQL
 - Operational Data
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

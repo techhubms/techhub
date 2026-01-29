@@ -19,6 +19,12 @@ tags:
 - Pulumi
 - Terraform
 - Zero Trust
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

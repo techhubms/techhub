@@ -23,6 +23,10 @@ tags:
 - Secrets Management
 - Secure Storage
 - Solution Architecture
+- Azure
+- Coding
+- Security
+- Blogs
 section_names:
 - azure
 - coding

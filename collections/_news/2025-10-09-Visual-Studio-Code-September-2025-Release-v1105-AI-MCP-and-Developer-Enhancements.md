@@ -24,6 +24,11 @@ tags:
 - Testing
 - VS Code
 - VS Code 1.105
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

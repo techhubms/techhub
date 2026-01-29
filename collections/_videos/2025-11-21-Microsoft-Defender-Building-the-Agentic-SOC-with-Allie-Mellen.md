@@ -24,6 +24,9 @@ tags:
 - SOC
 - Threat Response
 - Vendor Transparency
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

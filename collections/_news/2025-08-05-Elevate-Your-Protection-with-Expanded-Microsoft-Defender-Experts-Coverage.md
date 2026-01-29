@@ -15,6 +15,9 @@ tags:
 - Third Party Network Signals
 - Threat Response
 - XDR
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

@@ -22,6 +22,10 @@ tags:
 - Spec To Implementation
 - Team Productivity
 - Work IQ
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

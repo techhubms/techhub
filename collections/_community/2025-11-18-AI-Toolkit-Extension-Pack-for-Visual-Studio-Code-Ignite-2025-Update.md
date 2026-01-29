@@ -20,6 +20,11 @@ tags:
 - VS Code
 - VS Code Extensions
 - YAML Workflows
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

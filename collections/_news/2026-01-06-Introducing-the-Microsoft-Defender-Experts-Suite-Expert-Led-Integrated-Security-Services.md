@@ -21,6 +21,8 @@ tags:
 - Security Posture
 - SOC
 - Threat Hunting
+- Security
+- News
 section_names:
 - security
 primary_section: security

@@ -18,6 +18,8 @@ tags:
 - Production Readiness
 - Python Integration
 - Service Orchestration
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

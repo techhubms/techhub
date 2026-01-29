@@ -15,6 +15,11 @@ tags:
 - Software Development
 - Sonnet 4
 - Traycer
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

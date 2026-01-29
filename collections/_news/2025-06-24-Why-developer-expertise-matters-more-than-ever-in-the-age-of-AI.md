@@ -11,6 +11,8 @@ tags:
 - Developer Skills
 - Human in The Loop
 - Productivity
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

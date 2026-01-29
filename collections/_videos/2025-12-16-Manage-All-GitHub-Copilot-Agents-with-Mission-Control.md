@@ -17,6 +17,9 @@ tags:
 - Real Time Steering
 - Session Logs
 - VS Code Integration
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

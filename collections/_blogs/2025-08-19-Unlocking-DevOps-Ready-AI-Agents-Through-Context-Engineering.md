@@ -41,6 +41,9 @@ tags:
 - Software Development Lifecycle
 - Stack Overflow AI Survey
 - Windsurf IDE
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

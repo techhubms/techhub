@@ -19,6 +19,9 @@ tags:
 - Semantic Kernel
 - Vector Database
 - Vector Store Connectors
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

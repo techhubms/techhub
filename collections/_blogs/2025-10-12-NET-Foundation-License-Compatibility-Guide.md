@@ -22,6 +22,8 @@ tags:
 - Project Maintainers
 - RPL
 - Software Business Models
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

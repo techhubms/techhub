@@ -21,6 +21,10 @@ tags:
 - Software Workflow
 - Streaming Logs
 - Testing
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

@@ -15,6 +15,9 @@ tags:
 - Supply Chain Security
 - Uv
 - Vulnerability Management
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

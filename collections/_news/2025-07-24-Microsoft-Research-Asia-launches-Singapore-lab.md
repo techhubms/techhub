@@ -17,6 +17,8 @@ tags:
 - Talent Development
 - Technology
 - Technology Research
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

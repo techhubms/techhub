@@ -19,6 +19,8 @@ tags:
 - Pull Requests
 - Single File Mode
 - UI Update
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

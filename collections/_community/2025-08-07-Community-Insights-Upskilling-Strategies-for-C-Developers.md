@@ -24,6 +24,8 @@ tags:
 - Upskilling
 - Vanilla C#
 - YouTube Teaching
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

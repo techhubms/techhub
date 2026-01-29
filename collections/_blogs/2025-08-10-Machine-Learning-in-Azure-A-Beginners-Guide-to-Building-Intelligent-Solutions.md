@@ -24,6 +24,10 @@ tags:
 - Model Deployment
 - Python SDK
 - Regression
+- AI
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - azure

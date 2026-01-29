@@ -20,6 +20,9 @@ tags:
 - Passwordless Authentication
 - Phishing Resistant MFA
 - Secureyourdata
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

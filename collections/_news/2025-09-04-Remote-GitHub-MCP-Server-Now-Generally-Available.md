@@ -25,6 +25,11 @@ tags:
 - VS
 - VS Code
 - Xcode
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - devops

@@ -18,6 +18,8 @@ tags:
 - Responsible AI
 - Security Announcements
 - Talhah Mir
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

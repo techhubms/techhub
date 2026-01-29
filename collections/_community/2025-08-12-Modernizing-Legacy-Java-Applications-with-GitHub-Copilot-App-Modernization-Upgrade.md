@@ -26,6 +26,10 @@ tags:
 - Unit Test Generation
 - Upgrade For Java
 - Visual Studio Code Extension
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

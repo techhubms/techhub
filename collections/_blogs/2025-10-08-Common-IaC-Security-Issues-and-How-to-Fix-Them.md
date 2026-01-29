@@ -40,6 +40,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Terraform
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

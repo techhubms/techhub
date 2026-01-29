@@ -18,6 +18,8 @@ tags:
 - Pro Code Development
 - Professional Developers
 - Software Engineering
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

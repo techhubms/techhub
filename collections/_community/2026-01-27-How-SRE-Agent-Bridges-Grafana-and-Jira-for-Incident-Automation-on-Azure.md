@@ -24,6 +24,9 @@ tags:
 - Serverless
 - ServiceNow
 - SRE Agent
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

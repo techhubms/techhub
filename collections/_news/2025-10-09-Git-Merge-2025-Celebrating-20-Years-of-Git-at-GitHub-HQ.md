@@ -20,6 +20,8 @@ tags:
 - Technical Conference
 - Version Control
 - Workflow
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

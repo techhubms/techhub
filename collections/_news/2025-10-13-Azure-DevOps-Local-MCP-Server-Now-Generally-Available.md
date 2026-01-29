@@ -20,6 +20,10 @@ tags:
 - Prompt Engineering
 - Tooling
 - VS Code
+- AI
+- Azure
+- DevOps
+- News
 section_names:
 - ai
 - azure

@@ -19,6 +19,10 @@ tags:
 - Power Apps
 - Power BI
 - Web Application Development
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

@@ -23,6 +23,9 @@ tags:
 - Terraform
 - Upbound
 - Version Compatibility
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

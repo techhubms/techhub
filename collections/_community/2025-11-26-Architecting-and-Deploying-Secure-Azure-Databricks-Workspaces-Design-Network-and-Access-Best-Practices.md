@@ -25,6 +25,10 @@ tags:
 - User Defined Routes
 - Virtual Network
 - VNet Injection
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - azure
 - ml

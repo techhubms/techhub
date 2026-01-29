@@ -24,6 +24,11 @@ tags:
 - Remote Monitoring
 - Security Platforms
 - Workflows
+- AI
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

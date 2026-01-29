@@ -21,6 +21,9 @@ tags:
 - Payment Optimization
 - Payment Platform
 - Trust And Security
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

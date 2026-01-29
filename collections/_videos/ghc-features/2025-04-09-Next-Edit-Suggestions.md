@@ -9,6 +9,9 @@ plans:
 tags:
 - Editing
 - Suggestions
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

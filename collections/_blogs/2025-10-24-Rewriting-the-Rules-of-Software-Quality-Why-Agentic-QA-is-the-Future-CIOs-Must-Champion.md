@@ -39,6 +39,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Software Quality Assurance
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

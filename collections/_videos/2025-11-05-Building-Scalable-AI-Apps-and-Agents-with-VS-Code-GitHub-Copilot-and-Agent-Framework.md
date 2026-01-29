@@ -21,6 +21,12 @@ tags:
 - Spec Kit
 - Tracing
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

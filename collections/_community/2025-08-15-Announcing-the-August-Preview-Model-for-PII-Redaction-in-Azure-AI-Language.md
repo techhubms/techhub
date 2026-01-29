@@ -20,6 +20,9 @@ tags:
 - PII Redaction
 - Preview Release
 - SortCode
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

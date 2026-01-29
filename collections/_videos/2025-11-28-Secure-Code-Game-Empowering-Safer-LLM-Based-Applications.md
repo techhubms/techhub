@@ -15,6 +15,10 @@ tags:
 - Open Source
 - Secure Code Game
 - Secure Coding
+- AI
+- Coding
+- Security
+- Videos
 section_names:
 - ai
 - coding

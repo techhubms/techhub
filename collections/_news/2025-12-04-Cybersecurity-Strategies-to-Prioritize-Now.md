@@ -27,6 +27,9 @@ tags:
 - Security Collaboration
 - Security Standards
 - VPN
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

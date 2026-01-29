@@ -15,6 +15,9 @@ tags:
 - MCP Server
 - Offline AI
 - Structured Prompts
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

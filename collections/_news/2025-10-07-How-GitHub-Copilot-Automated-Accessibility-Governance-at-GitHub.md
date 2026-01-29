@@ -21,6 +21,10 @@ tags:
 - Project Management
 - Remediation Workflow
 - Stakeholder Visibility
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

@@ -15,6 +15,8 @@ tags:
 - PR Workflow
 - Repository Collaboration
 - Stacked Branches
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

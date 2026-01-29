@@ -22,6 +22,9 @@ tags:
 - Token Federation
 - VMware Tanzu
 - Workload Identity
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

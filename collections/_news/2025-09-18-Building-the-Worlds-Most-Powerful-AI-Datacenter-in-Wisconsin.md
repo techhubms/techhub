@@ -24,6 +24,9 @@ tags:
 - Sustainability
 - Technical Workforce
 - Wisconsin
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

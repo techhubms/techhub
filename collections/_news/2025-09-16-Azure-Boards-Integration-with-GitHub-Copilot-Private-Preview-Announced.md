@@ -20,6 +20,11 @@ tags:
 - Requirements Management
 - Task Automation
 - Work Item Automation
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

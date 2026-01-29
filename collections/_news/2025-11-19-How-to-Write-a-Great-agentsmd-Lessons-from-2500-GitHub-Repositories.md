@@ -24,6 +24,10 @@ tags:
 - TypeScript
 - Unit Testing
 - Vite
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -19,6 +19,9 @@ tags:
 - Microsoft Azure
 - Solution Architecture
 - Uli Homann
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

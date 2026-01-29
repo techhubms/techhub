@@ -17,6 +17,8 @@ tags:
 - WPF
 - WPF .NET Windows
 - XAML
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

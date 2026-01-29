@@ -20,6 +20,9 @@ tags:
 - Software Supply Chain
 - Version Control
 - Workflow Governance
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

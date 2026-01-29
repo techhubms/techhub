@@ -15,6 +15,8 @@ tags:
 - Scoped Services
 - Service Lifetimes
 - Singleton Services
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

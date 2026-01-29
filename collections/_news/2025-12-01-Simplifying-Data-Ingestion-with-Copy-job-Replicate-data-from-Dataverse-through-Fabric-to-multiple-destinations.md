@@ -20,6 +20,9 @@ tags:
 - Incremental Copy
 - Microsoft Fabric
 - Power Platform
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

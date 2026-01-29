@@ -17,6 +17,8 @@ tags:
 - Simulation
 - SPMD
 - Terrain Simulation
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

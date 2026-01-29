@@ -34,6 +34,9 @@ tags:
 - Social X
 - SRE
 - Workforce Productivity
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

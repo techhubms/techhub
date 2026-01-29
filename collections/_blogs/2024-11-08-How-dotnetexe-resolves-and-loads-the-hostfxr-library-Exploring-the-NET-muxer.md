@@ -20,6 +20,8 @@ tags:
 - Runtime
 - Version Selection
 - Windows
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

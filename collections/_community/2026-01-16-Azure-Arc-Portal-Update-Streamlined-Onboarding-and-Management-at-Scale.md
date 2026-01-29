@@ -16,6 +16,8 @@ tags:
 - Portal Update
 - Resource Management
 - Secure Score
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

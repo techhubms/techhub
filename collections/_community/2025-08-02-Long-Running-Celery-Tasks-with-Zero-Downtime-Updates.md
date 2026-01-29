@@ -15,6 +15,8 @@ tags:
 - Redis
 - Task Management
 - Zero Downtime
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

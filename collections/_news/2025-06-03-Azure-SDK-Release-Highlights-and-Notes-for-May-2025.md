@@ -21,6 +21,11 @@ tags:
 - SDK
 - Stable Release
 - Storage Blob
+- Azure
+- Coding
+- AI
+- Security
+- News
 section_names:
 - azure
 - coding

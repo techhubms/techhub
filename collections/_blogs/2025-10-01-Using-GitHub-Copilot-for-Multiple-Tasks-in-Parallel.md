@@ -18,6 +18,10 @@ tags:
 - Project Bootstrapping
 - Terminal Workflow
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

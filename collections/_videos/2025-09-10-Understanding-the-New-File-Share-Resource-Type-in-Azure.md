@@ -20,6 +20,8 @@ tags:
 - Scalability
 - Storage
 - Storage Management
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

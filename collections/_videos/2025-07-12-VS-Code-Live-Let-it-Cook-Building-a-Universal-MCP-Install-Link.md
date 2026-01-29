@@ -18,6 +18,9 @@ tags:
 - Sean Roberts
 - Vibecoding
 - VS Code
+- DevOps
+- Coding
+- Videos
 section_names:
 - devops
 - coding

@@ -22,6 +22,10 @@ tags:
 - Registry Allow Lists
 - Server Publishing
 - VS Code
+- AI
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - coding

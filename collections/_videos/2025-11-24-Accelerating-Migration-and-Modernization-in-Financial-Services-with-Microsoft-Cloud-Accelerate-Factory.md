@@ -22,6 +22,9 @@ tags:
 - Modernization Economics
 - MSIgnite
 - Resilience
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

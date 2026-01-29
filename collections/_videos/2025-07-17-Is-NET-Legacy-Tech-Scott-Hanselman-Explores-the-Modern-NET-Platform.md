@@ -16,6 +16,8 @@ tags:
 - Raspberry Pi
 - Scott Hanselman
 - Xbox
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

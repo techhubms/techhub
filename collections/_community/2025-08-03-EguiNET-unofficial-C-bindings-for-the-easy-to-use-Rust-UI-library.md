@@ -15,6 +15,8 @@ tags:
 - Rust
 - UI Library
 - Vulkan
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

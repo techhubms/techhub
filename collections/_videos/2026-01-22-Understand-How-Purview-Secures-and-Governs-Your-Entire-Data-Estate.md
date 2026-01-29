@@ -20,6 +20,9 @@ tags:
 - Microsoft Purview
 - Purview Demo
 - Unified Catalog
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

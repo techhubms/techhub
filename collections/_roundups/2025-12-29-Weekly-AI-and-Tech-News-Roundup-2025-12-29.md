@@ -14,6 +14,14 @@ tags:
 - Open Source
 - Supply Chain Security
 - VS Code
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -73,8 +81,8 @@ Custom agents can now be shared at the organization level, with repository-based
 
 Security processes, project-specific skills, and review controls build on last week's coverage of compliance, review assignments, and tailored AI integration, keeping Copilot headed toward a broad-use productivity solution that addresses enterprise needs.
 
-- [VS Code 2025: Year in Review with Burke Holland & Pierce Boggan](/ai/videos/VS-Code-2025-Year-in-Review-with-Burke-Holland-and-Pierce-Boggan)
-- [Visual Studio Code and GitHub Copilot - What's new in 1.107](/ai/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1107)
+- [VS Code 2025: Year in Review with Burke Holland & Pierce Boggan](/ai/videos/vs-code-2025-year-in-review-with-burke-holland-and-pierce-boggan)
+- [Visual Studio Code and GitHub Copilot - What's new in 1.107](/ai/videos/visual-studio-code-and-github-copilot-whats-new-in-1107)
 
 ### Agentic Copilot Workflows in Visual Studio and Project Management
 
@@ -104,7 +112,7 @@ Microsoft’s open-source Agent Framework is designed for building advanced AI a
 
 Continuing themes from Azure AI Foundry and its ecosystem, this framework brings orchestration, hosting, and model routing under a single solution. It combines methods like Durable Task Extension with orchestration models to support Microsoft’s efforts to unify agent development for cloud and enterprise use.
 
-- [What Is Microsoft Agent Framework & Why Another Agent Framework?](/ai/videos/What-Is-Microsoft-Agent-Framework-and-Why-Another-Agent-Framework)
+- [What Is Microsoft Agent Framework & Why Another Agent Framework?](/ai/videos/what-is-microsoft-agent-framework-and-why-another-agent-framework)
 
 ### Streamlining Agent Customization and Integration in Developer Tooling
 
@@ -112,7 +120,7 @@ Visual Studio Code now supports an Agent Skills feature, letting developers conf
 
 Recent updates to Agent Skills and the Skills.md standard complement Copilot and Azure AI Foundry improvements introduced last week. The current focus is on integrated skills editing in VS Code, building on positive community feedback about consistent, shareable configuration. These enhancements further the effort to make agent customization accessible across toolsets.
 
-- [Customizing AI Agents in VS Code with Agent Skills](/ai/videos/Customizing-AI-Agents-in-VS-Code-with-Agent-Skills)
+- [Customizing AI Agents in VS Code with Agent Skills](/ai/videos/customizing-ai-agents-in-vs-code-with-agent-skills)
 
 ### Hosting and Scaling ChatGPT Apps with Azure Functions
 
@@ -188,7 +196,7 @@ VS Code’s browser supports integration with AI-powered features and code autom
 
 Planned updates will further integrate development and browser features, ensuring consistent improvements for web developers using VS Code.
 
-- [Unlocking the Power of VS Code's Simple Browser Feature](/ai/videos/Unlocking-the-Power-of-VS-Codes-Simple-Browser-Feature)
+- [Unlocking the Power of VS Code's Simple Browser Feature](/ai/videos/unlocking-the-power-of-vs-codes-simple-browser-feature)
 
 ## DevOps
 

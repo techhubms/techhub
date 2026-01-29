@@ -26,6 +26,10 @@ tags:
 - Multi Model Reasoning
 - Streaming Synthesis
 - Windows 365
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

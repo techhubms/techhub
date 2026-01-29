@@ -24,6 +24,8 @@ tags:
 - Total Memory Encryption
 - Virtual Machines
 - Virtualization
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

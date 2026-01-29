@@ -23,6 +23,10 @@ tags:
 - SAP BTP
 - Sovereignty
 - Threat Detection
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -25,6 +25,10 @@ tags:
 - Syncfusion
 - UI Performance
 - Windows
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

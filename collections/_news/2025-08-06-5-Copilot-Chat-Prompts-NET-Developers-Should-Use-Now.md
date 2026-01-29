@@ -21,6 +21,11 @@ tags:
 - VS
 - VS Code
 - xUnit
+- AI
+- GitHub Copilot
+- Coding
+- Security
+- News
 section_names:
 - ai
 - github-copilot

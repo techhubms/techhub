@@ -21,6 +21,9 @@ tags:
 - Scalable AI
 - Semantic Kernel
 - Token Factory
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -15,6 +15,9 @@ tags:
 - Patches
 - Release Notes
 - Servicing Update
+- Coding
+- Security
+- News
 section_names:
 - coding
 - security

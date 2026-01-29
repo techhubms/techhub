@@ -15,6 +15,10 @@ tags:
 - Security Operations
 - SIEM
 - Unified Security Data
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

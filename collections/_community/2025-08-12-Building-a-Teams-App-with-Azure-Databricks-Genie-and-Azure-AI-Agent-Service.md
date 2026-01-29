@@ -26,6 +26,11 @@ tags:
 - Python
 - Sample Code
 - Secure Data Access
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

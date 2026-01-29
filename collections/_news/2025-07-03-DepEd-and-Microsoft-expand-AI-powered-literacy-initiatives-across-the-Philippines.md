@@ -12,6 +12,8 @@ tags:
 - Literacy
 - Microsoft
 - Philippines
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

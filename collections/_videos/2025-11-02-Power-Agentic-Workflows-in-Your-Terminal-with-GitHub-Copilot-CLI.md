@@ -18,6 +18,10 @@ tags:
 - Natural Language Coding
 - Software Development
 - Terminal Workflows
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

@@ -25,6 +25,9 @@ tags:
 - Scheduled Events
 - Virtual Machines
 - VM Watch
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

@@ -21,15 +21,24 @@ namespace TechHub.E2E.Tests.Web;
 /// keyboard accessibility of interactive elements.
 /// </summary>
 [Collection("Highlighting Tests")]
-public class HighlightingTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class HighlightingTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public HighlightingTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

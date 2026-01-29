@@ -21,6 +21,10 @@ tags:
 - Server Configuration
 - Tool Configuration
 - X MCP Tools
+- AI
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - devops

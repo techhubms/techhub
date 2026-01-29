@@ -22,6 +22,9 @@ tags:
 - Power BI Direct Lake
 - Real Time Analytics
 - Schema Changes
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml
@@ -43,7 +46,7 @@ Mirroring in Fabric is a data integration feature that replicates data from sour
 - Data becomes analytics-ready and can be consumed via Power BI (including the new Direct Lake mode), Data Warehouse, Data Engineering, Lakehouse, KQL Database, and Notebooks.
 - Supports seamless schema changes, drastically reducing administrative effort compared to ETL-based pipelines.
 
-![Mirroring Architecture](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/Picture1.png)
+![Mirroring Architecture](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/picture1.png)
 
 ## Setup, Monitoring, and Schema Adaptation
 
@@ -52,7 +55,7 @@ Setting up mirroring involves connecting your Azure SQL Managed Instance to Micr
 - Monitor mirroring status and data freshness from the Fabric UI.
 - Apply changes to schemas – DDL changes like adding or dropping columns can be made to mirrored tables without interruption.
 
-![Setup Visualization](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/Picture2-1024x553.png)
+![Setup Visualization](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/picture2-1024x553.png)
 
 ![Animation of Mirroring Setup](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/sqlmisamigif.gif)
 

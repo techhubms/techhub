@@ -14,6 +14,10 @@ tags:
 - Prompt Engineering
 - Question Clarity
 - Software Development
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

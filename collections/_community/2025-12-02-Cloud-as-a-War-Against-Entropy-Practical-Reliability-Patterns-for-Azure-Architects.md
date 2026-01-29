@@ -24,6 +24,9 @@ tags:
 - Resilience Patterns
 - SLA Calculation
 - Telemetry
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

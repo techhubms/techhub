@@ -21,6 +21,10 @@ tags:
 - Resource Management
 - Terraform
 - User Defined Functions
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

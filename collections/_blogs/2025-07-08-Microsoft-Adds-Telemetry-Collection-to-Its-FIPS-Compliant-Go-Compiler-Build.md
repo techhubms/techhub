@@ -24,6 +24,9 @@ tags:
 - MS GOTOOLCHAIN TELEMETRY ENABLED
 - NIST
 - Telemetry
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

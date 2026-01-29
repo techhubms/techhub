@@ -21,6 +21,8 @@ tags:
 - Prediction Models
 - Text Classification
 - Workflow Automation
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

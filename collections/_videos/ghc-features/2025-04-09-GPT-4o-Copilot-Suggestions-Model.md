@@ -10,6 +10,9 @@ tags:
 - GPT
 - LLM
 - Suggestions
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

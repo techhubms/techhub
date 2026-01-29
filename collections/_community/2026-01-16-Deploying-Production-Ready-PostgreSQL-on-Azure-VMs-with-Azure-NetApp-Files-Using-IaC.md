@@ -22,6 +22,9 @@ tags:
 - Production Workloads
 - Snapshot Management
 - Terraform
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

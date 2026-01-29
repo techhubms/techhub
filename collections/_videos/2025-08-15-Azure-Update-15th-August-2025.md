@@ -25,6 +25,8 @@ tags:
 - Power Platform
 - Private App Gateway V2
 - Tenant Health Alerts
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

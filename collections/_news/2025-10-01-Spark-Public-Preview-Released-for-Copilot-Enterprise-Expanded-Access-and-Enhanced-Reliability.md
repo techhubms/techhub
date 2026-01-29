@@ -21,6 +21,9 @@ tags:
 - Spark
 - User Experience
 - Workbench
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -20,6 +20,10 @@ tags:
 - Project Scaffolding
 - UI Development
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -20,6 +20,9 @@ tags:
 - Terraform
 - Terratest
 - Testing
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

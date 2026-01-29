@@ -22,6 +22,11 @@ tags:
 - Security Best Practices
 - VS
 - VS Code
+- AI
+- Azure
+- Coding
+- Security
+- News
 section_names:
 - ai
 - azure

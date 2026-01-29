@@ -15,6 +15,9 @@ tags:
 - Test Automation
 - Test Synchronization
 - Web Testing
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

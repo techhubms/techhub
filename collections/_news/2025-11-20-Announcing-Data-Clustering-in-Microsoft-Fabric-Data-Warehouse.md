@@ -20,6 +20,8 @@ tags:
 - Query Optimization
 - Resource Optimization
 - SQL
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

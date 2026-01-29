@@ -29,6 +29,10 @@ tags:
 - NVIDIA
 - Pangaea Data
 - Research Innovation
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

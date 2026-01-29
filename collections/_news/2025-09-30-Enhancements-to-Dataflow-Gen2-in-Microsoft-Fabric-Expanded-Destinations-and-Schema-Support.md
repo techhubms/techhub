@@ -20,6 +20,9 @@ tags:
 - SharePoint Integration
 - Snowflake
 - Spark
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -24,6 +24,9 @@ tags:
 - SONiC
 - Supercomputer
 - Sustainable Datacenter
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

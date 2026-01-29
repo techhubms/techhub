@@ -24,6 +24,9 @@ tags:
 - Summarization
 - Unified AI Abstractions
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

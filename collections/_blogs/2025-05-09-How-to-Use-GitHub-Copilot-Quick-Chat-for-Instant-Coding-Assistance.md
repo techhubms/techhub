@@ -15,6 +15,10 @@ tags:
 - Programming Tools
 - Quick Chat
 - Unit Testing
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

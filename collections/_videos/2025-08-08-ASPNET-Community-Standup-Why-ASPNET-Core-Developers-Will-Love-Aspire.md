@@ -26,6 +26,9 @@ tags:
 - Software Developer
 - Software Engineering
 - Testing
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

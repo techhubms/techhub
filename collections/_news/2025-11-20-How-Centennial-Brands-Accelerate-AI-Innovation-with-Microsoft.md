@@ -25,6 +25,10 @@ tags:
 - Retail Innovation
 - Supply Chain
 - Wells Fargo
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

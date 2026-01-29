@@ -18,6 +18,8 @@ tags:
 - SharePoint
 - SharePoint Embedded
 - SharePoint Online
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

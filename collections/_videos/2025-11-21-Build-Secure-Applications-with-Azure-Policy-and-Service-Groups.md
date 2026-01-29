@@ -20,6 +20,10 @@ tags:
 - Security Governance
 - Service Groups
 - Windows Workloads
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

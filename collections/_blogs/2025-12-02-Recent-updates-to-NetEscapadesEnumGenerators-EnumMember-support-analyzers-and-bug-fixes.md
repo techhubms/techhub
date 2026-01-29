@@ -22,6 +22,8 @@ tags:
 - Roslyn
 - Source Generator
 - Source Generators
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

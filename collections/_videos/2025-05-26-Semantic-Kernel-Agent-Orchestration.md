@@ -18,6 +18,9 @@ tags:
 - Microsoft AI
 - Multi Agent Systems
 - Semantic Kernel
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

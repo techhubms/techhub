@@ -24,6 +24,8 @@ tags:
 - Open Source Community
 - Open Standards
 - Podcast
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

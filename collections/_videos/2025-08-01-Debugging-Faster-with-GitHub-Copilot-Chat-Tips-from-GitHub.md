@@ -14,6 +14,9 @@ tags:
 - Error Messages
 - GitHub
 - Programming
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

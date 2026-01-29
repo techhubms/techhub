@@ -22,6 +22,8 @@ tags:
 - Technology Culture
 - Workforce Development
 - Workplace Innovation
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

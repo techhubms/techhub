@@ -396,6 +396,37 @@ Or force kill:
 Get-Process dotnet | Stop-Process -Force
 ```
 
+### Terminal Usage for AI Agents
+
+**🚨 CRITICAL**: AI agents should follow these rules to avoid resource waste:
+
+**isBackground Usage**:
+
+- `isBackground: true` → Long-running processes only (servers, watch mode)
+- `isBackground: false` → Tests and builds (blocks until complete, typically within 60 seconds)
+
+**Terminal Reuse**:
+
+- **ALWAYS reuse existing terminals** for sequential commands
+- **NEVER create new terminals** for each test run
+- Avoids orphaned processes and resource waste
+
+**Examples**:
+
+```typescript
+// ✅ CORRECT - Tests complete quickly
+run_in_terminal("Run -TestProject Infrastructure.Tests", isBackground: false)
+
+// ✅ CORRECT - Server runs indefinitely  
+run_in_terminal("Run -WithoutTests", isBackground: true)
+
+// ❌ WRONG - Don't use background for tests
+run_in_terminal("Run", isBackground: true)
+get_terminal_output(id)  // Wasteful polling
+```
+
+For more details, see [AGENTS.md - Terminal Usage](AGENTS.md#terminal-usage).
+
 ## Documentation Architecture
 
 The Tech Hub uses a **multi-tier documentation system** organized by scope and domain:

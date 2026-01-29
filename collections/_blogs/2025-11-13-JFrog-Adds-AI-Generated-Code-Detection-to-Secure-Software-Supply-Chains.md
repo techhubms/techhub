@@ -40,6 +40,10 @@ tags:
 - Software Supply Chain Security
 - Software Vulnerabilities
 - Source Code Scanning
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

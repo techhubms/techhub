@@ -14,6 +14,9 @@ tags:
 - Personalized AI
 - Software Tools
 - User Habits
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

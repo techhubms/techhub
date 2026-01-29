@@ -25,6 +25,9 @@ tags:
 - TeamsPhisher
 - Threat Intelligence
 - Zero Trust
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

@@ -20,6 +20,8 @@ tags:
 - Windows
 - Windows Forms
 - WPF
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

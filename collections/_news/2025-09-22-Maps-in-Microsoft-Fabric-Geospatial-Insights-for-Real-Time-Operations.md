@@ -20,6 +20,9 @@ tags:
 - Spatial Data
 - Streaming Data
 - Telemetry
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml
@@ -64,7 +67,7 @@ At FabCon Europe, Zava leveraged Maps in Fabric to unify business intelligence:
 5. **Monitor in Real Time:** Watch events unfold live on your maps
 6. **Share Solutions:** Distribute map-centric analytics across teams
 
-![Map editor screenshot](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/Slide8-1024x576.jpg)
+![Map editor screenshot](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/slide8-1024x576.jpg)
 
 ## Getting Started
 

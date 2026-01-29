@@ -22,6 +22,9 @@ tags:
 - Performance Tuning
 - Resiliency
 - Virtual Machines
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

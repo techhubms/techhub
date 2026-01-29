@@ -21,6 +21,10 @@ tags:
 - State Persistence
 - Stateful Workflows
 - Workflow Reliability
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

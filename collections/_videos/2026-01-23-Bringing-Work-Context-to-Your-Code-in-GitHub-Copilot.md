@@ -20,6 +20,9 @@ tags:
 - Tech
 - Technology
 - Work IQ
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

@@ -19,6 +19,9 @@ tags:
 - Static Analysis
 - TypeScript
 - Vulnerability Detection
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

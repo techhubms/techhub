@@ -24,6 +24,12 @@ tags:
 - Policy Enforcement
 - Project Pavilion
 - Service Mesh
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

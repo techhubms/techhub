@@ -14,6 +14,9 @@ tags:
 - Resource Management
 - Resource Tagging
 - Schedules
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

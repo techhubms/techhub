@@ -20,6 +20,10 @@ tags:
 - SOC
 - Threat Detection
 - Unified Security Platform
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

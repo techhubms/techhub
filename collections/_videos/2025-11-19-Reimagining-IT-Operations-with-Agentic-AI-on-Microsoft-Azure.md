@@ -23,6 +23,9 @@ tags:
 - Service Request
 - TAO
 - TCS
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

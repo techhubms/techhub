@@ -10,9 +10,16 @@ namespace TechHub.E2E.Tests.Api;
 /// Tests: GET /api/content, GET /api/content/filter
 /// </summary>
 [Collection("API E2E Tests")]
-public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
+public class ContentEndpointsE2ETests
 {
-    private readonly HttpClient _client = fixture.Factory.CreateClient();
+    private readonly HttpClient _client;
+
+    public ContentEndpointsE2ETests(ApiCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _client = fixture.Factory.CreateClient();
+    }
 
     #region GET /api/content - Basic Retrieval
 

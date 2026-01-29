@@ -23,6 +23,11 @@ tags:
 - MSIgnite
 - Scalable Agent Deployment
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

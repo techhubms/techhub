@@ -35,6 +35,9 @@ tags:
 - Software Security
 - Static Analysis
 - Threat Modeling
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

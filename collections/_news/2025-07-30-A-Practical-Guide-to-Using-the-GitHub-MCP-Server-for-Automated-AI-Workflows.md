@@ -20,6 +20,11 @@ tags:
 - Secret Scanning
 - Security Alerts
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - devops

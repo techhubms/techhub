@@ -19,6 +19,11 @@ tags:
 - Testing Best Practices
 - Unit Testing
 - Web Development
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

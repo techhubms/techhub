@@ -23,6 +23,9 @@ tags:
 - Service Principal
 - Table Mapping
 - Tenant Transfer
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

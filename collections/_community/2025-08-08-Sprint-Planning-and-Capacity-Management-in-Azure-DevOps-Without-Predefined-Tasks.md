@@ -15,6 +15,9 @@ tags:
 - Task Tracking
 - User Stories
 - Workflow Management
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

@@ -25,6 +25,9 @@ tags:
 - Serverless AI
 - Structured Output
 - Unstructured Data
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

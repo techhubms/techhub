@@ -18,6 +18,9 @@ tags:
 - Repository Configuration
 - Server Instructions
 - Tool Consolidation
+- AI
+- DevOps
+- News
 section_names:
 - ai
 - devops

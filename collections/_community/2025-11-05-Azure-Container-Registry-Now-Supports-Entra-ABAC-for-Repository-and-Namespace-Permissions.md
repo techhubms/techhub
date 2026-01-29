@@ -20,6 +20,10 @@ tags:
 - Registry Administration
 - Role Assignments
 - Zero Trust
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

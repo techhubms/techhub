@@ -14,6 +14,14 @@ tags:
 - Multi Agent Systems
 - Passwordless Authentication
 - VS Code
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -140,7 +148,7 @@ Ongoing debates focus on quotas—uncertainty around premium requests, chat vs. 
 
 Now recognized as developers’ top AI tool, Copilot’s deep IDE integration propels both productivity and a new culture of code review and learning. Yet, developers want more alignment with personal coding styles and stable platform integration, as discussed in live demos and team case studies. Ongoing product deprecations, platform-specific bugs, and consolidation of models (like GPT-4o’s retirement) highlight the rapid cycle of Copilot’s innovation and stabilization.
 
-- [GitHub Copilot Surpasses ChatGPT as Top Developer AI Tool](/ai/videos/GitHub-Copilot-Surpasses-ChatGPT-as-Top-Developer-AI-Tool)
+- [GitHub Copilot Surpasses ChatGPT as Top Developer AI Tool](/ai/videos/github-copilot-surpasses-chatgpt-as-top-developer-ai-tool)
 - [Deprecation of GPT-4o in Copilot Chat](https://github.blog/changelog/2025-08-06-deprecation-of-gpt-4o-in-copilot-chat)
 
 In sum, Copilot continues to evolve rapidly, maturing transparency, model choice, security, and workflow-native automation—driven by both technical advancements and persistent community feedback.
@@ -168,7 +176,7 @@ Launch of GPT-5 and variants in Azure and GitHub Models boosts agentic automatio
 Autonomous multi-agent systems are hitting real-world scale: Project Ire’s agentic malware classification is now in Defender, relieving analysts. “Async SWEs” shows AI fleets orchestrating full developer lifecycles. Composable multi-agent frameworks—like Dapr Durable AI Agents—simplify orchestration, error-handling, and monitoring, building on last week’s multi-agent maturation trend.
 
 - [Project Ire: Autonomous AI Agent for Large-Scale Malware Detection](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)
-- [Compound Software Development with Async SWE Agents](/ai/videos/Compound-Software-Development-with-Async-SWE-Agents-Orchestrating-AI-for-Engineering-Productivity)
+- [Compound Software Development with Async SWE Agents](/ai/videos/compound-software-development-with-async-swe-agents-orchestrating-ai-for-engineering-productivity)
 
 ### Next-Generation Reasoning, Transparency, and Evaluation
 
@@ -181,14 +189,14 @@ CLIO enables self-adaptive, user-steerable AI reasoning with explicit uncertaint
 
 Best-practice guides detail integrating AI in Actions workflows, proactive data cleanup with VS Code Data Wrangler, and model management with “model operation agents.” AI powers new analytics, gold mapping, and SEO blog generation, tying into trends for practical, agent-managed automation.
 
-- [How to Use AI Models in Your GitHub Actions Workflows](/ai/videos/How-to-Use-AI-Models-in-Your-GitHub-Actions-Workflows)
+- [How to Use AI Models in Your GitHub Actions Workflows](/ai/videos/how-to-use-ai-models-in-your-github-actions-workflows)
 - [How to Quickly Catch and Clean Bad Data for AI Agents with VS Code Data Wrangler](https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-catch-bad-data-before-it-derails-my-agent/ba-p/4440397)
 
 ### Developer Experience Evolves: MCP, Observability, and Accessibility
 
 MCP is positioned as the “new browser”—enabling context-rich model/telemetry integration and root-cause analysis. AI accessibility takes a leap with Teams’ Sign Language Mode, while AI Shell Preview 6 and Copilot Studio democratize rapid bot and workflow deployment.
 
-- ["MCP is the new browser?" — Kent C. Dodds x Burke Holland, Live](/ai/videos/MCP-is-the-new-browser-Kent-C-Dodds-x-Burke-Holland-Live)
+- ["MCP is the new browser?" — Kent C. Dodds x Burke Holland, Live](/ai/videos/mcp-is-the-new-browser-kent-c-dodds-x-burke-holland-live)
 - [Inclusive communication with Sign Language Mode in Microsoft Teams](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/inclusive-communication-with-sign-language-mode-in-microsoft/ba-p/4438299)
 
 ### Real-World Field Reporting: AI Agent Successes and Pitfalls
@@ -285,7 +293,7 @@ This week’s .NET ecosystem saw major advances in authentication, language expr
 .NET 10 Preview 6 brings passkey authentication support to ASP.NET Core and Blazor. Aspire—a toolkit for cloud-native app enablement—makes distributed app development more approachable with rich documentation, tooling, and CI/CD support.
 
 - [Exploring Passkey Support in ASP.NET Core Identity with .NET 10 Preview 6](https://andrewlock.net/exploring-dotnet-10-preview-features-6-passkey-support-for-aspnetcore-identity/)
-- [ASP.NET Community Standup: Why ASP.NET Core Developers Will Love Aspire](/coding/videos/ASPNET-Community-Standup-Why-ASPNET-Core-Developers-Will-Love-Aspire)
+- [ASP.NET Community Standup: Why ASP.NET Core Developers Will Love Aspire](/coding/videos/aspnet-community-standup-why-aspnet-core-developers-will-love-aspire)
 
 ### Language Innovations: C# 14 Extension Members and Future Nominal Union Types
 
@@ -448,7 +456,7 @@ Azure DevOps bakes in dependency scanning with Advanced Security, and endpoint p
 
 GitHub’s Secure Code Game and Microsoft’s $17M Bounty Program incentivize responsible disclosure, while Secure Future Initiative patterns deliver actionable security playbooks for developers and teams.
 
-- [AI Security Challenges in GitHub's Secure Code Game Season 3](/ai/videos/AI-Security-Challenges-in-GitHubs-Secure-Code-Game-Season-3)
+- [AI Security Challenges in GitHub's Secure Code Game Season 3](/ai/videos/ai-security-challenges-in-githubs-secure-code-game-season-3)
 
 ### Configuration, Testing, & Migration
 

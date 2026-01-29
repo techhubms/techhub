@@ -22,6 +22,11 @@ tags:
 - SQL Server
 - T SQL
 - Vector Search
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

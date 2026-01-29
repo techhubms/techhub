@@ -17,6 +17,9 @@ tags:
 - Todo List
 - VS Code
 - VS Code 1.103
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

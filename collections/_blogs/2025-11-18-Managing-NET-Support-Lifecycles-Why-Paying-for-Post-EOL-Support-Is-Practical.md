@@ -29,6 +29,9 @@ tags:
 - STS
 - Support Lifecycle
 - Version Upgrades
+- Coding
+- Security
+- Blogs
 section_names:
 - coding
 - security

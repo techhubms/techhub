@@ -15,6 +15,8 @@ tags:
 - Web Application
 - Windows
 - Windows Server
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

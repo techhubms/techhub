@@ -28,6 +28,11 @@ tags:
 - Sklearn
 - Startup Script
 - Streamlit
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

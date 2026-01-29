@@ -15,6 +15,9 @@ tags:
 - Gemini
 - Integrated Development Environment
 - Workflow Tips
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

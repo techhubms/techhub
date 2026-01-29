@@ -23,6 +23,10 @@ tags:
 - Open Standards
 - OpenTelemetry
 - Zero Trust Security
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

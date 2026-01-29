@@ -23,6 +23,10 @@ tags:
 - Namespace Migration
 - OpenRewrite
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - devops

@@ -14,6 +14,9 @@ tags:
 - Standardization
 - VS Code
 - Workshop
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

@@ -29,6 +29,8 @@ tags:
 - WPF
 - XAML
 - Xcode 26
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

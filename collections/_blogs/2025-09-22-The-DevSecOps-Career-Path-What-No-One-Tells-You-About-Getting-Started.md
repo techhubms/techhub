@@ -37,6 +37,9 @@ tags:
 - Supply Chain Security
 - Threat Modeling
 - Vulnerability Management
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

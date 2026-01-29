@@ -17,6 +17,8 @@ tags:
 - Team Administration
 - Teams Management
 - User Interface
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

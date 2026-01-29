@@ -23,6 +23,10 @@ tags:
 - Security Training
 - Threat Intelligence
 - Zero Trust
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

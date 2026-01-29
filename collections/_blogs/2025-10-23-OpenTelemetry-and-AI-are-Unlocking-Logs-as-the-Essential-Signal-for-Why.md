@@ -41,6 +41,9 @@ tags:
 - SRE
 - SRE Workflows
 - Telemetry Pipelines
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

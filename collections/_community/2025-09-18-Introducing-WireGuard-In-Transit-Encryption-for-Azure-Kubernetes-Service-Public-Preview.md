@@ -18,6 +18,9 @@ tags:
 - Network Security
 - VNet Encryption
 - WireGuard
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

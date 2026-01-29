@@ -20,6 +20,9 @@ tags:
 - Python
 - Student Developer Tools
 - VS Code
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

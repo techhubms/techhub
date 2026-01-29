@@ -25,6 +25,10 @@ tags:
 - VS Code
 - VS Code Extension
 - Windows ML
+- AI
+- Azure
+- Coding
+- GitHub Copilot
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-january-2026-update/ba-p/4485205
 feed_name: Microsoft Tech Community
 ---

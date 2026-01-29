@@ -27,6 +27,11 @@ tags:
 - Mission Critical Workloads
 - Operational Sovereignty
 - Private Cloud
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

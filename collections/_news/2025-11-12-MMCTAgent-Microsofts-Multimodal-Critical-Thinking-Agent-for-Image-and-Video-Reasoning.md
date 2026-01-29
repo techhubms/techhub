@@ -27,6 +27,9 @@ tags:
 - Video Reasoning
 - VideoAgent
 - Visual Question Answering
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

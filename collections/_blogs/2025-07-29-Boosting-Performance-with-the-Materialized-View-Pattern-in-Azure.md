@@ -27,6 +27,9 @@ tags:
 - Query Performance
 - Scheduled Refresh
 - Solution Architecture
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - azure
 - ml

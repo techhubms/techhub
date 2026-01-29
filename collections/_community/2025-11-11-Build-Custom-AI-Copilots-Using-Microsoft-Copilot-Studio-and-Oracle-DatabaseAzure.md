@@ -20,6 +20,10 @@ tags:
 - Role Based Access Control
 - Secure Data Integration
 - Teams Integration
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

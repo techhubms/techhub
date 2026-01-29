@@ -21,6 +21,10 @@ tags:
 - Privacy
 - Secure Cloud
 - Workflow Automation
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

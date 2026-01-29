@@ -26,6 +26,12 @@ tags:
 - Structured Development
 - Unit Testing
 - VS Code Extension
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

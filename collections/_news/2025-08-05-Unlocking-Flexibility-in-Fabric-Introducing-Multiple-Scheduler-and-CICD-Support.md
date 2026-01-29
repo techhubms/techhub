@@ -17,6 +17,10 @@ tags:
 - Multiple Scheduler
 - Scheduler API
 - Version Control
+- Azure
+- Machine Learning
+- DevOps
+- News
 section_names:
 - azure
 - ml
@@ -61,7 +65,7 @@ With added flexibility comes operational complexity—multiple schedulers mean m
 
 - **Git Integration**: Scheduler configurations live as `.json` files in the item directory and are reflected in Git status/diffs.
 
-  ![Scheduler JSON Example](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/08/schedulerJSON.png)
+  ![Scheduler JSON Example](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/08/schedulerjson.png)
 
 - **Deployment Pipeline Support**: Changes are visible within deployment history and comparison tooling.
 - **Public API**: Scheduler definitions are embedded, enabling full create/read/update/delete (CRUD) operations and version control.

@@ -25,6 +25,9 @@ tags:
 - Sprint Model
 - Technical Guidance
 - Well Architected Framework
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

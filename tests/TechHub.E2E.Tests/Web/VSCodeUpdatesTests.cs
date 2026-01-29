@@ -14,8 +14,17 @@ namespace TechHub.E2E.Tests.Web;
 /// - HighlightingTests.cs: Code syntax highlighting
 /// </summary>
 [Collection("Custom Pages TOC Tests")]
-public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class VSCodeUpdatesTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public VSCodeUpdatesTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private const string PageUrl = "/github-copilot/vscode-updates";
     private IBrowserContext? _context;
     private IPage? _page;
@@ -23,7 +32,7 @@ public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLif
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

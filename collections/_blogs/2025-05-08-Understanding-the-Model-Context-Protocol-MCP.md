@@ -14,6 +14,8 @@ tags:
 - Microsoft
 - Open Source Standard
 - Scalability
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

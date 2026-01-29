@@ -15,6 +15,9 @@ tags:
 - Resource Management
 - Service Bus
 - Workloads
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

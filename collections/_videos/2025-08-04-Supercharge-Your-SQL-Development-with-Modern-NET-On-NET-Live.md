@@ -17,6 +17,9 @@ tags:
 - SQL Server
 - Sqlpackage
 - Static Code Analysis
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - coding
 - ml

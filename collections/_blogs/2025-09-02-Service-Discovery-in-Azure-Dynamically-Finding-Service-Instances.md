@@ -22,6 +22,9 @@ tags:
 - Service Fabric
 - Service Mesh
 - Solution Architecture
+- Azure
+- Coding
+- Blogs
 section_names:
 - azure
 - coding

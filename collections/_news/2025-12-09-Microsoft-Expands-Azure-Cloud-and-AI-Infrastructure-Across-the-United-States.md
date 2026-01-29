@@ -19,6 +19,9 @@ tags:
 - Multi Region Architecture
 - Resilience
 - Sustainability
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

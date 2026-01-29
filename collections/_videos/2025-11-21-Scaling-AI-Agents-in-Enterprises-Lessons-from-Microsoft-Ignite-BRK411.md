@@ -21,6 +21,9 @@ tags:
 - MSIgnite
 - Other
 - User Trust
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

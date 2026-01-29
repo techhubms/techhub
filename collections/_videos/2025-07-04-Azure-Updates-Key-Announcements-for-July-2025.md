@@ -35,6 +35,12 @@ tags:
 - Security Policy
 - VM Dependency Agent
 - VS Code Extension
+- Azure
+- Coding
+- Machine Learning
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - coding

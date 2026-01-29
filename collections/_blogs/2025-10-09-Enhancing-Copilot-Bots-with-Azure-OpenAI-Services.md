@@ -20,6 +20,9 @@ tags:
 - Multimodal AI
 - RAG
 - Responsible AI
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

@@ -25,6 +25,9 @@ tags:
 - Microsoft Fabric
 - Power BI
 - Real Datatype
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

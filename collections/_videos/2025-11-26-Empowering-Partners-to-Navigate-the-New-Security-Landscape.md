@@ -31,6 +31,10 @@ tags:
 - Security Challenges
 - Security Teams
 - Threat Intelligence
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

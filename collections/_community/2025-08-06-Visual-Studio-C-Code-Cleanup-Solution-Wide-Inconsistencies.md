@@ -17,6 +17,8 @@ tags:
 - Microsoft
 - Solution Explorer
 - VS
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

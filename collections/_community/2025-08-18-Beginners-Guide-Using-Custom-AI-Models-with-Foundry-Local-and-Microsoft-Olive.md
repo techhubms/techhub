@@ -26,6 +26,8 @@ tags:
 - Qwen3 0.6B
 - Transformers
 - Windows
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

@@ -21,6 +21,9 @@ tags:
 - Security Features
 - Teams Integration
 - Workflow Automation
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

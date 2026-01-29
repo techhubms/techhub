@@ -18,6 +18,9 @@ tags:
 - Multiple Scheduler
 - Orchestration
 - Public APIs
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

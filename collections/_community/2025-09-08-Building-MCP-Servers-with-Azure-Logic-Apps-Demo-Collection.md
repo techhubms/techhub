@@ -18,6 +18,9 @@ tags:
 - Salesforce Integration
 - ServiceNow Integration
 - Workflow
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

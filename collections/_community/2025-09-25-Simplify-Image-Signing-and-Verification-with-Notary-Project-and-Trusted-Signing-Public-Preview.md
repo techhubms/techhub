@@ -22,6 +22,10 @@ tags:
 - Ratify
 - SBOM
 - Supply Chain Security
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

@@ -21,6 +21,10 @@ tags:
 - Opus 4.1
 - Sonnet 4
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

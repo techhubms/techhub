@@ -22,6 +22,11 @@ tags:
 - Semantic Model
 - Service Principal
 - Workspace Configuration
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Community
 section_names:
 - azure
 - coding

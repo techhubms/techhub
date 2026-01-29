@@ -20,6 +20,8 @@ tags:
 - Security Operations Center
 - Threat Protection
 - Zero Trust
+- Security
+- News
 section_names:
 - security
 primary_section: security

@@ -23,6 +23,9 @@ tags:
 - Responsible AI
 - Talent Development
 - UAE
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

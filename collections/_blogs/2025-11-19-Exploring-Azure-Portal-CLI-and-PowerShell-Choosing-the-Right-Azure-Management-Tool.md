@@ -19,6 +19,10 @@ tags:
 - Resource Group
 - Scripting
 - Windows Automation
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

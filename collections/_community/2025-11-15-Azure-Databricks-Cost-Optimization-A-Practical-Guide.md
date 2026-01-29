@@ -23,6 +23,11 @@ tags:
 - Spark
 - SQL Warehouse
 - Unity Catalog
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Community
 section_names:
 - azure
 - coding

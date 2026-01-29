@@ -23,6 +23,9 @@ tags:
 - Partner Ecosystem
 - Responsible AI
 - Workflow Migration
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

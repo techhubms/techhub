@@ -11,13 +11,16 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public abstract class ContentRepositoryBase : IContentRepository
 {
-    protected readonly IMemoryCache Cache;
-    protected readonly IMarkdownService MarkdownService;
+    protected IMemoryCache Cache { get; }
+    protected IMarkdownService MarkdownService { get; }
 
     protected ContentRepositoryBase(IMemoryCache cache, IMarkdownService markdownService)
     {
-        Cache = cache ?? throw new ArgumentNullException(nameof(cache));
-        MarkdownService = markdownService ?? throw new ArgumentNullException(nameof(markdownService));
+        ArgumentNullException.ThrowIfNull(cache);
+        ArgumentNullException.ThrowIfNull(markdownService);
+
+        Cache = cache;
+        MarkdownService = markdownService;
     }
 
     /// <summary>
@@ -39,35 +42,29 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     protected ContentItem RenderHtmlIfNeeded(ContentItem item)
     {
-        // If RenderedHtml is already set, just clear Content to save memory
-        if (item.RenderedHtml != null)
-        {
-            // Use constructor to create new instance with Content cleared
-            return new ContentItem(
-                item.Slug, item.Title, item.Author, item.DateEpoch, item.CollectionName,
-                item.FeedName, item.PrimarySectionName, item.Tags, item.Excerpt,
-                item.ExternalUrl, item.Draft, item.SubcollectionName, item.Plans,
-                item.GhesSupport, null, item.RenderedHtml
-            );
-        }
+        ArgumentNullException.ThrowIfNull(item);
 
-        // If no raw content to render, return as-is
-        if (string.IsNullOrEmpty(item.Content))
+        // If RenderedHtml is already set, return as-is (Content already nulled)
+        if (item.RenderedHtml != null)
         {
             return item;
         }
 
+        // If no raw content to render, something is wrong - item should have either RenderedHtml or Content
+        if (string.IsNullOrEmpty(item.Content))
+        {
+            throw new InvalidOperationException(
+                $"ContentItem '{item.Slug}' in collection '{item.CollectionName}' has no Content to render and no RenderedHtml. " +
+                "Items must have either pre-rendered HTML or raw markdown content.");
+        }
+
         // Render the markdown to HTML
         var processedMarkdown = MarkdownService.ProcessYouTubeEmbeds(item.Content);
-        var renderedHtml = MarkdownService.RenderToHtml(processedMarkdown, item.GetHref());
+        var renderedHtml = MarkdownService.RenderToHtml(processedMarkdown);
 
-        // Return with rendered HTML and clear Content to save memory
-        return new ContentItem(
-            item.Slug, item.Title, item.Author, item.DateEpoch, item.CollectionName,
-            item.FeedName, item.PrimarySectionName, item.Tags, item.Excerpt,
-            item.ExternalUrl, item.Draft, item.SubcollectionName, item.Plans,
-            item.GhesSupport, null, renderedHtml
-        );
+        // Set rendered HTML (this also clears Content to save memory)
+        item.SetRenderedHtml(renderedHtml);
+        return item;
     }
 
     // ==================== Public Methods with Caching ====================
@@ -82,6 +79,9 @@ public abstract class ContentRepositoryBase : IContentRepository
         bool includeDraft = false,
         CancellationToken ct = default)
     {
+        ArgumentNullException.ThrowIfNull(collectionName);
+        ArgumentNullException.ThrowIfNull(slug);
+
         var cacheKey = $"slug:{collectionName}:{slug}:{includeDraft}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
@@ -96,9 +96,9 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// Results are cached in memory.
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetAllAsync(
-        bool includeDraft = false,
-        int limit = 20,
+        int limit,
         int offset = 0,
+        bool includeDraft = false,
         CancellationToken ct = default)
     {
         var cacheKey = $"all:{includeDraft}:{limit}:{offset}";
@@ -115,12 +115,14 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
         string collectionName,
+        int limit,
         string? subcollectionName = null,
-        bool includeDraft = false,
-        int limit = 20,
         int offset = 0,
+        bool includeDraft = false,
         CancellationToken ct = default)
     {
+        ArgumentNullException.ThrowIfNull(collectionName);
+
         var cacheKey = $"collection:{collectionName}:{subcollectionName ?? "all"}:{includeDraft}:{limit}:{offset}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
@@ -131,20 +133,25 @@ public abstract class ContentRepositoryBase : IContentRepository
 
     /// <summary>
     /// Get all content items in a specific section.
+    /// Optionally filter by collection and subcollection.
     /// Results are cached in memory.
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
-        bool includeDraft = false,
-        int limit = 20,
+        int limit,
         int offset = 0,
+        string? collectionName = null,
+        string? subcollectionName = null,
+        bool includeDraft = false,
         CancellationToken ct = default)
     {
-        var cacheKey = $"section:{sectionName}:{includeDraft}:{limit}:{offset}";
+        ArgumentNullException.ThrowIfNull(sectionName);
+
+        var cacheKey = $"section:{sectionName}:{collectionName}:{subcollectionName}:{includeDraft}:{limit}:{offset}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SetPriority(CacheItemPriority.Normal);
-            return await GetBySectionInternalAsync(sectionName, includeDraft, limit, offset, ct);
+            return await GetBySectionInternalAsync(sectionName, collectionName, subcollectionName, includeDraft, limit, offset, ct);
         }) ?? [];
     }
 
@@ -154,6 +161,8 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     public async Task<SearchResults<ContentItem>> SearchAsync(SearchRequest request, CancellationToken ct = default)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var cacheKey = BuildSearchCacheKey(request);
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
@@ -173,6 +182,8 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     public async Task<FacetResults> GetFacetsAsync(FacetRequest request, CancellationToken ct = default)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var cacheKey = BuildFacetCacheKey(request);
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
@@ -182,16 +193,30 @@ public abstract class ContentRepositoryBase : IContentRepository
     }
 
     /// <summary>
-    /// Get related articles.
-    /// Results are cached in memory per article.
+    /// Get related articles based on tag overlap.
+    /// Results are cached in memory based on tags and excluded slug.
     /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> GetRelatedAsync(string articleId, int count = 5, CancellationToken ct = default)
+    public async Task<IReadOnlyList<ContentItem>> GetRelatedAsync(
+        IReadOnlyList<string> sourceTags,
+        string excludeSlug,
+        int count,
+        CancellationToken ct = default)
     {
-        var cacheKey = $"related:{articleId}:{count}";
+        ArgumentNullException.ThrowIfNull(sourceTags);
+        ArgumentNullException.ThrowIfNull(excludeSlug);
+
+        if (sourceTags.Count == 0)
+        {
+            return [];
+        }
+
+        // Cache key based on sorted tags for consistency
+        var sortedTags = string.Join(",", sourceTags.OrderBy(t => t));
+        var cacheKey = $"related:{sortedTags}:{excludeSlug}:{count}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
-            return await GetRelatedInternalAsync(articleId, count, ct);
+            entry.SetPriority(CacheItemPriority.Normal);
+            return await GetRelatedInternalAsync(sourceTags, excludeSlug, count, ct);
         }) ?? [];
     }
 
@@ -251,9 +276,12 @@ public abstract class ContentRepositoryBase : IContentRepository
 
     /// <summary>
     /// Internal implementation for getting content by section.
+    /// Optionally filter by collection and subcollection.
     /// </summary>
     protected abstract Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
         string sectionName,
+        string? collectionName,
+        string? subcollectionName,
         bool includeDraft,
         int limit,
         int offset,
@@ -274,10 +302,11 @@ public abstract class ContentRepositoryBase : IContentRepository
         CancellationToken ct);
 
     /// <summary>
-    /// Internal implementation for getting related articles.
+    /// Internal implementation for getting related articles based on tag overlap.
     /// </summary>
     protected abstract Task<IReadOnlyList<ContentItem>> GetRelatedInternalAsync(
-        string articleId,
+        IReadOnlyList<string> sourceTags,
+        string excludeSlug,
         int count,
         CancellationToken ct);
 
@@ -309,6 +338,8 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     protected static string BuildSearchCacheKey(SearchRequest request)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var parts = new List<string> { "search" };
 
         if (!string.IsNullOrWhiteSpace(request.Query))
@@ -356,6 +387,8 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     protected static string BuildFacetCacheKey(FacetRequest request)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var parts = new List<string> { "facets" };
 
         if (request.Tags?.Count > 0)

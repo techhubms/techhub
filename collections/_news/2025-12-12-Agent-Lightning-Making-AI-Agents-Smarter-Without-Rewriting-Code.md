@@ -25,6 +25,8 @@ tags:
 - RL Algorithms
 - Scalable Systems
 - Text To SQL
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

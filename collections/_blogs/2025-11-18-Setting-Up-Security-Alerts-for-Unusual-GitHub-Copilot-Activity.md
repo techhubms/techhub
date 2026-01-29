@@ -20,6 +20,10 @@ tags:
 - Security Alerts
 - SIEM
 - Unusual Activity Detection
+- AI
+- GitHub Copilot
+- Security
+- Blogs
 section_names:
 - ai
 - github-copilot

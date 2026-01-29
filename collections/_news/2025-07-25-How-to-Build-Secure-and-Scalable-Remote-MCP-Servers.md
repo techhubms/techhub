@@ -20,6 +20,10 @@ tags:
 - Secrets Management
 - Security Best Practices
 - Token Validation
+- AI
+- Security
+- Azure
+- News
 section_names:
 - ai
 - security

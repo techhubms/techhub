@@ -25,6 +25,9 @@ tags:
 - Tech
 - Technology
 - Vulnerability Fixing
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

@@ -23,6 +23,9 @@ tags:
 - Microsoft Foundry
 - Pricing
 - Responsible AI
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

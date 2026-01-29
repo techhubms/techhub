@@ -24,6 +24,8 @@ tags:
 - SUSE
 - Thomas Maurer
 - Video
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

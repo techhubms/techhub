@@ -33,6 +33,9 @@ tags:
 - Strategic AI Investment
 - Team Collaboration
 - Value Stream Management
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

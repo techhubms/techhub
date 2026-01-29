@@ -31,6 +31,9 @@ tags:
 - Social X
 - SRE Automation
 - Telemetry Data
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

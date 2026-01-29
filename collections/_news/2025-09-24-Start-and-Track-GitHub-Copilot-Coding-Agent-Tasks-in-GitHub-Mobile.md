@@ -16,6 +16,9 @@ tags:
 - Repository Management
 - Software Development
 - Task Automation
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

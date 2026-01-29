@@ -17,6 +17,9 @@ tags:
 - OpenSource
 - Software Development
 - Sustainable Cities
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

@@ -26,6 +26,9 @@ tags:
 - Parallel Processing
 - Semantic Kernel
 - Voting Systems
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

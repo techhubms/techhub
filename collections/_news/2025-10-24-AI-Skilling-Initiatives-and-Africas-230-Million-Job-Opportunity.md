@@ -21,6 +21,8 @@ tags:
 - Microsoft AI
 - Microsoft AI Skills Director
 - Workforce Development
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

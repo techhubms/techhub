@@ -17,6 +17,9 @@ tags:
 - SQL Endpoint
 - Warehouse
 - Workspace Level Settings
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

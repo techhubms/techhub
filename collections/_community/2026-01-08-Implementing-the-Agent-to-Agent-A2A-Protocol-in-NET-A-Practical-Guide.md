@@ -24,6 +24,9 @@ tags:
 - TaskManager
 - Traceability Metadata
 - VS
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

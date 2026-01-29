@@ -14,6 +14,8 @@ tags:
 - Snyk
 - Tags
 - Webhooks
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

@@ -21,6 +21,9 @@ tags:
 - Real Time Simulation
 - Simulation Platforms
 - Traffic Data Analytics
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

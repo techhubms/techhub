@@ -27,6 +27,12 @@ tags:
 - SLM
 - VS Code
 - VS Code Extension
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

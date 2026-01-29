@@ -21,6 +21,8 @@ tags:
 - Power Platform
 - User Experience
 - Visual Flow Builder
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

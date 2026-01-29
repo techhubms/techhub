@@ -19,6 +19,10 @@ tags:
 - Python
 - Semantic Kernel
 - Trust
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

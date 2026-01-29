@@ -23,6 +23,9 @@ tags:
 - Real Time Code Suggestions
 - Reinforcement Learning
 - Unit Testing
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

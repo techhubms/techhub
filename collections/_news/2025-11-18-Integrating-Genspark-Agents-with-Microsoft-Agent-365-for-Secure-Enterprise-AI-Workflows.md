@@ -21,6 +21,9 @@ tags:
 - PowerPoint Integration
 - Purview
 - Security Controls
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

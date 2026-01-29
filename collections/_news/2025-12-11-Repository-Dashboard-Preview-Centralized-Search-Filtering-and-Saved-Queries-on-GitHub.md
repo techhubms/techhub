@@ -17,6 +17,8 @@ tags:
 - Saved Queries
 - Search Optimization
 - Workflow Management
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

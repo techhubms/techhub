@@ -22,6 +22,8 @@ tags:
 - PyTorch
 - Scale Efficiency
 - Tensor Parallelism
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

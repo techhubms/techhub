@@ -19,6 +19,9 @@ tags:
 - OllamaSharp
 - Script Execution
 - Vision Models
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

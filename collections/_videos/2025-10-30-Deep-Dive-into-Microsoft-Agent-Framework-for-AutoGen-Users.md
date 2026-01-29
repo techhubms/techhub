@@ -29,6 +29,10 @@ tags:
 - Tech
 - Technology
 - Workflow
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

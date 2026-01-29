@@ -20,6 +20,10 @@ tags:
 - Security Compliance
 - Technical Debt
 - VMware Migration
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

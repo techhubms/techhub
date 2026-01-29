@@ -23,6 +23,10 @@ tags:
 - Operational Optimization
 - Policy Based Management
 - Retrieval Augmented Generation
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

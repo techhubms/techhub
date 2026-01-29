@@ -16,6 +16,10 @@ tags:
 - GitHub Enterprise
 - Pull Request Analytics
 - Pull Request Review
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

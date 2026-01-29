@@ -25,6 +25,9 @@ tags:
 - Tableau
 - Telemetry Aggregation
 - Virtual Machine Telemetry
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

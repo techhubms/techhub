@@ -26,6 +26,8 @@ tags:
 - Storage
 - Storage Limits
 - Workload Interaction
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

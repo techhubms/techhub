@@ -25,6 +25,11 @@ tags:
 - Observability
 - Semantic Kernel
 - VS Code Extension
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

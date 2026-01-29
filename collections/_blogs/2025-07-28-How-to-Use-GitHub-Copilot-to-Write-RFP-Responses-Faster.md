@@ -19,6 +19,9 @@ tags:
 - Software Development Lifecycle
 - Team Bio Generation
 - Technical Writing
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

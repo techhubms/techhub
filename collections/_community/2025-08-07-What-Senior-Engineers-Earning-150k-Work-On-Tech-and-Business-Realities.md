@@ -26,6 +26,11 @@ tags:
 - Snowflake
 - SSIS
 - Version Control
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

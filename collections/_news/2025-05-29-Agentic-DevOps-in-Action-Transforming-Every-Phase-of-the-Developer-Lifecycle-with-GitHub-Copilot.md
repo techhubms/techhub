@@ -19,6 +19,12 @@ tags:
 - Software Development Lifecycle
 - SRE Agent
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

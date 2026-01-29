@@ -20,6 +20,9 @@ tags:
 - Security Assessment
 - SQL Server
 - WindowsAgent.SqlServer
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

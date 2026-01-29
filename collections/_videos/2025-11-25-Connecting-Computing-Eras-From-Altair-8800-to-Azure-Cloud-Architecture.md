@@ -26,6 +26,10 @@ tags:
 - Sysinternals
 - Terminal
 - UEFI
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

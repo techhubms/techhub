@@ -25,6 +25,12 @@ tags:
 - Real Time Insights
 - Text To SQL
 - Traffic Analysis
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -17,6 +17,8 @@ tags:
 - Software Release
 - Visualstudio2026
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

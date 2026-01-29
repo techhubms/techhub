@@ -24,6 +24,9 @@ tags:
 - Software Engineering
 - Software Vulnerabilities
 - Survey
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

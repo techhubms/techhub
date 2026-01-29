@@ -22,6 +22,8 @@ tags:
 - Reference Architecture
 - Risk Assessment
 - Unifyyourdataplatform
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

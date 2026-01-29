@@ -10,6 +10,9 @@ tags:
 - Code
 - Git
 - Suggestions
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

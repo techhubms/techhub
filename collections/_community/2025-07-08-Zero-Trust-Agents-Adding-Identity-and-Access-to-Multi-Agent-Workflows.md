@@ -19,6 +19,10 @@ tags:
 - Security Best Practices
 - WSO2 Asgardeo
 - Zero Trust
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

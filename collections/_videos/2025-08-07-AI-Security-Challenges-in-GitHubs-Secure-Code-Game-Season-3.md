@@ -20,6 +20,10 @@ tags:
 - Secure Code Game
 - Secure Coding
 - Vulnerability Mitigation
+- AI
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - devops

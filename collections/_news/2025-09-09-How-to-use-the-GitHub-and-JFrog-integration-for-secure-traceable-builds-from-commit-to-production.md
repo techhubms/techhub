@@ -22,6 +22,9 @@ tags:
 - Security Scanning
 - Supply Chain Security
 - Workflow Automation
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

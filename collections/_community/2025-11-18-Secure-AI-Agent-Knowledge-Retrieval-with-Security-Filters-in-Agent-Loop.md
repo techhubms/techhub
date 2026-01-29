@@ -22,6 +22,10 @@ tags:
 - Security Filters
 - User Permissions
 - Vector Search
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

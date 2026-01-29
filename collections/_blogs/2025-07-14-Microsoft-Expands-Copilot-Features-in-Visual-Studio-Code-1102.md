@@ -23,6 +23,10 @@ tags:
 - Terminal Command Auto Approval
 - VS Code
 - VS Code 1.102
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

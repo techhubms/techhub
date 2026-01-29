@@ -23,6 +23,10 @@ tags:
 - Monitoring
 - MySQL
 - PostgreSQL
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

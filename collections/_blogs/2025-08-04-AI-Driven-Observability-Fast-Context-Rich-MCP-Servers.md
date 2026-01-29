@@ -18,6 +18,9 @@ tags:
 - Root Cause Analysis
 - Telemetry
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

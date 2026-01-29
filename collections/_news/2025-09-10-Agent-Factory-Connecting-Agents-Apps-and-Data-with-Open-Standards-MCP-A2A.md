@@ -20,6 +20,9 @@ tags:
 - Observability
 - Open Standards
 - Semantic Kernel
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

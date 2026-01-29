@@ -25,6 +25,10 @@ tags:
 - SQL Server
 - Tech
 - Technology
+- Azure
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - azure
 - coding

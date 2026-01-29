@@ -26,6 +26,11 @@ tags:
 - Real Time Telemetry
 - Reinforcement Learning
 - Signals Loop
+- AI
+- Azure
+- GitHub Copilot
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

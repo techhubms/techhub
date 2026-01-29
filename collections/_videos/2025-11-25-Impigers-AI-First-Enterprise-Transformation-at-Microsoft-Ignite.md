@@ -22,6 +22,8 @@ tags:
 - Secure AI Development
 - Third Party LLM Integration
 - Zero Trust
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

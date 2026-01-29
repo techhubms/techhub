@@ -25,6 +25,12 @@ tags:
 - Static Analysis
 - Technical Debt
 - Universe25
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - coding

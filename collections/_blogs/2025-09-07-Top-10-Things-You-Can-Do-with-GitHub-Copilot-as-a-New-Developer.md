@@ -18,6 +18,10 @@ tags:
 - Programming Languages
 - Software Development Tools
 - Unit Testing
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

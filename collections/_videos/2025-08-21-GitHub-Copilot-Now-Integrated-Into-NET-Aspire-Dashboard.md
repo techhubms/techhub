@@ -15,6 +15,9 @@ tags:
 - Microsoft
 - OneDevQuestion
 - Root Cause Analysis
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

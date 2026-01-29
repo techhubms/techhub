@@ -20,6 +20,8 @@ tags:
 - Programming
 - Scenes And Nodes
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

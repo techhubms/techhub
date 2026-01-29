@@ -23,6 +23,9 @@ tags:
 - Skilling Opportunities
 - Software Development
 - Technical Resources
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

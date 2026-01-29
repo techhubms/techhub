@@ -19,6 +19,12 @@ tags:
 - Secret Management
 - SecretClient
 - VS Code
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

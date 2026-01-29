@@ -19,6 +19,8 @@ tags:
 - Solution Architecture
 - Structurizr
 - System Diagrams
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

@@ -25,6 +25,10 @@ tags:
 - Virtual Machines
 - VM Migration
 - VMware Migration
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

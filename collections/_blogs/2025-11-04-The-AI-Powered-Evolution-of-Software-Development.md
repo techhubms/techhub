@@ -34,6 +34,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Software Quality
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - devops

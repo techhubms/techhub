@@ -26,6 +26,10 @@ tags:
 - Observability
 - OpenAPI
 - Security Best Practices
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

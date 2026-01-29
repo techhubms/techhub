@@ -19,6 +19,10 @@ tags:
 - Playwright MCP Server
 - Root Cause Analysis
 - Software Development Tools
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

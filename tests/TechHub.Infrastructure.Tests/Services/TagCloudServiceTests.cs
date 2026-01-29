@@ -8,6 +8,7 @@ using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
+using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
@@ -42,15 +43,9 @@ public class TagCloudServiceTests
 
         // Setup: Create FileBasedContentRepository pointing to TestCollections
         var testCollectionsPath = "/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections";
-        
-        var settings = new AppSettings
-        {
-            Content = new ContentSettings
-            {
-                CollectionsPath = testCollectionsPath,
-                Sections = []
-            }
-        };
+
+        // Load real AppSettings from appsettings.json and override collections path
+        var settings = ConfigurationHelper.LoadAppSettings(overrideCollectionsPath: testCollectionsPath);
 
         var mockEnvironment = new Mock<IHostEnvironment>();
         mockEnvironment.Setup(e => e.ContentRootPath).Returns(testCollectionsPath);

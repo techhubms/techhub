@@ -20,6 +20,9 @@ tags:
 - SQL Operator
 - SQL Query
 - Streaming Data
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

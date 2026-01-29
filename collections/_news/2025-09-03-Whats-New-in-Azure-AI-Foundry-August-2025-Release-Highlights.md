@@ -35,6 +35,10 @@ tags:
 - Sora API
 - Tracing
 - VibeVoice
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

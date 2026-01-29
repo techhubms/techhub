@@ -16,6 +16,9 @@ tags:
 - Step By Step Planning
 - Task Planning
 - VS Code
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

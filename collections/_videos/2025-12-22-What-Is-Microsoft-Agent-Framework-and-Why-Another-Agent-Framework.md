@@ -20,6 +20,9 @@ tags:
 - Python
 - Semantic Kernel
 - State Management
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

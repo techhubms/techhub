@@ -18,6 +18,9 @@ tags:
 - Operational Consistency
 - PowerShell
 - Server Management
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

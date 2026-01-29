@@ -22,6 +22,8 @@ tags:
 - Plan Mode
 - Software Development
 - Xai
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

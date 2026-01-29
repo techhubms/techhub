@@ -27,6 +27,9 @@ tags:
 - Stack Overflow Survey
 - Survey
 - Survey Insights
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

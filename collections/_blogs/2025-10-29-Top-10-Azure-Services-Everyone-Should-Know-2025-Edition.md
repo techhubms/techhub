@@ -25,6 +25,10 @@ tags:
 - PaaS
 - Serverless
 - Workflow Automation
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

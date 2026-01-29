@@ -15,6 +15,10 @@ tags:
 - GitHub
 - Pull Request
 - Review Suggestions
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

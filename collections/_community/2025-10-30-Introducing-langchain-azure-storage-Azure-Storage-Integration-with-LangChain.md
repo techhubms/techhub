@@ -24,6 +24,10 @@ tags:
 - RAG
 - UnstructuredLoader
 - Vector Store
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

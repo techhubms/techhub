@@ -25,6 +25,9 @@ tags:
 - Reporting
 - Resource Graph Explorer
 - Security Auditing
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -24,6 +24,9 @@ tags:
 - Session Cookie Theft
 - SharePoint
 - Threat Detection
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

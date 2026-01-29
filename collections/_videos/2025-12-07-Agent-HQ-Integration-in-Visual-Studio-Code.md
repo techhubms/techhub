@@ -19,6 +19,9 @@ tags:
 - Session Management
 - VS Code
 - Workflow Automation
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

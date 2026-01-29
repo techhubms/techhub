@@ -23,6 +23,11 @@ tags:
 - SQL
 - Threat Defense
 - Unifyyourdataplatform
+- AI
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

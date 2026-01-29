@@ -26,6 +26,10 @@ tags:
 - TMX
 - Translation API
 - Translation Workflow
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

@@ -24,6 +24,9 @@ tags:
 - Python
 - To Do List App
 - Web Applications
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

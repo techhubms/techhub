@@ -15,6 +15,10 @@ tags:
 - Improvement
 - Pull Request Templates
 - Repository Management
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

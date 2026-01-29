@@ -20,6 +20,8 @@ tags:
 - Microservices
 - Reactive Systems
 - Real Time Data
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

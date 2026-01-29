@@ -21,6 +21,11 @@ tags:
 - VS
 - VS Code
 - Work Items
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

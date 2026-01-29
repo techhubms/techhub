@@ -28,6 +28,9 @@ tags:
 - Retrieval Augmented Generation
 - Search
 - SLM
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

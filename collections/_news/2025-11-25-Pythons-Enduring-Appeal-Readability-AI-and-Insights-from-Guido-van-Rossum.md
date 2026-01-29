@@ -27,6 +27,9 @@ tags:
 - Software Engineering
 - Static Typing
 - TypeScript
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

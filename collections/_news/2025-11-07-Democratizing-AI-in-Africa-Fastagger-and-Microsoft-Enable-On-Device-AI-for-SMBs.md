@@ -28,6 +28,9 @@ tags:
 - SMB
 - Startup
 - Work & Life
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

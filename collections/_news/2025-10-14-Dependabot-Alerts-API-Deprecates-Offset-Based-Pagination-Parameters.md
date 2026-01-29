@@ -16,6 +16,9 @@ tags:
 - Retired
 - Security Alerts
 - Supply Chain Security
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

@@ -22,6 +22,8 @@ tags:
 - Scalability
 - Software Architecture
 - Software Developer
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

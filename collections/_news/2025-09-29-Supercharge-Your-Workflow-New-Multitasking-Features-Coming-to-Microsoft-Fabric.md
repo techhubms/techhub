@@ -20,6 +20,8 @@ tags:
 - UI Enhancements
 - Usability
 - Workflow Optimization
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml
@@ -37,7 +39,7 @@ Microsoft Fabric is rolling out a slate of multitasking upgrades aimed at improv
 - **Object Explorer**: This new feature lets you browse and manage all open items across your workspaces from a single structured view. No need to move between pages—stay organized and efficient as you handle multiple tasks.
 - **Raised Item Limit**: The previous cap of 10 open items has been lifted, granting greater flexibility for developers and data engineers working on large, multi-resource projects.
 
-![Fabric UI Enhancements](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/Screenshot-2025-07-10-165509-1024x92.png)
+![Fabric UI Enhancements](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/screenshot-2025-07-10-165509-1024x92.png)
 
 ## Addressing Developer Needs
 

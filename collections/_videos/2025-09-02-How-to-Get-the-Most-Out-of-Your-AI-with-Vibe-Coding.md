@@ -17,6 +17,9 @@ tags:
 - Software Development
 - Vibe Coding
 - VibeCoding
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

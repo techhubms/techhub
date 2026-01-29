@@ -20,6 +20,11 @@ tags:
 - PR Integration
 - Software Development
 - SRE Agents
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

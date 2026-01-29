@@ -20,6 +20,10 @@ tags:
 - Software Supply Chain
 - SPDX
 - Syft
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - coding
 - devops

@@ -17,6 +17,12 @@ tags:
 - Symbol Management
 - Unit Testing
 - Xamarin
+- DevOps
+- Azure
+- Machine Learning
+- AI
+- Coding
+- Community
 section_names:
 - devops
 - azure

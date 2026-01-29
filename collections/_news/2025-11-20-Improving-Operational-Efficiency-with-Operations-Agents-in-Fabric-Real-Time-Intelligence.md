@@ -21,6 +21,10 @@ tags:
 - Power Automate
 - Real Time Intelligence
 - Teams Integration
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

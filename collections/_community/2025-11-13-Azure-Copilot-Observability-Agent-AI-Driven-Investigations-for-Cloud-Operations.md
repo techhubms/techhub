@@ -20,6 +20,10 @@ tags:
 - Observability
 - Root Cause Analysis
 - Virtual Machines
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

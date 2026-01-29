@@ -13,6 +13,14 @@ tags:
 - MCP (model Context Protocol)
 - Microsoft Fabric
 - Quantum Computing
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -124,15 +132,15 @@ This week’s tutorials show Copilot connecting to Azure AI Foundry models with 
 
 Instructions include authentication, extension configuration, and enterprise deployment, illustrating a shift from general news toward step-by-step deployments.
 
-- [Integrating Azure AI Foundry Models with GitHub Copilot via AI Toolkit](/ai/videos/Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-via-AI-Toolkit)
-- [Integrating Azure AI Foundry Models with GitHub Copilot Using the AI Toolkit](/ai/videos/Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-Using-the-AI-Toolkit)
+- [Integrating Azure AI Foundry Models with GitHub Copilot via AI Toolkit](/ai/videos/integrating-azure-ai-foundry-models-with-github-copilot-via-ai-toolkit)
+- [Integrating Azure AI Foundry Models with GitHub Copilot Using the AI Toolkit](/ai/videos/integrating-azure-ai-foundry-models-with-github-copilot-using-the-ai-toolkit)
 
 ### Improving Code Quality, Refactoring, and Application Modernization
 
 Application Insights for .NET now features Copilot agent integration for automated performance analysis, following last week’s prompt-based code review and modernization efforts. Tutorials provide practical examples of Copilot instructions, prompt files, and refactoring with VS Code, extending previous resources on prompt engineering and moving toward full codebase modernization.
 
 - [Application Insights Code Optimizations: AI-Driven Performance Tuning for .NET Apps](https://devblogs.microsoft.com/dotnet/application-insights-code-optimizations/)
-- [Refactor an Existing Codebase Using Prompt-Driven Development with GitHub Copilot](/ai/videos/Refactor-an-Existing-Codebase-Using-Prompt-Driven-Development-with-GitHub-Copilot)
+- [Refactor an Existing Codebase Using Prompt-Driven Development with GitHub Copilot](/ai/videos/refactor-an-existing-codebase-using-prompt-driven-development-with-github-copilot)
 - [Understanding Instruction and Prompt Files for GitHub Copilot in .NET Development](https://devblogs.microsoft.com/dotnet/prompt-files-and-instructions-files-explained/)
 - [Unlocking Application Modernisation with GitHub Copilot](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba/p/4454121)
 
@@ -143,11 +151,11 @@ Agent-based code review and workflow features for Copilot now reach JetBrains an
 Spec Kit tools connect development standards to code delivery for improved collaboration—directly evolving earlier workflow standardization efforts. VS Code Dev Days continues with installation tutorials, extension building, and live demonstrations, providing hands-on training in Copilot features.
 
 - [Copilot Code Review Now Available in JetBrains IDEs and Visual Studio](https://github.blog/changelog/2025-09-18-copilot-code-review-now-in-jetbrains-ides-and-visual-studio)
-- [VS Code Dev Days: Unlocking AI-Powered Coding with GitHub Copilot](/ai/videos/VS-Code-Dev-Days-Unlocking-AI-Powered-Coding-with-GitHub-Copilot)
-- [Debugging a Full-Stack Chat App with GitHub Copilot Chat in VS Code](/ai/videos/Debugging-a-Full-Stack-Chat-App-with-GitHub-Copilot-Chat-in-VS-Code)
-- [Spec Kit and GitHub Copilot: Spec-Driven Development in VS Code with Den](/ai/videos/Spec-Kit-and-GitHub-Copilot-Spec-Driven-Development-in-VS-Code-with-Den)
+- [VS Code Dev Days: Unlocking AI-Powered Coding with GitHub Copilot](/ai/videos/vs-code-dev-days-unlocking-ai-powered-coding-with-github-copilot)
+- [Debugging a Full-Stack Chat App with GitHub Copilot Chat in VS Code](/ai/videos/debugging-a-full-stack-chat-app-with-github-copilot-chat-in-vs-code)
+- [Spec Kit and GitHub Copilot: Spec-Driven Development in VS Code with Den](/ai/videos/spec-kit-and-github-copilot-spec-driven-development-in-vs-code-with-den)
 - [Spec-Driven Development with GitHub Spec Kit: Streamlining AI-Assisted Coding Workflows](https://devblogs.microsoft.com/blog/spec-driven-development-spec-kit)
-- [VS Code Live: Enhancing Presentations and Live Coding with Demo Time](/ai/videos/VS-Code-Live-Enhancing-Presentations-and-Live-Coding-with-Demo-Time)
+- [VS Code Live: Enhancing Presentations and Live Coding with Demo Time](/ai/videos/vs-code-live-enhancing-presentations-and-live-coding-with-demo-time)
 
 ### Guardrails, Workflow Governance, and Enterprise Standards
 
@@ -203,7 +211,7 @@ Guides include MCP server setup, Dynamics 365/Dataverse deployments, and practic
 Recent MCP guides expand on earlier agent factory progress, providing more practical resources for interoperable workflows.
 
 - [How MCP Works in Microsoft’s AI Ecosystem](https://dellenny.com/how-mcp-works-in-microsofts-ai-ecosystem/)
-- [Unlocking MCP Server: AI Integration for Dataverse & Dynamics 365](/ai/videos/Unlocking-MCP-Server-AI-Integration-for-Dataverse-and-Dynamics-365)
+- [Unlocking MCP Server: AI Integration for Dataverse & Dynamics 365](/ai/videos/unlocking-mcp-server-ai-integration-for-dataverse-and-dynamics-365)
 
 ### Azure Agentic AI Solution Architecture and Best Practices
 
@@ -265,7 +273,7 @@ The Azure Essentials Show outlines improvements to RAG apps with better access c
 This builds on last week’s progress in agent-centric data integration, improving productivity.
 
 - [Ground Your Agents Faster with Native Azure AI Search Indexing in Foundry](https://devblogs.microsoft.com/foundry/ground-your-agents-faster-native-azure-ai-search-indexing-foundry/)
-- [Build Smarter Agents with Azure AI Search](/ai/videos/Build-Smarter-Agents-with-Azure-AI-Search)
+- [Build Smarter Agents with Azure AI Search](/ai/videos/build-smarter-agents-with-azure-ai-search)
 
 ### Multi-Agent AI Solutions and Collaborative Microsoft Workflows
 
@@ -283,8 +291,8 @@ A GitHub video explains AI model hallucinations, focusing on training data cover
 
 These resources complement last week’s coverage on developer education and practical risk management.
 
-- [Building for General Purpose AI Agents | Sip and Sync with Azure](/ai/videos/Building-for-General-Purpose-AI-Agents-Sip-and-Sync-with-Azure)
-- [The Real Reason AI Models Hallucinate](/ai/videos/The-Real-Reason-AI-Models-Hallucinate)
+- [Building for General Purpose AI Agents | Sip and Sync with Azure](/ai/videos/building-for-general-purpose-ai-agents-sip-and-sync-with-azure)
+- [The Real Reason AI Models Hallucinate](/ai/videos/the-real-reason-ai-models-hallucinate)
 
 ## ML
 
@@ -362,8 +370,8 @@ AI-based dependency assessment, expanded IaC/Arc support, Private Link, and scan
 - [Accelerate and Simplify Cloud Transformation with New Agentic AI Solutions](https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba/p/4454873)
 - [AI-Powered Migration and Modernization with Azure Essentials, Azure Migrate, and GitHub Copilot](https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba/p/4454849)
 - [Azure Migrate: Connected Experiences for Efficient Cloud Modernization](https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba/p/4454927)
-- [Unlocking Cloud Savings for Linux VMs with Azure Hybrid Benefit](/azure/videos/Unlocking-Cloud-Savings-for-Linux-VMs-with-Azure-Hybrid-Benefit)
-- [Future-Proofing Academic Research: Secure AI Computing Workflows with Terawe ManageX on Azure](/2025-09-16-Future-Proofing-Academic-Research-Secure-AI-Computing-Workloads-with-Terawe-ManageX-on-Azure.html)
+- [Unlocking Cloud Savings for Linux VMs with Azure Hybrid Benefit](/azure/videos/unlocking-cloud-savings-for-linux-vms-with-azure-hybrid-benefit)
+- [Future-Proofing Academic Research: Secure AI Computing Workflows with Terawe ManageX on Azure](/future-proofing-academic-research-secure-ai-computing-workloads-with-terawe-managex-on-azure)
 - [How to Cut Your Azure Bill in Half Without Losing Performance](https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/)
 
 ### Azure Platform Foundation: Essential Updates and Emerging Developer Tools
@@ -376,10 +384,10 @@ Azure Monitor Health Models convert telemetry into health signals, reducing aler
 
 Infrastructure highlights from Microsoft’s Fairwater AI datacenter demonstrate ongoing modernization and resiliency themes covered in prior security stories.
 
-- [Azure Update - 19th September 2025](/azure/videos/Azure-Update-19th-September-2025)
+- [Azure Update - 19th September 2025](/azure/videos/azure-update-19th-september-2025)
 - [Introducing Image Customizer for Azure Linux](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba/p/4454859)
 - [Inside the World’s Most Powerful AI Datacenter: Microsoft’s Fairwater Facility](https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/)
-- [Understanding Azure Monitor Health Models](/azure/videos/Understanding-Azure-Monitor-Health-Models)
+- [Understanding Azure Monitor Health Models](/azure/videos/understanding-azure-monitor-health-models)
 - [How to Update proxyAddresses for a Cloud-Only Entra ID User](https://techcommunity.microsoft.com/t5/azure/how-to-update-the-proxyaddresses-of-a-cloud-only-entra-id-user/m-p/4454763#M22217)
 - [Top 7 Azure Services You Didn’t Know You Needed](https://dellenny.com/top-7-azure-services-you-didnt-know-you-needed/)
 - [Azure for Beginners: How to Launch Your First Cloud Project in 30 Minutes](https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/)
@@ -397,7 +405,7 @@ The latest ASP.NET Community Standup covers .NET 10’s WebAssembly runtime, out
 Microsoft will extend .NET Standard Term Support to 24 months beginning with .NET 9, directly addressing prior migration challenges and adopting past recommendations for update planning.
 
 - [Supporting Platform-Specific .NET Tools on Older SDKs: .NET 10 Preview Deep Dive](https://andrewlock.net/exploring-dotnet-10-preview-features-8-supporting-platform-specific-dotnet-tools-on-old-sdks/)
-- [ASP.NET Community Standup: .NET 10 WebAssembly Performance Enhancements](/coding/videos/ASPNET-Community-Standup-NET-10-WebAssembly-Performance-Enhancements)
+- [ASP.NET Community Standup: .NET 10 WebAssembly Performance Enhancements](/coding/videos/aspnet-community-standup-net-10-webassembly-performance-enhancements)
 - [.NET Standard Term Support (STS) Releases Will Be Supported for 24 Months Starting with .NET 9](https://devblogs.microsoft.com/dotnet/dotnet-sts-releases-supported-for-24-months/)
 
 ## DevOps

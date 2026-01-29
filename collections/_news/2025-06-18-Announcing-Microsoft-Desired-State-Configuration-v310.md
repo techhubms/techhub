@@ -17,6 +17,9 @@ tags:
 - Resource Authoring
 - Windows
 - WinGet
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

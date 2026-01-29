@@ -19,6 +19,10 @@ tags:
 - VS
 - Windows 11
 - Windows Server
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

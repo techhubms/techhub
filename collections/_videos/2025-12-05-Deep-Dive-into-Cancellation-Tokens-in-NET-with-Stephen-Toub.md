@@ -29,6 +29,8 @@ tags:
 - Threading
 - Tokens
 - Volatile
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

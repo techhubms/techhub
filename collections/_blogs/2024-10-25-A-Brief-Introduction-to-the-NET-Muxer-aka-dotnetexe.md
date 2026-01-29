@@ -21,6 +21,8 @@ tags:
 - Runtime
 - SDK
 - Tracing
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

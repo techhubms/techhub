@@ -21,6 +21,9 @@ tags:
 - Microsoft.Extensions.AI
 - PDF Ingestion
 - Vector Store
+- AI
+- Coding
+- Blogs
 section_names:
 - ai
 - coding

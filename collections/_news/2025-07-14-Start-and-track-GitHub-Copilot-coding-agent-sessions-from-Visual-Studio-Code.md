@@ -14,6 +14,9 @@ tags:
 - Programming Tools
 - Software Development
 - Task Delegation
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

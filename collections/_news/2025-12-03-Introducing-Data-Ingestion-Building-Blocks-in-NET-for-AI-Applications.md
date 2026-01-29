@@ -28,6 +28,10 @@ tags:
 - Semantic Kernel
 - SummaryEnricher
 - Vector Databases
+- AI
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - coding

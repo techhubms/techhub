@@ -22,6 +22,10 @@ tags:
 - Virtual WAN
 - VPN Gateway
 - Web Application Firewall
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

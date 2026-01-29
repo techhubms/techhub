@@ -21,6 +21,9 @@ tags:
 - Tooling
 - Web App Delivery
 - Workflow
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

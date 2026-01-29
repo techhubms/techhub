@@ -19,6 +19,9 @@ tags:
 - VS Code
 - VS Code API
 - Xai
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

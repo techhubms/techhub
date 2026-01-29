@@ -20,6 +20,10 @@ tags:
 - VS
 - Web Development
 - WebAuthn
+- AI
+- Coding
+- Security
+- Videos
 section_names:
 - ai
 - coding

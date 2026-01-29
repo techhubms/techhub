@@ -29,6 +29,10 @@ tags:
 - SQL Migration
 - SSD V2
 - Ultra NVMe
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - azure
 - ml

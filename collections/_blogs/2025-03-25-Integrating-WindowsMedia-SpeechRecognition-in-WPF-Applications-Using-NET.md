@@ -20,6 +20,8 @@ tags:
 - Winrt
 - Winsdk
 - WPF
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

@@ -20,6 +20,10 @@ tags:
 - Root Cause Analysis
 - Safe Rollback
 - Teams Integration
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

@@ -1,4 +1,3 @@
-using FluentAssertions;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
@@ -7,6 +6,7 @@ using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
+using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
@@ -26,24 +26,8 @@ public class FileBasedContentRepositoryTests : BaseContentRepositoryTests
         // Use TestCollections directory for all test data
         var testCollectionsPath = "/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections";
 
-        // Setup: Configure AppSettings pointing to TestCollections
-        var settings = new AppSettings
-        {
-            Content = new ContentSettings
-            {
-                CollectionsPath = testCollectionsPath,
-                CollectionDisplayNames = new Dictionary<string, string>
-                {
-                    ["blogs"] = "Blogs",
-                    ["videos"] = "Videos",
-                    ["news"] = "News",
-                    ["community"] = "Community",
-                    ["roundups"] = "Roundups",
-                    ["ghc-features"] = "GitHub Copilot Features"
-                },
-                Sections = [] // Empty for content tests
-            }
-        };
+        // Load real AppSettings from appsettings.json and override collections path
+        var settings = ConfigurationHelper.LoadAppSettings(overrideCollectionsPath: testCollectionsPath);
 
         // Setup: Create mock IHostEnvironment
         var mockEnvironment = new Mock<IHostEnvironment>();

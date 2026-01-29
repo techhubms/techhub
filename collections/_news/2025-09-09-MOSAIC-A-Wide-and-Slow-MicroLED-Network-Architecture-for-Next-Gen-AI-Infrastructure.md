@@ -20,6 +20,9 @@ tags:
 - Parallel Low Speed Channels
 - SIGCOMM
 - Wide And Slow Architecture
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

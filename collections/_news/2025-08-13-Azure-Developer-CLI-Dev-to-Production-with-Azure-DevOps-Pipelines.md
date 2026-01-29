@@ -25,6 +25,12 @@ tags:
 - Pipeline Validation
 - VS Code
 - YAML
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

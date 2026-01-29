@@ -19,6 +19,10 @@ tags:
 - Rollouts
 - Switch Rollout Experiment
 - Telemetry
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

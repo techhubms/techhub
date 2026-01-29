@@ -19,6 +19,10 @@ tags:
 - Multi Tasking
 - SDK
 - SQL Validation
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

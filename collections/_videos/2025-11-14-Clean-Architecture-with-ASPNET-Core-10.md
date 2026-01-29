@@ -21,6 +21,8 @@ tags:
 - Solution Organization
 - Testable Code
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

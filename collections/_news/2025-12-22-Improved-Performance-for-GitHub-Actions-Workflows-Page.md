@@ -17,6 +17,8 @@ tags:
 - Lazy Loading
 - Monorepo Management
 - Workflow Optimization
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

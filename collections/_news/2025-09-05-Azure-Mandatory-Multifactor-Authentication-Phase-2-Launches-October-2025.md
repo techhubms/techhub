@@ -17,6 +17,9 @@ tags:
 - Multifactor Authentication
 - Resource Management
 - Safe Deployment
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

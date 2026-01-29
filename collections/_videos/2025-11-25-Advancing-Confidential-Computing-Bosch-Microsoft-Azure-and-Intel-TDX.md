@@ -22,6 +22,10 @@ tags:
 - Secure Enablement
 - Secureyourdata
 - Trusted Digital Ecosystems
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

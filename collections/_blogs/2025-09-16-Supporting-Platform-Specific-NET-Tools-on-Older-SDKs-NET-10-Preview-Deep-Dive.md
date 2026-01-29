@@ -23,6 +23,8 @@ tags:
 - Platform Specific Tools
 - Self Contained Deployment
 - Tool Packaging
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

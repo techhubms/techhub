@@ -22,6 +22,9 @@ tags:
 - RBAC
 - Self Hosted AI
 - Serverless GPU
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

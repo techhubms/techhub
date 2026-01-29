@@ -17,6 +17,10 @@ tags:
 - Pull Request Review
 - Refactoring
 - Senior Developer Skills
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

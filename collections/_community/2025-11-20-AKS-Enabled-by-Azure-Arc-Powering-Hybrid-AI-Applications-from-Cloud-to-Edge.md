@@ -27,6 +27,12 @@ tags:
 - Retrieval Augmented Generation
 - Telecom
 - Workload Identity Federation
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

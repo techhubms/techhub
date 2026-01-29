@@ -18,6 +18,9 @@ tags:
 - SQL Functions
 - T SQL
 - Time Based Reporting
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

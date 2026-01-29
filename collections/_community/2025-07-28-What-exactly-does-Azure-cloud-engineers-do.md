@@ -14,6 +14,10 @@ tags:
 - Cloud Development
 - Cloud Engineer
 - Cloud Migration
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

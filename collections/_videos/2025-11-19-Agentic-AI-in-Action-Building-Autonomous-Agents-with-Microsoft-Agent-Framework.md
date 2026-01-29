@@ -21,6 +21,9 @@ tags:
 - Role Based Access Control
 - Secure Document Management
 - Workflow Integration
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

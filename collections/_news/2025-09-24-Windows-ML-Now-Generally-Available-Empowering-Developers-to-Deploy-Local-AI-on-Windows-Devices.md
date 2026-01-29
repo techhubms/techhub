@@ -26,6 +26,9 @@ tags:
 - Windows 11
 - Windows App SDK
 - Windows ML
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

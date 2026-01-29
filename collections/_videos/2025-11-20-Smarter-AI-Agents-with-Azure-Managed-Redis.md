@@ -20,6 +20,9 @@ tags:
 - Semantic Routing
 - Session Persistence
 - Unifyyourdataplatform
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -23,6 +23,8 @@ tags:
 - Support
 - Support Policy
 - Upgrade Strategy
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

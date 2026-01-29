@@ -18,6 +18,8 @@ tags:
 - System Hardening
 - Windows 11
 - Windows Firewall
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

@@ -16,6 +16,8 @@ tags:
 - Microsoft
 - Partners
 - Success Stories
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

@@ -21,6 +21,10 @@ tags:
 - Red Hat OpenShift
 - Secrets Management
 - Vault Integration
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

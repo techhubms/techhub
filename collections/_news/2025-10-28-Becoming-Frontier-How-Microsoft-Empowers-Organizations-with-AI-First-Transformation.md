@@ -25,6 +25,9 @@ tags:
 - Operational Efficiency
 - Predictive Analytics
 - Workflow Optimization
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

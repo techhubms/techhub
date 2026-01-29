@@ -18,6 +18,8 @@ tags:
 - Release Notes
 - Sparks
 - Workflow Improvements
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -16,6 +16,9 @@ tags:
 - SPN
 - SQL Analytics Endpoint
 - Warehouse Encryption
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

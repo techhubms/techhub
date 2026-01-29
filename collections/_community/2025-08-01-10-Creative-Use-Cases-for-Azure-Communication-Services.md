@@ -21,6 +21,11 @@ tags:
 - Voice Assistant
 - WhatsApp Integration
 - Zammo.ai
+- AI
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -22,6 +22,12 @@ tags:
 - Repository Analysis
 - Security Gates
 - Software Development Lifecycle
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - coding

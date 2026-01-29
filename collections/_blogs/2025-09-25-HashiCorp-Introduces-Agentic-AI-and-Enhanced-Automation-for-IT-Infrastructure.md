@@ -32,6 +32,10 @@ tags:
 - Windows RDP Security
 - Zero Trust
 - Zero Trust Automation
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

@@ -22,6 +22,9 @@ tags:
 - Summarization
 - Vision Models
 - Windows AI APIs
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

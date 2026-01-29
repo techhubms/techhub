@@ -25,6 +25,9 @@ tags:
 - SIEM
 - Solution Architecture
 - Zero Trust Architecture
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

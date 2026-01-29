@@ -20,6 +20,8 @@ tags:
 - Power Platform
 - Scalable Performance
 - Supervisor Functionality
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

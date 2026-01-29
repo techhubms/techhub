@@ -21,6 +21,11 @@ tags:
 - Programming
 - Technical Demos
 - Workshops
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -21,6 +21,8 @@ tags:
 - MSIgnite
 - NTT DATA
 - Secure AI Platform
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

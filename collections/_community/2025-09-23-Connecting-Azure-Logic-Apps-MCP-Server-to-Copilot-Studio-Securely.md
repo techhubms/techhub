@@ -18,6 +18,10 @@ tags:
 - Microsoft Entra ID
 - Secure Integration
 - Workflow Automation
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

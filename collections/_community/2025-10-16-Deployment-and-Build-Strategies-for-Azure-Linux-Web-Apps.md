@@ -20,6 +20,10 @@ tags:
 - Startup Script
 - VS Code
 - YAML Pipelines
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

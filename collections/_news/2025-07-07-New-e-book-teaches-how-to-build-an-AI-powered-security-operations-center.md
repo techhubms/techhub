@@ -11,6 +11,9 @@ tags:
 - E Book
 - Security Operations Center
 - Threat Detection
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

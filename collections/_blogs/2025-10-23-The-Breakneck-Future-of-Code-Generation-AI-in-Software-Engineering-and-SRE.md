@@ -36,6 +36,11 @@ tags:
 - Software Vulnerabilities
 - System Observability
 - Technical Debt
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

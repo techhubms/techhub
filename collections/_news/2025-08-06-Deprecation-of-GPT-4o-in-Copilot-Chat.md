@@ -15,6 +15,9 @@ tags:
 - Model Deprecation
 - OpenAI
 - Software Development
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

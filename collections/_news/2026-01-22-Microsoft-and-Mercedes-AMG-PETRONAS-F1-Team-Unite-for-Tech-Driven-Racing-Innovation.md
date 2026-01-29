@@ -22,6 +22,11 @@ tags:
 - Real Time Decision Making
 - Simulation
 - Software Development
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

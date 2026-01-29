@@ -24,6 +24,9 @@ tags:
 - Supply Chain Integrity
 - Trusted Execution Environments
 - Uncategorized
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

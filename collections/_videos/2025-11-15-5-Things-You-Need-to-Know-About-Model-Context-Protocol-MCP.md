@@ -13,6 +13,9 @@ tags:
 - Resource Sharing
 - Tool Discovery
 - VS Code
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

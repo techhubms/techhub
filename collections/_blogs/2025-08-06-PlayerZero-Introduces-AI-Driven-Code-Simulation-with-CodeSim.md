@@ -22,6 +22,9 @@ tags:
 - Social X
 - Software Quality
 - Software Testing
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

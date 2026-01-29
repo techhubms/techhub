@@ -25,6 +25,11 @@ tags:
 - SQL Server
 - Standard Edition
 - Vector Support
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

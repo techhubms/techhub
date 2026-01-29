@@ -17,6 +17,10 @@ tags:
 - Regex Testing
 - Regular Expressions
 - Software Development
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

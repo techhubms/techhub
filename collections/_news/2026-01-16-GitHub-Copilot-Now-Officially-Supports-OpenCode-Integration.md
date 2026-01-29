@@ -20,6 +20,9 @@ tags:
 - OpenCode
 - Partnerships
 - Terminal Tools
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

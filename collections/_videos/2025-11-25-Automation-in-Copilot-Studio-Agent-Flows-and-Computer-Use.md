@@ -33,6 +33,8 @@ tags:
 - Uber
 - Virgin Money
 - Windows 365
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

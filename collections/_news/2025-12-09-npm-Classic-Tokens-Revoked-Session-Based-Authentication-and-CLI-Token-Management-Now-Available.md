@@ -20,6 +20,9 @@ tags:
 - Token Management
 - Yarn V1
 - Yarn V2
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

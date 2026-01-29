@@ -21,6 +21,9 @@ tags:
 - SONiC
 - Supercomputer
 - Superfactory
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

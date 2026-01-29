@@ -26,6 +26,12 @@ tags:
 - SQL Server
 - SQL Server Management Studio
 - Vector Search
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

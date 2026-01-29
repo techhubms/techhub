@@ -20,6 +20,10 @@ tags:
 - NVIDIA Blackwell B200 GPU
 - NVIDIA Grace CPU
 - Performance Testing
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

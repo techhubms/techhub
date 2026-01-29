@@ -22,6 +22,11 @@ tags:
 - Observability
 - Root Cause Analysis
 - Site Reliability Engineering
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

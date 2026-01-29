@@ -25,6 +25,9 @@ tags:
 - Semantic Models
 - Snowflake
 - SQL Server
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

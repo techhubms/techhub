@@ -25,6 +25,11 @@ tags:
 - Microsoft Defender For Cloud
 - Microsoft Fabric
 - Microsoft Sentinel
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -24,6 +24,9 @@ tags:
 - Resilience Testing
 - SIEM
 - Workflow Automation
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

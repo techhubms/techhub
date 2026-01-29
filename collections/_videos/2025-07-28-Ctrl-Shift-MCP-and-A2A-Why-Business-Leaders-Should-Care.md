@@ -17,6 +17,8 @@ tags:
 - LLM
 - MCP
 - Tech Trends
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

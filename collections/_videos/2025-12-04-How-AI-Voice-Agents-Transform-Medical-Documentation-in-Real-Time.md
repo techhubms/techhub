@@ -22,6 +22,8 @@ tags:
 - Tech
 - Technology
 - Workflow Optimization
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

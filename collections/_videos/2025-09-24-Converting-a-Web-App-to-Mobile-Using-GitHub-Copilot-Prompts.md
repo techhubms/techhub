@@ -23,6 +23,10 @@ tags:
 - Voice Prompting
 - VS Code
 - Web App Conversion
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

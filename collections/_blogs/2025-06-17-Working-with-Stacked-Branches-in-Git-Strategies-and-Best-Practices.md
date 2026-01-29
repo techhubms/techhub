@@ -17,6 +17,8 @@ tags:
 - Software Development
 - Stacked Branches
 - Workflow
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

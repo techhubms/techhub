@@ -21,6 +21,8 @@ tags:
 - Plugin Development
 - Power Platform
 - SharePoint
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

@@ -19,6 +19,9 @@ tags:
 - Performance Optimization
 - Satya Nadella
 - Windows AI
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -22,6 +22,8 @@ tags:
 - UI Automation
 - Web Automation
 - Windows 365
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

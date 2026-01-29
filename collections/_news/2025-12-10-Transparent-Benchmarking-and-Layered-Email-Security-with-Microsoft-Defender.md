@@ -20,6 +20,8 @@ tags:
 - Threat Detection
 - Transparent Security
 - Zero Hour Auto Purge
+- Security
+- News
 section_names:
 - security
 primary_section: security

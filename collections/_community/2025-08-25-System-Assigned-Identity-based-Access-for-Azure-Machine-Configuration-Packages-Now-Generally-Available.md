@@ -20,6 +20,10 @@ tags:
 - System Assigned Identity
 - User Assigned Identity
 - Virtual Machines
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

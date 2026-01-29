@@ -21,6 +21,8 @@ tags:
 - Servicing Release
 - Software Updates
 - Windows
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

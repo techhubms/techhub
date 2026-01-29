@@ -24,6 +24,10 @@ tags:
 - Testing
 - Testing Automation
 - TypeScript
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

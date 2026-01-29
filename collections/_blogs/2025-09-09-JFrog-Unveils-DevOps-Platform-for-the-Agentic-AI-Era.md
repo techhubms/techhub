@@ -26,6 +26,11 @@ tags:
 - SwampUP
 - Vulnerability Remediation
 - Xray Code Analysis
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- Blogs
 section_names:
 - ai
 - devops

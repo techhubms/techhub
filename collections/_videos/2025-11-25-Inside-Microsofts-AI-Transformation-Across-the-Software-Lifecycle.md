@@ -21,6 +21,11 @@ tags:
 - Pipeline Templates
 - Software Engineering
 - Technical Debt
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

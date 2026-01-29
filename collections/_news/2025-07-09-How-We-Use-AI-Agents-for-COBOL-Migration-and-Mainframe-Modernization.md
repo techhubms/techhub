@@ -24,6 +24,9 @@ tags:
 - Microsoft Azure
 - OpenAI
 - Semantic Kernel
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

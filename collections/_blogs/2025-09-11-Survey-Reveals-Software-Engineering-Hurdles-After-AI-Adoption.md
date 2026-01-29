@@ -23,6 +23,9 @@ tags:
 - System Architecture
 - Technical Debt
 - Uplevel
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

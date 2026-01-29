@@ -14,6 +14,9 @@ tags:
 - Organizational Change
 - Resource Management
 - Subscription Management
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -22,6 +22,9 @@ tags:
 - Spam Filtering
 - Workflow Automation
 - YAML
+- AI
+- DevOps
+- News
 section_names:
 - ai
 - devops

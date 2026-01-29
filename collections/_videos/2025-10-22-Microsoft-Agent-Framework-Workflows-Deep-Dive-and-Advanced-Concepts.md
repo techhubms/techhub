@@ -25,6 +25,10 @@ tags:
 - Web UI Demo
 - Workflow Automation
 - Workflow Web UI
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

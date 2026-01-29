@@ -18,6 +18,10 @@ tags:
 - Sem.py
 - Semantic Link
 - Service Principal
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

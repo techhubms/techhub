@@ -24,6 +24,10 @@ tags:
 - SAP Connectors
 - SAP Datasphere
 - Zero ETL
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

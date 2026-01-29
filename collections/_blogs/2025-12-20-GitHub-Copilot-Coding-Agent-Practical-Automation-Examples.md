@@ -20,6 +20,11 @@ tags:
 - Security Model
 - VS Code
 - Workflow Automation
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

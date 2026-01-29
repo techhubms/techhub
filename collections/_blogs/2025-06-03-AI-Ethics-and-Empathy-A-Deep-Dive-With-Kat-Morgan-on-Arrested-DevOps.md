@@ -20,6 +20,9 @@ tags:
 - Privacy
 - Software Development
 - Team Collaboration
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

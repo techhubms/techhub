@@ -17,6 +17,10 @@ tags:
 - Runbooks
 - Runtime Environment
 - Script Modernization
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - azure
 - coding

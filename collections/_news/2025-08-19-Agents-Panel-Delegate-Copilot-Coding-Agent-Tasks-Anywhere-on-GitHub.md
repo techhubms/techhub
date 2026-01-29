@@ -21,6 +21,9 @@ tags:
 - Task Delegation
 - VS Code Integration
 - Workflow Automation
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

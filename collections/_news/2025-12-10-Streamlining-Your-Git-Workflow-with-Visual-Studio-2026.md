@@ -20,6 +20,11 @@ tags:
 - Source Control
 - Stashing
 - VS
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

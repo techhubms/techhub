@@ -17,6 +17,9 @@ tags:
 - Microfluidics
 - Microsoft
 - System Architecture
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

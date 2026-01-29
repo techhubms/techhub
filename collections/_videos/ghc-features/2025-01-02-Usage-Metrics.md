@@ -9,6 +9,10 @@ plans:
 - Business
 tags:
 - Analytics
+- AI
+- GitHub Copilot
+- Coding
+- Videos
 section_names:
 - ai
 - github-copilot

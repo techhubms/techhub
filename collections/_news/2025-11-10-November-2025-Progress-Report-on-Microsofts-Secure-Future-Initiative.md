@@ -20,6 +20,10 @@ tags:
 - Security Operations
 - Vulnerability Disclosure
 - Zero Trust
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

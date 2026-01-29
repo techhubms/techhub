@@ -18,6 +18,10 @@ tags:
 - Prompt Optimization
 - Readme Generation
 - Software Development
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

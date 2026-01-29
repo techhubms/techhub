@@ -30,6 +30,9 @@ tags:
 - Private Knowledge Upload
 - RAG Chatbot
 - Resource Management
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

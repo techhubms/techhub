@@ -22,6 +22,8 @@ tags:
 - Software Developer
 - Software Development
 - Validation
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

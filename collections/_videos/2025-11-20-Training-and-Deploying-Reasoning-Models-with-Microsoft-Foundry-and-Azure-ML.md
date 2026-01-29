@@ -25,6 +25,10 @@ tags:
 - Reasoning Models
 - Reinforcement Learning
 - Synchronous Learning
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

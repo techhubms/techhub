@@ -21,6 +21,10 @@ tags:
 - State Management
 - Table Storage
 - Workflow Design
+- Azure
+- Coding
+- Machine Learning
+- Community
 section_names:
 - azure
 - coding

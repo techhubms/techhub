@@ -17,6 +17,12 @@ tags:
 - Playwright
 - Spec Kit
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

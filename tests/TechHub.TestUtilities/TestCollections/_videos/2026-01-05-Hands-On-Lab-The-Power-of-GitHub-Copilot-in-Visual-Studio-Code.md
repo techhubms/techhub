@@ -20,6 +20,9 @@ tags:
 - GitHub Copilot Cloud Agent
 - MCP Servers
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
 external_url: https://www.youtube.com/watch?v=dxDqelvVc2U
 feed_name: Visual Studio Code YouTube
 ---

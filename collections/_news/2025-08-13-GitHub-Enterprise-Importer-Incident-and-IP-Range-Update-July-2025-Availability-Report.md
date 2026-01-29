@@ -24,6 +24,10 @@ tags:
 - Service Incident
 - Unit Testing
 - Validation
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

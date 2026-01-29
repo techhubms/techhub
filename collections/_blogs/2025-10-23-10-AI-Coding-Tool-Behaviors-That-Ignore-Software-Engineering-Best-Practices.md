@@ -21,6 +21,11 @@ tags:
 - Social X
 - Software Engineering
 - Unit Testing
+- AI
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - coding

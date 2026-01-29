@@ -24,6 +24,9 @@ tags:
 - Tech
 - Technology
 - Workplace Strategies
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

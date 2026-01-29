@@ -23,6 +23,9 @@ tags:
 - ND GB200
 - ND GB300
 - Tokens Per Second
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

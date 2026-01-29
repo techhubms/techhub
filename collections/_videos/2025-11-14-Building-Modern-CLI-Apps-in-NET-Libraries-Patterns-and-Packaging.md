@@ -20,6 +20,8 @@ tags:
 - Modern Development
 - Software Packaging
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

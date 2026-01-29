@@ -19,6 +19,10 @@ tags:
 - Software Engineering
 - Tech Debt
 - WRAP Strategy
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

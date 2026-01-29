@@ -30,6 +30,11 @@ tags:
 - Vector Data
 - WAF Security Copilot
 - Workload Optimization
+- Azure
+- Machine Learning
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - ml

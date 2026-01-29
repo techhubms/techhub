@@ -21,6 +21,9 @@ tags:
 - Session Recording
 - Web Application Firewall
 - Zero Trust Security
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

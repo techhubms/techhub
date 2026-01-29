@@ -21,6 +21,9 @@ tags:
 - Microsoft
 - Performance Optimization
 - PFLOPS
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

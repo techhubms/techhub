@@ -19,6 +19,9 @@ tags:
 - Point in Time Restore
 - Sys.dm Database Backups
 - ZRS
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

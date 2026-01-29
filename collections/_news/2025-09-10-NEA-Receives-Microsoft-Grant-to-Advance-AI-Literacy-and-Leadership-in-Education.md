@@ -19,6 +19,8 @@ tags:
 - NEA
 - Policy Development
 - Professional Learning
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

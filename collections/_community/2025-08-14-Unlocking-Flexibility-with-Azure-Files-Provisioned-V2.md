@@ -20,6 +20,8 @@ tags:
 - Predictable Costs
 - Provisioned V2
 - Throughput
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

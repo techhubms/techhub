@@ -9,7 +9,8 @@ section_names:
 tags:
 - copilot
 - draft
-excerpt: This is a draft article that should not appear in any API results unless explicitly requested. It represents unreleased content.
+- AI
+- GitHub Copilot
 external_url: https://example.com/draft-feature
 feed_name: Test Feed
 draft: true

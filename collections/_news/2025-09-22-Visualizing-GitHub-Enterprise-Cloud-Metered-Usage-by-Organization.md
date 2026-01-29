@@ -19,6 +19,8 @@ tags:
 - Reporting Tools
 - Usage API
 - Usage Visualization
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

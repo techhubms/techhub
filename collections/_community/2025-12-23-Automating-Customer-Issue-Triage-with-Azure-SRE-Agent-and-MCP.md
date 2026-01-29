@@ -19,6 +19,10 @@ tags:
 - Support Automation
 - Ticket Triage
 - Workflow Orchestration
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

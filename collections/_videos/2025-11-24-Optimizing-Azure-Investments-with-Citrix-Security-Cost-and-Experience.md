@@ -21,6 +21,9 @@ tags:
 - Watermarking
 - Windows 365
 - Zero Trust
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

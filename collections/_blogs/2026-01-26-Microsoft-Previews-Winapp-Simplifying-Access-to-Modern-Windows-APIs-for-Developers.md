@@ -18,6 +18,8 @@ tags:
 - Windows API
 - Windows SDK
 - WinUI
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

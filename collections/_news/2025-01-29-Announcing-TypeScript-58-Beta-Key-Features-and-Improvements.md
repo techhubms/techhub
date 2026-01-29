@@ -21,6 +21,8 @@ tags:
 - Program Optimization
 - TypeScript
 - TypeScript 5.8
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

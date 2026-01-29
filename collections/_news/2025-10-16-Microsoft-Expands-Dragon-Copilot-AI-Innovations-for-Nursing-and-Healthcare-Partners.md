@@ -24,6 +24,8 @@ tags:
 - Smart Hospitals
 - UpToDate
 - Virtual Care
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

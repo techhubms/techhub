@@ -21,6 +21,8 @@ tags:
 - Solution Architecture
 - Team Autonomy
 - Version Control
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

@@ -15,6 +15,10 @@ tags:
 - Pipeline Security
 - Secret Scanning
 - Security Automation
+- DevOps
+- Security
+- Azure
+- Blogs
 section_names:
 - devops
 - security

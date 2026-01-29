@@ -24,6 +24,11 @@ tags:
 - Secure Boot
 - Systemd
 - Virtual File System
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

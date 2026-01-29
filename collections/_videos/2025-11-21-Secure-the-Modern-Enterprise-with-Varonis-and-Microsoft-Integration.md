@@ -21,6 +21,9 @@ tags:
 - Salesforce
 - Sensitive Data Protection
 - Varonis
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

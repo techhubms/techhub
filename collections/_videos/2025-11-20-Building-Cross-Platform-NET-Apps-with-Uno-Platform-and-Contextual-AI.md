@@ -28,6 +28,9 @@ tags:
 - UnoPlatform
 - WebAssembly
 - Windows
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

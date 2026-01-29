@@ -18,6 +18,9 @@ tags:
 - Wakatime
 - WorkOS
 - Yandex
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

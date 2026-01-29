@@ -18,6 +18,9 @@ tags:
 - Model Catalog
 - Procurement
 - Time To Value
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

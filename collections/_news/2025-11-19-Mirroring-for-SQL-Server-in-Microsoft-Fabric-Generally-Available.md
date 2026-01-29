@@ -23,6 +23,9 @@ tags:
 - Power BI
 - SQL Server
 - VNet Data Gateway
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

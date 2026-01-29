@@ -20,6 +20,8 @@ tags:
 - Shebang
 - Single File Programs
 - VS Code
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

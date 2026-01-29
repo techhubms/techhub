@@ -16,6 +16,10 @@ tags:
 - Interactive Development
 - Software Automation
 - Testing Migration
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

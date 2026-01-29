@@ -20,6 +20,8 @@ tags:
 - REST API
 - Semantic Models
 - Workspace Management
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

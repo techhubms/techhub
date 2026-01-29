@@ -23,6 +23,10 @@ tags:
 - Model Deployment
 - OpenAI
 - Pro Code Development
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

@@ -22,6 +22,10 @@ tags:
 - Platform Engineering
 - Queue Management
 - Service Degradation
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

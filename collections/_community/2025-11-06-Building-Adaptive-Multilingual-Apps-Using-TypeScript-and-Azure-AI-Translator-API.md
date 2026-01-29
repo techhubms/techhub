@@ -25,6 +25,10 @@ tags:
 - Tone Adaptation
 - Translation API
 - TypeScript
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

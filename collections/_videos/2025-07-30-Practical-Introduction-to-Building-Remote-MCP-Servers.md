@@ -22,6 +22,11 @@ tags:
 - Tech
 - Technology
 - VS Code
+- AI
+- Coding
+- DevOps
+- Azure
+- Videos
 section_names:
 - ai
 - coding

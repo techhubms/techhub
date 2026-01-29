@@ -24,6 +24,10 @@ tags:
 - Policy Enforcement
 - Semantic Caching
 - Token Limit
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - Programming Productivity
 - Remote MCP Server
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

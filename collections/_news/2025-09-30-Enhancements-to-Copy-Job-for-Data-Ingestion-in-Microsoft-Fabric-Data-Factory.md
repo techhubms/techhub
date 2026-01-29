@@ -31,6 +31,9 @@ tags:
 - SQL Server
 - Storage Integration
 - Variables Library
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

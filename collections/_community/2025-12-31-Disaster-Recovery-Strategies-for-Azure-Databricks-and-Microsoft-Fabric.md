@@ -21,6 +21,10 @@ tags:
 - Regional Redundancy
 - Terraform
 - Unity Catalog
+- Azure
+- DevOps
+- Machine Learning
+- Community
 section_names:
 - azure
 - devops

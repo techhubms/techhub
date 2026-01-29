@@ -17,6 +17,10 @@ tags:
 - Microsoft
 - SAP Business Data Cloud
 - Unified Data Estate
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

@@ -25,6 +25,10 @@ tags:
 - Windows APIs
 - Windows Developer Platform
 - Winget
+- AI
+- Coding
+- Security
+- Videos
 section_names:
 - ai
 - coding

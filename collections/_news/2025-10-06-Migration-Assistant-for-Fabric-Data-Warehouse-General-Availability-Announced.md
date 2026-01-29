@@ -20,6 +20,9 @@ tags:
 - Power BI Integration
 - SaaS Analytics
 - T SQL
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

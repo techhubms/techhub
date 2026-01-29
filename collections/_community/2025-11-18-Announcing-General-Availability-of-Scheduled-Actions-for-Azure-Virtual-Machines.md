@@ -15,6 +15,8 @@ tags:
 - Scheduled Actions
 - Subscription Throttling
 - VM Management
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

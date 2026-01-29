@@ -17,6 +17,10 @@ tags:
 - Personal Access Tokens
 - Project Collection Administrators
 - Token Management
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

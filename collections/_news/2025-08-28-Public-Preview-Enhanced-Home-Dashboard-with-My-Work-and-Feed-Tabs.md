@@ -16,6 +16,8 @@ tags:
 - Repository Management
 - UI Improvements
 - Workflow
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -23,6 +23,8 @@ tags:
 - SDK Integration
 - WhatsApp Integration
 - Windows 365
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

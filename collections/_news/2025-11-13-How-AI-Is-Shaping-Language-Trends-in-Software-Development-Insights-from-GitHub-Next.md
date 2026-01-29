@@ -22,6 +22,9 @@ tags:
 - Typescript
 - WASM
 - WebAssembly
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

@@ -20,6 +20,8 @@ tags:
 - SMT
 - Windows API
 - WMI
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

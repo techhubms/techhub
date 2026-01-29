@@ -22,6 +22,9 @@ tags:
 - On The Issues
 - Phishing
 - Ransomware
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

@@ -25,6 +25,10 @@ tags:
 - Power BI
 - Semantic Layer
 - Tableau Migration
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

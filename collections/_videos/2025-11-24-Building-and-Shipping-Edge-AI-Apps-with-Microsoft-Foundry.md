@@ -27,6 +27,9 @@ tags:
 - On Device AI
 - ORAS Tool
 - PhonePe Collaboration
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

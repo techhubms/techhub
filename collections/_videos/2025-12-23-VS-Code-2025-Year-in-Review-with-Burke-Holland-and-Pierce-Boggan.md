@@ -21,6 +21,10 @@ tags:
 - Subagents
 - Terminal Safety
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

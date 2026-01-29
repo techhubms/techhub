@@ -20,6 +20,8 @@ tags:
 - Windows Firewall
 - Windows Security
 - Windows Updates
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

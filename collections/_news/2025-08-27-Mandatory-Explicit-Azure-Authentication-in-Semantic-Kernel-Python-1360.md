@@ -18,6 +18,10 @@ tags:
 - Security Best Practices
 - Semantic Kernel
 - Service Principal
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

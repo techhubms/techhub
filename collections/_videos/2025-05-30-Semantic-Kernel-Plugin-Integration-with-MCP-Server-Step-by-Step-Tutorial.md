@@ -20,6 +20,9 @@ tags:
 - Plugin Integration
 - Real Time Demo
 - Semantic Kernel
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

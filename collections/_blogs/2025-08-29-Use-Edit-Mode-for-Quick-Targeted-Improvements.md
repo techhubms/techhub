@@ -19,6 +19,10 @@ tags:
 - Modern Best Practices
 - Programming Tools
 - Software Engineering
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

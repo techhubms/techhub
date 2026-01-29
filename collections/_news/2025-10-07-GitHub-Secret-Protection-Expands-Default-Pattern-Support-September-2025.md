@@ -22,6 +22,10 @@ tags:
 - Repository Security
 - Secret Scanning
 - Token Detection
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

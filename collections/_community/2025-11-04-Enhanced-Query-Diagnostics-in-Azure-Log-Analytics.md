@@ -17,6 +17,8 @@ tags:
 - Query Execution
 - Query Performance
 - Troubleshooting
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -14,6 +14,10 @@ tags:
 - GitHub Enterprise
 - Pipeline Minutes
 - Subscription Cost
+- AI
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - devops

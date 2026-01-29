@@ -28,6 +28,9 @@ tags:
 - Reflection Pattern
 - Retrieval Augmented Generation
 - Tool Use Pattern
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

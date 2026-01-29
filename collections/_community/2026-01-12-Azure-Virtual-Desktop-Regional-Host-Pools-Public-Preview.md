@@ -19,6 +19,8 @@ tags:
 - PowerShell
 - Regional Host Pools
 - Resiliency
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

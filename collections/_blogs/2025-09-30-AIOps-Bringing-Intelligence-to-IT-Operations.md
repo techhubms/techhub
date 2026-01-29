@@ -19,6 +19,9 @@ tags:
 - Observability
 - Predictive Analytics
 - Root Cause Analysis
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

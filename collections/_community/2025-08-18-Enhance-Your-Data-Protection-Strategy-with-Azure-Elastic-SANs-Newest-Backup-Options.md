@@ -22,6 +22,9 @@ tags:
 - Snapshot Retention
 - VM Data Recovery
 - Windows
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

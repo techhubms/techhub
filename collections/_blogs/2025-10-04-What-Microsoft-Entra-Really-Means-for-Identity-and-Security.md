@@ -22,6 +22,9 @@ tags:
 - SOC Integration
 - Workload Identity
 - Zero Trust
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

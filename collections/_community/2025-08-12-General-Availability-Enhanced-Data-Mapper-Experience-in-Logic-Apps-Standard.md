@@ -23,6 +23,9 @@ tags:
 - VS Code
 - XML
 - XSLT
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

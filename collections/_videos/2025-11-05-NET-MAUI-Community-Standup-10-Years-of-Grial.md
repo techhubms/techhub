@@ -25,6 +25,8 @@ tags:
 - UI Toolkit
 - UX Divers
 - Xamarin
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

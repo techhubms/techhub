@@ -22,6 +22,9 @@ tags:
 - Open Source
 - Scripts
 - Tools
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

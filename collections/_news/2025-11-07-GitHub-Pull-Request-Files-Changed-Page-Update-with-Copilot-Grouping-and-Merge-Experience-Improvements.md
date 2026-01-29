@@ -22,6 +22,10 @@ tags:
 - Public Preview
 - Pull Request
 - Status Checks
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

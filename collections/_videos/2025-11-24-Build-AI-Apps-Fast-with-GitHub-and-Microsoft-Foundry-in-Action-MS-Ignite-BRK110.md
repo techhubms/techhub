@@ -20,6 +20,12 @@ tags:
 - Multi Agent Systems
 - Orchestration
 - Retrieval Augmented Generation
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

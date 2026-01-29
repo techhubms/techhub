@@ -19,6 +19,10 @@ tags:
 - Model Development
 - Pipeline Management
 - Skilling Resources
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

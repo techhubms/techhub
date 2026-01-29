@@ -17,6 +17,9 @@ tags:
 - Server Security
 - Windows Admin Center
 - Windows Server
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

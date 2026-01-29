@@ -19,6 +19,10 @@ tags:
 - SSMS 22
 - T SQL
 - Warehouse Snapshots
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

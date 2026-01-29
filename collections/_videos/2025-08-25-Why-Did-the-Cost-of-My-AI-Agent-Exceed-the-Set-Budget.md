@@ -22,6 +22,9 @@ tags:
 - Tech
 - Tech Community
 - Technology
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

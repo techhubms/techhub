@@ -23,6 +23,9 @@ tags:
 - Windows Workloads
 - Zonal Placement
 - Zone Redundant Storage
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

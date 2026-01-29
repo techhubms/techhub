@@ -18,6 +18,9 @@ tags:
 - Retired
 - Security Automation
 - Workflow Update
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

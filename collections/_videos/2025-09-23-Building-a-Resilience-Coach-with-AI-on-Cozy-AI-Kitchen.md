@@ -26,6 +26,9 @@ tags:
 - Technology
 - Tutorial
 - VS Code
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

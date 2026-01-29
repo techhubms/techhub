@@ -17,6 +17,9 @@ tags:
 - Markdown Configuration
 - Workflow Automation
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

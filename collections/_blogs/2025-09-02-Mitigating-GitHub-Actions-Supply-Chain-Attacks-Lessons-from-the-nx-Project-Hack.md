@@ -21,6 +21,9 @@ tags:
 - Supply Chain Security
 - Workflow Security
 - YAML
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

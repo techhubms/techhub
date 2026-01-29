@@ -19,6 +19,10 @@ tags:
 - Security Orchestration
 - Telecom Security
 - Threat Hunting
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

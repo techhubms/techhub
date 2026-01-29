@@ -21,6 +21,8 @@ tags:
 - Model Variants
 - OpenAI
 - Software Development
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

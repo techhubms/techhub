@@ -15,6 +15,11 @@ tags:
 - GitHub Repositories
 - Pull Requests
 - Software Development Lifecycle
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

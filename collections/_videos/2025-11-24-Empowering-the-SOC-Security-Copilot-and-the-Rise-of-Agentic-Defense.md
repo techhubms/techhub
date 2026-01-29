@@ -22,6 +22,9 @@ tags:
 - SOC
 - SOC Lifecycle
 - Threat Intelligence
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

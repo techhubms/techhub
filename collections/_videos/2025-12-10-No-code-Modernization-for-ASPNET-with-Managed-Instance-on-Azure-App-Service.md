@@ -21,6 +21,9 @@ tags:
 - System Commands
 - Total Cost Of Ownership
 - Web API
+- Azure
+- Coding
+- Videos
 section_names:
 - azure
 - coding

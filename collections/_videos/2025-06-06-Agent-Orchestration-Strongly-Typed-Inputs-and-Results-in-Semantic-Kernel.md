@@ -20,6 +20,9 @@ tags:
 - Strongly Typed Models
 - Structured Data
 - Type Safe AI
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

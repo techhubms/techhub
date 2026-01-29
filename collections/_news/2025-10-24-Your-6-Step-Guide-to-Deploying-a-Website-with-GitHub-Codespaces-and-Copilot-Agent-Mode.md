@@ -20,6 +20,11 @@ tags:
 - Static Website Hosting
 - Version Control
 - Web Development
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

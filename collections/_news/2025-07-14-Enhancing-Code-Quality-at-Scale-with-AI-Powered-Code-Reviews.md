@@ -22,6 +22,11 @@ tags:
 - Engineering@Microsoft
 - Microsoft
 - Pull Requests
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

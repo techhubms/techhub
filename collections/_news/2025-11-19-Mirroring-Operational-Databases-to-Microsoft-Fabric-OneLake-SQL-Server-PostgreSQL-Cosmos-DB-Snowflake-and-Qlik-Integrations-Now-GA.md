@@ -25,6 +25,10 @@ tags:
 - SQL Server
 - T SQL Endpoint
 - Zero ETL
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

@@ -21,6 +21,9 @@ tags:
 - GitHub Repository
 - Improvement
 - Path Globs
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

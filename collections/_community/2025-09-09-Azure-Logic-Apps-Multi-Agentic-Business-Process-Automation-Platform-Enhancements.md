@@ -20,6 +20,11 @@ tags:
 - On Behalf Of Authentication
 - Python Code Interpreter
 - State Machine Orchestration
+- AI
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - ai
 - azure

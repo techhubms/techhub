@@ -21,6 +21,8 @@ tags:
 - Plan Mode
 - Software Collaboration
 - VS Code
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

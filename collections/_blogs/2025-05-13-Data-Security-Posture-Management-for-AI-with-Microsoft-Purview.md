@@ -21,6 +21,9 @@ tags:
 - Risk Assessment
 - Security Analytics
 - SharePoint
+- AI
+- Security
+- Blogs
 section_names:
 - ai
 - security

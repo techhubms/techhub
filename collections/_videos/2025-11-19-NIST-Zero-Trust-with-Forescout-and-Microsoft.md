@@ -21,6 +21,8 @@ tags:
 - Security Operations
 - Unmanaged Devices
 - Zero Trust
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

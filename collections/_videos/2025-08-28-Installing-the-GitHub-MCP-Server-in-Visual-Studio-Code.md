@@ -18,6 +18,9 @@ tags:
 - Remote Server Setup
 - VS Code
 - VSC
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

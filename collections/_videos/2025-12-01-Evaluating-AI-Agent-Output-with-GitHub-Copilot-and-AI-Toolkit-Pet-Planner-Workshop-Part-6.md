@@ -22,6 +22,11 @@ tags:
 - Pet Planner
 - Tech
 - Technology
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

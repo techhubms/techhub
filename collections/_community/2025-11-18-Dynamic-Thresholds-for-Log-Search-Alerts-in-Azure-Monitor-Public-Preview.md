@@ -20,6 +20,10 @@ tags:
 - Microsoft
 - Resource Graph
 - Subscription Based Alerting
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

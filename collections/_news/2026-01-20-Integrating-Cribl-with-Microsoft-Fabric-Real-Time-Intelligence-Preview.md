@@ -20,6 +20,9 @@ tags:
 - Real Time Intelligence
 - Stream Analytics
 - Telemetry Data
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

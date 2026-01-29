@@ -18,6 +18,11 @@ tags:
 - Tree Sitter
 - VS Code
 - VS Code 1.107
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

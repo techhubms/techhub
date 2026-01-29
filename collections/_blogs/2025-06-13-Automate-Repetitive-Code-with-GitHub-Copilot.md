@@ -19,6 +19,10 @@ tags:
 - Repetitive Code Automation
 - Tab Completion
 - Workflow Automation
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

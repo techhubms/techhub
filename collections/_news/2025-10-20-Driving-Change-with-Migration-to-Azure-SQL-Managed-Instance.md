@@ -18,6 +18,8 @@ tags:
 - Scalability
 - SQL Server
 - SQL Server Migration
+- Azure
+- News
 section_names:
 - azure
 primary_section: azure

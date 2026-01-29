@@ -23,6 +23,9 @@ tags:
 - Private AI
 - Prompt Engineering
 - SDK
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

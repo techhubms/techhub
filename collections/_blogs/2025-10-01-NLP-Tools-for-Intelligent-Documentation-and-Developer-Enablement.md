@@ -30,6 +30,9 @@ tags:
 - Vector Stores
 - VS Code
 - Zendesk
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

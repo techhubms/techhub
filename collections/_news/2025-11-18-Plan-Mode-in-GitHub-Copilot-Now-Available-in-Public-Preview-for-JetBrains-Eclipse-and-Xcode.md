@@ -21,6 +21,9 @@ tags:
 - Software Development
 - Step By Step Planning
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

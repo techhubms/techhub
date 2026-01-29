@@ -17,6 +17,11 @@ tags:
 - Secret Scanning
 - Security Advisories
 - Security Alerts
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - devops

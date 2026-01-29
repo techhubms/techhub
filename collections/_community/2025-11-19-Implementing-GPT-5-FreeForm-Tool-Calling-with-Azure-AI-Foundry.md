@@ -20,6 +20,11 @@ tags:
 - SQL
 - TypeScript
 - VM Sandbox
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

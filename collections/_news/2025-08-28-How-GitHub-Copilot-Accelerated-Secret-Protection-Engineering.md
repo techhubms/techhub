@@ -20,6 +20,12 @@ tags:
 - Secret Protection
 - Software Engineering
 - Token Validation
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - coding

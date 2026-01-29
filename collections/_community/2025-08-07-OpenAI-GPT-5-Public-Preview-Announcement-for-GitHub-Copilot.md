@@ -14,6 +14,9 @@ tags:
 - OpenAI GPT 5
 - Premium Pricing
 - Public Preview
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

@@ -24,6 +24,9 @@ tags:
 - Microsoft Sentinel
 - Security Operations
 - Zero Trust
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

@@ -41,6 +41,8 @@ tags:
 - Social X
 - System Reliability
 - Traces
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

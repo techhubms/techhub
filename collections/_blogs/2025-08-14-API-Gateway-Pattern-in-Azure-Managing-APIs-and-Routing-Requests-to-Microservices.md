@@ -24,6 +24,10 @@ tags:
 - Solution Architecture
 - Subscription Keys
 - Versioning
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - devops

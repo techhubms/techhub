@@ -19,6 +19,10 @@ tags:
 - Regular Expressions
 - Software Engineering
 - Testing
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

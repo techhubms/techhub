@@ -26,6 +26,9 @@ tags:
 - Role Boundaries
 - Secure Future Initiative
 - Threat Modeling
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

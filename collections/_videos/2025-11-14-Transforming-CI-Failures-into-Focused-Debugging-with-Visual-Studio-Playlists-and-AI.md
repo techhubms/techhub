@@ -23,6 +23,11 @@ tags:
 - Test Automation
 - Test Results
 - VS
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

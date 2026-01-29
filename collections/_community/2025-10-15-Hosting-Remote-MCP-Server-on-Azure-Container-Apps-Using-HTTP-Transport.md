@@ -19,6 +19,10 @@ tags:
 - REST API
 - Serverless
 - VS Code Chat
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

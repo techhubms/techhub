@@ -24,6 +24,9 @@ tags:
 - Security Compliance
 - Service Hooks
 - Third Party Connectors
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

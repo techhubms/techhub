@@ -16,6 +16,9 @@ tags:
 - Sensor Data
 - Smart Buildings
 - Stream Processing
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

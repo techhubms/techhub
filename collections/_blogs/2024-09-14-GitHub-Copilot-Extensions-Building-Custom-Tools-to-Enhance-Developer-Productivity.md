@@ -17,6 +17,10 @@ tags:
 - Retrieval Augmented Generation
 - User Confirmation
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - devops
@@ -31,7 +35,7 @@ Date posted: **14 Sep 2024**, 6 minutes to read
 
 GitHub Copilot is evolving beyond code completion, now empowering developers to write their own extensions to meet tailored needs. In his in-depth guide, Rob Bos discusses how Copilot Extensions work, their types, practical examples, and step-by-step instructions for building and deploying them.
 
-![Announcement image](/images/2024/20240914/Announcement.png)
+![Announcement image](/images/2024/20240914/announcement.png)
 
 ## What are Copilot Extensions?
 
@@ -109,7 +113,7 @@ console.log('Response sent');
 
 Developing inside a GitHub Codespace lets you easily receive traffic and debug your extension. Use a separate GitHub App for development vs production, as all app traffic is routed to your endpoint during testing.
 
-![Running in Codespace](/images/2024/20240914/Running-the-extension.png)
+![Running in Codespace](/images/2024/20240914/running-the-extension.png)
 
 Remember to:
 
@@ -117,19 +121,19 @@ Remember to:
 - Set the URL in both GitHub App settings and the Copilot section
 - Ensure your App is flagged for Copilot extensions in its settings
 
-![Codespace settings](/images/2024/20240914/AppSettings.png)
+![Codespace settings](/images/2024/20240914/appsettings.png)
 
 ## Invoking and Working with Extensions
 
 Once the GitHub App is installed in an org with Copilot enabled, users can invoke the extension by starting prompts with `@your-app-name`. Only one extension can interact per thread for security reasons and receives the full conversation context.
 
-![Prompt invocation example](/images/2024/20240914/01-Invoking-the-extension.png)
+![Prompt invocation example](/images/2024/20240914/01-invoking-the-extension.png)
 
 Extensions currently work in VS Code, VS Code Insiders, and github.com web interface. GitHub Copilot's content filter ensures only suitable prompts and safe responses are sent to and from the extension.
 
 When first used, an extension prompts users for consent to access conversation content and basic user info (GitHub handle, approximate location). This enables personalized responses and can be revoked via [GitHub settings](https://github.com/settings/installations).
 
-![Consent dialog screenshot](/images/2024/20240914/Allow-prompt.png)
+![Consent dialog screenshot](/images/2024/20240914/allow-prompt.png)
 
 ## Advanced Use Cases: System Prompts and Confirmation Dialogs
 
@@ -156,7 +160,7 @@ response.write(
 );
 ```
 
-![User confirm dialog](/images/2024/20240914/PromptAccept.png)
+![User confirm dialog](/images/2024/20240914/promptaccept.png)
 
 ## Conclusion & Outlook
 

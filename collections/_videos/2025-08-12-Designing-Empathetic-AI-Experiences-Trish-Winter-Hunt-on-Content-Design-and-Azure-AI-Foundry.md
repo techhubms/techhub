@@ -29,6 +29,9 @@ tags:
 - Technology
 - User Experience
 - UX Writing
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

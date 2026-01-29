@@ -23,6 +23,8 @@ tags:
 - Supply Chain Analytics
 - Workflow Automation
 - Workflow Monitoring
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

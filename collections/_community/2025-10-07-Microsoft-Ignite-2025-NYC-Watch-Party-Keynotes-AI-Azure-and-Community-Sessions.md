@@ -18,6 +18,10 @@ tags:
 - Power Apps
 - Power BI
 - Vector Search
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

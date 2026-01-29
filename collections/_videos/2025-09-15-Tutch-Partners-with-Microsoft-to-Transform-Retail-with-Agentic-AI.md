@@ -19,6 +19,9 @@ tags:
 - Product Recommendations
 - Retail Technology
 - Tutch
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

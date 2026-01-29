@@ -44,6 +44,9 @@ tags:
 - Team as A Service
 - Vendor Lock in
 - Vendor Lock in DevOps
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

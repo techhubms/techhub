@@ -16,6 +16,10 @@ tags:
 - VS Code
 - Wiki
 - Work
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

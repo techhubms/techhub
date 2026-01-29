@@ -20,6 +20,9 @@ tags:
 - Microsoft Teams
 - Natural Language Processing
 - Omnichannel Bots
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

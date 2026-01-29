@@ -21,6 +21,10 @@ tags:
 - OneLake
 - Real Time Analytics
 - Relationship Data
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

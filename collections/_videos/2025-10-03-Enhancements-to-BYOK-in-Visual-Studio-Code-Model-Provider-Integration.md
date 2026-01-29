@@ -16,6 +16,9 @@ tags:
 - Model Providers
 - Open Source
 - VS Code
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

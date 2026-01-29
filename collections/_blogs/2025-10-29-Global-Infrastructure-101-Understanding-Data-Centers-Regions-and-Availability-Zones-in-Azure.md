@@ -19,6 +19,8 @@ tags:
 - Latency
 - Microsoft Cloud
 - Resource Deployment
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

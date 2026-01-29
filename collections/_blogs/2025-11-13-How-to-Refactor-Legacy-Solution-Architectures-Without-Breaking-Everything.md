@@ -20,6 +20,9 @@ tags:
 - Stakeholder Management
 - Strangler Fig Pattern
 - Testing Strategies
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

@@ -18,6 +18,9 @@ tags:
 - Software Architecture
 - TheGitHubPodcast
 - Transparency
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

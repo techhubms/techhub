@@ -7,20 +7,20 @@
 
 ### ✅ Always Do
 
-- **Use backticks for escaping** (`` ` ``), NEVER backslashes
-- **Use subexpressions `$(...)` for complex interpolations** (dotted notation, array access, type casting)
-- **Test ALL script changes** - Run `Run -TestProject powershell` after modifications
-- **Set error handling** - `$ErrorActionPreference = "Stop"` at script start
-- **Use strict mode** - `Set-StrictMode -Version Latest`
-- **Handle two execution contexts** - Script directory vs workspace root
-- **Import error handling first** - Before other functions
-- **Document parameters** with `[Parameter()]` attributes
+- **Always use backticks for escaping** (`` ` ``), NEVER backslashes
+- **Always use subexpressions `$(...)` for complex interpolations** (dotted notation, array access, type casting)
+- **Always test ALL script changes** - Run `Run -TestProject powershell` after modifications
+- **Always set error handling** - `$ErrorActionPreference = "Stop"` at script start
+- **Always use strict mode** - `Set-StrictMode -Version Latest`
+- **Always handle two execution contexts** - Script directory vs workspace root
+- **Always import error handling first** - Before other functions
+- **Always document parameters** with `[Parameter()]` attributes
 
 ### ⚠️ Ask First
 
-- **Adding new PowerShell modules** or dependencies
-- **Changing RSS feed structure** or processing logic
-- **Modifying AI integration** patterns
+- **Ask first before adding new PowerShell modules** or dependencies
+- **Ask first before changing RSS feed structure** or processing logic
+- **Ask first before modifying AI integration** patterns
 
 ### 🚫 Never Do
 

@@ -27,6 +27,9 @@ tags:
 - Software
 - Software Development
 - Technical Preview
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

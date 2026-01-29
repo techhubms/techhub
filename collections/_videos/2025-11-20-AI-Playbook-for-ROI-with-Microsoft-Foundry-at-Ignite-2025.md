@@ -25,6 +25,9 @@ tags:
 - ROI
 - Scalability
 - Token Costs
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

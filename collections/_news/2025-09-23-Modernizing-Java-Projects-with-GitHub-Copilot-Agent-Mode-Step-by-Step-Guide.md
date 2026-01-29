@@ -25,6 +25,12 @@ tags:
 - OpenRewrite
 - Spring Security
 - VS Code
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

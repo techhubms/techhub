@@ -23,6 +23,10 @@ tags:
 - NuGet Packages
 - Project Orchestration
 - Service Defaults
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

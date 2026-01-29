@@ -24,6 +24,11 @@ tags:
 - Spring 6
 - Spring Framework
 - VS Code
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

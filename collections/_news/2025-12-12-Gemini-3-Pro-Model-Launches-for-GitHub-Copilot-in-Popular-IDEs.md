@@ -22,6 +22,9 @@ tags:
 - Software Development Tools
 - VS
 - Xcode
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

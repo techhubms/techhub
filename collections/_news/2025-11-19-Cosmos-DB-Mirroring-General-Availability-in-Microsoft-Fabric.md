@@ -25,6 +25,10 @@ tags:
 - T SQL
 - User Data Functions
 - Vector Indexing
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

@@ -17,6 +17,10 @@ tags:
 - Premium Requests
 - Subscription Management
 - Usage Dashboard
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

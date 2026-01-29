@@ -18,6 +18,8 @@ tags:
 - State Machines
 - Team Management
 - Workflow Automation
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

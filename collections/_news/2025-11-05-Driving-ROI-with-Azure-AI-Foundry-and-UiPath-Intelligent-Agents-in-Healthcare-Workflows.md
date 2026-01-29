@@ -21,6 +21,9 @@ tags:
 - Radiology Workflow
 - UiPath
 - UiPath Maestro
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - SOC Automation
 - Threat Detection
 - Tiered Decisioning
+- AI
+- Security
+- Community
 section_names:
 - ai
 - security

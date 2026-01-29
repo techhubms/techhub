@@ -44,6 +44,11 @@ tags:
 - Software Quality Assurance
 - Technical Debt
 - Vibe Coding
+- AI
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - coding

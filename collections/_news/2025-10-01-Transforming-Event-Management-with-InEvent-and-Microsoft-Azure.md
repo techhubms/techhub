@@ -21,6 +21,10 @@ tags:
 - Outlook Integration
 - Single Sign On
 - Workflow Integration
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

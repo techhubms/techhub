@@ -8,6 +8,9 @@ tags:
 - GitHub Desktop
 - Improvements
 - Version 3.5
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

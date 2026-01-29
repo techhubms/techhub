@@ -20,6 +20,9 @@ tags:
 - Monitoring Automation
 - RBAC
 - Serverless
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -34,6 +34,9 @@ tags:
 - Social LinkedIn
 - Social X
 - YAML Generation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

@@ -20,6 +20,10 @@ tags:
 - Tech
 - Technology
 - VS Code
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

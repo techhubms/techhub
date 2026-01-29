@@ -16,6 +16,9 @@ tags:
 - Software Update
 - Static Analysis
 - Versioning
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

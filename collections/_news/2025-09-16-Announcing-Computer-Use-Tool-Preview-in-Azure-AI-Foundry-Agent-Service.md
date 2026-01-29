@@ -21,6 +21,9 @@ tags:
 - Prompt Injection
 - REST API
 - SDK
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

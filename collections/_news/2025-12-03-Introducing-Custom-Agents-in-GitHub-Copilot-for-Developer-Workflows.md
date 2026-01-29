@@ -24,6 +24,12 @@ tags:
 - Security Automation
 - Terraform
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - coding

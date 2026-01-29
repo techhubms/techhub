@@ -27,6 +27,10 @@ tags:
 - System Center
 - Update Management
 - Windows Modernization
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

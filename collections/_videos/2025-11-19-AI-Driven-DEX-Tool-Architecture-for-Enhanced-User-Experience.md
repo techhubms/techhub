@@ -21,6 +21,10 @@ tags:
 - TeamViewer
 - User Experience
 - Window Of Vulnerability
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -21,6 +21,11 @@ tags:
 - SmartScreen Reputation
 - Windows Executable Signing
 - YAML Workflow
+- Azure
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - azure
 - coding

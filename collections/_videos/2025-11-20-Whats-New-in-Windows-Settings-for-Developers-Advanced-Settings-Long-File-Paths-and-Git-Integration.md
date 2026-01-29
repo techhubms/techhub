@@ -16,6 +16,8 @@ tags:
 - Windows Development
 - Windows Settings
 - Windows Updates
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

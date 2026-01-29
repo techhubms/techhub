@@ -22,6 +22,9 @@ tags:
 - Resume Builder
 - Social Security
 - Workforce Analytics
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

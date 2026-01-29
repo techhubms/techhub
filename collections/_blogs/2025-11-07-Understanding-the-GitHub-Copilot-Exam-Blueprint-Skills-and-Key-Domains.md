@@ -18,6 +18,9 @@ tags:
 - Scenario Based Questions
 - Software Development
 - Testing
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

@@ -19,6 +19,8 @@ tags:
 - Thomas Maurer
 - Well Architected
 - Well Architected Framework
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

@@ -22,6 +22,10 @@ tags:
 - Prompt Injection Protection
 - Threat Detection
 - Trustworthy AI
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

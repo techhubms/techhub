@@ -24,6 +24,10 @@ tags:
 - Storage
 - Storage Automation
 - Storage Management
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

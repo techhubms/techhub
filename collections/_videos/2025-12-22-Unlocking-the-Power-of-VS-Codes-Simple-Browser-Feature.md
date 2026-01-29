@@ -15,6 +15,9 @@ tags:
 - Simple Browser
 - VS Code
 - Web Development
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

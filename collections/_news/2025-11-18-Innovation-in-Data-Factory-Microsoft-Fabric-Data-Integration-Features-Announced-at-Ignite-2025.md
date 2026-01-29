@@ -26,6 +26,11 @@ tags:
 - SQL Server
 - Synapse Pipeline Migration
 - Zero ETL
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

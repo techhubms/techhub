@@ -25,6 +25,9 @@ tags:
 - Token Validity Checks
 - Val Town
 - Yandex
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

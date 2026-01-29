@@ -19,6 +19,9 @@ tags:
 - MSIgnite
 - Real World Case Studies
 - SecOps
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

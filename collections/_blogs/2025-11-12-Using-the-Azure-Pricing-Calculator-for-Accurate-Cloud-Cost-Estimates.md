@@ -20,6 +20,8 @@ tags:
 - Storage
 - Technical Planning
 - Virtual Machines
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

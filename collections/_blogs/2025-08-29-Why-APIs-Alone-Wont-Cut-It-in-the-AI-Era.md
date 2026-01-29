@@ -18,6 +18,9 @@ tags:
 - MCP
 - Upsera
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

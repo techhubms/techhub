@@ -5,13 +5,20 @@ namespace TechHub.Web.Middleware;
 /// Place this FIRST in the pipeline (before MapStaticAssets) to override any
 /// built-in cache headers with our own policies.
 /// </summary>
-public class StaticFilesCacheMiddleware(RequestDelegate next)
+public class StaticFilesCacheMiddleware
 {
-    private readonly RequestDelegate _next = next;
+    private readonly RequestDelegate _next;
+
+    public StaticFilesCacheMiddleware(RequestDelegate next)
+    {
+        ArgumentNullException.ThrowIfNull(next);
+
+        _next = next;
+    }
 
     // Extensions that should be cached for 1 year (immutable)
     // These are files that rarely change and benefit from aggressive caching
-    private static readonly HashSet<string> ImmutableCacheExtensions = new(StringComparer.OrdinalIgnoreCase)
+    private static readonly HashSet<string> _immutableCacheExtensions = new(StringComparer.OrdinalIgnoreCase)
     {
         // Images
         ".jpg", ".jpeg", ".png", ".gif", ".webp", ".jxl", ".svg", ".ico", ".bmp",
@@ -21,7 +28,7 @@ public class StaticFilesCacheMiddleware(RequestDelegate next)
 
     // Extensions that should use short cache with revalidation
     // These are files that may change but should still be cached
-    private static readonly HashSet<string> ShortCacheExtensions = new(StringComparer.OrdinalIgnoreCase)
+    private static readonly HashSet<string> _shortCacheExtensions = new(StringComparer.OrdinalIgnoreCase)
     {
         ".css", ".js", ".json", ".xml", ".html", ".htm"
     };
@@ -58,7 +65,7 @@ public class StaticFilesCacheMiddleware(RequestDelegate next)
                     // Remove Vary header that might prevent caching
                     context.Response.Headers.Remove("Vary");
                 }
-                else if (ImmutableCacheExtensions.Contains(extension))
+                else if (_immutableCacheExtensions.Contains(extension))
                 {
                     // Images and fonts: cache for 1 year (immutable)
                     // These rarely change and users benefit from not re-downloading
@@ -66,7 +73,7 @@ public class StaticFilesCacheMiddleware(RequestDelegate next)
                     // Remove Vary header that might prevent caching
                     context.Response.Headers.Remove("Vary");
                 }
-                else if (ShortCacheExtensions.Contains(extension))
+                else if (_shortCacheExtensions.Contains(extension))
                 {
                     // CSS/JS/HTML: short cache with revalidation
                     // Non-fingerprinted versions should revalidate frequently

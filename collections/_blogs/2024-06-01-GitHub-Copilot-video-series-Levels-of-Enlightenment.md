@@ -7,6 +7,9 @@ tags:
 - Software Development
 - Tutorials
 - Video Series
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

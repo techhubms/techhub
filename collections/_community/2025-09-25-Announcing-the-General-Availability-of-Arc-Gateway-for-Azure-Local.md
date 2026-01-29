@@ -20,6 +20,9 @@ tags:
 - Microsoft Azure
 - Network Security
 - Virtual Machines
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

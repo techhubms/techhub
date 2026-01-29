@@ -24,6 +24,11 @@ tags:
 - Software Maintenance
 - Team Scaling
 - Volunteer Management
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

@@ -22,6 +22,9 @@ tags:
 - Read Replicas
 - Rust Runtime
 - Write Ahead Log
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -22,6 +22,10 @@ tags:
 - Policy Management
 - Python
 - Real Time Context
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

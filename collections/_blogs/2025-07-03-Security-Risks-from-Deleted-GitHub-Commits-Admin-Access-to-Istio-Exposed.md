@@ -22,6 +22,9 @@ tags:
 - Source Control
 - Token Revocation
 - Truffle Security
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

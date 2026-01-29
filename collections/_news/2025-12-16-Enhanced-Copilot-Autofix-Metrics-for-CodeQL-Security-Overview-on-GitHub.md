@@ -17,6 +17,10 @@ tags:
 - Security Metrics
 - Security Overview
 - Vulnerability Management
+- AI
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - github-copilot

@@ -20,6 +20,10 @@ tags:
 - Secure Dependencies
 - Sponsorship
 - Trusted Publishing
+- AI
+- Coding
+- Security
+- Videos
 section_names:
 - ai
 - coding

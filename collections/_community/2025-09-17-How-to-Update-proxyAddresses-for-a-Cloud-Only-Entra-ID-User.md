@@ -17,6 +17,8 @@ tags:
 - Permissions
 - Proxyaddresses
 - User Management
+- Security
+- Community
 section_names:
 - security
 primary_section: security

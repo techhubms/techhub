@@ -20,6 +20,8 @@ tags:
 - Queue Management
 - RabbitMQ
 - Triggers
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

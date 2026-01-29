@@ -20,6 +20,9 @@ tags:
 - Multi Agent Applications
 - Python
 - Semantic Kernel
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

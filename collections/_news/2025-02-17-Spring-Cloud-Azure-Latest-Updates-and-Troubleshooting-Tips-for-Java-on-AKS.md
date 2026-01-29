@@ -21,6 +21,10 @@ tags:
 - Spring Boot
 - Spring Cloud Azure
 - TokenCredential
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

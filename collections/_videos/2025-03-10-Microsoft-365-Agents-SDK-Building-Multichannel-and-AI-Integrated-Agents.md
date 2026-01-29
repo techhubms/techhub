@@ -19,6 +19,10 @@ tags:
 - Slack
 - Twilio
 - Webchat
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

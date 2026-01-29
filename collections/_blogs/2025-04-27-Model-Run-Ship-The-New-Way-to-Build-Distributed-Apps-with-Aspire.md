@@ -22,6 +22,9 @@ tags:
 - Software Development
 - Terraform
 - Web Development
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

@@ -28,6 +28,11 @@ tags:
 - Tech
 - Technology
 - Token Based Authentication
+- AI
+- Azure
+- Coding
+- Security
+- Videos
 section_names:
 - ai
 - azure

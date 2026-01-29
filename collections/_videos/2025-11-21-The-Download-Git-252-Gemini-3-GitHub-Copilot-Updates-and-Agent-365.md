@@ -20,6 +20,10 @@ tags:
 - Software Development
 - Version Control
 - VERT
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

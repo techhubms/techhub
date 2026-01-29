@@ -24,6 +24,9 @@ tags:
 - Virtual Event
 - Virtualization
 - Zero Trust IAM
+- AI
+- Security
+- Blogs
 section_names:
 - ai
 - security

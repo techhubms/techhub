@@ -19,6 +19,8 @@ tags:
 - TypeScript
 - TypeScript 7.0
 - VS Code
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

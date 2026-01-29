@@ -30,6 +30,11 @@ tags:
 - Software Engineering
 - Tech
 - Technology
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

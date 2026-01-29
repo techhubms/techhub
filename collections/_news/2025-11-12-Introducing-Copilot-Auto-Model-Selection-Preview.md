@@ -20,6 +20,9 @@ tags:
 - Premium Requests
 - Software Engineering
 - VS
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

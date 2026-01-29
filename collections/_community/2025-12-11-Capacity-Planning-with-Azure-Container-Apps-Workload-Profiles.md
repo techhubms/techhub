@@ -18,6 +18,8 @@ tags:
 - Scaling Strategy
 - VM SKU
 - Workload Profiles
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

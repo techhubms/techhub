@@ -28,6 +28,9 @@ tags:
 - Resource Management
 - SDK
 - WebPubSub
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

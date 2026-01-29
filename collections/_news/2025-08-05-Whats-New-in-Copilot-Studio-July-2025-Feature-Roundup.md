@@ -19,6 +19,9 @@ tags:
 - Power Platform
 - Purview
 - ROI Analysis
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

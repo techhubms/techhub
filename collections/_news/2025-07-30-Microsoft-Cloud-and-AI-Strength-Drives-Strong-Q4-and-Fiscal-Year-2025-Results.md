@@ -16,6 +16,9 @@ tags:
 - Microsoft 365
 - Productivity And Business Processes
 - Satya Nadella
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - Public Preview
 - Repository
 - Workflow Enhancement
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

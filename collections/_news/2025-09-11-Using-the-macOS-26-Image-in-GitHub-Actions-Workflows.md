@@ -16,6 +16,8 @@ tags:
 - Runner Images
 - Workflow Automation
 - Xcode
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

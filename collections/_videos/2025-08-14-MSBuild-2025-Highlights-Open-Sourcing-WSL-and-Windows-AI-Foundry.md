@@ -16,6 +16,8 @@ tags:
 - Windows Development
 - Windows Subsystem For Linux
 - WSL Open Source
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

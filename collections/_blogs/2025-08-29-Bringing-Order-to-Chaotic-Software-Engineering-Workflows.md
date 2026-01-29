@@ -17,6 +17,9 @@ tags:
 - Tempo
 - Video Interviews
 - Workflow Optimization
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

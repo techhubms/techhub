@@ -22,6 +22,8 @@ tags:
 - Productivity AI
 - Security Copilot
 - Windows Copilot
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

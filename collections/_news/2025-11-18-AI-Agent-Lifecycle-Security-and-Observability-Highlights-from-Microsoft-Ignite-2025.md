@@ -20,6 +20,9 @@ tags:
 - Power BI
 - Security Solutions
 - Work IQ
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

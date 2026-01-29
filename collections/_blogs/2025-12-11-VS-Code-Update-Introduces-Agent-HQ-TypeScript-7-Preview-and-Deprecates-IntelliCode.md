@@ -22,6 +22,10 @@ tags:
 - TypeScript 7
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

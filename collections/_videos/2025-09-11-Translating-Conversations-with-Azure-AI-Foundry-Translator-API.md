@@ -26,6 +26,9 @@ tags:
 - Tone Detection
 - Translation API
 - Translator API
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -21,6 +21,9 @@ tags:
 - Trusted Analytics
 - Unified Data Platform
 - Unifyyourdataplatform
+- AI
+- Machine Learning
+- Videos
 section_names:
 - ai
 - ml

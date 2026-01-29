@@ -20,6 +20,9 @@ tags:
 - Streaming
 - TypeScript
 - VS Code
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

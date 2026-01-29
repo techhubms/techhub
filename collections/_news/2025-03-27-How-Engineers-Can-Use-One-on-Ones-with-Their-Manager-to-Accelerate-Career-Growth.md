@@ -20,6 +20,8 @@ tags:
 - Professional Development
 - Software Engineers
 - Workplace Communication
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

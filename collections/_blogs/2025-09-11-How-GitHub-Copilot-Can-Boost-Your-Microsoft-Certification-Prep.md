@@ -22,6 +22,9 @@ tags:
 - Python
 - SC 200
 - Scripting
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

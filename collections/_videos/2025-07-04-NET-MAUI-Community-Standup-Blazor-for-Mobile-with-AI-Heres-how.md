@@ -16,6 +16,10 @@ tags:
 - MAUI
 - Native Mobile Features
 - Web App
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

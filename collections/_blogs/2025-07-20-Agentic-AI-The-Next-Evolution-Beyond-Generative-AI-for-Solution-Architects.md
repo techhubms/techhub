@@ -24,6 +24,8 @@ tags:
 - Security in AI Agents
 - Self Improving Systems
 - Solution Architecture
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

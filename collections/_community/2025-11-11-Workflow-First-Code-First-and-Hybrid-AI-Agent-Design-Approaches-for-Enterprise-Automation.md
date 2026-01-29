@@ -26,6 +26,10 @@ tags:
 - Semantic Kernel
 - Visual Designers
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

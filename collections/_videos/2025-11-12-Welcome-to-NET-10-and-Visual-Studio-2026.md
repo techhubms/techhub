@@ -21,6 +21,9 @@ tags:
 - Orchestration
 - Productivity
 - VS
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

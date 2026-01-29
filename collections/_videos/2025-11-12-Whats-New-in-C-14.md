@@ -21,6 +21,8 @@ tags:
 - Programming Languages
 - Software Development
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

@@ -18,6 +18,12 @@ tags:
 - Microsoft Copilot
 - Microsoft Graph APIs
 - Microsoft Purview
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

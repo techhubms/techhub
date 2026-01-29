@@ -22,6 +22,9 @@ tags:
 - Secure Boot
 - Trusted Launch
 - Vtpm
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

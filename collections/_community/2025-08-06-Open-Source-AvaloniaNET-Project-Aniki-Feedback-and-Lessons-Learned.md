@@ -25,6 +25,8 @@ tags:
 - Regex Source Generator
 - TreatWarningsAsErrors
 - UI Framework
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

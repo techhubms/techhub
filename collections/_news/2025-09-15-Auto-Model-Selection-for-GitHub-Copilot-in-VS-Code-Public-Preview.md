@@ -23,6 +23,9 @@ tags:
 - Sonnet 4
 - VS Code
 - VS Code Extension
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

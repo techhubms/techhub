@@ -24,6 +24,8 @@ tags:
 - Observability
 - Solution Architecture
 - Stream Analytics
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

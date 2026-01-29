@@ -22,6 +22,8 @@ tags:
 - ROI
 - Savings Plans
 - Underperforming Commitment
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

@@ -21,6 +21,8 @@ tags:
 - Microsoft Fabric
 - Operational Autonomy
 - Partner Agents
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

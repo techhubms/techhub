@@ -19,6 +19,11 @@ tags:
 - Test Coverage
 - Unit Testing
 - Workflow Automation
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

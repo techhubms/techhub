@@ -21,6 +21,11 @@ tags:
 - Semantic Ranking
 - Unifyyourdataplatform
 - Vector Search
+- AI
+- Azure
+- GitHub Copilot
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

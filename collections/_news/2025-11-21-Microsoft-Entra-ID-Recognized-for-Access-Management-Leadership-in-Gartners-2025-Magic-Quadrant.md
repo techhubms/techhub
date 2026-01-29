@@ -22,6 +22,9 @@ tags:
 - Teams Integration
 - Threat Response
 - Zero Trust
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

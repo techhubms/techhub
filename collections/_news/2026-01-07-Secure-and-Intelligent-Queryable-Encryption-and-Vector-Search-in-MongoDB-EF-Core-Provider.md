@@ -20,6 +20,9 @@ tags:
 - Vector Embeddings
 - Vector Search
 - Vectorsearch
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

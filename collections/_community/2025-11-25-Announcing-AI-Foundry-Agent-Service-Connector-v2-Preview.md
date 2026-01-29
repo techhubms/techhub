@@ -20,6 +20,9 @@ tags:
 - Multi Agent Systems
 - Operations Monitoring
 - SharePoint Integration
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -31,6 +31,8 @@ tags:
 - Tempo
 - Traces
 - Vendor Lock in
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

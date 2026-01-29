@@ -19,6 +19,9 @@ tags:
 - Python
 - Response Discrepancy
 - System Prompt
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

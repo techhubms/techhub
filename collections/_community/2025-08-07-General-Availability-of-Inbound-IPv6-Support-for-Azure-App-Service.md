@@ -20,6 +20,8 @@ tags:
 - Network Configuration
 - Public Cloud
 - Windows App Service
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

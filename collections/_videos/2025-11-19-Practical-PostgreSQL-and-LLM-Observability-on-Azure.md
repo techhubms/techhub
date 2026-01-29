@@ -23,6 +23,10 @@ tags:
 - SQL Query Debugging
 - Unifyyourdataplatform
 - Vector Representation
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

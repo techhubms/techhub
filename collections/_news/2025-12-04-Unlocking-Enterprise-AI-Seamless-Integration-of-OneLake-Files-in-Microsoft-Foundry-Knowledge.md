@@ -20,6 +20,10 @@ tags:
 - Microsoft Fabric
 - OneLake
 - Unstructured Data
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

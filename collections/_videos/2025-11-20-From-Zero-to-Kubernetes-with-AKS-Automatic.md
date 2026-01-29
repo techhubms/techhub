@@ -24,6 +24,10 @@ tags:
 - Production Ready Kubernetes
 - Scalability
 - Security Best Practices
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

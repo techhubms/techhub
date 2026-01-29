@@ -19,6 +19,10 @@ tags:
 - PyGithub
 - Software Engineering
 - Workflow Orchestration
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

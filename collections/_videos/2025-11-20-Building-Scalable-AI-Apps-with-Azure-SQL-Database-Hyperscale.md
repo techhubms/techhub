@@ -27,6 +27,10 @@ tags:
 - Serverless
 - T SQL
 - Vector Indexes
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

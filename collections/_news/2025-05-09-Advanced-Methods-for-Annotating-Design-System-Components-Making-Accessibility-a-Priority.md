@@ -23,6 +23,8 @@ tags:
 - UI Components
 - User Experience
 - Visual Regression Testing
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -20,6 +20,9 @@ tags:
 - Sports Technology
 - Telemetry
 - Telemetry Pipeline
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

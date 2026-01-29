@@ -17,6 +17,8 @@ tags:
 - Public Preview
 - Team Scalability
 - User Governance
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

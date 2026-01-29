@@ -20,6 +20,9 @@ tags:
 - SLM
 - Small Language Models
 - Transformer Architecture
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

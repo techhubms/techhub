@@ -14,6 +14,10 @@ tags:
 - Searchbar
 - User Experience
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

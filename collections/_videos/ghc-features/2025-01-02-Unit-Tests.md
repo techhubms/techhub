@@ -8,6 +8,10 @@ plans:
 - Free
 tags:
 - Testing
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

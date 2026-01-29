@@ -21,6 +21,12 @@ tags:
 - Observability
 - Scalability
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

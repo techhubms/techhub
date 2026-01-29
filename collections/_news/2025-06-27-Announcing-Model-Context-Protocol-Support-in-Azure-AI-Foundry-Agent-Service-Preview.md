@@ -17,6 +17,10 @@ tags:
 - Open By Design
 - Python Code Samples
 - VS Code
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

@@ -16,6 +16,10 @@ tags:
 - Software Maintenance
 - Tech Debt
 - Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

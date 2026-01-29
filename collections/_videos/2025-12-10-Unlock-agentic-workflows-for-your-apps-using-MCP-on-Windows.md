@@ -25,6 +25,9 @@ tags:
 - Tech
 - Technology
 - Windows
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

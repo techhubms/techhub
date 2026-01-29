@@ -20,6 +20,9 @@ tags:
 - Repository Management
 - Rule Enforcement
 - Security Policy
+- DevOps
+- Security
+- Videos
 section_names:
 - devops
 - security

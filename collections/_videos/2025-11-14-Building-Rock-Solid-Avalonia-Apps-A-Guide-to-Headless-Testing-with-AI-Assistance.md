@@ -16,6 +16,11 @@ tags:
 - Testing Strategy
 - UI Automation
 - UI Testing
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

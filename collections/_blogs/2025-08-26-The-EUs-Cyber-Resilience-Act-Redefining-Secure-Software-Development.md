@@ -26,6 +26,9 @@ tags:
 - Software Updates
 - Techstrong Council
 - Vulnerability Management
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

@@ -16,6 +16,8 @@ tags:
 - Workflow Dispatch
 - Workflow Inputs
 - Workflow Trigger
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

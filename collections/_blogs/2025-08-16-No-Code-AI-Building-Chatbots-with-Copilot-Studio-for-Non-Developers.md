@@ -19,6 +19,8 @@ tags:
 - No Code Tools
 - Non Developers
 - Visual Flow Design
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

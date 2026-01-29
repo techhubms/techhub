@@ -26,6 +26,10 @@ tags:
 - Victor Dibia
 - Web UI
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

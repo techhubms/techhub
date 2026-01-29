@@ -18,6 +18,9 @@ tags:
 - Secret Management
 - Troubleshooting
 - VNet Integration
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

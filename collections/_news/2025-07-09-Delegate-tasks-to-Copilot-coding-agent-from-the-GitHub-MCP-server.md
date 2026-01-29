@@ -9,6 +9,9 @@ tags:
 - Coding Agent
 - GitHub MCP Server
 - Task Delegation
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

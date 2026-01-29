@@ -24,6 +24,10 @@ tags:
 - Software Delivery
 - Supply Chain Security
 - SwampUP
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

@@ -25,6 +25,11 @@ tags:
 - OpenAI
 - Retrieval Augmented Generation
 - Security And Governance
+- AI
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

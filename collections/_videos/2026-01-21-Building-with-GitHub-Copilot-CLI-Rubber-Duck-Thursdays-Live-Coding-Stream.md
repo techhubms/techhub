@@ -14,6 +14,9 @@ tags:
 - Programming
 - Software Development
 - Workflow Integration
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

@@ -16,6 +16,8 @@ tags:
 - Production Level AI
 - Solution Architect
 - Training
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

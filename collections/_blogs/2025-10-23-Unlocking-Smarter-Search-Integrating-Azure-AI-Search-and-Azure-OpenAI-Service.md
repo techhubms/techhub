@@ -19,6 +19,9 @@ tags:
 - Prompt Engineering
 - Retrieval Augmented Generation
 - Vector Search
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

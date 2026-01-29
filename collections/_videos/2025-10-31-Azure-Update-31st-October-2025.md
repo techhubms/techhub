@@ -24,6 +24,10 @@ tags:
 - PostgreSQL Flexible Server
 - Private Endpoints
 - Zero Downtime Deployment
+- Azure
+- DevOps
+- Machine Learning
+- Videos
 section_names:
 - azure
 - devops

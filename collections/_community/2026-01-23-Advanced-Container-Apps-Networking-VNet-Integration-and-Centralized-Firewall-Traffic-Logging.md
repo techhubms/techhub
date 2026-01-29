@@ -19,6 +19,9 @@ tags:
 - UDR
 - User Defined Routes
 - Virtual Network Integration
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

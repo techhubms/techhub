@@ -21,6 +21,9 @@ tags:
 - Technology
 - Tracing
 - Tracing Viewer
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

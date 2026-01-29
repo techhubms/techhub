@@ -22,6 +22,9 @@ tags:
 - Supply Chain Security
 - Token Management
 - Trusted Publishing
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

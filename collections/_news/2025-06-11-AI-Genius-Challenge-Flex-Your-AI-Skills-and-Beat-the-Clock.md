@@ -22,6 +22,9 @@ tags:
 - Microsoft Reactor
 - Public RAG Endpoints
 - Retrieval Augmented Generation
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

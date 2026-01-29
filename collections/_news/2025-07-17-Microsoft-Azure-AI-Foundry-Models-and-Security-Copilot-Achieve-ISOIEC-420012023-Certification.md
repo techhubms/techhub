@@ -21,6 +21,10 @@ tags:
 - Responsible AI
 - Security Certification
 - Trust And Transparency
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

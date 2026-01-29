@@ -25,6 +25,9 @@ tags:
 - Software Development Lifecycle
 - Third Party AI Integration
 - VS Code
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

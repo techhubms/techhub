@@ -21,6 +21,13 @@ tags:
 - MCP Server
 - Migration
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

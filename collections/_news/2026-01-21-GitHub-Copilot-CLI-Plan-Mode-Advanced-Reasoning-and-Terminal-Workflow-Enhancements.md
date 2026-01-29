@@ -25,6 +25,9 @@ tags:
 - Session Memory
 - Shell Mode
 - Terminal Workflow
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

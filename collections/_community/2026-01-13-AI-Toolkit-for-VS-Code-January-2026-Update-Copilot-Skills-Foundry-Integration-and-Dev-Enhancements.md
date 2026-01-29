@@ -21,6 +21,11 @@ tags:
 - VS Code
 - VS Code Extension
 - Windows ML
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

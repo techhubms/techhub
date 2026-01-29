@@ -16,6 +16,9 @@ tags:
 - Identity Governance
 - Mail Enabled Groups
 - SOA Conversion
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

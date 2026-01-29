@@ -13,6 +13,9 @@ tags:
 - Machine Learning
 - Self Driving Cars
 - Wayve
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

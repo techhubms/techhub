@@ -22,6 +22,9 @@ tags:
 - Rollforward
 - Testing
 - Tool Manifest
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

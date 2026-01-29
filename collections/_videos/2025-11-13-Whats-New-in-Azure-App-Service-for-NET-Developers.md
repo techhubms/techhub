@@ -24,6 +24,11 @@ tags:
 - Scaling Applications
 - VS
 - Web Apps
+- Azure
+- Coding
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - coding

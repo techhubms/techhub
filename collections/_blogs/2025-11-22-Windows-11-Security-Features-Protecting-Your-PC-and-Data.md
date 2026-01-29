@@ -26,6 +26,8 @@ tags:
 - Windows 11
 - Windows Defender Firewall
 - Windows Hello
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

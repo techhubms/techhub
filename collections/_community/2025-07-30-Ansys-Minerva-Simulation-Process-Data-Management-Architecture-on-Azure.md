@@ -14,6 +14,9 @@ tags:
 - Simulation Data Management
 - SQL Server
 - Virtual Machines
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

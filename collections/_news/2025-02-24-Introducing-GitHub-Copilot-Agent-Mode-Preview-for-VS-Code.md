@@ -19,6 +19,10 @@ tags:
 - Terminal Commands
 - VS Code
 - Workspace Tools
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

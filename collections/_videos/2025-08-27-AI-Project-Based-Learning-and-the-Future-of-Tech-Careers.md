@@ -14,6 +14,8 @@ tags:
 - Project Based Learning
 - Software Development
 - Technology Careers
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

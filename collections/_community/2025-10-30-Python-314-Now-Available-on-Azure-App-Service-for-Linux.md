@@ -20,6 +20,9 @@ tags:
 - Python 3.14
 - Runtime Upgrades
 - Web Apps
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

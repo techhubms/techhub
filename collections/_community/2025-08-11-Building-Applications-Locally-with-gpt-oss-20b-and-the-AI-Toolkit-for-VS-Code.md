@@ -25,6 +25,8 @@ tags:
 - Vllm
 - VS Code
 - VS Code Extension
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

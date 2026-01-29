@@ -18,6 +18,9 @@ tags:
 - Retired
 - VS Code
 - Workflow Update
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

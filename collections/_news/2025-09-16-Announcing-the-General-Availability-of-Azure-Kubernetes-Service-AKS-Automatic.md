@@ -26,6 +26,10 @@ tags:
 - Production Clusters
 - Scale
 - Technology
+- AI
+- Azure
+- DevOps
+- News
 section_names:
 - ai
 - azure

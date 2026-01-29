@@ -26,6 +26,10 @@ tags:
 - Technical Planning
 - Test Automation
 - Vibe Coding
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

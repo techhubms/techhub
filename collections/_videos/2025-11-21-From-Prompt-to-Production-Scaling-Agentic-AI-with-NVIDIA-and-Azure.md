@@ -22,6 +22,9 @@ tags:
 - NVIDIA Nemotron
 - NVIDIA NIM
 - Workflow Orchestration
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

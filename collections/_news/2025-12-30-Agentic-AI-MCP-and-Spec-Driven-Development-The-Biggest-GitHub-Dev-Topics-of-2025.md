@@ -20,6 +20,11 @@ tags:
 - Spec Driven Development
 - Spec Kit
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

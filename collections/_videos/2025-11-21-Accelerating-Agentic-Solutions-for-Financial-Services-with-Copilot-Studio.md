@@ -22,6 +22,8 @@ tags:
 - Morningstar
 - MSIgnite
 - Sub Agents
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

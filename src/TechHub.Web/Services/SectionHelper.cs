@@ -4,7 +4,7 @@ namespace TechHub.Web.Services;
 /// Helper service for section and collection display name mappings.
 /// Provides fallback display names when section data isn't available.
 /// </summary>
-internal static class SectionHelper
+public static class SectionHelper
 {
     /// <summary>
     /// Gets the display title for a section URL.
@@ -28,25 +28,6 @@ internal static class SectionHelper
     }
 
     /// <summary>
-    /// Gets the section URL from a section title.
-    /// </summary>
-    public static string GetSectionUrl(string sectionName)
-    {
-        return sectionName?.ToLowerInvariant() switch
-        {
-            "github copilot" => "github-copilot",
-            "artificial intelligence" or "ai" => "ai",
-            "machine learning" or "ml" => "ml",
-            "coding" or ".net" => "coding",
-            "azure" => "azure",
-            "devops" => "devops",
-            "security" => "security",
-            "all" => "all",
-            _ => sectionName?.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal) ?? ""
-        };
-    }
-
-    /// <summary>
     /// Gets the display name for a collection.
     /// </summary>
     public static string GetCollectionTitle(string collectionName)
@@ -57,18 +38,5 @@ internal static class SectionHelper
         }
 
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
-    }
-
-    /// <summary>
-    /// Converts a string to title case using invariant culture.
-    /// </summary>
-    public static string ToTitleCase(this string text)
-    {
-        if (string.IsNullOrWhiteSpace(text))
-        {
-            return text ?? string.Empty;
-        }
-
-        return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(text.ToLowerInvariant());
     }
 }

@@ -20,6 +20,10 @@ tags:
 - Semantic Kernel
 - Tool Integration
 - VS
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

@@ -20,6 +20,8 @@ tags:
 - Performance Tuning
 - SQL Server
 - SQL Server Migration Assistant
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

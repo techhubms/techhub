@@ -15,6 +15,8 @@ tags:
 - SoundEffect
 - SpriteFont
 - XNA 3.1
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

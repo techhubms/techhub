@@ -20,6 +20,8 @@ tags:
 - Model Deprecation
 - Model Migration
 - Retired
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

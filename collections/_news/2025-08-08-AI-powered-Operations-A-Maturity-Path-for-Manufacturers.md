@@ -16,6 +16,8 @@ tags:
 - Microsoft Partners
 - Operational Maturity
 - Smart Manufacturing
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

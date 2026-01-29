@@ -23,6 +23,11 @@ tags:
 - Stream Analytics Job
 - Terraform
 - Zero Trust
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

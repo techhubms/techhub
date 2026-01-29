@@ -24,6 +24,10 @@ tags:
 - Registry
 - Win32Apps
 - Windows
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - azure
 - coding

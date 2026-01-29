@@ -27,6 +27,10 @@ tags:
 - Turnkey Scaling
 - Unifyyourdataplatform
 - VS Code Extension
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

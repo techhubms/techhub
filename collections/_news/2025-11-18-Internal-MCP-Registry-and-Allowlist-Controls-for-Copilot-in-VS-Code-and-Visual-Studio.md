@@ -25,6 +25,10 @@ tags:
 - Security Policy
 - VS
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

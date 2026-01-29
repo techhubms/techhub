@@ -9,6 +9,9 @@ tags:
 - Developer Productivity
 - GitHub Mobile
 - Mobile Development
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

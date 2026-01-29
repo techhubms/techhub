@@ -17,6 +17,9 @@ tags:
 - Microservices
 - Software Development
 - VS Code
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

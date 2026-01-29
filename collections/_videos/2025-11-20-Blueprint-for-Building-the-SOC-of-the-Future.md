@@ -21,6 +21,9 @@ tags:
 - SOC Architecture
 - Threat Detection
 - Unified Identity Inventory
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

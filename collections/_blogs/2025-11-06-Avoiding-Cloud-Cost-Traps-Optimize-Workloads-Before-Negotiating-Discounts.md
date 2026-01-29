@@ -28,6 +28,8 @@ tags:
 - Social LinkedIn
 - Social X
 - Workload Analysis
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

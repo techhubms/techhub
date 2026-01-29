@@ -9,8 +9,17 @@ namespace TechHub.E2E.Tests.Web;
 /// E2E tests for RSS feed functionality
 /// </summary>
 [Collection("RSS Tests")]
-public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class RssTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public RssTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
@@ -19,7 +28,7 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

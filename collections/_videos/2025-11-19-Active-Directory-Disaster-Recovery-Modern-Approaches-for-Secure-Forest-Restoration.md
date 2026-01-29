@@ -21,6 +21,9 @@ tags:
 - Recovery Plan
 - Threat Detection
 - Windows Server Backup
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

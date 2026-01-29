@@ -19,6 +19,9 @@ tags:
 - OpenAI GPT 5.1 Codex Max
 - Product Update
 - Visual Studio Code Integration
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

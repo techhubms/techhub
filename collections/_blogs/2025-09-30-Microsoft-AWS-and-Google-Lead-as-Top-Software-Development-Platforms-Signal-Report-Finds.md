@@ -33,6 +33,8 @@ tags:
 - Spotlight
 - Strategic Vision
 - The Futurum Group
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

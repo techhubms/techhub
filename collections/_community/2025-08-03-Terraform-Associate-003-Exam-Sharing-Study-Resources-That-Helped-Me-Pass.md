@@ -18,6 +18,8 @@ tags:
 - Terraform
 - Terraform Associate
 - Udemy
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

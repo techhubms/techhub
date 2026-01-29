@@ -20,6 +20,10 @@ tags:
 - UI Cleanup
 - Visual Studio Blog
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

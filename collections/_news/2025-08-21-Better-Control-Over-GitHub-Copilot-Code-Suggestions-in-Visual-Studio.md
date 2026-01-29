@@ -15,6 +15,10 @@ tags:
 - Partial Accept
 - Programming Tools
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

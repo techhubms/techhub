@@ -24,6 +24,10 @@ tags:
 - Power BI
 - Real Time Analytics
 - Semantic Model
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

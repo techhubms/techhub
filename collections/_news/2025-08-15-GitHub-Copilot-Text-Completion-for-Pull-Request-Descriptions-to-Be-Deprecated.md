@@ -15,6 +15,9 @@ tags:
 - Product Update
 - Pull Requests
 - Text Completion
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

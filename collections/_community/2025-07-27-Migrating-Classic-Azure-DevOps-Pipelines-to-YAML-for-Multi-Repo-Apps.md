@@ -20,6 +20,10 @@ tags:
 - Playwright Tests
 - Release Pipeline
 - YAML Pipelines
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

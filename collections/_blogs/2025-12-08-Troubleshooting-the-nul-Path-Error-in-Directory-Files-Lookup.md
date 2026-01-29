@@ -20,6 +20,8 @@ tags:
 - Symlink
 - System.IO
 - Windows Devices
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

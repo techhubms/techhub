@@ -33,6 +33,11 @@ tags:
 - Regulatory Compliance
 - Smart Document Summarization
 - Unify Your Data Platform
+- AI
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

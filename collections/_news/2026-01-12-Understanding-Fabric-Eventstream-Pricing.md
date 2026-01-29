@@ -19,6 +19,9 @@ tags:
 - Pricing
 - Real Time Analytics
 - Streams
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

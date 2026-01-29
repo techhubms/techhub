@@ -20,6 +20,9 @@ tags:
 - Semantic Kernel
 - Semantic Processing
 - Workflow Automation
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

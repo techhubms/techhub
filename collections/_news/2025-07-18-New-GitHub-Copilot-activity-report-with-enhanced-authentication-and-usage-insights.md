@@ -14,6 +14,9 @@ tags:
 - Usage Analytics
 - User Authentication
 - Visibility
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

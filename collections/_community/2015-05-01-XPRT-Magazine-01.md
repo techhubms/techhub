@@ -13,6 +13,11 @@ tags:
 - Service Fabric
 - Version Control
 - VS
+- Azure
+- DevOps
+- Coding
+- Security
+- Community
 section_names:
 - azure
 - devops

@@ -15,6 +15,8 @@ tags:
 - Exam Preparation
 - Free Azure Account
 - Learning Resources
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -25,6 +25,9 @@ tags:
 - Reproducibility
 - Scalable Systems
 - Solution Architecture
+- AI
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - ml

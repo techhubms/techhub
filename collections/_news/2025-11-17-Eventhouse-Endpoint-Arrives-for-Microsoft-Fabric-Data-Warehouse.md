@@ -21,6 +21,8 @@ tags:
 - Telemetry Data
 - Time Series Data
 - Unified Architecture
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

@@ -21,6 +21,10 @@ tags:
 - Unit Testing
 - VS
 - xUnit
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

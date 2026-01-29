@@ -22,6 +22,8 @@ tags:
 - Postman
 - Software Development
 - Video Interviews
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

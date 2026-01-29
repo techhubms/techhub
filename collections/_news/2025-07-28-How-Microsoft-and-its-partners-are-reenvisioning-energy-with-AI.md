@@ -14,6 +14,8 @@ tags:
 - Partners
 - Sustainability
 - Technology Transformation
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

@@ -23,6 +23,9 @@ tags:
 - Service Orchestration
 - Software Development
 - Test Automation
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

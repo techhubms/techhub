@@ -22,6 +22,10 @@ tags:
 - Prometheus
 - Sustainability
 - Time Shifting
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

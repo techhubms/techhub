@@ -22,6 +22,10 @@ tags:
 - Structured Data
 - Unifyyourdataplatform
 - Unstructured Data
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - azure
 - ml

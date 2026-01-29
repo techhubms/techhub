@@ -20,6 +20,10 @@ tags:
 - Server Security
 - Virtual Training
 - Workload Protection
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

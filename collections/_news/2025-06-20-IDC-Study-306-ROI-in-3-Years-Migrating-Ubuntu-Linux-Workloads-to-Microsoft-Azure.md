@@ -16,6 +16,10 @@ tags:
 - ROI
 - Scalability
 - Ubuntu
+- Azure
+- AI
+- Security
+- News
 section_names:
 - azure
 - ai

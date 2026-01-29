@@ -18,6 +18,8 @@ tags:
 - Safia Abdalla
 - Web APIs
 - Web Development
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

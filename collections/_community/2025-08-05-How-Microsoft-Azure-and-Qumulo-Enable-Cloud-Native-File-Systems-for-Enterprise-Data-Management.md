@@ -23,6 +23,10 @@ tags:
 - Qumulo
 - Replication
 - Snapshots
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

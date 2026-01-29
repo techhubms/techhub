@@ -10,6 +10,9 @@ tags:
 - Context Limits
 - Copilot Chat
 - Image Support
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

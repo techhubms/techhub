@@ -23,6 +23,9 @@ tags:
 - Operational Excellence
 - PagerDuty
 - Remediation
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

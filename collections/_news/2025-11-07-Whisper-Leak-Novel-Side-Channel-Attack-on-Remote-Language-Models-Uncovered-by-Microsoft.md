@@ -25,6 +25,9 @@ tags:
 - Streaming Model
 - TLS
 - Whisper Leak
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

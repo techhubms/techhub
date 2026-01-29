@@ -18,6 +18,12 @@ tags:
 - Microsoft Foundry
 - Semantic Kernel
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

@@ -17,6 +17,9 @@ tags:
 - OpenAI
 - Programming Assistant
 - Visual Perception
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

@@ -17,6 +17,10 @@ tags:
 - Issue Management
 - Linear
 - Pull Requests
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

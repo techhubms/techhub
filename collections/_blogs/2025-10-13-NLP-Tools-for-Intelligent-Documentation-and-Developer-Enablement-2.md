@@ -35,6 +35,10 @@ tags:
 - Transformer Models
 - Vector Stores
 - VS Code
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

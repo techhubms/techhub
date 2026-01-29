@@ -23,6 +23,10 @@ tags:
 - Preview Features
 - Snowflake
 - Unified Data Access
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

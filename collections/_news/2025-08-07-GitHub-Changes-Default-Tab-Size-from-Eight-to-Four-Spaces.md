@@ -15,6 +15,8 @@ tags:
 - Tab Size
 - User Preferences
 - User Settings
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

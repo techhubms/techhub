@@ -21,6 +21,8 @@ tags:
 - Microsoft AI
 - Mustafa Suleyman
 - Superintelligence
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

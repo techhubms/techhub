@@ -19,6 +19,8 @@ tags:
 - Terraform
 - User Provisioning
 - Workload Management
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

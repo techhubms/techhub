@@ -18,6 +18,8 @@ tags:
 - Microsoft AI
 - Microsoft AI Transformation
 - Microsoft Cloud
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

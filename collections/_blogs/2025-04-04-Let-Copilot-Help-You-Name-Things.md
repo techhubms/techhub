@@ -17,6 +17,10 @@ tags:
 - Programming Tips
 - Refactoring
 - Variable Naming
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

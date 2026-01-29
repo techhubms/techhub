@@ -20,6 +20,8 @@ tags:
 - Namespace Replication
 - Premium Tier
 - Synchronous Replication
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

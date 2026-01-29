@@ -19,6 +19,8 @@ tags:
 - Nested Statements
 - Readability
 - While Loop
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

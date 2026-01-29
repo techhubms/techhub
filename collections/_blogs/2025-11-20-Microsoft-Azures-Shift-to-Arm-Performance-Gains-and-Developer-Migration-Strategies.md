@@ -22,6 +22,11 @@ tags:
 - Snowflake
 - Virtual Machines
 - VMs
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - azure

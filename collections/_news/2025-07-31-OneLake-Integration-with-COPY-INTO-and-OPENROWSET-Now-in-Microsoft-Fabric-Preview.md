@@ -22,6 +22,8 @@ tags:
 - Service Principals
 - SQL
 - Workspace Permissions
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

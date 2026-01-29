@@ -15,6 +15,9 @@ tags:
 - Machine Learning
 - Object Detection
 - Vision APIs
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

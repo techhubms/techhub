@@ -22,6 +22,10 @@ tags:
 - Pull Requests
 - Repository Onboarding
 - Terminal
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

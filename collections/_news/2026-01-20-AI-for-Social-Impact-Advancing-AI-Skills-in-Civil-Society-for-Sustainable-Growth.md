@@ -21,6 +21,8 @@ tags:
 - Prompt Engineering
 - Sukhothai Thammathirat Open University
 - Sustainable Growth
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

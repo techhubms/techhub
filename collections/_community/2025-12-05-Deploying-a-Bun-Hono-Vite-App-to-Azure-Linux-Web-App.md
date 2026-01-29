@@ -21,6 +21,10 @@ tags:
 - Vite
 - VS Code
 - Web Development
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

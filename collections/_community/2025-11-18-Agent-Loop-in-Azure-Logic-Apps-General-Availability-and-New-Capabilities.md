@@ -27,6 +27,11 @@ tags:
 - Teams Integration
 - VNET Integration
 - Workflow Orchestration
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

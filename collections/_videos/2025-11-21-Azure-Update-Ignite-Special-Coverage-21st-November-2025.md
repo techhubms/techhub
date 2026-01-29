@@ -29,6 +29,12 @@ tags:
 - Microsoft Azure
 - Microsoft Fabric
 - Microsoft Foundry
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

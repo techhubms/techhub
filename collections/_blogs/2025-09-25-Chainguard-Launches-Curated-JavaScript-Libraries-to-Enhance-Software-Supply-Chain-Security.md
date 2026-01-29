@@ -31,6 +31,9 @@ tags:
 - Social X
 - Software Supply Chain
 - Sonatype Nexus
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

@@ -21,7 +21,9 @@ public class ContentSyncService : IContentSyncService
     private readonly ILogger<ContentSyncService> _logger;
     private readonly ContentSyncOptions _options;
     private readonly string _collectionsPath;
-    
+    private static readonly char[] _tagSplitSeparators = [' ', '-', '_'];
+    private static readonly char[] _excerptSplitSeparators = [' ', '\n', '\r'];
+
     public ContentSyncService(
         IDbConnection connection,
         IMarkdownService markdownService,
@@ -29,13 +31,19 @@ public class ContentSyncService : IContentSyncService
         IOptions<ContentSyncOptions> options,
         IOptions<ContentOptions> contentOptions)
     {
-        _connection = connection ?? throw new ArgumentNullException(nameof(connection));
-        _markdownService = markdownService ?? throw new ArgumentNullException(nameof(markdownService));
-        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
-        _collectionsPath = contentOptions?.Value.CollectionsPath ?? throw new ArgumentNullException(nameof(contentOptions));
+        ArgumentNullException.ThrowIfNull(connection);
+        ArgumentNullException.ThrowIfNull(markdownService);
+        ArgumentNullException.ThrowIfNull(logger);
+        ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(contentOptions);
+
+        _connection = connection;
+        _markdownService = markdownService;
+        _logger = logger;
+        _options = options.Value;
+        _collectionsPath = contentOptions.Value.CollectionsPath;
     }
-    
+
     public async Task<SyncResult> SyncAsync(CancellationToken ct = default)
     {
         if (!_options.Enabled)
@@ -43,59 +51,62 @@ public class ContentSyncService : IContentSyncService
             _logger.LogInformation("Content sync disabled (ContentSync:Enabled = false)");
             return new SyncResult(0, 0, 0, 0, TimeSpan.Zero);
         }
-        
+
+        // Force full sync if explicitly configured
         if (_options.ForceFullSync)
         {
             return await ForceSyncAsync(ct);
         }
-        
-        // Skip sync if database already has content (fast startup)
-        // To resync: delete the database file and restart
-        if (await HasContentAsync(ct))
+
+        // Check if database has content
+        var hasContent = await HasContentAsync(ct);
+
+        if (!hasContent)
         {
-            _logger.LogInformation("Content sync skipped: database already has content. Delete techhub.db to force resync.");
-            return new SyncResult(0, 0, 0, 0, TimeSpan.Zero);
+            // Database is empty - do a full sync
+            _logger.LogInformation("Database is empty, performing initial full sync");
+            return await ForceSyncAsync(ct);
         }
-        
-        // Database is empty - do a full sync
-        return await ForceSyncAsync(ct);
+
+        // Database has content - do incremental sync by default
+        return await IncrementalSyncAsync(ct);
     }
-    
+
     public async Task<bool> HasContentAsync(CancellationToken ct = default)
     {
         var count = await _connection.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM content_items");
         return count > 0;
     }
-    
+
     public async Task<SyncResult> ForceSyncAsync(CancellationToken ct = default)
     {
         _logger.LogInformation("Starting FULL content sync (deleting all existing content)...");
         var stopwatch = Stopwatch.StartNew();
-        
+
         try
         {
             // Start transaction
             var transaction = _connection.BeginTransaction();
-            
+
             try
             {
                 // Delete all existing content (cascade deletes junction tables)
                 await _connection.ExecuteAsync("DELETE FROM content_items", transaction: transaction);
                 _logger.LogInformation("Deleted all existing content");
-                
+
                 // Load and insert all content
-                var (added, updated, deleted, unchanged) = await SyncContentAsync(isFullSync: true, ct);
-                
+                var (added, updated, deleted, unchanged) = await SyncContentAsync(ct);
+
                 // Update sync metadata
-                await UpdateSyncMetadataAsync(added, transaction, ct);
-                
+                await UpdateSyncMetadataAsync(added, transaction);
+
                 transaction.Commit();
                 stopwatch.Stop();
-                
+
                 _logger.LogInformation(
                     "Full sync complete: {Added} added, {Duration:N0}ms",
                     added, stopwatch.ElapsedMilliseconds);
-                
+
                 return new SyncResult(added, 0, 0, 0, stopwatch.Elapsed);
             }
             catch
@@ -110,44 +121,45 @@ public class ContentSyncService : IContentSyncService
             throw;
         }
     }
-    
+
     public async Task<bool> IsContentChangedAsync(CancellationToken ct = default)
     {
         var markdownFiles = GetMarkdownFiles();
         var fileHashes = await ComputeFileHashesAsync(markdownFiles, ct);
-        var dbHashes = await GetDatabaseHashesAsync(ct);
-        
+        var dbHashes = await GetDatabaseHashesAsync();
+
         // Check if any files are new, changed, or deleted
         var newFiles = fileHashes.Keys.Except(dbHashes.Keys).Any();
         var deletedFiles = dbHashes.Keys.Except(fileHashes.Keys).Any();
         var changedFiles = fileHashes.Where(kvp =>
             dbHashes.TryGetValue(kvp.Key, out var dbHash) && dbHash != kvp.Value).Any();
-        
+
         return newFiles || deletedFiles || changedFiles;
     }
-    
+
     private async Task<SyncResult> IncrementalSyncAsync(CancellationToken ct)
     {
         _logger.LogInformation("Starting incremental content sync...");
         var stopwatch = Stopwatch.StartNew();
-        
+
         try
         {
             var transaction = _connection.BeginTransaction();
-            
+
             try
             {
-                var (added, updated, deleted, unchanged) = await SyncContentAsync(isFullSync: false, ct);
-                
-                await UpdateSyncMetadataAsync(added + updated, transaction, ct);
-                
+                var (added, updated, deleted, unchanged) = await SyncContentAsync(ct);
+
+                // Total items = new items + updated items + unchanged items
+                await UpdateSyncMetadataAsync(added + updated + unchanged, transaction);
+
                 transaction.Commit();
                 stopwatch.Stop();
-                
+
                 _logger.LogInformation(
                     "Incremental sync complete: {Added} added, {Updated} updated, {Deleted} deleted, {Unchanged} unchanged ({Duration:N0}ms)",
                     added, updated, deleted, unchanged, stopwatch.ElapsedMilliseconds);
-                
+
                 return new SyncResult(added, updated, deleted, unchanged, stopwatch.Elapsed);
             }
             catch
@@ -162,24 +174,23 @@ public class ContentSyncService : IContentSyncService
             throw;
         }
     }
-    
+
     private async Task<(int added, int updated, int deleted, int unchanged)> SyncContentAsync(
-        bool isFullSync,
         CancellationToken ct)
     {
         // Get all markdown files
         var markdownFilesList = GetMarkdownFiles();
         _logger.LogInformation("Found {Count} markdown files", markdownFilesList.Count);
-        
+
         // Create dictionary for file lookup by slug
         var markdownFiles = markdownFilesList.ToDictionary(f => GetContentSlugFromFile(f), f => f);
-        
+
         // Compute hashes for all files
         var fileHashes = await ComputeFileHashesAsync(markdownFilesList, ct);
-        
+
         // Get existing hashes from database
-        var dbHashes = await GetDatabaseHashesAsync(ct);
-        
+        var dbHashes = await GetDatabaseHashesAsync();
+
         // Determine changes
         var newFiles = fileHashes.Keys.Except(dbHashes.Keys).ToList();
         var deletedFiles = dbHashes.Keys.Except(fileHashes.Keys).ToList();
@@ -189,11 +200,11 @@ public class ContentSyncService : IContentSyncService
         var unchanged = fileHashes.Keys.Intersect(dbHashes.Keys)
             .Where(id => fileHashes[id] == dbHashes[id])
             .ToList();
-        
+
         _logger.LogInformation(
             "Changes detected: {New} new, {Updated} updated, {Deleted} deleted, {Unchanged} unchanged",
             newFiles.Count, potentiallyChanged.Count, deletedFiles.Count, unchanged.Count);
-        
+
         // Process deletions
         foreach (var compositeId in deletedFiles)
         {
@@ -204,51 +215,51 @@ public class ContentSyncService : IContentSyncService
                 "DELETE FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug",
                 new { CollectionName = collectionName, Slug = slug });
         }
-        
+
         // Process new and updated files sequentially to avoid SQLite thread-safety issues
         // SQLite does not support concurrent writes even with WAL mode in all configurations
         var filesToProcess = newFiles.Concat(potentiallyChanged).ToList();
-        
+
         foreach (var id in filesToProcess)
         {
             await ProcessFileAsync(id, markdownFiles[id], fileHashes[id], ct);
         }
-        
+
         return (newFiles.Count, potentiallyChanged.Count, deletedFiles.Count, unchanged.Count);
     }
-    
+
     private List<FileInfo> GetMarkdownFiles()
     {
         var files = new List<FileInfo>();
         var collectionsDir = new DirectoryInfo(_collectionsPath);
-        
+
         if (!collectionsDir.Exists)
         {
             throw new DirectoryNotFoundException($"Collections directory not found: {_collectionsPath}");
         }
-        
+
         // Get all subdirectories starting with underscore (collections)
         var collectionDirs = collectionsDir.GetDirectories("_*");
-        
+
         foreach (var dir in collectionDirs)
         {
             // Get all markdown files recursively (including subfolders like ghc-features)
             var mdFiles = dir.GetFiles("*.md", SearchOption.AllDirectories)
                 .Where(f => !f.Name.Equals("AGENTS.md", StringComparison.OrdinalIgnoreCase) &&
                            !f.Name.EndsWith("-guidelines.md", StringComparison.OrdinalIgnoreCase));
-            
+
             files.AddRange(mdFiles);
         }
-        
+
         return files;
     }
-    
-    private async Task<Dictionary<string, string>> ComputeFileHashesAsync(
+
+    private static async Task<Dictionary<string, string>> ComputeFileHashesAsync(
         List<FileInfo> files,
         CancellationToken ct)
     {
         var hashes = new Dictionary<string, string>();
-        
+
         foreach (var file in files)
         {
             var slug = GetContentSlugFromFile(file);
@@ -256,19 +267,19 @@ public class ContentSyncService : IContentSyncService
             var hash = ComputeSha256Hash(content);
             hashes[slug] = hash;
         }
-        
+
         return hashes;
     }
-    
-    private async Task<Dictionary<string, string>> GetDatabaseHashesAsync(CancellationToken ct)
+
+    private async Task<Dictionary<string, string>> GetDatabaseHashesAsync()
     {
         var rows = await _connection.QueryAsync<(string CollectionName, string Slug, string ContentHash)>(
             "SELECT collection_name, slug, content_hash FROM content_items");
-        
+
         // Use composite key "collection:slug" to allow same slug in different collections
         return rows.ToDictionary(r => $"{r.CollectionName}:{r.Slug}", r => r.ContentHash);
     }
-    
+
     private async Task ProcessFileAsync(
         string compositeId,
         FileInfo file,
@@ -281,21 +292,21 @@ public class ContentSyncService : IContentSyncService
             var parts = compositeId.Split(':');
             var collectionName = parts[0];
             var slug = parts[1];
-            
+
             // Parse frontmatter and content
             var frontMatter = await _markdownService.ParseFrontMatterAsync(file.FullName, ct);
             var fileContent = await File.ReadAllTextAsync(file.FullName, ct);
-            
+
             // Extract content and excerpt
             var (excerpt, content) = ExtractExcerptAndContent(fileContent);
-            
+
             // Extract metadata from frontmatter and file path
             var subcollectionName = GetSubcollectionNameFromPath(file);
             var dateEpoch = GetDateEpochFromFrontMatter(frontMatter, file.Name);
             var sections = GetSectionsFromFrontMatter(frontMatter);
             var tags = GetTagsFromFrontMatter(frontMatter);
             var plans = GetPlansFromFrontMatter(frontMatter);
-            
+
             // Validate primary_section is present in frontmatter
             var primarySection = frontMatter.GetValueOrDefault("primary_section", null)?.ToString();
             if (string.IsNullOrWhiteSpace(primarySection))
@@ -304,16 +315,16 @@ public class ContentSyncService : IContentSyncService
                     $"Missing required 'primary_section' in frontmatter for file: {file.FullName}. " +
                     "Run ContentFixer to add missing frontmatter fields.");
             }
-            
+
             // Upsert main content item
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
                     slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
-                    primary_section_name, external_url, author, feed_name, ghes_support, draft, content_hash,
+                    primary_section_name, external_url, author, feed_name, ghes_support, draft, plans, content_hash,
                     created_at, updated_at
                 ) VALUES (
                     @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
-                    @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @ContentHash,
+                    @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @Plans, @ContentHash,
                     CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                 )
                 ON CONFLICT(collection_name, slug) DO UPDATE SET
@@ -328,6 +339,7 @@ public class ContentSyncService : IContentSyncService
                     feed_name = @FeedName,
                     ghes_support = @GhesSupport,
                     draft = @Draft,
+                    plans = @Plans,
                     content_hash = @ContentHash,
                     updated_at = CURRENT_TIMESTAMP",
                 new
@@ -345,15 +357,15 @@ public class ContentSyncService : IContentSyncService
                     FeedName = frontMatter.GetValueOrDefault("feed_name", null)?.ToString(),
                     GhesSupport = (frontMatter.GetValueOrDefault("ghes_support", false) is bool ghesSupport && ghesSupport) ? 1 : 0,
                     Draft = ConvertBoolToInt(frontMatter, "draft"),
+                    Plans = plans.Count > 0 ? string.Join(",", plans) : null,
                     ContentHash = contentHash
                 });
-            
+
             // Delete existing junction table entries
             await _connection.ExecuteAsync("DELETE FROM content_tags WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
             await _connection.ExecuteAsync("DELETE FROM content_tags_expanded WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
             await _connection.ExecuteAsync("DELETE FROM content_sections WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
-            await _connection.ExecuteAsync("DELETE FROM content_plans WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
-            
+
             // Insert tags and expanded tags
             foreach (var tag in tags)
             {
@@ -361,9 +373,9 @@ public class ContentSyncService : IContentSyncService
                 await _connection.ExecuteAsync(
                     "INSERT INTO content_tags (collection_name, slug, tag, tag_normalized) VALUES (@CollectionName, @Slug, @Tag, @TagNormalized)",
                     new { CollectionName = collectionName, Slug = slug, Tag = tag, TagNormalized = tagNormalized });
-                
+
                 // Expand tags into words for subset matching
-                var words = tag.Split(new[] { ' ', '-', '_' }, StringSplitOptions.RemoveEmptyEntries);
+                var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
                 foreach (var word in words)
                 {
                     var wordNormalized = word.ToLowerInvariant().Trim();
@@ -372,21 +384,13 @@ public class ContentSyncService : IContentSyncService
                         new { CollectionName = collectionName, Slug = slug, Word = wordNormalized });
                 }
             }
-            
+
             // Insert sections
             foreach (var section in sections)
             {
                 await _connection.ExecuteAsync(
                     "INSERT INTO content_sections (collection_name, slug, section_name) VALUES (@CollectionName, @Slug, @Section)",
                     new { CollectionName = collectionName, Slug = slug, Section = section });
-            }
-            
-            // Insert plans
-            foreach (var plan in plans)
-            {
-                await _connection.ExecuteAsync(
-                    "INSERT INTO content_plans (collection_name, slug, plan_name) VALUES (@CollectionName, @Slug, @Plan)",
-                    new { CollectionName = collectionName, Slug = slug, Plan = plan });
             }
         }
         catch (Exception ex)
@@ -395,7 +399,7 @@ public class ContentSyncService : IContentSyncService
             throw;
         }
     }
-    
+
     private static string GetContentSlugFromFile(FileInfo file)
     {
         // Composite key: "collection:slug" to allow same slug in different collections
@@ -405,7 +409,7 @@ public class ContentSyncService : IContentSyncService
         var slug = StripDatePrefixFromSlug(filename).ToLowerInvariant();
         return $"{collectionName}:{slug}";
     }
-    
+
     /// <summary>
     /// Strips YYYY-MM-DD- date prefix from filename to create clean slug.
     /// </summary>
@@ -416,29 +420,28 @@ public class ContentSyncService : IContentSyncService
             @"^\d{4}-\d{2}-\d{2}-",
             string.Empty);
     }
-    
+
     private static string GetCollectionNameFromPath(FileInfo file)
     {
         // Extract collection from path: collections/_videos/ghc-features/file.md → videos
         // or collections/_blogs/file.md → blogs
         // NOTE: Subcollections don't change the collection name - they're just for filtering
         var pathParts = file.DirectoryName?.Split(Path.DirectorySeparatorChar) ?? [];
-        
+
         // Find the collection directory (starts with _)
-        var collectionDir = pathParts.FirstOrDefault(p => p.StartsWith('_'));
-        if (collectionDir == null)
-            throw new InvalidOperationException($"Cannot determine collection from path: {file.FullName}");
-        
+        var collectionDir = pathParts.FirstOrDefault(p => p.StartsWith('_'))
+            ?? throw new InvalidOperationException($"Cannot determine collection from path: {file.FullName}");
+
         // Always use the main collection name without underscore
         // Subcollections (subfolders) are for filtering only, not for changing collection name
         return collectionDir[1..]; // Remove leading underscore
     }
-    
+
     private static string? GetSubcollectionNameFromPath(FileInfo file)
     {
         var pathParts = file.DirectoryName?.Split(Path.DirectorySeparatorChar) ?? [];
         var collectionDir = pathParts.FirstOrDefault(p => p.StartsWith('_'));
-        
+
         if (collectionDir != null)
         {
             var collectionIndex = Array.IndexOf(pathParts, collectionDir);
@@ -451,11 +454,11 @@ public class ContentSyncService : IContentSyncService
                 }
             }
         }
-        
+
         return null;
     }
-    
-    private static long GetDateEpochFromFrontMatter(Dictionary<string, object> frontMatter, string fileName)
+
+    private static long GetDateEpochFromFrontMatter(Dictionary<string, object?> frontMatter, string fileName)
     {
         // Try to get date from frontmatter first
         if (frontMatter.TryGetValue("date", out var dateValue) && dateValue != null)
@@ -465,55 +468,54 @@ public class ContentSyncService : IContentSyncService
                 return ((DateTimeOffset)parsedDate).ToUnixTimeSeconds();
             }
         }
-        
+
         // Fallback to filename (YYYY-MM-DD-title.md)
         var datePart = fileName[..10]; // First 10 chars: YYYY-MM-DD
         if (DateTime.TryParse(datePart, out var fileDate))
         {
             return ((DateTimeOffset)fileDate).ToUnixTimeSeconds();
         }
-        
+
         throw new InvalidOperationException($"Cannot determine date from frontmatter or filename: {fileName}");
     }
-    
-    private static List<string> GetSectionsFromFrontMatter(Dictionary<string, object> frontMatter)
+
+    private static List<string> GetSectionsFromFrontMatter(Dictionary<string, object?> frontMatter)
     {
         if (frontMatter.TryGetValue("section_names", out var value) && value is IEnumerable<object> list)
         {
-            return list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)).ToList();
+            return [.. list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s))];
         }
-        
+
         return ["all"]; // Default section
     }
-    
-    private static List<string> GetTagsFromFrontMatter(Dictionary<string, object> frontMatter)
+
+    private static List<string> GetTagsFromFrontMatter(Dictionary<string, object?> frontMatter)
     {
         if (frontMatter.TryGetValue("tags", out var value) && value is IEnumerable<object> list)
         {
-            return list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)).ToList();
+            return [.. list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s))];
         }
-        
+
         return [];
     }
-    
-    private static List<string> GetPlansFromFrontMatter(Dictionary<string, object> frontMatter)
+
+    private static List<string> GetPlansFromFrontMatter(Dictionary<string, object?> frontMatter)
     {
-        if (frontMatter.TryGetValue("copilot_plans", out var value) && value is IEnumerable<object> list)
+        if (frontMatter.TryGetValue("plans", out var value) && value is IEnumerable<object> list)
         {
-            return list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)).ToList();
+            return [.. list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s))];
         }
-        
+
         return [];
     }
-    
+
     private static (string excerpt, string content) ExtractExcerptAndContent(string fileContent)
     {
         // Remove frontmatter
         var lines = fileContent.Split('\n');
-        var inFrontMatter = false;
         var frontMatterEnd = 0;
         var dashCount = 0;
-        
+
         for (int i = 0; i < lines.Length; i++)
         {
             if (lines[i].Trim() == "---")
@@ -526,54 +528,54 @@ public class ContentSyncService : IContentSyncService
                 }
             }
         }
-        
+
         var bodyLines = lines.Skip(frontMatterEnd).ToList();
         var body = string.Join('\n', bodyLines);
-        
+
         // Extract excerpt (content before <!--excerpt_end-->)
         var excerptEndMarker = "<!--excerpt_end-->";
         var excerptEndIndex = body.IndexOf(excerptEndMarker, StringComparison.OrdinalIgnoreCase);
-        
+
         if (excerptEndIndex > 0)
         {
             var excerpt = body[..excerptEndIndex].Trim();
             return (excerpt, body);
         }
-        
+
         // No excerpt marker - use first 200 words as excerpt
-        var words = body.Split(new[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+        var words = body.Split(_excerptSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
         var excerptWords = words.Take(200);
         var fallbackExcerpt = string.Join(' ', excerptWords);
-        
+
         return (fallbackExcerpt, body);
     }
-    
+
     private static string ComputeSha256Hash(string content)
     {
         var bytes = Encoding.UTF8.GetBytes(content);
         var hash = SHA256.HashData(bytes);
         return Convert.ToHexString(hash).ToLowerInvariant();
     }
-    
-    private async Task UpdateSyncMetadataAsync(int totalItems, IDbTransaction transaction, CancellationToken ct)
+
+    private async Task UpdateSyncMetadataAsync(int totalItems, IDbTransaction transaction)
     {
         await _connection.ExecuteAsync(@"
             INSERT INTO sync_metadata (key, value, updated_at) VALUES (@Key, @Value, CURRENT_TIMESTAMP)
             ON CONFLICT(key) DO UPDATE SET value = @Value, updated_at = CURRENT_TIMESTAMP",
             new { Key = "last_sync", Value = DateTime.UtcNow.ToString("O") },
             transaction: transaction);
-        
+
         await _connection.ExecuteAsync(@"
             INSERT INTO sync_metadata (key, value, updated_at) VALUES (@Key, @Value, CURRENT_TIMESTAMP)
             ON CONFLICT(key) DO UPDATE SET value = @Value, updated_at = CURRENT_TIMESTAMP",
-            new { Key = "total_items", Value = totalItems.ToString() },
+            new { Key = "total_items", Value = totalItems.ToString(System.Globalization.CultureInfo.InvariantCulture) },
             transaction: transaction);
     }
 
-    private static int ConvertBoolToInt(Dictionary<string, object> frontMatter, string key)
+    private static int ConvertBoolToInt(Dictionary<string, object?> frontMatter, string key)
     {
         var value = frontMatter.GetValueOrDefault(key, false);
-        
+
         // Handle various types YamlDotNet might return
         return value switch
         {

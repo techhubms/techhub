@@ -28,6 +28,8 @@ tags:
 - Msft Ignite
 - SDK
 - SharePoint Data
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

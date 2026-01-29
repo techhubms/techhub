@@ -32,6 +32,9 @@ tags:
 - Telemetry
 - Unified Dashboards
 - Unified Telemetry
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

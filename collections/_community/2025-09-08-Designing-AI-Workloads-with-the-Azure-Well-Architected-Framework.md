@@ -21,6 +21,12 @@ tags:
 - Operational Excellence
 - Performance Optimization
 - Scalable AI Solutions
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

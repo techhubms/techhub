@@ -30,6 +30,8 @@ tags:
 - Vibe Coding
 - Vibe Coding Risks
 - Vibe Coding Security
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

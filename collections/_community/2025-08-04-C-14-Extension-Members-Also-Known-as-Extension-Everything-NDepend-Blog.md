@@ -15,6 +15,8 @@ tags:
 - NDepend
 - Operators
 - Properties
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

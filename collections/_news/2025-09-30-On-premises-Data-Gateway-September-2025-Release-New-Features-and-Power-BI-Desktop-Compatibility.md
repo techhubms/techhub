@@ -19,6 +19,9 @@ tags:
 - Power BI
 - Power BI Desktop
 - Version 3000.286
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

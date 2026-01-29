@@ -22,6 +22,8 @@ tags:
 - Upgrade Process
 - Web API
 - Windows Service
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

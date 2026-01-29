@@ -17,6 +17,8 @@ tags:
 - Machine Learning
 - Model Comparison
 - Prompt Engineering
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

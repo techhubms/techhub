@@ -16,6 +16,9 @@ tags:
 - Software Development
 - Source Control
 - VS Code
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

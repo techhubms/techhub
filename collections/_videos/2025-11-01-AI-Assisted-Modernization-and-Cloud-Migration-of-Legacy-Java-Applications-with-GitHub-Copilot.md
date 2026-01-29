@@ -29,6 +29,12 @@ tags:
 - RabbitMQ
 - Security Vulnerabilities
 - Spring Boot
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

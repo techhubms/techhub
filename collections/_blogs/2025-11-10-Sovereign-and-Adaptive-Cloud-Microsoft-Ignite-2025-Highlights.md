@@ -28,6 +28,10 @@ tags:
 - Observability
 - Resilience
 - Sovereign Cloud
+- AI
+- Azure
+- Security
+- Blogs
 section_names:
 - ai
 - azure

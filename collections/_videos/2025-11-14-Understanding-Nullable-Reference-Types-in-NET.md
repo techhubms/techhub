@@ -17,6 +17,8 @@ tags:
 - Nullable Reference Types
 - Programming Best Practices
 - Type System
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

@@ -26,6 +26,9 @@ tags:
 - SQL in Fabric
 - SQL Server
 - Transactional Databases
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - azure
 - ml

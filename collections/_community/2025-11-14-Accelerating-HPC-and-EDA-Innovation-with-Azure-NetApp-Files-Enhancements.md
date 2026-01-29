@@ -22,6 +22,10 @@ tags:
 - S3 Compatible
 - Volume Scalability
 - Well Architected
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

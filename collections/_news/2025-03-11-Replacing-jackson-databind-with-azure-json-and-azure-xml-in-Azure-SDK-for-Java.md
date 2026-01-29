@@ -19,6 +19,9 @@ tags:
 - Reflection
 - Serialization
 - XmlSerializable
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

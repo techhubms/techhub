@@ -43,23 +43,23 @@ public class SqliteDialect : ISqlDialect
 
     public string GetFullTextSearchSql(string searchQuery)
     {
-        // SQLite FTS5 syntax
+        // SQLite FTS5 syntax - must use table name, not alias, for MATCH and bm25()
         return @"
-            SELECT c.*, bm25(fts) AS rank
+            SELECT c.*, bm25(content_fts) AS rank
             FROM content_items c
-            JOIN content_fts fts ON c.rowid = fts.rowid
-            WHERE fts MATCH @SearchQuery";
+            JOIN content_fts ON c.rowid = content_fts.rowid
+            WHERE content_fts MATCH @SearchQuery";
     }
 
     public string GetRelevanceRankExpression()
     {
-        return "bm25(fts)";
+        return "bm25(content_fts)";
     }
 
     public string GetHighlightExpression(string columnName, string searchQuery)
     {
         // SQLite FTS5 snippet function
-        return $"snippet(fts, -1, '<mark>', '</mark>', '...', 64)";
+        return $"snippet(content_fts, -1, '<mark>', '</mark>', '...', 64)";
     }
 
     public string GetPaginationSql(int take, string? continuationToken)

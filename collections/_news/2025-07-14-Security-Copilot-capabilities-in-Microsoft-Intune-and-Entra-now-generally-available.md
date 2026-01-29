@@ -15,6 +15,9 @@ tags:
 - Security Automation
 - Security Copilot
 - Threat Management
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

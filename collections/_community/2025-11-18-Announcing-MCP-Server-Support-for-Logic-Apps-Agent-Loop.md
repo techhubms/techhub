@@ -18,6 +18,9 @@ tags:
 - OpenAPI
 - Secure Authentication
 - Tool Extensibility
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

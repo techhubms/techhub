@@ -23,6 +23,11 @@ tags:
 - Terraform
 - VS Code For Web
 - Well Architected Framework
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

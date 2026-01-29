@@ -15,6 +15,9 @@ tags:
 - General Availability
 - Microsoft Fabric
 - Serverless
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

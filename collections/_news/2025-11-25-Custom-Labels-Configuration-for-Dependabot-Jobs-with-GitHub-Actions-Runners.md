@@ -20,6 +20,9 @@ tags:
 - Self Hosted Runners
 - Supply Chain Security
 - Workflow Management
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

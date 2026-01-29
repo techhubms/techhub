@@ -16,6 +16,8 @@ tags:
 - Request Handling
 - Single Responsibility Principle
 - Software Architecture
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

@@ -18,6 +18,10 @@ tags:
 - Prompt Engineering
 - Responsible AI
 - Software Development
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

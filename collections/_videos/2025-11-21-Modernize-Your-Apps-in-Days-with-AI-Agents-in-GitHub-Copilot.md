@@ -21,6 +21,12 @@ tags:
 - MSIgnite
 - Oracle To PostgreSQL
 - Pull Request Automation
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

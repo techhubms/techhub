@@ -25,6 +25,8 @@ tags:
 - SDR Automation
 - Slack
 - Twilio
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

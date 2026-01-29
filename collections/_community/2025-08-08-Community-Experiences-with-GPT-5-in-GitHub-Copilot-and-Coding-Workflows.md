@@ -21,6 +21,10 @@ tags:
 - Sonnet 4
 - VS Code
 - VS Code Settings
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

@@ -24,6 +24,10 @@ tags:
 - Power BI
 - Real Time Intelligence
 - Row Level Security
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

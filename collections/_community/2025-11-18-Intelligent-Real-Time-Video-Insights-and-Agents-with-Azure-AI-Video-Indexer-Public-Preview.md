@@ -25,6 +25,9 @@ tags:
 - Scalability
 - Security Agent
 - Video Summarization
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

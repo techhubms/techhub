@@ -20,6 +20,8 @@ tags:
 - PowerShell
 - Private Networking
 - Ubuntu 24.02
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

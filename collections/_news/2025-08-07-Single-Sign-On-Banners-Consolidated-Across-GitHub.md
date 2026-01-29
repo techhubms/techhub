@@ -14,6 +14,8 @@ tags:
 - Single Sign On
 - SSO
 - User Experience
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

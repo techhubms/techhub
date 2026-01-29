@@ -82,16 +82,16 @@ public class MarkdownServiceTests
     }
 
     /// <summary>
-    /// Test: Empty or null input should return empty string
+    /// Test: Empty or whitespace input should return empty string
     /// Why: Defensive programming - handle edge cases gracefully
+    /// Note: null is handled by ArgumentNullException.ThrowIfNull (tested separately)
     /// </summary>
     [Theory]
-    [InlineData(null)]
     [InlineData("")]
     [InlineData("   ")]
     public void ToHtml_EmptyInput_ReturnsEmptyString(string? input)
     {
-        // Act: Process empty/null markdown
+        // Act: Process empty/whitespace markdown
         var html = _service.RenderToHtml(input!);
 
         // Assert: Returns empty string (no exceptions)

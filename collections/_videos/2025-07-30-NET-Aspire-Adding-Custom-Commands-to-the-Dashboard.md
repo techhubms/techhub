@@ -15,6 +15,8 @@ tags:
 - Development Environment
 - Scripts
 - Team Collaboration
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

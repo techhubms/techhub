@@ -23,6 +23,9 @@ tags:
 - Security Queries
 - Static Analysis
 - TypeScript
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

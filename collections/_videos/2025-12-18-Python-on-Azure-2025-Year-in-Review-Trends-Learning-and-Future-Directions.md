@@ -28,6 +28,9 @@ tags:
 - Technology
 - Year in Review
 - Yearinreview
+- Azure
+- Coding
+- Videos
 section_names:
 - azure
 - coding

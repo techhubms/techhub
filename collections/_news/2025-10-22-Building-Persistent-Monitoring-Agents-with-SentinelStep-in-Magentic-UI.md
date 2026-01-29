@@ -20,6 +20,8 @@ tags:
 - Python
 - SentinelBench
 - SentinelStep
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

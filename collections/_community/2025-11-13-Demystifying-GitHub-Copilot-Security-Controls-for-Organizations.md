@@ -19,6 +19,10 @@ tags:
 - Trust Center
 - VS Code
 - Vulnerability Protection
+- AI
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - github-copilot

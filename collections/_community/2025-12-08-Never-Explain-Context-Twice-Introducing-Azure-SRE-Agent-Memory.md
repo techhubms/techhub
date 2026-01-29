@@ -19,6 +19,10 @@ tags:
 - Runbooks
 - Session Insights
 - Site Reliability Engineering
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

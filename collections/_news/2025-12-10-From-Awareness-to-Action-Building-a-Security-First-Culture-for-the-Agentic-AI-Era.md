@@ -20,6 +20,9 @@ tags:
 - Security First Culture
 - Security Training
 - Skilling Initiatives
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

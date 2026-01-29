@@ -16,6 +16,8 @@ tags:
 - Marten
 - Migrations
 - ORM
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

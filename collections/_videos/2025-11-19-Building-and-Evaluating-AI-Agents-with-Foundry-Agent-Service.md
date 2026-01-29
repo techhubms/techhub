@@ -20,6 +20,10 @@ tags:
 - Session Recording
 - Tool Registration
 - W&B Weave
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

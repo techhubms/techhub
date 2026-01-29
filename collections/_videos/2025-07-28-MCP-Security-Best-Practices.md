@@ -15,6 +15,8 @@ tags:
 - Session Hijacking
 - Token Passthrough
 - Tool Poisoning
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

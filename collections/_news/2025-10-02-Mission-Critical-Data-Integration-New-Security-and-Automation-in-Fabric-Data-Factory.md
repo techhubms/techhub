@@ -20,6 +20,10 @@ tags:
 - REST API
 - VNet Gateway
 - Workspace Identity Authentication
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

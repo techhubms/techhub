@@ -18,6 +18,8 @@ tags:
 - Remote Engineering
 - Siemens NX
 - Virtual Desktop
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

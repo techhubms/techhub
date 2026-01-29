@@ -7,6 +7,8 @@ tags:
 - Language Models
 - Neural Networks
 - PyTorch
+- Machine Learning
+- Videos
 section_names:
 - ml
 primary_section: ml

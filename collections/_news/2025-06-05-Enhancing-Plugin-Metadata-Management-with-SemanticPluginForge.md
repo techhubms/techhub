@@ -16,6 +16,9 @@ tags:
 - Semantic Kernel
 - SemanticPluginForge
 - Tools
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

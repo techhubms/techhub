@@ -19,6 +19,8 @@ tags:
 - Organization Management
 - Outside Collaborators
 - Reporting
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

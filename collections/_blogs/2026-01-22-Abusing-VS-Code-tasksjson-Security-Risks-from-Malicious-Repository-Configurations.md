@@ -20,6 +20,10 @@ tags:
 - Tasks.json
 - VS Code
 - VS Code Settings
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - coding
 - devops

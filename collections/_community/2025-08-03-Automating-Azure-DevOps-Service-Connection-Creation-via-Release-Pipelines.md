@@ -16,6 +16,9 @@ tags:
 - Release Pipeline
 - Service Connections
 - Service Principal
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

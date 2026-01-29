@@ -18,6 +18,8 @@ tags:
 - Runner Image
 - Workflow Migration
 - X86 64
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

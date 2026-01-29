@@ -25,6 +25,10 @@ tags:
 - T SQL
 - Tech
 - Technology
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

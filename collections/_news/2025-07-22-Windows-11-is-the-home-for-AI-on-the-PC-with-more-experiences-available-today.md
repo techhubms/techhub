@@ -14,6 +14,8 @@ tags:
 - PC Experiences
 - User Experience
 - Windows 11
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

@@ -17,6 +17,9 @@ tags:
 - Software Engineering
 - Task Automation
 - Technical Debt
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

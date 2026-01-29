@@ -21,6 +21,9 @@ tags:
 - Microsoft Azure
 - Modern Web Development
 - VS
+- Azure
+- Coding
+- Videos
 section_names:
 - azure
 - coding

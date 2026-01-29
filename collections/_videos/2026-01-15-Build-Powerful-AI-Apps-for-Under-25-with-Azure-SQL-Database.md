@@ -25,6 +25,9 @@ tags:
 - Tech
 - Technology
 - Web Apps
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

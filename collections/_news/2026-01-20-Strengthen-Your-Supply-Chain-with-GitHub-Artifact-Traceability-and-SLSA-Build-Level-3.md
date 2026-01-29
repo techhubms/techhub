@@ -23,6 +23,9 @@ tags:
 - Security Alerts
 - SLSA
 - Supply Chain Security
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

@@ -26,6 +26,8 @@ tags:
 - VM Fleet Consolidation
 - Weak Scaling
 - WRF
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

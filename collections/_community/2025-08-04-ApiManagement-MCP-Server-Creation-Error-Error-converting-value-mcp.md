@@ -15,6 +15,8 @@ tags:
 - Microsoft Documentation
 - Microsoft.Azure.ApiManagement
 - REST API
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

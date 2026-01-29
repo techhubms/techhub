@@ -18,6 +18,9 @@ tags:
 - Network Restrictions
 - Platform Governance
 - Proxy Configuration
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

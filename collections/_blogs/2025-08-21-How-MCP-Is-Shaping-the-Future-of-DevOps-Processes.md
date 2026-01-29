@@ -20,6 +20,9 @@ tags:
 - Software Delivery Lifecycle
 - Software Governance
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

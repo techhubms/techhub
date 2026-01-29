@@ -20,6 +20,9 @@ tags:
 - Spark SQL
 - Table Maintenance
 - Write Amplification
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

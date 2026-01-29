@@ -34,6 +34,14 @@ tags:
 - Serverless GPUs
 - Spring AI
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

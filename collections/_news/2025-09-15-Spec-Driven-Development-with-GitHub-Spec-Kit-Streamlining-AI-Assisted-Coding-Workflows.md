@@ -19,6 +19,10 @@ tags:
 - Spec Driven Development
 - Specify CLI
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -20,6 +20,11 @@ tags:
 - Raycast
 - Software Development
 - Task Assignment
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

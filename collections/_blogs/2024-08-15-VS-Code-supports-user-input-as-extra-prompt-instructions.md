@@ -6,6 +6,9 @@ tags:
 - Configuration
 - Custom Instructions
 - Productivity
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

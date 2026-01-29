@@ -21,6 +21,8 @@ tags:
 - VS
 - WPF
 - XAML
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

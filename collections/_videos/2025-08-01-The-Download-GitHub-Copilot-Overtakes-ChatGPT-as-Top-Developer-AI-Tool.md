@@ -20,6 +20,9 @@ tags:
 - Podcast
 - Software Development
 - TheDownload
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

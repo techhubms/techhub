@@ -15,6 +15,10 @@ tags:
 - Release Notes
 - Security Update
 - YAML Pipelines
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

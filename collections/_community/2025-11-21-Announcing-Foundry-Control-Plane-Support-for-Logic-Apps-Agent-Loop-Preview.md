@@ -21,6 +21,9 @@ tags:
 - Preview
 - Telemetry
 - Token Usage
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

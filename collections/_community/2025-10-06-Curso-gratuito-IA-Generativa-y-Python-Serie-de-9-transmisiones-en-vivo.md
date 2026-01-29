@@ -28,6 +28,11 @@ tags:
 - Structured Outputs
 - Tool Calling
 - Vector Search
+- AI
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - ai
 - azure

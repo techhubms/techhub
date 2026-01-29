@@ -18,6 +18,9 @@ tags:
 - npm 11
 - Testing
 - V8 Engine
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

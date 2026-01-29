@@ -22,6 +22,9 @@ tags:
 - Programming Languages
 - Pulumi
 - Software Developer
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

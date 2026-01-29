@@ -23,6 +23,10 @@ tags:
 - Threat Intelligence
 - Tool Consolidation
 - XDR
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

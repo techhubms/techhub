@@ -17,6 +17,9 @@ tags:
 - Natural Language Processing
 - Pipeline Expression Builder
 - Preview Features
+- AI
+- Machine Learning
+- News
 section_names:
 - ai
 - ml

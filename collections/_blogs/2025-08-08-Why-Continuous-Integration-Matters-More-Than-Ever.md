@@ -26,6 +26,8 @@ tags:
 - Software Quality
 - Team Collaboration
 - Testing Automation
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

@@ -20,6 +20,11 @@ tags:
 - Task Automation
 - Team Workflows
 - Technology
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

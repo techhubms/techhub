@@ -26,6 +26,10 @@ tags:
 - PowerShell
 - Ripgrep
 - Shell Commands
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

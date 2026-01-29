@@ -18,6 +18,9 @@ tags:
 - Public Preview
 - Software Development Metrics
 - Universe25
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

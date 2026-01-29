@@ -23,6 +23,10 @@ tags:
 - SQLite
 - Supervisory Agents
 - Workflow Orchestration
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

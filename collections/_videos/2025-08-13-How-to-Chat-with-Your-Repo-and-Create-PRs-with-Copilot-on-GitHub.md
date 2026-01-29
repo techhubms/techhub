@@ -20,6 +20,9 @@ tags:
 - Pull Requests
 - Repository Q&A
 - Software Engineering
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

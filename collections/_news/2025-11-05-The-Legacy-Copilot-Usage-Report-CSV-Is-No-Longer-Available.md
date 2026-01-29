@@ -18,6 +18,9 @@ tags:
 - Retired
 - Usage Report
 - Workflow Updates
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

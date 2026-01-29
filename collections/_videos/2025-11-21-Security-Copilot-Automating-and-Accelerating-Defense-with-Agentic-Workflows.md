@@ -22,6 +22,9 @@ tags:
 - Security Copilot
 - Security Marketplace
 - Trust Metrics
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

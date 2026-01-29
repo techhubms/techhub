@@ -19,6 +19,9 @@ tags:
 - Technical Challenge
 - Underrepresented Groups
 - Virtual Event
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

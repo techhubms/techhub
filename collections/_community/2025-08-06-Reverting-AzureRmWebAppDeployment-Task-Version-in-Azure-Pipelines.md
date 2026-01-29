@@ -20,6 +20,9 @@ tags:
 - Task Versioning
 - Tfx
 - YAML Pipelines
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

@@ -15,6 +15,10 @@ tags:
 - Project Guidelines
 - Team Collaboration
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

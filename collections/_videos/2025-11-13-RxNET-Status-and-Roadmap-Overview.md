@@ -18,6 +18,8 @@ tags:
 - Reactive Programming
 - Rx.NET
 - Software Roadmap
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

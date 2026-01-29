@@ -22,6 +22,8 @@ tags:
 - Windows
 - Windows Server
 - Windows Server Summit
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

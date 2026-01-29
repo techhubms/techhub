@@ -32,6 +32,9 @@ tags:
 - Transitive Dependencies
 - Vulnerability Management
 - Vulnerability Remediation
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

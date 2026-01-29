@@ -22,6 +22,8 @@ tags:
 - Resiliency
 - Sustainability
 - Thought Leadership
+- Azure
+- News
 section_names:
 - azure
 primary_section: azure

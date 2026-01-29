@@ -20,6 +20,8 @@ tags:
 - Microsoft Azure
 - Pay as You Go
 - Red Hat
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -15,6 +15,8 @@ tags:
 - Repository Creation
 - Repository Management
 - Workflow Improvements
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

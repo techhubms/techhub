@@ -24,6 +24,10 @@ tags:
 - Python
 - Satellite Imagery
 - Unsupervised Learning
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

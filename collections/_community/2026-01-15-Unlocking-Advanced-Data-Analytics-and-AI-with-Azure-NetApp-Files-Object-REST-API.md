@@ -23,6 +23,10 @@ tags:
 - S3 Compatible
 - SMB
 - Spark
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

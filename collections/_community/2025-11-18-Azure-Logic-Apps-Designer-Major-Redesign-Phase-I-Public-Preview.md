@@ -20,6 +20,10 @@ tags:
 - Unified Canvas
 - VS Code
 - Workflow Automation
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

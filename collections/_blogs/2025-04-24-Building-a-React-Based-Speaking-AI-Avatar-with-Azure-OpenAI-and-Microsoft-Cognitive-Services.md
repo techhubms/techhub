@@ -19,6 +19,10 @@ tags:
 - Three.js
 - Viseme
 - WebRTC
+- AI
+- Azure
+- Coding
+- Blogs
 section_names:
 - ai
 - azure

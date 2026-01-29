@@ -11,6 +11,9 @@ tags:
 - GitHub
 - Premium
 - Pull Request
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

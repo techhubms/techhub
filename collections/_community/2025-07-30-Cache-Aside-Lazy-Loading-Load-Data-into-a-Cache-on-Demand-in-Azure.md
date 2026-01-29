@@ -14,6 +14,8 @@ tags:
 - Lazy Loading
 - Performance
 - Scalability
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

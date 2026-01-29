@@ -22,6 +22,8 @@ tags:
 - Threat Intelligence
 - User Feedback
 - Windows
+- Security
+- News
 section_names:
 - security
 primary_section: security

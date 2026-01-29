@@ -16,6 +16,8 @@ tags:
 - SharePoint
 - SharePoint Governance
 - Site Templates
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

@@ -19,6 +19,10 @@ tags:
 - RPM
 - SBOM
 - YAML
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

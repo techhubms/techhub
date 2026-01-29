@@ -31,6 +31,10 @@ tags:
 - Social X
 - Software Quality
 - Unit Test Generation
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

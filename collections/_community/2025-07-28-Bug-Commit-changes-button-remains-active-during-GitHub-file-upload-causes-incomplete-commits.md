@@ -15,6 +15,8 @@ tags:
 - UI Bug
 - User Experience
 - Workflow
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

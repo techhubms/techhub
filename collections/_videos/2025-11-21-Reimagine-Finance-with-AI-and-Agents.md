@@ -19,6 +19,9 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Variance Analysis
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

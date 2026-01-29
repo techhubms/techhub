@@ -22,6 +22,8 @@ tags:
 - MSIgnite
 - Multi Agent Management
 - Responsible AI
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

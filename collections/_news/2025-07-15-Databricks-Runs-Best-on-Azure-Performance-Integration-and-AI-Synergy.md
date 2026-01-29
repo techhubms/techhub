@@ -25,6 +25,12 @@ tags:
 - Microsoft Purview
 - Power BI
 - Unity Catalog
+- AI
+- Azure
+- Machine Learning
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

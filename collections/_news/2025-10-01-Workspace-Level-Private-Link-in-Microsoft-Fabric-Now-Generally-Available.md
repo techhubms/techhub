@@ -16,6 +16,10 @@ tags:
 - Network Isolation
 - Private Link
 - Workspace Security
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

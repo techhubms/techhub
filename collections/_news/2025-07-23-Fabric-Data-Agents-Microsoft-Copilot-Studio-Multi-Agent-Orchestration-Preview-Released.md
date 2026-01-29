@@ -15,6 +15,9 @@ tags:
 - Microsoft Copilot Studio
 - Microsoft Fabric
 - Multi Agent Orchestration
+- AI
+- Machine Learning
+- News
 section_names:
 - ai
 - ml

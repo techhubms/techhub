@@ -20,6 +20,10 @@ tags:
 - Organizational Transformation
 - Platform Modernization
 - Retail Data
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

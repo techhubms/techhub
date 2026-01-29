@@ -22,6 +22,10 @@ tags:
 - Unified Data Platform
 - Unifyyourdataplatform
 - Vector Search
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

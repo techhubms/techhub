@@ -12,6 +12,11 @@ tags:
 - GitHub Actions
 - Node.js
 - OAuth
+- AI
+- Azure
+- GitHub Copilot
+- Coding
+- Blogs
 section_names:
 - ai
 - azure

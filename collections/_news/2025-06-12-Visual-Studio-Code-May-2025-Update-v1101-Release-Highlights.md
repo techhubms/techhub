@@ -23,6 +23,11 @@ tags:
 - V1.101
 - VS Code
 - VSCE
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

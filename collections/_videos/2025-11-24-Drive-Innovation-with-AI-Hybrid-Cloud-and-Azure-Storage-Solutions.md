@@ -22,6 +22,9 @@ tags:
 - Reliability
 - Scalability
 - Workflow Automation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

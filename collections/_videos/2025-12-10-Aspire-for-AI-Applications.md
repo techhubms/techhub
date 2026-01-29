@@ -24,6 +24,9 @@ tags:
 - Tech
 - Technology
 - Token Usage Analysis
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

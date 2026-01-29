@@ -29,6 +29,8 @@ tags:
 - UDR
 - User Defined Routes
 - VMSS
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

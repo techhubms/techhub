@@ -19,6 +19,10 @@ tags:
 - Preview Feature
 - Root Cause Analysis
 - Support Automation
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

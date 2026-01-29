@@ -20,6 +20,8 @@ tags:
 - Themes
 - User Adoption
 - Web Parts
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

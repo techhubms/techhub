@@ -16,6 +16,9 @@ tags:
 - Pull Requests
 - Repository Management
 - Web Interface
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

@@ -20,6 +20,9 @@ tags:
 - Internet Of Things
 - RAG (retrieval Augmented Generation)
 - Smart Automation
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -23,6 +23,10 @@ tags:
 - SQL Server Integration Services
 - SSIS
 - T SQL COPY INTO
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

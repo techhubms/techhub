@@ -10,9 +10,16 @@ namespace TechHub.E2E.Tests.Api;
 /// Tests: GET /api/sections, GET /api/sections/{name}
 /// </summary>
 [Collection("API E2E Tests")]
-public class SectionEndpointsE2ETests(ApiCollectionFixture fixture)
+public class SectionEndpointsE2ETests
 {
-    private readonly HttpClient _client = fixture.Factory.CreateClient();
+    private readonly HttpClient _client;
+
+    public SectionEndpointsE2ETests(ApiCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _client = fixture.Factory.CreateClient();
+    }
 
     [Fact]
     public async Task GetAllSections_ReturnsRealSections()

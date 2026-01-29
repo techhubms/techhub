@@ -24,6 +24,9 @@ tags:
 - Proxy
 - Sidecar Pattern
 - Solution Architecture
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

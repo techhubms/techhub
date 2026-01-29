@@ -21,6 +21,8 @@ tags:
 - Win32
 - Windows App SDK
 - WinUI 3
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

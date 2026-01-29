@@ -22,6 +22,10 @@ tags:
 - Pull Request Automation
 - Security Guidelines
 - Technical Planning
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

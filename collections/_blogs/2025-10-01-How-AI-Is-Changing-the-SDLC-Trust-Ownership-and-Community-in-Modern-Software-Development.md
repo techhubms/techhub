@@ -20,6 +20,9 @@ tags:
 - Non Deterministic Systems
 - Platform Engineering
 - Software Development Lifecycle
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

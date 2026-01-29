@@ -20,6 +20,11 @@ tags:
 - OAuth
 - OpenTelemetry
 - Python
+- AI
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - ai
 - azure

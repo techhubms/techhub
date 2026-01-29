@@ -15,6 +15,8 @@ tags:
 - OneDevQuestion
 - Plain Language To Code
 - Seth Juarez
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

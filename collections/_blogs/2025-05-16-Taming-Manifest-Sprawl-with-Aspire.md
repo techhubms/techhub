@@ -18,6 +18,9 @@ tags:
 - OpenTelemetry
 - Service Modeling
 - Software Development
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

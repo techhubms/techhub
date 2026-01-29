@@ -21,6 +21,8 @@ tags:
 - Software Supply Chain
 - Software Vulnerabilities
 - Vulnerability Response
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

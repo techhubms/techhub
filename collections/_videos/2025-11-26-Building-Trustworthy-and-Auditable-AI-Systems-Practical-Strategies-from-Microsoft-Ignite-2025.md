@@ -29,6 +29,9 @@ tags:
 - Technical
 - Technical Strategy
 - Workflow Complexity
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

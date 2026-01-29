@@ -20,6 +20,8 @@ tags:
 - Virtualization
 - Windows 11
 - WSL2
+- Security
+- Blogs
 section_names:
 - security
 primary_section: security

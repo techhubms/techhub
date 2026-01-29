@@ -21,6 +21,9 @@ tags:
 - MAUI
 - Performance Analysis
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

@@ -27,6 +27,9 @@ tags:
 - Session Management
 - Terminal
 - WinGet
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

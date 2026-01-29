@@ -14,6 +14,9 @@ tags:
 - Reliability Engineering
 - Site Reliability Engineering
 - SRE
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

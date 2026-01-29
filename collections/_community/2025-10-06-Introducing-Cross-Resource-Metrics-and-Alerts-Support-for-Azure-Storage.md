@@ -19,6 +19,9 @@ tags:
 - ResourceId
 - Storage Metrics
 - Table Storage
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

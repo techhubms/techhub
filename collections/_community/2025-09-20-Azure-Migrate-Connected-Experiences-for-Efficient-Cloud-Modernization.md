@@ -20,6 +20,11 @@ tags:
 - Private Link
 - Security By Design
 - Sustainability
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

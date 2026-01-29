@@ -23,6 +23,8 @@ tags:
 - Replication
 - Scaling
 - Sharding
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

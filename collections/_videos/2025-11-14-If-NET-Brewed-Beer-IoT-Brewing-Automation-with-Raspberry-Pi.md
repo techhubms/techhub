@@ -17,6 +17,8 @@ tags:
 - Raspberry Pi
 - Software Development
 - Tech Conference
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

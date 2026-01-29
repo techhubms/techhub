@@ -20,6 +20,9 @@ tags:
 - PIN Authentication
 - Windows 10
 - Windows 11
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

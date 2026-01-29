@@ -21,6 +21,10 @@ tags:
 - Policy as Code
 - Security Baseline
 - Windows Server
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

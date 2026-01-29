@@ -20,6 +20,9 @@ tags:
 - SIEM
 - Threat Hunting
 - XDR
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

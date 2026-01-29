@@ -19,6 +19,10 @@ tags:
 - Reusable Workflows
 - Runner Improvements
 - Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

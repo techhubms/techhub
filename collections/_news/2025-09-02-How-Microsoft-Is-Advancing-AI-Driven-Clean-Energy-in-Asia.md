@@ -20,6 +20,9 @@ tags:
 - Sustainability
 - Virtual PPA
 - Water Resilience
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

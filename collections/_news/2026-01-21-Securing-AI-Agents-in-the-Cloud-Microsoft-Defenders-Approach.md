@@ -20,6 +20,10 @@ tags:
 - Security Posture Management
 - Sensitive Data Protection
 - Threat Detection
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

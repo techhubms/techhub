@@ -21,6 +21,10 @@ tags:
 - Power BI
 - Real Time Intelligence
 - SynapseML
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

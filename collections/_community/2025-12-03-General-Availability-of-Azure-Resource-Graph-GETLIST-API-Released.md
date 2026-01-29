@@ -25,6 +25,8 @@ tags:
 - Resource Group
 - Resource Management
 - Virtual Machines
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

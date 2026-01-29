@@ -11,6 +11,9 @@ tags:
 - Code Review
 - Pull Request
 - Workspace
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

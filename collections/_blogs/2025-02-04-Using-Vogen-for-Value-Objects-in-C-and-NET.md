@@ -15,6 +15,8 @@ tags:
 - Validation
 - Value Objects
 - Vogen
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

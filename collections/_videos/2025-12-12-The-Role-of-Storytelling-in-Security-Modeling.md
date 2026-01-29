@@ -15,6 +15,8 @@ tags:
 - Storytelling
 - Team Communication
 - Threat Modeling
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

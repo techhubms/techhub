@@ -21,6 +21,9 @@ tags:
 - Recruitment
 - Skills Development
 - Talent Innovation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

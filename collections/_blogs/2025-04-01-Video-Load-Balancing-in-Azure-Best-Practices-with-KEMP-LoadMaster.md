@@ -18,6 +18,8 @@ tags:
 - Networking
 - On Premises
 - Progress
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

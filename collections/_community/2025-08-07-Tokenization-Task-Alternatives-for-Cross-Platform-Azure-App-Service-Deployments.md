@@ -21,6 +21,10 @@ tags:
 - Variable Substitution
 - Windows Agents
 - ZIP Deploy
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

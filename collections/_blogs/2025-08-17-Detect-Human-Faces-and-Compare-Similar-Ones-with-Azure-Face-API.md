@@ -22,6 +22,9 @@ tags:
 - GDPR Compliance
 - Identity Management
 - Python
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

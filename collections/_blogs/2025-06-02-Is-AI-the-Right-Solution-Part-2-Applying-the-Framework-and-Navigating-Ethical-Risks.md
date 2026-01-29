@@ -21,6 +21,8 @@ tags:
 - Privacy in AI
 - Process Optimization
 - Series
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

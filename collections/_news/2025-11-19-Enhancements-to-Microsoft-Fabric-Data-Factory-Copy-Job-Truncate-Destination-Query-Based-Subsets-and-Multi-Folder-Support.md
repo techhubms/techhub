@@ -20,6 +20,9 @@ tags:
 - Incremental Copy
 - Microsoft Fabric
 - Truncate Destination
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

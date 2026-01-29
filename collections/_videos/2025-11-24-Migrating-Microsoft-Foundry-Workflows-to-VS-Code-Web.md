@@ -24,6 +24,10 @@ tags:
 - VS Code
 - VS Code Web
 - Workflow Migration
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

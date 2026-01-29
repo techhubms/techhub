@@ -19,6 +19,10 @@ tags:
 - Model Training
 - Neural Concept
 - Scaling AI
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

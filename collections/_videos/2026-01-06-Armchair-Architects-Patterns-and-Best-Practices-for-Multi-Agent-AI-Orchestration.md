@@ -19,6 +19,10 @@ tags:
 - Pattern Selection
 - Scalability
 - Semantic Kernel
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

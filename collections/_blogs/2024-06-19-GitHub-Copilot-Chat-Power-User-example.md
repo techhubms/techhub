@@ -9,6 +9,10 @@ tags:
 - Automation
 - Programming
 - Prompt Engineering
+- AI
+- GitHub Copilot
+- Coding
+- Blogs
 section_names:
 - ai
 - github-copilot

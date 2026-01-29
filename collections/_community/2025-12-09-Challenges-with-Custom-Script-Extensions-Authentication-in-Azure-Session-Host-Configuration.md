@@ -16,6 +16,9 @@ tags:
 - SAS Token
 - Session Host Configuration
 - Storage Account
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

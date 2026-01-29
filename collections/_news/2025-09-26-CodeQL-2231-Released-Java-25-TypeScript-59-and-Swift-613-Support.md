@@ -23,6 +23,9 @@ tags:
 - Static Analysis
 - Swift 6.1.3
 - TypeScript 5.9
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

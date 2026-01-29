@@ -22,6 +22,10 @@ tags:
 - Spark
 - SQL Analytics
 - Unifyyourdataplatform
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

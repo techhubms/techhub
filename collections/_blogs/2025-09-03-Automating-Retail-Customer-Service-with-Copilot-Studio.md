@@ -20,6 +20,8 @@ tags:
 - Personalized Recommendations
 - Retail Automation
 - Returns Automation
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

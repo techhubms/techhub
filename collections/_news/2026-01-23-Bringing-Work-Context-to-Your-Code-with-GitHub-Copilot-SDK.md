@@ -20,6 +20,10 @@ tags:
 - Plugin Development
 - VS Code
 - Work IQ
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

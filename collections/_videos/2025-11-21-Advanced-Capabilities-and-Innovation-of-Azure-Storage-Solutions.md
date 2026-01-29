@@ -25,6 +25,9 @@ tags:
 - NVMe
 - Priority Replication
 - Smart Tiering
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

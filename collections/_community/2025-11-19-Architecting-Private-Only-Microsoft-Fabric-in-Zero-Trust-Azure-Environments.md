@@ -25,6 +25,10 @@ tags:
 - VNet Data Gateway
 - Warehouse
 - Zero Trust
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - azure
 - ml

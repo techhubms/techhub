@@ -25,6 +25,9 @@ tags:
 - Software Defined Storage
 - SQL Server
 - Virtual Machines
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

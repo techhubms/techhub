@@ -20,6 +20,9 @@ tags:
 - Supplychain Security
 - Vulnerability Management
 - YAML Workflow
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

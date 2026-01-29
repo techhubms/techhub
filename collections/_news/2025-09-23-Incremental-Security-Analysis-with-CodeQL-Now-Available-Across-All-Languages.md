@@ -18,6 +18,10 @@ tags:
 - Security Scanning
 - Static Analysis
 - Swift
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - coding
 - devops

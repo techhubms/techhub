@@ -24,6 +24,14 @@ tags:
 - PostgreSQL
 - Python
 - VS Code
+- AI
+- Azure
+- Coding
+- Machine Learning
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -25,6 +25,10 @@ tags:
 - System Tables
 - Unity Catalog
 - Virtual Network Flow Logs
+- Azure
+- DevOps
+- Machine Learning
+- Community
 section_names:
 - azure
 - devops

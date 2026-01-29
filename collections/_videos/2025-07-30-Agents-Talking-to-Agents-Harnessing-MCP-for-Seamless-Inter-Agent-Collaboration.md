@@ -25,6 +25,9 @@ tags:
 - Technology
 - Tool Catalog
 - VS Code
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

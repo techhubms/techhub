@@ -21,6 +21,9 @@ tags:
 - Microsoft Research
 - Red Teaming
 - Vulnerability Detection
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

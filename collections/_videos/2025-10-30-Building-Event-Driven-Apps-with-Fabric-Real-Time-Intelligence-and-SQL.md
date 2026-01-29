@@ -25,6 +25,11 @@ tags:
 - Tech
 - Technology
 - Windowing Functions
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

@@ -18,6 +18,10 @@ tags:
 - Model Playground
 - ONNX Models
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

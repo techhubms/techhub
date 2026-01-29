@@ -17,6 +17,9 @@ tags:
 - Python Functions
 - Service Limits
 - Testing
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

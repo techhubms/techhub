@@ -25,6 +25,11 @@ tags:
 - Spark
 - Starter Kit
 - Workload Development Kit
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

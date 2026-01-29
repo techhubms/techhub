@@ -19,6 +19,9 @@ tags:
 - Q4
 - Windows
 - Xbox
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

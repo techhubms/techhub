@@ -20,6 +20,8 @@ tags:
 - Model Selection
 - Prizes
 - Problem Solving
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

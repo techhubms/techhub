@@ -17,6 +17,10 @@ tags:
 - Programming Tips
 - Python
 - Software Engineering
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

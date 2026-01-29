@@ -18,6 +18,10 @@ tags:
 - Relativity
 - Unstructured Data
 - Video Processing
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

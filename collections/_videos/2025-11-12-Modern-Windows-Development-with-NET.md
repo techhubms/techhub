@@ -24,6 +24,8 @@ tags:
 - Windows App SDK
 - Windows Development
 - WinUI 3
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

@@ -20,6 +20,10 @@ tags:
 - WCF SQL
 - XML Integration
 - XSLT Mapping
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

@@ -23,6 +23,10 @@ tags:
 - VS Code
 - XML Documentation
 - xUnit
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

@@ -20,6 +20,9 @@ tags:
 - Microsoft Fabric
 - On Premises Mirroring
 - OneLake
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

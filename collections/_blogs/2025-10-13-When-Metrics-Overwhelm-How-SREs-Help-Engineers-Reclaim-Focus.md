@@ -33,6 +33,8 @@ tags:
 - SRE
 - System Resilience
 - War Room Culture
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

@@ -20,6 +20,9 @@ tags:
 - Microsoft Fabric
 - Multi Cloud
 - SAP Datasphere
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

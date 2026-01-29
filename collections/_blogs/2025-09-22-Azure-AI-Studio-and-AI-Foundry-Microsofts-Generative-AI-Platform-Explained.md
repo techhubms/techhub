@@ -24,6 +24,9 @@ tags:
 - Prompt Engineering
 - RAG
 - Responsible AI
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

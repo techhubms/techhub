@@ -25,6 +25,10 @@ tags:
 - Terraform
 - Threat Detection
 - Zero Trust
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

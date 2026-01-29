@@ -20,6 +20,11 @@ tags:
 - Migration
 - MSIgnite
 - Oracle Database
+- AI
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

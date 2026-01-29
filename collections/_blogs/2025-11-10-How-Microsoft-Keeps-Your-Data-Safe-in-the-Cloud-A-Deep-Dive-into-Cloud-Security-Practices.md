@@ -24,6 +24,9 @@ tags:
 - RBAC
 - Shared Responsibility Model
 - Threat Detection
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

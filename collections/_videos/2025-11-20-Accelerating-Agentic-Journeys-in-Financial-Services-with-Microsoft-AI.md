@@ -21,6 +21,9 @@ tags:
 - Morningstar Case Study
 - MSIgnite
 - Partner Program
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

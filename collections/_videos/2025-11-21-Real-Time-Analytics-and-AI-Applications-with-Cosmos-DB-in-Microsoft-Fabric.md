@@ -22,6 +22,10 @@ tags:
 - User Data Functions
 - Vector Search
 - Zero ETL
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

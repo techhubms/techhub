@@ -13,6 +13,10 @@ tags:
 - Organizational Implementation
 - Scalability
 - Slides
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - devops
@@ -40,7 +44,7 @@ At the welcoming and inspiring GitHub Universe conference, Rob detailed:
 
 The session aims to help organizations maximize the value of GitHub Copilot, ensuring seamless onboarding and effective usage for thousands of developers.
 
-![Photo of the Xebia group at the standup on our stand](/images/2024/20241030/20241029_150537380_iOS.jpg)
+![Photo of the Xebia group at the standup on our stand](/images/2024/20241030/20241029_150537380_ios.jpg)
 
 ## Watch the Session
 
@@ -52,7 +56,7 @@ The session recording is available:
 
 You can download or view the slides presented during the session:
 
-[Session Slides (PDF)](/slides/20241030_AI1197B-Successfully-scaling-GitHub-Copilot-to-thousands-of-developers.pdf)
+[Session Slides (PDF)](/slides/20241030_ai1197b-successfully-scaling-github-copilot-to-thousands-of-developers.pdf)
 
 ## More Information
 

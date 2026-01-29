@@ -21,6 +21,9 @@ tags:
 - Personalization
 - Real Time Data
 - Responsible AI
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

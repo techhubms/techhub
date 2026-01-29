@@ -17,6 +17,9 @@ tags:
 - Pro Plus
 - Programming Productivity
 - Repository Context
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

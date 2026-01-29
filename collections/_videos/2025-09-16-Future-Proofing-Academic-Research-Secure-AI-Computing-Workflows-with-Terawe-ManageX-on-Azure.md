@@ -26,6 +26,9 @@ tags:
 - Self Service Workspaces
 - Terawe ManageX
 - University IT
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

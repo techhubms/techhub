@@ -20,6 +20,9 @@ tags:
 - Retail Analytics
 - Schema Standardization
 - Streaming Data
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

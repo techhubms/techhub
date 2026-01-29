@@ -23,6 +23,8 @@ tags:
 - Microsoft Education
 - Professional Development
 - Workforce Readiness
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

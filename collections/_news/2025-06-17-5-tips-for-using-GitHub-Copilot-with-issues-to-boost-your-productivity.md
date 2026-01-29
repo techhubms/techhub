@@ -13,6 +13,9 @@ tags:
 - Generative AI
 - GitHub Issues
 - Resolution Time
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

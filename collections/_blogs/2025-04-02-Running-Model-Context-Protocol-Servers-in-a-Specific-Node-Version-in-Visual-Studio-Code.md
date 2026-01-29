@@ -17,6 +17,11 @@ tags:
 - Playwright
 - Typescript
 - VS Code
+- DevOps
+- GitHub Copilot
+- AI
+- Coding
+- Blogs
 section_names:
 - devops
 - github-copilot

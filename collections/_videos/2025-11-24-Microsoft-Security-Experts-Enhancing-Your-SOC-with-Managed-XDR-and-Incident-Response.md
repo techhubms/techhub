@@ -22,6 +22,8 @@ tags:
 - SOC
 - Threat Hunting
 - Threat Intelligence
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

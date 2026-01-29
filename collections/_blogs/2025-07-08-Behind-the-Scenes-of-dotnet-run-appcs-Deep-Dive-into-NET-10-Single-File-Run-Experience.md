@@ -16,6 +16,8 @@ tags:
 - Source Code Dive
 - Top Level Statements
 - Virtual Project File
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

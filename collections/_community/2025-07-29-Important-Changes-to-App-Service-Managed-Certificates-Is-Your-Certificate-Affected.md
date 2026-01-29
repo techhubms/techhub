@@ -13,6 +13,8 @@ tags:
 - Microsoft
 - Service Changes
 - TLS/SSL
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -26,6 +26,9 @@ tags:
 - Supercomputing
 - Tensor Core
 - Virtual Machines
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -22,6 +22,9 @@ tags:
 - Software Lifecycle
 - Survey
 - Team Archetypes
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

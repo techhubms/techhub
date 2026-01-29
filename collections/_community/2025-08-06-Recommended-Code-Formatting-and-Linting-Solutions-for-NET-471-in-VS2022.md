@@ -20,6 +20,9 @@ tags:
 - StyleCop.Analyzers
 - Team Collaboration
 - VS
+- Coding
+- DevOps
+- Community
 section_names:
 - coding
 - devops

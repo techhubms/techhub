@@ -13,6 +13,9 @@ tags:
 - Operational Intelligence
 - Real Time Intelligence
 - Swiggy
+- AI
+- Machine Learning
+- News
 section_names:
 - ai
 - ml

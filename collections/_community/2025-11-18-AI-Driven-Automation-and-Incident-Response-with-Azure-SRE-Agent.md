@@ -24,6 +24,11 @@ tags:
 - Observability
 - Operational Playbooks
 - Root Cause Analysis
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

@@ -21,6 +21,9 @@ tags:
 - Resource Groups
 - Resource Tagging
 - Role Based Access Control
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

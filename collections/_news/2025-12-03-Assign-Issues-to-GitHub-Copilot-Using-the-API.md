@@ -22,6 +22,10 @@ tags:
 - Repository Configuration
 - REST API
 - Updateissue Mutation
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

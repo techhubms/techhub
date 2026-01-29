@@ -22,6 +22,9 @@ tags:
 - Silicon Design
 - Supercomputing Cluster
 - System Architecture
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

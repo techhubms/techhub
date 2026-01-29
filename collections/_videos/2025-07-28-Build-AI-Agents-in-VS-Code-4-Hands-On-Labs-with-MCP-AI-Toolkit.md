@@ -14,6 +14,9 @@ tags:
 - Prompt Engineering
 - VS Code
 - Web Integration
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

@@ -22,6 +22,9 @@ tags:
 - Machine Learning
 - Responsible AI
 - Semantic Kernel
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

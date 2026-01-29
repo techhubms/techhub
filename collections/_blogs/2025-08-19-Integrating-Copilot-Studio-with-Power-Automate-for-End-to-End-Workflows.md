@@ -21,6 +21,8 @@ tags:
 - Variables Mapping
 - Workflow Orchestration
 - Workflow Testing
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

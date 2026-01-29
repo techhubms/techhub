@@ -14,6 +14,8 @@ tags:
 - Rubber Duck Thursdays
 - Software Projects
 - Streaming
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

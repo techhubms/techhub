@@ -21,6 +21,10 @@ tags:
 - Unified Data Platform
 - Vector Search
 - VS Code Integration
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

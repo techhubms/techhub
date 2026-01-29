@@ -32,6 +32,8 @@ tags:
 - Structured Logging
 - Traces
 - Zipkin
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

@@ -20,6 +20,10 @@ tags:
 - Python
 - SQL
 - Tool Calling
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

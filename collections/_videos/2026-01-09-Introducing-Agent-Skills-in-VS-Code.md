@@ -18,6 +18,9 @@ tags:
 - Microsoft
 - Software Developer
 - VS Code
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

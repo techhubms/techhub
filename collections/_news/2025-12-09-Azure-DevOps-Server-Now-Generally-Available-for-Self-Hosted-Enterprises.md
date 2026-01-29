@@ -16,6 +16,8 @@ tags:
 - Self Hosted Solutions
 - Team Foundation Server
 - TFS Upgrade
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

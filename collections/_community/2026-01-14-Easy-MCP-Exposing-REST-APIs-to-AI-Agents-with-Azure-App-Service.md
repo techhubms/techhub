@@ -19,6 +19,9 @@ tags:
 - No Code Changes
 - OpenAPI
 - REST API
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -17,6 +17,9 @@ tags:
 - Productivity
 - Windows
 - Windows Settings
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

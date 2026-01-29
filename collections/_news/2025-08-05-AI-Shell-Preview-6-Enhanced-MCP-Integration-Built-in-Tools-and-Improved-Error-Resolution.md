@@ -17,6 +17,9 @@ tags:
 - PowerShell
 - Resolve Error
 - Terminal Tools
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

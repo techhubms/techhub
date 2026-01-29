@@ -21,6 +21,10 @@ tags:
 - Python
 - VS Code
 - VS Code Extension
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

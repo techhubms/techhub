@@ -38,6 +38,10 @@ tags:
 - Social Facebook
 - Social LinkedIn
 - Social X
+- AI
+- Azure
+- DevOps
+- Blogs
 section_names:
 - ai
 - azure

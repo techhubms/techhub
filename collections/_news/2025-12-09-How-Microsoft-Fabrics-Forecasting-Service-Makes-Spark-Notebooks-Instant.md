@@ -18,6 +18,10 @@ tags:
 - Resource Optimization
 - Spark
 - Time Series Forecasting
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

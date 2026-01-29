@@ -17,6 +17,10 @@ tags:
 - MCP Center
 - Private Registry
 - Tool Discovery
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

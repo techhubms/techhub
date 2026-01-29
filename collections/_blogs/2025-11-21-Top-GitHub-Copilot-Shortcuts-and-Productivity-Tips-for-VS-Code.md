@@ -19,6 +19,10 @@ tags:
 - Prompt Engineering
 - Software Development
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

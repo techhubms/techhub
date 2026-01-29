@@ -18,6 +18,8 @@ tags:
 - SRE
 - Team Structure
 - Xebia
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

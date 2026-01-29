@@ -22,6 +22,10 @@ tags:
 - Proactive Operations
 - Real Time Intelligence
 - Streaming Data
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

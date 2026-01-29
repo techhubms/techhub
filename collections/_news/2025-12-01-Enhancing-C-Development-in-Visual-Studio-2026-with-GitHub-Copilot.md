@@ -19,6 +19,10 @@ tags:
 - Private Preview
 - VS
 - Windows Development
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -19,6 +19,9 @@ tags:
 - SDK 2.3.7
 - SVG Not Supported
 - TypeScript
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

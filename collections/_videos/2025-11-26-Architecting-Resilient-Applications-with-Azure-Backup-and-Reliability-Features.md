@@ -29,6 +29,9 @@ tags:
 - Virtual Machines
 - Workload Coverage
 - Zonal Resiliency
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

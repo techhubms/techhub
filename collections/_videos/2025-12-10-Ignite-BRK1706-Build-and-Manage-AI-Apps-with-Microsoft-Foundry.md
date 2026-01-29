@@ -22,6 +22,9 @@ tags:
 - Tech
 - Technology
 - Workflow Orchestration
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

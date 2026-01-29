@@ -20,6 +20,8 @@ tags:
 - Microsoft Azure
 - Utilization Alerts
 - Virtual Machines
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

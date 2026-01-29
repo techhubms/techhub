@@ -16,6 +16,9 @@ tags:
 - Refactoring
 - Software Architecture
 - Software Engineering
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

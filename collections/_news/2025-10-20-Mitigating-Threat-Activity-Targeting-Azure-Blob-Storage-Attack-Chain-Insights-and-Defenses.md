@@ -24,6 +24,9 @@ tags:
 - Security Recommendations
 - Threat Detection
 - Zero Trust
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

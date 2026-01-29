@@ -25,6 +25,10 @@ tags:
 - SQL Database
 - Transparent Data Encryption
 - Workspaces
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

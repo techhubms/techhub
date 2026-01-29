@@ -17,6 +17,10 @@ tags:
 - GitHub Copilot Cloud Agent
 - MCP Servers
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

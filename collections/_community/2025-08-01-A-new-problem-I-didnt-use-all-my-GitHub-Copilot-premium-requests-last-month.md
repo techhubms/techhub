@@ -14,6 +14,9 @@ tags:
 - Monthly Reset
 - Premium Requests
 - Usage Planning
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

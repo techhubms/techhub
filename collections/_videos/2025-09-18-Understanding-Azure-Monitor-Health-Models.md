@@ -16,6 +16,8 @@ tags:
 - Observability
 - OneDevQuestion
 - System Health
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

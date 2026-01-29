@@ -17,6 +17,9 @@ tags:
 - Microsoft 365 Governance
 - Passive Liveness Detection
 - Policy Enforcement
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

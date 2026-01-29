@@ -22,6 +22,10 @@ tags:
 - Speakers
 - Virtual Event
 - Web
+- AI
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - coding

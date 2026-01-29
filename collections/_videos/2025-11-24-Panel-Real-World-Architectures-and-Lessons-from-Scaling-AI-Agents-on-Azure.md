@@ -21,6 +21,9 @@ tags:
 - Observability
 - Panel Discussion
 - Production Challenges
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

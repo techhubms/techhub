@@ -20,6 +20,8 @@ tags:
 - VS
 - WinDbg
 - Windows Server
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

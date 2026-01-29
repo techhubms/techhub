@@ -24,6 +24,9 @@ tags:
 - Structurize
 - TypeScript
 - VS Code Extension
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

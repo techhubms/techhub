@@ -21,6 +21,10 @@ tags:
 - POS Data
 - Predictive Analytics
 - Process Automation
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

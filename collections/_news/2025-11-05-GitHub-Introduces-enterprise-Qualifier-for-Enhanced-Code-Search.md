@@ -16,6 +16,8 @@ tags:
 - Improvement
 - Query Operators
 - Search Syntax
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

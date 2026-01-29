@@ -24,6 +24,8 @@ tags:
 - SharePoint Online
 - SharePoint Server
 - SPFx
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

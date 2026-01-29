@@ -31,6 +31,8 @@ tags:
 - Telemetry Filtering
 - Telemetry Monitoring
 - Telemetry Overload
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

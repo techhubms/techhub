@@ -20,6 +20,10 @@ tags:
 - Prompting
 - Team Adoption
 - Technology
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - devops

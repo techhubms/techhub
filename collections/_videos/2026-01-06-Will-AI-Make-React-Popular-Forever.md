@@ -14,6 +14,9 @@ tags:
 - Programming Languages
 - React
 - Software Development
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

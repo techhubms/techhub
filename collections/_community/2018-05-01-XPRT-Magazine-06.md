@@ -18,6 +18,10 @@ tags:
 - Performance
 - Web
 - Website Speed
+- DevOps
+- Coding
+- Security
+- Community
 section_names:
 - devops
 - coding

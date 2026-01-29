@@ -20,6 +20,11 @@ tags:
 - RBAC
 - Resource Management
 - Subagent Builder
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

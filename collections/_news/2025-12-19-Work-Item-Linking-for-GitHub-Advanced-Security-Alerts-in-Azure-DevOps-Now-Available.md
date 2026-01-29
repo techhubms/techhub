@@ -19,6 +19,10 @@ tags:
 - Sprint Planning
 - Vulnerability Management
 - Work Item Linking
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

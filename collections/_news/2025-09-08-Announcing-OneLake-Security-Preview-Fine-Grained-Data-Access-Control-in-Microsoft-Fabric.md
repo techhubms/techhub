@@ -23,6 +23,10 @@ tags:
 - Shortcuts
 - Spark
 - SQL Analytics Endpoint
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

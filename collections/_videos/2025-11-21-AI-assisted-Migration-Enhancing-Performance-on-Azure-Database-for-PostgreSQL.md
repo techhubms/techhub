@@ -19,6 +19,10 @@ tags:
 - PostgreSQL
 - Schema Validation
 - VS Code Demo
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

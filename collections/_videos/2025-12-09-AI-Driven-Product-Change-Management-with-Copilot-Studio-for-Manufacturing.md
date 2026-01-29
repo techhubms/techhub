@@ -17,6 +17,8 @@ tags:
 - Process Automation
 - Product Change Management
 - Workflow Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

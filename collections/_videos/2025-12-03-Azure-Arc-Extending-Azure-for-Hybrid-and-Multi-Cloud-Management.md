@@ -29,6 +29,10 @@ tags:
 - Technical
 - Unified Management
 - Windows
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

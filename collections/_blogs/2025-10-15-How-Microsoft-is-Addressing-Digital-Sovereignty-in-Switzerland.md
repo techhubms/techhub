@@ -33,6 +33,9 @@ tags:
 - Sovereign Private Cloud
 - Sovereign Public Cloud
 - Switzerland
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

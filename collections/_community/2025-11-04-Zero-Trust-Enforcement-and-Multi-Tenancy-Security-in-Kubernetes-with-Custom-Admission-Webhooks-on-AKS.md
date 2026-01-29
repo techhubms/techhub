@@ -25,6 +25,10 @@ tags:
 - Supply Chain Security
 - TLS
 - Zero Trust
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

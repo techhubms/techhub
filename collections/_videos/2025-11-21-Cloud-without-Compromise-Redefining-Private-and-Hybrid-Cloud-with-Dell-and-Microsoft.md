@@ -25,6 +25,9 @@ tags:
 - Private Cloud
 - ScalewithcloudandAIendpoints
 - Tab0
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

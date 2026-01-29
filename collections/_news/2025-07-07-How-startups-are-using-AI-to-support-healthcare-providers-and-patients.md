@@ -11,6 +11,8 @@ tags:
 - Medical Technology
 - Patient Care
 - Startups
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

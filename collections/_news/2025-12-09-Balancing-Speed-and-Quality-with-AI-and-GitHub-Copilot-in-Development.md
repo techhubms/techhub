@@ -25,6 +25,10 @@ tags:
 - Software Maintainability
 - Technical Debt
 - Technical Documentation
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

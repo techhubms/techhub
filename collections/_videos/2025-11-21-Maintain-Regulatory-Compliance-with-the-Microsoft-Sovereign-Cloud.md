@@ -20,6 +20,10 @@ tags:
 - Private Clouds
 - Regulatory Compliance
 - Site To Site Recovery
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -23,6 +23,8 @@ tags:
 - Smart Tiering
 - Storage Provisioning
 - TCO Reduction
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

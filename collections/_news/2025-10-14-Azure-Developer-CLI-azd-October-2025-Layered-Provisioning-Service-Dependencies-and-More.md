@@ -32,6 +32,10 @@ tags:
 - Templates
 - Typescript
 - VS Code
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

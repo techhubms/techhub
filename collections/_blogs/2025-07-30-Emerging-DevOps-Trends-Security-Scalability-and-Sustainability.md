@@ -20,6 +20,9 @@ tags:
 - Software Development
 - Sustainability
 - Sustainability in DevOps
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

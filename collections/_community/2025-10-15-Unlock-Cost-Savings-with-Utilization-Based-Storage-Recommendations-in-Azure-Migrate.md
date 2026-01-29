@@ -15,6 +15,8 @@ tags:
 - Right Sizing
 - Storage Optimization
 - Utilization Based Recommendations
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

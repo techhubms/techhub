@@ -32,6 +32,9 @@ tags:
 - Social X
 - SRE
 - SRE Evolution
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

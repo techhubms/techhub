@@ -19,6 +19,9 @@ tags:
 - Storage Account
 - Streaming
 - Telemetry
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

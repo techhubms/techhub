@@ -21,6 +21,11 @@ tags:
 - Pipelines
 - Power BI
 - Real Time Intelligence
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

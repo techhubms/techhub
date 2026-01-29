@@ -20,6 +20,9 @@ tags:
 - Schema Validation
 - Update Policies
 - Visualization Tools
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -20,6 +20,8 @@ tags:
 - Resource Optimization
 - REST API
 - Table Storage
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -18,6 +18,10 @@ tags:
 - Environment Variables
 - GitHub Actions
 - IaC
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

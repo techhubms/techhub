@@ -20,6 +20,9 @@ tags:
 - Spark Advisor API
 - Spark Monitoring APIs
 - Vcore Usage
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

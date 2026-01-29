@@ -7,12 +7,21 @@ namespace TechHub.Infrastructure.Services;
 /// <summary>
 /// Service for generating tag clouds with quantile-based sizing and scoping logic
 /// </summary>
-public class TagCloudService(
-    IContentRepository contentRepository,
-    IOptions<FilteringOptions> filteringOptions) : ITagCloudService
+public class TagCloudService : ITagCloudService
 {
-    private readonly IContentRepository _contentRepository = contentRepository ?? throw new ArgumentNullException(nameof(contentRepository));
-    private readonly FilteringOptions _filteringOptions = filteringOptions?.Value ?? throw new ArgumentNullException(nameof(filteringOptions));
+    private readonly IContentRepository _contentRepository;
+    private readonly FilteringOptions _filteringOptions;
+
+    public TagCloudService(
+        IContentRepository contentRepository,
+        IOptions<FilteringOptions> filteringOptions)
+    {
+        ArgumentNullException.ThrowIfNull(contentRepository);
+        ArgumentNullException.ThrowIfNull(filteringOptions);
+
+        _contentRepository = contentRepository;
+        _filteringOptions = filteringOptions.Value;
+    }
 
     /// <summary>
     /// Generate tag cloud for the specified scope
@@ -96,7 +105,7 @@ public class TagCloudService(
 
         return new AllTagsResponse
         {
-            Tags = tagCounts.ToList(),
+            Tags = [.. tagCounts],
             TotalCount = tagCounts.Count
         };
     }

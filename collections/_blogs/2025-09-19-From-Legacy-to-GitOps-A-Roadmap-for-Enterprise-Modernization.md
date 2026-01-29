@@ -36,6 +36,8 @@ tags:
 - Social LinkedIn
 - Social X
 - Terraform
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

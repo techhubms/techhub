@@ -23,6 +23,9 @@ tags:
 - Unified File Systems
 - Unifyyourdataplatform
 - Virtual Experts
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

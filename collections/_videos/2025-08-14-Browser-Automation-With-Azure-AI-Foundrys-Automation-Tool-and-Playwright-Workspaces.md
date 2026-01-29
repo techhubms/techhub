@@ -22,6 +22,9 @@ tags:
 - Technology
 - VS Code
 - Web Automation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

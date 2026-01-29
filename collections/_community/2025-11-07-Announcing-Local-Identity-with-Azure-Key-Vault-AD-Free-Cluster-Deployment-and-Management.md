@@ -19,6 +19,9 @@ tags:
 - Management Toolkit
 - Partner Ecosystem
 - Veeam
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

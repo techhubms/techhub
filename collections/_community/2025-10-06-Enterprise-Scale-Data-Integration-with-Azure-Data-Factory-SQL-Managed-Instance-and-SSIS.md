@@ -19,6 +19,9 @@ tags:
 - SQL Server Integration Services
 - SSIS
 - Virtual Network
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

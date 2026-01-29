@@ -20,6 +20,8 @@ tags:
 - Route Propagation
 - VNet Peering
 - Vwan
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

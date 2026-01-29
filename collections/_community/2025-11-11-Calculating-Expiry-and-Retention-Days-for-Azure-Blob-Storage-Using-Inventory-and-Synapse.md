@@ -18,6 +18,8 @@ tags:
 - Soft Delete
 - SQL Query
 - Storage Lifecycle
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

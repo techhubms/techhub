@@ -31,6 +31,9 @@ tags:
 - Software Catalog For AI
 - Software Catalogs
 - Workflow Automation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

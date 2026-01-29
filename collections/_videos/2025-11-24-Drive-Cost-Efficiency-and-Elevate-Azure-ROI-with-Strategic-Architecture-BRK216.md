@@ -21,6 +21,9 @@ tags:
 - Policy Inheritance
 - ROI
 - Strategic Investments
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -24,6 +24,10 @@ tags:
 - Sample Repository
 - Secret Token
 - Telemetry
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

@@ -21,6 +21,10 @@ tags:
 - Multi Cluster
 - Scalability
 - Scheduling
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

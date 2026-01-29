@@ -17,6 +17,10 @@ tags:
 - Programming Languages
 - Software Development
 - TypeScript
+- AI
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - coding

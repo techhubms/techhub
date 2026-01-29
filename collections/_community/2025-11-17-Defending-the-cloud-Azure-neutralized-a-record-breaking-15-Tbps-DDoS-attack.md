@@ -20,6 +20,9 @@ tags:
 - Provider Enforcement
 - Turbo Mirai
 - UDP Flood
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -20,6 +20,9 @@ tags:
 - Performance Optimization
 - Resource Management
 - Spark
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -24,6 +24,10 @@ tags:
 - VS
 - VS Code
 - VS Code Extensions
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

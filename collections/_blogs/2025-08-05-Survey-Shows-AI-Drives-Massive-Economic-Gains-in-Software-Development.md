@@ -21,6 +21,9 @@ tags:
 - Social X
 - Software Development
 - Software Innovation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

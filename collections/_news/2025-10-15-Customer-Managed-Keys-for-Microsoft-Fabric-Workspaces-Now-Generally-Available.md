@@ -19,6 +19,9 @@ tags:
 - SQL Analytics Endpoint
 - TLS 1.2
 - Workspace Administration
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

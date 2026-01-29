@@ -18,6 +18,8 @@ tags:
 - Server Preview
 - Windows Server Datacenter
 - Windows Server Vnext
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

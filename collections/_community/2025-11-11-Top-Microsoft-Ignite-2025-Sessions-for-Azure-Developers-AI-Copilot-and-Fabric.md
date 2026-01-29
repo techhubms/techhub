@@ -18,6 +18,12 @@ tags:
 - Microsoft Fabric
 - Microsoft Ignite
 - Session Scheduler
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

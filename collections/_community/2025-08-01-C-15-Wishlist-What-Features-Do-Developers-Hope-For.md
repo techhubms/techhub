@@ -15,6 +15,8 @@ tags:
 - Language Features
 - Programming
 - Wishlist
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

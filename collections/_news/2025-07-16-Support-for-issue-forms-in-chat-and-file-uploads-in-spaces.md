@@ -14,6 +14,9 @@ tags:
 - Issue Creation
 - Issue Forms
 - Productivity
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

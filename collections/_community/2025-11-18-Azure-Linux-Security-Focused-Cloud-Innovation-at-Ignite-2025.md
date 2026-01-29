@@ -25,6 +25,9 @@ tags:
 - VM Level Isolation
 - Vtpm
 - Workload Isolation
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

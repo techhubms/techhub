@@ -23,6 +23,9 @@ tags:
 - Omniverse
 - RAG
 - Virtual Desktop
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

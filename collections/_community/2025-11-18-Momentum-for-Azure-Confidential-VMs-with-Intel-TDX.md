@@ -26,6 +26,10 @@ tags:
 - Remote Storage
 - Trusted Execution
 - VM Security
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

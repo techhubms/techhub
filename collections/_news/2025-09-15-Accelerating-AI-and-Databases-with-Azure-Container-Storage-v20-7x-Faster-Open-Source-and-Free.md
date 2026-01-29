@@ -24,6 +24,9 @@ tags:
 - PostgreSQL
 - Stateful Workloads
 - Storage Orchestration
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

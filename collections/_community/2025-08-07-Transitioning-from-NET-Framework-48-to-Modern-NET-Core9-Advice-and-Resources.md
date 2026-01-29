@@ -26,6 +26,8 @@ tags:
 - Tim Corey
 - Udemy
 - VS Code
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

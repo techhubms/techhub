@@ -14,6 +14,9 @@ tags:
 - Pull Request
 - UI Enhancement
 - Workflow
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

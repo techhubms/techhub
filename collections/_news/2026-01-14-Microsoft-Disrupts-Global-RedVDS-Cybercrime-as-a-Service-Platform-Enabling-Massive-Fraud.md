@@ -22,6 +22,9 @@ tags:
 - RedVDS
 - Security Best Practices
 - Windows
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

@@ -20,6 +20,8 @@ tags:
 - Reusable Workflows
 - Security Automation
 - Workflow Automation
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

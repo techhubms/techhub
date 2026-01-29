@@ -18,6 +18,9 @@ tags:
 - Secure Development
 - VS Code
 - VS Code Extensions
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

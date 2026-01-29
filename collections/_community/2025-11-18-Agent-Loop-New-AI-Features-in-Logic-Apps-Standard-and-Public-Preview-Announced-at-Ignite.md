@@ -22,6 +22,11 @@ tags:
 - RAG
 - Serverless
 - Workflow Designer
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

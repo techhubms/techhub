@@ -19,6 +19,9 @@ tags:
 - Pipelines as Code
 - Testing
 - VS Code
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

@@ -19,6 +19,8 @@ tags:
 - Terminal
 - VS Code
 - Win32 Input Mode
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

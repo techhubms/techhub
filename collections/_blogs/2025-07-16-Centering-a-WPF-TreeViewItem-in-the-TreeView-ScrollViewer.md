@@ -16,6 +16,8 @@ tags:
 - UI Development
 - Visual Tree
 - WPF
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

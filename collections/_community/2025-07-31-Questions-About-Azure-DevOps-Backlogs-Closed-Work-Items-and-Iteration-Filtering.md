@@ -16,6 +16,9 @@ tags:
 - Team Configuration
 - User Stories
 - Work Item Visibility
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

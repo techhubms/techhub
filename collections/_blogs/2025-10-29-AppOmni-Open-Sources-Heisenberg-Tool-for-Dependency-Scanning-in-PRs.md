@@ -25,6 +25,9 @@ tags:
 - Social X
 - Software Bill Of Materials
 - Supply Chain Security
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

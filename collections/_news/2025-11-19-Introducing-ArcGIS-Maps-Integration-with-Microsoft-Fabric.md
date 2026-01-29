@@ -21,6 +21,10 @@ tags:
 - OneLake
 - Power BI
 - Spark Notebooks
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

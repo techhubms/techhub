@@ -19,6 +19,10 @@ tags:
 - Spring Tools
 - User Experience
 - Workflow Enhancement
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

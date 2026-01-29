@@ -19,6 +19,8 @@ tags:
 - Team Topologies
 - Tooling
 - Uncategorized
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

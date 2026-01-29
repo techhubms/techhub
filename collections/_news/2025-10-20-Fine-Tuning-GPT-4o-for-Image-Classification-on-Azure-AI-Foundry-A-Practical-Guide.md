@@ -21,6 +21,10 @@ tags:
 - Stanford Dogs Dataset
 - Supervised Fine Tuning
 - Vision Language Models
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

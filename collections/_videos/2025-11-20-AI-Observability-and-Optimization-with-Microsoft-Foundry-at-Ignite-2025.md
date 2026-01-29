@@ -23,6 +23,10 @@ tags:
 - Risk Assessment
 - Safety Evaluation
 - Sky Release
+- AI
+- Azure
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

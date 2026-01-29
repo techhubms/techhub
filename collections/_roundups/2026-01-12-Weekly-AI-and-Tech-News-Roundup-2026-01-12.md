@@ -15,6 +15,14 @@ tags:
 - Multi Agent Orchestration
 - Open Source
 - Semantic Search
+- AI
+- GitHub Copilot
+- Machine Learning
+- Azure
+- Coding
+- DevOps
+- Security
+- Roundups
 section_names:
 - ai
 - github-copilot
@@ -87,8 +95,8 @@ New tutorials demonstrate Copilot usage across hands-on projects and agent-drive
 
 A Copilot lab for Visual Studio Code explores agent mode, covering MCP server connections, custom agent development, and automated background tasks. These learning resources help developers move from basic completion to orchestrated multi-agent workflows, continuing the shift toward scalable, enterprise-grade Copilot implementations.
 
-- [Building Space Invaders from Scratch with GitHub Copilot, AI Toolkit, and Azure Deployment](/ai/videos/Building-Space-Invaders-from-Scratch-with-GitHub-Copilot-AI-Toolkit-and-Azure-Deployment)
-- [Hands-On Lab: The Power of GitHub Copilot in Visual Studio Code](/ai/videos/Hands-On-Lab-The-Power-of-GitHub-Copilot-in-Visual-Studio-Code)
+- [Building Space Invaders from Scratch with GitHub Copilot, AI Toolkit, and Azure Deployment](/ai/videos/building-space-invaders-from-scratch-with-github-copilot-ai-toolkit-and-azure-deployment)
+- [Hands-On Lab: The Power of GitHub Copilot in Visual Studio Code](/ai/videos/hands-on-lab-the-power-of-github-copilot-in-visual-studio-code)
 
 ### Analyses: Copilot’s Impact on Frameworks, Open Source, and Coding Standards
 
@@ -98,8 +106,8 @@ An interview with Homebrew maintainer Mike McQuaid spotlights open source automa
 
 A case for moving beyond informal code styles to systematic, specification-led workflow development supports a disciplined approach to software engineering as AI becomes more integral to project delivery.
 
-- [Will AI Make React Popular Forever?](/ai/videos/Will-AI-Make-React-Popular-Forever)
-- [Sustaining Homebrew: Leadership, Automation, and AI with Mike McQuaid](/ai/videos/Sustaining-Homebrew-Leadership-Automation-and-AI-with-Mike-McQuaid)
+- [Will AI Make React Popular Forever?](/ai/videos/will-ai-make-react-popular-forever)
+- [Sustaining Homebrew: Leadership, Automation, and AI with Mike McQuaid](/ai/videos/sustaining-homebrew-leadership-automation-and-ai-with-mike-mcquaid)
 - [From Vibe Coding to Spec-Driven Development: Why AI-Generated Code Needs Structure](https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development)
 
 ### Other GitHub Copilot News
@@ -132,7 +140,7 @@ Topics include permissioning, security practices, and operational controls, buil
 
 A review of application modernization further explores human-in-the-loop design for safe AI adoption, confirming the ongoing need for robust practices in updating existing technology.
 
-- [Armchair Architects: Patterns and Best Practices for Multi-Agent AI Orchestration](/ai/videos/Armchair-Architects-Patterns-and-Best-Practices-for-Multi-Agent-AI-Orchestration)
+- [Armchair Architects: Patterns and Best Practices for Multi-Agent AI Orchestration](/ai/videos/armchair-architects-patterns-and-best-practices-for-multi-agent-ai-orchestration)
 - [The Realities of Application Modernization with Agentic AI: A 2026 Perspective](https://devblogs.microsoft.com/all-things-azure/the-realities-of-application-modernization-with-agentic-ai-early-2026/)
 
 ### Agentic AI Solutions in Retail and Supply Chain Automation
@@ -142,14 +150,14 @@ Microsoft launches updated agentic AI templates and retail automation tools, int
 Workflow modularity supports mature enterprise tool practices and links internal engineering and customer-facing activities. Blue Yonder’s supply chain case study further exemplifies integration and transparency, building on previous themes around orchestration and business reliability for critical deployments.
 
 - [Microsoft Launches Agentic AI Solutions to Transform Retail Automation and Personalization](https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/)
-- [Store Operations That Scale: Turn Signals into Decisions](/ai/videos/Store-Operations-That-Scale-Turn-Signals-into-Decisions)
-- [AI-Driven Agents Transforming Supply Chain Management at Blue Yonder](/ai/videos/AI-Driven-Agents-Transforming-Supply-Chain-Management-at-Blue-Yonder)
+- [Store Operations That Scale: Turn Signals into Decisions](/ai/videos/store-operations-that-scale-turn-signals-into-decisions)
+- [AI-Driven Agents Transforming Supply Chain Management at Blue Yonder](/ai/videos/ai-driven-agents-transforming-supply-chain-management-at-blue-yonder)
 
 ### Other AI News
 
 Agent Skills in Visual Studio Code, previewed earlier in Copilot releases, now include expanded features. This allows more developers to author and test reusable automations within the IDE, highlighting the ongoing shift of customizable AI into daily development activities.
 
-- [Introducing Agent Skills in VS Code](/ai/videos/Introducing-Agent-Skills-in-VS-Code)
+- [Introducing Agent Skills in VS Code](/ai/videos/introducing-agent-skills-in-vs-code)
 
 ## ML
 
@@ -209,8 +217,8 @@ The January platform update covers AKS-native calculators, expanded Premium SSDv
 
 - [Oracle Database@Azure Expands to West Europe and Brazil Southeast](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/global-expansion-now-available-in-west-europe-netherlands/ba-p/4479671)
 - [Deploying Siemens NX on Azure NVads V710 v5-Series with AMD Radeon GPUs](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-v710-v5-series-amd-radeon-gpu-validation-of-siemens-cad-nx/ba-p/4483791)
-- [Azure Update - 9th January 2026](/azure/videos/Azure-Update-9th-January-2026)
-- [Major Innovations in Microsoft Fabric Data Warehousing: 2025 Overview](/azure/videos/Major-Innovations-in-Microsoft-Fabric-Data-Warehousing-2025-Overview)
+- [Azure Update - 9th January 2026](/azure/videos/azure-update-9th-january-2026)
+- [Major Innovations in Microsoft Fabric Data Warehousing: 2025 Overview](/azure/videos/major-innovations-in-microsoft-fabric-data-warehousing-2025-overview)
 
 ### Cloud-Native Architecture: AI, Mapping, and Real-Time Workflows
 
@@ -222,7 +230,7 @@ A feature on Azure Maps clarifies the differences between view and routing coord
 
 SharePoint architects get a new guide for flat site collections and navigation, tied into Azure AD, Power Platform, and Purview governance best practices.
 
-- [Exploring AI Features in Azure Managed PostgreSQL](/ai/videos/Exploring-AI-Features-in-Azure-Managed-PostgreSQL)
+- [Exploring AI Features in Azure Managed PostgreSQL](/ai/videos/exploring-ai-features-in-azure-managed-postgresql)
 - [Building scalable, cost-effective real-time multiplayer games with Azure Web PubSub](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584)
 - [Azure Maps: Understanding View vs. Routing Coordinates](https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532)
 - [Designing a Future-Proof SharePoint Information Architecture](https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/)
@@ -266,10 +274,10 @@ Cross-platform development gains more focus. Avalonia Standup demonstrates Avalo
 Distributed app development is featured in Orleans sessions, diving into scalable architecture patterns for maintainable cloud-native applications.
 
 - [Secure and Intelligent: Queryable Encryption and Vector Search in MongoDB EF Core Provider](https://devblogs.microsoft.com/dotnet/mongodb-efcore-provider-queryable-encryption-vector-search/)
-- [Blazor Community Standup: Planning the Future of Blazor in .NET 11](/coding/videos/Blazor-Community-Standup-Planning-the-Future-of-Blazor-in-NET-11)
-- [.NET MAUI on Linux with Avalonia: Community Standup Recap](/coding/videos/NET-MAUI-on-Linux-with-Avalonia-Community-Standup-Recap)
-- [Orleans Deep Dive: Routing, Placement & Balancing](/coding/videos/Orleans-Deep-Dive-Routing-Placement-and-Balancing)
-- [ASP.NET Community Standup: What's Next for Orleans?](/coding/videos/ASPNET-Community-Standup-Whats-Next-for-Orleans)
+- [Blazor Community Standup: Planning the Future of Blazor in .NET 11](/coding/videos/blazor-community-standup-planning-the-future-of-blazor-in-net-11)
+- [.NET MAUI on Linux with Avalonia: Community Standup Recap](/coding/videos/net-maui-on-linux-with-avalonia-community-standup-recap)
+- [Orleans Deep Dive: Routing, Placement & Balancing](/coding/videos/orleans-deep-dive-routing-placement-and-balancing)
+- [ASP.NET Community Standup: What's Next for Orleans?](/coding/videos/aspnet-community-standup-whats-next-for-orleans)
 
 ### UI Development Tools and Open Source Progress
 

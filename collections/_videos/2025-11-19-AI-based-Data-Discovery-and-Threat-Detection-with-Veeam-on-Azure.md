@@ -24,6 +24,10 @@ tags:
 - SOC
 - Threat Evaluation
 - Veeam Data Cloud
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -26,6 +26,10 @@ tags:
 - SharePoint Integration
 - Smart Cities
 - Zero Trust
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

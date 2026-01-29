@@ -24,6 +24,9 @@ tags:
 - SDK Integration
 - Stateful Workflows
 - Workflow Automation
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -21,6 +21,10 @@ tags:
 - Software Development
 - Task Assignment
 - Unit Testing
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

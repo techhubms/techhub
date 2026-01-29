@@ -21,6 +21,10 @@ tags:
 - Service Outage
 - Site Reliability
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

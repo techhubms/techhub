@@ -25,6 +25,10 @@ tags:
 - Rust
 - SDK
 - Storage Discovery
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

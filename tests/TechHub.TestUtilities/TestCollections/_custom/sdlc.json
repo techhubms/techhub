@@ -1,0 +1,550 @@
+{
+    "title": "AI SDLC",
+    "description": "How AI enhances every phase of the Software Development Lifecycle",
+    "intro": "The Software Development Lifecycle (SDLC) is a structured process for building high-quality software. AI transforms each phase by augmenting human capabilities with automation, analysis, and intelligent assistance.",
+    "phases": [
+        {
+            "id": "ideation",
+            "name": "Ideation",
+            "icon": "💡",
+            "what": "Explore possibilities, generate ideas, and validate concepts before committing resources. This exploratory phase is about understanding what's possible and what resonates with users.",
+            "how": "Run brainstorming workshops, create quick throwaway prototypes, conduct user interviews and surveys, sketch wireframes, build proof-of-concepts, and test assumptions with minimal investment. Fail fast and iterate quickly.",
+            "tools": [
+                {
+                    "name": "GitHub Spark",
+                    "url": "https://githubnext.com/projects/github-spark"
+                },
+                {
+                    "name": "GitHub Copilot",
+                    "url": "https://github.com/features/copilot"
+                }
+            ],
+            "aiEnhancements": {
+                "intro": "AI transforms ideation from a purely creative exercise into a data-informed discovery process.",
+                "roles": [
+                    {
+                        "role": "developers",
+                        "content": "AI generates functional prototypes from natural language descriptions using tools like GitHub Spark, which creates full-stack micro apps from simple prompts. AI creates UI mockups instantly, suggests feature combinations based on technical feasibility, and explores design alternatives at unprecedented speed."
+                    },
+                    {
+                        "role": "Product Owners",
+                        "content": "AI analyzes market trends using retrieval-augmented generation (RAG) to surface emerging opportunities, competitive gaps, and user pain points from vast data sources. AI serves as a brainstorming partner, helping refine rough ideas into structured feature proposals."
+                    },
+                    {
+                        "role": "Scrum Masters",
+                        "content": "AI helps document ideation sessions, synthesize diverse stakeholder inputs into coherent themes, and identify dependencies or risks in proposed concepts early."
+                    }
+                ]
+            },
+            "handover": "Present prototype demos to stakeholders, share user research findings, discuss technical feasibility insights, and align on which concepts to pursue in formal planning.",
+            "bestPractices": "Embrace experimentation without fear of failure. Keep prototypes lightweight and disposable. Focus on learning rather than building production-ready code. Involve diverse stakeholders early. Document insights and decisions for the planning phase."
+        },
+        {
+            "id": "planning",
+            "name": "Planning",
+            "icon": "📋",
+            "what": "Gather and analyze requirements from stakeholders, define project scope, establish timelines, and create a comprehensive roadmap. This phase determines the project's technical, operational, and economic feasibility.",
+            "how": "Conduct stakeholder interviews, gather functional and non-functional requirements, perform feasibility analysis, define acceptance criteria, and create user stories with clear definitions of done.",
+            "tools": [
+                {
+                    "name": "GitHub Copilot",
+                    "url": "https://github.com/features/copilot"
+                },
+                {
+                    "name": "GitHub Spark",
+                    "url": "https://githubnext.com/projects/github-spark"
+                },
+                {
+                    "name": "GitHub Issues",
+                    "url": "https://github.com/features/issues"
+                },
+                {
+                    "name": "GitHub MCP",
+                    "url": "https://github.com/github/github-mcp-server"
+                },
+                {
+                    "name": "Azure DevOps MCP",
+                    "url": "https://github.com/microsoft/azure-devops-mcp"
+                }
+            ],
+            "aiEnhancements": {
+                "intro": "AI revolutionizes requirements gathering by transforming how teams capture, structure, and validate what they need to build.",
+                "roles": [
+                    {
+                        "role": "developers",
+                        "content": "AI analyzes requirement documents to identify ambiguities, contradictions, and missing edge cases before implementation begins. AI generates technical specifications from business requirements and suggests acceptance criteria based on similar projects."
+                    },
+                    {
+                        "role": "Product Owners",
+                        "content": "AI transforms raw stakeholder inputs—meeting notes, emails, feedback—into structured requirements documents. AI generates comprehensive user stories with acceptance criteria, creates Product Requirements Documents (PRDs), and helps prioritize backlogs based on business value and dependencies."
+                    },
+                    {
+                        "role": "Scrum Masters",
+                        "content": "AI assists in breaking epics into sprint-sized user stories, estimates story points based on historical data, identifies potential blockers, and ensures requirements are clear enough for the team to estimate and commit to."
+                    }
+                ]
+            },
+            "handover": "Conduct requirements review meeting with design team, obtain stakeholder sign-off, and ensure all questions are documented and answered before design begins.",
+            "bestPractices": "Organize requirements into a prioritized product backlog, break work into sprint-sized increments, and use iterative planning to adapt to changing needs."
+        },
+        {
+            "id": "design",
+            "name": "Design",
+            "icon": "🎨",
+            "what": "Create system architecture, define data models, design user interfaces, and establish technical specifications that translate requirements into a detailed blueprint for development.",
+            "how": "Develop high-level and detailed architecture diagrams, create wireframes and interactive prototypes, define API contracts, establish coding standards, and conduct design reviews with stakeholders.",
+            "tools": [
+                {
+                    "name": "GitHub Copilot",
+                    "url": "https://github.com/features/copilot"
+                },
+                {
+                    "name": "GitHub Spark",
+                    "url": "https://githubnext.com/projects/github-spark"
+                },
+                {
+                    "name": "Figma MCP",
+                    "url": "https://www.figma.com/blog/introducing-figma-mcp-server/"
+                }
+            ],
+            "aiEnhancements": {
+                "intro": "AI accelerates the translation of requirements into technical blueprints.",
+                "roles": [
+                    {
+                        "role": "developers and architects",
+                        "content": "AI generates architecture diagrams from requirements, suggests optimal design patterns based on scalability needs, creates database schemas, and produces code scaffolding from specifications. AI identifies potential security vulnerabilities and scalability concerns during design review. Tools like Figma's MCP server bridge the design-to-code gap."
+                    },
+                    {
+                        "role": "Product Owners",
+                        "content": "AI creates visual representations of user journeys and system flows, making technical designs accessible for review and validation against business needs."
+                    },
+                    {
+                        "role": "Scrum Masters",
+                        "content": "AI helps estimate design complexity, identifies technical debt risks in proposed architectures, and ensures design decisions are documented for team reference."
+                    }
+                ]
+            },
+            "handover": "Design handoff meeting with development team, walkthrough of architecture decisions, establish version control branching strategy, and set up initial repository structure.",
+            "bestPractices": "Design for modularity and reusability, consider security requirements from the start, plan for testability, and document architectural decisions and their rationale."
+        },
+        {
+            "id": "implementation",
+            "name": "Implementation",
+            "icon": "⚙️",
+            "what": "Write, review, and integrate code to build the software according to design specifications. This phase transforms the blueprint into a functional product.",
+            "how": "Develop in iterative sprints, use feature branches and pull requests, conduct code reviews, maintain continuous integration pipelines, and follow coding standards.",
+            "tools": [
+                {
+                    "name": "GitHub Copilot",
+                    "url": "https://github.com/features/copilot"
+                },
+                {
+                    "name": "GitHub Copilot Coding Agent",
+                    "url": "https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent-to-work-on-tasks"
+                },
+                {
+                    "name": "GitHub Codespaces",
+                    "url": "https://github.com/features/codespaces"
+                },
+                {
+                    "name": "GitHub MCP",
+                    "url": "https://github.com/github/github-mcp-server"
+                },
+                {
+                    "name": "Azure DevOps MCP",
+                    "url": "https://github.com/microsoft/azure-devops-mcp"
+                }
+            ],
+            "aiEnhancements": {
+                "intro": "AI transforms coding from a purely manual craft into an augmented collaboration between human expertise and machine capability.",
+                "roles": [
+                    {
+                        "role": "developers",
+                        "content": "AI provides real-time code suggestions and intelligent autocompletion, generates boilerplate code and repetitive patterns, assists with debugging by explaining errors and suggesting fixes, translates code between languages, and helps refactor for better performance. The key to consistent AI-generated code lies in combining clear requirements, well-crafted prompts, and AI coding rules."
+                    },
+                    {
+                        "role": "Product Owners",
+                        "content": "AI-generated documentation and code summaries make it easier to understand technical progress without deep diving into code."
+                    },
+                    {
+                        "role": "Scrum Masters",
+                        "content": "AI can summarize pull request changes, highlight potential merge conflicts, and track code review bottlenecks across the team."
+                    }
+                ]
+            },
+            "handover": "Feature demonstration to QA team, test environment verification, review test plan coverage, and establish defect tracking workflow.",
+            "bestPractices": "Write clear, descriptive commit messages. Test code before committing. Use branches for features and fixes. Review changes before merging. Pull changes frequently to stay current."
+        },
+        {
+            "id": "testing",
+            "name": "Testing",
+            "icon": "🧪",
+            "what": "Verify functionality, identify defects, validate security, and ensure the software meets quality standards and user requirements before release.",
+            "testingTypes": [
+                {
+                    "name": "Unit Testing",
+                    "description": "Test individual components in isolation"
+                },
+                {
+                    "name": "Integration Testing",
+                    "description": "Verify components work together"
+                },
+                {
+                    "name": "Functional Testing",
+                    "description": "Validate against requirements"
+                },
+                {
+                    "name": "Regression Testing",
+                    "description": "Ensure changes don't break existing features"
+                },
+                {
+                    "name": "User Acceptance Testing",
+                    "description": "End-users validate the system"
+                },
+                {
+                    "name": "Security Testing",
+                    "description": "Identify vulnerabilities"
+                },
+                {
+                    "name": "Performance Testing",
+                    "description": "Validate under load conditions"
+                }
+            ],
+            "tools": [
+                {
+                    "name": "GitHub Copilot",
+                    "url": "https://github.com/features/copilot"
+                },
+                {
+                    "name": "GitHub Advanced Security",
+                    "url": "https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security"
+                },
+                {
+                    "name": "Copilot Autofix",
+                    "url": "https://docs.github.com/en/code-security/code-scanning/managing-code-scanning-alerts/about-copilot-autofix-for-code-scanning"
+                },
+                {
+                    "name": "Dependabot",
+                    "url": "https://docs.github.com/en/code-security/dependabot"
+                },
+                {
+                    "name": "Microsoft Defender for Cloud",
+                    "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/"
+                },
+                {
+                    "name": "Playwright MCP",
+                    "url": "https://github.com/executeautomation/mcp-playwright"
+                }
+            ],
+            "aiEnhancements": {
+                "intro": "AI dramatically expands test coverage while reducing manual effort.",
+                "roles": [
+                    {
+                        "role": "developers and QA engineers",
+                        "content": "AI auto-generates unit tests, integration tests, and end-to-end test cases directly from code and requirements. AI identifies high-risk areas that need focused testing, suggests edge cases that humans often miss, and predicts where bugs are most likely to occur. Through MCP servers like Playwright MCP, AI can directly automate browser testing."
+                    },
+                    {
+                        "role": "Product Owners",
+                        "content": "AI generates test scenarios from acceptance criteria, ensuring business requirements are validated automatically. AI can also translate user stories into executable test cases."
+                    },
+                    {
+                        "role": "Scrum Masters",
+                        "content": "AI tracks test coverage trends, identifies testing bottlenecks, and predicts which stories carry higher quality risks based on historical defect patterns."
+                    }
+                ]
+            },
+            "handover": "Go/no-go decision meeting, final stakeholder approval, deployment checklist verification, and rollback plan confirmation.",
+            "bestPractices": "Start testing early in the development cycle. Write comprehensive test cases covering edge cases. Automate repetitive tests. Prioritize security testing. Document and track all defects."
+        },
+        {
+            "id": "deployment",
+            "name": "Deployment",
+            "icon": "🚀",
+            "what": "Release the software to production environments, configure infrastructure, and make the application available to end users with minimal disruption.",
+            "how": "Use automated CI/CD pipelines, implement blue-green or canary deployment strategies, maintain rollback procedures, and monitor deployment health in real-time.",
+            "tools": [
+                {
+                    "name": "GitHub Copilot",
+                    "url": "https://github.com/features/copilot"
+                },
+                {
+                    "name": "Terraform MCP",
+                    "url": "https://github.com/hashicorp/terraform-mcp-server"
+                },
+                {
+                    "name": "GitHub Actions",
+                    "url": "https://github.com/features/actions"
+                },
+                {
+                    "name": "Azure MCP",
+                    "url": "https://github.com/microsoft/mcp/tree/main/servers/Azure.Mcp.Server"
+                }
+            ],
+            "aiEnhancements": {
+                "intro": "AI makes deployments safer and more predictable by learning from historical patterns.",
+                "roles": [
+                    {
+                        "role": "DevOps engineers and developers",
+                        "content": "AI predicts optimal deployment timing based on historical success rates, system load, and team availability. During rollouts, AI monitors real-time health metrics and automatically detects anomalies. Through MCP servers like Terraform MCP, AI can directly interact with Infrastructure as Code."
+                    },
+                    {
+                        "role": "Product Owners",
+                        "content": "AI provides deployment risk assessments and predicted user impact, enabling informed go/no-go decisions. AI can generate release notes and change summaries for stakeholder communication."
+                    },
+                    {
+                        "role": "Scrum Masters",
+                        "content": "AI tracks deployment frequency, failure rates, and mean time to recovery—key metrics for continuous improvement discussions and retrospectives."
+                    }
+                ]
+            },
+            "handover": "Knowledge transfer sessions with support team, handover of administrative access, alert threshold configuration, and incident response drill.",
+            "bestPractices": "Continuous Delivery ensures code is always in a deployable state. Continuous Deployment automates releases to production. Infrastructure as Code manages environments consistently. Feature flags enable gradual rollouts."
+        },
+        {
+            "id": "maintenance",
+            "name": "Maintenance",
+            "icon": "🔧",
+            "what": "Monitor system health, fix bugs, apply security patches, optimize performance, and gather user feedback to drive continuous improvement and future iterations.",
+            "how": "Implement proactive monitoring and alerting, establish incident response procedures, analyze user feedback systematically, and maintain documentation for operational knowledge.",
+            "tools": [
+                {
+                    "name": "GitHub Copilot",
+                    "url": "https://github.com/features/copilot"
+                },
+                {
+                    "name": "Azure SRE Agent",
+                    "url": "https://learn.microsoft.com/en-us/azure/sre-agent/overview"
+                },
+                {
+                    "name": "Azure Monitor Smart Detection",
+                    "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/proactive-diagnostics"
+                },
+                {
+                    "name": "Application Insights",
+                    "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview"
+                },
+                {
+                    "name": "GitHub Issues",
+                    "url": "https://github.com/features/issues"
+                },
+                {
+                    "name": "Azure MCP",
+                    "url": "https://github.com/microsoft/mcp/tree/main/servers/Azure.Mcp.Server"
+                }
+            ],
+            "aiEnhancements": {
+                "intro": "AI shifts maintenance from reactive firefighting to proactive prevention.",
+                "roles": [
+                    {
+                        "role": "developers and operations teams",
+                        "content": "AI detects system anomalies before they become user-facing incidents, predicts potential failures based on patterns in metrics, logs, and traces. AI performs intelligent log analysis to identify root causes faster. Azure SRE Agent automates operational tasks end-to-end—from incident triage and mitigation to scheduled maintenance workflows."
+                    },
+                    {
+                        "role": "Product Owners",
+                        "content": "AI analyzes user feedback and usage patterns to surface feature requests and pain points, directly informing the next ideation cycle. AI can summarize user sentiment trends and identify which issues affect the most users."
+                    },
+                    {
+                        "role": "Scrum Masters",
+                        "content": "AI provides insights into team capacity for maintenance versus new development, identifies recurring issues that might indicate systemic problems, and helps balance bug fixes against feature work in sprint planning."
+                    }
+                ]
+            },
+            "bestPractices": "User feedback and operational insights flow back to the Ideation phase, enabling iterative improvements. This creates a cycle where each release informs the next development iteration."
+        }
+    ],
+    "preconditions": [
+        {
+            "id": "requirements",
+            "icon": "📝",
+            "title": "Clear Requirements",
+            "description": "Define functional and technical requirements with precision and completeness. AI performs best when it understands exactly what you're trying to achieve.",
+            "actions": [
+                "Write detailed user stories with specific acceptance criteria",
+                "Document constraints, edge cases, and non-functional requirements",
+                "Include examples of expected inputs and outputs",
+                "Define what success looks like before starting"
+            ],
+            "example": "Instead of \"add user authentication\", specify \"implement OAuth 2.0 authentication with GitHub and Microsoft providers, supporting session management with 24-hour token expiry, and including MFA for admin users.\""
+        },
+        {
+            "id": "prompts",
+            "icon": "💬",
+            "title": "Effective Prompts",
+            "description": "Craft clear, detailed requests that guide AI toward your intended outcome. Good prompts bridge the gap between your vision and AI's capabilities.",
+            "actions": [
+                "Start with a clear objective and context",
+                "Break complex tasks into smaller, focused requests",
+                "Include relevant code snippets, patterns, or examples",
+                "Iterate and refine prompts based on AI responses",
+                "Save successful prompts for reuse across the team"
+            ],
+            "example": "Instead of \"write a login function\", use \"Create a C# login method for ASP.NET Core using Identity that validates email format, checks for account lockout after 5 failed attempts, and logs authentication events using Serilog.\""
+        },
+        {
+            "id": "rules",
+            "icon": "📏",
+            "title": "AI Rules & Standards",
+            "description": "Establish consistent patterns, conventions, and quality standards that AI must follow. This ensures AI-generated code integrates seamlessly with your existing codebase.",
+            "actions": [
+                "Create AI instruction files (like .github/copilot-instructions.md)",
+                "Define naming conventions, code style, and architecture patterns",
+                "Specify preferred libraries, frameworks, and approaches",
+                "Document anti-patterns and practices to avoid",
+                "Keep AI rules updated as your codebase evolves"
+            ],
+            "example": "Document rules like \"Use repository pattern for data access\", \"All public methods require XML documentation\", \"Use async/await for I/O operations\"."
+        },
+        {
+            "id": "models",
+            "icon": "🤖",
+            "title": "Capable AI Models",
+            "description": "Select the right AI model for each task. Different tasks require different capabilities—match the model to the complexity and nature of the work.",
+            "actions": [
+                "Use advanced models (GPT-4, Claude) for complex reasoning and architecture",
+                "Use faster models for simple completions and refactoring",
+                "Consider specialized models for specific domains (security, testing)",
+                "Evaluate cost vs. quality tradeoffs for high-volume tasks",
+                "Test different models and track which perform best for your use cases"
+            ],
+            "example": "Use GPT-4 for generating complex business logic and architectural decisions, but use a faster model like GPT-3.5 for generating boilerplate code, documentation, or simple unit tests."
+        },
+        {
+            "id": "foundation",
+            "icon": "🏗️",
+            "title": "DevOps Foundation",
+            "description": "AI amplifies your existing practices—it cannot replace a solid DevOps foundation. Teams must have testing, CI/CD, and automation fundamentals in place.",
+            "actions": [
+                "Establish comprehensive test coverage (unit, integration, end-to-end)",
+                "Implement CI/CD pipelines for automated builds and deployments",
+                "Use Infrastructure as Code for consistent environments",
+                "Set up monitoring and alerting for production systems",
+                "Allocate dedicated time (e.g., 10% per sprint) for technical debt reduction"
+            ],
+            "why": "Only when these fundamentals are in place can teams roll out changes faster with trust that their deployments work as intended. AI excels at helping teams build this foundation—generating tests, pipelines, and infrastructure configurations."
+        }
+    ],
+    "additionalInfo": {
+        "benefits": [
+            {
+                "icon": "✓",
+                "title": "Improved Quality",
+                "description": "Systematic testing and reviews catch defects early, reducing bugs in production."
+            },
+            {
+                "icon": "✓",
+                "title": "Clear Communication",
+                "description": "Defined phases and handovers ensure all stakeholders stay aligned throughout development."
+            },
+            {
+                "icon": "✓",
+                "title": "Predictable Delivery",
+                "description": "Structured planning and tracking enable accurate timelines and resource allocation."
+            },
+            {
+                "icon": "✓",
+                "title": "Reduced Risk",
+                "description": "Early requirement validation and iterative feedback minimize costly late-stage changes."
+            },
+            {
+                "icon": "✓",
+                "title": "Security Integration",
+                "description": "Security considerations are embedded at each phase rather than added as an afterthought."
+            },
+            {
+                "icon": "✓",
+                "title": "Continuous Improvement",
+                "description": "Feedback loops from maintenance inform future iterations, creating a learning organization."
+            },
+            {
+                "icon": "✓",
+                "title": "Engineer as Orchestrator",
+                "description": "Engineers evolve from writing all code to orchestrating AI agents, focusing on architecture and quality."
+            }
+        ],
+        "metrics": {
+            "intro": "AI changes the speed of delivery, but it does not automatically improve outcomes. Use a small set of metrics as trend signals.",
+            "frameworks": [
+                {
+                    "name": "DORA",
+                    "icon": "📦",
+                    "description": "Track deployment frequency, lead time for changes, time to restore service, and change failure rate."
+                },
+                {
+                    "name": "SPACE",
+                    "icon": "🧭",
+                    "description": "A multi-dimensional view of productivity including satisfaction, collaboration, and overall effectiveness."
+                },
+                {
+                    "name": "DevEx (DX)",
+                    "icon": "🛠️",
+                    "description": "Measure friction and flow: onboarding time, local setup reliability, build/test speed, cognitive load."
+                },
+                {
+                    "name": "Guardrails",
+                    "icon": "🧪",
+                    "description": "Add \"do not regress\" checks such as test pass rate, escaped defects, vulnerability findings."
+                }
+            ],
+            "seeAlso": {
+                "text": "DX, SPACE & DORA",
+                "url": "/devops/dx-space"
+            }
+        },
+        "challenges": [
+            {
+                "title": "Scope Creep",
+                "description": "Requirements grow beyond original scope. Mitigate with clear change management processes."
+            },
+            {
+                "title": "Communication Gaps",
+                "description": "Information lost between phases. Address with clear documentation and regular meetings."
+            },
+            {
+                "title": "Technical Debt",
+                "description": "Shortcuts accumulate over time. Plan regular refactoring cycles."
+            },
+            {
+                "title": "Testing Bottlenecks",
+                "description": "Testing becomes a blocker late in the cycle. Shift-left by integrating testing earlier."
+            },
+            {
+                "title": "Uncritical AI Acceptance",
+                "description": "Blindly accepting AI suggestions leads to bugs. Always review and validate AI-generated code."
+            }
+        ],
+        "methodologies": [
+            {
+                "name": "Waterfall",
+                "type": "Sequential",
+                "description": "Each SDLC phase completes fully before the next begins.",
+                "bestFor": "Stable requirements, regulated industries",
+                "cycleTime": "Months to years",
+                "flexibility": "Low"
+            },
+            {
+                "name": "Agile / Scrum",
+                "type": "Iterative",
+                "description": "All SDLC phases happen within each sprint (2-4 weeks).",
+                "bestFor": "Evolving requirements, customer collaboration",
+                "cycleTime": "2-4 weeks per sprint",
+                "flexibility": "High"
+            },
+            {
+                "name": "Kanban",
+                "type": "Continuous Flow",
+                "description": "Work items flow continuously through SDLC phases without fixed iterations.",
+                "bestFor": "Continuous delivery, support/maintenance teams",
+                "cycleTime": "Continuous",
+                "flexibility": "Very High"
+            },
+            {
+                "name": "DevOps / CI/CD",
+                "type": "Automated",
+                "description": "DevOps automates the handovers between SDLC phases.",
+                "bestFor": "Frequent releases, automation-ready teams",
+                "cycleTime": "Hours to days",
+                "flexibility": "High"
+            }
+        ]
+    }
+}

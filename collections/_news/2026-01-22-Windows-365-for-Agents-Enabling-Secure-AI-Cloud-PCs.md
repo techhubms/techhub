@@ -21,6 +21,10 @@ tags:
 - Microsoft Entra ID
 - Programmatic Control
 - Windows 365
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

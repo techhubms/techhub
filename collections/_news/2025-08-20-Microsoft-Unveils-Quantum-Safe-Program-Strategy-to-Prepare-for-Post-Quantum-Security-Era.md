@@ -27,6 +27,8 @@ tags:
 - Windows
 - Workforce Readiness
 - X.509
+- Security
+- News
 section_names:
 - security
 primary_section: security

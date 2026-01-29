@@ -25,6 +25,10 @@ tags:
 - Oracle Database@Azure
 - West Europe
 - Zero Downtime Migration
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

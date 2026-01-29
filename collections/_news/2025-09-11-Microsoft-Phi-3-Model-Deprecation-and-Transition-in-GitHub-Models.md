@@ -17,6 +17,8 @@ tags:
 - Phi 3
 - Phi 4
 - Retired
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

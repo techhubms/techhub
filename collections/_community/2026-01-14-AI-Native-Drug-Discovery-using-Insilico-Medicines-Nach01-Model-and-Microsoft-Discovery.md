@@ -23,6 +23,10 @@ tags:
 - Nach01
 - Reproducible Research
 - Scalable Compute
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

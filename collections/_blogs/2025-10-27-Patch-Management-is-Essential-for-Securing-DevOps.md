@@ -39,6 +39,9 @@ tags:
 - Vulnerability Management
 - Zero Day Defense
 - Zero Day Exploits
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

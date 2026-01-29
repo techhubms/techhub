@@ -20,6 +20,9 @@ tags:
 - Productivity Tools
 - Sentiment Analysis
 - Text Summarization
+- AI
+- Machine Learning
+- Community
 section_names:
 - ai
 - ml

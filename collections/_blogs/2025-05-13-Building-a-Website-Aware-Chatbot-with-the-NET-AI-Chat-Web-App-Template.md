@@ -21,6 +21,9 @@ tags:
 - Textify
 - Vector Embeddings
 - Web Scraping
+- AI
+- Coding
+- Blogs
 section_names:
 - ai
 - coding

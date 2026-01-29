@@ -27,6 +27,11 @@ tags:
 - V17.14
 - VS
 - Zero Length Array Allocation
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

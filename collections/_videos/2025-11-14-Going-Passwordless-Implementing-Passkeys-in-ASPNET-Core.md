@@ -17,6 +17,9 @@ tags:
 - Security Key Integration
 - WebAuthn
 - Yubikey
+- Coding
+- Security
+- Videos
 section_names:
 - coding
 - security

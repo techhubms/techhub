@@ -25,6 +25,9 @@ tags:
 - Web.config
 - X Content Type Options
 - X Frame Options
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

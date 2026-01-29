@@ -20,6 +20,9 @@ tags:
 - Microsoft Purview
 - Security Policies
 - Sensitivity Labels
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

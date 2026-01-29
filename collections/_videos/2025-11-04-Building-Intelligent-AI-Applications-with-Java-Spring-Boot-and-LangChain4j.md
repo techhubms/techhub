@@ -30,6 +30,11 @@ tags:
 - OpenAI Java SDK
 - Spring Boot
 - SpringBoot
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

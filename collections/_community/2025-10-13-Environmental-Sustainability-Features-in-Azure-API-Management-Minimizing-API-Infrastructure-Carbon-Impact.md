@@ -20,6 +20,9 @@ tags:
 - Scope 2 Emissions
 - Sustainability Reporting
 - Sustainable Workloads
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

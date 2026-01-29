@@ -21,6 +21,8 @@ tags:
 - Mobile Apps
 - NuGet
 - Page Size Requirement
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

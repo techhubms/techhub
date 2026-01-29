@@ -25,6 +25,9 @@ tags:
 - Tech Community
 - UX Improvements
 - Windows Baselines
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -25,6 +25,12 @@ tags:
 - Test Automation
 - Test Parallelization
 - VS Code
+- AI
+- GitHub Copilot
+- Azure
+- DevOps
+- Coding
+- Community
 section_names:
 - ai
 - github-copilot

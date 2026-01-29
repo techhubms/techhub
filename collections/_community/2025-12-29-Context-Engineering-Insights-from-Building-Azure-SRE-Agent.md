@@ -17,6 +17,9 @@ tags:
 - Prompt Engineering
 - Reliability
 - System Trust
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

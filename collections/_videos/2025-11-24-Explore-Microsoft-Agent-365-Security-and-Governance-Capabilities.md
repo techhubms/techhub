@@ -21,6 +21,9 @@ tags:
 - Regulatory Compliance
 - Session Management
 - Threat Protection
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

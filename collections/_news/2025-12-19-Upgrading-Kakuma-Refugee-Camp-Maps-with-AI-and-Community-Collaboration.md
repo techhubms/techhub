@@ -20,6 +20,9 @@ tags:
 - Refugee Camp
 - Satellite Imagery
 - UNHCR
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

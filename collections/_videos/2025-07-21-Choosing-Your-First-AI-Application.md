@@ -23,6 +23,8 @@ tags:
 - Risk Management
 - ROI
 - Technical Feasibility
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

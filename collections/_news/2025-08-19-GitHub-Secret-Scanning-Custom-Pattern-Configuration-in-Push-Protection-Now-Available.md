@@ -16,6 +16,9 @@ tags:
 - Secret Protection
 - Secret Scanning
 - Security Policy
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

@@ -27,6 +27,11 @@ tags:
 - VS Code
 - Workflow
 - Workflow Automation
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding
@@ -203,7 +208,7 @@ These extensions mean configurations can precisely control which terminal comman
 
 ## References
 
-- [Previous post: Automating my Git workflow in VS Code](/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval.html)
+- [Previous post: Automating my Git workflow in VS Code](/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval)
 - [VS Code Issue #252650](https://github.com/microsoft/vscode/issues/252650)
 - [VS Code Issue #253314](https://github.com/microsoft/vscode/issues/253314)
 - [VS Code Issue #253472](https://github.com/microsoft/vscode/issues/253472)

@@ -20,6 +20,12 @@ tags:
 - SDK Upgrades
 - Token Based Authentication
 - VS Code
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

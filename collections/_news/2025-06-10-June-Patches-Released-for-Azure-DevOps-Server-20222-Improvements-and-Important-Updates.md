@@ -16,6 +16,10 @@ tags:
 - Suite Import
 - Test Plans
 - XLSX Export
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

@@ -22,6 +22,8 @@ tags:
 - SDK
 - Servicing Release
 - WinForms
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

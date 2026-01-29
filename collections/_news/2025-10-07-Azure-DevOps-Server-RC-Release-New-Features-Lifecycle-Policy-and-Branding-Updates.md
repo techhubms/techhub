@@ -18,6 +18,9 @@ tags:
 - Test Plan Recovery
 - TFX Validation
 - Upgrade Path
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

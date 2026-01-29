@@ -23,6 +23,9 @@ tags:
 - Social X
 - Software Development
 - Systemic Change
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

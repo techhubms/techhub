@@ -19,6 +19,10 @@ tags:
 - Test Automation
 - Test Results Analysis
 - Think Time Parameterization
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

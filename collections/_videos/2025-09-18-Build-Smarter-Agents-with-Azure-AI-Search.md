@@ -18,6 +18,9 @@ tags:
 - RAG
 - Retrieval Augmented Generation
 - Skilling
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

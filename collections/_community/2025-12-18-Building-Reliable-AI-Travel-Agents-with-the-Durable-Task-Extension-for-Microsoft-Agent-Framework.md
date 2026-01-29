@@ -24,6 +24,10 @@ tags:
 - Reactive Programming
 - Serverless
 - State Persistence
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

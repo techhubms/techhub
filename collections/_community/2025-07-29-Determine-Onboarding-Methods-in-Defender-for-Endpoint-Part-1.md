@@ -22,6 +22,9 @@ tags:
 - Troubleshooting
 - Understanding
 - Windows Endpoint
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

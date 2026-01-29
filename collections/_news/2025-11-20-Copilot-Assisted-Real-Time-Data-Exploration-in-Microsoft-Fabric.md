@@ -18,6 +18,9 @@ tags:
 - No Code Analytics
 - Real Time Dashboard
 - Realtime Data
+- AI
+- Machine Learning
+- News
 section_names:
 - ai
 - ml

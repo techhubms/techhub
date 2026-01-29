@@ -22,6 +22,11 @@ tags:
 - Security Guardrails
 - Security Posture Management
 - Threat Mitigation
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

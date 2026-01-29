@@ -27,6 +27,11 @@ tags:
 - JavaAzure
 - JavaCloud
 - YAML
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

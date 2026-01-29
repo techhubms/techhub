@@ -15,6 +15,9 @@ tags:
 - GitHub Copilot CLI
 - Yolo
 - YOLO Mode
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

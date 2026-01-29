@@ -14,6 +14,9 @@ tags:
 - Model Selection
 - User Experience
 - UX
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

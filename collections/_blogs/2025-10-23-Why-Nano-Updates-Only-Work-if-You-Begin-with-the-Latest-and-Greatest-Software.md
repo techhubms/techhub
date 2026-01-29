@@ -33,6 +33,9 @@ tags:
 - Software Updates
 - Technical Debt
 - Vulnerability Management
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

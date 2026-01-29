@@ -20,6 +20,9 @@ tags:
 - Process Automation
 - Sentiment Analysis
 - UK Financial Services
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

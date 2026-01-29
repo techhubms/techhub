@@ -27,6 +27,9 @@ tags:
 - Parallel Execution
 - Reasoning Models
 - Tool Calling
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

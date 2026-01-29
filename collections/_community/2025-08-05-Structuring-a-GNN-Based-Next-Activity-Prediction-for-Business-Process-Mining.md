@@ -20,6 +20,8 @@ tags:
 - Process Instance
 - Process Mining
 - Python
+- Machine Learning
+- Community
 section_names:
 - ml
 primary_section: ml

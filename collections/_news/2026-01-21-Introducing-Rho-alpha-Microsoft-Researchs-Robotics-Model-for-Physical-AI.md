@@ -19,6 +19,8 @@ tags:
 - Rho Alpha
 - Robotics
 - Sensing Modalities
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

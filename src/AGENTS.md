@@ -62,26 +62,25 @@ Run -Clean              # Clean build + all tests + servers (when dependencies c
 
 ### ✅ Always Do
 
-- **Run tests after code changes**: `Run -Clean` or `Run -Clean -TestProject <name>`
-- **Use -Clean to expose build warnings** so you can fix them
-- **Fix all build warnings** (0 warnings policy enforced)
-- **Follow EditorConfig rules** (auto-format code)
-- **Use file-scoped namespaces** in all C# files
-- **Enable nullable reference types** (already global)
-- **Use primary constructors** when possible
-- **Simplify collection initialization**: Only when its a simple collection, don't wrap larger statements in `[]`
-- **Write tests BEFORE or DURING implementation** (TDD)
-- **Maintain 80%+ code coverage** for unit tests
-- **Use context7 MCP tool** for latest .NET/Blazor documentation
-- **Check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
-- **When adding NuGet packages**, always get and use the latest stable version
+- **Always run tests after code changes**: `Run -Clean` or `Run -Clean -TestProject <name>`
+- **Always use -Clean to expose build warnings** so you can fix them
+- **Always fix all build warnings** (0 warnings policy enforced)
+- **Always follow EditorConfig rules** (auto-format code)
+- **Always use file-scoped namespaces** in all C# files
+- **Always enable nullable reference types** (already global)
+- **Always simplify collection initialization**: Only when its a simple collection, don't wrap larger statements in `[]`
+- **Always write tests BEFORE or DURING implementation** (TDD)
+- **Always maintain 80%+ code coverage** for unit tests
+- **Always use context7 MCP tool** for latest .NET/Blazor documentation
+- **Always check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
+- **Always add the latest stable version when adding NuGet packages**
 
 ### ⚠️ Ask First
 
-- **Database schema changes** or data model modifications
-- **Adding new dependencies** to project files
-- **Breaking API changes** that affect existing endpoints
-- **Significant refactoring** across multiple projects
+- **Ask first before database schema changes** or data model modifications
+- **Ask first before adding new dependencies** to project files
+- **Ask first before breaking API changes** that affect existing endpoints
+- **Ask first before significant refactoring** across multiple projects
 
 ### 🚫 Never Do
 
@@ -96,6 +95,7 @@ Run -Clean              # Clean build + all tests + servers (when dependencies c
 - **Never rename identifiers without checking ALL occurrences**
 - **Never use `List<T>` in public APIs** (use `IReadOnlyList<T>`)
 - **Never catch exceptions without logging them**
+- **Never use primary constructors** as I like explicit constructors better
 
 ## Directory Structure
 

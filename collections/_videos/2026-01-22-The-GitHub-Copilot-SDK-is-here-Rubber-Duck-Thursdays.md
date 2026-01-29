@@ -13,6 +13,9 @@ tags:
 - Integration
 - Productivity
 - SDK
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

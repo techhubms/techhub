@@ -34,6 +34,13 @@ tags:
 - PostgreSQL Flexible Server
 - PowerShell Durable Functions SDK
 - SSD Ephemeral OS Disk
+- AI
+- Azure
+- Coding
+- Machine Learning
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

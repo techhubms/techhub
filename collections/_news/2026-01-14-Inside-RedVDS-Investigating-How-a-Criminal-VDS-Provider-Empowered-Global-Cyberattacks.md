@@ -24,6 +24,9 @@ tags:
 - Storm 2470
 - Threat Intelligence
 - Virtual Dedicated Server
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

@@ -25,6 +25,10 @@ tags:
 - QuarkusJav
 - Server Sent Events
 - ServerDevelopment
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

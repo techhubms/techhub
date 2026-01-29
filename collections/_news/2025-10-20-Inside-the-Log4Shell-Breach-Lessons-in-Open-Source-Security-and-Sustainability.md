@@ -22,6 +22,8 @@ tags:
 - Software Maintenance
 - Supply Chain Security
 - Vulnerability Management
+- Security
+- News
 section_names:
 - security
 primary_section: security

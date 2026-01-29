@@ -20,6 +20,8 @@ tags:
 - Spam Filtering
 - Threat Detection
 - Transparency
+- Security
+- News
 section_names:
 - security
 primary_section: security

@@ -21,6 +21,11 @@ tags:
 - Multi Agent Orchestration
 - Resiliency Agent
 - Security Posture Management
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

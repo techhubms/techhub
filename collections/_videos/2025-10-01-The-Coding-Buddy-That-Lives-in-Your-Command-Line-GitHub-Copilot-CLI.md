@@ -16,6 +16,9 @@ tags:
 - Local Development
 - Productivity
 - Terminal
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

@@ -25,6 +25,9 @@ tags:
 - Version Control
 - Visual Studio Subscriptions
 - VS
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

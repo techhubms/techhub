@@ -23,6 +23,9 @@ tags:
 - Passkeys
 - Policy Management
 - Synced Credentials
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

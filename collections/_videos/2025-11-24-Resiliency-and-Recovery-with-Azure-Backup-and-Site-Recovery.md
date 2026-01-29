@@ -27,6 +27,9 @@ tags:
 - Unstructured Data
 - Virtual Machines
 - Workload Protection
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

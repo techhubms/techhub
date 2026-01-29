@@ -26,6 +26,9 @@ tags:
 - Software Supply Chain
 - Threat Intelligence
 - VS Code
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

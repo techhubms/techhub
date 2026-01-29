@@ -41,6 +41,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Versioning
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

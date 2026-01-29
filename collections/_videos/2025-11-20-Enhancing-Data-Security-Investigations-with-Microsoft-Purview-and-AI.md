@@ -23,6 +23,9 @@ tags:
 - Secureyourdata
 - Security Operations Center
 - Vector Search
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

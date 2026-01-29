@@ -27,6 +27,10 @@ tags:
 - VS Code
 - VS Code Copilot Extension
 - VS Code Insiders
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

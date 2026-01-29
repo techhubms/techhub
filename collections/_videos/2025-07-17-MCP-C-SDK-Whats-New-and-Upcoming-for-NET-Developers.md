@@ -17,6 +17,9 @@ tags:
 - Microsoft
 - SDK Updates
 - Versions
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

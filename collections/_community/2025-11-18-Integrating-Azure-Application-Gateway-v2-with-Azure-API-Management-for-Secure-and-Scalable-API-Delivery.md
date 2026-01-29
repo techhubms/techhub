@@ -23,6 +23,11 @@ tags:
 - VNet
 - WAF
 - Zero Trust
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

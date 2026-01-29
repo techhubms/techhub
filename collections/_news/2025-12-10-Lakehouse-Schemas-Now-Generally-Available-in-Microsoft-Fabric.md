@@ -20,6 +20,9 @@ tags:
 - Spark
 - Table Organization
 - Workspace Private Links
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -18,6 +18,8 @@ tags:
 - Rustup
 - Toolchain Management
 - Version Updates
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -24,6 +24,12 @@ tags:
 - Sessions
 - Work Item Traceability
 - YAML
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

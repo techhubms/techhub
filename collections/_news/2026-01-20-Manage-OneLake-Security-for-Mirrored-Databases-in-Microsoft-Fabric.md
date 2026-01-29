@@ -20,6 +20,10 @@ tags:
 - OneLake
 - Role Based Access Control
 - Shortcuts
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml
@@ -40,7 +44,7 @@ Microsoft Fabric's OneLake now supports defining data access roles on all Mirror
 - **Supported Artifacts**: All Mirrored item types are eligible for security role assignment as part of this release.
 - **Enforcement at Time of Access**: Security roles are evaluated dynamically as users query data, so users see only the data they are authorized for.
 
-![Screenshot of OneLake security management UI for a Mirrored Database in Azure SQL](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2026/01/OutroStill-1024x576.png)
+![Screenshot of OneLake security management UI for a Mirrored Database in Azure SQL](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2026/01/outrostill-1024x576.png)
 
 ## How it Works
 

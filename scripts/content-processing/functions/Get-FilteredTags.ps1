@@ -47,10 +47,8 @@ function Get-FilteredTags {
         throw "Collection parameter cannot be null or empty"
     }
 
-    # NOTE: We no longer filter out section/collection names from input tags.
-    # If the AI assigned them as tags, we keep them.
-    # We just don't AUTOMATICALLY ADD categories/collection as tags anymore.
-    $allTags = @($Tags)
+    # Add the current categories and collection
+    $allTags = @($Tags) + @($Categories) + @($Collection)
 
     # Filter out tags that only contain special characters (no alphanumeric characters)
     $allTags = $allTags | Where-Object { $_ -match '[a-zA-Z0-9]' }
@@ -278,11 +276,12 @@ function Get-FilteredTags {
         }
     }
     $allTags = $newTags
-
-    # NOTE: We used to add 'AI' and 'GitHub Copilot' tags when content contained these words,
-    # but with the .NET migration, we no longer need to add section/collection names as tags.
-    # Section filtering is now done dynamically via queries.
-
+    
+    # Special rule: If "GitHub Copilot" tag exists, also add "AI" tag
+    if ($allTags | Where-Object { $_ -eq 'GitHub Copilot' }) {
+        $allTags += 'AI'
+    }
+    
     # Remove case-insensitive duplicates, keeping the first (most uppercase) version
     $seen = @{}
     $filteredTags = @()

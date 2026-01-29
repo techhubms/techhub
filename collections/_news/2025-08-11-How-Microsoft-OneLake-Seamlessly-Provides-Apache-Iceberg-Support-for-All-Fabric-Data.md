@@ -26,6 +26,8 @@ tags:
 - Table Formats
 - Trino
 - Virtualization
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

@@ -24,6 +24,10 @@ tags:
 - Semantic Models
 - Service Principal
 - Workspace Identity
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

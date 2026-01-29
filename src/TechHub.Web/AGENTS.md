@@ -18,21 +18,21 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 
 ### ✅ Always Do
 
-- **Use design tokens exclusively** - ALL colors, spacing, typography from `wwwroot/css/design-tokens.css` (see [Design Tokens section](#design-tokens---single-source-of-truth))
-- **Server-side render initial content** - Use SSR for SEO and performance
-- **Progressive enhancement** - Core functionality works without JavaScript
-- **Use TechHubApiClient for all API calls** - Typed HTTP client in `Services/TechHubApiClient.cs`
-- **Follow Blazor component patterns** - See [Root AGENTS.md](../../AGENTS.md) for .NET/Blazor framework-specific guidance
-- **Follow semantic HTML structure** - Use `<main>`, `<section>`, `<article>`, `<aside>` instead of `<div>` (see Semantic HTML Structure section)
-- **Fix all linting errors** - Check with `get_errors` tool after editing files
-- **Add tests for components** - Use bUnit for component testing (see [tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md))
+- **Always use design tokens exclusively** - ALL colors, spacing, typography from `wwwroot/css/design-tokens.css` (see [Design Tokens section](#design-tokens---single-source-of-truth))
+- **Always server-side render initial content** - Use SSR for SEO and performance
+- **Always progressive enhancement** - Core functionality works without JavaScript
+- **Always use TechHubApiClient for all API calls** - Typed HTTP client in `Services/TechHubApiClient.cs`
+- **Always follow Blazor component patterns** - See [Root AGENTS.md](../../AGENTS.md) for .NET/Blazor framework-specific guidance
+- **Always follow semantic HTML structure** - Use `<main>`, `<section>`, `<article>`, `<aside>` instead of `<div>` (see Semantic HTML Structure section)
+- **Always fix all linting errors** - Check with `get_errors` tool after editing files
+- **Always add tests for components** - Use bUnit for component testing (see [tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md))
 
 ### ⚠️ Ask First
 
-- **Adding new component dependencies** - Verify no duplication exists
-- **Changing global CSS** - May affect all components
-- **Modifying TechHubApiClient** - May impact all pages
-- **Breaking component APIs** - Changes to @Parameters or public methods
+- **Ask first before adding new component dependencies** - Verify no duplication exists
+- **Ask first before changing global CSS** - May affect all components
+- **Ask first before modifying TechHubApiClient** - May impact all pages
+- **Ask first before breaking component APIs** - Changes to @Parameters or public methods
 
 ### 🚫 Never Do
 

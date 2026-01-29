@@ -14,6 +14,11 @@ tags:
 - Notification System
 - Security Alerts
 - Security Automation
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - devops

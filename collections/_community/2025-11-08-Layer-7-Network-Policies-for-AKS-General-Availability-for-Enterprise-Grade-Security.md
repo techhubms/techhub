@@ -19,6 +19,9 @@ tags:
 - Network Observability
 - Policy Enforcement
 - Zero Trust
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

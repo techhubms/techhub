@@ -15,6 +15,9 @@ tags:
 - OpenCode
 - Subscription Management
 - Terminal Tools
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

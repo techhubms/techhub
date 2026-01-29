@@ -18,6 +18,9 @@ tags:
 - Kubernetes
 - SQL Server
 - Testcontainers
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

@@ -19,6 +19,9 @@ tags:
 - Role Based Security
 - Schema Level Access
 - Storage Solutions
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

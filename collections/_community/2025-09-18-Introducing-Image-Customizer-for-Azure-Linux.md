@@ -26,6 +26,9 @@ tags:
 - Ubuntu
 - VHD
 - WSL2
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

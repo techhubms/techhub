@@ -19,6 +19,11 @@ tags:
 - Resource Validation
 - Storage Provisioning
 - VS Code Extension
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

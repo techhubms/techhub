@@ -20,6 +20,9 @@ tags:
 - Security Automation
 - Security Coverage
 - Workflow Policies
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

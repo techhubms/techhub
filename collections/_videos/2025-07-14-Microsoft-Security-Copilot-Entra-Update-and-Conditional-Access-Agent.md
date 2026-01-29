@@ -21,6 +21,10 @@ tags:
 - Security Automation
 - Security Monitoring
 - Security Operations
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

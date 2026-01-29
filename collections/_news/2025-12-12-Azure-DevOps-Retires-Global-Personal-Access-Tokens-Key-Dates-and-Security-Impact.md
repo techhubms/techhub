@@ -18,6 +18,10 @@ tags:
 - Release Management
 - Token Decommission
 - Token Governance
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

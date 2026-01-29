@@ -22,6 +22,8 @@ tags:
 - Pull Requests
 - Team Communication
 - Testing
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

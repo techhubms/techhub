@@ -14,6 +14,8 @@ tags:
 - Datto
 - Restore Points
 - VHDX Compatibility
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

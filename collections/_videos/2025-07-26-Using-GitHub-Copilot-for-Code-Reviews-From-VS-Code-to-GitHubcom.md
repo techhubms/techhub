@@ -16,6 +16,10 @@ tags:
 - Security Patterns
 - Team Guidelines
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

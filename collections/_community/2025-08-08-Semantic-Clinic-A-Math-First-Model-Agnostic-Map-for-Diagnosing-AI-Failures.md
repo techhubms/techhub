@@ -26,6 +26,10 @@ tags:
 - Semantic Clinic
 - System Observability
 - Vector Store
+- AI
+- Machine Learning
+- DevOps
+- Community
 section_names:
 - ai
 - ml

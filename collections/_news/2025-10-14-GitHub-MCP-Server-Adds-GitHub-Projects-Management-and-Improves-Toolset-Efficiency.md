@@ -17,6 +17,8 @@ tags:
 - Server Configuration
 - Tool Consolidation
 - Workflow Automation
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

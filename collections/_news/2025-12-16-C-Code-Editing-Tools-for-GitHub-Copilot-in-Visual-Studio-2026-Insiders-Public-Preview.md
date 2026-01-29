@@ -20,6 +20,10 @@ tags:
 - Symbol Awareness
 - Tool Integration
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

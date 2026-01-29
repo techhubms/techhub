@@ -21,6 +21,9 @@ tags:
 - Retrieval Augmented Generation
 - Signify
 - Technology
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

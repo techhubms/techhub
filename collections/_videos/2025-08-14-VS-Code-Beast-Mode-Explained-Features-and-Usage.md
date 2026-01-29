@@ -23,6 +23,8 @@ tags:
 - VS Code
 - VS Code Extensions
 - VS Code Features
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

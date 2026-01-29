@@ -14,6 +14,8 @@ tags:
 - GitHub
 - Open Source
 - Software Development
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

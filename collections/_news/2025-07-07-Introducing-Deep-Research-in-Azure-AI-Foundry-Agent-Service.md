@@ -24,6 +24,9 @@ tags:
 - Pricing
 - SDK
 - Web Research
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

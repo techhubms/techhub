@@ -20,6 +20,9 @@ tags:
 - Model Creation Protocol
 - REST API
 - Web API
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

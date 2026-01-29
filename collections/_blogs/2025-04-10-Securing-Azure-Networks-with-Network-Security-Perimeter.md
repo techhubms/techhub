@@ -22,6 +22,9 @@ tags:
 - Private Endpoints
 - Security Posture
 - Virtual Networks
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

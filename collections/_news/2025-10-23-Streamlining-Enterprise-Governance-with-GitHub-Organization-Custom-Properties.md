@@ -21,6 +21,8 @@ tags:
 - Rulesets
 - Security Compliance
 - Targeting
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

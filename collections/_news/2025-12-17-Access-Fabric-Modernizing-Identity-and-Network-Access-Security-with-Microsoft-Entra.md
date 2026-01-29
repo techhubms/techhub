@@ -20,6 +20,10 @@ tags:
 - Session Management
 - Threat Mitigation
 - Zero Trust
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

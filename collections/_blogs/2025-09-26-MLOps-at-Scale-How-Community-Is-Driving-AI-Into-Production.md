@@ -20,6 +20,10 @@ tags:
 - Scaling AI
 - Technical Debt
 - Video Interviews
+- AI
+- DevOps
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - devops

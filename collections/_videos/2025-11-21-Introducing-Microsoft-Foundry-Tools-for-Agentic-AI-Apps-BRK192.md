@@ -23,6 +23,9 @@ tags:
 - Model Versioning
 - MSIgnite
 - Transcription
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

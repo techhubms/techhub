@@ -1,0 +1,129 @@
+{
+    "title": "GitHub Copilot Features",
+    "description": "Explore the powerful features of GitHub Copilot",
+    "intro": "This page provides a comprehensive overview of GitHub Copilot plans, combining official features with example videos. For the most current pricing, visit GitHub's official pricing page.",
+    "note": "GitHub Copilot features like the Coding Agent are not currently available in GitHub Enterprise Server. For the most recent plan details view the official documentation.",
+    "links": {
+        "pricing": "https://github.com/features/copilot/plans",
+        "planDetails": "https://docs.github.com/en/copilot/get-started/plans"
+    },
+    "subscriptionTiers": [
+        {
+            "id": "free",
+            "name": "Free",
+            "tagline": "A fast way to get started with GitHub Copilot",
+            "price": null,
+            "features": [
+                "50 agent mode or chat requests per month",
+                "2,000 completions per month",
+                "Access to Haiku 4.5, GPT-4.1, and more"
+            ],
+            "videoAnchor": "videos-free"
+        },
+        {
+            "id": "pro",
+            "name": "Pro",
+            "tagline": "Accelerate workflows with GitHub Copilot ($10 USD per month or $100 per year)",
+            "price": {
+                "monthly": 10,
+                "yearly": 100,
+                "currency": "USD"
+            },
+            "features": [
+                "Everything in Free",
+                "Coding agent",
+                "Unlimited agent mode and chats with GPT-5 mini",
+                "Unlimited code completions",
+                "Access to code review, Claude Sonnet 4/4.5, GPT-5, Gemini 2.5 Pro, and more",
+                "300 premium requests to use latest models, with option to buy more",
+                "Free for verified students, teachers, and maintainers of popular open source projects"
+            ],
+            "videoAnchor": "videos-pro"
+        },
+        {
+            "id": "business",
+            "name": "Business",
+            "tagline": "For teams and organizations ($19 USD per user per month)",
+            "price": {
+                "monthly": 19,
+                "perUser": true,
+                "currency": "USD"
+            },
+            "features": [
+                "Everything in Pro",
+                "Coding agent for organizations",
+                "Usage metrics and analytics",
+                "Data excluded from training by default",
+                "User management and policies",
+                "Content exclusions",
+                "Audit logs",
+                "300 premium requests per month"
+            ],
+            "videoAnchor": "videos-pro"
+        },
+        {
+            "id": "proplus",
+            "name": "Pro+",
+            "tagline": "Scale with agents and more models ($39 USD per month or $390 per year)",
+            "price": {
+                "monthly": 39,
+                "yearly": 390,
+                "currency": "USD"
+            },
+            "features": [
+                "Everything in Pro",
+                "Access to all models, including Claude Opus 4.1 and more",
+                "1500 Premium Requests per month, with option to buy more",
+                "Access to GitHub Spark",
+                "Codex IDE extension support in VS Code"
+            ],
+            "videoAnchor": "videos-proplus"
+        },
+        {
+            "id": "enterprise",
+            "name": "Enterprise",
+            "tagline": "Full enterprise features and controls ($39 USD per user per month)",
+            "price": {
+                "monthly": 39,
+                "perUser": true,
+                "currency": "USD"
+            },
+            "features": [
+                "Everything in Business",
+                "1000 premium requests per month",
+                "Copilot knowledge bases",
+                "Advanced compliance and security features",
+                "Custom policies and content exclusions",
+                "Enterprise-grade audit logs",
+                "SAML SSO integration"
+            ],
+            "videoAnchor": "videos-proplus"
+        }
+    ],
+    "featureSections": [
+        {
+            "id": "videos-free",
+            "title": "Free Features",
+            "plans": [
+                "Free"
+            ]
+        },
+        {
+            "id": "videos-pro",
+            "title": "Pro & Business Features",
+            "plans": [
+                "Pro",
+                "Business"
+            ]
+        },
+        {
+            "id": "videos-proplus",
+            "title": "Pro+ & Enterprise Features",
+            "plans": [
+                "Pro+",
+                "Enterprise"
+            ]
+        }
+    ],
+    "videoCollection": "ghc-features"
+}

@@ -27,6 +27,12 @@ tags:
 - REST API
 - Service Principal
 - SQL Analytics
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

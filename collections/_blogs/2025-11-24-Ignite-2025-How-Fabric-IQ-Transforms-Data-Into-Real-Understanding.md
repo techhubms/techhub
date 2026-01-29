@@ -19,6 +19,9 @@ tags:
 - Operational Intelligence
 - Reasoning Graph
 - Semantic Layer
+- AI
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - ml

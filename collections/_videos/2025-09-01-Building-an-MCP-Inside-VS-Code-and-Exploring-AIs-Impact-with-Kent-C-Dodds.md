@@ -18,6 +18,10 @@ tags:
 - VS Code
 - VS Code Extensions
 - Workflow Automation
+- AI
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - coding

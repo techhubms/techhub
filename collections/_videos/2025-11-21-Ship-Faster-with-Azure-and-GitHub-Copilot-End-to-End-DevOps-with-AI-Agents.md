@@ -22,6 +22,11 @@ tags:
 - SRE Agent
 - Testing Agent
 - VS Code
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

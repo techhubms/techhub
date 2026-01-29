@@ -26,6 +26,10 @@ tags:
 - Real Time AI
 - Rust
 - TypeScript
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

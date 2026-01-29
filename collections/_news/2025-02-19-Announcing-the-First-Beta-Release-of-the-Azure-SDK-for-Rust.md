@@ -18,6 +18,9 @@ tags:
 - Open Source
 - Rust
 - Secure Coding
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

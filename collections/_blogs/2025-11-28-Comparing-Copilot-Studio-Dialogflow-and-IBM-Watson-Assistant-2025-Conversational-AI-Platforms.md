@@ -25,6 +25,8 @@ tags:
 - Power Platform
 - Power Virtual Agents
 - Virtual Agents
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

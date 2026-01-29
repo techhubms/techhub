@@ -22,6 +22,9 @@ tags:
 - MRI Analysis
 - Nuance PowerShare
 - Terraform
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

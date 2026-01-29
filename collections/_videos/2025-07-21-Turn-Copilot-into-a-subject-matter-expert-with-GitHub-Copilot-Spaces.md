@@ -16,6 +16,9 @@ tags:
 - GitHub
 - Software Development
 - Team Collaboration
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

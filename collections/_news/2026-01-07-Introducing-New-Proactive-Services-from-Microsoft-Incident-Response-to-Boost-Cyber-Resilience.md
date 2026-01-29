@@ -24,6 +24,8 @@ tags:
 - Tabletop Exercises
 - Threat Detection
 - Threat Hunting
+- Security
+- News
 section_names:
 - security
 primary_section: security

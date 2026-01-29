@@ -22,6 +22,9 @@ tags:
 - Remote Support
 - Virtual Desktop Infrastructure
 - Windows 365
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

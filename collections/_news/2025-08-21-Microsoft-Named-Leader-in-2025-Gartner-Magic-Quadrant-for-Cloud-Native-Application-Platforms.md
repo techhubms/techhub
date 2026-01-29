@@ -30,6 +30,11 @@ tags:
 - VS
 - Web
 - Web Applications
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

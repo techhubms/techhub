@@ -21,6 +21,9 @@ tags:
 - Personalization
 - Sales Automation
 - Sentiment Analysis
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

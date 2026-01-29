@@ -19,6 +19,10 @@ tags:
 - Shiva Shastri
 - Thomas Maurer
 - Workload Migration
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

@@ -21,6 +21,13 @@ tags:
 - Team Learning
 - UI Modernization
 - Xpirit
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

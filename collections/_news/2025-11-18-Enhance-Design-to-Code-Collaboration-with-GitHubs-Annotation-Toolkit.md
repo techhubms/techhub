@@ -22,6 +22,9 @@ tags:
 - Quality Assurance
 - UI Engineering
 - WCAG
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

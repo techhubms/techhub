@@ -20,6 +20,9 @@ tags:
 - SAS Token
 - SDK
 - User Delegation SAS
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

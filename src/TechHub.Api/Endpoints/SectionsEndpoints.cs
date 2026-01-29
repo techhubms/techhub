@@ -7,7 +7,7 @@ namespace TechHub.Api.Endpoints;
 /// <summary>
 /// API endpoints for sections - top-level organizational units
 /// </summary>
-internal static class SectionsEndpoints
+public static class SectionsEndpoints
 {
     /// <summary>
     /// Maps all section-related endpoints to the application
@@ -114,7 +114,14 @@ internal static class SectionsEndpoints
 
         // Get all content for this section (filter by section.Name which matches ContentItem.SectionNames)
         // Exclude drafts from section content listings
-        var content = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false, limit: 1000, offset: 0, cancellationToken);
+        var content = await contentRepository.GetBySectionAsync(
+            section.Name, 
+            limit: 1000, 
+            offset: 0, 
+            collectionName: null, 
+            subcollectionName: null, 
+            includeDraft: false, 
+            cancellationToken);
 
         return TypedResults.Ok(content.AsEnumerable());
     }
@@ -202,13 +209,11 @@ internal static class SectionsEndpoints
         };
         var searchResults = await contentRepository.SearchAsync(request, cancellationToken);
         var sectionContent = searchResults.Items;
-        
+
         // Further filter by subcollection if specified (SearchRequest doesn't support subcollection filtering yet)
         if (!string.IsNullOrWhiteSpace(subcollection))
         {
-            sectionContent = sectionContent
-                .Where(c => c.SubcollectionName?.Equals(subcollection, StringComparison.OrdinalIgnoreCase) ?? false)
-                .ToList();
+            sectionContent = [.. sectionContent.Where(c => c.SubcollectionName?.Equals(subcollection, StringComparison.OrdinalIgnoreCase) ?? false)];
         }
 
         return TypedResults.Ok(sectionContent.AsEnumerable());

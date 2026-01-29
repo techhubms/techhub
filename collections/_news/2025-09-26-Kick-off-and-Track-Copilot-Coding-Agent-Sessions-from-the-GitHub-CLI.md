@@ -20,6 +20,11 @@ tags:
 - Pull Request
 - Release V2.80.0
 - Workflow Automation
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

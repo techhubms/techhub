@@ -19,6 +19,9 @@ tags:
 - Performance Optimization
 - Preview Feature
 - Staging
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

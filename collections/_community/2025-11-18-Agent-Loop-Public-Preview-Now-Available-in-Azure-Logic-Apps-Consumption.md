@@ -22,6 +22,9 @@ tags:
 - Pay as You Go
 - Serverless Workflows
 - Workflow Automation
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

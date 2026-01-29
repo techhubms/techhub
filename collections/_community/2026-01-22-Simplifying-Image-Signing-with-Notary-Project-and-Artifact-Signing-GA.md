@@ -23,6 +23,10 @@ tags:
 - Role Based Access Control
 - Short Lived Certificates
 - Trusted Signing
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

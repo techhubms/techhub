@@ -15,6 +15,11 @@ tags:
 - Governance
 - Insights Dashboard
 - MCP
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - devops

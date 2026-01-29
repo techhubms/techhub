@@ -16,6 +16,10 @@ tags:
 - Production Failures
 - Semantic Health Checks
 - Semantic Tree
+- DevOps
+- AI
+- Security
+- Community
 section_names:
 - devops
 - ai

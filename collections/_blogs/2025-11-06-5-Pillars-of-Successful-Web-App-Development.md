@@ -41,6 +41,10 @@ tags:
 - Web Application Development
 - Web Architecture
 - Web Security
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - coding
 - devops

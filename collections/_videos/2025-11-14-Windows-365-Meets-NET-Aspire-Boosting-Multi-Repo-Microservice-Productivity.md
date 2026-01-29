@@ -19,6 +19,9 @@ tags:
 - RunAsEmulator Extension
 - Seed Data
 - Windows 365
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

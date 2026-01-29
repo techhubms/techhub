@@ -19,6 +19,9 @@ tags:
 - Security Automation
 - Security Configuration
 - Security Workflow
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

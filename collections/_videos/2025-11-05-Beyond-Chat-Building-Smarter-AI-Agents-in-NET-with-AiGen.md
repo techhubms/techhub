@@ -23,6 +23,9 @@ tags:
 - Software Development
 - User Experience
 - VS
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

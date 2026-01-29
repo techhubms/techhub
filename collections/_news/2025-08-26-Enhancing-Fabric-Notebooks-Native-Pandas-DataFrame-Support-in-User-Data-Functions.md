@@ -21,6 +21,9 @@ tags:
 - Scala
 - UDF
 - User Data Functions
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -21,6 +21,11 @@ tags:
 - Open Source Contribution
 - Software Engineering
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

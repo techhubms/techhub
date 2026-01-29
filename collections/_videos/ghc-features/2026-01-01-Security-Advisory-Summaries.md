@@ -7,7 +7,10 @@ ghes_support: false
 draft: true
 plans:
 - Business
-tags: []
+tags:
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

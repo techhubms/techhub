@@ -20,6 +20,11 @@ tags:
 - Slack Integration
 - Test Coverage
 - Universe25
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

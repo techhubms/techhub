@@ -25,6 +25,10 @@ tags:
 - SLM
 - Windows AI PC
 - Windows Development
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

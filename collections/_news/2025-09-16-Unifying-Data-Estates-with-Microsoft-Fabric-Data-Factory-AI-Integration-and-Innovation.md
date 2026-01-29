@@ -28,6 +28,10 @@ tags:
 - Semantic Models
 - VNet Gateway
 - Zero ETL
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

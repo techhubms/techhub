@@ -16,6 +16,9 @@ tags:
 - PowerPoint
 - User Experience
 - Word
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

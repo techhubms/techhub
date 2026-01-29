@@ -24,6 +24,11 @@ tags:
 - VM Applications
 - VMSS Instance Mix
 - Zonal Redundant Storage
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

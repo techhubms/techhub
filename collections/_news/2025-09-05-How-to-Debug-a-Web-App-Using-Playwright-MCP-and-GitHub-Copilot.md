@@ -20,6 +20,10 @@ tags:
 - VS Code
 - VS Code Extensions
 - Web App Debugging
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

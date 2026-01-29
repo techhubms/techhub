@@ -21,6 +21,8 @@ tags:
 - Software Developer
 - Software Development
 - VS Code
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

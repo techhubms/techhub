@@ -21,6 +21,11 @@ tags:
 - SysAdmin
 - Tenant Maintenance
 - User Provisioning
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - azure

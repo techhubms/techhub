@@ -17,6 +17,10 @@ tags:
 - Unit Testing
 - VS
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

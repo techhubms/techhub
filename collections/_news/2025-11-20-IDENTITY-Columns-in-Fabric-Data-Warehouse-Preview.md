@@ -21,6 +21,9 @@ tags:
 - SQL Server
 - Surrogate Key
 - T SQL
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

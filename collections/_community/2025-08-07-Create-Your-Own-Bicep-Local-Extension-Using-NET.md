@@ -20,6 +20,10 @@ tags:
 - Project Scaffolding
 - Resource Handler
 - VS Code
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

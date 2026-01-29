@@ -19,6 +19,8 @@ tags:
 - Trivia Games
 - Twitch
 - Virtual Event
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

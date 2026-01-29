@@ -23,6 +23,9 @@ tags:
 - Private Link
 - Service Consolidation
 - Web Application Firewall
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

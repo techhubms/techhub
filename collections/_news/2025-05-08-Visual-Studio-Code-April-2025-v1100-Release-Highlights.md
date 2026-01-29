@@ -26,6 +26,12 @@ tags:
 - TypeScript
 - VS Code
 - VS Code 1.100
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - coding

@@ -20,6 +20,9 @@ tags:
 - PiKVM
 - Security Operations
 - Threat Intelligence
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

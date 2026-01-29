@@ -25,6 +25,11 @@ tags:
 - VS Code
 - VS Code Extension
 - YAML
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

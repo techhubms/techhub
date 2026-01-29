@@ -15,6 +15,8 @@ tags:
 - Sorting
 - Span APIs
 - String Manipulation
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

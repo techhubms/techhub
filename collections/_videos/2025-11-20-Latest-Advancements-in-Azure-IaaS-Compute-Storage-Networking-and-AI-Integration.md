@@ -26,6 +26,10 @@ tags:
 - Snapshots
 - Storage
 - Workload Optimization
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

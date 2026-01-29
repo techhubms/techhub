@@ -18,6 +18,8 @@ tags:
 - Resource Management
 - Subscription Management
 - Virtual Machine Scale Sets
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -12,6 +12,8 @@ tags:
 - Java
 - Microsoft Semantic Kernel
 - Semantic Kernel
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

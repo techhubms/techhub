@@ -21,6 +21,9 @@ tags:
 - PromQL
 - Virtual Machines
 - VMSS
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

@@ -21,6 +21,8 @@ tags:
 - Navigation Properties
 - Row Level Security
 - Soft Delete
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

@@ -8,22 +8,35 @@ namespace TechHub.Api.Middleware;
 /// and returns consistent error responses
 /// </summary>
 #pragma warning disable CA1812 // Internal class is never instantiated - instantiated by ASP.NET Core middleware pipeline
-internal sealed class ExceptionHandlerMiddleware(
+internal sealed class ExceptionHandlerMiddleware
 #pragma warning restore CA1812
-    RequestDelegate next,
-    ILogger<ExceptionHandlerMiddleware> logger,
-    IHostEnvironment environment)
 {
     private static readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
-    private readonly RequestDelegate _next = next;
-    private readonly ILogger<ExceptionHandlerMiddleware> _logger = logger;
-    private readonly IHostEnvironment _environment = environment;
+    private readonly RequestDelegate _next;
+    private readonly ILogger<ExceptionHandlerMiddleware> _logger;
+    private readonly IHostEnvironment _environment;
+
+    public ExceptionHandlerMiddleware(
+        RequestDelegate next,
+        ILogger<ExceptionHandlerMiddleware> logger,
+        IHostEnvironment environment)
+    {
+        ArgumentNullException.ThrowIfNull(next);
+        ArgumentNullException.ThrowIfNull(logger);
+        ArgumentNullException.ThrowIfNull(environment);
+
+        _next = next;
+        _logger = logger;
+        _environment = environment;
+    }
 
     public async Task InvokeAsync(HttpContext context)
     {
+        ArgumentNullException.ThrowIfNull(context);
+
         try
         {
             await _next(context);

@@ -15,6 +15,9 @@ tags:
 - Productivity
 - Software Development
 - The Pragmatic Engineer
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

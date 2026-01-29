@@ -24,6 +24,9 @@ tags:
 - Microsoft AI
 - Software Developer
 - Software Development
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

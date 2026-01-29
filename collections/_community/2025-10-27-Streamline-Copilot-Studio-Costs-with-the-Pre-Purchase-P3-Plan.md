@@ -19,6 +19,8 @@ tags:
 - Resource Groups
 - Subscription Management
 - Usage Monitoring
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

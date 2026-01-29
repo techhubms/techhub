@@ -22,6 +22,10 @@ tags:
 - Python
 - SDK
 - Semantic Kernel
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

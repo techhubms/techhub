@@ -23,6 +23,10 @@ tags:
 - SDK Features
 - VS
 - Windows Containers
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

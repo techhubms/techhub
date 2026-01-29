@@ -13,6 +13,10 @@ tags:
 - Code Remediation
 - Enterprise Migration
 - Validation
+- AI
+- Azure
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

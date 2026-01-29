@@ -24,6 +24,9 @@ tags:
 - PromptTools
 - Secondisc.com
 - Vellum
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

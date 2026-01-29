@@ -19,6 +19,11 @@ tags:
 - TheDownload
 - VS Code
 - VS Code Dev Days
+- AI
+- Coding
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - coding

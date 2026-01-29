@@ -21,6 +21,9 @@ tags:
 - Microsoft Fabric
 - OneLake
 - SQL Mirroring
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

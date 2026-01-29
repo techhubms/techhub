@@ -31,6 +31,9 @@ tags:
 - Monitoring
 - Operational Optimization
 - Runbooks
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

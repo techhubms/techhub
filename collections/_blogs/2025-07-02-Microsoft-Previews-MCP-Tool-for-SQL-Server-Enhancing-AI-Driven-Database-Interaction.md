@@ -28,6 +28,10 @@ tags:
 - SQL AI
 - SQL Server
 - SQL Tools
+- AI
+- Azure
+- Coding
+- Blogs
 section_names:
 - ai
 - azure

@@ -16,6 +16,8 @@ tags:
 - Strongly Typed Objects
 - YAML
 - YamlDotNet
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

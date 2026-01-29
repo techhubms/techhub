@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Services;
+using TechHub.TestUtilities;
 using TechHub.TestUtilities.Builders;
 
 namespace TechHub.Infrastructure.Tests.Services;
@@ -16,36 +17,9 @@ public class RssServiceTests
 
     public RssServiceTests()
     {
-        // Create mock AppSettings with collection display names
-        var appSettings = new AppSettings
-        {
-            Content = new ContentSettings
-            {
-                CollectionsPath = "/collections",
-                Sections = new Dictionary<string, SectionConfig>
-                {
-                    ["ai"] = new()
-                    {
-                        Title = "AI",
-                        Description = "Artificial Intelligence",
-                        Url = "/ai",
-                        Collections = new Dictionary<string, CollectionConfig>
-                        {
-                            ["news"] = new() { Title = "News", Url = "/ai/news", Description = "AI News", Custom = false }
-                        }
-                    }
-                },
-                CollectionDisplayNames = new Dictionary<string, string>
-                {
-                    ["news"] = "News",
-                    ["videos"] = "Videos",
-                    ["blogs"] = "Blogs",
-                    ["community"] = "Community",
-                    ["roundups"] = "Roundups"
-                }
-            }
-        };
-        
+        // Load real AppSettings from appsettings.json
+        var appSettings = ConfigurationHelper.LoadAppSettings();
+
         var options = Options.Create(appSettings);
         _rssService = new RssService(options);
     }
@@ -104,7 +78,7 @@ public class RssServiceTests
         channel.Should().NotBeNull();
         channel.Title.Should().Be("Tech Hub - AI");
         channel.Description.Should().Be("Artificial Intelligence resources");
-        channel.Link.Should().Be("https://tech.hub.ms/ai");
+        channel.Link.Should().Be("https://localhost:5003/ai");
         channel.Language.Should().Be("en-us");
         channel.Items.Should().HaveCount(2);
     }
@@ -195,7 +169,7 @@ public class RssServiceTests
         channel.Should().NotBeNull();
         channel.Title.Should().Be("Tech Hub - News");
         channel.Description.Should().Be("Latest news from Tech Hub");
-        channel.Link.Should().Be("https://tech.hub.ms/all/news");
+        channel.Link.Should().Be("https://localhost:5003/all/news");
         channel.Language.Should().Be("en-us");
         channel.Items.Should().HaveCount(2);
     }
@@ -280,15 +254,29 @@ public class RssServiceTests
     {
         // Arrange
         var section = CreateTestSection();
-        var items = CreateTestItems();
+        var internalItems = new List<ContentItem>
+        {
+            A.ContentItem
+                .WithSlug("internal-video-1")
+                .WithTitle("Internal Video")
+                .WithAuthor("John Doe")
+                .WithDateEpoch(1705305600)
+                .WithCollectionName("videos") // Videos are internal, not external
+                .WithFeedName("test-feed")
+                .WithPrimarySectionName("ai")
+                .WithTags("AI", "Tutorial")
+                .WithExcerpt("Internal video excerpt")
+                .WithRenderedHtml("<p>Video content</p>")
+                .Build()
+        };
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, internalItems);
 
         // Assert
-        var internalItem = channel.Items.First(); // First item is internal
-        internalItem.Link.Should().StartWith("https://tech.hub.ms");
-        internalItem.Guid.Should().StartWith("https://tech.hub.ms");
+        var internalItem = channel.Items.First();
+        internalItem.Link.Should().StartWith("https://localhost:5003");
+        internalItem.Guid.Should().StartWith("https://localhost:5003");
     }
 
     [Fact]
@@ -336,14 +324,15 @@ public class RssServiceTests
         xml.Should().Contain("<channel>");
         xml.Should().Contain("<title>Tech Hub - AI</title>");
         xml.Should().Contain("<description>Artificial Intelligence resources</description>");
-        xml.Should().Contain("<link>https://tech.hub.ms/ai</link>");
+        xml.Should().Contain("<link>https://localhost:5003/ai</link>");
         xml.Should().Contain("<language>en-us</language>");
         xml.Should().Contain("<item>");
         xml.Should().Contain("<title>Test Article 1</title>");
         xml.Should().Contain("<guid isPermaLink=\"true\">");
         xml.Should().Contain("<pubDate>");
         xml.Should().Contain("<author>John Doe</author>");
-        xml.Should().Contain("<category>ai</category>");  // Section name, not tag
+        xml.Should().Contain("<category>AI</category>");  // Tag from content
+        xml.Should().Contain("<category>Machine Learning</category>");  // Tag from content
         xml.Should().Contain("</item>");
         xml.Should().Contain("</channel>");
         xml.Should().Contain("</rss>");

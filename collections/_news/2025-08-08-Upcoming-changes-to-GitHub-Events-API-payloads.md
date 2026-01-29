@@ -20,6 +20,8 @@ tags:
 - REST API
 - Scalability
 - Webhooks
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

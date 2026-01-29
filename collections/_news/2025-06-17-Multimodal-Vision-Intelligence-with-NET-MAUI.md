@@ -19,6 +19,9 @@ tags:
 - Mobile Development
 - Multimodal
 - Prompt Engineering
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

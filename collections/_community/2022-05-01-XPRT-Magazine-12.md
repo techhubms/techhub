@@ -23,6 +23,13 @@ tags:
 - Value Chain
 - WebAssembly
 - Xpirit Germany
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

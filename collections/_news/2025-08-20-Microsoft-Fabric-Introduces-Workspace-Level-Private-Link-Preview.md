@@ -18,6 +18,9 @@ tags:
 - Private Endpoint
 - Regulatory Compliance
 - Virtual Networks
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security
@@ -43,7 +46,7 @@ Following last year’s general availability of Private Link for Fabric Tenants,
 
 **Azure Private Link** enables private connectivity from Azure services to virtual networks. Now, Microsoft Fabric supports configuring these connections at the workspace scope.
 
-![Workspace-level Private Link](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/Picture2.png)
+![Workspace-level Private Link](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/picture2.png)
 
 ## Key Benefits
 

@@ -23,6 +23,12 @@ tags:
 - Legacy Code Refactoring
 - Technical Debt Reduction
 - Unit Testing
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

@@ -19,6 +19,11 @@ tags:
 - VS
 - Web App Development
 - Workflow Optimization
+- AI
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

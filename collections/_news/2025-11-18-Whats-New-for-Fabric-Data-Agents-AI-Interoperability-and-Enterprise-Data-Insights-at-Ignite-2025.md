@@ -22,6 +22,10 @@ tags:
 - Teams Integration
 - Unstructured Data
 - VS Code
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

@@ -21,6 +21,8 @@ tags:
 - Model Testing
 - Prompt Engineering
 - Software Development
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

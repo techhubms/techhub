@@ -28,6 +28,9 @@ tags:
 - Serverless Containers
 - Shared Responsibility Model
 - Thought Leadership
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

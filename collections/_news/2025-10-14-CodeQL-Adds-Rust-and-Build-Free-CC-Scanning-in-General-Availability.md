@@ -20,6 +20,9 @@ tags:
 - Release Notes
 - Rust
 - Security Analysis
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

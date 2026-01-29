@@ -19,6 +19,12 @@ tags:
 - Script Analyzer
 - VS Code Extension
 - WinGet
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

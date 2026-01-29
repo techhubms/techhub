@@ -22,6 +22,9 @@ tags:
 - Retrieval Augmented Generation
 - Semantic Ranker
 - SharePoint Integration
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

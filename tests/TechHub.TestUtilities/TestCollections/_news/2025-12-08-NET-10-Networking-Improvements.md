@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/
 title: .NET 10 Networking Improvements
 author: Máňa
@@ -26,6 +26,8 @@ tags:
 - WebSockets
 - WebSocketStream
 - WinHttpHandler
+- Coding
+- Security
 primary_section: coding
 section_names:
 - coding

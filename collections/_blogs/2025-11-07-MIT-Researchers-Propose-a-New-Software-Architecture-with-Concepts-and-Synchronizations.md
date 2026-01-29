@@ -29,6 +29,10 @@ tags:
 - Synchronizations
 - System Synchronization
 - System Transparency
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

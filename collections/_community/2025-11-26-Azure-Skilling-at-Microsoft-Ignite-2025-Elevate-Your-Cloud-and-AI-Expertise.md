@@ -21,6 +21,10 @@ tags:
 - Microsoft Learn
 - Microsoft Reactor
 - Performance Based Testing
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

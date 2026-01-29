@@ -21,6 +21,9 @@ tags:
 - Security Scanning
 - Static Analysis
 - Taint Analysis
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

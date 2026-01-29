@@ -24,6 +24,10 @@ tags:
 - REST API
 - Throttling
 - VS Code
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

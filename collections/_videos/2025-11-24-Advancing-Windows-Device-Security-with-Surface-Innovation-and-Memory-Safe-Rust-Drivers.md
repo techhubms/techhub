@@ -23,6 +23,9 @@ tags:
 - Secure Core PC
 - Windows Drivers Rs
 - Windows Security
+- Coding
+- Security
+- Videos
 section_names:
 - coding
 - security

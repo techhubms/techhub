@@ -27,6 +27,11 @@ tags:
 - Software Engineering
 - Sustainable Software
 - Zero Trust
+- AI
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - coding

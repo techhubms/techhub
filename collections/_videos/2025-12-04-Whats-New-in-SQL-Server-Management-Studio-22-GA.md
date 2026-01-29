@@ -26,6 +26,9 @@ tags:
 - Tech
 - Technology
 - Workload Management
+- Azure
+- Coding
+- Videos
 section_names:
 - azure
 - coding

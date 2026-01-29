@@ -27,6 +27,9 @@ tags:
 - VMware To Azure
 - Windows Server
 - Workload Modernization
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

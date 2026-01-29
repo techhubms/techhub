@@ -29,6 +29,11 @@ tags:
 - SQL Server
 - Vector Search
 - Zero ETL
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

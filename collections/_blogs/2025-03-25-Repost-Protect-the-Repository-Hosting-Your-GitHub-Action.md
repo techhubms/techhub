@@ -15,6 +15,9 @@ tags:
 - Software Supply Chain
 - Token Security
 - Versioning
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

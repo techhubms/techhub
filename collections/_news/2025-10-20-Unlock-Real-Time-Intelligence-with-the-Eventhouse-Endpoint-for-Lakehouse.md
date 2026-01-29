@@ -20,6 +20,9 @@ tags:
 - Schema Synchronization
 - SQL
 - Time Series Analysis
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

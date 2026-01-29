@@ -14,6 +14,8 @@ tags:
 - PowerShell 7.5
 - Quality Improvements
 - Scripting
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

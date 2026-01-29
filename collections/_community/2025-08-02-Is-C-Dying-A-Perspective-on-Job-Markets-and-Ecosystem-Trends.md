@@ -21,6 +21,8 @@ tags:
 - Technology Trends
 - VS
 - VS Code
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

@@ -35,6 +35,12 @@ tags:
 - Segregation Of Duties
 - Service Principals
 - Zero Trust
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

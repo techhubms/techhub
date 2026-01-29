@@ -38,6 +38,10 @@ tags:
 - Vibe Coding
 - Vibe Coding CI/CD
 - Vibe Coding DevOps
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

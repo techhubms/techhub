@@ -17,6 +17,8 @@ tags:
 - Usage Based Billing
 - User Management
 - Visual Studio Subscriptions
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

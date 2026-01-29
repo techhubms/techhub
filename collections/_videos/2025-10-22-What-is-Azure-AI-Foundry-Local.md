@@ -14,6 +14,9 @@ tags:
 - Offline AI
 - On Premises AI
 - Privacy
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

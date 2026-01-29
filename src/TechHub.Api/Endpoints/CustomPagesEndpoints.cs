@@ -10,7 +10,7 @@ namespace TechHub.Api.Endpoints;
 /// <summary>
 /// API endpoints for custom pages
 /// </summary>
-internal static class CustomPagesEndpoints
+public static class CustomPagesEndpoints
 {
     private static readonly JsonSerializerOptions _jsonOptions = new()
     {

@@ -22,6 +22,9 @@ tags:
 - NVLink
 - Storage
 - Supercomputer
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

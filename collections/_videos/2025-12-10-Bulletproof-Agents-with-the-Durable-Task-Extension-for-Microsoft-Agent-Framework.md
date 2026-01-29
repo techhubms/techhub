@@ -20,6 +20,10 @@ tags:
 - Serverless Architecture
 - Session Management
 - Stateful Agents
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

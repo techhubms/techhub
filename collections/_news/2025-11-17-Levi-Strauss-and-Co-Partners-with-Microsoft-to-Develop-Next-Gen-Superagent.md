@@ -22,6 +22,12 @@ tags:
 - Surface Copilot+ PCs
 - Windows 11
 - Zero Trust Security
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

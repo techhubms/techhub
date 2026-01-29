@@ -17,6 +17,10 @@ tags:
 - ROI in Software Tools
 - SDLC
 - Software Development Lifecycle
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - devops
@@ -43,7 +47,7 @@ The challenges are evident with AI tools such as GitHub Copilot. The Copilot met
 
 More positive, recent API updates now reflect both the number of suggestions shown and those (even partially) accepted, shifting the focus toward *engagement* rather than crude productivity measures.
 
-![Picture of a confused engineer scratching their head surrounded with question marks](/images/2025/20250401/20250607-Confusion.png)
+![Picture of a confused engineer scratching their head surrounded with question marks](/images/2025/20250401/20250607-confusion.png)
 
 ## What to Focus on Instead
 
@@ -71,11 +75,11 @@ Such practical applications allow organizations to convert time savings directly
 
 Rob calls for a mindset change: stop equating productivity to lines of code. Instead, understand how GitHub Copilot and generative AI fundamentally alter the way software is built and value is delivered. There’s also potential in enabling non-engineering colleagues to benefit from these workflows, leveling up the entire organization’s efficiency.
 
-He refers readers to his related blog post, [GitHub Copilot - Change the Narrative](/blog/2025/04/01/GitHub-Copilot-Change-the-Narrative), for deeper discussion on shifting engineering culture and orchestrating AI agent collaboration.
+He refers readers to his related blog post, [GitHub Copilot - Change the Narrative](/blog/github-copilot-change-the-narrative), for deeper discussion on shifting engineering culture and orchestrating AI agent collaboration.
 
 > Lets work in the right direction and embrace the future state of working by leveraging Generative AI more and more, and leave the past behind us. I think we will become more of an orchestrator of AI agents, and the agents can only go faster if we understand how to build a solid foundation to trust on.  
 
-![Image of adding value to the end user](/images/2025/20250401/20250401-Value.png)
+![Image of adding value to the end user](/images/2025/20250401/20250401-value.png)
 
 ---
 

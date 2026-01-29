@@ -25,6 +25,9 @@ tags:
 - Session State
 - Token Management
 - Workflow Automation
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

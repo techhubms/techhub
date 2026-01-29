@@ -23,6 +23,9 @@ tags:
 - Software Developer
 - Software Development
 - VS Code
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

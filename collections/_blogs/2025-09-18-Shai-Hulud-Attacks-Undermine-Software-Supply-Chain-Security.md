@@ -25,6 +25,9 @@ tags:
 - Software Supply Chain
 - Supply Chain Attack
 - Worm Attack
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

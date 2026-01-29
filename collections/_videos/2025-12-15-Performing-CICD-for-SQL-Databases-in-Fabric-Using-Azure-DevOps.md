@@ -25,6 +25,9 @@ tags:
 - SqlPackage
 - Tech
 - Technology
+- Azure
+- DevOps
+- Videos
 section_names:
 - azure
 - devops

@@ -22,6 +22,9 @@ tags:
 - Tool Calling
 - VibeVoice
 - WorkflowBuilder
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

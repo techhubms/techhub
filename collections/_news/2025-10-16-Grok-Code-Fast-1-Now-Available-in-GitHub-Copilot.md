@@ -18,6 +18,9 @@ tags:
 - Release Notes
 - VS
 - VS Code
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -31,9 +31,9 @@ public interface IContentRepository
     /// Get all content items across all collections.
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetAllAsync(
-        bool includeDraft = false,
-        int limit = 20,
+        int limit,
         int offset = 0,
+        bool includeDraft = false,
         CancellationToken ct = default);
 
     /// <summary>
@@ -42,20 +42,23 @@ public interface IContentRepository
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
         string collectionName,
+        int limit,
         string? subcollectionName = null,
-        bool includeDraft = false,
-        int limit = 20,
         int offset = 0,
+        bool includeDraft = false,
         CancellationToken ct = default);
 
     /// <summary>
     /// Get all content items in a specific section.
+    /// Optionally filter by collection and subcollection.
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
-        bool includeDraft = false,
-        int limit = 20,
+        int limit,
         int offset = 0,
+        string? collectionName = null,
+        string? subcollectionName = null,
+        bool includeDraft = false,
         CancellationToken ct = default);
 
     // ==================== New Search Methods ====================
@@ -77,12 +80,17 @@ public interface IContentRepository
         CancellationToken ct = default);
 
     /// <summary>
-    /// Get related articles based on tag overlap (Phase 1) or semantic similarity (Phase 2).
-    /// Returns articles ranked by shared tags.
+    /// Get related articles based on tag overlap.
+    /// Returns articles ranked by number of shared tags (descending).
     /// </summary>
+    /// <param name="sourceTags">Tags from the source article (caller already has these)</param>
+    /// <param name="excludeSlug">Slug of the source article to exclude from results</param>
+    /// <param name="count">Maximum number of related articles to return</param>
+    /// <param name="ct">Cancellation token</param>
     Task<IReadOnlyList<ContentItem>> GetRelatedAsync(
-        string articleId,
-        int count = 5,
+        IReadOnlyList<string> sourceTags,
+        string excludeSlug,
+        int count,
         CancellationToken ct = default);
 
     /// <summary>

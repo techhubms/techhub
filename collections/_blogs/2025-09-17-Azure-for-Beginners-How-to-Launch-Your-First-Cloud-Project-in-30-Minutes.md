@@ -19,6 +19,8 @@ tags:
 - Ubuntu Server
 - Virtual Machine
 - Windows VM
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

@@ -21,6 +21,10 @@ tags:
 - Quart
 - RAG
 - Uvicorn
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

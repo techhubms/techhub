@@ -20,6 +20,9 @@ tags:
 - Private Endpoints
 - Traffic Manager
 - Web Apps
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

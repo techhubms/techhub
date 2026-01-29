@@ -21,6 +21,9 @@ tags:
 - Performance Tuning
 - Pipeline Integration
 - Spark
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

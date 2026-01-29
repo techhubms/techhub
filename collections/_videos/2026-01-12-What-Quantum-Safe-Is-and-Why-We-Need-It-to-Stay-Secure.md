@@ -25,6 +25,10 @@ tags:
 - Quantum Threats
 - RSA
 - SymCrypt
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

@@ -23,6 +23,9 @@ tags:
 - Predictive Maintenance
 - Real Time Analytics
 - Scalable Infrastructure
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

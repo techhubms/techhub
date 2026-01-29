@@ -19,6 +19,8 @@ tags:
 - OpenAPI
 - Strong Typing
 - VS Code Extension
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

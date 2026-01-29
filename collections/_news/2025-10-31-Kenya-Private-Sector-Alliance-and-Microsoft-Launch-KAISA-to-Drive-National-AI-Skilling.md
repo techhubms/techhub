@@ -23,6 +23,8 @@ tags:
 - Technology Partnerships
 - Workforce Development
 - Youth Skilling
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

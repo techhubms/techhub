@@ -28,6 +28,13 @@ tags:
 - Token Authentication
 - VS
 - Vulnerability Insights
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - azure

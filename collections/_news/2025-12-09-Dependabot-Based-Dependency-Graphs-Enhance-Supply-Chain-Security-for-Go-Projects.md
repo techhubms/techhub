@@ -21,6 +21,9 @@ tags:
 - Software Bill Of Materials
 - Supply Chain Security
 - Transitive Dependencies
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

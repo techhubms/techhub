@@ -18,6 +18,11 @@ tags:
 - Microsoft
 - Productivity Tools
 - VS
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

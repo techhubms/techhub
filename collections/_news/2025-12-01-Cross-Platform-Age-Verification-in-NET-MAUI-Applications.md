@@ -24,6 +24,8 @@ tags:
 - UserAccountInformation
 - Windows
 - Windows Age Consent
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

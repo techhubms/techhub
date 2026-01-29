@@ -25,6 +25,10 @@ tags:
 - Unifyyourdataplatform
 - Vector Database
 - VS Code
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

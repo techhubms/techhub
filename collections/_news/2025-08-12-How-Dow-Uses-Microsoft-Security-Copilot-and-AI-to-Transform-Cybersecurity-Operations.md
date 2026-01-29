@@ -23,6 +23,9 @@ tags:
 - Security Governance
 - Security Operations Center
 - Threat Hunting
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

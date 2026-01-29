@@ -10,6 +10,10 @@ tags:
 - Agent Mode
 - GitHub
 - MCP
+- AI
+- Azure
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

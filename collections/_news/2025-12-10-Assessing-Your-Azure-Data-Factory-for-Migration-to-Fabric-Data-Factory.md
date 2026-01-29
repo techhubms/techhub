@@ -20,6 +20,9 @@ tags:
 - Migration Tools
 - Pipeline Migration
 - PowerShell
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

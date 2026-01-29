@@ -23,6 +23,8 @@ tags:
 - Session Memory
 - Topics
 - Variables
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

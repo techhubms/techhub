@@ -27,6 +27,10 @@ tags:
 - Speckit
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

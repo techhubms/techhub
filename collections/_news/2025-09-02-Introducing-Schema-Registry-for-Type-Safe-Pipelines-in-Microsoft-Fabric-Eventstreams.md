@@ -21,6 +21,9 @@ tags:
 - Schema Validation
 - Streaming Analytics
 - Versioning
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

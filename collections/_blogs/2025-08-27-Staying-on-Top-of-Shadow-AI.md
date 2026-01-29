@@ -35,6 +35,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Unapproved AI Tools
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

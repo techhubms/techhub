@@ -15,6 +15,10 @@ tags:
 - Semantic Kernel
 - SemantiClip
 - Video To Blog
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

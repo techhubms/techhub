@@ -24,6 +24,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Thomas Dohmke
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

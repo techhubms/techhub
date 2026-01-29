@@ -16,6 +16,8 @@ tags:
 - Security Best Practices
 - Security Blueprint
 - Threat Modeling
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

@@ -21,6 +21,10 @@ tags:
 - Secure Future Initiative
 - Threat Intelligence
 - Zero Trust
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

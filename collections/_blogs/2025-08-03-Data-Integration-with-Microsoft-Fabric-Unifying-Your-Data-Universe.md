@@ -24,6 +24,9 @@ tags:
 - Power BI
 - Real Time Data
 - Synapse Data Engineering
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - azure
 - ml

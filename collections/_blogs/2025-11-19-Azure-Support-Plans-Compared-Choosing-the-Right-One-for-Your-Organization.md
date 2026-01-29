@@ -22,6 +22,8 @@ tags:
 - Standard Support
 - Support Plans
 - Technical Guidance
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

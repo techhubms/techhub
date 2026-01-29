@@ -25,6 +25,10 @@ tags:
 - Virtual Network
 - Zero Day Threats
 - Zone Redundancy
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

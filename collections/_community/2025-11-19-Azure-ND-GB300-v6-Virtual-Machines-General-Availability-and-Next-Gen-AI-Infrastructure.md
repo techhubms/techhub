@@ -24,6 +24,10 @@ tags:
 - NVIDIA GB300 NVL72
 - NVLINK
 - Slurm
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

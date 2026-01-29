@@ -20,6 +20,9 @@ tags:
 - Sys.tables
 - T SQL
 - Workload Management
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

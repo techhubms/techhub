@@ -27,6 +27,11 @@ tags:
 - Semantic Models
 - SQL Database
 - Warehouse
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

@@ -21,6 +21,11 @@ tags:
 - Multicluster
 - Open Source
 - Supply Chain Security
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

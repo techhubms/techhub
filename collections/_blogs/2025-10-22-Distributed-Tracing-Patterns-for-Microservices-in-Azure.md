@@ -21,6 +21,9 @@ tags:
 - Telemetry
 - TelemetryClient
 - Tracing
+- Azure
+- DevOps
+- Blogs
 section_names:
 - azure
 - devops

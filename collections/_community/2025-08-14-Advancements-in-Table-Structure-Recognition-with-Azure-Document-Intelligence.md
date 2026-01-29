@@ -21,6 +21,9 @@ tags:
 - Synthetic Data
 - Table Extraction
 - Table Recognition
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

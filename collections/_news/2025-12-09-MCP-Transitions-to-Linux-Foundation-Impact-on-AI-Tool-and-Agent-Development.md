@@ -23,6 +23,11 @@ tags:
 - Open Source
 - Schema Driven Interfaces
 - Secure Integrations
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

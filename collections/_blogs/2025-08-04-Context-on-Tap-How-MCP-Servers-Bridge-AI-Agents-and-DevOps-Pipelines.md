@@ -20,6 +20,9 @@ tags:
 - Open Standards
 - Supply Chain Security
 - Video Interviews
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

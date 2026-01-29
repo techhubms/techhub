@@ -14,6 +14,9 @@ tags:
 - Prompt Engineering
 - Prompt Optimization
 - README Generation
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

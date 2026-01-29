@@ -25,6 +25,12 @@ tags:
 - VBA
 - VS Code
 - WCAG
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

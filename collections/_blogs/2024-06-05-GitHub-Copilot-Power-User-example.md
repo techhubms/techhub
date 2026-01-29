@@ -9,6 +9,11 @@ tags:
 - Developer Workflow
 - GitHub Actions
 - YAML Pipelines
+- AI
+- GitHub Copilot
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - github-copilot

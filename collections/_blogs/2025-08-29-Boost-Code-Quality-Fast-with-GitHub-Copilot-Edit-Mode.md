@@ -18,6 +18,10 @@ tags:
 - JSDoc
 - Productivity
 - XML Comments
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

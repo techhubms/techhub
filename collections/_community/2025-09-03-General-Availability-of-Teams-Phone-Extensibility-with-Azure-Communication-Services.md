@@ -22,6 +22,9 @@ tags:
 - Telephony Integration
 - UCaaS
 - Unified Communications
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -25,6 +25,8 @@ tags:
 - Sample Application
 - VS
 - XNA 4.0 API
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

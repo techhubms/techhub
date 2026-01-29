@@ -24,6 +24,10 @@ tags:
 - MSIgnite
 - Open Source Models
 - Serverless GPU
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

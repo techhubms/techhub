@@ -18,6 +18,10 @@ tags:
 - Package Management
 - Performance
 - Transitive Dependencies
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - coding
 - devops

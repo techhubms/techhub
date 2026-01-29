@@ -26,6 +26,11 @@ tags:
 - RAG Pipeline
 - Secure Deployment
 - Serverless Hosting
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

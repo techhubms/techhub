@@ -7,19 +7,19 @@
 
 ### ✅ Always Do
 
-- **Read writing-style-guidelines.md FIRST** before creating or editing ANY content
-- **Use filename format `YYYY-MM-DD-title-slug.md`** for all content files
-- **Match filename date with frontmatter date** for `layout: post` files
-- **Include excerpt section** - Max 200 words, end with `<!--excerpt_end-->`
-- **Mention author in excerpt** - Author name must appear in intro
-- **Place files in correct collection directory** based on content type
-- **Add `alt-collection` frontmatter** for special video subcollections (ghc-features, vscode-updates)
+- **Always read writing-style-guidelines.md FIRST** before creating or editing ANY content
+- **Always use filename format `YYYY-MM-DD-title-slug.md`** for all content files
+- **Always match filename date with frontmatter date** for `layout: post` files
+- **Always include excerpt section** - Max 200 words, end with `<!--excerpt_end-->`
+- **Always mention author in excerpt** - Author name must appear in intro
+- **Always place files in correct collection directory** based on content type
+- **Always add `alt-collection` frontmatter** for special video subcollections (ghc-features, vscode-updates)
 
 ### ⚠️ Ask First
 
-- **Creating new collection types** or changing collection structure
-- **Modifying frontmatter schema** or required fields
-- **Changing content processing** workflows
+- **Ask first before creating new collection types** or changing collection structure
+- **Ask first before modifying frontmatter schema** or required fields
+- **Ask first before changing content processing** workflows
 
 ### 🚫 Never Do
 

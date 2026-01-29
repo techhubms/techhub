@@ -21,6 +21,9 @@ tags:
 - Open Source AI
 - OpenAI
 - Windows AI Foundry
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

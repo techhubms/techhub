@@ -16,6 +16,9 @@ tags:
 - Open Source Tools
 - Package Management
 - Vcpkg
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

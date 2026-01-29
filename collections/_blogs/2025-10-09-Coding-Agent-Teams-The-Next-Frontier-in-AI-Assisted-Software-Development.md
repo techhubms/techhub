@@ -42,6 +42,10 @@ tags:
 - Social X
 - Software Development
 - Software Development Automation
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

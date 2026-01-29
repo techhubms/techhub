@@ -25,6 +25,10 @@ tags:
 - Responsible AI
 - Tech
 - Technology
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

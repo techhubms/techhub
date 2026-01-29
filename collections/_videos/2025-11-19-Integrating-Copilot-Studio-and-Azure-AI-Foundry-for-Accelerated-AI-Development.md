@@ -21,6 +21,9 @@ tags:
 - MSIgnite
 - Prompt Engineering
 - Scalable Solutions
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

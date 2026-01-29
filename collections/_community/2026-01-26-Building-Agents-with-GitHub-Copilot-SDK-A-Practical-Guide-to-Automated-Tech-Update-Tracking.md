@@ -21,6 +21,11 @@ tags:
 - Python
 - Technical Blog Generation
 - TypeScript
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

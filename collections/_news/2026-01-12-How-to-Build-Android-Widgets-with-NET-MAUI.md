@@ -23,6 +23,8 @@ tags:
 - VS
 - Widget Configuration
 - Widgets
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

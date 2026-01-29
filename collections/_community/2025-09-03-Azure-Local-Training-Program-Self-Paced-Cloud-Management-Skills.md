@@ -18,6 +18,9 @@ tags:
 - Environment Checker
 - Networking
 - Self Paced Learning
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

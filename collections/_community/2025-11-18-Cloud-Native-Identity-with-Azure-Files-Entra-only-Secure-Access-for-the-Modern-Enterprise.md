@@ -21,6 +21,9 @@ tags:
 - Thin Client
 - Virtual Desktop Infrastructure
 - Zero Trust
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

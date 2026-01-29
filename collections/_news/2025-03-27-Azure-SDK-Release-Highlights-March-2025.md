@@ -26,6 +26,9 @@ tags:
 - Rust
 - SDK
 - SDK Release
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

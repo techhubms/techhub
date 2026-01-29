@@ -14,6 +14,10 @@ tags:
 - Developer Tools
 - For The Love Of Code
 - GitHub
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

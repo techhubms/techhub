@@ -31,6 +31,10 @@ tags:
 - SM Clock Speed
 - Telemetry
 - Tensor Parallelism
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

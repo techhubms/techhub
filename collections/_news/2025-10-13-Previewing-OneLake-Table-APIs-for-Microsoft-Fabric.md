@@ -19,6 +19,9 @@ tags:
 - Open Table Formats
 - Programmatic Data Access
 - REST API
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

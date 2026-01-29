@@ -26,6 +26,11 @@ tags:
 - Microsoft Fabric
 - NCads H100 V5
 - NVadsA10 V5
+- AI
+- Azure
+- GitHub Copilot
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

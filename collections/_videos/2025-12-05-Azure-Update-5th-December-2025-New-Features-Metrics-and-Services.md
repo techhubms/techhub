@@ -24,6 +24,10 @@ tags:
 - PostgreSQL Flex
 - Regional Expansion
 - SDK Retirement
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

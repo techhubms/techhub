@@ -24,6 +24,14 @@ tags:
 - VS Live!
 - Vslive
 - Workshops
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -20,6 +20,11 @@ tags:
 - SQL Server
 - Vector Data
 - VS Code
+- AI
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

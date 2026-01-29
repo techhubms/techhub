@@ -36,6 +36,9 @@ tags:
 - Social LinkedIn
 - Social X
 - Telemetry Normalization
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

@@ -31,6 +31,10 @@ tags:
 - Semantic Kernel
 - VS Code AI Toolkit
 - Workflow Orchestration
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

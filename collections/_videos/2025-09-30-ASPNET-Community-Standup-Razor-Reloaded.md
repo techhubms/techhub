@@ -21,6 +21,8 @@ tags:
 - Visualstudio2026
 - Visualstudioinsiders
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

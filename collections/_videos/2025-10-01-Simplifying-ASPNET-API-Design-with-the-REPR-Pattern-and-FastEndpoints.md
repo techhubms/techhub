@@ -25,6 +25,8 @@ tags:
 - Request Validation
 - Response Structuring
 - Software Architecture
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

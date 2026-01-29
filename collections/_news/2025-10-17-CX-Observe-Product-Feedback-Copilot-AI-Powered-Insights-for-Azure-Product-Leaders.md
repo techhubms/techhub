@@ -21,6 +21,9 @@ tags:
 - Strategic Planning
 - Technology
 - User Stories
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

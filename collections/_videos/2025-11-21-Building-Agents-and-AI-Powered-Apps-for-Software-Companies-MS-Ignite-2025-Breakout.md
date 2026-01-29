@@ -23,6 +23,13 @@ tags:
 - Pair Programming
 - Partner Ecosystem
 - Rapid Development
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - azure

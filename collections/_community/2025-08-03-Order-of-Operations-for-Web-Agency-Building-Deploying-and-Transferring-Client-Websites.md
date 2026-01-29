@@ -15,6 +15,8 @@ tags:
 - Vercel
 - Web Agency Workflow
 - Website Deployment
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

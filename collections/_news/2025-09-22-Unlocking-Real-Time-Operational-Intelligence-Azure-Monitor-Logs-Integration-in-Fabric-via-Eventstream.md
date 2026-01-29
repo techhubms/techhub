@@ -20,6 +20,9 @@ tags:
 - Operational Monitoring
 - Real Time Intelligence
 - Streaming Analytics
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

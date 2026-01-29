@@ -23,6 +23,10 @@ tags:
 - Service Bus Trigger
 - SRE
 - Voice Models
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

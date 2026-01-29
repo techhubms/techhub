@@ -29,8 +29,8 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
 
         // Create a mock markdown service for rendering
         var mockMarkdownService = new Mock<IMarkdownService>();
-        mockMarkdownService.Setup(m => m.RenderToHtml(It.IsAny<string>(), It.IsAny<string>()))
-            .Returns<string, string>((content, _) => $"<p>{content}</p>");
+        mockMarkdownService.Setup(m => m.RenderToHtml(It.IsAny<string>()))
+            .Returns<string>(content => $"<p>{content}</p>");
         mockMarkdownService.Setup(m => m.ProcessYouTubeEmbeds(It.IsAny<string>()))
             .Returns<string>(content => content);
         mockMarkdownService.Setup(m => m.ExtractExcerpt(It.IsAny<string>(), It.IsAny<int>()))
@@ -60,7 +60,7 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-11-fts-test.md contains "TechHubSpecialKeyword"
-        var request = new SearchRequest { Query = "TechHubSpecialKeyword" };
+        var request = new SearchRequest { Query = "TechHubSpecialKeyword", Take = 1000 };
 
         // Act
         var results = await Repository.SearchAsync(request);

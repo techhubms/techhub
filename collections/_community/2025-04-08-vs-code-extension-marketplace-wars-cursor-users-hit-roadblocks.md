@@ -13,6 +13,8 @@ tags:
 - Microsoft
 - Open VSX
 - VS Code
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

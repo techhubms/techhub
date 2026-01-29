@@ -14,6 +14,9 @@ tags:
 - Metrics
 - Pipeline Resilience
 - User Management
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -29,6 +29,11 @@ tags:
 - Social X
 - SonarSource
 - Technical Debt
+- AI
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - coding

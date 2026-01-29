@@ -19,6 +19,10 @@ tags:
 - Production Templates
 - Terraform
 - VS Code Extension
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

@@ -20,6 +20,8 @@ tags:
 - Project Structure
 - Software Architecture
 - Validation
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

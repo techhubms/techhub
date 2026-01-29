@@ -15,6 +15,10 @@ tags:
 - GitHub Billing
 - Premium Models
 - Premium Requests
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

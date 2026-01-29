@@ -17,6 +17,9 @@ tags:
 - Organization Management
 - Security Policy
 - Settings
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

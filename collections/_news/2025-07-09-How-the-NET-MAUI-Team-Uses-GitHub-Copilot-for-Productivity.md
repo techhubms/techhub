@@ -18,6 +18,11 @@ tags:
 - Pull Requests
 - Repository Instructions
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

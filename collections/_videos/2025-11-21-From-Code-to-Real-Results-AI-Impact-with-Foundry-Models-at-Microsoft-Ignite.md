@@ -21,6 +21,9 @@ tags:
 - MSIgnite
 - Omnichannel
 - Scalability
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

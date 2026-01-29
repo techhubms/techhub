@@ -25,6 +25,10 @@ tags:
 - Power BI
 - Pro Code Development
 - Responsible AI
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

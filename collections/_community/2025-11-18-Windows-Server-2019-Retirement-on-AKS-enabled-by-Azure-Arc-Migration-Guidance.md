@@ -17,6 +17,9 @@ tags:
 - Support Lifecycle
 - Windows Server
 - Workload Migration
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

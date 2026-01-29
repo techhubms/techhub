@@ -21,6 +21,9 @@ tags:
 - Software Dependencies
 - Software Development
 - Tooling
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

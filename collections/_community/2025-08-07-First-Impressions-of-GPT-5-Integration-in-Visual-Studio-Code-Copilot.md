@@ -19,6 +19,9 @@ tags:
 - Prompt Engineering
 - VS Code
 - VS Code Extensions
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

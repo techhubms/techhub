@@ -19,6 +19,10 @@ tags:
 - Pull Requests
 - Repository Rulesets
 - Static Analysis
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

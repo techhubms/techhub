@@ -26,6 +26,10 @@ tags:
 - Oracle Database@Azure
 - Power BI
 - Transparent Data Encryption
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

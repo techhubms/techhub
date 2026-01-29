@@ -20,6 +20,9 @@ tags:
 - Runtime Environments
 - Ubuntu
 - Web Applications
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

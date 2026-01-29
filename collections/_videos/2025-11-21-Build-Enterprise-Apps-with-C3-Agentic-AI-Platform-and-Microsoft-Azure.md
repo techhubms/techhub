@@ -21,6 +21,10 @@ tags:
 - Versioning
 - VS Code
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

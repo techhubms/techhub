@@ -27,6 +27,10 @@ tags:
 - Red Teaming Agent
 - Risk Evaluation
 - Shift Left Security
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

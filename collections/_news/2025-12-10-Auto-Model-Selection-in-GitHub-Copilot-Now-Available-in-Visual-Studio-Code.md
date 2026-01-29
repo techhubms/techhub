@@ -18,6 +18,9 @@ tags:
 - Premium Requests
 - Sonnet 4.5
 - VS Code
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

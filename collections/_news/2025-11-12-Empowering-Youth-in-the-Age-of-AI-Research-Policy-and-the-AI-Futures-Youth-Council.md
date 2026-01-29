@@ -22,6 +22,8 @@ tags:
 - Responsible AI
 - Technology Regulation
 - Youth And Technology
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

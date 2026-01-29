@@ -20,6 +20,9 @@ tags:
 - NVL72
 - Rack Management
 - Supercomputing
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

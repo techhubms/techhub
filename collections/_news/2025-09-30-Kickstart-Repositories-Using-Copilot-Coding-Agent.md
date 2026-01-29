@@ -24,6 +24,10 @@ tags:
 - Pull Requests
 - Repository Automation
 - Repository Initialization
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

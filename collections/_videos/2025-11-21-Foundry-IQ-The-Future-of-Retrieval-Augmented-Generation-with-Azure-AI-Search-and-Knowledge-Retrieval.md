@@ -22,6 +22,9 @@ tags:
 - RAG Orchestration
 - Retrieval Augmented Generation
 - Steering Instructions
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -21,6 +21,10 @@ tags:
 - Responsible AI
 - Scalable AI
 - Workforce Optimization
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

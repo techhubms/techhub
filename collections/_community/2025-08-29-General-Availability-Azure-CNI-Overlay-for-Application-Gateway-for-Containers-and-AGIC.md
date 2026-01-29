@@ -18,6 +18,9 @@ tags:
 - L7 Load Balancing
 - Pod Routing
 - Scalability
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

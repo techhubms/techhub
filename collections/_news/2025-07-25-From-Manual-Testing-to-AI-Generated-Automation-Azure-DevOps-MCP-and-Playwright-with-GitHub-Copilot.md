@@ -19,6 +19,12 @@ tags:
 - Test Pipelines
 - Test Scripts
 - TypeScript
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

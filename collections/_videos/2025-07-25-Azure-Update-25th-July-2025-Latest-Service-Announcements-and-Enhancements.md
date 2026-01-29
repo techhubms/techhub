@@ -26,6 +26,11 @@ tags:
 - Microsoft Sentinel
 - Sentinel Data Lake
 - VNet Encryption
+- Azure
+- Machine Learning
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - ml

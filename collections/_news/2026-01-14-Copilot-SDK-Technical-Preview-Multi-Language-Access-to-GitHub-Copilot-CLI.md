@@ -20,6 +20,10 @@ tags:
 - Technical Preview
 - Tool Execution
 - TypeScript
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

@@ -23,6 +23,10 @@ tags:
 - Windows Terminal
 - WSL
 - Zero Trust
+- Coding
+- DevOps
+- Security
+- Videos
 section_names:
 - coding
 - devops

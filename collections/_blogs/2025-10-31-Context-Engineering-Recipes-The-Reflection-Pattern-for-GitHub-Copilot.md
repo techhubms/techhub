@@ -14,6 +14,10 @@ tags:
 - Self Critique
 - Self Explanation
 - Teach Back Mode
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

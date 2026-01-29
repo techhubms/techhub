@@ -23,6 +23,9 @@ tags:
 - OpenTelemetry
 - Serverless
 - Telemetry
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

@@ -27,6 +27,8 @@ tags:
 - Vue
 - Web Innovation
 - Zod
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

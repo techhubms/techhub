@@ -20,6 +20,8 @@ tags:
 - Social X
 - Systemic Failure
 - Team Collaboration
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

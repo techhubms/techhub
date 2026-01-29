@@ -21,6 +21,9 @@ tags:
 - Microsoft Azure
 - Operational Insights
 - Workflows
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

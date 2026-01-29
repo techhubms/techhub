@@ -18,6 +18,8 @@ tags:
 - New Release
 - OpenTelemetry
 - Python
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

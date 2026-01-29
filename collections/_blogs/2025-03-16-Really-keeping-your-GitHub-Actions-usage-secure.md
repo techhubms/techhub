@@ -16,6 +16,9 @@ tags:
 - StepSecurity
 - Supply Chain Security
 - Workflow Automation
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

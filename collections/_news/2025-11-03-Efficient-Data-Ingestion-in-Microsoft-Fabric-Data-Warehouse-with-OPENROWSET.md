@@ -26,6 +26,9 @@ tags:
 - Table Creation
 - Transformation
 - TSV
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

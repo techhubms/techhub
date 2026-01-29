@@ -25,6 +25,11 @@ tags:
 - Security Best Practices
 - TypeScript
 - Workflow Optimization
+- Azure
+- DevOps
+- Coding
+- Security
+- Community
 section_names:
 - azure
 - devops

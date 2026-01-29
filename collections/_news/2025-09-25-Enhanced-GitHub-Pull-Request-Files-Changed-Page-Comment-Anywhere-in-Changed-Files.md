@@ -22,6 +22,8 @@ tags:
 - Pull Requests
 - Single File Mode
 - UI Enhancement
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

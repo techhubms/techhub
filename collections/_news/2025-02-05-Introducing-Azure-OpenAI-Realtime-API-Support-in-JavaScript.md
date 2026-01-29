@@ -18,6 +18,10 @@ tags:
 - Streaming Data
 - Typescript
 - WebSocket
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

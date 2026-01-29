@@ -21,6 +21,9 @@ tags:
 - Test Cases
 - Validation Tool
 - Workload Publishing
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml
@@ -72,7 +75,7 @@ Partners are encouraged to:
 
 ## Visual Reference
 
-![Fabric Extensibility Toolkit: Hello World Sample](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/11/FET-Blog-HelloWorld-1024x576.gif)
+![Fabric Extensibility Toolkit: Hello World Sample](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/11/fet-blog-helloworld-1024x576.gif)
 
 ---
 

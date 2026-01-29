@@ -20,6 +20,8 @@ tags:
 - State Management
 - Store Pattern
 - Web Development
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

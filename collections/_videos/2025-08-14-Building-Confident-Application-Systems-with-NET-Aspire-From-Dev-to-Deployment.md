@@ -19,6 +19,10 @@ tags:
 - Observability
 - Software Development
 - VS
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

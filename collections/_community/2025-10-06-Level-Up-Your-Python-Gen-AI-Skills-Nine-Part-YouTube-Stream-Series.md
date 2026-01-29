@@ -24,6 +24,10 @@ tags:
 - Structured Outputs
 - Vector Embeddings
 - Vision Models
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

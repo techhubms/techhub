@@ -18,6 +18,9 @@ tags:
 - Password Writeback
 - Service Account
 - Sync Server
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

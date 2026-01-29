@@ -19,6 +19,10 @@ tags:
 - Task Management
 - VS Code
 - Workflow
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

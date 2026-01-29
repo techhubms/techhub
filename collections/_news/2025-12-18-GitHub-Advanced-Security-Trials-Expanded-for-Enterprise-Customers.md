@@ -15,6 +15,9 @@ tags:
 - Secret Protection
 - Security Features
 - Security Trial
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

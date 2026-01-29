@@ -21,6 +21,9 @@ tags:
 - Packaged Learnings
 - Partner Enablement
 - User Adoption
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

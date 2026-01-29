@@ -19,6 +19,9 @@ tags:
 - Responsible AI
 - Science Magazine
 - Synthetic Biology
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

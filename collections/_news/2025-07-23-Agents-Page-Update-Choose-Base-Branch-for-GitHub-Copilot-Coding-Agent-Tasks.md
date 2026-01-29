@@ -14,6 +14,10 @@ tags:
 - GitHub CLI
 - Pull Requests
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

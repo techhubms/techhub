@@ -23,6 +23,11 @@ tags:
 - Microsoft Graph API
 - REST API
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

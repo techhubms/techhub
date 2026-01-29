@@ -18,6 +18,9 @@ tags:
 - Fine Grained Permissions
 - GitHub Enterprise
 - Policy Delegation
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

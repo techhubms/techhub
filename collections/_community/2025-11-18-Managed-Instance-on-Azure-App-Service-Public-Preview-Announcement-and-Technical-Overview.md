@@ -21,6 +21,11 @@ tags:
 - RDP
 - VNET Integration
 - Windows Registry
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

@@ -23,6 +23,9 @@ tags:
 - Operational Health
 - Power Platform
 - Source Control
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

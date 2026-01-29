@@ -22,6 +22,9 @@ tags:
 - Real Time Data Processing
 - Streaming Analytics
 - Swiggy
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

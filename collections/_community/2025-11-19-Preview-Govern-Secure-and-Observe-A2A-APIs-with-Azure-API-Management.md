@@ -20,6 +20,10 @@ tags:
 - JSON RPC
 - MCP Tools
 - OpenTelemetry
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

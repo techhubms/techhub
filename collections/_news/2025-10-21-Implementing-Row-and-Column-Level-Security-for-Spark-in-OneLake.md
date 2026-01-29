@@ -20,6 +20,10 @@ tags:
 - Spark
 - SQL
 - Workspace Security
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

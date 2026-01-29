@@ -24,6 +24,8 @@ tags:
 - Repository Metrics
 - Research Insights
 - Software Trends
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

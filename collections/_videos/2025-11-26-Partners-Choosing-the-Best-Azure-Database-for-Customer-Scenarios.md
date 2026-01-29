@@ -29,6 +29,10 @@ tags:
 - Session
 - Unify Your Data Platform
 - Unify Your Data Platform:microsoft Fabric
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

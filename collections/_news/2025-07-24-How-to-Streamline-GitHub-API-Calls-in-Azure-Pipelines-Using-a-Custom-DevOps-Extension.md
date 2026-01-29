@@ -20,6 +20,10 @@ tags:
 - Service Connection
 - Token Management
 - YAML Pipeline
+- DevOps
+- Azure
+- Security
+- News
 section_names:
 - devops
 - azure

@@ -25,6 +25,10 @@ tags:
 - Voice Live API
 - VS Code Extension
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

@@ -29,6 +29,10 @@ tags:
 - Social LinkedIn
 - Social X
 - VS Code
+- AI
+- Coding
+- DevOps
+- Blogs
 section_names:
 - ai
 - coding

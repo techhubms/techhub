@@ -20,6 +20,9 @@ tags:
 - Post Call Analysis
 - Sentiment Analysis
 - Structured Output
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

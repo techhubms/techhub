@@ -15,6 +15,8 @@ tags:
 - SweetAlert
 - User Interaction
 - Web UX
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

@@ -26,6 +26,9 @@ tags:
 - Tech
 - Technology
 - Unstructured Data
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

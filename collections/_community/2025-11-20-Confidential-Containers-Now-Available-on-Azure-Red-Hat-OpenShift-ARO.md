@@ -26,6 +26,10 @@ tags:
 - Trusted Execution Environments
 - Workload Attestation
 - Zero Trust
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

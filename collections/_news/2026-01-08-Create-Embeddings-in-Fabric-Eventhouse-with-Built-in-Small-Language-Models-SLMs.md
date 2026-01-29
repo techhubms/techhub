@@ -20,6 +20,10 @@ tags:
 - Small Language Models
 - Update Policy
 - Vector Database
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

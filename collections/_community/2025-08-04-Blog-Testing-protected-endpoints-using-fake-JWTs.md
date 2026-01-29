@@ -15,6 +15,9 @@ tags:
 - JWT
 - Protected Endpoints
 - Testing
+- Coding
+- Security
+- Community
 section_names:
 - coding
 - security

@@ -26,6 +26,10 @@ tags:
 - SemantiClip
 - Software Developer
 - Workflow Automation
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

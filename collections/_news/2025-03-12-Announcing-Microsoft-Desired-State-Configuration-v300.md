@@ -18,6 +18,10 @@ tags:
 - Resource Authoring
 - System Orchestration
 - YAML
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

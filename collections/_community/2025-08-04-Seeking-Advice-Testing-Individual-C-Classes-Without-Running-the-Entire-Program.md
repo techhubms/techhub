@@ -15,6 +15,8 @@ tags:
 - Interactive Coding
 - Lambda Expressions
 - Project Structure
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

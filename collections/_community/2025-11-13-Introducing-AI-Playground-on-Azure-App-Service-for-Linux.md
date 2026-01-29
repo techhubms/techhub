@@ -24,6 +24,10 @@ tags:
 - SLM Sidecar
 - Small Language Model
 - Web App Deployment
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

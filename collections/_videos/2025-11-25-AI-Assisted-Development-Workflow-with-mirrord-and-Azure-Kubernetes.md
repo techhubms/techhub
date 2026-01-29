@@ -24,6 +24,11 @@ tags:
 - Open Source Tools
 - Tech
 - Technology
+- AI
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - azure

@@ -23,6 +23,9 @@ tags:
 - United Kingdom
 - Windows 365
 - Workforce Training
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

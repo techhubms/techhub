@@ -20,6 +20,8 @@ tags:
 - Resource Tagging
 - Savings Plans
 - Virtual Machines
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

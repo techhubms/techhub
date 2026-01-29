@@ -19,6 +19,10 @@ tags:
 - Pair Programming
 - Unit Test Generation
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

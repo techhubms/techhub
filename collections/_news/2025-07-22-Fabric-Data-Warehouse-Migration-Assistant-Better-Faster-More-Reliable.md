@@ -15,6 +15,9 @@ tags:
 - Public Preview
 - Reliability
 - Warehouse Migration
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -22,6 +22,8 @@ tags:
 - User Intent
 - Visibility Signals
 - Zero Click Visibility
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

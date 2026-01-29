@@ -26,6 +26,11 @@ tags:
 - Role Based Access Control
 - Semantic Kernel
 - Web Apps
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

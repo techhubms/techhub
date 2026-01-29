@@ -21,6 +21,10 @@ tags:
 - Production AI
 - Request Reply Pattern
 - Service Bus
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

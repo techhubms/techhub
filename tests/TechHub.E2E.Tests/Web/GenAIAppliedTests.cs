@@ -14,8 +14,17 @@ namespace TechHub.E2E.Tests.Web;
 /// - MermaidTests.cs: Diagram rendering
 /// </summary>
 [Collection("Custom Pages Tests")]
-public class GenAIAppliedTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class GenAIAppliedTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public GenAIAppliedTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private const string PageUrl = "/ai/genai-applied";
     private IBrowserContext? _context;
     private IPage? _page;
@@ -23,7 +32,7 @@ public class GenAIAppliedTests(PlaywrightCollectionFixture fixture) : IAsyncLife
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 

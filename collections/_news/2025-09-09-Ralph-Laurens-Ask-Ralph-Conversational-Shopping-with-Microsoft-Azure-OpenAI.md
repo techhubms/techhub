@@ -17,6 +17,9 @@ tags:
 - Microsoft Azure
 - Ralph Lauren
 - Retail Technology
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

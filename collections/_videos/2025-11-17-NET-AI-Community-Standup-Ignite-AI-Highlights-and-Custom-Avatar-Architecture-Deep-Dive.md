@@ -27,6 +27,10 @@ tags:
 - Multimodal AI
 - Speech Services
 - Technical Deep Dive
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

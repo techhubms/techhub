@@ -22,6 +22,8 @@ tags:
 - Social LinkedIn
 - Social X
 - Telemetry
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

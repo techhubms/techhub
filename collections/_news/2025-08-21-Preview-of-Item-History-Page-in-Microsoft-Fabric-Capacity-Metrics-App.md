@@ -21,6 +21,9 @@ tags:
 - Resource Optimization
 - Usage Trends
 - Workspaces
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

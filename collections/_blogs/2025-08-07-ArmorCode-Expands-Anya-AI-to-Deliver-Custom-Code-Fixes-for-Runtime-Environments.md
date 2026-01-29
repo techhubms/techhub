@@ -32,6 +32,10 @@ tags:
 - Third Party Integrations
 - VEX Format
 - Vulnerability Management
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

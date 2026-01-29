@@ -18,6 +18,10 @@ tags:
 - Platform Engineering
 - SDLC
 - VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - devops

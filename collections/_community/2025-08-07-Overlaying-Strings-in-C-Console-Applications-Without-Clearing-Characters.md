@@ -19,6 +19,8 @@ tags:
 - String Manipulation
 - String Overlay
 - System.Console
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

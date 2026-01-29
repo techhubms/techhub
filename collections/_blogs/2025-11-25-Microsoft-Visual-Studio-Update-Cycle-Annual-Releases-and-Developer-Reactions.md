@@ -20,6 +20,9 @@ tags:
 - UI Themes
 - Uncategorized
 - VS
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

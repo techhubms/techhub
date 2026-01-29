@@ -18,6 +18,8 @@ tags:
 - Minimal APIs
 - Session Management
 - Web Development
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

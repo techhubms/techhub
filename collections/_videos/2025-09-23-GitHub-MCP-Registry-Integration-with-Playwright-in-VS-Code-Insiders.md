@@ -24,6 +24,11 @@ tags:
 - Testing Automation
 - VS Code
 - VS Code Insiders
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

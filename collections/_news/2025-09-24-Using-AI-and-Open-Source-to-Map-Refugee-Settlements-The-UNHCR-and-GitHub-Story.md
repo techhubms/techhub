@@ -19,6 +19,9 @@ tags:
 - Social Impact
 - Sustainable Planning
 - UNHCR
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -24,6 +24,11 @@ tags:
 - Root Cause Analysis
 - ServiceNow
 - Source Code Analysis
+- AI
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

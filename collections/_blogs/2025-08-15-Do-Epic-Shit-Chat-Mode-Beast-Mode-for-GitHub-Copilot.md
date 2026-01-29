@@ -19,6 +19,10 @@ tags:
 - Software Testing
 - Todo Loop
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

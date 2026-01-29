@@ -19,6 +19,10 @@ tags:
 - Multi Agent Systems
 - Templates
 - Workflow Reproducibility
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

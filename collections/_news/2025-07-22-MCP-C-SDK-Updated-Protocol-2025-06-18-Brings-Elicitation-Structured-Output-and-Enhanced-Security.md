@@ -18,6 +18,10 @@ tags:
 - SDK
 - Structured Output
 - Tool Metadata
+- AI
+- Coding
+- Security
+- News
 section_names:
 - ai
 - coding

@@ -15,6 +15,8 @@ tags:
 - Tuples
 - Type Constraints
 - Web Applications
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

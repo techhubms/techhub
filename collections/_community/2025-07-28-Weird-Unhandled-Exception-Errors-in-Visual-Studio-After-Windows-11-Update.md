@@ -15,6 +15,8 @@ tags:
 - Unhandled Exception
 - VS
 - Windows 11
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

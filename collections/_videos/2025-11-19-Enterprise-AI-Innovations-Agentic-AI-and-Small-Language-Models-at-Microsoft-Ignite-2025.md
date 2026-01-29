@@ -23,6 +23,8 @@ tags:
 - Responsible AI
 - SLM
 - Small Language Models
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

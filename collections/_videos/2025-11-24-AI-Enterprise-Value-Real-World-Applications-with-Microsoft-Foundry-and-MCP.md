@@ -20,6 +20,8 @@ tags:
 - Speech To Form Technology
 - Windows
 - Workflow Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

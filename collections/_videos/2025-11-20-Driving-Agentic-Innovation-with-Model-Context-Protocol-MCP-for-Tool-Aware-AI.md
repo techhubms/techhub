@@ -21,6 +21,9 @@ tags:
 - Tool Orchestration
 - Unified Access
 - VS Code
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

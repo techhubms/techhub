@@ -20,6 +20,9 @@ tags:
 - SOC Automation
 - Threat Intelligence
 - Zero Trust Security
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

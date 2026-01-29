@@ -16,6 +16,9 @@ tags:
 - Open Source
 - Spam Detection
 - Workflow Automation
+- AI
+- DevOps
+- News
 section_names:
 - ai
 - devops

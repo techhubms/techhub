@@ -24,6 +24,8 @@ tags:
 - RaccoonO365
 - Ransomware
 - Threat Intelligence
+- Security
+- News
 section_names:
 - security
 primary_section: security

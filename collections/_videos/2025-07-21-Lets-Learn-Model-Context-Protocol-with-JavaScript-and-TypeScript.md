@@ -24,6 +24,9 @@ tags:
 - Microsoft Docs MCP
 - Playwright
 - Typescript
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

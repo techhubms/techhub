@@ -15,6 +15,9 @@ tags:
 - Software Development
 - Upgrade
 - VS
+- AI
+- Coding
+- Community
 section_names:
 - ai
 - coding

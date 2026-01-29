@@ -18,6 +18,10 @@ tags:
 - Programming Languages
 - Software Engineering
 - TypeScript
+- AI
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - coding

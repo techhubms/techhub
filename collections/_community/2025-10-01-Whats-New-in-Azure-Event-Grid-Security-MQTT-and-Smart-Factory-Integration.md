@@ -25,6 +25,10 @@ tags:
 - SCADA
 - Sparkplug B
 - Telemetry
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

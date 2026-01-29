@@ -23,6 +23,10 @@ tags:
 - SharePoint Integration
 - Snowflake
 - Variable Libraries
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

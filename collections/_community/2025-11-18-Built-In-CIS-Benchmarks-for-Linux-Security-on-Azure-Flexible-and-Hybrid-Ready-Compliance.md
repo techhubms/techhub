@@ -25,6 +25,9 @@ tags:
 - Policy Management
 - Regulatory Compliance
 - STIG
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -21,6 +21,10 @@ tags:
 - Real Time Data
 - Sports Analytics
 - Unifyyourdataplatform
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

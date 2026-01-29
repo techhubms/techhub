@@ -28,6 +28,11 @@ tags:
 - Operational Excellence
 - PostgreSQL
 - SQL Managed Instance
+- AI
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -17,6 +17,9 @@ tags:
 - Secure Compute
 - Trusted Launch VMs
 - Windows Virtual Machines
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

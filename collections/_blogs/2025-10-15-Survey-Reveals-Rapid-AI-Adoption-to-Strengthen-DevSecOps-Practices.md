@@ -23,6 +23,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Vulnerability Detection
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

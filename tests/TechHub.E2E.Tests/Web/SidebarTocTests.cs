@@ -23,15 +23,24 @@ namespace TechHub.E2E.Tests.Web;
 /// - No console errors
 /// </summary>
 [Collection("Sidebar TOC Tests")]
-public class SidebarTocTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class SidebarTocTests : IAsyncLifetime
 {
+    private readonly PlaywrightCollectionFixture _fixture;
+
+    public SidebarTocTests(PlaywrightCollectionFixture fixture)
+    {
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _fixture = fixture;
+    }
+
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {
-        _context = await fixture.CreateContextAsync();
+        _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
     }
 
@@ -128,7 +137,7 @@ public class SidebarTocTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         }
 
         // Act - Scroll to second heading
-        var secondHeading = headings.Nth(1);
+        _ = headings.Nth(1);
         await Page.EvaluateAndWaitForScrollAsync("document.querySelectorAll('h2[id], h3[id]')[1].scrollIntoView()");
 
         // Assert - Active TOC link should update

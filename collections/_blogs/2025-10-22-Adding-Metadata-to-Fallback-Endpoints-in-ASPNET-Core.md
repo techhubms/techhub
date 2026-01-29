@@ -21,6 +21,8 @@ tags:
 - Razor Pages
 - RequireAuthorization
 - Routing
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

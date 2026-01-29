@@ -23,6 +23,11 @@ tags:
 - Multi Cloud
 - OneLake
 - Power BI
+- AI
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

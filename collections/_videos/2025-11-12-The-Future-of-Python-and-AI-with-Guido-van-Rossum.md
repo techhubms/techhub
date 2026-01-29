@@ -28,6 +28,10 @@ tags:
 - Typechecking
 - TypeScript
 - VS Code
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

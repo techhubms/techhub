@@ -29,6 +29,11 @@ tags:
 - Vulnerability Research
 - Web Application Security
 - Workspace Trust
+- AI
+- Coding
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - coding

@@ -25,6 +25,10 @@ tags:
 - Templates
 - Typescript
 - VS Code
+- AI
+- Azure
+- DevOps
+- News
 section_names:
 - ai
 - azure

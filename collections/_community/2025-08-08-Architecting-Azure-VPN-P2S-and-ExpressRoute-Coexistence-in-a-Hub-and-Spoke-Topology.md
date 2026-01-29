@@ -20,6 +20,9 @@ tags:
 - Transitive Routing
 - Virtual Network Gateway
 - Virtual WAN
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

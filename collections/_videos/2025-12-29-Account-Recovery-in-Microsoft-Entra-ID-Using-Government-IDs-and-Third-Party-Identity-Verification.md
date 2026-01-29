@@ -22,6 +22,9 @@ tags:
 - Phishing Resistance
 - Self Service Password Reset
 - Third Party Authentication
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

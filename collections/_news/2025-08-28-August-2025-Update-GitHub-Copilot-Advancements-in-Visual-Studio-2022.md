@@ -16,6 +16,10 @@ tags:
 - Model Integration
 - Software Updates
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

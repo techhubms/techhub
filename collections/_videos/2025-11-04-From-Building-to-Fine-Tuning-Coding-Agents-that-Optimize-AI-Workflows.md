@@ -28,6 +28,12 @@ tags:
 - SWE Agents
 - Tech
 - Technology
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

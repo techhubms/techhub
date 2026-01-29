@@ -20,6 +20,10 @@ tags:
 - Operational Security
 - System Tables
 - Unity Catalog
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - azure
 - ml

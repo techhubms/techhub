@@ -31,6 +31,8 @@ tags:
 - Unmanaged APIs
 - Visual Studio Profilers
 - Win32Exception
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

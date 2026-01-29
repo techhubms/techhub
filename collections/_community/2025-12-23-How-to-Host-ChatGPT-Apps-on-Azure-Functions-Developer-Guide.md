@@ -19,6 +19,10 @@ tags:
 - REST API
 - Serverless Infrastructure
 - Streamable HTTP
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

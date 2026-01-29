@@ -21,6 +21,10 @@ tags:
 - Service Bindings
 - Sidecar Pattern
 - State Management
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

@@ -20,6 +20,10 @@ tags:
 - NVIDIA RTX GPU
 - Private Cloud
 - Regulated Industries
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

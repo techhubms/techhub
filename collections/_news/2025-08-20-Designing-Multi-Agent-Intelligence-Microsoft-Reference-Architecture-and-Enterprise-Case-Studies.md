@@ -27,6 +27,10 @@ tags:
 - Reference Architecture
 - Semantic Kernel
 - SLM
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

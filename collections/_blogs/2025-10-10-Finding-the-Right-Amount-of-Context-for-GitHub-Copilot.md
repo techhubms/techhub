@@ -16,6 +16,9 @@ tags:
 - Copilot Sidebar
 - Developer Productivity
 - VS Code
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

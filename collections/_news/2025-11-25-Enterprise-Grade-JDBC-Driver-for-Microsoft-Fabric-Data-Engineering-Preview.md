@@ -26,6 +26,9 @@ tags:
 - Proxy Support
 - Spark SQL
 - Tableau
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

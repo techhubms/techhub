@@ -17,6 +17,8 @@ tags:
 - Sign in Experience
 - User Permissions
 - User Profile
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

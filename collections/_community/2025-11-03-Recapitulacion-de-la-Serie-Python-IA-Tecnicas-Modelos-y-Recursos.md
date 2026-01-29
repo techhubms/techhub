@@ -25,6 +25,12 @@ tags:
 - Retrieval Augmented Generation
 - Seguridad IA
 - Tool Calling
+- AI
+- Azure
+- GitHub Copilot
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

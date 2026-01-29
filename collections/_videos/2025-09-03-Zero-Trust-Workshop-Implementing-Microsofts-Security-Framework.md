@@ -20,6 +20,9 @@ tags:
 - Security Workshop
 - Sentinel
 - Zero Trust
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

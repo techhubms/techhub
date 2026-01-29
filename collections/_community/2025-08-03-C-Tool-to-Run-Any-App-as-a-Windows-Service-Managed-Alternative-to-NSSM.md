@@ -15,6 +15,8 @@ tags:
 - Startup Type
 - Windows App Deployment
 - Windows Service
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

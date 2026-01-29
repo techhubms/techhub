@@ -26,6 +26,9 @@ tags:
 - Semantic Kernel
 - Tech
 - Technology
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

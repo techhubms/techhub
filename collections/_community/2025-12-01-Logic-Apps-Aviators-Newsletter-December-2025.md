@@ -26,6 +26,12 @@ tags:
 - Semantic Kernel
 - Service Bus
 - XML
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -19,6 +19,9 @@ tags:
 - Organization Sharing
 - Version Control
 - Workflow Improvement
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

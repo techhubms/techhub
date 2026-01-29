@@ -24,6 +24,11 @@ tags:
 - Reliability
 - Shared Responsibility
 - Zone Redundant Architecture
+- AI
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

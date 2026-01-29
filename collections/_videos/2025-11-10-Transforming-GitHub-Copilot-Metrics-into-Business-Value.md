@@ -20,6 +20,9 @@ tags:
 - ROI
 - SDLC
 - Usage Insights
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

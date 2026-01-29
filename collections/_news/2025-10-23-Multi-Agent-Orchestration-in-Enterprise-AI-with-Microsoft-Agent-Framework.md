@@ -24,6 +24,10 @@ tags:
 - Samples
 - Workflow Automation
 - Workflow Patterns
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

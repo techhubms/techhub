@@ -77,7 +77,10 @@ public class TagMatchingService : ITagMatchingService
     /// <returns>Normalized tag</returns>
     public string Normalize(string tag)
     {
-        ArgumentNullException.ThrowIfNull(tag);
+        if (string.IsNullOrWhiteSpace(tag))
+        {
+            return string.Empty;
+        }
 
         return tag.Trim().ToLowerInvariant();
     }

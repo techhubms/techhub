@@ -22,6 +22,9 @@ tags:
 - SHA 256
 - Sparse Checkout
 - Version Control
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

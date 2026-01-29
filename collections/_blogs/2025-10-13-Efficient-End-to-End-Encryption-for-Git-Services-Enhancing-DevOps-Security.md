@@ -31,6 +31,9 @@ tags:
 - Software Supply Chain
 - Software Supply Chain Security
 - Version Control
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

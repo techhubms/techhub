@@ -20,6 +20,9 @@ tags:
 - Policy Enforcement
 - Security Automation
 - Security Copilot
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

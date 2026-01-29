@@ -27,6 +27,12 @@ tags:
 - Virtualization Based Security
 - Windows 11
 - Xbox PC App
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

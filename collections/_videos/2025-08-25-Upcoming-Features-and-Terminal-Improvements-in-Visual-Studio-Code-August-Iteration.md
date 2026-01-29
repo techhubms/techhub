@@ -20,6 +20,9 @@ tags:
 - Terminal Improvements
 - VS Code
 - VS Code Extensions
+- Coding
+- DevOps
+- Videos
 section_names:
 - coding
 - devops

@@ -17,6 +17,9 @@ tags:
 - Resource ID
 - Windows 365
 - Windows App
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -16,6 +16,8 @@ tags:
 - Spark
 - User Notifications
 - Workflow Reliability
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

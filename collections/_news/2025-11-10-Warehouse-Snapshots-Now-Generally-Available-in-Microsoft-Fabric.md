@@ -22,6 +22,9 @@ tags:
 - SSMS
 - T SQL
 - Warehouse Snapshots
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

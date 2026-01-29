@@ -24,6 +24,10 @@ tags:
 - Microsoft Azure
 - Software Developer
 - Stateful AI
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

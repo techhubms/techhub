@@ -24,6 +24,10 @@ tags:
 - REST API
 - Security Configuration
 - X API Key
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

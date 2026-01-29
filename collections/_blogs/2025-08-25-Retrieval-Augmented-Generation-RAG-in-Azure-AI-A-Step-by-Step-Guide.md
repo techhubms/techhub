@@ -27,6 +27,9 @@ tags:
 - SDK
 - Semantic Ranking
 - Vector Search
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

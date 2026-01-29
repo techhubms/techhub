@@ -23,6 +23,10 @@ tags:
 - Rainforest Pay
 - Secret Scanning
 - Sentry
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

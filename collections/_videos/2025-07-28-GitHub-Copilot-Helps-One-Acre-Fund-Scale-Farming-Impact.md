@@ -18,6 +18,9 @@ tags:
 - Open Source
 - OpenSource
 - Software Acceleration
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

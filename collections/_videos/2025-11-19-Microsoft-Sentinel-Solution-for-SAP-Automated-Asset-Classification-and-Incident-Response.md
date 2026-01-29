@@ -30,6 +30,8 @@ tags:
 - Security Monitoring
 - Security Rules
 - Technical
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

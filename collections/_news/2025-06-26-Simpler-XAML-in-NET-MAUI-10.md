@@ -20,6 +20,8 @@ tags:
 - Xaml
 - XmlnsDefinition
 - XmlnsPrefix
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

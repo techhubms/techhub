@@ -19,6 +19,9 @@ tags:
 - Microsoft Ignite
 - Power BI
 - Semantic Models
+- AI
+- Machine Learning
+- News
 section_names:
 - ai
 - ml

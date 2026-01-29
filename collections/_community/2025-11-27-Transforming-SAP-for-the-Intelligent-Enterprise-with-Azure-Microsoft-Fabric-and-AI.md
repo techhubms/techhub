@@ -29,6 +29,11 @@ tags:
 - Ultra Disk
 - Virtual Machines
 - Zero Trust
+- AI
+- Azure
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -22,6 +22,12 @@ tags:
 - Microsoft Foundry
 - Multi Agent Orchestration
 - Semantic Kernel
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

@@ -20,6 +20,10 @@ tags:
 - Source Control
 - UI Improvements
 - Webhooks
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

@@ -24,6 +24,9 @@ tags:
 - OpenAI
 - SDK
 - Text To Image
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

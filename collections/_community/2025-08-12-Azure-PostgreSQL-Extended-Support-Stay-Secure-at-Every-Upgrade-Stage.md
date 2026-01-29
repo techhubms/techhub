@@ -20,6 +20,9 @@ tags:
 - Security Patches
 - Technical Support
 - Version Retirement
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

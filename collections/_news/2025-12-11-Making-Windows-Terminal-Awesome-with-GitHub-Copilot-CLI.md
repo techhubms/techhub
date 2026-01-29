@@ -21,6 +21,10 @@ tags:
 - Terminal Panes
 - Terminal Profiles
 - Windows Terminal
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

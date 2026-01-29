@@ -26,6 +26,9 @@ tags:
 - Secure Access
 - Security Operations
 - Zero Trust
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

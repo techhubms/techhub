@@ -14,6 +14,8 @@ tags:
 - Microsoft AI
 - Onedevquestion
 - Tech Shifts
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

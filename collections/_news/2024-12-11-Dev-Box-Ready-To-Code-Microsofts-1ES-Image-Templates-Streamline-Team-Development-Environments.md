@@ -21,6 +21,10 @@ tags:
 - Ready To Code
 - Team Customizations
 - Template Artifacts
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

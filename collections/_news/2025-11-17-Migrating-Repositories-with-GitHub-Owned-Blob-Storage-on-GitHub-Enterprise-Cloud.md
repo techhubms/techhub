@@ -22,6 +22,8 @@ tags:
 - GitLab
 - Improvement
 - Repository Migration
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

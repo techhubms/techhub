@@ -23,6 +23,10 @@ tags:
 - WAF
 - Web Application Firewall
 - Zone Redundancy
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

@@ -21,6 +21,10 @@ tags:
 - Python
 - Revision Based Deployment
 - Traffic Splitting
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - azure
 - coding

@@ -23,6 +23,8 @@ tags:
 - Session BRK314
 - Unified SDK
 - Unified Tracing
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

@@ -23,6 +23,8 @@ tags:
 - Rightsizing
 - Session ODSP1433
 - Suresh Mathew
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

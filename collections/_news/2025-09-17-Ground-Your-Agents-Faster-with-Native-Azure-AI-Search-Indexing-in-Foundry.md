@@ -22,6 +22,9 @@ tags:
 - Microsoft OneLake
 - Retrieval Augmented Generation
 - Vector Search
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

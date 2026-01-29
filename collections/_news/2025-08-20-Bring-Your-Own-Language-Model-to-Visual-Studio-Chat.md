@@ -23,6 +23,9 @@ tags:
 - Models
 - OpenAI
 - VS
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

@@ -10,6 +10,9 @@ tags:
 - BYOLLM
 - Chat
 - Code
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

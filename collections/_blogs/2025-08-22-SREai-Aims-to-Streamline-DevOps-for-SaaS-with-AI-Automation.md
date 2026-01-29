@@ -24,6 +24,9 @@ tags:
 - SRE.ai
 - Tooling Sprawl
 - Workflow Automation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

@@ -22,6 +22,10 @@ tags:
 - Power BI
 - Skills Challenge
 - Study Groups
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

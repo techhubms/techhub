@@ -20,6 +20,9 @@ tags:
 - Pull Requests
 - Terraform
 - YAML Pipelines
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

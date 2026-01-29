@@ -17,6 +17,10 @@ tags:
 - Microsoft Ignite
 - Microsoft Technologies
 - Multimodal Interfaces
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

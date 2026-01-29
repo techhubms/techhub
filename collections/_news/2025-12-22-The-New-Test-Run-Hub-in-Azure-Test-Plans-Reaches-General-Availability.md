@@ -24,6 +24,9 @@ tags:
 - Test Points
 - Test Run Hub
 - Test Runs
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

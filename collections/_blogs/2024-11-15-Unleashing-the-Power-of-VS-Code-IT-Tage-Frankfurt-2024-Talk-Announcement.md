@@ -15,6 +15,9 @@ tags:
 - IT Tage Frankfurt
 - React
 - VS Code
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops
@@ -28,7 +31,7 @@ In this announcement, Harald Binkle shares details about his talk at IT-Tage Fra
 **Posted on:** November 15, 2024  
 **Event Date:** December 10, 2024  
 
-![ittagefrankfurt](/_astro/ittagefrankfurt.CotbTXy__ImIae.webp)
+![ittagefrankfurt](/_astro/ittagefrankfurt.cotbtxy__imiae.webp)
 
 Harald Binkle will be speaking at **IT-Tage Frankfurt 2024** on December 10, 2024. His session, delivered in German, centers around Visual Studio Code (VS Code) and its utility for modern full-stack development.
 

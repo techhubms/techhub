@@ -25,6 +25,10 @@ tags:
 - Shor's Algorithm
 - Superposition
 - VS Code
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

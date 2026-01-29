@@ -18,6 +18,10 @@ tags:
 - Pull Request Annotations
 - Repository Settings
 - Security Alerts
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

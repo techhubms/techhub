@@ -15,6 +15,8 @@ tags:
 - Software Architecture
 - Solution Organization
 - Team Workflow
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

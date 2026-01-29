@@ -23,6 +23,9 @@ tags:
 - Security Best Practices
 - Security Patterns
 - VS
+- Coding
+- Security
+- Videos
 section_names:
 - coding
 - security

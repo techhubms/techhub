@@ -6,7 +6,9 @@ section_names:
 - ai
 - cloud
 tags:
+- AI
 - Azure
+- Cloud
 external_url: https://example.com/test
 author: Test Author
 feed_name: Test Feed

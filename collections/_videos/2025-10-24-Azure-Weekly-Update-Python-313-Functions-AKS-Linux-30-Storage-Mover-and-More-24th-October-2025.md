@@ -26,6 +26,8 @@ tags:
 - Python 3.13
 - SQL Managed Instance
 - VM Vcore
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

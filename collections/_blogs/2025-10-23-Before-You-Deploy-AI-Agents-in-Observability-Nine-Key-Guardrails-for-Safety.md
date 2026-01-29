@@ -40,6 +40,10 @@ tags:
 - Social LinkedIn
 - Social X
 - Zero Trust
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

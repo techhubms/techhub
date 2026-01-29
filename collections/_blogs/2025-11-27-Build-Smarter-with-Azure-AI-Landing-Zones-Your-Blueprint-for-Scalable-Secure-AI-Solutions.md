@@ -23,6 +23,9 @@ tags:
 - ML Pipelines
 - Modular Architecture
 - Scalable Solutions
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

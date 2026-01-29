@@ -32,6 +32,10 @@ tags:
 - Safe AI
 - SafeAI
 - Soft Blocks
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

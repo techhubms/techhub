@@ -24,6 +24,11 @@ tags:
 - TypeScript 5.7
 - VS Code
 - VS Code Extension
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

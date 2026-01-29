@@ -16,6 +16,8 @@ tags:
 - Practical AI
 - Real World Applications
 - 'Session Speaker: Michael Washington'
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

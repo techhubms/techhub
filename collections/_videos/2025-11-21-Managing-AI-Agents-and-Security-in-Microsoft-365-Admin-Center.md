@@ -28,6 +28,8 @@ tags:
 - Risk Monitoring
 - STUDIO37
 - STUDIO37 V1
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

@@ -25,6 +25,10 @@ tags:
 - Streaming APIs
 - Tool Integration
 - Web Components
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

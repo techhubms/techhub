@@ -29,6 +29,10 @@ tags:
 - Semantics Index
 - SSO
 - Zero Trust
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

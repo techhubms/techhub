@@ -17,6 +17,9 @@ tags:
 - Preview Features
 - Resource Monitoring
 - Virtual Machines
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

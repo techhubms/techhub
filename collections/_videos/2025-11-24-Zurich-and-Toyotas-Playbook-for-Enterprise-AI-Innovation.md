@@ -25,6 +25,9 @@ tags:
 - Toyota
 - Unstructured Data
 - Zurich
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

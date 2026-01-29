@@ -19,6 +19,10 @@ tags:
 - Shorts2026
 - Software Engineering
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

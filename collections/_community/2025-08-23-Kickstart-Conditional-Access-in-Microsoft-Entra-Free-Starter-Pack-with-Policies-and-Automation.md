@@ -21,6 +21,10 @@ tags:
 - Security Policy
 - Sign in Logs
 - Zero Trust
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

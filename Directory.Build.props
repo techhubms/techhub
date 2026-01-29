@@ -11,13 +11,7 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <AnalysisMode>All</AnalysisMode>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    
-    <!-- Globally suppress i18n/localization warnings as this is not a localized application -->
-    <NoWarn>$(NoWarn);CA1303</NoWarn>
-    <!-- Suppress CA1515 - Web application classes don't need to be internal just because they're not referenced externally -->
-    <NoWarn>$(NoWarn);CA1515</NoWarn>
-    <!-- Suppress CA1056 and CA2234 - Using strings for URLs is consistent with our HttpClient usage patterns -->
-    <NoWarn>$(NoWarn);CA1056;CA2234</NoWarn>
+    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
     
     <!-- Generate XML documentation files for IntelliSense and enable IDE0005 (unused usings) during build -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -32,43 +26,63 @@
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
     
-    <!-- Code quality -->
-    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
-    
     <!-- Exclude all non-src directories from dotnet watch (only src/ affects running website) -->
     <!-- Prevents duplicate file detection errors like "YamlDotNet.dll already added" -->
     <DefaultItemExcludes>$(DefaultItemExcludes);tests/**;scripts/**;collections/**;docs/**;specs/**;infra/**;.git/**;.github/**;.devcontainer/**;.tmp/**;.vscode/**;node_modules/**</DefaultItemExcludes>
   </PropertyGroup>
 
-  <!-- Global package references -->
-  <ItemGroup>
-    <!-- Roslynator analyzers - comprehensive C# code analysis -->
-    <PackageReference Include="Roslynator.Analyzers" Version="4.15.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
   <!-- Suppress specific warnings -->
+  <!-- ⚠️ IMPORTANT: Keep these suppressions in sync with .editorconfig -->
+  <!-- Any suppression added here MUST also be added to .editorconfig (and vice versa) -->
+  <!-- This ensures VS Code Problems tab, dotnet build, and CI/CD all report the same issues -->
   <PropertyGroup>
     <!-- CA1308: ToLowerInvariant - intentional for tag/search normalization (lowercase is conventional) -->
     <NoWarn>$(NoWarn);CA1308</NoWarn>
-    <!-- CA1720: Identifier contains type name - 'Guid' in RSS feeds is the RSS standard, not System.Guid -->
-    <NoWarn>$(NoWarn);CA1720</NoWarn>
-    <!-- CA1822: Member does not access instance data - we prefer instance methods for consistency and testability -->
-    <NoWarn>$(NoWarn);CA1822</NoWarn>
-    <!-- CA1002: List vs Collection - internal API, List is more practical for LINQ operations -->
-    <NoWarn>$(NoWarn);CA1002</NoWarn>
     <!-- CA1848: LoggerMessage - performance optimization not critical, traditional logging is clearer -->
     <NoWarn>$(NoWarn);CA1848</NoWarn>
     <!-- CA2007: ConfigureAwait - not necessary for ASP.NET Core (no SynchronizationContext) -->
     <NoWarn>$(NoWarn);CA2007</NoWarn>
     <!-- CS1591: Missing XML comment - not enforcing XML docs on all public members -->
     <NoWarn>$(NoWarn);CS1591</NoWarn>
-    <!-- CS1570: Malformed XML in doc comment - minor formatting issues don't affect functionality -->
-    <NoWarn>$(NoWarn);CS1570</NoWarn>
-    <!-- IDE0211: Top-level statements vs Program.Main - we prefer explicit Program class -->
+    <!-- CA1303: Localization warnings - this is not a localized application -->
+    <NoWarn>$(NoWarn);CA1303</NoWarn>
+    <!-- CA1002: List vs Collection - internal API, List is more practical for LINQ operations -->
+    <NoWarn>$(NoWarn);CA1002</NoWarn>
+    <!-- CA1054: URI parameters should use System.Uri - we use strings for routing paths and JSON serialization -->
+    <NoWarn>$(NoWarn);CA1054</NoWarn>
+    <!-- CA1056: URI properties should use System.Uri - we use strings for routing paths and JSON serialization -->
+    <NoWarn>$(NoWarn);CA1056</NoWarn>
+    <!-- CA2234: Pass System.Uri instead of string - HttpClient accepts both, string is more convenient -->
+    <NoWarn>$(NoWarn);CA2234</NoWarn>
+    <!-- IDE0211: Top-level statements vs Program.Main - causes circular warnings, rely on style preference instead -->
     <NoWarn>$(NoWarn);IDE0211</NoWarn>
+    <!-- CA1711: Rename Collection - established domain name for content collections -->
+    <NoWarn>$(NoWarn);CA1711</NoWarn>
+    <!-- CA1515: Make types internal - web application, not a library, public is fine -->
+    <NoWarn>$(NoWarn);CA1515</NoWarn>
   </PropertyGroup>
+  
+  <!-- REMAINING SUPPRESSIONS DISABLED FOR ANALYSIS -->
+  <!-- <PropertyGroup>
+    <!~~ CA1720: Identifier contains type name - 'Guid' in RSS feeds is the RSS standard, not System.Guid ~~>
+    <NoWarn>$(NoWarn);CA1720</NoWarn>
+    <!~~ CA1822: Member does not access instance data - we prefer instance methods for consistency and testability ~~>
+    <NoWarn>$(NoWarn);CA1822</NoWarn>
+    <!~~ CA1002: List vs Collection - internal API, List is more practical for LINQ operations ~~>
+    <NoWarn>$(NoWarn);CA1002</NoWarn>
+    <!~~ CS1570: Malformed XML in doc comment - minor formatting issues don't affect functionality ~~>
+    <NoWarn>$(NoWarn);CS1570</NoWarn>
+    <!~~ IDE0211: Top-level statements vs Program.Main - we prefer explicit Program class ~~>
+    <NoWarn>$(NoWarn);IDE0211</NoWarn>
+    <!~~ IDE0290: Use primary constructor - we prefer traditional constructors with explicit null checks ~~>
+    <NoWarn>$(NoWarn);IDE0290</NoWarn>
+    <!~~ Globally suppress i18n/localization warnings as this is not a localized application ~~>
+    <NoWarn>$(NoWarn);CA1303</NoWarn>
+    <!~~ Suppress CA1515 - Web application classes don't need to be internal just because they're not referenced externally ~~>
+    <NoWarn>$(NoWarn);CA1515</NoWarn>
+    <!~~ Suppress CA1056 and CA2234 - Using strings for URLs is consistent with our HttpClient usage patterns ~~>
+    <NoWarn>$(NoWarn);CA1056;CA2234</NoWarn>
+  </PropertyGroup> -->
+
 </Project>
 

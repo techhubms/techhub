@@ -22,6 +22,12 @@ tags:
 - Synapse Migration
 - Terraform
 - VS Code
+- AI
+- Azure
+- Machine Learning
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

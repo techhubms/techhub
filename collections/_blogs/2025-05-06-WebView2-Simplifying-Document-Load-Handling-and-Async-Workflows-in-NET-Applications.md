@@ -21,6 +21,8 @@ tags:
 - Windows
 - Windows Development
 - WPF
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

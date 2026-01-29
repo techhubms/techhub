@@ -24,6 +24,9 @@ tags:
 - Software Visibility
 - Supply Chain Security
 - Zero Trust
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

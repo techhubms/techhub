@@ -20,6 +20,10 @@ tags:
 - Student Developers
 - Technical Skills
 - University Collaboration
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

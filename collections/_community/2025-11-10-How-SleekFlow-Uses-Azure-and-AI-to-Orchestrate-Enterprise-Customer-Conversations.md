@@ -20,6 +20,9 @@ tags:
 - Retrieval Augmented Generation
 - Semantic Kernel
 - Vector Search
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

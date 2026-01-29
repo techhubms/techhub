@@ -20,6 +20,9 @@ tags:
 - Microsoft Cost Management
 - NC64as T4 V3
 - Virtual Machines
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

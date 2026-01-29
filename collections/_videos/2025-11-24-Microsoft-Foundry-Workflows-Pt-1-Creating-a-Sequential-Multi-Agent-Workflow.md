@@ -22,6 +22,9 @@ tags:
 - Technology
 - Template Usage
 - Workflow Automation
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

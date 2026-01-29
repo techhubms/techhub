@@ -18,6 +18,9 @@ tags:
 - NSP
 - Preview Features
 - Resource Connectivity
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

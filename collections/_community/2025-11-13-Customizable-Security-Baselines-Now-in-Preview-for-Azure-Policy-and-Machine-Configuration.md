@@ -20,6 +20,10 @@ tags:
 - Policy as Code
 - Security Baselines
 - Windows Server
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

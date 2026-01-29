@@ -22,6 +22,9 @@ tags:
 - MSIgnite
 - Red Hat OpenShift Virtualization
 - Virtual Machines
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

@@ -16,6 +16,9 @@ tags:
 - MVP Development
 - OpenAI GPT 3
 - Web Development
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

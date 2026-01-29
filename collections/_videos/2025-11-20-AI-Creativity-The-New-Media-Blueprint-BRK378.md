@@ -25,6 +25,8 @@ tags:
 - Premier League
 - Session BRK378
 - Workflow Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

@@ -15,6 +15,9 @@ tags:
 - Lifecycle Management
 - Page Blobs
 - Storage Cost Optimization
+- Azure
+- Machine Learning
+- Community
 section_names:
 - azure
 - ml

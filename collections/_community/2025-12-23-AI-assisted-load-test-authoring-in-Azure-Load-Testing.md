@@ -18,6 +18,10 @@ tags:
 - Script Quality
 - Test Automation
 - Think Times
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

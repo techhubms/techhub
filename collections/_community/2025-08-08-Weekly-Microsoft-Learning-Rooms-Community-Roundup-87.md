@@ -21,6 +21,12 @@ tags:
 - Purview
 - Real Time Data
 - Tech Events
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

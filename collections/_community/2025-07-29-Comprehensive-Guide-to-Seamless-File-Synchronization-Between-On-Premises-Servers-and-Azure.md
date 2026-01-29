@@ -15,6 +15,9 @@ tags:
 - Microsoft Azure
 - On Premises Servers
 - Storage Scalability
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

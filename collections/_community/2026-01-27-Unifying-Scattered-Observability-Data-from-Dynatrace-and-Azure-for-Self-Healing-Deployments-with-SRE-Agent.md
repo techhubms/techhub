@@ -21,6 +21,9 @@ tags:
 - Scheduled Tasks
 - Self Healing
 - Subagents
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

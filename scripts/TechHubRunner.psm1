@@ -292,7 +292,7 @@ function Run {
         bash -c "find '$workspaceRoot' -type d \( -name bin -o -name obj \) -exec rm -rf {} + 2>/dev/null"
         
         # Also do a dotnet clean for any other cleanup
-        dotnet -clean $solutionPath
+        dotnet clean $solutionPath
 
         Write-Success "Clean completed"
         return $true
@@ -499,6 +499,16 @@ function Run {
         Write-Step "Running unit and integration tests"
         Write-Host ""
         
+        # Clear integration test log files before running tests
+        # Only clear files with "integrationtest" in the name (not dev/prod/staging logs)
+        if (Test-Path $logDir) {
+            $integrationLogFiles = Get-ChildItem -Path $logDir -Filter "*integrationtest*" -ErrorAction SilentlyContinue
+            if ($integrationLogFiles) {
+                Write-Info "Clearing integration test log files..."
+                $integrationLogFiles | Remove-Item -Force -ErrorAction SilentlyContinue
+            }
+        }
+        
         # Build filter expression
         $filterParts = @("FullyQualifiedName!~E2E")
         
@@ -583,11 +593,10 @@ function Run {
         
         # Clear ALL previous log files before starting new servers
         if (Test-Path $logDir) {
-            Remove-Item "$logDir/*" -Force -Recurse -ErrorAction SilentlyContinue
+            # Remove all files in the log directory that do not have 'integrationtest' in the name
+            Get-ChildItem -Path $logDir -File | Where-Object { $_.Name -notlike "*integrationtest*" } | Remove-Item -Force -ErrorAction SilentlyContinue
         }
-        
-        # Ensure log directory exists
-        if (-not (Test-Path $logDir)) {
+        else {        
             New-Item -Path $logDir -ItemType Directory -Force | Out-Null
         }
         
@@ -856,11 +865,11 @@ function Run {
         $playwrightProcesses = Get-Process -Name "chromium", "chrome", "headless_shell" -ErrorAction SilentlyContinue
         if ($playwrightProcesses) {
             if (-not $Silent) {
-                Write-Info "  Killing orphaned browser processes:"
+                Write-Info "Killing orphaned browser processes:"
             }
             $playwrightProcesses | ForEach-Object { 
                 if (-not $Silent) {
-                    Write-Info ("    - PID {0}: {1}" -f $_.Id, $_.ProcessName)
+                    Write-Info ("  - PID {0}: {1}" -f $_.Id, $_.ProcessName)
                 }
                 try { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue } catch { }
             }
@@ -871,11 +880,11 @@ function Run {
         $testProcesses = Get-Process -Name "testhost", "vstest" -ErrorAction SilentlyContinue
         if ($testProcesses) {
             if (-not $Silent) {
-                Write-Info "  Killing orphaned test processes:"
+                Write-Info "Killing orphaned test processes:"
             }
             $testProcesses | ForEach-Object { 
                 if (-not $Silent) {
-                    Write-Info ("    - PID {0}: {1}" -f $_.Id, $_.ProcessName)
+                    Write-Info ("  - PID {0}: {1}" -f $_.Id, $_.ProcessName)
                 }
                 try { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue } catch { }
             }
@@ -902,7 +911,7 @@ function Run {
                     if ($cmdLine -match "vstest|testhost|dotnet.*test") {
                         if (-not $Silent) {
                             $parentPid = ps -o ppid= -p $proc.Id 2>$null | ForEach-Object { $_.Trim() }
-                            Write-Info ("  Killing orphaned test process: PID {0} (Parent: {1})" -f $proc.Id, $parentPid)
+                            Write-Info ("Killing orphaned test process: PID {0} (Parent: {1})" -f $proc.Id, $parentPid)
                         }
                         kill -9 $proc.Id 2>$null
                         $cleanedAny = $true

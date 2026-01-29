@@ -22,6 +22,9 @@ tags:
 - Microsoft Fabric
 - ORC
 - XML
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

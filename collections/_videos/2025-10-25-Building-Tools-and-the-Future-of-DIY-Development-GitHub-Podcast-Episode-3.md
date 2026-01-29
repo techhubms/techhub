@@ -14,6 +14,10 @@ tags:
 - Open Source
 - Productivity
 - Software Development
+- AI
+- Coding
+- DevOps
+- Videos
 section_names:
 - ai
 - coding

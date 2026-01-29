@@ -15,6 +15,9 @@ tags:
 - Programming Productivity
 - Prompt Engineering
 - Testing
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

@@ -19,6 +19,10 @@ tags:
 - Visual Studio Marketplace
 - VS
 - VS Code
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - coding
 - devops

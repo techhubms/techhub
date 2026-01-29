@@ -15,6 +15,9 @@ tags:
 - Intelligent Agents
 - Microsoft
 - Multi Agent Systems
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

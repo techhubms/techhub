@@ -22,6 +22,8 @@ tags:
 - VS
 - Web Development
 - Windows Community Toolkit
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

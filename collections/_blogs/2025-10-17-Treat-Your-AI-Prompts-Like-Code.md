@@ -17,6 +17,11 @@ tags:
 - Pull Requests
 - Team Collaboration
 - Version Control
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - coding

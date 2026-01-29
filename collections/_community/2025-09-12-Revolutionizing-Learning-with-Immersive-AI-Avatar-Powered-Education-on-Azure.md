@@ -20,6 +20,10 @@ tags:
 - Security Best Practices
 - SSML
 - Text To Speech
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

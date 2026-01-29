@@ -21,6 +21,9 @@ tags:
 - Software Architecture
 - Streaming
 - Tool Integration
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

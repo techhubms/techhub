@@ -22,6 +22,9 @@ tags:
 - Platform Services
 - VMware Migration
 - Vsphere
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

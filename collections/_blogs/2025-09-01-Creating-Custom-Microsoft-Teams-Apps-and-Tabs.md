@@ -23,6 +23,8 @@ tags:
 - Teams Toolkit
 - VS Code
 - Web Development
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

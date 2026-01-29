@@ -16,6 +16,10 @@ tags:
 - Software Development
 - VS
 - Workflow Efficiency
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

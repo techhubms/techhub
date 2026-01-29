@@ -21,6 +21,9 @@ tags:
 - Security Evaluation
 - SOC
 - Threat Detection
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

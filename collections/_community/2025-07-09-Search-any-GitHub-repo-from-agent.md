@@ -15,6 +15,9 @@ tags:
 - Prompt Discovery
 - Repo Search
 - VS Code Agent
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

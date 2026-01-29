@@ -21,6 +21,10 @@ tags:
 - UWP
 - VS
 - Windows 10 IoT Core
+- Azure
+- DevOps
+- Coding
+- Community
 section_names:
 - azure
 - devops

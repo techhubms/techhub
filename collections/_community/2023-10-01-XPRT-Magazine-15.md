@@ -17,6 +17,12 @@ tags:
 - Playwright
 - Sustainable Software Engineering
 - Value Stream Mapping
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - ai
 - azure

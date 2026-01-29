@@ -17,6 +17,8 @@ tags:
 - REST API
 - SaaS Management
 - User Management
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

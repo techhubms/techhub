@@ -24,6 +24,9 @@ tags:
 - Model Deployment
 - QnA Maker
 - Question Answering Agent
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -14,6 +14,10 @@ tags:
 - Programming
 - Software Engineering
 - Validation Function
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

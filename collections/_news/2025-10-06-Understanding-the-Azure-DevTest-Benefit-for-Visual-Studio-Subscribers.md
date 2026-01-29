@@ -23,6 +23,9 @@ tags:
 - Visual Studio Subscriptions
 - VS
 - VSS Benefits
+- Azure
+- DevOps
+- News
 section_names:
 - azure
 - devops

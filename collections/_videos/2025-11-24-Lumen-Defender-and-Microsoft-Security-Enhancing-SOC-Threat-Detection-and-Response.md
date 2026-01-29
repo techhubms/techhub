@@ -22,6 +22,8 @@ tags:
 - SOC Operations
 - Threat Detection
 - Threat Intelligence
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

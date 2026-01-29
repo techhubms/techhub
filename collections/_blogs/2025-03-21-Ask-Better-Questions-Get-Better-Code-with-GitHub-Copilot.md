@@ -14,6 +14,9 @@ tags:
 - Efficient Coding
 - Prompt Engineering
 - Software Development
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

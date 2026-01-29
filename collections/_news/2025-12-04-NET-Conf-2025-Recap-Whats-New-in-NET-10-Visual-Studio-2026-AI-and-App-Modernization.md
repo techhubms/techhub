@@ -32,6 +32,14 @@ tags:
 - Performance
 - Testing
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

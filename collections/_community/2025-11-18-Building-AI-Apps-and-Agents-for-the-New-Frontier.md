@@ -25,6 +25,13 @@ tags:
 - Security Integration
 - Teams Integration
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

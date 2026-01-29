@@ -20,6 +20,8 @@ tags:
 - Network Observability
 - Network Optimizations
 - ServiceNow Integration
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

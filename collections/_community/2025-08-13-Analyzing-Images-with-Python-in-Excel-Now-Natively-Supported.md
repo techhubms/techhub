@@ -20,6 +20,8 @@ tags:
 - Python in Excel
 - SciPy
 - Xl() Function
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

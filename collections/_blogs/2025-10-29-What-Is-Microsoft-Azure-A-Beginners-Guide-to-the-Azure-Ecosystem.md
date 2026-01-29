@@ -24,6 +24,13 @@ tags:
 - Hybrid Cloud
 - Microsoft Azure
 - VS
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Security
+- Blogs
 section_names:
 - ai
 - azure

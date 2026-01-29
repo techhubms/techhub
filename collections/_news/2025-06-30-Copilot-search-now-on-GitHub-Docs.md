@@ -9,6 +9,9 @@ tags:
 - GitHub
 - Productivity
 - Search
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

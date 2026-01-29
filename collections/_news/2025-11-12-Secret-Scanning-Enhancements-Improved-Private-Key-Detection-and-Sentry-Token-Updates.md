@@ -19,6 +19,9 @@ tags:
 - Secret Scanning
 - Sentry
 - Token Renaming
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

@@ -15,6 +15,9 @@ tags:
 - Observability
 - OpenTelemetry
 - System.Diagnostics
+- Coding
+- DevOps
+- Blogs
 section_names:
 - coding
 - devops

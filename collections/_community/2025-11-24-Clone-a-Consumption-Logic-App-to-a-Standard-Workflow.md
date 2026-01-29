@@ -19,6 +19,8 @@ tags:
 - Stateful Workflows
 - VS Code Integration
 - Workflow Cloning
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

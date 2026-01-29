@@ -21,6 +21,10 @@ tags:
 - Service Outage
 - Traffic Management
 - Web Application Firewall
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

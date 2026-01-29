@@ -8,7 +8,10 @@ draft: true
 plans:
 - Pro+
 - Enterprise
-tags: []
+tags:
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

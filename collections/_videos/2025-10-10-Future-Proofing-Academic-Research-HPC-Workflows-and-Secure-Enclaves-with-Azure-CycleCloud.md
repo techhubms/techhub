@@ -25,6 +25,8 @@ tags:
 - Scheduler Integration
 - Slurm
 - ThinLinc
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

@@ -19,6 +19,10 @@ tags:
 - Policy Management
 - Token Management
 - User Sign in
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

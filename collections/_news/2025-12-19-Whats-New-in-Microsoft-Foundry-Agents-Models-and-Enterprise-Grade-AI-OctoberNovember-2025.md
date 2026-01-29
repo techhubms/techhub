@@ -28,6 +28,12 @@ tags:
 - Sora
 - VNET
 - Zero Trust
+- AI
+- Azure
+- Coding
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

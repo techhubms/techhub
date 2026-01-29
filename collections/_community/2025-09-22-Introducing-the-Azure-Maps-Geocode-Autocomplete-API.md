@@ -21,6 +21,9 @@ tags:
 - Rideshare
 - Store Locator
 - Web Application
+- Azure
+- Coding
+- Community
 section_names:
 - azure
 - coding

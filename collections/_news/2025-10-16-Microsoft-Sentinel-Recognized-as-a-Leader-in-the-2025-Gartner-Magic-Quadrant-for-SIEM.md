@@ -25,6 +25,10 @@ tags:
 - Threat Detection
 - Threat Intelligence
 - UEBA
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

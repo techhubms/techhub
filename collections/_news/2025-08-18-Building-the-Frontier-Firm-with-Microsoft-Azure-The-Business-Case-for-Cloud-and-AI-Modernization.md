@@ -22,6 +22,9 @@ tags:
 - Microsoft Azure
 - ROI
 - Technical Debt
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

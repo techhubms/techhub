@@ -30,6 +30,9 @@ tags:
 - VS Code
 - Workflow Automation
 - YAML Workflows
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

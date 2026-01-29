@@ -19,6 +19,9 @@ tags:
 - Spark
 - Spark Job Definitions
 - Spark SQL
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -23,6 +23,9 @@ tags:
 - Scientific Research
 - TechSpark
 - TitletownTech
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

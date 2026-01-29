@@ -8,7 +8,7 @@ public interface IMarkdownService
     /// <summary>
     /// Parse YAML frontmatter from markdown file
     /// </summary>
-    Task<Dictionary<string, object>> ParseFrontMatterAsync(
+    Task<Dictionary<string, object?>> ParseFrontMatterAsync(
         string filePath,
         CancellationToken cancellationToken = default);
 
@@ -16,9 +16,12 @@ public interface IMarkdownService
     /// Render markdown content to HTML
     /// </summary>
     /// <param name="markdown">Raw markdown content</param>
-    /// <param name="currentPagePath">Current page path for fixing hash-only links (e.g., "/all/roundups/2025-12-29-weekly-ai-and-tech-news-roundup")</param>
     /// <returns>Rendered HTML with properly formatted links</returns>
-    string RenderToHtml(string markdown, string? currentPagePath = null);
+    /// <remarks>
+    /// Hash-only links (#section) are preserved as-is and handled client-side by JavaScript
+    /// in nav-helpers.js which converts them to full URL navigation.
+    /// </remarks>
+    string RenderToHtml(string markdown);
 
     /// <summary>
     /// Extract excerpt from markdown (content before &lt;!--excerpt_end--&gt; marker)

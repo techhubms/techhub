@@ -23,6 +23,9 @@ tags:
 - SMB Security
 - Threat Protection
 - Unified Security
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

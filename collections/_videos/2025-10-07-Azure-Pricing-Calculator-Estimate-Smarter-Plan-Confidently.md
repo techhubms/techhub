@@ -21,6 +21,8 @@ tags:
 - Resource Optimization
 - Scenario Modeling
 - Workload Management
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

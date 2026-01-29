@@ -13,6 +13,9 @@ tags:
 - Schema Validation
 - Tool Design
 - Workflow Patterns
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

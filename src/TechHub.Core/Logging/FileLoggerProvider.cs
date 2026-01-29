@@ -81,12 +81,24 @@ public sealed class FileLoggerProvider : ILoggerProvider
     /// <summary>
     /// Simple file logger for application with local timezone timestamps
     /// </summary>
-    private sealed class FileLogger(string categoryName, StreamWriter writer, object lockObj, LogLevel minLogLevel) : ILogger
+    private sealed class FileLogger : ILogger
     {
-        private readonly string _categoryName = categoryName;
-        private readonly StreamWriter _writer = writer;
-        private readonly object _lock = lockObj;
-        private readonly LogLevel _minLogLevel = minLogLevel;
+        private readonly string _categoryName;
+        private readonly StreamWriter _writer;
+        private readonly object _lock;
+        private readonly LogLevel _minLogLevel;
+
+        public FileLogger(string categoryName, StreamWriter writer, object lockObj, LogLevel minLogLevel)
+        {
+            ArgumentNullException.ThrowIfNull(categoryName);
+            ArgumentNullException.ThrowIfNull(writer);
+            ArgumentNullException.ThrowIfNull(lockObj);
+
+            _categoryName = categoryName;
+            _writer = writer;
+            _lock = lockObj;
+            _minLogLevel = minLogLevel;
+        }
 
         public IDisposable? BeginScope<TState>(TState state) where TState : notnull => null;
 

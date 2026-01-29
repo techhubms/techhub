@@ -24,6 +24,8 @@ tags:
 - VS Code
 - VS Code V1.104
 - Vscoderelease
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

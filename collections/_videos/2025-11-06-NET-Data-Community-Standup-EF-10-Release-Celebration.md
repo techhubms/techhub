@@ -21,6 +21,8 @@ tags:
 - Modern .NET
 - ORM
 - Q&A
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

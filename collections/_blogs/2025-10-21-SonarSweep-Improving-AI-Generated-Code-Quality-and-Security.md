@@ -24,6 +24,10 @@ tags:
 - Software Development
 - Sonar Platform
 - SonarSweep
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

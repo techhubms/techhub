@@ -22,6 +22,9 @@ tags:
 - Open Source
 - REST API
 - Systemic Bias
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

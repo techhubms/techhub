@@ -19,6 +19,9 @@ tags:
 - Productivity
 - Usage Management
 - VS
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

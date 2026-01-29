@@ -19,6 +19,11 @@ tags:
 - Template Generation
 - VS Code
 - VS Code Extension
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

@@ -20,6 +20,9 @@ tags:
 - Secureyourdata
 - Security Copilot
 - Security Operations
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

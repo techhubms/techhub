@@ -21,6 +21,8 @@ tags:
 - Security Operations
 - Security Platform
 - Threat Intelligence
+- Security
+- News
 section_names:
 - security
 primary_section: security

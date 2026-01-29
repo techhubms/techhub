@@ -16,6 +16,10 @@ tags:
 - Resource Graph
 - Token Expiration
 - Workbook Deployment
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

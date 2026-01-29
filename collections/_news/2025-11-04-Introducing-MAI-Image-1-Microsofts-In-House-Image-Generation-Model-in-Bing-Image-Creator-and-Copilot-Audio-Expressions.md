@@ -19,6 +19,8 @@ tags:
 - MAI Image 1
 - Microsoft AI
 - Text To Image
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

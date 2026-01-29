@@ -22,6 +22,9 @@ tags:
 - Security Copilot
 - Sensitive Data
 - Threat Defense
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

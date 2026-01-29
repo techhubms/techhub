@@ -17,6 +17,10 @@ tags:
 - Sharda Kaur
 - Simona Liao
 - Student Zone
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

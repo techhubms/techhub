@@ -19,6 +19,11 @@ tags:
 - Secure Development
 - Security Automation
 - Token Security
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - devops

@@ -21,6 +21,9 @@ tags:
 - Security Governance
 - Supply Chain Security
 - Vulnerability Management
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

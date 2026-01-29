@@ -24,6 +24,11 @@ tags:
 - Serverless Deployment
 - Trend Forecasting
 - Vector Search
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - azure

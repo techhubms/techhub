@@ -21,6 +21,10 @@ tags:
 - SRE
 - Triage Automation
 - Work Notes Automation
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

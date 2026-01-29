@@ -20,6 +20,10 @@ tags:
 - Python
 - User Data Functions
 - Variable Library
+- Azure
+- Coding
+- Machine Learning
+- News
 section_names:
 - azure
 - coding

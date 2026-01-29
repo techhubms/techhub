@@ -26,6 +26,9 @@ tags:
 - Voice AI
 - WebRTC
 - WebSocket
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

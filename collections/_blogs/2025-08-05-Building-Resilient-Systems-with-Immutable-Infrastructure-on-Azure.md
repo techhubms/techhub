@@ -23,6 +23,10 @@ tags:
 - Solution Architecture
 - Terraform
 - Virtual Machines
+- Azure
+- Coding
+- DevOps
+- Blogs
 section_names:
 - azure
 - coding

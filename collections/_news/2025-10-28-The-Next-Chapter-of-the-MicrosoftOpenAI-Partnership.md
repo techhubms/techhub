@@ -19,6 +19,9 @@ tags:
 - OpenAI
 - Public Benefit Corporation
 - Research Collaboration
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

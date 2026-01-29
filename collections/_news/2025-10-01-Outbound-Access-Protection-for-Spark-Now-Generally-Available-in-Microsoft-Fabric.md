@@ -17,6 +17,10 @@ tags:
 - Spark
 - Tenant Isolation
 - Workspace Governance
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

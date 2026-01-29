@@ -20,6 +20,9 @@ tags:
 - PLDM
 - Redfish API
 - Reliability
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

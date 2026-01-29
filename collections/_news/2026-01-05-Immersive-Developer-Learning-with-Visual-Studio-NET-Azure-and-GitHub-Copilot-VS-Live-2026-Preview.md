@@ -18,6 +18,13 @@ tags:
 - Training
 - VS
 - Vslive
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

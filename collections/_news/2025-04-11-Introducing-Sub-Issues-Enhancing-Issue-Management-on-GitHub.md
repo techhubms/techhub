@@ -23,6 +23,8 @@ tags:
 - Software Engineering
 - Sub Issues
 - Workflow Optimization
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

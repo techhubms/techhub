@@ -18,6 +18,8 @@ tags:
 - Roslyn
 - Source Generators
 - VS
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

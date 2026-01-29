@@ -21,6 +21,10 @@ tags:
 - Spring Boot
 - Spring Framework
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - coding

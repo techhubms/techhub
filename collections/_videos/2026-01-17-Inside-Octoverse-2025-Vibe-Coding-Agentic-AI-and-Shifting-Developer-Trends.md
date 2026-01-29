@@ -23,6 +23,12 @@ tags:
 - Vibe Coding
 - Vite
 - VS Code
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
 section_names:
 - ai
 - coding

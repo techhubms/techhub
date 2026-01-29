@@ -30,6 +30,9 @@ tags:
 - Power Optimization
 - Quantum 2 InfiniBand
 - Technical
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

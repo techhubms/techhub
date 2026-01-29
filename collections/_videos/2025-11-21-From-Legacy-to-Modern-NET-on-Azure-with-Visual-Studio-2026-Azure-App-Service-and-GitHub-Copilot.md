@@ -21,6 +21,12 @@ tags:
 - Secure Deployments
 - VS
 - WinForms
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

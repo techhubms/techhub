@@ -26,6 +26,8 @@ tags:
 - S2S VPN
 - Virtual Networks
 - VNet
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

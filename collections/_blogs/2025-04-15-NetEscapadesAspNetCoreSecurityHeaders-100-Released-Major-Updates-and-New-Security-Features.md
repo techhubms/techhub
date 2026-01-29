@@ -17,6 +17,9 @@ tags:
 - Permissions Policy
 - Security Headers
 - Trusted Types
+- Coding
+- Security
+- Blogs
 section_names:
 - coding
 - security

@@ -23,6 +23,9 @@ tags:
 - Scientific Computing
 - Slurm
 - Ubuntu 20.24
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

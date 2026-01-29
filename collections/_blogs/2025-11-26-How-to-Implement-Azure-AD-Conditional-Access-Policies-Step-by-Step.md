@@ -21,6 +21,9 @@ tags:
 - Session Controls
 - Sign in Risk
 - Zero Trust
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

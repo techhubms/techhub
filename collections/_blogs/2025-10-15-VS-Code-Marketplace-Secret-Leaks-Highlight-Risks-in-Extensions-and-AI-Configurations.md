@@ -27,6 +27,11 @@ tags:
 - Supply Chain Security
 - VS Code
 - Wiz
+- AI
+- Azure
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - azure

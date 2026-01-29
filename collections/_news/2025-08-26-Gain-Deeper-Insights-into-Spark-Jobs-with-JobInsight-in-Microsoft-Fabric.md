@@ -20,6 +20,9 @@ tags:
 - Resource Tuning
 - Spark
 - Spark Diagnostics
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -30,6 +30,11 @@ tags:
 - Social X
 - Software Reliability
 - Testing Strategies
+- AI
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - coding

@@ -16,6 +16,9 @@ tags:
 - NES
 - Next Edit Suggestions
 - Productivity
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

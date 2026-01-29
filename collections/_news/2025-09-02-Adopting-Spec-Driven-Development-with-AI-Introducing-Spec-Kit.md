@@ -20,6 +20,10 @@ tags:
 - Spec Kit
 - Specifications
 - VS Code Integration
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

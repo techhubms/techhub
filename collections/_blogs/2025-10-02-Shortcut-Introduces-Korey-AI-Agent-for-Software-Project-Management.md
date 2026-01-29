@@ -29,6 +29,9 @@ tags:
 - Software Engineering Productivity
 - Task Tracking
 - Workflow Orchestration
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

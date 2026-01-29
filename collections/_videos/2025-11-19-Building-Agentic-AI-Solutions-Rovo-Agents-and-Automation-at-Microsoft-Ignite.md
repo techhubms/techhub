@@ -21,6 +21,8 @@ tags:
 - Rovo Agents
 - Team Collaboration
 - Workflow Design
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

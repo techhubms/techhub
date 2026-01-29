@@ -21,6 +21,10 @@ tags:
 - Security Best Practices
 - Semantic Kernel
 - Web Application Firewall
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

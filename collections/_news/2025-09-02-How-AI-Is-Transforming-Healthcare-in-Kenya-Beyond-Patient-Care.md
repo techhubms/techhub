@@ -21,6 +21,8 @@ tags:
 - Microsoft
 - Public Private Partnerships
 - Workforce Development
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

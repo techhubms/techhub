@@ -24,6 +24,9 @@ tags:
 - Tools
 - Workflow Automation
 - Workflow Design
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

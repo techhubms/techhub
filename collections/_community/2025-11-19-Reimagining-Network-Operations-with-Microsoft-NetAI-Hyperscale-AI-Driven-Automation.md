@@ -19,6 +19,10 @@ tags:
 - NOA Framework
 - Operational Efficiency
 - Telecommunications
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

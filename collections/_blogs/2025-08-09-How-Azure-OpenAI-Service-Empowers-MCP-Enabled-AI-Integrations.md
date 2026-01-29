@@ -23,6 +23,9 @@ tags:
 - Microsoft 365 Integration
 - Microsoft Purview
 - Role Based Access
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

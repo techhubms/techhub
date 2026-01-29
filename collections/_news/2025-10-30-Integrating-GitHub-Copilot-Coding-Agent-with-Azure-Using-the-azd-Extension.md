@@ -34,6 +34,12 @@ tags:
 - Typescript
 - VS Code
 - Workflow Automation
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -18,6 +18,9 @@ tags:
 - Planning Prompts
 - Prompt Engineering
 - Software Planning
+- AI
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - github-copilot

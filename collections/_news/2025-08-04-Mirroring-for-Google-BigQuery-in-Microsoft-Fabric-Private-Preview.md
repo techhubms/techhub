@@ -19,6 +19,8 @@ tags:
 - Private Preview
 - Real Time Analytics
 - Zero ETL
+- Machine Learning
+- News
 section_names:
 - ml
 primary_section: ml

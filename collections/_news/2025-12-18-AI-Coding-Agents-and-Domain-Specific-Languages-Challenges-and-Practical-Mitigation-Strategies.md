@@ -21,6 +21,11 @@ tags:
 - MCP Server
 - Software Engineering
 - VS Code Extensions
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

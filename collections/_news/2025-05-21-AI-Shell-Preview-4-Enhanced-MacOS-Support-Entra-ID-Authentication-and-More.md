@@ -18,6 +18,10 @@ tags:
 - Phi Silica
 - PowerShell
 - Predictive IntelliSense
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

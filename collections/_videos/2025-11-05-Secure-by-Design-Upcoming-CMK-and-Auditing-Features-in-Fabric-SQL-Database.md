@@ -27,6 +27,9 @@ tags:
 - Tech
 - Technology
 - Transparent Data Encryption
+- Azure
+- Security
+- Videos
 section_names:
 - azure
 - security

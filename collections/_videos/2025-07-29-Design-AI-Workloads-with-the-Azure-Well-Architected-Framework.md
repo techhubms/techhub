@@ -18,6 +18,9 @@ tags:
 - Operational Excellence
 - Performance Efficiency
 - Reliability
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

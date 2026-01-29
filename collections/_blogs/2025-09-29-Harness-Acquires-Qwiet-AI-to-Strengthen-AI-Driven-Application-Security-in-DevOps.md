@@ -23,6 +23,10 @@ tags:
 - Software Supply Chain
 - Traceable
 - Vulnerability Remediation
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

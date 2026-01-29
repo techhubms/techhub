@@ -16,6 +16,8 @@ tags:
 - Improvement
 - Python
 - Supply Chain Security
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

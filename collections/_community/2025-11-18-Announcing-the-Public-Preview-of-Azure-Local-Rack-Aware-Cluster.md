@@ -21,6 +21,9 @@ tags:
 - Storage Spaces Direct
 - Version 2510
 - VM Provisioning
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

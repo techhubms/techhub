@@ -22,6 +22,10 @@ tags:
 - SDK Integration
 - Sensitive Data Leakage
 - Trustworthy AI
+- AI
+- Azure
+- Security
+- News
 section_names:
 - ai
 - azure

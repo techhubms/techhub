@@ -18,6 +18,8 @@ tags:
 - Navigation
 - Roland Vizner
 - State Persistence
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

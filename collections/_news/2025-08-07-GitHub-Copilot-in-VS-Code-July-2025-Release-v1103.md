@@ -18,6 +18,9 @@ tags:
 - UI Improvements
 - V1.103
 - VS Code
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

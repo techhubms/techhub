@@ -21,6 +21,11 @@ tags:
 - Repository Integration
 - REST API
 - Work Item Automation
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

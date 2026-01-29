@@ -18,6 +18,11 @@ tags:
 - Vite
 - Web Development
 - Webpack
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

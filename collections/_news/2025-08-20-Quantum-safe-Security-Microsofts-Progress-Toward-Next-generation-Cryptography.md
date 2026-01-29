@@ -23,6 +23,9 @@ tags:
 - SymCrypt
 - TLS 1.3
 - Windows Insiders
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

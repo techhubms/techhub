@@ -21,6 +21,9 @@ tags:
 - Operational Insights
 - Oracle Database@Azure
 - Oracle Exadata
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

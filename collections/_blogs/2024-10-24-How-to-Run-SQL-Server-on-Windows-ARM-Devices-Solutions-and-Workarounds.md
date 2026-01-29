@@ -21,6 +21,9 @@ tags:
 - Windows
 - Windows 11
 - Windows ARM
+- Azure
+- Coding
+- Blogs
 section_names:
 - azure
 - coding

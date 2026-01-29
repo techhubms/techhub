@@ -20,6 +20,8 @@ tags:
 - Standard V2
 - Workspace Gateways
 - Workspaces
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

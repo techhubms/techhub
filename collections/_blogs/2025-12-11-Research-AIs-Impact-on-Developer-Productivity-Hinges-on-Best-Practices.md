@@ -22,6 +22,8 @@ tags:
 - Software Development Lifecycle
 - Stack Trace Analysis
 - Team Dynamics
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

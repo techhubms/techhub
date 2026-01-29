@@ -24,6 +24,10 @@ tags:
 - Network Security Groups
 - Service Principal
 - Token Authentication
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - azure
 - coding

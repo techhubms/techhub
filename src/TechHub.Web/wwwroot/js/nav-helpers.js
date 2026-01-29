@@ -101,6 +101,43 @@
         }
     }
 
+    /**
+     * Handle clicks on hash-only links (e.g., href="#section-heading")
+     * 
+     * Hash-only links don't work correctly with Blazor enhanced navigation because
+     * the browser doesn't know the full page URL context. This handler intercepts
+     * clicks on hash-only links and converts them to full URL navigation.
+     * 
+     * @param {Event} event - The click event
+     */
+    function handleHashLinkClick(event) {
+        const link = event.target.closest('a[href^="#"]');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        
+        // Only handle hash-only links (not full URLs with hashes like /page#section)
+        if (!href || !href.startsWith('#') || href === '#') return;
+
+        // Prevent default behavior
+        event.preventDefault();
+
+        // Navigate to full URL with hash
+        // This triggers proper browser navigation instead of just updating the hash
+        const fullUrl = window.location.pathname + window.location.search + href;
+        window.location.href = fullUrl;
+    }
+
+    // Set up hash link click handler on article content
+    function setupHashLinkHandler() {
+        // Target article-body where rendered markdown content lives
+        const articleBody = document.querySelector('.article-body');
+        if (articleBody && !articleBody.dataset.hashLinksHandled) {
+            articleBody.addEventListener('click', handleHashLinkClick);
+            articleBody.dataset.hashLinksHandled = 'true';
+        }
+    }
+
     // Show/hide buttons based on scroll position
     function handleScroll() {
         const container = document.getElementById(BUTTON_CONTAINER_ID);
@@ -130,6 +167,9 @@
         if (!document.getElementById(BUTTON_CONTAINER_ID)) {
             createButtonContainer();
         }
+
+        // Set up hash link handler for article content
+        setupHashLinkHandler();
 
         // Always check scroll position on init
         handleScroll();

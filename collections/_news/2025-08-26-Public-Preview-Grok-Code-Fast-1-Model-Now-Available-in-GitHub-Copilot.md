@@ -16,6 +16,9 @@ tags:
 - Model Management
 - VS Code
 - Xai
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -24,6 +24,11 @@ tags:
 - Public Sector AI
 - Python
 - Teams Integration
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

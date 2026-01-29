@@ -17,6 +17,9 @@ tags:
 - Permission Management
 - Repository Admin
 - Settings Management
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

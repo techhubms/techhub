@@ -25,6 +25,10 @@ tags:
 - Public Sector
 - Regulated Industries
 - Sovereign Cloud
+- AI
+- Azure
+- Security
+- Blogs
 section_names:
 - ai
 - azure

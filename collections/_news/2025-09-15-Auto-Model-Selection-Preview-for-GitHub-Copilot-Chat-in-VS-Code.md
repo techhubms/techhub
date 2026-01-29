@@ -19,6 +19,9 @@ tags:
 - Premium Requests
 - VS Code
 - VS Code Dev Days
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

@@ -23,6 +23,10 @@ tags:
 - Observability
 - OpenAI API
 - Personalization
+- AI
+- Azure
+- Coding
+- Videos
 section_names:
 - ai
 - azure

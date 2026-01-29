@@ -28,6 +28,9 @@ tags:
 - User Interface
 - Visual Designer
 - VS Code
+- AI
+- Coding
+- Blogs
 section_names:
 - ai
 - coding

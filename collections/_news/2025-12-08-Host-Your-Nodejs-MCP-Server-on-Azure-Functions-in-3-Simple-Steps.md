@@ -17,6 +17,10 @@ tags:
 - Node.js
 - Serverless
 - TypeScript
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

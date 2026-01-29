@@ -14,6 +14,10 @@ tags:
 - Public Preview
 - Software Development
 - Sub Issues
+- AI
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - devops

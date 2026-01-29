@@ -18,6 +18,9 @@ tags:
 - Security Debt
 - Security Operations
 - Vulnerability Remediation
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

@@ -15,6 +15,8 @@ tags:
 - Project Structure
 - Repository Pattern
 - Software Practices
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

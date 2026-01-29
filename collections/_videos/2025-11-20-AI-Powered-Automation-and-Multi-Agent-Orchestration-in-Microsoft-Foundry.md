@@ -28,6 +28,11 @@ tags:
 - Secure Deployment
 - Semantic Kernel
 - VS
+- AI
+- Azure
+- Machine Learning
+- Security
+- Videos
 section_names:
 - ai
 - azure

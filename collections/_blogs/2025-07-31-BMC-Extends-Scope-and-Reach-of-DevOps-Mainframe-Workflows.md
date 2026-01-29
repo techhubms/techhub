@@ -23,6 +23,9 @@ tags:
 - Social X
 - Software Supply Chain Security
 - Workflow Optimization
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

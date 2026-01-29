@@ -16,6 +16,9 @@ tags:
 - Session Management
 - Task Assignment
 - Web IDE
+- AI
+- DevOps
+- Videos
 section_names:
 - ai
 - devops

@@ -21,6 +21,9 @@ tags:
 - Migrateandmodernizeyourestate
 - MSIgnite
 - SAP
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

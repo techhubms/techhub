@@ -16,6 +16,8 @@ tags:
 - Role Based Access Control
 - Subscriptions
 - Tagging
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

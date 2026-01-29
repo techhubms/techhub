@@ -22,6 +22,10 @@ tags:
 - Open Source
 - VS Code
 - VS Code Extensions
+- AI
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - coding

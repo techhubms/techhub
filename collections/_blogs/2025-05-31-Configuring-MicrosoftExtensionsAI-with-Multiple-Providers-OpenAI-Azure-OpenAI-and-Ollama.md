@@ -18,6 +18,10 @@ tags:
 - OpenAI
 - Streaming Completions
 - WPF
+- AI
+- Coding
+- Azure
+- Blogs
 section_names:
 - ai
 - coding

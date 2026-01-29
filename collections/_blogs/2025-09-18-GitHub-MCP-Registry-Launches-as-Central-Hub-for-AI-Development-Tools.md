@@ -30,6 +30,9 @@ tags:
 - Spotlight
 - VS Code
 - Workflow Automation
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

@@ -15,6 +15,8 @@ tags:
 - Portability Analyzer
 - Project Migration
 - Upgrade Assistant
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

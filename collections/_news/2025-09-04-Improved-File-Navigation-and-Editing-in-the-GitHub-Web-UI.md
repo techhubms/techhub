@@ -15,6 +15,8 @@ tags:
 - Search Improvements
 - User Experience
 - Web UI
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -14,6 +14,9 @@ tags:
 - Live Coding
 - Programming Stream
 - Software Engineering
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

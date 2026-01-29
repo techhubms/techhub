@@ -25,6 +25,10 @@ tags:
 - Open Data
 - Power BI
 - Unity Catalog
+- AI
+- Azure
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

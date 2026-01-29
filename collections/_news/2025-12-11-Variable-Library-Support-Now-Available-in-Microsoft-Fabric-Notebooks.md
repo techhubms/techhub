@@ -19,6 +19,11 @@ tags:
 - Spark Development
 - SPN Authentication
 - Variable Library
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- News
 section_names:
 - azure
 - coding
@@ -51,7 +56,7 @@ Variable Library enables:
 ![Define variables in Variable Library](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/12/variable-library-1-1024x324.png)
 Define variables in Variable Library
 
-![Use Variable library in notebook](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/12/UseVL-1-1024x568.png)
+![Use Variable library in notebook](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/12/usevl-1-1024x568.png)
 Use Variable Library in notebook
 
 ## Resources

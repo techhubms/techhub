@@ -21,6 +21,11 @@ tags:
 - Pipeline Monitoring
 - Pipeline Scheduling
 - Service Principal Name
+- AI
+- Azure
+- DevOps
+- Machine Learning
+- News
 section_names:
 - ai
 - azure

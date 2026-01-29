@@ -23,6 +23,8 @@ tags:
 - Testing Framework
 - TUnit
 - VS
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

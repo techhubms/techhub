@@ -22,6 +22,8 @@ tags:
 - Resource Provider Deprecation
 - Service Bus
 - TTS
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

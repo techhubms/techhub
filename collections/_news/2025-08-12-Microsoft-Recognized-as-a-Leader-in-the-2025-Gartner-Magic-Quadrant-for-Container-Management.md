@@ -27,6 +27,12 @@ tags:
 - Microsoft Defender For Containers
 - Operational Simplicity
 - VS Code
+- AI
+- Azure
+- Coding
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

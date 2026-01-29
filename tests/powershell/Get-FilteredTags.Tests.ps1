@@ -60,14 +60,13 @@ Describe "Get-FilteredTags" {
             $result | Should -Not -Contain "***"
         }
         
-        It "Should NOT automatically add categories and collection to output" {
+        It "Should automatically add categories and collection to output" {
             $result = Get-FilteredTags -Tags @("test-tag", "Python", "JavaScript") -Categories @("AI", "Technology") -Collection "news"
             
-            # Categories and collection should NOT be automatically added
-            # (they're not in the input Tags, so they shouldn't appear in output)
-            $result | Should -Not -Contain "AI"
-            $result | Should -Not -Contain "Technology" 
-            $result | Should -Not -Contain "News"
+            # Categories and collection SHOULD be automatically added
+            $result | Should -Contain "AI"
+            $result | Should -Contain "Technology" 
+            $result | Should -Contain "News"
             
             # Actual tags should still be present
             $result | Should -Contain "Test Tag"
@@ -311,8 +310,8 @@ Describe "Get-FilteredTags" {
             $result | Should -Contain "Kubernetes"
             $result | Should -Contain "Cloud"
             $result | Should -Contain "Single Tag"
-            # Note: "Blogs" is a collection name and is now filtered out
-            $result | Should -Not -Contain "Blogs"
+            # Note: "Blogs" is a collection name and is now included
+            $result | Should -Contain "Blogs"
         }
         
         It "Should split tags on commas" {
@@ -326,9 +325,9 @@ Describe "Get-FilteredTags" {
             $result | Should -Contain "Data Science"
             $result | Should -Contain "Analytics"
             $result | Should -Contain "Solo Tag"
-            # Note: AI and Blogs are section/collection names and are now filtered out
-            $result | Should -Not -Contain "AI"
-            $result | Should -Not -Contain "Blogs"
+            # Note: AI and Blogs are section/collection names and are now included
+            $result | Should -Contain "AI"
+            $result | Should -Contain "Blogs"
         }
         
         It "Should split tags on both semicolons and commas in same tag" {
@@ -343,9 +342,9 @@ Describe "Get-FilteredTags" {
             $result | Should -Contain "Kubernetes"
             $result | Should -Contain "Docker"
             $result | Should -Contain "Terraform"
-            # Section/collection names are filtered out
-            $result | Should -Not -Contain "Technology"
-            $result | Should -Not -Contain "Blogs"
+            # Section/collection names are now included
+            $result | Should -Contain "Technology"
+            $result | Should -Contain "Blogs"
         }
         
         It "Should handle empty values after splitting" {
@@ -376,9 +375,9 @@ Describe "Get-FilteredTags" {
             $result | Should -Contain "Cloud Computing"
             $result | Should -Contain "Data Science"
             $result | Should -Contain "Analytics"
-            # Categories/collection are NOT automatically added (not in input tags)
-            $result | Should -Not -Contain "Technology"
-            $result | Should -Not -Contain "Blogs"
+            # Categories/collection ARE automatically added
+            $result | Should -Contain "Technology"
+            $result | Should -Contain "Blogs"
         }
     }
     
@@ -399,10 +398,10 @@ Describe "Get-FilteredTags" {
             $result | Should -Contain ".NET Framework"
             $result | Should -Contain "VS Code"
             $result | Should -Contain "IaC"
-            # Categories/collection are NOT automatically added (not in input tags)
-            $result | Should -Not -Contain "AI"
-            $result | Should -Not -Contain "Development"
-            $result | Should -Not -Contain "Blogs"
+            # Categories/collection ARE automatically added
+            $result | Should -Contain "AI"
+            $result | Should -Contain "Development"
+            $result | Should -Contain "Blogs"
         }
     }
 }

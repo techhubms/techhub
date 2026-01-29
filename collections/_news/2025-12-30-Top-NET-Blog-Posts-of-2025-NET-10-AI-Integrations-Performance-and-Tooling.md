@@ -26,6 +26,11 @@ tags:
 - VS
 - VS Code
 - Wrapped
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

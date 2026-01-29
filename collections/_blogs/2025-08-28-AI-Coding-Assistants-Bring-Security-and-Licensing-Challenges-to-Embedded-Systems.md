@@ -37,6 +37,11 @@ tags:
 - Software Composition Analysis
 - Software Composition Analysis (sca)
 - Software Security
+- AI
+- Coding
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - coding

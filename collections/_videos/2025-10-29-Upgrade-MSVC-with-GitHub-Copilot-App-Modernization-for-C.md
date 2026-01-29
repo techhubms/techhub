@@ -24,6 +24,10 @@ tags:
 - Source Code Upgrade
 - Tech
 - Technology
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

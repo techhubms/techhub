@@ -26,6 +26,9 @@ tags:
 - Swift 6.2
 - Thread Safety
 - Vulnerability Detection
+- DevOps
+- Security
+- News
 section_names:
 - devops
 - security

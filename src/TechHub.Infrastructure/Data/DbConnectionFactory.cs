@@ -9,9 +9,15 @@ namespace TechHub.Infrastructure.Data;
 /// Factory for creating SQLite database connections.
 /// Each connection is independent and can be used concurrently.
 /// </summary>
-public class SqliteConnectionFactory(string connectionString) : IDbConnectionFactory
+public class SqliteConnectionFactory : IDbConnectionFactory
 {
-    private readonly string _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
+    private readonly string _connectionString;
+
+    public SqliteConnectionFactory(string connectionString)
+    {
+        ArgumentNullException.ThrowIfNull(connectionString);
+        _connectionString = connectionString;
+    }
 
     public IDbConnection CreateConnection()
     {
@@ -25,9 +31,15 @@ public class SqliteConnectionFactory(string connectionString) : IDbConnectionFac
 /// Factory for creating PostgreSQL database connections.
 /// Each connection is independent and can be used concurrently.
 /// </summary>
-public class PostgresConnectionFactory(string connectionString) : IDbConnectionFactory
+public class PostgresConnectionFactory : IDbConnectionFactory
 {
-    private readonly string _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
+    private readonly string _connectionString;
+
+    public PostgresConnectionFactory(string connectionString)
+    {
+        ArgumentNullException.ThrowIfNull(connectionString);
+        _connectionString = connectionString;
+    }
 
     public IDbConnection CreateConnection()
     {

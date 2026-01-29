@@ -19,6 +19,8 @@ tags:
 - Personalized Medicine
 - Responsible AI
 - Scientific Discovery
+- AI
+- News
 section_names:
 - ai
 primary_section: ai

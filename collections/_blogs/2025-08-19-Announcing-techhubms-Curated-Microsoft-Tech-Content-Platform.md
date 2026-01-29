@@ -22,6 +22,11 @@ tags:
 - Site Launch
 - Tech News
 - Weekly Roundup
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Blogs
 section_names:
 - ai
 - azure

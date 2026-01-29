@@ -20,6 +20,9 @@ tags:
 - OneLake Catalog
 - Security Insights
 - Sensitivity Labels
+- Azure
+- Security
+- News
 section_names:
 - azure
 - security

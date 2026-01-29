@@ -33,6 +33,13 @@ tags:
 - Terraform
 - VS Code Extension
 - Workload Assignment
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Security
+- News
 section_names:
 - ai
 - azure

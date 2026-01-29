@@ -15,6 +15,9 @@ tags:
 - Security Event
 - Security Platform
 - Threat Intelligence
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

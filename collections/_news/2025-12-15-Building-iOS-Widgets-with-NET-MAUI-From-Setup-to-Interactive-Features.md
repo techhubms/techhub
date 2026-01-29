@@ -30,6 +30,8 @@ tags:
 - Widgets
 - Xcode
 - XReleases
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

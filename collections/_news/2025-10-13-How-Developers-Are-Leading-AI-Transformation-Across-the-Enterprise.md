@@ -21,6 +21,11 @@ tags:
 - Microsoft Cloud
 - Productivity Tools
 - Software Modernization
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

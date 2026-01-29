@@ -19,6 +19,9 @@ tags:
 - Security Campaigns
 - Static Code Analysis
 - Vulnerability Management
+- DevOps
+- Security
+- Videos
 section_names:
 - devops
 - security

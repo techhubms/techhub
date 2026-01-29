@@ -20,6 +20,8 @@ tags:
 - Windows Desktop Development
 - WinForms
 - WPF
+- Coding
+- Blogs
 section_names:
 - coding
 primary_section: coding

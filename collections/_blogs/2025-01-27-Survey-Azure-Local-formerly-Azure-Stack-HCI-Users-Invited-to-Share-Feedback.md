@@ -16,6 +16,8 @@ tags:
 - Thomas Maurer
 - User Feedback
 - Virtualization
+- Azure
+- Blogs
 section_names:
 - azure
 primary_section: azure

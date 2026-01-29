@@ -26,6 +26,10 @@ tags:
 - Windows 11
 - Windows ML
 - Winget
+- AI
+- Azure
+- Coding
+- News
 section_names:
 - ai
 - azure

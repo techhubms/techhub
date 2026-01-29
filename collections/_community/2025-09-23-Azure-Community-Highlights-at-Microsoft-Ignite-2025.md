@@ -21,6 +21,10 @@ tags:
 - MVP Program
 - SQL Server Management Studio
 - SSMS Copilot
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

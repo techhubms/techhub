@@ -23,6 +23,9 @@ tags:
 - Software Developer
 - Stephen Halter
 - Web APIs
+- Coding
+- Security
+- Videos
 section_names:
 - coding
 - security

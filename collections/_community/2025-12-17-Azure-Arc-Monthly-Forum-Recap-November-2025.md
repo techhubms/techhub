@@ -22,6 +22,9 @@ tags:
 - Preview
 - Security Baseline
 - Windows Server
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

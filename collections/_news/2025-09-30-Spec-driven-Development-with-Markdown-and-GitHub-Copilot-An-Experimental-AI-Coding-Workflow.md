@@ -24,6 +24,10 @@ tags:
 - README.md
 - Spec Driven Development
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

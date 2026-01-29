@@ -18,6 +18,10 @@ tags:
 - Security Update
 - Token Management
 - VS
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

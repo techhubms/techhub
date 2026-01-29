@@ -16,6 +16,9 @@ tags:
 - Microsoft AI
 - Teamwork
 - Yina Arenas
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

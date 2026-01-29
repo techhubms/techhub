@@ -25,6 +25,9 @@ tags:
 - Spatial Data
 - Sustainability
 - Vegetation Management
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

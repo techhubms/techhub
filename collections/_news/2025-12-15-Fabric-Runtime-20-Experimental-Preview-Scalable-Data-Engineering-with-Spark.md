@@ -20,6 +20,9 @@ tags:
 - Scala 2.13
 - Scalable Analytics
 - Spark Based Workloads
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -23,6 +23,10 @@ tags:
 - Microsoft Purview
 - Ontology
 - Semantic Layer
+- AI
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - azure

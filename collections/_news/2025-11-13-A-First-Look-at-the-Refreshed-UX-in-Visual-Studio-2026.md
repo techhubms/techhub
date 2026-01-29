@@ -18,6 +18,8 @@ tags:
 - User Experience
 - VS
 - Windows Development
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

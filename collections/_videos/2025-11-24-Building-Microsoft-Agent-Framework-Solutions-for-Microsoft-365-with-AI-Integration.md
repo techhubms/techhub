@@ -22,6 +22,10 @@ tags:
 - Onboarding Automation
 - Security Monitoring
 - Tenant Environment
+- AI
+- Azure
+- Security
+- Videos
 section_names:
 - ai
 - azure

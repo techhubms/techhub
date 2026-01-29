@@ -15,6 +15,8 @@ tags:
 - Remote Collaboration
 - Secure Applications
 - Video Communications
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

@@ -26,6 +26,10 @@ tags:
 - Prometheus
 - RBAC
 - VM Insights
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

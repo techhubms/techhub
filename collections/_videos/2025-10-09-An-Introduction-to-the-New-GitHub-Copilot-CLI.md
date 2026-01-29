@@ -17,6 +17,9 @@ tags:
 - Terminal
 - Windows
 - WSL
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

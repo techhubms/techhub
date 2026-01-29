@@ -21,6 +21,8 @@ tags:
 - TheDownload
 - TypeScript
 - Uv
+- DevOps
+- Videos
 section_names:
 - devops
 primary_section: devops

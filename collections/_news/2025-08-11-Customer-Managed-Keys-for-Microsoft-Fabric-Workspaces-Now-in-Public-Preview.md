@@ -19,6 +19,10 @@ tags:
 - Public Preview
 - Regulatory Requirements
 - Workspace Encryption
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

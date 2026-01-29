@@ -3,7 +3,6 @@ using Dapper;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
 using TechHub.Infrastructure.Services;
 
 namespace TechHub.TestUtilities;
@@ -21,14 +20,15 @@ public static class TestCollectionsSeeder
     /// </summary>
     /// <param name="connection">Database connection to populate</param>
     /// <param name="testCollectionsPath">Optional path override. Defaults to TestCollections in TestUtilities project.</param>
-    /// <param name="logger">Optional logger for seeding progress. Defaults to NullLogger if not provided.</param>
+    /// <param name="loggerFactory">Optional logger factory for creating loggers. Defaults to NullLoggerFactory if not provided.</param>
     public static async Task SeedFromFilesAsync(
         IDbConnection connection,
         string? testCollectionsPath = null,
-        ILogger? logger = null)
+        ILoggerFactory? loggerFactory = null)
     {
-        logger ??= NullLogger.Instance;
-        
+        loggerFactory ??= NullLoggerFactory.Instance;
+        var logger = loggerFactory.CreateLogger(typeof(TestCollectionsSeeder));
+
         // Hardcoded to source directory - no file copying needed
         testCollectionsPath ??= "/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections";
 
@@ -54,12 +54,12 @@ public static class TestCollectionsSeeder
         });
 
         var markdownService = new MarkdownService();
-        var syncLogger = NullLogger<ContentSyncService>.Instance;
+        var syncLogger = loggerFactory.CreateLogger<ContentSyncService>();
         var syncService = new ContentSyncService(connection, markdownService, syncLogger, syncOptions, contentOptions);
 
         // Use actual production sync logic - ensures tests validate real code path
         var syncResult = await syncService.SyncAsync(CancellationToken.None);
-        
+
         logger.LogInformation(
             "✅ Content sync complete: {Added} added, {Updated} updated, {Deleted} deleted ({Duration:N0}ms)",
             syncResult.Added, syncResult.Updated, syncResult.Deleted, syncResult.Duration.TotalMilliseconds);
@@ -88,7 +88,7 @@ public static class TestCollectionsSeeder
         };
 
         logger.LogInformation("📊 Database record counts:");
-        
+
         foreach (var (tableName, description) in tables)
         {
             try

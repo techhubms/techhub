@@ -20,6 +20,9 @@ tags:
 - Statistical Analysis
 - Statsig
 - Variant Group
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

@@ -17,6 +17,9 @@ tags:
 - Issue Automation
 - Preview Release
 - Workflow Enhancement
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

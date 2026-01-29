@@ -23,6 +23,9 @@ tags:
 - Planet Scale AI
 - Sustainability
 - Training
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

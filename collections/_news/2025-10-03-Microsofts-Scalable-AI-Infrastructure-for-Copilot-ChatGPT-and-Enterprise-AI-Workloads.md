@@ -22,6 +22,9 @@ tags:
 - Satya Nadella
 - Scalability
 - Scott Guthrie
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

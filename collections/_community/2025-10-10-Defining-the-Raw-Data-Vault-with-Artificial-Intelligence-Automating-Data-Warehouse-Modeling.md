@@ -22,6 +22,10 @@ tags:
 - Neural Networks
 - Raw Data Vault
 - Synapse
+- AI
+- Azure
+- Machine Learning
+- Community
 section_names:
 - ai
 - azure

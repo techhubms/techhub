@@ -14,6 +14,9 @@ tags:
 - Software Development
 - VS Code
 - Workflow Automation
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

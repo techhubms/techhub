@@ -16,6 +16,8 @@ tags:
 - Productivity
 - Pull Requests
 - Workflow
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

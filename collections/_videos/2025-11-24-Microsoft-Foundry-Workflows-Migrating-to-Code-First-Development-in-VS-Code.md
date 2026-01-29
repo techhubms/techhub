@@ -25,6 +25,11 @@ tags:
 - VS Code
 - Workflow Migration
 - Workflows
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - azure

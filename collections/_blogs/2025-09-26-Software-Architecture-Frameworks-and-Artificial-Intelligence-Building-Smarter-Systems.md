@@ -23,6 +23,8 @@ tags:
 - Solution Architecture
 - TOGAF
 - Zachman Framework
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

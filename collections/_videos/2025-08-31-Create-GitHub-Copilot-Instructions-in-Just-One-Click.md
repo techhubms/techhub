@@ -16,6 +16,9 @@ tags:
 - GitHub
 - Repository Analysis
 - Software Development
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

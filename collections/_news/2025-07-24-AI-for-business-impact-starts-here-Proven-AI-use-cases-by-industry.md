@@ -16,6 +16,9 @@ tags:
 - Industry Use Cases
 - Microsoft AI
 - Sector Specific AI
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

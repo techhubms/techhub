@@ -22,6 +22,9 @@ tags:
 - Scalability
 - Semantic Kernel
 - SLM
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

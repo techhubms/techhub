@@ -24,6 +24,8 @@ tags:
 - TypeScript 5.7
 - V8 Compile Caching
 - Variable Initialization
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

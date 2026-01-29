@@ -9,6 +9,9 @@ plans:
 tags:
 - LLM
 - Multi Feature
+- AI
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - github-copilot

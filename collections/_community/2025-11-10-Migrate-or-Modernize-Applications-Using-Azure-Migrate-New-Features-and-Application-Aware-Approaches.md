@@ -25,6 +25,13 @@ tags:
 - Rehost
 - Replatform
 - Wave Planning
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

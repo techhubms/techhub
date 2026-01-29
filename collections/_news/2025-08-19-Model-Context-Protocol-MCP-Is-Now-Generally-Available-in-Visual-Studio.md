@@ -25,6 +25,12 @@ tags:
 - Server Integration
 - Servers
 - VS
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - coding

@@ -20,6 +20,10 @@ tags:
 - Windows Forms
 - Windows Projection APIs
 - WinForms
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

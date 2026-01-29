@@ -20,6 +20,10 @@ tags:
 - PowerShell Automation
 - Unified Management
 - VMware
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

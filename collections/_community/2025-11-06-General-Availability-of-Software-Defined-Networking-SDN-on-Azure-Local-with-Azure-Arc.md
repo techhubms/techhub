@@ -21,6 +21,9 @@ tags:
 - Software Defined Networking
 - Virtual Networks
 - VLAN
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

@@ -20,6 +20,9 @@ tags:
 - Role Based Access Control
 - SAML
 - Single Sign On
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

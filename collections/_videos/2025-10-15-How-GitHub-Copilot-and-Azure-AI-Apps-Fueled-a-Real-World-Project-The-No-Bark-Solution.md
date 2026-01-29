@@ -24,6 +24,11 @@ tags:
 - Tech
 - Technology
 - Ultrasonic Signals
+- AI
+- Azure
+- GitHub Copilot
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

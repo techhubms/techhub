@@ -16,6 +16,8 @@ tags:
 - Remote Development
 - University
 - Web Based IDE
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

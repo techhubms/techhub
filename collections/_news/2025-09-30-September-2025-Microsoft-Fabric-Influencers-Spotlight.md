@@ -23,6 +23,9 @@ tags:
 - Scikit Learn
 - Semantic Models
 - Super User
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

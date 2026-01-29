@@ -17,6 +17,13 @@ tags:
 - Prompty
 - Radius
 - Terraform
+- AI
+- Azure
+- Coding
+- DevOps
+- GitHub Copilot
+- Security
+- Community
 section_names:
 - ai
 - azure

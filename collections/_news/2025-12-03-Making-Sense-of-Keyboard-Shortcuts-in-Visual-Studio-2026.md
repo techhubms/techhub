@@ -20,6 +20,8 @@ tags:
 - Usability
 - VS
 - Workflow Management
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

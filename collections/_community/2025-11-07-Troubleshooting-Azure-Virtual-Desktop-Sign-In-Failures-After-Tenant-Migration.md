@@ -20,6 +20,9 @@ tags:
 - MSAL Tokens
 - Tenant Migration
 - Token Persistence
+- Azure
+- Security
+- Community
 section_names:
 - azure
 - security

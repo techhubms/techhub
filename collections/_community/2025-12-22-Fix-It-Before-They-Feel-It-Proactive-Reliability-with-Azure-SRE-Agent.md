@@ -23,6 +23,11 @@ tags:
 - Performance Monitoring
 - PowerShell
 - Slot Swap
+- AI
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - ai
 - azure

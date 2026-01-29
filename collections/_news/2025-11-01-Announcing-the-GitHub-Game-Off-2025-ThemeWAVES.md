@@ -24,6 +24,9 @@ tags:
 - Unreal Engine
 - Version Control
 - WAVES
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

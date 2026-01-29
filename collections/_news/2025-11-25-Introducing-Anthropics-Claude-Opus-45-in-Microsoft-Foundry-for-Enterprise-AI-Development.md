@@ -25,6 +25,12 @@ tags:
 - Software Engineering
 - SWE Bench
 - Visual Reasoning
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- Security
+- News
 section_names:
 - ai
 - azure

@@ -19,6 +19,8 @@ tags:
 - Regulatory Compliance
 - Risk Management
 - Unified Security Platform
+- Security
+- News
 section_names:
 - security
 primary_section: security

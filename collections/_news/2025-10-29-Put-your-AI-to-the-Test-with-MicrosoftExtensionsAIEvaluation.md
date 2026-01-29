@@ -27,6 +27,11 @@ tags:
 - Test Automation
 - VS
 - xUnit
+- AI
+- Azure
+- Coding
+- DevOps
+- News
 section_names:
 - ai
 - azure

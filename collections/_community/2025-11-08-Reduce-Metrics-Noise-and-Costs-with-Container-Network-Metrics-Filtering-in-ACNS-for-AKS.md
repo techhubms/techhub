@@ -19,6 +19,9 @@ tags:
 - Metrics Filtering
 - Network Observability
 - Prometheus
+- Azure
+- DevOps
+- Community
 section_names:
 - azure
 - devops

@@ -21,6 +21,9 @@ tags:
 - JSON Format
 - Microsoft Fabric
 - SQL Server
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

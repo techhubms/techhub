@@ -28,6 +28,9 @@ tags:
 - Social X
 - Techstrong Council
 - Terraform
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

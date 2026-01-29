@@ -22,6 +22,10 @@ tags:
 - Service Discovery
 - Telemetry
 - VS
+- Azure
+- Coding
+- DevOps
+- Videos
 section_names:
 - azure
 - coding

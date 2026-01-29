@@ -5,7 +5,7 @@ namespace TechHub.Api.Endpoints;
 /// <summary>
 /// API endpoints for RSS feeds
 /// </summary>
-internal static class RssEndpoints
+public static class RssEndpoints
 {
     /// <summary>
     /// Maps all RSS feed endpoints to the application
@@ -51,15 +51,22 @@ internal static class RssEndpoints
         IRssService rssService)
     {
         // Get only the 50 most recent items for RSS feed (standard RSS practice)
-        var allItems = await contentRepository.GetAllAsync(includeDraft: false, limit: 50);
+        var allItems = await contentRepository.GetAllAsync(limit: 50, offset: 0, includeDraft: false);
 
-        // Create a virtual "Everything" section for the feed
+        // Create a virtual "Everything" section for the feed with a dummy collection
+        var dummyCollection = new Core.Models.Collection(
+            name: "all",
+            title: "All Content",
+            url: "/all",
+            description: "All content from Tech Hub",
+            displayName: "All Content");
+        
         var everythingSection = new Core.Models.Section(
             name: "all",
             title: "Everything",
             description: "All content from Tech Hub",
             url: "/",
-            collections: []);
+            collections: [dummyCollection]);
 
         var channel = await rssService.GenerateSectionFeedAsync(everythingSection, allItems);
         var xml = rssService.SerializeToXml(channel);
@@ -84,7 +91,13 @@ internal static class RssEndpoints
 
         // Get content for this section using the section name (lowercase identifier)
         // RSS feeds should exclude draft content and show only 50 most recent items
-        var items = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false, limit: 50);
+        var items = await contentRepository.GetBySectionAsync(
+            section.Name, 
+            limit: 50, 
+            offset: 0, 
+            collectionName: null, 
+            subcollectionName: null, 
+            includeDraft: false);
         var channel = await rssService.GenerateSectionFeedAsync(section, items);
         var xml = rssService.SerializeToXml(channel);
 
@@ -113,7 +126,7 @@ internal static class RssEndpoints
             return Results.NotFound();
         }
 
-        var items = await contentRepository.GetByCollectionAsync(collectionName, subcollection, includeDraft: false, limit: 50, offset: 0);
+        var items = await contentRepository.GetByCollectionAsync(collectionName, limit: 50, subcollectionName: subcollection, offset: 0, includeDraft: false);
         var channel = await rssService.GenerateCollectionFeedAsync(collectionName, items);
         var xml = rssService.SerializeToXml(channel);
 

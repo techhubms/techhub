@@ -19,6 +19,9 @@ tags:
 - Power BI
 - Power BI Desktop
 - Release October
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

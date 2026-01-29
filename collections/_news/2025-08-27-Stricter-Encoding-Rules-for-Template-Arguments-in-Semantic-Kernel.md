@@ -19,6 +19,9 @@ tags:
 - Semantic Kernel
 - Template Encoding
 - Template Injection
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

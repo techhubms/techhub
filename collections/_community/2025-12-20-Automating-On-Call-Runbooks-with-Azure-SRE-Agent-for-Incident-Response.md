@@ -22,6 +22,10 @@ tags:
 - Runbooks
 - ServiceNow
 - SRE
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

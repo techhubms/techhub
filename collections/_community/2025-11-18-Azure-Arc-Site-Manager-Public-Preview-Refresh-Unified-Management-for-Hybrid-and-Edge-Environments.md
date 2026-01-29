@@ -25,6 +25,10 @@ tags:
 - Site Manager
 - Terraform
 - Update Management
+- Azure
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - devops

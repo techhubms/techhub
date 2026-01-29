@@ -22,6 +22,11 @@ tags:
 - Supply Chain Security
 - Vulnerability Research
 - Web Application Security
+- DevOps
+- GitHub Copilot
+- Security
+- News
+- AI
 section_names:
 - devops
 - github-copilot

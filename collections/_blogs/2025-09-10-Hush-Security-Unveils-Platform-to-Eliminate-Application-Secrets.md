@@ -35,6 +35,9 @@ tags:
 - SPIFFE Runtime Access
 - Zero Trust
 - Zero Trust Secrets
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

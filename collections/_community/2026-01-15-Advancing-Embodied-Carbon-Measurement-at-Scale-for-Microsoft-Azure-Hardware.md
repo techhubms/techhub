@@ -20,6 +20,8 @@ tags:
 - Scope 3 Emissions
 - Supply Chain Emissions
 - Sustainability
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

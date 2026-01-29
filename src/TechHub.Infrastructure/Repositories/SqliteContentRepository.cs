@@ -11,13 +11,17 @@ namespace TechHub.Infrastructure.Repositories;
 /// SQLite implementation of content repository using FTS5 for full-text search.
 /// Uses Dapper for database operations and extends DatabaseContentRepositoryBase (which handles common SQL and caching).
 /// </summary>
-public class SqliteContentRepository(
-    IDbConnection connection,
-    ISqlDialect dialect,
-    IMemoryCache cache,
-    IMarkdownService markdownService)
-    : DatabaseContentRepositoryBase(connection, dialect, cache, markdownService)
+public class SqliteContentRepository : DatabaseContentRepositoryBase
 {
+    public SqliteContentRepository(
+        IDbConnection connection,
+        ISqlDialect dialect,
+        IMemoryCache cache,
+        IMarkdownService markdownService)
+        : base(connection, dialect, cache, markdownService)
+    {
+    }
+
     /// <summary>
     /// Full-text search using SQLite FTS5.
     /// Supports query string, tag filtering, section filtering, and date filtering.
@@ -25,82 +29,86 @@ public class SqliteContentRepository(
     /// </summary>
     protected override async Task<SearchResults<ContentItem>> SearchInternalAsync(SearchRequest request, CancellationToken ct = default)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var sql = new StringBuilder();
         var parameters = new DynamicParameters();
-        
-        // Base SELECT - only include rank when FTS is needed
+
+        // Base SELECT - columns map directly to ContentItem model
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
-        
+
         sql.Append(@"
             SELECT 
                 c.slug AS Slug,
                 c.title AS Title,
-                c.content AS Content,
-                c.excerpt AS Excerpt,
+                c.author AS Author,
                 c.date_epoch AS DateEpoch,
                 c.collection_name AS CollectionName,
-                c.subcollection_name AS SubcollectionName,
                 c.feed_name AS FeedName,
+                c.primary_section_name AS PrimarySectionName,
+                c.excerpt AS Excerpt,
                 c.external_url AS ExternalUrl,
-                c.author AS Author,
-                c.ghes_support AS GhesSupport,
-                c.draft AS Draft");
-        
-        if (hasQuery)
-        {
-            sql.Append(",\n                bm25(fts) AS Rank");
-        }
-        
+                c.draft AS Draft,
+                c.content AS Content,
+                c.subcollection_name AS SubcollectionName,
+                c.plans AS Plans,
+                c.ghes_support AS GhesSupport");
+
+        // NOTE: bm25() rank is used in ORDER BY, not in SELECT, to avoid Dapper mapping issues
+
         sql.Append("\n            FROM content_items c");
 
         // Join with FTS5 for full-text search if query is provided
         if (hasQuery)
         {
             sql.Append(@"
-                INNER JOIN content_fts fts ON c.rowid = fts.rowid");
+                INNER JOIN content_fts ON c.rowid = content_fts.rowid");
         }
 
         // WHERE clause
-        var whereClauses = new List<string>();
-
-        // Always exclude drafts in search
-        whereClauses.Add("c.draft = 0");
+        var whereClauses = new List<string>
+        {
+            // Always exclude drafts in search
+            "c.draft = 0"
+        };
 
         // Full-text search
         if (hasQuery)
         {
-            whereClauses.Add("fts MATCH @query");
+            whereClauses.Add("content_fts MATCH @query");
             parameters.Add("query", request.Query);
         }
 
         // Tag filtering (AND logic - all selected tags must match)
+        // Uses content_tags table with tag_normalized for full tag matching
         if (request.Tags != null && request.Tags.Count > 0)
         {
             for (int i = 0; i < request.Tags.Count; i++)
             {
                 whereClauses.Add($@"
                     EXISTS (
-                        SELECT 1 FROM content_tags_expanded cte{i}
-                        WHERE cte{i}.slug = c.slug
-                        AND cte{i}.tag_word = @tag{i}
+                        SELECT 1 FROM content_tags ct{i}
+                        WHERE ct{i}.slug = c.slug
+                        AND ct{i}.collection_name = c.collection_name
+                        AND ct{i}.tag_normalized = @tag{i}
                     )");
                 // Normalize tag to lowercase for case-insensitive matching
                 parameters.Add($"tag{i}", request.Tags[i].ToLowerInvariant().Trim());
             }
         }
 
-        // Section filtering
+        // Section filtering (normalize to lowercase for case-insensitive matching)
         if (request.Sections != null && request.Sections.Count > 0)
         {
             whereClauses.Add("c.primary_section_name IN @sections");
-            parameters.Add("sections", request.Sections);
+            parameters.Add("sections", request.Sections.Select(s => s.ToLowerInvariant().Trim()).ToList());
         }
 
-        // Collection filtering
+        // Collection filtering (normalize to lowercase for case-insensitive matching)
         if (request.Collections != null && request.Collections.Count > 0)
         {
             whereClauses.Add("c.collection_name IN @collections");
-            parameters.Add("collections", request.Collections);
+            parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
         }
 
         // Date range filtering
@@ -123,9 +131,10 @@ public class SqliteContentRepository(
         }
 
         // ORDER BY (FTS rank if search query, otherwise date descending)
+        // bm25() returns negative values (lower = better match), so we order ascending
         if (hasQuery)
         {
-            sql.Append(" ORDER BY Rank");
+            sql.Append(" ORDER BY bm25(content_fts)");
         }
         else
         {
@@ -142,7 +151,7 @@ public class SqliteContentRepository(
         var items = await Connection.QueryAsync<ContentItem>(
             new CommandDefinition(sql.ToString(), parameters, cancellationToken: ct));
 
-        var hydratedItems = await HydrateRelationshipsAsync(items.ToList(), ct);
+        var hydratedItems = await HydrateRelationshipsAsync([.. items], ct);
 
         // Get total count (without LIMIT/OFFSET)
         var countSql = GetCountSql(request);
@@ -160,7 +169,7 @@ public class SqliteContentRepository(
                 Collections = request.Collections,
                 DateFrom = request.DateFrom,
                 DateTo = request.DateTo,
-                FacetFields = new[] { "tags", "collections", "sections" }
+                FacetFields = ["tags", "collections", "sections"]
             }, ct);
         }
 
@@ -179,6 +188,8 @@ public class SqliteContentRepository(
     /// </summary>
     protected override async Task<FacetResults> GetFacetsInternalAsync(FacetRequest request, CancellationToken ct = default)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         var parameters = new DynamicParameters();
         var facets = new Dictionary<string, IReadOnlyList<FacetValue>>();
 
@@ -192,15 +203,17 @@ public class SqliteContentRepository(
             new CommandDefinition(countSql, parameters, cancellationToken: ct));
 
         // Get tag facets if requested
+        // Uses content_tags_expanded to count items that would match via substring
+        // For example, clicking "AI" would match items with "Agentic AI", "AI Development", etc.
         if (request.FacetFields.Contains("tags"))
         {
             var tagsSql = $@"
-                SELECT ct.tag AS Value, COUNT(DISTINCT c.slug) AS Count
-                FROM content_tags ct
-                INNER JOIN content_items c ON ct.slug = c.slug
+                SELECT cte.tag_word AS Value, COUNT(DISTINCT c.slug) AS Count
+                FROM content_tags_expanded cte
+                INNER JOIN content_items c ON cte.slug = c.slug AND cte.collection_name = c.collection_name
                 {whereClause}
-                GROUP BY ct.tag
-                ORDER BY Count DESC, ct.tag
+                GROUP BY cte.tag_word
+                ORDER BY Count DESC, cte.tag_word
                 LIMIT @maxFacetValues";
 
             parameters.Add("maxFacetValues", request.MaxFacetValues);
@@ -208,7 +221,7 @@ public class SqliteContentRepository(
             var tags = await Connection.QueryAsync<FacetValue>(
                 new CommandDefinition(tagsSql, parameters, cancellationToken: ct));
 
-            facets["tags"] = tags.ToList();
+            facets["tags"] = [.. tags];
         }
 
         // Get collection facets if requested
@@ -224,7 +237,7 @@ public class SqliteContentRepository(
             var collections = await Connection.QueryAsync<FacetValue>(
                 new CommandDefinition(collectionsSql, parameters, cancellationToken: ct));
 
-            facets["collections"] = collections.ToList();
+            facets["collections"] = [.. collections];
         }
 
         // Get section facets if requested
@@ -241,7 +254,7 @@ public class SqliteContentRepository(
             var sections = await Connection.QueryAsync<FacetValue>(
                 new CommandDefinition(sectionsSql, parameters, cancellationToken: ct));
 
-            facets["sections"] = sections.ToList();
+            facets["sections"] = [.. sections];
         }
 
         return new FacetResults
@@ -257,99 +270,78 @@ public class SqliteContentRepository(
     /// Implementation called by base class cached wrapper.
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetRelatedInternalAsync(
-        string articleId,
-        int count = 5,
+        IReadOnlyList<string> sourceTags,
+        string excludeSlug,
+        int count,
         CancellationToken ct = default)
     {
-        // Get tags for the source article
-        const string getTagsSql = @"
-            SELECT tag FROM content_tags WHERE slug = @articleId";
-
-        var sourceTags = (await Connection.QueryAsync<string>(
-            new CommandDefinition(getTagsSql, new { articleId }, cancellationToken: ct))).ToList();
-
         if (sourceTags.Count == 0)
         {
-            // Fallback: return recent articles from same collection
-            const string fallbackSql = @"
-                SELECT 
-                    c.slug AS Slug,
-                    c.title AS Title,
-                    c.content AS Content,
-                    c.excerpt AS Excerpt,
-                    c.date_epoch AS DateEpoch,
-                    c.collection_name AS CollectionName,
-                    c.subcollection_name AS SubcollectionName,
-                    c.feed_name AS FeedName,
-                    c.external_url AS ExternalUrl,
-                    c.author AS Author,
-                    c.ghes_support AS GhesSupport,
-                    c.draft AS Draft
-                FROM content_items c
-                WHERE c.collection_name = (SELECT collection_name FROM content_items WHERE slug = @articleId)
-                  AND c.slug != @articleId
-                  AND c.draft = 0
-                ORDER BY c.date_epoch DESC
-                LIMIT @count";
-
-            var fallbackItems = await Connection.QueryAsync<ContentItem>(
-                new CommandDefinition(fallbackSql, new { articleId, count }, cancellationToken: ct));
-
-            return await HydrateRelationshipsAsync(fallbackItems.ToList(), ct);
+            return [];
         }
 
-        // Find articles with tag overlap
-        const string relatedSql = @"
+        // Find articles with tag overlap, ranked by shared tag count
+        const string RelatedSql = @"
+            WITH RankedArticles AS (
+                SELECT 
+                    c.slug,
+                    c.collection_name,
+                    COUNT(ct.tag) AS SharedTagCount
+                FROM content_items c
+                INNER JOIN content_tags ct ON c.slug = ct.slug AND c.collection_name = ct.collection_name
+                WHERE ct.tag IN @sourceTags
+                  AND c.slug != @excludeSlug
+                  AND c.draft = 0
+                GROUP BY c.slug, c.collection_name
+            )
             SELECT 
                 c.slug AS Slug,
                 c.title AS Title,
-                c.content AS Content,
-                c.excerpt AS Excerpt,
+                c.author AS Author,
                 c.date_epoch AS DateEpoch,
                 c.collection_name AS CollectionName,
-                c.subcollection_name AS SubcollectionName,
                 c.feed_name AS FeedName,
+                c.primary_section_name AS PrimarySectionName,
+                c.excerpt AS Excerpt,
                 c.external_url AS ExternalUrl,
-                c.author AS Author,
-                c.ghes_support AS GhesSupport,
                 c.draft AS Draft,
-                COUNT(ct.tag) AS SharedTagCount
+                c.content AS Content,
+                c.subcollection_name AS SubcollectionName,
+                c.plans AS Plans,
+                c.ghes_support AS GhesSupport
             FROM content_items c
-            INNER JOIN content_tags ct ON c.slug = ct.slug
-            WHERE ct.tag IN @sourceTags
-              AND c.slug != @articleId
-              AND c.draft = 0
-            GROUP BY c.slug
-            ORDER BY SharedTagCount DESC, c.date_epoch DESC
+            INNER JOIN RankedArticles ra ON c.slug = ra.slug AND c.collection_name = ra.collection_name
+            ORDER BY ra.SharedTagCount DESC, c.date_epoch DESC
             LIMIT @count";
 
         var items = await Connection.QueryAsync<ContentItem>(
-            new CommandDefinition(relatedSql, new { sourceTags, articleId, count }, cancellationToken: ct));
+            new CommandDefinition(RelatedSql, new { sourceTags, excludeSlug, count }, cancellationToken: ct));
 
-        return await HydrateRelationshipsAsync(items.ToList(), ct);
+        return await HydrateRelationshipsAsync([.. items], ct);
     }
 
     /// <summary>
     /// Build SQL for counting total results (for pagination).
     /// </summary>
-    private string GetCountSql(SearchRequest request)
+    private static string GetCountSql(SearchRequest request)
     {
         var sql = new StringBuilder("SELECT COUNT(DISTINCT c.slug) FROM content_items c");
 
         if (!string.IsNullOrWhiteSpace(request.Query))
         {
-            sql.Append(" INNER JOIN content_fts fts ON c.rowid = fts.rowid");
+            sql.Append(" INNER JOIN content_fts ON c.rowid = content_fts.rowid");
         }
 
-        var parameters = new DynamicParameters();
-        var whereClauses = new List<string>();
-
-        // Always exclude drafts
-        whereClauses.Add("c.draft = 0");
+        _ = new DynamicParameters();
+        var whereClauses = new List<string>
+        {
+            // Always exclude drafts
+            "c.draft = 0"
+        };
 
         if (!string.IsNullOrWhiteSpace(request.Query))
         {
-            whereClauses.Add("fts MATCH @query");
+            whereClauses.Add("content_fts MATCH @query");
         }
 
         if (request.Tags != null && request.Tags.Count > 0)
@@ -358,9 +350,10 @@ public class SqliteContentRepository(
             {
                 whereClauses.Add($@"
                     EXISTS (
-                        SELECT 1 FROM content_tags_expanded cte{i}
-                        WHERE cte{i}.slug = c.slug
-                        AND cte{i}.tag_word = @tag{i}
+                        SELECT 1 FROM content_tags ct{i}
+                        WHERE ct{i}.slug = c.slug
+                        AND ct{i}.collection_name = c.collection_name
+                        AND ct{i}.tag_normalized = @tag{i}
                     )");
             }
         }
@@ -397,12 +390,13 @@ public class SqliteContentRepository(
     /// <summary>
     /// Build WHERE clauses for facet filtering.
     /// </summary>
-    private List<string> BuildFilterWhereClauses(FacetRequest request, DynamicParameters parameters)
+    private static List<string> BuildFilterWhereClauses(FacetRequest request, DynamicParameters parameters)
     {
-        var whereClauses = new List<string>();
-
-        // Always exclude drafts
-        whereClauses.Add("c.draft = 0");
+        var whereClauses = new List<string>
+        {
+            // Always exclude drafts
+            "c.draft = 0"
+        };
 
         if (request.Tags != null && request.Tags.Count > 0)
         {
@@ -410,9 +404,10 @@ public class SqliteContentRepository(
             {
                 whereClauses.Add($@"
                     EXISTS (
-                        SELECT 1 FROM content_tags_expanded cte{i}
-                        WHERE cte{i}.slug = c.slug
-                        AND cte{i}.tag_word = @tag{i}
+                        SELECT 1 FROM content_tags ct{i}
+                        WHERE ct{i}.slug = c.slug
+                        AND ct{i}.collection_name = c.collection_name
+                        AND ct{i}.tag_normalized = @tag{i}
                     )");
                 // Normalize tag to lowercase for case-insensitive matching
                 parameters.Add($"tag{i}", request.Tags[i].ToLowerInvariant().Trim());
@@ -422,13 +417,13 @@ public class SqliteContentRepository(
         if (request.Sections != null && request.Sections.Count > 0)
         {
             whereClauses.Add("c.primary_section_name IN @sections");
-            parameters.Add("sections", request.Sections);
+            parameters.Add("sections", request.Sections.Select(s => s.ToLowerInvariant().Trim()).ToList());
         }
 
         if (request.Collections != null && request.Collections.Count > 0)
         {
             whereClauses.Add("c.collection_name IN @collections");
-            parameters.Add("collections", request.Collections);
+            parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
         }
 
         if (request.DateFrom.HasValue)
@@ -528,6 +523,6 @@ public class SqliteContentRepository(
         var results = await Connection.QueryAsync<TagWithCount>(
             new CommandDefinition(sql.ToString(), parameters, cancellationToken: ct));
 
-        return results.ToList();
+        return [.. results];
     }
 }

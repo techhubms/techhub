@@ -17,6 +17,10 @@ tags:
 - Multi Tenant Hosting
 - Regulatory Requirements
 - Repository Management
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

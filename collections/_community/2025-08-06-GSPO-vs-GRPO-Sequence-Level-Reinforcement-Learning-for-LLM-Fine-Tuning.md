@@ -27,6 +27,9 @@ tags:
 - Sequence Level Sampling
 - Token Level Sampling
 - Variance Reduction
+- AI
+- Machine Learning
+- Community
 section_names:
 - ai
 - ml

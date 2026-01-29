@@ -16,6 +16,8 @@ tags:
 - Reservations
 - Savings Plans
 - Workload Optimization
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

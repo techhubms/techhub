@@ -18,6 +18,9 @@ tags:
 - Microsoft Cloud Adoption Framework
 - Organizational Adoption
 - Team Structure
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

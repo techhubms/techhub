@@ -20,6 +20,10 @@ tags:
 - Observability
 - OpenTelemetry
 - Telemetry
+- AI
+- Azure
+- DevOps
+- Community
 section_names:
 - ai
 - azure

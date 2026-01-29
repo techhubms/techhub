@@ -19,6 +19,10 @@ tags:
 - Repository Management
 - Team Collaboration
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

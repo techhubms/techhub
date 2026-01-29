@@ -28,6 +28,13 @@ tags:
 - Serverless
 - TypeScript
 - VNET Networking
+- AI
+- Azure
+- Coding
+- DevOps
+- Machine Learning
+- Security
+- Community
 section_names:
 - ai
 - azure

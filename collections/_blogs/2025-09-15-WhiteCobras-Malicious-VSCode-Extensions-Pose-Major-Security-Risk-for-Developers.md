@@ -31,6 +31,9 @@ tags:
 - VS Code
 - WhiteCobra
 - Windows Security
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

@@ -27,6 +27,9 @@ tags:
 - RF3 Tool
 - Scalable AI
 - Xai
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

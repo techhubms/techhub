@@ -20,6 +20,10 @@ tags:
 - OpenAPI Tools
 - Premium V4
 - Python
+- AI
+- Azure
+- Coding
+- Community
 section_names:
 - ai
 - azure

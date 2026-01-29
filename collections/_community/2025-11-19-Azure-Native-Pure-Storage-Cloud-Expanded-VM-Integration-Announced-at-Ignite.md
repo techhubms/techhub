@@ -21,6 +21,8 @@ tags:
 - Storage Management
 - Virtual Machines
 - Windows
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

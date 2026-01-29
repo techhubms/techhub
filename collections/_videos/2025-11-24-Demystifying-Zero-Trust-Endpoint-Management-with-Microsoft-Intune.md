@@ -22,6 +22,8 @@ tags:
 - Threat Protection
 - Windows 365
 - Zero Trust
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

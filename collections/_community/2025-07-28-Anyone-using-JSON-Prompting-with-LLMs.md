@@ -14,6 +14,10 @@ tags:
 - Structured Prompts
 - Tailwind CSS
 - TypeScript
+- AI
+- GitHub Copilot
+- Coding
+- Community
 section_names:
 - ai
 - github-copilot

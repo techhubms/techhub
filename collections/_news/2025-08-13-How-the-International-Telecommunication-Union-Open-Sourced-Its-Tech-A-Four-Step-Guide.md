@@ -18,6 +18,8 @@ tags:
 - Repository Management
 - Social Impact
 - UN ITU
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops

@@ -18,6 +18,10 @@ tags:
 - React
 - VS Code
 - Workspace Settings
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

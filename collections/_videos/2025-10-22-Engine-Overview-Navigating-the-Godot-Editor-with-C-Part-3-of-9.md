@@ -19,6 +19,8 @@ tags:
 - Microsoft Developer
 - Scene Panel
 - VS Code
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

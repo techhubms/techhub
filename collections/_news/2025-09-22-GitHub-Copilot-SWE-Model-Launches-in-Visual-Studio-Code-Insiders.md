@@ -18,6 +18,9 @@ tags:
 - Technical Preview
 - VS Code
 - VS Code Insiders
+- AI
+- GitHub Copilot
+- News
 section_names:
 - ai
 - github-copilot

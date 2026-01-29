@@ -24,6 +24,8 @@ tags:
 - PowerShell
 - Service Retirement
 - Technical Training
+- Azure
+- Videos
 section_names:
 - azure
 primary_section: azure

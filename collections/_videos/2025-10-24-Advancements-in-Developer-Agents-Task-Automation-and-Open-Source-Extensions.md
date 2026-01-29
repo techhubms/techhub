@@ -15,6 +15,9 @@ tags:
 - Software Engineering
 - SRE Agent
 - Task Automation
+- AI
+- Coding
+- Videos
 section_names:
 - ai
 - coding

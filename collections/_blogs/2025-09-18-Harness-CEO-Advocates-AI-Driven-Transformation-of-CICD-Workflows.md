@@ -25,6 +25,10 @@ tags:
 - Software Engineering
 - Traceable Platform
 - Unscripted
+- AI
+- DevOps
+- Security
+- Blogs
 section_names:
 - ai
 - devops

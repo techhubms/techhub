@@ -26,6 +26,10 @@ tags:
 - Ransomware Protection
 - Resiliency Agent
 - Site Recovery
+- AI
+- Azure
+- Security
+- Community
 section_names:
 - ai
 - azure

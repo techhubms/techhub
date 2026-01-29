@@ -19,6 +19,8 @@ tags:
 - Data Quality
 - Data Validation
 - Machine Learning
+- AI
+- Blogs
 section_names:
 - ai
 primary_section: ai

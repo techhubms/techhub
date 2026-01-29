@@ -20,6 +20,9 @@ tags:
 - Uncategorized
 - VS
 - Windows Development
+- Coding
+- DevOps
+- News
 section_names:
 - coding
 - devops

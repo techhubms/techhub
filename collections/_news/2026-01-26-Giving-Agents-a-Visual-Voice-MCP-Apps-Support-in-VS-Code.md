@@ -21,6 +21,9 @@ tags:
 - VS Code
 - VS Code Extensions
 - Workflow Automation
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

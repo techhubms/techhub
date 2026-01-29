@@ -24,6 +24,9 @@ tags:
 - Software Development Practices
 - Team Morale
 - Technical Debt
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

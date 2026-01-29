@@ -21,6 +21,9 @@ tags:
 - Vulnerability Disclosure
 - Windows
 - Zero Day Quest
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

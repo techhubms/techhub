@@ -23,6 +23,10 @@ tags:
 - Profiler Integration
 - Profiling
 - VS
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

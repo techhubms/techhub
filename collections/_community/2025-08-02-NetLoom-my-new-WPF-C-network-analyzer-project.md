@@ -14,6 +14,8 @@ tags:
 - Network Monitoring
 - Real Time Analytics
 - WPF
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

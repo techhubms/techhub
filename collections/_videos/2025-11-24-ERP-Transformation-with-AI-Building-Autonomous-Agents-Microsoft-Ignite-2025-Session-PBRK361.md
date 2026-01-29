@@ -23,6 +23,8 @@ tags:
 - Partner Practices
 - Structured Data
 - Unstructured Data
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

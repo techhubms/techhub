@@ -23,6 +23,10 @@ tags:
 - Semantic Model
 - Unified Data
 - Unifyyourdataplatform
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

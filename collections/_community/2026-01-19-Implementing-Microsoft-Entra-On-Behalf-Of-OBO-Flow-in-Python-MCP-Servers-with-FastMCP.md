@@ -23,6 +23,10 @@ tags:
 - On Behalf Of Flow
 - Python
 - Service Principal
+- Azure
+- Coding
+- Security
+- Community
 section_names:
 - azure
 - coding

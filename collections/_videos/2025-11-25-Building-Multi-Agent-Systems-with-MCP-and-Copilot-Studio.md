@@ -21,6 +21,8 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Multi Agent Systems
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

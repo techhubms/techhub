@@ -15,6 +15,8 @@ tags:
 - Publishing
 - Scaffolding
 - VS
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

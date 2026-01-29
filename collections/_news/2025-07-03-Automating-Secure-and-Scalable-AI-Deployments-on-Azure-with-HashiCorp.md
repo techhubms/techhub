@@ -22,6 +22,11 @@ tags:
 - Sentinel
 - Terraform
 - Vault
+- AI
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - ai
 - azure

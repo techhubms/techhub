@@ -22,6 +22,10 @@ tags:
 - Spark Notebooks
 - Structured Data
 - Unstructured Data
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

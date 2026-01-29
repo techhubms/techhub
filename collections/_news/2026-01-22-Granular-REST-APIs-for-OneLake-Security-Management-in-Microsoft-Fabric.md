@@ -17,6 +17,10 @@ tags:
 - Role Management
 - Security Automation
 - Security Policy
+- Azure
+- DevOps
+- Security
+- News
 section_names:
 - azure
 - devops

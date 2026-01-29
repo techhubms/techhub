@@ -15,6 +15,10 @@ tags:
 - Resource Configuration
 - Terraform
 - Workload Identity
+- DevOps
+- Azure
+- Machine Learning
+- News
 section_names:
 - devops
 - azure

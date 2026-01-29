@@ -21,6 +21,9 @@ tags:
 - Security Copilot
 - Verified ID
 - Zero Trust
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

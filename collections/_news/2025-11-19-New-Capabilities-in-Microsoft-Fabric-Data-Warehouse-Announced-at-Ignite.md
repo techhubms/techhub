@@ -21,6 +21,9 @@ tags:
 - VARBINARY(MAX)
 - VARCHAR(MAX)
 - Warehouse Snapshots
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

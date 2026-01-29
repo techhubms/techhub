@@ -44,6 +44,8 @@ tags:
 - Uptime Metrics
 - User Segmentation
 - Weighted Error Budgets
+- DevOps
+- Blogs
 section_names:
 - devops
 primary_section: devops

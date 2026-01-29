@@ -14,6 +14,8 @@ tags:
 - Offline Scenarios
 - On Premises AI
 - Privacy
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

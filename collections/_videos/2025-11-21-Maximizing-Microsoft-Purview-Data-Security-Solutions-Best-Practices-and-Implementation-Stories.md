@@ -23,6 +23,8 @@ tags:
 - Security Best Practices
 - Security Frameworks
 - User Training
+- Security
+- Videos
 section_names:
 - security
 primary_section: security

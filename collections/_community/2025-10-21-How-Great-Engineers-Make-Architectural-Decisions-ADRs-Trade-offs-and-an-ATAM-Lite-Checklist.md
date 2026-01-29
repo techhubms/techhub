@@ -24,6 +24,11 @@ tags:
 - Reliability
 - Team Guidelines
 - Trade Offs
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

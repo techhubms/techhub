@@ -20,6 +20,10 @@ tags:
 - Redis CLI
 - Troubleshooting
 - TTL
+- Azure
+- Coding
+- DevOps
+- Community
 section_names:
 - azure
 - coding

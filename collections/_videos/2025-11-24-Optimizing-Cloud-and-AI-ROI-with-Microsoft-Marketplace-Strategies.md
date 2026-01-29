@@ -21,6 +21,9 @@ tags:
 - PO Management Service
 - Procurement
 - Solution Deployment
+- AI
+- Azure
+- Videos
 section_names:
 - ai
 - azure

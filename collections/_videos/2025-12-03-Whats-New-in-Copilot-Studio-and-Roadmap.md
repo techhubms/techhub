@@ -29,6 +29,8 @@ tags:
 - Msft Ignite
 - Platform Integration
 - What’s New in Copilot Studio And Roadmap | BRK313
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

@@ -20,6 +20,8 @@ tags:
 - Retail Technology
 - Store Operations
 - Workflow Automation
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

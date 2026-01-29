@@ -18,6 +18,9 @@ tags:
 - SWE Bench
 - Technical Benchmarks
 - Token Cost
+- AI
+- GitHub Copilot
+- Community
 section_names:
 - ai
 - github-copilot

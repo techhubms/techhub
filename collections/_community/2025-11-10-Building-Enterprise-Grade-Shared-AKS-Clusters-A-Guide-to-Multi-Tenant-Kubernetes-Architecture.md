@@ -35,6 +35,11 @@ tags:
 - Service Mesh
 - Trivy
 - Velero
+- Azure
+- Coding
+- DevOps
+- Security
+- Community
 section_names:
 - azure
 - coding

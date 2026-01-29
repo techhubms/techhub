@@ -29,6 +29,11 @@ tags:
 - Python
 - Reinforcement Learning
 - TypeScript
+- AI
+- Azure
+- Coding
+- Security
+- News
 section_names:
 - ai
 - azure

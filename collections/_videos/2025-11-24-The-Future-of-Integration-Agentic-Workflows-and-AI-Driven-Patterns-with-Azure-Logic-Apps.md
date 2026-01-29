@@ -22,6 +22,11 @@ tags:
 - MSIgnite
 - Scalability
 - ServiceNow
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - ai
 - azure

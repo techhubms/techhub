@@ -20,6 +20,9 @@ tags:
 - Troubleshooting
 - Upstream Jobs
 - Workflow Management
+- Azure
+- Machine Learning
+- News
 section_names:
 - azure
 - ml

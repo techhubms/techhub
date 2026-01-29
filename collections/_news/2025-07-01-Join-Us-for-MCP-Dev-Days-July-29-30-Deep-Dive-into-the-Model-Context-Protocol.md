@@ -18,6 +18,13 @@ tags:
 - VS
 - VS Code
 - Workshops
+- AI
+- GitHub Copilot
+- Coding
+- DevOps
+- Azure
+- Security
+- News
 section_names:
 - ai
 - github-copilot

@@ -25,6 +25,9 @@ tags:
 - Security Operations Center
 - SOC
 - Threat Detection
+- AI
+- Security
+- News
 section_names:
 - ai
 - security

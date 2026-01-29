@@ -20,6 +20,9 @@ tags:
 - VS Code Extension
 - Workflow Visualizer
 - YAML Workflows
+- AI
+- Azure
+- Community
 section_names:
 - ai
 - azure

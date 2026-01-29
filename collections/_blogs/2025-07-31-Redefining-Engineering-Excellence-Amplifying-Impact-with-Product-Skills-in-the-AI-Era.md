@@ -21,6 +21,9 @@ tags:
 - Social X
 - Software Engineering
 - User Experience
+- AI
+- DevOps
+- Blogs
 section_names:
 - ai
 - devops

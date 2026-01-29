@@ -20,6 +20,8 @@ tags:
 - VM Images
 - Zonal Redundant Storage
 - ZRS
+- Azure
+- Community
 section_names:
 - azure
 primary_section: azure

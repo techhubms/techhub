@@ -22,6 +22,8 @@ tags:
 - SMS Channel
 - Translation
 - Voice Channel
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

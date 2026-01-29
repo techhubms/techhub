@@ -20,6 +20,8 @@ tags:
 - MSIgnite
 - Partnerships
 - Resolution Engine
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

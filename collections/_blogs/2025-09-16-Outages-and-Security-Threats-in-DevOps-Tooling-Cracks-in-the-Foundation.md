@@ -33,6 +33,9 @@ tags:
 - Software Supply Chain
 - Supply Chain Security
 - Vendor Management
+- DevOps
+- Security
+- Blogs
 section_names:
 - devops
 - security

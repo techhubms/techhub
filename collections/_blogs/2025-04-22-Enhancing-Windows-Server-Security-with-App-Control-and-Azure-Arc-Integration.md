@@ -21,6 +21,9 @@ tags:
 - PowerShell
 - Securtiy
 - Windows Server
+- Azure
+- Security
+- Blogs
 section_names:
 - azure
 - security

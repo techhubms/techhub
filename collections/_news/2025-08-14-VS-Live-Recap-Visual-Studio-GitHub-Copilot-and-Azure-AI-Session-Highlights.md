@@ -19,6 +19,11 @@ tags:
 - Session Highlights
 - VS
 - VS Live
+- AI
+- Azure
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - azure

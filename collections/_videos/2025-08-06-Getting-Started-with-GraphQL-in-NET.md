@@ -16,6 +16,8 @@ tags:
 - Michael Staib
 - Microsoft
 - Nick Chapsas
+- Coding
+- Videos
 section_names:
 - coding
 primary_section: coding

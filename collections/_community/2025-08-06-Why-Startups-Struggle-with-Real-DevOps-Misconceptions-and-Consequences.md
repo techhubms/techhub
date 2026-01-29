@@ -20,6 +20,8 @@ tags:
 - Team Culture
 - Technical Debt
 - Zero Downtime Deployments
+- DevOps
+- Community
 section_names:
 - devops
 primary_section: devops

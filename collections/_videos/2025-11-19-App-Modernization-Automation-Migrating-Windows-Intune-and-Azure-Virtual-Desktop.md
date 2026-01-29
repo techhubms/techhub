@@ -23,6 +23,10 @@ tags:
 - SCCM
 - Windows 11
 - Windows 365
+- Azure
+- DevOps
+- Security
+- Videos
 section_names:
 - azure
 - devops

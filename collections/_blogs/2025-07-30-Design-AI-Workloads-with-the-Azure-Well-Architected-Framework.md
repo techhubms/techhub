@@ -23,6 +23,9 @@ tags:
 - Reliability
 - Thomas Maurer
 - Well Architected Framework
+- AI
+- Azure
+- Blogs
 section_names:
 - ai
 - azure

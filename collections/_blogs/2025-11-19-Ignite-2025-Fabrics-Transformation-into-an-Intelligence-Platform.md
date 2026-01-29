@@ -24,6 +24,10 @@ tags:
 - Power BI
 - Real Time Intelligence
 - SAP Mirroring
+- AI
+- Azure
+- Machine Learning
+- Blogs
 section_names:
 - ai
 - azure

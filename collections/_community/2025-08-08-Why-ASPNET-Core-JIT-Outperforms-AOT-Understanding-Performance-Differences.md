@@ -19,6 +19,8 @@ tags:
 - Startup Performance
 - TechEmpower Benchmarks
 - Web Application Performance
+- Coding
+- Community
 section_names:
 - coding
 primary_section: coding

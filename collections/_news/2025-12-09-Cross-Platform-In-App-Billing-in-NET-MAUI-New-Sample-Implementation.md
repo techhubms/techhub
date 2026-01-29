@@ -26,6 +26,8 @@ tags:
 - StoreKit 1
 - StoreKit 2
 - Windows
+- Coding
+- News
 section_names:
 - coding
 primary_section: coding

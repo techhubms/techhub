@@ -24,6 +24,8 @@ tags:
 - Software Mitigation
 - Supercomputing
 - Utility Requirements
+- AI
+- Community
 section_names:
 - ai
 primary_section: ai

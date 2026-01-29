@@ -27,6 +27,10 @@ tags:
 - UI Performance
 - Vite
 - VS Code
+- AI
+- Coding
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

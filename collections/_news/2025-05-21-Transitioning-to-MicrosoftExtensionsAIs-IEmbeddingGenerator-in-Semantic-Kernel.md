@@ -23,6 +23,9 @@ tags:
 - Semantic Kernel
 - Type Safety
 - Vector Database
+- AI
+- Coding
+- News
 section_names:
 - ai
 - coding

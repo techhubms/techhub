@@ -16,6 +16,9 @@ tags:
 - Model Governance
 - Open Source
 - Software Deployment
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

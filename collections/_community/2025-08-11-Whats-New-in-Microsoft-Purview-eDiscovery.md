@@ -22,6 +22,8 @@ tags:
 - Premium Features
 - Reporting
 - Search Duplication
+- Security
+- Community
 section_names:
 - security
 primary_section: security

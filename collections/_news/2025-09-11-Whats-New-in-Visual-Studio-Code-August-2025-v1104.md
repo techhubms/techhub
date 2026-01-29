@@ -19,6 +19,11 @@ tags:
 - TypeScript
 - VS Code
 - VS Code 1.104
+- AI
+- Coding
+- DevOps
+- GitHub Copilot
+- News
 section_names:
 - ai
 - coding

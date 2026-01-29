@@ -22,6 +22,9 @@ tags:
 - Security Best Practices
 - Security Governance
 - Threat Detection
+- AI
+- Security
+- Videos
 section_names:
 - ai
 - security

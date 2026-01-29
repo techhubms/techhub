@@ -22,6 +22,8 @@ tags:
 - RPA
 - Secure Connectors
 - Server Side Logic
+- AI
+- Videos
 section_names:
 - ai
 primary_section: ai

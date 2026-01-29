@@ -20,6 +20,10 @@ tags:
 - Prompt Engineering
 - Responsible Coding
 - Team Workload Visualization
+- AI
+- Coding
+- GitHub Copilot
+- Videos
 section_names:
 - ai
 - coding

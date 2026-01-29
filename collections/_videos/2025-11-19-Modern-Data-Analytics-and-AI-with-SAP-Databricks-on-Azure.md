@@ -21,6 +21,10 @@ tags:
 - Power BI Integration
 - SAP Business Data Cloud
 - Unifyyourdataplatform
+- AI
+- Azure
+- Machine Learning
+- Videos
 section_names:
 - ai
 - azure

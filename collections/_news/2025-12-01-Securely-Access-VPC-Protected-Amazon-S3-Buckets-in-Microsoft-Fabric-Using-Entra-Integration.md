@@ -20,6 +20,10 @@ tags:
 - Service Principal
 - VPC
 - Zero Trust
+- Azure
+- Machine Learning
+- Security
+- News
 section_names:
 - azure
 - ml

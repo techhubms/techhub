@@ -25,6 +25,9 @@ tags:
 - SDK
 - SDK Release
 - Stable Release
+- Azure
+- Coding
+- News
 section_names:
 - azure
 - coding

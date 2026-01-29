@@ -5,10 +5,19 @@ namespace TechHub.Api.Middleware;
 /// <summary>
 /// Middleware that logs incoming HTTP requests with method, path, status code, and duration.
 /// </summary>
-public sealed class RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggingMiddleware> logger)
+public sealed class RequestLoggingMiddleware
 {
-    private readonly RequestDelegate _next = next;
-    private readonly ILogger<RequestLoggingMiddleware> _logger = logger;
+    private readonly RequestDelegate _next;
+    private readonly ILogger<RequestLoggingMiddleware> _logger;
+
+    public RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggingMiddleware> logger)
+    {
+        ArgumentNullException.ThrowIfNull(next);
+        ArgumentNullException.ThrowIfNull(logger);
+
+        _next = next;
+        _logger = logger;
+    }
 
     public async Task InvokeAsync(HttpContext context)
     {

@@ -21,6 +21,9 @@ tags:
 - NVIDIA
 - Production Scale AI
 - Token Throughput
+- AI
+- Azure
+- News
 section_names:
 - ai
 - azure

@@ -16,6 +16,8 @@ tags:
 - Software Maintenance
 - Supply Chain Security
 - Version Updates
+- DevOps
+- News
 section_names:
 - devops
 primary_section: devops
