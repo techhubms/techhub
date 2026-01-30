@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-01-30 20:03:54",
+  "EnhancedContent": "On February 9th, 2026, Docker and Docker Compose will be updated on all Windows and Ubuntu runner images except `ubuntu-slim` . This update allows you to take advantage of the latest features in these tools.\n\n### New Versions\n\n- Docker Engine: `v29.1`\n- Docker Compose: `v2.40`\n(or higher if new v2 minor versions release before our change)\n\nYou may need to update your workflows if you rely on Docker functionality [slated for removal in v29](https://docs.docker.com/engine/deprecated/).\n\n### Keep up to date on upcoming runner image changes\n\nWe regularly update runner images for improved performance, enhanced functionality, and security improvements. You can find a list of other upcoming changes, updates, and deprecations to runner images in the [runner-images repository](https://github.com/actions/runner-images/labels/Announcement). Check regularly to confirm that your runner images will not be impacted by any scheduled updates.",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-01-30-docker-and-docker-compose-version-upgrades-on-hosted-runners",
+  "PubDate": "2026-01-30T14:20:34+00:00",
+  "Tags": [
+    "actions",
+    "Improvement"
+  ],
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "On February 9th, 2026, Docker and Docker Compose will be updated on all Windows and Ubuntu runner images except ubuntu-slim. This update allows you to take advantage of the latest…\n\nThe post [Docker and Docker Compose version upgrades on hosted runners](https://github.blog/changelog/2026-01-30-docker-and-docker-compose-version-upgrades-on-hosted-runners) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Docker and Docker Compose version upgrades on hosted runners",
+  "Author": "Allison"
+}

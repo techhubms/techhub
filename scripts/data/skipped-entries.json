@@ -11637,5 +11637,17 @@
     "timestamp": "2026-01-30 17:12:34 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule: the event is primarily in Spanish, as indicated by the title ('Event in Spanish: Jueves de Quak con Carlos Alarcon y Copilot SDK') and the description, which is written entirely in Spanish. According to the language exclusion rule, content not primarily in English (<80% English in main text) cannot be assigned categories. Additionally, the lack of provided main content ('content': null) makes it impossible to assess technical details or further qualify for categorization.",
     "collection": "videos"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-30 19:13:07 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/avd-remote-published-application-disconnection/m-p/4490873#M13989"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-30 19:13:07 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/remoteapp-for-word-excel-with-google-drive/m-p/4490874#M13990"
   }
 ]

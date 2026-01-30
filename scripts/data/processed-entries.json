@@ -24778,5 +24778,17 @@
     "timestamp": "2026-01-30 18:08:53 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-local-lens-workbook-deep-insights-at-scale-in-minutes/ba-p/4490608",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/semantic-kernel/build-ai-agents-with-claude-agent-sdk-and-microsoft-agent-framework/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the content is about building AI agents, discusses agentic capabilities, and references Microsoft AI frameworks (AI rules 1, 4). Assigned 'Azure' because of the use and orchestration of Azure OpenAI agents in multi-agent workflows (Azure rule 1 and 4). Assigned 'Coding' because Python SDK usage, code samples, and developer implementation patterns are central throughout (Coding rules 1 and 2). No 'ML', 'DevOps', 'GitHub Copilot', or 'Security' assigned as those were not core focuses of the article. Content is highly technical and implementation-focused, aligning with inclusion rules and does not trigger any generic exclusions.",
+    "timestamp": "2026-01-30 20:05:25 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-01-30-docker-and-docker-compose-version-upgrades-on-hosted-runners",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content is focused on updates to Docker and Docker Compose on GitHub hosted runners, which are core DevOps tools within CI/CD pipelines (DevOps rule 2 and 5). The update is relevant to workflow automation and infrastructure management, fitting the definition of DevOps practices. No other category applies because the content does not directly cover Microsoft cloud, coding, AI, ML, or security topics.",
+    "timestamp": "2026-01-30 20:05:44 +00:00"
   }
 ]
