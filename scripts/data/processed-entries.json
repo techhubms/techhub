@@ -24736,5 +24736,23 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' because the workflow centers on using Large Language Models and AI-driven automation for extracting, mapping, and analyzing threat detection insights (AI rules 1, 4, 5). Assigned 'Security' because the entire context is security operations—TTP extraction, detection engineering, and threat intelligence mapping against security frameworks like MITRE ATT&CK (Security rules 1, 3, 5, 9). Not assigning Azure, ML, or DevOps because there's no focus on Azure-specific services, data science/ML model development, or DevOps pipelines. 'Coding' does not apply, as it's not about software development or programming practices but rather security workflow automation.",
     "timestamp": "2026-01-29 23:06:30 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-30 00:07:36 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-29-codeql-2-24-0-adds-swift-6-2-support-net-10-compatibility-and-file-handling-for-minified-javascript",
+    "reason": "Succesfully added: Assigned Security because the content centers on CodeQL's capabilities for vulnerability detection, taint tracking, and security queries (Security rules 1 and 5). Assigned DevOps because CodeQL is tightly integrated with GitHub code scanning in CI/CD and development workflows (DevOps rules 2 and 5). Assigned Coding because of detailed coverage of .NET 10, C# 14, ASP.NET Core, Python, and other language/framework integration (Coding rules 1 and 2). Not assigned AI, Azure, ML as the focus is on static analysis and security for code rather than AI or Azure-specific development. No generic exclusion rules applied as this is technical product release content, not sales, biographical, non-English, or business-strategy focused."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-30 00:07:54 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-29-codespaces-is-now-in-public-preview-for-github-enterprise-with-data-residency",
+    "reason": "Succesfully added: DevOps category is assigned because the content focuses on GitHub Codespaces, which provides cloud-based development environments and is deeply relevant to DevOps practices (DevOps rule 2: GitHub DevOps Tools, rule 9: Developer Experience). No other categories (AI, Coding, Azure, ML, Security, GitHub Copilot) are triggered as the content is specifically about configuring, managing, and policy requirements surrounding GitHub Codespaces for enterprises. There is no code, language, AI, security, or Azure-specific focus."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-30 00:08:46 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-moltbot-to-azure-container-apps-your-24-7-ai-assistant-in/ba-p/4490611",
+    "reason": "Succesfully added: Assigned AI category because MoltBot is an AI assistant, interacts via LLM APIs like OpenRouter, and automates tasks via natural language (AI Category rule 1, 4, and 5). Assigned Azure because the deployment, security model, and operational platform are centered on Azure Container Apps, with detailed Azure CLI/DevOps automation and architectural guidance (Azure rule 1, 4, 5, and 6). Assigned DevOps because the guide deeply covers automated provisioning, secrets and config management, and deployment with Azure Developer CLI, including troubleshooting, key rotation, observability, and best practices (DevOps rules 3, 5, 6, 7, and 11). Did not assign Coding (app code is not modified here), ML (no custom model training/prep), Security (security is discussed, but not as its own implementation topic or with Defender deep-dive). No generic exclusion rules applied—the post is technical, practical, and focused on Microsoft-centric automation and AI deployment engineering."
   }
 ]
