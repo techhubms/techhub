@@ -24754,5 +24754,11 @@
     "timestamp": "2026-01-30 00:08:46 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-moltbot-to-azure-container-apps-your-24-7-ai-assistant-in/ba-p/4490611",
     "reason": "Succesfully added: Assigned AI category because MoltBot is an AI assistant, interacts via LLM APIs like OpenRouter, and automates tasks via natural language (AI Category rule 1, 4, and 5). Assigned Azure because the deployment, security model, and operational platform are centered on Azure Container Apps, with detailed Azure CLI/DevOps automation and architectural guidance (Azure rule 1, 4, 5, and 6). Assigned DevOps because the guide deeply covers automated provisioning, secrets and config management, and deployment with Azure Developer CLI, including troubleshooting, key rotation, observability, and best practices (DevOps rules 3, 5, 6, 7, and 11). Did not assign Coding (app code is not modified here), ML (no custom model training/prep), Security (security is discussed, but not as its own implementation topic or with Defender deep-dive). No generic exclusion rules applied—the post is technical, practical, and focused on Microsoft-centric automation and AI deployment engineering."
+  },
+  {
+    "reason": "Succesfully added: The content is about Azure App Testing's minimum usage policy for load tests and includes clear technical details about billing, testing methodology, and test configuration. The 'Azure' category is assigned because the content is focused on features and practices in Microsoft Azure. The 'DevOps' category is included because the subject matter relates to test automation, CI/CD, and best practices around load testing workflows, which are key aspects of DevOps. Other categories (AI, ML, Coding, Security, GitHub Copilot) do not apply as the main focus is infrastructure usage, load test configuration, and cost management, not AI/ML, coding in Microsoft languages, or security features. The mention of 'AI-assisted load test authoring' is only incidental to a linked feature, not the main subject.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/minimum-usage-in-azure-app-testing/ba-p/4490658",
+    "collection": "community",
+    "timestamp": "2026-01-30 07:17:13 +00:00"
   }
 ]
