@@ -24760,5 +24760,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/minimum-usage-in-azure-app-testing/ba-p/4490658",
     "collection": "community",
     "timestamp": "2026-01-30 07:17:13 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: Azure, because Microsoft Fabric is an Azure-integrated analytics/data platform and the content includes technical implementation details with Azure SQL Databases (Azure rule 1, 4, 5, 6, and data platform context). ML and AI categories are included due to detailed coverage of data science workflows (regularization, machine learning) and AI-powered tools like Power BI Narrative Visual (ML rules 1, 4; AI rules 1, 4, 5). Coding is included since the majority of highlighted content covers implementation details, power BI scripting, UDFs, and data engineering with user data functions (Coding rules 1, 2, 4). Security is included due to the in-depth guidance on configuring OneLake security and Row-Level Security (Security rules 1, 3, 9). No categories were excluded by generic rules, as the article remains fully technical, does not focus on business management or productivity, and all references are to development and engineering facets of the Microsoft Fabric platform.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-january-2026/",
+    "collection": "news",
+    "timestamp": "2026-01-30 16:08:24 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centers on building an app with GitHub Copilot SDK and demonstrates AI-powered features (AI inclusion rule 2 and 3, always pairing 'AI' and 'GitHub Copilot'). Assigned 'Coding' because the video details end-to-end application development and debugging using code (Coding rule 4 and 5). Content does not trigger any generic exclusion rules, and Microsoft technologies (GitHub Copilot SDK) are central to the solution.",
+    "canonical_url": "https://www.youtube.com/shorts/aGDQD3V5mvw",
+    "collection": "videos",
+    "timestamp": "2026-01-30 16:09:06 +00:00"
   }
 ]

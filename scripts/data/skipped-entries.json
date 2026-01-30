@@ -11625,5 +11625,11 @@
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule - content is not primarily in English. The description and title are in Spanish ('Vamos a explorar juntos lo ultimo de GitHub!', 'Event in Spanish: Jueves de Quack Copilot SDK'), violating the Non-English Content exclusion in Chapter 3.",
     "timestamp": "2026-01-29 23:07:02 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=97b7TE_-kSM",
+    "reason": "No categories found: Content excluded based on generic exclusion rules: this is a video announcement with no substantive technical update or instructional content. The main body promotes channel playlists, certification resources, charity information, and directs users to various learning resources. There is no technical detail, implementation guidance, or subject matter discussion specific to Microsoft technologies present in the description or title. The content is fundamentally a short community update and resource/promotional post, which does not meet the quality standards or inclusion requirements for any categories.",
+    "timestamp": "2026-01-30 15:09:43 +00:00"
   }
 ]
