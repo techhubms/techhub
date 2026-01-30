@@ -11631,5 +11631,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=97b7TE_-kSM",
     "reason": "No categories found: Content excluded based on generic exclusion rules: this is a video announcement with no substantive technical update or instructional content. The main body promotes channel playlists, certification resources, charity information, and directs users to various learning resources. There is no technical detail, implementation guidance, or subject matter discussion specific to Microsoft technologies present in the description or title. The content is fundamentally a short community update and resource/promotional post, which does not meet the quality standards or inclusion requirements for any categories.",
     "timestamp": "2026-01-30 15:09:43 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=nMsuWOkaf9I",
+    "timestamp": "2026-01-30 17:12:34 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the event is primarily in Spanish, as indicated by the title ('Event in Spanish: Jueves de Quak con Carlos Alarcon y Copilot SDK') and the description, which is written entirely in Spanish. According to the language exclusion rule, content not primarily in English (<80% English in main text) cannot be assigned categories. Additionally, the lack of provided main content ('content': null) makes it impossible to assess technical details or further qualify for categorization.",
+    "collection": "videos"
   }
 ]

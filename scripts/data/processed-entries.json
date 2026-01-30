@@ -24772,5 +24772,11 @@
     "canonical_url": "https://www.youtube.com/shorts/aGDQD3V5mvw",
     "collection": "videos",
     "timestamp": "2026-01-30 16:09:06 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses entirely on Azure, specifically a new Azure workbook for large-scale operational visibility (Azure inclusion rule 1 and 4). The content is practical, development/operations-focused, and targets Azure infrastructure teams, but does not feature AI, coding practices, DevOps tooling/processes, ML/data science, or security implementation as the central topic. Article meets all quality standards, is in English, and is not a sales pitch or business-only content.",
+    "timestamp": "2026-01-30 18:08:53 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-local-lens-workbook-deep-insights-at-scale-in-minutes/ba-p/4490608",
+    "collection": "community"
   }
 ]
