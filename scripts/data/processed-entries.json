@@ -24790,5 +24790,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the content is focused on updates to Docker and Docker Compose on GitHub hosted runners, which are core DevOps tools within CI/CD pipelines (DevOps rule 2 and 5). The update is relevant to workflow automation and infrastructure management, fitting the definition of DevOps practices. No other category applies because the content does not directly cover Microsoft cloud, coding, AI, ML, or security topics.",
     "timestamp": "2026-01-30 20:05:44 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content analyzes securing AI-powered systems, discusses AI applications, agentic workflows, Copilot Studio agents, and AI-focused orchestration vulnerabilities, all involving Microsoft security tooling (AI rules 1, 4, 5). Added Security category due to the explicit focus on a real vulnerability (LangGrinch/CVE-2025-68664), risk assessment, and mitigation advice utilizing Microsoft Defender products (Security rules 1, 5, 9). Added Azure category as Microsoft Defender for Cloud and related Azure tools are central to the protection and hunting recommendations; the mitigation workflow and references are predominantly Azure-centric (Azure rule 1, 4, 5). Did NOT assign ML or Coding categories since this article addresses infrastructure security and operational workflows around AI platforms—no focus on ML/data science engineering, or code-level development. DevOps is not added because, although CI/CD and developer workflows are mentioned, the primary lens is supply chain security and runtime/asset visibility across Azure Defender products, not end-to-end DevOps pipelines.",
+    "timestamp": "2026-01-30 21:06:57 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/30/case-study-securing-ai-application-supply-chains/"
   }
 ]
