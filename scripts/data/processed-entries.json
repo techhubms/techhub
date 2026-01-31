@@ -24814,5 +24814,11 @@
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the video centrally demonstrates using GitHub Copilot as an AI-powered developer tool (AI rules 2 and 4, GitHub Copilot inclusion rule 1). 'Coding' is also included because the content details building a development tool from scratch, involving prototyping and shipping code (Coding rules 3, 4, and 5). The central focus is technical, on Copilot CLI and code development, rather than business productivity or general office tasks, aligning with the category inclusion and Copilot distinction rules.",
     "collection": "videos",
     "timestamp": "2026-01-31 00:07:11 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the podcast episode centers on GitHub platform enhancements that impact developer workflows, productivity, pull request processes, and automation—all key aspects of DevOps (DevOps Inclusion Rules 2, 3, 5, 9). While AI is mentioned briefly with respect to AI as a 'new contributor', the core content does not detail Microsoft AI products or specific development with AI, so the AI category is not applied. No Coding category because the focus is on platform/process improvements, not direct code or framework development; no Security, since there is no substantive focus on security procedures or tools. The episode discusses open standards, workflow automation, and accessibility features in GitHub, aligning primarily with DevOps.",
+    "collection": "videos",
+    "timestamp": "2026-01-31 15:04:51 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=DW_vw8BkcBU"
   }
 ]
