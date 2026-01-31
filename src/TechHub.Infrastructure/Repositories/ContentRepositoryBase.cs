@@ -37,10 +37,8 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// <summary>
     /// Renders the raw markdown content to HTML if Content is present and RenderedHtml is not already set.
     /// After rendering, clears the raw Content to save memory since it's no longer needed.
-    /// All repository implementations should return ContentItem with Content populated,
-    /// and this method handles the rendering uniformly.
     /// </summary>
-    protected ContentItem RenderHtmlIfNeeded(ContentItem item)
+    protected ContentItemDetail RenderHtmlIfNeeded(ContentItemDetail item)
     {
         ArgumentNullException.ThrowIfNull(item);
 
@@ -54,7 +52,7 @@ public abstract class ContentRepositoryBase : IContentRepository
         if (string.IsNullOrEmpty(item.Content))
         {
             throw new InvalidOperationException(
-                $"ContentItem '{item.Slug}' in collection '{item.CollectionName}' has no Content to render and no RenderedHtml. " +
+                $"ContentItemDetail '{item.Slug}' in collection '{item.CollectionName}' has no Content to render and no RenderedHtml. " +
                 "Items must have either pre-rendered HTML or raw markdown content.");
         }
 
@@ -72,8 +70,9 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// <summary>
     /// Get a single content item by slug and collection.
     /// Results are cached in memory. Renders markdown to HTML if needed.
+    /// Returns ContentItemDetail which includes the full markdown content and rendered HTML.
     /// </summary>
-    public async Task<ContentItem?> GetBySlugAsync(
+    public async Task<ContentItemDetail?> GetBySlugAsync(
         string collectionName,
         string slug,
         bool includeDraft = false,
@@ -210,19 +209,23 @@ public abstract class ContentRepositoryBase : IContentRepository
             return [];
         }
 
+        // Normalize tags to lowercase to match content_tags_expanded storage
+        var normalizedTags = sourceTags.Select(t => t.ToLowerInvariant()).ToList();
+
         // Cache key based on sorted tags for consistency
-        var sortedTags = string.Join(",", sourceTags.OrderBy(t => t));
+        var sortedTags = string.Join(",", normalizedTags.OrderBy(t => t));
         var cacheKey = $"related:{sortedTags}:{excludeSlug}:{count}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SetPriority(CacheItemPriority.Normal);
-            return await GetRelatedInternalAsync(sourceTags, excludeSlug, count, ct);
+            return await GetRelatedInternalAsync(normalizedTags, excludeSlug, count, ct);
         }) ?? [];
     }
 
     /// <summary>
     /// Get tag counts with optional filtering by date range, section, and collection.
-    /// Uses efficient database GROUP BY instead of loading all items.
+    /// Returns top N tags (sorted by count descending) above minUses threshold.
+    /// Results are cached - very fast for repeated calls with same filters.
     /// </summary>
     public async Task<IReadOnlyList<TagWithCount>> GetTagCountsAsync(
         DateTimeOffset? dateFrom = null,
@@ -246,8 +249,9 @@ public abstract class ContentRepositoryBase : IContentRepository
 
     /// <summary>
     /// Internal implementation for getting content by slug.
+    /// Returns ContentItemDetail which includes the full markdown content.
     /// </summary>
-    protected abstract Task<ContentItem?> GetBySlugInternalAsync(
+    protected abstract Task<ContentItemDetail?> GetBySlugInternalAsync(
         string collectionName,
         string slug,
         bool includeDraft,
@@ -321,15 +325,6 @@ public abstract class ContentRepositoryBase : IContentRepository
         int? maxTags,
         int minUses,
         CancellationToken ct);
-
-    /// <summary>
-    /// Hydrate relationship properties (tags, sections, plans) for content items.
-    /// For database repositories, loads from normalized relationship tables.
-    /// For file-based repositories, items are already hydrated from frontmatter.
-    /// </summary>
-    protected abstract Task<List<ContentItem>> HydrateRelationshipsAsync(
-        IList<ContentItem> items,
-        CancellationToken ct = default);
 
     // ==================== Cache Key Builders ====================
 

@@ -23,6 +23,7 @@ namespace TechHub.ContentFixer;
 /// - Remove 'section' frontmatter field (singular - replaced by section_names)
 /// - Remove 'description' field from frontmatter
 /// - Remove 'viewing_mode' frontmatter field
+/// - Normalize author name: "Tech Hub Team" → "TechHub"
 /// - Replace template variables ({{ page.variable }}) with actual values
 /// - Expand template variables inside tags ({% youtube page.variable %} → {% youtube VALUE %})
 /// - Remove {% raw %} and {% endraw %} tags
@@ -413,6 +414,70 @@ public sealed class Program
             changed = true;
         }
 
+        // 4l. Normalize author name (Tech Hub Team → TechHub)
+        if (frontMatter.TryGetValue("author", out var currentAuthor) && 
+            currentAuthor?.ToString() == "Tech Hub Team")
+        {
+            frontMatter["author"] = "TechHub";
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Normalized author: Tech Hub Team → TechHub");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 4m. Add author if missing (default to 'TechHub' for roundups, otherwise required)
+        if (!frontMatter.TryGetValue("author", out var authorValue) || string.IsNullOrWhiteSpace(authorValue?.ToString()))
+        {
+            if (collection == "roundups")
+            {
+                frontMatter["author"] = "TechHub";
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("  ✓ Added author = TechHub (roundups default)");
+                Console.ResetColor();
+                changed = true;
+            }
+            else
+            {
+                throw new InvalidOperationException(
+                    $"Missing required 'author' field for {filePath}. " +
+                    "Add 'author: AuthorName' to frontmatter.");
+            }
+        }
+
+        // 4n. Add external_url if missing (required for all collections)
+        // Roundups and videos (internal content) use internal URL pattern
+        if (!frontMatter.TryGetValue("external_url", out var externalUrlValue) || string.IsNullOrWhiteSpace(externalUrlValue?.ToString()))
+        {
+            var slug = ExtractSlugFromPath(filePath);
+            
+            if (collection == "roundups")
+            {
+                // For roundups, generate internal URL: /{primary_section}/roundups/{slug}
+                var internalUrl = $"/{computedPrimarySection}/roundups/{slug}";
+                frontMatter["external_url"] = internalUrl;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"  ✓ Added external_url = {internalUrl} (roundups internal URL)");
+                Console.ResetColor();
+                changed = true;
+            }
+            else if (collection == "videos")
+            {
+                // For videos, generate internal URL: /{primary_section}/videos/{slug}
+                var internalUrl = $"/{computedPrimarySection}/videos/{slug}";
+                frontMatter["external_url"] = internalUrl;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"  ✓ Added external_url = {internalUrl} (videos internal URL)");
+                Console.ResetColor();
+                changed = true;
+            }
+            else
+            {
+                throw new InvalidOperationException(
+                    $"Missing required 'external_url' field for {filePath}. " +
+                    "Add 'external_url: https://...' to frontmatter.");
+            }
+        }
+
         // 5. Save description for variable replacement, then remove from frontmatter
         var description = frontMatter.TryGetValue("description", out var descObj) ? descObj?.ToString() : null;
         if (frontMatter.Remove("description"))
@@ -483,6 +548,18 @@ public sealed class Program
     {
         var match = Regex.Match(filePath, @"collections/_([^/]+)/");
         return match.Success ? match.Groups[1].Value : "unknown";
+    }
+
+    /// <summary>
+    /// Extract slug from file path. E.g., "collections/_roundups/2026-01-26-weekly-roundup.md" → "weekly-roundup"
+    /// Removes the date prefix (YYYY-MM-DD-) from the filename.
+    /// </summary>
+    private static string ExtractSlugFromPath(string filePath)
+    {
+        var filename = Path.GetFileNameWithoutExtension(filePath);
+        // Remove date prefix (YYYY-MM-DD-)
+        var slugMatch = Regex.Match(filename, @"^\d{4}-\d{2}-\d{2}-(.+)$");
+        return slugMatch.Success ? slugMatch.Groups[1].Value : filename;
     }
 
     private static string NormalizeSectionName(string displayName)

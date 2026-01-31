@@ -1,6 +1,6 @@
 ﻿---
 title: Updated AI Tools, Open-Source Security, and Azure Integration
-author: Tech Hub Team
+author: TechHub
 date: 2025-10-20 09:00:00 +00:00
 tags:
 - Agentic AI
@@ -29,6 +29,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-10-20
 ---
 Welcome to this week’s technology roundup. In this edition, we highlight the recent developments in developer-focused AI, new advancements in open-source and cloud security, improved efficiency for data and machine learning pipelines, and an increased interest in automation within hybrid and agent-based workflows.
 

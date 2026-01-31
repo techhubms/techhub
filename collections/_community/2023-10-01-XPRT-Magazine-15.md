@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 15
 date: 2023-10-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-15
 tags:
 - Azure Policy
 - CKAD

@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 17
 date: 2024-10-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-17
 tags:
 - Automation
 - Cloud Native

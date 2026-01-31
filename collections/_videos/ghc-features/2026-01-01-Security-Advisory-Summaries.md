@@ -1,5 +1,5 @@
 ﻿---
-external_url: ''
+external_url: /github-copilot/videos/Security-Advisory-Summaries
 title: Security Advisory Summaries
 author: TBD
 date: 2026-01-01 00:00:00 +00:00

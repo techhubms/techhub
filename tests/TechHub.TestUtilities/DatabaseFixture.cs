@@ -60,11 +60,8 @@ public class DatabaseFixture<T> : IDisposable
         using var command = _connection.CreateCommand();
         command.CommandText = @"
             DELETE FROM content_plans;
-            DELETE FROM content_sections;
             DELETE FROM content_tags_expanded;
-            DELETE FROM content_tags;
             DELETE FROM content_items;
-            DELETE FROM collections;
             DELETE FROM sync_metadata;
         ";
         command.ExecuteNonQuery();

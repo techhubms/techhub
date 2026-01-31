@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 09
 date: 2019-10-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-09
 tags:
 - .NET Foundation
 - API Management

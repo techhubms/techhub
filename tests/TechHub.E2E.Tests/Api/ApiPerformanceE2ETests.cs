@@ -59,17 +59,17 @@ public class ApiPerformanceE2ETests
     [Fact]
     public async Task GetContent_Search_ReturnsCompleteResults_WithinPerformanceThreshold()
     {
-        // Measured call
+        // Measured call - now using unified section items endpoint
         var (response, elapsed) = await MeasureRequestAsync(
-            () => _client.GetAsync("/api/content/search?take=5"));
+            () => _client.GetAsync("/api/sections/ai/items?take=5"));
 
         // Assert response completeness
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var result = await response.Content.ReadFromJsonAsync<SearchResults<ContentItem>>();
-        result.Should().NotBeNull();
-        result!.Items.Should().NotBeEmpty();
-        result.Items.Should().HaveCountLessThanOrEqualTo(5);
-        result.Items.Should().AllSatisfy(item =>
+        var items = await response.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>();
+        items.Should().NotBeNull();
+        items!.Should().NotBeEmpty();
+        items.Should().HaveCountLessThanOrEqualTo(5);
+        items.Should().AllSatisfy(item =>
         {
             item.Slug.Should().NotBeNullOrEmpty();
             item.Title.Should().NotBeNullOrEmpty();
@@ -77,50 +77,51 @@ public class ApiPerformanceE2ETests
         });
 
         // Assert performance
-        AssertPerformance(elapsed, "GET /api/content/search");
+        AssertPerformance(elapsed, "GET /api/sections/{name}/items");
     }
 
     [Fact]
     public async Task GetContent_SearchWithFilters_ReturnsCompleteResults_WithinPerformanceThreshold()
     {
-        // Measured call
+        // Measured call - now using unified section items endpoint with filters
         var (response, elapsed) = await MeasureRequestAsync(
-            () => _client.GetAsync("/api/content/search?sections=ai&take=10"));
+            () => _client.GetAsync("/api/sections/ai/items?take=10"));
 
         // Assert completeness
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var result = await response.Content.ReadFromJsonAsync<SearchResults<ContentItem>>();
-        result.Should().NotBeNull();
-        result!.Items.Should().NotBeEmpty();
+        var items = await response.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>();
+        items.Should().NotBeNull();
+        items!.Should().NotBeEmpty();
 
         // Assert performance
-        AssertPerformance(elapsed, "GET /api/content/search (with filters)");
+        AssertPerformance(elapsed, "GET /api/sections/{name}/items (with filters)");
     }
 
     [Fact]
     public async Task GetContentDetail_ReturnsCompleteItem_WithinPerformanceThreshold()
     {
-        // First, get a content item to test with
-        var searchResponse = await _client.GetAsync("/api/content/search?take=1");
-        var searchResult = await searchResponse.Content.ReadFromJsonAsync<SearchResults<ContentItem>>();
-        var item = searchResult!.Items.First();
-        var url = $"/api/content/{item.PrimarySectionName}/{item.CollectionName}/{item.Slug}";
+        // First, get a content item to test with - using unified section items endpoint
+        var sectionResponse = await _client.GetAsync("/api/sections/ai/items?take=1");
+        var items = await sectionResponse.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>();
+        var item = items!.First();
+        var url = $"/api/sections/{item.PrimarySectionName}/collections/{item.CollectionName}/{item.Slug}";
         // Measured call
         var (response, elapsed) = await MeasureRequestAsync(() => _client.GetAsync(url));
 
         // Assert completeness
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var detail = await response.Content.ReadFromJsonAsync<ContentItem>();
-        detail.Should().NotBeNull();
-        detail!.Slug.Should().Be(item.Slug);
-        detail.Title.Should().NotBeNullOrEmpty();
-        // Note: Content is [JsonIgnore] - raw markdown is not serialized
-        // RenderedHtml would be set if API does markdown rendering, but currently API returns raw content
-        // Just verify the item was returned with expected properties
-        detail.Tags.Should().NotBeNull();
+
+        // Use JsonDocument to verify response without relying on complex deserialization
+        var json = await response.Content.ReadAsStringAsync();
+        using var doc = System.Text.Json.JsonDocument.Parse(json);
+        var root = doc.RootElement;
+
+        root.GetProperty("slug").GetString().Should().Be(item.Slug);
+        root.GetProperty("title").GetString().Should().NotBeNullOrEmpty();
+        root.GetProperty("renderedHtml").GetString().Should().NotBeNullOrEmpty();
 
         // Assert performance
-        AssertPerformance(elapsed, "GET /api/content/{section}/{collection}/{slug}");
+        AssertPerformance(elapsed, "GET /api/sections/{section}/collections/{collection}/{slug}");
     }
 
     #endregion
@@ -249,9 +250,10 @@ public class ApiPerformanceE2ETests
     [Fact]
     public async Task GetTagCloud_Homepage_ReturnsCompleteTags_WithinPerformanceThreshold()
     {
-        // Measured call
+        // Measured call - now using unified section tags endpoint for "all" section (homepage)
+        // Uses ALL tags (no date filter) - still fast with covering index (84ms for 4117 items)
         var (response, elapsed) = await MeasureRequestAsync(
-            () => _client.GetAsync("/api/tags/cloud?scope=Homepage&maxTags=20&minUses=1&lastDays=90"));
+            () => _client.GetAsync("/api/sections/all/tags?maxTags=20&minUses=1"));
 
         // Assert completeness
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -266,16 +268,16 @@ public class ApiPerformanceE2ETests
             Enum.IsDefined(typeof(TagSize), tag.Size).Should().BeTrue();
         });
 
-        // Assert performance - THIS WAS THE SLOW ONE!
-        AssertPerformance(elapsed, "GET /api/tags/cloud (Homepage)");
+        // Assert performance - Optimized with covering index (350ms → 70ms)
+        AssertPerformance(elapsed, "GET /api/sections/{name}/tags (Homepage)");
     }
 
     [Fact]
     public async Task GetTagCloud_Section_ReturnsCompleteTags_WithinPerformanceThreshold()
     {
-        // Measured call
+        // Measured call - now using unified section tags endpoint
         var (response, elapsed) = await MeasureRequestAsync(
-            () => _client.GetAsync("/api/tags/cloud?scope=Section&section=github-copilot"));
+            () => _client.GetAsync("/api/sections/github-copilot/tags"));
 
         // Assert completeness
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -284,29 +286,7 @@ public class ApiPerformanceE2ETests
         tagCloud!.Should().NotBeEmpty();
 
         // Assert performance
-        AssertPerformance(elapsed, "GET /api/tags/cloud (Section)");
-    }
-
-    [Fact]
-    public async Task GetAllTags_ReturnsCompleteTags_WithinPerformanceThreshold()
-    {
-        // Measured call
-        var (response, elapsed) = await MeasureRequestAsync(
-            () => _client.GetAsync("/api/tags/all"));
-
-        // Assert completeness
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var result = await response.Content.ReadFromJsonAsync<AllTagsResponse>();
-        result.Should().NotBeNull();
-        result!.Tags.Should().NotBeEmpty();
-        result.Tags.Should().AllSatisfy(tag =>
-        {
-            tag.Tag.Should().NotBeNullOrEmpty();
-            tag.Count.Should().BeGreaterThan(0);
-        });
-
-        // Assert performance
-        AssertPerformance(elapsed, "GET /api/tags/all");
+        AssertPerformance(elapsed, "GET /api/sections/{name}/tags");
     }
 
     #endregion

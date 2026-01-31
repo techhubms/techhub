@@ -1673,25 +1673,30 @@ Return only JSON with fields: title, tags, description, introduction
             }
             
             $tableOfContents = $tocLines -join "`n"
+
+            # Extract slug from filename (remove date prefix for URL pattern)
+            $slug = $filename -replace '^\d{4}-\d{2}-\d{2}-', ''
             
-            # Create the final markdown content
+            # Create the final markdown content with all required frontmatter fields
+            # Note: layout and permalink are obsolete - removed by ContentFixer
+            # Required fields: title, author, date, tags, section_names, primary_section, feed_name, external_url
             $finalContent = @"
 ---
-layout: "post"
 title: "$($metadata.title)"
-author: "Tech Hub Team"
+author: "TechHub"
 date: $publishDate
-permalink: "/$filename.html"
 tags: $($metadata.tags | ConvertTo-Json -Compress)
 section_names:
 - ai
 - github-copilot
 - azure
-- dotnet
 - devops
 - security
 - coding
-- cloud
+- ml
+primary_section: "github-copilot"
+feed_name: "TechHub"
+external_url: "/github-copilot/roundups/$slug"
 ---
 
 $($metadata.introduction)

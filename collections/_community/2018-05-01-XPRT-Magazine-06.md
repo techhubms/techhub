@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 06
 date: 2018-05-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-06
 tags:
 - Automation
 - Blazor

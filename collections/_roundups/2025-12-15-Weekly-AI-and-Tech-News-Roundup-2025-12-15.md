@@ -1,6 +1,6 @@
 ﻿---
 title: 'Streamlining Development: Updates in Copilot, AI Platforms, and Secure Automation'
-author: Tech Hub Team
+author: TechHub
 date: 2025-12-15 09:00:00 +00:00
 tags:
 - Agentic AI
@@ -31,6 +31,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-12-15
 ---
 Welcome to this week's technology roundup covering progress in intelligent, secure, and connected development environments. GitHub Copilot introduced public previews of new AI models—OpenAI's GPT-5.2, Claude Opus, and Gemini 3 Pro—alongside expanded model selection and deeper agent workflows. Microsoft expanded AI platform capabilities with agentic workflows, persistent memory, and the Model Context Protocol joining the Linux Foundation for better interoperability. Security and DevOps coverage addresses supply chain risks, credential management, and endpoint security.<!--excerpt_end-->
 

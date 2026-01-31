@@ -1,6 +1,6 @@
 ﻿---
 title: 'AI Agents, DevOps Changes, and Platform Security: Weekly Technology Update'
-author: Tech Hub Team
+author: TechHub
 date: 2025-12-22 09:00:00 +00:00
 tags:
 - Automation
@@ -30,6 +30,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-12-22
 ---
 This week's biggest news: GitHub Copilot adds GPT-5.2, Claude Opus 4.5, and Gemini 3 Flash models alongside new Agent Skills and Mission Control for workflow automation. Microsoft Azure AI Foundry expands its agentic AI ecosystem with hosted agents and the Model Router going GA. On the security front, teams are responding to the React2Shell vulnerability (CVE-2025-55182) affecting Next.js workloads, while GitHub Actions announces pricing changes for self-hosted runners starting March 2026.<!--excerpt_end-->
 

@@ -67,7 +67,7 @@
     public string? VideoSlug { get; set; }
 
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
-    private TechHub.Core.Models.ContentItem? selectedVideoDetail;
+    private TechHub.Core.Models.ContentItemDetail? selectedVideoDetail;
     private string selectedVideoSlug = "";
 
     protected override async Task OnInitializedAsync()
@@ -88,9 +88,8 @@
     {
         try
         {
-            var allVideos = await ApiClient.GetContentAsync(null, "videos");
+            var allVideos = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName);
             videoItems = (allVideos ?? Enumerable.Empty<TechHub.Core.Models.ContentItem>())
-                .Where(v => v.SubcollectionName == VideoCollectionName)
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();
 

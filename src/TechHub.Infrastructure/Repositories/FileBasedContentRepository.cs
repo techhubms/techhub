@@ -98,6 +98,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
     /// <summary>
     /// Internal implementation: Load all content from markdown files.
     /// Results are cached in the local AllItems cache.
+    /// Stores ContentItemDetail internally but returns as ContentItem for list views.
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
         bool includeDraft,
@@ -106,6 +107,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         CancellationToken ct)
     {
         // Use local cache for all items (file-based loads everything at once)
+        // Cache stores ContentItemDetail but returns as ContentItem for list views
         var allItems = await Cache.GetOrCreateAsync(AllItemsCacheKey, async entry =>
         {
             entry.SetPriority(CacheItemPriority.NeverRemove);
@@ -129,7 +131,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
                 .OrderByDescending(x => x.DateEpoch)
                 .ToList();
 
-            return (IReadOnlyList<ContentItem>)cachedItems;
+            // Store as ContentItem for polymorphic access but actually holds ContentItemDetail
+            return (IReadOnlyList<ContentItem>)cachedItems.Cast<ContentItem>().ToList();
         }) ?? [];
 
         // Filter drafts if needed
@@ -144,15 +147,18 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
     /// <summary>
     /// Internal implementation: Get content by slug from cached data.
+    /// Returns ContentItemDetail with full content for rendering.
     /// </summary>
-    protected override async Task<ContentItem?> GetBySlugInternalAsync(
+    protected override async Task<ContentItemDetail?> GetBySlugInternalAsync(
         string collectionName,
         string slug,
         bool includeDraft,
         CancellationToken ct)
     {
         var items = await GetByCollectionInternalAsync(collectionName, subcollectionName: null, includeDraft, int.MaxValue, 0, ct);
-        return items.FirstOrDefault(item => item.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
+        var item = items.FirstOrDefault(item => item.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
+        // The cache stores ContentItemDetail objects, so cast back for detail view
+        return item as ContentItemDetail;
     }
 
     /// <summary>
@@ -249,13 +255,14 @@ public class FileBasedContentRepository : ContentRepositoryBase
         IEnumerable<ContentItem> filtered = allItems;
 
         // Full-text search (naive: check if query appears in title, excerpt, or content)
+        // Items are stored as ContentItemDetail, so cast to access Content property
         if (!string.IsNullOrWhiteSpace(request.Query))
         {
             var query = request.Query.ToLowerInvariant();
             filtered = filtered.Where(item =>
                 (item.Title?.Contains(query, StringComparison.OrdinalIgnoreCase) ?? false) ||
                 (item.Excerpt?.Contains(query, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                (item.Content?.Contains(query, StringComparison.OrdinalIgnoreCase) ?? false));
+                ((item as ContentItemDetail)?.Content?.Contains(query, StringComparison.OrdinalIgnoreCase) ?? false));
         }
 
         // Tag filtering (AND logic)
@@ -523,7 +530,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
             filtered = filtered.Where(item => item.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
         }
 
-        // Count tags using LINQ GROUP BY
+        // Count tags, sort, and limit
         var tagCounts = filtered
             .SelectMany(item => item.Tags)
             .GroupBy(tag => tag, StringComparer.OrdinalIgnoreCase)
@@ -539,24 +546,13 @@ public class FileBasedContentRepository : ContentRepositoryBase
         return result;
     }
 
-    /// <summary>
-    /// For file-based repository, items are already hydrated from frontmatter.
-    /// Returns items as-is without additional processing.
-    /// </summary>
-    protected override Task<List<ContentItem>> HydrateRelationshipsAsync(
-        IList<ContentItem> items,
-        CancellationToken ct = default)
-    {
-        // File-based repo already has all data loaded from frontmatter - nothing to hydrate
-        return Task.FromResult(items.ToList());
-    }
-
     // ==================== Private File Loading Methods ====================
 
     /// <summary>
     /// Load all items from a collection directory.
+    /// Returns ContentItemDetail with raw content for detail views.
     /// </summary>
-    private async Task<List<ContentItem>> LoadCollectionItemsAsync(
+    private async Task<List<ContentItemDetail>> LoadCollectionItemsAsync(
         string collectionName,
         CancellationToken ct)
     {
@@ -580,8 +576,9 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
     /// <summary>
     /// Load a single content item from a markdown file.
+    /// Returns ContentItemDetail with raw content - base class will render to HTML.
     /// </summary>
-    private async Task<ContentItem?> LoadContentItemAsync(
+    private async Task<ContentItemDetail?> LoadContentItemAsync(
         string filePath,
         string collectionName,
         CancellationToken ct)
@@ -626,8 +623,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
         // Convert plans list to CSV for constructor
         var plansString = plans.Count > 0 ? string.Join(",", plans) : null;
 
-        // Return ContentItem with raw Content - base class will render to HTML
-        var item = new ContentItem(
+        // Return ContentItemDetail with raw Content - base class will render to HTML
+        var item = new ContentItemDetail(
             slug: slug,
             title: title,
             author: author,

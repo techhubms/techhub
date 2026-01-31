@@ -1,9 +1,8 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// Content item model - used for both list views and detail views.
-/// For list views: RenderedHtml will be null.
-/// For detail views: RenderedHtml is populated with rendered HTML.
+/// Content item model - used for list views where full content is not needed.
+/// For detail views with full content and rendered HTML, use ContentItemDetail.
 /// </summary>
 public record ContentItem
 {
@@ -23,37 +22,14 @@ public record ContentItem
     public string PrimarySectionName { get; }
 
     public IReadOnlyList<string> Tags { get; private set; } = [];
+    
+    /// <summary>
+    /// List of sections this content belongs to (parsed from database boolean columns).
+    /// </summary>
+    public IReadOnlyList<string> Sections { get; private set; } = [];
+    
     public string Excerpt { get; }
     public string ExternalUrl { get; }
-
-    /// <summary>
-    /// Raw markdown content (from file or database).
-    /// Used internally for rendering. Not serialized to API responses.
-    /// Set to null when RenderedHtml is populated to save memory.
-    /// </summary>
-    [System.Text.Json.Serialization.JsonIgnore]
-    public string? Content { get; private set; }
-
-    /// <summary>
-    /// Full rendered HTML content (only populated for detail views).
-    /// Null for list views, populated for detail views.
-    /// Setting this will null out Content to save memory.
-    /// </summary>
-    public string? RenderedHtml { get; private set; }
-
-    /// <summary>
-    /// Set the rendered HTML and null out the raw content to save memory.
-    /// </summary>
-    public void SetRenderedHtml(string renderedHtml)
-    {
-        if (string.IsNullOrWhiteSpace(renderedHtml))
-        {
-            throw new ArgumentException("Rendered HTML cannot be empty", nameof(renderedHtml));
-        }
-
-        RenderedHtml = renderedHtml;
-        Content = null; // Free up memory
-    }
 
     /// <summary>
     /// Set the tags for this content item.
@@ -90,7 +66,6 @@ public record ContentItem
 
     /// <summary>
     /// JSON deserialization constructor - used when deserializing from API responses.
-    /// Does not require the 'content' parameter since Content is [JsonIgnore].
     /// Parameters must match the JSON property names exactly (case-insensitive).
     /// </summary>
     [System.Text.Json.Serialization.JsonConstructor]
@@ -103,24 +78,22 @@ public record ContentItem
         string feedName,
         string primarySectionName,
         IReadOnlyList<string> tags,
+        IReadOnlyList<string>? sections,
         string excerpt,
         string externalUrl,
         bool draft,
         string? subcollectionName,
         IReadOnlyList<string> plans,
-        bool ghesSupport,
-        string? renderedHtml = null)
-        : this(slug, title, author, dateEpoch, collectionName, feedName, primarySectionName, excerpt, externalUrl, draft, "n/a", subcollectionName, plans?.Count > 0 ? string.Join(",", plans) : null, ghesSupport)
+        bool ghesSupport)
+        : this(slug, title, author, dateEpoch, collectionName, feedName, primarySectionName, excerpt, externalUrl, draft, subcollectionName, plans?.Count > 0 ? string.Join(",", plans) : null, ghesSupport)
     {
         SetTags(tags);
-        if (renderedHtml != null)
-        {
-            SetRenderedHtml(renderedHtml);
-        }
+        Sections = sections ?? [];
     }
 
     /// <summary>
-    /// Full constructor with content - used when creating ContentItem from files or database.
+    /// Full constructor - used when creating ContentItem from files or database.
+    /// Boolean section parameters are converted to Sections list.
     /// </summary>
     public ContentItem(
         string slug,
@@ -133,10 +106,17 @@ public record ContentItem
         string excerpt,
         string externalUrl,
         bool draft,
-        string content,
         string? subcollectionName,
         string? plans,
-        bool ghesSupport)
+        bool ghesSupport,
+        string? tagsCsv = null,
+        bool isAi = false,
+        bool isAzure = false,
+        bool isCoding = false,
+        bool isDevOps = false,
+        bool isGitHubCopilot = false,
+        bool isMl = false,
+        bool isSecurity = false)
     {
         // Validate all required properties
         if (string.IsNullOrWhiteSpace(slug))
@@ -232,10 +212,25 @@ public record ContentItem
         SubcollectionName = subcollectionName;
         FeedName = feedName;
         PrimarySectionName = primarySectionName;
-        Tags = [];
+        
+        // Parse tags from comma-separated string
+        Tags = string.IsNullOrWhiteSpace(tagsCsv)
+            ? []
+            : tagsCsv.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+        
+        // Parse sections from boolean columns
+        var sections = new List<string>();
+        if (isAi) sections.Add("ai");
+        if (isAzure) sections.Add("azure");
+        if (isCoding) sections.Add("coding");
+        if (isDevOps) sections.Add("devops");
+        if (isGitHubCopilot) sections.Add("github-copilot");
+        if (isMl) sections.Add("ml");
+        if (isSecurity) sections.Add("security");
+        Sections = sections;
+        
         Excerpt = excerpt;
         ExternalUrl = externalUrl;
-        Content = content;
         Plans = plansList;
         GhesSupport = ghesSupport;
         Draft = draft;

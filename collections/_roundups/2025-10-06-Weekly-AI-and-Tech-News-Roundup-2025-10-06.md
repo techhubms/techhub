@@ -1,6 +1,6 @@
 ﻿---
 title: Agentic AI, Copilot Updates, and Platform Integration Drive Tech Ecosystem Developments
-author: Tech Hub Team
+author: TechHub
 date: 2025-10-06 09:00:00 +00:00
 tags:
 - AI Agents
@@ -31,6 +31,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-10-06
 ---
 Thanks for joining this week’s tech roundup, where AI, automation, and platform engineering increasingly intersect. The focus is on new agentic AI developments, including GitHub Copilot’s unified experience for desktop, terminal, and cloud. Improved agent workflows, the addition of models like Anthropic Claude Sonnet 4.5, and expanded Visual Studio/VS Code integration are changing how developers build and maintain software of all sizes. With features such as auto model selection, multimodal prompts, and extended analytics, AI-powered development and governance now reach broader audiences.
 

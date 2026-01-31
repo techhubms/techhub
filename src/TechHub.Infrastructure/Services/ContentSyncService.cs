@@ -1,4 +1,5 @@
 using System.Data;
+using System.Data.Common;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
@@ -19,10 +20,42 @@ public class ContentSyncService : IContentSyncService
     private readonly IDbConnection _connection;
     private readonly IMarkdownService _markdownService;
     private readonly ILogger<ContentSyncService> _logger;
+    private readonly SyncPerformanceLogger _perfLogger;
     private readonly ContentSyncOptions _options;
     private readonly string _collectionsPath;
     private static readonly char[] _tagSplitSeparators = [' ', '-', '_'];
     private static readonly char[] _excerptSplitSeparators = [' ', '\n', '\r'];
+
+    private sealed record ParsedContent(
+        string CompositeId,
+        string CollectionName,
+        string Slug,
+        string? SubcollectionName,
+        Dictionary<string, object?> FrontMatter,
+        string Content,
+        string Excerpt,
+        long DateEpoch,
+        List<string> Sections,
+        List<string> Tags,
+        List<string> Plans,
+        string ContentHash);
+
+    /// <summary>
+    /// Strongly-typed record for tag words to avoid reflection overhead during bulk insert.
+    /// Uses int (0/1) for boolean flags to match SQLite storage format.
+    /// </summary>
+    private sealed record TagWord(
+        string CollectionName,
+        string Slug,
+        string Word,
+        long DateEpoch,
+        int IsAi,
+        int IsAzure,
+        int IsCoding,
+        int IsDevOps,
+        int IsGitHubCopilot,
+        int IsMl,
+        int IsSecurity);
 
     public ContentSyncService(
         IDbConnection connection,
@@ -40,6 +73,7 @@ public class ContentSyncService : IContentSyncService
         _connection = connection;
         _markdownService = markdownService;
         _logger = logger;
+        _perfLogger = new SyncPerformanceLogger(logger);
         _options = options.Value;
         _collectionsPath = contentOptions.Value.CollectionsPath;
     }
@@ -85,6 +119,9 @@ public class ContentSyncService : IContentSyncService
 
         try
         {
+            // Disable indexes and triggers for maximum write performance
+            await DisableIndexesAndTriggersAsync();
+
             // Start transaction
             var transaction = _connection.BeginTransaction();
 
@@ -94,13 +131,38 @@ public class ContentSyncService : IContentSyncService
                 await _connection.ExecuteAsync("DELETE FROM content_items", transaction: transaction);
                 _logger.LogInformation("Deleted all existing content");
 
-                // Load and insert all content
-                var (added, updated, deleted, unchanged) = await SyncContentAsync(ct);
-
-                // Update sync metadata
-                await UpdateSyncMetadataAsync(added, transaction);
-
                 transaction.Commit();
+                stopwatch.Stop();
+
+                _logger.LogInformation("Delete complete ({Duration:N0}ms)", stopwatch.ElapsedMilliseconds);
+            }
+            catch
+            {
+                transaction.Rollback();
+                throw;
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Full sync failed - delete transaction rolled back");
+            throw;
+        }
+
+        // Now sync content with batched commits (no single giant transaction)
+        stopwatch.Restart();
+        try
+        {
+            // Load and insert all content with batched transactions
+            // For full sync we always use bulk mode (indexes already disabled above)
+            var (added, updated, deleted, unchanged, _) = await SyncContentAsync(ct, bulkModeAlreadyEnabled: true);
+
+            // Update sync metadata in separate transaction
+            var metaTrans = _connection.BeginTransaction();
+            try
+            {
+                await UpdateSyncMetadataAsync(added, metaTrans);
+                metaTrans.Commit();
+
                 stopwatch.Stop();
 
                 _logger.LogInformation(
@@ -111,13 +173,18 @@ public class ContentSyncService : IContentSyncService
             }
             catch
             {
-                transaction.Rollback();
+                metaTrans.Rollback();
                 throw;
+            }
+            finally
+            {
+                // Re-enable indexes and triggers
+                await EnableIndexesAndTriggersAsync();
             }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Full sync failed - transaction rolled back");
+            _logger.LogError(ex, "Full sync failed - metadata transaction rolled back");
             throw;
         }
     }
@@ -137,6 +204,9 @@ public class ContentSyncService : IContentSyncService
         return newFiles || deletedFiles || changedFiles;
     }
 
+    // Threshold for disabling indexes during sync - only worth it for bulk operations
+    private const int BulkOperationThreshold = 50;
+
     private async Task<SyncResult> IncrementalSyncAsync(CancellationToken ct)
     {
         _logger.LogInformation("Starting incremental content sync...");
@@ -144,12 +214,14 @@ public class ContentSyncService : IContentSyncService
 
         try
         {
-            var transaction = _connection.BeginTransaction();
+            // Sync content with batched transactions
+            // Pass flag to indicate whether to use bulk mode (disable indexes)
+            var (added, updated, deleted, unchanged, usedBulkMode) = await SyncContentAsync(ct);
 
+            // Update sync metadata in separate transaction
+            var transaction = _connection.BeginTransaction();
             try
             {
-                var (added, updated, deleted, unchanged) = await SyncContentAsync(ct);
-
                 // Total items = new items + updated items + unchanged items
                 await UpdateSyncMetadataAsync(added + updated + unchanged, transaction);
 
@@ -167,6 +239,14 @@ public class ContentSyncService : IContentSyncService
                 transaction.Rollback();
                 throw;
             }
+            finally
+            {
+                // Re-enable indexes and triggers only if we disabled them
+                if (usedBulkMode)
+                {
+                    await EnableIndexesAndTriggersAsync();
+                }
+            }
         }
         catch (Exception ex)
         {
@@ -175,8 +255,9 @@ public class ContentSyncService : IContentSyncService
         }
     }
 
-    private async Task<(int added, int updated, int deleted, int unchanged)> SyncContentAsync(
-        CancellationToken ct)
+    private async Task<(int added, int updated, int deleted, int unchanged, bool usedBulkMode)> SyncContentAsync(
+        CancellationToken ct,
+        bool bulkModeAlreadyEnabled = false)
     {
         // Get all markdown files
         var markdownFilesList = GetMarkdownFiles();
@@ -205,27 +286,164 @@ public class ContentSyncService : IContentSyncService
             "Changes detected: {New} new, {Updated} updated, {Deleted} deleted, {Unchanged} unchanged",
             newFiles.Count, potentiallyChanged.Count, deletedFiles.Count, unchanged.Count);
 
-        // Process deletions
-        foreach (var compositeId in deletedFiles)
+        // Determine if we should use bulk mode (disable indexes) based on change count
+        // Skip if caller already enabled bulk mode
+        var totalChanges = newFiles.Count + potentiallyChanged.Count + deletedFiles.Count;
+        var usedBulkMode = bulkModeAlreadyEnabled || totalChanges >= BulkOperationThreshold;
+
+        if (!bulkModeAlreadyEnabled && totalChanges >= BulkOperationThreshold)
         {
-            var parts = compositeId.Split(':');
-            var collectionName = parts[0];
-            var slug = parts[1];
-            await _connection.ExecuteAsync(
-                "DELETE FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug",
-                new { CollectionName = collectionName, Slug = slug });
+            _logger.LogInformation("Using bulk mode for {Count} changes (threshold: {Threshold})", totalChanges, BulkOperationThreshold);
+            await DisableIndexesAndTriggersAsync();
+        }
+        else if (totalChanges > 0 && !bulkModeAlreadyEnabled)
+        {
+            _logger.LogInformation("Using normal mode for {Count} changes (below threshold: {Threshold})", totalChanges, BulkOperationThreshold);
         }
 
-        // Process new and updated files sequentially to avoid SQLite thread-safety issues
-        // SQLite does not support concurrent writes even with WAL mode in all configurations
+        // Process deletions with batched transactions
+        if (deletedFiles.Count > 0)
+        {
+            const int BatchSize = 100;
+            for (int i = 0; i < deletedFiles.Count; i += BatchSize)
+            {
+                var batch = deletedFiles.Skip(i).Take(BatchSize);
+                var transaction = _connection.BeginTransaction();
+                try
+                {
+                    foreach (var compositeId in batch)
+                    {
+                        var parts = compositeId.Split(':');
+                        var collectionName = parts[0];
+                        var slug = parts[1];
+                        await _connection.ExecuteAsync(
+                            "DELETE FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug",
+                            new { CollectionName = collectionName, Slug = slug },
+                            transaction);
+                    }
+
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
+        }
+
+        // Phase 1: Parse files in parallel (I/O and CPU intensive)
         var filesToProcess = newFiles.Concat(potentiallyChanged).ToList();
+        _logger.LogInformation("Parsing {Count} files in parallel...", filesToProcess.Count);
+        var parsedFiles = await ParseFilesInParallelAsync(filesToProcess, markdownFiles, fileHashes, ct);
 
-        foreach (var id in filesToProcess)
+        // Track which items are new (INSERT) vs updated (UPDATE) to optimize tag deletion
+        var newItemIds = newFiles.ToHashSet();
+
+        // Phase 2: Write to database with batched commits (commit every 500 items for better performance)
+        _logger.LogInformation("Writing {Count} items to database...", parsedFiles.Count);
+        const int WriteBatchSize = 500;
+        var writeCount = 0;
+        
+        for (int i = 0; i < parsedFiles.Count; i += WriteBatchSize)
         {
-            await ProcessFileAsync(id, markdownFiles[id], fileHashes[id], ct);
-        }
+            var batchStopwatch = Stopwatch.StartNew();
+            var batch = parsedFiles.Skip(i).Take(WriteBatchSize).ToList();
+            var transaction = _connection.BeginTransaction();
+            var itemStopwatch = Stopwatch.StartNew();
+            var totalDeleteMs = 0L;
+            var totalInsertContentMs = 0L;
+            var allBatchTags = new List<TagWord>();
+            try
+            {
+                foreach (var parsed in batch)
+                {
+                    var isNewItem = newItemIds.Contains(parsed.CompositeId);
+                    itemStopwatch.Restart();
+                    var (deleteMs, insertContentMs, tagWords) = await WriteToDatabase(parsed, transaction, isNewItem);
+                    totalDeleteMs += deleteMs;
+                    totalInsertContentMs += insertContentMs;
+                    allBatchTags.AddRange(tagWords);
+                    writeCount++;
+                }
 
-        return (newFiles.Count, potentiallyChanged.Count, deletedFiles.Count, unchanged.Count);
+                // Bulk insert all tags for this batch in chunks (SQLite has a limit of ~999 parameters)
+                var insertTagsStopwatch = Stopwatch.StartNew();
+                if (allBatchTags.Count > 0)
+                {
+                    const int TagsPerChunk = 90; // 90 tags × 11 params = 990 parameters (just under limit)
+                    for (int chunkStart = 0; chunkStart < allBatchTags.Count; chunkStart += TagsPerChunk)
+                    {
+                        var chunkSize = Math.Min(TagsPerChunk, allBatchTags.Count - chunkStart);
+                        var sb = new System.Text.StringBuilder();
+                        sb.Append("INSERT OR IGNORE INTO content_tags_expanded ");
+                        sb.Append("(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security) VALUES ");
+                        
+                        using var cmd = _connection.CreateCommand();
+                        cmd.Transaction = transaction;
+                        
+                        for (int tagIdx = 0; tagIdx < chunkSize; tagIdx++)
+                        {
+                            var tag = allBatchTags[chunkStart + tagIdx];
+
+                            if (tagIdx > 0)
+                            {
+                                sb.Append(", ");
+                            }
+
+                            sb.Append(System.Globalization.CultureInfo.InvariantCulture, $"(@cn{tagIdx}, @s{tagIdx}, @w{tagIdx}, @de{tagIdx}, @ai{tagIdx}, @az{tagIdx}, @c{tagIdx}, @do{tagIdx}, @gc{tagIdx}, @ml{tagIdx}, @sec{tagIdx})");
+                            
+                            // Add parameters using direct property access (no reflection)
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@cn{tagIdx}", tag.CollectionName));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@s{tagIdx}", tag.Slug));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@w{tagIdx}", tag.Word));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@de{tagIdx}", tag.DateEpoch));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@ai{tagIdx}", tag.IsAi));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@az{tagIdx}", tag.IsAzure));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@c{tagIdx}", tag.IsCoding));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@do{tagIdx}", tag.IsDevOps));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@gc{tagIdx}", tag.IsGitHubCopilot));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@ml{tagIdx}", tag.IsMl));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@sec{tagIdx}", tag.IsSecurity));
+                        }
+                        
+                        cmd.CommandText = sb.ToString();
+                        await ((System.Data.Common.DbCommand)cmd).ExecuteNonQueryAsync(ct);
+                    }
+                }
+
+                var totalInsertTagsMs = insertTagsStopwatch.ElapsedMilliseconds;
+
+                var commitStopwatch = Stopwatch.StartNew();
+                transaction.Commit();
+                var commitMs = commitStopwatch.ElapsedMilliseconds;
+                var totalBatchMs = batchStopwatch.ElapsedMilliseconds;
+                
+                _perfLogger.LogBatchProgress(
+                    (i / WriteBatchSize) + 1,
+                    batch.Count,
+                    totalBatchMs,
+                    totalBatchMs - commitMs,
+                    commitMs);
+                
+                _logger.LogInformation("  ↳ Breakdown: DELETE {DeleteMs}ms, INSERT content {InsertContentMs}ms, INSERT tags {InsertTagsMs}ms ({TagCount} tags)",
+                    totalDeleteMs, totalInsertContentMs, totalInsertTagsMs, allBatchTags.Count);
+                
+                if (writeCount % 500 == 0 || writeCount >= parsedFiles.Count)
+                {
+                    _logger.LogInformation("Progress: {Written}/{Total} items written", writeCount, parsedFiles.Count);
+                }
+            }
+            catch
+            {
+                transaction.Rollback();
+                throw;
+            }
+        }
+        
+        _logger.LogInformation("Database writes complete: {Total} items", parsedFiles.Count);
+
+        return (newFiles.Count, potentiallyChanged.Count, deletedFiles.Count, unchanged.Count, usedBulkMode);
     }
 
     private List<FileInfo> GetMarkdownFiles()
@@ -258,17 +476,21 @@ public class ContentSyncService : IContentSyncService
         List<FileInfo> files,
         CancellationToken ct)
     {
-        var hashes = new Dictionary<string, string>();
+        var hashes = new System.Collections.Concurrent.ConcurrentDictionary<string, string>();
 
-        foreach (var file in files)
+        await Parallel.ForEachAsync(files, new ParallelOptions
+        {
+            MaxDegreeOfParallelism = Environment.ProcessorCount * 2,
+            CancellationToken = ct
+        }, async (file, token) =>
         {
             var slug = GetContentSlugFromFile(file);
-            var content = await File.ReadAllTextAsync(file.FullName, ct);
+            var content = await File.ReadAllTextAsync(file.FullName, token);
             var hash = ComputeSha256Hash(content);
             hashes[slug] = hash;
-        }
+        });
 
-        return hashes;
+        return hashes.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
     }
 
     private async Task<Dictionary<string, string>> GetDatabaseHashesAsync()
@@ -280,51 +502,113 @@ public class ContentSyncService : IContentSyncService
         return rows.ToDictionary(r => $"{r.CollectionName}:{r.Slug}", r => r.ContentHash);
     }
 
-    private async Task ProcessFileAsync(
-        string compositeId,
-        FileInfo file,
-        string contentHash,
+    private async Task<List<ParsedContent>> ParseFilesInParallelAsync(
+        List<string> compositeIds,
+        Dictionary<string, FileInfo> markdownFiles,
+        Dictionary<string, string> fileHashes,
         CancellationToken ct)
     {
+        var results = new System.Collections.Concurrent.ConcurrentBag<ParsedContent>();
+
+        await Parallel.ForEachAsync(compositeIds, new ParallelOptions
+        {
+            MaxDegreeOfParallelism = _options.MaxParallelFiles,
+            CancellationToken = ct
+        }, async (compositeId, token) =>
+        {
+            try
+            {
+                var file = markdownFiles[compositeId];
+                var contentHash = fileHashes[compositeId];
+
+                // Extract collection and slug from composite key "collection:slug"
+                var parts = compositeId.Split(':');
+                var collectionName = parts[0];
+                var slug = parts[1];
+
+                // Parse frontmatter and content (I/O intensive)
+                var frontMatter = await _markdownService.ParseFrontMatterAsync(file.FullName, token);
+                var fileContent = await File.ReadAllTextAsync(file.FullName, token);
+
+                // Extract content and excerpt (CPU intensive)
+                var (excerpt, content) = ExtractExcerptAndContent(fileContent);
+
+                // Extract metadata from frontmatter and file path
+                var subcollectionName = GetSubcollectionNameFromPath(file);
+                var dateEpoch = GetDateEpochFromFrontMatter(frontMatter, file.Name);
+                var sections = GetSectionsFromFrontMatter(frontMatter);
+                var tags = GetTagsFromFrontMatter(frontMatter);
+                var plans = GetPlansFromFrontMatter(frontMatter);
+
+                // Validate primary_section is present in frontmatter
+                var primarySection = frontMatter.GetValueOrDefault("primary_section", null)?.ToString();
+                if (string.IsNullOrWhiteSpace(primarySection))
+                {
+                    throw new InvalidOperationException(
+                        $"Missing required 'primary_section' in frontmatter for file: {file.FullName}. " +
+                        "Run ContentFixer to add missing frontmatter fields.");
+                }
+
+                results.Add(new ParsedContent(
+                    compositeId,
+                    collectionName,
+                    slug,
+                    subcollectionName,
+                    frontMatter,
+                    content,
+                    excerpt,
+                    dateEpoch,
+                    sections,
+                    tags,
+                    plans,
+                    contentHash));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to parse file for composite ID: {CompositeId}", compositeId);
+                throw;
+            }
+        });
+
+        return [.. results];
+    }
+
+    private async Task<(long deleteMs, long insertContentMs, List<TagWord> tagWords)> WriteToDatabase(ParsedContent parsed, IDbTransaction transaction, bool isNewItem)
+    {
+        long deleteMs;
+        long insertContentMs;
+
         try
         {
-            // Extract collection and slug from composite key "collection:slug"
-            var parts = compositeId.Split(':');
-            var collectionName = parts[0];
-            var slug = parts[1];
+            var primarySection = parsed.FrontMatter.GetValueOrDefault("primary_section", null)?.ToString()!;
 
-            // Parse frontmatter and content
-            var frontMatter = await _markdownService.ParseFrontMatterAsync(file.FullName, ct);
-            var fileContent = await File.ReadAllTextAsync(file.FullName, ct);
+            // Build tags_csv for in-memory parsing: ",AI,GitHub Copilot,DevOps,"
+            var tagsCsv = parsed.Tags.Count > 0 ? $",{string.Join(",", parsed.Tags)}," : "";
 
-            // Extract content and excerpt
-            var (excerpt, content) = ExtractExcerptAndContent(fileContent);
-
-            // Extract metadata from frontmatter and file path
-            var subcollectionName = GetSubcollectionNameFromPath(file);
-            var dateEpoch = GetDateEpochFromFrontMatter(frontMatter, file.Name);
-            var sections = GetSectionsFromFrontMatter(frontMatter);
-            var tags = GetTagsFromFrontMatter(frontMatter);
-            var plans = GetPlansFromFrontMatter(frontMatter);
-
-            // Validate primary_section is present in frontmatter
-            var primarySection = frontMatter.GetValueOrDefault("primary_section", null)?.ToString();
-            if (string.IsNullOrWhiteSpace(primarySection))
+            // Build section boolean flags
+            var sectionFlags = new
             {
-                throw new InvalidOperationException(
-                    $"Missing required 'primary_section' in frontmatter for file: {file.FullName}. " +
-                    "Run ContentFixer to add missing frontmatter fields.");
-            }
+                IsAi = parsed.Sections.Contains("ai") ? 1 : 0,
+                IsAzure = parsed.Sections.Contains("azure") ? 1 : 0,
+                IsCoding = parsed.Sections.Contains("coding") ? 1 : 0,
+                IsDevOps = parsed.Sections.Contains("devops") ? 1 : 0,
+                IsGitHubCopilot = parsed.Sections.Contains("github-copilot") ? 1 : 0,
+                IsMl = parsed.Sections.Contains("ml") ? 1 : 0,
+                IsSecurity = parsed.Sections.Contains("security") ? 1 : 0
+            };
 
-            // Upsert main content item
+            // Upsert main content item with section booleans
+            var insertContentStopwatch = Stopwatch.StartNew();
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
                     slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
-                    primary_section_name, external_url, author, feed_name, ghes_support, draft, plans, content_hash,
+                    primary_section_name, external_url, author, feed_name, ghes_support, draft, plans, tags_csv, content_hash,
+                    is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security,
                     created_at, updated_at
                 ) VALUES (
                     @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
-                    @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @Plans, @ContentHash,
+                    @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @Plans, @TagsCsv, @ContentHash,
+                    @IsAi, @IsAzure, @IsCoding, @IsDevOps, @IsGitHubCopilot, @IsMl, @IsSecurity,
                     CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                 )
                 ON CONFLICT(collection_name, slug) DO UPDATE SET
@@ -340,62 +624,113 @@ public class ContentSyncService : IContentSyncService
                     ghes_support = @GhesSupport,
                     draft = @Draft,
                     plans = @Plans,
+                    tags_csv = @TagsCsv,
                     content_hash = @ContentHash,
+                    is_ai = @IsAi,
+                    is_azure = @IsAzure,
+                    is_coding = @IsCoding,
+                    is_devops = @IsDevOps,
+                    is_github_copilot = @IsGitHubCopilot,
+                    is_ml = @IsMl,
+                    is_security = @IsSecurity,
                     updated_at = CURRENT_TIMESTAMP",
                 new
                 {
-                    Slug = slug,
-                    Title = frontMatter.GetValueOrDefault("title", "")?.ToString() ?? "",
-                    Content = content,
-                    Excerpt = excerpt,
-                    DateEpoch = dateEpoch,
-                    CollectionName = collectionName,
-                    SubcollectionName = subcollectionName,
+                    Slug = parsed.Slug,
+                    Title = parsed.FrontMatter.GetValueOrDefault("title", "")?.ToString() ?? "",
+                    Content = parsed.Content,
+                    Excerpt = parsed.Excerpt,
+                    DateEpoch = parsed.DateEpoch,
+                    CollectionName = parsed.CollectionName,
+                    SubcollectionName = parsed.SubcollectionName,
                     PrimarySectionName = primarySection,
-                    ExternalUrl = frontMatter.GetValueOrDefault("external_url", null)?.ToString(),
-                    Author = frontMatter.GetValueOrDefault("author", null)?.ToString(),
-                    FeedName = frontMatter.GetValueOrDefault("feed_name", null)?.ToString(),
-                    GhesSupport = (frontMatter.GetValueOrDefault("ghes_support", false) is bool ghesSupport && ghesSupport) ? 1 : 0,
-                    Draft = ConvertBoolToInt(frontMatter, "draft"),
-                    Plans = plans.Count > 0 ? string.Join(",", plans) : null,
-                    ContentHash = contentHash
-                });
+                    ExternalUrl = parsed.FrontMatter.GetValueOrDefault("external_url", null)?.ToString(),
+                    Author = parsed.FrontMatter.GetValueOrDefault("author", null)?.ToString(),
+                    FeedName = parsed.FrontMatter.GetValueOrDefault("feed_name", null)?.ToString(),
+                    GhesSupport = (parsed.FrontMatter.GetValueOrDefault("ghes_support", false) is bool ghesSupport && ghesSupport) ? 1 : 0,
+                    Draft = ConvertBoolToInt(parsed.FrontMatter, "draft"),
+                    Plans = parsed.Plans.Count > 0 ? string.Join(",", parsed.Plans) : null,
+                    TagsCsv = tagsCsv,
+                    ContentHash = parsed.ContentHash,
+                    sectionFlags.IsAi,
+                    sectionFlags.IsAzure,
+                    sectionFlags.IsCoding,
+                    sectionFlags.IsDevOps,
+                    sectionFlags.IsGitHubCopilot,
+                    sectionFlags.IsMl,
+                    sectionFlags.IsSecurity
+                },
+                transaction);
+            insertContentMs = insertContentStopwatch.ElapsedMilliseconds;
 
-            // Delete existing junction table entries
-            await _connection.ExecuteAsync("DELETE FROM content_tags WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
-            await _connection.ExecuteAsync("DELETE FROM content_tags_expanded WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
-            await _connection.ExecuteAsync("DELETE FROM content_sections WHERE collection_name = @CollectionName AND slug = @Slug", new { Slug = slug, CollectionName = collectionName });
+            // Delete existing content_tags_expanded entries (only for updates, not new inserts)
+            var deleteStopwatch = Stopwatch.StartNew();
+            if (!isNewItem)
+            {
+                await _connection.ExecuteAsync(
+                    "DELETE FROM content_tags_expanded WHERE collection_name = @CollectionName AND slug = @Slug",
+                    new { Slug = parsed.Slug, CollectionName = parsed.CollectionName },
+                    transaction);
+            }
 
-            // Insert tags and expanded tags
-            foreach (var tag in tags)
+            deleteMs = deleteStopwatch.ElapsedMilliseconds;
+
+            // Collect all tag words for bulk insert (eliminates N+1 query problem)
+            var tagWords = new List<TagWord>();
+            
+            foreach (var tag in parsed.Tags)
             {
                 var tagNormalized = tag.ToLowerInvariant().Trim();
-                await _connection.ExecuteAsync(
-                    "INSERT INTO content_tags (collection_name, slug, tag, tag_normalized) VALUES (@CollectionName, @Slug, @Tag, @TagNormalized)",
-                    new { CollectionName = collectionName, Slug = slug, Tag = tag, TagNormalized = tagNormalized });
-
-                // Expand tags into words for subset matching
+                
+                // Add the full tag (lowercased) for exact matching
+                tagWords.Add(new TagWord(
+                    parsed.CollectionName,
+                    parsed.Slug,
+                    tagNormalized,
+                    parsed.DateEpoch,
+                    sectionFlags.IsAi,
+                    sectionFlags.IsAzure,
+                    sectionFlags.IsCoding,
+                    sectionFlags.IsDevOps,
+                    sectionFlags.IsGitHubCopilot,
+                    sectionFlags.IsMl,
+                    sectionFlags.IsSecurity
+                ));
+                
+                // Also expand tags into words for subset matching
                 var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
                 foreach (var word in words)
                 {
                     var wordNormalized = word.ToLowerInvariant().Trim();
-                    await _connection.ExecuteAsync(
-                        "INSERT OR IGNORE INTO content_tags_expanded (collection_name, slug, tag_word) VALUES (@CollectionName, @Slug, @Word)",
-                        new { CollectionName = collectionName, Slug = slug, Word = wordNormalized });
+                    
+                    // Skip if it's the same as the full tag (already added above)
+                    if (wordNormalized == tagNormalized)
+                    {
+                        continue;
+                    }
+                    
+                    tagWords.Add(new TagWord(
+                        parsed.CollectionName,
+                        parsed.Slug,
+                        wordNormalized,
+                        parsed.DateEpoch,
+                        sectionFlags.IsAi,
+                        sectionFlags.IsAzure,
+                        sectionFlags.IsCoding,
+                        sectionFlags.IsDevOps,
+                        sectionFlags.IsGitHubCopilot,
+                        sectionFlags.IsMl,
+                        sectionFlags.IsSecurity
+                    ));
                 }
             }
 
-            // Insert sections
-            foreach (var section in sections)
-            {
-                await _connection.ExecuteAsync(
-                    "INSERT INTO content_sections (collection_name, slug, section_name) VALUES (@CollectionName, @Slug, @Section)",
-                    new { CollectionName = collectionName, Slug = slug, Section = section });
-            }
+            // Return tags for batch insertion later
+            return (deleteMs, insertContentMs, tagWords);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Failed to process file {FilePath}", file.FullName);
+            _logger.LogError(ex, "Failed to write content to database for: {CollectionName}:{Slug}", parsed.CollectionName, parsed.Slug);
             throw;
         }
     }
@@ -584,6 +919,99 @@ public class ContentSyncService : IContentSyncService
             int i => i != 0 ? 1 : 0,
             _ => 0
         };
+    }
+
+    private async Task DisableIndexesAndTriggersAsync()
+    {
+        _logger.LogInformation("Disabling indexes and FTS triggers for bulk insert performance...");
+
+        // Dynamically drop all secondary indexes (except sqlite_autoindex_* which are for PRIMARY KEY/UNIQUE)
+        // This is future-proof: any new indexes added in EnableIndexesAndTriggersAsync will be auto-dropped
+        var indexes = await _connection.QueryAsync<string>(
+            @"SELECT name FROM sqlite_master 
+              WHERE type = 'index' 
+              AND tbl_name IN ('content_items', 'content_tags_expanded')
+              AND name NOT LIKE 'sqlite_autoindex_%'");
+        
+        foreach (var indexName in indexes)
+        {
+            await _connection.ExecuteAsync($"DROP INDEX IF EXISTS {indexName}");
+        }
+        _logger.LogInformation("Dropped {Count} indexes", indexes.Count());
+
+        // Drop FTS triggers (FTS index will be rebuilt at end)
+        await _connection.ExecuteAsync("DROP TRIGGER IF EXISTS content_ai");
+        await _connection.ExecuteAsync("DROP TRIGGER IF EXISTS content_au");
+        await _connection.ExecuteAsync("DROP TRIGGER IF EXISTS content_ad");
+
+        _logger.LogInformation("Indexes and triggers disabled");
+    }
+
+    private async Task EnableIndexesAndTriggersAsync()
+    {
+        _logger.LogInformation("Re-creating indexes and FTS triggers...");
+
+        // Essential indexes based on actual query patterns in SqliteContentRepository
+        
+        // Query: Filter by collection + draft, order by date (GetByCollectionAsync, feed generation)
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_content_collection_date ON content_items(collection_name, draft, date_epoch DESC)");
+
+        // Query: Filter by draft, order by date (GetAllAsync)
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_content_draft_date ON content_items(draft, date_epoch DESC)");
+
+        // Partial indexes for section filtering - supports both section-only and section+collection queries
+        // These are used by GetBySectionAsync and SearchAsync with section filters
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_ai ON content_items(collection_name, date_epoch DESC) WHERE is_ai = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_azure ON content_items(collection_name, date_epoch DESC) WHERE is_azure = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_coding ON content_items(collection_name, date_epoch DESC) WHERE is_coding = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_devops ON content_items(collection_name, date_epoch DESC) WHERE is_devops = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_github_copilot ON content_items(collection_name, date_epoch DESC) WHERE is_github_copilot = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_ml ON content_items(collection_name, date_epoch DESC) WHERE is_ml = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_security ON content_items(collection_name, date_epoch DESC) WHERE is_security = 1 AND draft = 0");
+
+        // Partial indexes for section-filtered tag queries (tag cloud, tag filtering)
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_ai ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_ai = 1");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_azure ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_azure = 1");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_coding ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_coding = 1");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_devops ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_devops = 1");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_github_copilot ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_github_copilot = 1");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_ml ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_ml = 1");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_security ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_security = 1");
+
+        // Query: Lookup tags for a specific content item (used in related articles)
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_content_lookup ON content_tags_expanded(collection_name, slug, tag_word)");
+
+        // Recreate FTS triggers using raw DbCommand (Dapper treats BEGIN as stored procedure)
+        var triggerStopwatch = Stopwatch.StartNew();
+        var dbCmd = (DbCommand)_connection.CreateCommand();
+        
+        dbCmd.CommandText = "CREATE TRIGGER IF NOT EXISTS content_ai AFTER INSERT ON content_items BEGIN INSERT INTO content_fts(rowid, slug, title, excerpt, content) VALUES (new.rowid, new.slug, new.title, new.excerpt, new.content); END";
+        await dbCmd.ExecuteNonQueryAsync();
+
+        dbCmd.CommandText = "CREATE TRIGGER IF NOT EXISTS content_ad AFTER DELETE ON content_items BEGIN INSERT INTO content_fts(content_fts, rowid, slug, title, excerpt, content) VALUES ('delete', old.rowid, old.slug, old.title, old.excerpt, old.content); END";
+        await dbCmd.ExecuteNonQueryAsync();
+
+        dbCmd.CommandText = "CREATE TRIGGER IF NOT EXISTS content_au AFTER UPDATE ON content_items BEGIN INSERT INTO content_fts(content_fts, rowid, slug, title, excerpt, content) VALUES ('delete', old.rowid, old.slug, old.title, old.excerpt, old.content); INSERT INTO content_fts(rowid, slug, title, excerpt, content) VALUES (new.rowid, new.slug, new.title, new.excerpt, new.content); END";
+        await dbCmd.ExecuteNonQueryAsync();
+        _logger.LogInformation("⏱️ FTS triggers creation: {ElapsedMs}ms", triggerStopwatch.ElapsedMilliseconds);
+
+        // Rebuild FTS index from scratch (more efficient than incremental updates)
+        _logger.LogInformation("Rebuilding FTS index...");
+        var ftsRebuildStopwatch = Stopwatch.StartNew();
+        dbCmd.CommandText = "INSERT INTO content_fts(content_fts) VALUES('rebuild')";
+        await dbCmd.ExecuteNonQueryAsync();
+        _logger.LogInformation("⏱️ FTS rebuild: {ElapsedMs}ms", ftsRebuildStopwatch.ElapsedMilliseconds);
+
+        // Update statistics for query planner
+        _logger.LogInformation("Updating query planner statistics...");
+        var analyzeStopwatch = Stopwatch.StartNew();
+        dbCmd.CommandText = "ANALYZE";
+        await dbCmd.ExecuteNonQueryAsync();
+        _logger.LogInformation("⏱️ ANALYZE: {ElapsedMs}ms", analyzeStopwatch.ElapsedMilliseconds);
+        
+        dbCmd.Dispose();
+
+        _logger.LogInformation("Indexes and triggers re-created");
     }
 }
 

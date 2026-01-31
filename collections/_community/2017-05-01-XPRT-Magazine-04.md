@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 04
 date: 2017-05-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-04
 tags:
 - .NET
 - App Delivery

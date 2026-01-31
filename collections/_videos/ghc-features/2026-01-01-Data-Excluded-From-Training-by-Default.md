@@ -1,5 +1,5 @@
 ﻿---
-external_url: ''
+external_url: /github-copilot/videos/Data-Excluded-From-Training-by-Default
 title: Data Excluded From Training by Default
 author: TBD
 date: 2026-01-01 00:00:00 +00:00

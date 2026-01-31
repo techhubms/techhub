@@ -332,49 +332,6 @@ public class TagCloudServiceTests
 
     #endregion
 
-    #region GetAllTags Tests
-
-    [Fact]
-    public async Task GetAllTags_NoFilters_ReturnsAllTagsWithCounts()
-    {
-        // Act
-        var result = await _service.GetAllTagsAsync(null, null, CancellationToken.None);
-
-        // Assert
-        result.Should().NotBeNull();
-        result.Tags.Should().NotBeEmpty();
-        result.Tags.Should().Contain(t => t.Tag == "Code Review");
-        result.Tags.Should().Contain(t => t.Tag == "Developer Tools");
-        result.Tags.All(t => t.Count > 0).Should().BeTrue();
-        result.Tags.Should().BeInDescendingOrder(t => t.Count);
-    }
-
-    [Fact]
-    public async Task GetAllTags_WithSectionFilter_ReturnsOnlySectionTags()
-    {
-        // Act
-        var result = await _service.GetAllTagsAsync("ai", null, CancellationToken.None);
-
-        // Assert - Tags that exist in "ai" section files (no date filter)
-        result.Should().NotBeNull();
-        result.Tags.Should().Contain(t => t.Tag == "Code Review", "Code Review tag exists in ai section blogs");
-        result.Tags.Should().NotContain(t => t.Tag == "Uncategorized", "Uncategorized tag doesn't exist in ai section");
-    }
-
-    [Fact]
-    public async Task GetAllTags_WithSectionAndCollectionFilter_ReturnsOnlyCollectionTags()
-    {
-        // Act - Note: CollectionName is stored without underscore (e.g., "blogs" not "_blogs")
-        var result = await _service.GetAllTagsAsync("ai", "blogs", CancellationToken.None);
-
-        // Assert
-        result.Should().NotBeNull();
-        result.Tags.Should().Contain(t => t.Tag == "Code Review", "Code Review tag exists in ai section blogs");
-        // Verify tags are from blogs only - should NOT contain tags from other collections like videos
-    }
-
-    #endregion
-
     #region Edge Cases
 
     [Fact]

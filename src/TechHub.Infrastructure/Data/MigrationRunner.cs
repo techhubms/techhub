@@ -9,12 +9,15 @@ namespace TechHub.Infrastructure.Data;
 /// <summary>
 /// Executes SQL migration scripts automatically on application startup.
 /// Runs all migration scripts in sequential order based on filename (001_, 002_, etc.).
+/// Tracks executed migrations in a _migrations table to ensure each script runs only once.
+/// Uses file-based locking to prevent concurrent migration execution (critical for SQLite in parallel tests).
 /// </summary>
 public class MigrationRunner
 {
     private readonly IDbConnection _connection;
     private readonly ISqlDialect _dialect;
     private readonly ILogger<MigrationRunner> _logger;
+    private static readonly SemaphoreSlim _migrationLock = new(1, 1);
 
     public MigrationRunner(
         IDbConnection connection,
@@ -32,10 +35,29 @@ public class MigrationRunner
 
     /// <summary>
     /// Run all pending migrations for the configured database provider.
+    /// Acquires a global lock to prevent concurrent migrations (critical for SQLite parallel tests).
     /// </summary>
     public async Task RunMigrationsAsync(CancellationToken cancellationToken = default)
     {
+        // Acquire lock to prevent concurrent migration execution
+        // This is critical when running parallel E2E tests with SQLite
+        await _migrationLock.WaitAsync(cancellationToken);
+        try
+        {
+            await RunMigrationsInternalAsync(cancellationToken);
+        }
+        finally
+        {
+            _migrationLock.Release();
+        }
+    }
+
+    private async Task RunMigrationsInternalAsync(CancellationToken cancellationToken)
+    {
         _logger.LogInformation("Running database migrations for {Provider}...", _dialect.ProviderName);
+
+        // Ensure migration tracking table exists
+        await EnsureMigrationTableExistsAsync();
 
         var migrationFolder = _dialect.ProviderName.ToLowerInvariant() switch
         {
@@ -61,12 +83,57 @@ public class MigrationRunner
 
         _logger.LogInformation("Found {Count} migration scripts", migrationScripts.Count);
 
+        // Get already executed migrations
+        var executedMigrations = await GetExecutedMigrationsAsync();
+
+        var pendingCount = 0;
         foreach (var scriptName in migrationScripts)
         {
+            var scriptFileName = Path.GetFileName(scriptName);
+
+            if (executedMigrations.Contains(scriptFileName))
+            {
+                _logger.LogDebug("Skipping already executed migration: {ScriptName}", scriptFileName);
+                continue;
+            }
+
             await RunMigrationScriptAsync(assembly, scriptName, cancellationToken);
+            pendingCount++;
         }
 
-        _logger.LogInformation("Database migrations completed successfully");
+        if (pendingCount == 0)
+        {
+            _logger.LogInformation("No pending migrations to run");
+        }
+        else
+        {
+            _logger.LogInformation("Database migrations completed successfully ({Count} migrations executed)", pendingCount);
+        }
+    }
+
+    private async Task EnsureMigrationTableExistsAsync()
+    {
+        const string sql = """
+            CREATE TABLE IF NOT EXISTS _migrations (
+                script_name TEXT PRIMARY KEY,
+                executed_at TEXT NOT NULL DEFAULT (datetime('now'))
+            )
+            """;
+
+        await _connection.ExecuteAsync(sql);
+    }
+
+    private async Task<HashSet<string>> GetExecutedMigrationsAsync()
+    {
+        const string sql = "SELECT script_name FROM _migrations";
+        var migrations = await _connection.QueryAsync<string>(sql);
+        return migrations.ToHashSet(StringComparer.OrdinalIgnoreCase);
+    }
+
+    private async Task RecordMigrationAsync(string scriptFileName)
+    {
+        const string sql = "INSERT INTO _migrations (script_name) VALUES (@ScriptName)";
+        await _connection.ExecuteAsync(sql, new { ScriptName = scriptFileName });
     }
 
     private async Task RunMigrationScriptAsync(
@@ -84,6 +151,7 @@ public class MigrationRunner
         try
         {
             await _connection.ExecuteAsync(sql);
+            await RecordMigrationAsync(scriptFileName);
             _logger.LogInformation("Migration {ScriptName} completed successfully", scriptFileName);
         }
         catch (Exception ex)

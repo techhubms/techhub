@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 12
 date: 2022-05-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-12
 tags:
 - ARM Templates
 - Automation

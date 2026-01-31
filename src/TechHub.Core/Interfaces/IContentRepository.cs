@@ -20,8 +20,9 @@ public interface IContentRepository
 
     /// <summary>
     /// Get a single content item by slug and collection.
+    /// Returns ContentItemDetail which includes the full markdown content for rendering.
     /// </summary>
-    Task<ContentItem?> GetBySlugAsync(
+    Task<ContentItemDetail?> GetBySlugAsync(
         string collectionName,
         string slug,
         bool includeDraft = false,
@@ -95,7 +96,8 @@ public interface IContentRepository
 
     /// <summary>
     /// Get tag counts with optional filtering by date range, section, and collection.
-    /// Uses efficient database GROUP BY instead of loading all items.
+    /// Returns top N tags (sorted by count descending) above minUses threshold.
+    /// Results are cached - very fast for repeated calls with same filters.
     /// </summary>
     Task<IReadOnlyList<TagWithCount>> GetTagCountsAsync(
         DateTimeOffset? dateFrom = null,

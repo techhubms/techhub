@@ -48,7 +48,7 @@ public class RssServiceTests
             .WithExcerpt("Test excerpt 1")
             .WithExternalUrl("https://example.com/article-1")
             .WithRenderedHtml("<p>Test content 1</p>")
-            .Build(),
+            .BuildDetail(),
         A.ContentItem
             .WithSlug("test-article-2")
             .WithTitle("Test Article 2")
@@ -61,7 +61,7 @@ public class RssServiceTests
             .WithExcerpt("Test excerpt 2")
             .WithExternalUrl("https://example.com/article-2")
             .WithRenderedHtml("<p>Test content 2</p>")
-            .Build()
+            .BuildDetail()
     ];
 
     [Fact]
@@ -115,7 +115,7 @@ public class RssServiceTests
                 .WithExcerpt($"Excerpt {i}")
                 .WithExternalUrl($"https://example.com/article-{i}")
                 .WithRenderedHtml($"<p>Content {i}</p>")
-                .Build())
+                .BuildDetail())
             .ToList();
 
         // Act
@@ -223,7 +223,7 @@ public class RssServiceTests
                 .WithExcerpt("Test excerpt")
                 .WithExternalUrl("https://example.com/test")
                 .WithRenderedHtml("<p>Content</p>")
-                .Build()
+                .BuildDetail()
         };
 
         // Act
@@ -267,7 +267,7 @@ public class RssServiceTests
                 .WithTags("AI", "Tutorial")
                 .WithExcerpt("Internal video excerpt")
                 .WithRenderedHtml("<p>Video content</p>")
-                .Build()
+                .BuildDetail()
         };
 
         // Act
@@ -368,7 +368,7 @@ public class RssServiceTests
                 .WithPrimarySectionName("ai")
                 .WithTags("tag&special")
                 .WithExcerpt("Excerpt with \"quotes\" & <tags>")                .WithExternalUrl("https://example.com/test")                .WithRenderedHtml("<p>Content</p>")
-                .Build()
+                .BuildDetail()
         };
         var channel = await _rssService.GenerateSectionFeedAsync(section, items);
 

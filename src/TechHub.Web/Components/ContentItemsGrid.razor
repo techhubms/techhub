@@ -167,32 +167,31 @@
             {
                 if (SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
                 {
-                    // /all/all - get everything
-                    Logger.LogDebug("Calling ApiClient.GetContentAsync(\"\", \"\") for /all/all");
-                    items = await ApiClient.GetContentAsync("", "");
+                    // /all/all - get everything across all sections
+                    Logger.LogDebug("Calling ApiClient.GetSectionItemsAsync for /all/all");
+                    items = await ApiClient.GetSectionItemsAsync("all");
                 }
                 else
                 {
-                    // /section/all - get all content for this section (use SectionName)
-                    Logger.LogDebug("Calling ApiClient.GetContentAsync({SectionName}, '') for section={SectionName}", SectionName);
-                    items = await ApiClient.GetContentAsync(SectionName, "");
+                    // /section/all - get all content for this section
+                    Logger.LogDebug("Calling ApiClient.GetSectionItemsAsync({SectionName}) for section all", SectionName);
+                    items = await ApiClient.GetSectionItemsAsync(SectionName);
                 }
             }
             // Special handling for "All" section with specific collection
             else if (SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
-                // /all/news - get all news across all sections
-                Logger.LogDebug("Calling ApiClient.GetContentAsync('', {collectionName}) for collection={collectionName}",
-                CollectionName,
+                // /all/news - get all news across all sections via the "all" section's collection
+                Logger.LogDebug("Calling ApiClient.GetCollectionItemsAsync('all', {collectionName})",
                 CollectionName);
-                items = await ApiClient.GetContentAsync("", CollectionName);
+                items = await ApiClient.GetCollectionItemsAsync("all", CollectionName);
             }
             else
             {
-                // /section/collection - get specific collection for specific section (use SectionName)
-                Logger.LogDebug("Calling ApiClient.GetContentAsync({SectionName}, {collectionName}) for section={SectionName}, collection={collectionName}",
-                SectionName, CollectionName, SectionName, CollectionName);
-                items = await ApiClient.GetContentAsync(SectionName, CollectionName);
+                // /section/collection - get specific collection for specific section
+                Logger.LogDebug("Calling ApiClient.GetCollectionItemsAsync({SectionName}, {collectionName})",
+                SectionName, CollectionName);
+                items = await ApiClient.GetCollectionItemsAsync(SectionName, CollectionName);
             }
 
             contentItems = items?.ToList() ?? new List<ContentItem>();

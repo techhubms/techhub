@@ -3,8 +3,9 @@ using TechHub.Core.Models;
 namespace TechHub.TestUtilities.Builders;
 
 /// <summary>
-/// Builder pattern for creating ContentItem instances in tests.
+/// Builder pattern for creating ContentItem and ContentItemDetail instances in tests.
 /// All required properties have sensible defaults to reduce test boilerplate.
+/// Use Build() for list-view tests (no content), BuildDetail() for detail-view tests (with content).
 /// </summary>
 public class ContentItemBuilder
 {
@@ -128,6 +129,9 @@ public class ContentItemBuilder
         return this;
     }
 
+    /// <summary>
+    /// Build a ContentItem for list-view tests (no content property).
+    /// </summary>
     public ContentItem Build()
     {
         // Convert plans list to CSV string for constructor
@@ -136,6 +140,37 @@ public class ContentItemBuilder
             : null;
 
         var contentItem = new ContentItem(
+            slug: _slug,
+            title: _title,
+            author: _author,
+            dateEpoch: _dateEpoch,
+            collectionName: _collectionName,
+            feedName: _feedName,
+            primarySectionName: _primarySectionName,
+            excerpt: _excerpt,
+            externalUrl: _externalUrl,
+            draft: _draft,
+            subcollectionName: _subcollectionName,
+            plans: plansString,
+            ghesSupport: _ghesSupport
+        );
+
+        contentItem.SetTags(_tags);
+
+        return contentItem;
+    }
+
+    /// <summary>
+    /// Build a ContentItemDetail for detail-view tests (includes content and rendered HTML).
+    /// </summary>
+    public ContentItemDetail BuildDetail()
+    {
+        // Convert plans list to CSV string for constructor
+        var plansString = _plans != null && _plans.Count > 0
+            ? string.Join(",", _plans)
+            : null;
+
+        var contentItem = new ContentItemDetail(
             slug: _slug,
             title: _title,
             author: _author,

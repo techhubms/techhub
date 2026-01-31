@@ -1,6 +1,6 @@
 ﻿---
 title: Latest Updates in AI Development, Cloud Automation, and Enterprise Security
-author: Tech Hub Team
+author: TechHub
 date: 2025-09-08 09:00:00 +00:00
 tags:
 - .NET
@@ -39,6 +39,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-09-08
 ---
 Welcome to this week's tech roundup. We're focusing on practical developments happening at the intersection of AI, cloud, and enterprise automation. GitHub Copilot advances toward a broader role in development, with new features like autonomous agents, integrated web-based workflows, enhanced customization, and more detailed enterprise license administration. Meanwhile, Azure AI Foundry and Copilot Studio introduce tools for AI model management and agent-to-agent automations, making business processes and workflow design more accessible.
 

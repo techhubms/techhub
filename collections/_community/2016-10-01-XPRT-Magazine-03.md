@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 03
 date: 2016-10-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-03
 tags:
 - Agile
 - Automation

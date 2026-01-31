@@ -4,6 +4,7 @@ namespace TechHub.Web.Services;
 
 /// <summary>
 /// Typed HTTP client for calling Tech Hub API endpoints.
+/// Uses the unified /api/sections hierarchy for all content access.
 /// Public to allow mocking in unit tests (virtual methods require public class for Moq proxies).
 /// </summary>
 public class TechHubApiClient : ITechHubApiClient
@@ -20,8 +21,13 @@ public class TechHubApiClient : ITechHubApiClient
         _logger = logger;
     }
 
+    // ================================================================
+    // Section endpoints
+    // ================================================================
+
     /// <summary>
     /// Get all sections with their collections
+    /// GET /api/sections
     /// </summary>
     public virtual async Task<IEnumerable<Section>?> GetAllSectionsAsync(CancellationToken cancellationToken = default)
     {
@@ -44,6 +50,7 @@ public class TechHubApiClient : ITechHubApiClient
 
     /// <summary>
     /// Get a specific section by name
+    /// GET /api/sections/{sectionName}
     /// </summary>
     public virtual async Task<Section?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default)
     {
@@ -52,7 +59,6 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogInformation("Fetching section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{sectionName}", cancellationToken);
 
-            // Return null for 404 (not found is a valid state)
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 _logger.LogWarning("Section not found: {SectionName}", sectionName);
@@ -71,18 +77,25 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get all items in a section
+    /// Get items in a section with optional filtering
+    /// GET /api/sections/{sectionName}/items?take=&amp;skip=&amp;q=&amp;tags=&amp;lastDays=
     /// </summary>
     public virtual async Task<IEnumerable<ContentItem>?> GetSectionItemsAsync(
         string sectionName,
+        int? take = null,
+        int? skip = null,
+        string? query = null,
+        string? tags = null,
+        int? lastDays = null,
         CancellationToken cancellationToken = default)
     {
         try
         {
+            var queryParams = BuildQueryString(take, skip, query, tags, lastDays);
+            var url = $"/api/sections/{sectionName}/items{queryParams}";
+
             _logger.LogInformation("Fetching items for section: {SectionName}", sectionName);
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(
-                $"/api/sections/{sectionName}/items",
-                cancellationToken);
+            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(url, cancellationToken);
 
             _logger.LogInformation("Successfully fetched {Count} items for section {SectionName}",
                 items?.Count() ?? 0, sectionName);
@@ -96,169 +109,245 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get items in a specific collection within a section
+    /// Get tag cloud for a section
+    /// GET /api/sections/{sectionName}/tags
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItem>?> GetSectionCollectionItemsAsync(
+    public virtual async Task<IReadOnlyList<TagCloudItem>?> GetSectionTagsAsync(
+        string sectionName,
+        int? maxTags = null,
+        int? minUses = null,
+        int? lastDays = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var queryParams = new List<string>();
+            if (maxTags.HasValue)
+            {
+                queryParams.Add($"maxTags={maxTags.Value}");
+            }
+
+            if (minUses.HasValue)
+            {
+                queryParams.Add($"minUses={minUses.Value}");
+            }
+
+            if (lastDays.HasValue)
+            {
+                queryParams.Add($"lastDays={lastDays.Value}");
+            }
+
+            var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
+            var url = $"/api/sections/{sectionName}/tags{queryString}";
+
+            _logger.LogInformation("Fetching tag cloud for section: {SectionName}", sectionName);
+            var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
+
+            _logger.LogInformation("Successfully fetched {Count} tags for section {SectionName}",
+                tagCloud?.Count ?? 0, sectionName);
+            return tagCloud;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch tag cloud for section {SectionName}", sectionName);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get all collections in a section
+    /// GET /api/sections/{sectionName}/collections
+    /// </summary>
+    public virtual async Task<IEnumerable<Collection>?> GetSectionCollectionsAsync(
+        string sectionName,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching collections for section: {SectionName}", sectionName);
+            var response = await _httpClient.GetAsync($"/api/sections/{sectionName}/collections", cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Section not found: {SectionName}", sectionName);
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var collections = await response.Content.ReadFromJsonAsync<IEnumerable<Collection>>(cancellationToken: cancellationToken);
+            return collections;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch collections for section {SectionName}", sectionName);
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Collection endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get a specific collection in a section
+    /// GET /api/sections/{sectionName}/collections/{collectionName}
+    /// </summary>
+    public virtual async Task<Collection?> GetCollectionAsync(
         string sectionName,
         string collectionName,
         CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogInformation("Fetching {CollectionName} items for section: {SectionName}",
-                collectionName, sectionName);
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(
-                $"/api/sections/{sectionName}/collections/{collectionName}/items",
+            _logger.LogInformation("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            var response = await _httpClient.GetAsync(
+                $"/api/sections/{sectionName}/collections/{collectionName}",
                 cancellationToken);
 
-            _logger.LogInformation("Successfully fetched {Count} {CollectionName} items for section {SectionName}",
-                items?.Count() ?? 0, collectionName, sectionName);
-            return items;
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Collection not found: {SectionName}/{CollectionName}", sectionName, collectionName);
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var collection = await response.Content.ReadFromJsonAsync<Collection>(cancellationToken: cancellationToken);
+            return collection;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch {CollectionName} items for section {SectionName}",
-                collectionName, sectionName);
+            _logger.LogError(ex, "Failed to fetch collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
 
     /// <summary>
-    /// Filter content by multiple criteria
+    /// Get items in a collection with optional filtering
+    /// GET /api/sections/{sectionName}/collections/{collectionName}/items?take=&amp;skip=&amp;q=&amp;tags=&amp;subcollection=&amp;lastDays=&amp;includeDraft=
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItem>?> FilterContentAsync(
-        string? sections = null,
-        string? collections = null,
+    public virtual async Task<IEnumerable<ContentItem>?> GetCollectionItemsAsync(
+        string sectionName,
+        string collectionName,
+        int? take = null,
+        int? skip = null,
+        string? query = null,
         string? tags = null,
-        string? searchQuery = null,
+        string? subcollection = null,
+        int? lastDays = null,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
         try
         {
             var queryParams = new List<string>();
-            if (!string.IsNullOrWhiteSpace(sections))
+            if (take.HasValue)
             {
-                queryParams.Add($"sections={Uri.EscapeDataString(sections)}");
+                queryParams.Add($"take={take.Value}");
             }
 
-            if (!string.IsNullOrWhiteSpace(collections))
+            if (skip.HasValue)
             {
-                queryParams.Add($"collections={Uri.EscapeDataString(collections)}");
+                queryParams.Add($"skip={skip.Value}");
             }
 
-            if (!string.IsNullOrWhiteSpace(tags))
+            if (!string.IsNullOrEmpty(query))
+            {
+                queryParams.Add($"q={Uri.EscapeDataString(query)}");
+            }
+
+            if (!string.IsNullOrEmpty(tags))
             {
                 queryParams.Add($"tags={Uri.EscapeDataString(tags)}");
             }
 
-            if (!string.IsNullOrWhiteSpace(searchQuery))
+            if (!string.IsNullOrEmpty(subcollection))
             {
-                queryParams.Add($"q={Uri.EscapeDataString(searchQuery)}");
+                queryParams.Add($"subcollection={Uri.EscapeDataString(subcollection)}");
+            }
+
+            if (lastDays.HasValue)
+            {
+                queryParams.Add($"lastDays={lastDays.Value}");
+            }
+
+            if (includeDraft)
+            {
+                queryParams.Add("includeDraft=true");
             }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
-            var url = $"/api/content/filter{queryString}";
+            var url = $"/api/sections/{sectionName}/collections/{collectionName}/items{queryString}";
 
-            _logger.LogInformation("Filtering content with query: {QueryString}", queryString);
+            _logger.LogInformation("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(url, cancellationToken);
 
-            _logger.LogInformation("Filter returned {Count} items", items?.Count() ?? 0);
+            _logger.LogInformation("Successfully fetched {Count} items for collection {SectionName}/{CollectionName}",
+                items?.Count() ?? 0, sectionName, collectionName);
             return items;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to filter content");
+            _logger.LogError(ex, "Failed to fetch items for collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
 
     /// <summary>
-    /// Get all unique tags across all content
+    /// Get tag cloud for a collection
+    /// GET /api/sections/{sectionName}/collections/{collectionName}/tags
     /// </summary>
-    public virtual async Task<IEnumerable<string>?> GetAllTagsAsync(CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            _logger.LogInformation("Fetching all tags from API");
-            var response = await _httpClient.GetFromJsonAsync<AllTagsResponse>(
-                "/api/tags/all",
-                cancellationToken);
-
-            var tags = response?.Tags.Select(t => t.Tag).AsEnumerable();
-            _logger.LogInformation("Successfully fetched {Count} tags", tags?.Count() ?? 0);
-            return tags;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch tags from API");
-            throw;
-        }
-    }
-
-    /// <summary>
-    /// Get content items by section and collection.
-    /// Pass null for section to get all items in the collection regardless of section.
-    /// </summary>
-    public virtual async Task<IEnumerable<ContentItem>?> GetContentAsync(
-        string? sectionName,
+    public virtual async Task<IReadOnlyList<TagCloudItem>?> GetCollectionTagsAsync(
+        string sectionName,
         string collectionName,
+        int? maxTags = null,
+        int? minUses = null,
+        int? lastDays = null,
         CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogInformation("Fetching content for section: {SectionName}, collection: {CollectionName}",
-                string.IsNullOrEmpty(sectionName) ? "(all)" : sectionName,
-                string.IsNullOrEmpty(collectionName) ? "(all)" : collectionName);
+            var queryParams = new List<string>();
+            if (maxTags.HasValue)
+            {
+                queryParams.Add($"maxTags={maxTags.Value}");
+            }
 
-            var url = string.IsNullOrWhiteSpace(sectionName)
-                ? $"/api/content?collectionName={Uri.EscapeDataString(collectionName)}"
-                : $"/api/content?sectionName={Uri.EscapeDataString(sectionName)}&collectionName={Uri.EscapeDataString(collectionName)}";
+            if (minUses.HasValue)
+            {
+                queryParams.Add($"minUses={minUses.Value}");
+            }
 
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(
-                url,
-                cancellationToken);
+            if (lastDays.HasValue)
+            {
+                queryParams.Add($"lastDays={lastDays.Value}");
+            }
 
-            _logger.LogInformation("Successfully fetched {Count} items", items?.Count() ?? 0);
-            return items;
+            var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
+            var url = $"/api/sections/{sectionName}/collections/{collectionName}/tags{queryString}";
+
+            _logger.LogInformation("Fetching tag cloud for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
+
+            _logger.LogInformation("Successfully fetched {Count} tags for collection {SectionName}/{CollectionName}",
+                tagCloud?.Count ?? 0, sectionName, collectionName);
+            return tagCloud;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch content for section {SectionName}, collection {CollectionName}",
-                string.IsNullOrEmpty(sectionName) ? "(all)" : sectionName,
-                string.IsNullOrEmpty(collectionName) ? "(all)" : collectionName);
+            _logger.LogError(ex, "Failed to fetch tag cloud for collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
 
-    /// <summary>
-    /// Get GitHub Copilot feature videos (subcollection=ghc-features), including drafts.
-    /// This is the ONLY endpoint that returns draft content.
-    /// </summary>
-    public virtual async Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            _logger.LogInformation("Fetching GitHub Copilot features (including drafts)");
-
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(
-                "/api/content?collectionName=videos&subcollection=ghc-features&includeDraft=true",
-                cancellationToken);
-
-            _logger.LogInformation("Successfully fetched {Count} GitHub Copilot features", items?.Count() ?? 0);
-            return items;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch GitHub Copilot features");
-            throw;
-        }
-    }
+    // ================================================================
+    // Content item endpoints
+    // ================================================================
 
     /// <summary>
-    /// Get detailed content item by sectionName, collectionName, and slug
+    /// Get content item detail by section, collection, and slug
+    /// GET /api/sections/{sectionName}/collections/{collectionName}/{slug}
     /// </summary>
-    public virtual async Task<ContentItem?> GetContentDetailAsync(
+    public virtual async Task<ContentItemDetail?> GetContentDetailAsync(
         string sectionName,
         string collectionName,
         string slug,
@@ -270,10 +359,9 @@ public class TechHubApiClient : ITechHubApiClient
                 sectionName, collectionName, slug);
 
             var response = await _httpClient.GetAsync(
-                $"/api/content/{sectionName}/{collectionName}/{slug}",
+                $"/api/sections/{sectionName}/collections/{collectionName}/{slug}",
                 cancellationToken);
 
-            // Return null for 404 (not found is a valid state)
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 _logger.LogWarning("Content not found: {SectionName}/{CollectionName}/{Slug}",
@@ -282,7 +370,7 @@ public class TechHubApiClient : ITechHubApiClient
             }
 
             response.EnsureSuccessStatusCode();
-            var item = await response.Content.ReadFromJsonAsync<ContentItem>(cancellationToken: cancellationToken);
+            var item = await response.Content.ReadFromJsonAsync<ContentItemDetail>(cancellationToken: cancellationToken);
             return item;
         }
         catch (HttpRequestException ex)
@@ -293,51 +381,38 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    // ================================================================
+    // Convenience methods (built on top of the unified API)
+    // ================================================================
+
     /// <summary>
-    /// Get the latest items across all sections (for homepage sidebar)
-    /// Uses database-level limiting via SearchAsync for optimal performance.
+    /// Get the latest items across all sections (for homepage sidebar).
+    /// Fetches items from "all" virtual section.
     /// </summary>
     public virtual async Task<IEnumerable<ContentItem>?> GetLatestItemsAsync(
         int count = 10,
         CancellationToken cancellationToken = default)
     {
-        try
-        {
-            _logger.LogInformation("Fetching latest {Count} items via search endpoint", count);
-
-            // Use the search endpoint with Take parameter for database-level limiting
-            var searchResults = await SearchContentAsync(take: count, cancellationToken: cancellationToken);
-
-            _logger.LogInformation("Successfully fetched {Count} latest items", searchResults?.Items.Count ?? 0);
-            return searchResults?.Items;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch latest items");
-            throw;
-        }
+        // Use "all" virtual section to get items across all sections
+        return await GetSectionItemsAsync("all", take: count, cancellationToken: cancellationToken);
     }
 
     /// <summary>
     /// Get the latest roundup (for homepage sidebar)
-    /// Uses database-level limiting via SearchAsync for optimal performance.
     /// </summary>
     public virtual async Task<ContentItem?> GetLatestRoundupAsync(
         CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogInformation("Fetching latest roundup via search endpoint");
-
-            // Use the search endpoint with Collections=roundups and Take=1 for database-level limiting
-            var searchResults = await SearchContentAsync(
-                collections: "roundups",
+            // Get latest 1 item from roundups collection in all sections
+            var items = await GetCollectionItemsAsync(
+                "all",
+                "roundups",
                 take: 1,
                 cancellationToken: cancellationToken);
 
-            var latestRoundup = searchResults?.Items.Count > 0 ? searchResults.Items[0] : null;
-            _logger.LogInformation("Successfully fetched latest roundup: {Title}", latestRoundup?.Title ?? "none");
-            return latestRoundup;
+            return items?.FirstOrDefault();
         }
         catch (HttpRequestException ex)
         {
@@ -347,101 +422,53 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Search content with database-level filtering and pagination.
-    /// This is the most efficient way to query content.
+    /// Get GitHub Copilot feature videos (subcollection=ghc-features), including drafts.
+    /// This is the ONLY endpoint that returns draft content.
     /// </summary>
-    public virtual async Task<SearchResults<ContentItem>?> SearchContentAsync(
-        string? sections = null,
-        string? collections = null,
-        string? tags = null,
-        string? query = null,
-        int? take = null,
-        int? lastDays = null,
-        string? orderBy = null,
+    public virtual async Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(
         CancellationToken cancellationToken = default)
     {
-        try
-        {
-            var queryParams = new List<string>();
-            if (!string.IsNullOrEmpty(sections))
-            {
-                queryParams.Add($"sections={Uri.EscapeDataString(sections)}");
-            }
-
-            if (!string.IsNullOrEmpty(collections))
-            {
-                queryParams.Add($"collections={Uri.EscapeDataString(collections)}");
-            }
-
-            if (!string.IsNullOrEmpty(tags))
-            {
-                queryParams.Add($"tags={Uri.EscapeDataString(tags)}");
-            }
-
-            if (!string.IsNullOrEmpty(query))
-            {
-                queryParams.Add($"q={Uri.EscapeDataString(query)}");
-            }
-
-            if (take.HasValue)
-            {
-                queryParams.Add($"take={take.Value}");
-            }
-
-            if (lastDays.HasValue)
-            {
-                queryParams.Add($"lastDays={lastDays.Value}");
-            }
-
-            if (!string.IsNullOrEmpty(orderBy))
-            {
-                queryParams.Add($"orderBy={Uri.EscapeDataString(orderBy)}");
-            }
-
-            var url = queryParams.Count > 0
-                ? $"/api/content/search?{string.Join("&", queryParams)}"
-                : "/api/content/search";
-
-            _logger.LogDebug("Calling search API: {Url}", url);
-            var results = await _httpClient.GetFromJsonAsync<SearchResults<ContentItem>>(url, cancellationToken);
-            return results;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to search content");
-            throw;
-        }
+        return await GetCollectionItemsAsync(
+            "github-copilot",
+            "videos",
+            subcollection: "ghc-features",
+            includeDraft: true,
+            cancellationToken: cancellationToken);
     }
 
     /// <summary>
-    /// Get popular tags (tags that appear most frequently across all content)
+    /// Get tag cloud for specified scope (backward compatibility wrapper)
     /// </summary>
-    public virtual async Task<IEnumerable<string>?> GetPopularTagsAsync(
-        int count = 15,
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
+    public virtual async Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
+        TagCloudScope scope,
+        string? sectionName = null,
+        string? collectionName = null,
+        string? slug = null,
+        int? maxTags = null,
+        int? minUses = null,
+        int? lastDays = null,
         CancellationToken cancellationToken = default)
     {
-        try
+        return scope switch
         {
-            _logger.LogInformation("Fetching popular tags (top {Count})", count);
+            TagCloudScope.Section when !string.IsNullOrWhiteSpace(sectionName)
+                => await GetSectionTagsAsync(sectionName, maxTags, minUses, lastDays, cancellationToken),
 
-            // Get all tags
-            var allTags = await GetAllTagsAsync(cancellationToken);
+            TagCloudScope.Collection when !string.IsNullOrWhiteSpace(sectionName) && !string.IsNullOrWhiteSpace(collectionName)
+                => await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, cancellationToken),
 
-            // For now, return all tags sorted alphabetically
-            // In the future, this could be enhanced to track tag frequency
-            var popularTags = allTags?
-                .OrderBy(t => t)
-                .Take(count);
+            // Homepage and Content scopes need special handling - fetch from "all" section
+            TagCloudScope.Homepage
+                => await GetSectionTagsAsync("all", maxTags, minUses, lastDays, cancellationToken),
 
-            _logger.LogInformation("Successfully fetched {Count} popular tags", popularTags?.Count() ?? 0);
-            return popularTags;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch popular tags");
-            throw;
-        }
+            _ => null
+        };
     }
+
+    // ================================================================
+    // RSS feed endpoints
+    // ================================================================
 
     /// <summary>
     /// Get RSS feed for all content
@@ -509,32 +536,16 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    // ================================================================
+    // Custom pages endpoints
+    // ================================================================
+
     /// <summary>
     /// Get DX Space page data
     /// </summary>
     public virtual async Task<DXSpacePageData?> GetDXSpaceDataAsync(CancellationToken cancellationToken = default)
     {
-        try
-        {
-            _logger.LogInformation("Fetching DX Space page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/dx-space", cancellationToken);
-
-            // Return null for 404 (not found is a valid state)
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                _logger.LogWarning("DX Space data not found");
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<DXSpacePageData>(cancellationToken: cancellationToken);
-            return data;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch DX Space data");
-            throw;
-        }
+        return await GetCustomPageDataAsync<DXSpacePageData>("/api/custom-pages/dx-space", "DX Space", cancellationToken);
     }
 
     /// <summary>
@@ -542,26 +553,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<HandbookPageData?> GetHandbookDataAsync(CancellationToken cancellationToken = default)
     {
-        try
-        {
-            _logger.LogInformation("Fetching Handbook page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/handbook", cancellationToken);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                _logger.LogWarning("Handbook data not found");
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<HandbookPageData>(cancellationToken: cancellationToken);
-            return data;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch Handbook data");
-            throw;
-        }
+        return await GetCustomPageDataAsync<HandbookPageData>("/api/custom-pages/handbook", "Handbook", cancellationToken);
     }
 
     /// <summary>
@@ -569,26 +561,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<LevelsPageData?> GetLevelsDataAsync(CancellationToken cancellationToken = default)
     {
-        try
-        {
-            _logger.LogInformation("Fetching Levels page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/levels", cancellationToken);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                _logger.LogWarning("Levels data not found");
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<LevelsPageData>(cancellationToken: cancellationToken);
-            return data;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch Levels data");
-            throw;
-        }
+        return await GetCustomPageDataAsync<LevelsPageData>("/api/custom-pages/levels", "Levels", cancellationToken);
     }
 
     /// <summary>
@@ -596,26 +569,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default)
     {
-        try
-        {
-            _logger.LogInformation("Fetching Features page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/features", cancellationToken);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                _logger.LogWarning("Features data not found");
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<FeaturesPageData>(cancellationToken: cancellationToken);
-            return data;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch Features data");
-            throw;
-        }
+        return await GetCustomPageDataAsync<FeaturesPageData>("/api/custom-pages/features", "Features", cancellationToken);
     }
 
     /// <summary>
@@ -623,26 +577,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<GenAIPageData?> GetGenAIBasicsDataAsync(CancellationToken cancellationToken = default)
     {
-        try
-        {
-            _logger.LogInformation("Fetching GenAI Basics page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/genai-basics", cancellationToken);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                _logger.LogWarning("GenAI Basics data not found");
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<GenAIPageData>(cancellationToken: cancellationToken);
-            return data;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch GenAI Basics data");
-            throw;
-        }
+        return await GetCustomPageDataAsync<GenAIPageData>("/api/custom-pages/genai-basics", "GenAI Basics", cancellationToken);
     }
 
     /// <summary>
@@ -650,26 +585,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<GenAIPageData?> GetGenAIAdvancedDataAsync(CancellationToken cancellationToken = default)
     {
-        try
-        {
-            _logger.LogInformation("Fetching GenAI Advanced page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/genai-advanced", cancellationToken);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                _logger.LogWarning("GenAI Advanced data not found");
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<GenAIPageData>(cancellationToken: cancellationToken);
-            return data;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch GenAI Advanced data");
-            throw;
-        }
+        return await GetCustomPageDataAsync<GenAIPageData>("/api/custom-pages/genai-advanced", "GenAI Advanced", cancellationToken);
     }
 
     /// <summary>
@@ -677,26 +593,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<GenAIPageData?> GetGenAIAppliedDataAsync(CancellationToken cancellationToken = default)
     {
-        try
-        {
-            _logger.LogInformation("Fetching GenAI Applied page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/genai-applied", cancellationToken);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                _logger.LogWarning("GenAI Applied data not found");
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<GenAIPageData>(cancellationToken: cancellationToken);
-            return data;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch GenAI Applied data");
-            throw;
-        }
+        return await GetCustomPageDataAsync<GenAIPageData>("/api/custom-pages/genai-applied", "GenAI Applied", cancellationToken);
     }
 
     /// <summary>
@@ -704,101 +601,70 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<SDLCPageData?> GetSDLCDataAsync(CancellationToken cancellationToken = default)
     {
+        return await GetCustomPageDataAsync<SDLCPageData>("/api/custom-pages/sdlc", "SDLC", cancellationToken);
+    }
+
+    // ================================================================
+    // Helper methods
+    // ================================================================
+
+    private static string BuildQueryString(
+        int? take = null,
+        int? skip = null,
+        string? query = null,
+        string? tags = null,
+        int? lastDays = null)
+    {
+        var queryParams = new List<string>();
+        if (take.HasValue)
+        {
+            queryParams.Add($"take={take.Value}");
+        }
+
+        if (skip.HasValue)
+        {
+            queryParams.Add($"skip={skip.Value}");
+        }
+
+        if (!string.IsNullOrEmpty(query))
+        {
+            queryParams.Add($"q={Uri.EscapeDataString(query)}");
+        }
+
+        if (!string.IsNullOrEmpty(tags))
+        {
+            queryParams.Add($"tags={Uri.EscapeDataString(tags)}");
+        }
+
+        if (lastDays.HasValue)
+        {
+            queryParams.Add($"lastDays={lastDays.Value}");
+        }
+
+        return queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
+    }
+
+    private async Task<T?> GetCustomPageDataAsync<T>(string url, string pageName, CancellationToken cancellationToken)
+        where T : class
+    {
         try
         {
-            _logger.LogInformation("Fetching SDLC page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/sdlc", cancellationToken);
+            _logger.LogInformation("Fetching {PageName} page data", pageName);
+            var response = await _httpClient.GetAsync(url, cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarning("SDLC data not found");
+                _logger.LogWarning("{PageName} data not found", pageName);
                 return null;
             }
 
             response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<SDLCPageData>(cancellationToken: cancellationToken);
+            var data = await response.Content.ReadFromJsonAsync<T>(cancellationToken: cancellationToken);
             return data;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch SDLC data");
-            throw;
-        }
-    }
-
-    /// <summary>
-    /// Get tag cloud for specified scope (Homepage, Section, Collection, or Content)
-    /// </summary>
-    /// <param name="scope">Scope for tag cloud (Homepage/Section/Collection/Content)</param>
-    /// <param name="sectionName">Section name (required for Section/Collection/Content scopes)</param>
-    /// <param name="collectionName">Collection name (required for Collection scope)</param>
-    /// <param name="slug">Content item slug (required for Content scope)</param>
-    /// <param name="maxTags">Maximum number of tags to return (default: 20)</param>
-    /// <param name="minUses">Minimum usage count for tag inclusion (default: 1)</param>
-    /// <param name="lastDays">Only include tags from content published within this many days (default: 90)</param>
-    /// <param name="cancellationToken">Cancellation token</param>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
-    public virtual async Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
-        TagCloudScope scope,
-        string? sectionName = null,
-        string? collectionName = null,
-        string? slug = null,
-        int? maxTags = null,
-        int? minUses = null,
-        int? lastDays = null,
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            var queryParams = new List<string>
-            {
-                $"scope={scope}"
-            };
-
-            if (!string.IsNullOrWhiteSpace(sectionName))
-            {
-                queryParams.Add($"section={Uri.EscapeDataString(sectionName)}");
-            }
-
-            if (!string.IsNullOrWhiteSpace(collectionName))
-            {
-                queryParams.Add($"collection={Uri.EscapeDataString(collectionName)}");
-            }
-
-            if (!string.IsNullOrWhiteSpace(slug))
-            {
-                queryParams.Add($"slug={Uri.EscapeDataString(slug)}");
-            }
-
-            if (maxTags.HasValue)
-            {
-                queryParams.Add($"maxTags={maxTags.Value}");
-            }
-
-            if (minUses.HasValue)
-            {
-                queryParams.Add($"minUses={minUses.Value}");
-            }
-
-            if (lastDays.HasValue)
-            {
-                queryParams.Add($"lastDays={lastDays.Value}");
-            }
-
-            var queryString = string.Join("&", queryParams);
-            var url = $"/api/tags/cloud?{queryString}";
-
-            _logger.LogInformation("Fetching tag cloud for scope: {Scope}, section: {SectionName}, collection: {CollectionName}",
-                scope, sectionName ?? "(none)", collectionName ?? "(none)");
-
-            var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
-
-            _logger.LogInformation("Successfully fetched {Count} tags", tagCloud?.Count ?? 0);
-            return tagCloud;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch tag cloud for scope {Scope}", scope);
+            _logger.LogError(ex, "Failed to fetch {PageName} data", pageName);
             throw;
         }
     }

@@ -1,6 +1,6 @@
 ﻿---
 title: Advances in AI Tooling, Platform Engineering, and Security Shape This Week’s Highlights
-author: Tech Hub Team
+author: TechHub
 date: 2026-01-26 09:00:00 +00:00
 tags:
 - Agentic SDK
@@ -30,6 +30,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2026-01-26
 ---
 Welcome to this week’s tech update, covering the latest tools and strategies affecting developer experience and enterprise IT. AI-driven agents now support production environments, with GitHub Copilot’s SDK and enhanced CLI, while Microsoft platforms automate workflows across sectors like healthcare and retail. Azure, machine learning, and Fabric updates drive improvements in performance, security, and modernization—helping teams with DevOps, supply chain enhancements, and up-to-date security. Below, we detail the week’s main releases and approaches influencing the current technology landscape.<!--excerpt_end-->
 

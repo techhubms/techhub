@@ -9,9 +9,10 @@ sudo rm -f /etc/apt/sources.list.d/yarn.list
 
 # Install NSS tools for certificate management, ImageMagick for image processing, and libjxl for JPEG XL encoding
 # Also install exiftool (libimage-exiftool-perl), webp tools, and file utility for Normalize-Images.ps1 script
+# sqlite3 is needed for database inspection and queries
 echo "Installing system dependencies..."
 sudo apt-get update
-sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file
+sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3
 
 # ==================== .NET Dev Certificates ====================
 sudo dotnet workload update

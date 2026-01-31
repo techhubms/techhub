@@ -12,6 +12,61 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 {
+    /// <summary>
+    /// Column selection for list views - excludes content column for performance.
+    /// Maps to ContentItem record which doesn't have a Content property.
+    /// </summary>
+    protected const string ListViewColumns = @"
+                c.slug AS Slug,
+                c.title AS Title,
+                c.author AS Author,
+                c.date_epoch AS DateEpoch,
+                c.collection_name AS CollectionName,
+                c.feed_name AS FeedName,
+                c.primary_section_name AS PrimarySectionName,
+                c.excerpt AS Excerpt,
+                c.external_url AS ExternalUrl,
+                c.draft AS Draft,
+                c.subcollection_name AS SubcollectionName,
+                c.plans AS Plans,
+                c.ghes_support AS GhesSupport,
+                c.tags_csv AS TagsCsv,
+                c.is_ai AS IsAi,
+                c.is_azure AS IsAzure,
+                c.is_coding AS IsCoding,
+                c.is_devops AS IsDevOps,
+                c.is_github_copilot AS IsGitHubCopilot,
+                c.is_ml AS IsMl,
+                c.is_security AS IsSecurity";
+
+    /// <summary>
+    /// Column selection for detail views - includes content column for markdown rendering.
+    /// Maps to ContentItemDetail record which extends ContentItem with the Content property.
+    /// </summary>
+    protected const string DetailViewColumns = @"
+                c.slug AS Slug,
+                c.title AS Title,
+                c.author AS Author,
+                c.date_epoch AS DateEpoch,
+                c.collection_name AS CollectionName,
+                c.feed_name AS FeedName,
+                c.primary_section_name AS PrimarySectionName,
+                c.excerpt AS Excerpt,
+                c.external_url AS ExternalUrl,
+                c.draft AS Draft,
+                c.content AS Content,
+                c.subcollection_name AS SubcollectionName,
+                c.plans AS Plans,
+                c.ghes_support AS GhesSupport,
+                c.tags_csv AS TagsCsv,
+                c.is_ai AS IsAi,
+                c.is_azure AS IsAzure,
+                c.is_coding AS IsCoding,
+                c.is_devops AS IsDevOps,
+                c.is_github_copilot AS IsGitHubCopilot,
+                c.is_ml AS IsMl,
+                c.is_security AS IsSecurity";
+
     protected IDbConnection Connection { get; }
     protected ISqlDialect Dialect { get; }
 
@@ -60,50 +115,31 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 
     /// <summary>
     /// Internal implementation for getting content by slug.
-    /// Uses SQL to query the database.
+    /// Uses SQL to query the database. Includes content column for detail view rendering.
+    /// Returns ContentItemDetail which includes the markdown content.
     /// </summary>
-    protected override async Task<ContentItem?> GetBySlugInternalAsync(
+    protected override async Task<ContentItemDetail?> GetBySlugInternalAsync(
         string collectionName,
         string slug,
         bool includeDraft,
         CancellationToken ct)
     {
-        const string Sql = @"
-            SELECT 
-                c.slug AS Slug,
-                c.title AS Title,
-                c.author AS Author,
-                c.date_epoch AS DateEpoch,
-                c.collection_name AS CollectionName,
-                c.feed_name AS FeedName,
-                c.primary_section_name AS PrimarySectionName,
-                c.excerpt AS Excerpt,
-                c.external_url AS ExternalUrl,
-                c.draft AS Draft,
-                c.content AS Content,
-                c.subcollection_name AS SubcollectionName,
-                c.plans AS Plans,
-                c.ghes_support AS GhesSupport
+        var sql = $@"
+            SELECT {DetailViewColumns}
             FROM content_items c
             WHERE c.collection_name = @collectionName
               AND c.slug = @slug
               AND (c.draft = 0 OR @includeDraft = 1)";
 
-        var item = await Connection.QuerySingleOrDefaultAsync<ContentItem>(
-            new CommandDefinition(Sql, new { collectionName, slug, includeDraft }, cancellationToken: ct));
+        var item = await Connection.QuerySingleOrDefaultAsync<ContentItemDetail>(
+            new CommandDefinition(sql, new { collectionName, slug, includeDraft }, cancellationToken: ct));
 
-        if (item != null)
-        {
-            var hydratedItems = await HydrateTagsAsync([item], ct);
-            return hydratedItems.FirstOrDefault();
-        }
-
-        return null;
+        return item;
     }
 
     /// <summary>
     /// Internal implementation for getting all content.
-    /// Uses SQL to query the database.
+    /// Uses SQL to query the database. Excludes content column for performance.
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
         bool includeDraft,
@@ -111,36 +147,22 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         int offset,
         CancellationToken ct)
     {
-        const string Sql = @"
-            SELECT 
-                c.slug AS Slug,
-                c.title AS Title,
-                c.author AS Author,
-                c.date_epoch AS DateEpoch,
-                c.collection_name AS CollectionName,
-                c.feed_name AS FeedName,
-                c.primary_section_name AS PrimarySectionName,
-                c.excerpt AS Excerpt,
-                c.external_url AS ExternalUrl,
-                c.draft AS Draft,
-                c.content AS Content,
-                c.subcollection_name AS SubcollectionName,
-                c.plans AS Plans,
-                c.ghes_support AS GhesSupport
+        var sql = $@"
+            SELECT {ListViewColumns}
             FROM content_items c
             WHERE c.draft = 0 OR @includeDraft = 1
             ORDER BY c.date_epoch DESC
             LIMIT @limit OFFSET @offset";
 
         var items = await Connection.QueryAsync<ContentItem>(
-            new CommandDefinition(Sql, new { includeDraft, limit, offset }, cancellationToken: ct));
+            new CommandDefinition(sql, new { includeDraft, limit, offset }, cancellationToken: ct));
 
-        return await HydrateTagsAsync([.. items], ct);
+        return [.. items];
     }
 
     /// <summary>
     /// Internal implementation for getting content by collection.
-    /// Uses SQL to query the database.
+    /// Uses SQL to query the database. Excludes content column for performance.
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetByCollectionInternalAsync(
         string collectionName,
@@ -164,21 +186,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
             : "c.collection_name = @collectionName";
 
         var sql = $@"
-            SELECT 
-                c.slug AS Slug,
-                c.title AS Title,
-                c.author AS Author,
-                c.date_epoch AS DateEpoch,
-                c.collection_name AS CollectionName,
-                c.feed_name AS FeedName,
-                c.primary_section_name AS PrimarySectionName,
-                c.excerpt AS Excerpt,
-                c.external_url AS ExternalUrl,
-                c.draft AS Draft,
-                c.content AS Content,
-                c.subcollection_name AS SubcollectionName,
-                c.plans AS Plans,
-                c.ghes_support AS GhesSupport
+            SELECT {ListViewColumns}
             FROM content_items c
             WHERE {whereClause}
               AND (c.draft = 0 OR @includeDraft = 1)
@@ -188,13 +196,14 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         var items = await Connection.QueryAsync<ContentItem>(
             new CommandDefinition(sql, new { collectionName, subcollectionName, includeDraft, limit, offset }, cancellationToken: ct));
 
-        return await HydrateTagsAsync([.. items], ct);
+        return [.. items];
     }
 
     /// <summary>
     /// Internal implementation for getting content by section.
     /// Optionally filter by collection and subcollection.
-    /// Uses SQL to query the database.
+    /// Uses SQL to query the database with dynamic section conditions for optimal index usage.
+    /// Excludes content column for performance.
     /// </summary>
     protected override async Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
         string sectionName,
@@ -213,104 +222,54 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
             return await GetAllInternalAsync(includeDraft, limit, offset, ct);
         }
 
-        // Build dynamic SQL based on filters
-        var sql = @"
-            SELECT 
-                c.slug AS Slug,
-                c.title AS Title,
-                c.author AS Author,
-                c.date_epoch AS DateEpoch,
-                c.collection_name AS CollectionName,
-                c.feed_name AS FeedName,
-                c.primary_section_name AS PrimarySectionName,
-                c.excerpt AS Excerpt,
-                c.external_url AS ExternalUrl,
-                c.draft AS Draft,
-                c.content AS Content,
-                c.subcollection_name AS SubcollectionName,
-                c.plans AS Plans,
-                c.ghes_support AS GhesSupport
-            FROM content_items c
-            INNER JOIN content_sections cs ON c.collection_name = cs.collection_name AND c.slug = cs.slug
-            WHERE cs.section_name = @sectionName
-              AND (c.draft = 0 OR @includeDraft = 1)";
+        // Build section condition directly in SQL (not parameterized) so SQLite can use partial indexes
+        // idx_section_ai, idx_section_azure, etc. have WHERE is_* = 1 AND draft = 0
+        var sectionNormalized = sectionName.ToLowerInvariant().Trim();
+        var sectionCondition = sectionNormalized switch
+        {
+            "ai" => "c.is_ai = 1",
+            "azure" => "c.is_azure = 1",
+            "coding" => "c.is_coding = 1",
+            "devops" => "c.is_devops = 1",
+            "github-copilot" => "c.is_github_copilot = 1",
+            "ml" => "c.is_ml = 1",
+            "security" => "c.is_security = 1",
+            _ => "1=0" // Unknown section - no match (safe default)
+        };
+
+        // Build WHERE clauses for index-optimized filtering
+        var whereClauses = new List<string> { sectionCondition };
+
+        // Draft filtering - directly in SQL for index usage
+        if (!includeDraft)
+        {
+            whereClauses.Add("c.draft = 0");
+        }
 
         // Add collection filter if specified
         if (!string.IsNullOrWhiteSpace(collectionName))
         {
-            sql += " AND c.collection_name = @collectionName";
+            whereClauses.Add("c.collection_name = @collectionName");
         }
 
         // Add subcollection filter if specified
         if (!string.IsNullOrWhiteSpace(subcollectionName))
         {
-            sql += " AND c.subcollection_name = @subcollectionName";
+            whereClauses.Add("c.subcollection_name = @subcollectionName");
         }
 
-        sql += " ORDER BY c.date_epoch DESC LIMIT @limit OFFSET @offset";
+        var whereClause = string.Join(" AND ", whereClauses);
+
+        var sql = $@"
+            SELECT {ListViewColumns}
+            FROM content_items c
+            WHERE {whereClause}
+            ORDER BY c.date_epoch DESC
+            LIMIT @limit OFFSET @offset";
 
         var items = await Connection.QueryAsync<ContentItem>(
-            new CommandDefinition(sql, new { sectionName, collectionName, subcollectionName, includeDraft, limit, offset }, cancellationToken: ct));
+            new CommandDefinition(sql, new { collectionName, subcollectionName, limit, offset }, cancellationToken: ct));
 
-        return await HydrateTagsAsync([.. items], ct);
-    }
-
-    /// <summary>
-    /// Hydrate Tags property from normalized database table.
-    /// Uses single batch query with composite key filtering for optimal performance.
-    /// </summary>
-    private async Task<List<ContentItem>> HydrateTagsAsync(IList<ContentItem> items, CancellationToken ct = default)
-    {
-        if (items.Count == 0)
-        {
-            return [];
-        }
-
-        // Build row value constructor: WHERE (slug, collection_name) IN ((val1, val2), (val3, val4), ...)
-        var parameters = new DynamicParameters();
-        var valuePairs = new List<string>();
-
-        for (int i = 0; i < items.Count; i++)
-        {
-            var slugParam = $"slug{i}";
-            var collectionParam = $"collection{i}";
-            parameters.Add(slugParam, items[i].Slug);
-            parameters.Add(collectionParam, items[i].CollectionName);
-            valuePairs.Add($"(@{slugParam}, @{collectionParam})");
-        }
-
-        var valuesClause = string.Join(", ", valuePairs);
-        var sql = $@"
-            SELECT ct.slug, ct.collection_name, ct.tag
-            FROM content_tags ct
-            WHERE (ct.slug, ct.collection_name) IN ({valuesClause})
-            ORDER BY ct.slug, ct.collection_name, ct.tag";
-
-        var tags = await Connection.QueryAsync<(string Slug, string CollectionName, string Tag)>(
-            new CommandDefinition(sql, parameters, cancellationToken: ct));
-
-        // Build lookup for fast tag assignment
-        var tagLookup = tags.ToLookup(t => (t.Slug, t.CollectionName), t => t.Tag);
-
-        // Hydrate tags into items (in-place mutation via SetTags method)
-        foreach (var item in items)
-        {
-            var itemTags = tagLookup[(item.Slug, item.CollectionName)].ToArray();
-            if (itemTags.Length > 0)
-            {
-                item.SetTags(itemTags);
-            }
-        }
-
-        return (List<ContentItem>)items;
-    }
-
-    /// <summary>
-    /// Legacy method for compatibility. Calls HydrateTagsAsync since plans are now in the items.
-    /// </summary>
-    protected override Task<List<ContentItem>> HydrateRelationshipsAsync(IList<ContentItem> items, CancellationToken ct = default)
-    {
-        ArgumentNullException.ThrowIfNull(items);
-        return HydrateTagsAsync(items, ct);
+        return [.. items];
     }
 }

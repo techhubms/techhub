@@ -1,21 +1,29 @@
 using Microsoft.Extensions.Logging;
+using System.Collections.Concurrent;
+using System.Text;
 
 namespace TechHub.Core.Logging;
 
 /// <summary>
-/// Simple file logger provider for application logs with Europe/Brussels timezone.
-/// Respects log level configuration passed as a dictionary.
+/// High-performance file logger provider with background write queue for concurrent logging.
+/// Uses Europe/Brussels timezone and respects log level configuration.
+/// Thread-safe across multiple processes via per-write file locking.
 /// </summary>
 public sealed class FileLoggerProvider : ILoggerProvider
 {
-    private readonly StreamWriter _writer;
-    private readonly object _lock = new();
+    private readonly string _filePath;
     private readonly Dictionary<string, LogLevel> _logLevels;
     private readonly LogLevel _defaultLogLevel;
     private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+    
+    // High-performance concurrent write queue
+    private readonly BlockingCollection<string> _writeQueue;
+    private readonly Thread _writerThread;
+    private readonly CancellationTokenSource _cts;
 
     /// <summary>
     /// Creates a file logger provider with optional log level configuration.
+    /// Uses a background thread for non-blocking, thread-safe writes.
     /// </summary>
     /// <param name="filePath">Path to the log file.</param>
     /// <param name="logLevels">Dictionary of category prefixes to minimum log levels. Use "Default" key for default level.</param>
@@ -27,7 +35,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
             Directory.CreateDirectory(directory);
         }
 
-        _writer = new StreamWriter(filePath, append: true) { AutoFlush = true };
+        _filePath = filePath;
 
         // Copy log levels from provided dictionary
         _logLevels = new Dictionary<string, LogLevel>(StringComparer.OrdinalIgnoreCase);
@@ -47,12 +55,48 @@ public sealed class FileLoggerProvider : ILoggerProvider
                 }
             }
         }
+
+        // Initialize background writer thread for non-blocking concurrent writes
+        _writeQueue = new BlockingCollection<string>(boundedCapacity: 10000);
+        _cts = new CancellationTokenSource();
+        _writerThread = new Thread(ProcessWriteQueue)
+        {
+            IsBackground = true,
+            Name = "FileLogger-Writer"
+        };
+        _writerThread.Start();
+    }
+
+    private void ProcessWriteQueue()
+    {
+        try
+        {
+            while (!_cts.Token.IsCancellationRequested)
+            {
+                // GetConsumingEnumerable blocks until items available
+                foreach (var logEntry in _writeQueue.GetConsumingEnumerable(_cts.Token))
+                {
+                    // Write each entry with file locking to prevent interleaving across processes
+                    // Each write opens the file, acquires exclusive lock, writes, then closes
+                    // This ensures atomic writes even when multiple test processes run concurrently
+                    using (var fileStream = new FileStream(_filePath, FileMode.Append, FileAccess.Write, FileShare.Read))
+                    using (var writer = new StreamWriter(fileStream, Encoding.UTF8))
+                    {
+                        writer.WriteLine(logEntry);
+                    }
+                }
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            // Expected during shutdown
+        }
     }
 
     public ILogger CreateLogger(string categoryName)
     {
         ArgumentNullException.ThrowIfNull(categoryName);
-        return new FileLogger(categoryName, _writer, _lock, GetMinLogLevel(categoryName));
+        return new FileLogger(categoryName, _writeQueue, GetMinLogLevel(categoryName));
     }
 
     private LogLevel GetMinLogLevel(string categoryName)
@@ -74,29 +118,35 @@ public sealed class FileLoggerProvider : ILoggerProvider
 
     public void Dispose()
     {
-        _writer.Dispose();
+        // Signal shutdown
+        _cts.Cancel();
+        _writeQueue.CompleteAdding();
+        
+        // Wait for writer thread to finish (max 5 seconds)
+        _writerThread.Join(TimeSpan.FromSeconds(5));
+        
+        _writeQueue.Dispose();
+        _cts.Dispose();
+        
         GC.SuppressFinalize(this);
     }
 
     /// <summary>
-    /// Simple file logger for application with local timezone timestamps
+    /// Lock-free file logger that queues writes to a background thread
     /// </summary>
     private sealed class FileLogger : ILogger
     {
         private readonly string _categoryName;
-        private readonly StreamWriter _writer;
-        private readonly object _lock;
+        private readonly BlockingCollection<string> _writeQueue;
         private readonly LogLevel _minLogLevel;
 
-        public FileLogger(string categoryName, StreamWriter writer, object lockObj, LogLevel minLogLevel)
+        public FileLogger(string categoryName, BlockingCollection<string> writeQueue, LogLevel minLogLevel)
         {
             ArgumentNullException.ThrowIfNull(categoryName);
-            ArgumentNullException.ThrowIfNull(writer);
-            ArgumentNullException.ThrowIfNull(lockObj);
+            ArgumentNullException.ThrowIfNull(writeQueue);
 
             _categoryName = categoryName;
-            _writer = writer;
-            _lock = lockObj;
+            _writeQueue = writeQueue;
             _minLogLevel = minLogLevel;
         }
 
@@ -111,15 +161,30 @@ public sealed class FileLoggerProvider : ILoggerProvider
                 return;
             }
 
-            lock (_lock)
+            // Convert UTC to Europe/Brussels timezone (handles CET/CEST automatically)
+            var localTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, _brusselsTimeZone);
+            var logEntry = new StringBuilder(256);
+            logEntry.Append('[')
+                    .Append(localTime.ToString("yyyy-MM-dd HH:mm:ss.fff"))
+                    .Append("] [")
+                    .Append(logLevel)
+                    .Append("] ")
+                    .Append(_categoryName)
+                    .Append(": ")
+                    .Append(formatter(state, exception));
+
+            // Non-blocking write to queue - if queue is full, TryAdd will fail gracefully
+            // This prevents logging from blocking application threads
+            if (!_writeQueue.TryAdd(logEntry.ToString(), millisecondsTimeout: 100))
             {
-                // Convert UTC to Europe/Brussels timezone (handles CET/CEST automatically)
-                var localTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, _brusselsTimeZone);
-                _writer.WriteLine($"[{localTime:yyyy-MM-dd HH:mm:ss.fff}] [{logLevel}] {_categoryName}: {formatter(state, exception)}");
-                if (exception != null)
-                {
-                    _writer.WriteLine(exception.ToString());
-                }
+                // Queue is full - log entry is dropped to prevent blocking
+                // This only happens under extreme load (10000+ queued messages)
+            }
+
+            // If exception exists, queue it as a separate entry
+            if (exception != null)
+            {
+                _writeQueue.TryAdd(exception.ToString(), millisecondsTimeout: 100);
             }
         }
     }

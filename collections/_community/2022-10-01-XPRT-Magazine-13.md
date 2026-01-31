@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 13
 date: 2022-10-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-13
 tags:
 - Accessibility
 - Automation

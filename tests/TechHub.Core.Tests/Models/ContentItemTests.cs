@@ -21,7 +21,7 @@ public class ContentItemTests
             .WithTags("AI", "News", "Machine Learning")
             .WithExternalUrl("https://example.com")
             .WithRenderedHtml("<p>Test content</p>")
-            .Build();
+            .BuildDetail();
     }
 
     [Fact]

@@ -27,7 +27,17 @@ public class ContentItemsGridTests : BunitContext
 
         // Default setup - return empty list
         _mockApiClient
-            .Setup(x => x.GetContentAsync(It.IsAny<string>(), It.IsAny<string>()))
+            .Setup(x => x.GetCollectionItemsAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<bool>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
 
         // Initialize SectionCache with test data

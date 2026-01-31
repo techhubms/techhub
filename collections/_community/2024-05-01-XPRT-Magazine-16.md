@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 16
 date: 2024-05-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-16
 tags:
 - Agents
 - Art

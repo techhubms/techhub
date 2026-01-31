@@ -142,10 +142,8 @@ app.UseCors();
 
 // Map API endpoints
 app.MapSectionsEndpoints();
-app.MapContentEndpoints();
 app.MapCustomPagesEndpoints();
 app.MapRssEndpoints();
-app.MapTagEndpoints();
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
@@ -169,11 +167,6 @@ using (var startupScope = app.Services.CreateScope())
     // Log database record counts for verification
     await LogDatabaseRecordCountsAsync(app, services);
 
-    // Preload all content into cache BEFORE starting server
-    // This blocks server startup until cache is warm, ensuring blazingly fast first request
-    var contentRepository = services.GetRequiredService<IContentRepository>();
-    var loadedItems = await contentRepository.InitializeAsync();
-    app.Logger.LogInformation("✅ Repository initialized with {Count} content items", loadedItems.Count);
 }
 
 await app.RunAsync();
@@ -186,10 +179,7 @@ static async Task LogDatabaseRecordCountsAsync(WebApplication app, IServiceProvi
     var tables = new (string TableName, string Description)[]
     {
         ("content_items", "content items"),
-        ("content_tags", "tags"),
-        ("content_sections", "section mappings"),
         ("content_tags_expanded", "expanded tags"),
-        ("collections", "collections"),
         ("sync_metadata", "sync metadata entries")
     };
 

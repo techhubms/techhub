@@ -1,6 +1,6 @@
 ﻿---
 title: Updated AI DevOps, Copilot Personalization, and Secure Cloud Developments
-author: Tech Hub Team
+author: TechHub
 date: 2025-08-25 09:00:00 +00:00
 tags:
 - .NET Modernization
@@ -35,6 +35,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-08-25
 ---
 Welcome to this week’s roundup, where AI, cloud platforms, and developer-focused tools continue to shape developer workflows. GitHub Copilot leads with new premium models, improved workflow automation, and enhanced customization for both individual and organizational users. Teams now have more tools to manage Copilot and adopt Spaces for context-driven collaboration, along with better diagnostics in Visual Studio and .NET environments.
 

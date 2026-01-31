@@ -40,7 +40,17 @@ public class SectionTests : BunitContext
         ]);
 
         mockApiClient
-            .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
+            .Setup(x => x.GetCollectionItemsAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<bool>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
 
         // Mock ITechHubApiClient for SidebarTagCloud component
@@ -111,7 +121,17 @@ public class SectionTests : BunitContext
         ]);
 
         mockApiClient
-            .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
+            .Setup(x => x.GetCollectionItemsAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<bool>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
 
         // Mock ITechHubApiClient for SidebarTagCloud component

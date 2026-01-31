@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 10
 date: 2020-05-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-10
 tags:
 - Automation
 - Azure Cosmos DB

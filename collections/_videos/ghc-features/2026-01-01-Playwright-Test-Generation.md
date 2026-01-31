@@ -1,5 +1,5 @@
 ﻿---
-external_url: ''
+external_url: /github-copilot/videos/Playwright-Test-Generation
 title: Playwright Test Generation
 author: TBD
 date: 2026-08-29 09:39:31 +00:00

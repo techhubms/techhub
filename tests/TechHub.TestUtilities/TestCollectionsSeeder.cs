@@ -79,11 +79,8 @@ public static class TestCollectionsSeeder
         var tables = new[]
         {
             ("content_items", "content items"),
-            ("content_tags", "tags"),
-            ("content_sections", "section mappings"),
             ("content_plans", "plan mappings"),
             ("content_tags_expanded", "expanded tags"),
-            ("collections", "collections"),
             ("sync_metadata", "sync metadata entries")
         };
 

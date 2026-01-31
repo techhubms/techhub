@@ -60,7 +60,7 @@ public class TagCloudService : ITagCloudService
             ? request.CollectionName
             : null;
 
-        // Use efficient database-level GROUP BY query
+        // Get top N tag counts (repository returns cached results - very fast)
         var tagCounts = await _contentRepository.GetTagCountsAsync(
             dateFrom: dateFrom,
             dateTo: null,
@@ -75,39 +75,10 @@ public class TagCloudService : ITagCloudService
             return [];
         }
 
-        // Apply quantile-based sizing
-        var tagsToInclude = tagCounts
-            .Select(t => new KeyValuePair<string, int>(t.Tag, t.Count))
-            .ToList();
-
-        var tagCloudItems = ApplyQuantileSizing(tagsToInclude);
+        // Apply quantile-based sizing to top N tags
+        var tagCloudItems = ApplyQuantileSizing(tagCounts.ToList());
 
         return tagCloudItems;
-    }
-
-    /// <summary>
-    /// Get all tags with their usage counts for the specified scope
-    /// </summary>
-    public async Task<AllTagsResponse> GetAllTagsAsync(
-        string? sectionName = null,
-        string? collectionName = null,
-        CancellationToken cancellationToken = default)
-    {
-        // Use efficient database-level GROUP BY query (no maxTags limit, minUses = 1)
-        var tagCounts = await _contentRepository.GetTagCountsAsync(
-            dateFrom: null,
-            dateTo: null,
-            sectionName: sectionName,
-            collectionName: collectionName,
-            maxTags: null,
-            minUses: 1,
-            ct: cancellationToken);
-
-        return new AllTagsResponse
-        {
-            Tags = [.. tagCounts],
-            TotalCount = tagCounts.Count
-        };
     }
 
     private async Task<IReadOnlyList<TagCloudItem>> GetContentItemTagsAsync(
@@ -137,7 +108,7 @@ public class TagCloudService : ITagCloudService
             })];
     }
 
-    private List<TagCloudItem> ApplyQuantileSizing(List<KeyValuePair<string, int>> sortedTags)
+    private List<TagCloudItem> ApplyQuantileSizing(List<TagWithCount> sortedTags)
     {
         if (sortedTags.Count == 0)
         {
@@ -156,7 +127,7 @@ public class TagCloudService : ITagCloudService
 
         for (int i = 0; i < sortedTags.Count; i++)
         {
-            var kvp = sortedTags[i];
+            var tag = sortedTags[i];
             TagSize size;
 
             // Top 25% (0-25% index) = Large
@@ -177,8 +148,8 @@ public class TagCloudService : ITagCloudService
 
             result.Add(new TagCloudItem
             {
-                Tag = kvp.Key,
-                Count = kvp.Value,
+                Tag = tag.Tag,
+                Count = tag.Count,
                 Size = size
             });
         }

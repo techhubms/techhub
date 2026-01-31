@@ -1,7 +1,8 @@
-﻿---
+---
 title: XPRT Magazine 18
 date: 2025-05-01 00:00:00 +00:00
 author: Xebia
+external_url: https://xprt.xebia.com/magazine-18
 tags:
 - .NET Aspire
 - Accessibility

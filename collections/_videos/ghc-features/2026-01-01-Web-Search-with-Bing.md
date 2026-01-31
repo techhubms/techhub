@@ -1,5 +1,5 @@
 ﻿---
-external_url: ''
+external_url: /github-copilot/videos/Web-Search-with-Bing
 title: Web Search with Bing
 author: TBD
 date: 2026-08-29 09:39:31 +00:00

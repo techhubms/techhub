@@ -1,5 +1,5 @@
 ﻿---
-external_url: ''
+external_url: /github-copilot/videos/Chat-with-your-Pull-Request
 title: Chat with your Pull Request
 author: TBD
 date: 2026-01-01 00:00:00 +00:00
