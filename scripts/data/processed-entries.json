@@ -24808,5 +24808,11 @@
     "timestamp": "2026-01-30 23:06:54 +00:00",
     "canonical_url": "https://www.cooknwithcopilot.com/blog/trust-but-verify-building-confidence-in-github-copilot-output.html",
     "reason": "Succesfully added: Categories assigned: 'GitHub Copilot' because the article centers entirely on developer use of GitHub Copilot features, usage, and practical advice (GitHub Copilot rules 1, 2, 4). 'AI' was included because Copilot is an AI-powered tool and the advice involves AI interaction and prompt engineering (AI rule 2, 4, 5). 'Coding' is included as the content focuses on code writing, code review strategies, and safe development workflows (Coding rule 4 and 5). No other categories qualify as there is no significant DevOps, Azure, ML, or Security content. Generic exclusion rules do not apply because the article is not biographical, non-technical, or business-focused, and is a blog post in clear English."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Lxi66vm5hP0",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the video centrally demonstrates using GitHub Copilot as an AI-powered developer tool (AI rules 2 and 4, GitHub Copilot inclusion rule 1). 'Coding' is also included because the content details building a development tool from scratch, involving prototyping and shipping code (Coding rules 3, 4, and 5). The central focus is technical, on Copilot CLI and code development, rather than business productivity or general office tasks, aligning with the category inclusion and Copilot distinction rules.",
+    "collection": "videos",
+    "timestamp": "2026-01-31 00:07:11 +00:00"
   }
 ]
