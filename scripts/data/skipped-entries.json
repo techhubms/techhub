@@ -11649,5 +11649,11 @@
     "timestamp": "2026-01-30 19:13:07 +00:00",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/remoteapp-for-word-excel-with-google-drive/m-p/4490874#M13990"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-31 18:03:44 +00:00",
+    "reason": "No categories found: All category inclusion rules require substantive content details focusing on Microsoft technology, developer tooling, coding, DevOps, AI, ML, or Security. This video is primarily about 'Tiny Wins' process improvement and time management at GitHub—a cultural/team productivity strategy. It does not discuss technical implementation details, coding practices, GitHub Actions, Copilot, or specific Microsoft integrations. It also does not meet any category's technology thresholds. Generic exclusion rules also apply: this is high-level developer team inspiration and productivity advice, not technical implementation content.",
+    "canonical_url": "https://www.youtube.com/shorts/XvFVAWEsr0c"
   }
 ]
