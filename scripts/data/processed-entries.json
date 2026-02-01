@@ -24820,5 +24820,11 @@
     "collection": "videos",
     "timestamp": "2026-01-31 15:04:51 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=DW_vw8BkcBU"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-02-01 16:04:32 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=dpxODnbIQgg",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on using GitHub Copilot CLI with multiple AI models (AI rule 2 and 1). Assigned 'GitHub Copilot' because it specifically showcases GitHub Copilot features—model switching, CLI usage, and workflow integration (GitHub Copilot rules 1 and 2). Did NOT assign 'Coding' or 'DevOps' because the video focuses on demoing interface features, not coding patterns, framework development, or CI/CD processes."
   }
 ]
