@@ -1,3 +1,4 @@
+using System.Text;
 using Microsoft.Extensions.Caching.Memory;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
@@ -192,37 +193,6 @@ public abstract class ContentRepositoryBase : IContentRepository
     }
 
     /// <summary>
-    /// Get related articles based on tag overlap.
-    /// Results are cached in memory based on tags and excluded slug.
-    /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> GetRelatedAsync(
-        IReadOnlyList<string> sourceTags,
-        string excludeSlug,
-        int count,
-        CancellationToken ct = default)
-    {
-        ArgumentNullException.ThrowIfNull(sourceTags);
-        ArgumentNullException.ThrowIfNull(excludeSlug);
-
-        if (sourceTags.Count == 0)
-        {
-            return [];
-        }
-
-        // Normalize tags to lowercase to match content_tags_expanded storage
-        var normalizedTags = sourceTags.Select(t => t.ToLowerInvariant()).ToList();
-
-        // Cache key based on sorted tags for consistency
-        var sortedTags = string.Join(",", normalizedTags.OrderBy(t => t));
-        var cacheKey = $"related:{sortedTags}:{excludeSlug}:{count}";
-        return await Cache.GetOrCreateAsync(cacheKey, async entry =>
-        {
-            entry.SetPriority(CacheItemPriority.Normal);
-            return await GetRelatedInternalAsync(normalizedTags, excludeSlug, count, ct);
-        }) ?? [];
-    }
-
-    /// <summary>
     /// Get tag counts with optional filtering by date range, section, and collection.
     /// Returns top N tags (sorted by count descending) above minUses threshold.
     /// Results are cached - very fast for repeated calls with same filters.
@@ -306,15 +276,6 @@ public abstract class ContentRepositoryBase : IContentRepository
         CancellationToken ct);
 
     /// <summary>
-    /// Internal implementation for getting related articles based on tag overlap.
-    /// </summary>
-    protected abstract Task<IReadOnlyList<ContentItem>> GetRelatedInternalAsync(
-        IReadOnlyList<string> sourceTags,
-        string excludeSlug,
-        int count,
-        CancellationToken ct);
-
-    /// <summary>
     /// Internal implementation for getting tag counts with GROUP BY.
     /// </summary>
     protected abstract Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
@@ -335,46 +296,54 @@ public abstract class ContentRepositoryBase : IContentRepository
     {
         ArgumentNullException.ThrowIfNull(request);
 
-        var parts = new List<string> { "search" };
+        // Optimization: Use StringBuilder instead of List<string> + string.Join
+        // to reduce allocations and improve performance for cache key building
+        var sb = new StringBuilder("search");
 
         if (!string.IsNullOrWhiteSpace(request.Query))
         {
-            parts.Add($"q:{request.Query}");
+            sb.Append("|q:").Append(request.Query);
         }
 
         if (request.Tags?.Count > 0)
         {
-            parts.Add($"t:{string.Join(",", request.Tags.OrderBy(x => x))}");
+            sb.Append("|t:");
+            var sortedTags = (IEnumerable<string>)(request.Tags.Count == 1 ? request.Tags : request.Tags.OrderBy(x => x));
+            sb.AppendJoin(',', sortedTags);
         }
 
         if (request.Sections?.Count > 0)
         {
-            parts.Add($"s:{string.Join(",", request.Sections.OrderBy(x => x))}");
+            sb.Append("|s:");
+            var sortedSections = (IEnumerable<string>)(request.Sections.Count == 1 ? request.Sections : request.Sections.OrderBy(x => x));
+            sb.AppendJoin(',', sortedSections);
         }
 
         if (request.Collections?.Count > 0)
         {
-            parts.Add($"c:{string.Join(",", request.Collections.OrderBy(x => x))}");
+            sb.Append("|c:");
+            var sortedCollections = (IEnumerable<string>)(request.Collections.Count == 1 ? request.Collections : request.Collections.OrderBy(x => x));
+            sb.AppendJoin(',', sortedCollections);
         }
 
         if (request.DateFrom.HasValue)
         {
-            parts.Add($"df:{request.DateFrom.Value.ToUnixTimeSeconds()}");
+            sb.Append("|df:").Append(request.DateFrom.Value.ToUnixTimeSeconds());
         }
 
         if (request.DateTo.HasValue)
         {
-            parts.Add($"dt:{request.DateTo.Value.ToUnixTimeSeconds()}");
+            sb.Append("|dt:").Append(request.DateTo.Value.ToUnixTimeSeconds());
         }
 
-        parts.Add($"take:{request.Take}");
+        sb.Append("|take:").Append(request.Take);
 
         if (!string.IsNullOrWhiteSpace(request.ContinuationToken))
         {
-            parts.Add($"ct:{request.ContinuationToken}");
+            sb.Append("|ct:").Append(request.ContinuationToken);
         }
 
-        return string.Join("|", parts);
+        return sb.ToString();
     }
 
     /// <summary>

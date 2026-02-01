@@ -453,42 +453,6 @@ public class FileBasedContentRepository : ContentRepositoryBase
     }
 
     /// <summary>
-    /// In-memory related articles computation for file-based repository.
-    /// Finds articles with overlapping tags, ranked by shared tag count.
-    /// </summary>
-    protected override async Task<IReadOnlyList<ContentItem>> GetRelatedInternalAsync(
-        IReadOnlyList<string> sourceTags,
-        string excludeSlug,
-        int count,
-        CancellationToken ct)
-    {
-        if (sourceTags.Count == 0)
-        {
-            return [];
-        }
-
-        var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
-        var sourceTagSet = new HashSet<string>(sourceTags, StringComparer.OrdinalIgnoreCase);
-
-        // Find articles with tag overlap, ranked by shared tag count
-        var relatedItems = allItems
-            .Where(item => item.Slug != excludeSlug)
-            .Select(item => new
-            {
-                Item = item,
-                SharedTagCount = item.Tags.Count(t => sourceTagSet.Contains(t))
-            })
-            .Where(x => x.SharedTagCount > 0)
-            .OrderByDescending(x => x.SharedTagCount)
-            .ThenByDescending(x => x.Item.DateEpoch)
-            .Take(count)
-            .Select(x => x.Item)
-            .ToList();
-
-        return relatedItems;
-    }
-
-    /// <summary>
     /// Get tag counts from in-memory items using LINQ GROUP BY.
     /// For file-based repository, this is efficient since items are already loaded.
     /// </summary>

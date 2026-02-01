@@ -18,15 +18,25 @@ sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool
 sudo dotnet workload update
 
 echo "🔐 Setting up .NET HTTPS development certificate..."
+# Clean any existing certificate directories with wrong ownership
+sudo rm -rf /home/vscode/.dotnet/corefx/cryptography/x509stores
+sudo rm -rf /home/vscode/.aspnet/https
+
+# Set up certificate store directory with correct ownership
+mkdir -p /home/vscode/.dotnet/corefx/cryptography/x509stores/my
+mkdir -p /home/vscode/.aspnet/https
+
 # Clean old certificates (ignore errors if none exist)
-sudo -E dotnet dev-certs https --clean > /dev/null 2>&1 || true
 dotnet dev-certs https --clean > /dev/null 2>&1 || true
-# Generate new certificate
+
+# Generate new certificate (this creates it in the vscode user store)
 dotnet dev-certs https
-# Trust it on Linux by installing to system certificates
+
+# Export to PEM format for system-level trust
 sudo mkdir -p /usr/local/share/ca-certificates/aspnet
 sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https.crt --format PEM
 sudo update-ca-certificates
+
 echo "✅ HTTPS certificate generated and trusted"
 
 # ==================== .NET Global Tools ====================

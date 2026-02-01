@@ -128,26 +128,52 @@ CREATE INDEX IF NOT EXISTS idx_content_draft_date ON content_items(draft, date_e
 CREATE INDEX IF NOT EXISTS idx_draft_date_tags_covering ON content_items(date_epoch DESC, tags_csv)
     WHERE draft = 0;
 
--- Combined section+collection+date indexes (partial indexes for optimal query plans)
--- These indexes support both section-only and section+collection queries efficiently
--- The partial index WHERE clause allows SQLite to use these for queries matching the condition
--- Including tags_csv makes these covering indexes for tag cloud queries (no table lookups)
-CREATE INDEX IF NOT EXISTS idx_section_ai ON content_items(collection_name, date_epoch DESC, tags_csv) 
+-- Section partial indexes for browsing (no tags_csv needed - not used for tag clouds)
+-- These support GetBySectionAsync and SearchAsync with section filters
+CREATE INDEX IF NOT EXISTS idx_section_ai_date ON content_items(date_epoch DESC)
     WHERE is_ai = 1 AND draft = 0;
-CREATE INDEX IF NOT EXISTS idx_section_azure ON content_items(collection_name, date_epoch DESC, tags_csv) 
+CREATE INDEX IF NOT EXISTS idx_section_azure_date ON content_items(date_epoch DESC)
     WHERE is_azure = 1 AND draft = 0;
-CREATE INDEX IF NOT EXISTS idx_section_coding ON content_items(collection_name, date_epoch DESC, tags_csv) 
+CREATE INDEX IF NOT EXISTS idx_section_coding_date ON content_items(date_epoch DESC)
     WHERE is_coding = 1 AND draft = 0;
-CREATE INDEX IF NOT EXISTS idx_section_devops ON content_items(collection_name, date_epoch DESC, tags_csv) 
+CREATE INDEX IF NOT EXISTS idx_section_devops_date ON content_items(date_epoch DESC)
     WHERE is_devops = 1 AND draft = 0;
-CREATE INDEX IF NOT EXISTS idx_section_github_copilot ON content_items(collection_name, date_epoch DESC, tags_csv) 
+CREATE INDEX IF NOT EXISTS idx_section_github_copilot_date ON content_items(date_epoch DESC)
     WHERE is_github_copilot = 1 AND draft = 0;
-CREATE INDEX IF NOT EXISTS idx_section_ml ON content_items(collection_name, date_epoch DESC, tags_csv) 
+CREATE INDEX IF NOT EXISTS idx_section_ml_date ON content_items(date_epoch DESC)
     WHERE is_ml = 1 AND draft = 0;
-CREATE INDEX IF NOT EXISTS idx_section_security ON content_items(collection_name, date_epoch DESC, tags_csv) 
+CREATE INDEX IF NOT EXISTS idx_section_security_date ON content_items(date_epoch DESC)
     WHERE is_security = 1 AND draft = 0;
 
+-- Section + collection partial indexes for tag cloud queries
+-- Include tags_csv for covering index optimization (GetTagCountsAsync with section+collection)
+CREATE INDEX IF NOT EXISTS idx_section_ai_collection_tags ON content_items(collection_name, date_epoch DESC, tags_csv)
+    WHERE is_ai = 1 AND draft = 0;
+CREATE INDEX IF NOT EXISTS idx_section_azure_collection_tags ON content_items(collection_name, date_epoch DESC, tags_csv)
+    WHERE is_azure = 1 AND draft = 0;
+CREATE INDEX IF NOT EXISTS idx_section_coding_collection_tags ON content_items(collection_name, date_epoch DESC, tags_csv)
+    WHERE is_coding = 1 AND draft = 0;
+CREATE INDEX IF NOT EXISTS idx_section_devops_collection_tags ON content_items(collection_name, date_epoch DESC, tags_csv)
+    WHERE is_devops = 1 AND draft = 0;
+CREATE INDEX IF NOT EXISTS idx_section_github_copilot_collection_tags ON content_items(collection_name, date_epoch DESC, tags_csv)
+    WHERE is_github_copilot = 1 AND draft = 0;
+CREATE INDEX IF NOT EXISTS idx_section_ml_collection_tags ON content_items(collection_name, date_epoch DESC, tags_csv)
+    WHERE is_ml = 1 AND draft = 0;
+CREATE INDEX IF NOT EXISTS idx_section_security_collection_tags ON content_items(collection_name, date_epoch DESC, tags_csv)
+    WHERE is_security = 1 AND draft = 0;
+
+-- Collection index for tag cloud queries (no section filter)
+-- Includes tags_csv for covering index optimization (GetTagCountsAsync with collection-only)
+CREATE INDEX IF NOT EXISTS idx_collection_date_tags ON content_items(collection_name, date_epoch DESC, tags_csv)
+    WHERE draft = 0;
+
 -- Expanded tags indexes
+-- General index for tags-only queries (no section filter, no collection filter)
+CREATE INDEX IF NOT EXISTS idx_tags_date ON content_tags_expanded(tag_word, date_epoch DESC);
+
+-- Collection-scoped tag indexes (tag filtering within specific collection, no section)
+CREATE INDEX IF NOT EXISTS idx_tags_collection ON content_tags_expanded(tag_word, collection_name, date_epoch DESC);
+
 -- Partial indexes for section-filtered tag queries (tag cloud, tag filtering)
 CREATE INDEX IF NOT EXISTS idx_tags_section_ai ON content_tags_expanded(tag_word, date_epoch DESC) 
     WHERE is_ai = 1;
@@ -162,6 +188,22 @@ CREATE INDEX IF NOT EXISTS idx_tags_section_github_copilot ON content_tags_expan
 CREATE INDEX IF NOT EXISTS idx_tags_section_ml ON content_tags_expanded(tag_word, date_epoch DESC) 
     WHERE is_ml = 1;
 CREATE INDEX IF NOT EXISTS idx_tags_section_security ON content_tags_expanded(tag_word, date_epoch DESC) 
+    WHERE is_security = 1;
+
+-- Section + collection tag indexes (most specific tag filtering)
+CREATE INDEX IF NOT EXISTS idx_tags_section_collection_ai ON content_tags_expanded(tag_word, collection_name, date_epoch DESC)
+    WHERE is_ai = 1;
+CREATE INDEX IF NOT EXISTS idx_tags_section_collection_azure ON content_tags_expanded(tag_word, collection_name, date_epoch DESC)
+    WHERE is_azure = 1;
+CREATE INDEX IF NOT EXISTS idx_tags_section_collection_coding ON content_tags_expanded(tag_word, collection_name, date_epoch DESC)
+    WHERE is_coding = 1;
+CREATE INDEX IF NOT EXISTS idx_tags_section_collection_devops ON content_tags_expanded(tag_word, collection_name, date_epoch DESC)
+    WHERE is_devops = 1;
+CREATE INDEX IF NOT EXISTS idx_tags_section_collection_github_copilot ON content_tags_expanded(tag_word, collection_name, date_epoch DESC)
+    WHERE is_github_copilot = 1;
+CREATE INDEX IF NOT EXISTS idx_tags_section_collection_ml ON content_tags_expanded(tag_word, collection_name, date_epoch DESC)
+    WHERE is_ml = 1;
+CREATE INDEX IF NOT EXISTS idx_tags_section_collection_security ON content_tags_expanded(tag_word, collection_name, date_epoch DESC)
     WHERE is_security = 1;
 
 -- Content lookup index for retrieving tags by content item

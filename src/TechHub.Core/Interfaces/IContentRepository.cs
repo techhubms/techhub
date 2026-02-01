@@ -81,20 +81,6 @@ public interface IContentRepository
         CancellationToken ct = default);
 
     /// <summary>
-    /// Get related articles based on tag overlap.
-    /// Returns articles ranked by number of shared tags (descending).
-    /// </summary>
-    /// <param name="sourceTags">Tags from the source article (caller already has these)</param>
-    /// <param name="excludeSlug">Slug of the source article to exclude from results</param>
-    /// <param name="count">Maximum number of related articles to return</param>
-    /// <param name="ct">Cancellation token</param>
-    Task<IReadOnlyList<ContentItem>> GetRelatedAsync(
-        IReadOnlyList<string> sourceTags,
-        string excludeSlug,
-        int count,
-        CancellationToken ct = default);
-
-    /// <summary>
     /// Get tag counts with optional filtering by date range, section, and collection.
     /// Returns top N tags (sorted by count descending) above minUses threshold.
     /// Results are cached - very fast for repeated calls with same filters.

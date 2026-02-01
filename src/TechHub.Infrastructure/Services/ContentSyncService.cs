@@ -676,43 +676,21 @@ public class ContentSyncService : IContentSyncService
             deleteMs = deleteStopwatch.ElapsedMilliseconds;
 
             // Collect all tag words for bulk insert (eliminates N+1 query problem)
+            // NOTE: Skip tags for draft items - they shouldn't be included in tag clouds
             var tagWords = new List<TagWord>();
+            var isDraft = ConvertBoolToInt(parsed.FrontMatter, "draft") == 1;
             
-            foreach (var tag in parsed.Tags)
+            if (!isDraft)
             {
-                var tagNormalized = tag.ToLowerInvariant().Trim();
-                
-                // Add the full tag (lowercased) for exact matching
-                tagWords.Add(new TagWord(
-                    parsed.CollectionName,
-                    parsed.Slug,
-                    tagNormalized,
-                    parsed.DateEpoch,
-                    sectionFlags.IsAi,
-                    sectionFlags.IsAzure,
-                    sectionFlags.IsCoding,
-                    sectionFlags.IsDevOps,
-                    sectionFlags.IsGitHubCopilot,
-                    sectionFlags.IsMl,
-                    sectionFlags.IsSecurity
-                ));
-                
-                // Also expand tags into words for subset matching
-                var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
-                foreach (var word in words)
+                foreach (var tag in parsed.Tags)
                 {
-                    var wordNormalized = word.ToLowerInvariant().Trim();
+                    var tagNormalized = tag.ToLowerInvariant().Trim();
                     
-                    // Skip if it's the same as the full tag (already added above)
-                    if (wordNormalized == tagNormalized)
-                    {
-                        continue;
-                    }
-                    
+                    // Add the full tag (lowercased) for exact matching
                     tagWords.Add(new TagWord(
                         parsed.CollectionName,
                         parsed.Slug,
-                        wordNormalized,
+                        tagNormalized,
                         parsed.DateEpoch,
                         sectionFlags.IsAi,
                         sectionFlags.IsAzure,
@@ -722,6 +700,33 @@ public class ContentSyncService : IContentSyncService
                         sectionFlags.IsMl,
                         sectionFlags.IsSecurity
                     ));
+                    
+                    // Also expand tags into words for subset matching
+                    var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (var word in words)
+                    {
+                        var wordNormalized = word.ToLowerInvariant().Trim();
+                        
+                        // Skip if it's the same as the full tag (already added above)
+                        if (wordNormalized == tagNormalized)
+                        {
+                            continue;
+                        }
+                        
+                        tagWords.Add(new TagWord(
+                            parsed.CollectionName,
+                            parsed.Slug,
+                            wordNormalized,
+                            parsed.DateEpoch,
+                            sectionFlags.IsAi,
+                            sectionFlags.IsAzure,
+                            sectionFlags.IsCoding,
+                            sectionFlags.IsDevOps,
+                            sectionFlags.IsGitHubCopilot,
+                            sectionFlags.IsMl,
+                            sectionFlags.IsSecurity
+                        ));
+                    }
                 }
             }
 
@@ -959,6 +964,10 @@ public class ContentSyncService : IContentSyncService
         // Query: Filter by draft, order by date (GetAllAsync)
         await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_content_draft_date ON content_items(draft, date_epoch DESC)");
 
+        // COVERING INDEX for GetTagCountsAsync (all sections) - includes tags_csv to avoid table lookups
+        // This is the MOST CRITICAL index for homepage tag cloud performance
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_all_covering ON content_items(draft, tags_csv) WHERE draft = 0");
+
         // Partial indexes for section filtering - supports both section-only and section+collection queries
         // These are used by GetBySectionAsync and SearchAsync with section filters
         await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_ai ON content_items(collection_name, date_epoch DESC) WHERE is_ai = 1 AND draft = 0");
@@ -968,6 +977,19 @@ public class ContentSyncService : IContentSyncService
         await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_github_copilot ON content_items(collection_name, date_epoch DESC) WHERE is_github_copilot = 1 AND draft = 0");
         await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_ml ON content_items(collection_name, date_epoch DESC) WHERE is_ml = 1 AND draft = 0");
         await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_security ON content_items(collection_name, date_epoch DESC) WHERE is_security = 1 AND draft = 0");
+
+        // COVERING INDEXES for GetTagCountsAsync (per-section) - include tags_csv to avoid table lookups
+        // These are CRITICAL for section-specific tag cloud performance
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_ai_covering ON content_items(is_ai, tags_csv) WHERE is_ai = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_azure_covering ON content_items(is_azure, tags_csv) WHERE is_azure = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_coding_covering ON content_items(is_coding, tags_csv) WHERE is_coding = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_devops_covering ON content_items(is_devops, tags_csv) WHERE is_devops = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_github_copilot_covering ON content_items(is_github_copilot, tags_csv) WHERE is_github_copilot = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_ml_covering ON content_items(is_ml, tags_csv) WHERE is_ml = 1 AND draft = 0");
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_security_covering ON content_items(is_security, tags_csv) WHERE is_security = 1 AND draft = 0");
+
+        // General index for tags-only queries (no section filter)
+        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_date ON content_tags_expanded(tag_word, date_epoch DESC)");
 
         // Partial indexes for section-filtered tag queries (tag cloud, tag filtering)
         await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_ai ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_ai = 1");

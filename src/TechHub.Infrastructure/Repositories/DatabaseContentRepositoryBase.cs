@@ -124,15 +124,18 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         bool includeDraft,
         CancellationToken ct)
     {
+        // Build WHERE clause conditionally to allow index usage
+        var draftFilter = includeDraft ? "" : "AND c.draft = 0";
+        
         var sql = $@"
             SELECT {DetailViewColumns}
             FROM content_items c
             WHERE c.collection_name = @collectionName
               AND c.slug = @slug
-              AND (c.draft = 0 OR @includeDraft = 1)";
+              {draftFilter}";
 
         var item = await Connection.QuerySingleOrDefaultAsync<ContentItemDetail>(
-            new CommandDefinition(sql, new { collectionName, slug, includeDraft }, cancellationToken: ct));
+            new CommandDefinition(sql, new { collectionName, slug }, cancellationToken: ct));
 
         return item;
     }
@@ -147,15 +150,18 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         int offset,
         CancellationToken ct)
     {
+        // Build WHERE clause conditionally to allow index usage (idx_content_draft_date)
+        var whereClause = includeDraft ? "" : "WHERE c.draft = 0";
+        
         var sql = $@"
             SELECT {ListViewColumns}
             FROM content_items c
-            WHERE c.draft = 0 OR @includeDraft = 1
+            {whereClause}
             ORDER BY c.date_epoch DESC
             LIMIT @limit OFFSET @offset";
 
         var items = await Connection.QueryAsync<ContentItem>(
-            new CommandDefinition(sql, new { includeDraft, limit, offset }, cancellationToken: ct));
+            new CommandDefinition(sql, new { limit, offset }, cancellationToken: ct));
 
         return [.. items];
     }
@@ -185,16 +191,21 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
             ? "c.collection_name = @collectionName AND c.subcollection_name = @subcollectionName"
             : "c.collection_name = @collectionName";
 
+        // Add draft filter conditionally to allow index usage
+        if (!includeDraft)
+        {
+            whereClause += " AND c.draft = 0";
+        }
+
         var sql = $@"
             SELECT {ListViewColumns}
             FROM content_items c
             WHERE {whereClause}
-              AND (c.draft = 0 OR @includeDraft = 1)
             ORDER BY c.date_epoch DESC
             LIMIT @limit OFFSET @offset";
 
         var items = await Connection.QueryAsync<ContentItem>(
-            new CommandDefinition(sql, new { collectionName, subcollectionName, includeDraft, limit, offset }, cancellationToken: ct));
+            new CommandDefinition(sql, new { collectionName, subcollectionName, limit, offset }, cancellationToken: ct));
 
         return [.. items];
     }
