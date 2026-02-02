@@ -15,7 +15,7 @@
 | **Domain AGENTS.md files** | Technical details - code patterns, framework guidance (e.g., [src/AGENTS.md](src/AGENTS.md)) |
 | **[docs/](docs/)** | Functional docs - WHAT the system does (API specs, features) |
 | **[docs/AGENTS.md](docs/AGENTS.md)** | Documentation strategies - rules for writing and maintaining documentation |
-| **[tests/AGENTS.md](tests/AGENTS.md)** | Testing strategies - testing pyramid, patterns, and requirements |
+| **[tests/AGENTS.md](tests/AGENTS.md)** | Testing strategies - testing diamond, patterns, and requirements |
 
 **How to use**: Follow the 10 steps below. Each step has a checklist - complete or explicitly skip each item.
 
@@ -216,12 +216,14 @@
 
 | Change Type | Required Tests |
 |-------------|----------------|
-| Bug fix | Failing test reproducing bug |
-| New feature | Unit + Integration + E2E |
-| API changes | Integration tests |
-| UI/frontend changes | Component + E2E (**MANDATORY**) |
-| Backend-only | Unit + Integration |
+| Bug fix | Failing test reproducing bug (integration preferred if exposed via API) |
+| New feature | **Integration (MANDATORY)** + Unit (edge cases) + E2E (critical paths) |
+| API changes | **Integration tests (MANDATORY)** |
+| UI/frontend changes | Component + **E2E (MANDATORY)** + Integration for API endpoints |
+| Backend-only | **Integration (MANDATORY)** + Unit (edge cases) |
 | Documentation-only | None |
+
+**Testing Diamond Priority**: Integration tests at the API boundary are the most important layer. All functionality exposed via API must have integration test coverage. Unit tests focus on edge cases and quick feedback. E2E tests validate critical user journeys.
 
 **🚨 E2E tests are MANDATORY for ALL UI changes** - see [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)
 

@@ -157,11 +157,10 @@ tests/TechHub.E2E.Tests/
 │   ├── ApiTestFactory.cs               ← Shared WebApplicationFactory for API tests
 │   ├── SectionEndpointsE2ETests.cs     ← Section endpoints (4 tests)
 │   ├── ContentEndpointsE2ETests.cs     ← Content endpoints (23 tests)
-│   ├── TagEndpointsE2ETests.cs         ← Tag endpoints (15 tests)
-│   └── ApiEndToEndTests.cs             ← Legacy test (1 test for backwards compatibility)
+│   ├── ContentEndpointsE2ETests.cs     ← Content endpoints (23 tests)
+│   └── SectionEndpointsE2ETests.cs     ← Section endpoints (4 tests)
 ├── Helpers/
-│   ├── BlazorHelpers.cs                ← Blazor-specific wait patterns
-│   └── PlaywrightExtensions.cs         ← Page interaction helpers
+│   └── BlazorHelpers.cs                ← Blazor-specific wait patterns
 ├── PlaywrightCollectionFixture.cs      ← Shared browser configuration
 └── xunit.runner.json                   ← Parallel execution settings
 ```
@@ -251,8 +250,7 @@ API E2E tests are organized by endpoint group for maintainability:
 
 - **ApiCollectionFixture.cs**: Shared WebApplicationFactory for all API E2E test classes
 - **SectionEndpointsE2ETests.cs**: Tests for GET /api/sections and GET /api/sections/{name}
-- **ContentEndpointsE2ETests.cs**: Tests for GET /api/content and GET /api/content/filter  
-- **TagEndpointsE2ETests.cs**: Tests for GET /api/tags/all and GET /api/tags/cloud
+- **ContentEndpointsE2ETests.cs**: Tests for GET /api/content, GET /api/content/filter, and tag cloud endpoints
 
 **Pattern**: One test file per logical endpoint group, all sharing the same collection fixture.
 
@@ -266,7 +264,7 @@ API E2E tests are organized by endpoint group for maintainability:
 
 **Performance**: Shared factory reduces API test time from ~12s to ~6.5s by avoiding redundant app startups.
 
-**See**: [Api/TagEndpointsE2ETests.cs](Api/TagEndpointsE2ETests.cs), [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs), [Api/SectionEndpointsE2ETests.cs](Api/SectionEndpointsE2ETests.cs) for complete examples
+**See**: [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs), [Api/SectionEndpointsE2ETests.cs](Api/SectionEndpointsE2ETests.cs) for complete examples
 
 **Total**: 83 E2E test cases across all Web test files:
 
@@ -481,7 +479,7 @@ await Assertions.Expect(link).ToHaveClassAsync(new Regex("active"),
 **Assertions**: `AssertUrlEndsWithAsync()`, `AssertElementVisibleAsync()`, `AssertElementContainsTextBySelectorAsync()`  
 **Interactions**: `ClickBlazorElementAsync()`, `TextContentWithTimeoutAsync()`, `GetHrefAsync()`
 
-**See**: [Helpers/BlazorHelpers.cs](Helpers/BlazorHelpers.cs) and [Helpers/PlaywrightExtensions.cs](Helpers/PlaywrightExtensions.cs) for complete method list
+**See**: [Helpers/BlazorHelpers.cs](Helpers/BlazorHelpers.cs) for complete method list
 
 **Available Helper Methods**:
 

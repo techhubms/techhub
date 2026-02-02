@@ -22,12 +22,12 @@ public record ContentItem
     public string PrimarySectionName { get; }
 
     public IReadOnlyList<string> Tags { get; private set; } = [];
-    
+
     /// <summary>
     /// List of sections this content belongs to (parsed from database boolean columns).
     /// </summary>
     public IReadOnlyList<string> Sections { get; private set; } = [];
-    
+
     public string Excerpt { get; }
     public string ExternalUrl { get; }
 
@@ -212,23 +212,51 @@ public record ContentItem
         SubcollectionName = subcollectionName;
         FeedName = feedName;
         PrimarySectionName = primarySectionName;
-        
+
         // Parse tags from comma-separated string
         Tags = string.IsNullOrWhiteSpace(tagsCsv)
             ? []
             : tagsCsv.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-        
+
         // Parse sections from boolean columns
         var sections = new List<string>();
-        if (isAi) sections.Add("ai");
-        if (isAzure) sections.Add("azure");
-        if (isCoding) sections.Add("coding");
-        if (isDevOps) sections.Add("devops");
-        if (isGitHubCopilot) sections.Add("github-copilot");
-        if (isMl) sections.Add("ml");
-        if (isSecurity) sections.Add("security");
+        if (isAi)
+        {
+            sections.Add("ai");
+        }
+
+        if (isAzure)
+        {
+            sections.Add("azure");
+        }
+
+        if (isCoding)
+        {
+            sections.Add("coding");
+        }
+
+        if (isDevOps)
+        {
+            sections.Add("devops");
+        }
+
+        if (isGitHubCopilot)
+        {
+            sections.Add("github-copilot");
+        }
+
+        if (isMl)
+        {
+            sections.Add("ml");
+        }
+
+        if (isSecurity)
+        {
+            sections.Add("security");
+        }
+
         Sections = sections;
-        
+
         Excerpt = excerpt;
         ExternalUrl = externalUrl;
         Plans = plansList;

@@ -127,7 +127,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
     {
         // Build WHERE clause conditionally to allow index usage
         var draftFilter = includeDraft ? "" : "AND c.draft = 0";
-        
+
         var sql = $@"
             SELECT {DetailViewColumns}
             FROM content_items c
@@ -153,7 +153,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
     {
         // Build WHERE clause conditionally to allow index usage (idx_content_draft_date)
         var whereClause = includeDraft ? "" : "WHERE c.draft = 0";
-        
+
         var sql = $@"
             SELECT {ListViewColumns}
             FROM content_items c
@@ -244,10 +244,10 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         // Build section condition using bitmask for idx_section_date index usage
         // idx_section_date: (collection_name, date_epoch DESC, sections_bitmask, tags_csv) WHERE draft = 0
         var sectionBitmask = CalculateSectionBitmask(sectionName);
-        
+
         // Build WHERE clauses for index-optimized filtering
         var whereClauses = new List<string>();
-        
+
         if (sectionBitmask > 0)
         {
             whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");

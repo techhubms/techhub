@@ -31,7 +31,7 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
             var errorContent = await response.Content.ReadAsStringAsync();
             throw new Exception($"Expected OK but got {response.StatusCode}. Response: {errorContent}");
         }
-        
+
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         response.Content.Headers.ContentType?.ToString().Should().Be("application/rss+xml; charset=utf-8");
 

@@ -23,13 +23,13 @@ public class SqliteConnectionFactory : IDbConnectionFactory
     {
         var connection = new SqliteConnection(_connectionString);
         connection.Open();
-        
+
         // Enable Write-Ahead Logging (WAL) mode for better write performance
         // WAL allows concurrent reads while writing and prevents journal bloat
         using var cmd = connection.CreateCommand();
         cmd.CommandText = "PRAGMA journal_mode = WAL; PRAGMA synchronous = NORMAL;";
         cmd.ExecuteNonQuery();
-        
+
         return connection;
     }
 }

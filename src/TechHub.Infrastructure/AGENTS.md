@@ -5,9 +5,9 @@
 
 ## Overview
 
-This project implements data access using the Repository pattern with file-based storage, markdown processing, caching, and other infrastructure concerns.
+This project implements data access using SQLite database with FTS5 full-text search, markdown processing, content synchronization from files to database, and other infrastructure concerns.
 
-**When to read this file**: When implementing repositories, working with markdown files, adding caching, or understanding data access patterns.
+**When to read this file**: When implementing repositories, working with database queries, content sync, or understanding data access patterns.
 
 **Testing this code**: See [tests/TechHub.Infrastructure.Tests/AGENTS.md](../../tests/TechHub.Infrastructure.Tests/AGENTS.md) for unit testing patterns.
 
@@ -15,21 +15,70 @@ This project implements data access using the Repository pattern with file-based
 
 ```text
 TechHub.Infrastructure/
+├── Data/                                      # Database infrastructure
+│   ├── DbConnectionFactory.cs                 # SQLite/PostgreSQL connection factories
+│   ├── MigrationRunner.cs                     # Database schema migrations
+│   ├── SqliteDialect.cs                       # SQLite-specific SQL syntax
+│   ├── PostgresDialect.cs                     # PostgreSQL-specific SQL syntax
+│   └── Migrations/                            # SQL migration scripts
+│       ├── sqlite/                            # SQLite migrations
+│       │   └── 001_initial_schema.sql         # Main schema with FTS5
+│       └── postgres/                          # PostgreSQL migrations
 ├── Repositories/                              # Repository implementations
 │   ├── ConfigurationBasedSectionRepository.cs # Sections from appsettings.json
-│   └── FileBasedContentRepository.cs          # Content from markdown files
-├── Services/                                   # Infrastructure services
+│   ├── ContentRepositoryBase.cs               # Abstract base for content repos
+│   ├── DatabaseContentRepositoryBase.cs       # Database-specific base class
+│   ├── SqliteContentRepository.cs             # SQLite with FTS5 implementation
+│   └── FileBasedContentRepository.cs          # Legacy file-based (for reference)
+├── Services/                                  # Infrastructure services
+│   ├── ContentSyncService.cs                  # Sync markdown files to database
 │   ├── FrontMatterParser.cs                   # YAML frontmatter parsing
 │   ├── MarkdownService.cs                     # Markdown to HTML conversion
-│   └── RssService.cs                          # RSS feed generation
+│   ├── RssService.cs                          # RSS feed generation
+│   ├── TagCloudService.cs                     # Tag cloud generation
 └── TechHub.Infrastructure.csproj              # Project file
 ```
+
+## Database Architecture
+
+### Provider Configuration
+
+Database provider is configured in `appsettings.json`:
+
+```json
+{
+  "Database": {
+    "Provider": "SQLite",
+    "ConnectionString": "Data Source=techhub.db"
+  }
+}
+```
+
+**Supported Providers**: SQLite (default), PostgreSQL (planned)
+
+### Schema Overview
+
+**Main Tables**:
+
+- `content_items` - All content with denormalized section flags and bitmask
+- `content_tags_expanded` - Word-level tag matching (denormalized for fast filtering)
+- `sync_metadata` - Tracks last sync time and content hashes
+- `content_fts` - FTS5 virtual table for full-text search
+
+**Key Design Decisions**:
+
+1. **Denormalized section flags**: Each content item has `is_ai`, `is_azure`, `is_github_copilot`, etc. boolean columns for fast filtering without JOINs
+2. **Section bitmask**: Single integer column for multi-section filtering with bitwise operations
+3. **Expanded tags table**: Multi-word tags split into separate rows for word-level matching
+4. **FTS5 external content**: Full-text index synced via triggers
+
+**See**: [Data/Migrations/sqlite/001_initial_schema.sql](Data/Migrations/sqlite/001_initial_schema.sql) for complete schema
 
 ## Repository Patterns
 
 ### Configuration-Based Repository
 
-**Key Pattern**: Load sections from `appsettings.json` in constructor, cache in readonly field, return Task.FromResult.
+**Key Pattern**: Load sections from `appsettings.json` in constructor, cache in readonly field.
 
 **Implementation**: `ConfigurationBasedSectionRepository`
 
@@ -37,24 +86,65 @@ TechHub.Infrastructure/
 
 - Uses `IOptions<AppSettings>` to access configuration
 - Converts `SectionConfig` to domain `Section` models in constructor
-- No file I/O - all data loaded from configuration at startup
+- No database I/O - all data loaded from configuration at startup
 - Thread-safe via readonly collections
-- Supports URL matching with and without leading slash
 
-### File-Based Repository with Caching
+### Database Content Repository
 
-**Key Pattern**: Check cache → Load from disk → Sort by date → Cache result → Return.
+**Key Pattern**: Query SQLite with Dapper → Map to domain models → Use FTS5 for search.
 
-**Implementation**: `FileBasedContentRepository`
+**Implementation**: `SqliteContentRepository` extends `DatabaseContentRepositoryBase`
 
 **Important Details**:
 
-- **Cache expiration**: 30 minutes (configurable via `TimeSpan`)
-- **Cache key**: `"all_content"` (constant string)
-- **Sorting**: CRITICAL - All methods return content sorted by `DateEpoch` descending (newest first)
-- **Error handling**: Log errors, continue processing other files (one bad file doesn't crash system)
-- **Discovery**: Scans `collections/` for directories matching `_*` pattern
-- **Filtering**: `GetBySectionAsync` filters cached content (no separate cache per section)
+- Uses Dapper for lightweight ORM
+- FTS5 for full-text search with BM25 ranking
+- Section filtering via bitmask: `WHERE sections_bitmask & @mask > 0`
+- Tag filtering via subquery on `content_tags_expanded` table
+- Pagination via keyset (cursor-based) for performance
+
+**Query Optimization**:
+
+```sql
+-- Section filtering with bitmask (very fast)
+WHERE sections_bitmask & 17 > 0  -- AI (1) + GitHub Copilot (16)
+
+-- Tag filtering with pre-filter (reduces FTS search scope)
+WHERE (collection_name, slug) IN (
+    SELECT collection_name, slug FROM content_tags_expanded
+    WHERE tag_word IN ('copilot', 'ai')
+)
+```
+
+## Content Synchronization
+
+### ContentSyncService
+
+**Key Pattern**: Hash-based change detection → Incremental sync → Transaction safety.
+
+**Implementation**: `ContentSyncService`
+
+**Sync Process**:
+
+1. Scan markdown files in `collections/` directory
+2. Compute SHA-256 hash of each file
+3. Compare with stored hashes in `sync_metadata`
+4. INSERT new items, UPDATE changed items, DELETE removed items
+5. Rebuild FTS index after bulk operations
+
+**Performance Optimizations**:
+
+- Bulk operations in single transaction
+- Index/trigger disable during sync for speed
+- FTS rebuild at end instead of per-row triggers
+
+**Important Details**:
+
+- Runs at API startup (see Program.cs)
+- Entire sync is transactional (rollback on error)
+- Logs detailed metrics for performance monitoring
+
+**See**: [Services/ContentSyncService.cs](Services/ContentSyncService.cs) for implementation
 
 ## Markdown Processing
 
@@ -62,17 +152,17 @@ TechHub.Infrastructure/
 
 **Key Pattern**: Extract YAML between `---` delimiters → Parse with YamlDotNet → Return metadata + content.
 
-**Implementation**: `FrontMatterParser` (static Parse method)
+**Implementation**: `FrontMatterParser`
 
 **Important Details**:
 
 - Uses `UnderscoredNamingConvention` to map `snake_case` YAML to `PascalCase` C# properties
-- Returns empty `FrontMatter` object if no frontmatter found (graceful degradation)
-- See [src/TechHub.Core/AGENTS.md](../TechHub.Core/AGENTS.md#markdown-frontmatter-mapping) for complete field mappings
+- Returns tuple of (Dictionary, string) for flexibility
+- See [src/TechHub.Core/AGENTS.md](../TechHub.Core/AGENTS.md) for field mappings
 
 ### Markdown to HTML Conversion
 
-**Key Pattern**: Read file → Parse frontmatter → Extract excerpt → Convert to HTML → Map to ContentItem.
+**Key Pattern**: Parse markdown → Apply extensions → Generate HTML with heading IDs.
 
 **Implementation**: `MarkdownService`
 
@@ -80,109 +170,82 @@ TechHub.Infrastructure/
 
 - **Markdig pipeline**: Uses `UseAdvancedExtensions()`, `UseAutoIdentifiers()`, `UseEmojiAndSmiley()`, `UsePipeTables()`
 - **Excerpt extraction**: Content before `<!--excerpt_end-->` marker, or first 200 words if no marker
-- **Slug generation**: Derived from filename without extension
 - **Date handling**: Converts dates to Unix epoch using configured timezone (`Europe/Brussels`)
-- **Tag normalization**: Lowercase + replace spaces with hyphens + deduplicate
-- **Error handling**: Returns null on error, logs exception details
+
+## Service Registration
+
+**Registration in Program.cs**:
+
+```csharp
+// Database infrastructure (based on Provider config)
+builder.Services.AddSingleton<ISqlDialect, SqliteDialect>();
+builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFactory(connectionString));
+builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
+
+// Repositories
+builder.Services.AddTransient<IContentRepository, SqliteContentRepository>();
+builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
+
+// Services
+builder.Services.AddTransient<IMarkdownService, MarkdownService>();
+builder.Services.AddTransient<IRssService, RssService>();
+builder.Services.AddTransient<ITagCloudService, TagCloudService>();
+builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
+builder.Services.AddTransient<MigrationRunner>();
+```
+
+**Service Lifetimes**:
+
+- **Singleton**: `ISqlDialect`, `IDbConnectionFactory`, `ISectionRepository` (stateless or config-based)
+- **Scoped**: `IDbConnection` (per-request database connection)
+- **Transient**: All other services (lightweight, stateless)
+
+## Tag Services
 
 ### Tag Cloud Service
 
-**Key Pattern**: Filter content by scope → Count tags → Filter by min usage → Take top N → Assign quantile sizes.
+**Key Pattern**: Query tags from database → Count occurrences → Apply quantile sizing.
 
 **Implementation**: `TagCloudService`
 
 **Quantile Size Algorithm**:
 
-- **Top 25%** (index 0-24%): `TagSize.Large`
-- **Middle 50%** (index 25-74%): `TagSize.Medium`
-- **Bottom 25%** (index 75-100%): `TagSize.Small`
+- **Top 25%**: `TagSize.Large`
+- **Middle 50%**: `TagSize.Medium`
+- **Bottom 25%**: `TagSize.Small`
 
-**Important Details**:
+### Tag Filtering
 
-- **Scoping**: Homepage (all), Section, Collection, or Content (section + collection)
-- **Date filtering**: Optional `lastDays` parameter
-- **Usage filtering**: `MinimumTagUses` (default: 5)
-- **Top-N limiting**: `DefaultMaxTags` (default: 20)
-- **Sorting**: By count descending, then alphabetically
+**Database**: Tag filtering is done directly in SQL queries via the `content_tags_expanded` table:
 
-**Why Quantiles?**:
+```sql
+-- Tags are expanded to words during sync: "GitHub Copilot" → "github", "copilot"
+SELECT collection_name, slug FROM content_tags_expanded
+WHERE tag_word IN @tags
+```
 
-- Consistent visual distribution (not all same size)
-- Scalable (works with 5 or 500 tags)
-- Predictable size distinctions
+**File-based**: Uses simple substring matching:
 
-### Tag Matching Service
-
-**Key Pattern**: Word boundary regex matching with OR logic between selected tags.
-
-**Implementation**: `TagMatchingService`
-
-**Matching Logic**:
-
-- **Exact match**: `"AI"` == `"AI"`
-- **Word boundary match**: Regex pattern `\b{escaped}\b` prevents partial matches
-- **Examples**: `"AI"` matches `"Generative AI"` but NOT `"AIR"`
-
-**Important Details**:
-
-- **Normalization**: Trim + lowercase for case-insensitive matching
-- **MatchesAny** (OR logic): ANY selected tag matches ANY item tag
-- **Empty behavior**: Empty selected = show all, empty item = no match
-
-## Caching Strategy
-
-### Memory Cache Pattern
-
-**Check-Load-Store Pattern**:
-
-1. Check cache with `_cache.TryGetValue(cacheKey, out T? cached)`
-2. If miss, load data from source
-3. Store in cache with `_cache.Set(cacheKey, data, TimeSpan.FromMinutes(30))`
-4. Log cache hits/misses for monitoring
-
-### Cache Invalidation
-
-**When to invalidate**:
-
-- Content files change (file watcher, manual trigger)
-- Configuration updates
-- Administrative actions
-
-**See**: [Repositories/FileBasedContentRepository.cs](Repositories/FileBasedContentRepository.cs) for complete caching implementation
-
-## Service Lifetimes
-
-**Registration Pattern**:
-
-- **Singleton**: Stateless services that cache internally (repositories, markdown service, tag services)
-- **Scoped**: Per-request services (RSS service)
-- **Built-in**: `AddMemoryCache()`, `AddSingleton(TimeProvider.System)`
-
-**See**: [Program.cs](../TechHub.Api/Program.cs) service registration section
+```csharp
+item.Tags.Any(t => t.Contains(normalizedTag, StringComparison.OrdinalIgnoreCase))
+```
 
 ## Error Handling
 
 **Always log errors and handle gracefully**:
 
-**Error Handling Pattern**:
-
-- Wrap file operations in try-catch blocks
-- Catch specific exceptions (`IOException`, `YamlException`)
+- Wrap database operations in try-catch blocks
+- Use transactions for multi-step operations
 - Log with context (file path, error details)
-- Continue processing other files (don't let one bad file crash system)
-- Use catch-all for unexpected errors
-
-**Principle**: One bad file should not crash the entire system. Log the error and continue.
-
-**See**: [Services/MarkdownService.cs](Services/MarkdownService.cs) file processing loop for error handling pattern
+- One bad file should not crash the entire system
 
 ## Testing
 
 **See [tests/TechHub.Infrastructure.Tests/AGENTS.md](../../tests/TechHub.Infrastructure.Tests/AGENTS.md)** for comprehensive testing patterns including:
 
-- Repository testing with file system mocks
+- Repository testing with in-memory SQLite
+- ContentSyncService integration tests
 - Markdown parsing test cases
-- Cache behavior verification
 - Error handling scenarios
 
 ## Related Documentation
@@ -195,4 +258,4 @@ TechHub.Infrastructure/
 
 ---
 
-**Remember**: Infrastructure layer handles the "how" - file I/O, caching, external services. Keep it separate from domain logic.
+**Remember**: Infrastructure layer handles the "how" - database access, file I/O, external services. Keep it separate from domain logic.

@@ -1,6 +1,6 @@
-using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
 using System.Text;
+using Microsoft.Extensions.Logging;
 
 namespace TechHub.Core.Logging;
 
@@ -15,7 +15,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
     private readonly Dictionary<string, LogLevel> _logLevels;
     private readonly LogLevel _defaultLogLevel;
     private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
-    
+
     // High-performance concurrent write queue
     private readonly BlockingCollection<string> _writeQueue;
     private readonly Thread _writerThread;
@@ -121,13 +121,13 @@ public sealed class FileLoggerProvider : ILoggerProvider
         // Signal shutdown
         _cts.Cancel();
         _writeQueue.CompleteAdding();
-        
+
         // Wait for writer thread to finish (max 5 seconds)
         _writerThread.Join(TimeSpan.FromSeconds(5));
-        
+
         _writeQueue.Dispose();
         _cts.Dispose();
-        
+
         GC.SuppressFinalize(this);
     }
 

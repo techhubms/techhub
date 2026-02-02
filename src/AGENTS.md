@@ -7,7 +7,7 @@
 
 You are a .NET development specialist for the Tech Hub source code. This directory contains all production code for the .NET implementation: REST API, Blazor frontend, domain models, and infrastructure services.
 
-**CRITICAL**: Test code also has development guidance. See [tests/AGENTS.md](/tests/AGENTS.md) for comprehensive testing patterns and rules.
+**CRITICAL**: Test code also has development guidance. See [tests/AGENTS.md](../tests/AGENTS.md) for comprehensive testing patterns and rules.
 
 **Documentation Philosophy**: This file describes .NET development patterns - WHAT to use and WHY. Show structure and key decisions, not full implementations. Reference actual source files for complete code.
 
@@ -27,8 +27,8 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 **Fixed Ports**:
 
-- API: 5001 (HTTPS) - Defined in [src/TechHub.Api/Properties/launchSettings.json](src/TechHub.Api/Properties/launchSettings.json)
-- Web: 5003 (HTTPS) - Defined in [src/TechHub.Web/Properties/launchSettings.json](src/TechHub.Web/Properties/launchSettings.json)
+- API: 5001 (HTTPS) - Defined in [TechHub.Api/Properties/launchSettings.json](TechHub.Api/Properties/launchSettings.json)
+- Web: 5003 (HTTPS) - Defined in [TechHub.Web/Properties/launchSettings.json](TechHub.Web/Properties/launchSettings.json)
 - Aspire Dashboard: 18888 (HTTPS)
 
 **Benefits**:
@@ -245,7 +245,7 @@ The following warnings are intentionally suppressed because they represent delib
 - **IDE0060**: Unused parameter - Sometimes needed for interface/signature compatibility
 - **IDE0211**: Top-level statements - Project prefers explicit Program class for clarity
 
-See [Directory.Build.props](/Directory.Build.props) for complete list with detailed XML documentation.
+See [Directory.Build.props](../Directory.Build.props) for complete list with detailed XML documentation.
 
 ### Code Quality Results
 
@@ -310,19 +310,20 @@ These patterns apply across all .NET projects. **See project-specific AGENTS.md 
 **Singleton** - Service has no state or state is shared across all requests:
 
 - `ISectionRepository` (ConfigurationBasedSectionRepository - loads from appsettings.json)
-- `IContentRepository` (FileBasedContentRepository with caching)
-- `IMarkdownService` (stateless)
+- `ISqlDialect` (SqliteDialect or PostgresDialect)
+- `IDbConnectionFactory` (creates database connections)
 - `IMemoryCache`, `TimeProvider` (built-in)
 
 **Scoped** - Service lifetime matches HTTP request:
 
-- `IRssGenerator` (generates per-request)
-- `IStructuredDataService` (generates per-request)
+- `IDbConnection` (database connection per request)
 - `ITechHubApiClient` (typed HttpClient)
 
 **Transient** - Lightweight, stateless, new instance each time:
 
-- Rarely needed (most services fit Singleton or Scoped)
+- `IContentRepository` (SqliteContentRepository - uses scoped IDbConnection)
+- `IMarkdownService`, `IRssService`, `ITagCloudService`
+- `IContentSyncService`, `MigrationRunner`
 
 **Options Pattern for Configuration**:
 

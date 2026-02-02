@@ -132,7 +132,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
                 .ToList();
 
             // Store as ContentItem for polymorphic access but actually holds ContentItemDetail
-            return (IReadOnlyList<ContentItem>)cachedItems.Cast<ContentItem>().ToList();
+            return (IReadOnlyList<ContentItem>)[.. cachedItems.Cast<ContentItem>()];
         }) ?? [];
 
         // Filter drafts if needed
@@ -381,7 +381,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         if (request.FacetFields.Contains("tags"))
         {
             var tagWordToSlugs = new Dictionary<string, HashSet<string>>(StringComparer.OrdinalIgnoreCase);
-            
+
             foreach (var item in filteredList)
             {
                 foreach (var tag in item.Tags)

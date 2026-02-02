@@ -358,4 +358,262 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
             section.Collections.Should().NotBeNull();
         }
     }
+
+    #region Tag Cloud Endpoint Tests
+
+    [Fact]
+    public async Task GetCollectionTags_WithValidParameters_ReturnsTagCloud()
+    {
+        // Arrange - Use AI collection with "all" to get section-wide tags (more likely to have results)
+        
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+        
+        // Tag cloud may be empty if no content matches the default filters (lastDays, minUses)
+        // The important thing is the endpoint returns successfully
+        if (tagCloud!.Count > 0)
+        {
+            // Verify tag cloud structure when tags are present
+            tagCloud.Should().AllSatisfy(item =>
+            {
+                item.Tag.Should().NotBeNullOrEmpty("Tag should have a name");
+                item.Count.Should().BeGreaterThan(0, "Tag count should be positive");
+                item.Size.Should().BeOneOf(TagSize.Small, TagSize.Medium, TagSize.Large);
+            });
+
+            // Verify tags are sorted by count descending (most popular first)
+            for (int i = 0; i < tagCloud.Count - 1; i++)
+            {
+                tagCloud[i].Count.Should().BeGreaterThanOrEqualTo(tagCloud[i + 1].Count,
+                    "Tags should be sorted by count descending");
+            }
+        }
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithAllCollection_ReturnsSectionTagCloud()
+    {
+        // Arrange - Use "all" collection to get section-wide tag cloud
+        
+        // Act
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/all/tags");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+        tagCloud!.Should().NotBeEmpty("GitHub Copilot section should have tags across all collections");
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithInvalidSection_ReturnsNotFound()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/invalid-section/collections/news/tags");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithInvalidCollection_ReturnsNotFound()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/invalid-collection/tags");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithMaxTagsParameter_RespectsLimit()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?maxTags=5");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+        tagCloud!.Should().HaveCountLessThanOrEqualTo(5, "maxTags parameter should limit results");
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithMinUsesParameter_FiltersLowCountTags()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?minUses=3");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+
+        // Verify all tags meet minimum usage threshold
+        tagCloud!.Should().AllSatisfy(item =>
+        {
+            item.Count.Should().BeGreaterThanOrEqualTo(3, "All tags should meet minimum usage threshold");
+        });
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithLastDaysParameter_FiltersOldContent()
+    {
+        // Act - Request tags from last 30 days only
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?lastDays=30");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+        
+        // Tag cloud should only include tags from recent content
+        // The exact tags will vary, but structure should be valid
+        tagCloud!.Should().AllSatisfy(item =>
+        {
+            item.Tag.Should().NotBeNullOrEmpty();
+            item.Count.Should().BeGreaterThan(0);
+        });
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithMultipleParameters_CombinesFilters()
+    {
+        // Act - Combine multiple filtering parameters
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/tags?maxTags=3&minUses=2&lastDays=90");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+        tagCloud!.Should().HaveCountLessThanOrEqualTo(3, "maxTags should be respected");
+        tagCloud!.Should().AllSatisfy(item =>
+        {
+            item.Count.Should().BeGreaterThanOrEqualTo(2, "minUses should be respected");
+        });
+    }
+
+    #endregion
+
+    #region Content Detail Endpoint Tests
+
+    [Fact]
+    public async Task GetContentDetail_WithValidSlug_ReturnsContentWithRenderedHtml()
+    {
+        // Arrange - Use a known content item from test data
+        // First get a content item to know its slug
+        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        items.Should().NotBeNull();
+        items!.Should().NotBeEmpty();
+
+        var testItem = items!.First();
+        var slug = testItem.Slug;
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{slug}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
+        detail.Should().NotBeNull();
+        detail!.Slug.Should().Be(slug);
+        detail.Title.Should().NotBeNullOrEmpty();
+        detail.RenderedHtml.Should().NotBeNullOrEmpty("Content should be rendered to HTML");
+        detail.RenderedHtml.Should().Contain("<", "Rendered content should contain HTML tags");
+    }
+
+    [Fact]
+    public async Task GetContentDetail_WithInvalidSection_ReturnsNotFound()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/invalid-section/collections/news/test-slug");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task GetContentDetail_WithInvalidCollection_ReturnsNotFound()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/invalid-collection/test-slug");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task GetContentDetail_WithInvalidSlug_ReturnsNotFound()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/non-existent-slug-12345");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task GetContentDetail_IncludesMetadata()
+    {
+        // Arrange - Get a valid content item
+        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var testItem = items!.First();
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
+        detail.Should().NotBeNull();
+        
+        // Verify all metadata is populated
+        detail!.Slug.Should().NotBeNullOrEmpty();
+        detail.Title.Should().NotBeNullOrEmpty();
+        detail.Author.Should().NotBeNullOrEmpty();
+        detail.DateEpoch.Should().BeGreaterThan(0);
+        detail.CollectionName.Should().Be("news");
+        detail.Tags.Should().NotBeNull();
+        detail.Excerpt.Should().NotBeNullOrEmpty();
+    }
+
+    [Fact]
+    public async Task GetContentDetail_ShouldNotReturnDraftContent()
+    {
+        // This test verifies that draft content is not accessible via the detail endpoint
+        // We can't easily test this without knowing specific draft slugs,
+        // but we can verify that any returned content is not marked as draft
+
+        // Arrange - Get any valid content item
+        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var testItem = items!.First();
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
+        detail.Should().NotBeNull();
+        detail!.Draft.Should().BeFalse("Detail endpoint should not return draft content");
+    }
+
+    #endregion
 }

@@ -212,64 +212,7 @@ Users can filter by date ranges with the date slider, with faceted counts updati
 3. **Given** I use custom date slider, **When** I drag to a specific range, **Then** facet counts update in real-time (debounced)
 4. **Given** a tag has zero content items in selected date range, **When** viewing tag cloud, **Then** tag shows count "0" and is de-emphasized
 
-### User Story 6 - Related Articles Discovery (Priority: P2 - Phase 2)
-
-**Phase 1 (PostgreSQL)**: Tag-based related articles using shared tags.
-**Phase 2 (AI Search)**: Semantic similarity using vector embeddings.
-
-Users viewing an article see a "Related Articles" section showing similar content.
-
-**Why this priority**: Increases engagement and content discovery through contextual recommendations.
-
-**Independent Test**: View an article about "Azure AI Search", verify related articles section shows topically similar content.
-
-**Acceptance Scenarios**:
-
-1. **Given** I'm viewing a content item about "GitHub Copilot tips", **When** I scroll to related content items, **Then** I see other GitHub Copilot content ranked by tag overlap (Phase 1) or semantic similarity (Phase 2)
-2. **Given** a content item has specific tags, **When** viewing related content, **Then** content items sharing tags appear, weighted by tag overlap count
-3. **Given** I click a related content item, **When** navigating, **Then** URL preserves any active filters as context
-4. **Given** a content item is the only one on a niche topic, **When** viewing related content, **Then** broader related content items appear (same section/collection)
-
-**Related Articles Query Pattern (Phase 1 - Tag Overlap)**:
-
-```sql
--- Find content items related to a given content item by tag overlap
--- Returns content items ranked by number of shared tags
-WITH source_tags AS (
-    SELECT tag_normalized FROM content_tags WHERE content_id = @article_id
-),
-related AS (
-    SELECT 
-        c.id,
-        c.title,
-        c.excerpt,
-        c.collection_name,
-        c.date_epoch,
-        COUNT(t.tag_normalized) AS shared_tag_count
-    FROM content_items c
-    JOIN content_tags t ON c.id = t.content_id
-    WHERE t.tag_normalized IN (SELECT tag_normalized FROM source_tags)
-      AND c.id != @article_id
-      AND c.draft = false
-    GROUP BY c.id, c.title, c.excerpt, c.collection_name, c.date_epoch
-)
-SELECT * FROM related
-ORDER BY shared_tag_count DESC, date_epoch DESC
-LIMIT 5;
-
--- Fallback: If no tag overlap, return same section/collection
--- (Only used when shared_tag_count query returns < 5 results)
-SELECT c.id, c.title, c.excerpt, c.collection_name, c.date_epoch
-FROM content_items c
-JOIN content_sections s ON c.id = s.content_id
-WHERE s.section_name = @source_section
-  AND c.id != @article_id
-  AND c.draft = false
-ORDER BY c.date_epoch DESC
-LIMIT 5;
-```
-
-### User Story 7 - MCP Server for AI Agents (Priority: P2 - Phase 2)
+### User Story 6 - MCP Server for AI Agents (Priority: P2 - Phase 2)
 
 **Deferred to Phase 2**: MCP server benefits most from semantic search capabilities.
 
@@ -281,7 +224,7 @@ External AI agents can query Tech Hub content via Model Context Protocol (MCP) f
 
 **Note**: Detailed acceptance scenarios and implementation specifications will be defined in Phase 2 planning when Azure AI Search integration is designed.
 
-### User Story 8 - Local Development Without Azure (Priority: P0)
+### User Story 7 - Local Development Without Azure (Priority: P0)
 
 Developers can run the full application locally without any Azure connectivity using SQLite or Docker PostgreSQL.
 
@@ -701,16 +644,12 @@ public interface IContentRepository
     Task<FacetResults> GetFacetsAsync(
         FacetRequest request,
         CancellationToken ct = default);
-    
-    Task<IReadOnlyList<ContentItemDto>> GetRelatedAsync(
-        string articleId,
-        int count = 5,
-        CancellationToken ct = default);
 }
 
 // Implementations (using Dapper):
 // - PostgresContentRepository (production, CI/CD, E2E tests)
 // - SqliteContentRepository (local dev, integration tests)
+// - FileBasedContentRepository (kept for feature parity, uses file system)
 ```
 
 **HTML Rendering Strategy**:
@@ -858,6 +797,45 @@ volumes:
 | Component Tests (bUnit) | None (mocks) | N/A |
 | E2E Tests | Docker PostgreSQL | Full sync |
 | PowerShell Tests | None | N/A |
+
+**Testing Strategy for Repository Implementations**:
+
+To enforce feature parity across all `IContentRepository` implementations (FileBasedContentRepository, SqliteContentRepository, PostgresContentRepository):
+
+1. **BaseContentRepositoryTests**: Abstract test class containing ALL common repository behavior tests
+   - Test all IContentRepository methods and scenarios
+   - Each implementation inherits these tests automatically
+   - Ensures 100% feature parity across implementations
+
+2. **Implementation-Specific Test Classes**: Only contain tests for implementation-specific concerns
+   - FileBasedContentRepositoryTests: File I/O edge cases, markdown parsing
+   - SqliteContentRepositoryTests: SQLite-specific FTS5 behaviors, transaction handling
+   - PostgresContentRepositoryTests: PostgreSQL-specific tsvector behaviors, connection pooling
+
+3. **Pattern**:
+   ```csharp
+   // Base class with all common tests
+   public abstract class BaseContentRepositoryTests
+   {
+       protected abstract Task<IContentRepository> CreateRepositoryAsync();
+       
+       [Fact] public async Task GetBySlugAsync_ReturnsContent() { ... }
+       [Fact] public async Task SearchAsync_WithTags_FiltersCorrectly() { ... }
+       // ... all common tests
+   }
+   
+   // Implementation-specific tests
+   public class FileBasedContentRepositoryTests : BaseContentRepositoryTests
+   {
+       protected override async Task<IContentRepository> CreateRepositoryAsync()
+           => new FileBasedContentRepository(...);
+       
+       [Fact] public async Task Initialize_WithCorruptedMarkdown_ThrowsException() { ... }
+       // ... only file-specific tests
+   }
+   ```
+
+This approach ensures that if a new feature is added to one implementation, the base test will fail for other implementations until they implement the same feature.
 
 ## Key Entities
 
@@ -1017,7 +995,7 @@ public string GetLinkTarget(SearchResultItem item)
 7. **Sync can be skipped entirely** via `ContentSync:Enabled = false` for fast local dev
 8. **All unit/integration tests pass without any database** (mocks/in-memory)
 9. **E2E tests pass using Docker PostgreSQL** with full sync
-10. **Related articles show tag-overlap similarity** (semantic similarity in Phase 2)
+10. **File-based implementation maintains feature parity** with database implementations (enforced via BaseContentRepositoryTests)
 
 ## Dependencies
 
@@ -1107,6 +1085,7 @@ public string GetLinkTarget(SearchResultItem item)
 5. Image/video content analysis (text metadata only)
 6. User personalization / recommendation engine
 7. MCP server implementation (deferred to Phase 2)
+8. Related/similar articles feature (removed from scope)
 
 ## Risks & Mitigations
 
@@ -1140,7 +1119,6 @@ public string GetLinkTarget(SearchResultItem item)
 - Semantic/vector search with embeddings
 - Hybrid search (PostgreSQL + AI Search)
 - MCP server for AI agents
-- Related articles using vector similarity
 
 ## Clarifications
 
@@ -1161,3 +1139,9 @@ public string GetLinkTarget(SearchResultItem item)
 - Q: How to handle alt-collection (ghc-features, vscode-updates)? → A: These become proper collection names. Query "all videos" uses `collection_name IN ('videos', 'ghc-features', 'vscode-updates')`.
 - Q: SQLite full-text search? → A: Use FTS5 extension (enabled by default in .NET SQLite). Provides similar capabilities to PostgreSQL tsvector.
 - Q: New API endpoints? → A: No new endpoints in Phase 1. Existing API moves to database backing. Search/facet endpoints added when UI features require them.
+
+### Session 2026-02-02
+
+- Q: Should related/similar articles feature be implemented? → A: No, removed from scope entirely. Not part of Phase 1 or Phase 2.
+- Q: How to ensure feature parity between FileBasedContentRepository and database implementations? → A: BaseContentRepositoryTests abstract class containing ALL common tests. Each implementation (FileBasedContentRepository, SqliteContentRepository, PostgresContentRepository) inherits these tests. Implementation-specific test classes only contain tests for implementation-specific concerns (file I/O, SQLite FTS5, PostgreSQL tsvector, etc.). This ensures any new feature added to one implementation automatically requires the same feature in all implementations.
+- Q: Should FileBasedContentRepository be removed? → A: No, keep it with full feature parity enforced by BaseContentRepositoryTests. All three implementations must pass the same suite of tests.

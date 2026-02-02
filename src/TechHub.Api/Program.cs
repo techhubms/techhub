@@ -100,7 +100,6 @@ builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepos
 builder.Services.AddTransient<IMarkdownService, MarkdownService>();
 builder.Services.AddTransient<IRssService, RssService>();
 builder.Services.AddTransient<ITagCloudService, TagCloudService>();
-builder.Services.AddTransient<ITagMatchingService, TagMatchingService>();
 builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
 builder.Services.AddTransient<MigrationRunner>();
 

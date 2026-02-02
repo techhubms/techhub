@@ -20,12 +20,11 @@ public class ContentSyncService : IContentSyncService
     private readonly IDbConnection _connection;
     private readonly IMarkdownService _markdownService;
     private readonly ILogger<ContentSyncService> _logger;
-    private readonly SyncPerformanceLogger _perfLogger;
     private readonly ContentSyncOptions _options;
     private readonly string _collectionsPath;
     private static readonly char[] _tagSplitSeparators = [' ', '-', '_'];
     private static readonly char[] _excerptSplitSeparators = [' ', '\n', '\r'];
-    
+
     // Runtime-captured database schema objects (populated during DisableIndexesAndTriggersAsync)
     private List<string>? _capturedIndexDefinitions;
     private List<string>? _capturedTriggerDefinitions;
@@ -79,7 +78,6 @@ public class ContentSyncService : IContentSyncService
         _connection = connection;
         _markdownService = markdownService;
         _logger = logger;
-        _perfLogger = new SyncPerformanceLogger(logger);
         _options = options.Value;
         _collectionsPath = contentOptions.Value.CollectionsPath;
     }
@@ -350,7 +348,7 @@ public class ContentSyncService : IContentSyncService
         _logger.LogInformation("Writing {Count} items to database...", parsedFiles.Count);
         const int WriteBatchSize = 500;
         var writeCount = 0;
-        
+
         for (int i = 0; i < parsedFiles.Count; i += WriteBatchSize)
         {
             var batchStopwatch = Stopwatch.StartNew();
@@ -384,10 +382,10 @@ public class ContentSyncService : IContentSyncService
                         var sb = new System.Text.StringBuilder();
                         sb.Append("INSERT OR IGNORE INTO content_tags_expanded ");
                         sb.Append("(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask) VALUES ");
-                        
+
                         using var cmd = _connection.CreateCommand();
                         cmd.Transaction = transaction;
-                        
+
                         for (int tagIdx = 0; tagIdx < chunkSize; tagIdx++)
                         {
                             var tag = allBatchTags[chunkStart + tagIdx];
@@ -398,7 +396,7 @@ public class ContentSyncService : IContentSyncService
                             }
 
                             sb.Append(System.Globalization.CultureInfo.InvariantCulture, $"(@cn{tagIdx}, @s{tagIdx}, @w{tagIdx}, @de{tagIdx}, @ai{tagIdx}, @az{tagIdx}, @c{tagIdx}, @do{tagIdx}, @gc{tagIdx}, @ml{tagIdx}, @sec{tagIdx}, @bm{tagIdx})");
-                            
+
                             // Add parameters using direct property access (no reflection)
                             cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@cn{tagIdx}", tag.CollectionName));
                             cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@s{tagIdx}", tag.Slug));
@@ -413,7 +411,7 @@ public class ContentSyncService : IContentSyncService
                             cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@sec{tagIdx}", tag.IsSecurity));
                             cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@bm{tagIdx}", tag.SectionsBitmask));
                         }
-                        
+
                         cmd.CommandText = sb.ToString();
                         await ((System.Data.Common.DbCommand)cmd).ExecuteNonQueryAsync(ct);
                     }
@@ -425,17 +423,10 @@ public class ContentSyncService : IContentSyncService
                 transaction.Commit();
                 var commitMs = commitStopwatch.ElapsedMilliseconds;
                 var totalBatchMs = batchStopwatch.ElapsedMilliseconds;
-                
-                _perfLogger.LogBatchProgress(
-                    (i / WriteBatchSize) + 1,
-                    batch.Count,
-                    totalBatchMs,
-                    totalBatchMs - commitMs,
-                    commitMs);
-                
+
                 _logger.LogInformation("  ↳ Breakdown: DELETE {DeleteMs}ms, INSERT content {InsertContentMs}ms, INSERT tags {InsertTagsMs}ms ({TagCount} tags)",
                     totalDeleteMs, totalInsertContentMs, totalInsertTagsMs, allBatchTags.Count);
-                
+
                 if (writeCount % 500 == 0 || writeCount >= parsedFiles.Count)
                 {
                     _logger.LogInformation("Progress: {Written}/{Total} items written", writeCount, parsedFiles.Count);
@@ -447,7 +438,7 @@ public class ContentSyncService : IContentSyncService
                 throw;
             }
         }
-        
+
         _logger.LogInformation("Database writes complete: {Total} items", parsedFiles.Count);
 
         return (newFiles.Count, potentiallyChanged.Count, deletedFiles.Count, unchanged.Count, usedBulkMode);
@@ -606,7 +597,7 @@ public class ContentSyncService : IContentSyncService
 
             // Upsert main content item with section booleans
             var insertContentStopwatch = Stopwatch.StartNew();
-            
+
             // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
             var sectionsBitmask = (sectionFlags.IsAi * 1) +
                                   (sectionFlags.IsAzure * 2) +
@@ -615,7 +606,7 @@ public class ContentSyncService : IContentSyncService
                                   (sectionFlags.IsGitHubCopilot * 16) +
                                   (sectionFlags.IsMl * 32) +
                                   (sectionFlags.IsSecurity * 64);
-            
+
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
                     slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
@@ -698,13 +689,13 @@ public class ContentSyncService : IContentSyncService
             // NOTE: Skip tags for draft items - they shouldn't be included in tag clouds
             var tagWords = new List<TagWord>();
             var isDraft = ConvertBoolToInt(parsed.FrontMatter, "draft") == 1;
-            
+
             if (!isDraft)
             {
                 foreach (var tag in parsed.Tags)
                 {
                     var tagNormalized = tag.ToLowerInvariant().Trim();
-                    
+
                     // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
                     var bitmask = (sectionFlags.IsAi * 1) +
                                   (sectionFlags.IsAzure * 2) +
@@ -713,7 +704,7 @@ public class ContentSyncService : IContentSyncService
                                   (sectionFlags.IsGitHubCopilot * 16) +
                                   (sectionFlags.IsMl * 32) +
                                   (sectionFlags.IsSecurity * 64);
-                    
+
                     // Add the full tag (lowercased) for exact matching
                     tagWords.Add(new TagWord(
                         parsed.CollectionName,
@@ -729,19 +720,19 @@ public class ContentSyncService : IContentSyncService
                         sectionFlags.IsSecurity,
                         bitmask
                     ));
-                    
+
                     // Also expand tags into words for subset matching
                     var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
                     foreach (var word in words)
                     {
                         var wordNormalized = word.ToLowerInvariant().Trim();
-                        
+
                         // Skip if it's the same as the full tag (already added above)
                         if (wordNormalized == tagNormalized)
                         {
                             continue;
                         }
-                        
+
                         tagWords.Add(new TagWord(
                             parsed.CollectionName,
                             parsed.Slug,
@@ -967,7 +958,7 @@ public class ContentSyncService : IContentSyncService
               AND tbl_name IN ('content_items', 'content_tags_expanded')
               AND name NOT LIKE 'sqlite_autoindex_%'
               AND sql IS NOT NULL");
-        _capturedIndexDefinitions = indexDefinitions.ToList();
+        _capturedIndexDefinitions = [.. indexDefinitions];
         _logger.LogInformation("Captured {Count} index definitions", _capturedIndexDefinitions.Count);
 
         // STEP 2: Capture trigger definitions BEFORE dropping them
@@ -976,7 +967,7 @@ public class ContentSyncService : IContentSyncService
               WHERE type = 'trigger' 
               AND tbl_name = 'content_items'
               AND sql IS NOT NULL");
-        _capturedTriggerDefinitions = triggerDefinitions.ToList();
+        _capturedTriggerDefinitions = [.. triggerDefinitions];
         _logger.LogInformation("Captured {Count} trigger definitions", _capturedTriggerDefinitions.Count);
 
         // STEP 3: Drop all indexes
@@ -985,11 +976,12 @@ public class ContentSyncService : IContentSyncService
               WHERE type = 'index' 
               AND tbl_name IN ('content_items', 'content_tags_expanded')
               AND name NOT LIKE 'sqlite_autoindex_%'");
-        
+
         foreach (var indexName in indexNames)
         {
             await _connection.ExecuteAsync($"DROP INDEX IF EXISTS {indexName}");
         }
+
         _logger.LogInformation("Dropped {Count} indexes", indexNames.Count());
 
         // STEP 4: Drop all triggers
@@ -997,11 +989,12 @@ public class ContentSyncService : IContentSyncService
             @"SELECT name FROM sqlite_master 
               WHERE type = 'trigger' 
               AND tbl_name = 'content_items'");
-        
+
         foreach (var triggerName in triggerNames)
         {
             await _connection.ExecuteAsync($"DROP TRIGGER IF EXISTS {triggerName}");
         }
+
         _logger.LogInformation("Dropped {Count} triggers", triggerNames.Count());
 
         _logger.LogInformation("Indexes and triggers disabled");
@@ -1020,21 +1013,27 @@ public class ContentSyncService : IContentSyncService
         // STEP 1: Recreate all indexes from captured definitions
         var dbCmd = (DbCommand)_connection.CreateCommand();
         var indexStopwatch = Stopwatch.StartNew();
-        
+
         foreach (var indexSql in _capturedIndexDefinitions)
         {
+#pragma warning disable CA2100 // SQL is from captured index definitions, not user input
             dbCmd.CommandText = indexSql;
+#pragma warning restore CA2100
             await dbCmd.ExecuteNonQueryAsync();
         }
+
         _logger.LogInformation("⏱️ Recreated {Count} indexes in {ElapsedMs}ms", _capturedIndexDefinitions.Count, indexStopwatch.ElapsedMilliseconds);
 
         // STEP 2: Recreate all triggers from captured definitions
         var triggerStopwatch = Stopwatch.StartNew();
         foreach (var triggerSql in _capturedTriggerDefinitions)
         {
+#pragma warning disable CA2100 // SQL is from captured trigger definitions, not user input
             dbCmd.CommandText = triggerSql;
+#pragma warning restore CA2100
             await dbCmd.ExecuteNonQueryAsync();
         }
+
         _logger.LogInformation("⏱️ Recreated {Count} triggers in {ElapsedMs}ms", _capturedTriggerDefinitions.Count, triggerStopwatch.ElapsedMilliseconds);
 
         // Rebuild FTS index from scratch (more efficient than incremental updates)

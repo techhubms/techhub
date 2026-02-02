@@ -528,7 +528,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
             var allItems = await Repository.GetAllAsync(limit: int.MaxValue);
             // Count PUBLISHED items that have tags containing "ai" as a word (substring match)
             var actualAiCount = allItems.Where(i => !i.Draft).Count(i =>
-                i.Tags.Any(t => t.Split(new[] { ' ', '-', '_' }, StringSplitOptions.RemoveEmptyEntries)
+                i.Tags.Any(t => t.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries)
                     .Any(word => word.Equals("AI", StringComparison.OrdinalIgnoreCase))));
             aiTagFacet.Count.Should().Be(actualAiCount,
                 "AI tag facet count should match PUBLISHED items with 'AI' as a word in any tag (substring match)");

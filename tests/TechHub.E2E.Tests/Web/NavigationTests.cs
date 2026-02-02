@@ -266,6 +266,7 @@ public class NavigationTests : IAsyncLifetime
                 initialHrefs.Add(href);
             }
         }
+
         initialHrefs.Should().NotBeEmpty("Cards should have navigable links");
 
         // Act - Navigate to "News" collection
@@ -290,6 +291,7 @@ public class NavigationTests : IAsyncLifetime
                 newsHrefs.Add(href);
             }
         }
+
         newsHrefs.Should().NotBeEmpty("News cards should have navigable links");
 
         // Assert - The content should be different (at least some links differ)
@@ -373,7 +375,7 @@ public class NavigationTests : IAsyncLifetime
         // Assert - Internal content links should stay in current section
         internalCard.Should().NotBeNull("Should have at least one internal content link");
         internalHref.Should().NotBeNull();
-        internalHref!.Should().StartWith("/devops/", 
+        internalHref!.Should().StartWith("/devops/",
             "Content cards in /devops/videos should link to /devops/{collection}/{slug}, not to another section");
     }
 }

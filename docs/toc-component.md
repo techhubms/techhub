@@ -184,5 +184,5 @@ Pages using `<SidebarToc>` must wrap content in `.article-body` container:
 
 ## Related Documentation
 
-- [Content Rendering](content-rendering.md) - How markdown converts to HTML with heading anchors
 - [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md) - Blazor component implementation patterns
+- [src/TechHub.Infrastructure/AGENTS.md](../src/TechHub.Infrastructure/AGENTS.md) - Markdown processing and rendering services

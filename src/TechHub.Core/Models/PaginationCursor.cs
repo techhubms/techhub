@@ -24,7 +24,7 @@ public record PaginationCursor
     public static string Encode(PaginationCursor cursor)
     {
         ArgumentNullException.ThrowIfNull(cursor);
-        
+
         return Convert.ToBase64String(JsonSerializer.SerializeToUtf8Bytes(cursor));
     }
 

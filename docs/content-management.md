@@ -166,7 +166,7 @@ End-to-end tests verify that the custom pages work correctly:
 - Visual Studio Code Updates page (`/github-copilot/vscode-updates`)
 - Other custom pages
 
-Tests are located in [tests/TechHub.E2E.Tests/Web/CustomPagesTests.cs](../tests/TechHub.E2E.Tests/Web/CustomPagesTests.cs).
+Tests are located in the [tests/TechHub.E2E.Tests/Web/](../tests/TechHub.E2E.Tests/Web/) directory (e.g., HandbookTests.cs, LevelsOfEnlightenmentTests.cs, VSCodeUpdatesTests.cs).
 
 ## RSS Feed Processing
 

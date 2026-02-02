@@ -24,7 +24,7 @@ Use `FileBasedContentRepository` pointing to `TestCollections/`:
 var testCollectionsPath = "/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections";
 _repository = new FileBasedContentRepository(
     Options.Create(new AppSettings { Content = new ContentSettings { CollectionsPath = testCollectionsPath } }),
-    markdownService, tagMatchingService, mockEnvironment.Object, cache);
+    markdownService, mockEnvironment.Object, cache);
 ```
 
 **Why**: Fast, no database overhead, tests file parsing and business logic.

@@ -60,7 +60,7 @@ public static class RssEndpoints
             url: "/all",
             description: "All content from Tech Hub",
             displayName: "All Content");
-        
+
         var everythingSection = new Core.Models.Section(
             name: "all",
             title: "Everything",
@@ -92,11 +92,11 @@ public static class RssEndpoints
         // Get content for this section using the section name (lowercase identifier)
         // RSS feeds should exclude draft content and show only 50 most recent items
         var items = await contentRepository.GetBySectionAsync(
-            section.Name, 
-            limit: 50, 
-            offset: 0, 
-            collectionName: null, 
-            subcollectionName: null, 
+            section.Name,
+            limit: 50,
+            offset: 0,
+            collectionName: null,
+            subcollectionName: null,
             includeDraft: false);
         var channel = await rssService.GenerateSectionFeedAsync(section, items);
         var xml = rssService.SerializeToXml(channel);

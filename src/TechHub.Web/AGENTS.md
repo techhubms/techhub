@@ -2561,8 +2561,8 @@ The `SidebarTagCloud` component provides interactive tag filtering with toggle b
 - Normalize and deduplicate on parse
 - Use `Distinct(StringComparer.OrdinalIgnoreCase)`
 
-**See**: [Components/Shared/SidebarTagCloud.razor.cs](Components/Shared/SidebarTagCloud.razor.cs) for toggle implementation  
-**See**: [Pages/Section.razor.cs](Pages/Section.razor.cs) for URL parameter parsing
+**See**: [Components/SidebarTagCloud.razor.cs](Components/SidebarTagCloud.razor.cs) for toggle implementation  
+**See**: [Components/Pages/Section.razor](Components/Pages/Section.razor) for URL parameter parsing
 
 **CSS Active State** (`SidebarTagCloud.razor.css`):
 

@@ -76,7 +76,7 @@ public class TagCloudService : ITagCloudService
         }
 
         // Apply quantile-based sizing to top N tags
-        var tagCloudItems = ApplyQuantileSizing(tagCounts.ToList());
+        var tagCloudItems = ApplyQuantileSizing([.. tagCounts]);
 
         return tagCloudItems;
     }

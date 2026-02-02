@@ -257,7 +257,7 @@ public sealed class Program
         {
             frontMatter["tags"] = new List<string>();
         }
-        
+
         var currentTags = GetListValue(frontMatter, "tags");
         var tagSectionNames = GetListValue(frontMatter, "section_names");
         var tagsToAdd = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -295,7 +295,7 @@ public sealed class Program
         // Add tags that aren't already present (case-insensitive check)
         var existingTagsLower = new HashSet<string>(currentTags.Select(t => t.ToLowerInvariant()));
         var newTags = tagsToAdd.Where(t => !existingTagsLower.Contains(t.ToLowerInvariant())).ToList();
-        
+
         if (newTags.Count > 0)
         {
             var updatedTags = currentTags.Concat(newTags).ToList();
@@ -415,7 +415,7 @@ public sealed class Program
         }
 
         // 4l. Normalize author name (Tech Hub Team → TechHub)
-        if (frontMatter.TryGetValue("author", out var currentAuthor) && 
+        if (frontMatter.TryGetValue("author", out var currentAuthor) &&
             currentAuthor?.ToString() == "Tech Hub Team")
         {
             frontMatter["author"] = "TechHub";
@@ -449,7 +449,7 @@ public sealed class Program
         if (!frontMatter.TryGetValue("external_url", out var externalUrlValue) || string.IsNullOrWhiteSpace(externalUrlValue?.ToString()))
         {
             var slug = ExtractSlugFromPath(filePath);
-            
+
             if (collection == "roundups")
             {
                 // For roundups, generate internal URL: /{primary_section}/roundups/{slug}

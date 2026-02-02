@@ -5,7 +5,7 @@
 
 ## Overview
 
-You are a testing specialist for the Tech Hub .NET project. This directory contains all automated tests implementing a comprehensive testing pyramid strategy across multiple test layers: unit tests, integration tests, component tests, and end-to-end tests.
+You are a testing specialist for the Tech Hub .NET project. This directory contains all automated tests implementing a comprehensive **testing diamond strategy** across multiple test layers: unit tests, **integration tests** (the widest and most important layer), component tests, and end-to-end tests.
 
 **🚨 Testing is Mandatory**: All testing requirements are defined in [Root AGENTS.md - Step 6: Write Tests First](../AGENTS.md#step-6-write-tests-first-tdd). Follow those instructions for when and how to test.
 
@@ -329,38 +329,66 @@ tests/
 
 ## Testing Strategy
 
-### Testing Pyramid
+### Testing Diamond
+
+The **testing diamond** approach prioritizes integration tests as the most valuable layer, with the API boundary being the crucial point where functionality is exposed and validated.
 
 ```text
         /\
        /  \     E2E Tests - Playwright .NET
-      /____\    ← Slow, Few Tests, High Value
+      /____\    ← Slow, Fewer Tests, Critical User Journeys
      /      \   
     /        \  Component Tests - bUnit
-   /__________\ ← Medium Speed, Some Tests
+   /__________\ ← Medium Speed, UI Component Behavior
   /            \
- /   API Tests  \ Integration Tests - WebApplicationFactory
-/________________\ ← Medium-Fast, Most Tests of All
+ / INTEGRATION  \ Integration Tests - WebApplicationFactory
+/________________\ ← MOST IMPORTANT - API boundary validation
  \              /
-  \            /  Unit Tests - xUnit
-   \__________/   ← Fast, Many Tests, Quick Feedback
+  \   UNIT     /  Unit Tests - xUnit
+   \__________/   ← Fast, Edge Cases & Happy Paths
 ```
+
+**Why Testing Diamond?**
+
+1. **API is the crucial boundary**: Our API defines what functionality is exposed to users and other systems
+2. **Integration tests catch real issues**: They test how components work together at the API boundary
+3. **Unit tests for edge cases**: If code paths aren't exposed via the API, they matter less
+4. **All functionality must be covered**: Integration + E2E tests verify all exposed functionality
+5. **Unit tests for quick feedback**: Test edge cases, boundary conditions, and happy paths quickly
+
+**Test Distribution Philosophy**:
+
+- **Integration tests (widest layer)**: Every API endpoint, every feature exposed via API
+- **Unit tests (narrower)**: Edge cases, boundary conditions, complex business logic, error handling
+- **E2E tests (focused)**: Critical user journeys, complete workflows
+- **Component tests**: UI component behavior, rendering, interactions
+
+**Key Principle**: If a code path is NEVER exposed via the API, its test priority is lower. Focus testing effort on what users can actually trigger through the API.
 
 ### Test Layer Mapping
 
-| Layer           | Framework                     | Projects             | Purpose                                              | External Dependencies | Local Dependencies (Filesystem) |
-|-----------------|-------------------------------|----------------------|------------------------------------------------------|----------------------|---------------------------------|
-| **Unit**        | xUnit + Stubs                 | Core, Infrastructure | Domain logic, services                               | ❌ NEVER             | ❌ NEVER                        |
-| **Integration** | xUnit + WebApplicationFactory | Api                  | API endpoints with real internal services            | ❌ Stub/Mock         | ✅ Real (we control it)         |
-| **Component**   | bUnit                         | Web                  | Blazor component rendering & logic                   | ❌ Stub/Mock         | ❌ Stub/Mock                    |
-| **E2E**         | Playwright .NET + HttpClient  | E2E                  | Full user workflows, complete system                 | ✅ Real              | ✅ Real                         |
-| **PowerShell**  | Pester                        | powershell/          | Automation scripts                                   | ❌ Mock              | ✅ Real (test files)            |
+| Layer           | Framework                     | Projects             | Purpose                                              | Priority | External Dependencies | Local Dependencies (Filesystem) |
+|-----------------|-------------------------------|----------------------|------------------------------------------------------|----------|----------------------|---------------------------------|
+| **Integration** | xUnit + WebApplicationFactory | Api                  | **API endpoints with real internal services**        | **🔥 HIGHEST** | ❌ Stub/Mock         | ✅ Real (we control it)         |
+| **Unit**        | xUnit + Stubs                 | Core, Infrastructure | Edge cases, complex logic, quick feedback            | **High** | ❌ NEVER             | ❌ NEVER                        |
+| **E2E**         | Playwright .NET + HttpClient  | E2E                  | Critical user journeys, complete workflows           | **High** | ✅ Real              | ✅ Real                         |
+| **Component**   | bUnit                         | Web                  | Blazor component rendering & logic                   | Medium | ❌ Stub/Mock         | ❌ Stub/Mock                    |
+| **PowerShell**  | Pester                        | powershell/          | Automation scripts                                   | Medium | ❌ Mock              | ✅ Real (test files)            |
+
+**Priority Explanation**:
+
+- **Integration tests are the most important**: They validate the API boundary - what users and systems can actually access
+- **Unit tests remain valuable**: Quick feedback for edge cases and complex business logic
+- **E2E tests for critical paths**: Verify complete user workflows work end-to-end
+- **All exposed functionality must be covered by integration + E2E tests**
 
 ## Understanding Test Layers - Detailed Definitions
 
 ### E2E Tests (End-to-End)
 
-**Goal**: Test the complete system **as real as possible** to verify full user workflows.
+**Goal**: Test **critical user journeys** through the complete system to verify end-to-end workflows.
+
+**Priority**: E2E tests validate **complete user workflows** and should focus on the most important user journeys rather than comprehensive coverage.
 
 **What's Real**:
 
@@ -372,10 +400,13 @@ tests/
 
 **What to Test**:
 
-- Complete user journeys (navigation, filtering, search)
-- Browser interactions (clicks, forms, navigation)
-- API endpoints with full dependency chain
-- Visual rendering and responsiveness
+- ✅ **Critical user journeys** - Most important workflows users perform
+- ✅ **Complete user workflows** - Navigation, filtering, search from start to finish
+- ✅ **Browser interactions** - Clicks, forms, navigation
+- ✅ **API endpoints with full dependency chain** - End-to-end validation
+- ✅ **Visual rendering and responsiveness** - UI behaves correctly
+
+**Coverage Philosophy**: **All functionality should be covered by integration + E2E tests combined**. E2E tests focus on critical paths while integration tests validate all API endpoints.
 
 **Example**: `NavigationTests.cs` - User navigates from homepage → AI section → filters by tags → views content
 
@@ -385,7 +416,14 @@ tests/
 
 ### Integration Tests
 
-**Goal**: Test **as real as possible**, but isolate from **external dependencies** (cloud services, third-party APIs).
+**Goal**: Test **as real as possible** at the API boundary - the most important testing layer in the testing diamond.
+
+**Why Integration Tests Are Most Important**:
+
+1. **API is the contract**: The API defines what functionality is exposed to users and other systems
+2. **Real component interaction**: Tests verify how services, repositories, and middleware work together
+3. **Catch integration bugs**: Issues that only appear when components interact are caught here
+4. **If it's not exposed via API, it's less critical**: Code paths never reachable through the API have lower priority
 
 **✅ What's Real** (we control these):
 
@@ -404,10 +442,14 @@ tests/
 
 **What to Test**:
 
-- API endpoint contracts and responses
-- HTTP pipeline (CORS, caching, security headers)
-- Request validation and error handling
-- Content loading from real markdown files
+- ✅ **Every API endpoint** - All functionality exposed via API must be tested
+- ✅ **API endpoint contracts and responses** - Verify request/response structure
+- ✅ **HTTP pipeline** - CORS, caching, security headers
+- ✅ **Request validation and error handling** - Validate inputs, handle errors gracefully
+- ✅ **Content loading from real markdown files** - Test with actual data
+- ✅ **Integration of all internal services** - Verify components work together
+
+**Coverage Requirement**: **All functionality exposed via the API must have integration test coverage**. If a feature can be accessed through an API endpoint, it must be tested at the integration layer.
 
 **Example**: `SectionsEndpointTests.cs` - API endpoint loads real markdown files, returns sections
 
@@ -417,9 +459,24 @@ tests/
 
 ### Unit Tests
 
-**Goal**: Test with **real implementations** - only stub/mock when code touches filesystem or external systems.
+**Goal**: Test edge cases, boundary conditions, and happy paths quickly - NOT to test every code path.
 
-**Core Philosophy**: **Minimize mocking**. Use real classes and real implementations. Only stub/mock the boundaries where code interacts with systems we don't control in tests.
+**Core Philosophy**: **Unit tests are for quick feedback on specific scenarios**. Focus on:
+
+1. **Edge cases** - Boundary conditions, null handling, empty collections
+2. **Complex business logic** - Algorithms, calculations, transformations
+3. **Happy paths** - Quick verification that basic functionality works
+4. **Error handling** - Exception scenarios, validation failures
+
+**What Unit Tests Are NOT For**:
+
+- ❌ **Testing every possible code path** - If a path is never exposed via API, it's less critical
+- ❌ **Duplicating integration test coverage** - Don't test the same thing twice
+- ❌ **Testing implementation details** - Test public APIs only
+
+**Key Principle**: **If code can break in scenarios only reproducible via unit tests, but these paths are NEVER exposed via the API - what does it matter?** Focus unit testing effort on scenarios that can actually happen in production through the API.
+
+**Priority**: Unit tests provide **quick feedback** and test **specific edge cases**, but integration tests at the API boundary are more important for overall system validation.
 
 **🎯 When to Use REAL Implementations**:
 

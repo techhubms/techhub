@@ -49,11 +49,14 @@ TechHub.Core/
 │   ├── PaginationCursor.cs      # Keyset pagination cursor
 │   └── SyncResult.cs            # Content sync operation result
 ├── Interfaces/                   # Repository contracts
-│   ├── ISectionRepository.cs    # Section data access
 │   ├── IContentRepository.cs    # Content data access
+│   ├── IContentSyncService.cs   # Content sync operations
+│   ├── IDbConnectionFactory.cs  # Database connection factory
 │   ├── IMarkdownService.cs      # Markdown processing
 │   ├── IRssService.cs           # RSS feed generation
-│   └── IContentSyncService.cs   # Content sync operations
+│   ├── ISectionRepository.cs    # Section data access
+│   ├── ISqlDialect.cs           # SQL dialect abstraction
+│   └── ITagCloudService.cs      # Tag cloud generation
 └── TechHub.Core.csproj          # Project file (no dependencies!)
 ```
 
@@ -121,12 +124,7 @@ TechHub.Core/
 - List views: `RenderedHtml` is null
 - Detail views: `RenderedHtml` getter throws if accessed when null (fail-fast)
 - **Why**: Eliminates duplication, simpler serialization, type-safe
-
-**CustomPage** ([Models/Core/CustomPage.cs](Models/Core/CustomPage.cs)):
-
-- Same pattern: nullable `RenderedHtml` with throwing getter
-- List views skip HTML rendering for performance
-- Detail views populate full HTML content
+- Same pattern applies to custom page data models in `Models/PageData/`
 
 **Benefits**:
 

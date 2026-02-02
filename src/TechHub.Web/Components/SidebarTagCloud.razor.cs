@@ -182,11 +182,10 @@ public partial class SidebarTagCloud : ComponentBase
             {
                 // Convert provided tags to TagCloudItems with equal sizing
                 // (since we don't have usage counts for individual item tags)
-                _tags = Tags
+                _tags = [.. Tags
                     .Distinct(StringComparer.OrdinalIgnoreCase)
                     .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
-                    .Select(t => new TagCloudItem { Tag = t, Count = 1, Size = TagSize.Medium })
-                    .ToList();
+                    .Select(t => new TagCloudItem { Tag = t, Count = 1, Size = TagSize.Medium })];
 
                 Logger.LogInformation("Using {Count} provided tags for content item", _tags.Count);
                 return;

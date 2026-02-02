@@ -75,12 +75,12 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure query performance
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var item = await repository.GetBySlugAsync("blogs", "github-copilot-levels-of-enlightenment");
-            
+
             // Assert completeness
             item.Should().NotBeNull();
             item!.Slug.Should().Be("github-copilot-levels-of-enlightenment");
@@ -130,12 +130,12 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure query performance
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var items = await repository.GetByCollectionAsync("blogs", limit: 20, offset: 0);
-            
+
             // Assert completeness
             items.Should().NotBeEmpty();
             items.Count.Should().BeLessThanOrEqualTo(20);
@@ -151,12 +151,12 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure query performance for different collection
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var items = await repository.GetByCollectionAsync("videos", limit: 20, offset: 0);
-            
+
             // Assert completeness
             items.Should().NotBeEmpty();
             items.Count.Should().BeLessThanOrEqualTo(20);
@@ -184,12 +184,12 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure query performance for section (CRITICAL for tag cloud performance)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var items = await repository.GetBySectionAsync(sectionName, limit: 20, offset: 0);
-            
+
             // Assert completeness (some sections may be empty in test data)
             items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -207,12 +207,12 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure tag cloud query performance (homepage) - MOST CRITICAL PERFORMANCE TEST
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var tags = await repository.GetTagCountsAsync(maxTags: 100);
-            
+
             // Assert completeness
             tags.Should().NotBeEmpty();
             tags.Count.Should().BeLessThanOrEqualTo(100);
@@ -239,12 +239,12 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure tag cloud query performance for specific section - CRITICAL PERFORMANCE TEST
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var tags = await repository.GetTagCountsAsync(sectionName: sectionName, maxTags: 50);
-            
+
             // Assert completeness
             tags.Should().NotBeEmpty($"{sectionName} section should have tags");
             tags.Count.Should().BeLessThanOrEqualTo(50);
@@ -264,13 +264,13 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search query performance
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest { Query = "test", Take = 20 };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness - may be empty if no matches
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -284,18 +284,18 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with section filter
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
                 Query = "test",
-                Sections = new[] { "ai" },
+                Sections = ["ai"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness - may be empty if no matches
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -309,7 +309,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure FTS search with section + collection filters
         var elapsed = await MeasureExecutionAsync(async () =>
         {
@@ -321,7 +321,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness - may be empty if no matches
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -335,7 +335,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure FTS search with section + tags filters
         var elapsed = await MeasureExecutionAsync(async () =>
         {
@@ -347,7 +347,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness - may be empty if no matches
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -361,7 +361,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure FTS search with section + collection + tags filters (all filters)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
@@ -374,7 +374,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness - may be empty if no matches
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -388,17 +388,17 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with tags filter
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
-                Tags = new[] { "AI" },
+                Tags = ["AI"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness - should have AI-tagged items
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -412,7 +412,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with date filter
         var elapsed = await MeasureExecutionAsync(async () =>
         {
@@ -422,7 +422,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness - should have 2024+ items
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -436,17 +436,17 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with multiple tags (AND logic)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
-                Tags = new[] { "AI", "GitHub" },
+                Tags = ["AI", "GitHub"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -460,18 +460,18 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with tags + section (uses partial index)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
-                Tags = new[] { "Copilot" },
-                Sections = new[] { "ai" },
+                Tags = ["Copilot"],
+                Sections = ["ai"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -485,18 +485,18 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with tags + collection
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
-                Tags = new[] { "Copilot" },
-                Collections = new[] { "blogs" },
+                Tags = ["Copilot"],
+                Collections = ["blogs"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -510,19 +510,19 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with tags + section + collection (most specific filter)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
-                Tags = new[] { "Copilot" },
-                Sections = new[] { "ai" },
-                Collections = new[] { "blogs" },
+                Tags = ["Copilot"],
+                Sections = ["ai"],
+                Collections = ["blogs"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -536,17 +536,17 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with multiple sections
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
-                Sections = new[] { "ai", "github-copilot" },
+                Sections = ["ai", "github-copilot"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -560,18 +560,18 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure search with section + collection (no tags, no query)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
-                Sections = new[] { "ai" },
-                Collections = new[] { "blogs" },
+                Sections = ["ai"],
+                Collections = ["blogs"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
         });
@@ -585,13 +585,13 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure getting top X items (no search, no filters)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest { Take = 20 };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
             // Should be sorted by date DESC
@@ -607,17 +607,17 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure getting items from collection (no search, no section)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var request = new SearchRequest
             {
-                Collections = new[] { "blogs" },
+                Collections = ["blogs"],
                 Take = 20
             };
             var results = await repository.SearchAsync(request);
-            
+
             // Assert completeness
             results.Items.Count.Should().BeLessThanOrEqualTo(20);
             results.Items.Should().AllSatisfy(i => i.CollectionName.Should().Be("blogs"));
@@ -639,14 +639,14 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure tag cloud for collection (no section filter)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
             var tags = await repository.GetTagCountsAsync(
                 collectionName: collectionName,
                 maxTags: 50);
-            
+
             // Assert completeness
             tags.Count.Should().BeLessThanOrEqualTo(50);
             tags.Should().BeInDescendingOrder(t => t.Count);
@@ -665,7 +665,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     {
         // Arrange
         var repository = GetRepository();
-        
+
         // Act - measure tag cloud for section + collection (most specific)
         var elapsed = await MeasureExecutionAsync(async () =>
         {
@@ -673,7 +673,7 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
                 sectionName: sectionName,
                 collectionName: collectionName,
                 maxTags: 30);
-            
+
             // Assert completeness
             tags.Count.Should().BeLessThanOrEqualTo(30);
             tags.Should().BeInDescendingOrder(t => t.Count);
@@ -684,6 +684,5 @@ public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApi
     }
 
     #endregion
-
 
 }

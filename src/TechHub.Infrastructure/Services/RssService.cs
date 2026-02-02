@@ -164,13 +164,13 @@ public class RssService : IRssService
     private RssItem CreateRssItem(ContentItem item)
     {
         var href = item.GetHref();
-        
+
         // For internal items (relative URLs), prepend base URL
         if (!item.LinksExternally())
         {
             href = $"{_settings.BaseUrl}{href}";
         }
-        
+
         return new RssItem
         {
             Title = item.Title,

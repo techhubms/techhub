@@ -90,7 +90,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 **Key Files**:
 
 - [src/AGENTS.md](../../src/AGENTS.md) - .NET development patterns across all projects
-- [tests/AGENTS.md](../../tests/AGENTS.md) - Testing strategies (unit, integration, component, E2E)
+- [tests/AGENTS.md](../../tests/AGENTS.md) - Testing strategies (testing diamond: integration, unit, component, E2E)
 - [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) - Blazor component patterns
 - [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) - API endpoint patterns
 - [collections/AGENTS.md](../../collections/AGENTS.md) - Content creation and markdown guidelines
@@ -172,7 +172,9 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 
 ### Quality & Testing
 
-- **Test Pyramid**: Unit → Integration → Component → E2E
+- **Test Diamond**: Integration tests (widest) → Unit (edge cases) → E2E (critical paths)
+- **Integration tests are most important**: All API functionality must have integration test coverage
+- **API boundary is crucial**: Focus testing on what's exposed through the API
 - **80% minimum code coverage** for unit tests
 - **Zero warnings policy**: Fix all build warnings immediately
 - **Continuous validation**: Run tests after EVERY code change
