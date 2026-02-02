@@ -24844,5 +24844,17 @@
     "collection": "videos",
     "timestamp": "2026-02-02 15:14:56 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=FDRuQVG30Bo"
+  },
+  {
+    "timestamp": "2026-02-02 16:08:51 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mirroring-azure-databricks-catalogs-from-azure-databricks-workspaces-behind-private-endpoints-generally-available/",
+    "reason": "Succesfully added: The 'Azure' category is assigned because the article is centered on Azure services (Azure Databricks, Microsoft Fabric, private endpoints, and VNet data gateway) and their integration (Azure rule 1, 2, 4). The 'ML' category is included because Azure Databricks is a data/analytics platform typically used for machine learning and data science workloads, and the mirroring capability directly serves analytics and data engineering/data governance scenarios (ML rule 1, 2, 4). The content does NOT fit generic exclusions: it is not biographical, promotional, or negative, and is in English. 'AI' is NOT assigned since the article does not discuss AI model development or Azure AI/ML services specifically, but rather data infrastructure and analytics integration. Other categories such as 'Security' and 'DevOps' are not the main focus. Content is technical and targets practitioner audiences using these Azure technologies for enterprise analytics.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-02 16:09:48 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-february-2026/ba-p/4491309",
+    "reason": "Succesfully added: Categories assigned as follows: Azure (core focus on Logic Apps, Functions, API Management; Azure and BizTalk modernization covered extensively in both product group and community news), DevOps (unit testing, test frameworks, GitHub Copilot for unit test writing, automated testing practices), Coding (mention of C# development, MS Test, workflow coding, integration-specific design and troubleshooting), and AI (MCP Server, agent loops, Copilot Studio workshops, and agentic orchestration patterns demonstrate clear Azure-based AI integration and automation). GitHub Copilot is discussed in a technical capacity for unit testing in Logic Apps, justifying inclusion of DevOps and Coding, but not as a main focus so 'GitHub Copilot' category was not included. A substantial portion of content is technical, about Azure, Logic Apps, and automation rather than business/biographical or user productivity, exceeding the 200-word threshold for a community post. The content references Copilot Studio and agentic workflows as development/maker tools (in AI context), so 'AI' is included. No generic exclusion rules apply. All categories are supported by specific, technical sections in the newsletter and linked articles.",
+    "collection": "community"
   }
 ]
