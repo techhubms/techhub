@@ -35,10 +35,8 @@ public class SidebarTagCloudTests : BunitContext
         // Arrange
         var tags = CreateTestTagCloud();
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -47,9 +45,8 @@ public class SidebarTagCloudTests : BunitContext
 
         // Act
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Homepage)
-            .Add(p => p.SectionName, null)
-            .Add(p => p.CollectionName, null));
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all"));
 
         // Assert
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
@@ -71,10 +68,8 @@ public class SidebarTagCloudTests : BunitContext
             new TagCloudItem { Tag = "Small Tag", Count = 10, Size = TagSize.Small }
         };
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -83,7 +78,8 @@ public class SidebarTagCloudTests : BunitContext
 
         // Act
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Homepage));
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all"));
 
         // Assert
         cut.WaitForAssertion(() =>
@@ -101,10 +97,8 @@ public class SidebarTagCloudTests : BunitContext
         // Arrange
         var tags = CreateTestTagCloud();
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -112,7 +106,8 @@ public class SidebarTagCloudTests : BunitContext
             .ReturnsAsync(tags);
 
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Homepage));
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all"));
 
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
 
@@ -137,10 +132,8 @@ public class SidebarTagCloudTests : BunitContext
         var tags = CreateTestTagCloud();
         // Use ReturnsAsync for synchronous task completion - works with bUnit's rendering
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -148,7 +141,8 @@ public class SidebarTagCloudTests : BunitContext
             .ReturnsAsync(tags);
 
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Homepage));
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all"));
 
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
 
@@ -178,10 +172,8 @@ public class SidebarTagCloudTests : BunitContext
         // Arrange
         var tags = CreateTestTagCloud();
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -190,7 +182,8 @@ public class SidebarTagCloudTests : BunitContext
 
         List<string>? raisedTags = null;
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Homepage)
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all")
             .Add(p => p.OnSelectionChanged, EventCallback.Factory.Create<List<string>>(
                 this, selectedTags => raisedTags = selectedTags)));
 
@@ -212,10 +205,8 @@ public class SidebarTagCloudTests : BunitContext
         // Arrange
         var tags = CreateTestTagCloud();
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -226,7 +217,8 @@ public class SidebarTagCloudTests : BunitContext
 
         // Act
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Homepage)
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all")
             .Add(p => p.SelectedTags, preSelectedTags));
 
         // Assert
@@ -243,10 +235,8 @@ public class SidebarTagCloudTests : BunitContext
         // Arrange
         var tcs = new TaskCompletionSource<IReadOnlyList<TagCloudItem>>();
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -255,7 +245,8 @@ public class SidebarTagCloudTests : BunitContext
 
         // Act
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Homepage));
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all"));
 
         // Assert - Should show loading state
         cut.Markup.Should().Contain("Loading tags");
@@ -272,10 +263,8 @@ public class SidebarTagCloudTests : BunitContext
     {
         // Arrange
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -285,7 +274,8 @@ public class SidebarTagCloudTests : BunitContext
 
         // Act
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Homepage));
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all"));
 
         // Assert
         cut.WaitForAssertion(() => cut.Markup.Should().Contain("Error loading tags"));
@@ -298,10 +288,8 @@ public class SidebarTagCloudTests : BunitContext
         var tags = CreateTestTagCloud();
         // Use ReturnsAsync for synchronous task completion - works with bUnit's rendering
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                TagCloudScope.Section,
                 "ai",
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                "all",
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -310,16 +298,14 @@ public class SidebarTagCloudTests : BunitContext
 
         // Act
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Section)
-            .Add(p => p.SectionName, "ai"));
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.CollectionName, "all"));
 
         // Assert
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
         _mockApiClient.Verify(x => x.GetTagCloudAsync(
-            TagCloudScope.Section,
             "ai",
-            null,
-            null,
+            "all",
             It.IsAny<int?>(),
             It.IsAny<int?>(),
             It.IsAny<int?>(),
@@ -333,10 +319,8 @@ public class SidebarTagCloudTests : BunitContext
         var tags = CreateTestTagCloud();
         // Use ReturnsAsync for synchronous task completion - works with bUnit's rendering
         _mockApiClient.Setup(x => x.GetTagCloudAsync(
-                TagCloudScope.Collection,
                 "ai",
                 "news",
-                It.IsAny<string?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -345,17 +329,14 @@ public class SidebarTagCloudTests : BunitContext
 
         // Act
         var cut = Render<SidebarTagCloud>(parameters => parameters
-            .Add(p => p.Scope, TagCloudScope.Collection)
             .Add(p => p.SectionName, "ai")
             .Add(p => p.CollectionName, "news"));
 
         // Assert
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
         _mockApiClient.Verify(x => x.GetTagCloudAsync(
-            TagCloudScope.Collection,
             "ai",
             "news",
-            null,
             It.IsAny<int?>(),
             It.IsAny<int?>(),
             It.IsAny<int?>(),

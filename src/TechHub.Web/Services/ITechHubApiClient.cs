@@ -9,13 +9,13 @@ namespace TechHub.Web.Services;
 internal interface ITechHubApiClient
 {
     /// <summary>
-    /// Get tag cloud for specified scope
+    /// Get tag cloud for specified scope.
+    /// Uses /api/sections/{sectionName}/collections/{collectionName}/tags endpoint.
+    /// Pass "all" as collectionName for section-level tag cloud.
     /// </summary>
     Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
-        TagCloudScope scope,
-        string? sectionName = null,
-        string? collectionName = null,
-        string? slug = null,
+        string sectionName,
+        string collectionName,
         int? maxTags = null,
         int? minUses = null,
         int? lastDays = null,

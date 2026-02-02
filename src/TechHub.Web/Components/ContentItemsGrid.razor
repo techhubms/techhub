@@ -162,37 +162,13 @@
         {
             IEnumerable<ContentItem>? items = null;
 
-            // Handle "all" collection - get all content for this section across all collections
-            if (CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-            {
-                if (SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-                {
-                    // /all/all - get everything across all sections
-                    Logger.LogDebug("Calling ApiClient.GetSectionItemsAsync for /all/all");
-                    items = await ApiClient.GetSectionItemsAsync("all");
-                }
-                else
-                {
-                    // /section/all - get all content for this section
-                    Logger.LogDebug("Calling ApiClient.GetSectionItemsAsync({SectionName}) for section all", SectionName);
-                    items = await ApiClient.GetSectionItemsAsync(SectionName);
-                }
-            }
-            // Special handling for "All" section with specific collection
-            else if (SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-            {
-                // /all/news - get all news across all sections via the "all" section's collection
-                Logger.LogDebug("Calling ApiClient.GetCollectionItemsAsync('all', {collectionName})",
-                CollectionName);
-                items = await ApiClient.GetCollectionItemsAsync("all", CollectionName);
-            }
-            else
-            {
-                // /section/collection - get specific collection for specific section
-                Logger.LogDebug("Calling ApiClient.GetCollectionItemsAsync({SectionName}, {collectionName})",
+            // Always use the unified collection endpoint with "all" as virtual collection
+            // /section/all -> GetCollectionItemsAsync(section, "all")
+            // /all/all -> GetCollectionItemsAsync("all", "all")
+            // /section/collection -> GetCollectionItemsAsync(section, collection)
+            Logger.LogDebug("Calling ApiClient.GetCollectionItemsAsync({SectionName}, {CollectionName})",
                 SectionName, CollectionName);
-                items = await ApiClient.GetCollectionItemsAsync(SectionName, CollectionName);
-            }
+            items = await ApiClient.GetCollectionItemsAsync(SectionName, CollectionName);
 
             contentItems = items?.ToList() ?? new List<ContentItem>();
             Logger.LogDebug("LoadContent COMPLETE: Loaded {Count} items, isLoading will be set to false", contentItems.Count);

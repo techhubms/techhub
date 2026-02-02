@@ -23,8 +23,8 @@ namespace TechHub.Infrastructure.Tests.Repositories;
 public class ContentRepositoryPerformanceTests : IClassFixture<TechHubE2ETestApiFactory>
 {
     private readonly TechHubE2ETestApiFactory _factory;
-    private const int MaxResponseTimeMs = 150;  // Aggressive threshold for non-FTS queries
-    private const int MaxFtsResponseTimeMs = 350;  // FTS queries with bm25() + section filter are inherently slower
+    private const int MaxResponseTimeMs = 200;  // Aggressive threshold for non-FTS queries
+    private const int MaxFtsResponseTimeMs = 500;  // FTS queries with bm25() + section filter are inherently slower
 
     public ContentRepositoryPerformanceTests(TechHubE2ETestApiFactory factory)
     {

@@ -75,85 +75,6 @@ public class TechHubApiClient : ITechHubApiClient
             throw;
         }
     }
-
-    /// <summary>
-    /// Get items in a section with optional filtering
-    /// GET /api/sections/{sectionName}/items?take=&amp;skip=&amp;q=&amp;tags=&amp;lastDays=
-    /// </summary>
-    public virtual async Task<IEnumerable<ContentItem>?> GetSectionItemsAsync(
-        string sectionName,
-        int? take = null,
-        int? skip = null,
-        string? query = null,
-        string? tags = null,
-        int? lastDays = null,
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            var queryParams = BuildQueryString(take, skip, query, tags, lastDays);
-            var url = $"/api/sections/{sectionName}/items{queryParams}";
-
-            _logger.LogInformation("Fetching items for section: {SectionName}", sectionName);
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(url, cancellationToken);
-
-            _logger.LogInformation("Successfully fetched {Count} items for section {SectionName}",
-                items?.Count() ?? 0, sectionName);
-            return items;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch items for section {SectionName}", sectionName);
-            throw;
-        }
-    }
-
-    /// <summary>
-    /// Get tag cloud for a section
-    /// GET /api/sections/{sectionName}/tags
-    /// </summary>
-    public virtual async Task<IReadOnlyList<TagCloudItem>?> GetSectionTagsAsync(
-        string sectionName,
-        int? maxTags = null,
-        int? minUses = null,
-        int? lastDays = null,
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            var queryParams = new List<string>();
-            if (maxTags.HasValue)
-            {
-                queryParams.Add($"maxTags={maxTags.Value}");
-            }
-
-            if (minUses.HasValue)
-            {
-                queryParams.Add($"minUses={minUses.Value}");
-            }
-
-            if (lastDays.HasValue)
-            {
-                queryParams.Add($"lastDays={lastDays.Value}");
-            }
-
-            var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
-            var url = $"/api/sections/{sectionName}/tags{queryString}";
-
-            _logger.LogInformation("Fetching tag cloud for section: {SectionName}", sectionName);
-            var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
-
-            _logger.LogInformation("Successfully fetched {Count} tags for section {SectionName}",
-                tagCloud?.Count ?? 0, sectionName);
-            return tagCloud;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch tag cloud for section {SectionName}", sectionName);
-            throw;
-        }
-    }
-
     /// <summary>
     /// Get all collections in a section
     /// GET /api/sections/{sectionName}/collections
@@ -387,14 +308,14 @@ public class TechHubApiClient : ITechHubApiClient
 
     /// <summary>
     /// Get the latest items across all sections (for homepage sidebar).
-    /// Fetches items from "all" virtual section.
+    /// Fetches items from "all" virtual section with "all" collection.
     /// </summary>
     public virtual async Task<IEnumerable<ContentItem>?> GetLatestItemsAsync(
         int count = 10,
         CancellationToken cancellationToken = default)
     {
-        // Use "all" virtual section to get items across all sections
-        return await GetSectionItemsAsync("all", take: count, cancellationToken: cancellationToken);
+        // Use "all" virtual section and "all" collection to get items across everything
+        return await GetCollectionItemsAsync("all", "all", take: count, cancellationToken: cancellationToken);
     }
 
     /// <summary>
@@ -437,33 +358,23 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get tag cloud for specified scope (backward compatibility wrapper)
+    /// Get tag cloud for specified scope.
+    /// Uses /api/sections/{sectionName}/collections/{collectionName}/tags endpoint.
+    /// Pass "all" as collectionName for section-level tag cloud.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
-        TagCloudScope scope,
-        string? sectionName = null,
-        string? collectionName = null,
-        string? slug = null,
+        string sectionName,
+        string collectionName,
         int? maxTags = null,
         int? minUses = null,
         int? lastDays = null,
         CancellationToken cancellationToken = default)
     {
-        return scope switch
-        {
-            TagCloudScope.Section when !string.IsNullOrWhiteSpace(sectionName)
-                => await GetSectionTagsAsync(sectionName, maxTags, minUses, lastDays, cancellationToken),
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+        ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
 
-            TagCloudScope.Collection when !string.IsNullOrWhiteSpace(sectionName) && !string.IsNullOrWhiteSpace(collectionName)
-                => await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, cancellationToken),
-
-            // Homepage and Content scopes need special handling - fetch from "all" section
-            TagCloudScope.Homepage
-                => await GetSectionTagsAsync("all", maxTags, minUses, lastDays, cancellationToken),
-
-            _ => null
-        };
+        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, cancellationToken);
     }
 
     // ================================================================
@@ -607,42 +518,6 @@ public class TechHubApiClient : ITechHubApiClient
     // ================================================================
     // Helper methods
     // ================================================================
-
-    private static string BuildQueryString(
-        int? take = null,
-        int? skip = null,
-        string? query = null,
-        string? tags = null,
-        int? lastDays = null)
-    {
-        var queryParams = new List<string>();
-        if (take.HasValue)
-        {
-            queryParams.Add($"take={take.Value}");
-        }
-
-        if (skip.HasValue)
-        {
-            queryParams.Add($"skip={skip.Value}");
-        }
-
-        if (!string.IsNullOrEmpty(query))
-        {
-            queryParams.Add($"q={Uri.EscapeDataString(query)}");
-        }
-
-        if (!string.IsNullOrEmpty(tags))
-        {
-            queryParams.Add($"tags={Uri.EscapeDataString(tags)}");
-        }
-
-        if (lastDays.HasValue)
-        {
-            queryParams.Add($"lastDays={lastDays.Value}");
-        }
-
-        return queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
-    }
 
     private async Task<T?> GetCustomPageDataAsync<T>(string url, string pageName, CancellationToken cancellationToken)
         where T : class

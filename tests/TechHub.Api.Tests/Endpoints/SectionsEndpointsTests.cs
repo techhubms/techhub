@@ -96,8 +96,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     [Fact]
     public async Task GetSectionItems_WithValidSection_ReturnsItems()
     {
-        // Act
-        var response = await _client.GetAsync("/api/sections/ai/items");
+        // Act - Use collections/all endpoint to get all items in a section
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -110,8 +110,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     [Fact]
     public async Task GetSectionItems_WithInvalidSection_ReturnsNotFound()
     {
-        // Act
-        var response = await _client.GetAsync("/api/sections/invalid/items");
+        // Act - Use collections/all endpoint for invalid section
+        var response = await _client.GetAsync("/api/sections/invalid/collections/all/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -292,8 +292,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     [Fact]
     public async Task GetSectionItems_ShouldNotIncludeDraftItems()
     {
-        // Act
-        var response = await _client.GetAsync("/api/sections/ai/items");
+        // Act - Use collections/all endpoint to get all items in a section
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);

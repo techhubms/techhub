@@ -45,28 +45,16 @@ public partial class SidebarTagCloud : ComponentBase
     public string Title { get; set; } = "Tags";
 
     /// <summary>
-    /// Scope for tag cloud (Homepage, Section, Collection, Content)
-    /// </summary>
-    [Parameter]
-    public TagCloudScope Scope { get; set; }
-
-    /// <summary>
-    /// Section name (required for Section/Collection/Content scopes)
+    /// Section name - defaults to "all" if not specified
     /// </summary>
     [Parameter]
     public string? SectionName { get; set; }
 
     /// <summary>
-    /// Collection name (required for Collection scope)
+    /// Collection name - defaults to "all" if not specified
     /// </summary>
     [Parameter]
     public string? CollectionName { get; set; }
-
-    /// <summary>
-    /// Content item slug (required for Content scope)
-    /// </summary>
-    [Parameter]
-    public string? Slug { get; set; }
 
     /// <summary>
     /// Pre-selected tags (e.g., from URL parameters)
@@ -110,6 +98,14 @@ public partial class SidebarTagCloud : ComponentBase
     /// </summary>
     [Parameter]
     public int LastDays { get; set; } = 90;
+
+    /// <summary>
+    /// Optional: Provide tags directly instead of loading from API.
+    /// When set, these tags are displayed without fetching from the tag cloud API.
+    /// Useful for showing tags specific to a single content item.
+    /// </summary>
+    [Parameter]
+    public IReadOnlyList<string>? Tags { get; set; }
 
     private IReadOnlyList<TagCloudItem>? _tags;
     private HashSet<string> _selectedTagsInternal = [];
@@ -181,14 +177,31 @@ public partial class SidebarTagCloud : ComponentBase
             _isLoading = true;
             _hasError = false;
 
-            Logger.LogInformation("Loading tag cloud for scope: {Scope}, section: {SectionName}, collection: {CollectionName}",
-                Scope, SectionName ?? "(none)", CollectionName ?? "(none)");
+            // If Tags parameter is provided, use those directly instead of API
+            if (Tags != null && Tags.Count > 0)
+            {
+                // Convert provided tags to TagCloudItems with equal sizing
+                // (since we don't have usage counts for individual item tags)
+                _tags = Tags
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
+                    .Select(t => new TagCloudItem { Tag = t, Count = 1, Size = TagSize.Medium })
+                    .ToList();
+
+                Logger.LogInformation("Using {Count} provided tags for content item", _tags.Count);
+                return;
+            }
+
+            // Explicit values - "all" is the default for both section and collection
+            var effectiveSectionName = string.IsNullOrWhiteSpace(SectionName) ? "all" : SectionName;
+            var effectiveCollectionName = string.IsNullOrWhiteSpace(CollectionName) ? "all" : CollectionName;
+
+            Logger.LogInformation("Loading tag cloud for section: {SectionName}, collection: {CollectionName}",
+                effectiveSectionName, effectiveCollectionName);
 
             _tags = await ApiClient.GetTagCloudAsync(
-                Scope,
-                SectionName,
-                CollectionName,
-                Slug,
+                effectiveSectionName,
+                effectiveCollectionName,
                 MaxTags,
                 MinUses,
                 LastDays);
@@ -200,7 +213,8 @@ public partial class SidebarTagCloud : ComponentBase
 #pragma warning disable CA1031
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to load tag cloud for scope {Scope}", Scope);
+            Logger.LogError(ex, "Failed to load tag cloud for section {SectionName}, collection {CollectionName}",
+                SectionName ?? "all", CollectionName ?? "all");
             _hasError = true;
             _tags = null;
         }

@@ -6,7 +6,6 @@ using Moq;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
 using CollectionModel = TechHub.Core.Models.Collection;
-using TagCloudScope = TechHub.Core.Models.TagCloudScope;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -57,10 +56,8 @@ public class SectionTests : BunitContext
         var mockApiInterface = new Mock<ITechHubApiClient>();
         mockApiInterface
             .Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
@@ -138,10 +135,8 @@ public class SectionTests : BunitContext
         var mockApiInterface = new Mock<ITechHubApiClient>();
         mockApiInterface
             .Setup(x => x.GetTagCloudAsync(
-                It.IsAny<TagCloudScope>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
+                It.IsAny<string>(),
+                It.IsAny<string>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),

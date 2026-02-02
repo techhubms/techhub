@@ -6,8 +6,13 @@ using TechHub.Core.Models;
 namespace TechHub.E2E.Tests.Api;
 
 /// <summary>
-/// End-to-end tests for Content API endpoints
-/// Tests: GET /api/content, GET /api/content/filter
+/// End-to-end tests for Content API endpoints.
+/// Tests: GET /api/sections/{sectionName}/collections/{collectionName}/items
+/// 
+/// API Pattern:
+/// - Use "all" as sectionName for cross-section queries
+/// - Use "all" as collectionName for all collections within a section
+/// - Both "all" values can be combined for all content
 /// </summary>
 [Collection("API E2E Tests")]
 public class ContentEndpointsE2ETests
@@ -21,13 +26,13 @@ public class ContentEndpointsE2ETests
         _client = fixture.Factory.CreateClient();
     }
 
-    #region GET /api/content - Basic Retrieval
+    #region GET /api/sections/all/collections/all/items - All Content
 
     [Fact]
     public async Task GetAllContent_ReturnsRealContent()
     {
-        // Act
-        var response = await _client.GetAsync("/api/content");
+        // Act - Use "all" section and "all" collection to get all content
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -57,11 +62,15 @@ public class ContentEndpointsE2ETests
         }
     }
 
+    #endregion
+
+    #region GET /api/sections/all/collections/{collectionName}/items - Collection Filtering
+
     [Fact]
     public async Task GetContentByCollection_News_ReturnsNewsItems()
     {
-        // Act
-        var response = await _client.GetAsync("/api/content?collectionName=news");
+        // Act - Use "all" section to get news from all sections
+        var response = await _client.GetAsync("/api/sections/all/collections/news/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -76,7 +85,7 @@ public class ContentEndpointsE2ETests
     public async Task GetContentByCollection_Videos_ReturnsVideoItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collectionName=videos");
+        var response = await _client.GetAsync("/api/sections/all/collections/videos/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -91,7 +100,7 @@ public class ContentEndpointsE2ETests
     public async Task GetContentByCollection_Blogs_ReturnsBlogItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collectionName=blogs");
+        var response = await _client.GetAsync("/api/sections/all/collections/blogs/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -106,7 +115,7 @@ public class ContentEndpointsE2ETests
     public async Task GetContentByCollection_Community_ReturnsCommunityItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collectionName=community");
+        var response = await _client.GetAsync("/api/sections/all/collections/community/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -121,7 +130,7 @@ public class ContentEndpointsE2ETests
     public async Task GetContentByCollection_Roundups_ReturnsRoundupItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collectionName=roundups");
+        var response = await _client.GetAsync("/api/sections/all/collections/roundups/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -134,13 +143,13 @@ public class ContentEndpointsE2ETests
 
     #endregion
 
-    #region GET /api/content - Section Filtering
+    #region GET /api/sections/{sectionName}/collections/all/items - Section Filtering
 
     [Fact]
     public async Task GetContentBySection_AI_ReturnsAIItems()
     {
-        // Act
-        var response = await _client.GetAsync("/api/content?sectionName=ai");
+        // Act - Use "all" collection to get all items in AI section
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -154,7 +163,7 @@ public class ContentEndpointsE2ETests
     public async Task GetContentBySection_GitHubCopilot_ReturnsCopilotItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?sectionName=github-copilot");
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/all/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -168,7 +177,7 @@ public class ContentEndpointsE2ETests
     public async Task GetContentBySection_Azure_ReturnsAzureItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?sectionName=azure");
+        var response = await _client.GetAsync("/api/sections/azure/collections/all/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -180,27 +189,13 @@ public class ContentEndpointsE2ETests
 
     #endregion
 
-    #region GET /api/content/filter - Advanced Filtering
+    #region GET /api/sections/{sectionName}/collections/{collectionName}/items - Combined Filtering
 
     [Fact]
-    public async Task FilterContent_BySection_ReturnsFilteredItems()
+    public async Task GetContent_BySectionAndCollection_ReturnsFilteredItems()
     {
-        // Act
-        var response = await _client.GetAsync("/api/content/filter?sections=ai");
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
-        items.Should().NotBeNull();
-        items!.Should().NotBeEmpty();
-    }
-
-    [Fact]
-    public async Task FilterContent_BySectionAndCollection_ReturnsFilteredItems()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/content/filter?sections=github-copilot&collections=news");
+        // Act - Get news items from GitHub Copilot section only
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/news/items");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -215,24 +210,10 @@ public class ContentEndpointsE2ETests
     }
 
     [Fact]
-    public async Task FilterContent_ByMultipleSections_ReturnsItemsFromAnySections()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/content/filter?sections=ai,azure");
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
-        items.Should().NotBeNull();
-        items!.Should().NotBeEmpty();
-    }
-
-    [Fact]
     public async Task SearchContent_ByQuery_ReturnsMatchingItems()
     {
-        // Act
-        var response = await _client.GetAsync("/api/content/filter?q=copilot");
+        // Act - Search for "copilot" in all content
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?q=copilot");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -260,11 +241,11 @@ public class ContentEndpointsE2ETests
     public async Task GetAllContent_RespondsQuickly_DueToInMemoryCache()
     {
         // Warm up cache
-        await _client.GetAsync("/api/content");
+        await _client.GetAsync("/api/sections/all/collections/all/items");
 
         // Act - Second request should be very fast (from cache)
         var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-        var response = await _client.GetAsync("/api/content");
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items");
         stopwatch.Stop();
 
         // Assert
@@ -280,11 +261,11 @@ public class ContentEndpointsE2ETests
     public async Task FilterContent_RespondsQuickly_DueToInMemoryCache()
     {
         // Warm up cache
-        await _client.GetAsync("/api/content/filter?sections=ai");
+        await _client.GetAsync("/api/sections/ai/collections/all/items");
 
         // Act - Second request should be very fast (from cache)
         var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-        var response = await _client.GetAsync("/api/content/filter?sections=ai");
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items");
         stopwatch.Stop();
 
         // Assert
@@ -302,7 +283,7 @@ public class ContentEndpointsE2ETests
     public async Task AllContent_HasRequiredFields()
     {
         // Act
-        var response = await _client.GetAsync("/api/content");
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items");
         var content = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert
@@ -321,7 +302,7 @@ public class ContentEndpointsE2ETests
     public async Task AllContent_HasValidDateFormats()
     {
         // Act
-        var response = await _client.GetAsync("/api/content");
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items");
         var content = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert
@@ -337,19 +318,28 @@ public class ContentEndpointsE2ETests
     public async Task AllContent_HasValidUrls()
     {
         // Act
-        var response = await _client.GetAsync("/api/content");
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items");
         var content = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert
         content!.Should().AllSatisfy(item =>
         {
-            // URL should start with / and contain the collection name and slug (lowercased)
-            // Subcollections are for filtering only, URLs always use collection name
             var href = item.GetHref();
-            href.Should().StartWith("/");
-            href.Should().Contain(item.CollectionName.ToLowerInvariant(),
-                $"URL '{href}' should contain collection '{item.CollectionName}' (not subcollection '{item.SubcollectionName}')");
-            href.Should().Contain(item.Slug.ToLowerInvariant());
+
+            // External content (news, blogs, community) links to original source
+            if (item.LinksExternally())
+            {
+                href.Should().StartWith("http", $"External item '{item.Slug}' should have full URL");
+            }
+            else
+            {
+                // Internal content (videos, roundups, custom) links within site
+                // URL should start with / and contain the collection name and slug (lowercased)
+                href.Should().StartWith("/");
+                href.Should().Contain(item.CollectionName.ToLowerInvariant(),
+                    $"URL '{href}' should contain collection '{item.CollectionName}' (not subcollection '{item.SubcollectionName}')");
+                href.Should().Contain(item.Slug.ToLowerInvariant());
+            }
         });
     }
 

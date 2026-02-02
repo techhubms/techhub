@@ -19,7 +19,7 @@
 
 <main class="page-with-sidebar">
     <aside class="sidebar">
-        <SidebarTagCloud Scope="TagCloudScope.Section" SectionName="@SectionName" Title="Popular Tags"
+        <SidebarTagCloud SectionName="@SectionName" Title="Popular Tags"
             NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
             OnSelectionChanged="HandleTagSelectionChanged" />
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />

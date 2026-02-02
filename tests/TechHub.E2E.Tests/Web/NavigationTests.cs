@@ -243,6 +243,64 @@ public class NavigationTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task CollectionNavigation_ChangesDisplayedContent()
+    {
+        // Arrange - Start on GitHub Copilot with "All" collection (default)
+        await Page.GotoRelativeAsync("/github-copilot");
+        await Page.WaitForSelectorWithTimeoutAsync(".card");
+
+        // Get the titles/hrefs of the first few cards displayed in "All" collection
+        var initialCards = Page.Locator(".card");
+        var initialCardCount = await initialCards.CountAsync();
+        initialCardCount.Should().BeGreaterThan(0, "All collection should have content");
+
+        // Get hrefs of first 5 cards (or less if fewer exist)
+        // Note: .card IS the anchor element (a.card), so we get href directly from it
+        var countToCheck = Math.Min(5, initialCardCount);
+        var initialHrefs = new List<string>();
+        for (int i = 0; i < countToCheck; i++)
+        {
+            var href = await initialCards.Nth(i).GetAttributeAsync("href");
+            if (!string.IsNullOrEmpty(href))
+            {
+                initialHrefs.Add(href);
+            }
+        }
+        initialHrefs.Should().NotBeEmpty("Cards should have navigable links");
+
+        // Act - Navigate to "News" collection
+        var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
+        await newsButton.ClickBlazorElementAsync();
+        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/news");
+        await Page.WaitForSelectorWithTimeoutAsync(".card");
+
+        // Get the hrefs of cards in the "News" collection
+        // Note: .card IS the anchor element (a.card), so we get href directly from it
+        var newsCards = Page.Locator(".card");
+        var newsCardCount = await newsCards.CountAsync();
+        newsCardCount.Should().BeGreaterThan(0, "News collection should have content");
+
+        var newsCountToCheck = Math.Min(5, newsCardCount);
+        var newsHrefs = new List<string>();
+        for (int i = 0; i < newsCountToCheck; i++)
+        {
+            var href = await newsCards.Nth(i).GetAttributeAsync("href");
+            if (!string.IsNullOrEmpty(href))
+            {
+                newsHrefs.Add(href);
+            }
+        }
+        newsHrefs.Should().NotBeEmpty("News cards should have navigable links");
+
+        // Assert - The content should be different (at least some links differ)
+        // Since "News" is a subset of "All", the news items should be in a different order
+        // or the "All" view should contain items from multiple collections
+        // At minimum, the first item should be different or the list order should differ
+        newsHrefs.Should().NotBeEquivalentTo(initialHrefs,
+            "Navigating from 'All' collection to 'News' collection should display different (filtered) content");
+    }
+
+    [Fact]
     public async Task TOC_HighlightingWorksAfterNavigation_FromHomepageToHandbook()
     {
         // Arrange - Start on homepage (which doesn't have TOC)

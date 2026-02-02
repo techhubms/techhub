@@ -261,6 +261,12 @@ public record ContentItem
             return ExternalUrl;
         }
 
+        // Roundups are only accessible via /all/roundups/ (they don't exist in individual section collections)
+        if (CollectionName == "roundups")
+        {
+            return $"/all/roundups/{Slug}".ToLowerInvariant();
+        }
+
         // For internal links, build contextual URL
         var section = sectionOverride ?? PrimarySectionName;
 

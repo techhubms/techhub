@@ -175,7 +175,7 @@ public class UrlRoutingTests : IAsyncLifetime
         // Arrange
 
         // Get total item count across all GitHub Copilot collections from API
-        var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/content?sectionName=github-copilot");
+        var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/sections/github-copilot/collections/all/items");
         var allItems = await apiResponse.JsonAsync();
         var totalItemCount = allItems.Value.GetArrayLength();
 
@@ -198,7 +198,7 @@ public class UrlRoutingTests : IAsyncLifetime
         // Arrange
 
         // Get total item count across ALL sections and collections from API
-        var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/content");
+        var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/sections/all/collections/all/items");
         var allItems = await apiResponse.JsonAsync();
         var totalItemCount = allItems.Value.GetArrayLength();
 
@@ -218,7 +218,7 @@ public class UrlRoutingTests : IAsyncLifetime
         // Arrange
 
         // Get total news count across all sections from API
-        var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/content?collectionName=news");
+        var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/sections/all/collections/news/items");
         var allNewsItems = await apiResponse.JsonAsync();
         var totalNewsCount = allNewsItems.Value.GetArrayLength();
 

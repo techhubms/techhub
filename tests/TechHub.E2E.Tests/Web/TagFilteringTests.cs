@@ -365,6 +365,36 @@ public class TagFilteringTests : IAsyncLifetime
         // - ContentItemCard only displays first 5 tags, so selected tags might not be visible
     }
 
+    [Fact]
+    public async Task TagCloud_AllSection_BothAllAndAllAllShowIdenticalTags()
+    {
+        // Arrange - Navigate to /all and get tag cloud contents
+        await Page.GotoRelativeAsync("/all");
+        await WaitForTagCloudReadyAsync();
+
+        // Get all tag texts from /all
+        var tagCloudOnAll = Page.Locator(".tag-cloud");
+        await Assertions.Expect(tagCloudOnAll).ToBeVisibleAsync(new() { Timeout = 5000 });
+
+        var tagsOnAll = await Page.Locator(".tag-cloud-item").AllTextContentsAsync();
+        tagsOnAll.Should().NotBeEmpty("Tag cloud should be visible on /all");
+
+        // Act - Navigate to /all/all
+        await Page.GotoRelativeAsync("/all/all");
+        await WaitForTagCloudReadyAsync();
+
+        // Get tag cloud contents on /all/all
+        var tagCloudOnAllAll = Page.Locator(".tag-cloud");
+        await Assertions.Expect(tagCloudOnAllAll).ToBeVisibleAsync(new() { Timeout = 5000 });
+
+        var tagsOnAllAll = await Page.Locator(".tag-cloud-item").AllTextContentsAsync();
+        tagsOnAllAll.Should().NotBeEmpty("Tag cloud should be visible on /all/all");
+
+        // Assert - Tags should be identical
+        tagsOnAllAll.Should().BeEquivalentTo(tagsOnAll,
+            "Both /all and /all/all should display the same tags in the tag cloud since they represent the same 'all content' view");
+    }
+
     /// <summary>
     /// Helper method to wait for tag cloud to be fully loaded and interactive.
     /// Blazor Server @rendermode InteractiveServer components require:

@@ -23,9 +23,9 @@
     <aside class="sidebar">
         @if (item != null)
         {
-            @* Tag cloud for this content item - navigate within current section with tag filter *@
-            <SidebarTagCloud Scope="TagCloudScope.Content" SectionName="@SectionName" CollectionName="@CollectionName"
-                Slug="@Slug" Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
+            @* Tag cloud showing this content item's tags - click navigates to section with tag filter *@
+            <SidebarTagCloud Tags="@item.Tags"
+                Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
                 NavigationBaseUrl="@($"/{SectionName.ToLowerInvariant()}")" />
             <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
         }

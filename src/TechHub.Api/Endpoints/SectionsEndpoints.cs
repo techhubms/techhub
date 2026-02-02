@@ -29,12 +29,10 @@ public static class SectionsEndpoints
     /// Hierarchy:
     /// - /api/sections                                              → List all sections
     /// - /api/sections/{sectionName}                                → Get section metadata
-    /// - /api/sections/{sectionName}/items                          → Get items in section (with filtering)
-    /// - /api/sections/{sectionName}/tags                           → Get tag cloud for section
     /// - /api/sections/{sectionName}/collections                    → List collections in section
     /// - /api/sections/{sectionName}/collections/{collectionName}   → Get collection metadata
-    /// - /api/sections/{sectionName}/collections/{collectionName}/items  → Get items in collection
-    /// - /api/sections/{sectionName}/collections/{collectionName}/tags   → Get tag cloud for collection
+    /// - /api/sections/{sectionName}/collections/{collectionName}/items  → Get items (use "all" for section-level)
+    /// - /api/sections/{sectionName}/collections/{collectionName}/tags   → Get tag cloud (use "all" for section-level)
     /// - /api/sections/{sectionName}/collections/{collectionName}/{slug} → Get single item detail
     /// </summary>
     public static IEndpointRouteBuilder MapSectionsEndpoints(this IEndpointRouteBuilder endpoints)
@@ -58,21 +56,6 @@ public static class SectionsEndpoints
             .WithSummary("Get section by name")
             .WithDescription("Returns a single section with its collections and metadata")
             .Produces<Section>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
-
-        group.MapGet("/{sectionName}/items", GetSectionItems)
-            .WithName("GetSectionItems")
-            .WithSummary("Get items in a section")
-            .WithDescription($"Returns content items from a section with optional filtering. " +
-                $"Supports: take (default={DefaultPageSize}, max={MaxPageSize}), skip, q (search), tags, lastDays.")
-            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
-
-        group.MapGet("/{sectionName}/tags", GetSectionTags)
-            .WithName("GetSectionTags")
-            .WithSummary("Get tag cloud for a section")
-            .WithDescription("Returns top tags with usage counts for tag cloud rendering")
-            .Produces<IReadOnlyList<TagCloudItem>>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         group.MapGet("/{sectionName}/collections", GetSectionCollections)
@@ -156,99 +139,6 @@ public static class SectionsEndpoints
     }
 
     /// <summary>
-    /// GET /api/sections/{sectionName}/items - Get items in a section with optional filtering
-    /// </summary>
-    private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound>> GetSectionItems(
-        string sectionName,
-        [FromQuery] int take = DefaultPageSize,
-        [FromQuery] int skip = 0,
-        [FromQuery] string? q = null,
-        [FromQuery] string? tags = null,
-        [FromQuery] int? lastDays = null,
-        ISectionRepository sectionRepository = default!,
-        IContentRepository contentRepository = default!,
-        CancellationToken cancellationToken = default)
-    {
-        // Verify section exists
-        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
-        if (section == null)
-        {
-            return TypedResults.NotFound();
-        }
-
-        // Enforce pagination limits
-        var limit = Math.Clamp(take, 1, MaxPageSize);
-        var offset = Math.Max(skip, 0);
-
-        // If filtering by query or tags, use SearchAsync
-        if (!string.IsNullOrWhiteSpace(q) || !string.IsNullOrWhiteSpace(tags))
-        {
-            var request = new SearchRequest
-            {
-                Query = q,
-                Sections = [section.Name],
-                Tags = string.IsNullOrWhiteSpace(tags)
-                    ? null
-                    : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
-                DateFrom = lastDays.HasValue
-                    ? DateTimeOffset.UtcNow.AddDays(-lastDays.Value)
-                    : null,
-                Take = limit
-            };
-
-            var searchResults = await contentRepository.SearchAsync(request, cancellationToken);
-            return TypedResults.Ok(searchResults.Items.Skip(offset).AsEnumerable());
-        }
-
-        // Simple section query - use indexed GetBySectionAsync
-        var content = await contentRepository.GetBySectionAsync(
-            section.Name,
-            limit: limit,
-            offset: offset,
-            collectionName: null,
-            subcollectionName: null,
-            includeDraft: false,
-            cancellationToken);
-
-        return TypedResults.Ok(content.AsEnumerable());
-    }
-
-    /// <summary>
-    /// GET /api/sections/{sectionName}/tags - Get tag cloud for a section
-    /// </summary>
-    private static async Task<Results<Ok<IReadOnlyList<TagCloudItem>>, NotFound>> GetSectionTags(
-        string sectionName,
-        [FromQuery] int? maxTags = null,
-        [FromQuery] int? minUses = null,
-        [FromQuery] int? lastDays = null,
-        ISectionRepository sectionRepository = default!,
-        ITagCloudService tagCloudService = default!,
-        IOptions<FilteringOptions> filteringOptions = default!,
-        CancellationToken cancellationToken = default)
-    {
-        // Verify section exists
-        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
-        if (section == null)
-        {
-            return TypedResults.NotFound();
-        }
-
-        var options = filteringOptions.Value;
-        var request = new TagCloudRequest
-        {
-            Scope = TagCloudScope.Section,
-            SectionName = section.Name,
-            MaxTags = maxTags ?? options.TagCloud.DefaultMaxTags,
-            MinUses = minUses ?? options.TagCloud.MinimumTagUses,
-            LastDays = lastDays ?? options.TagCloud.DefaultDateRangeDays
-        };
-
-        var tagCloud = await tagCloudService.GetTagCloudAsync(request, cancellationToken);
-
-        return TypedResults.Ok(tagCloud);
-    }
-
-    /// <summary>
     /// GET /api/sections/{sectionName}/collections - Get all collections in a section
     /// </summary>
     private static async Task<Results<Ok<IEnumerable<Collection>>, NotFound>> GetSectionCollections(
@@ -299,6 +189,7 @@ public static class SectionsEndpoints
 
     /// <summary>
     /// GET /api/sections/{sectionName}/collections/{collectionName}/items - Get items in a collection
+    /// Supports "all" as a virtual collection name - returns all items in the section.
     /// </summary>
     private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound>> GetCollectionItems(
         string sectionName,
@@ -321,13 +212,19 @@ public static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        // Verify collection exists in this section
-        var hasCollection = section.Collections.Any(c =>
-            c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+        // "all" is a virtual collection - returns all items in section
+        var isAllCollection = string.Equals(collectionName, "all", StringComparison.OrdinalIgnoreCase);
 
-        if (!hasCollection)
+        // Verify collection exists (skip for virtual "all" collection)
+        if (!isAllCollection)
         {
-            return TypedResults.NotFound();
+            var hasCollection = section.Collections.Any(c =>
+                c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+
+            if (!hasCollection)
+            {
+                return TypedResults.NotFound();
+            }
         }
 
         // Enforce pagination limits
@@ -341,7 +238,7 @@ public static class SectionsEndpoints
             {
                 Query = q,
                 Sections = [section.Name],
-                Collections = [collectionName],
+                Collections = isAllCollection ? null : [collectionName],
                 Tags = string.IsNullOrWhiteSpace(tags)
                     ? null
                     : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
@@ -356,11 +253,12 @@ public static class SectionsEndpoints
         }
 
         // Simple collection query - use indexed GetBySectionAsync
+        // For "all" virtual collection, pass null to get all items in section
         var content = await contentRepository.GetBySectionAsync(
             section.Name,
             limit: limit,
             offset: offset,
-            collectionName: collectionName,
+            collectionName: isAllCollection ? null : collectionName,
             subcollectionName: subcollection,
             includeDraft: includeDraft,
             ct: cancellationToken);
@@ -370,6 +268,7 @@ public static class SectionsEndpoints
 
     /// <summary>
     /// GET /api/sections/{sectionName}/collections/{collectionName}/tags - Get tag cloud for a collection
+    /// Supports "all" as a virtual collection name - falls back to section-level tags.
     /// </summary>
     private static async Task<Results<Ok<IReadOnlyList<TagCloudItem>>, NotFound>> GetCollectionTags(
         string sectionName,
@@ -389,21 +288,28 @@ public static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        // Verify collection exists
-        var hasCollection = section.Collections.Any(c =>
-            c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+        // "all" is a virtual collection - use section scope instead
+        var isAllCollection = string.Equals(collectionName, "all", StringComparison.OrdinalIgnoreCase);
 
-        if (!hasCollection)
+        // Verify collection exists (skip for virtual "all" collection)
+        if (!isAllCollection)
         {
-            return TypedResults.NotFound();
+            var hasCollection = section.Collections.Any(c =>
+                c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+
+            if (!hasCollection)
+            {
+                return TypedResults.NotFound();
+            }
         }
 
         var options = filteringOptions.Value;
         var request = new TagCloudRequest
         {
-            Scope = TagCloudScope.Collection,
+            // Use Section scope for "all" virtual collection, otherwise Collection scope
+            Scope = isAllCollection ? TagCloudScope.Section : TagCloudScope.Collection,
             SectionName = section.Name,
-            CollectionName = collectionName,
+            CollectionName = isAllCollection ? null : collectionName,
             MaxTags = maxTags ?? options.TagCloud.DefaultMaxTags,
             MinUses = minUses ?? options.TagCloud.MinimumTagUses,
             LastDays = lastDays ?? options.TagCloud.DefaultDateRangeDays

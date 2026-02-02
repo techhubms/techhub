@@ -36,6 +36,33 @@ public record ContentItemDetail : ContentItem
     }
 
     /// <summary>
+    /// JSON deserialization constructor - used when deserializing from API responses.
+    /// Parameters must match the JSON property names exactly (case-insensitive).
+    /// </summary>
+    [System.Text.Json.Serialization.JsonConstructor]
+    public ContentItemDetail(
+        string slug,
+        string title,
+        string author,
+        long dateEpoch,
+        string collectionName,
+        string feedName,
+        string primarySectionName,
+        IReadOnlyList<string> tags,
+        IReadOnlyList<string>? sections,
+        string excerpt,
+        string externalUrl,
+        bool draft,
+        string? subcollectionName,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        string? renderedHtml)
+        : base(slug, title, author, dateEpoch, collectionName, feedName, primarySectionName, tags, sections, excerpt, externalUrl, draft, subcollectionName, plans, ghesSupport)
+    {
+        RenderedHtml = renderedHtml;
+    }
+
+    /// <summary>
     /// Database constructor - used by Dapper to materialize from database queries.
     /// Parameter order and types must match the SELECT column order exactly.
     /// </summary>
