@@ -11661,5 +11661,11 @@
     "collection": "blogs",
     "canonical_url": "https://dellenny.com/preparing-your-sharepoint-content-for-copilot-a-practical-guide/",
     "timestamp": "2026-02-02 13:26:17 +00:00"
+  },
+  {
+    "timestamp": "2026-02-02 17:15:15 +00:00",
+    "canonical_url": "https://devclass.com/2026/02/02/anthropic-research-skilled-devs-make-better-use-of-ai-but-using-ai-is-bad-for-learning-skills/",
+    "reason": "No categories found: No categories assigned because, despite significant discussion of AI tools and their impact on software development, the article does not centrally address any Microsoft technologies, products, or specific Microsoft AI platforms. The content focuses on Anthropic-sponsored research, primarily involving the use of Python, AI-assisted coding, and developer skill formation. There is no mention of Azure AI, Microsoft Copilot/Copilot Studio, Azure, GitHub Copilot, or any other Microsoft ecosystem technologies. Per the processing rules, Microsoft technologies must be central to the solution or ≥40% of the substantive content for categories to be assigned.",
+    "collection": "blogs"
   }
 ]

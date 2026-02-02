@@ -24856,5 +24856,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-february-2026/ba-p/4491309",
     "reason": "Succesfully added: Categories assigned as follows: Azure (core focus on Logic Apps, Functions, API Management; Azure and BizTalk modernization covered extensively in both product group and community news), DevOps (unit testing, test frameworks, GitHub Copilot for unit test writing, automated testing practices), Coding (mention of C# development, MS Test, workflow coding, integration-specific design and troubleshooting), and AI (MCP Server, agent loops, Copilot Studio workshops, and agentic orchestration patterns demonstrate clear Azure-based AI integration and automation). GitHub Copilot is discussed in a technical capacity for unit testing in Logic Apps, justifying inclusion of DevOps and Coding, but not as a main focus so 'GitHub Copilot' category was not included. A substantial portion of content is technical, about Azure, Logic Apps, and automation rather than business/biographical or user productivity, exceeding the 200-word threshold for a community post. The content references Copilot Studio and agentic workflows as development/maker tools (in AI context), so 'AI' is included. No generic exclusion rules apply. All categories are supported by specific, technical sections in the newsletter and linked articles.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-02-02 17:14:54 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the primary focus is on using GitHub Copilot’s advanced (agentic) features in a real-world engineering context, matching AI inclusion rule 2 and GitHub Copilot rules 1 and 2. 'Coding' is included since the content deeply explores system design, modularization, implementation details, and refactoring using Microsoft ecosystem coding patterns (Coding rule 4). There is no substantive coverage of Azure, DevOps, ML, or Security services, so those categories were not assigned.",
+    "collection": "news"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-02-02 18:11:15 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-insights-from-sap-with-fabric-real-time-intelligence/",
+    "reason": "Succesfully added: Assigned 'Azure' because Fabric RTI is a core Azure-based offering integrating with Microsoft cloud and analytics services (Azure category rule 1 and 4). Assigned 'ML' because the article emphasizes real-time analytics, data ingestion, and delivering analytics pipelines relevant to ML/BI/data engineering scenarios (ML category rule 1, 2, and 4). Assigned 'AI' because the content repeatedly focuses on enabling up-to-date data for AI-driven solutions, actionable business insights, and empowering AI agents with fresh data (AI category rule 5). No Coding or DevOps category since there is no focus on code-level development or deployment/CI/CD. No Security category as there is no mention of security, authentication, or Microsoft security tooling."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-02 18:12:06 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-generally-available-in-azure/ba-p/4491314",
+    "reason": "Succesfully added: Included the 'Azure' category because this content is centrally about Azure Databricks, a Microsoft Azure service, and details its management, networking, and storage options (Azure rules 1, 4, and 5). Included 'ML' because Azure Databricks is a core Microsoft platform for big data analytics and machine learning pipelines, and the article addresses operational models for data analytics and engineering workloads (ML rules 1 and 2). Did not include AI, Coding, DevOps, GitHub Copilot, or Security: while underlying infrastructure and governance are discussed, there is no focus on AI services, code-level practices, CI/CD, or security-specific implementation. The content meets all generic inclusion criteria and is not excluded by any generic or business-only rules."
   }
 ]
