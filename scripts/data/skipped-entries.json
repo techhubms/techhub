@@ -11655,5 +11655,11 @@
     "timestamp": "2026-01-31 18:03:44 +00:00",
     "reason": "No categories found: All category inclusion rules require substantive content details focusing on Microsoft technology, developer tooling, coding, DevOps, AI, ML, or Security. This video is primarily about 'Tiny Wins' process improvement and time management at GitHub—a cultural/team productivity strategy. It does not discuss technical implementation details, coding practices, GitHub Actions, Copilot, or specific Microsoft integrations. It also does not meet any category's technology thresholds. Generic exclusion rules also apply: this is high-level developer team inspiration and productivity advice, not technical implementation content.",
     "canonical_url": "https://www.youtube.com/shorts/XvFVAWEsr0c"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is entirely focused on preparing organizational SharePoint and Microsoft 365 environments for business productivity gains using 'Microsoft 365 Copilot' (see title, opening paragraphs, repeated references to Copilot for Microsoft 365, and practical steps centering around document management/governance for improved business outcomes). As per the 'Generic Exclusion Rules' and 'Copilot Product Distinction' in Chapter 3 and 4: All business productivity Copilot products (Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot) are explicitly excluded from categorization. There is no mention of developer tooling, coding, Copilot Studio, GitHub Copilot, or custom application development—only end-user content management and governance. Therefore, this content is excluded from all categories.",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/preparing-your-sharepoint-content-for-copilot-a-practical-guide/",
+    "timestamp": "2026-02-02 13:26:17 +00:00"
   }
 ]

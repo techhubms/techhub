@@ -24832,5 +24832,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/benchmarking-local-ai-models/ba-p/4490780",
     "reason": "Succesfully added: Included the AI category because the entire article is focused on benchmarking, evaluating, and comparing AI models using Microsoft Foundry Local and related SDKs, aligning directly with AI inclusion rule 1. There is no coverage of GitHub Copilot, Azure services, ML/data engineering, security, or DevOps-specific practices, so those categories do not apply. The article is technical, focused on developer tooling and methodology, and avoids generic exclusion rules, providing significant education about building scientific AI benchmarking infrastructure.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: The content is centered around features and usage of GitHub Copilot CLI. 'GitHub Copilot' category is assigned because the focus is on Copilot-specific functionality for developers (e.g., session sharing, model selection). Per rules, inclusion of 'GitHub Copilot' always triggers the 'AI' category. 'Coding' and 'DevOps' are not added as the focus is usage of developer tooling itself, not code writing or DevOps workflows. The information is technical, hands-on, and fits the outlined inclusion criteria. No generic exclusion rules apply.",
+    "collection": "videos",
+    "timestamp": "2026-02-02 15:14:34 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=E17SXyL53w4"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the video is centrally focused on Azure's core services and architecture, including VMs, regions, and App Services (Azure rule 1, 4, 5). Security is included due to substantial coverage of governance, RBAC, disk encryption, Key Vault, and confidential compute (Security rules 1, 2, 3, 7, 9). DevOps is added due to coverage of infrastructure as code, deployment stacks, and operational management practices (DevOps rules 1, 5, 6). Coding is not included as there is no primary focus on code-level development, and AI/ML are not prominent topics based on the chapter outline. Generic exclusion rules don't apply; content is technical, in English, and directly relevant to Microsoft Azure professionals.",
+    "collection": "videos",
+    "timestamp": "2026-02-02 15:14:56 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=FDRuQVG30Bo"
   }
 ]

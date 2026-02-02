@@ -1,0 +1,23 @@
+{
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "Title": "Azure State of the Union 2026",
+  "ProcessedDate": "2026-02-02 15:13:22",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Link": "https://www.youtube.com/watch?v=FDRuQVG30Bo",
+  "OutputDir": "_videos",
+  "FeedName": "John Savill's Technical Training",
+  "PubDate": "2026-02-02T15:08:03+00:00",
+  "Description": "Overview of core Azure in 2026 and key compute aspects.\n\n🔎 Looking for content on a particular topic? Search the channel. If I have something it will be there! 🤔 Due to the channel growth and number of people wanting help I no longer can answer or even read questions and they will just stay in the moderation queue never to be seen so please post questions to other sites like Reddit, Microsoft Community Hub etc.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:19 - Capacity and resource 05:32 - Types of service 15:49 - Scaling and consumption 20:39 - Environments 25:47 - Regions 37:18 - Availability Zones 44:25 - Zonal and zone-resilient 47:54 - Proximity placement groups 48:58 - Availability sets 49:54 - SLAs 52:14 - Azure Local 57:00 - EAs 59:19 - Governance 1:01:17 - Entra ID 1:08:13 - Management groups 1:09:24 - Resource groups 1:10:52 - RBAC 1:11:47 - Control and data plane 1:15:05 - Policy 1:16:32 - Budget 1:17:51 - Scopes 1:19:15 - Other governance 1:20:48 - Infrastructure as code 1:22:35 - Deployment stacks 1:24:36 - VM types 1:32:37 - Burstable 1:36:05 - Spot 1:38:10 - Generations 1:39:24 - Pricing calculator 1:40:01 - Savings plan and RI 1:41:44 - Capacity guarantee 1:43:04 - Confidential compute 1:47:09 - Core VM aspects 1:51:50 - Managed disks 1:55:26 - Disk encryption sets 1:57:19 - Azure Key Vault 1:58:02 - Managed identity 2:01:38 - Network 2:04:52 - App services 2:09:12 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/AzureSOU2026.png ► Globe explore: 🔗 https://datacenters.microsoft.com/globe/explore?view=map ► Sovereign solutions: 🔗 https://blogs.microsoft.com/blog/2025/06/16/announcing-comprehensive-sovereign-solutions-empowering-european-organizations/ ► Regions: 🔗 https://learn.microsoft.com/azure/reliability/regions-list ► SLAs: 🔗 https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1 ► Azure Local services: 🔗 https://learn.microsoft.com/azure/azure-local/overview/hyperconverged-overview?view=azloc-2601#common-azure-services-used-with-azure-local ► VM sizes: 🔗 https://docs.microsoft.com/azure/virtual-machines/windows/sizes ► Pricing calculator: 🔗 https://azure.microsoft.com/pricing/calculator/\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #azure #johnsavillstechnicaltraining #onboardtoazure",
+  "Tags": [
+    "azure",
+    "azure cloud",
+    "cloud",
+    "Entra ID",
+    "governance",
+    "microsoft",
+    "microsoft azure",
+    "VM"
+  ],
+  "Author": "John Savill's Technical Training"
+}
