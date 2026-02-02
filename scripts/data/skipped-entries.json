@@ -11667,5 +11667,11 @@
     "canonical_url": "https://devclass.com/2026/02/02/anthropic-research-skilled-devs-make-better-use-of-ai-but-using-ai-is-bad-for-learning-skills/",
     "reason": "No categories found: No categories assigned because, despite significant discussion of AI tools and their impact on software development, the article does not centrally address any Microsoft technologies, products, or specific Microsoft AI platforms. The content focuses on Anthropic-sponsored research, primarily involving the use of Python, AI-assisted coding, and developer skill formation. There is no mention of Azure AI, Microsoft Copilot/Copilot Studio, Azure, GitHub Copilot, or any other Microsoft ecosystem technologies. Per the processing rules, Microsoft technologies must be central to the solution or ≥40% of the substantive content for categories to be assigned.",
     "collection": "blogs"
+  },
+  {
+    "timestamp": "2026-02-02 23:07:35 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=c8mcMNn0f5s",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because there is insufficient substantive content provided to evaluate for inclusion. The 'content' field is null, so I cannot assess whether Microsoft technologies are central to the material, nor whether any specific category inclusion rules are met. The available description focuses on Rio Terminal, its development story, and high-performance CLI tool ergonomics, but without explicit reference to Microsoft technologies or developer tools like GitHub Copilot, Azure, etc., I cannot assign categories. Per processing rules, only the actual content (not just the title/description) is to be used for categorization and detail extraction."
   }
 ]

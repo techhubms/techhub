@@ -24874,5 +24874,29 @@
     "timestamp": "2026-02-02 18:12:06 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-generally-available-in-azure/ba-p/4491314",
     "reason": "Succesfully added: Included the 'Azure' category because this content is centrally about Azure Databricks, a Microsoft Azure service, and details its management, networking, and storage options (Azure rules 1, 4, and 5). Included 'ML' because Azure Databricks is a core Microsoft platform for big data analytics and machine learning pipelines, and the article addresses operational models for data analytics and engineering workloads (ML rules 1 and 2). Did not include AI, Coding, DevOps, GitHub Copilot, or Security: while underlying infrastructure and governance are discussed, there is no focus on AI services, code-level practices, CI/CD, or security-specific implementation. The content meets all generic inclusion criteria and is not excluded by any generic or business-only rules."
+  },
+  {
+    "timestamp": "2026-02-02 23:05:58 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/32713/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the ML category because the content discusses enhancements to data visualization features within Microsoft Fabric Real-Time Dashboards, specifically supporting operational reporting and data storytelling, which align with analytics and business intelligence development in the ML category (ML rule 4: Advanced Data Analytics/BI Development). Azure, AI, Coding, Security, DevOps, and GitHub Copilot categories do not apply as the post is focused on dashboard customization, not development, security, or dev/ops tooling."
+  },
+  {
+    "timestamp": "2026-02-02 23:06:19 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/bringing-together-fabric-real-time-intelligence-notebook-and-spark-structured-streaming-preview/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because the feature is central to Microsoft Fabric, which is an Azure-based analytics platform (Azure rule 1). Assigned ML because the content focuses on building real-time data science and analytics pipelines, including streaming, anomaly detection, and ML integration (ML rules 1, 2, 4, and 6). Assigned AI because the article discusses enabling AI pipelines, real-time analytic solutions, and references use cases involving machine learning and advanced models in an Azure ecosystem (AI rules 1, 4, 5). Copilot is not mentioned, so GitHub Copilot is not assigned. Coding is not assigned because the article mainly describes configuration, low-code setup, and auto-generated snippets for integration and does not focus on traditional software engineering or development frameworks and patterns."
+  },
+  {
+    "timestamp": "2026-02-02 23:06:45 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/02/infostealers-without-borders-macos-python-stealers-and-platform-abuse/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Security category because the entire article centers on the technical details of infostealer malware, credential theft, detection and response using Microsoft Defender XDR, and actionable mitigations (per Security inclusion rules 1, 2, 4, 5, 7, and 9). There is no meaningful DevOps, ML, AI, Coding, or Azure focus. The article provides technical threat insights and mitigation steps directly suited for practitioners, meeting both the relevance and technical depth thresholds for Security."
+  },
+  {
+    "timestamp": "2026-02-02 23:07:21 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=PWLawDLe_RY",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the video centers on building AI-powered applications and using AI coding assistants (AI rule 4). Assigned Coding category since the focus is on .NET (including Blazor and ASP.NET Core) development with technical demonstrations (Coding rules 1 and 4). Did not assign Azure or other categories, as there is no evidence of direct Azure service integration or DevOps focus. Tags are based on technical keywords, presenters, and featured tools."
   }
 ]

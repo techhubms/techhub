@@ -1,0 +1,30 @@
+{
+  "Title": "Build AI‑Powered .NET Apps with Telerik",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Author": "dotnet",
+  "PubDate": "2026-02-02T18:54:40+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=PWLawDLe_RY",
+  "FeedName": "DotNet YouTube",
+  "Tags": [
+    "AI",
+    "aspdotnet",
+    "aspnetcore",
+    "blazor",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "mcp",
+    "microsoft",
+    "progresstelerik",
+    "softwaredeveloper",
+    "telerik"
+  ],
+  "ProcessedDate": "2026-02-02 23:05:15",
+  "Description": "Ed Charbeneau from Progress Telerik joins the ASP.NET Community Standup to show how to build AI‑powered Blazor apps with Telerik’s AI coding tools and UI components. See how AI coding assistants, MCP servers, and intelligent UI components accelerate development, generate clean code, and deliver smarter user experiences.\n\n🔗 Links: https://www.theurlist.com/aspnet-standup-20260202\n\n🎙️ Featuring: Daniel Roth, Ed Charbeneau\n\n#dotnet #aspnetcore"
+}
