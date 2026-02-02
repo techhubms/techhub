@@ -72,4 +72,37 @@ public class PostgresDialect : ISqlDialect
 
         return $"AND (date_epoch, id) < (@CursorDate, @CursorId) ORDER BY date_epoch DESC, id DESC LIMIT {take}";
     }
+
+    public string CreateMigrationTableSql()
+    {
+        return """
+            CREATE TABLE IF NOT EXISTS _migrations (
+                script_name TEXT PRIMARY KEY,
+                executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+            )
+            """;
+    }
+
+    public object ConvertBooleanParameter(bool value)
+    {
+        // PostgreSQL has native BOOLEAN type
+        return value;
+    }
+
+    public string GetInsertIgnorePrefix(string tableName, string columns)
+    {
+        return $"INSERT INTO {tableName} {columns} VALUES ";
+    }
+
+    public string GetInsertIgnoreSuffix()
+    {
+        // PostgreSQL uses ON CONFLICT clause after VALUES
+        return " ON CONFLICT DO NOTHING";
+    }
+
+    public string GetBooleanLiteral(bool value)
+    {
+        // PostgreSQL uses native boolean type
+        return value ? "true" : "false";
+    }
 }

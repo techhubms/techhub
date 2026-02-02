@@ -1,17 +1,89 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Tech Hub PowerShell Module - Provides the Run function for easy development workflow.
+    Tech Hub PowerShell Module - Provides the Run and Stop-Servers functions for easy development workflow.
 
 .DESCRIPTION
-    This module exports the 'Run' function which provides a convenient way to build, test,
+    This module exports the 'Run' and 'Stop-Servers' functions which provide a convenient way to build, test,
     and run the Tech Hub .NET application. It wraps the functionality into
-    a reusable PowerShell function that auto-loads in terminal sessions.
+    reusable PowerShell functions that auto-load in terminal sessions.
 
 .NOTES
     Author: Tech Hub Team
     Requires: .NET 10 SDK, PowerShell 7+
 #>
+
+# ============================================================================
+# MODULE-LEVEL EXPORTED FUNCTIONS
+# ============================================================================
+
+# Stop all servers and clean up ports
+function Stop-Servers {
+    <#
+    .SYNOPSIS
+        Stops all servers (both dotnet processes and Docker containers).
+    
+    .DESCRIPTION
+        Comprehensive cleanup function that stops everything:
+        - Kills any processes using server ports (5001, 5003)
+        - Stops Docker containers via docker compose down
+        Always safe to call.
+    
+    .PARAMETER Silent
+        Suppress output messages
+    
+    .EXAMPLE
+        Stop-Servers
+        Stop all running servers and containers
+    
+    .EXAMPLE
+        Stop-Servers -Silent
+        Stop all running servers without output messages
+    #>
+    param(
+        [switch]$Silent
+    )
+    
+    # Color output helpers (module-level)
+    $writeInfo = {
+        param([string]$Message)
+        Write-Host "  $Message" -ForegroundColor Gray
+    }
+    
+    $writeSuccess = {
+        param([string]$Message)
+        Write-Host "✓ $Message" -ForegroundColor Green
+    }
+    
+    # Also stop Docker containers (safe to call even if not running)
+    docker compose down --remove-orphans 2>&1 | Out-Null
+
+    # Kill any processes on our ports
+    $ports = @(5001, 5003)
+    $stoppedAny = $false
+    
+    foreach ($port in $ports) {
+        $processIds = lsof -ti ":$port" 2>$null
+        if ($processIds) {
+            $stoppedAny = $true
+            foreach ($pidToKill in $processIds) {
+                if (-not $Silent) {
+                    & $writeInfo "  Killing process on port $port (PID: $pidToKill)"
+                }
+                kill -9 $pidToKill 2>$null
+            }
+        }
+    }
+    
+    if ($stoppedAny) {
+        # Brief wait to ensure ports are released
+        Start-Sleep -Milliseconds 300
+        if (-not $Silent) {
+            & $writeSuccess "Server cleanup completed"
+        }
+    }
+}
+
 
 function Run {
     <#
@@ -115,7 +187,10 @@ function Run {
 
         [Parameter(Mandatory = $false)]
         [ValidateSet("Development", "Production", "Staging")]
-        [string]$Environment = "Development"
+        [string]$Environment = "Development",
+
+        [Parameter(Mandatory = $false)]
+        [switch]$Docker
     )
 
     # Disable progress bars for performance (prevents slowdown from file operations)
@@ -137,7 +212,8 @@ function Run {
         Write-Host "  -StopServers   Stop servers after tests complete (for CI/CD pipelines)" -ForegroundColor White
         Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor White
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor White
-        Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)`n" -ForegroundColor White
+        Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor White
+        Write-Host "  -Docker        Start servers using docker compose instead of dotnet run`n" -ForegroundColor White
         
         Write-Host "EXAMPLES:" -ForegroundColor Yellow
         Write-Host "  Run                                  Build + all tests + servers (default)" -ForegroundColor Gray
@@ -148,7 +224,8 @@ function Run {
         Write-Host "  Run -TestProject powershell          Run only PowerShell tests, keep servers running" -ForegroundColor Gray
         Write-Host "  Run -TestProject Web.Tests           Run only Web tests, keep servers running" -ForegroundColor Gray
         Write-Host "  Run -TestName SectionCard            Run tests matching 'SectionCard', keep servers running" -ForegroundColor Gray
-        Write-Host "  Run -StopServers -TestProject E2E -TestName Nav  CI/CD: Run E2E navigation tests, then stop`n" -ForegroundColor Gray
+        Write-Host "  Run -StopServers -TestProject E2E -TestName Nav  CI/CD: Run E2E navigation tests, then stop" -ForegroundColor Gray
+        Write-Host "  Run -Docker                          Build + tests + servers via Docker containers`n" -ForegroundColor Gray
         
         Write-Host "COMMON WORKFLOWS:" -ForegroundColor Yellow
         Write-Host "  CI/CD (test + stop):       Run -StopServers" -ForegroundColor Gray
@@ -160,14 +237,7 @@ function Run {
         Write-Host "SERVICES:" -ForegroundColor Yellow
         Write-Host "  API:       https://localhost:5001 (Swagger: /swagger)" -ForegroundColor Gray
         Write-Host "  Web:       https://localhost:5003" -ForegroundColor Gray
-        Write-Host "  Dashboard: https://localhost:18888 (Aspire Dashboard)`n" -ForegroundColor Gray
-        
-        Write-Host "LOG FILES:" -ForegroundColor Yellow
-        Write-Host "  Console:      .tmp/logs/console.txt (Development - combined Aspire output)" -ForegroundColor Gray
-        Write-Host "  API console:  .tmp/logs/api-console.txt (Production/Staging mode)" -ForegroundColor Gray
-        Write-Host "  Web console:  .tmp/logs/web-console.txt (Production/Staging mode)" -ForegroundColor Gray
-        Write-Host "  API logs:     .tmp/logs/api-dev.log / api-prod.log (FileLoggerProvider)" -ForegroundColor Gray
-        Write-Host "  Web logs:     .tmp/logs/web-dev.log / web-prod.log (FileLoggerProvider)`n" -ForegroundColor Gray
+        Write-Host "  Dashboard: http://localhost:18888 (Aspire Dashboard)`n" -ForegroundColor Gray
         
         Write-Host "For detailed help: " -NoNewline -ForegroundColor White
         Write-Host "Get-Help Run -Full`n" -ForegroundColor Cyan
@@ -200,7 +270,7 @@ function Run {
 
     # Log directories and files
     $logDir = Join-Path $workspaceRoot ".tmp/logs"
-    $consoleLogPath = Join-Path $logDir "console.txt"
+    $consoleLogPath = Join-Path $logDir "console.log"
 
     # Build configuration - Release for Production, Debug otherwise
     $configuration = if ($Environment -eq "Production") { "Release" } else { "Debug" }
@@ -632,24 +702,39 @@ function Run {
         return ($apiHealthy -and $webHealthy)
     }
 
+    # Test if servers are running via Docker
+    function Test-ServersRunningViaDocker {
+        $dockerPs = docker ps --filter "name=techhub-api" --filter "status=running" --format "{{.Names}}" 2>&1
+        return ($LASTEXITCODE -eq 0 -and $dockerPs -match "techhub-api")
+    }
+
     # Start Aspire AppHost (orchestrates API + Web servers)
     # Servers run in background with output redirected to .tmp/logs/
     function Start-AppHost {
         param(
-            [string]$Environment
+            [string]$Environment,
+            [switch]$UseDocker
         )
         
-        # Check if servers are already running and healthy - just reuse them
-        if (Test-ServersHealthy) {
+        # Check if servers are already running and healthy in the correct mode
+        $serversHealthy = Test-ServersHealthy
+        $runningViaDocker = Test-ServersRunningViaDocker
+        $correctMode = ($UseDocker -and $runningViaDocker) -or (-not $UseDocker -and -not $runningViaDocker)
+        
+        if ($serversHealthy -and $correctMode) {
+            # Servers are healthy and running in correct mode - reuse them
             return $true
         }
         
-        # Servers not healthy - clean up and restart
-        # This handles crashed servers, unhealthy servers, or blocked ports
-        Write-Info "Servers not healthy - restarting..."
+        # Servers not healthy or wrong mode - clean up and restart
+        if (-not $serversHealthy) {
+            Write-Info "Servers not healthy - restarting..."
+        }
+        
+        # Clean up everything (both dotnet processes and Docker containers)
         Stop-Servers -Silent
         
-        Write-Step "Starting services in background ($Environment mode)"
+        Write-Step "Starting services in background ($Environment mode$(if ($UseDocker) { ' - Docker' }))"
         
         # Clear ALL previous log files before starting new servers
         if (Test-Path $logDir) {
@@ -663,8 +748,64 @@ function Run {
         # Log environment configuration for debugging
         Write-Info "Configuring environment: $Environment"
         
+        # Docker mode: Use docker compose
+        if ($UseDocker) {
+            Write-Info "Starting services via Docker Compose..."
+            
+            # Ensure HTTPS certificate has correct permissions for Docker containers
+            $certPath = Join-Path $HOME ".aspnet/https/aspnetapp.pfx"
+            if (Test-Path $certPath) {
+                chmod 644 $certPath 2>&1 | Out-Null
+            }
+            else {
+                Write-Error "HTTPS certificate not found at $certPath. Run post-create.sh or Generate-DevCertificate.ps1"
+                return $false
+            }
+            
+            # Ensure log directory exists with world-writable permissions for Docker containers
+            # Docker containers run as non-root user and need write access
+            if (-not (Test-Path $logDir)) {
+                New-Item -Path $logDir -ItemType Directory -Force | Out-Null
+            }
+            chmod 777 $logDir 2>&1 | Out-Null
+            
+            # Ensure .databases directory exists with proper permissions
+            $databasesDir = Join-Path $workspaceRoot ".databases"
+            if (-not (Test-Path $databasesDir)) {
+                New-Item -Path $databasesDir -ItemType Directory -Force | Out-Null
+            }
+            chmod 777 $databasesDir 2>&1 | Out-Null
+            
+            # Ensure subdirectories exist with proper permissions
+            $postgresDir = Join-Path $databasesDir "postgres"
+            $sqliteDir = Join-Path $databasesDir "sqlite"
+            if (-not (Test-Path $postgresDir)) {
+                New-Item -Path $postgresDir -ItemType Directory -Force | Out-Null
+            }
+            if (-not (Test-Path $sqliteDir)) {
+                New-Item -Path $sqliteDir -ItemType Directory -Force | Out-Null
+            }
+            chmod 777 $postgresDir 2>&1 | Out-Null
+            chmod 777 $sqliteDir 2>&1 | Out-Null
+            
+            # Start containers in detached mode
+            $composeResult = docker compose up --build -d 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                Write-Error "Docker Compose failed to start: $composeResult"
+                return $false
+            }
+            
+            Write-Info "Docker containers starting..."
+        }
         # Production/Staging mode: Run from published DLLs (real deployment simulation)
-        if ($Environment -eq "Production" -or $Environment -eq "Staging") {
+        elseif ($Environment -eq "Production" -or $Environment -eq "Staging") {
+            # Ensure .databases directory exists with proper permissions (for SQLite)
+            $databasesDir = Join-Path $workspaceRoot ".databases"
+            $sqliteDir = Join-Path $databasesDir "sqlite"
+            if (-not (Test-Path $sqliteDir)) {
+                New-Item -Path $sqliteDir -ItemType Directory -Force | Out-Null
+            }
+            
             # Verify publish artifacts exist
             $apiDll = Join-Path $publishApiDir "TechHub.Api.dll"
             $webDll = Join-Path $publishWebDir "TechHub.Web.dll"
@@ -679,8 +820,8 @@ function Run {
             Write-Info "  Web: $publishWebDir"
             
             # Console output files for Production mode (separate from FileLoggerProvider logs)
-            $apiConsolePath = Join-Path $logDir "api-console.txt"
-            $webConsolePath = Join-Path $logDir "web-console.txt"
+            $apiConsolePath = Join-Path $logDir "api-console.log"
+            $webConsolePath = Join-Path $logDir "web-console.log"
             
             # Start API in background using PowerShell job
             Start-Job -ScriptBlock {
@@ -706,6 +847,13 @@ function Run {
         else {
             # Development: Use Aspire AppHost orchestration in background
             $appHostDir = Split-Path $appHostProjectPath -Parent
+            
+            # Ensure .databases directory exists with proper permissions (for SQLite)
+            $databasesDir = Join-Path $workspaceRoot ".databases"
+            $sqliteDir = Join-Path $databasesDir "sqlite"
+            if (-not (Test-Path $sqliteDir)) {
+                New-Item -Path $sqliteDir -ItemType Directory -Force | Out-Null
+            }
             
             # Start dotnet watch in background using PowerShell job
             Start-Job -ScriptBlock {
@@ -754,7 +902,7 @@ function Run {
             Write-Host "    Expected: https://localhost:5003/health" -ForegroundColor Gray
             Write-Host ""
             Write-Host "  Troubleshooting:" -ForegroundColor Cyan
-            Write-Host "    1. Check logs: .tmp/logs/ (console.txt or api/web-console.txt)" -ForegroundColor Gray
+            Write-Host "    1. Check logs: .tmp/logs/ (console.log or api/web-console.log)" -ForegroundColor Gray
             Write-Host "    2. Try manually: curl -k https://localhost:5001/health" -ForegroundColor Gray
             Write-Host "    3. Check if ports are already in use" -ForegroundColor Gray
             Write-Host ""
@@ -871,46 +1019,7 @@ function Run {
         return $true
     }
 
-    # Stop all servers and clean up ports
-    function Stop-Servers {
-        <#
-        .SYNOPSIS
-            Stops all processes using the server ports (5001, 5003).
-        
-        .DESCRIPTION
-            Port-based cleanup function that kills any process using our ports.
-            No process tracking needed - just kills whatever is on the ports.
-            Always safe to call.
-        #>
-        param(
-            [switch]$Silent
-        )
-        
-        # Kill any processes on our ports
-        $ports = @(5001, 5003)
-        $stoppedAny = $false
-        
-        foreach ($port in $ports) {
-            $processIds = lsof -ti ":$port" 2>$null
-            if ($processIds) {
-                $stoppedAny = $true
-                foreach ($pidToKill in $processIds) {
-                    if (-not $Silent) {
-                        Write-Info "  Killing process on port $port (PID: $pidToKill)"
-                    }
-                    kill -9 $pidToKill 2>$null
-                }
-            }
-        }
-        
-        if ($stoppedAny) {
-            # Brief wait to ensure ports are released
-            Start-Sleep -Milliseconds 300
-            if (-not $Silent) {
-                Write-Success "Port cleanup completed"
-            }
-        }
-    }
+
 
     # Kill ALL potentially orphaned processes (browsers, test runners, dotnet processes)
     function Stop-AllOrphanedProcesses {
@@ -1088,8 +1197,11 @@ function Run {
         # Check if we need to restart servers:
         # 1. Source projects were rebuilt (binaries changed)
         # 2. Servers are unhealthy (not responding to health checks)
+        # 3. Mode mismatch (Docker vs dotnet)
         $serversHealthy = Test-ServersHealthy
-        $needsRestart = $buildResult.SrcRebuilt -or (-not $serversHealthy)
+        $runningViaDocker = Test-ServersRunningViaDocker
+        $modeMismatch = ($Docker -and -not $runningViaDocker) -or (-not $Docker -and $runningViaDocker)
+        $needsRestart = $buildResult.SrcRebuilt -or (-not $serversHealthy) -or $modeMismatch
         
         if ($needsRestart) {
             Write-Step "Restart decision"
@@ -1100,6 +1212,15 @@ function Run {
             elseif (-not $serversHealthy) {
                 Write-Info "Servers are unhealthy or not running"
                 Write-Info "Restarting servers..."
+            }
+            elseif ($modeMismatch) {
+                if ($Docker) {
+                    Write-Info "Servers running via dotnet, but Docker mode requested"
+                }
+                else {
+                    Write-Info "Servers running via Docker, but dotnet mode requested"
+                }
+                Write-Info "Switching modes and restarting servers..."
             }
             
             # Stop existing servers and clean up ports
@@ -1160,7 +1281,7 @@ function Run {
             
             # PHASE 3: Start servers if needed for E2E tests
             if ($runE2E) {
-                $serversStarted = Start-AppHost -Environment $Environment
+                $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker
                 if ($serversStarted -ne $true) {
                     # Server startup failed - ALWAYS clean up (can't leave non-running servers)
                     Stop-Servers
@@ -1201,7 +1322,7 @@ function Run {
         }
         else {
             # -WithoutTests: Start servers directly
-            $serversStarted = Start-AppHost -Environment $Environment
+            $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker
             if ($serversStarted -ne $true) {
                 # Server startup failed - ALWAYS clean up (can't leave non-running servers)
                 Stop-Servers
@@ -1215,13 +1336,30 @@ function Run {
             Write-Step "Services (running in background)"
             Write-Info "API: https://localhost:5001 (Swagger: https://localhost:5001/swagger)"
             Write-Info "Web: https://localhost:5003"
-            Write-Info "Dashboard: https://localhost:18888 (Aspire Dashboard)"
+            Write-Info "Dashboard: http://localhost:18888 (Aspire Dashboard)"
             Write-Step "Log files"
-            Write-Host "  Console:      .tmp/logs/console.txt (Development - combined Aspire output)" -ForegroundColor Gray
-            Write-Host "  API console:  .tmp/logs/api-console.txt (Production/Staging mode)" -ForegroundColor Gray
-            Write-Host "  Web console:  .tmp/logs/web-console.txt (Production/Staging mode)" -ForegroundColor Gray
-            Write-Host "  API logs:     .tmp/logs/api-dev.log / api-prod.log (FileLoggerProvider)" -ForegroundColor Gray
-            Write-Host "  Web logs:     .tmp/logs/web-dev.log / web-prod.log (FileLoggerProvider)" -ForegroundColor Gray
+            
+            # Show appropriate logs based on mode and environment
+            $envLower = $Environment.ToLower()
+            
+            if ($Docker) {
+                # Docker mode: Logs in containers + mounted to .tmp/logs
+                Write-Host "  Docker logs:  docker compose logs <service> (api, web, aspire-dashboard, postgres)" -ForegroundColor Gray
+            }
+            elseif ($Environment -eq "Production" -or $Environment -eq "Staging") {
+                # Production/Staging mode: Separate console logs + application logs
+                Write-Host "  API console:  .tmp/logs/api-console.log" -ForegroundColor Gray
+                Write-Host "  Web console:  .tmp/logs/web-console.log" -ForegroundColor Gray
+
+            }
+            else {
+                # Development mode: Combined Aspire console + application logs
+                Write-Host "  Console:      .tmp/logs/console.log (Aspire - combined output)" -ForegroundColor Gray
+            }
+
+            Write-Host "  API logs:     .tmp/logs/api-$envLower.log" -ForegroundColor Gray
+            Write-Host "  Web logs:     .tmp/logs/web-$envLower.log" -ForegroundColor Gray
+            
             Write-Host ""
         }
     }
@@ -1242,5 +1380,5 @@ function Run {
     }
 }
 
-# Export the Run function
-Export-ModuleMember -Function Run
+# Export functions
+Export-ModuleMember -Function Run, Stop-Servers

@@ -1,6 +1,8 @@
 using System.Data;
 using TechHub.Api.Endpoints;
+using TechHub.Api.HealthChecks;
 using TechHub.Api.Middleware;
+using TechHub.Api.Services;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
@@ -14,6 +16,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks)
 builder.AddServiceDefaults();
 
+// Register startup state tracking service as singleton
+builder.Services.AddSingleton<StartupStateService>();
+
+// Add custom health check that waits for startup operations to complete
+builder.Services.AddHealthChecks()
+    .AddCheck<StartupHealthCheck>("startup", tags: ["ready"]);
+
 // Log environment during startup for verification
 using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
 {
@@ -21,12 +30,15 @@ using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
     logger.LogInformation("🚀 TechHub.Api starting in {Environment} environment", builder.Environment.EnvironmentName);
 }
 
-// Configure file logging when path is configured in appsettings
+// Configure file logging
 // Skip during integration tests (AppSettings:SkipFileLogging = true)
 var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFileLogging");
-var logPath = builder.Configuration["Logging:File:Path"];
-if (!skipFileLogging && !string.IsNullOrEmpty(logPath))
+if (!skipFileLogging)
 {
+    // Build log path: use TECHHUB_TMP if set (Docker), otherwise .tmp (local dev)
+    var tmpDir = Environment.GetEnvironmentVariable("TECHHUB_TMP") ?? ".tmp";
+    var logPath = Path.Combine(tmpDir, "logs", $"api-{builder.Environment.EnvironmentName.ToLowerInvariant()}.log");
+    
     // Parse log levels from configuration
     var logLevels = new Dictionary<string, LogLevel>();
     var logLevelSection = builder.Configuration.GetSection("Logging:File:LogLevel");
@@ -70,9 +82,14 @@ builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("App
 
 // Register database connection and repository based on configured provider
 var databaseProvider = builder.Configuration["Database:Provider"] ?? "SQLite";
-var connectionString = builder.Configuration["Database:ConnectionString"] ?? "Data Source=techhub.db";
+var connectionString = builder.Configuration["Database:ConnectionString"] ?? "Data Source=.databases/sqlite/techhub.db";
 
-if (databaseProvider.Equals("SQLite", StringComparison.OrdinalIgnoreCase))
+if (databaseProvider.Equals("FileSystem", StringComparison.OrdinalIgnoreCase))
+{
+    // FileSystem: Read markdown files directly (no database)
+    builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
+}
+else if (databaseProvider.Equals("SQLite", StringComparison.OrdinalIgnoreCase))
 {
     builder.Services.AddSingleton<ISqlDialect, SqliteDialect>();
     builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFactory(connectionString));
@@ -84,13 +101,11 @@ else if (databaseProvider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCas
     builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
     builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionFactory(connectionString));
     builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-
-    // TODO: Create PostgresContentRepository
-    throw new NotImplementedException("PostgreSQL repository not yet implemented");
+    builder.Services.AddTransient<IContentRepository, PostgresContentRepository>();
 }
 else
 {
-    throw new InvalidOperationException($"Unsupported database provider: {databaseProvider}");
+    throw new InvalidOperationException($"Unsupported database provider: {databaseProvider}. Use 'FileSystem', 'SQLite', or 'PostgreSQL'.");
 }
 
 // Register singleton services
@@ -151,17 +166,20 @@ app.MapDefaultEndpoints();
 using (var startupScope = app.Services.CreateScope())
 {
     var services = startupScope.ServiceProvider;
+    var startupState = app.Services.GetRequiredService<StartupStateService>();
 
     // Run database migrations
     var migrationRunner = services.GetRequiredService<MigrationRunner>();
     await migrationRunner.RunMigrationsAsync();
     app.Logger.LogInformation("✅ Database migrations completed");
+    startupState.MarkMigrationsCompleted();
 
     // Synchronize content from markdown files to database
     var contentSyncService = services.GetRequiredService<IContentSyncService>();
     var syncResult = await contentSyncService.SyncAsync();
     app.Logger.LogInformation("✅ Content sync: {Added} added, {Updated} updated, {Deleted} deleted, {Unchanged} unchanged ({Duration}ms)",
         syncResult.Added, syncResult.Updated, syncResult.Deleted, syncResult.Unchanged, syncResult.Duration.TotalMilliseconds);
+    startupState.MarkContentSyncCompleted();
 
     // Log database record counts for verification
     await LogDatabaseRecordCountsAsync(app, services);

@@ -25,7 +25,7 @@ Push-Location $PSScriptRoot/..
 try {
     # Step 1: Clean database
     Write-Host "→ Deleting existing database..." -ForegroundColor Yellow
-    Remove-Item -Path "techhub.db*" -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path ".databases/sqlite/techhub.db*" -Force -ErrorAction SilentlyContinue
     Write-Host "✓ Database deleted`n" -ForegroundColor Green
 
     # Step 2: Clear logs

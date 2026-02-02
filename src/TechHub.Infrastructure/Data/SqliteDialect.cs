@@ -72,4 +72,35 @@ public class SqliteDialect : ISqlDialect
 
         return $"AND (date_epoch, id) < (@CursorDate, @CursorId) ORDER BY date_epoch DESC, id DESC LIMIT {take}";
     }
-}
+
+    public string CreateMigrationTableSql()
+    {
+        return """
+            CREATE TABLE IF NOT EXISTS _migrations (
+                script_name TEXT PRIMARY KEY,
+                executed_at TEXT NOT NULL DEFAULT (datetime('now'))
+            )
+            """;
+    }
+
+    public object ConvertBooleanParameter(bool value)
+    {
+        // SQLite doesn't have native BOOLEAN type, uses INTEGER 0/1
+        return value ? 1 : 0;
+    }
+
+    public string GetInsertIgnorePrefix(string tableName, string columns)
+    {
+        return $"INSERT OR IGNORE INTO {tableName} {columns} VALUES ";
+    }
+
+    public string GetInsertIgnoreSuffix()
+    {
+        // SQLite uses INSERT OR IGNORE syntax, no suffix needed
+        return string.Empty;
+    }
+    public string GetBooleanLiteral(bool value)
+    {
+        // SQLite uses 0/1 for booleans
+        return value ? "1" : "0";
+    }}

@@ -3,6 +3,9 @@ using Dapper;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
+using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Services;
 
 namespace TechHub.TestUtilities;
@@ -53,9 +56,14 @@ public static class TestCollectionsSeeder
             CollectionsPath = testCollectionsPath
         });
 
+        // Create appropriate SQL dialect based on connection type
+        var dialect = connection.GetType().Name.Contains("Npgsql")
+            ? (ISqlDialect)new PostgresDialect()
+            : new SqliteDialect();
+
         var markdownService = new MarkdownService();
         var syncLogger = loggerFactory.CreateLogger<ContentSyncService>();
-        var syncService = new ContentSyncService(connection, markdownService, syncLogger, syncOptions, contentOptions);
+        var syncService = new ContentSyncService(connection, markdownService, syncLogger, dialect, syncOptions, contentOptions);
 
         // Use actual production sync logic - ensures tests validate real code path
         var syncResult = await syncService.SyncAsync(CancellationToken.None);

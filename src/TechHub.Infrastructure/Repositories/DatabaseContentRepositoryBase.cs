@@ -126,7 +126,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         CancellationToken ct)
     {
         // Build WHERE clause conditionally to allow index usage
-        var draftFilter = includeDraft ? "" : "AND c.draft = 0";
+        var draftFilter = includeDraft ? "" : $"AND c.draft = {Dialect.GetBooleanLiteral(false)}";
 
         var sql = $@"
             SELECT {DetailViewColumns}
@@ -152,7 +152,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         CancellationToken ct)
     {
         // Build WHERE clause conditionally to allow index usage (idx_content_draft_date)
-        var whereClause = includeDraft ? "" : "WHERE c.draft = 0";
+        var whereClause = includeDraft ? "" : $"WHERE c.draft = {Dialect.GetBooleanLiteral(false)}";
 
         var sql = $@"
             SELECT {ListViewColumns}
@@ -195,7 +195,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         // Add draft filter conditionally to allow index usage
         if (!includeDraft)
         {
-            whereClause += " AND c.draft = 0";
+            whereClause += $" AND c.draft = {Dialect.GetBooleanLiteral(false)}";
         }
 
         var sql = $@"
@@ -261,7 +261,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         // Draft filtering - directly in SQL for index usage
         if (!includeDraft)
         {
-            whereClauses.Add("c.draft = 0");
+            whereClauses.Add($"c.draft = {Dialect.GetBooleanLiteral(false)}");
         }
 
         // Add collection filter if specified
@@ -443,7 +443,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         var sql = new StringBuilder("SELECT tags_csv FROM content_items c");
         var parameters = new DynamicParameters();
 
-        var whereClauses = new List<string> { "c.draft = 0" };
+        var whereClauses = new List<string> { $"c.draft = {Dialect.GetBooleanLiteral(false)}" };
 
         // Section filtering via bitmask column
         if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
@@ -521,12 +521,12 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
     /// Build WHERE clauses for filtering content items.
     /// Reusable helper for facets, search, and other queries.
     /// </summary>
-    protected static List<string> BuildFilterWhereClauses(FacetRequest request, DynamicParameters parameters)
+    protected List<string> BuildFilterWhereClauses(FacetRequest request, DynamicParameters parameters)
     {
         ArgumentNullException.ThrowIfNull(request);
         ArgumentNullException.ThrowIfNull(parameters);
 
-        var whereClauses = new List<string> { "c.draft = 0" };
+        var whereClauses = new List<string> { $"c.draft = {Dialect.GetBooleanLiteral(false)}" };
 
         if (request.Tags != null && request.Tags.Count > 0)
         {

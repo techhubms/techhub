@@ -121,6 +121,120 @@ builder.AddServiceDefaults();  // Adds OpenTelemetry, health checks, resilience
 app.MapDefaultEndpoints();     // Maps /health and /alive endpoints
 ```
 
+## Database Configuration
+
+Tech Hub supports three content storage backends configured via `appsettings.json`:
+
+### Option 1: FileSystem (Default - No Database)
+
+Reads markdown files directly from `collections/` folder.
+
+```json
+{
+  "Database": {
+    "Provider": "FileSystem"
+  }
+}
+```
+
+**Pros**: Fastest startup, no database needed, simplest setup  
+**Cons**: No full-text search, slower filtering on large datasets
+
+### Option 2: SQLite (Recommended for Local Development)
+
+Uses local SQLite database with FTS5 full-text search.
+
+```json
+{
+  "Database": {
+    "Provider": "SQLite",
+    "ConnectionString": "Data Source=techhub.db"
+  },
+  "ContentSync": {
+    "Enabled": true
+  }
+}
+```
+
+**Pros**: Fast, no Docker required, full-text search with FTS5  
+**Cons**: Limited concurrency compared to PostgreSQL
+
+**First Run**: Database syncs from markdown files (~30-60s for 4000+ files)  
+**Subsequent Runs**: Hash-based diff (<1s if no changes)
+
+### Option 3: PostgreSQL (Production + E2E Tests)
+
+Uses PostgreSQL with tsvector full-text search and GIN indexes.
+
+**Via Docker Compose** (includes Aspire):
+
+```bash
+# Start PostgreSQL + Aspire AppHost
+docker-compose up
+
+# Or start PostgreSQL only
+docker-compose up postgres
+
+# Then run normally
+Run
+```
+
+**Configuration**:
+
+```json
+{
+  "Database": {
+    "Provider": "PostgreSQL",
+    "ConnectionString": "Host=localhost;Database=techhub;Username=techhub;Password=localdev"
+  },
+  "ContentSync": {
+    "Enabled": true
+  }
+}
+```
+
+**Pros**: Production-ready, best performance at scale, semantic search ready  
+**Cons**: Requires Docker or cloud PostgreSQL instance
+
+### Docker Compose Services
+
+The [docker-compose.yml](docker-compose.yml) provides:
+
+- **postgres**: PostgreSQL 16 database (port 5432)
+- **postgres-test**: Test database (port 5433)
+- **aspire**: Full Aspire stack with API + Web + Dashboard
+
+```bash
+# Start all services
+docker-compose up
+
+# Start specific services
+docker-compose up postgres
+docker-compose up postgres aspire
+
+# Stop and remove containers
+docker-compose down
+
+# View logs
+docker-compose logs -f postgres
+```
+
+### Content Sync Options
+
+Control database sync behavior via `appsettings.json`:
+
+```json
+{
+  "ContentSync": {
+    "Enabled": true,         // Set false to skip sync (faster startup)
+    "ForceFullSync": false,  // Set true to force complete reimport
+    "MaxParallelFiles": 10   // Parallel file processing during sync
+  }
+}
+```
+
+**Tip**: Set `ContentSync:Enabled = false` for rapid iteration when not testing search/filtering features.
+
 ## DevContainer Setup
 
 1. In VS Code, open Command Palette (`Ctrl+Shift+P`)
@@ -321,7 +435,63 @@ The site provides RSS feeds for all sections and collections.
 
 ## Starting, Stopping and Testing the Website
 
-### Starting the Website
+### Database Testing Strategy
+
+Tech Hub uses different database backends for different testing scenarios:
+
+| Test Type | Database | Rationale |
+|-----------|----------|-----------|
+| **Integration Tests** | SQLite in-memory | Fast, isolated, no cleanup needed |
+| **E2E Tests** | PostgreSQL (docker-compose) | Tests production architecture |
+| **Local Development** | PostgreSQL OR SQLite file | Your choice (persistent data) |
+| **Production** | Azure PostgreSQL | Managed, scalable, production-grade |
+
+**Integration tests** (`*Tests.cs` in `tests/`) use DatabaseFixture with SQLite in-memory for speed and isolation. Each test class gets a fresh database.
+
+**E2E tests** use docker-compose with real PostgreSQL + separate API/Web containers (matching production architecture).
+
+### Starting with Docker Compose (E2E / Production-like)
+
+Docker Compose runs the **exact production architecture**:
+
+- **postgres** - PostgreSQL database (matches Azure Database for PostgreSQL)
+- **api** - API container (matches Azure Container App)
+- **web** - Web container (matches Azure Container App)
+- **aspire-dashboard** - Standalone observability dashboard
+
+**First time setup** - Generate HTTPS certificate:
+
+```powershell
+# Generate and trust dev certificate for HTTPS
+./scripts/Generate-DevCertificate.ps1
+```
+
+**Start services**:
+
+```powershell
+# Start all services (postgres, api, web, aspire-dashboard)
+docker-compose up -d
+
+# View logs
+docker-compose logs -f api
+docker-compose logs -f web
+
+# Stop all services
+docker-compose down
+
+# Stop and remove volumes (clean slate)
+docker-compose down -v
+```
+
+**Access**:
+- Web UI: **https://localhost:5003** (HTTPS)
+- API: **https://localhost:5001** (HTTPS)
+- Aspire Dashboard: http://localhost:18888
+- PostgreSQL: localhost:5432
+
+**Note**: Internal health checks use HTTP, external access uses HTTPS (same as production).
+
+### Starting with Run Function (Standard Development)
 
 **ALWAYS use the Run function directly** (automatically loaded in PowerShell):
 
@@ -345,7 +515,7 @@ Run -StopServers
 
 **Log Files**:
 
-- **Console output**: `.tmp/logs/console.txt` (Development) or `api-console.txt`/`web-console.txt` (Production)
+- **Console output**: `.tmp/logs/console.log` (Development) or `api-console.log`/`web-console.log` (Production)
 - **API logs**: `.tmp/logs/api-dev.log` (-prod for Production mode)
 - **Web logs**: `.tmp/logs/web-dev.log` (-prod for Production mode)
 
@@ -402,8 +572,12 @@ Get-Process dotnet | Stop-Process -Force
 
 **isBackground Usage**:
 
-- `isBackground: true` → Long-running processes only (servers, watch mode)
-- `isBackground: false` → Tests and builds (blocks until complete, typically within 60 seconds)
+- `isBackground: false` → Use for `Run` command (builds, tests, starts servers - all automated, returns when complete)
+- `isBackground: true` → Use ONLY for manual server commands like `dotnet run` that run indefinitely
+
+**Why `Run` uses `isBackground: false`**:
+
+The `Run` function is smart - it automatically starts servers in background processes and returns when setup is complete. Servers continue running after the command finishes. Using `isBackground: true` wastes resources by keeping a terminal open for no reason.
 
 **Terminal Reuse**:
 
@@ -414,15 +588,17 @@ Get-Process dotnet | Stop-Process -Force
 **Examples**:
 
 ```typescript
-// ✅ CORRECT - Tests complete quickly
+// ✅ CORRECT - Run handles everything and returns when done
+run_in_terminal("Run", isBackground: false)
 run_in_terminal("Run -TestProject Infrastructure.Tests", isBackground: false)
+run_in_terminal("Run -WithoutTests", isBackground: false)
 
-// ✅ CORRECT - Server runs indefinitely  
-run_in_terminal("Run -WithoutTests", isBackground: true)
+// ✅ CORRECT - Manual server command runs indefinitely
+run_in_terminal("dotnet run --project src/TechHub.Api", isBackground: true)
 
-// ❌ WRONG - Don't use background for tests
+// ❌ WRONG - Wasteful, Run already manages background servers
 run_in_terminal("Run", isBackground: true)
-get_terminal_output(id)  // Wasteful polling
+get_terminal_output(id)  // Wasteful polling - Run already finished!
 ```
 
 For more details, see [AGENTS.md - Terminal Usage](AGENTS.md#terminal-usage).

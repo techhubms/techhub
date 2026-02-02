@@ -18,12 +18,15 @@ using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
     logger.LogInformation("🚀 TechHub.Web starting in {Environment} environment", builder.Environment.EnvironmentName);
 }
 
-// Configure file logging when path is configured in appsettings
+// Configure file logging
 // Skip during integration tests (AppSettings:SkipFileLogging = true)
 var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFileLogging");
-var logPath = builder.Configuration["Logging:File:Path"];
-if (!skipFileLogging && !string.IsNullOrEmpty(logPath))
+if (!skipFileLogging)
 {
+    // Build log path: use TECHHUB_TMP if set (Docker), otherwise .tmp (local dev)
+    var tmpDir = Environment.GetEnvironmentVariable("TECHHUB_TMP") ?? ".tmp";
+    var logPath = Path.Combine(tmpDir, "logs", $"web-{builder.Environment.EnvironmentName.ToLowerInvariant()}.log");
+    
     // Parse log levels from configuration
     var logLevels = new Dictionary<string, LogLevel>();
     var logLevelSection = builder.Configuration.GetSection("Logging:File:LogLevel");
@@ -88,10 +91,28 @@ var apiBaseUrl = builder.Configuration["services:api:https:0"]
     ?? builder.Configuration["ApiBaseUrl"]
     ?? "https://localhost:5001";
 
+// Log the resolved API base URL for debugging
+builder.Logging.AddSimpleConsole();
+var startupLogger = LoggerFactory.Create(b => b.AddConsole()).CreateLogger("Startup");
+startupLogger.LogInformation("🔗 Connecting to API at: {ApiBaseUrl}", apiBaseUrl);
+
 builder.Services.AddHttpClient<TechHubApiClient>(client =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
     client.Timeout = TimeSpan.FromSeconds(30);
+})
+.ConfigurePrimaryHttpMessageHandler(() =>
+{
+    // Allow invalid certificates in development (Docker uses self-signed certs)
+    var handler = new SocketsHttpHandler
+    {
+        // In Docker, accept any certificate for inter-container communication
+        SslOptions = new System.Net.Security.SslClientAuthenticationOptions
+        {
+            RemoteCertificateValidationCallback = (_, _, _, _) => true
+        }
+    };
+    return handler;
 });
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());

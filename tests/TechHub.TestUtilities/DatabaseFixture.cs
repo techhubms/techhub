@@ -8,13 +8,14 @@ namespace TechHub.TestUtilities;
 
 /// <summary>
 /// Base fixture for integration tests that need a database.
-/// Creates an in-memory SQLite database with migrations applied.
+/// Always uses in-memory SQLite for fast, isolated integration tests.
+/// For E2E tests with real PostgreSQL, use docker-compose instead.
 /// Implements IDisposable to ensure cleanup after tests.
 /// </summary>
 /// <typeparam name="T">The test class using this fixture</typeparam>
 public class DatabaseFixture<T> : IDisposable
 {
-    private readonly SqliteConnection _connection;
+    private readonly IDbConnection _connection;
     private readonly ILoggerFactory _loggerFactory;
     private bool _disposed;
 
@@ -31,9 +32,10 @@ public class DatabaseFixture<T> : IDisposable
 
         var logger = _loggerFactory.CreateLogger<DatabaseFixture<T>>();
 
-        // Create in-memory SQLite database (data lives only for the connection lifetime)
-        _connection = new SqliteConnection("Data Source=:memory:");
-        _connection.Open();
+        // SQLite: Create in-memory database (data lives only for the connection lifetime)
+        var sqliteConnection = new SqliteConnection("Data Source=:memory:");
+        sqliteConnection.Open();
+        _connection = sqliteConnection;
 
         logger.LogInformation("🗄️ Created in-memory SQLite database for {TestClass}", typeof(T).Name);
 
@@ -44,7 +46,7 @@ public class DatabaseFixture<T> : IDisposable
             NullLogger<MigrationRunner>.Instance);
 
         migrationRunner.RunMigrationsAsync().GetAwaiter().GetResult();
-        logger.LogInformation("✅ Database migrations completed");
+        logger.LogInformation("✅ Database migrations completed (SQLite)");
 
         // Seed database with test markdown files using production sync logic
         TestCollectionsSeeder.SeedFromFilesAsync(_connection, loggerFactory: _loggerFactory).GetAwaiter().GetResult();
@@ -56,10 +58,9 @@ public class DatabaseFixture<T> : IDisposable
     /// </summary>
     public void ClearData()
     {
-        // Delete in reverse dependency order
+        // Delete in reverse dependency order (SQLite)
         using var command = _connection.CreateCommand();
         command.CommandText = @"
-            DELETE FROM content_plans;
             DELETE FROM content_tags_expanded;
             DELETE FROM content_items;
             DELETE FROM sync_metadata;

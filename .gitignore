@@ -1,6 +1,9 @@
 # Content processing (keep execute-with-token.ps1 private)
 scripts/content-processing/execute-with-token.ps1
 
+# Database files
+.databases/
+
 # Temporary files and logs
 *.tmp
 *.log

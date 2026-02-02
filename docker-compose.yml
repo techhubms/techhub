@@ -1,0 +1,113 @@
+services:
+  # PostgreSQL database service (matches production: Azure Database for PostgreSQL)
+  postgres:
+    image: postgres:16-alpine
+    container_name: techhub-postgres
+    environment:
+      POSTGRES_DB: techhub
+      POSTGRES_USER: techhub
+      POSTGRES_PASSWORD: localdev
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.databases/postgres:/var/lib/postgresql/data
+      - ./.tmp/logs:/var/log/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U techhub -d techhub"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - techhub
+
+  # API service (matches production: separate container)
+  api:
+    build:
+      context: .
+      dockerfile: src/TechHub.Api/Dockerfile
+    container_name: techhub-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:5001;http://+:5000
+      - ASPNETCORE_HTTPS_PORTS=5001
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=devpass
+      - TECHHUB_TMP=/tmp/techhub
+      - Database__Provider=PostgreSQL
+      - Database__ConnectionString=Host=postgres;Database=techhub;Username=techhub;Password=localdev
+      - AppSettings__Content__CollectionsPath=/app/collections
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://aspire-dashboard:18889
+      - OTEL_SERVICE_NAME=techhub-api
+    ports:
+      - "5001:5001"  # HTTPS
+      - "5000:5000"  # HTTP (for internal health checks)
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - techhub
+    volumes:
+      - ./collections:/app/collections:ro
+      - ~/.aspnet/https:/https:ro
+      - ./.tmp/logs:/tmp/techhub/logs
+
+  # Web service (matches production: separate container)
+  web:
+    build:
+      context: .
+      dockerfile: src/TechHub.Web/Dockerfile
+    container_name: techhub-web
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:5003;http://+:5002
+      - ASPNETCORE_HTTPS_PORTS=5003
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=devpass
+      - TECHHUB_TMP=/tmp/techhub
+      - ApiBaseUrl=https://api:5001
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://aspire-dashboard:18889
+      - OTEL_SERVICE_NAME=techhub-web
+    ports:
+      - "5003:5003"  # HTTPS
+      - "5002:5002"  # HTTP (for internal health checks)
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5002/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - techhub
+    volumes:
+      - ~/.aspnet/https:/https:ro
+      - ./.tmp/logs:/tmp/techhub/logs
+
+  # Aspire Dashboard (observability - matches production monitoring)
+  aspire-dashboard:
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:latest
+    container_name: techhub-aspire-dashboard
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_DASHBOARD_OTLP_ENDPOINT_URL=http://+:18889
+      - DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS=true
+    ports:
+      - "18888:18888"  # Dashboard UI
+      - "18889:18889"  # OTLP receiver
+    volumes:
+      - ./.tmp/logs:/app/logs
+    networks:
+      - techhub
+
+networks:
+  techhub:
+    driver: bridge

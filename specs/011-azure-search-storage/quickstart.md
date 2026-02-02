@@ -254,7 +254,7 @@ Run -Clean
 ### View Logs
 
 ```text
-Console: .tmp/logs/console.txt (Development) or api/web-console.txt (Production)
+Console: .tmp/logs/console.log (Development) or api/web-console.log (Production)
 API logs: .tmp/logs/api-dev.log
 Web logs: .tmp/logs/web-dev.log
 ```

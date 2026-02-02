@@ -10,9 +10,10 @@ sudo rm -f /etc/apt/sources.list.d/yarn.list
 # Install NSS tools for certificate management, ImageMagick for image processing, and libjxl for JPEG XL encoding
 # Also install exiftool (libimage-exiftool-perl), webp tools, and file utility for Normalize-Images.ps1 script
 # sqlite3 is needed for database inspection and queries
+# postgresql-client for connecting to PostgreSQL databases (docker-compose or Azure)
 echo "Installing system dependencies..."
 sudo apt-get update
-sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3
+sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 postgresql-client
 
 # ==================== .NET Dev Certificates ====================
 sudo dotnet workload update
@@ -36,6 +37,13 @@ dotnet dev-certs https
 sudo mkdir -p /usr/local/share/ca-certificates/aspnet
 sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https.crt --format PEM
 sudo update-ca-certificates
+
+# Export to PFX for Docker containers (with password)
+echo "Exporting certificate for Docker containers..."
+dotnet dev-certs https -ep /home/vscode/.aspnet/https/aspnetapp.pfx -p devpass
+
+# Make certificate readable by Docker containers (non-root user needs read access)
+chmod 644 /home/vscode/.aspnet/https/aspnetapp.pfx
 
 echo "✅ HTTPS certificate generated and trusted"
 
@@ -152,6 +160,11 @@ $env:POWERSHELL_UPDATECHECK = "Off"
 $env:POWERSHELL_TELEMETRY_OPTOUT = "1"
 
 # ==================== Development Settings ====================
+# Set TECHHUB_TMP for temporary files (logs, uploads, etc.)
+# Points to workspace .tmp directory for local dev (Docker overrides this to /tmp/techhub)
+$env:TECHHUB_TMP = "/workspaces/techhub/.tmp"
+
+# ==================== Development Settings ====================
 # Set default encoding to UTF-8
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
@@ -170,22 +183,12 @@ if (Test-Path $techHubRoot) {
 Write-Host "Tech Hub .NET Development Environment" -ForegroundColor Cyan
 Write-Host "✅ PowerShell profile loaded" -ForegroundColor Green
 Write-Host ""
-Write-Host "Quick start: Type 'Run' to build, test, and start servers" -ForegroundColor Yellow
+Write-Host "Quick start:" -ForegroundColor Yellow
+Write-Host "- Type 'Run' to build, test, and start servers" -ForegroundColor Yellow
+Write-Host "- Type 'Run -Docker' to use Docker containers/Postgres" -ForegroundColor Yellow
+Write-Host "- Type 'Run -Help' for detailed options" -ForegroundColor Yellow
+Write-Host ""
 Write-Host "Servers run in background - terminal is always free to use" -ForegroundColor Yellow
-Write-Host ""
-Write-Host "OPTIONS:" -ForegroundColor Yellow
-Write-Host "  -Help          Show detailed help" -ForegroundColor Gray
-Write-Host "  -Clean         Clean build artifacts before building" -ForegroundColor Gray
-Write-Host "  -WithoutTests  Skip all tests, start servers directly" -ForegroundColor Gray
-Write-Host "  -StopServers   Stop servers after tests complete" -ForegroundColor Gray
-Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor Gray
-Write-Host "  -TestProject   Scope tests to specific project" -ForegroundColor Gray
-Write-Host "  -TestName      Scope tests by name pattern" -ForegroundColor Gray
-Write-Host ""
-Write-Host "LOG FILES:" -ForegroundColor Yellow
-Write-Host "  Console:   .tmp/logs/console.txt (Development) or api/web-console.txt (Production)" -ForegroundColor Gray
-Write-Host "  API logs:  .tmp/logs/api-dev.log (-prod for Production mode)" -ForegroundColor Gray
-Write-Host "  Web logs:  .tmp/logs/web-dev.log (-prod for Production mode)" -ForegroundColor Gray
 Write-Host ""
 EOF
 

@@ -21,6 +21,7 @@ public class ContentSyncService : IContentSyncService
     private readonly IMarkdownService _markdownService;
     private readonly ILogger<ContentSyncService> _logger;
     private readonly ContentSyncOptions _options;
+    private readonly ISqlDialect _dialect;
     private readonly string _collectionsPath;
     private static readonly char[] _tagSplitSeparators = [' ', '-', '_'];
     private static readonly char[] _excerptSplitSeparators = [' ', '\n', '\r'];
@@ -66,18 +67,21 @@ public class ContentSyncService : IContentSyncService
         IDbConnection connection,
         IMarkdownService markdownService,
         ILogger<ContentSyncService> logger,
+        ISqlDialect dialect,
         IOptions<ContentSyncOptions> options,
         IOptions<ContentOptions> contentOptions)
     {
         ArgumentNullException.ThrowIfNull(connection);
         ArgumentNullException.ThrowIfNull(markdownService);
         ArgumentNullException.ThrowIfNull(logger);
+        ArgumentNullException.ThrowIfNull(dialect);
         ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(contentOptions);
 
         _connection = connection;
         _markdownService = markdownService;
         _logger = logger;
+        _dialect = dialect;
         _options = options.Value;
         _collectionsPath = contentOptions.Value.CollectionsPath;
     }
@@ -375,13 +379,12 @@ public class ContentSyncService : IContentSyncService
                 var insertTagsStopwatch = Stopwatch.StartNew();
                 if (allBatchTags.Count > 0)
                 {
-                    const int TagsPerChunk = 90; // 90 tags × 11 params = 990 parameters (just under limit)
+                    const int TagsPerChunk = 90; // 90 tags × 12 params = 1080 parameters (SQLite/PostgreSQL both support this)
                     for (int chunkStart = 0; chunkStart < allBatchTags.Count; chunkStart += TagsPerChunk)
                     {
                         var chunkSize = Math.Min(TagsPerChunk, allBatchTags.Count - chunkStart);
                         var sb = new System.Text.StringBuilder();
-                        sb.Append("INSERT OR IGNORE INTO content_tags_expanded ");
-                        sb.Append("(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask) VALUES ");
+                        sb.Append(_dialect.GetInsertIgnorePrefix("content_tags_expanded", "(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask)"));
 
                         using var cmd = _connection.CreateCommand();
                         cmd.Transaction = transaction;
@@ -397,21 +400,22 @@ public class ContentSyncService : IContentSyncService
 
                             sb.Append(System.Globalization.CultureInfo.InvariantCulture, $"(@cn{tagIdx}, @s{tagIdx}, @w{tagIdx}, @de{tagIdx}, @ai{tagIdx}, @az{tagIdx}, @c{tagIdx}, @do{tagIdx}, @gc{tagIdx}, @ml{tagIdx}, @sec{tagIdx}, @bm{tagIdx})");
 
-                            // Add parameters using direct property access (no reflection)
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@cn{tagIdx}", tag.CollectionName));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@s{tagIdx}", tag.Slug));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@w{tagIdx}", tag.Word));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@de{tagIdx}", tag.DateEpoch));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@ai{tagIdx}", tag.IsAi));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@az{tagIdx}", tag.IsAzure));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@c{tagIdx}", tag.IsCoding));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@do{tagIdx}", tag.IsDevOps));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@gc{tagIdx}", tag.IsGitHubCopilot));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@ml{tagIdx}", tag.IsMl));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@sec{tagIdx}", tag.IsSecurity));
-                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@bm{tagIdx}", tag.SectionsBitmask));
+                            // Add parameters using database-agnostic approach
+                            var cnParam = cmd.CreateParameter(); cnParam.ParameterName = $"@cn{tagIdx}"; cnParam.Value = tag.CollectionName; cmd.Parameters.Add(cnParam);
+                            var sParam = cmd.CreateParameter(); sParam.ParameterName = $"@s{tagIdx}"; sParam.Value = tag.Slug; cmd.Parameters.Add(sParam);
+                            var wParam = cmd.CreateParameter(); wParam.ParameterName = $"@w{tagIdx}"; wParam.Value = tag.Word; cmd.Parameters.Add(wParam);
+                            var deParam = cmd.CreateParameter(); deParam.ParameterName = $"@de{tagIdx}"; deParam.Value = tag.DateEpoch; cmd.Parameters.Add(deParam);
+                            var aiParam = cmd.CreateParameter(); aiParam.ParameterName = $"@ai{tagIdx}"; aiParam.Value = _dialect.ConvertBooleanParameter(tag.IsAi == 1); cmd.Parameters.Add(aiParam);
+                            var azParam = cmd.CreateParameter(); azParam.ParameterName = $"@az{tagIdx}"; azParam.Value = _dialect.ConvertBooleanParameter(tag.IsAzure == 1); cmd.Parameters.Add(azParam);
+                            var cParam = cmd.CreateParameter(); cParam.ParameterName = $"@c{tagIdx}"; cParam.Value = _dialect.ConvertBooleanParameter(tag.IsCoding == 1); cmd.Parameters.Add(cParam);
+                            var doParam = cmd.CreateParameter(); doParam.ParameterName = $"@do{tagIdx}"; doParam.Value = _dialect.ConvertBooleanParameter(tag.IsDevOps == 1); cmd.Parameters.Add(doParam);
+                            var gcParam = cmd.CreateParameter(); gcParam.ParameterName = $"@gc{tagIdx}"; gcParam.Value = _dialect.ConvertBooleanParameter(tag.IsGitHubCopilot == 1); cmd.Parameters.Add(gcParam);
+                            var mlParam = cmd.CreateParameter(); mlParam.ParameterName = $"@ml{tagIdx}"; mlParam.Value = _dialect.ConvertBooleanParameter(tag.IsMl == 1); cmd.Parameters.Add(mlParam);
+                            var secParam = cmd.CreateParameter(); secParam.ParameterName = $"@sec{tagIdx}"; secParam.Value = _dialect.ConvertBooleanParameter(tag.IsSecurity == 1); cmd.Parameters.Add(secParam);
+                            var bmParam = cmd.CreateParameter(); bmParam.ParameterName = $"@bm{tagIdx}"; bmParam.Value = tag.SectionsBitmask; cmd.Parameters.Add(bmParam);
                         }
 
+                        sb.Append(_dialect.GetInsertIgnoreSuffix());
                         cmd.CommandText = sb.ToString();
                         await ((System.Data.Common.DbCommand)cmd).ExecuteNonQueryAsync(ct);
                     }
@@ -584,28 +588,40 @@ public class ContentSyncService : IContentSyncService
             var tagsCsv = parsed.Tags.Count > 0 ? $",{string.Join(",", parsed.Tags)}," : "";
 
             // Build section boolean flags
-            var sectionFlags = new
+            var sectionBools = new
             {
-                IsAi = parsed.Sections.Contains("ai") ? 1 : 0,
-                IsAzure = parsed.Sections.Contains("azure") ? 1 : 0,
-                IsCoding = parsed.Sections.Contains("coding") ? 1 : 0,
-                IsDevOps = parsed.Sections.Contains("devops") ? 1 : 0,
-                IsGitHubCopilot = parsed.Sections.Contains("github-copilot") ? 1 : 0,
-                IsMl = parsed.Sections.Contains("ml") ? 1 : 0,
-                IsSecurity = parsed.Sections.Contains("security") ? 1 : 0
+                IsAi = parsed.Sections.Contains("ai"),
+                IsAzure = parsed.Sections.Contains("azure"),
+                IsCoding = parsed.Sections.Contains("coding"),
+                IsDevOps = parsed.Sections.Contains("devops"),
+                IsGitHubCopilot = parsed.Sections.Contains("github-copilot"),
+                IsMl = parsed.Sections.Contains("ml"),
+                IsSecurity = parsed.Sections.Contains("security")
+            };
+
+            // Convert to integers for TagWord records (SQLite compatibility)
+            var sectionInts = new
+            {
+                IsAi = sectionBools.IsAi ? 1 : 0,
+                IsAzure = sectionBools.IsAzure ? 1 : 0,
+                IsCoding = sectionBools.IsCoding ? 1 : 0,
+                IsDevOps = sectionBools.IsDevOps ? 1 : 0,
+                IsGitHubCopilot = sectionBools.IsGitHubCopilot ? 1 : 0,
+                IsMl = sectionBools.IsMl ? 1 : 0,
+                IsSecurity = sectionBools.IsSecurity ? 1 : 0
             };
 
             // Upsert main content item with section booleans
             var insertContentStopwatch = Stopwatch.StartNew();
 
             // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
-            var sectionsBitmask = (sectionFlags.IsAi * 1) +
-                                  (sectionFlags.IsAzure * 2) +
-                                  (sectionFlags.IsCoding * 4) +
-                                  (sectionFlags.IsDevOps * 8) +
-                                  (sectionFlags.IsGitHubCopilot * 16) +
-                                  (sectionFlags.IsMl * 32) +
-                                  (sectionFlags.IsSecurity * 64);
+            var sectionsBitmask = (sectionInts.IsAi * 1) +
+                                  (sectionInts.IsAzure * 2) +
+                                  (sectionInts.IsCoding * 4) +
+                                  (sectionInts.IsDevOps * 8) +
+                                  (sectionInts.IsGitHubCopilot * 16) +
+                                  (sectionInts.IsMl * 32) +
+                                  (sectionInts.IsSecurity * 64);
 
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
@@ -656,18 +672,18 @@ public class ContentSyncService : IContentSyncService
                     ExternalUrl = parsed.FrontMatter.GetValueOrDefault("external_url", null)?.ToString(),
                     Author = parsed.FrontMatter.GetValueOrDefault("author", null)?.ToString(),
                     FeedName = parsed.FrontMatter.GetValueOrDefault("feed_name", null)?.ToString(),
-                    GhesSupport = (parsed.FrontMatter.GetValueOrDefault("ghes_support", false) is bool ghesSupport && ghesSupport) ? 1 : 0,
-                    Draft = ConvertBoolToInt(parsed.FrontMatter, "draft"),
+                    GhesSupport = _dialect.ConvertBooleanParameter(parsed.FrontMatter.GetValueOrDefault("ghes_support", false) is bool ghesSupport && ghesSupport),
+                    Draft = _dialect.ConvertBooleanParameter(ConvertBoolToBool(parsed.FrontMatter, "draft")),
                     Plans = parsed.Plans.Count > 0 ? string.Join(",", parsed.Plans) : null,
                     TagsCsv = tagsCsv,
                     ContentHash = parsed.ContentHash,
-                    sectionFlags.IsAi,
-                    sectionFlags.IsAzure,
-                    sectionFlags.IsCoding,
-                    sectionFlags.IsDevOps,
-                    sectionFlags.IsGitHubCopilot,
-                    sectionFlags.IsMl,
-                    sectionFlags.IsSecurity,
+                    IsAi = _dialect.ConvertBooleanParameter(sectionBools.IsAi),
+                    IsAzure = _dialect.ConvertBooleanParameter(sectionBools.IsAzure),
+                    IsCoding = _dialect.ConvertBooleanParameter(sectionBools.IsCoding),
+                    IsDevOps = _dialect.ConvertBooleanParameter(sectionBools.IsDevOps),
+                    IsGitHubCopilot = _dialect.ConvertBooleanParameter(sectionBools.IsGitHubCopilot),
+                    IsMl = _dialect.ConvertBooleanParameter(sectionBools.IsMl),
+                    IsSecurity = _dialect.ConvertBooleanParameter(sectionBools.IsSecurity),
                     SectionsBitmask = sectionsBitmask
                 },
                 transaction);
@@ -688,7 +704,7 @@ public class ContentSyncService : IContentSyncService
             // Collect all tag words for bulk insert (eliminates N+1 query problem)
             // NOTE: Skip tags for draft items - they shouldn't be included in tag clouds
             var tagWords = new List<TagWord>();
-            var isDraft = ConvertBoolToInt(parsed.FrontMatter, "draft") == 1;
+            var isDraft = ConvertBoolToBool(parsed.FrontMatter, "draft");
 
             if (!isDraft)
             {
@@ -697,13 +713,13 @@ public class ContentSyncService : IContentSyncService
                     var tagNormalized = tag.ToLowerInvariant().Trim();
 
                     // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
-                    var bitmask = (sectionFlags.IsAi * 1) +
-                                  (sectionFlags.IsAzure * 2) +
-                                  (sectionFlags.IsCoding * 4) +
-                                  (sectionFlags.IsDevOps * 8) +
-                                  (sectionFlags.IsGitHubCopilot * 16) +
-                                  (sectionFlags.IsMl * 32) +
-                                  (sectionFlags.IsSecurity * 64);
+                    var bitmask = (sectionInts.IsAi * 1) +
+                                  (sectionInts.IsAzure * 2) +
+                                  (sectionInts.IsCoding * 4) +
+                                  (sectionInts.IsDevOps * 8) +
+                                  (sectionInts.IsGitHubCopilot * 16) +
+                                  (sectionInts.IsMl * 32) +
+                                  (sectionInts.IsSecurity * 64);
 
                     // Add the full tag (lowercased) for exact matching
                     tagWords.Add(new TagWord(
@@ -711,13 +727,13 @@ public class ContentSyncService : IContentSyncService
                         parsed.Slug,
                         tagNormalized,
                         parsed.DateEpoch,
-                        sectionFlags.IsAi,
-                        sectionFlags.IsAzure,
-                        sectionFlags.IsCoding,
-                        sectionFlags.IsDevOps,
-                        sectionFlags.IsGitHubCopilot,
-                        sectionFlags.IsMl,
-                        sectionFlags.IsSecurity,
+                        sectionInts.IsAi,
+                        sectionInts.IsAzure,
+                        sectionInts.IsCoding,
+                        sectionInts.IsDevOps,
+                        sectionInts.IsGitHubCopilot,
+                        sectionInts.IsMl,
+                        sectionInts.IsSecurity,
                         bitmask
                     ));
 
@@ -738,13 +754,13 @@ public class ContentSyncService : IContentSyncService
                             parsed.Slug,
                             wordNormalized,
                             parsed.DateEpoch,
-                            sectionFlags.IsAi,
-                            sectionFlags.IsAzure,
-                            sectionFlags.IsCoding,
-                            sectionFlags.IsDevOps,
-                            sectionFlags.IsGitHubCopilot,
-                            sectionFlags.IsMl,
-                            sectionFlags.IsSecurity,
+                            sectionInts.IsAi,
+                            sectionInts.IsAzure,
+                            sectionInts.IsCoding,
+                            sectionInts.IsDevOps,
+                            sectionInts.IsGitHubCopilot,
+                            sectionInts.IsMl,
+                            sectionInts.IsSecurity,
                             bitmask
                         ));
                     }
@@ -933,23 +949,33 @@ public class ContentSyncService : IContentSyncService
             transaction: transaction);
     }
 
-    private static int ConvertBoolToInt(Dictionary<string, object?> frontMatter, string key)
+    private static bool ConvertBoolToBool(Dictionary<string, object?> frontMatter, string key)
     {
         var value = frontMatter.GetValueOrDefault(key, false);
 
         // Handle various types YamlDotNet might return
         return value switch
         {
-            bool b => b ? 1 : 0,
-            string s => s.Equals("true", StringComparison.OrdinalIgnoreCase) ? 1 : 0,
-            int i => i != 0 ? 1 : 0,
-            _ => 0
+            bool b => b,
+            string s => s.Equals("true", StringComparison.OrdinalIgnoreCase),
+            int i => i != 0,
+            _ => false
         };
     }
 
     private async Task DisableIndexesAndTriggersAsync()
     {
         _logger.LogInformation("Capturing and disabling indexes and FTS triggers for bulk insert performance...");
+
+        // Skip index optimization for PostgreSQL (requires different system catalog queries)
+        // This optimization is primarily beneficial for SQLite FTS5 triggers
+        if (_connection is Npgsql.NpgsqlConnection)
+        {
+            _logger.LogInformation("Skipping index/trigger optimization (PostgreSQL - not supported yet)");
+            _capturedIndexDefinitions = [];
+            _capturedTriggerDefinitions = [];
+            return;
+        }
 
         // STEP 1: Capture index definitions from sqlite_master BEFORE dropping them
         var indexDefinitions = await _connection.QueryAsync<string>(
@@ -1003,6 +1029,13 @@ public class ContentSyncService : IContentSyncService
     private async Task EnableIndexesAndTriggersAsync()
     {
         _logger.LogInformation("Re-creating indexes and FTS triggers from captured definitions...");
+
+        // Skip if PostgreSQL (index optimization was skipped)
+        if (_connection is Npgsql.NpgsqlConnection)
+        {
+            _logger.LogInformation("Skipping index/trigger recreation (PostgreSQL - not captured)");
+            return;
+        }
 
         if (_capturedIndexDefinitions == null || _capturedTriggerDefinitions == null)
         {
