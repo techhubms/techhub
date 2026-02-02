@@ -1,6 +1,6 @@
 @using TechHub.Core.Models
 
-<a href="@Item.GetHref()"
+<a href="@Item.GetHref(SectionName)"
    class="card"
    target="@Item.GetTarget()"
    rel="@Item.GetRel()"
@@ -46,6 +46,13 @@
 @code {
     [Parameter, EditorRequired]
     public ContentItem Item { get; set; } = null!;
+
+    /// <summary>
+    /// The current section name. When set, content links will stay within this section.
+    /// When null, links fall back to the item's PrimarySectionName.
+    /// </summary>
+    [Parameter]
+    public string? SectionName { get; set; }
 
     [Parameter]
     public bool ShowCollectionBadge { get; set; } = true;

@@ -333,4 +333,47 @@ public class NavigationTests : IAsyncLifetime
         var activeClass = await aboutBookLink.GetAttributeAsync("class");
         activeClass.Should().Contain("active", "TOC link should be highlighted after clicking");
     }
+
+    [Fact]
+    public async Task ContentCard_Click_StaysInCurrentSection()
+    {
+        // Arrange - Navigate to DevOps videos (a section with cross-section content)
+        await Page.GotoRelativeAsync("/devops/videos");
+
+        // Wait for content cards to load
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+
+        // Find a content card that has an internal link (not external)
+        // Internal links should stay within /devops/videos/ path
+        var cards = Page.Locator(".card");
+        var cardCount = await cards.CountAsync();
+        cardCount.Should().BeGreaterThan(0, "Should have content cards on the page");
+
+        // Get the href of the first card
+        var firstCard = cards.First;
+        var href = await firstCard.GetHrefAsync();
+        href.Should().NotBeNull("Card should have an href");
+
+        // Skip external links - find first internal card
+        ILocator? internalCard = null;
+        string? internalHref = null;
+
+        for (int i = 0; i < cardCount; i++)
+        {
+            var card = cards.Nth(i);
+            var cardHref = await card.GetHrefAsync();
+            if (cardHref != null && cardHref.StartsWith("/"))
+            {
+                internalCard = card;
+                internalHref = cardHref;
+                break;
+            }
+        }
+
+        // Assert - Internal content links should stay in current section
+        internalCard.Should().NotBeNull("Should have at least one internal content link");
+        internalHref.Should().NotBeNull();
+        internalHref!.Should().StartWith("/devops/", 
+            "Content cards in /devops/videos should link to /devops/{collection}/{slug}, not to another section");
+    }
 }
