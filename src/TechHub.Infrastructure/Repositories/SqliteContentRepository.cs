@@ -38,28 +38,55 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
         var hasTags = request.Tags != null && request.Tags.Count > 0;
         var hasSections = request.Sections != null && request.Sections.Count > 0;
+        var hasCollections = request.Collections != null && request.Collections.Count > 0;
+        var hasDates = request.DateFrom.HasValue || request.DateTo.HasValue;
 
-        // OPTIMIZATION: When filtering by tags+sections WITHOUT full-text search,
-        // query content_tags_expanded directly (denormalized with date_epoch, is_* columns)
-        // This uses optimized partial indexes idx_tags_section_* for 10x speedup
-        // NOTE: Requires sections to leverage partial indexes; tags-only uses standard join
-        var useTagsTableOptimization = hasTags && hasSections && !hasQuery;
-
-        if (useTagsTableOptimization)
+        // OPTIMIZATION: When filtering by tags (with or without full-text search),
+        // use tags table pre-filtering:
+        // 1. Get (collection_name, slug) from content_tags_expanded (has denormalized date_epoch, is_*, collection_name)
+        // 2. Fetch full content_items with IN clause
+        // This leverages idx_tags_* indexes and reduces FTS search from 4000+ items to potentially just 10-20
+        if (hasTags)
         {
-            // Step 1: Get (collection_name, slug) from denormalized tags table
-            // This is FAST because it uses partial indexes and avoids joining to content_items
+            // Step 1: Get (collection_name, slug, date_epoch) from denormalized tags table
+            // content_tags_expanded has: date_epoch, collection_name, is_* columns - can filter everything!
             var tagsQuery = BuildTagsTableQuery(request, parameters);
             
-            // Step 2: Fetch full content details for the limited results
+            // Step 2: Fetch full content details for the pre-filtered results
             sql.Append($@"
             SELECT {ListViewColumns}
-            FROM content_items c
+            FROM content_items c");
+            
+            // Join with FTS if query is provided (now operating on pre-filtered subset!)
+            if (hasQuery)
+            {
+                sql.Append(@"
+            INNER JOIN content_fts ON c.rowid = content_fts.rowid");
+            }
+            
+            sql.Append($@"
             WHERE (c.collection_name, c.slug) IN (
                 {tagsQuery}
             )
-            AND c.draft = 0
-            ORDER BY c.date_epoch DESC");
+            AND c.draft = 0");
+            
+            // Apply FTS filter if query is provided
+            if (hasQuery)
+            {
+                sql.Append(@"
+            AND content_fts MATCH @query");
+                parameters.Add("query", request.Query);
+            }
+            
+            // Order by FTS rank if searching, otherwise by date
+            if (hasQuery)
+            {
+                sql.Append(" ORDER BY bm25(content_fts)");
+            }
+            else
+            {
+                sql.Append(" ORDER BY c.date_epoch DESC");
+            }
         }
         else
         {
@@ -68,70 +95,42 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
             // NOTE: bm25() rank is used in ORDER BY, not in SELECT, to avoid Dapper mapping issues
 
-            // Optimization: When filtering by tags (without sections), start FROM tags table first
-            // then join to content_items. This is faster than scanning all content_items first.
-            if (hasTags && !hasQuery)
+            // Start from content_items (this path is for FTS queries or non-tag queries)
+            sql.Append("\n            FROM content_items c");
+
+            // Join with FTS5 for full-text search if query is provided
+            if (hasQuery)
             {
-                // Start with first tag (most selective)
-                sql.Append("\n            FROM content_tags_expanded cte0");
                 sql.Append(@"
-                INNER JOIN content_items c 
-                    ON c.slug = cte0.slug 
-                    AND c.collection_name = cte0.collection_name");
-                
-                parameters.Add("tag0", request.Tags[0].ToLowerInvariant().Trim());
-                
-                // Additional tags (if any)
-                for (int i = 1; i < request.Tags.Count; i++)
-                {
-                    sql.Append($@"
-                INNER JOIN content_tags_expanded cte{i} 
-                    ON cte{i}.slug = c.slug 
-                    AND cte{i}.collection_name = c.collection_name
-                    AND cte{i}.tag_word = @tag{i}");
-                    parameters.Add($"tag{i}", request.Tags[i].ToLowerInvariant().Trim());
-                }
-            }
-            else
-            {
-                // Default: Start from content_items
-                sql.Append("\n            FROM content_items c");
-
-                // Join with FTS5 for full-text search if query is provided
-                if (hasQuery)
-                {
-                    sql.Append(@"
                 INNER JOIN content_fts ON c.rowid = content_fts.rowid");
-                }
+            }
 
-                // Tag filtering (when combined with other filters or no tags)
-                if (hasTags)
-                {
-                    for (int i = 0; i < request.Tags.Count; i++)
-                    {
-                        sql.Append($@"
-                INNER JOIN content_tags_expanded cte{i} 
-                    ON cte{i}.slug = c.slug 
-                    AND cte{i}.collection_name = c.collection_name
-                    AND cte{i}.tag_word = @tag{i}");
-                        parameters.Add($"tag{i}", request.Tags[i].ToLowerInvariant().Trim());
-                    }
-                }
+            // Tag filtering using subquery with GROUP BY + HAVING (parameters added for WHERE clause)
+            if (hasTags)
+            {
+                var normalizedTags = request.Tags.Select(t => t.ToLowerInvariant().Trim()).ToList();
+                parameters.Add("tags", normalizedTags);
+                parameters.Add("tagCount", normalizedTags.Count);
             }
         }
 
         // WHERE clause (skip if using tags table optimization - filters already in subquery)
         var whereClauses = new List<string>();
         
-        if (!useTagsTableOptimization)
+        if (!hasTags)
         {
             // Always exclude drafts in search
             whereClauses.Add("c.draft = 0");
 
-            // Tag word filter (when starting from tags table)
-            if (hasTags && !hasQuery)
+            // Tag filtering using subquery with GROUP BY + HAVING
+            if (hasTags)
             {
-                whereClauses.Add("cte0.tag_word = @tag0");
+                whereClauses.Add(@"(c.collection_name, c.slug) IN (
+                    SELECT collection_name, slug FROM content_tags_expanded
+                    WHERE tag_word IN @tags
+                    GROUP BY collection_name, slug
+                    HAVING COUNT(*) = @tagCount
+                )");
             }
 
             // Full-text search
@@ -141,32 +140,20 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
                 parameters.Add("query", request.Query);
             }
 
-            // Section filtering using boolean columns (zero-join filtering)
+            // Section filtering using bitmask (zero-join filtering)
             if (request.Sections != null && request.Sections.Count > 0)
             {
-                var sectionConditions = new List<string>();
-                foreach (var section in request.Sections)
+                var sectionBitmask = CalculateSectionBitmask(request.Sections);
+                if (sectionBitmask > 0)
                 {
-                    var sectionNormalized = section.ToLowerInvariant().Trim();
-                    sectionConditions.Add(sectionNormalized switch
-                    {
-                        "ai" => "c.is_ai = 1",
-                        "azure" => "c.is_azure = 1",
-                        "coding" => "c.is_coding = 1",
-                        "devops" => "c.is_devops = 1",
-                        "github-copilot" => "c.is_github_copilot = 1",
-                        "ml" => "c.is_ml = 1",
-                        "security" => "c.is_security = 1",
-                        _ => "1=0" // Unknown section - no match
-                    });
+                    whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
                 }
-                whereClauses.Add($"({string.Join(" OR ", sectionConditions)})");
             }
         }
 
         // Collection and date filtering (applies to both approaches)
         // When using tags table optimization, these are handled in the subquery
-        if (!useTagsTableOptimization)
+        if (!hasTags)
         {
             // Collection filtering (normalize to lowercase for case-insensitive matching)
             if (request.Collections != null && request.Collections.Count > 0)
@@ -196,7 +183,7 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
         }
 
         // ORDER BY and LIMIT (skip if using tags table optimization - already in subquery)
-        if (!useTagsTableOptimization)
+        if (!hasTags)
         {
             // ORDER BY (FTS rank if search query, otherwise date descending)
             // bm25() returns negative values (lower = better match), so we order ascending
@@ -312,21 +299,21 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
         // Get section facets if requested
         if (request.FacetFields.Contains("sections"))
         {
-            // Use UNION ALL to count each section from boolean columns
+            // Use UNION ALL to count each section from bitmask column
             var sectionsSql = $@"
-                SELECT 'ai' AS Value, COUNT(*) AS Count FROM content_items c {whereClause} AND c.is_ai = 1
+                SELECT 'ai' AS Value, COUNT(*) AS Count FROM content_items c {whereClause} AND (c.sections_bitmask & 1) > 0
                 UNION ALL
-                SELECT 'azure', COUNT(*) FROM content_items c {whereClause} AND c.is_azure = 1
+                SELECT 'azure', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 2) > 0
                 UNION ALL
-                SELECT 'coding', COUNT(*) FROM content_items c {whereClause} AND c.is_coding = 1
+                SELECT 'coding', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 4) > 0
                 UNION ALL
-                SELECT 'devops', COUNT(*) FROM content_items c {whereClause} AND c.is_devops = 1
+                SELECT 'devops', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 8) > 0
                 UNION ALL
-                SELECT 'github-copilot', COUNT(*) FROM content_items c {whereClause} AND c.is_github_copilot = 1
+                SELECT 'github-copilot', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 16) > 0
                 UNION ALL
-                SELECT 'ml', COUNT(*) FROM content_items c {whereClause} AND c.is_ml = 1
+                SELECT 'ml', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 32) > 0
                 UNION ALL
-                SELECT 'security', COUNT(*) FROM content_items c {whereClause} AND c.is_security = 1
+                SELECT 'security', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 64) > 0
                 ORDER BY Count DESC, Value";
 
             var sections = await Connection.QueryAsync<FacetValue>(
@@ -346,6 +333,7 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
     /// <summary>
     /// Build SQL for counting total results (for pagination).
+    /// Uses GROUP BY + HAVING for multi-tag AND logic (matches BuildTagsTableQuery approach).
     /// </summary>
     private static string GetCountSql(SearchRequest request)
     {
@@ -353,70 +341,89 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
         var hasSections = request.Sections != null && request.Sections.Count > 0;
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
         
-        // OPTIMIZATION: When filtering by tags WITHOUT full-text search,
-        // count from content_tags_expanded directly (faster than scanning content_items)
-        // With sections: uses partial indexes idx_tags_section_*
-        // Without sections: uses idx_tags_content_lookup
-        var useTagsTableCountOptimization = hasTags && !hasQuery;
-        
-        if (useTagsTableCountOptimization)
+        // OPTIMIZATION: When filtering by tags (with or without FTS),
+        // pre-filter using content_tags_expanded then apply FTS on smaller subset
+        if (hasTags)
         {
-            // Count from denormalized tags table (FAST with partial indexes)
-            var sql = new StringBuilder("SELECT COUNT(*) FROM content_tags_expanded cte0");
-            
-            // Additional tags (if any)
-            for (int i = 1; i < request.Tags!.Count; i++)
+            if (hasQuery)
             {
-                sql.Append($@"
-                INNER JOIN content_tags_expanded cte{i} 
-                    ON cte{i}.slug = cte0.slug 
-                    AND cte{i}.collection_name = cte0.collection_name
-                    AND cte{i}.tag_word = @tag{i}");
-            }
-            
-            var optimizedWhereClauses = new List<string> { "cte0.tag_word = @tag0" };
-            
-            // Section filtering using denormalized is_* columns (if specified)
-            if (hasSections)
-            {
-                var sectionConditions = new List<string>();
-                foreach (var section in request.Sections!)
+                // Count with FTS: pre-filter by tags, then apply FTS match
+                var sql = new StringBuilder(@"
+                SELECT COUNT(*) FROM content_items c
+                INNER JOIN content_fts ON c.rowid = content_fts.rowid
+                WHERE (c.collection_name, c.slug) IN (
+                    SELECT collection_name, slug FROM content_tags_expanded
+                    WHERE tag_word IN @tags");
+                
+                // Section filtering
+                if (hasSections)
                 {
-                    var sectionNormalized = section.ToLowerInvariant().Trim();
-                    sectionConditions.Add(sectionNormalized switch
+                    var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+                    if (sectionBitmask > 0)
                     {
-                        "ai" => "cte0.is_ai = 1",
-                        "azure" => "cte0.is_azure = 1",
-                        "coding" => "cte0.is_coding = 1",
-                        "devops" => "cte0.is_devops = 1",
-                        "github-copilot" => "cte0.is_github_copilot = 1",
-                        "ml" => "cte0.is_ml = 1",
-                        "security" => "cte0.is_security = 1",
-                        _ => "1=0"
-                    });
+                        sql.Append($" AND (sections_bitmask & {sectionBitmask}) > 0");
+                    }
                 }
-                optimizedWhereClauses.Add($"({string.Join(" OR ", sectionConditions)})");
+                
+                // Collection filtering
+                if (request.Collections != null && request.Collections.Count > 0)
+                {
+                    sql.Append(" AND collection_name IN @collections");
+                }
+                
+                // Date filtering
+                if (request.DateFrom.HasValue)
+                {
+                    sql.Append(" AND date_epoch >= @fromDate");
+                }
+                
+                if (request.DateTo.HasValue)
+                {
+                    sql.Append(" AND date_epoch <= @toDate");
+                }
+                
+                sql.Append(" GROUP BY collection_name, slug HAVING COUNT(*) = @tagCount");
+                sql.Append(") AND c.draft = 0 AND content_fts MATCH @query");
+                return sql.ToString();
             }
-            
-            // Collection filtering
-            if (request.Collections != null && request.Collections.Count > 0)
+            else
             {
-                optimizedWhereClauses.Add("cte0.collection_name IN @collections");
+                // Count without FTS: use tags table directly (original optimization)
+                var sql = new StringBuilder(@"
+                SELECT COUNT(*) FROM (
+                    SELECT collection_name, slug FROM content_tags_expanded
+                    WHERE tag_word IN @tags");
+                
+                // Section filtering using bitmask column (if specified)
+                if (hasSections)
+                {
+                    var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+                    if (sectionBitmask > 0)
+                    {
+                        sql.Append($" AND (sections_bitmask & {sectionBitmask}) > 0");
+                    }
+                }
+                
+                // Collection filtering
+                if (request.Collections != null && request.Collections.Count > 0)
+                {
+                    sql.Append(" AND collection_name IN @collections");
+                }
+                
+                // Date filtering using denormalized date_epoch
+                if (request.DateFrom.HasValue)
+                {
+                    sql.Append(" AND date_epoch >= @fromDate");
+                }
+                
+                if (request.DateTo.HasValue)
+                {
+                    sql.Append(" AND date_epoch <= @toDate");
+                }
+                
+                sql.Append(" GROUP BY collection_name, slug HAVING COUNT(*) = @tagCount)");
+                return sql.ToString();
             }
-            
-            // Date filtering using denormalized date_epoch
-            if (request.DateFrom.HasValue)
-            {
-                optimizedWhereClauses.Add("cte0.date_epoch >= @fromDate");
-            }
-            
-            if (request.DateTo.HasValue)
-            {
-                optimizedWhereClauses.Add("cte0.date_epoch <= @toDate");
-            }
-            
-            sql.Append(" WHERE ").Append(string.Join(" AND ", optimizedWhereClauses));
-            return sql.ToString();
         }
         
         // Standard approach: count from content_items
@@ -430,20 +437,18 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
             standardSql.Append(" INNER JOIN content_fts ON c.rowid = content_fts.rowid");
         }
 
-        // Tag filtering using INNER JOIN (same as main query for consistency)
+        // Tag filtering using subquery with GROUP BY + HAVING (matches main query approach)
         if (hasTags)
         {
-            for (int i = 0; i < request.Tags!.Count; i++)
-            {
-                standardSql.Append($@"
-                INNER JOIN content_tags_expanded cte{i} 
-                    ON cte{i}.slug = c.slug 
-                    AND cte{i}.collection_name = c.collection_name
-                    AND cte{i}.tag_word = @tag{i}");
-            }
+            standardSql.Append(@"
+                WHERE (c.collection_name, c.slug) IN (
+                    SELECT collection_name, slug FROM content_tags_expanded
+                    WHERE tag_word IN @tags
+                    GROUP BY collection_name, slug
+                    HAVING COUNT(*) = @tagCount
+                )");
         }
 
-        _ = new DynamicParameters();
         var whereClauses = new List<string>
         {
             // Always exclude drafts
@@ -457,23 +462,11 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
         if (request.Sections != null && request.Sections.Count > 0)
         {
-            var sectionConditions = new List<string>();
-            foreach (var section in request.Sections)
+            var sectionBitmask = CalculateSectionBitmask(request.Sections);
+            if (sectionBitmask > 0)
             {
-                var sectionNormalized = section.ToLowerInvariant().Trim();
-                sectionConditions.Add(sectionNormalized switch
-                {
-                    "ai" => "c.is_ai = 1",
-                    "azure" => "c.is_azure = 1",
-                    "coding" => "c.is_coding = 1",
-                    "devops" => "c.is_devops = 1",
-                    "github-copilot" => "c.is_github_copilot = 1",
-                    "ml" => "c.is_ml = 1",
-                    "security" => "c.is_security = 1",
-                    _ => "1=0"
-                });
+                whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
             }
-            whereClauses.Add($"({string.Join(" OR ", sectionConditions)})");
         }
 
         if (request.Collections != null && request.Collections.Count > 0)
@@ -493,7 +486,8 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
         if (whereClauses.Count > 0)
         {
-            standardSql.Append(" WHERE ");
+            // Use AND if we already have a WHERE clause from tags subquery
+            standardSql.Append(hasTags ? " AND " : " WHERE ");
             standardSql.Append(string.Join(" AND ", whereClauses));
         }
 
@@ -529,23 +523,11 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
         if (request.Sections != null && request.Sections.Count > 0)
         {
-            var sectionConditions = new List<string>();
-            foreach (var section in request.Sections)
+            var sectionBitmask = CalculateSectionBitmask(request.Sections);
+            if (sectionBitmask > 0)
             {
-                var sectionNormalized = section.ToLowerInvariant().Trim();
-                sectionConditions.Add(sectionNormalized switch
-                {
-                    "ai" => "c.is_ai = 1",
-                    "azure" => "c.is_azure = 1",
-                    "coding" => "c.is_coding = 1",
-                    "devops" => "c.is_devops = 1",
-                    "github-copilot" => "c.is_github_copilot = 1",
-                    "ml" => "c.is_ml = 1",
-                    "security" => "c.is_security = 1",
-                    _ => "1=0"
-                });
+                whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
             }
-            whereClauses.Add($"({string.Join(" OR ", sectionConditions)})");
         }
 
         if (request.Collections != null && request.Collections.Count > 0)
@@ -595,22 +577,14 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
         // tags_csv is NOT NULL in the schema, so no null check needed
         var whereClauses = new List<string> { "c.draft = 0" };
         
-        // Section filtering via denormalized boolean columns (no join needed)
+        // Section filtering via bitmask column (no join needed)
         if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            var sectionNormalized = sectionName.ToLowerInvariant().Trim();
-            var sectionCondition = sectionNormalized switch
+            var sectionBitmask = CalculateSectionBitmask(sectionName);
+            if (sectionBitmask > 0)
             {
-                "ai" => "c.is_ai = 1",
-                "azure" => "c.is_azure = 1",
-                "coding" => "c.is_coding = 1",
-                "devops" => "c.is_devops = 1",
-                "github-copilot" => "c.is_github_copilot = 1",
-                "ml" => "c.is_ml = 1",
-                "security" => "c.is_security = 1",
-                _ => "1=0" // Unknown section - no match
-            };
-            whereClauses.Add(sectionCondition);
+                whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
+            }
         }
 
         // Collection filtering
@@ -679,77 +653,61 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
     /// <summary>
     /// Build optimized subquery that queries content_tags_expanded directly.
-    /// Uses partial indexes idx_tags_section_* for fast filtering by tags+sections.
+    /// Uses GROUP BY + HAVING COUNT(*) = N for multi-tag AND logic (5.8x faster than self-join).
+    /// Uses bitmask for fast section filtering with single idx_tags_word_sections_date index.
     /// Returns (collection_name, slug) pairs ordered by date_epoch DESC.
     /// </summary>
     private static string BuildTagsTableQuery(SearchRequest request, DynamicParameters parameters)
     {
         var sql = new StringBuilder();
-        sql.Append("SELECT DISTINCT cte0.collection_name, cte0.slug FROM content_tags_expanded cte0");
-        
-        // Join with additional tags (if any) - ensures items have ALL specified tags
-        for (int i = 1; i < request.Tags!.Count; i++)
-        {
-            sql.Append($@"
-                INNER JOIN content_tags_expanded cte{i} 
-                    ON cte{i}.slug = cte0.slug 
-                    AND cte{i}.collection_name = cte0.collection_name
-                    AND cte{i}.tag_word = @tag{i}");
-            parameters.Add($"tag{i}", request.Tags[i].ToLowerInvariant().Trim());
-        }
+        sql.Append("SELECT collection_name, slug FROM content_tags_expanded");
         
         var whereClauses = new List<string>();
         
-        // First tag filter
-        whereClauses.Add("cte0.tag_word = @tag0");
-        parameters.Add("tag0", request.Tags[0].ToLowerInvariant().Trim());
+        // Tag filtering - use IN clause for all tags
+        var normalizedTags = request.Tags!.Select(t => t.ToLowerInvariant().Trim()).ToList();
+        whereClauses.Add("tag_word IN @tags");
+        parameters.Add("tags", normalizedTags);
         
-        // Section filtering using denormalized is_* columns (enables partial index usage, if specified)
+        // Section filtering using bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
         if (request.Sections != null && request.Sections.Count > 0)
         {
-            var sectionConditions = new List<string>();
-            foreach (var section in request.Sections)
+            var sectionBitmask = CalculateSectionBitmask(request.Sections);
+            if (sectionBitmask > 0)
             {
-                var sectionNormalized = section.ToLowerInvariant().Trim();
-                sectionConditions.Add(sectionNormalized switch
-                {
-                    "ai" => "cte0.is_ai = 1",
-                    "azure" => "cte0.is_azure = 1",
-                    "coding" => "cte0.is_coding = 1",
-                    "devops" => "cte0.is_devops = 1",
-                    "github-copilot" => "cte0.is_github_copilot = 1",
-                    "ml" => "cte0.is_ml = 1",
-                    "security" => "cte0.is_security = 1",
-                    _ => "1=0"
-                });
+                whereClauses.Add($"(sections_bitmask & {sectionBitmask}) > 0");
             }
-            whereClauses.Add($"({string.Join(" OR ", sectionConditions)})");
         }
         
         // Collection filtering
         if (request.Collections != null && request.Collections.Count > 0)
         {
-            whereClauses.Add("cte0.collection_name IN @collections");
+            whereClauses.Add("collection_name IN @collections");
             parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
         }
         
         // Date filtering using denormalized date_epoch column
         if (request.DateFrom.HasValue)
         {
-            whereClauses.Add("cte0.date_epoch >= @fromDate");
+            whereClauses.Add("date_epoch >= @fromDate");
             parameters.Add("fromDate", ((DateTimeOffset)request.DateFrom.Value).ToUnixTimeSeconds());
         }
         
         if (request.DateTo.HasValue)
         {
-            whereClauses.Add("cte0.date_epoch <= @toDate");
+            whereClauses.Add("date_epoch <= @toDate");
             parameters.Add("toDate", ((DateTimeOffset)request.DateTo.Value).ToUnixTimeSeconds());
         }
         
         sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
         
-        // Order by date_epoch DESC (partial index already has this ordering)
-        sql.Append(" ORDER BY cte0.date_epoch DESC");
+        // GROUP BY to find items that have ALL tags (AND logic)
+        sql.Append(" GROUP BY collection_name, slug");
+        sql.Append(" HAVING COUNT(*) = @tagCount");
+        parameters.Add("tagCount", normalizedTags.Count);
+        
+        // Order by max date_epoch DESC (need MAX since we're grouping)
+        sql.Append(" ORDER BY MAX(date_epoch) DESC");
         
         // Limit results
         sql.Append(" LIMIT @take");

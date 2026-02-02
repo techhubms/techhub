@@ -239,6 +239,51 @@ function Run {
         return $LASTEXITCODE -eq 0
     }
 
+    # Resolve a test project name to its full .csproj path
+    # Accepts various formats: "Infrastructure.Tests", "TechHub.Infrastructure.Tests", etc.
+    function Resolve-TestProjectPath {
+        param([string]$ProjectName)
+        
+        $testsDir = Join-Path $workspaceRoot "tests"
+        
+        # Normalize: remove "TechHub." prefix if present, and ".Tests" suffix for matching
+        $normalizedName = $ProjectName -replace "^TechHub\.", "" -replace "\.Tests$", ""
+        
+        # Try exact match first (e.g., "TechHub.Infrastructure.Tests")
+        $exactPath = Join-Path $testsDir "$ProjectName/$ProjectName.csproj"
+        if (Test-Path $exactPath) {
+            return $exactPath
+        }
+        
+        # Try with TechHub prefix (e.g., "Infrastructure.Tests" -> "TechHub.Infrastructure.Tests")
+        $withPrefixPath = Join-Path $testsDir "TechHub.$ProjectName/TechHub.$ProjectName.csproj"
+        if (Test-Path $withPrefixPath) {
+            return $withPrefixPath
+        }
+        
+        # Try normalized name with full path (e.g., "Infrastructure" -> "TechHub.Infrastructure.Tests")
+        $fullName = "TechHub.$normalizedName.Tests"
+        $normalizedPath = Join-Path $testsDir "$fullName/$fullName.csproj"
+        if (Test-Path $normalizedPath) {
+            return $normalizedPath
+        }
+        
+        # Try finding any matching project in tests directory
+        $matchingProjects = Get-ChildItem -Path $testsDir -Directory | 
+            Where-Object { $_.Name -like "*$normalizedName*" -and $_.Name -like "*.Tests" } |
+            Select-Object -First 1
+        
+        if ($matchingProjects) {
+            $csprojPath = Join-Path $matchingProjects.FullName "$($matchingProjects.Name).csproj"
+            if (Test-Path $csprojPath) {
+                return $csprojPath
+            }
+        }
+        
+        # Not found - return null to fall back to filter-based approach
+        return $null
+    }
+
     # Validate prerequisites
     function Test-Prerequisites {
         Write-Step "Checking prerequisites"
@@ -509,30 +554,45 @@ function Run {
             }
         }
         
-        # Build filter expression
+        # Determine what to test: specific project or solution
+        $testTarget = $solutionPath
         $filterParts = @("FullyQualifiedName!~E2E")
         
         if ($TestProject) {
-            $filterParts += "FullyQualifiedName~$TestProject"
+            # Try to resolve TestProject to a specific .csproj file
+            $projectPath = Resolve-TestProjectPath $TestProject
+            if ($projectPath) {
+                $testTarget = $projectPath
+                # When testing a specific project, no need for E2E exclusion filter
+                $filterParts = @()
+                Write-Info "Testing project: $(Split-Path $projectPath -Leaf)"
+            }
+            else {
+                # Fall back to filter-based approach if project not found
+                $filterParts += "FullyQualifiedName~$TestProject"
+            }
         }
         
         if ($TestName) {
             $filterParts += "FullyQualifiedName~$TestName"
         }
         
-        $filter = $filterParts -join "&"
-        
-        # Run all tests except E2E using solution-level test with filter
-        # Integration tests use WebApplicationFactory which manages its own environment
+        # Build test arguments
         $testArgs = @(
             "test",
-            $solutionPath,
+            $testTarget,
             "--configuration", $configuration,
             "--no-build",
-            "--filter", $filter,
             "--settings", (Join-Path $workspaceRoot ".runsettings"),
             "--blame-hang-timeout", "1m"
         )
+        
+        # Add filter only if we have filter parts
+        if ($filterParts.Count -gt 0) {
+            $filter = $filterParts -join "&"
+            $testArgs += "--filter"
+            $testArgs += $filter
+        }
         
         $success = Invoke-ExternalCommand "dotnet" $testArgs
         

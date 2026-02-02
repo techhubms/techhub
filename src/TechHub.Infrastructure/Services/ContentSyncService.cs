@@ -25,6 +25,10 @@ public class ContentSyncService : IContentSyncService
     private readonly string _collectionsPath;
     private static readonly char[] _tagSplitSeparators = [' ', '-', '_'];
     private static readonly char[] _excerptSplitSeparators = [' ', '\n', '\r'];
+    
+    // Runtime-captured database schema objects (populated during DisableIndexesAndTriggersAsync)
+    private List<string>? _capturedIndexDefinitions;
+    private List<string>? _capturedTriggerDefinitions;
 
     private sealed record ParsedContent(
         string CompositeId,
@@ -43,6 +47,7 @@ public class ContentSyncService : IContentSyncService
     /// <summary>
     /// Strongly-typed record for tag words to avoid reflection overhead during bulk insert.
     /// Uses int (0/1) for boolean flags to match SQLite storage format.
+    /// SectionsBitmask: Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security
     /// </summary>
     private sealed record TagWord(
         string CollectionName,
@@ -55,7 +60,8 @@ public class ContentSyncService : IContentSyncService
         int IsDevOps,
         int IsGitHubCopilot,
         int IsMl,
-        int IsSecurity);
+        int IsSecurity,
+        int SectionsBitmask);
 
     public ContentSyncService(
         IDbConnection connection,
@@ -377,7 +383,7 @@ public class ContentSyncService : IContentSyncService
                         var chunkSize = Math.Min(TagsPerChunk, allBatchTags.Count - chunkStart);
                         var sb = new System.Text.StringBuilder();
                         sb.Append("INSERT OR IGNORE INTO content_tags_expanded ");
-                        sb.Append("(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security) VALUES ");
+                        sb.Append("(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask) VALUES ");
                         
                         using var cmd = _connection.CreateCommand();
                         cmd.Transaction = transaction;
@@ -391,7 +397,7 @@ public class ContentSyncService : IContentSyncService
                                 sb.Append(", ");
                             }
 
-                            sb.Append(System.Globalization.CultureInfo.InvariantCulture, $"(@cn{tagIdx}, @s{tagIdx}, @w{tagIdx}, @de{tagIdx}, @ai{tagIdx}, @az{tagIdx}, @c{tagIdx}, @do{tagIdx}, @gc{tagIdx}, @ml{tagIdx}, @sec{tagIdx})");
+                            sb.Append(System.Globalization.CultureInfo.InvariantCulture, $"(@cn{tagIdx}, @s{tagIdx}, @w{tagIdx}, @de{tagIdx}, @ai{tagIdx}, @az{tagIdx}, @c{tagIdx}, @do{tagIdx}, @gc{tagIdx}, @ml{tagIdx}, @sec{tagIdx}, @bm{tagIdx})");
                             
                             // Add parameters using direct property access (no reflection)
                             cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@cn{tagIdx}", tag.CollectionName));
@@ -405,6 +411,7 @@ public class ContentSyncService : IContentSyncService
                             cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@gc{tagIdx}", tag.IsGitHubCopilot));
                             cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@ml{tagIdx}", tag.IsMl));
                             cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@sec{tagIdx}", tag.IsSecurity));
+                            cmd.Parameters.Add(new Microsoft.Data.Sqlite.SqliteParameter($"@bm{tagIdx}", tag.SectionsBitmask));
                         }
                         
                         cmd.CommandText = sb.ToString();
@@ -599,16 +606,26 @@ public class ContentSyncService : IContentSyncService
 
             // Upsert main content item with section booleans
             var insertContentStopwatch = Stopwatch.StartNew();
+            
+            // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
+            var sectionsBitmask = (sectionFlags.IsAi * 1) +
+                                  (sectionFlags.IsAzure * 2) +
+                                  (sectionFlags.IsCoding * 4) +
+                                  (sectionFlags.IsDevOps * 8) +
+                                  (sectionFlags.IsGitHubCopilot * 16) +
+                                  (sectionFlags.IsMl * 32) +
+                                  (sectionFlags.IsSecurity * 64);
+            
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
                     slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
                     primary_section_name, external_url, author, feed_name, ghes_support, draft, plans, tags_csv, content_hash,
-                    is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security,
+                    is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask,
                     created_at, updated_at
                 ) VALUES (
                     @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
                     @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @Plans, @TagsCsv, @ContentHash,
-                    @IsAi, @IsAzure, @IsCoding, @IsDevOps, @IsGitHubCopilot, @IsMl, @IsSecurity,
+                    @IsAi, @IsAzure, @IsCoding, @IsDevOps, @IsGitHubCopilot, @IsMl, @IsSecurity, @SectionsBitmask,
                     CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                 )
                 ON CONFLICT(collection_name, slug) DO UPDATE SET
@@ -633,6 +650,7 @@ public class ContentSyncService : IContentSyncService
                     is_github_copilot = @IsGitHubCopilot,
                     is_ml = @IsMl,
                     is_security = @IsSecurity,
+                    sections_bitmask = @SectionsBitmask,
                     updated_at = CURRENT_TIMESTAMP",
                 new
                 {
@@ -658,7 +676,8 @@ public class ContentSyncService : IContentSyncService
                     sectionFlags.IsDevOps,
                     sectionFlags.IsGitHubCopilot,
                     sectionFlags.IsMl,
-                    sectionFlags.IsSecurity
+                    sectionFlags.IsSecurity,
+                    SectionsBitmask = sectionsBitmask
                 },
                 transaction);
             insertContentMs = insertContentStopwatch.ElapsedMilliseconds;
@@ -686,6 +705,15 @@ public class ContentSyncService : IContentSyncService
                 {
                     var tagNormalized = tag.ToLowerInvariant().Trim();
                     
+                    // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
+                    var bitmask = (sectionFlags.IsAi * 1) +
+                                  (sectionFlags.IsAzure * 2) +
+                                  (sectionFlags.IsCoding * 4) +
+                                  (sectionFlags.IsDevOps * 8) +
+                                  (sectionFlags.IsGitHubCopilot * 16) +
+                                  (sectionFlags.IsMl * 32) +
+                                  (sectionFlags.IsSecurity * 64);
+                    
                     // Add the full tag (lowercased) for exact matching
                     tagWords.Add(new TagWord(
                         parsed.CollectionName,
@@ -698,7 +726,8 @@ public class ContentSyncService : IContentSyncService
                         sectionFlags.IsDevOps,
                         sectionFlags.IsGitHubCopilot,
                         sectionFlags.IsMl,
-                        sectionFlags.IsSecurity
+                        sectionFlags.IsSecurity,
+                        bitmask
                     ));
                     
                     // Also expand tags into words for subset matching
@@ -724,7 +753,8 @@ public class ContentSyncService : IContentSyncService
                             sectionFlags.IsDevOps,
                             sectionFlags.IsGitHubCopilot,
                             sectionFlags.IsMl,
-                            sectionFlags.IsSecurity
+                            sectionFlags.IsSecurity,
+                            bitmask
                         ));
                     }
                 }
@@ -928,110 +958,102 @@ public class ContentSyncService : IContentSyncService
 
     private async Task DisableIndexesAndTriggersAsync()
     {
-        _logger.LogInformation("Disabling indexes and FTS triggers for bulk insert performance...");
+        _logger.LogInformation("Capturing and disabling indexes and FTS triggers for bulk insert performance...");
 
-        // Dynamically drop all secondary indexes (except sqlite_autoindex_* which are for PRIMARY KEY/UNIQUE)
-        // This is future-proof: any new indexes added in EnableIndexesAndTriggersAsync will be auto-dropped
-        var indexes = await _connection.QueryAsync<string>(
+        // STEP 1: Capture index definitions from sqlite_master BEFORE dropping them
+        var indexDefinitions = await _connection.QueryAsync<string>(
+            @"SELECT sql FROM sqlite_master 
+              WHERE type = 'index' 
+              AND tbl_name IN ('content_items', 'content_tags_expanded')
+              AND name NOT LIKE 'sqlite_autoindex_%'
+              AND sql IS NOT NULL");
+        _capturedIndexDefinitions = indexDefinitions.ToList();
+        _logger.LogInformation("Captured {Count} index definitions", _capturedIndexDefinitions.Count);
+
+        // STEP 2: Capture trigger definitions BEFORE dropping them
+        var triggerDefinitions = await _connection.QueryAsync<string>(
+            @"SELECT sql FROM sqlite_master 
+              WHERE type = 'trigger' 
+              AND tbl_name = 'content_items'
+              AND sql IS NOT NULL");
+        _capturedTriggerDefinitions = triggerDefinitions.ToList();
+        _logger.LogInformation("Captured {Count} trigger definitions", _capturedTriggerDefinitions.Count);
+
+        // STEP 3: Drop all indexes
+        var indexNames = await _connection.QueryAsync<string>(
             @"SELECT name FROM sqlite_master 
               WHERE type = 'index' 
               AND tbl_name IN ('content_items', 'content_tags_expanded')
               AND name NOT LIKE 'sqlite_autoindex_%'");
         
-        foreach (var indexName in indexes)
+        foreach (var indexName in indexNames)
         {
             await _connection.ExecuteAsync($"DROP INDEX IF EXISTS {indexName}");
         }
-        _logger.LogInformation("Dropped {Count} indexes", indexes.Count());
+        _logger.LogInformation("Dropped {Count} indexes", indexNames.Count());
 
-        // Drop FTS triggers (FTS index will be rebuilt at end)
-        await _connection.ExecuteAsync("DROP TRIGGER IF EXISTS content_ai");
-        await _connection.ExecuteAsync("DROP TRIGGER IF EXISTS content_au");
-        await _connection.ExecuteAsync("DROP TRIGGER IF EXISTS content_ad");
+        // STEP 4: Drop all triggers
+        var triggerNames = await _connection.QueryAsync<string>(
+            @"SELECT name FROM sqlite_master 
+              WHERE type = 'trigger' 
+              AND tbl_name = 'content_items'");
+        
+        foreach (var triggerName in triggerNames)
+        {
+            await _connection.ExecuteAsync($"DROP TRIGGER IF EXISTS {triggerName}");
+        }
+        _logger.LogInformation("Dropped {Count} triggers", triggerNames.Count());
 
         _logger.LogInformation("Indexes and triggers disabled");
     }
 
     private async Task EnableIndexesAndTriggersAsync()
     {
-        _logger.LogInformation("Re-creating indexes and FTS triggers...");
+        _logger.LogInformation("Re-creating indexes and FTS triggers from captured definitions...");
 
-        // Essential indexes based on actual query patterns in SqliteContentRepository
-        
-        // Query: Filter by collection + draft, order by date (GetByCollectionAsync, feed generation)
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_content_collection_date ON content_items(collection_name, draft, date_epoch DESC)");
+        if (_capturedIndexDefinitions == null || _capturedTriggerDefinitions == null)
+        {
+            _logger.LogError("No captured definitions found - indexes/triggers were not properly captured during disable phase");
+            throw new InvalidOperationException("Cannot recreate indexes/triggers: definitions were not captured");
+        }
 
-        // Query: Filter by draft, order by date (GetAllAsync)
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_content_draft_date ON content_items(draft, date_epoch DESC)");
-
-        // COVERING INDEX for GetTagCountsAsync (all sections) - includes tags_csv to avoid table lookups
-        // This is the MOST CRITICAL index for homepage tag cloud performance
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_all_covering ON content_items(draft, tags_csv) WHERE draft = 0");
-
-        // Partial indexes for section filtering - supports both section-only and section+collection queries
-        // These are used by GetBySectionAsync and SearchAsync with section filters
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_ai ON content_items(collection_name, date_epoch DESC) WHERE is_ai = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_azure ON content_items(collection_name, date_epoch DESC) WHERE is_azure = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_coding ON content_items(collection_name, date_epoch DESC) WHERE is_coding = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_devops ON content_items(collection_name, date_epoch DESC) WHERE is_devops = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_github_copilot ON content_items(collection_name, date_epoch DESC) WHERE is_github_copilot = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_ml ON content_items(collection_name, date_epoch DESC) WHERE is_ml = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_section_security ON content_items(collection_name, date_epoch DESC) WHERE is_security = 1 AND draft = 0");
-
-        // COVERING INDEXES for GetTagCountsAsync (per-section) - include tags_csv to avoid table lookups
-        // These are CRITICAL for section-specific tag cloud performance
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_ai_covering ON content_items(is_ai, tags_csv) WHERE is_ai = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_azure_covering ON content_items(is_azure, tags_csv) WHERE is_azure = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_coding_covering ON content_items(is_coding, tags_csv) WHERE is_coding = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_devops_covering ON content_items(is_devops, tags_csv) WHERE is_devops = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_github_copilot_covering ON content_items(is_github_copilot, tags_csv) WHERE is_github_copilot = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_ml_covering ON content_items(is_ml, tags_csv) WHERE is_ml = 1 AND draft = 0");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_security_covering ON content_items(is_security, tags_csv) WHERE is_security = 1 AND draft = 0");
-
-        // General index for tags-only queries (no section filter)
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_date ON content_tags_expanded(tag_word, date_epoch DESC)");
-
-        // Partial indexes for section-filtered tag queries (tag cloud, tag filtering)
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_ai ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_ai = 1");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_azure ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_azure = 1");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_coding ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_coding = 1");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_devops ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_devops = 1");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_github_copilot ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_github_copilot = 1");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_ml ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_ml = 1");
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_section_security ON content_tags_expanded(tag_word, date_epoch DESC) WHERE is_security = 1");
-
-        // Query: Lookup tags for a specific content item (used in related articles)
-        await _connection.ExecuteAsync("CREATE INDEX IF NOT EXISTS idx_tags_content_lookup ON content_tags_expanded(collection_name, slug, tag_word)");
-
-        // Recreate FTS triggers using raw DbCommand (Dapper treats BEGIN as stored procedure)
-        var triggerStopwatch = Stopwatch.StartNew();
+        // STEP 1: Recreate all indexes from captured definitions
         var dbCmd = (DbCommand)_connection.CreateCommand();
+        var indexStopwatch = Stopwatch.StartNew();
         
-        dbCmd.CommandText = "CREATE TRIGGER IF NOT EXISTS content_ai AFTER INSERT ON content_items BEGIN INSERT INTO content_fts(rowid, slug, title, excerpt, content) VALUES (new.rowid, new.slug, new.title, new.excerpt, new.content); END";
-        await dbCmd.ExecuteNonQueryAsync();
+        foreach (var indexSql in _capturedIndexDefinitions)
+        {
+            dbCmd.CommandText = indexSql;
+            await dbCmd.ExecuteNonQueryAsync();
+        }
+        _logger.LogInformation("⏱️ Recreated {Count} indexes in {ElapsedMs}ms", _capturedIndexDefinitions.Count, indexStopwatch.ElapsedMilliseconds);
 
-        dbCmd.CommandText = "CREATE TRIGGER IF NOT EXISTS content_ad AFTER DELETE ON content_items BEGIN INSERT INTO content_fts(content_fts, rowid, slug, title, excerpt, content) VALUES ('delete', old.rowid, old.slug, old.title, old.excerpt, old.content); END";
-        await dbCmd.ExecuteNonQueryAsync();
-
-        dbCmd.CommandText = "CREATE TRIGGER IF NOT EXISTS content_au AFTER UPDATE ON content_items BEGIN INSERT INTO content_fts(content_fts, rowid, slug, title, excerpt, content) VALUES ('delete', old.rowid, old.slug, old.title, old.excerpt, old.content); INSERT INTO content_fts(rowid, slug, title, excerpt, content) VALUES (new.rowid, new.slug, new.title, new.excerpt, new.content); END";
-        await dbCmd.ExecuteNonQueryAsync();
-        _logger.LogInformation("⏱️ FTS triggers creation: {ElapsedMs}ms", triggerStopwatch.ElapsedMilliseconds);
+        // STEP 2: Recreate all triggers from captured definitions
+        var triggerStopwatch = Stopwatch.StartNew();
+        foreach (var triggerSql in _capturedTriggerDefinitions)
+        {
+            dbCmd.CommandText = triggerSql;
+            await dbCmd.ExecuteNonQueryAsync();
+        }
+        _logger.LogInformation("⏱️ Recreated {Count} triggers in {ElapsedMs}ms", _capturedTriggerDefinitions.Count, triggerStopwatch.ElapsedMilliseconds);
 
         // Rebuild FTS index from scratch (more efficient than incremental updates)
         _logger.LogInformation("Rebuilding FTS index...");
         var ftsRebuildStopwatch = Stopwatch.StartNew();
-        dbCmd.CommandText = "INSERT INTO content_fts(content_fts) VALUES('rebuild')";
-        await dbCmd.ExecuteNonQueryAsync();
+        var rebuildCmd = (DbCommand)_connection.CreateCommand();
+        rebuildCmd.CommandText = "INSERT INTO content_fts(content_fts) VALUES('rebuild')";
+        await rebuildCmd.ExecuteNonQueryAsync();
+        rebuildCmd.Dispose();
         _logger.LogInformation("⏱️ FTS rebuild: {ElapsedMs}ms", ftsRebuildStopwatch.ElapsedMilliseconds);
 
         // Update statistics for query planner
         _logger.LogInformation("Updating query planner statistics...");
         var analyzeStopwatch = Stopwatch.StartNew();
-        dbCmd.CommandText = "ANALYZE";
-        await dbCmd.ExecuteNonQueryAsync();
+        var analyzeCmd = (DbCommand)_connection.CreateCommand();
+        analyzeCmd.CommandText = "ANALYZE";
+        await analyzeCmd.ExecuteNonQueryAsync();
+        analyzeCmd.Dispose();
         _logger.LogInformation("⏱️ ANALYZE: {ElapsedMs}ms", analyzeStopwatch.ElapsedMilliseconds);
-        
-        dbCmd.Dispose();
 
         _logger.LogInformation("Indexes and triggers re-created");
     }

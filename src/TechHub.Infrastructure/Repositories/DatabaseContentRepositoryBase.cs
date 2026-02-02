@@ -233,23 +233,22 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
             return await GetAllInternalAsync(includeDraft, limit, offset, ct);
         }
 
-        // Build section condition directly in SQL (not parameterized) so SQLite can use partial indexes
-        // idx_section_ai, idx_section_azure, etc. have WHERE is_* = 1 AND draft = 0
-        var sectionNormalized = sectionName.ToLowerInvariant().Trim();
-        var sectionCondition = sectionNormalized switch
-        {
-            "ai" => "c.is_ai = 1",
-            "azure" => "c.is_azure = 1",
-            "coding" => "c.is_coding = 1",
-            "devops" => "c.is_devops = 1",
-            "github-copilot" => "c.is_github_copilot = 1",
-            "ml" => "c.is_ml = 1",
-            "security" => "c.is_security = 1",
-            _ => "1=0" // Unknown section - no match (safe default)
-        };
-
+        // Build section condition using bitmask for idx_section_date index usage
+        // idx_section_date: (collection_name, date_epoch DESC, sections_bitmask, tags_csv) WHERE draft = 0
+        var sectionBitmask = CalculateSectionBitmask(sectionName);
+        
         // Build WHERE clauses for index-optimized filtering
-        var whereClauses = new List<string> { sectionCondition };
+        var whereClauses = new List<string>();
+        
+        if (sectionBitmask > 0)
+        {
+            whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
+        }
+        else
+        {
+            // Unknown section - no match (safe default)
+            whereClauses.Add("1=0");
+        }
 
         // Draft filtering - directly in SQL for index usage
         if (!includeDraft)
@@ -282,5 +281,43 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
             new CommandDefinition(sql, new { collectionName, subcollectionName, limit, offset }, cancellationToken: ct));
 
         return [.. items];
+    }
+
+    /// <summary>
+    /// Calculate bitmask value for section filtering.
+    /// Bit 0 (1) = AI, Bit 1 (2) = Azure, Bit 2 (4) = Coding, Bit 3 (8) = DevOps,
+    /// Bit 4 (16) = GitHub Copilot, Bit 5 (32) = ML, Bit 6 (64) = Security.
+    /// </summary>
+    /// <param name="sections">Collection of section names to include in bitmask</param>
+    /// <returns>Integer bitmask with bits set for each matching section</returns>
+    protected static int CalculateSectionBitmask(IEnumerable<string> sections)
+    {
+        var bitmask = 0;
+        foreach (var section in sections)
+        {
+            bitmask |= CalculateSectionBitmask(section);
+        }
+        return bitmask;
+    }
+
+    /// <summary>
+    /// Calculate bitmask value for a single section.
+    /// </summary>
+    /// <param name="section">Section name</param>
+    /// <returns>Integer bitmask value for the section (0 if unknown)</returns>
+    protected static int CalculateSectionBitmask(string section)
+    {
+        var sectionNormalized = section.ToLowerInvariant().Trim();
+        return sectionNormalized switch
+        {
+            "ai" => 1,
+            "azure" => 2,
+            "coding" => 4,
+            "devops" => 8,
+            "github-copilot" => 16,
+            "ml" => 32,
+            "security" => 64,
+            _ => 0
+        };
     }
 }
