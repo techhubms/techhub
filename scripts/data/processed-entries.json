@@ -24826,5 +24826,11 @@
     "timestamp": "2026-02-01 16:04:32 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=dpxODnbIQgg",
     "reason": "Succesfully added: Assigned 'AI' because the content centers on using GitHub Copilot CLI with multiple AI models (AI rule 2 and 1). Assigned 'GitHub Copilot' because it specifically showcases GitHub Copilot features—model switching, CLI usage, and workflow integration (GitHub Copilot rules 1 and 2). Did NOT assign 'Coding' or 'DevOps' because the video focuses on demoing interface features, not coding patterns, framework development, or CI/CD processes."
+  },
+  {
+    "timestamp": "2026-02-02 08:10:52 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/benchmarking-local-ai-models/ba-p/4490780",
+    "reason": "Succesfully added: Included the AI category because the entire article is focused on benchmarking, evaluating, and comparing AI models using Microsoft Foundry Local and related SDKs, aligning directly with AI inclusion rule 1. There is no coverage of GitHub Copilot, Azure services, ML/data engineering, security, or DevOps-specific practices, so those categories do not apply. The article is technical, focused on developer tooling and methodology, and avoids generic exclusion rules, providing significant education about building scientific AI benchmarking infrastructure.",
+    "collection": "community"
   }
 ]
