@@ -149,3 +149,9 @@ public class TabHighlightingCollection : ICollectionFixture<PlaywrightCollection
 public class TabOrderingCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }
+
+
+[CollectionDefinition("Infinite Scroll Tests")]
+public class InfiniteScrollCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
