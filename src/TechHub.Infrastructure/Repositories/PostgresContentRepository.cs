@@ -109,7 +109,7 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
             }
 
             sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
-            
+
             // ORDER BY: Full-text search uses ts_rank, otherwise date descending
             if (hasQuery)
             {
@@ -183,7 +183,11 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
 
                 for (int i = 0; i < request.Tags!.Count; i++)
                 {
-                    if (i > 0) sql.Append(" INTERSECT ");
+                    if (i > 0)
+                    {
+                        sql.Append(" INTERSECT ");
+                    }
+
                     sql.Append(@"
                         SELECT collection_name, slug 
                         FROM content_tags_expanded 
@@ -208,7 +212,11 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
 
                 for (int i = 0; i < request.Tags!.Count; i++)
                 {
-                    if (i > 0) sql.Append(" INTERSECT ");
+                    if (i > 0)
+                    {
+                        sql.Append(" INTERSECT ");
+                    }
+
                     sql.Append(@"
                         SELECT collection_name, slug 
                         FROM content_tags_expanded 

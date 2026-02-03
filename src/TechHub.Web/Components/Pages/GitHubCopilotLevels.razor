@@ -114,7 +114,7 @@
         return sb.ToString();
     }
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
         try
         {
@@ -129,5 +129,4 @@
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
-    }
-}
+    }}

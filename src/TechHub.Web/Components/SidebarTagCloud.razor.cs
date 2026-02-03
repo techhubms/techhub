@@ -187,7 +187,7 @@ public partial class SidebarTagCloud : ComponentBase
                     .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
                     .Select(t => new TagCloudItem { Tag = t, Count = 1, Size = TagSize.Medium })];
 
-                Logger.LogInformation("Using {Count} provided tags for content item", _tags.Count);
+                Logger.LogDebug("Using {Count} provided tags for content item", _tags.Count);
                 return;
             }
 
@@ -195,7 +195,7 @@ public partial class SidebarTagCloud : ComponentBase
             var effectiveSectionName = string.IsNullOrWhiteSpace(SectionName) ? "all" : SectionName;
             var effectiveCollectionName = string.IsNullOrWhiteSpace(CollectionName) ? "all" : CollectionName;
 
-            Logger.LogInformation("Loading tag cloud for section: {SectionName}, collection: {CollectionName}",
+            Logger.LogDebug("Loading tag cloud for section: {SectionName}, collection: {CollectionName}",
                 effectiveSectionName, effectiveCollectionName);
 
             _tags = await ApiClient.GetTagCloudAsync(
@@ -205,7 +205,7 @@ public partial class SidebarTagCloud : ComponentBase
                 MinUses,
                 LastDays);
 
-            Logger.LogInformation("Successfully loaded {Count} tags", _tags?.Count ?? 0);
+            Logger.LogDebug("Successfully loaded {Count} tags", _tags?.Count ?? 0);
         }
         // Suppress CA1031: Catching all exceptions is appropriate for component error handling
         // We log the error and set hasError flag to show error UI to user

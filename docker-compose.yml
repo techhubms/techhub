@@ -12,7 +12,6 @@ services:
       - "5432:5432"
     volumes:
       - ./.databases/postgres:/var/lib/postgresql/data
-      - ./.tmp/logs:/var/log/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U techhub -d techhub"]
       interval: 5s
@@ -27,6 +26,7 @@ services:
       context: .
       dockerfile: src/TechHub.Api/Dockerfile
     container_name: techhub-api
+    user: "1000:1000"  # Run as vscode user to match dev container (prevents log file permission issues)
     depends_on:
       postgres:
         condition: service_healthy
@@ -64,6 +64,7 @@ services:
       context: .
       dockerfile: src/TechHub.Web/Dockerfile
     container_name: techhub-web
+    user: "1000:1000"  # Run as vscode user to match dev container (prevents log file permission issues)
     depends_on:
       api:
         condition: service_healthy
@@ -103,8 +104,6 @@ services:
     ports:
       - "18888:18888"  # Dashboard UI
       - "18889:18889"  # OTLP receiver
-    volumes:
-      - ./.tmp/logs:/app/logs
     networks:
       - techhub
 

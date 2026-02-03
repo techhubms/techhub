@@ -33,12 +33,12 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching all sections from API");
+            _logger.LogDebug("Fetching all sections from API");
             var sections = await _httpClient.GetFromJsonAsync<IEnumerable<Section>>(
                 "/api/sections",
                 cancellationToken);
 
-            _logger.LogInformation("Successfully fetched {Count} sections", sections?.Count() ?? 0);
+            _logger.LogDebug("Successfully fetched {Count} sections", sections?.Count() ?? 0);
             return sections;
         }
         catch (HttpRequestException ex)
@@ -56,7 +56,7 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching section: {SectionName}", sectionName);
+            _logger.LogDebug("Fetching section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{sectionName}", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -85,7 +85,7 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching collections for section: {SectionName}", sectionName);
+            _logger.LogDebug("Fetching collections for section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{sectionName}/collections", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -120,7 +120,7 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var response = await _httpClient.GetAsync(
                 $"/api/sections/{sectionName}/collections/{collectionName}",
                 cancellationToken);
@@ -199,10 +199,10 @@ public class TechHubApiClient : ITechHubApiClient
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/sections/{sectionName}/collections/{collectionName}/items{queryString}";
 
-            _logger.LogInformation("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(url, cancellationToken);
 
-            _logger.LogInformation("Successfully fetched {Count} items for collection {SectionName}/{CollectionName}",
+            _logger.LogDebug("Successfully fetched {Count} items for collection {SectionName}/{CollectionName}",
                 items?.Count() ?? 0, sectionName, collectionName);
             return items;
         }
@@ -246,10 +246,10 @@ public class TechHubApiClient : ITechHubApiClient
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/sections/{sectionName}/collections/{collectionName}/tags{queryString}";
 
-            _logger.LogInformation("Fetching tag cloud for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching tag cloud for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
 
-            _logger.LogInformation("Successfully fetched {Count} tags for collection {SectionName}/{CollectionName}",
+            _logger.LogDebug("Successfully fetched {Count} tags for collection {SectionName}/{CollectionName}",
                 tagCloud?.Count ?? 0, sectionName, collectionName);
             return tagCloud;
         }
@@ -276,7 +276,7 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
+            _logger.LogDebug("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
                 sectionName, collectionName, slug);
 
             var response = await _httpClient.GetAsync(
@@ -388,12 +388,12 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching RSS feed for all content");
+            _logger.LogDebug("Fetching RSS feed for all content");
             var response = await _httpClient.GetAsync(new Uri("/api/rss/all", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
 
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);
-            _logger.LogInformation("Successfully fetched RSS feed for all content");
+            _logger.LogDebug("Successfully fetched RSS feed for all content");
             return xml;
         }
         catch (HttpRequestException ex)
@@ -410,12 +410,12 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching RSS feed for section: {SectionName}", sectionName);
+            _logger.LogDebug("Fetching RSS feed for section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync(new Uri($"/api/rss/{sectionName}", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
 
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);
-            _logger.LogInformation("Successfully fetched RSS feed for section: {SectionName}", sectionName);
+            _logger.LogDebug("Successfully fetched RSS feed for section: {SectionName}", sectionName);
             return xml;
         }
         catch (HttpRequestException ex)
@@ -432,12 +432,12 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching RSS feed for collection: {CollectionName}", collectionName);
+            _logger.LogDebug("Fetching RSS feed for collection: {CollectionName}", collectionName);
             var response = await _httpClient.GetAsync(new Uri($"/api/rss/collection/{collectionName}", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
 
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);
-            _logger.LogInformation("Successfully fetched RSS feed for collection: {CollectionName}", collectionName);
+            _logger.LogDebug("Successfully fetched RSS feed for collection: {CollectionName}", collectionName);
             return xml;
         }
         catch (HttpRequestException ex)
@@ -524,7 +524,7 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            _logger.LogInformation("Fetching {PageName} page data", pageName);
+            _logger.LogDebug("Fetching {PageName} page data", pageName);
             var response = await _httpClient.GetAsync(url, cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)

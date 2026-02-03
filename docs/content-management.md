@@ -6,6 +6,24 @@ The Tech Hub supports both manual and automated content creation. Content is org
 
 ## Content Creation Methods
 
+### Database Synchronization
+
+**Important**: Tech Hub uses a **database-backed** content system. Markdown files in the `collections/` folder are the **source of truth**, but the application serves content from a database (SQLite or PostgreSQL) for performance.
+
+**How it works**:
+
+1. **First startup**: Database syncs from all markdown files (~30-60s for 4000+ files)
+2. **Subsequent startups**: Hash-based diff detects changes (<1s if no changes)
+3. **Configuration**: Set `ContentSync:Enabled = false` in appsettings.json to skip sync for faster local dev
+
+**Providers**:
+
+- **FileSystem** (default) - Direct file access, no database (slower filtering)
+- **SQLite** (recommended for local dev) - Fast, FTS5 full-text search, no Docker required
+- **PostgreSQL** (production) - Best performance, tsvector search, requires Docker or cloud instance
+
+See [README.md](../README.md#database-configuration) for configuration details.
+
 ### 1. Manual Content Creation with GitHub Copilot (Recommended)
 
 The easiest way to create content is using the built-in GitHub Copilot commands:

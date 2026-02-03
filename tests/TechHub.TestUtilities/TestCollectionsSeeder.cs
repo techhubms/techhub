@@ -3,7 +3,6 @@ using Dapper;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Services;
@@ -87,7 +86,6 @@ public static class TestCollectionsSeeder
         var tables = new[]
         {
             ("content_items", "content items"),
-            ("content_plans", "plan mappings"),
             ("content_tags_expanded", "expanded tags"),
             ("sync_metadata", "sync metadata entries")
         };
@@ -96,16 +94,8 @@ public static class TestCollectionsSeeder
 
         foreach (var (tableName, description) in tables)
         {
-            try
-            {
-                var count = await connection.ExecuteScalarAsync<int>($"SELECT COUNT(*) FROM {tableName}");
-                logger.LogInformation("   - {TableName}: {Count} {Description}", tableName, count, description);
-            }
-            catch (Exception ex)
-            {
-                // Table might not exist yet (e.g., if migrations haven't run)
-                logger.LogWarning("   - {TableName}: Could not query ({Error})", tableName, ex.Message);
-            }
+            var count = await connection.ExecuteScalarAsync<int>($"SELECT COUNT(*) FROM {tableName}");
+            logger.LogInformation("   - {TableName}: {Count} {Description}", tableName, count, description);
         }
     }
 }

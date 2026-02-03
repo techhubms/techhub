@@ -365,7 +365,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     public async Task GetCollectionTags_WithValidParameters_ReturnsTagCloud()
     {
         // Arrange - Use AI collection with "all" to get section-wide tags (more likely to have results)
-        
+
         // Act
         var response = await _client.GetAsync("/api/sections/ai/collections/all/tags");
 
@@ -374,7 +374,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
 
         var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
         tagCloud.Should().NotBeNull();
-        
+
         // Tag cloud may be empty if no content matches the default filters (lastDays, minUses)
         // The important thing is the endpoint returns successfully
         if (tagCloud!.Count > 0)
@@ -400,7 +400,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     public async Task GetCollectionTags_WithAllCollection_ReturnsSectionTagCloud()
     {
         // Arrange - Use "all" collection to get section-wide tag cloud
-        
+
         // Act
         var response = await _client.GetAsync("/api/sections/github-copilot/collections/all/tags");
 
@@ -476,7 +476,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
 
         var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
         tagCloud.Should().NotBeNull();
-        
+
         // Tag cloud should only include tags from recent content
         // The exact tags will vary, but structure should be valid
         tagCloud!.Should().AllSatisfy(item =>
@@ -581,7 +581,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
 
         var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
         detail.Should().NotBeNull();
-        
+
         // Verify all metadata is populated
         detail!.Slug.Should().NotBeNullOrEmpty();
         detail.Title.Should().NotBeNullOrEmpty();

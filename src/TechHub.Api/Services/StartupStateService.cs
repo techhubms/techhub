@@ -6,13 +6,10 @@ namespace TechHub.Api.Services;
 /// </summary>
 public class StartupStateService
 {
-    private bool _contentSyncCompleted;
-    private bool _migrationsCompleted;
+    public bool IsContentSyncCompleted { get; private set; }
+    public bool IsMigrationsCompleted { get; private set; }
+    public bool IsFullyStarted => IsMigrationsCompleted && IsContentSyncCompleted;
 
-    public bool IsContentSyncCompleted => _contentSyncCompleted;
-    public bool IsMigrationsCompleted => _migrationsCompleted;
-    public bool IsFullyStarted => _migrationsCompleted && _contentSyncCompleted;
-
-    public void MarkMigrationsCompleted() => _migrationsCompleted = true;
-    public void MarkContentSyncCompleted() => _contentSyncCompleted = true;
+    public void MarkMigrationsCompleted() => IsMigrationsCompleted = true;
+    public void MarkContentSyncCompleted() => IsContentSyncCompleted = true;
 }

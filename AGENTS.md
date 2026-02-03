@@ -363,14 +363,19 @@ See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and
 **Common Commands**:
 
 ```powershell
-Run                         # Build + all tests + servers
+Run                         # Build + all tests + servers (SQLite)
+Run -Docker                 # Build + tests + PostgreSQL stack (Docker)
 Run -WithoutTests           # Build + servers (no tests)
 Run -TestProject Web.Tests  # Run specific test project
-Run -TestProject E2E.Tests  # Run E2E tests
+Run -TestProject E2E.Tests  # Run E2E tests (automatically uses Docker)
 Run -StopServers            # CI/CD mode
 ```
 
 **🚨 Never use `dotnet test` directly for tests**: Use `Run` instead or `Run -TestProject E2E.Tests` if you want to scope to a certain project or even add `-TestName` too
+
+**🚨 Never use `isBackground: true` for test runs**: Tests complete within 60 seconds - use `isBackground: false` to wait synchronously
+
+**Docker Mode**: `Run -Docker` automatically starts PostgreSQL + API/Web via docker-compose, tears down after tests (or keeps running with `-WithoutTests`). E2E tests automatically use `Run -Docker` internally.
 
 ### Documentation Map
 

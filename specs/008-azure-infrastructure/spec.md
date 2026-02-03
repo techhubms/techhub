@@ -42,6 +42,29 @@ Defines Azure infrastructure for Tech Hub .NET deployment using Azure Container 
 | Virtual Network | `Microsoft.Network/virtualNetworks` | Network isolation |
 | Storage Account | `Microsoft.Storage/storageAccounts` | Static content storage |
 
+### Database Resources (from spec 011)
+
+| Resource | Type | Purpose |
+|----------|------|---------|
+| Azure PostgreSQL Flexible Server | `Microsoft.DBforPostgreSQL/flexibleServers` | Primary content database |
+
+**Configuration** (from [spec 011](../011-azure-search-storage/spec.md)):
+
+- **Tier**: Basic (2 vCores, 5GB storage) - ~$15/month
+- **Database**: `techhub`
+- **Version**: PostgreSQL 16+
+- **Features**: tsvector full-text search, GIN indexes, word-boundary tag matching
+- **Connection**: Via private endpoint or allow Azure services
+
+**Required for**:
+
+- Content storage and retrieval
+- Full-text search with tsvector
+- Tag filtering with accurate facet counts
+- Fast section/collection queries
+
+**Cost Estimate**: ~$15/month (Basic tier sufficient for 6,000+ content items)
+
 ---
 
 ## Bicep Structure

@@ -537,10 +537,75 @@ Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used
 - ARIA labels for filter controls
 - Focus states clearly visible
 
+## Backend Implementation Status
+
+### Database Layer (✅ COMPLETE - from spec 011)
+
+The database infrastructure for filtering is **fully implemented** in the repository layer:
+
+**✅ Implemented**:
+
+- Tag filtering with AND logic using `SearchAsync` method
+- Tag subset matching via `content_tags_expanded` table (word-boundary matching)
+- Section/collection/date filtering
+- Hash-based incremental content sync
+- Both SQLite (FTS5) and PostgreSQL (tsvector) providers
+- 90 passing repository integration tests
+
+**❌ Missing API Layer**:
+
+- No `/api/facets` endpoint to expose `GetFacetsAsync` (needed for dynamic tag counts)
+- `GetFacetsAsync` repository method is stub only - needs full implementation
+- No `/api/search` endpoint (though SearchAsync exists in repository)
+
+**Database Schema** (see [spec 011](../011-azure-search-storage/data-model.md)):
+
+```sql
+-- Tag subset matching via expanded words table
+CREATE TABLE content_tags_expanded (
+    content_id  TEXT NOT NULL,
+    tag_word    TEXT NOT NULL,  -- "ai", "azure", etc.
+    PRIMARY KEY (content_id, tag_word)
+);
+
+-- Query pattern for "AI" tag (matches "AI", "Azure AI", "Generative AI")
+SELECT DISTINCT c.*
+FROM content_items c
+JOIN content_tags_expanded e ON c.id = e.content_id
+WHERE e.tag_word = 'ai';
+
+-- AND logic for multiple tags (e.g., "AI" AND "Azure")
+SELECT c.*
+FROM content_items c
+WHERE c.id IN (
+    SELECT content_id
+    FROM content_tags_expanded
+    WHERE tag_word IN ('ai', 'azure')
+    GROUP BY content_id
+    HAVING COUNT(DISTINCT tag_word) = 2
+);
+```
+
+**Performance Targets** (from spec 011):
+
+- Tag filtering < 200ms (4000+ content items)
+- Facet counts 100% accurate using SQL GROUP BY aggregations
+- First sync < 60 seconds, subsequent sync < 1 second
+
+**Action Items for This Spec**:
+
+1. ✅ Backend filtering logic complete (SearchAsync implemented)
+2. ❌ Implement `GetFacetsAsync` for dynamic tag counts
+3. ❌ Create `/api/facets` endpoint
+4. ❌ Build frontend components to consume API
+5. ❌ Add E2E tests for complete filtering workflow
+
 ## Dependencies
 
-- **Completed**: API filtering endpoints (`GET /api/content/filter`)
-- **Completed**: Content repository with tag and date filtering logic
+- **Completed**: Database schema and repository layer (spec 011)
+- **Completed**: Content sync with hash-based incremental updates (spec 011)
+- **Needs Implementation**: `/api/facets` endpoint for dynamic tag counts
+- **Needs Implementation**: `GetFacetsAsync` repository method
 - **In Progress**: Blazor component architecture for state management
 - **Needed**: URL state management library or custom implementation
 - **Needed**: Visual design for Excel-style tag dropdown

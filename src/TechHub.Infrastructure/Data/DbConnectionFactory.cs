@@ -17,7 +17,7 @@ public class SqliteConnectionFactory : IDbConnectionFactory
     {
         ArgumentNullException.ThrowIfNull(connectionString);
         _connectionString = connectionString;
-        
+
         // Ensure database directory exists
         EnsureDatabaseDirectoryExists(_connectionString);
     }
@@ -43,7 +43,7 @@ public class SqliteConnectionFactory : IDbConnectionFactory
         var dataSource = builder.DataSource;
 
         // Skip for in-memory databases
-        if (string.IsNullOrEmpty(dataSource) || 
+        if (string.IsNullOrEmpty(dataSource) ||
             dataSource.Equals(":memory:", StringComparison.OrdinalIgnoreCase) ||
             dataSource.Contains("Mode=Memory", StringComparison.OrdinalIgnoreCase))
         {

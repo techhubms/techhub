@@ -123,6 +123,80 @@ Users see clear feedback about search state, result counts, and empty result sce
 - **SC-007**: Search provides clear feedback (result counts, loading states, empty states)
 - **SC-008**: Clear button removes search query and updates results immediately
 
+## Backend Implementation Status
+
+### Database Full-Text Search (✅ COMPLETE - from spec 011)
+
+The full-text search infrastructure is **fully implemented** in the repository layer:
+
+**✅ Implemented**:
+
+- Full-text search via `SearchAsync` method with `Query` parameter
+- SQLite: FTS5 with BM25 ranking
+- PostgreSQL: tsvector with ts_rank relevance scoring
+- Search across title, excerpt, and content fields
+- Combined with tag/section/collection/date filters (AND logic)
+- Weighted search (title > excerpt > content)
+- Both providers working with 90 passing tests
+
+**❌ Missing**:
+
+- No `/api/search` endpoint to expose search functionality
+- No search result highlighting/snippets at API level (though ts_headline/FTS5 snippet() exist in SQL)
+- No frontend search component
+
+**Database Implementation** (see [spec 011](../011-azure-search-storage/spec.md)):
+
+**SQLite (FTS5)**:
+
+```sql
+-- FTS5 virtual table for full-text search
+CREATE VIRTUAL TABLE content_fts USING fts5(
+    id, title, excerpt, content
+);
+
+-- Search query with ranking
+SELECT c.*, bm25(content_fts) AS rank
+FROM content_items c
+JOIN content_fts ON c.id = content_fts.id
+WHERE content_fts MATCH 'agent framework'
+ORDER BY rank;
+```
+
+**PostgreSQL (tsvector)**:
+
+```sql
+-- Generated tsvector column with weighted fields
+ALTER TABLE content_items ADD COLUMN search_vector tsvector
+    GENERATED ALWAYS AS (
+        setweight(to_tsvector('english', coalesce(title, '')), 'A') ||
+        setweight(to_tsvector('english', coalesce(excerpt, '')), 'B') ||
+        setweight(to_tsvector('english', coalesce(content, '')), 'C')
+    ) STORED;
+
+-- GIN index for fast search
+CREATE INDEX idx_content_search ON content_items USING GIN(search_vector);
+
+-- Search with ranking and highlighting
+SELECT 
+    c.*,
+    ts_rank(c.search_vector, query) AS rank,
+    ts_headline('english', c.excerpt, query) AS highlighted_excerpt
+FROM content_items c,
+     plainto_tsquery('english', 'agent framework') AS query
+WHERE c.search_vector @@ query
+ORDER BY rank DESC;
+```
+
+**Action Items for This Spec**:
+
+1. ✅ Backend search logic complete (SearchAsync implemented)
+2. ❌ Create `/api/search` endpoint (or enhance existing `/api/content/filter`)
+3. ❌ Add search result highlighting/snippet extraction at API layer
+4. ❌ Build SidebarSearch component  
+5. ❌ Integrate search with existing filter UI
+6. ❌ Add E2E tests for search workflow
+
 ## Implementation Notes
 
 ### Reference Documentation

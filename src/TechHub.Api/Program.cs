@@ -38,7 +38,7 @@ if (!skipFileLogging)
     // Build log path: use TECHHUB_TMP if set (Docker), otherwise .tmp (local dev)
     var tmpDir = Environment.GetEnvironmentVariable("TECHHUB_TMP") ?? ".tmp";
     var logPath = Path.Combine(tmpDir, "logs", $"api-{builder.Environment.EnvironmentName.ToLowerInvariant()}.log");
-    
+
     // Parse log levels from configuration
     var logLevels = new Dictionary<string, LogLevel>();
     var logLevelSection = builder.Configuration.GetSection("Logging:File:LogLevel");

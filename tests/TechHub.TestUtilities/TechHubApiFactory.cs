@@ -6,6 +6,7 @@ using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 
 namespace TechHub.TestUtilities;
 
@@ -17,6 +18,14 @@ public abstract class TechHubApiFactoryBase : WebApplicationFactory<Program>
 {
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
+        // Suppress console logging for cleaner test output, but keep file logging
+        builder.ConfigureLogging(logging =>
+        {
+            // Remove console and debug providers only
+            logging.ClearProviders();
+            // File logging will be re-added by the app's logging configuration
+        });
+
         // Delegate test-specific configuration to subclasses
         ConfigureTestSpecificServices(builder);
     }
@@ -52,10 +61,12 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IDisposab
         // Use IntegrationTest environment for integration tests
         builder.UseEnvironment("IntegrationTest");
 
-        // Create logger for seeding output
+        // Create logger for seeding output (file logging only)
+        var logPath = Path.Combine(".tmp", "logs", "tests.log");
+        var logLevels = new Dictionary<string, LogLevel> { ["Default"] = LogLevel.Information };
         _loggerFactory = LoggerFactory.Create(b =>
         {
-            b.AddConsole();
+            b.AddProvider(new FileLoggerProvider(logPath, logLevels));
             b.SetMinimumLevel(LogLevel.Information);
         });
         var logger = _loggerFactory.CreateLogger<TechHubIntegrationTestApiFactory>();

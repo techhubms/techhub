@@ -685,21 +685,67 @@ function Run {
     }
     
     # Test if servers are healthy
+    # Returns: Hashtable with ApiStatus, WebStatus, and AllHealthy properties
+    # Status values: "healthy", "unhealthy", "not-running"
     function Test-ServersHealthy {
-        $apiHealthy = $false
-        $webHealthy = $false
+        param(
+            [switch]$UseDocker
+        )
         
-        $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:5001/health" 2>&1
-        if ($LASTEXITCODE -eq 0 -and $curlOutput -match "200$") {
-            $apiHealthy = $true
+        $apiStatus = "not-running"
+        $webStatus = "not-running"
+        
+        if ($UseDocker) {
+            # Docker mode: Check container health status via docker inspect
+            $apiHealth = docker inspect techhub-api --format='{{json .State.Health}}' 2>$null | ConvertFrom-Json | Select-Object -ExpandProperty Status 2>$null
+            if ($apiHealth -eq "healthy") {
+                $apiStatus = "healthy"
+            }
+            elseif ($apiHealth -in @("starting", "unhealthy")) {
+                $apiStatus = "unhealthy"
+            }
+            
+            $webHealth = docker inspect techhub-web --format='{{json .State.Health}}' 2>$null | ConvertFrom-Json | Select-Object -ExpandProperty Status 2>$null
+            if ($webHealth -eq "healthy") {
+                $webStatus = "healthy"
+            }
+            elseif ($webHealth -in @("starting", "unhealthy")) {
+                $webStatus = "unhealthy"
+            }
+        }
+        else {
+            # Native mode: Check if API port is listening first
+            $apiListening = lsof -ti ":5001" 2>$null
+            if ($apiListening) {
+                # Port is listening - now check health endpoint
+                $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:5001/health" 2>&1
+                if ($LASTEXITCODE -eq 0 -and $curlOutput -match "200$") {
+                    $apiStatus = "healthy"
+                }
+                else {
+                    $apiStatus = "unhealthy"
+                }
+            }
+            
+            # Check if Web port is listening first
+            $webListening = lsof -ti ":5003" 2>$null
+            if ($webListening) {
+                # Port is listening - now check health endpoint
+                $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:5003/health" 2>&1
+                if ($LASTEXITCODE -eq 0 -and $curlOutput -match "200$") {
+                    $webStatus = "healthy"
+                }
+                else {
+                    $webStatus = "unhealthy"
+                }
+            }
         }
         
-        $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:5003/health" 2>&1
-        if ($LASTEXITCODE -eq 0 -and $curlOutput -match "200$") {
-            $webHealthy = $true
+        return @{
+            ApiStatus = $apiStatus
+            WebStatus = $webStatus
+            AllHealthy = ($apiStatus -eq "healthy" -and $webStatus -eq "healthy")
         }
-        
-        return ($apiHealthy -and $webHealthy)
     }
 
     # Test if servers are running via Docker
@@ -717,18 +763,26 @@ function Run {
         )
         
         # Check if servers are already running and healthy in the correct mode
-        $serversHealthy = Test-ServersHealthy
+        $healthStatus = Test-ServersHealthy -UseDocker:$UseDocker
         $runningViaDocker = Test-ServersRunningViaDocker
         $correctMode = ($UseDocker -and $runningViaDocker) -or (-not $UseDocker -and -not $runningViaDocker)
         
-        if ($serversHealthy -and $correctMode) {
+        if ($healthStatus.AllHealthy -and $correctMode) {
             # Servers are healthy and running in correct mode - reuse them
             return $true
         }
         
         # Servers not healthy or wrong mode - clean up and restart
-        if (-not $serversHealthy) {
-            Write-Info "Servers not healthy - restarting..."
+        if (-not $healthStatus.AllHealthy) {
+            if ($healthStatus.ApiStatus -eq "not-running" -and $healthStatus.WebStatus -eq "not-running") {
+                Write-Info "Servers not running - starting..."
+            }
+            elseif ($healthStatus.ApiStatus -eq "unhealthy" -or $healthStatus.WebStatus -eq "unhealthy") {
+                Write-Info "Servers unhealthy (API: $($healthStatus.ApiStatus), Web: $($healthStatus.WebStatus)) - restarting..."
+            }
+            else {
+                Write-Info "Servers not ready (API: $($healthStatus.ApiStatus), Web: $($healthStatus.WebStatus)) - restarting..."
+            }
         }
         
         # Clean up everything (both dotnet processes and Docker containers)
@@ -762,40 +816,38 @@ function Run {
                 return $false
             }
             
-            # Ensure log directory exists with world-writable permissions for Docker containers
-            # Docker containers run as non-root user and need write access
+            # Ensure log directory exists (Docker containers run as vscode user so no special permissions needed)
             if (-not (Test-Path $logDir)) {
                 New-Item -Path $logDir -ItemType Directory -Force | Out-Null
             }
-            chmod 777 $logDir 2>&1 | Out-Null
             
-            # Ensure .databases directory exists with proper permissions
+            # Ensure .databases directory and subdirectories exist
             $databasesDir = Join-Path $workspaceRoot ".databases"
-            if (-not (Test-Path $databasesDir)) {
-                New-Item -Path $databasesDir -ItemType Directory -Force | Out-Null
-            }
-            chmod 777 $databasesDir 2>&1 | Out-Null
-            
-            # Ensure subdirectories exist with proper permissions
             $postgresDir = Join-Path $databasesDir "postgres"
             $sqliteDir = Join-Path $databasesDir "sqlite"
+            
             if (-not (Test-Path $postgresDir)) {
                 New-Item -Path $postgresDir -ItemType Directory -Force | Out-Null
             }
             if (-not (Test-Path $sqliteDir)) {
                 New-Item -Path $sqliteDir -ItemType Directory -Force | Out-Null
             }
-            chmod 777 $postgresDir 2>&1 | Out-Null
-            chmod 777 $sqliteDir 2>&1 | Out-Null
             
-            # Start containers in detached mode
-            $composeResult = docker compose up --build -d 2>&1
+            # Log docker compose output to file
+            $dockerLogFile = Join-Path $logDir "docker-compose-startup.log"
+            Write-Info "Logging docker compose output to: $dockerLogFile"
+            
+            # Start containers in detached mode, capture output
+            docker compose up --build -d 2>&1 | Tee-Object -FilePath $dockerLogFile | Out-Null
             if ($LASTEXITCODE -ne 0) {
-                Write-Error "Docker Compose failed to start: $composeResult"
+                Write-Error "Docker Compose failed to start. Check $dockerLogFile for details."
+                Write-Host ""
+                Write-Host "Last 20 lines of docker compose output:" -ForegroundColor Yellow
+                Get-Content $dockerLogFile -Tail 20 | ForEach-Object { Write-Host "  $_" -ForegroundColor Gray }
                 return $false
             }
             
-            Write-Info "Docker containers starting..."
+            Write-Info "Docker containers starting (see $dockerLogFile for details)..."
         }
         # Production/Staging mode: Run from published DLLs (real deployment simulation)
         elseif ($Environment -eq "Production" -or $Environment -eq "Staging") {
@@ -868,9 +920,9 @@ function Run {
         Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
         $maxAttempts = 60
         $attempt = 0
-        $serversReady = $false
+        $healthStatus = $null
         
-        while ($attempt -lt $maxAttempts -and -not $serversReady) {
+        while ($attempt -lt $maxAttempts) {
             Start-Sleep -Seconds 1
             $attempt++
                 
@@ -880,15 +932,16 @@ function Run {
             }
                 
             # Check if both servers are healthy
-            $serversReady = Test-ServersHealthy
+            $healthStatus = Test-ServersHealthy -UseDocker:$UseDocker
             
-            if ($serversReady) {
+            if ($healthStatus.AllHealthy) {
                 Write-Info "API ready ✓"
                 Write-Info "Web ready ✓"
+                break
             }
         }
             
-        if (-not $serversReady) {
+        if (-not $healthStatus.AllHealthy) {
             Write-Host ""
             Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
@@ -897,14 +950,32 @@ function Run {
             Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
             Write-Host ""
             Write-Host "  Services failed to start within $maxAttempts seconds" -ForegroundColor Yellow
-            Write-Host "  Health check failed for one or both services" -ForegroundColor Yellow
-            Write-Host "    Expected: https://localhost:5001/health" -ForegroundColor Gray
-            Write-Host "    Expected: https://localhost:5003/health" -ForegroundColor Gray
+            Write-Host ""
+            Write-Host "  Status:" -ForegroundColor Cyan
+            Write-Host "    API (port 5001): $($healthStatus.ApiStatus)" -ForegroundColor Gray
+            Write-Host "    Web (port 5003): $($healthStatus.WebStatus)" -ForegroundColor Gray
+            Write-Host ""
+            
+            if ($healthStatus.ApiStatus -eq "not-running" -or $healthStatus.WebStatus -eq "not-running") {
+                Write-Host "  Servers are not running (ports not listening)" -ForegroundColor Yellow
+                Write-Host "  This usually means:" -ForegroundColor Yellow
+                Write-Host "    - Application failed to start" -ForegroundColor Gray
+                Write-Host "    - Startup exceptions occurred" -ForegroundColor Gray
+                Write-Host "    - Port binding failed" -ForegroundColor Gray
+            }
+            elseif ($healthStatus.ApiStatus -eq "unhealthy" -or $healthStatus.WebStatus -eq "unhealthy") {
+                Write-Host "  Servers are running but unhealthy (ports listening but /health failing)" -ForegroundColor Yellow
+                Write-Host "  This usually means:" -ForegroundColor Yellow
+                Write-Host "    - Application started but health check failed" -ForegroundColor Gray
+                Write-Host "    - Database connection issues" -ForegroundColor Gray
+                Write-Host "    - Service dependencies not ready" -ForegroundColor Gray
+            }
+            
             Write-Host ""
             Write-Host "  Troubleshooting:" -ForegroundColor Cyan
             Write-Host "    1. Check logs: .tmp/logs/ (console.log or api/web-console.log)" -ForegroundColor Gray
             Write-Host "    2. Try manually: curl -k https://localhost:5001/health" -ForegroundColor Gray
-            Write-Host "    3. Check if ports are already in use" -ForegroundColor Gray
+            Write-Host "    3. Check if ports are available: lsof -ti :5001 :5003" -ForegroundColor Gray
             Write-Host ""
             return $false
         }
@@ -939,6 +1010,12 @@ function Run {
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
         Write-Host ""
         
+        # Build Phase 1 filter: PerformanceTests + optional TestName
+        $phase1Filter = "FullyQualifiedName~PerformanceTests"
+        if ($TestName) {
+            $phase1Filter = "FullyQualifiedName~PerformanceTests&FullyQualifiedName~$TestName"
+        }
+        
         $apiPerfTestArgs = @(
             "test",
             $e2eTestProjectPath,
@@ -947,7 +1024,7 @@ function Run {
             "--settings", (Join-Path $workspaceRoot ".runsettings"),
             "--logger", "console;verbosity=detailed",
             "--blame-hang-timeout", "1m",
-            "--filter", "FullyQualifiedName~ApiPerformanceE2ETests"
+            "--filter", $phase1Filter
         )
         
         $apiPerfSuccess = Invoke-ExternalCommand "dotnet" $apiPerfTestArgs
@@ -974,7 +1051,7 @@ function Run {
         Write-Success "API Performance tests passed - APIs warmed up and validated"
         Write-Host ""
         
-        # Phase 2: Run remaining E2E tests (API + Web)
+        # Phase 2: Run remaining E2E tests (API + Web) - exclude performance tests already run in Phase 1
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
         Write-Host "  Phase 2: All E2E Tests (API + Web)" -ForegroundColor Cyan
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
@@ -987,13 +1064,14 @@ function Run {
             "--no-build",
             "--settings", (Join-Path $workspaceRoot ".runsettings"),
             "--logger", "console;verbosity=detailed",
-            "--blame-hang-timeout", "1m"
+            "--blame-hang-timeout", "1m",
+            "--filter", "FullyQualifiedName!~PerformanceTests"
         )
             
-        # Add name filter if specified
+        # Add additional name filter if specified
         if ($TestName) {
-            $e2eTestArgs += "--filter"
-            $e2eTestArgs += "FullyQualifiedName~$TestName"
+            # Combine with existing PerformanceTests exclusion
+            $e2eTestArgs[-1] = "FullyQualifiedName!~PerformanceTests&FullyQualifiedName~$TestName"
         }
             
         # Run E2E tests
@@ -1198,10 +1276,10 @@ function Run {
         # 1. Source projects were rebuilt (binaries changed)
         # 2. Servers are unhealthy (not responding to health checks)
         # 3. Mode mismatch (Docker vs dotnet)
-        $serversHealthy = Test-ServersHealthy
+        $healthStatus = Test-ServersHealthy
         $runningViaDocker = Test-ServersRunningViaDocker
         $modeMismatch = ($Docker -and -not $runningViaDocker) -or (-not $Docker -and $runningViaDocker)
-        $needsRestart = $buildResult.SrcRebuilt -or (-not $serversHealthy) -or $modeMismatch
+        $needsRestart = $buildResult.SrcRebuilt -or (-not $healthStatus.AllHealthy) -or $modeMismatch
         
         if ($needsRestart) {
             Write-Step "Restart decision"
@@ -1209,8 +1287,8 @@ function Run {
                 Write-Info "Source changes detected - binaries were rebuilt"
                 Write-Info "Restarting servers to load new code..."
             }
-            elseif (-not $serversHealthy) {
-                Write-Info "Servers are unhealthy or not running"
+            elseif (-not $healthStatus.AllHealthy) {
+                Write-Info "Servers are unhealthy or not running (API: $($healthStatus.ApiStatus), Web: $($healthStatus.WebStatus))"
                 Write-Info "Restarting servers..."
             }
             elseif ($modeMismatch) {

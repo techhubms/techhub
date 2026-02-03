@@ -166,17 +166,18 @@ Uses local SQLite database with FTS5 full-text search.
 
 Uses PostgreSQL with tsvector full-text search and GIN indexes.
 
-**Via Docker Compose** (includes Aspire):
+**Quick Start** (`Run -Docker` handles everything automatically):
 
 ```bash
-# Start PostgreSQL + Aspire AppHost
-docker-compose up
+Run -Docker  # Starts PostgreSQL + API + Web via Docker
+```
 
-# Or start PostgreSQL only
-docker-compose up postgres
+**Manual docker-compose** (for advanced scenarios):
 
-# Then run normally
-Run
+```bash
+docker-compose up          # Start all services
+docker-compose up postgres # PostgreSQL only, then Run normally
+docker-compose down        # Stop all services
 ```
 
 **Configuration**:
@@ -201,22 +202,23 @@ Run
 The [docker-compose.yml](docker-compose.yml) provides:
 
 - **postgres**: PostgreSQL 16 database (port 5432)
-- **postgres-test**: Test database (port 5433)
-- **aspire**: Full Aspire stack with API + Web + Dashboard
+- **api**: API container with PostgreSQL backend
+- **web**: Web frontend container
+- **aspire-dashboard**: Aspire observability dashboard (port 18888)
 
 ```bash
 # Start all services
 docker-compose up
 
-# Start specific services
+# Start PostgreSQL only (then use Run normally)
 docker-compose up postgres
-docker-compose up postgres aspire
 
 # Stop and remove containers
 docker-compose down
 
 # View logs
-docker-compose logs -f postgres
+docker-compose logs -f api
+docker-compose logs -f web
 ```
 
 ### Content Sync Options
@@ -448,13 +450,21 @@ Tech Hub uses different database backends for different testing scenarios:
 
 **Integration tests** (`*Tests.cs` in `tests/`) use DatabaseFixture with SQLite in-memory for speed and isolation. Each test class gets a fresh database.
 
-**E2E tests** use docker-compose with real PostgreSQL + separate API/Web containers (matching production architecture).
+**E2E tests** automatically use PostgreSQL via `Run -Docker`, which starts the full production-like stack.
 
-### Starting with Docker Compose (E2E / Production-like)
+### Starting with Docker (E2E / Production-like)
+
+**Recommended**: Use `Run -Docker` which handles everything automatically:
+
+```powershell
+Run -Docker  # Build + tests + PostgreSQL stack via Docker
+```
+
+**Manual docker-compose** (advanced use only):
 
 Docker Compose runs the **exact production architecture**:
 
-- **postgres** - PostgreSQL database (matches Azure Database for PostgreSQL)
+- **postgres** - PostgreSQL 16 database (matches Azure Database for PostgreSQL)
 - **api** - API container (matches Azure Container App)
 - **web** - Web container (matches Azure Container App)
 - **aspire-dashboard** - Standalone observability dashboard
@@ -484,9 +494,10 @@ docker-compose down -v
 ```
 
 **Access**:
-- Web UI: **https://localhost:5003** (HTTPS)
-- API: **https://localhost:5001** (HTTPS)
-- Aspire Dashboard: http://localhost:18888
+
+- Web UI: <https://localhost:5003> (HTTPS)
+- API: <https://localhost:5001> (HTTPS)
+- Aspire Dashboard: <http://localhost:18888>
 - PostgreSQL: localhost:5432
 
 **Note**: Internal health checks use HTTP, external access uses HTTPS (same as production).
@@ -500,8 +511,11 @@ The `Run` function builds, tests, and starts servers **in background**. After `R
 **Standard Run Commands**:
 
 ```powershell
-# Default development workflow - build, test, start servers in background
+# Default development workflow (SQLite backend)
 Run
+
+# Production-like PostgreSQL stack via Docker
+Run -Docker
 
 # Scoped testing - only runs E2E tests
 Run -TestProject E2E.Tests

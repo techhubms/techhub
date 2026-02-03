@@ -2,6 +2,7 @@ using System.Data;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+using TechHub.Core.Logging;
 using TechHub.Infrastructure.Data;
 
 namespace TechHub.TestUtilities;
@@ -15,18 +16,19 @@ namespace TechHub.TestUtilities;
 /// <typeparam name="T">The test class using this fixture</typeparam>
 public class DatabaseFixture<T> : IDisposable
 {
-    private readonly IDbConnection _connection;
     private readonly ILoggerFactory _loggerFactory;
     private bool _disposed;
 
-    public IDbConnection Connection => _connection;
+    public IDbConnection Connection { get; }
 
     public DatabaseFixture()
     {
-        // Create logger factory for seeding output
+        // Create logger factory for seeding output (file logging only)
+        var logPath = Path.Combine(".tmp", "logs", "tests.log");
+        var logLevels = new Dictionary<string, LogLevel> { ["Default"] = LogLevel.Information };
         _loggerFactory = LoggerFactory.Create(builder =>
         {
-            builder.AddConsole();
+            builder.AddProvider(new FileLoggerProvider(logPath, logLevels));
             builder.SetMinimumLevel(LogLevel.Information);
         });
 
@@ -35,13 +37,13 @@ public class DatabaseFixture<T> : IDisposable
         // SQLite: Create in-memory database (data lives only for the connection lifetime)
         var sqliteConnection = new SqliteConnection("Data Source=:memory:");
         sqliteConnection.Open();
-        _connection = sqliteConnection;
+        Connection = sqliteConnection;
 
         logger.LogInformation("🗄️ Created in-memory SQLite database for {TestClass}", typeof(T).Name);
 
         // Run migrations to create schema
         var migrationRunner = new MigrationRunner(
-            _connection,
+            Connection,
             new SqliteDialect(),
             NullLogger<MigrationRunner>.Instance);
 
@@ -49,7 +51,7 @@ public class DatabaseFixture<T> : IDisposable
         logger.LogInformation("✅ Database migrations completed (SQLite)");
 
         // Seed database with test markdown files using production sync logic
-        TestCollectionsSeeder.SeedFromFilesAsync(_connection, loggerFactory: _loggerFactory).GetAwaiter().GetResult();
+        TestCollectionsSeeder.SeedFromFilesAsync(Connection, loggerFactory: _loggerFactory).GetAwaiter().GetResult();
     }
 
     /// <summary>
@@ -59,7 +61,7 @@ public class DatabaseFixture<T> : IDisposable
     public void ClearData()
     {
         // Delete in reverse dependency order (SQLite)
-        using var command = _connection.CreateCommand();
+        using var command = Connection.CreateCommand();
         command.CommandText = @"
             DELETE FROM content_tags_expanded;
             DELETE FROM content_items;
@@ -80,7 +82,7 @@ public class DatabaseFixture<T> : IDisposable
         {
             if (disposing)
             {
-                _connection?.Dispose();
+                Connection?.Dispose();
                 _loggerFactory?.Dispose();
             }
 

@@ -56,7 +56,7 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
     /// Test: Full-text search finds items by unique content keyword
     /// Why: SQLite FTS5 provides fast full-text search that other repositories don't have
     /// </summary>
-    [Fact(Skip = "FTS5 external content table configuration needs investigation")]
+    [Fact]
     public async Task SearchAsync_FullTextSearch_FindsMatchingItems()
     {
         // Arrange - data already seeded from TestCollections

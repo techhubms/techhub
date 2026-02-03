@@ -93,7 +93,7 @@
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();
 
-            await LoadSelectedVideo();
+            // Note: Don't call LoadSelectedVideo here - OnParametersSetAsync handles it
         }
         catch (Exception ex)
         {

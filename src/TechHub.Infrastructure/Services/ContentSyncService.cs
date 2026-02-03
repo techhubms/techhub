@@ -401,18 +401,65 @@ public class ContentSyncService : IContentSyncService
                             sb.Append(System.Globalization.CultureInfo.InvariantCulture, $"(@cn{tagIdx}, @s{tagIdx}, @w{tagIdx}, @de{tagIdx}, @ai{tagIdx}, @az{tagIdx}, @c{tagIdx}, @do{tagIdx}, @gc{tagIdx}, @ml{tagIdx}, @sec{tagIdx}, @bm{tagIdx})");
 
                             // Add parameters using database-agnostic approach
-                            var cnParam = cmd.CreateParameter(); cnParam.ParameterName = $"@cn{tagIdx}"; cnParam.Value = tag.CollectionName; cmd.Parameters.Add(cnParam);
-                            var sParam = cmd.CreateParameter(); sParam.ParameterName = $"@s{tagIdx}"; sParam.Value = tag.Slug; cmd.Parameters.Add(sParam);
-                            var wParam = cmd.CreateParameter(); wParam.ParameterName = $"@w{tagIdx}"; wParam.Value = tag.Word; cmd.Parameters.Add(wParam);
-                            var deParam = cmd.CreateParameter(); deParam.ParameterName = $"@de{tagIdx}"; deParam.Value = tag.DateEpoch; cmd.Parameters.Add(deParam);
-                            var aiParam = cmd.CreateParameter(); aiParam.ParameterName = $"@ai{tagIdx}"; aiParam.Value = _dialect.ConvertBooleanParameter(tag.IsAi == 1); cmd.Parameters.Add(aiParam);
-                            var azParam = cmd.CreateParameter(); azParam.ParameterName = $"@az{tagIdx}"; azParam.Value = _dialect.ConvertBooleanParameter(tag.IsAzure == 1); cmd.Parameters.Add(azParam);
-                            var cParam = cmd.CreateParameter(); cParam.ParameterName = $"@c{tagIdx}"; cParam.Value = _dialect.ConvertBooleanParameter(tag.IsCoding == 1); cmd.Parameters.Add(cParam);
-                            var doParam = cmd.CreateParameter(); doParam.ParameterName = $"@do{tagIdx}"; doParam.Value = _dialect.ConvertBooleanParameter(tag.IsDevOps == 1); cmd.Parameters.Add(doParam);
-                            var gcParam = cmd.CreateParameter(); gcParam.ParameterName = $"@gc{tagIdx}"; gcParam.Value = _dialect.ConvertBooleanParameter(tag.IsGitHubCopilot == 1); cmd.Parameters.Add(gcParam);
-                            var mlParam = cmd.CreateParameter(); mlParam.ParameterName = $"@ml{tagIdx}"; mlParam.Value = _dialect.ConvertBooleanParameter(tag.IsMl == 1); cmd.Parameters.Add(mlParam);
-                            var secParam = cmd.CreateParameter(); secParam.ParameterName = $"@sec{tagIdx}"; secParam.Value = _dialect.ConvertBooleanParameter(tag.IsSecurity == 1); cmd.Parameters.Add(secParam);
-                            var bmParam = cmd.CreateParameter(); bmParam.ParameterName = $"@bm{tagIdx}"; bmParam.Value = tag.SectionsBitmask; cmd.Parameters.Add(bmParam);
+                            var cnParam = cmd.CreateParameter();
+                            cnParam.ParameterName = $"@cn{tagIdx}";
+                            cnParam.Value = tag.CollectionName;
+                            cmd.Parameters.Add(cnParam);
+
+                            var sParam = cmd.CreateParameter();
+                            sParam.ParameterName = $"@s{tagIdx}";
+                            sParam.Value = tag.Slug;
+                            cmd.Parameters.Add(sParam);
+                            
+                            var wParam = cmd.CreateParameter();
+                            wParam.ParameterName = $"@w{tagIdx}";
+                            wParam.Value = tag.Word;
+                            cmd.Parameters.Add(wParam);
+
+                            var deParam = cmd.CreateParameter();
+                            deParam.ParameterName = $"@de{tagIdx}";
+                            deParam.Value = tag.DateEpoch;
+                            cmd.Parameters.Add(deParam);
+
+                            var aiParam = cmd.CreateParameter();
+                            aiParam.ParameterName = $"@ai{tagIdx}";
+                            aiParam.Value = _dialect.ConvertBooleanParameter(tag.IsAi == 1);
+                            cmd.Parameters.Add(aiParam);
+
+                            var azParam = cmd.CreateParameter();
+                            azParam.ParameterName = $"@az{tagIdx}";
+                            azParam.Value = _dialect.ConvertBooleanParameter(tag.IsAzure == 1);
+                            cmd.Parameters.Add(azParam);
+
+                            var cParam = cmd.CreateParameter();
+                            cParam.ParameterName = $"@c{tagIdx}";
+                            cParam.Value = _dialect.ConvertBooleanParameter(tag.IsCoding == 1);
+                            cmd.Parameters.Add(cParam);
+
+                            var doParam = cmd.CreateParameter();
+                            doParam.ParameterName = $"@do{tagIdx}";
+                            doParam.Value = _dialect.ConvertBooleanParameter(tag.IsDevOps == 1);
+                            cmd.Parameters.Add(doParam);
+
+                            var gcParam = cmd.CreateParameter();
+                            gcParam.ParameterName = $"@gc{tagIdx}";
+                            gcParam.Value = _dialect.ConvertBooleanParameter(tag.IsGitHubCopilot == 1);
+                            cmd.Parameters.Add(gcParam);
+
+                            var mlParam = cmd.CreateParameter();
+                            mlParam.ParameterName = $"@ml{tagIdx}";
+                            mlParam.Value = _dialect.ConvertBooleanParameter(tag.IsMl == 1);
+                            cmd.Parameters.Add(mlParam);
+
+                            var secParam = cmd.CreateParameter();
+                            secParam.ParameterName = $"@sec{tagIdx}";
+                            secParam.Value = _dialect.ConvertBooleanParameter(tag.IsSecurity == 1);
+                            cmd.Parameters.Add(secParam);
+                            
+                            var bmParam = cmd.CreateParameter();
+                            bmParam.ParameterName = $"@bm{tagIdx}";
+                            bmParam.Value = tag.SectionsBitmask;
+                            cmd.Parameters.Add(bmParam);
                         }
 
                         sb.Append(_dialect.GetInsertIgnoreSuffix());

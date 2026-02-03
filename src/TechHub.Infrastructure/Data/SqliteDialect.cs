@@ -103,4 +103,5 @@ public class SqliteDialect : ISqlDialect
     {
         // SQLite uses 0/1 for booleans
         return value ? "1" : "0";
-    }}
+    }
+}

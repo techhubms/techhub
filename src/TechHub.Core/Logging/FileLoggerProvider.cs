@@ -76,13 +76,29 @@ public sealed class FileLoggerProvider : ILoggerProvider
                 // GetConsumingEnumerable blocks until items available
                 foreach (var logEntry in _writeQueue.GetConsumingEnumerable(_cts.Token))
                 {
-                    // Write each entry with file locking to prevent interleaving across processes
-                    // Each write opens the file, acquires exclusive lock, writes, then closes
-                    // This ensures atomic writes even when multiple test processes run concurrently
-                    using (var fileStream = new FileStream(_filePath, FileMode.Append, FileAccess.Write, FileShare.Read))
-                    using (var writer = new StreamWriter(fileStream, Encoding.UTF8))
+                    // Retry with exclusive lock (FileShare.None) - handle parallel test processes
+                    const int maxRetries = 100; // 100ms max wait (100 retries × 1ms)
+                    for (int i = 0; i < maxRetries; i++)
                     {
-                        writer.WriteLine(logEntry);
+                        try
+                        {
+                            using (var fileStream = new FileStream(_filePath, FileMode.Append, FileAccess.Write, FileShare.None))
+                            using (var writer = new StreamWriter(fileStream, Encoding.UTF8))
+                            {
+                                writer.WriteLine(logEntry);
+                            }
+                            break; // Success - exit retry loop
+                        }
+                        catch (IOException) when (i < maxRetries - 1)
+                        {
+                            // File locked by another process - wait 1ms and retry
+                            Thread.Sleep(1);
+                        }
+                        catch
+                        {
+                            // Other errors (permissions, disk full, etc.) - give up
+                            break;
+                        }
                     }
                 }
             }

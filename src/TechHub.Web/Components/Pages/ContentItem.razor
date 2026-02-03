@@ -70,9 +70,9 @@
             Navigation.NavigateTo("/not-found");
             return;
         }
-
-        // Load item
-        await LoadItem();
+        
+        // Note: Don't load item here - OnParametersSetAsync will be called next
+        // and handles both initial load and parameter changes
     }
 
     protected override async Task OnParametersSetAsync()

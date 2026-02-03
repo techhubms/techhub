@@ -4,6 +4,8 @@
 
 The Tech Hub API provides RESTful access to content organized by sections and collections. It uses a nested route structure that mirrors the site's hierarchical organization.
 
+**Content Storage**: The API serves content from a database backend (SQLite, PostgreSQL, or FileSystem) configured via appsettings.json. The database syncs from markdown files in the `collections/` folder on startup, using hash-based incremental updates for fast subsequent starts.
+
 **Key Design Principles**:
 
 - **Resource hierarchy**: Routes mirror domain model (`/sections/{sectionName}/collections/{collectionName}/items`)
