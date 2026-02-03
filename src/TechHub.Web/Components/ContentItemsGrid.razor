@@ -1,10 +1,13 @@
 @using TechHub.Core.Models
 @using TechHub.Core.Configuration
 @using TechHub.Web.Services
+@using Microsoft.JSInterop
 @inject TechHubApiClient ApiClient
 @inject SectionCache SectionCache
 @inject ILogger<ContentItemsGrid> Logger
+@inject IJSRuntime JSRuntime
 @attribute [StreamRendering]
+@implements IAsyncDisposable
 
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionTitle() content">
     <h1 id="main-content" class="page-h1" tabindex="-1">@GetPageTitle()</h1>
@@ -36,7 +39,7 @@
         <div class="error" role="alert">
             <h2>Error Loading Content</h2>
             <p>@errorMessage</p>
-            <button @onclick="LoadContent" aria-label="Retry loading content">Retry</button>
+            <button @onclick="LoadInitialBatch" aria-label="Retry loading content">Retry</button>
         </div>
     }
     else if (FilteredContentItems.Any())
@@ -47,6 +50,26 @@
                 <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" SectionName="@SectionName" />
             }
         </div>
+
+        @if (_hasMoreContent && !_isLoadingMore)
+        {
+            <div id="scroll-trigger" style="height: 1px;"></div>
+        }
+
+        @if (_isLoadingMore)
+        {
+            <div class="loading-more-indicator" role="status" aria-live="polite">
+                <div class="loading-spinner"></div>
+                <p>Loading more content...</p>
+            </div>
+        }
+
+        @if (!_hasMoreContent && contentItems.Any())
+        {
+            <div class="end-of-content" role="status">
+                <p>End of content</p>
+            </div>
+        }
     }
     else if (FilterTags != null && FilterTags.Count > 0 && contentItems.Any())
     {
@@ -80,6 +103,15 @@
     private string? errorMessage;
     private string previousCollectionName = string.Empty;
     private List<string>? previousFilterTags;
+
+    // Infinite scroll state
+    private int _currentBatch = 1;
+    private const int BatchSize = 20;
+    private bool _hasMoreContent = true;
+    private bool _isLoadingMore = false;
+    private IJSObjectReference? _infiniteScrollModule;
+    private IJSObjectReference? _observerInstance;
+    private DotNetObjectReference<ContentItemsGrid>? _dotNetRef;
 
     private bool ShowCollectionBadge =>
     SectionName.Equals("all", StringComparison.OrdinalIgnoreCase) ||
@@ -119,7 +151,7 @@
     {
         previousCollectionName = CollectionName;
         previousFilterTags = FilterTags?.ToList();
-        await LoadContent();
+        await LoadInitialBatch();
     }
 
     protected override async Task OnParametersSetAsync()
@@ -128,7 +160,7 @@
         if (CollectionName != previousCollectionName)
         {
             previousCollectionName = CollectionName;
-            await LoadContent();
+            await LoadInitialBatch();
         }
 
         // Check if filter tags changed (triggers re-render but not reload)
@@ -149,41 +181,99 @@
         return a.OrderBy(x => x).SequenceEqual(b.OrderBy(x => x));
     }
 
-    private async Task LoadContent()
+    private async Task LoadInitialBatch()
     {
+        // Reset state
+        contentItems.Clear();
+        _currentBatch = 1;
+        _hasMoreContent = true;
+        _isLoadingMore = false;
+
         isLoading = true;
         errorMessage = null;
         StateHasChanged();
 
-        Logger.LogDebug("LoadContent START: Section={SectionName}, Collection={CollectionName}",
-        SectionName, CollectionName);
+        Logger.LogDebug("LoadInitialBatch START: Section={SectionName}, Collection={CollectionName}",
+            SectionName, CollectionName);
 
         try
         {
-            IEnumerable<ContentItem>? items = null;
-
-            // Always use the unified collection endpoint with "all" as virtual collection
-            // /section/all -> GetCollectionItemsAsync(section, "all")
-            // /all/all -> GetCollectionItemsAsync("all", "all")
-            // /section/collection -> GetCollectionItemsAsync(section, collection)
-            Logger.LogDebug("Calling ApiClient.GetCollectionItemsAsync({SectionName}, {CollectionName})",
-                SectionName, CollectionName);
-            items = await ApiClient.GetCollectionItemsAsync(SectionName, CollectionName);
-
-            contentItems = items?.ToList() ?? new List<ContentItem>();
-            Logger.LogDebug("LoadContent COMPLETE: Loaded {Count} items, isLoading will be set to false", contentItems.Count);
+            await LoadBatch(batch: 1);
+            Logger.LogDebug("LoadInitialBatch COMPLETE: Loaded {Count} items", contentItems.Count);
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to load content for {SectionName}/{CollectionName}", SectionName, CollectionName);
+            Logger.LogError(ex, "Failed to load initial batch for {SectionName}/{CollectionName}", SectionName, CollectionName);
             errorMessage = "Unable to load content";
         }
         finally
         {
             isLoading = false;
             StateHasChanged();
-            Logger.LogDebug("LoadContent FINALLY: isLoading={IsLoading}, contentItems.Count={Count}", isLoading,
-            contentItems.Count);
+            Logger.LogDebug("LoadInitialBatch FINALLY: isLoading={IsLoading}, contentItems.Count={Count}",
+                isLoading, contentItems.Count);
+        }
+    }
+
+    private async Task LoadBatch(int batch)
+    {
+        var skip = (batch - 1) * BatchSize;
+
+        Logger.LogDebug("LoadBatch: batch={Batch}, skip={Skip}, take={Take}", batch, skip, BatchSize);
+
+        IEnumerable<ContentItem>? items = await ApiClient.GetCollectionItemsAsync(
+            SectionName,
+            CollectionName,
+            take: BatchSize,
+            skip: skip);
+
+        var newItems = items?.ToList() ?? new List<ContentItem>();
+
+        Logger.LogDebug("LoadBatch: Retrieved {Count} items", newItems.Count);
+
+        // Check if we've reached the end
+        if (newItems.Count < BatchSize)
+        {
+            _hasMoreContent = false;
+            Logger.LogDebug("LoadBatch: Reached end of content (got {Count} items, expected {BatchSize})", 
+                newItems.Count, BatchSize);
+        }
+
+        // Append new items
+        contentItems.AddRange(newItems);
+        _currentBatch = batch;
+
+        Logger.LogDebug("LoadBatch: Total items now: {Total}", contentItems.Count);
+    }
+
+    [JSInvokable]
+    public async Task LoadNextBatch()
+    {
+        if (_isLoadingMore || !_hasMoreContent)
+        {
+            Logger.LogDebug("LoadNextBatch: Skipped (_isLoadingMore={IsLoadingMore}, _hasMoreContent={HasMore})",
+                _isLoadingMore, _hasMoreContent);
+            return;
+        }
+
+        _isLoadingMore = true;
+        StateHasChanged();
+
+        Logger.LogDebug("LoadNextBatch: Loading batch {NextBatch}", _currentBatch + 1);
+
+        try
+        {
+            await LoadBatch(_currentBatch + 1);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load next batch for {SectionName}/{CollectionName}", SectionName, CollectionName);
+            errorMessage = "Unable to load more content";
+        }
+        finally
+        {
+            _isLoadingMore = false;
+            StateHasChanged();
         }
     }
 
@@ -235,5 +325,83 @@
             // /github-copilot/news → "Browse GitHub Copilot News"
             return $"Browse {sectionDisplayName} {collectionDisplay}";
         }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                _infiniteScrollModule = await JSRuntime.InvokeAsync<IJSObjectReference>(
+                    "import", "/js/infinite-scroll.js");
+                _dotNetRef = DotNetObjectReference.Create(this);
+
+                Logger.LogDebug("InfiniteScroll: Module imported and DotNetRef created");
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "Failed to initialize infinite scroll module");
+            }
+        }
+
+        // Set up observer when scroll trigger is rendered and we don't already have an observer
+        if (_observerInstance == null && _hasMoreContent && !_isLoadingMore && _infiniteScrollModule != null && _dotNetRef != null)
+        {
+            Logger.LogDebug("InfiniteScroll: Attempting to set up observer (firstRender={FirstRender}, hasMore={HasMore}, isLoading={IsLoading})", 
+                firstRender, _hasMoreContent, _isLoadingMore);
+
+            try
+            {
+                // Create new observer
+                _observerInstance = await _infiniteScrollModule.InvokeAsync<IJSObjectReference>(
+                    "observeScrollTrigger", _dotNetRef, "scroll-trigger");
+
+                Logger.LogDebug("InfiniteScroll: Observer created successfully");
+            }
+            catch (JSException jsEx) when (jsEx.Message.Contains("not found"))
+            {
+                // Scroll trigger not yet rendered, will retry on next render
+                Logger.LogDebug("InfiniteScroll: Scroll trigger not yet in DOM, will retry");
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "InfiniteScroll: Failed to set up scroll observer");
+            }
+        }
+        else if (_observerInstance != null)
+        {
+            Logger.LogDebug("InfiniteScroll: Observer already exists, skipping setup");
+        }
+        else
+        {
+            Logger.LogDebug("InfiniteScroll: Conditions not met for observer setup (hasMore={HasMore}, isLoading={IsLoading}, moduleLoaded={ModuleLoaded}, dotNetRefCreated={DotNetRefCreated})",
+                _hasMoreContent, _isLoadingMore, _infiniteScrollModule != null, _dotNetRef != null);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_observerInstance != null)
+        {
+            try
+            {
+                await _observerInstance.InvokeVoidAsync("dispose");
+                await _observerInstance.DisposeAsync();
+            }
+            catch
+            {
+                // Ignore disposal errors
+            }
+        }
+
+        if (_infiniteScrollModule != null)
+        {
+            await _infiniteScrollModule.DisposeAsync();
+        }
+
+        _dotNetRef?.Dispose();
+
+        GC.SuppressFinalize(this);
     }
 }
