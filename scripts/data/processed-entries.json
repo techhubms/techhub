@@ -24964,5 +24964,29 @@
     "canonical_url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
     "reason": "Succesfully added: Assigned 'AI' because the content discusses how AI is changing language choice and developer workflows on GitHub, highlights Python's dominance in AI projects, and references the rapid adoption of AI in mainstream development (AI rule 4, 5). Assigned 'Coding' since the analysis is deeply focused on programming languages (TypeScript, Python), coding best practices (types, CI/CD), and the evolution of software development approaches (Coding rules 1, 2, 4). Did not assign other categories (e.g., Azure, DevOps) because, while related topics like CI/CD and developer tooling are mentioned, there is no substantive discussion of Microsoft-specific platforms or tooling that would trigger their inclusion.",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'Azure' category as the content thoroughly discusses both Azure Synapse Analytics and Microsoft Fabric Data Warehouse, which are core Azure analytics services (Azure rules 1, 4, 5, 6). Included 'ML' because the article addresses analytics, data warehousing, and complex data engineering—namely technical BI, data engineering, and enterprise-scale analytics workloads, which fits ML rule 1, 2, 3, and 4 (‘Data engineering for analytics and data science’, ‘Data warehousing for BI/ML’, and ‘Advanced reporting and analytics development’). Did not assign 'AI' since, while AI workloads and AI transformation are referenced in a broad sense, the technical details and concrete examples focus on warehouse/analytics performance, migration, cost, and architecture—not integration or development of AI. No other categories apply (no code, DevOps, security, or Copilot-specific content). The exclusion of business/productivity categories is justified, as the discussion is technical, not purely business-strategy-focused. All reasoning directly follows the strict decision process and referenced rules.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/a-turning-point-for-enterprise-data-warehousing/",
+    "timestamp": "2026-02-03 18:16:23 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' due to the article’s in-depth focus on securing AI systems, evolving SDL specifically for AI, and covering AI-specific security risks (AI rules 1, 4, 5). Assigned 'Security' because the post's core is about security frameworks, practices, and risk management for Microsoft technologies (Security rules 1, 9, 10). No other categories apply as there’s no implementation-level coding, DevOps, or ML engineering content. Content is technical, aimed at practitioners, and not high-level business strategy or biographical in nature.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/03/microsoft-sdl-evolving-security-practices-for-an-ai-powered-world/",
+    "timestamp": "2026-02-03 18:16:46 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category per Inclusion Rule 2 (GitHub DevOps tools) and Inclusion Rule 6 (infrastructure and automation), since the Dependabot Proxy is a DevOps tool for automating and securing dependency management in workflows. Assigned Security category per Inclusion Rule 1 (focus on supply chain security and authentication), as the content discusses how the proxy helps developers audit and secure software dependencies, citing compliance and vulnerability management. Coding, AI, ML, Azure, and GitHub Copilot were not assigned, as there is no code-level tutorial, AI/ML, or Azure-specific implementation, and no mention of Copilot.",
+    "canonical_url": "https://github.blog/changelog/2026-02-03-the-dependabot-proxy-is-now-open-source-with-an-mit-license",
+    "timestamp": "2026-02-03 18:17:06 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the core demo is the GitHub Copilot App Modernization agent, an AI-powered tool for developers (AI rule 2 and GitHub Copilot rule 1). Assigned 'Coding' because the video focuses on upgrading, analyzing, and migrating .NET code (Coding rules 1, 4, and 5). The use of Visual Studio, .NET, and code-centric modernization methods justify Coding. Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as those aspects are not present in the content description or topic coverage.",
+    "canonical_url": "https://www.youtube.com/watch?v=LvJwxb_EvZE",
+    "timestamp": "2026-02-03 18:17:42 +00:00"
   }
 ]

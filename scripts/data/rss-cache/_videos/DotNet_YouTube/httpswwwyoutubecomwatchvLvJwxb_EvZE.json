@@ -1,0 +1,18 @@
+{
+  "Title": "Upgrade to modern .NET with GitHub Copilot: Assess → Plan → Execute",
+  "ProcessedDate": "2026-02-03 18:15:37",
+  "Description": "Upgrading an older .NET app can feel risky—unknown dependencies, breaking changes, and “will this even build?” moments. In this video, I demo the GitHub Copilot app modernization agent inside Visual Studio and walk through the full upgrade workflow: Assessment → Planning → Execution.\n\nIn this video, we walk through how to upgrade a legacy .NET application to a modern version of .NET using GitHub Copilot App Modernization for .NET.\n\nYou’ll see a full end-to-end demo of the assessment, planning, and execution workflow, showing how GitHub Copilot helps analyze an existing .NET codebase, identify upgrade issues, and guide the migration process step by step.\n\nThis is an introductory demo focused specifically on .NET migration, ideal for developers working with older .NET Framework or early .NET Core apps who want a practical, AI-assisted upgrade path.\n\nTopics covered: Assessing a legacy .NET app for modernization Planning an upgrade with GitHub Copilot Executing the migration to a newer version of .NET Using Copilot to speed up and de-risk .NET upgrades\n\nDocumentation: https://aka.ms/ghcp-appmod/dotNET VS Code extension: https://aka.ms/ghcp-appmod/vscode-extension Sample repository: https://aka.ms/ghcp-appmod/dotNET-mvc-repo Connect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "FeedLevelAuthor": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "Link": "https://www.youtube.com/watch?v=LvJwxb_EvZE",
+  "Tags": [
+    ".NET",
+    "Copilot",
+    "GitHub"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Author": "dotnet",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "PubDate": "2026-02-03T17:23:48+00:00"
+}
