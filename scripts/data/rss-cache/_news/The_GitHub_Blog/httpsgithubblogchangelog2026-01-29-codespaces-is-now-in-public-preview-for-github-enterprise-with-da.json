@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-01-30 00:05:55",
+  "Description": "GitHub Codespaces is now available in public preview for GitHub Enterprise Cloud with data residency. You can now use secure, configurable, instantly available cloud development environments while maintaining strict compliance…\n\nThe post [Codespaces is now in public preview for GitHub Enterprise with data residency](https://github.blog/changelog/2026-01-29-codespaces-is-now-in-public-preview-for-github-enterprise-with-data-residency) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-01-29-codespaces-is-now-in-public-preview-for-github-enterprise-with-data-residency",
+  "Tags": [
+    "collaboration tools",
+    "Release"
+  ],
+  "Author": "Allison",
+  "PubDate": "2026-01-29T23:25:07+00:00",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "Title": "Codespaces is now in public preview for GitHub Enterprise with data residency",
+  "EnhancedContent": "GitHub Codespaces is now available in public preview for GitHub Enterprise Cloud with data residency. You can now use secure, configurable, instantly available cloud development environments while maintaining strict compliance with your data residency requirements. Functionality is identical to Codespaces on the general GitHub platform, with the available regions limited to those within your account’s selected region.\n\n## What’s new\n\nCodespaces for data resident customers provides:\n\n- **Full feature parity**: Access to the complete GitHub Codespaces feature set, including all policies and configurations available in the general offering.\n- **Data residency compliance**: All sensitive data remains within your selected region.\n- **Regional availability**: Codespaces are available in the following data residency regions:\n- Australia\n- EU\n- US\n- Japan (coming during preview, before general availability)\n\n## Important considerations\n\nTo maintain strict data residency, enterprise or organization-owned codespaces are required. User-owned codespaces are not supported for GitHub Enterprise Cloud with data residency accounts. Please ensure your enterprise or organization policies are configured to set proper ownership for Codespaces usage. More information can be found in [our documentation on codespace ownership](https://docs.github.com/codespaces/managing-codespaces-for-your-organization/choosing-who-owns-and-pays-for-codespaces-in-your-organization).\n\n[Learn more about GitHub Codespaces](https://docs.github.com/codespaces) and [GitHub Enterprise with data residency](https://docs.github.com/enterprise-cloud@latest/admin/data-residency/about-github-enterprise-cloud-with-data-residency).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog"
+}

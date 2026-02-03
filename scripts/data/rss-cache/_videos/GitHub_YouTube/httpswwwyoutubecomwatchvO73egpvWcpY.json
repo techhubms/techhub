@@ -1,0 +1,18 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "FeedLevelAuthor": "GitHub",
+  "Description": "The Model Context Protocol (MCP) is like a USB port for your AI, allowing you to plug in external tools and documentation. In this video, @shanselman demonstrates how to configure an MCP server in the GitHub Copilot CLI. He uses Context 7 to pull in up-to-date Next.js documentation, enabling Copilot to generate an accurate architecture diagram.\n\n#MCP #GitHubCopilot #CopilotCLI\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Title": "Configuring model context protocol in the GitHub Copilot CLI | demo",
+  "Tags": [
+    "CopilotCLI",
+    "GitHubCopilot",
+    "MCP"
+  ],
+  "PubDate": "2026-02-03T15:00:44+00:00",
+  "Link": "https://www.youtube.com/watch?v=O73egpvWcpY",
+  "EnhancedContent": null,
+  "Author": "GitHub",
+  "ProcessedDate": "2026-02-03 15:14:40",
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube"
+}

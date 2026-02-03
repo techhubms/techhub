@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://blog.fabric.microsoft.com/en-us/blog/feed/",
+  "FeedName": "Microsoft Fabric Blog",
+  "PubDate": "2026-01-29T10:00:00+00:00",
+  "Title": "On-premises data gateway January 2026 release",
+  "Tags": [],
+  "ProcessedDate": "2026-01-29 17:11:25",
+  "Description": "Here is the January 2026 release of the on-premises data gateway (version 3000.302).",
+  "FeedLevelAuthor": "Microsoft Fabric Blog",
+  "OutputDir": "_news",
+  "EnhancedContent": "The January 2026 release of the on-premises data gateway is (version 3000.302).\n\n## Improvements\n\n- Performance optimization for reading CSV format in Copy job and Pipeline activities.\n- Performance optimization for read and write through adaptive performance tuning capability in Pipeline.\n\n## Power BI Desktop compatibility\n\nThis update brings the on-premises data gateway up to date with the January 2026 release of Power BI Desktop.\n\n[Download on-premises data gateway (standard mode)](https://download.microsoft.com/download/d/a/1/da1fddb8-6da8-4f50-b4d0-18019591e182/GatewayInstall-26-01.exe)\n\n[Download on-premises data gateway (personal mode)](https://download.microsoft.com/download/6/0/2/602A459E-E1A3-4FB9-B07F-FC2B60881900/On-premises%20data%20gateway%20%28personal%20mode%29-26-01.exe)\n\nThis version of the gateway will ensure that the reports that you publish to the Power BI Service and refresh via the gateway will go through the same query execution logic/run-time as in the December’s version of Power BI Desktop. View the data connectivity section of Power BI’s January 2026 feature summary for updates on relevant connectors.\n\n## Thank you!\n\nPlease continue to send us feedback for what new capabilities you’d like in the future! You can vote for your favorite feature suggestions at [Ideas](https://ideas.powerbi.com/ideas/).",
+  "Author": "Microsoft Fabric Blog",
+  "Link": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-january-2026-release/"
+}
