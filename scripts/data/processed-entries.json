@@ -24904,5 +24904,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=rNUZm1xLlzo",
     "collection": "videos",
     "reason": "Succesfully added: Assigned Coding category because the tutorial focuses on getting started with Visual Studio Code, which is a Microsoft development tool, and covers foundational topics like editing, source control, UI, and workflow (Coding rule 5). No evidence of AI, GitHub Copilot, Azure, ML, DevOps, or Security content based on the description and chapter list, so those categories were not assigned."
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because Microsoft OneLake (part of Microsoft Fabric, built on Azure) and its interoperability with Snowflake are central to the content, and OneLake/OneLake APIs are all Azure-based data services (Azure rules 1, 4, 5). Assigned ML category because the announcement enables enterprise analytics and AI workloads, and features like Iceberg tables, cross-platform data sharing, and real-time analytics serve advanced data engineering and business intelligence use cases (ML rule 1, 4, 5, 7). Did not assign AI because content focuses on platform architecture and interoperability for analytics/ML, not direct use or development of AI services or tools as required by the AI category rules. Other categories like Coding, DevOps, Security, and GitHub Copilot do not apply because the announcement is platform/data architecture focused, not code, CI/CD, security, or AI tool development centric.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-onelake-and-snowflake-interoperability-is-now-generally-available/",
+    "timestamp": "2026-02-03 07:17:35 +00:00",
+    "collection": "news"
   }
 ]
