@@ -11691,5 +11691,11 @@
     "canonical_url": "https://www.youtube.com/shorts/P_gizaPKgPY",
     "reason": "No categories found: No categories assigned because the content is primarily a conceptual discussion about programming language adoption and AI rather than a technical implementation, tutorial, or development-focused piece. The description, title, and available information do not provide any substantive details about Microsoft technologies, services, or developmental practices per the inclusion rules. There is no mention of Microsoft AI products, coding guidance using Microsoft tools, or technical depth regarding Microsoft ecosystem integration (see AI, Coding, and Generic Inclusion rules). Furthermore, the content is missing its main body ('content': null), so there is insufficient information to extract any technical value that fits platform requirements.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=3k8dq7YXNic",
+    "reason": "No categories found: No categories assigned. The content is focused on the business and industry-level impact of agentic (AI-driven) commerce in retail, emphasizing market trends, organizational readiness, and high-level business transformation. It does not provide technical implementation details, code, development frameworks, or actionable guidance for developers or technical consultants. This aligns with the Generic Exclusion Rules: business strategy/executive content and high-level market analysis without technical depth are excluded. Although Microsoft AI is mentioned, the content is not substantively about development with Microsoft AI products or technical architecture.",
+    "timestamp": "2026-02-03 20:10:05 +00:00",
+    "collection": "videos"
   }
 ]
