@@ -24910,5 +24910,17 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-onelake-and-snowflake-interoperability-is-now-generally-available/",
     "timestamp": "2026-02-03 07:17:35 +00:00",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-build-safe-natural-language-driven-apis/ba-p/4488509",
+    "reason": "Succesfully added: This content was assigned the 'AI' category since it is centered on building production natural language APIs using LLMs and covers architectural patterns for working with large language models (AI Rule 1 and 4). The 'Azure' category is included because Azure OpenAI is a primary enabling technology discussed throughout, including code-level integration patterns (Azure Rule 1 and 3). The article is not primarily about coding practices, DevOps, custom ML model building, or security implementation; it focuses on API design and orchestration with Azure AI tools, hence 'Coding', 'DevOps', and 'ML' were not assigned. The content meets quality standards as it is a highly technical, practitioner-focused guide for building reliable systems with Microsoft AI technologies.",
+    "collection": "community",
+    "timestamp": "2026-02-03 08:10:02 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-perfect-fusion-of-github-copilot-sdk-and-cloud-native/ba-p/4491199",
+    "reason": "Succesfully added: Assigned AI category because the article provides an in-depth guide to building multi-agent AI systems using GitHub Copilot SDK and agent orchestration protocols (AI rules 1, 4, 5). Assigned GitHub Copilot because the main focus and code examples revolve around GitHub Copilot SDK and its technical application (GitHub Copilot rules 1, 2, 4). Assigned Azure category due to multiple real-world deployment patterns and Azure Container Apps usage (Azure rule 1, 4). Assigned DevOps because the article covers full agent CI/CD, Docker, containerization practices, deployment pipelines, and infrastructure automation (DevOps rules 5, 6, 8). Assigned Coding because concrete SDK usage, Python/.NET/Node.js examples, Skill file definition, and agent embedding in applications are discussed (Coding rules 1, 2, 4). No ML category: while ML/AI is discussed, the focus is agent orchestration and application, not custom model building or data science pipelines (ML rules 1, 6). No Security category: Security is addressed only in deployment and secret management best practices, not as a primary technical focus. All category and tag choices follow explicit inclusion rules.",
+    "collection": "community",
+    "timestamp": "2026-02-03 08:10:36 +00:00"
   }
 ]
