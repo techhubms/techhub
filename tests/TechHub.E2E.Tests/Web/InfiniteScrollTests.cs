@@ -143,7 +143,7 @@ public class InfiniteScrollTests : IAsyncLifetime
         }
 
         // Assert - End message should be visible
-        await Assertions.Expect(endMessage).ToBeVisibleAsync(new PageWaitForFunctionOptions { Timeout = 2000 });
+        await Assertions.Expect(endMessage).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions { Timeout = 2000 });
         
         var endText = await endMessage.TextContentAsync();
         endText.Should().Contain("End of content", "end message should indicate no more items");
@@ -235,7 +235,7 @@ public class InfiniteScrollTests : IAsyncLifetime
         {
             // Assert - With few results, should see end message
             var endMessage = Page.Locator(".end-of-content");
-            await Assertions.Expect(endMessage).ToBeVisibleAsync(new PageWaitForFunctionOptions { Timeout = 2000 });
+            await Assertions.Expect(endMessage).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions { Timeout = 2000 });
         }
     }
 
@@ -256,7 +256,7 @@ public class InfiniteScrollTests : IAsyncLifetime
 
         // Assert - Loading indicator should appear immediately
         var loadingIndicator = Page.Locator(".loading-more-indicator");
-        await Assertions.Expect(loadingIndicator).ToBeVisibleAsync(new PageWaitForFunctionOptions { Timeout = 1000 });
+        await Assertions.Expect(loadingIndicator).ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions { Timeout = 1000 });
 
         // And should contain appropriate text
         var loadingText = await loadingIndicator.TextContentAsync();
@@ -268,7 +268,7 @@ public class InfiniteScrollTests : IAsyncLifetime
             new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
 
         // Loading indicator should disappear
-        await Assertions.Expect(loadingIndicator).Not.ToBeVisibleAsync(new PageWaitForFunctionOptions { Timeout = 2000 });
+        await Assertions.Expect(loadingIndicator).Not.ToBeVisibleAsync(new LocatorAssertionsToBeVisibleOptions { Timeout = 2000 });
     }
 
     [Fact]
