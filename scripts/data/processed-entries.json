@@ -24940,5 +24940,23 @@
     "collection": "videos",
     "timestamp": "2026-02-03 11:14:05 +00:00",
     "reason": "Succesfully added: Assigned AI because the event centrally involves AI agent building, tracks focused on AI development, and leverages Microsoft AI technology (AI rule 1, 4, and 6). Assigned GitHub Copilot because one of the primary tracks involves building with GitHub Copilot (GitHub Copilot rule 1 and 2), and the description specifically lists it. Assigned Azure because of the recurring emphasis on Microsoft Cloud and Azure as a platform supporting the AI tracks (Azure rule 1, 4, 5). Did not assign Coding, DevOps, ML, or Security because the core focus described is on AI-enabled apps, agent reasoning, and platform use, not deep aspects of those other categories."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/performance-improvements-to-mef-based-editor-productivity-extensions/",
+    "timestamp": "2026-02-03 15:15:49 +00:00",
+    "reason": "Succesfully added: The content is focused on technical implementation and performance improvements in Visual Studio extension development, specifically around MEF-based editor extensions and changes relevant for developers adopting Visual Studio 2026. Per the Coding category inclusion rules (Microsoft development tools, Visual Studio, extension development), this is a clear fit. No other categories apply, as there is no Azure, DevOps, AI, ML, or Security focus. Category assignment is justified by direct references to threading, analyzer usage, SDKs, and developer tooling.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=O73egpvWcpY",
+    "timestamp": "2026-02-03 15:16:28 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the video focuses on configuring the Model Context Protocol (MCP) in the GitHub Copilot CLI, enhancing AI-assisted development (AI rule 2 and GitHub Copilot rules 1–4). Although the video references external documentation (e.g., Next.js), the main subject is GitHub Copilot's AI integration for developer use. No other technical domains (such as Azure, Security, ML, DevOps, or Coding frameworks) are substantively featured, so no additional categories were added.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/retina-1-0-is-now-available/ba-p/4489003",
+    "timestamp": "2026-02-03 15:17:02 +00:00",
+    "reason": "Succesfully added: Categories assigned: DevOps (the content heavily focuses on Kubernetes operations, observability tooling, continuous monitoring, and SRE use cases—aligns with DevOps category inclusion rules 1, 3, 5, 7, 9), Azure (significant detail on Azure Monitor, Log Analytics, AKS compatibility, Azure integrations—aligns with Azure inclusion rule 1, 4), Security (directly addresses security auditing, compliance, incident investigation, flow logging—aligns with Security inclusion rules 2, 3, 5, 7, 9). Did not assign ML or AI: content does not address analytics/ML pipelines or Microsoft AI services. Did not assign Coding: no code-level developer framework or programming guidance included. Generic exclusions not triggered—the content is in English, technical, substantive, well over community content length threshold, and is not biographical, promotional in nature, nor business/strategy exclusive.",
+    "collection": "community"
   }
 ]
