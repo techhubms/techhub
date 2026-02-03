@@ -24922,5 +24922,23 @@
     "reason": "Succesfully added: Assigned AI category because the article provides an in-depth guide to building multi-agent AI systems using GitHub Copilot SDK and agent orchestration protocols (AI rules 1, 4, 5). Assigned GitHub Copilot because the main focus and code examples revolve around GitHub Copilot SDK and its technical application (GitHub Copilot rules 1, 2, 4). Assigned Azure category due to multiple real-world deployment patterns and Azure Container Apps usage (Azure rule 1, 4). Assigned DevOps because the article covers full agent CI/CD, Docker, containerization practices, deployment pipelines, and infrastructure automation (DevOps rules 5, 6, 8). Assigned Coding because concrete SDK usage, Python/.NET/Node.js examples, Skill file definition, and agent embedding in applications are discussed (Coding rules 1, 2, 4). No ML category: while ML/AI is discussed, the focus is agent orchestration and application, not custom model building or data science pipelines (ML rules 1, 6). No Security category: Security is addressed only in deployment and secret management best practices, not as a primary technical focus. All category and tag choices follow explicit inclusion rules.",
     "collection": "community",
     "timestamp": "2026-02-03 08:10:36 +00:00"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/",
+    "collection": "news",
+    "timestamp": "2026-02-03 11:12:58 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the article deeply discusses enabling AI workflows with PostgreSQL on Azure (AI inclusion rules 1, 4, and 5). The GitHub Copilot category is included since Copilot's developer assistance in authoring and optimizing SQL on PostgreSQL is highlighted, and as per CRITICAL Copilot Product Distinction, both AI and GitHub Copilot must be assigned. Azure is included due to the discussion centering on Azure Database for PostgreSQL and related Azure services (Azure rule 1). DevOps is included because the content demonstrates integrating managed services into developer workflows, covering provisioning, monitoring, and lifecycle management (DevOps rules 1, 2, and 9). Coding qualifies since there is extensive focus on development using PostgreSQL, SQL queries, schemas, and programming tools inside VS Code (Coding rules 1, 2, and 5). ML is included because of the direct support for ML/AI model invocation in-database, use of LLMs, embeddings, and analytics--this constitutes custom ML engineering and data science capabilities (ML rules 1, 2, 4, 5, 6, and 9). No Security tag added as security is referenced only as an assurance, not as the technical focus. Generic exclusion rules do not apply."
+  },
+  {
+    "canonical_url": "https://andrewlock.net/creating-strongly-typed-metics-with-a-source-generator/",
+    "collection": "blogs",
+    "timestamp": "2026-02-03 11:13:27 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the content deeply discusses the implementation, usage patterns, and limitations of .NET's System.Diagnostics.Metrics APIs—including direct code samples, API comparisons, and source generator integration. There is a strong focus on C# development, code structure, and practical programming, which all fit Coding inclusion rules (Coding rules 1, 2, and 4). The content does not centrally cover Azure, DevOps, AI, ML, or Security; it centers on developer experience and observability instrumentation within .NET apps. Tags reflect technical topics covered, as per tagging guidance."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/d6qt0xV0RV0",
+    "collection": "videos",
+    "timestamp": "2026-02-03 11:14:05 +00:00",
+    "reason": "Succesfully added: Assigned AI because the event centrally involves AI agent building, tracks focused on AI development, and leverages Microsoft AI technology (AI rule 1, 4, and 6). Assigned GitHub Copilot because one of the primary tracks involves building with GitHub Copilot (GitHub Copilot rule 1 and 2), and the description specifically lists it. Assigned Azure because of the recurring emphasis on Microsoft Cloud and Azure as a platform supporting the AI tracks (Azure rule 1, 4, 5). Did not assign Coding, DevOps, ML, or Security because the core focus described is on AI-enabled apps, agent reasoning, and platform use, not deep aspects of those other categories."
   }
 ]
