@@ -11697,5 +11697,17 @@
     "reason": "No categories found: No categories assigned. The content is focused on the business and industry-level impact of agentic (AI-driven) commerce in retail, emphasizing market trends, organizational readiness, and high-level business transformation. It does not provide technical implementation details, code, development frameworks, or actionable guidance for developers or technical consultants. This aligns with the Generic Exclusion Rules: business strategy/executive content and high-level market analysis without technical depth are excluded. Although Microsoft AI is mentioned, the content is not substantively about development with Microsoft AI products or technical architecture.",
     "timestamp": "2026-02-03 20:10:05 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=GlSN5FmVUqg",
+    "timestamp": "2026-02-03 21:11:14 +00:00",
+    "reason": "No categories found: Content excluded due to insufficient information for category assignment. The title and description ('Chris will be walking through some projects and answering your questions') are too vague and do not specify any Microsoft technologies, products, or technical focus that would qualify for predefined categories. No substantive content is provided (content field is null), making it impossible to assess technical depth or the relevance of Microsoft developer tools. Per the rule 'when in doubt, exclude,' no categories are assigned.",
+    "collection": "videos"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/issues-with-fslogix-profiles-on-win11-25h2-multiuser-sessionhost/m-p/4491584#M13994",
+    "timestamp": "2026-02-03 22:08:40 +00:00"
   }
 ]

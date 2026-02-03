@@ -25000,5 +25000,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the entire content is focused on Azure-specific services and solutions (Azure rule 1). Assigned DevOps because the article covers deployment models, CI/CD, traffic routing, operational runbooks, and GitOps practices (DevOps rules 1, 3, 4, 5, and 9). Assigned Security due to detailed sections on identity (Azure Entra ID), RBAC, network segmentation, policy enforcement, and Microsoft Defender for Containers (Security rules 1, 2, 3, 4, and 5). Did not assign ML, AI, or Coding as there is no substantive content about machine learning, AI, or application code implementations. The technical focus is architecture, platform resilience, traffic management, data/state handling, and cloud security.",
     "timestamp": "2026-02-03 20:10:40 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Coding' category because the tutorial is centered on using Visual Studio Code, a core development tool (Coding rule 5). 'DevOps' is included due to the coverage of source control integration and issue management within the editor (DevOps rules 3 and 8). Did not assign AI or GitHub Copilot categories because, although inline suggestions and IntelliSense are mentioned, there is no clear indication that GitHub Copilot or broader Microsoft AI development platforms are the focus. Azure, Security, and ML do not apply as there is no substantive content on those topics.",
+    "canonical_url": "https://www.youtube.com/watch?v=f8_uF_IDV50",
+    "timestamp": "2026-02-03 22:08:39 +00:00"
   }
 ]
