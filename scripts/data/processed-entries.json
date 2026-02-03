@@ -24988,5 +24988,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the core demo is the GitHub Copilot App Modernization agent, an AI-powered tool for developers (AI rule 2 and GitHub Copilot rule 1). Assigned 'Coding' because the video focuses on upgrading, analyzing, and migrating .NET code (Coding rules 1, 4, and 5). The use of Visual Studio, .NET, and code-centric modernization methods justify Coding. Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as those aspects are not present in the content description or topic coverage.",
     "canonical_url": "https://www.youtube.com/watch?v=LvJwxb_EvZE",
     "timestamp": "2026-02-03 18:17:42 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/architecting-an-azure-ai-hub-and-spoke-landing-zone-for-multi/ba-p/4491161",
+    "timestamp": "2026-02-03 19:20:37 +00:00",
+    "reason": "Succesfully added: Assigned AI category because Azure OpenAI, Azure AI Search, and LLMs are central to the platform (AI inclusion rule 1, 3, and 4). Assigned Azure because the architecture and tooling (AKS, VNet, Application Gateway, etc.) are all based on Azure (Azure rules 1, 4, 5). Assigned Security because of deep focus on tenant isolation, zero-trust, identity (Microsoft Entra ID), centralized ingress/egress controls, and compliance enforcement (Security rules 1, 3, 4, 9). Assigned DevOps due to extensive use of Infrastructure as Code (Bicep/Terraform), GitOps, automation, application onboarding, and modern CI/CD (DevOps rules 1, 6, 8, 9). Did not assign ML or Coding since the focus is on architecture, deployment, and operation rather than on development of ML algorithms or code-level patterns.",
+    "collection": "community"
   }
 ]
