@@ -24898,5 +24898,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=PWLawDLe_RY",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the video centers on building AI-powered applications and using AI coding assistants (AI rule 4). Assigned Coding category since the focus is on .NET (including Blazor and ASP.NET Core) development with technical demonstrations (Coding rules 1 and 4). Did not assign Azure or other categories, as there is no evidence of direct Azure service integration or DevOps focus. Tags are based on technical keywords, presenters, and featured tools."
+  },
+  {
+    "timestamp": "2026-02-03 05:23:57 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=rNUZm1xLlzo",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Coding category because the tutorial focuses on getting started with Visual Studio Code, which is a Microsoft development tool, and covers foundational topics like editing, source control, UI, and workflow (Coding rule 5). No evidence of AI, GitHub Copilot, Azure, ML, DevOps, or Security content based on the description and chapter list, so those categories were not assigned."
   }
 ]

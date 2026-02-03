@@ -11673,5 +11673,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=c8mcMNn0f5s",
     "collection": "videos",
     "reason": "No categories found: No categories assigned because there is insufficient substantive content provided to evaluate for inclusion. The 'content' field is null, so I cannot assess whether Microsoft technologies are central to the material, nor whether any specific category inclusion rules are met. The available description focuses on Rio Terminal, its development story, and high-performance CLI tool ergonomics, but without explicit reference to Microsoft technologies or developer tools like GitHub Copilot, Azure, etc., I cannot assign categories. Per processing rules, only the actual content (not just the title/description) is to be used for categorization and detail extraction."
+  },
+  {
+    "collection": "community",
+    "reason": "No categories found: This community content is primarily a help-seeking, question-only post in which the author describes being locked out of the Azure Portal and requests assistance regaining access to their account. According to the Generic Exclusion Rules in Chapter 3, 'Question-Only Content'—posts seeking help without providing substantive solutions or technical walkthroughs—must be excluded. The content does not provide technical guidance, solutions, or architectural insights, and consists mainly of the author's frustration and a request for help. Therefore, no categories are assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/urgent-locked-out-of-azure-portal-github-login-loop/m-p/4491668#M22424",
+    "timestamp": "2026-02-03 03:49:34 +00:00"
   }
 ]
