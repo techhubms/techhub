@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Anders Hejlsberg on the Origins of TypeScript and Fixing JavaScript"
-description: "This video features Anders Hejlsberg discussing why industry leaders recognized JavaScript's limitations for large-scale applications. It details how this led to the critical decision to move away from solutions like Script# and toward enhancing JavaScript with robust tooling, culminating in the creation of TypeScript."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/NzaNeWeI31Y"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/NzaNeWeI31Y
+title: Anders Hejlsberg on the Origins of TypeScript and Fixing JavaScript
+author: GitHub
+primary_section: coding
+feed_name: GitHub YouTube
 date: 2026-01-27 19:00:33 +00:00
-permalink: "/2026-01-27-Anders-Hejlsberg-on-the-Origins-of-TypeScript-and-Fixing-JavaScript.html"
-categories: ["Coding"]
-tags: ["Anders Hejlsberg", "Code Quality", "Coding", "Developer Tools", "JavaScript", "Language Design", "Microsoft", "Programming Languages", "ScriptSharp", "Software Engineering", "TypeScript", "Videos", "Web Development"]
-tags_normalized: ["anders hejlsberg", "code quality", "coding", "developer tools", "javascript", "language design", "microsoft", "programming languages", "scriptsharp", "software engineering", "typescript", "videos", "web development"]
+tags:
+- Anders Hejlsberg
+- Code Quality
+- Coding
+- Developer Tools
+- JavaScript
+- Language Design
+- Microsoft
+- Programming Languages
+- ScriptSharp
+- Software Engineering
+- TypeScript
+- Videos
+- Web Development
+section_names:
+- coding
 ---
-
 In this GitHub video, Anders Hejlsberg discusses with the audience how limitations in JavaScript engineering led to the creation of TypeScript, offering insight into the evolution of scalable web development.<!--excerpt_end-->
 
 {% youtube NzaNeWeI31Y %}

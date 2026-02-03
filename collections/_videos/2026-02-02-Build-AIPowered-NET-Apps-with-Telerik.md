@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Build AI‑Powered .NET Apps with Telerik"
-description: "This session from the ASP.NET Community Standup features Ed Charbeneau from Progress Telerik, demonstrating how to build AI-powered Blazor applications using Telerik’s AI coding tools and intelligent UI components. The demo highlights integration with Microsoft platforms, showing how MCP servers, AI assistants, and UI components accelerate .NET development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=PWLawDLe_RY"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=PWLawDLe_RY
+title: Build AI‑Powered .NET Apps with Telerik
+author: dotnet
+primary_section: ai
+feed_name: DotNet YouTube
 date: 2026-02-02 18:54:40 +00:00
-permalink: "/2026-02-02-Build-AIPowered-NET-Apps-with-Telerik.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AI Coding Assistants", "AI UI Components", "ASP.NET Core", "Aspdotnet", "Blazor", "Coding", "Daniel Roth", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Ed Charbeneau", "Mcp", "Microsoft", "Progress Telerik", "Progresstelerik", "Software Developer", "Telerik", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai coding assistants", "ai ui components", "aspdotnet core", "aspdotnet", "blazor", "coding", "daniel roth", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "ed charbeneau", "mcp", "microsoft", "progress telerik", "progresstelerik", "software developer", "telerik", "videos"]
+tags:
+- .NET
+- AI
+- AI Coding Assistants
+- AI UI Components
+- ASP.NET Core
+- Aspdotnet
+- Blazor
+- Coding
+- Daniel Roth
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnetdeveloper
+- Ed Charbeneau
+- Mcp
+- Microsoft
+- Progress Telerik
+- Progresstelerik
+- Software Developer
+- Telerik
+- Videos
+section_names:
+- ai
+- coding
 ---
-
 In this video, Ed Charbeneau from Progress Telerik joins Daniel Roth to demonstrate how developers can leverage AI coding tools and intelligent UI components for building smart .NET Blazor applications.<!--excerpt_end-->
 
 {% youtube PWLawDLe_RY %}

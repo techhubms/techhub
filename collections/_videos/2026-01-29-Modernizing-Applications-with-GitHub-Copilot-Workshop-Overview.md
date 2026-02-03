@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Modernizing Applications with GitHub Copilot: Workshop Overview"
-description: "This video workshop demonstrates how developers can leverage GitHub Copilot to modernize existing applications by converting languages and decomposing problems into manageable steps. The session emphasizes prompt engineering, hands-on coding, and provides direct resources alongside expert guidance from Liam Hampton."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/HPCQVTnlINs"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/shorts/HPCQVTnlINs
+title: 'Modernizing Applications with GitHub Copilot: Workshop Overview'
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-01-29 21:56:46 +00:00
-permalink: "/2026-01-29-Modernizing-Applications-with-GitHub-Copilot-Workshop-Overview.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["#githubcopilot #appmodernisation #developer", "AI", "AI Assisted Development", "Application Modernization", "Appmodernisation", "Appmodernization", "Code", "Code Conversion", "Coding", "Demo", "Developer", "Developer Workshop", "GitHub Copilot", "Hands On Demo", "Liam Hampton", "Mcp", "Programming Tools", "Prompt Engineering", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["sharpgithubcopilot sharpappmodernisation sharpdeveloper", "ai", "ai assisted development", "application modernization", "appmodernisation", "appmodernization", "code", "code conversion", "coding", "demo", "developer", "developer workshop", "github copilot", "hands on demo", "liam hampton", "mcp", "programming tools", "prompt engineering", "software development", "videos", "vs code"]
+tags:
+- '#githubcopilot #appmodernisation #developer'
+- AI
+- AI Assisted Development
+- Application Modernization
+- Appmodernisation
+- Appmodernization
+- Code
+- Code Conversion
+- Coding
+- Demo
+- Developer
+- Developer Workshop
+- GitHub Copilot
+- Hands On Demo
+- Liam Hampton
+- Mcp
+- Programming Tools
+- Prompt Engineering
+- Software Development
+- Videos
+- VS Code
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Presented by Liam Hampton, this workshop video showcases practical strategies for modernizing applications using GitHub Copilot, focusing on code conversion, prompt breakdown, and developer productivity in VS Code.<!--excerpt_end-->
 
 {% youtube HPCQVTnlINs %}

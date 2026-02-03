@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Engineering Accessibility and Animation for GitHub Copilot CLI’s ASCII Banner"
-description: "This article explores the technical and accessibility-driven challenges the GitHub team faced while building an animated ASCII intro for Copilot CLI. It details the unique engineering solutions around terminal rendering, ANSI color management, accessibility compliance, and the use of custom tools and React-based Ink components to deliver a cross-terminal animation experience."
-author: "Aaron Winston"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+external_url: https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/
+title: Engineering Accessibility and Animation for GitHub Copilot CLI’s ASCII Banner
+author: Aaron Winston
+primary_section: github-copilot
+feed_name: GitHub Engineering Blog
 date: 2026-01-28 17:00:00 +00:00
-permalink: "/2026-01-28-Engineering-Accessibility-and-Animation-for-GitHub-Copilot-CLIs-ASCII-Banner.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Accessibility", "AI", "Animation Workflow", "ANSI Color Codes", "ASCII Animation", "CLI Development", "Coding", "Developer Tools", "Engineering", "GitHub CLI", "GitHub Copilot", "GitHub Copilot CLI", "Ink", "News", "Open Source", "React", "Terminal Engineering", "TypeScript"]
-tags_normalized: ["accessibility", "ai", "animation workflow", "ansi color codes", "ascii animation", "cli development", "coding", "developer tools", "engineering", "github cli", "github copilot", "github copilot cli", "ink", "news", "open source", "react", "terminal engineering", "typescript"]
+tags:
+- Accessibility
+- AI
+- Animation Workflow
+- ANSI Color Codes
+- ASCII Animation
+- CLI Development
+- Coding
+- Developer Tools
+- Engineering
+- GitHub CLI
+- GitHub Copilot
+- GitHub Copilot CLI
+- Ink
+- News
+- Open Source
+- React
+- Terminal Engineering
+- TypeScript
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Aaron Winston details the engineering and design challenges behind the animated ASCII banner in GitHub Copilot CLI, highlighting collaboration between design and engineering, accessibility best practices, and the technical creativity required for modern terminal experiences.<!--excerpt_end-->
 
 # Engineering the Animated ASCII Banner for GitHub Copilot CLI

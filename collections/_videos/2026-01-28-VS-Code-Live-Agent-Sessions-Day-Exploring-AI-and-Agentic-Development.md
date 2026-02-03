@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "VS Code Live: Agent Sessions Day – Exploring AI and Agentic Development"
-description: "This event showcases the evolution of Visual Studio Code with a focus on agents, AI-assisted coding, and agentic development. Led by the VS Code product team and community builders, it offers live demos and practical insights into customizing workflows and leveraging AI within VS Code to enhance development processes."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=tAezuMSJuFs"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=tAezuMSJuFs
+title: 'VS Code Live: Agent Sessions Day – Exploring AI and Agentic Development'
+author: Visual Studio Code
+primary_section: ai
+feed_name: Visual Studio Code YouTube
 date: 2026-01-28 21:31:01 +00:00
-permalink: "/2026-01-28-VS-Code-Live-Agent-Sessions-Day-Exploring-AI-and-Agentic-Development.html"
-categories: ["AI", "Coding"]
-tags: ["Agentic Development", "Agents", "Agentsessions", "AI", "AI Assisted Coding", "Code", "Code Editor", "Codeeditor", "Coding", "Custom Workflows", "Demo", "Developer Tools", "Live Demo", "Microsoft", "Open Source", "Software Developer", "Software Development", "Videos", "VS Code", "Workflow Automation"]
-tags_normalized: ["agentic development", "agents", "agentsessions", "ai", "ai assisted coding", "code", "code editor", "codeeditor", "coding", "custom workflows", "demo", "developer tools", "live demo", "microsoft", "open source", "software developer", "software development", "videos", "vs code", "workflow automation"]
+tags:
+- Agentic Development
+- Agents
+- Agentsessions
+- AI
+- AI Assisted Coding
+- Code
+- Code Editor
+- Codeeditor
+- Coding
+- Custom Workflows
+- Demo
+- Developer Tools
+- Live Demo
+- Microsoft
+- Open Source
+- Software Developer
+- Software Development
+- Videos
+- VS Code
+- Workflow Automation
+section_names:
+- ai
+- coding
 ---
-
 The Visual Studio Code team hosts a live event featuring Olivia Guzzardo McVicker and others, exploring advances in agentic development and AI integration for developers.<!--excerpt_end-->
 
 {% youtube tAezuMSJuFs %}

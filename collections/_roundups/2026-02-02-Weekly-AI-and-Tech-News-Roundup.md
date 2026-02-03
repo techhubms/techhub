@@ -1,17 +1,39 @@
----
-layout: "post"
-title: "GitHub Copilot, AI Accelerators, and Secure Cloud: The Latest in Platform and Developer Tools"
-description: "This week's update covers expanded AI-powered development tools and updates across cloud platforms, including new GitHub Copilot agent integrations and SDK enhancements, Microsoft's Maia 200 AI accelerator for Azure, and additional frameworks for agent protocols and multi-model orchestration. Improvements also include enhanced data engineering with Microsoft Fabric and security updates like AI-driven threat detection, broader CodeQL support, and new identity protections."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup
+title: 'GitHub Copilot, AI Accelerators, and Secure Cloud: The Latest in Platform and Developer Tools'
+author: TechHub
+primary_section: github-copilot
 date: 2026-02-02 09:00:00 +00:00
-permalink: "/2026-02-02-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", "Agentic Workflows", "AI", "Azure", "CLI Automation", "Cloud Computing", "Coding", "Compliance", "Data Engineering", "DevOps", "GitHub Copilot", "Kubernetes", "Machine Learning", "MCP", "ML", "Open Source", "Roundups", "SDKs", "Security"]
-tags_normalized: ["dotnet", "agentic workflows", "ai", "azure", "cli automation", "cloud computing", "coding", "compliance", "data engineering", "devops", "github copilot", "kubernetes", "machine learning", "mcp", "ml", "open source", "roundups", "sdks", "security"]
+feed_name: TechHub
+tags:
+- .NET
+- Agentic Workflows
+- AI
+- Azure
+- CLI Automation
+- Cloud Computing
+- Coding
+- Compliance
+- Data Engineering
+- DevOps
+- GitHub Copilot
+- Kubernetes
+- Machine Learning
+- MCP
+- ML
+- Open Source
+- Roundups
+- SDKs
+- Security
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- coding
+- devops
+- security
 ---
-
 Welcome to this week's technical news roundup, with updated tools and platform features built around AI, cloud, and developer productivity. GitHub Copilot adds new agent-driven workflows, SDKs, and command-line features, while Microsoft's Maia 200 accelerator offers more options for AI workloads on Azure. Cloud platform changes include data engineering improvements, operational changes, and advances in secure identity. You will find practical guides, resources for implementing agent protocols, and hands-on strategies for building modern applications and workflows.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -80,11 +102,11 @@ The Copilot CLI continues to improve for terminal automation. Following last wee
 
 A public preview of the Agent Client Protocol (ACP) brings standardized integration for Copilot CLI with other tools, IDEs, and CI/CD pipelines, making Copilot automation easier to embed. New tutorials and demos show practical CLI use for onboarding, code review, debugging, and accessibility workflows. Enhanced command approval, permissions, and automation based on context further improve secure development.
 
-- [What’s New in the GitHub Copilot CLI?]({{ "/2026-01-26-Whats-New-in-the-GitHub-Copilot-CLI.html" | relative_url }})
-- [Switching Models in GitHub Copilot CLI: Demo by @shanselman]({{ "/2026-02-01-Switching-Models-in-GitHub-Copilot-CLI-Demo-by-shanselman.html" | relative_url }})
+- [What’s New in the GitHub Copilot CLI?](/2026-01-26-Whats-New-in-the-GitHub-Copilot-CLI.html)
+- [Switching Models in GitHub Copilot CLI: Demo by @shanselman](/2026-02-01-Switching-Models-in-GitHub-Copilot-CLI-Demo-by-shanselman.html)
 - [ACP Protocol Support Now Available in GitHub Copilot CLI](https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview)
 - [Power Agentic Workflows in Your Terminal with GitHub Copilot CLI](https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/)
-- [How a Designer Built an ASCII Animation Tool with GitHub Copilot]({{ "/2026-01-30-How-a-Designer-Built-an-ASCII-Animation-Tool-with-GitHub-Copilot.html" | relative_url }})
+- [How a Designer Built an ASCII Animation Tool with GitHub Copilot](/2026-01-30-How-a-Designer-Built-an-ASCII-Animation-Tool-with-GitHub-Copilot.html)
 - [Engineering Accessibility and Animation for GitHub Copilot CLI’s ASCII Banner](https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/)
 
 ### GitHub Copilot SDK and Agent Framework
@@ -93,11 +115,11 @@ The Copilot SDK and agent features have been enhanced, continuing last week's fo
 
 Guides cover tasks like image extraction, agent memory for update tracking, multi-model routing, and hybrid AI that combines Foundry Local SLMs for private data with cloud LLMs for richer content. The tutorials support rapid prototyping and stronger automation for teams using AI at scale.
 
-- [Building a Color Palette App Using GitHub Copilot SDK]({{ "/2026-01-30-Building-a-Color-Palette-App-Using-GitHub-Copilot-SDK.html" | relative_url }})
+- [Building a Color Palette App Using GitHub Copilot SDK](/2026-01-30-Building-a-Color-Palette-App-Using-GitHub-Copilot-SDK.html)
 - [Building Agents with GitHub Copilot SDK: A Practical Guide to Automated Tech Update Tracking](https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-agents-with-github-copilot-sdk-a-practical-guide-to/ba-p/4488948)
 - [Hybrid AI with GitHub Copilot SDK: Automating README to PowerPoint Generation Using Microsoft Foundry Local](https://techcommunity.microsoft.com/t5/microsoft-developer-community/github-copilot-sdk-and-hybrid-ai-in-practice-automating-readme/ba-p/4489694)
 - [Build AI Agents with GitHub Copilot SDK and Microsoft Agent Framework](https://devblogs.microsoft.com/semantic-kernel/build-ai-agents-with-github-copilot-sdk-and-microsoft-agent-framework/)
-- [Integrating GitHub Copilot SDK: Live Coding on Rubber Duck Thursdays]({{ "/2026-01-28-Integrating-GitHub-Copilot-SDK-Live-Coding-on-Rubber-Duck-Thursdays.html" | relative_url }})
+- [Integrating GitHub Copilot SDK: Live Coding on Rubber Duck Thursdays](/2026-01-28-Integrating-GitHub-Copilot-SDK-Live-Coding-on-Rubber-Duck-Thursdays.html)
 
 ### GitHub Copilot Agent Ecosystem and Extension Mechanisms
 
@@ -132,8 +154,8 @@ Copilot’s integration into SQL Server Migration Assistant for Oracle offers ne
 Community workshops and demos remain a central channel for hands-on learning. These resources illustrate how to use SDKs and CLI integrations, write effective prompts, and modernize applications with Copilot.
 
 - [Trust, but Verify: Building Confidence in GitHub Copilot Output](https://www.cooknwithcopilot.com/blog/trust-but-verify-building-confidence-in-github-copilot-output.html)
-- [Accelerating Oracle to SQL Server Migrations with AI and Copilot in SSMA]({{ "/2026-01-28-Accelerating-Oracle-to-SQL-Server-Migrations-with-AI-and-Copilot-in-SSMA.html" | relative_url }})
-- [Modernizing Applications with GitHub Copilot: Workshop Overview]({{ "/2026-01-29-Modernizing-Applications-with-GitHub-Copilot-Workshop-Overview.html" | relative_url }})
+- [Accelerating Oracle to SQL Server Migrations with AI and Copilot in SSMA](/2026-01-28-Accelerating-Oracle-to-SQL-Server-Migrations-with-AI-and-Copilot-in-SSMA.html)
+- [Modernizing Applications with GitHub Copilot: Workshop Overview](/2026-01-29-Modernizing-Applications-with-GitHub-Copilot-Workshop-Overview.html)
 
 ## AI
 
@@ -159,7 +181,7 @@ VS Code has added public preview support for Model Context Protocol (MCP) Apps, 
 This continues last week's story on agent interoperability, now moving toward UI-driven agent flows inside VS Code. The Agent Sessions Day event showcased open source community extensions and AI-driven workflows that help streamline common development tasks.
 
 - [Giving Agents a Visual Voice: MCP Apps Support in VS Code](https://code.visualstudio.com/blogs/2026/01/26/mcp-apps-support)
-- [VS Code Live: Agent Sessions Day – Exploring AI and Agentic Development]({{ "/2026-01-28-VS-Code-Live-Agent-Sessions-Day-Exploring-AI-and-Agentic-Development.html" | relative_url }})
+- [VS Code Live: Agent Sessions Day – Exploring AI and Agentic Development](/2026-01-28-VS-Code-Live-Agent-Sessions-Day-Exploring-AI-and-Agentic-Development.html)
 
 ### Microsoft Agent Framework, Multi-Agent Orchestration, and UI Integration
 
@@ -177,7 +199,7 @@ Updates include open event-driven protocol support via AG-UI, allowing Python/Fa
 Detailed guides show how to move from stateless to stateful AI interactions within .NET, including examples for managing stateful assistants that adapt over multiple sessions.
 
 - [.NET AI Essentials: Unified Building Blocks for Intelligent Apps](https://devblogs.microsoft.com/dotnet/dotnet-ai-essentials-the-core-building-blocks-explained/)
-- [Beyond the Prompt: Designing Stateful AI Experiences in .NET]({{ "/2026-01-26-Beyond-the-Prompt-Designing-Stateful-AI-Experiences-in-NET.html" | relative_url }})
+- [Beyond the Prompt: Designing Stateful AI Experiences in .NET](/2026-01-26-Beyond-the-Prompt-Designing-Stateful-AI-Experiences-in-NET.html)
 
 ### Agentic Systems, Platform Governance, and Responsible Integration
 
@@ -193,11 +215,11 @@ On AI-powered robotics, Microsoft Cozy AI Kitchen explores moving from scripted 
 
 Last week’s coverage of physical AI continues with guides and case studies on real-world agentic applications.
 
-- [Inside the Future of AI‑Powered Robotics with Tim Chung | Cozy AI Kitchen]({{ "/2026-01-27-Inside-the-Future-of-AIPowered-Robotics-with-Tim-Chung-Cozy-AI-Kitchen.html" | relative_url }})
+- [Inside the Future of AI‑Powered Robotics with Tim Chung | Cozy AI Kitchen](/2026-01-27-Inside-the-Future-of-AIPowered-Robotics-with-Tim-Chung-Cozy-AI-Kitchen.html)
 
 A step-by-step guide to building a free AI-powered inventory manager uses Azure Cognitive Services and .NET to help automate grocery tracking, showing accessible paths for AI automation.
 
-- [Building a Free AI-Powered Inventory Manager with Azure]({{ "/2026-01-29-Building-a-Free-AI-Powered-Inventory-Manager-with-Azure.html" | relative_url }})
+- [Building a Free AI-Powered Inventory Manager with Azure](/2026-01-29-Building-a-Free-AI-Powered-Inventory-Manager-with-Azure.html)
 
 Sustainability is addressed this week in a practical guide for aligning AI with environmental goals. Concrete tips cover moving workloads to energy-efficient infrastructure, optimizing processes, and selecting AI models that match business and sustainability needs. Case studies demonstrate cost and energy reductions.
 
@@ -225,7 +247,7 @@ Local-first, privacy-focused agent pipelines are growing in use. This week’s h
 
 Model evaluation is now easier using Microsoft Foundry and GitHub Copilot. The step-by-step guide describes forming datasets, running repeatable benchmarks with metrics like F1/METEOR, and analyzing results using the Python SDK and Jupyter. Debugging and documentation guidance are provided, along with pointers to Foundry and Azure AI model leaderboard resources.
 
-- [Evaluating AI Models with Microsoft Foundry and GitHub Copilot]({{ "/2026-01-27-Evaluating-AI-Models-with-Microsoft-Foundry-and-GitHub-Copilot.html" | relative_url }})
+- [Evaluating AI Models with Microsoft Foundry and GitHub Copilot](/2026-01-27-Evaluating-AI-Models-with-Microsoft-Foundry-and-GitHub-Copilot.html)
 
 ### Data Engineering and Platform Operations with Microsoft Fabric
 
@@ -327,8 +349,8 @@ A video-based Azure training course shares introductory tips, resource optimizat
 
 - [Understanding Minimum Usage Charges in Azure App Testing Load Tests](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/minimum-usage-in-azure-app-testing/ba-p/4490658)
 - [Deploying MoltBot: 24/7 Personal AI Assistant on Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-moltbot-to-azure-container-apps-your-24-7-ai-assistant-in/ba-p/4490611)
-- [REST APIs, Vectors, and AI in SQL Server 2025]({{ "/2026-01-26-REST-APIs-Vectors-and-AI-in-SQL-Server-2025.html" | relative_url }})
-- [Learn Azure in 2026]({{ "/2026-01-26-Learn-Azure-in-2026.html" | relative_url }})
+- [REST APIs, Vectors, and AI in SQL Server 2025](/2026-01-26-REST-APIs-Vectors-and-AI-in-SQL-Server-2025.html)
+- [Learn Azure in 2026](/2026-01-26-Learn-Azure-in-2026.html)
 
 ## Coding
 
@@ -341,9 +363,9 @@ Andrew Lock’s guide to System.Diagnostics.Metrics APIs teaches metrics, counte
 - [Creating and Consuming Metrics with System.Diagnostics.Metrics APIs in .NET](https://andrewlock.net/creating-and-consuming-metrics-with-system-diagnostics-metrics-apis/)
 - [Application Performance Optimisation in .NET: Practical Techniques and Tools](https://www.stevejgordon.co.uk/talk-application-performance-optimisation-in-practice-60-mins)
 - [Solving .NET Memory Allocation Discrepancies: The Case of the Missing 18 Bytes](https://www.stevejgordon.co.uk/the-grand-mystery-of-the-missing-18-bytes)
-- [100 Essential Tips for Writing Better C# Code]({{ "/2026-01-26-100-Essential-Tips-for-Writing-Better-C-Code.html" | relative_url }})
-- [Introducing Collection Expression Arguments in C# 15 and .NET 11]({{ "/2026-01-27-Introducing-Collection-Expression-Arguments-in-C-15-and-NET-11.html" | relative_url }})
-- [The Boolean Trick No C# Developer Knows About]({{ "/2026-01-29-The-Boolean-Trick-No-C-Developer-Knows-About.html" | relative_url }})
+- [100 Essential Tips for Writing Better C# Code](/2026-01-26-100-Essential-Tips-for-Writing-Better-C-Code.html)
+- [Introducing Collection Expression Arguments in C# 15 and .NET 11](/2026-01-27-Introducing-Collection-Expression-Arguments-in-C-15-and-NET-11.html)
+- [The Boolean Trick No C# Developer Knows About](/2026-01-29-The-Boolean-Trick-No-C-Developer-Knows-About.html)
 - [Integrating Sentry Logging with .NET Applications](https://dotnetfoundation.org/news-events/detail/sponsor-spotlight-sentryblog1)
 
 ### Language Design, Tooling Philosophy, and AI in Programming
@@ -352,7 +374,7 @@ Insights from Anders Hejlsberg, the creator of C# and TypeScript, highlight the 
 
 - [7 Key Lessons from Anders Hejlsberg: Architect of C# and TypeScript](https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/)
 - [TypeScript inventor Anders Hejlsberg: AI’s Role in Language Porting and Development Tools](https://devclass.com/2026/01/28/typescript-inventor-anders-hejlsberg-ai-is-a-big-regurgitator-of-stuff-someone-has-done/)
-- [Anders Hejlsberg on the Origins of TypeScript and Fixing JavaScript]({{ "/2026-01-27-Anders-Hejlsberg-on-the-Origins-of-TypeScript-and-Fixing-JavaScript.html" | relative_url }})
+- [Anders Hejlsberg on the Origins of TypeScript and Fixing JavaScript](/2026-01-27-Anders-Hejlsberg-on-the-Origins-of-TypeScript-and-Fixing-JavaScript.html)
 
 ### WebAssembly and Cross-Platform Coding: .NET, Uno, and Microsoft’s Vision
 
@@ -410,7 +432,7 @@ A step-by-step approach for teams looking to transition to spec-driven, collabor
 GitHub Issues now supports semantic search for more relevant results, with an opt-out option. The latest GitHub podcast covers review management and Model Context Protocol improvements, and the Innovation Graph now provides expanded data for open source adoption and research.
 
 - [Semantic Search Enhancement for GitHub Issues Now in Public Preview](https://github.blog/changelog/2026-01-29-improved-search-for-github-issues-in-public-preview)
-- [GitHub’s Year in Review: Accessibility, Model Context Protocol, and Developer Wins]({{ "/2026-01-31-GitHubs-Year-in-Review-Accessibility-Model-Context-Protocol-and-Developer-Wins.html" | relative_url }})
+- [GitHub’s Year in Review: Accessibility, Model Context Protocol, and Developer Wins](/2026-01-31-GitHubs-Year-in-Review-Accessibility-Model-Context-Protocol-and-Developer-Wins.html)
 - [GitHub Innovation Graph: 2025 Recap and Future Plans](https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/)
 
 ## Security
@@ -445,7 +467,7 @@ Microsoft Fabric introduces preview features for workspace outbound access prote
 
 Entra ID now deploys passkey-based authentication, supporting synced and device-bound credentials for more secure access and easier administration.
 
-- [Automatic Passkey Rollout Update for Microsoft Entra ID]({{ "/2026-01-28-Automatic-Passkey-Rollout-Update-for-Microsoft-Entra-ID.html" | relative_url }})
+- [Automatic Passkey Rollout Update for Microsoft Entra ID](/2026-01-28-Automatic-Passkey-Rollout-Update-for-Microsoft-Entra-ID.html)
 
 ### Other Security News
 
@@ -454,4 +476,4 @@ A tutorial details how to set up two-factor authentication using TOTP codes via 
 A recent GitHub Podcast episode covers the Secure Open Source Fund, with maintainers sharing how funding drives security best practices, SBOM adoption, and workflow hardening. AI and Copilot are being used for advanced vulnerability detection in open source.
 
 - [Building a TOTP Authenticator App on Azure Functions and Azure Key Vault](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-a-totp-authenticator-app-on-azure-functions-and-azure/ba-p/4489332)
-- [Inside the GitHub Secure Open Source Fund: Leveling Up OSS Security]({{ "/2026-01-28-Inside-the-GitHub-Secure-Open-Source-Fund-Leveling-Up-OSS-Security.html" | relative_url }})
+- [Inside the GitHub Secure Open Source Fund: Leveling Up OSS Security](/2026-01-28-Inside-the-GitHub-Secure-Open-Source-Fund-Leveling-Up-OSS-Security.html)

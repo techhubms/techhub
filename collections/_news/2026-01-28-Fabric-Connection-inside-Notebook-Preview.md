@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Fabric Connection inside Notebook (Preview)"
-description: "This news post from the Microsoft Fabric Blog introduces the cross-Fabric 'Get Data with Cloud Connection' feature, enabling secure and flexible connections to cloud data sources directly within notebooks. It details supported data sources, authentication methods, ways to create and manage connections, code generation, and permission requirements for data engineering workflows in Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/32822/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/32822/
+title: Fabric Connection inside Notebook (Preview)
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-01-28 14:00:00 +00:00
-permalink: "/2026-01-28-Fabric-Connection-inside-Notebook-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Blob Storage", "Azure Key Vault", "Azure SQL Database", "Cloud Connection", "Cosmos DB", "Data Engineering", "Data Security", "Data Source Authentication", "Jupyter", "Microsoft Azure", "Microsoft Fabric", "ML", "News", "Notebook", "Python", "Service Principal", "Workspace Identity"]
-tags_normalized: ["azure", "azure blob storage", "azure key vault", "azure sql database", "cloud connection", "cosmos db", "data engineering", "data security", "data source authentication", "jupyter", "microsoft azure", "microsoft fabric", "ml", "news", "notebook", "python", "service principal", "workspace identity"]
+tags:
+- Azure
+- Azure Blob Storage
+- Azure Key Vault
+- Azure SQL Database
+- Cloud Connection
+- Cosmos DB
+- Data Engineering
+- Data Security
+- Data Source Authentication
+- Jupyter
+- Microsoft Azure
+- Microsoft Fabric
+- ML
+- News
+- Notebook
+- Python
+- Service Principal
+- Workspace Identity
+- Machine Learning
+section_names:
+- azure
+- ml
 ---
-
 This Microsoft Fabric Blog post presents the new capability to create and manage secure cloud data connections inside notebooks, empowering data engineers with streamlined, credential-protected access to diverse sources. Authored by the Microsoft Fabric team.<!--excerpt_end-->
 
 # Fabric Connection inside Notebook (Preview)

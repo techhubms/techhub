@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing General Availability of Azure Da/Ea/Fasv7-series VMs based on AMD ‘Turin’ processors"
-description: "This article details the launch of Azure's newest AMD-based Da/Ea/Fasv7-series Virtual Machines powered by 5th Gen AMD EPYC (Turin) processors. It covers the technical improvements in CPU, memory, and network performance, workload-specific enhancements, and security advancements for these VM series, as well as guidance on use cases, region availability, and new features such as Azure Boost, enhanced storage options, and hardware-based encryption. Customer and partner testimonials illustrate real-world performance benefits across a variety of scenarios."
-author: "ArpitaChatterjee"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-da-ea-fasv7-series-vms/ba-p/4488627"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-da-ea-fasv7-series-vms/ba-p/4488627
+title: Announcing General Availability of Azure Da/Ea/Fasv7-series VMs based on AMD ‘Turin’ processors
+author: ArpitaChatterjee
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-01-27 21:54:30 +00:00
-permalink: "/2026-01-27-Announcing-General-Availability-of-Azure-DaEaFasv7-series-VMs-based-on-AMD-Turin-processors.html"
-categories: ["Azure"]
-tags: ["AMD EPYC Turin", "Azure", "Azure Boost", "Azure Storage", "Azure Virtual Machines", "Cloud Infrastructure", "Community", "Compute Performance", "Constrained Core VM", "Dalsv7", "Dasv7", "Easv7", "Fasv7", "HSM", "Linux", "MANA", "Memory Optimization", "NVMe", "Performance Optimization", "Price Performance", "VM Scalability", "Windows"]
-tags_normalized: ["amd epyc turin", "azure", "azure boost", "azure storage", "azure virtual machines", "cloud infrastructure", "community", "compute performance", "constrained core vm", "dalsv7", "dasv7", "easv7", "fasv7", "hsm", "linux", "mana", "memory optimization", "nvme", "performance optimization", "price performance", "vm scalability", "windows"]
+tags:
+- AMD EPYC Turin
+- Azure
+- Azure Boost
+- Azure Storage
+- Azure Virtual Machines
+- Cloud Infrastructure
+- Community
+- Compute Performance
+- Constrained Core VM
+- Dalsv7
+- Dasv7
+- Easv7
+- Fasv7
+- HSM
+- Linux
+- MANA
+- Memory Optimization
+- NVMe
+- Performance Optimization
+- Price Performance
+- VM Scalability
+- Windows
+section_names:
+- azure
 ---
-
 ArpitaChatterjee announces the general availability of Azure's new AMD 'Turin'-based VM series, highlighting technical advances and use cases for developers, enterprises, and partners.<!--excerpt_end-->
 
 # Announcing General Availability of Azure Da/Ea/Fasv7-series VMs based on AMD ‘Turin’ processors

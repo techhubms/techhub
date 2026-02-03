@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Integrating Claude Agent SDK with Microsoft Agent Framework for Advanced AI Agents"
-description: "This article demonstrates how developers can leverage the integration between Microsoft Agent Framework and the Claude Agent SDK to build powerful, agentic AI applications in Python. It covers consistent agent abstractions, multi-agent workflow orchestration, and hands-on code examples—including Azure OpenAI and GitHub Copilot interoperability."
-author: "Dmytro Struk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/build-ai-agents-with-claude-agent-sdk-and-microsoft-agent-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/build-ai-agents-with-claude-agent-sdk-and-microsoft-agent-framework/
+title: Integrating Claude Agent SDK with Microsoft Agent Framework for Advanced AI Agents
+author: Dmytro Struk
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2026-01-30 19:21:49 +00:00
-permalink: "/2026-01-30-Integrating-Claude-Agent-SDK-with-Microsoft-Agent-Framework-for-Advanced-AI-Agents.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Abstraction", "Agent Framework", "AI", "AI Agents", "Async Programming", "Azure", "Azure OpenAI", "Claude Agent SDK", "Coding", "Function Calling", "MCP Integration", "Microsoft Agent Framework", "Multi Agent Orchestration", "News", "Python", "SDK Integration", "Streaming Responses", "Workflow Automation"]
-tags_normalized: ["agent abstraction", "agent framework", "ai", "ai agents", "async programming", "azure", "azure openai", "claude agent sdk", "coding", "function calling", "mcp integration", "microsoft agent framework", "multi agent orchestration", "news", "python", "sdk integration", "streaming responses", "workflow automation"]
+tags:
+- Agent Abstraction
+- Agent Framework
+- AI
+- AI Agents
+- Async Programming
+- Azure
+- Azure OpenAI
+- Claude Agent SDK
+- Coding
+- Function Calling
+- MCP Integration
+- Microsoft Agent Framework
+- Multi Agent Orchestration
+- News
+- Python
+- SDK Integration
+- Streaming Responses
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Dmytro Struk explains how to utilize the Claude Agent SDK and Microsoft Agent Framework together to build advanced AI agents. The article features practical examples in Python and explores multi-agent workflows, including integration with Azure OpenAI.<!--excerpt_end-->
 
 # Integrating Claude Agent SDK with Microsoft Agent Framework for Advanced AI Agents

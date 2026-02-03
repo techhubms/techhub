@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Logic Apps Aviators Newsletter – February 2026: Integration, Testing, and Agentic Automation on Azure"
-description: "The February 2026 Logic Apps Aviators Newsletter highlights integration best practices, technical innovations in Azure Logic Apps, BizTalk modernization challenges, and the rise of AI-powered agentic orchestration. Inside, developers and architects will find product updates, troubleshooting advice, community insights, and resources focused on automation, test frameworks, cloud integration, and advancing platform capabilities in Microsoft's ecosystem."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-february-2026/ba-p/4491309"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-february-2026/ba-p/4491309
+title: 'Logic Apps Aviators Newsletter – February 2026: Integration, Testing, and Agentic Automation on Azure'
+author: WSilveira
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-02 16:00:00 +00:00
-permalink: "/2026-02-02-Logic-Apps-Aviators-Newsletter-February-2026-Integration-Testing-and-Agentic-Automation-on-Azure.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["Agent Loop", "Agentic Orchestration", "AI", "API Management", "Application Registration", "Azure", "Azure Logic Apps", "Azure Resource Graph", "BizTalk Server", "C#", "Cloud Automation", "Coding", "Community", "Copilot Studio", "DevOps", "Enterprise Integration", "Functions", "Integration", "JSON", "MCP Server", "MSTest", "Service Bus", "SFTP", "Test Explorer", "Unit Testing", "Workflow Automation"]
-tags_normalized: ["agent loop", "agentic orchestration", "ai", "api management", "application registration", "azure", "azure logic apps", "azure resource graph", "biztalk server", "csharp", "cloud automation", "coding", "community", "copilot studio", "devops", "enterprise integration", "functions", "integration", "json", "mcp server", "mstest", "service bus", "sftp", "test explorer", "unit testing", "workflow automation"]
+tags:
+- Agent Loop
+- Agentic Orchestration
+- AI
+- API Management
+- Application Registration
+- Azure
+- Azure Logic Apps
+- Azure Resource Graph
+- BizTalk Server
+- C#
+- Cloud Automation
+- Coding
+- Community
+- Copilot Studio
+- DevOps
+- Enterprise Integration
+- Functions
+- Integration
+- JSON
+- MCP Server
+- MSTest
+- Service Bus
+- SFTP
+- Test Explorer
+- Unit Testing
+- Workflow Automation
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 WSilveira curates the February 2026 Logic Apps Aviators Newsletter, offering technical articles and community insights on Azure Logic Apps, BizTalk modernization, agentic workflows, test automation, and cloud integration best practices.<!--excerpt_end-->
 
 # Logic Apps Aviators Newsletter – February 2026

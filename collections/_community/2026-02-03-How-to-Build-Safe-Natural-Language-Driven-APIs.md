@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How to Build Safe Natural Language-Driven APIs"
-description: "This article presents a concrete, production-ready architecture for developing safe, reliable APIs that accept natural language as input. Drawing from experience building with Azure OpenAI and LangGraph, the author demonstrates how to separate semantic parsing from deterministic execution by translating user input into structured, code-level schemas. Key topics include schema completion for clarification, confidence gating, code-based ontologies for value normalization, and orchestration patterns that ensure stability and safety in modern LLM-powered systems."
-author: "pratikpanda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-build-safe-natural-language-driven-apis/ba-p/4488509"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-build-safe-natural-language-driven-apis/ba-p/4488509
+title: How to Build Safe Natural Language-Driven APIs
+author: pratikpanda
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-03 08:00:00 +00:00
-permalink: "/2026-02-03-How-to-Build-Safe-Natural-Language-Driven-APIs.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "API Design", "Architecture", "Azure", "Azure OpenAI", "Best Practices", "Canonical Schemas", "Code Ontologies", "Community", "Confidence Gates", "Conversation Flow", "Entity Extraction", "LangGraph", "LLM", "Microsoft Azure", "Natural Language API", "Orchestration", "Production Systems", "Schema Validation", "Semantic Parsing", "Structured Data"]
-tags_normalized: ["ai", "api design", "architecture", "azure", "azure openai", "best practices", "canonical schemas", "code ontologies", "community", "confidence gates", "conversation flow", "entity extraction", "langgraph", "llm", "microsoft azure", "natural language api", "orchestration", "production systems", "schema validation", "semantic parsing", "structured data"]
+tags:
+- AI
+- API Design
+- Architecture
+- Azure
+- Azure OpenAI
+- Best Practices
+- Canonical Schemas
+- Code Ontologies
+- Community
+- Confidence Gates
+- Conversation Flow
+- Entity Extraction
+- LangGraph
+- LLM
+- Microsoft Azure
+- Natural Language API
+- Orchestration
+- Production Systems
+- Schema Validation
+- Semantic Parsing
+- Structured Data
+section_names:
+- ai
+- azure
 ---
-
 pratikpanda explores production-level strategies for designing safe, natural language-driven APIs using Azure OpenAI and LangGraph, offering practical patterns for translating user input into robust, deterministic backend workflows.<!--excerpt_end-->
 
 # How to Build Safe Natural Language-Driven APIs

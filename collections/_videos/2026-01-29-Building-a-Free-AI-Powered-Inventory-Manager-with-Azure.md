@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building a Free AI-Powered Inventory Manager with Azure"
-description: "This video from Microsoft Developer demonstrates how to build a free inventory management solution that leverages AI technology to automate grocery receipt scanning and inventory tracking. The episode covers the inspiration for the project, architectural overview, technology stack, development process, and a hands-on demo using Azure services."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=lHKL19uYo_8"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=lHKL19uYo_8
+title: Building a Free AI-Powered Inventory Manager with Azure
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-01-29 08:00:56 +00:00
-permalink: "/2026-01-29-Building-a-Free-AI-Powered-Inventory-Manager-with-Azure.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Architecture", "Automation", "Azure", "Cloud Computing", "Cloud Development", "Coding", "Computer Vision", "Console App", "Dev", "Development", "Inventory Management", "Microsoft", "Microsoft Developer", "Receipt Scanning", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "architecture", "automation", "azure", "cloud computing", "cloud development", "coding", "computer vision", "console app", "dev", "development", "inventory management", "microsoft", "microsoft developer", "receipt scanning", "tech", "technology", "videos"]
+tags:
+- AI
+- Architecture
+- Automation
+- Azure
+- Cloud Computing
+- Cloud Development
+- Coding
+- Computer Vision
+- Console App
+- Dev
+- Development
+- Inventory Management
+- Microsoft
+- Microsoft Developer
+- Receipt Scanning
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Microsoft Developer presents a tutorial on creating a free, AI-driven inventory manager using Azure services to automate grocery receipt scanning and inventory tracking.<!--excerpt_end-->
 
 {% youtube lHKL19uYo_8 %}

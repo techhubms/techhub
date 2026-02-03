@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "TypeScript inventor Anders Hejlsberg: AI’s Role in Language Porting and Development Tools"
-description: "This article covers an in-depth interview with Anders Hejlsberg, Microsoft technical fellow and creator of C# and TypeScript. He discusses porting the TypeScript compiler to Go, the challenges with using AI for deterministic code translation, and how AI is affecting developer tools and programming language evolution."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/28/typescript-inventor-anders-hejlsberg-ai-is-a-big-regurgitator-of-stuff-someone-has-done/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://devclass.com/2026/01/28/typescript-inventor-anders-hejlsberg-ai-is-a-big-regurgitator-of-stuff-someone-has-done/
+title: 'TypeScript inventor Anders Hejlsberg: AI’s Role in Language Porting and Development Tools'
+author: Tim Anderson
+primary_section: ai
+feed_name: DevClass
 date: 2026-01-28 17:44:39 +00:00
-permalink: "/2026-01-28-TypeScript-inventor-Anders-Hejlsberg-AIs-Role-in-Language-Porting-and-Development-Tools.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI in Development", "AI/ML", "Anders Hejlsberg", "Blogs", "C#", "Code Translation", "Coding", "Development", "Development Tools", "Go", "IDEs", "Language Porting", "Machine Learning", "MCP", "Microsoft", "Native Compiler", "Programming Languages", "Semantic Services", "Typescript"]
-tags_normalized: ["ai", "ai in development", "aislashml", "anders hejlsberg", "blogs", "csharp", "code translation", "coding", "development", "development tools", "go", "ides", "language porting", "machine learning", "mcp", "microsoft", "native compiler", "programming languages", "semantic services", "typescript"]
+tags:
+- AI
+- AI in Development
+- AI/ML
+- Anders Hejlsberg
+- Blogs
+- C#
+- Code Translation
+- Coding
+- Development
+- Development Tools
+- Go
+- IDEs
+- Language Porting
+- Machine Learning
+- MCP
+- Microsoft
+- Native Compiler
+- Programming Languages
+- Semantic Services
+- Typescript
+section_names:
+- ai
+- coding
 ---
-
 In this piece, Tim Anderson interviews Anders Hejlsberg, Microsoft technical fellow, revealing insights on AI's use in compiler porting and the impact of machine learning on programming languages and developer tooling.<!--excerpt_end-->
 
 # TypeScript inventor Anders Hejlsberg: AI’s Role in Language Porting and Development Tools

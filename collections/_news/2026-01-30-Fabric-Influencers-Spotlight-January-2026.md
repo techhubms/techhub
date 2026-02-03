@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Fabric Influencers Spotlight January 2026"
-description: "This January 2026 edition of the Fabric Influencers Spotlight showcases noteworthy blogs, videos, and resources contributed by Microsoft MVPs and Fabric Super Users. The featured content covers technical deep-dives into the Microsoft Fabric platform, including Data Warehousing, Power BI, Data Engineering, Data Science, Real-Time Intelligence, Fabric administration, and AI-powered analytics. Each highlighted piece offers hands-on technical guidance, architectural discussions, and practical strategies for implementing and optimizing solutions with Microsoft Fabric's full spectrum of data and analytics services."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-january-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-january-2026/
+title: Fabric Influencers Spotlight January 2026
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-01-30 09:00:00 +00:00
-permalink: "/2026-01-30-Fabric-Influencers-Spotlight-January-2026.html"
-categories: ["AI", "Azure", "Coding", "ML", "Security"]
-tags: ["AI", "Azure", "Azure SQL Database", "Certification", "Coding", "Cosmos DB", "Data Engineering", "Data Science", "DAX UDF", "Eventhouse", "Fabric Data Warehouse", "Fabric RTI", "Fabric UDF", "IDENTITY Columns", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake Security", "Power BI", "Real Time Intelligence", "Regularization", "Row Level Security", "Security", "Surrogate Keys", "User Data Functions", "Warehouse"]
-tags_normalized: ["ai", "azure", "azure sql database", "certification", "coding", "cosmos db", "data engineering", "data science", "dax udf", "eventhouse", "fabric data warehouse", "fabric rti", "fabric udf", "identity columns", "lakehouse", "microsoft fabric", "ml", "news", "onelake security", "power bi", "real time intelligence", "regularization", "row level security", "security", "surrogate keys", "user data functions", "warehouse"]
+tags:
+- AI
+- Azure
+- Azure SQL Database
+- Certification
+- Coding
+- Cosmos DB
+- Data Engineering
+- Data Science
+- DAX UDF
+- Eventhouse
+- Fabric Data Warehouse
+- Fabric RTI
+- Fabric UDF
+- IDENTITY Columns
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OneLake Security
+- Power BI
+- Real Time Intelligence
+- Regularization
+- Row Level Security
+- Security
+- Surrogate Keys
+- User Data Functions
+- Warehouse
+- Machine Learning
+section_names:
+- ai
+- azure
+- coding
+- ml
+- security
 ---
-
 In this edition, Microsoft Fabric Blog compiles key technical contributions by MVPs and Super Users, spanning Fabric Data Warehouse features, Power BI UDFs, write-back patterns with Azure SQL, advanced regularization for data science, OneLake security, and Real-Time Intelligence best practices.<!--excerpt_end-->
 
 # Fabric Influencers Spotlight January 2026

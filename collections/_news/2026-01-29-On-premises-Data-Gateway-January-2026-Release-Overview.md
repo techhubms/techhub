@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "On-premises Data Gateway January 2026 Release Overview"
-description: "This post details the January 2026 update for the on-premises data gateway (version 3000.302), a key Microsoft Fabric and Power BI integration component. It highlights performance optimizations and improvements for CSV reading in Copy and Pipeline activities, and updates to match the latest Power BI Desktop release compatibility."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-january-2026-release/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-january-2026-release/
+title: On-premises Data Gateway January 2026 Release Overview
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-01-29 10:00:00 +00:00
-permalink: "/2026-01-29-On-premises-Data-Gateway-January-2026-Release-Overview.html"
-categories: ["ML"]
-tags: ["CSV Performance", "Data Connectivity", "Data Integration", "Enterprise Data Gateway", "Microsoft Fabric", "ML", "News", "On Premises Data Gateway", "Performance Optimization", "Pipeline Activities", "Power BI", "Power BI Desktop"]
-tags_normalized: ["csv performance", "data connectivity", "data integration", "enterprise data gateway", "microsoft fabric", "ml", "news", "on premises data gateway", "performance optimization", "pipeline activities", "power bi", "power bi desktop"]
+tags:
+- CSV Performance
+- Data Connectivity
+- Data Integration
+- Enterprise Data Gateway
+- Microsoft Fabric
+- ML
+- News
+- On Premises Data Gateway
+- Performance Optimization
+- Pipeline Activities
+- Power BI
+- Power BI Desktop
+- Machine Learning
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog outlines the January 2026 on-premises data gateway release. The update focuses on performance enhancements and compatibility with the latest version of Power BI Desktop.<!--excerpt_end-->
 
 # On-premises Data Gateway January 2026 Release

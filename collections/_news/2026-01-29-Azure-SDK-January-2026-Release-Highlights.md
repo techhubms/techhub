@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure SDK January 2026 Release Highlights"
-description: "This post provides a comprehensive overview of the Azure SDK January 2026 release, detailing major updates across AI, data, real-time communications, and management libraries for .NET, Go, Java, and Python. Key features include AI Foundry for .NET, Azure AI Search with new model support, a stable Functions extension for Web PubSub, and a range of initial stable and beta packages."
-author: "Ronnie Geraghty"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-january-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-january-2026/
+title: Azure SDK January 2026 Release Highlights
+author: Ronnie Geraghty
+primary_section: ai
+feed_name: Microsoft Azure SDK Blog
 date: 2026-01-29 22:00:41 +00:00
-permalink: "/2026-01-29-Azure-SDK-January-2026-Release-Highlights.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AgentServer", "AI", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Functions", "Azure OpenAI", "Azure SDK", "Beta Release", "Client Libraries", "Coding", "DNS", "Durable Task", "Front Door", "Go", "GPT 5", "Java", "Management Libraries", "Microsoft Azure", "Mongo Cluster", "News", "Python", "Resource Management", "SDK", "SocketIO", "Web PubSub"]
-tags_normalized: ["dotnet", "agentserver", "ai", "azure", "azure ai foundry", "azure ai search", "azure functions", "azure openai", "azure sdk", "beta release", "client libraries", "coding", "dns", "durable task", "front door", "go", "gpt 5", "java", "management libraries", "microsoft azure", "mongo cluster", "news", "python", "resource management", "sdk", "socketio", "web pubsub"]
+tags:
+- .NET
+- AgentServer
+- AI
+- Azure
+- Azure AI Foundry
+- Azure AI Search
+- Azure Functions
+- Azure OpenAI
+- Azure SDK
+- Beta Release
+- Client Libraries
+- Coding
+- DNS
+- Durable Task
+- Front Door
+- Go
+- GPT 5
+- Java
+- Management Libraries
+- Microsoft Azure
+- Mongo Cluster
+- News
+- Python
+- Resource Management
+- SDK
+- SocketIO
+- Web PubSub
+section_names:
+- ai
+- azure
+- coding
 ---
-
 Ronnie Geraghty summarizes the January 2026 Azure SDK release, spotlighting significant improvements in AI, real-time communication tools, and expanded platform support for developers.<!--excerpt_end-->
 
 # Azure SDK January 2026 Release Highlights

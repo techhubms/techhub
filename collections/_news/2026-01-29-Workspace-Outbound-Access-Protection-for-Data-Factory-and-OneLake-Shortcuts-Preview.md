@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Workspace Outbound Access Protection for Data Factory and OneLake Shortcuts (Preview)"
-description: "This article from the Microsoft Fabric Blog introduces workspace-level Outbound Access Protection (OAP) for Data Factory and OneLake Shortcuts in Microsoft Fabric. It details the security, compliance, and management enhancements enabled by OAP, discusses supported workloads and configuration guidance, and highlights new capabilities for administrators to control outbound connections at a granular workspace level."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-data-factory/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-data-factory/
+title: Workspace Outbound Access Protection for Data Factory and OneLake Shortcuts (Preview)
+author: Microsoft Fabric Blog
+primary_section: azure
+feed_name: Microsoft Fabric Blog
 date: 2026-01-29 15:00:00 +00:00
-permalink: "/2026-01-29-Workspace-Outbound-Access-Protection-for-Data-Factory-and-OneLake-Shortcuts-Preview.html"
-categories: ["Azure", "Security"]
-tags: ["Admin APIs", "Azure", "Azure Data Lake Storage", "Compliance", "Cross Workspace Connections", "Data Factory", "Data Gateway", "Data Security", "Dataflow Gen2", "Lakehouse", "Microsoft Fabric", "Mirrored Databases", "News", "OAP", "OneLake", "Outbound Access Protection", "Security", "SQL Endpoint", "VNET", "Warehouse", "Workspace Admin"]
-tags_normalized: ["admin apis", "azure", "azure data lake storage", "compliance", "cross workspace connections", "data factory", "data gateway", "data security", "dataflow gen2", "lakehouse", "microsoft fabric", "mirrored databases", "news", "oap", "onelake", "outbound access protection", "security", "sql endpoint", "vnet", "warehouse", "workspace admin"]
+tags:
+- Admin APIs
+- Azure
+- Azure Data Lake Storage
+- Compliance
+- Cross Workspace Connections
+- Data Factory
+- Data Gateway
+- Data Security
+- Dataflow Gen2
+- Lakehouse
+- Microsoft Fabric
+- Mirrored Databases
+- News
+- OAP
+- OneLake
+- Outbound Access Protection
+- Security
+- SQL Endpoint
+- VNET
+- Warehouse
+- Workspace Admin
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog explains recent improvements to workspace-level Outbound Access Protection (OAP) for Data Factory and OneLake Shortcuts, describing benefits, supported workloads, and configuration steps for enhanced security and compliance.<!--excerpt_end-->
 
 # Workspace Outbound Access Protection for Data Factory and OneLake Shortcuts (Preview)

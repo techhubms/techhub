@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Docker and Docker Compose Upgrades on GitHub Hosted Runners"
-description: "This news update announces that Docker and Docker Compose versions will be upgraded on all Windows and Ubuntu GitHub hosted runner images except for ubuntu-slim. It highlights the specific new versions, suggests workflow updates for deprecated features, and provides resources for staying informed on future changes."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-30-docker-and-docker-compose-version-upgrades-on-hosted-runners"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-30-docker-and-docker-compose-version-upgrades-on-hosted-runners
+title: Docker and Docker Compose Upgrades on GitHub Hosted Runners
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-01-30 14:20:34 +00:00
-permalink: "/2026-01-30-Docker-and-Docker-Compose-Upgrades-on-GitHub-Hosted-Runners.html"
-categories: ["DevOps"]
-tags: ["Actions", "CI/CD", "Deprecation", "DevOps", "Docker", "Docker Compose", "GitHub Actions", "Improvement", "News", "Runner Images", "Ubuntu", "Version Upgrade", "Windows", "Workflow Automation"]
-tags_normalized: ["actions", "cislashcd", "deprecation", "devops", "docker", "docker compose", "github actions", "improvement", "news", "runner images", "ubuntu", "version upgrade", "windows", "workflow automation"]
+tags:
+- Actions
+- CI/CD
+- Deprecation
+- DevOps
+- Docker
+- Docker Compose
+- GitHub Actions
+- Improvement
+- News
+- Runner Images
+- Ubuntu
+- Version Upgrade
+- Windows
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison explains important upcoming Docker and Docker Compose upgrades on GitHub hosted runners, outlining new versions, potential workflow changes, and links to more information.<!--excerpt_end-->
 
 # Docker and Docker Compose Upgrades on GitHub Hosted Runners

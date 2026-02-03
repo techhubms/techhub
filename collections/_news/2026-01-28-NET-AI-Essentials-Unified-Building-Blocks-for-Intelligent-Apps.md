@@ -1,20 +1,39 @@
----
-layout: "post"
-title: ".NET AI Essentials: Unified Building Blocks for Intelligent Apps"
-description: "This post explores how .NET developers can leverage Microsoft.Extensions.AI and related libraries to build intelligent applications with any large language model provider. It covers unified API access, structured outputs, multi-modal content handling, and best practices for AI integration. Readers learn to streamline generative AI integration using familiar .NET patterns and extensibility, and get practical guidance for efficient, robust AI-powered app development."
-author: "Jeremy Likness"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-ai-essentials-the-core-building-blocks-explained/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-ai-essentials-the-core-building-blocks-explained/
+title: '.NET AI Essentials: Unified Building Blocks for Intelligent Apps'
+author: Jeremy Likness
+primary_section: ai
+feed_name: Microsoft .NET Blog
 date: 2026-01-28 17:30:00 +00:00
-permalink: "/2026-01-28-NET-AI-Essentials-Unified-Building-Blocks-for-Intelligent-Apps.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AI Integration", "Aspire", "Azure OpenAI", "C#", "ChatClient", "Coding", "Dependency Injection", "Generative AI", "Large Language Models", "Llm", "MCP", "Microsoft.Extensions.AI", "Middleware", "Multi Modal Models", "News", "OllamaSharp", "OpenAI", "OpenTelemetry", "Semantic Kernel", "Structured Output", "Telemetry", "Vector Embeddings"]
-tags_normalized: ["dotnet", "ai", "ai integration", "aspire", "azure openai", "csharp", "chatclient", "coding", "dependency injection", "generative ai", "large language models", "llm", "mcp", "microsoftdotextensionsdotai", "middleware", "multi modal models", "news", "ollamasharp", "openai", "opentelemetry", "semantic kernel", "structured output", "telemetry", "vector embeddings"]
+tags:
+- .NET
+- AI
+- AI Integration
+- Aspire
+- Azure OpenAI
+- C#
+- ChatClient
+- Coding
+- Dependency Injection
+- Generative AI
+- Large Language Models
+- Llm
+- MCP
+- Microsoft.Extensions.AI
+- Middleware
+- Multi Modal Models
+- News
+- OllamaSharp
+- OpenAI
+- OpenTelemetry
+- Semantic Kernel
+- Structured Output
+- Telemetry
+- Vector Embeddings
+section_names:
+- ai
+- coding
 ---
-
 Jeremy Likness explains core AI building blocks in .NET for developers, highlighting how Microsoft.Extensions.AI provides unified LLM access, structured outputs, and practical middleware for robust intelligent app development.<!--excerpt_end-->
 
 # .NET AI Essentials: The Core Building Blocks Explained

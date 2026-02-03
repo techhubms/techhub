@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Evaluating AI Models with Microsoft Foundry and GitHub Copilot"
-description: "In this episode of MVP Unplugged, Microsoft MVP Veronika Kolesnikova demonstrates practical methods for evaluating and selecting AI models using Microsoft Foundry. The discussion covers dataset generation with GitHub Copilot, evaluation workflows with the Foundry SDK, comparison between models like GPT-5, Claude, and Grok, real-world strategies for debugging, and insights into performance metrics and dataset versioning. The episode is aimed at developers looking to improve their approach to AI projects using Microsoft tools."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=o5o_pmMXJUs"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=o5o_pmMXJUs
+title: Evaluating AI Models with Microsoft Foundry and GitHub Copilot
+author: Microsoft Developer
+primary_section: github-copilot
+feed_name: Microsoft Developer YouTube
 date: 2026-01-27 19:23:14 +00:00
-permalink: "/2026-01-27-Evaluating-AI-Models-with-Microsoft-Foundry-and-GitHub-Copilot.html"
-categories: ["AI", "Azure", "GitHub Copilot", "ML"]
-tags: ["Agent Development", "AI", "AI Model Evaluation", "Azure", "Azure AI", "Claude Sonnet 4.5", "Cloud Computing", "Dataset Versioning", "Dev", "Developer Workflow", "Development", "Evaluations SDK", "F1 Score", "GitHub Copilot", "GPT 5", "Grok 4", "Jupyter Notebooks", "Machine Learning", "METEOR", "Microsoft", "Microsoft Foundry", "ML", "Prompt Engineering", "Python SDK", "PyTorch", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent development", "ai", "ai model evaluation", "azure", "azure ai", "claude sonnet 4dot5", "cloud computing", "dataset versioning", "dev", "developer workflow", "development", "evaluations sdk", "f1 score", "github copilot", "gpt 5", "grok 4", "jupyter notebooks", "machine learning", "meteor", "microsoft", "microsoft foundry", "ml", "prompt engineering", "python sdk", "pytorch", "tech", "technology", "videos"]
+tags:
+- Agent Development
+- AI
+- AI Model Evaluation
+- Azure
+- Azure AI
+- Claude Sonnet 4.5
+- Cloud Computing
+- Dataset Versioning
+- Dev
+- Developer Workflow
+- Development
+- Evaluations SDK
+- F1 Score
+- GitHub Copilot
+- GPT 5
+- Grok 4
+- Jupyter Notebooks
+- Machine Learning
+- METEOR
+- Microsoft
+- Microsoft Foundry
+- ML
+- Prompt Engineering
+- Python SDK
+- PyTorch
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
+- github-copilot
+- ml
 ---
-
 Microsoft MVP Veronika Kolesnikova, joined by Justin Garrett, provides a hands-on walkthrough of evaluating and comparing AI models using Microsoft Foundry, with practical tips for developers. Generated datasets and workflows with GitHub Copilot are also showcased.<!--excerpt_end-->
 
 {% youtube o5o_pmMXJUs %}

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Innovation Graph: 2025 Recap and Future Plans"
-description: "This article reviews two years of the GitHub Innovation Graph, outlining its expanding role in tracking public software development, supporting AI policy, and fostering research. It highlights new data releases, academic papers, global conferences, media coverage, and outlines future priorities for community growth and innovation."
-author: "Kevin Xu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/
+title: 'GitHub Innovation Graph: 2025 Recap and Future Plans'
+author: Kevin Xu
+primary_section: ai
+feed_name: The GitHub Blog
 date: 2026-01-28 16:00:00 +00:00
-permalink: "/2026-01-28-GitHub-Innovation-Graph-2025-Recap-and-Future-Plans.html"
-categories: ["AI", "DevOps"]
-tags: ["Academic Research", "AI", "AI Policy", "Community Insights", "Conferences", "Data Analytics", "DevOps", "GitHub", "Global Collaboration", "Innovation Graph", "News", "News & Insights", "Open Source", "Policy", "Public Data", "Research", "Software Development", "Software Metrics", "Statistics"]
-tags_normalized: ["academic research", "ai", "ai policy", "community insights", "conferences", "data analytics", "devops", "github", "global collaboration", "innovation graph", "news", "news and insights", "open source", "policy", "public data", "research", "software development", "software metrics", "statistics"]
+tags:
+- Academic Research
+- AI
+- AI Policy
+- Community Insights
+- Conferences
+- Data Analytics
+- DevOps
+- GitHub
+- Global Collaboration
+- Innovation Graph
+- News
+- News & Insights
+- Open Source
+- Policy
+- Public Data
+- Research
+- Software Development
+- Software Metrics
+- Statistics
+section_names:
+- ai
+- devops
 ---
-
 Kevin Xu provides a comprehensive review of the GitHub Innovation Graph's journey through 2025, focusing on its impact across global software development, research, AI, and policy communities.<!--excerpt_end-->
 
 # GitHub Innovation Graph: 2025 Recap and Future Plans

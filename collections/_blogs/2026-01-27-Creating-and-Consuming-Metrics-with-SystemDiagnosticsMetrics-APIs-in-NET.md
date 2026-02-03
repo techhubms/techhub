@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Creating and Consuming Metrics with System.Diagnostics.Metrics APIs in .NET"
-description: "This blog post by Andrew Lock introduces developers to the System.Diagnostics.Metrics API in .NET. It covers built-in and custom metrics, explains core concepts such as Meter and Instrument, demonstrates usage of dotnet-counters for monitoring, and provides step-by-step guidance for creating application-specific metrics and integrating them into a modern .NET application."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/creating-and-consuming-metrics-with-system-diagnostics-metrics-apis/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/creating-and-consuming-metrics-with-system-diagnostics-metrics-apis/
+title: Creating and Consuming Metrics with System.Diagnostics.Metrics APIs in .NET
+author: Andrew Lock
+primary_section: coding
+feed_name: Andrew Lock's Blog
 date: 2026-01-27 10:00:00 +00:00
-permalink: "/2026-01-27-Creating-and-Consuming-Metrics-with-SystemDiagnosticsMetrics-APIs-in-NET.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET Core", ".NET Counters", "ASP.NET Core", "Blogs", "C#", "Coding", "Custom Metrics", "Datadog", "Dependency Injection", "DevOps", "Diagnostics", "Instrumentation", "Metrics API", "Monitoring", "Observability", "OpenTelemetry", "Performance Monitoring", "System.Diagnostics.Metrics", "Web API"]
-tags_normalized: ["dotnet", "dotnet core", "dotnet counters", "aspdotnet core", "blogs", "csharp", "coding", "custom metrics", "datadog", "dependency injection", "devops", "diagnostics", "instrumentation", "metrics api", "monitoring", "observability", "opentelemetry", "performance monitoring", "systemdotdiagnosticsdotmetrics", "web api"]
+tags:
+- .NET
+- .NET Core
+- .NET Counters
+- ASP.NET Core
+- Blogs
+- C#
+- Coding
+- Custom Metrics
+- Datadog
+- Dependency Injection
+- DevOps
+- Diagnostics
+- Instrumentation
+- Metrics API
+- Monitoring
+- Observability
+- OpenTelemetry
+- Performance Monitoring
+- System.Diagnostics.Metrics
+- Web API
+section_names:
+- coding
+- devops
 ---
-
 Andrew Lock provides a comprehensive walkthrough on leveraging System.Diagnostics.Metrics APIs in .NET, guiding developers through instrumentation concepts, monitoring with dotnet-counters, and building custom metrics for production-grade observability.<!--excerpt_end-->
 
 # Creating and Consuming Metrics with System.Diagnostics.Metrics APIs in .NET

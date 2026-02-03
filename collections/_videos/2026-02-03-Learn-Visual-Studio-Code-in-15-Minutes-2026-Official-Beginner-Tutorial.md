@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Learn Visual Studio Code in 15 Minutes: 2026 Official Beginner Tutorial"
-description: "This official Visual Studio Code video tutorial provides a quick-start guide for beginners, covering the main features of VS Code in just 15 minutes. It walks through the UI, file creation, using integrated chat, source control, MCP integration, and session management, making it accessible for new users."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=rNUZm1xLlzo"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=rNUZm1xLlzo
+title: 'Learn Visual Studio Code in 15 Minutes: 2026 Official Beginner Tutorial'
+author: Visual Studio Code
+primary_section: coding
+feed_name: Visual Studio Code YouTube
 date: 2026-02-03 04:32:10 +00:00
-permalink: "/2026-02-03-Learn-Visual-Studio-Code-in-15-Minutes-2026-Official-Beginner-Tutorial.html"
-categories: ["Coding"]
-tags: ["Beginner Tutorial", "Code Editing", "Coding", "Development Tools", "Editor UI", "Inline Suggestions", "IntelliSense", "Issue Tracking", "MCP Server", "Microsoft", "Session Management", "Source Control", "Videos", "VS Code"]
-tags_normalized: ["beginner tutorial", "code editing", "coding", "development tools", "editor ui", "inline suggestions", "intellisense", "issue tracking", "mcp server", "microsoft", "session management", "source control", "videos", "vs code"]
+tags:
+- Beginner Tutorial
+- Code Editing
+- Coding
+- Development Tools
+- Editor UI
+- Inline Suggestions
+- IntelliSense
+- Issue Tracking
+- MCP Server
+- Microsoft
+- Session Management
+- Source Control
+- Videos
+- VS Code
+section_names:
+- coding
 ---
-
 Visual Studio Code's official team, featuring Reynald Adolphe, presents a beginner-friendly 15-minute tutorial covering VS Code setup, editing, and productivity features.<!--excerpt_end-->
 
 {% youtube rNUZm1xLlzo %}

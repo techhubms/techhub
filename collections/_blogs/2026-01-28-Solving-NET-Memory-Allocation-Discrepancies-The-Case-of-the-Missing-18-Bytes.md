@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Solving .NET Memory Allocation Discrepancies: The Case of the Missing 18 Bytes"
-description: "This blog post by Steve Gordon unravels the technical mystery behind an 18-byte difference in memory allocation measurements in .NET applications. The post compares results from BenchmarkDotNet, dotMemory, and Visual Studio Profiler, investigates the calculation details, considers object sizes with memory alignment, and provides actionable insights for developers using memory profiling and benchmarking tools in performance tuning efforts."
-author: "Steve Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.stevejgordon.co.uk/the-grand-mystery-of-the-missing-18-bytes"
-viewing_mode: "external"
-feed_name: "Steve Gordon's Blog"
-feed_url: "https://www.stevejgordon.co.uk/feed"
+﻿---
+external_url: https://www.stevejgordon.co.uk/the-grand-mystery-of-the-missing-18-bytes
+title: 'Solving .NET Memory Allocation Discrepancies: The Case of the Missing 18 Bytes'
+author: Steve Gordon
+primary_section: coding
+feed_name: Steve Gordon's Blog
 date: 2026-01-28 15:33:29 +00:00
-permalink: "/2026-01-28-Solving-NET-Memory-Allocation-Discrepancies-The-Case-of-the-Missing-18-Bytes.html"
-categories: ["Coding"]
-tags: [".NET", "Allocation Analysis", "ASP.NET Core", "BenchmarkDotNet", "Blogs", "C#", "Coding", "Dotmemory", "GC.GetTotalAllocatedBytes", "Heap Allocations", "Memory Investigation", "Memory Profiling", "Object Alignment", "Performance Tuning", "Profiling Tools", "StringBuilder", "Visual Studio Profiler"]
-tags_normalized: ["dotnet", "allocation analysis", "aspdotnet core", "benchmarkdotnet", "blogs", "csharp", "coding", "dotmemory", "gcdotgettotalallocatedbytes", "heap allocations", "memory investigation", "memory profiling", "object alignment", "performance tuning", "profiling tools", "stringbuilder", "visual studio profiler"]
+tags:
+- .NET
+- Allocation Analysis
+- ASP.NET Core
+- BenchmarkDotNet
+- Blogs
+- C#
+- Coding
+- Dotmemory
+- GC.GetTotalAllocatedBytes
+- Heap Allocations
+- Memory Investigation
+- Memory Profiling
+- Object Alignment
+- Performance Tuning
+- Profiling Tools
+- StringBuilder
+- Visual Studio Profiler
+section_names:
+- coding
 ---
-
 Steve Gordon explores an 18-byte discrepancy in .NET memory allocation reports by different profiling tools, offering a technical investigation that benefits developers focused on performance optimization.<!--excerpt_end-->
 
 # Solving .NET Memory Allocation Discrepancies: The Case of the Missing 18 Bytes

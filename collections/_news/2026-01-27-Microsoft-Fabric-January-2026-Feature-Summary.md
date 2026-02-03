@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Microsoft Fabric January 2026 Feature Summary"
-description: "This detailed summary covers new features and enhancements in Microsoft Fabric as of January 2026, including updates in AI, machine learning, data engineering, security, DevOps, and integration tools. Topics highlight advancements in the Fabric platform, OneLake, Data Warehouse, Real-Time Intelligence, and Data Factory, serving architects and engineers working with Microsoft’s data ecosystem."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-january-2026-feature-summary/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-january-2026-feature-summary/
+title: Microsoft Fabric January 2026 Feature Summary
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-01-27 09:00:00 +00:00
-permalink: "/2026-01-27-Microsoft-Fabric-January-2026-Feature-Summary.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "AI Auto Summary", "Azure", "Copilot", "Copy Job", "Data Access Control", "Data Engineering", "Data Factory", "Data Warehouse", "DevOps", "Eventstream", "GitHub Integration", "Incremental Copy", "KQL", "Lakehouse", "Materialized Lake View", "MERGE T SQL", "Microsoft Fabric", "ML", "MQTT", "News", "Notebooks", "OneLake", "Python SDK", "Real Time Intelligence", "Security", "Semantic Models", "SQL Analytics", "Statistics Refresh", "Streaming Data", "VS Code"]
-tags_normalized: ["ai", "ai auto summary", "azure", "copilot", "copy job", "data access control", "data engineering", "data factory", "data warehouse", "devops", "eventstream", "github integration", "incremental copy", "kql", "lakehouse", "materialized lake view", "merge t sql", "microsoft fabric", "ml", "mqtt", "news", "notebooks", "onelake", "python sdk", "real time intelligence", "security", "semantic models", "sql analytics", "statistics refresh", "streaming data", "vs code"]
+tags:
+- AI
+- AI Auto Summary
+- Azure
+- Copilot
+- Copy Job
+- Data Access Control
+- Data Engineering
+- Data Factory
+- Data Warehouse
+- DevOps
+- Eventstream
+- GitHub Integration
+- Incremental Copy
+- KQL
+- Lakehouse
+- Materialized Lake View
+- MERGE T SQL
+- Microsoft Fabric
+- ML
+- MQTT
+- News
+- Notebooks
+- OneLake
+- Python SDK
+- Real Time Intelligence
+- Security
+- Semantic Models
+- SQL Analytics
+- Statistics Refresh
+- Streaming Data
+- VS Code
+- Machine Learning
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 Microsoft Fabric Blog presents a comprehensive overview of the January 2026 feature update, detailing enhancements in AI support, developer tooling, security, data engineering, and integration within the Microsoft Fabric platform.<!--excerpt_end-->
 
 # Microsoft Fabric January 2026 Feature Summary

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding Minimum Usage Charges in Azure App Testing Load Tests"
-description: "This post details the new minimum usage policy for load testing in Azure App Testing, effective March 1, 2026. It explains how Virtual User Hours (VUH) minimums impact test billing, provides clear examples, and offers recommendations for optimizing load test configurations for efficiency and cost-effectiveness."
-author: "Nikita_Nallamothu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/minimum-usage-in-azure-app-testing/ba-p/4490658"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/minimum-usage-in-azure-app-testing/ba-p/4490658
+title: Understanding Minimum Usage Charges in Azure App Testing Load Tests
+author: Nikita_Nallamothu
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-01-30 06:56:43 +00:00
-permalink: "/2026-01-30-Understanding-Minimum-Usage-Charges-in-Azure-App-Testing-Load-Tests.html"
-categories: ["Azure", "DevOps"]
-tags: ["AI", "AI Assisted Testing", "Azure", "Azure App Testing", "Azure Load Testing", "Billing", "CI/CD", "Cloud Testing", "Community", "Cost Optimization", "DevOps", "Load Testing", "Microsoft Azure", "Performance Testing", "Test Automation", "Test Configuration", "Test Infrastructure", "Testing Strategies", "Virtual User Hours"]
-tags_normalized: ["ai", "ai assisted testing", "azure", "azure app testing", "azure load testing", "billing", "cislashcd", "cloud testing", "community", "cost optimization", "devops", "load testing", "microsoft azure", "performance testing", "test automation", "test configuration", "test infrastructure", "testing strategies", "virtual user hours"]
+tags:
+- AI
+- AI Assisted Testing
+- Azure
+- Azure App Testing
+- Azure Load Testing
+- Billing
+- CI/CD
+- Cloud Testing
+- Community
+- Cost Optimization
+- DevOps
+- Load Testing
+- Microsoft Azure
+- Performance Testing
+- Test Automation
+- Test Configuration
+- Test Infrastructure
+- Testing Strategies
+- Virtual User Hours
+section_names:
+- azure
+- devops
 ---
-
 Nikita Nallamothu explains Azure App Testing's new minimum Virtual User Hours policy for load tests, including practical examples and tips to help your team avoid unnecessary charges while optimizing test efficiency.<!--excerpt_end-->
 
 # Understanding Minimum Usage Charges in Azure App Testing Load Tests

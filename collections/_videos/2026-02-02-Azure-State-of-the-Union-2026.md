@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure State of the Union 2026"
-description: "This deep-dive presentation by John Savill offers a comprehensive overview of core Azure services as of 2026, covering compute, scaling, governance, regions, VM types, security features, infrastructure as code, and more. The video explores practical details about Azure's evolving architecture, capacity management, and best practices for managing modern cloud environments."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FDRuQVG30Bo"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=FDRuQVG30Bo
+title: Azure State of the Union 2026
+author: John Savill's Technical Training
+primary_section: azure
+feed_name: John Savill's Technical Training
 date: 2026-02-02 15:08:03 +00:00
-permalink: "/2026-02-02-Azure-State-of-the-Union-2026.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["App Services", "Availability Zones", "Azure", "Azure Cloud", "Azure Virtual Machines", "Budgeting", "Cloud", "Cloud Architecture", "Compute", "Deployment", "DevOps", "Disk Encryption", "Entra ID", "Governance", "IaC", "Key Vault", "Managed Disks", "Managed Identity", "Microsoft", "Microsoft Azure", "Policy", "RBAC", "Regions", "Resource Management", "Scaling", "Security", "SLAs", "Videos", "VM", "VM Types"]
-tags_normalized: ["app services", "availability zones", "azure", "azure cloud", "azure virtual machines", "budgeting", "cloud", "cloud architecture", "compute", "deployment", "devops", "disk encryption", "entra id", "governance", "iac", "key vault", "managed disks", "managed identity", "microsoft", "microsoft azure", "policy", "rbac", "regions", "resource management", "scaling", "security", "slas", "videos", "vm", "vm types"]
+tags:
+- App Services
+- Availability Zones
+- Azure
+- Azure Cloud
+- Azure Virtual Machines
+- Budgeting
+- Cloud
+- Cloud Architecture
+- Compute
+- Deployment
+- DevOps
+- Disk Encryption
+- Entra ID
+- Governance
+- IaC
+- Key Vault
+- Managed Disks
+- Managed Identity
+- Microsoft
+- Microsoft Azure
+- Policy
+- RBAC
+- Regions
+- Resource Management
+- Scaling
+- Security
+- SLAs
+- Videos
+- VM
+- VM Types
+section_names:
+- azure
+- devops
+- security
 ---
-
 John Savill's Technical Training presents a comprehensive overview of Azure in 2026, highlighting resource management, compute options, governance, security, and best practices for cloud deployments.<!--excerpt_end-->
 
 {% youtube FDRuQVG30Bo %}

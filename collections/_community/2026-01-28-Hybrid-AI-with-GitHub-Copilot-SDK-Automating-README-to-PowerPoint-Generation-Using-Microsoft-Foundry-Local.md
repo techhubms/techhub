@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Hybrid AI with GitHub Copilot SDK: Automating README to PowerPoint Generation Using Microsoft Foundry Local"
-description: "This in-depth guide explores how to architect hybrid AI solutions by combining Microsoft Foundry Local (running local SLMs), cloud-based LLMs, and the GitHub Copilot SDK. Focusing on the GenGitHubRepoPPT case study, it demonstrates techniques for balancing privacy, cost efficiency, and AI capability—enabling automatic generation of professional PowerPoint presentations from GitHub README files. Learn how production-grade agent frameworks and reusable Copilot Skills accelerate modern AI development and help democratize agent-based coding for all experience levels."
-author: "kinfey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/github-copilot-sdk-and-hybrid-ai-in-practice-automating-readme/ba-p/4489694"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/github-copilot-sdk-and-hybrid-ai-in-practice-automating-readme/ba-p/4489694
+title: 'Hybrid AI with GitHub Copilot SDK: Automating README to PowerPoint Generation Using Microsoft Foundry Local'
+author: kinfey
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-01-28 09:10:46 +00:00
-permalink: "/2026-01-28-Hybrid-AI-with-GitHub-Copilot-SDK-Automating-README-to-PowerPoint-Generation-Using-Microsoft-Foundry-Local.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Development", "AI", "AI Orchestration", "Automation", "Claude Sonnet 4.5", "Coding", "Community", "Copilot CLI", "Copilot Skills", "Cost Optimization", "Edge AI", "GitHub Copilot", "GitHub Copilot SDK", "Hybrid AI", "Large Language Models", "LLM", "Microsoft Foundry Local", "Natural Language Engineering", "PowerPoint Generation", "Privacy", "Python", "Qwen 2.5 7B", "README Processing", "SLM", "Small Language Models"]
-tags_normalized: ["agent development", "ai", "ai orchestration", "automation", "claude sonnet 4dot5", "coding", "community", "copilot cli", "copilot skills", "cost optimization", "edge ai", "github copilot", "github copilot sdk", "hybrid ai", "large language models", "llm", "microsoft foundry local", "natural language engineering", "powerpoint generation", "privacy", "python", "qwen 2dot5 7b", "readme processing", "slm", "small language models"]
+tags:
+- Agent Development
+- AI
+- AI Orchestration
+- Automation
+- Claude Sonnet 4.5
+- Coding
+- Community
+- Copilot CLI
+- Copilot Skills
+- Cost Optimization
+- Edge AI
+- GitHub Copilot
+- GitHub Copilot SDK
+- Hybrid AI
+- Large Language Models
+- LLM
+- Microsoft Foundry Local
+- Natural Language Engineering
+- PowerPoint Generation
+- Privacy
+- Python
+- Qwen 2.5 7B
+- README Processing
+- SLM
+- Small Language Models
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 kinfey delivers a practical exploration of hybrid AI system design, highlighting how Microsoft Foundry Local and GitHub Copilot SDK automate the conversion of GitHub README files into professional PowerPoint presentations. This article demystifies local and cloud AI model orchestration for real developer scenarios.<!--excerpt_end-->
 
 # Hybrid AI with GitHub Copilot SDK: Automating README to PowerPoint Generation Using Microsoft Foundry Local

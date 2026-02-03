@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Mirroring Azure Databricks Catalogs Behind Private Endpoints Now Generally Available"
-description: "This announcement details Microsoft Fabric’s new support for mirroring Azure Databricks catalogs from workspaces deployed exclusively behind Azure private endpoints. It explains the technical background, architecture, enterprise security benefits, and what this means for organizations with highly regulated virtual network environments. VNet data gateways enable secure, private connectivity and a consistent analytics experience in Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/mirroring-azure-databricks-catalogs-from-azure-databricks-workspaces-behind-private-endpoints-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-azure-databricks-catalogs-from-azure-databricks-workspaces-behind-private-endpoints-generally-available/
+title: Mirroring Azure Databricks Catalogs Behind Private Endpoints Now Generally Available
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-02 09:00:00 +00:00
-permalink: "/2026-02-02-Mirroring-Azure-Databricks-Catalogs-Behind-Private-Endpoints-Now-Generally-Available.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "Azure Databricks", "Cloud Networking", "Data Governance", "Data Mirroring", "Enterprise Security", "Microsoft Fabric", "ML", "Network Isolation", "News", "Private Endpoints", "Regulatory Compliance", "SaaS Integration", "Unity Catalog", "Virtual Network", "VNet Data Gateway"]
-tags_normalized: ["analytics", "azure", "azure databricks", "cloud networking", "data governance", "data mirroring", "enterprise security", "microsoft fabric", "ml", "network isolation", "news", "private endpoints", "regulatory compliance", "saas integration", "unity catalog", "virtual network", "vnet data gateway"]
+tags:
+- Analytics
+- Azure
+- Azure Databricks
+- Cloud Networking
+- Data Governance
+- Data Mirroring
+- Enterprise Security
+- Microsoft Fabric
+- ML
+- Network Isolation
+- News
+- Private Endpoints
+- Regulatory Compliance
+- SaaS Integration
+- Unity Catalog
+- Virtual Network
+- VNet Data Gateway
+- Machine Learning
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces that organizations can now mirror Azure Databricks catalogs from workspaces secured behind private endpoints. This update, authored by the Microsoft Fabric Blog team, enables secure, enterprise-grade data integration for analytics in regulated Azure environments.<!--excerpt_end-->
 
 # Mirroring Azure Databricks Catalogs from Private Workspaces Now Generally Available

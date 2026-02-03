@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building Interactive Agent UIs with AG-UI and Microsoft Agent Framework"
-description: "This community blog by pratikpanda explores AG-UI, an open, event-based protocol that standardizes real-time communication between AI agents and user interfaces. It provides a framework-agnostic solution for streaming updates and observability, and demonstrates integration with Microsoft Agent Framework (Python) to build an event-driven interactive agent application. Readers will learn about AG-UI concepts, protocol design, core event types, architecture, and see step-by-step instructions to build a complete working solution using Azure OpenAI and FastAPI."
-author: "pratikpanda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-interactive-agent-uis-with-ag-ui-and-microsoft-agent/ba-p/4488249"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-interactive-agent-uis-with-ag-ui-and-microsoft-agent/ba-p/4488249
+title: Building Interactive Agent UIs with AG-UI and Microsoft Agent Framework
+author: pratikpanda
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-01-29 08:00:00 +00:00
-permalink: "/2026-01-29-Building-Interactive-Agent-UIs-with-AG-UI-and-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AG UI", "Agent Architectures", "Agent Observability", "AI", "AI Protocols", "Async Programming", "Azure", "Azure AI Foundry", "Azure OpenAI", "Coding", "Community", "CrewAI", "Event Driven Design", "FastAPI", "LangGraph", "LLM", "Microsoft Agent Framework", "Python", "Real Time UI", "Server Sent Events", "Streaming APIs", "Tool Invocation"]
-tags_normalized: ["dotnet", "ag ui", "agent architectures", "agent observability", "ai", "ai protocols", "async programming", "azure", "azure ai foundry", "azure openai", "coding", "community", "crewai", "event driven design", "fastapi", "langgraph", "llm", "microsoft agent framework", "python", "real time ui", "server sent events", "streaming apis", "tool invocation"]
+tags:
+- .NET
+- AG UI
+- Agent Architectures
+- Agent Observability
+- AI
+- AI Protocols
+- Async Programming
+- Azure
+- Azure AI Foundry
+- Azure OpenAI
+- Coding
+- Community
+- CrewAI
+- Event Driven Design
+- FastAPI
+- LangGraph
+- LLM
+- Microsoft Agent Framework
+- Python
+- Real Time UI
+- Server Sent Events
+- Streaming APIs
+- Tool Invocation
+section_names:
+- ai
+- azure
+- coding
 ---
-
 pratikpanda presents a hands-on guide to building interactive UIs for AI agents using AG-UI and Microsoft Agent Framework. This post explains the motivation, protocol design, architecture, and provides working code for integrating Azure OpenAI with Python FastAPI.<!--excerpt_end-->
 
 # Building Interactive Agent UIs with AG-UI and Microsoft Agent Framework

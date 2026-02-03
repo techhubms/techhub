@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Integrating GitHub Copilot SDK: Live Coding on Rubber Duck Thursdays"
-description: "This session from Rubber Duck Thursdays features a live coding walkthrough of using the GitHub Copilot SDK and Copilot CLI. The video focuses on integrating Copilot capabilities into applications, offering practical insights into leveraging AI-powered developer tools within a project environment."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=IKzfETGGt0E"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=IKzfETGGt0E
+title: 'Integrating GitHub Copilot SDK: Live Coding on Rubber Duck Thursdays'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-01-28 11:10:30 +00:00
-permalink: "/2026-01-28-Integrating-GitHub-Copilot-SDK-Live-Coding-on-Rubber-Duck-Thursdays.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Developer Tools", "Application Development", "Coding", "Copilot CLI", "Copilot SDK", "Developer Productivity", "GitHub", "GitHub Copilot", "Live Coding", "Programming", "SDK Integration", "Videos"]
-tags_normalized: ["ai", "ai developer tools", "application development", "coding", "copilot cli", "copilot sdk", "developer productivity", "github", "github copilot", "live coding", "programming", "sdk integration", "videos"]
+tags:
+- AI
+- AI Developer Tools
+- Application Development
+- Coding
+- Copilot CLI
+- Copilot SDK
+- Developer Productivity
+- GitHub
+- GitHub Copilot
+- Live Coding
+- Programming
+- SDK Integration
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub hosts a Rubber Duck Thursdays session where the team demonstrates how to build with GitHub Copilot SDK and Copilot CLI, showing developers practical integration techniques.<!--excerpt_end-->
 
 {% youtube IKzfETGGt0E %}

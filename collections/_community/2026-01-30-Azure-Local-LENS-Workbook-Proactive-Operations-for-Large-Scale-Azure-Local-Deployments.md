@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Azure Local LENS Workbook: Proactive Operations for Large-Scale Azure Local Deployments"
-description: "Azure Local LENS is a free, open-source Azure Workbook designed to provide operational visibility and actionable insights for organizations managing large Azure Local fleets. This guide covers features, deployment steps, and real-world usage scenarios, enabling central operations teams and architects to make informed decisions and streamline fleet management."
-author: "Neil_Bird"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-local-lens-workbook-deep-insights-at-scale-in-minutes/ba-p/4490608"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-local-lens-workbook-deep-insights-at-scale-in-minutes/ba-p/4490608
+title: 'Azure Local LENS Workbook: Proactive Operations for Large-Scale Azure Local Deployments'
+author: Neil_Bird
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-01-30 17:47:17 +00:00
-permalink: "/2026-01-30-Azure-Local-LENS-Workbook-Proactive-Operations-for-Large-Scale-Azure-Local-Deployments.html"
-categories: ["Azure"]
-tags: ["AKS Arc", "Automation", "Azure", "Azure LENS", "Azure Local", "Azure Monitoring", "Azure Workbook", "Cloud Infrastructure", "Community", "Compliance", "DevOps Practices", "Fleet Management", "Health Monitoring", "Operational Insights", "Outlier Detection", "Resource Bridge", "Update Management"]
-tags_normalized: ["aks arc", "automation", "azure", "azure lens", "azure local", "azure monitoring", "azure workbook", "cloud infrastructure", "community", "compliance", "devops practices", "fleet management", "health monitoring", "operational insights", "outlier detection", "resource bridge", "update management"]
+tags:
+- AKS Arc
+- Automation
+- Azure
+- Azure LENS
+- Azure Local
+- Azure Monitoring
+- Azure Workbook
+- Cloud Infrastructure
+- Community
+- Compliance
+- DevOps Practices
+- Fleet Management
+- Health Monitoring
+- Operational Insights
+- Outlier Detection
+- Resource Bridge
+- Update Management
+section_names:
+- azure
 ---
-
 Neil_Bird introduces Azure Local LENS, a community-driven workbook that delivers deep, actionable insights into large Azure Local fleets, helping operations teams shift toward proactive management.<!--excerpt_end-->
 
 # Azure Local LENS Workbook—Deep Insights at Scale, in Minutes

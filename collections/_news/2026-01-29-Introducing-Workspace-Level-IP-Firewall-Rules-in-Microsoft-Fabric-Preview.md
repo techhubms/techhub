@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Introducing Workspace-Level IP Firewall Rules in Microsoft Fabric (Preview)"
-description: "This article details the new workspace-level IP firewall rules in Microsoft Fabric, enabling workspace administrators to restrict inbound access using public IP-based allowlists. The feature enhances network security by enabling granular control at the workspace level, complementing existing solutions like Private Links and Entra Conditional Access."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-level-ip-firewall-rules-in-microsoft-fabric-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-level-ip-firewall-rules-in-microsoft-fabric-preview/
+title: Introducing Workspace-Level IP Firewall Rules in Microsoft Fabric (Preview)
+author: Microsoft Fabric Blog
+primary_section: azure
+feed_name: Microsoft Fabric Blog
 date: 2026-01-29 09:00:00 +00:00
-permalink: "/2026-01-29-Introducing-Workspace-Level-IP-Firewall-Rules-in-Microsoft-Fabric-Preview.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Admin Portal", "Azure", "Cloud Security", "Compliance", "Entra Conditional Access", "Firewall Rules", "Governance", "IP Firewall", "Microsoft Fabric", "Network Security", "News", "Private Links", "Public Endpoint Protection", "Security", "Workspace Level Security"]
-tags_normalized: ["access control", "admin portal", "azure", "cloud security", "compliance", "entra conditional access", "firewall rules", "governance", "ip firewall", "microsoft fabric", "network security", "news", "private links", "public endpoint protection", "security", "workspace level security"]
+tags:
+- Access Control
+- Admin Portal
+- Azure
+- Cloud Security
+- Compliance
+- Entra Conditional Access
+- Firewall Rules
+- Governance
+- IP Firewall
+- Microsoft Fabric
+- Network Security
+- News
+- Private Links
+- Public Endpoint Protection
+- Security
+- Workspace Level Security
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog showcases the preview of workspace-level IP firewall rules, letting admins enforce IP-based inbound restrictions for enhanced and granular workspace security.<!--excerpt_end-->
 
 # Introducing Workspace-Level IP Firewall Rules in Microsoft Fabric (Preview)

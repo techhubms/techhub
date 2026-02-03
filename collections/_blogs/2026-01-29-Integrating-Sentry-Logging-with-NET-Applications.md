@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Integrating Sentry Logging with .NET Applications"
-description: "This article introduces how Sentry’s new structured logging capability integrates logs with issues, traces, and session replays for .NET, MAUI, and ASP.NET Core applications. It highlights how sending logs to Sentry creates a unified debugging and monitoring experience for .NET developers."
-author: ".NET Foundation News and Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dotnetfoundation.org/news-events/detail/sponsor-spotlight-sentryblog1"
-viewing_mode: "external"
-feed_name: ".NET Foundation's Blog"
-feed_url: "https://dotnetfoundation.org/feeds/blog"
+﻿---
+external_url: https://dotnetfoundation.org/news-events/detail/sponsor-spotlight-sentryblog1
+title: Integrating Sentry Logging with .NET Applications
+author: .NET Foundation News and Blog
+primary_section: coding
+feed_name: .NET Foundation's Blog
 date: 2026-01-29 14:44:53 +00:00
-permalink: "/2026-01-29-Integrating-Sentry-Logging-with-NET-Applications.html"
-categories: ["Coding"]
-tags: [".NET", "Application Monitoring", "ASP.NET Core", "Blogs", "Coding", "Debugging", "Error Tracking", "Logging", "MAUI", "Performance Monitoring", "Sentry", "Session Replay", "Stack Trace", "Structured Logs"]
-tags_normalized: ["dotnet", "application monitoring", "aspdotnet core", "blogs", "coding", "debugging", "error tracking", "logging", "maui", "performance monitoring", "sentry", "session replay", "stack trace", "structured logs"]
+tags:
+- .NET
+- Application Monitoring
+- ASP.NET Core
+- Blogs
+- Coding
+- Debugging
+- Error Tracking
+- Logging
+- MAUI
+- Performance Monitoring
+- Sentry
+- Session Replay
+- Stack Trace
+- Structured Logs
+section_names:
+- coding
 ---
-
 .NET Foundation News and Blog explains how developers can integrate structured logging in Sentry with their .NET, MAUI, and ASP.NET Core projects for enhanced debugging and monitoring.<!--excerpt_end-->
 
 # Integrating Sentry Logging with .NET Applications

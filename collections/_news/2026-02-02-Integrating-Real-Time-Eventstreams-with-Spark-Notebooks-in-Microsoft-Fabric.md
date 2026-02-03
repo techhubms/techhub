@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Integrating Real-Time Eventstreams with Spark Notebooks in Microsoft Fabric"
-description: "This news article outlines the new preview capability in Microsoft Fabric, enabling seamless integration between Fabric Eventstreams and Spark Notebooks. Developers can now easily build low-latency, real-time analytics and AI pipelines by combining Spark Structured Streaming with Eventstreams—eliminating much of the manual effort, boilerplate code, and complexity of traditional streaming workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/bringing-together-fabric-real-time-intelligence-notebook-and-spark-structured-streaming-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/bringing-together-fabric-real-time-intelligence-notebook-and-spark-structured-streaming-preview/
+title: Integrating Real-Time Eventstreams with Spark Notebooks in Microsoft Fabric
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-02 14:00:00 +00:00
-permalink: "/2026-02-02-Integrating-Real-Time-Eventstreams-with-Spark-Notebooks-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Apache Kafka", "Automatic Code Generation", "Azure", "Data Engineering", "Data Pipelines", "Entra ID", "Eventstreams", "Microsoft Fabric", "ML", "News", "Notebook Integration", "PySpark", "Real Time Intelligence", "Real Time Processing", "Spark Notebooks", "Spark Structured Streaming", "Streaming Analytics", "Streaming Data"]
-tags_normalized: ["ai", "apache kafka", "automatic code generation", "azure", "data engineering", "data pipelines", "entra id", "eventstreams", "microsoft fabric", "ml", "news", "notebook integration", "pyspark", "real time intelligence", "real time processing", "spark notebooks", "spark structured streaming", "streaming analytics", "streaming data"]
+tags:
+- AI
+- Apache Kafka
+- Automatic Code Generation
+- Azure
+- Data Engineering
+- Data Pipelines
+- Entra ID
+- Eventstreams
+- Microsoft Fabric
+- ML
+- News
+- Notebook Integration
+- PySpark
+- Real Time Intelligence
+- Real Time Processing
+- Spark Notebooks
+- Spark Structured Streaming
+- Streaming Analytics
+- Streaming Data
+- Machine Learning
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog, coauthored by QiXiao Wang, presents the Preview integration of Fabric Eventstreams and Spark Notebooks. This advancement enables developers to build robust, real-time analytics and AI pipelines in Microsoft Fabric with less manual coding.<!--excerpt_end-->
 
 # Integrating Real-Time Eventstreams with Spark Notebooks in Microsoft Fabric

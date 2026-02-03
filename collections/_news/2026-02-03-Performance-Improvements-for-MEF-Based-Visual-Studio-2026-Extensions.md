@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Performance Improvements for MEF-Based Visual Studio 2026 Extensions"
-description: "This article discusses how Visual Studio 2026 brings faster load times for MEF-based editor productivity extensions by enabling background thread loading. It highlights the implications for extension developers, introduces new analyzer support, and outlines how teams can adapt their extensions to leverage these performance gains. Developers are guided to tools, documentation, and community resources for a smoother transition."
-author: "Tina Schrepfer (LI), Amadeus Wieczorek"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/performance-improvements-to-mef-based-editor-productivity-extensions/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/performance-improvements-to-mef-based-editor-productivity-extensions/
+title: Performance Improvements for MEF-Based Visual Studio 2026 Extensions
+author: Tina Schrepfer (LI), Amadeus Wieczorek
+primary_section: coding
+feed_name: Microsoft VisualStudio Blog
 date: 2026-02-03 15:00:21 +00:00
-permalink: "/2026-02-03-Performance-Improvements-for-MEF-Based-Visual-Studio-2026-Extensions.html"
-categories: ["Coding"]
-tags: ["Analyzer", "Background Loading", "Coding", "Editor Productivity", "Extensibility", "Extension Development", "Extensions", "Managed Extensibility Framework", "MEF", "Microsoft", "Microsoft.VisualStudio.SDK.Analyzers", "News", "Performance", "Performance Optimization", "Threading", "UI Thread", "VS", "VS Extensions", "VSSDK"]
-tags_normalized: ["analyzer", "background loading", "coding", "editor productivity", "extensibility", "extension development", "extensions", "managed extensibility framework", "mef", "microsoft", "microsoftdotvisualstudiodotsdkdotanalyzers", "news", "performance", "performance optimization", "threading", "ui thread", "vs", "vs extensions", "vssdk"]
+tags:
+- Analyzer
+- Background Loading
+- Coding
+- Editor Productivity
+- Extensibility
+- Extension Development
+- Extensions
+- Managed Extensibility Framework
+- MEF
+- Microsoft
+- Microsoft.VisualStudio.SDK.Analyzers
+- News
+- Performance
+- Performance Optimization
+- Threading
+- UI Thread
+- VS
+- VS Extensions
+- VSSDK
+section_names:
+- coding
 ---
-
 Tina Schrepfer and Amadeus Wieczorek explain how Visual Studio 2026 improves startup times for MEF-based editor extensions, what changes developers need to adjust for, and how to adapt your extension code for performance gains.<!--excerpt_end-->
 
 # Performance Improvements for MEF-Based Visual Studio 2026 Extensions

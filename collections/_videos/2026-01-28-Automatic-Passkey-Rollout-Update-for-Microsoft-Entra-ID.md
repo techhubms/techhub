@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Automatic Passkey Rollout Update for Microsoft Entra ID"
-description: "This video from John Savill’s Technical Training provides a concise review of the latest updates regarding the automatic rollout of passkeys in Microsoft Entra ID (formerly Azure Active Directory). It covers the benefits of passkeys, distinctions between synced and device-bound passkeys, changes in the registration campaign, and their impact on organizational security and user authentication."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=hAm_DcqH0nY"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=hAm_DcqH0nY
+title: Automatic Passkey Rollout Update for Microsoft Entra ID
+author: John Savill's Technical Training
+primary_section: security
+feed_name: John Savill's Technical Training
 date: 2026-01-28 10:12:06 +00:00
-permalink: "/2026-01-28-Automatic-Passkey-Rollout-Update-for-Microsoft-Entra-ID.html"
-categories: ["Security"]
-tags: ["Access Management", "Authentication", "Authorization", "Azure Active Directory", "Azure AD", "Cloud Security", "Device Bound Passkeys", "Entra Id", "FIDO2", "Identity Management", "Microsoft", "Microsoft Security", "Passkeys", "Registration Campaign", "Security", "Security Update", "Synced Passkeys", "Videos"]
-tags_normalized: ["access management", "authentication", "authorization", "azure active directory", "azure ad", "cloud security", "device bound passkeys", "entra id", "fido2", "identity management", "microsoft", "microsoft security", "passkeys", "registration campaign", "security", "security update", "synced passkeys", "videos"]
+tags:
+- Access Management
+- Authentication
+- Authorization
+- Azure Active Directory
+- Azure AD
+- Cloud Security
+- Device Bound Passkeys
+- Entra Id
+- FIDO2
+- Identity Management
+- Microsoft
+- Microsoft Security
+- Passkeys
+- Registration Campaign
+- Security
+- Security Update
+- Synced Passkeys
+- Videos
+section_names:
+- security
 ---
-
 John Savill’s Technical Training reviews the latest updates on automatic passkey rollout in Microsoft Entra ID, highlighting benefits, security enhancements, and what’s changing for authentication.<!--excerpt_end-->
 
 {% youtube hAm_DcqH0nY %}

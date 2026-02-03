@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Visual Studio January Update — Enhanced Editor Experience"
-description: "This news post highlights the January update to Visual Studio, introducing several new productivity features aimed at giving developers greater control and customization of the editor. Key enhancements cover fast and middle-click scrolling, HTML-rich copy/paste, a more compact left margin, colorized code completions, partial acceptance for code suggestions, and improved Markdown preview controls. The update also references integration with Copilot Chat, showing a developer-focused approach to boosting workflow efficiency in Visual Studio 2026."
-author: "Simona Liao"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-january-update-enhanced-editor-experience/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-january-update-enhanced-editor-experience/
+title: Visual Studio January Update — Enhanced Editor Experience
+author: Simona Liao
+primary_section: coding
+feed_name: Microsoft VisualStudio Blog
 date: 2026-01-27 18:30:12 +00:00
-permalink: "/2026-01-27-Visual-Studio-January-Update-Enhanced-Editor-Experience.html"
-categories: ["Coding"]
-tags: ["Code Completion", "Coding", "Colorized Suggestions", "Copilot Chat Integration", "Developer Productivity", "Developer Tools", "Editor", "Editor Customization", "Fast Scrolling", "HTML Clipboard", "Margin Settings", "Markdown Preview", "Mermaid Diagrams", "Middle Click Scroll", "News", "Productivity", "Syntactic Line Compression", "Text Editor Options", "VS"]
-tags_normalized: ["code completion", "coding", "colorized suggestions", "copilot chat integration", "developer productivity", "developer tools", "editor", "editor customization", "fast scrolling", "html clipboard", "margin settings", "markdown preview", "mermaid diagrams", "middle click scroll", "news", "productivity", "syntactic line compression", "text editor options", "vs"]
+tags:
+- Code Completion
+- Coding
+- Colorized Suggestions
+- Copilot Chat Integration
+- Developer Productivity
+- Developer Tools
+- Editor
+- Editor Customization
+- Fast Scrolling
+- HTML Clipboard
+- Margin Settings
+- Markdown Preview
+- Mermaid Diagrams
+- Middle Click Scroll
+- News
+- Productivity
+- Syntactic Line Compression
+- Text Editor Options
+- VS
+section_names:
+- coding
 ---
-
 Simona Liao shares the latest Visual Studio January update, focusing on enhanced editor productivity and customization features for developers.<!--excerpt_end-->
 
 # Visual Studio January Update — Enhanced Editor Experience

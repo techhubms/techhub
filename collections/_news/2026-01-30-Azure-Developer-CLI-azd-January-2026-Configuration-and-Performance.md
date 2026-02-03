@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) – January 2026: Configuration & Performance"
-description: "An in-depth overview of the January 2026 updates to the Azure Developer CLI (azd), detailing major enhancements in configuration management, multitenant authentication, developer experience, performance improvements, and new community-contributed templates across AI, infrastructure, and DevOps scenarios."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-january-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-january-2026/
+title: 'Azure Developer CLI (azd) – January 2026: Configuration & Performance'
+author: PuiChee (PC) Chan
+primary_section: ai
+feed_name: Microsoft Azure SDK Blog
 date: 2026-01-30 10:30:09 +00:00
-permalink: "/2026-01-30-Azure-Developer-CLI-azd-January-2026-Configuration-and-Performance.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", "AI", "Authentication", "Azd", "Azure", "Azure Developer CLI", "Azure SDK", "Azure Spring Apps", "Bicep", "Codespaces", "Coding", "Configuration Management", "DevOps", "Docker", "GitHub CLI", "Java", "JavaScript", "Kubernetes", "Managed Identity", "MCP", "Microsoft Agent Framework", "Multitenant", "News", "Performance", "Podman", "Python", "Security", "Templates", "Terraform", "Typescript", "VS", "VS Code"]
-tags_normalized: ["dotnet", "ai", "authentication", "azd", "azure", "azure developer cli", "azure sdk", "azure spring apps", "bicep", "codespaces", "coding", "configuration management", "devops", "docker", "github cli", "java", "javascript", "kubernetes", "managed identity", "mcp", "microsoft agent framework", "multitenant", "news", "performance", "podman", "python", "security", "templates", "terraform", "typescript", "vs", "vs code"]
+tags:
+- .NET
+- AI
+- Authentication
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure SDK
+- Azure Spring Apps
+- Bicep
+- Codespaces
+- Coding
+- Configuration Management
+- DevOps
+- Docker
+- GitHub CLI
+- Java
+- JavaScript
+- Kubernetes
+- Managed Identity
+- MCP
+- Microsoft Agent Framework
+- Multitenant
+- News
+- Performance
+- Podman
+- Python
+- Security
+- Templates
+- Terraform
+- Typescript
+- VS
+- VS Code
+section_names:
+- ai
+- azure
+- coding
+- devops
+- security
 ---
-
 PuiChee (PC) Chan summarizes the January 2026 release of the Azure Developer CLI, highlighting critical improvements in configuration, authentication, performance, and new AI-powered and security-focused templates contributed by the community.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) – January 2026: Configuration & Performance

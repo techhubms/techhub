@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Trust, but Verify: Building Confidence in GitHub Copilot Output"
-description: "This article by Randy Pagels focuses on effective strategies for using GitHub Copilot responsibly as a development tool. It explains how developers can confidently leverage Copilot for common coding patterns while building habits for quick validation on more complex or risky areas. Fast verification prompts, practical review techniques, and a flexible trust model are highlighted."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/trust-but-verify-building-confidence-in-github-copilot-output.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/trust-but-verify-building-confidence-in-github-copilot-output.html
+title: 'Trust, but Verify: Building Confidence in GitHub Copilot Output'
+author: randy.pagels@xebia.com (Randy Pagels)
+primary_section: github-copilot
+feed_name: Randy Pagels's Blog
 date: 2026-01-30 00:00:00 +00:00
-permalink: "/2026-01-30-Trust-but-Verify-Building-Confidence-in-GitHub-Copilot-Output.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Code Assistant", "Best Practices", "Blogs", "Code Review", "Code Validation", "Coding", "Developer Productivity", "Edge Cases", "GitHub Copilot", "Prompt Engineering", "Risk Assessment", "Software Development"]
-tags_normalized: ["ai", "ai code assistant", "best practices", "blogs", "code review", "code validation", "coding", "developer productivity", "edge cases", "github copilot", "prompt engineering", "risk assessment", "software development"]
+tags:
+- AI
+- AI Code Assistant
+- Best Practices
+- Blogs
+- Code Review
+- Code Validation
+- Coding
+- Developer Productivity
+- Edge Cases
+- GitHub Copilot
+- Prompt Engineering
+- Risk Assessment
+- Software Development
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 Randy Pagels shares practical guidance for developers on building confidence in GitHub Copilot’s coding output by combining smart trust with targeted verification.<!--excerpt_end-->
 
 # Trust, but Verify: Building Confidence in GitHub Copilot Output

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How to Use the /share Command in GitHub Copilot CLI"
-description: "This video demonstrates how to use the /share command in GitHub Copilot CLI to export conversation logs and diagrams to a gist. It also covers selecting different models (including Claude Opus and Sonnet) and visualizing Next.js routing structures directly in the terminal, providing hands-on insights for developers leveraging GitHub Copilot resources."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=E17SXyL53w4"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=E17SXyL53w4
+title: How to Use the /share Command in GitHub Copilot CLI
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-02 15:00:19 +00:00
-permalink: "/2026-02-02-How-to-Use-the-share-Command-in-GitHub-Copilot-CLI.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Claude Opus", "CLI Tools", "Conversation Logs", "Copilot", "Copilot CLI", "Developer Tools", "Gist Sharing", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "Model Selection", "Next.js", "OpenAI", "Session Export", "Software Development", "Sonnet", "Terminal Visualization", "Videos"]
-tags_normalized: ["ai", "claude opus", "cli tools", "conversation logs", "copilot", "copilot cli", "developer tools", "gist sharing", "github", "github copilot", "github copilot cli", "model selection", "nextdotjs", "openai", "session export", "software development", "sonnet", "terminal visualization", "videos"]
+tags:
+- AI
+- Claude Opus
+- CLI Tools
+- Conversation Logs
+- Copilot
+- Copilot CLI
+- Developer Tools
+- Gist Sharing
+- GitHub
+- GitHub Copilot
+- GitHub Copilot CLI
+- Model Selection
+- Next.js
+- OpenAI
+- Session Export
+- Software Development
+- Sonnet
+- Terminal Visualization
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this demo, GitHub showcases how to use the /share command in GitHub Copilot CLI. Author GitHub walks through exporting session data, model selection options, and visualizing routing for Next.js—all from the terminal.<!--excerpt_end-->
 
 {% youtube E17SXyL53w4 %}

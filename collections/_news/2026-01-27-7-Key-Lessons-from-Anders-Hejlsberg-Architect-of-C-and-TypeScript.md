@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "7 Key Lessons from Anders Hejlsberg: Architect of C# and TypeScript"
-description: "This article highlights insights from Anders Hejlsberg, the architect behind C# and TypeScript, as he reflects on language and tool design, scaling software, the value of open source collaboration, and the impact of AI on programming workflows. The discussion is rich with practical takeaways for developers and technical leads."
-author: "Aaron Winston"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/
+title: '7 Key Lessons from Anders Hejlsberg: Architect of C# and TypeScript'
+author: Aaron Winston
+primary_section: coding
+feed_name: The GitHub Blog
 date: 2026-01-27 17:17:28 +00:00
-permalink: "/2026-01-27-7-Key-Lessons-from-Anders-Hejlsberg-Architect-of-C-and-TypeScript.html"
-categories: ["Coding"]
-tags: ["AI", "AI Tooling", "Anders Hejlsberg", "C#", "Coding", "Compiler Design", "Developer Skills", "Developer Tools", "Feedback Loops", "Go", "JavaScript", "Language Design", "News", "Octoverse", "Open Source", "Programming Languages", "Programming Languages & Frameworks", "Semantic Models", "Software Engineering", "Technical Leadership", "Typescript"]
-tags_normalized: ["ai", "ai tooling", "anders hejlsberg", "csharp", "coding", "compiler design", "developer skills", "developer tools", "feedback loops", "go", "javascript", "language design", "news", "octoverse", "open source", "programming languages", "programming languages and frameworks", "semantic models", "software engineering", "technical leadership", "typescript"]
+tags:
+- AI
+- AI Tooling
+- Anders Hejlsberg
+- C#
+- Coding
+- Compiler Design
+- Developer Skills
+- Developer Tools
+- Feedback Loops
+- Go
+- JavaScript
+- Language Design
+- News
+- Octoverse
+- Open Source
+- Programming Languages
+- Programming Languages & Frameworks
+- Semantic Models
+- Software Engineering
+- Technical Leadership
+- Typescript
+section_names:
+- coding
 ---
-
 Aaron Winston shares seven essential lessons from Anders Hejlsberg, architect of C# and TypeScript, focusing on fast feedback, scaling, open source practices, and the evolving role of AI in programming.<!--excerpt_end-->
 
 # 7 Key Lessons from Anders Hejlsberg: Architect of C# and TypeScript

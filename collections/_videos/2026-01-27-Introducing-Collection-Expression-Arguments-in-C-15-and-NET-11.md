@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Introducing Collection Expression Arguments in C# 15 and .NET 11"
-description: "Nick Chapsas introduces the new Collection Expression Arguments feature in C# 15 and .NET 11, exploring its syntax, use cases, and his perspective on its implications for C# developers. Intended for .NET developers interested in upcoming language features."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wNynE4mwEKI"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+external_url: https://www.youtube.com/watch?v=wNynE4mwEKI
+title: Introducing Collection Expression Arguments in C# 15 and .NET 11
+author: Nick Chapsas
+primary_section: coding
+feed_name: Nick Chapsas YouTube
 date: 2026-01-27 11:45:00 +00:00
-permalink: "/2026-01-27-Introducing-Collection-Expression-Arguments-in-C-15-and-NET-11.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 11", "C#", "C# 15", "C# Features", "Coding", "Collection Expression Arguments", "Language Syntax", "Microsoft", "Programming Languages", "Software Development", "Videos"]
-tags_normalized: ["dotnet", "dotnet 11", "csharp", "csharp 15", "csharp features", "coding", "collection expression arguments", "language syntax", "microsoft", "programming languages", "software development", "videos"]
+tags:
+- .NET
+- .NET 11
+- C#
+- C# 15
+- C# Features
+- Coding
+- Collection Expression Arguments
+- Language Syntax
+- Microsoft
+- Programming Languages
+- Software Development
+- Videos
+section_names:
+- coding
 ---
-
 Nick Chapsas discusses the first new feature in C# 15—Collection Expression Arguments—in this video, sharing his insights for C# and .NET developers.<!--excerpt_end-->
 
 {% youtube wNynE4mwEKI %}

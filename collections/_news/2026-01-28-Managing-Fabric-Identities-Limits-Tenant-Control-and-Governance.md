@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Managing Fabric Identities Limits: Tenant Control and Governance"
-description: "This article introduces a new tenant admin setting in Microsoft Fabric that allows administrators to control the maximum number of Fabric (Workspace) identities within their organization. It covers the default and custom limit options, programmatic management via the REST API, and relevant Entra ID considerations for large-scale identity governance."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/take-control-of-fabric-identities-limit-for-your-tenant-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/take-control-of-fabric-identities-limit-for-your-tenant-generally-available/
+title: 'Managing Fabric Identities Limits: Tenant Control and Governance'
+author: Microsoft Fabric Blog
+primary_section: azure
+feed_name: Microsoft Fabric Blog
 date: 2026-01-28 10:00:00 +00:00
-permalink: "/2026-01-28-Managing-Fabric-Identities-Limits-Tenant-Control-and-Governance.html"
-categories: ["Azure", "Security"]
-tags: ["Admin Portal", "API Integration", "Azure", "Developer Settings", "Entra ID", "Identity Governance", "Identity Management", "Microsoft Fabric", "News", "Programmatic Management", "REST API", "Security", "Tenant Admin", "Tenant Settings", "Workspace Identity"]
-tags_normalized: ["admin portal", "api integration", "azure", "developer settings", "entra id", "identity governance", "identity management", "microsoft fabric", "news", "programmatic management", "rest api", "security", "tenant admin", "tenant settings", "workspace identity"]
+tags:
+- Admin Portal
+- API Integration
+- Azure
+- Developer Settings
+- Entra ID
+- Identity Governance
+- Identity Management
+- Microsoft Fabric
+- News
+- Programmatic Management
+- REST API
+- Security
+- Tenant Admin
+- Tenant Settings
+- Workspace Identity
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog details how tenant admins can now manage the maximum number of Fabric identities, with options for custom limits and programmatic control. Authored by Microsoft Fabric Blog.<!--excerpt_end-->
 
 # Managing Fabric Identities Limits: Tenant Control and Governance

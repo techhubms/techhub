@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Building a Color Palette App Using GitHub Copilot SDK"
-description: "This video by GitHub showcases Cassidy Williams as she develops a dedicated color palette manager using the GitHub Copilot SDK. The demo covers the entire process from planning features to building and debugging the app, including AI-powered extraction of color codes from images."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/aGDQD3V5mvw"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/aGDQD3V5mvw
+title: Building a Color Palette App Using GitHub Copilot SDK
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-01-30 15:00:04 +00:00
-permalink: "/2026-01-30-Building-a-Color-Palette-App-Using-GitHub-Copilot-SDK.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Tools", "AI Development", "Application Development", "Cassidy Williams", "Coding", "Color Palette App", "Debugging", "GitHub", "GitHub Copilot", "GitHub Copilot SDK", "GitHubCopilotSDK", "Image Color Extraction", "Plan Mode", "SDK", "Software Engineering", "Videos"]
-tags_normalized: ["ai", "ai coding tools", "ai development", "application development", "cassidy williams", "coding", "color palette app", "debugging", "github", "github copilot", "github copilot sdk", "githubcopilotsdk", "image color extraction", "plan mode", "sdk", "software engineering", "videos"]
+tags:
+- AI
+- AI Coding Tools
+- AI Development
+- Application Development
+- Cassidy Williams
+- Coding
+- Color Palette App
+- Debugging
+- GitHub
+- GitHub Copilot
+- GitHub Copilot SDK
+- GitHubCopilotSDK
+- Image Color Extraction
+- Plan Mode
+- SDK
+- Software Engineering
+- Videos
+section_names:
+- ai
+- coding
+- github-copilot
 ---
-
 GitHub, with Cassidy Williams, demonstrates how to use the GitHub Copilot SDK and Plan Mode to rapidly build a color palette app, featuring AI-assisted coding and real-time debugging.<!--excerpt_end-->
 
 {% youtube aGDQD3V5mvw %}

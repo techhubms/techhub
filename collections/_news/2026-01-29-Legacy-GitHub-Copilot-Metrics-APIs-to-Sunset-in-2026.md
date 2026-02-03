@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Legacy GitHub Copilot Metrics APIs to Sunset in 2026"
-description: "GitHub is deprecating three legacy Copilot metrics APIs in favor of new, unified usage metrics endpoints. Developers and enterprise users are advised to transition to the latest APIs to benefit from enhanced data and avoid workflow disruptions. The notice details sunset dates and outlines changes in available metrics and endpoints."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-29-closing-down-notice-of-legacy-copilot-metrics-apis"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-29-closing-down-notice-of-legacy-copilot-metrics-apis
+title: Legacy GitHub Copilot Metrics APIs to Sunset in 2026
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-01-29 15:57:01 +00:00
-permalink: "/2026-01-29-Legacy-GitHub-Copilot-Metrics-APIs-to-Sunset-in-2026.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Account Management", "AI", "API Deprecation", "API Migration", "API Sunset", "Code Completion", "Copilot", "Copilot Metrics", "Developer Tooling", "Enterprise Management Tools", "Enterprise Tools", "GitHub Copilot", "IDE Telemetry", "Metrics API", "News", "Retired", "Usage Metrics", "User Adoption"]
-tags_normalized: ["account management", "ai", "api deprecation", "api migration", "api sunset", "code completion", "copilot", "copilot metrics", "developer tooling", "enterprise management tools", "enterprise tools", "github copilot", "ide telemetry", "metrics api", "news", "retired", "usage metrics", "user adoption"]
+tags:
+- Account Management
+- AI
+- API Deprecation
+- API Migration
+- API Sunset
+- Code Completion
+- Copilot
+- Copilot Metrics
+- Developer Tooling
+- Enterprise Management Tools
+- Enterprise Tools
+- GitHub Copilot
+- IDE Telemetry
+- Metrics API
+- News
+- Retired
+- Usage Metrics
+- User Adoption
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details the planned deprecation of legacy Copilot metrics APIs, urging developers and enterprise users to migrate to new usage metrics endpoints that offer deeper and more granular insights into Copilot adoption.<!--excerpt_end-->
 
 # Legacy GitHub Copilot Metrics APIs to Sunset in 2026

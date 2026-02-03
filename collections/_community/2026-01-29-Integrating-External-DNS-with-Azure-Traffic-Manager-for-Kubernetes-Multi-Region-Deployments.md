@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Integrating External DNS with Azure Traffic Manager for Kubernetes Multi-Region Deployments"
-description: "This article explores a proof-of-concept for integrating External DNS with Azure Traffic Manager to automate DNS-based global load balancing across Kubernetes clusters (AKS). It covers the architecture, example configurations, deployment steps, and practical use cases such as weighted routing, automatic failover, and blue-green deployments, providing actionable insights and resources."
-author: "samcogan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exploring-traffic-manager-integration-for-external-dns/ba-p/4485690"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exploring-traffic-manager-integration-for-external-dns/ba-p/4485690
+title: Integrating External DNS with Azure Traffic Manager for Kubernetes Multi-Region Deployments
+author: samcogan
+primary_section: coding
+feed_name: Microsoft Tech Community
 date: 2026-01-29 08:43:34 +00:00
-permalink: "/2026-01-29-Integrating-External-DNS-with-Azure-Traffic-Manager-for-Kubernetes-Multi-Region-Deployments.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["AKS", "Annotation Driven Configuration", "Azure", "Azure DNS", "Azure Traffic Manager", "Blue Green Deployment", "Cloud Native", "Coding", "Community", "DevOps", "Disaster Recovery", "DNS Automation", "External DNS", "Global Load Balancing", "Go SDK", "Health Checks", "Kubernetes", "Multi Region Deployment", "Network Architecture", "Webhook Provider", "Weighted Routing"]
-tags_normalized: ["aks", "annotation driven configuration", "azure", "azure dns", "azure traffic manager", "blue green deployment", "cloud native", "coding", "community", "devops", "disaster recovery", "dns automation", "external dns", "global load balancing", "go sdk", "health checks", "kubernetes", "multi region deployment", "network architecture", "webhook provider", "weighted routing"]
+tags:
+- AKS
+- Annotation Driven Configuration
+- Azure
+- Azure DNS
+- Azure Traffic Manager
+- Blue Green Deployment
+- Cloud Native
+- Coding
+- Community
+- DevOps
+- Disaster Recovery
+- DNS Automation
+- External DNS
+- Global Load Balancing
+- Go SDK
+- Health Checks
+- Kubernetes
+- Multi Region Deployment
+- Network Architecture
+- Webhook Provider
+- Weighted Routing
+section_names:
+- azure
+- coding
+- devops
 ---
-
 Sam Cogan presents a practical proof-of-concept for automating Azure Traffic Manager configuration using External DNS and Kubernetes, enabling multi-region DNS-based load balancing and streamlined deployment workflows.<!--excerpt_end-->
 
 # Integrating External DNS with Azure Traffic Manager for Kubernetes Multi-Region Deployments

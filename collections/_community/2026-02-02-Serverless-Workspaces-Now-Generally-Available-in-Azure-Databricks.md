@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Serverless Workspaces Now Generally Available in Azure Databricks"
-description: "This announcement covers the general availability of Serverless Workspaces in Azure Databricks, contrasting the features, benefits, and limitations of the Serverless and Classic workspace models. It highlights managed infrastructure, storage options, governance with Unity Catalog, and guidelines for choosing between workspace types according to organizational needs."
-author: "AnaviNahar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-generally-available-in-azure/ba-p/4491314"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-generally-available-in-azure/ba-p/4491314
+title: Serverless Workspaces Now Generally Available in Azure Databricks
+author: AnaviNahar
+primary_section: ml
+feed_name: Microsoft Tech Community
 date: 2026-02-02 17:15:00 +00:00
-permalink: "/2026-02-02-Serverless-Workspaces-Now-Generally-Available-in-Azure-Databricks.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Databricks", "Classic Workspaces", "Cluster Management", "Community", "Data Analytics", "Data Engineering", "Identity Federation", "Managed Storage", "ML", "Network Configuration", "Object Storage", "Resource Optimization", "Serverless Compute", "Serverless Workspaces", "Unity Catalog", "Workspace Governance"]
-tags_normalized: ["azure", "azure databricks", "classic workspaces", "cluster management", "community", "data analytics", "data engineering", "identity federation", "managed storage", "ml", "network configuration", "object storage", "resource optimization", "serverless compute", "serverless workspaces", "unity catalog", "workspace governance"]
+tags:
+- Azure
+- Azure Databricks
+- Classic Workspaces
+- Cluster Management
+- Community
+- Data Analytics
+- Data Engineering
+- Identity Federation
+- Managed Storage
+- ML
+- Network Configuration
+- Object Storage
+- Resource Optimization
+- Serverless Compute
+- Serverless Workspaces
+- Unity Catalog
+- Workspace Governance
+- Machine Learning
+section_names:
+- azure
+- ml
 ---
-
 AnaviNahar introduces the general availability of Serverless Workspaces in Azure Databricks, detailing their architecture and guidance for when to choose Serverless or Classic models.<!--excerpt_end-->
 
 # Serverless Workspaces Now Generally Available in Azure Databricks

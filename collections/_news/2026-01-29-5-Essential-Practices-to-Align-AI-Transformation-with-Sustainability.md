@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "5 Essential Practices to Align AI Transformation with Sustainability"
-description: "This article from Microsoft news explores how organizations can strategically align AI transformation efforts with sustainability goals. It introduces practical guidance, detailed examples, and research findings from Microsoft’s new Strategic Guide, focusing on cloud optimization, data management, workload efficiency, and responsible technology choices for measurable environmental and business outcomes."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/01/28/beyond-davos-2026-5-practices-to-align-ai-transformation-and-sustainability/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/01/28/beyond-davos-2026-5-practices-to-align-ai-transformation-and-sustainability/
+title: 5 Essential Practices to Align AI Transformation with Sustainability
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-01-29 20:50:13 +00:00
-permalink: "/2026-01-29-5-Essential-Practices-to-Align-AI-Transformation-with-Sustainability.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Platforms", "AI Transformation", "Azure", "Azure IoT Hub", "Azure OpenAI", "Cloud Strategy", "Company News", "Data Management", "Energy Efficiency", "Frontier Organizations", "Microsoft Azure", "Microsoft Foundry", "News", "Operational Resilience", "Responsible AI", "Strategic Guide", "Sustainability", "Sustainable Cloud"]
-tags_normalized: ["ai", "ai platforms", "ai transformation", "azure", "azure iot hub", "azure openai", "cloud strategy", "company news", "data management", "energy efficiency", "frontier organizations", "microsoft azure", "microsoft foundry", "news", "operational resilience", "responsible ai", "strategic guide", "sustainability", "sustainable cloud"]
+tags:
+- AI
+- AI Platforms
+- AI Transformation
+- Azure
+- Azure IoT Hub
+- Azure OpenAI
+- Cloud Strategy
+- Company News
+- Data Management
+- Energy Efficiency
+- Frontier Organizations
+- Microsoft Azure
+- Microsoft Foundry
+- News
+- Operational Resilience
+- Responsible AI
+- Strategic Guide
+- Sustainability
+- Sustainable Cloud
+section_names:
+- ai
+- azure
 ---
-
 stclarke presents practical strategies for aligning AI transformation with sustainability, drawing on Microsoft's new guide and real-world customer examples to illustrate actionable steps and results.<!--excerpt_end-->
 
 # 5 Essential Practices to Align AI Transformation with Sustainability

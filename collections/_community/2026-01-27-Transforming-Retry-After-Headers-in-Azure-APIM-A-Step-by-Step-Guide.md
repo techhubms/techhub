@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Transforming Retry-After Headers in Azure APIM: A Step-by-Step Guide"
-description: "This post offers hands-on guidance for customizing the Retry-After response header in Azure API Management (APIM) rate-limiting policies. It walks developers through using the on-error policy scope to output a timestamp as the header value, making APIs more user-friendly and flexible. Readers gain insight into rate-limiting, default APIM behaviors, and practical implementation strategies."
-author: "pratikpanda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transforming-retry-after-headers-in-azure-apim-a-step-by-step/ba-p/4489762"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transforming-retry-after-headers-in-azure-apim-a-step-by-step/ba-p/4489762
+title: 'Transforming Retry-After Headers in Azure APIM: A Step-by-Step Guide'
+author: pratikpanda
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-01-27 14:18:10 +00:00
-permalink: "/2026-01-27-Transforming-Retry-After-Headers-in-Azure-APIM-A-Step-by-Step-Guide.html"
-categories: ["Azure"]
-tags: ["API Gateway", "API Throttling", "APIM", "Azure", "Azure API Management", "Cloud Architecture", "Community", "DevOps Best Practices", "Error Handling", "Header Manipulation", "Microsoft Azure", "On Error Policy", "Policy Customization", "Rate Limit Policy", "Rate Limiting", "REST API", "Retry After Header"]
-tags_normalized: ["api gateway", "api throttling", "apim", "azure", "azure api management", "cloud architecture", "community", "devops best practices", "error handling", "header manipulation", "microsoft azure", "on error policy", "policy customization", "rate limit policy", "rate limiting", "rest api", "retry after header"]
+tags:
+- API Gateway
+- API Throttling
+- APIM
+- Azure
+- Azure API Management
+- Cloud Architecture
+- Community
+- DevOps Best Practices
+- Error Handling
+- Header Manipulation
+- Microsoft Azure
+- On Error Policy
+- Policy Customization
+- Rate Limit Policy
+- Rate Limiting
+- REST API
+- Retry After Header
+section_names:
+- azure
 ---
-
 pratikpanda shares how to override the Retry-After response header in Azure API Management's rate-limiting policies, giving developers practical steps to improve client experience and meet custom requirements.<!--excerpt_end-->
 
 # Transforming Retry-After Headers in Azure APIM: A Step-by-Step Guide

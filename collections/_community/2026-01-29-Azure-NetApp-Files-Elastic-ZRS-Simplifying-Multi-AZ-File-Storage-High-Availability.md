@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure NetApp Files Elastic ZRS: Simplifying Multi-AZ File Storage High Availability"
-description: "This article by GeertVanTeylingen introduces Azure NetApp Files Elastic ZRS, a new service level for Azure NetApp Files that delivers high availability and seamless zone-redundant storage. It explains how Elastic ZRS provides synchronous replication across Azure Availability Zones with minimal complexity, ensuring zero data loss and high uptime for critical workloads such as SAP, financial platforms, and Kubernetes applications. Readers will learn about its architecture, operational benefits, use cases, and steps to enable the service."
-author: "GeertVanTeylingen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-netapp-files-elastic-zrs-service-level-file-storage-high/ba-p/4484235"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-netapp-files-elastic-zrs-service-level-file-storage-high/ba-p/4484235
+title: 'Azure NetApp Files Elastic ZRS: Simplifying Multi-AZ File Storage High Availability'
+author: GeertVanTeylingen
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-01-29 17:55:00 +00:00
-permalink: "/2026-01-29-Azure-NetApp-Files-Elastic-ZRS-Simplifying-Multi-AZ-File-Storage-High-Availability.html"
-categories: ["Azure"]
-tags: ["Availability Zones", "Azure", "Azure Architecture", "Azure NetApp Files", "Cloud Storage", "Community", "Compliance", "Data Protection", "Disaster Recovery", "Elastic ZRS", "Enterprise Storage", "File Shares", "High Availability", "Kubernetes", "NFS", "Performance Optimization", "SAP", "Shared QoS", "SMB", "Synchronous Replication", "Zone Redundant Storage"]
-tags_normalized: ["availability zones", "azure", "azure architecture", "azure netapp files", "cloud storage", "community", "compliance", "data protection", "disaster recovery", "elastic zrs", "enterprise storage", "file shares", "high availability", "kubernetes", "nfs", "performance optimization", "sap", "shared qos", "smb", "synchronous replication", "zone redundant storage"]
+tags:
+- Availability Zones
+- Azure
+- Azure Architecture
+- Azure NetApp Files
+- Cloud Storage
+- Community
+- Compliance
+- Data Protection
+- Disaster Recovery
+- Elastic ZRS
+- Enterprise Storage
+- File Shares
+- High Availability
+- Kubernetes
+- NFS
+- Performance Optimization
+- SAP
+- Shared QoS
+- SMB
+- Synchronous Replication
+- Zone Redundant Storage
+section_names:
+- azure
 ---
-
 GeertVanTeylingen details how Azure NetApp Files Elastic ZRS enables resilient, highly available cloud file storage through automated synchronous replication and transparent failover across Azure Availability Zones.<!--excerpt_end-->
 
 # Azure NetApp Files Elastic ZRS: File Storage High Availability Made Easy

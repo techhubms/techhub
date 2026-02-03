@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Unlock Real-Time Insights from SAP with Fabric Real-Time Intelligence"
-description: "This article explores how Microsoft Fabric Real-Time Intelligence (RTI) enables organizations to build scalable, real-time analytics on SAP data. It details integration with SAP Datasphere, implementation reference architecture, cost considerations, and the benefits for AI-driven decision-making and operational efficiency."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-insights-from-sap-with-fabric-real-time-intelligence/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-insights-from-sap-with-fabric-real-time-intelligence/
+title: Unlock Real-Time Insights from SAP with Fabric Real-Time Intelligence
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-02 10:00:00 +00:00
-permalink: "/2026-02-02-Unlock-Real-Time-Insights-from-SAP-with-Fabric-Real-Time-Intelligence.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "Azure", "Business Intelligence", "Dashboards", "Data Ingestion", "Eventstream", "Fabric Real Time Intelligence", "Integration Platform", "Kafka", "Low Code", "Microsoft Fabric", "ML", "News", "Operational Data", "Real Time Analytics", "Real Time Decision Making", "SAP Datasphere", "SAP Integration"]
-tags_normalized: ["ai", "ai agents", "azure", "business intelligence", "dashboards", "data ingestion", "eventstream", "fabric real time intelligence", "integration platform", "kafka", "low code", "microsoft fabric", "ml", "news", "operational data", "real time analytics", "real time decision making", "sap datasphere", "sap integration"]
+tags:
+- AI
+- AI Agents
+- Azure
+- Business Intelligence
+- Dashboards
+- Data Ingestion
+- Eventstream
+- Fabric Real Time Intelligence
+- Integration Platform
+- Kafka
+- Low Code
+- Microsoft Fabric
+- ML
+- News
+- Operational Data
+- Real Time Analytics
+- Real Time Decision Making
+- SAP Datasphere
+- SAP Integration
+- Machine Learning
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog, authored by Kevin Lam and Xu Jiang, outlines how Fabric Real-Time Intelligence empowers organizations to gain immediate insights from SAP data, streamlining analytics for superior AI-driven business outcomes.<!--excerpt_end-->
 
 # Unlock Real-Time Insights from SAP with Fabric Real-Time Intelligence

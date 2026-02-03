@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "WebAssembly Adoption Accelerates with Microsoft .NET 10 and Uno Platform Collaboration"
-description: "This article explores the rising adoption of WebAssembly (Wasm) in both web and server scenarios, highlighting its integration with .NET 10 and the Uno Platform as well as advancements in browser support, language compatibility, and cross-platform deployment. Microsoft technologies are featured in the context of AOT compilation, cross-platform solutions, and ongoing development to enable Wasm multi-threading."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/28/webassembly-gaining-adoption-behind-the-scenes-as-technology-advances/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://devclass.com/2026/01/28/webassembly-gaining-adoption-behind-the-scenes-as-technology-advances/
+title: WebAssembly Adoption Accelerates with Microsoft .NET 10 and Uno Platform Collaboration
+author: Tim Anderson
+primary_section: coding
+feed_name: DevClass
 date: 2026-01-28 08:44:04 +00:00
-permalink: "/2026-01-28-WebAssembly-Adoption-Accelerates-with-Microsoft-NET-10-and-Uno-Platform-Collaboration.html"
-categories: ["Coding"]
-tags: [".NET 10", "AOT Compilation", "Blogs", "Coding", "Cross Browser Support", "Dart", "Deno", "Development", "Edge Computing", "Embedded Devices", "Java", "Kotlin", "Microsoft", "Multi Threading", "Node.js", "OCami", "OCaml", "Scala", "Scheme", "Server Runtimes", "Uno Platform", "Wasm", "Wasmtime", "WebAssembly"]
-tags_normalized: ["dotnet 10", "aot compilation", "blogs", "coding", "cross browser support", "dart", "deno", "development", "edge computing", "embedded devices", "java", "kotlin", "microsoft", "multi threading", "nodedotjs", "ocami", "ocaml", "scala", "scheme", "server runtimes", "uno platform", "wasm", "wasmtime", "webassembly"]
+tags:
+- .NET 10
+- AOT Compilation
+- Blogs
+- Coding
+- Cross Browser Support
+- Dart
+- Deno
+- Development
+- Edge Computing
+- Embedded Devices
+- Java
+- Kotlin
+- Microsoft
+- Multi Threading
+- Node.js
+- OCami
+- OCaml
+- Scala
+- Scheme
+- Server Runtimes
+- Uno Platform
+- Wasm
+- Wasmtime
+- WebAssembly
+section_names:
+- coding
 ---
-
 Tim Anderson summarizes Gerard Gallant’s WebAssembly adoption report, examining how .NET 10, Uno Platform, and recent browser innovations expand WebAssembly’s reach for developers.<!--excerpt_end-->
 
 # WebAssembly Adoption Accelerates with Microsoft .NET 10 and Uno Platform Collaboration

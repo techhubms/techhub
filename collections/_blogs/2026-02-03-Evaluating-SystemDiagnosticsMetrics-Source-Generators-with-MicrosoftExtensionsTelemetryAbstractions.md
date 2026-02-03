@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Evaluating System.Diagnostics.Metrics Source Generators with Microsoft.Extensions.Telemetry.Abstractions"
-description: "This post by Andrew Lock explores the use of source generators in the Microsoft.Extensions.Telemetry.Abstractions package for the System.Diagnostics.Metrics APIs in .NET 6+. It provides a hands-on walkthrough, compares manual and generated code, explains implementation details, and offers critical insights into usability, performance, and limitations of the current approach."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/creating-strongly-typed-metics-with-a-source-generator/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/creating-strongly-typed-metics-with-a-source-generator/
+title: Evaluating System.Diagnostics.Metrics Source Generators with Microsoft.Extensions.Telemetry.Abstractions
+author: Andrew Lock
+primary_section: coding
+feed_name: Andrew Lock's Blog
 date: 2026-02-03 10:00:00 +00:00
-permalink: "/2026-02-03-Evaluating-SystemDiagnosticsMetrics-Source-Generators-with-MicrosoftExtensionsTelemetryAbstractions.html"
-categories: ["Coding"]
-tags: [".NET 6", ".NET Core", "Blogs", "Boilerplate Reduction", "C#", "Coding", "Counter", "Instrumentation", "Meter", "Metrics", "Microsoft.Extensions.Telemetry.Abstractions", "Observability", "OpenTelemetry", "Performance", "Source Generators", "Strongly Typed Tags", "System.Diagnostics.Metrics"]
-tags_normalized: ["dotnet 6", "dotnet core", "blogs", "boilerplate reduction", "csharp", "coding", "counter", "instrumentation", "meter", "metrics", "microsoftdotextensionsdottelemetrydotabstractions", "observability", "opentelemetry", "performance", "source generators", "strongly typed tags", "systemdotdiagnosticsdotmetrics"]
+tags:
+- .NET 6
+- .NET Core
+- Blogs
+- Boilerplate Reduction
+- C#
+- Coding
+- Counter
+- Instrumentation
+- Meter
+- Metrics
+- Microsoft.Extensions.Telemetry.Abstractions
+- Observability
+- OpenTelemetry
+- Performance
+- Source Generators
+- Strongly Typed Tags
+- System.Diagnostics.Metrics
+section_names:
+- coding
 ---
-
 Andrew Lock dives into the System.Diagnostics.Metrics source generators in Microsoft.Extensions.Telemetry.Abstractions, examining their implementation, generated code, and practical value for .NET developers.<!--excerpt_end-->
 
 # Evaluating System.Diagnostics.Metrics Source Generators with Microsoft.Extensions.Telemetry.Abstractions

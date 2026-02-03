@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "CodeQL 2.24.0 Adds .NET 10 and Swift 6.2 Support, Enhances Security Analysis"
-description: "This release note details enhancements in CodeQL 2.24.0, the static analysis engine behind GitHub code scanning, with a focus on new language support (including .NET 10/C# 14), improved security queries, expanded framework compatibility, and refined analysis across multiple ecosystems. The update introduces support for the latest .NET, C#, and popular frameworks, as well as new and improved queries critical to secure software development."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-29-codeql-2-24-0-adds-swift-6-2-support-net-10-compatibility-and-file-handling-for-minified-javascript"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-29-codeql-2-24-0-adds-swift-6-2-support-net-10-compatibility-and-file-handling-for-minified-javascript
+title: CodeQL 2.24.0 Adds .NET 10 and Swift 6.2 Support, Enhances Security Analysis
+author: Allison
+primary_section: coding
+feed_name: The GitHub Blog
 date: 2026-01-29 23:17:01 +00:00
-permalink: "/2026-01-29-CodeQL-2240-Adds-NET-10-and-Swift-62-Support-Enhances-Security-Analysis.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: [".NET 10", "Application Security", "ASP.NET Core", "C# 14", "CI/CD", "Code Scanning", "CodeQL", "Coding", "DevOps", "DevOps Tools", "GitHub", "Improvement", "News", "NHibernate", "Query Models", "Security", "Software Quality", "Static Analysis", "Taint Tracking", "Vulnerability Detection"]
-tags_normalized: ["dotnet 10", "application security", "aspdotnet core", "csharp 14", "cislashcd", "code scanning", "codeql", "coding", "devops", "devops tools", "github", "improvement", "news", "nhibernate", "query models", "security", "software quality", "static analysis", "taint tracking", "vulnerability detection"]
+tags:
+- .NET 10
+- Application Security
+- ASP.NET Core
+- C# 14
+- CI/CD
+- Code Scanning
+- CodeQL
+- Coding
+- DevOps
+- DevOps Tools
+- GitHub
+- Improvement
+- News
+- NHibernate
+- Query Models
+- Security
+- Software Quality
+- Static Analysis
+- Taint Tracking
+- Vulnerability Detection
+section_names:
+- coding
+- devops
+- security
 ---
-
 Allison introduces the CodeQL 2.24.0 release, highlighting improved security analysis, expanded language support including .NET 10 and C# 14, and new features beneficial to developers and DevOps teams.<!--excerpt_end-->
 
 # CodeQL 2.24.0 Adds .NET 10 and Swift 6.2 Support, Enhances Security Analysis

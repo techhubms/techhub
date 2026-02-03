@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Application Performance Optimisation in .NET: Practical Techniques and Tools"
-description: "This blog post by Steve Gordon presents a detailed look at practical performance optimisation techniques for .NET applications. It covers the full lifecycle of performance tuning, from identifying bottlenecks to using profiling and benchmarking tools. Developers will learn actionable strategies for improving ASP.NET Core applications and making informed optimisation decisions."
-author: "Steve Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.stevejgordon.co.uk/talk-application-performance-optimisation-in-practice-60-mins"
-viewing_mode: "external"
-feed_name: "Steve Gordon's Blog"
-feed_url: "https://www.stevejgordon.co.uk/feed"
+﻿---
+external_url: https://www.stevejgordon.co.uk/talk-application-performance-optimisation-in-practice-60-mins
+title: 'Application Performance Optimisation in .NET: Practical Techniques and Tools'
+author: Steve Gordon
+primary_section: coding
+feed_name: Steve Gordon's Blog
 date: 2026-01-27 16:31:56 +00:00
-permalink: "/2026-01-27-Application-Performance-Optimisation-in-NET-Practical-Techniques-and-Tools.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET Core", "BenchmarkDotNet", "Benchmarking", "Best Practices", "Blogs", "Code Optimisation", "Coding", "Dotmemory", "Dottrace", "Memory Management", "Monitoring", "Performance Optimisation", "Profiling", "Software Engineering"]
-tags_normalized: ["dotnet", "aspdotnet core", "benchmarkdotnet", "benchmarking", "best practices", "blogs", "code optimisation", "coding", "dotmemory", "dottrace", "memory management", "monitoring", "performance optimisation", "profiling", "software engineering"]
+tags:
+- .NET
+- ASP.NET Core
+- BenchmarkDotNet
+- Benchmarking
+- Best Practices
+- Blogs
+- Code Optimisation
+- Coding
+- Dotmemory
+- Dottrace
+- Memory Management
+- Monitoring
+- Performance Optimisation
+- Profiling
+- Software Engineering
+section_names:
+- coding
 ---
-
 Steve Gordon offers practical advice for optimising .NET application performance, providing developers with actionable strategies, tool guidance, and real-world examples.<!--excerpt_end-->
 
 # Application Performance Optimisation in .NET: Practical Techniques and Tools

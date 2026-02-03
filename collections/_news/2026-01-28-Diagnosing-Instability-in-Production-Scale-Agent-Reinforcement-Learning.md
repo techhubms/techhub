@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Diagnosing Instability in Production-Scale Agent Reinforcement Learning"
-description: "This in-depth article, authored by Aditya Challapally for Engineering@Microsoft, explores a failure mode in agent reinforcement learning systems: late-phase instability in long-running, tool-using RL pipelines. The post introduces diagnostics and monitoring approaches—upstreamed into the open-source Post-Training Toolkit, developed by Microsoft—to facilitate detection and resolution of hidden agent pathologies. It includes theory, empirical evidence, and implementation specifics relevant to ML engineering and production AI reliability."
-author: "Aditya Challapally"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/engineering-at-microsoft/diagnosing-instability-in-production-scale-agent-rl/"
-viewing_mode: "external"
-feed_name: "Microsoft Engineering Blog"
-feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/engineering-at-microsoft/diagnosing-instability-in-production-scale-agent-rl/
+title: Diagnosing Instability in Production-Scale Agent Reinforcement Learning
+author: Aditya Challapally
+primary_section: ai
+feed_name: Microsoft Engineering Blog
 date: 2026-01-28 18:07:38 +00:00
-permalink: "/2026-01-28-Diagnosing-Instability-in-Production-Scale-Agent-Reinforcement-Learning.html"
-categories: ["AI", "ML"]
-tags: ["Agent Systems", "AI", "AI Reliability", "Diagnostic Tools", "Diagnostics", "Distributed Training", "Effective Sample Size", "Engineering@Microsoft", "Failure Modes", "Hugging Face", "Importance Weighting", "Machine Learning", "Microsoft", "ML", "News", "On Policy Methods", "Post Training Toolkit", "Production AI", "Reinforcement Learning", "RL Monitoring", "Tool Augmented Agents", "TRL", "Variance Amplification"]
-tags_normalized: ["agent systems", "ai", "ai reliability", "diagnostic tools", "diagnostics", "distributed training", "effective sample size", "engineeringatmicrosoft", "failure modes", "hugging face", "importance weighting", "machine learning", "microsoft", "ml", "news", "on policy methods", "post training toolkit", "production ai", "reinforcement learning", "rl monitoring", "tool augmented agents", "trl", "variance amplification"]
+tags:
+- Agent Systems
+- AI
+- AI Reliability
+- Diagnostic Tools
+- Diagnostics
+- Distributed Training
+- Effective Sample Size
+- Engineering@Microsoft
+- Failure Modes
+- Hugging Face
+- Importance Weighting
+- Machine Learning
+- Microsoft
+- ML
+- News
+- On Policy Methods
+- Post Training Toolkit
+- Production AI
+- Reinforcement Learning
+- RL Monitoring
+- Tool Augmented Agents
+- TRL
+- Variance Amplification
+section_names:
+- ai
+- ml
 ---
-
 Aditya Challapally of Engineering@Microsoft explains new diagnostics and a Post-Training Toolkit for exposing and addressing subtle failure modes in production-scale agent reinforcement learning, providing actionable insight for ML practitioners.<!--excerpt_end-->
 
 # Diagnosing Instability in Production-Scale Agent Reinforcement Learning

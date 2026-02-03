@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Introducing Data Series Colors: Enhanced Visualization Control in Real-Time Dashboards"
-description: "This news article from the Microsoft Fabric Blog introduces the Data Series Colors feature for Real-Time Dashboards, enabling dashboard authors to assign and customize colors for each data series in various visualizations. The update provides greater clarity, consistency, and control for operational and reporting scenarios, improving how stories and insights are visually communicated within dashboards."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/32713/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/32713/
+title: 'Introducing Data Series Colors: Enhanced Visualization Control in Real-Time Dashboards'
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-02 11:00:00 +00:00
-permalink: "/2026-02-02-Introducing-Data-Series-Colors-Enhanced-Visualization-Control-in-Real-Time-Dashboards.html"
-categories: ["ML"]
-tags: ["Bar Chart", "Chart Customization", "Color Assignment", "Dashboard Customization", "Data Series Colors", "Data Storytelling", "Data Visualization", "Microsoft Fabric", "ML", "News", "Operational Reporting", "Pie Chart", "Real Time Dashboards", "Time Series Analysis"]
-tags_normalized: ["bar chart", "chart customization", "color assignment", "dashboard customization", "data series colors", "data storytelling", "data visualization", "microsoft fabric", "ml", "news", "operational reporting", "pie chart", "real time dashboards", "time series analysis"]
+tags:
+- Bar Chart
+- Chart Customization
+- Color Assignment
+- Dashboard Customization
+- Data Series Colors
+- Data Storytelling
+- Data Visualization
+- Microsoft Fabric
+- ML
+- News
+- Operational Reporting
+- Pie Chart
+- Real Time Dashboards
+- Time Series Analysis
+- Machine Learning
+section_names:
+- ml
 ---
-
 Microsoft Fabric Blog announces the general availability of Data Series Colors for Real-Time Dashboards, empowering authors to assign unique colors for each data series and enhance operational reporting clarity.<!--excerpt_end-->
 
 # Introducing Data Series Colors: tell clearer stories with Real-Time Dashboards (Generally Available)

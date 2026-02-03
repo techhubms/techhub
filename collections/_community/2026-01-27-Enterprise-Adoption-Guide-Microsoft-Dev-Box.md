@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Enterprise Adoption Guide: Microsoft Dev Box"
-description: "This comprehensive guide, written for Platform Engineering, Cloud Architects, Security Teams, and Developer Leads, presents a practical approach to planning, implementing, and scaling Microsoft Dev Box across enterprise environments. The guide offers best practices, actionable strategies, and lessons learned to help teams streamline developer onboarding, environment consistency, governance, and security when adopting Microsoft Dev Box. Key topics include architecture decisions, phased rollout, security, automation, cost management, anti-patterns, common friction points, and strategies to maximize value and minimize risk."
-author: "sauravtyagi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-adoption-guide-microsoft-dev-box/ba-p/4485682"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-adoption-guide-microsoft-dev-box/ba-p/4485682
+title: 'Enterprise Adoption Guide: Microsoft Dev Box'
+author: sauravtyagi
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-01-27 16:18:09 +00:00
-permalink: "/2026-01-27-Enterprise-Adoption-Guide-Microsoft-Dev-Box.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Cloud Workstation", "Community", "Conditional Access", "Cost Management", "Developer Experience", "Developer Platform", "DevOps", "Enterprise Onboarding", "Governance", "Image Management", "Intune", "Microsoft Dev Box", "Microsoft Entra ID", "Operational Best Practices", "Platform Engineering", "Security", "VNET Integration", "Zero Trust Security"]
-tags_normalized: ["azure", "cloud workstation", "community", "conditional access", "cost management", "developer experience", "developer platform", "devops", "enterprise onboarding", "governance", "image management", "intune", "microsoft dev box", "microsoft entra id", "operational best practices", "platform engineering", "security", "vnet integration", "zero trust security"]
+tags:
+- Azure
+- Cloud Workstation
+- Community
+- Conditional Access
+- Cost Management
+- Developer Experience
+- Developer Platform
+- DevOps
+- Enterprise Onboarding
+- Governance
+- Image Management
+- Intune
+- Microsoft Dev Box
+- Microsoft Entra ID
+- Operational Best Practices
+- Platform Engineering
+- Security
+- VNET Integration
+- Zero Trust Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 sauravtyagi delivers an in-depth, actionable guide on successfully adopting Microsoft Dev Box in enterprise contexts, detailing strategies for architecture, security, operational rollout, and maximizing ROI for development teams.<!--excerpt_end-->
 
 # Enterprise Adoption Guide: Microsoft Dev Box

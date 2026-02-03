@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Deprecation of GitHub Dependabot Pull Request Comment Commands"
-description: "This news update details the deprecation of several Dependabot-specific pull request comment commands on GitHub, highlighting the shift toward using GitHub’s native pull request features for improved reliability and workflow clarity. The article provides migration guidance for affected users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-27-changes-to-github-dependabot-pull-request-comment-commands"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-27-changes-to-github-dependabot-pull-request-comment-commands
+title: Deprecation of GitHub Dependabot Pull Request Comment Commands
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-01-27 19:35:52 +00:00
-permalink: "/2026-01-27-Deprecation-of-GitHub-Dependabot-Pull-Request-Comment-Commands.html"
-categories: ["DevOps"]
-tags: ["Automation", "Comment Commands", "Dependabot", "Deprecation", "DevOps", "GitHub", "GitHub CLI", "News", "Pull Requests", "REST API", "Retired", "Supply Chain Security", "Workflow Migration"]
-tags_normalized: ["automation", "comment commands", "dependabot", "deprecation", "devops", "github", "github cli", "news", "pull requests", "rest api", "retired", "supply chain security", "workflow migration"]
+tags:
+- Automation
+- Comment Commands
+- Dependabot
+- Deprecation
+- DevOps
+- GitHub
+- GitHub CLI
+- News
+- Pull Requests
+- REST API
+- Retired
+- Supply Chain Security
+- Workflow Migration
+section_names:
+- devops
 ---
-
 Allison announces the deprecation of specific Dependabot pull request comment commands, guiding users to adopt GitHub’s native pull request features for workflow management.<!--excerpt_end-->
 
 # Deprecation of GitHub Dependabot Pull Request Comment Commands

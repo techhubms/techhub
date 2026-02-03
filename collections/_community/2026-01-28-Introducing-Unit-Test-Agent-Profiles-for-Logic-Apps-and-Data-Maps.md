@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Introducing Unit Test Agent Profiles for Logic Apps & Data Maps"
-description: "This post introduces specialized agent profiles leveraging GitHub Copilot custom agents to streamline test authoring for Azure Logic Apps Standard workflows and Data Maps. It showcases a modular approach centered on discovery, reusable specifications, mock data generation, MSTest implementation, and batch operations for enterprise integration projects on Azure."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-unit-test-agent-profiles-for-logic-apps-data-maps/ba-p/4490216"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-unit-test-agent-profiles-for-logic-apps-data-maps/ba-p/4490216
+title: Introducing Unit Test Agent Profiles for Logic Apps & Data Maps
+author: WSilveira
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-01-28 23:33:34 +00:00
-permalink: "/2026-01-28-Introducing-Unit-Test-Agent-Profiles-for-Logic-Apps-and-Data-Maps.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "Automated Test SDK", "Azure", "Azure DevOps", "Azure Logic Apps", "Coding", "Community", "Continuous Integration", "Custom Agents", "Data Map Testing", "DevOps", "Integration Testing", "LML", "Mock Data", "MSTest", "Scenario Design", "SDK Constraints", "Spec First Testing", "Speckit", "Test Automation", "Unit Testing", "Workflow Automation", "Workflow Discovery", "XSLT"]
-tags_normalized: ["ai", "automated test sdk", "azure", "azure devops", "azure logic apps", "coding", "community", "continuous integration", "custom agents", "data map testing", "devops", "integration testing", "lml", "mock data", "mstest", "scenario design", "sdk constraints", "spec first testing", "speckit", "test automation", "unit testing", "workflow automation", "workflow discovery", "xslt"]
+tags:
+- AI
+- Automated Test SDK
+- Azure
+- Azure DevOps
+- Azure Logic Apps
+- Coding
+- Community
+- Continuous Integration
+- Custom Agents
+- Data Map Testing
+- DevOps
+- Integration Testing
+- LML
+- Mock Data
+- MSTest
+- Scenario Design
+- SDK Constraints
+- Spec First Testing
+- Speckit
+- Test Automation
+- Unit Testing
+- Workflow Automation
+- Workflow Discovery
+- XSLT
+section_names:
+- ai
+- azure
+- coding
+- devops
 ---
-
 WSilveira shares how GitHub Copilot custom agents can automate and standardize unit testing for Azure Logic Apps and Data Maps, emphasizing reusable specs, automated mock generation, and robust MSTest implementations.<!--excerpt_end-->
 
 # Introducing Unit Test Agent Profiles for Logic Apps & Data Maps
