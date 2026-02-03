@@ -24958,5 +24958,11 @@
     "timestamp": "2026-02-03 15:17:02 +00:00",
     "reason": "Succesfully added: Categories assigned: DevOps (the content heavily focuses on Kubernetes operations, observability tooling, continuous monitoring, and SRE use cases—aligns with DevOps category inclusion rules 1, 3, 5, 7, 9), Azure (significant detail on Azure Monitor, Log Analytics, AKS compatibility, Azure integrations—aligns with Azure inclusion rule 1, 4), Security (directly addresses security auditing, compliance, incident investigation, flow logging—aligns with Security inclusion rules 2, 3, 5, 7, 9). Did not assign ML or AI: content does not address analytics/ML pipelines or Microsoft AI services. Did not assign Coding: no code-level developer framework or programming guidance included. Generic exclusions not triggered—the content is in English, technical, substantive, well over community content length threshold, and is not biographical, promotional in nature, nor business/strategy exclusive.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-02-03 17:19:16 +00:00",
+    "canonical_url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
+    "reason": "Succesfully added: Assigned 'AI' because the content discusses how AI is changing language choice and developer workflows on GitHub, highlights Python's dominance in AI projects, and references the rapid adoption of AI in mainstream development (AI rule 4, 5). Assigned 'Coding' since the analysis is deeply focused on programming languages (TypeScript, Python), coding best practices (types, CI/CD), and the evolution of software development approaches (Coding rules 1, 2, 4). Did not assign other categories (e.g., Azure, DevOps) because, while related topics like CI/CD and developer tooling are mentioned, there is no substantive discussion of Microsoft-specific platforms or tooling that would trigger their inclusion.",
+    "collection": "news"
   }
 ]

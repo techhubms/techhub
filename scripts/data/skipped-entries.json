@@ -11679,5 +11679,17 @@
     "reason": "No categories found: This community content is primarily a help-seeking, question-only post in which the author describes being locked out of the Azure Portal and requests assistance regaining access to their account. According to the Generic Exclusion Rules in Chapter 3, 'Question-Only Content'—posts seeking help without providing substantive solutions or technical walkthroughs—must be excluded. The content does not provide technical guidance, solutions, or architectural insights, and consists mainly of the author's frustration and a request for help. Therefore, no categories are assigned.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/urgent-locked-out-of-azure-portal-github-login-loop/m-p/4491668#M22424",
     "timestamp": "2026-02-03 03:49:34 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=4rE2B4efne0",
+    "timestamp": "2026-02-03 16:16:18 +00:00",
+    "reason": "No categories found: No categories are assigned because the content is an event highlights video, focusing primarily on keynote speeches and activations at the Microsoft AI Tour in New York City. The description emphasizes event atmosphere, business empowerment, and general AI excitement without providing substantial technical implementation details, tutorials, or developer-oriented content. According to the generic exclusion rules (business strategy/executive content, event summaries without technical depth), the content does not meet the threshold for inclusion in any predefined technical categories."
+  },
+  {
+    "timestamp": "2026-02-03 17:19:47 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/P_gizaPKgPY",
+    "reason": "No categories found: No categories assigned because the content is primarily a conceptual discussion about programming language adoption and AI rather than a technical implementation, tutorial, or development-focused piece. The description, title, and available information do not provide any substantive details about Microsoft technologies, services, or developmental practices per the inclusion rules. There is no mention of Microsoft AI products, coding guidance using Microsoft tools, or technical depth regarding Microsoft ecosystem integration (see AI, Coding, and Generic Inclusion rules). Furthermore, the content is missing its main body ('content': null), so there is insufficient information to extract any technical value that fits platform requirements.",
+    "collection": "videos"
   }
 ]
