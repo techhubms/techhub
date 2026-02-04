@@ -25162,5 +25162,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/azure-automated-virtual-machine-recovery-minimizing-downtime/ba-p/4483166",
     "reason": "Succesfully added: Assigned the 'Azure' category because the content explains an Azure Compute feature (Azure Automated VM Recovery) focused on Azure Virtual Machines, fulfilling Azure inclusion rules 1 and 4. There is no coverage of AI, GitHub Copilot, Coding (no software/code samples or development frameworks), DevOps (not discussing CI/CD, developer experience, or automation beyond VM management), ML, or Security. The content is technical, not biographical, sales, or negative, and is primarily in English and long enough for community content. No generic exclusion rules apply.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-02-04 21:09:04 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-february/",
+    "reason": "Succesfully added: The AI category is assigned due to the focus on AI agent workflows and MCP (AI rule 1). GitHub Copilot is directly covered, qualifying for both the GitHub Copilot and AI categories together (per AI rule 2 and Copilot product distinction). Coding is included because the content is about enhancing development workflows and developer tooling within Visual Studio (Coding rule 5). The content is technical, not a sales pitch, career advice, or business productivity focus, so no generic exclusions apply.",
+    "collection": "news"
   }
 ]
