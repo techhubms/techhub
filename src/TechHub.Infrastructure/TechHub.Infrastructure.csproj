@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <InternalsVisibleTo Include="TechHub.Infrastructure.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="Markdig" Version="0.44.0" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.2" />

@@ -40,8 +40,10 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
         var hasTags = request.Tags != null && request.Tags.Count > 0;
-        var hasSections = request.Sections != null && request.Sections.Count > 0;
-        var hasCollections = request.Collections != null && request.Collections.Count > 0;
+        var hasSections = request.Sections != null && request.Sections.Count > 0 && 
+                          !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase));
+        var hasCollections = request.Collections != null && request.Collections.Count > 0 && 
+                             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase));
 
         // OPTIMIZATION: When filtering by tags, pre-filter using tags table
         // This reduces FTS search from 4000+ items to potentially just 10-20
@@ -64,7 +66,14 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
             WHERE (c.collection_name, c.slug) IN (
                 {tagsQuery}
             )
-            AND c.draft = 0");
+            AND c.draft = {(request.IncludeDraft ? "0 OR c.draft = 1" : "0")}");
+
+            if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+                !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                sql.Append(" AND c.subcollection_name = @subcollection");
+                parameters.Add("subcollection", request.Subcollection);
+            }
 
             if (hasQuery)
             {
@@ -74,6 +83,9 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
             }
 
             sql.Append(hasQuery ? " ORDER BY bm25(content_fts)" : " ORDER BY c.date_epoch DESC");
+            sql.Append(" LIMIT @take OFFSET @skip");
+            parameters.Add("take", request.Take);
+            parameters.Add("skip", request.Skip);
         }
         else
         {
@@ -89,7 +101,12 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
             }
 
             // Build WHERE clause
-            var whereClauses = new List<string> { "c.draft = 0" };
+            var whereClauses = new List<string>();
+
+            if (!request.IncludeDraft)
+            {
+                whereClauses.Add("c.draft = 0");
+            }
 
             if (hasQuery)
             {
@@ -112,6 +129,13 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
                 parameters.Add("collections", request.Collections!.Select(c => c.ToLowerInvariant().Trim()).ToList());
             }
 
+            if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+                !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                whereClauses.Add("c.subcollection_name = @subcollection");
+                parameters.Add("subcollection", request.Subcollection);
+            }
+
             if (request.DateFrom.HasValue)
             {
                 whereClauses.Add("c.date_epoch >= @fromDate");
@@ -126,8 +150,9 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
             sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
             sql.Append(hasQuery ? " ORDER BY bm25(content_fts)" : " ORDER BY c.date_epoch DESC");
-            sql.Append(" LIMIT @take");
+            sql.Append(" LIMIT @take OFFSET @skip");
             parameters.Add("take", request.Take);
+            parameters.Add("skip", request.Skip);
         }
 
         // Get items and count in a single round-trip
@@ -143,15 +168,14 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
         FacetResults? facets = null;
         if (request.IncludeFacets)
         {
-            facets = await GetFacetsAsync(new FacetRequest
-            {
-                Tags = request.Tags,
-                Sections = request.Sections,
-                Collections = request.Collections,
-                DateFrom = request.DateFrom,
-                DateTo = request.DateTo,
-                FacetFields = ["tags", "collections", "sections"]
-            }, ct);
+            facets = await GetFacetsAsync(new FacetRequest(
+                facetFields: ["tags", "collections", "sections"],
+                tags: request.Tags,
+                sections: request.Sections,
+                collections: request.Collections,
+                dateFrom: request.DateFrom,
+                dateTo: request.DateTo
+            ), ct);
         }
 
         return new SearchResults<ContentItem>
@@ -205,7 +229,8 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
                 }
             }
 
-            if (request.Collections != null && request.Collections.Count > 0)
+            if (request.Collections != null && request.Collections.Count > 0 && 
+                !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
             {
                 sql.Append(" AND collection_name IN @collections");
             }
@@ -228,7 +253,7 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
             }
             else
             {
-                sql.Append(')');
+                sql.Append(")");
             }
 
             return sql.ToString();
@@ -258,7 +283,8 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
             }
         }
 
-        if (request.Collections != null && request.Collections.Count > 0)
+        if (request.Collections != null && request.Collections.Count > 0 && 
+            !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             whereClauses.Add("c.collection_name IN @collections");
         }

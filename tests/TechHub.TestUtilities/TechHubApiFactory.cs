@@ -6,7 +6,6 @@ using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using TechHub.Core.Interfaces;
-using TechHub.Core.Logging;
 
 namespace TechHub.TestUtilities;
 
@@ -18,12 +17,11 @@ public abstract class TechHubApiFactoryBase : WebApplicationFactory<Program>
 {
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        // Suppress console logging for cleaner test output, but keep file logging
+        // Use default logging from Program.cs, just suppress console Info logs during tests
         builder.ConfigureLogging(logging =>
         {
-            // Remove console and debug providers only
-            logging.ClearProviders();
-            // File logging will be re-added by the app's logging configuration
+            logging.AddFilter<Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider>(
+                level => level >= LogLevel.Error);
         });
 
         // Delegate test-specific configuration to subclasses
@@ -52,7 +50,6 @@ public abstract class TechHubApiFactoryBase : WebApplicationFactory<Program>
 public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IDisposable
 {
     private SqliteConnection? _masterConnection;
-    private ILoggerFactory? _loggerFactory;
     private string? _connectionString;
     private bool _disposed;
 
@@ -61,21 +58,9 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IDisposab
         // Use IntegrationTest environment for integration tests
         builder.UseEnvironment("IntegrationTest");
 
-        // Create logger for seeding output (file logging only)
-        var logPath = Path.Combine(".tmp", "logs", "tests.log");
-        var logLevels = new Dictionary<string, LogLevel> { ["Default"] = LogLevel.Information };
-        _loggerFactory = LoggerFactory.Create(b =>
-        {
-            b.AddProvider(new FileLoggerProvider(logPath, logLevels));
-            b.SetMinimumLevel(LogLevel.Information);
-        });
-        var logger = _loggerFactory.CreateLogger<TechHubIntegrationTestApiFactory>();
-
         // Create shared in-memory database with a name so multiple connections can access it
         // Using Mode=Memory and Cache=Shared allows multiple connections to the same in-memory DB
         _connectionString = $"Data Source=IntegrationTest_{Guid.NewGuid():N};Mode=Memory;Cache=Shared";
-
-        logger.LogInformation("🗄️ Creating in-memory SQLite database: {ConnectionString}", _connectionString);
 
         // Master connection keeps the in-memory database alive
         _masterConnection = new SqliteConnection(_connectionString);
@@ -106,7 +91,6 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IDisposab
             if (disposing)
             {
                 _masterConnection?.Dispose();
-                _loggerFactory?.Dispose();
             }
 
             _disposed = true;

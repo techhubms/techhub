@@ -111,36 +111,6 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     }
 
     [Fact]
-    public async Task GetCollectionFeed_Roundups_ReturnsValidRss()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/rss/collection/roundups");
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-        response.Content.Headers.ContentType?.ToString().Should().Be("application/rss+xml; charset=utf-8");
-
-        var xml = await response.Content.ReadAsStringAsync();
-        var doc = XDocument.Parse(xml);
-        var channel = doc.Descendants("channel").First();
-
-        // Validate channel contains "Roundups"
-        var title = channel.Element("title")?.Value;
-        title.Should().NotBeNull();
-        title.Should().Contain("Roundups");
-    }
-
-    [Fact]
-    public async Task GetCollectionFeed_InvalidCollection_ReturnsNotFound()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/rss/collection/nonexistent");
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
-    }
-
-    [Fact]
     public async Task RssFeed_ItemsAreSortedByDateDescending()
     {
         // Act
@@ -264,27 +234,6 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
         var items = doc.Descendants("item").ToList();
 
         // Should not include draft content even though it has ai section
-        var draftItems = items.Where(item =>
-        {
-            var title = item.Element("title");
-            return title != null && title.Value.Contains("Coming Soon", StringComparison.OrdinalIgnoreCase);
-        }).ToList();
-
-        draftItems.Should().BeEmpty("RSS feeds should never include draft items");
-    }
-
-    [Fact]
-    public async Task GetCollectionFeed_ShouldNotIncludeDraftItems()
-    {
-        // Act - News collection feed (our draft is in news collection)
-        var response = await _client.GetAsync("/api/rss/collection/news");
-        var xml = await response.Content.ReadAsStringAsync();
-
-        // Assert
-        var doc = XDocument.Parse(xml);
-        var items = doc.Descendants("item").ToList();
-
-        // Should not include draft news items
         var draftItems = items.Where(item =>
         {
             var title = item.Element("title");

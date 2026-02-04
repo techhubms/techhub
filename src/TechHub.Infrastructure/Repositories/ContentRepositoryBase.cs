@@ -1,4 +1,3 @@
-using System.Text;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -146,78 +145,14 @@ public abstract class ContentRepositoryBase : IContentRepository
     }
 
     /// <summary>
-    /// Get all content items across all collections.
-    /// Results are cached in memory.
-    /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> GetAllAsync(
-        int limit,
-        int offset = 0,
-        bool includeDraft = false,
-        CancellationToken ct = default)
-    {
-        var cacheKey = $"all:{includeDraft}:{limit}:{offset}";
-        return await Cache.GetOrCreateAsync(cacheKey, async entry =>
-        {
-            entry.SetPriority(CacheItemPriority.Normal);
-            return await GetAllInternalAsync(includeDraft, limit, offset, ct);
-        }) ?? [];
-    }
-
-    /// <summary>
-    /// Get all content items in a specific collection.
-    /// Results are cached in memory.
-    /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
-        string collectionName,
-        int limit,
-        string? subcollectionName = null,
-        int offset = 0,
-        bool includeDraft = false,
-        CancellationToken ct = default)
-    {
-        ArgumentNullException.ThrowIfNull(collectionName);
-
-        var cacheKey = $"collection:{collectionName}:{subcollectionName ?? "all"}:{includeDraft}:{limit}:{offset}";
-        return await Cache.GetOrCreateAsync(cacheKey, async entry =>
-        {
-            entry.SetPriority(CacheItemPriority.Normal);
-            return await GetByCollectionInternalAsync(collectionName, subcollectionName, includeDraft, limit, offset, ct);
-        }) ?? [];
-    }
-
-    /// <summary>
-    /// Get all content items in a specific section.
-    /// Optionally filter by collection and subcollection.
-    /// Results are cached in memory.
-    /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
-        string sectionName,
-        int limit,
-        int offset = 0,
-        string? collectionName = null,
-        string? subcollectionName = null,
-        bool includeDraft = false,
-        CancellationToken ct = default)
-    {
-        ArgumentNullException.ThrowIfNull(sectionName);
-
-        var cacheKey = $"section:{sectionName}:{collectionName}:{subcollectionName}:{includeDraft}:{limit}:{offset}";
-        return await Cache.GetOrCreateAsync(cacheKey, async entry =>
-        {
-            entry.SetPriority(CacheItemPriority.Normal);
-            return await GetBySectionInternalAsync(sectionName, collectionName, subcollectionName, includeDraft, limit, offset, ct);
-        }) ?? [];
-    }
-
-    /// <summary>
-    /// Full-text search with filtering.
+    /// Search content with filters, facets, and pagination.
     /// Results are cached in memory based on search parameters.
     /// </summary>
     public async Task<SearchResults<ContentItem>> SearchAsync(SearchRequest request, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(request);
 
-        var cacheKey = BuildSearchCacheKey(request);
+        var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SetPriority(CacheItemPriority.NeverRemove);
@@ -238,7 +173,7 @@ public abstract class ContentRepositoryBase : IContentRepository
     {
         ArgumentNullException.ThrowIfNull(request);
 
-        var cacheKey = BuildFacetCacheKey(request);
+        var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SetPriority(CacheItemPriority.NeverRemove);
@@ -247,24 +182,21 @@ public abstract class ContentRepositoryBase : IContentRepository
     }
 
     /// <summary>
-    /// Get tag counts with optional filtering by date range, section, and collection.
+    /// Get tag counts with optional filtering.
     /// Returns top N tags (sorted by count descending) above minUses threshold.
     /// Results are cached - very fast for repeated calls with same filters.
     /// </summary>
     public async Task<IReadOnlyList<TagWithCount>> GetTagCountsAsync(
-        DateTimeOffset? dateFrom = null,
-        DateTimeOffset? dateTo = null,
-        string? sectionName = null,
-        string? collectionName = null,
-        int? maxTags = null,
-        int minUses = 1,
+        TagCountsRequest request,
         CancellationToken ct = default)
     {
-        var cacheKey = BuildTagCountsCacheKey(dateFrom, dateTo, sectionName, collectionName, maxTags, minUses);
+        ArgumentNullException.ThrowIfNull(request);
+
+        var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SetPriority(CacheItemPriority.NeverRemove);
-            return await GetTagCountsInternalAsync(dateFrom, dateTo, sectionName, collectionName, maxTags, minUses, ct);
+            return await GetTagCountsInternalAsync(request, ct);
         }) ?? [];
     }
 
@@ -314,40 +246,6 @@ public abstract class ContentRepositoryBase : IContentRepository
         CancellationToken ct);
 
     /// <summary>
-    /// Internal implementation for getting all content.
-    /// </summary>
-    protected abstract Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
-        bool includeDraft,
-        int limit,
-        int offset,
-        CancellationToken ct);
-
-    /// <summary>
-    /// Internal implementation for getting content by collection.
-    /// Optionally filters by subcollection.
-    /// </summary>
-    protected abstract Task<IReadOnlyList<ContentItem>> GetByCollectionInternalAsync(
-        string collectionName,
-        string? subcollectionName,
-        bool includeDraft,
-        int limit,
-        int offset,
-        CancellationToken ct);
-
-    /// <summary>
-    /// Internal implementation for getting content by section.
-    /// Optionally filter by collection and subcollection.
-    /// </summary>
-    protected abstract Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
-        string sectionName,
-        string? collectionName,
-        string? subcollectionName,
-        bool includeDraft,
-        int limit,
-        int offset,
-        CancellationToken ct);
-
-    /// <summary>
     /// Internal implementation for full-text search.
     /// </summary>
     protected abstract Task<SearchResults<ContentItem>> SearchInternalAsync(
@@ -365,155 +263,8 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// Internal implementation for getting tag counts with GROUP BY.
     /// </summary>
     protected abstract Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
-        DateTimeOffset? dateFrom,
-        DateTimeOffset? dateTo,
-        string? sectionName,
-        string? collectionName,
-        int? maxTags,
-        int minUses,
+        TagCountsRequest request,
         CancellationToken ct);
-
-    // ==================== Cache Key Builders ====================
-
-    /// <summary>
-    /// Build cache key for search requests based on all query parameters.
-    /// </summary>
-    protected static string BuildSearchCacheKey(SearchRequest request)
-    {
-        ArgumentNullException.ThrowIfNull(request);
-
-        // Optimization: Use StringBuilder instead of List<string> + string.Join
-        // to reduce allocations and improve performance for cache key building
-        var sb = new StringBuilder("search");
-
-        if (!string.IsNullOrWhiteSpace(request.Query))
-        {
-            sb.Append("|q:").Append(request.Query);
-        }
-
-        if (request.Tags?.Count > 0)
-        {
-            sb.Append("|t:");
-            var sortedTags = (IEnumerable<string>)(request.Tags.Count == 1 ? request.Tags : request.Tags.OrderBy(x => x));
-            sb.AppendJoin(',', sortedTags);
-        }
-
-        if (request.Sections?.Count > 0)
-        {
-            sb.Append("|s:");
-            var sortedSections = (IEnumerable<string>)(request.Sections.Count == 1 ? request.Sections : request.Sections.OrderBy(x => x));
-            sb.AppendJoin(',', sortedSections);
-        }
-
-        if (request.Collections?.Count > 0)
-        {
-            sb.Append("|c:");
-            var sortedCollections = (IEnumerable<string>)(request.Collections.Count == 1 ? request.Collections : request.Collections.OrderBy(x => x));
-            sb.AppendJoin(',', sortedCollections);
-        }
-
-        if (request.DateFrom.HasValue)
-        {
-            sb.Append("|df:").Append(request.DateFrom.Value.ToUnixTimeSeconds());
-        }
-
-        if (request.DateTo.HasValue)
-        {
-            sb.Append("|dt:").Append(request.DateTo.Value.ToUnixTimeSeconds());
-        }
-
-        sb.Append("|take:").Append(request.Take);
-
-        if (!string.IsNullOrWhiteSpace(request.ContinuationToken))
-        {
-            sb.Append("|ct:").Append(request.ContinuationToken);
-        }
-
-        return sb.ToString();
-    }
-
-    /// <summary>
-    /// Build cache key for facet requests based on all filter parameters.
-    /// </summary>
-    protected static string BuildFacetCacheKey(FacetRequest request)
-    {
-        ArgumentNullException.ThrowIfNull(request);
-
-        var parts = new List<string> { "facets" };
-
-        if (request.Tags?.Count > 0)
-        {
-            parts.Add($"t:{string.Join(",", request.Tags.OrderBy(x => x))}");
-        }
-
-        if (request.Sections?.Count > 0)
-        {
-            parts.Add($"s:{string.Join(",", request.Sections.OrderBy(x => x))}");
-        }
-
-        if (request.Collections?.Count > 0)
-        {
-            parts.Add($"c:{string.Join(",", request.Collections.OrderBy(x => x))}");
-        }
-
-        if (request.DateFrom.HasValue)
-        {
-            parts.Add($"df:{request.DateFrom.Value.ToUnixTimeSeconds()}");
-        }
-
-        if (request.DateTo.HasValue)
-        {
-            parts.Add($"dt:{request.DateTo.Value.ToUnixTimeSeconds()}");
-        }
-
-        parts.Add($"fields:{string.Join(",", request.FacetFields.OrderBy(x => x))}");
-        parts.Add($"max:{request.MaxFacetValues}");
-
-        return string.Join("|", parts);
-    }
-
-    /// <summary>
-    /// Build cache key for tag counts requests.
-    /// </summary>
-    protected static string BuildTagCountsCacheKey(
-        DateTimeOffset? dateFrom,
-        DateTimeOffset? dateTo,
-        string? sectionName,
-        string? collectionName,
-        int? maxTags,
-        int minUses)
-    {
-        var parts = new List<string> { "tagcounts" };
-
-        if (dateFrom.HasValue)
-        {
-            parts.Add($"df:{dateFrom.Value.ToUnixTimeSeconds()}");
-        }
-
-        if (dateTo.HasValue)
-        {
-            parts.Add($"dt:{dateTo.Value.ToUnixTimeSeconds()}");
-        }
-
-        if (!string.IsNullOrWhiteSpace(sectionName))
-        {
-            parts.Add($"s:{sectionName}");
-        }
-
-        if (!string.IsNullOrWhiteSpace(collectionName))
-        {
-            parts.Add($"c:{collectionName}");
-        }
-
-        if (maxTags.HasValue)
-        {
-            parts.Add($"max:{maxTags.Value}");
-        }
-
-        parts.Add($"min:{minUses}");
-
-        return string.Join("|", parts);
-    }
 
     // ==================== Section Methods ====================
 

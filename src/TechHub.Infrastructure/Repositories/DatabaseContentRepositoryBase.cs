@@ -145,156 +145,6 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
     }
 
     /// <summary>
-    /// Internal implementation for getting all content.
-    /// Uses SQL to query the database. Excludes content column for performance.
-    /// </summary>
-    protected override async Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
-        bool includeDraft,
-        int limit,
-        int offset,
-        CancellationToken ct)
-    {
-        // Build WHERE clause conditionally to allow index usage (idx_content_draft_date)
-        var whereClause = includeDraft ? "" : $"WHERE c.draft = {Dialect.GetBooleanLiteral(false)}";
-
-        var sql = $@"
-            SELECT {ListViewColumns}
-            FROM content_items c
-            {whereClause}
-            ORDER BY c.date_epoch DESC
-            LIMIT @limit OFFSET @offset";
-
-        var items = await Connection.QueryAsync<ContentItem>(
-            new CommandDefinition(sql, new { limit, offset }, cancellationToken: ct));
-
-        return [.. items];
-    }
-
-    /// <summary>
-    /// Internal implementation for getting content by collection.
-    /// Uses SQL to query the database. Excludes content column for performance.
-    /// </summary>
-    protected override async Task<IReadOnlyList<ContentItem>> GetByCollectionInternalAsync(
-        string collectionName,
-        string? subcollectionName,
-        bool includeDraft,
-        int limit,
-        int offset,
-        CancellationToken ct)
-    {
-        ArgumentNullException.ThrowIfNull(collectionName);
-
-        // Handle virtual "all" collection - return all items
-        if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-        {
-            return await GetAllInternalAsync(includeDraft, limit, offset, ct);
-        }
-
-        // Build WHERE clause - filter by collection and optionally by subcollection
-        var whereClause = !string.IsNullOrWhiteSpace(subcollectionName)
-            ? "c.collection_name = @collectionName AND c.subcollection_name = @subcollectionName"
-            : "c.collection_name = @collectionName";
-
-        // Add draft filter conditionally to allow index usage
-        if (!includeDraft)
-        {
-            whereClause += $" AND c.draft = {Dialect.GetBooleanLiteral(false)}";
-        }
-
-        var sql = $@"
-            SELECT {ListViewColumns}
-            FROM content_items c
-            WHERE {whereClause}
-            ORDER BY c.date_epoch DESC
-            LIMIT @limit OFFSET @offset";
-
-        var items = await Connection.QueryAsync<ContentItem>(
-            new CommandDefinition(sql, new { collectionName, subcollectionName, limit, offset }, cancellationToken: ct));
-
-        return [.. items];
-    }
-
-    /// <summary>
-    /// Internal implementation for getting content by section.
-    /// Optionally filter by collection and subcollection.
-    /// Uses SQL to query the database with dynamic section conditions for optimal index usage.
-    /// Excludes content column for performance.
-    /// </summary>
-    protected override async Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
-        string sectionName,
-        string? collectionName,
-        string? subcollectionName,
-        bool includeDraft,
-        int limit,
-        int offset,
-        CancellationToken ct)
-    {
-        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
-
-        // Handle virtual "all" section
-        if (sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-        {
-            // If a specific collection is requested, filter by collection
-            // Otherwise return all items
-            if (!string.IsNullOrWhiteSpace(collectionName))
-            {
-                return await GetByCollectionInternalAsync(collectionName, subcollectionName, includeDraft, limit, offset, ct);
-            }
-
-            return await GetAllInternalAsync(includeDraft, limit, offset, ct);
-        }
-
-        // Build section condition using bitmask for idx_section_date index usage
-        // idx_section_date: (collection_name, date_epoch DESC, sections_bitmask, tags_csv) WHERE draft = 0
-        var sectionBitmask = CalculateSectionBitmask(sectionName);
-
-        // Build WHERE clauses for index-optimized filtering
-        var whereClauses = new List<string>();
-
-        if (sectionBitmask > 0)
-        {
-            whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
-        }
-        else
-        {
-            // Unknown section - no match (safe default)
-            whereClauses.Add("1=0");
-        }
-
-        // Draft filtering - directly in SQL for index usage
-        if (!includeDraft)
-        {
-            whereClauses.Add($"c.draft = {Dialect.GetBooleanLiteral(false)}");
-        }
-
-        // Add collection filter if specified
-        if (!string.IsNullOrWhiteSpace(collectionName))
-        {
-            whereClauses.Add("c.collection_name = @collectionName");
-        }
-
-        // Add subcollection filter if specified
-        if (!string.IsNullOrWhiteSpace(subcollectionName))
-        {
-            whereClauses.Add("c.subcollection_name = @subcollectionName");
-        }
-
-        var whereClause = string.Join(" AND ", whereClauses);
-
-        var sql = $@"
-            SELECT {ListViewColumns}
-            FROM content_items c
-            WHERE {whereClause}
-            ORDER BY c.date_epoch DESC
-            LIMIT @limit OFFSET @offset";
-
-        var items = await Connection.QueryAsync<ContentItem>(
-            new CommandDefinition(sql, new { collectionName, subcollectionName, limit, offset }, cancellationToken: ct));
-
-        return [.. items];
-    }
-
-    /// <summary>
     /// Calculate bitmask value for section filtering.
     /// Bit 0 (1) = AI, Bit 1 (2) = Azure, Bit 2 (4) = Coding, Bit 3 (8) = DevOps,
     /// Bit 4 (16) = GitHub Copilot, Bit 5 (32) = ML, Bit 6 (64) = Security.
@@ -436,12 +286,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
     /// Automatically excludes section and collection titles from tag counts.
     /// </summary>
     protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
-        DateTimeOffset? dateFrom,
-        DateTimeOffset? dateTo,
-        string? sectionName,
-        string? collectionName,
-        int? maxTags,
-        int minUses,
+        TagCountsRequest request,
         CancellationToken ct)
     {
         // Build exclude set from section/collection titles
@@ -453,9 +298,9 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         var whereClauses = new List<string> { $"c.draft = {Dialect.GetBooleanLiteral(false)}" };
 
         // Section filtering via bitmask column
-        if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        if (!string.IsNullOrWhiteSpace(request.SectionName) && !request.SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            var sectionBitmask = CalculateSectionBitmask(sectionName);
+            var sectionBitmask = CalculateSectionBitmask(request.SectionName);
             if (sectionBitmask > 0)
             {
                 whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
@@ -463,23 +308,23 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         }
 
         // Collection filtering
-        if (!string.IsNullOrWhiteSpace(collectionName) && !collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        if (!string.IsNullOrWhiteSpace(request.CollectionName) && !request.CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             whereClauses.Add("c.collection_name = @collectionName");
-            parameters.Add("collectionName", collectionName);
+            parameters.Add("collectionName", request.CollectionName);
         }
 
         // Date filtering
-        if (dateFrom.HasValue)
+        if (request.DateFrom.HasValue)
         {
             whereClauses.Add("c.date_epoch >= @dateFrom");
-            parameters.Add("dateFrom", dateFrom.Value.ToUnixTimeSeconds());
+            parameters.Add("dateFrom", request.DateFrom.Value.ToUnixTimeSeconds());
         }
 
-        if (dateTo.HasValue)
+        if (request.DateTo.HasValue)
         {
             whereClauses.Add("c.date_epoch <= @dateTo");
-            parameters.Add("dateTo", dateTo.Value.ToUnixTimeSeconds());
+            parameters.Add("dateTo", request.DateTo.Value.ToUnixTimeSeconds());
         }
 
         sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
@@ -510,15 +355,15 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 
         // Filter by minimum uses, sort, and limit results (AFTER excluding section/collection tags)
         var results = tagCounts
-            .Where(kvp => kvp.Value >= minUses)
+            .Where(kvp => kvp.Value >= request.MinUses)
             .Select(kvp => new TagWithCount { Tag = kvp.Key, Count = kvp.Value })
             .OrderByDescending(t => t.Count)
             .ThenBy(t => t.Tag)
             .AsEnumerable();
 
-        if (maxTags.HasValue)
+        if (request.MaxTags.HasValue)
         {
-            return [.. results.Take(maxTags.Value)];
+            return [.. results.Take(request.MaxTags.Value)];
         }
 
         return [.. results];
@@ -561,8 +406,17 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 
         if (request.Collections != null && request.Collections.Count > 0)
         {
-            whereClauses.Add("c.collection_name IN @collections");
-            parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
+            // Optimization: Use equality for single collection, IN for multiple
+            if (request.Collections.Count == 1)
+            {
+                whereClauses.Add("c.collection_name = @collection");
+                parameters.Add("collection", request.Collections[0].ToLowerInvariant().Trim());
+            }
+            else
+            {
+                whereClauses.Add("c.collection_name IN @collections");
+                parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
+            }
         }
 
         if (request.DateFrom.HasValue)
@@ -594,13 +448,17 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 
         var whereClauses = new List<string>();
 
-        // Tag filtering
+        // Tag filtering - exact match on tag_word (no splitting)
+        // If user searches "azure ai foundry", we look for exact match "azure ai foundry" in tag_word
+        // If user searches "ai", we look for exact match "ai" in tag_word
+        // Tags are pre-split during storage, so this provides word-level matching
         var normalizedTags = request.Tags!.Select(t => t.ToLowerInvariant().Trim()).ToList();
         whereClauses.Add("tag_word IN @tags");
         parameters.Add("tags", normalizedTags);
 
-        // Section filtering using bitmask
-        if (request.Sections != null && request.Sections.Count > 0)
+        // Section filtering using bitmask ("all" means no filter)
+        if (request.Sections != null && request.Sections.Count > 0 && 
+            !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             var sectionBitmask = CalculateSectionBitmask(request.Sections);
             if (sectionBitmask > 0)
@@ -609,11 +467,21 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
             }
         }
 
-        // Collection filtering
-        if (request.Collections != null && request.Collections.Count > 0)
+        // Collection filtering ("all" means no filter)
+        if (request.Collections != null && request.Collections.Count > 0 && 
+            !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
-            whereClauses.Add("collection_name IN @collections");
-            parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
+            // Optimization: Use equality for single collection, IN for multiple
+            if (request.Collections.Count == 1)
+            {
+                whereClauses.Add("collection_name = @collection");
+                parameters.Add("collection", request.Collections[0].ToLowerInvariant().Trim());
+            }
+            else
+            {
+                whereClauses.Add("collection_name IN @collections");
+                parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
+            }
         }
 
         // Date filtering
@@ -631,17 +499,17 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 
         sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
 
-        // GROUP BY to find items that have ALL tags (AND logic)
+        // GROUP BY to prevent duplicates when item matches multiple tags
         sql.Append(" GROUP BY collection_name, slug");
-        sql.Append(" HAVING COUNT(*) = @tagCount");
+        
+        // HAVING COUNT(DISTINCT tag_word) = @tagCount ensures ALL tags must match (AND logic)
+        // For single tag: COUNT = 1
+        // For multiple tags (e.g., tags=ai,azure): COUNT = 2 (item must have both)
+        sql.Append(" HAVING COUNT(DISTINCT tag_word) = @tagCount");
         parameters.Add("tagCount", normalizedTags.Count);
-
-        // Order by max date_epoch DESC
-        sql.Append(" ORDER BY MAX(date_epoch) DESC");
-
-        // Limit results
-        sql.Append(" LIMIT @take");
-        parameters.Add("take", request.Take);
+        
+        // NOTE: ORDER BY removed from subquery because it's ignored in WHERE IN clause
+        // The outer query handles ordering by c.date_epoch DESC
 
         return sql.ToString();
     }

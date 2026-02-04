@@ -96,11 +96,11 @@ public class FileBasedContentRepository : ContentRepositoryBase
     }
 
     /// <summary>
-    /// Internal implementation: Load all content from markdown files.
+    /// Internal helper: Load all content from markdown files.
     /// Results are cached in the local AllItems cache.
     /// Stores ContentItemDetail internally but returns as ContentItem for list views.
     /// </summary>
-    protected override async Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
+    private async Task<IReadOnlyList<ContentItem>> GetAllInternalAsync(
         bool includeDraft,
         int limit,
         int offset,
@@ -162,10 +162,10 @@ public class FileBasedContentRepository : ContentRepositoryBase
     }
 
     /// <summary>
-    /// Internal implementation: Get content by collection from cached data.
+    /// Internal helper: Get content by collection from cached data.
     /// Optionally filters by subcollection.
     /// </summary>
-    protected override async Task<IReadOnlyList<ContentItem>> GetByCollectionInternalAsync(
+    private async Task<IReadOnlyList<ContentItem>> GetByCollectionInternalAsync(
         string collectionName,
         string? subcollectionName,
         bool includeDraft,
@@ -201,10 +201,10 @@ public class FileBasedContentRepository : ContentRepositoryBase
     }
 
     /// <summary>
-    /// Internal implementation: Get content by section from cached data.
+    /// Internal helper: Get content by section from cached data.
     /// Optionally filter by collection and subcollection.
     /// </summary>
-    protected override async Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
+    private async Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
         string sectionName,
         string? collectionName,
         string? subcollectionName,
@@ -251,7 +251,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
     {
         ArgumentNullException.ThrowIfNull(request);
 
-        var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
+        var allItems = await GetAllInternalAsync(includeDraft: request.IncludeDraft, limit: int.MaxValue, offset: 0, ct);
         IEnumerable<ContentItem> filtered = allItems;
 
         // Full-text search (naive: check if query appears in title, excerpt, or content)
@@ -276,19 +276,30 @@ public class FileBasedContentRepository : ContentRepositoryBase
             }
         }
 
-        // Section filtering (OR logic) - use cached section_names from frontmatter
-        if (request.Sections is { Count: > 0 })
+        // Section filtering (OR logic) - use cached section_names from frontmatter ("all" means no filter)
+        if (request.Sections is { Count: > 0 } && 
+            !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             filtered = filtered.Where(item =>
                 _sectionNamesCache.TryGetValue(item.Slug, out var sections) &&
                 sections.Any(s => request.Sections.Contains(s, StringComparer.OrdinalIgnoreCase)));
         }
 
-        // Collection filtering (OR logic)
-        if (request.Collections is { Count: > 0 })
+        // Collection filtering (OR logic) ("all" means no filter)
+        if (request.Collections is { Count: > 0 } && 
+            !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             filtered = filtered.Where(item =>
                 request.Collections.Contains(item.CollectionName, StringComparer.OrdinalIgnoreCase));
+        }
+
+        // Subcollection filtering ("all" means no filter)
+        if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+            !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            filtered = filtered.Where(item =>
+                item.SubcollectionName != null &&
+                item.SubcollectionName.Equals(request.Subcollection, StringComparison.OrdinalIgnoreCase));
         }
 
         // Date range filtering
@@ -458,12 +469,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
     /// Automatically excludes section and collection titles from tag counts.
     /// </summary>
     protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
-        DateTimeOffset? dateFrom,
-        DateTimeOffset? dateTo,
-        string? sectionName,
-        string? collectionName,
-        int? maxTags,
-        int minUses,
+        TagCountsRequest request,
         CancellationToken ct)
     {
         var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
@@ -471,28 +477,28 @@ public class FileBasedContentRepository : ContentRepositoryBase
         // Apply filters
         var filtered = allItems.AsEnumerable();
 
-        if (dateFrom.HasValue)
+        if (request.DateFrom.HasValue)
         {
-            var fromEpoch = dateFrom.Value.ToUnixTimeSeconds();
+            var fromEpoch = request.DateFrom.Value.ToUnixTimeSeconds();
             filtered = filtered.Where(item => item.DateEpoch >= fromEpoch);
         }
 
-        if (dateTo.HasValue)
+        if (request.DateTo.HasValue)
         {
-            var toEpoch = dateTo.Value.ToUnixTimeSeconds();
+            var toEpoch = request.DateTo.Value.ToUnixTimeSeconds();
             filtered = filtered.Where(item => item.DateEpoch <= toEpoch);
         }
 
-        if (!string.IsNullOrWhiteSpace(sectionName) && !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        if (!string.IsNullOrWhiteSpace(request.SectionName) && !request.SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             filtered = filtered.Where(item =>
                 _sectionNamesCache.TryGetValue(item.Slug, out var sections) &&
-                sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
+                sections.Contains(request.SectionName, StringComparer.OrdinalIgnoreCase));
         }
 
-        if (!string.IsNullOrWhiteSpace(collectionName) && !collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        if (!string.IsNullOrWhiteSpace(request.CollectionName) && !request.CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            filtered = filtered.Where(item => item.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+            filtered = filtered.Where(item => item.CollectionName.Equals(request.CollectionName, StringComparison.OrdinalIgnoreCase));
         }
 
         // Build exclude set from section/collection titles
@@ -504,12 +510,12 @@ public class FileBasedContentRepository : ContentRepositoryBase
             .Where(tag => !excludeSet.Contains(tag)) // Filter section/collection tags BEFORE grouping
             .GroupBy(tag => tag, StringComparer.OrdinalIgnoreCase)
             .Select(g => new TagWithCount { Tag = g.Key, Count = g.Count() })
-            .Where(t => t.Count >= minUses)
+            .Where(t => t.Count >= request.MinUses)
             .OrderByDescending(t => t.Count)
             .ThenBy(t => t.Tag, StringComparer.OrdinalIgnoreCase);
 
-        var result = maxTags.HasValue
-            ? tagCounts.Take(maxTags.Value).ToList()
+        var result = request.MaxTags.HasValue
+            ? tagCounts.Take(request.MaxTags.Value).ToList()
             : [.. tagCounts];
 
         return result;

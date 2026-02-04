@@ -94,10 +94,10 @@ public partial class SidebarTagCloud : ComponentBase
     public int MinUses { get; set; } = 1;
 
     /// <summary>
-    /// Only include tags from content published within this many days (default: 90)
+    /// Only include tags from content published within this many days (default: 0 = no limit)
     /// </summary>
     [Parameter]
-    public int LastDays { get; set; } = 90;
+    public int LastDays { get; set; } = 0;
 
     /// <summary>
     /// Optional: Provide tags directly instead of loading from API.

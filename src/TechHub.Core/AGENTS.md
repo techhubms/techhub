@@ -45,7 +45,6 @@ TechHub.Core/
 │   │   ├── AllTagsResponse.cs   # Response for all tags API
 │   │   ├── TagCloudItem.cs      # Tag cloud item with size
 │   │   ├── TagWithCount.cs      # Tag with usage count
-│   ├── PaginationCursor.cs      # Keyset pagination cursor
 │   └── SyncResult.cs            # Content sync operation result
 ├── Interfaces/                   # Repository contracts
 │   ├── IContentRepository.cs    # Content & Section data access

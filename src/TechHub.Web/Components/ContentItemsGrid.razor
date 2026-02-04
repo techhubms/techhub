@@ -122,28 +122,9 @@
         SectionName.Equals("all", StringComparison.OrdinalIgnoreCase) ||
         CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
 
-    private IEnumerable<ContentItem> FilteredContentItems
-    {
-        get
-        {
-            if (FilterTags == null || FilterTags.Count == 0)
-            {
-                return contentItems;
-            }
-
-            var normalizedTags = FilterTags.Select(t => t.ToLowerInvariant()).ToHashSet();
-            return contentItems.Where(item =>
-            {
-                if (item.Tags == null || item.Tags.Count == 0)
-                {
-                    return false;
-                }
-
-                var itemTagsLower = item.Tags.Select(t => t.ToLowerInvariant()).ToHashSet();
-                return normalizedTags.All(selectedTag => itemTagsLower.Contains(selectedTag));
-            });
-        }
-    }
+    // No longer needed - API now handles tag filtering
+    // Content items are already filtered by the backend
+    private IEnumerable<ContentItem> FilteredContentItems => contentItems;
 
     protected override async Task OnInitializedAsync()
     {
@@ -199,13 +180,15 @@
         {
             previousCollectionName = CollectionName;
             await LoadInitialBatch();
+            return; // Don't check tags if collection changed - LoadInitialBatch handles everything
         }
 
         var tagsChanged = !TagsAreEqual(FilterTags, previousFilterTags);
         if (tagsChanged)
         {
             previousFilterTags = FilterTags?.ToList();
-            StateHasChanged();
+            // Tags changed - reload data from API with new filters
+            await LoadInitialBatch();
         }
     }
 
@@ -270,7 +253,19 @@
     private async Task LoadBatch(int batch)
     {
         var skip = (batch - 1) * BatchSize;
-        var items = await ApiClient.GetCollectionItemsAsync(SectionName, CollectionName, take: BatchSize, skip: skip);
+        
+        // Build tags parameter for API (comma-separated list)
+        var tagsParam = FilterTags != null && FilterTags.Count > 0
+            ? string.Join(",", FilterTags)
+            : null;
+        
+        var items = await ApiClient.GetCollectionItemsAsync(
+            SectionName, 
+            CollectionName, 
+            take: BatchSize, 
+            skip: skip,
+            tags: tagsParam);
+            
         var newItems = items?.ToList() ?? [];
 
         if (newItems.Count < BatchSize)

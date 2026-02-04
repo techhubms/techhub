@@ -39,8 +39,10 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
 
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
         var hasTags = request.Tags != null && request.Tags.Count > 0;
-        var hasSections = request.Sections != null && request.Sections.Count > 0;
-        var hasCollections = request.Collections != null && request.Collections.Count > 0;
+        var hasSections = request.Sections != null && request.Sections.Count > 0 && 
+                          !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase));
+        var hasCollections = request.Collections != null && request.Collections.Count > 0 && 
+                             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase));
 
         // OPTIMIZATION: When filtering by tags, pre-filter using tags table
         // This reduces tsvector search from 4000+ items to potentially just 10-20
@@ -54,7 +56,14 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
             WHERE (c.collection_name, c.slug) IN (
                 {tagsQuery}
             )
-            AND c.draft = {Dialect.GetBooleanLiteral(false)}");
+            AND c.draft = {(request.IncludeDraft ? $"{Dialect.GetBooleanLiteral(false)} OR c.draft = {Dialect.GetBooleanLiteral(true)}" : Dialect.GetBooleanLiteral(false))}");
+
+            if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+                !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                sql.Append(" AND c.subcollection_name = @subcollection");
+                parameters.Add("subcollection", request.Subcollection);
+            }
 
             if (hasQuery)
             {
@@ -67,6 +76,10 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
             {
                 sql.Append(" ORDER BY c.date_epoch DESC");
             }
+
+            sql.Append(" LIMIT @take OFFSET @skip");
+            parameters.Add("take", request.Take);
+            parameters.Add("skip", request.Skip);
         }
         else
         {
@@ -76,7 +89,12 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
             FROM content_items c");
 
             // Build WHERE clause
-            var whereClauses = new List<string> { $"c.draft = {Dialect.GetBooleanLiteral(false)}" };
+            var whereClauses = new List<string>();
+
+            if (!request.IncludeDraft)
+            {
+                whereClauses.Add($"c.draft = {Dialect.GetBooleanLiteral(false)}");
+            }
 
             if (hasQuery)
             {
@@ -97,6 +115,13 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
             {
                 whereClauses.Add("c.collection_name = ANY(@collections)");
                 parameters.Add("collections", request.Collections!.Select(c => c.ToLowerInvariant().Trim()).ToArray());
+            }
+
+            if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+                !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                whereClauses.Add("c.subcollection_name = @subcollection");
+                parameters.Add("subcollection", request.Subcollection);
             }
 
             if (request.DateFrom.HasValue)
@@ -123,8 +148,9 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
                 sql.Append(" ORDER BY c.date_epoch DESC");
             }
 
-            sql.Append(" LIMIT @take");
+            sql.Append(" LIMIT @take OFFSET @skip");
             parameters.Add("take", request.Take);
+            parameters.Add("skip", request.Skip);
         }
 
         // Get items and count in a single round-trip
@@ -140,15 +166,14 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
         FacetResults? facets = null;
         if (request.IncludeFacets)
         {
-            facets = await GetFacetsAsync(new FacetRequest
-            {
-                Tags = request.Tags,
-                Sections = request.Sections,
-                Collections = request.Collections,
-                DateFrom = request.DateFrom,
-                DateTo = request.DateTo,
-                FacetFields = ["tags", "collections", "sections"]
-            }, ct);
+            facets = await GetFacetsAsync(new FacetRequest(
+                facetFields: ["tags", "collections", "sections"],
+                tags: request.Tags,
+                sections: request.Sections,
+                collections: request.Collections,
+                dateFrom: request.DateFrom,
+                dateTo: request.DateTo
+            ), ct);
         }
 
         return new SearchResults<ContentItem>
@@ -252,7 +277,8 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
             }
         }
 
-        if (request.Collections != null && request.Collections.Count > 0)
+        if (request.Collections != null && request.Collections.Count > 0 && 
+            !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             countSql.Append(" AND c.collection_name = ANY(@collections)");
         }

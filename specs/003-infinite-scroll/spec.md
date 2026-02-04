@@ -1,4 +1,4 @@
-# Feature Specification: Infinite Scroll Pagination
+RE# Feature Specification: Infinite Scroll Pagination
 
 **Feature Branch**: `003-infinite-scroll`  
 **Created**: 2026-01-16  

@@ -76,7 +76,7 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-11-fts-test.md contains "TechHubSpecialKeyword"
-        var request = new SearchRequest { Query = "TechHubSpecialKeyword", Take = 1000 };
+        var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: [], query: "TechHubSpecialKeyword");
 
         // Act
         var results = await Repository.SearchAsync(request);

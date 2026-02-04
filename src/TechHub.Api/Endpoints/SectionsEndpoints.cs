@@ -211,10 +211,8 @@ public static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        // "all" is a virtual collection - returns all items in section
+        // "all" is a virtual collection - verify it exists unless it's "all"
         var isAllCollection = string.Equals(collectionName, "all", StringComparison.OrdinalIgnoreCase);
-
-        // Verify collection exists (skip for virtual "all" collection)
         if (!isAllCollection)
         {
             var hasCollection = section.Collections.Any(c =>
@@ -230,39 +228,25 @@ public static class SectionsEndpoints
         var limit = Math.Clamp(take, 1, MaxPageSize);
         var offset = Math.Max(skip, 0);
 
-        // If filtering by query or tags, use SearchAsync
-        if (!string.IsNullOrWhiteSpace(q) || !string.IsNullOrWhiteSpace(tags))
-        {
-            var request = new SearchRequest
-            {
-                Query = q,
-                Sections = [section.Name],
-                Collections = isAllCollection ? null : [collectionName],
-                Tags = string.IsNullOrWhiteSpace(tags)
-                    ? null
-                    : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
-                DateFrom = lastDays.HasValue
-                    ? DateTimeOffset.UtcNow.AddDays(-lastDays.Value)
-                    : null,
-                Take = limit
-            };
+        // Build search request - repository will handle "all" as no filter
+        var request = new SearchRequest(
+            take: limit,
+            skip: offset,
+            query: q,
+            sections: [section.Name],
+            collections: [collectionName],  // Pass "all" through, repo handles it
+            tags: string.IsNullOrWhiteSpace(tags)
+                ? []
+                : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+            subcollection: subcollection,
+            dateFrom: lastDays.HasValue
+                ? DateTimeOffset.UtcNow.AddDays(-lastDays.Value)
+                : null,
+            includeDraft: includeDraft
+        );
 
-            var searchResults = await contentRepository.SearchAsync(request, cancellationToken);
-            return TypedResults.Ok(searchResults.Items.Skip(offset).AsEnumerable());
-        }
-
-        // Simple collection query - use indexed GetBySectionAsync
-        // For "all" virtual collection, pass null to get all items in section
-        var content = await contentRepository.GetBySectionAsync(
-            section.Name,
-            limit: limit,
-            offset: offset,
-            collectionName: isAllCollection ? null : collectionName,
-            subcollectionName: subcollection,
-            includeDraft: includeDraft,
-            ct: cancellationToken);
-
-        return TypedResults.Ok(content.AsEnumerable());
+        var content = await contentRepository.SearchAsync(request, cancellationToken);
+        return TypedResults.Ok(content.Items.AsEnumerable());
     }
 
     /// <summary>
@@ -286,10 +270,8 @@ public static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        // "all" is a virtual collection - use section scope instead
+        // "all" is a virtual collection - verify it exists unless it's "all"
         var isAllCollection = string.Equals(collectionName, "all", StringComparison.OrdinalIgnoreCase);
-
-        // Verify collection exists (skip for virtual "all" collection)
         if (!isAllCollection)
         {
             var hasCollection = section.Collections.Any(c =>
@@ -308,28 +290,16 @@ public static class SectionsEndpoints
             ? DateTimeOffset.UtcNow.AddDays(-(lastDays ?? options.TagCloud.DefaultDateRangeDays))
             : null;
 
-        // Determine section/collection filters
-        // "all" is a virtual section/collection - means no filter
-        string? sectionFilter = !isAllCollection &&
-                                !string.IsNullOrWhiteSpace(sectionName) &&
-                                !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
-            ? sectionName
-            : null;
-
-        string? collectionFilter = !isAllCollection &&
-                                   !string.IsNullOrWhiteSpace(collectionName)
-            ? collectionName
-            : null;
-
-        // Get top N tag counts from repository
+        // Get top N tag counts from repository - repository will handle "all" as no filter
         var tagCounts = await contentRepository.GetTagCountsAsync(
-            dateFrom: dateFrom,
-            dateTo: null,
-            sectionName: sectionFilter,
-            collectionName: collectionFilter,
-            maxTags: maxTags ?? options.TagCloud.DefaultMaxTags,
-            minUses: minUses ?? options.TagCloud.MinimumTagUses,
-            ct: cancellationToken);
+            new TagCountsRequest(
+                sectionName: sectionName,
+                collectionName: collectionName,
+                minUses: minUses ?? options.TagCloud.MinimumTagUses,
+                maxTags: maxTags ?? options.TagCloud.DefaultMaxTags,
+                dateFrom: dateFrom
+            ),
+            cancellationToken);
 
         if (tagCounts.Count == 0)
         {
@@ -346,7 +316,9 @@ public static class SectionsEndpoints
     /// Apply quantile-based sizing to tag cloud items.
     /// Top 25% = Large, Middle 50% = Medium, Bottom 25% = Small.
     /// </summary>
+#pragma warning disable CA1859 // Used as return type for endpoint method - cannot change to concrete type
     private static IReadOnlyList<TagCloudItem> ApplyQuantileSizing(
+#pragma warning restore CA1859
         List<TagWithCount> sortedTags,
         QuantilePercentilesOptions quantileOptions)
     {

@@ -28,45 +28,19 @@ public interface IContentRepository
         bool includeDraft = false,
         CancellationToken ct = default);
 
-    /// <summary>
-    /// Get all content items across all collections.
-    /// </summary>
-    Task<IReadOnlyList<ContentItem>> GetAllAsync(
-        int limit,
-        int offset = 0,
-        bool includeDraft = false,
-        CancellationToken ct = default);
-
-    /// <summary>
-    /// Get all content items in a specific collection.
-    /// Optionally filter by subcollection (e.g., "ghc-features", "vscode-updates").
-    /// </summary>
-    Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
-        string collectionName,
-        int limit,
-        string? subcollectionName = null,
-        int offset = 0,
-        bool includeDraft = false,
-        CancellationToken ct = default);
-
-    /// <summary>
-    /// Get all content items in a specific section.
-    /// Optionally filter by collection and subcollection.
-    /// </summary>
-    Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
-        string sectionName,
-        int limit,
-        int offset = 0,
-        string? collectionName = null,
-        string? subcollectionName = null,
-        bool includeDraft = false,
-        CancellationToken ct = default);
-
-    // ==================== New Search Methods ====================
+    // ==================== Search Methods ====================
 
     /// <summary>
     /// Search content with filters, facets, and pagination.
     /// Supports full-text search, tag filtering, date ranges, and keyset pagination.
+    /// 
+    /// Examples:
+    /// - All items: SearchAsync(new SearchRequest { Take = 20 })
+    /// - By collection: SearchAsync(new SearchRequest { Collections = ["blogs"], Take = 20 })
+    /// - By section: SearchAsync(new SearchRequest { Sections = ["github-copilot"], Take = 20 })
+    /// - By section + collection: SearchAsync(new SearchRequest { Sections = ["ai"], Collections = ["blogs"], Take = 20 })
+    /// - With tags: SearchAsync(new SearchRequest { Tags = ["copilot"], Take = 20 })
+    /// - Full-text search: SearchAsync(new SearchRequest { Query = "ai foundry", Take = 20 })
     /// </summary>
     Task<SearchResults<ContentItem>> SearchAsync(
         SearchRequest request,
@@ -81,17 +55,36 @@ public interface IContentRepository
         CancellationToken ct = default);
 
     /// <summary>
-    /// Get tag counts with optional filtering by date range, section, and collection.
+    /// Get tag counts with optional filtering.
     /// Returns top N tags (sorted by count descending) above minUses threshold.
     /// Results are cached - very fast for repeated calls with same filters.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// // Get top 20 most used tags
+    /// var popularTags = await repo.GetTagCountsAsync(new TagCountsRequest
+    /// {
+    ///     MaxTags = 20,
+    ///     MinUses = 5
+    /// });
+    ///
+    /// // Get tags for specific section
+    /// var aiTags = await repo.GetTagCountsAsync(new TagCountsRequest
+    /// {
+    ///     SectionName = "ai",
+    ///     MaxTags = 50
+    /// });
+    ///
+    /// // Get recent tags
+    /// var recentTags = await repo.GetTagCountsAsync(new TagCountsRequest
+    /// {
+    ///     DateFrom = DateTimeOffset.UtcNow.AddMonths(-3),
+    ///     MinUses = 2
+    /// });
+    /// </code>
+    /// </example>
     Task<IReadOnlyList<TagWithCount>> GetTagCountsAsync(
-        DateTimeOffset? dateFrom = null,
-        DateTimeOffset? dateTo = null,
-        string? sectionName = null,
-        string? collectionName = null,
-        int? maxTags = null,
-        int minUses = 1,
+        TagCountsRequest request,
         CancellationToken ct = default);
 
     // ==================== Section Methods ====================

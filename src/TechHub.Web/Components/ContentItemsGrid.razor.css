@@ -84,3 +84,49 @@
   width: 60px;
   border-radius: var(--radius-full);
 }
+
+/* ============================================================================
+   Infinite Scroll States
+   ============================================================================ */
+
+.loading-more-indicator {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--color-text-secondary);
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--color-border-default);
+  border-top-color: var(--color-accent-emphasis);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-more-indicator p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.end-of-content {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-secondary);
+}
+
+.end-of-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  opacity: 0.8;
+}
