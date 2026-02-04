@@ -1,0 +1,19 @@
+{
+  "Title": "Auto-install `azd` extensions in dev containers",
+  "FeedUrl": "https://devblogs.microsoft.com/azure-sdk/feed/",
+  "Author": "PuiChee (PC) Chan",
+  "Description": "The `azd` dev container feature now supports automatic extension installation.\n\nThe post [Auto-install `azd` extensions in dev containers](https://devblogs.microsoft.com/azure-sdk/azd-devcontainer-extensions/) appeared first on [Azure SDK Blog](https://devblogs.microsoft.com/azure-sdk).",
+  "OutputDir": "_news",
+  "EnhancedContent": "# Auto-install `azd`\nextensions in dev containers\n\n*Welcome to the first `azd` mini blog! Things move fast – new features ship, and it’s easy to miss something useful. These short posts (1-minute reads, we promise) highlight features the team ships that you want to know about. No fluff, just what it is, why it matters, and how to use it.*\n\n## What’s new?\n\nThe `azd` development (dev) container feature now supports an `extensions` option. You can specify a comma-separated list of `azd` extensions in your dev container configuration, and they install automatically when the container builds.\n\nHere’s what it looks like in your `devcontainer.json` file:\n\n```json { \"features\": { \"ghcr.io/azure/azure-dev/azd:latest\": { \"extensions\": \"azd-ext-example,azd-ext-another\" } } } ```\n\nNo more “oh wait, I need to install that extension first” after spinning up your dev container.\n\n## Why it matters\n\nDev containers give you a ready-to-code environment in seconds. But if your project relies on `azd` extensions, you still had to install them manually after the container started. That’s friction – especially when onboarding new team members or switching between projects.\n\nNow your extensions are ready when the container starts. Open the dev container and run `azd up` – everything you need is already in place.\n\n## How to use it\n\n1. Open your `.devcontainer/devcontainer.json`\nfile.\n2. Add (or update) the `azd`\nfeature with the `extensions` option:\n\n```json { \"features\": { \"ghcr.io/azure/azure-dev/azd:latest\": { \"extensions\": \"your-extension-name\" } } } ```\n\n1. Rebuild your dev container.\n\nThat’s it. The extensions install during container build.\n\n## Get started\n\nUpdate your dev container configuration and rebuild. To learn more about creating dev containers, see the [VS Code dev container docs](https://code.visualstudio.com/docs/devcontainers/create-dev-container).\n\n## Feedback\n\nHave questions or ideas? File an issue or start a discussion on [GitHub](https://github.com/Azure/azure-dev). Want to help shape the future of `azd` ? [Sign up for user research](https://aka.ms/azd-user-research-signup).\n\n*This feature was introduced in [PR #6460](https://github.com/Azure/azure-dev/pull/6460).*",
+  "PubDate": "2026-02-04T19:08:28+00:00",
+  "FeedLevelAuthor": "Azure SDK Blog",
+  "FeedName": "Microsoft Azure SDK Blog",
+  "Link": "https://devblogs.microsoft.com/azure-sdk/azd-devcontainer-extensions/",
+  "ProcessedDate": "2026-02-04 19:14:58",
+  "Tags": [
+    "azd",
+    "Azure SDK",
+    "azure-developer-cli",
+    "devcontainers"
+  ]
+}

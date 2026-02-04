@@ -1,0 +1,17 @@
+{
+  "Title": "GitHub Copilot in Visual Studio — January update",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "Description": "January 2026 brought colorized code completions, partial acceptance of code completions, productivity improvements, and more. Highlights Here’s what’s new with GitHub Copilot in Visual Studio 2026. Check the Insiders channel…\n\nThe post [GitHub Copilot in Visual Studio — January update](https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "EnhancedContent": "January 2026 brought colorized code completions, partial acceptance of code completions, productivity improvements, and more.\n\n### Highlights\n\nHere’s what’s new with GitHub Copilot in Visual Studio 2026. Check the Insiders channel for the latest:\n\n- **Colorized code completions**: Code completions now feature syntax highlighting to help you quickly distinguish variables, functions, and other elements. Enable this in settings by selecting **Use colorized text for code completions**.\n- **Click to partially accept code completions**: Accept only part of a suggestion by clicking directly inside it. Hover over the suggestion to see each segment highlighted, and accept up to the cursor position.\n- **Productivity improvements**: A series of highly requested improvements let you better control and customize your editor with faster scrolling, HTML-rich copy paste, syntactic line compression, and more.\n- **Streamlined Markdown preview controls**: Switch between **Split Preview**, **Open Preview**, and **Edit Markdown** modes for more flexibility. Zoom controls help with Mermaid diagrams, and Copilot Chat now includes a **Preview** button to render and edit generated markdown content directly. This is now available in the Stable channel.\n\n[Download Visual Studio 2026](https://visualstudio.microsoft.com/downloads) to experience all the new Copilot features today. To learn more about what’s new, check out the [Visual Studio blog](https://devblogs.microsoft.com/visualstudio/visual-studio-january-update-enhanced-editor-experience/) and [release notes](https://learn.microsoft.com/visualstudio/releases/2026/release-notes).\n\n### What’s next for Copilot in Visual Studio\n\nStay up to date on the latest Copilot features by following the [Visual Studio blog](https://devblogs.microsoft.com/visualstudio), where you’ll find roadmap updates and opportunities to share feedback.\n\nFor the latest news, release notes, videos, and community conversations, visit the [Visual Studio Hub](https://visualstudio.microsoft.com/hub/), your central resource for all things Visual Studio.",
+  "PubDate": "2026-02-04T17:41:21+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update",
+  "ProcessedDate": "2026-02-04 19:15:21",
+  "Tags": [
+    "copilot",
+    "Release"
+  ]
+}
