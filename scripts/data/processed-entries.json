@@ -25012,5 +25012,17 @@
     "canonical_url": "https://github.blog/changelog/2026-02-03-dependabot-now-supports-oidc-authentication",
     "reason": "Succesfully added: Assigned 'DevOps' category because the update concerns Dependabot (a DevOps automation tool) and its new workflow for handling credentials. Assigned 'Security' due to its focus on removing static secrets, leveraging OIDC, and enhancing supply chain security (Security rules 1 and 2). Added 'Azure' since Azure DevOps Artifacts is a directly supported registry, and setup will be relevant for Microsoft-centric practitioners. The content is news-type, comes from a technical perspective, and contains actionable implementation guidance, fitting all category inclusion rules. The rules on productivity/non-development exclusion do not apply as this is development tooling.",
     "timestamp": "2026-02-04 00:07:00 +00:00"
+  },
+  {
+    "timestamp": "2026-02-04 01:33:20 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=zVWT8ZQZYhI",
+    "reason": "Succesfully added: I assigned the 'AI' category because core segments discuss GitHub Copilot and AI coding agents, meeting AI inclusion rules (AI rule 2 and 4). 'GitHub Copilot' was assigned as the Copilot product is featured in the Furby hack, keynote moment, and relates directly to developer coding workflows. Other categories like Coding and DevOps weren't explicitly triggered—while platform improvements and agent discussions relate to development, there is not enough implementation or technical detail. The exclusion of other categories aligns with outlined rules. Generic exclusions do not apply as this is technical, English-language, development-focused content."
+  },
+  {
+    "timestamp": "2026-02-04 01:33:56 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=KRBqLjRjX70",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on integrating AI (GitHub Copilot, MCP) into development (AI inclusion rules 2 and 4). Assigned 'GitHub Copilot' because it is a core technology demonstrated in the workflow (per GitHub Copilot inclusion rules 1 and 2), and as per the Copilot distinction, this is a developer tool. Assigned 'Coding' because the session demonstrates practical code generation, IDE-based code bootstrapping, and development workflow (Coding inclusion rules 2 and 4). Did not assign 'Azure', 'ML', 'DevOps', or 'Security' because there is no mention of Azure, data science/ML, CI/CD operations, or security practices in the session description. Content meets quality, is technical, and productively focused on developer experience."
   }
 ]

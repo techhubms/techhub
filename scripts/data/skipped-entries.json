@@ -11715,5 +11715,11 @@
     "collection": "videos",
     "reason": "No categories found: Excluded all categories because the full content text is missing (content field is null), so category inclusion cannot be assessed. Without substantive content, it is not possible to determine if the video meets technical, developer-focused, or Microsoft-central content requirements per generic exclusion rules. Additionally, the description alone remains high-level and lacks technical implementation detail, making it insufficient for confident inclusion in any category.",
     "canonical_url": "https://www.youtube.com/shorts/5_TQburf3bA"
+  },
+  {
+    "timestamp": "2026-02-04 01:33:35 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Xx1fjvy99Dk",
+    "reason": "No categories found: No categories assigned. The content provided lacks the full text ('content' is null), and the remaining description is a high-level executive/business strategy overview focused on transformative trends in automotive software through ETAS and Microsoft partnership. It discusses broad topics such as faster vehicle launches, cloud-powered toolchains, and cloud-native solutions but does not contain technical depth, hands-on guidance, code, specific Microsoft technology implementation details, or information directed at practitioners or developers. Therefore, per the Generic Exclusion Rules (Business Strategy and Executive Content, and insufficient substantive technical detail), this content is excluded."
   }
 ]

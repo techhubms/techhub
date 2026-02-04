@@ -1,0 +1,24 @@
+{
+  "Link": "https://www.youtube.com/watch?v=KRBqLjRjX70",
+  "Author": "Visual Studio Code",
+  "OutputDir": "_videos",
+  "Title": "🔴 VS Code Live - AI-Powered Kafka Development: Confluent Extension + GitHub Copilot + MCP",
+  "Tags": [
+    "AI",
+    "code",
+    "confluent",
+    "copilot",
+    "githubcopilot",
+    "kafka",
+    "mcp",
+    "visualstudiocode",
+    "vscode"
+  ],
+  "PubDate": "2026-02-04T01:09:24+00:00",
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-02-04 01:31:49",
+  "Description": "Apache Kafka powers modern data streaming applications, yet its learning curve remains steep. This session demonstrates how combining the Confluent VS Code Extension with GitHub Copilot and Model Context Protocol (MCP) creates an AI-assisted workflow that accelerates Kafka development.\n\nWe'll explore common challenges developers face with Kafka: understanding distributed systems concepts, bootstrapping code, managing schemas, and debugging message flow. Through live demonstration, you'll see how the free Confluent VS Code Extension addresses these challenges directly within your IDE.\n\nThe session covers environment setup without context switching, using Copilot with Kafka-aware context for code generation, leveraging MCP to give AI assistants access to schema registries and topic metadata, and managing schema evolution with intelligent validation.\n\nYou'll see how AI-assisted engineering transforms Kafka development from a documentation-heavy process into an interactive, guided experience where your toolchain understands your streaming context.\n\n🎙️ Featuring: Reynald Adolphe (@ReynaldAdolphe), Viktor Gamov (@gamussa)\n\n#vscode #visualstudiocode #confluent #kafka",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedLevelAuthor": "Visual Studio Code"
+}
