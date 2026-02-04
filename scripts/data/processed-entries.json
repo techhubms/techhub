@@ -25054,5 +25054,11 @@
     "reason": "Succesfully added: Assigned the AI category because the article is focused on building agentic AI workflows and safe automation using Microsoft Copilot, Copilot Studio, Power Automate, Microsoft Graph, Azure OpenAI, and security/guardrail techniques (AI rules 1, 3, 4, 5). Did NOT assign GitHub Copilot, Coding, DevOps, Azure, ML, or Security categories because the main content does not focus on code, developer tools, Azure infrastructure, ML engineering, or security implementation—though security and compliance are discussed, the context is AI workflow design. The main technical details and step-by-step guidance fit best under the 'AI' category per inclusion rules.",
     "timestamp": "2026-02-04 12:07:16 +00:00",
     "collection": "blogs"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the article discusses orchestrating multiple AI models (OpenAI, Anthropic, Google) and platform-level AI integration (AI rule 1 and 4). 'GitHub Copilot' is included as the core subject, explicitly referenced throughout, triggering the requirement to also add the 'AI' category. 'DevOps' is assigned due to automation, governance, workflow orchestration, and integration details (DevOps rules 2, 3, 5, 6). 'Coding' is included because the technical solutions involve developer tools, SDKs, coding conventions, and integration for Python/Node.js (Coding rule 1, 2, 4, and 5). Exclusion rules do not apply: the content is strongly technical, with no focus on business productivity Copilot, jobs, biographical material, non-English content, or business-only themes.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/the-os-for-intelligence-how-github-bridges-the-fragmented-ai-landscape/",
+    "timestamp": "2026-02-04 16:14:32 +00:00"
   }
 ]

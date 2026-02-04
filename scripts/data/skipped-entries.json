@@ -11727,5 +11727,17 @@
     "reason": "No categories found: No categories assigned. The content is focused exclusively on Adobe Animate (formerly Flash Professional) and the business/product decision by Adobe to discontinue and then maintain the product. There is historical context about Flash, Apple, web standards, and some designer/developer responses, but there is NO substantive Microsoft technology discussed, no Microsoft services, and no relevant comparison or migration to Microsoft. The article's tags and content confirm the absence of .NET, Azure, Microsoft development frameworks, AI/ML, DevOps, or any relevant security/identity context. All information is about Adobe's product lifecycle, industry response, and historical web technology trends outside the Microsoft ecosystem. Following the requirement that Microsoft technology must be central or at least 40% of substantive content, this article does not meet any inclusion criteria. Per rules: only use predefined categories and 'when in doubt, exclude.'",
     "canonical_url": "https://devclass.com/2026/02/04/adobe-backtracks-reanimates-animate-following-user-backlash/",
     "collection": "blogs"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is focused on the use of Microsoft's AI-powered educational tools in primary and secondary education settings, specifically highlighting initiatives such as Microsoft Learning Accelerators and AI literacy for Filipino students and teachers. According to the generic exclusion rules, content related to general business or end-user productivity, non-development Microsoft products, and education platforms that do not involve technical or developer implementation is excluded. There are no technical/developer, AI development, coding, or engineering practices discussed—only the impact of AI tools on literacy and education outcomes. Therefore, per the generic exclusion rules for non-development Microsoft products and business/user solution content, all categories are excluded.",
+    "canonical_url": "https://news.microsoft.com/source/asia/2026/02/03/deped-and-microsoft-accelerate-learning-recovery-and-ai-literacy-for-filipinos/",
+    "collection": "news",
+    "timestamp": "2026-02-04 15:15:14 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The main content, as indicated by the description, is a discussion video reflecting on whether .NET and C# are underrated, overrated, or appropriately valued—a subjective industry sentiment/opinion piece without technical implementation details, code, architectural guidance, or hands-on educational value. There is no substantive technical content to categorize (no tutorials, patterns, architectural practices, code, or actionable knowledge per category rules). The video prompt and call to comment/like/subscribe reinforce the opinion/discussion nature, not technical depth. Per the Quality Standards and Generic Exclusion Rules, such content does not qualify.",
+    "canonical_url": "https://www.youtube.com/watch?v=QNLKV6kx82Q",
+    "collection": "videos",
+    "timestamp": "2026-02-04 15:15:54 +00:00"
   }
 ]
