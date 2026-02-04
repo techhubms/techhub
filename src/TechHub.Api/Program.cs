@@ -108,13 +108,11 @@ else
     throw new InvalidOperationException($"Unsupported database provider: {databaseProvider}. Use 'FileSystem', 'SQLite', or 'PostgreSQL'.");
 }
 
-// Register singleton services
-builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>(); // Caches config at startup
+// Register singleton services - none currently
 
 // Register transient services
 builder.Services.AddTransient<IMarkdownService, MarkdownService>();
 builder.Services.AddTransient<IRssService, RssService>();
-builder.Services.AddTransient<ITagCloudService, TagCloudService>();
 builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
 builder.Services.AddTransient<MigrationRunner>();
 

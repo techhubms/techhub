@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
-using TechHub.Infrastructure.Services;
 
 namespace TechHub.Api.Endpoints;
 
@@ -113,10 +113,10 @@ public static class SectionsEndpoints
     /// GET /api/sections - Get all sections
     /// </summary>
     private static async Task<Ok<IEnumerable<Section>>> GetAllSections(
-        ISectionRepository sectionRepository,
+        IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        var sections = await sectionRepository.GetAllAsync(cancellationToken);
+        var sections = await contentRepository.GetAllSectionsAsync(cancellationToken);
         return TypedResults.Ok(sections.AsEnumerable());
     }
 
@@ -125,10 +125,10 @@ public static class SectionsEndpoints
     /// </summary>
     private static async Task<Results<Ok<Section>, NotFound>> GetSectionByName(
         string sectionName,
-        ISectionRepository sectionRepository,
+        IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
+        var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
         {
@@ -143,10 +143,10 @@ public static class SectionsEndpoints
     /// </summary>
     private static async Task<Results<Ok<IEnumerable<Collection>>, NotFound>> GetSectionCollections(
         string sectionName,
-        ISectionRepository sectionRepository,
+        IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
+        var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
         {
@@ -166,10 +166,10 @@ public static class SectionsEndpoints
     private static async Task<Results<Ok<Collection>, NotFound>> GetSectionCollection(
         string sectionName,
         string collectionName,
-        ISectionRepository sectionRepository,
+        IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
+        var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
         {
@@ -201,12 +201,11 @@ public static class SectionsEndpoints
         [FromQuery] string? subcollection = null,
         [FromQuery] int? lastDays = null,
         [FromQuery] bool includeDraft = false,
-        ISectionRepository sectionRepository = default!,
         IContentRepository contentRepository = default!,
         CancellationToken cancellationToken = default)
     {
         // Verify section exists
-        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
+        var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)
         {
             return TypedResults.NotFound();
@@ -276,13 +275,12 @@ public static class SectionsEndpoints
         [FromQuery] int? maxTags = null,
         [FromQuery] int? minUses = null,
         [FromQuery] int? lastDays = null,
-        ISectionRepository sectionRepository = default!,
-        ITagCloudService tagCloudService = default!,
+        IContentRepository contentRepository = default!,
         IOptions<FilteringOptions> filteringOptions = default!,
         CancellationToken cancellationToken = default)
     {
         // Verify section exists
-        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
+        var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)
         {
             return TypedResults.NotFound();
@@ -304,20 +302,98 @@ public static class SectionsEndpoints
         }
 
         var options = filteringOptions.Value;
-        var request = new TagCloudRequest
-        {
-            // Use Section scope for "all" virtual collection, otherwise Collection scope
-            Scope = isAllCollection ? TagCloudScope.Section : TagCloudScope.Collection,
-            SectionName = section.Name,
-            CollectionName = isAllCollection ? null : collectionName,
-            MaxTags = maxTags ?? options.TagCloud.DefaultMaxTags,
-            MinUses = minUses ?? options.TagCloud.MinimumTagUses,
-            LastDays = lastDays ?? options.TagCloud.DefaultDateRangeDays
-        };
 
-        var tagCloud = await tagCloudService.GetTagCloudAsync(request, cancellationToken);
+        // Calculate date filter if LastDays is specified
+        DateTimeOffset? dateFrom = (lastDays ?? options.TagCloud.DefaultDateRangeDays) > 0
+            ? DateTimeOffset.UtcNow.AddDays(-(lastDays ?? options.TagCloud.DefaultDateRangeDays))
+            : null;
+
+        // Determine section/collection filters
+        // "all" is a virtual section/collection - means no filter
+        string? sectionFilter = !isAllCollection &&
+                                !string.IsNullOrWhiteSpace(sectionName) &&
+                                !sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
+            ? sectionName
+            : null;
+
+        string? collectionFilter = !isAllCollection &&
+                                   !string.IsNullOrWhiteSpace(collectionName)
+            ? collectionName
+            : null;
+
+        // Get top N tag counts from repository
+        var tagCounts = await contentRepository.GetTagCountsAsync(
+            dateFrom: dateFrom,
+            dateTo: null,
+            sectionName: sectionFilter,
+            collectionName: collectionFilter,
+            maxTags: maxTags ?? options.TagCloud.DefaultMaxTags,
+            minUses: minUses ?? options.TagCloud.MinimumTagUses,
+            ct: cancellationToken);
+
+        if (tagCounts.Count == 0)
+        {
+            return TypedResults.Ok<IReadOnlyList<TagCloudItem>>([]);
+        }
+
+        // Apply quantile-based sizing to top N tags
+        var tagCloud = ApplyQuantileSizing([.. tagCounts], options.TagCloud.QuantilePercentiles);
 
         return TypedResults.Ok(tagCloud);
+    }
+
+    /// <summary>
+    /// Apply quantile-based sizing to tag cloud items.
+    /// Top 25% = Large, Middle 50% = Medium, Bottom 25% = Small.
+    /// </summary>
+    private static IReadOnlyList<TagCloudItem> ApplyQuantileSizing(
+        List<TagWithCount> sortedTags,
+        QuantilePercentilesOptions quantileOptions)
+    {
+        if (sortedTags.Count == 0)
+        {
+            return [];
+        }
+
+        var smallToMedium = quantileOptions.SmallToMedium;
+        var mediumToLarge = quantileOptions.MediumToLarge;
+
+        var totalTags = sortedTags.Count;
+        var smallThreshold = (int)Math.Ceiling(totalTags * smallToMedium);
+        var largeThreshold = (int)Math.Ceiling(totalTags * mediumToLarge);
+
+        var result = new List<TagCloudItem>();
+
+        for (int i = 0; i < sortedTags.Count; i++)
+        {
+            var tag = sortedTags[i];
+            TagSize size;
+
+            // Top 25% (0-25% index) = Large
+            // Middle 50% (25%-75% index) = Medium
+            // Bottom 25% (75%-100% index) = Small
+            if (i < smallThreshold)
+            {
+                size = TagSize.Large;
+            }
+            else if (i < largeThreshold)
+            {
+                size = TagSize.Medium;
+            }
+            else
+            {
+                size = TagSize.Small;
+            }
+
+            result.Add(new TagCloudItem
+            {
+                Tag = tag.Tag,
+                Count = tag.Count,
+                Size = size
+            });
+        }
+
+        return result;
     }
 
     // ================================================================
@@ -332,12 +408,11 @@ public static class SectionsEndpoints
         string sectionName,
         string collectionName,
         string slug,
-        ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
         // Verify section exists
-        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
+        var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)
         {
             return TypedResults.NotFound();

@@ -93,4 +93,18 @@ public interface IContentRepository
         int? maxTags = null,
         int minUses = 1,
         CancellationToken ct = default);
+
+    // ==================== Section Methods ====================
+
+    /// <summary>
+    /// Get all sections defined in configuration.
+    /// Sections define the main navigation areas (AI, GitHub Copilot, Security, etc.).
+    /// </summary>
+    Task<IReadOnlyList<Section>> GetAllSectionsAsync(CancellationToken ct = default);
+
+    /// <summary>
+    /// Get a single section by name.
+    /// Returns null if section doesn't exist.
+    /// </summary>
+    Task<Section?> GetSectionByNameAsync(string name, CancellationToken ct = default);
 }

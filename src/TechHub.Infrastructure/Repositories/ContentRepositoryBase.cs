@@ -33,6 +33,52 @@ public abstract class ContentRepositoryBase : IContentRepository
     }
 
     /// <summary>
+    /// Initialize sections from configuration.
+    /// Converts configuration to Section models and applies ordering.
+    /// </summary>
+    private static IReadOnlyList<Section> InitializeSections(AppSettings settings)
+    {
+        var collectionDisplayNames = settings.Content.CollectionDisplayNames;
+
+        // Define section display order (matches live site - starts with "all")
+        var sectionOrder = new[]
+        {
+            "all", "github-copilot", "ai", "ml", "devops", "azure", "coding", "security"
+        };
+
+        // Convert configuration to Section models
+        var sectionsDict = settings.Content.Sections
+            .Select(kvp => ConvertToSection(kvp.Key, kvp.Value, collectionDisplayNames))
+            .ToDictionary(s => s.Name);
+
+        // Order sections according to defined order, then any remaining alphabetically
+        return sectionOrder
+            .Where(name => sectionsDict.ContainsKey(name))
+            .Select(name => sectionsDict[name])
+            .Concat(sectionsDict.Values.Where(s => !sectionOrder.Contains(s.Name)).OrderBy(s => s.Title))
+            .ToList()
+            .AsReadOnly();
+    }
+
+    /// <summary>
+    /// Convert SectionConfig from appsettings.json to Section model.
+    /// </summary>
+    private static Section ConvertToSection(string sectionName, SectionConfig config, Dictionary<string, string> collectionDisplayNames)
+    {
+        var collections = config.Collections
+            .Select(kvp =>
+            {
+                var displayName = collectionDisplayNames.TryGetValue(kvp.Key.ToLowerInvariant(), out var name)
+                    ? name
+                    : kvp.Value.Title;
+                return new Collection(kvp.Key, kvp.Value.Title, kvp.Value.Url, kvp.Value.Description, displayName, kvp.Value.Custom);
+            })
+            .ToList();
+
+        return new Section(sectionName, config.Title, config.Description, config.Url, collections);
+    }
+
+    /// <summary>
     /// Initialize repository. Override in derived classes for pre-loading if needed.
     /// </summary>
     public virtual Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken ct = default)
@@ -226,33 +272,27 @@ public abstract class ContentRepositoryBase : IContentRepository
 
     /// <summary>
     /// Build a set of section and collection titles to exclude from tag clouds.
-    /// Uses cached section configuration data.
+    /// Uses cached section data from GetAllSectionsAsync.
     /// </summary>
-    protected HashSet<string> BuildSectionCollectionExcludeSet()
+    protected async Task<HashSet<string>> BuildSectionCollectionExcludeSet()
     {
         var excludeSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        var sectionsConfig = _settings.Content.Sections;
+        var sections = await GetAllSectionsAsync();
         
-        if (sectionsConfig != null)
+        foreach (var section in sections)
         {
-            foreach (var (_, sectionConfig) in sectionsConfig)
+            // Add section title
+            if (!string.IsNullOrWhiteSpace(section.Title))
             {
-                // Add section title
-                if (!string.IsNullOrWhiteSpace(sectionConfig.Title))
+                excludeSet.Add(section.Title);
+            }
+            
+            // Add collection titles
+            foreach (var collection in section.Collections)
+            {
+                if (!string.IsNullOrWhiteSpace(collection.Title))
                 {
-                    excludeSet.Add(sectionConfig.Title);
-                }
-                
-                // Add collection titles
-                if (sectionConfig.Collections != null)
-                {
-                    foreach (var (_, collectionConfig) in sectionConfig.Collections)
-                    {
-                        if (!string.IsNullOrWhiteSpace(collectionConfig.Title))
-                        {
-                            excludeSet.Add(collectionConfig.Title);
-                        }
-                    }
+                    excludeSet.Add(collection.Title);
                 }
             }
         }
@@ -473,5 +513,31 @@ public abstract class ContentRepositoryBase : IContentRepository
         parts.Add($"min:{minUses}");
 
         return string.Join("|", parts);
+    }
+
+    // ==================== Section Methods ====================
+
+    /// <summary>
+    /// Get all sections defined in configuration.
+    /// Sections are loaded lazily and cached in memory.
+    /// </summary>
+    public async Task<IReadOnlyList<Section>> GetAllSectionsAsync(CancellationToken ct = default)
+    {
+        return await Cache.GetOrCreateAsync("sections:all", entry =>
+        {
+            entry.SetPriority(CacheItemPriority.NeverRemove);
+            return Task.FromResult(InitializeSections(_settings));
+        }) ?? [];
+    }
+
+    /// <summary>
+    /// Get a single section by name.
+    /// Sections are loaded lazily and cached in memory.
+    /// </summary>
+    public async Task<Section?> GetSectionByNameAsync(string name, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(name);
+        var sections = await GetAllSectionsAsync(ct);
+        return sections.FirstOrDefault(s => s.Name == name);
     }
 }

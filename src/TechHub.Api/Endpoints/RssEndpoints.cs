@@ -46,7 +46,6 @@ public static class RssEndpoints
     /// Gets RSS feed containing all content from all sections
     /// </summary>
     private static async Task<IResult> GetAllContentFeed(
-        ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         IRssService rssService)
     {
@@ -79,11 +78,10 @@ public static class RssEndpoints
     /// </summary>
     private static async Task<IResult> GetSectionFeed(
         string sectionName,
-        ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         IRssService rssService)
     {
-        var section = await sectionRepository.GetByNameAsync(sectionName);
+        var section = await contentRepository.GetSectionByNameAsync(sectionName);
         if (section is null)
         {
             return Results.NotFound();
@@ -111,12 +109,11 @@ public static class RssEndpoints
     private static async Task<IResult> GetCollectionFeed(
         string collectionName,
         string? subcollection,
-        ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         IRssService rssService)
     {
         // Get all sections to find if this collection exists
-        var sections = await sectionRepository.GetAllAsync();
+        var sections = await contentRepository.GetAllSectionsAsync();
         var collection = sections
             .SelectMany(s => s.Collections)
             .FirstOrDefault(c => c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));

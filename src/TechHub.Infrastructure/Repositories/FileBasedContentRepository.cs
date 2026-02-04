@@ -495,8 +495,8 @@ public class FileBasedContentRepository : ContentRepositoryBase
             filtered = filtered.Where(item => item.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
         }
 
-        // Build exclude set from section/collection titles (done in-memory, no async needed for file-based repo)
-        var excludeSet = BuildSectionCollectionExcludeSet();
+        // Build exclude set from section/collection titles
+        var excludeSet = await BuildSectionCollectionExcludeSet();
 
         // Count tags, filter out excluded tags BEFORE grouping, sort, and limit
         var tagCounts = filtered

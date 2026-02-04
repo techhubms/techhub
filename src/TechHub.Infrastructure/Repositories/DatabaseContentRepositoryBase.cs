@@ -445,7 +445,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         CancellationToken ct)
     {
         // Build exclude set from section/collection titles
-        var excludeSet = BuildSectionCollectionExcludeSet();
+        var excludeSet = await BuildSectionCollectionExcludeSet();
         
         var sql = new StringBuilder("SELECT tags_csv FROM content_items c");
         var parameters = new DynamicParameters();
