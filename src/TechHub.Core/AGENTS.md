@@ -44,20 +44,17 @@ TechHub.Core/
 │   ├── Tags/                    # Tag-related models
 │   │   ├── AllTagsResponse.cs   # Response for all tags API
 │   │   ├── TagCloudItem.cs      # Tag cloud item with size
-│   │   ├── TagCloudRequest.cs   # Tag cloud request parameters
-│   │   └── TagWithCount.cs      # Tag with usage count
+│   │   ├── TagWithCount.cs      # Tag with usage count
 │   ├── PaginationCursor.cs      # Keyset pagination cursor
 │   └── SyncResult.cs            # Content sync operation result
 ├── Interfaces/                   # Repository contracts
-│   ├── IContentRepository.cs    # Content data access
+│   ├── IContentRepository.cs    # Content & Section data access
 │   ├── IContentSyncService.cs   # Content sync operations
 │   ├── IDbConnectionFactory.cs  # Database connection factory
 │   ├── IMarkdownService.cs      # Markdown processing
 │   ├── IRssService.cs           # RSS feed generation
-│   ├── ISectionRepository.cs    # Section data access
-│   ├── ISqlDialect.cs           # SQL dialect abstraction
-│   └── ITagCloudService.cs      # Tag cloud generation
-└── TechHub.Core.csproj          # Project file (no dependencies!)
+│   └── ISqlDialect.cs           # SQL dialect abstraction
+└── TechHub.Core.csproj          # Project file (zero dependencies!)
 ```
 
 ## Core Principles
@@ -67,9 +64,10 @@ TechHub.Core/
 **CRITICAL**: TechHub.Core must remain framework-agnostic:
 
 - ✅ **Use**: `System.*` namespaces only
+- ✅ **Use**: `Microsoft.Extensions.*.Abstractions` (logging, DI interfaces)
 - ✅ **Use**: Standard .NET types (string, int, DateTime, etc.)
 - ✅ **Use**: Collections (`IReadOnlyList<T>`, `List<T>`, `Dictionary<K,V>`)
-- 🚫 **NEVER**: Add NuGet packages or framework dependencies
+- 🚫 **NEVER**: Add NuGet packages with implementation logic
 - 🚫 **NEVER**: Reference ASP.NET Core, Entity Framework, or other frameworks
 
 **Why**: Keeps domain logic clean, testable, and reusable across any application type.

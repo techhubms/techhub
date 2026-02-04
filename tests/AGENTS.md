@@ -13,15 +13,15 @@ You are a testing specialist for the Tech Hub .NET project. This directory conta
 
 ## Tech Stack
 
-- **.NET 10**: Latest LTS runtime
-- **xUnit 2.9.3**: Unit and integration test framework
-- **Moq 4.20.72**: Mocking framework
-- **FluentAssertions 7.0.0**: Assertion library
-- **Microsoft.AspNetCore.Mvc.Testing 10.0.1**: API integration testing
-- **bUnit 1.31.3**: Blazor component testing
+- **.NET**: Latest LTS runtime
+- **xUnit**: Unit and integration test framework
+- **Moq**: Mocking framework
+- **FluentAssertions**: Assertion library
+- **Microsoft.AspNetCore.Mvc.Testing**: API integration testing
+- **bUnit**: Blazor component testing
 - **Playwright .NET**: End-to-end testing
 - **Pester**: PowerShell script testing
-- **C# 13**: With nullable reference types enabled
+- **C#**: With nullable reference types enabled
 
 ## Running Tests
 
@@ -656,11 +656,11 @@ Shared configuration for all test projects (package versions, nullable reference
   <Import Project="../Directory.Build.props" />
   
   <ItemGroup>
-    <PackageReference Include="xunit" Version="2.9.3" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="3.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
-    <PackageReference Include="FluentAssertions" Version="7.0.0" />
-    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Moq" />
   </ItemGroup>
 </Project>
 ```

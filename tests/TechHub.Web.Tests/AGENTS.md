@@ -14,7 +14,7 @@ This directory contains **component tests** for Tech Hub Blazor components using
 **Test Files**: bUnit test classes that validate Blazor component behavior:
 
 - `Components/Pages/` - Tests for Blazor page components
-- `Components/Shared/` - Tests for shared UI components (future)
+- `Components/*Tests.cs` (Root) - Tests for shared and core components (ContentItemCard, SectionCard, etc.)
 - `Components/Layout/` - Tests for layout components (future)
 
 ## Testing Strategy

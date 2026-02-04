@@ -14,7 +14,7 @@ This directory contains **unit tests** for the Tech Hub Core domain layer using 
 **Test Files**: xUnit test classes that validate domain model behavior:
 
 - `Models/ContentItemTests.cs` - Tests for ContentItem domain model
-- `Models/SectionTests.cs` - Tests for Section domain model (future)
+- `Models/SectionTests.cs` - Tests for Section domain model
 - `Extensions/` - Tests for extension methods (future)
 
 ## Testing Strategy

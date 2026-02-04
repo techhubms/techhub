@@ -12,7 +12,7 @@ Tech Hub provides RSS 2.0 feeds for all content, allowing users to subscribe to 
 
 **URL**: `/all/feed.xml`
 
-Returns all content from all sections, sorted by publication date (newest first), limited to 100 most recent items.
+Returns all content from all sections, sorted by publication date (newest first), limited to 50 most recent items.
 
 **Use Case**: Subscribe to all Tech Hub content in a single feed.
 
@@ -20,7 +20,7 @@ Returns all content from all sections, sorted by publication date (newest first)
 
 **URL**: `/all/roundups/feed.xml`
 
-Returns only weekly content roundups, sorted by publication date (newest first), limited to 100 most recent items.
+Returns only weekly content roundups, sorted by publication date (newest first), limited to 50 most recent items.
 
 **Use Case**: Subscribe to weekly curated content summaries.
 
@@ -76,14 +76,8 @@ Each item in the feed includes:
 ### Sorting and Limiting
 
 - Feeds are sorted by publication date, **newest first**
-- Feeds are limited to the **100 most recent items** for performance
+- Feeds are limited to the **50 most recent items** for performance
 - Future-dated content (beyond current date in Europe/Brussels timezone) is excluded
-
-### Caching
-
-- Feeds use **output caching** with 15-minute TTL
-- Feeds include `ETag` and `Last-Modified` headers for HTTP caching
-- Cached feeds are served directly without regeneration for optimal performance
 
 ### Content-Type
 

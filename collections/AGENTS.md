@@ -13,7 +13,6 @@
 - **Always include excerpt section** - Max 200 words, end with `<!--excerpt_end-->`
 - **Always mention author in excerpt** - Author name must appear in intro
 - **Always place files in correct collection directory** based on content type
-- **Always add `alt-collection` frontmatter** for special video subcollections (ghc-features, vscode-updates)
 
 ### ⚠️ Ask First
 
@@ -49,7 +48,6 @@
 - Creating new content items (news, videos, posts, etc.)
 - Editing existing collection content
 - Understanding frontmatter requirements
-- Working with special collection types (alt-collection)
 - Managing content structure and organization
 
 **Related Documentation**:
@@ -68,8 +66,8 @@ This directory contains the content collections for the Tech Hub site. Each coll
 - **_blogs**: Blogs
 - **_roundups**: Curated weekly content summaries
 - **_videos**: Educational and informational video content
-  - **_videos/ghc-features/**: GitHub Copilot features (requires `alt-collection: "features"`, `plans: []`, `ghes_support` in frontmatter)
-  - **_videos/vscode-updates/**: VS Code updates (requires `alt-collection: "vscode-updates"` in frontmatter)
+  - **_videos/ghc-features/**: GitHub Copilot features (derived from directory path)
+  - **_videos/vscode-updates/**: VS Code updates (derived from directory path)
 
 ## Content Organization
 

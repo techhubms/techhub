@@ -25,17 +25,16 @@ TechHub.Infrastructure/
 │       │   └── 001_initial_schema.sql         # Main schema with FTS5
 │       └── postgres/                          # PostgreSQL migrations
 ├── Repositories/                              # Repository implementations
-│   ├── ConfigurationBasedSectionRepository.cs # Sections from appsettings.json
 │   ├── ContentRepositoryBase.cs               # Abstract base for content repos
 │   ├── DatabaseContentRepositoryBase.cs       # Database-specific base class
 │   ├── SqliteContentRepository.cs             # SQLite with FTS5 implementation
+│   ├── PostgresContentRepository.cs           # PostgreSQL implementation
 │   └── FileBasedContentRepository.cs          # Legacy file-based (for reference)
 ├── Services/                                  # Infrastructure services
 │   ├── ContentSyncService.cs                  # Sync markdown files to database
 │   ├── FrontMatterParser.cs                   # YAML frontmatter parsing
 │   ├── MarkdownService.cs                     # Markdown to HTML conversion
-│   ├── RssService.cs                          # RSS feed generation
-│   ├── TagCloudService.cs                     # Tag cloud generation
+│   └── RssService.cs                          # RSS feed generation
 └── TechHub.Infrastructure.csproj              # Project file
 ```
 
@@ -54,7 +53,7 @@ Database provider is configured in `appsettings.json`:
 }
 ```
 
-**Supported Providers**: SQLite (default), PostgreSQL (planned)
+**Supported Providers**: SQLite (default), PostgreSQL
 
 ### Schema Overview
 
@@ -75,19 +74,6 @@ Database provider is configured in `appsettings.json`:
 **See**: [Data/Migrations/sqlite/001_initial_schema.sql](Data/Migrations/sqlite/001_initial_schema.sql) for complete schema
 
 ## Repository Patterns
-
-### Configuration-Based Repository
-
-**Key Pattern**: Load sections from `appsettings.json` in constructor, cache in readonly field.
-
-**Implementation**: `ConfigurationBasedSectionRepository`
-
-**Important Details**:
-
-- Uses `IOptions<AppSettings>` to access configuration
-- Converts `SectionConfig` to domain `Section` models in constructor
-- No database I/O - all data loaded from configuration at startup
-- Thread-safe via readonly collections
 
 ### Database Content Repository
 

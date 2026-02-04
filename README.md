@@ -66,14 +66,13 @@ The Aspire Dashboard provides real-time visualization of:
 - **Logs**: Structured logs from all services
 - **Resources**: Service health and status
 
-To start the dashboard:
+To start the dashboard, simply run the application:
 
 ```powershell
-# Start with dashboard (runs as Docker container)
-Run -Dashboard
-
+# Dashboard starts automatically with the app
 # Dashboard URL: https://localhost:18888
 # Note: Copy the login token from the terminal output
+Run
 ```
 
 Manual dashboard start (if needed separately):

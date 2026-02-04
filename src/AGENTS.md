@@ -13,8 +13,8 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 ## Tech Stack
 
-- **.NET 10**: Latest LTS runtime
-- **C# 13**: File-scoped namespaces, nullable reference types
+- **.NET**: Latest LTS runtime
+- **C#**: File-scoped namespaces, nullable reference types
 - **ASP.NET Core**: Minimal APIs, dependency injection
 - **Blazor**: Server-Side Rendering (SSR) + WebAssembly
 - **.NET Aspire**: Orchestration and telemetry
@@ -29,7 +29,7 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 - API: 5001 (HTTPS) - Defined in [TechHub.Api/Properties/launchSettings.json](TechHub.Api/Properties/launchSettings.json)
 - Web: 5003 (HTTPS) - Defined in [TechHub.Web/Properties/launchSettings.json](TechHub.Web/Properties/launchSettings.json)
-- Aspire Dashboard: 18888 (HTTPS)
+- Aspire Dashboard: 18888 (HTTP)
 
 **Benefits**:
 
@@ -87,7 +87,6 @@ Run -Clean              # Clean build + all tests + servers (when dependencies c
 - **Never commit code with build warnings or errors**
 - **Never skip tests after code changes**
 - **Never suppress warnings without documenting rationale**
-- **Never use top-level statements** (prefer explicit Program class)
 - **Never assume UTC** (use `Europe/Brussels` timezone)
 - **Never make parameters nullable without good reason**
 - **Never duplicate production logic in tests**
@@ -243,7 +242,7 @@ The following warnings are intentionally suppressed because they represent delib
 
 - **IDE0011**: Add braces - Enforced by EditorConfig, auto-fixes when code is formatted
 - **IDE0060**: Unused parameter - Sometimes needed for interface/signature compatibility
-- **IDE0211**: Top-level statements - Project prefers explicit Program class for clarity
+- **IDE0211**: Top-level statements - Project uses top-level statements; suppression prevents "Convert to Program.Main" suggestions
 
 See [Directory.Build.props](../Directory.Build.props) for complete list with detailed XML documentation.
 
@@ -252,7 +251,7 @@ See [Directory.Build.props](../Directory.Build.props) for complete list with det
 **Current Status** (After Configuration):
 
 - **Build Status**: 0 warnings, 0 errors ✅
-- **Tests**: 92/92 passing (100% pass rate) ✅
+- **Tests**: 100% passing required ✅
 - **Code Analysis**: All issues either fixed or intentionally suppressed with documented rationale
 
 **Key Learnings**:

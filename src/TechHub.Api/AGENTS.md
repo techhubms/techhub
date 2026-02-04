@@ -28,10 +28,9 @@ This project implements the REST API backend using ASP.NET Core Minimal APIs. It
 TechHub.Api/
 ├── Program.cs                    # Entry point, DI registration, middleware pipeline
 ├── Endpoints/                    # Minimal API endpoint definitions
-│   ├── SectionEndpoints.cs      # Section-related endpoints
-│   ├── ContentEndpoints.cs      # Content retrieval endpoints
-│   ├── FilterEndpoints.cs       # Advanced filtering endpoints
-│   └── RssEndpoints.cs          # RSS feed generation
+│   ├── SectionsEndpoints.cs      # Section & Content related endpoints
+│   ├── RssEndpoints.cs           # RSS feed generation
+│   └── CustomPagesEndpoints.cs   # Custom page data endpoints
 ├── appsettings.json             # Configuration (sections, collections, paths)
 ├── appsettings.Development.json # Development-specific settings
 └── TechHub.Api.csproj           # Project file
@@ -48,11 +47,11 @@ TechHub.Api/
 **Example Structure**:
 
 ```csharp
-public static class SectionEndpoints
+public static class SectionsEndpoints
 {
-    public static void MapSectionEndpoints(this WebApplication app)
+    public static void MapSectionsEndpoints(this IEndpointRouteBuilder endpoints)
     {
-        var group = app.MapGroup("/api/sections")
+        var group = endpoints.MapGroup("/api/sections")
             .WithTags("Sections")
             .WithOpenApi();
         
@@ -60,26 +59,27 @@ public static class SectionEndpoints
         group.MapGet("/{sectionUrl}", GetSectionByUrl).WithName("GetSectionByUrl");
     }
     
-    private static async Task<IResult> GetAllSections(
-        ISectionRepository repository, CancellationToken ct)
+    // Uses IContentRepository - all data access consolidated
+    private static async Task<Ok<IEnumerable<Section>>> GetAllSections(
+        IContentRepository contentRepository,
+        CancellationToken cancellationToken)
     {
-        var sections = await repository.GetAllAsync(ct);
-        return Results.Ok(sections);
+        var sections = await contentRepository.GetAllSectionsAsync(cancellationToken);
+        return TypedResults.Ok(sections.AsEnumerable());
     }
 }
 ```
 
-**Register in Program.cs**: `app.MapSectionEndpoints();`
+**Register in Program.cs**: `app.MapSectionsEndpoints();`
 
 ```csharp
 // Program.cs
 var app = builder.Build();
 
 // Map all endpoints
-app.MapSectionEndpoints();
-app.MapContentEndpoints();
-app.MapFilterEndpoints();
+app.MapSectionsEndpoints();
 app.MapRssEndpoints();
+app.MapCustomPagesEndpoints();
 
 app.Run();
 ```

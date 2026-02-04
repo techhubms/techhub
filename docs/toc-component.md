@@ -53,9 +53,9 @@ private string GetRenderedContent()
 
 ### Detection Point
 
-The scroll spy detection line is positioned at **~40% from the top of the viewport**. When a heading crosses this line while scrolling, the corresponding TOC link highlights.
+The scroll spy detection line is positioned at **~30% from the top of the viewport**. When a heading crosses this line while scrolling, the corresponding TOC link highlights.
 
-**Why 40%?**
+**Why 30%?**
 
 - Natural reading position (users tend to read content in upper-middle viewport area)
 - Balances early activation (too high) vs late activation (too low)
@@ -78,7 +78,7 @@ The scroll spy detection line is positioned at **~40% from the top of the viewpo
 **Explanation**:
 
 - Adds 50% of viewport height as empty space after content
-- Allows last heading to scroll to detection point (~40% from top)
+- Allows last heading to scroll to detection point (~30% from top)
 - Not full viewport to avoid excessive empty scrolling
 - Applied globally to all `.article-body` containers
 
@@ -86,8 +86,9 @@ The scroll spy detection line is positioned at **~40% from the top of the viewpo
 
 1. **Setup**: Component marks itself with `data-toc-scroll-spy` attribute
 2. **Content selector**: Points to `.article-body` container
-3. **JavaScript observer**: Tracks heading positions relative to detection line
-4. **Highlighting**: Updates active TOC link when heading crosses detection point
+3. **Heading tracking**: Tracks `h2` and `h3` elements only (skips `h4`+ to reduce noise)
+4. **JavaScript observer**: Tracks heading positions relative to detection line
+5. **Highlighting**: Updates active TOC link when heading crosses detection point
 
 **Data Attributes**:
 
