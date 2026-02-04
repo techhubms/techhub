@@ -11721,5 +11721,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=Xx1fjvy99Dk",
     "reason": "No categories found: No categories assigned. The content provided lacks the full text ('content' is null), and the remaining description is a high-level executive/business strategy overview focused on transformative trends in automotive software through ETAS and Microsoft partnership. It discusses broad topics such as faster vehicle launches, cloud-powered toolchains, and cloud-native solutions but does not contain technical depth, hands-on guidance, code, specific Microsoft technology implementation details, or information directed at practitioners or developers. Therefore, per the Generic Exclusion Rules (Business Strategy and Executive Content, and insufficient substantive technical detail), this content is excluded."
+  },
+  {
+    "timestamp": "2026-02-04 09:13:53 +00:00",
+    "reason": "No categories found: No categories assigned. The content is focused exclusively on Adobe Animate (formerly Flash Professional) and the business/product decision by Adobe to discontinue and then maintain the product. There is historical context about Flash, Apple, web standards, and some designer/developer responses, but there is NO substantive Microsoft technology discussed, no Microsoft services, and no relevant comparison or migration to Microsoft. The article's tags and content confirm the absence of .NET, Azure, Microsoft development frameworks, AI/ML, DevOps, or any relevant security/identity context. All information is about Adobe's product lifecycle, industry response, and historical web technology trends outside the Microsoft ecosystem. Following the requirement that Microsoft technology must be central or at least 40% of substantive content, this article does not meet any inclusion criteria. Per rules: only use predefined categories and 'when in doubt, exclude.'",
+    "canonical_url": "https://devclass.com/2026/02/04/adobe-backtracks-reanimates-animate-following-user-backlash/",
+    "collection": "blogs"
   }
 ]
