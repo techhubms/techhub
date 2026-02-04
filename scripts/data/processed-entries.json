@@ -25168,5 +25168,11 @@
     "canonical_url": "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-february/",
     "reason": "Succesfully added: The AI category is assigned due to the focus on AI agent workflows and MCP (AI rule 1). GitHub Copilot is directly covered, qualifying for both the GitHub Copilot and AI categories together (per AI rule 2 and Copilot product distinction). Coding is included because the content is about enhancing development workflows and developer tooling within Visual Studio (Coding rule 5). The content is technical, not a sales pitch, career advice, or business productivity focus, so no generic exclusions apply.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-04 22:05:01 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content highlights AI features such as embeddings and vectors within Microsoft.Extensions.DataIngestion (AI inclusion rule 1 and 4). Assigned 'Coding' because it is a .NET library aimed at developers and discussed in a technical implementation context (Coding rules 1, 2, and 4). I did not assign 'ML' because the primary focus is on application integration with AI features, not on custom ML/data science pipelines. 'Azure', 'DevOps', and 'Security' are not assigned as there is no evidence the discussion significantly covers those topics. The content’s technical level qualifies for inclusion and there are no generic exclusions present.",
+    "canonical_url": "https://www.youtube.com/watch?v=pQivzi4n6jM",
+    "collection": "videos"
   }
 ]
