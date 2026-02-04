@@ -148,6 +148,84 @@
     // Re-initialize after page shows (handles full page back/forward navigation)
     window.addEventListener('pageshow', init);
 
-    // Re-initialize after Blazor enhanced navigation (forward navigation)
-    document.addEventListener('enhancedload', init);
+    // Re-initialize after Blazor enhanced navigation
+    // Note: Must use Blazor.addEventListener, not document.addEventListener
+    function setupBlazorListeners() {
+        if (typeof Blazor !== 'undefined' && Blazor.addEventListener) {
+            Blazor.addEventListener('enhancedload', init);
+            Blazor.addEventListener('enhancedload', handleEnhancedNavigation);
+        } else {
+            // Blazor not ready yet, try again after a short delay
+            setTimeout(setupBlazorListeners, 100);
+        }
+    }
+    setupBlazorListeners();
+
+    // Track navigation type to distinguish forward vs back navigation
+    // The Navigation API (if available) tells us the navigation type
+    let lastUrl = window.location.href;
+
+    /**
+     * Reset scroll and focus for forward navigation
+     * This ensures Tab goes to skip link after navigating to a new page
+     */
+    function resetPagePosition() {
+        // Scroll to top
+        window.scrollTo(0, 0);
+
+        // Reset focus to body so next Tab focuses skip link
+        // Use requestAnimationFrame to ensure this runs after any other focus changes
+        // from Blazor's enhanced navigation or other scripts
+        requestAnimationFrame(() => {
+            // Use tabindex trick to make body temporarily focusable
+            document.body.tabIndex = -1;
+            document.body.focus();
+            document.body.removeAttribute('tabindex');
+        });
+    }
+
+    /**
+     * Handle enhanced navigation completion
+     * Only reset position on forward navigation, not back/forward browser navigation
+     */
+    function handleEnhancedNavigation(event) {
+        const newUrl = window.location.href;
+
+        // Skip if URL hasn't changed (same-page navigation like hash links)
+        if (newUrl === lastUrl) {
+            return;
+        }
+
+        // Check if this is a back/forward navigation using Navigation API
+        // The Navigation API is available in modern browsers
+        if (window.navigation && window.navigation.currentEntry) {
+            const navType = window.navigation.currentEntry.navigationType;
+            // 'traverse' means back/forward navigation - don't reset
+            if (navType === 'traverse') {
+                lastUrl = newUrl;
+                return;
+            }
+        }
+
+        // For browsers without Navigation API, use a heuristic:
+        // If popstate fired recently, it's likely back/forward navigation
+        if (isPopstateNavigation) {
+            lastUrl = newUrl;
+            return;
+        }
+
+        // This is forward navigation - reset page position
+        lastUrl = newUrl;
+        resetPagePosition();
+    }
+
+    // Track popstate to detect back/forward navigation in browsers without Navigation API
+    let isPopstateNavigation = false;
+    window.addEventListener('popstate', () => {
+        isPopstateNavigation = true;
+        // Reset flag after a short delay (enhancedload fires shortly after)
+        setTimeout(() => { isPopstateNavigation = false; }, 100);
+    });
+
+    // Note: Enhanced navigation listener is set up in setupBlazorListeners() above
 })();
