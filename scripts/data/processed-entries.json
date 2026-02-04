@@ -25030,5 +25030,17 @@
     "reason": "Succesfully added: Assigned 'AI' because the content focuses on intelligent agentic workflows and their application within AI-powered developer tools (AI rule 2, 3, and 4). Assigned 'GitHub Copilot' because the article directly addresses features, integrations, and usage tips for GitHub Copilot (GitHub Copilot rules 1–4), and per CRITICAL, 'AI' must also be included. Assigned 'Coding' category since it discusses configuration and usage in developer tools (Visual Studio Code/CLI), structuring custom scripts, and coding assistant functions (Coding rules 2, 4, and 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' because the primary focus is on enhancing the development workflow and Copilot feature configuration, not on deployment, cloud hosting, ML infrastructure, or security engineering specifically.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/integrate-agents-with-skills-in-github-copilot/m-p/4492020#M1391"
+  },
+  {
+    "timestamp": "2026-02-04 08:10:59 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the post focuses on troubleshooting, upgrading, and performance improvements for Azure CLI, a core Azure management tool (Azure rule 1 and 4). No other categories (AI, ML, Coding, Security, DevOps, GitHub Copilot) were assigned because the content does not discuss coding practices, DevOps workflows, security configuration, machine learning/data engineering, or AI integration. The post is fully technical, targets Azure practitioners, and provides a constructive, solution-focused analysis.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-windows-msi-upgrade-issue-root-cause-mitigation-and/ba-p/4491691"
+  },
+  {
+    "timestamp": "2026-02-04 08:11:25 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned DevOps category because the process, tooling, and workflows described (versioning, synchronization, use of JSON state files, maintenance and drift detection) are firmly DevOps practices (DevOps rules 3, 5, 6, and 9) in the context of documentation assets. Azure is assigned because Co-op Translator is hosted at github.com/Azure/, is used in Microsoft's official 'For Beginners' series, and the context is Microsoft open-source infrastructure (Azure rule 1). Coding is assigned because the solution involves developer workflows, tools (pip, poetry, npm analogies), and repository-level automation, all of which relate to programming practices and repository maintainability (Coding rule 4). AI and ML categories are not assigned, as the article focuses on process automation, state tracking, and versioning rather than building or using AI/ML models. Security is also not assigned, as the primary concern is not security, identity, or compliance. No generic exclusion rules apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/rethinking-documentation-translation-treating-translations-as/ba-p/4491755"
   }
 ]
