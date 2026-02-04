@@ -204,9 +204,11 @@ builder.Services.AddTransient<MigrationRunner>();
 
 ### Tag Cloud Service
 
-**Key Pattern**: Query tags from database → Count occurrences → Apply quantile sizing.
+**Key Pattern**: Query tags from repository (with section/collection title exclusion) → Count occurrences → Apply quantile sizing.
 
 **Implementation**: `TagCloudService`
+
+**Section/Collection Title Exclusion**: Repository layer (`ContentRepositoryBase`) filters out section and collection titles from tags BEFORE counting. This ensures tag clouds don't show "AI", "GitHub Copilot", etc. as tags when they are already shown as section/collection filters.
 
 **Quantile Size Algorithm**:
 

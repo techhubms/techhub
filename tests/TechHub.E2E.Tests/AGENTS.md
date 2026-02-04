@@ -27,7 +27,7 @@ await Assertions.Expect(element).ToHaveClassAsync(new Regex("active"));
 
 // Wait for DOM condition
 await Page.WaitForFunctionAsync(
-    "() => document.querySelectorAll('.content-item-card').length > 0",
+    "() => document.querySelectorAll('.card').length > 0",
     new() { Timeout = 5000, PollingInterval = 100 });
 ```
 

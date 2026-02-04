@@ -379,7 +379,7 @@ public class FilteringTests : PlaywrightTest
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert
-        await Expect(Page.Locator(".content-item-card")).Not.ToBeEmptyAsync();
+        await Expect(Page.Locator(".card")).Not.ToBeEmptyAsync();
         await Expect(Page).ToHaveURLAsync("**/sections/ai?tags=azure");
     }
 

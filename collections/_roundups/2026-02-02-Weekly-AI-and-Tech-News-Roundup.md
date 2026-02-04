@@ -1,5 +1,5 @@
-﻿---
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup
+---
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 title: 'GitHub Copilot, AI Accelerators, and Secure Cloud: The Latest in Platform and Developer Tools'
 author: TechHub
 primary_section: github-copilot

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Agentic AI Advancements, GitHub Copilot Progress, Hybrid DevOps, and Secure Cloud Updates
 author: TechHub
 date: 2025-10-27 09:00:00 +00:00
@@ -32,7 +32,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-10-27
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup-2025-10-27
 ---
 Welcome to this week’s Tech Roundup, where updates in automation, developer capabilities, and security show how technology is evolving. GitHub Copilot introduces improvements in model speed, multi-model selection, and stronger IDE integration—helping developers work faster and with increased context. Step-by-step guides and community examples demonstrate how agentic workflows are becoming practical, with applications ranging from cloud migration to creative open-source solutions.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: AI Developer Tools, Security Updates, and Azure Service Improvements This Week
 author: TechHub
 date: 2026-01-19 09:00:00 +00:00
@@ -31,7 +31,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2026-01-19
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup-2026-01-19
 ---
 Welcome to this week’s technology summary, where updates in AI and cloud platforms are in focus. GitHub Copilot introduces improved automation that adapts to context alongside better integration for business users. Microsoft Azure has new releases that range from vector database search to secure hybrid storage and advanced networking features. In DevOps and security, you’ll find articles covering efforts to disrupt cloud-based cybercrime, new agentic tooling for workflows, and stronger security automation for open source projects and CI/CD. Read below to find out what these releases mean for developer productivity, cloud security, and modernization of data handling throughout the technology stack.<!--excerpt_end-->
 

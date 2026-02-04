@@ -2,8 +2,6 @@
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 
-@using static TechHub.Web.Services.SectionHelper
-
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
 
 <HeadContent>
@@ -52,10 +50,10 @@
                                 aria-label="@item.GetAriaLabel()">
                                 <span class="sidebar-content-button-title">@item.Title</span>
                                 <span class="sidebar-content-button-meta">
-                                    <span class="sidebar-item-section">@GetSectionDisplayName(item.PrimarySectionName)</span>
+                                    <span class="sidebar-item-section">@GetItemSectionTitle(item.PrimarySectionName)</span>
                                     <span class="sidebar-content-button-meta-separator">•</span>
                                     <span
-                                        class="sidebar-item-collection">@(GetCollectionTitle(item.CollectionName))</span>
+                                        class="sidebar-item-collection">@GetItemCollectionTitle(item.CollectionName)</span>
                                     <span class="sidebar-content-button-meta-separator">•</span>
                                     <span class="sidebar-item-date">@FormatDateShort(item.DateEpoch)</span>
                                 </span>
@@ -109,6 +107,28 @@ new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon(
             <path
                 d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
     </svg>;
+
+    private string GetItemSectionTitle(string sectionName)
+    {
+        var section = sections?.FirstOrDefault(s => s.Name.Equals(sectionName, StringComparison.OrdinalIgnoreCase));
+        return section?.Title ?? sectionName;
+    }
+
+    private string GetItemCollectionTitle(string collectionName)
+    {
+        // Search all sections for the collection
+        foreach (var section in sections ?? Enumerable.Empty<TechHub.Core.Models.Section>())
+        {
+            var collection = section.Collections.FirstOrDefault(c => 
+                c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+            if (collection != null)
+            {
+                return collection.DisplayName ?? collection.Title;
+            }
+        }
+        // Fallback to title case
+        return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
+    }
 
 protected override async Task OnParametersSetAsync()
 {

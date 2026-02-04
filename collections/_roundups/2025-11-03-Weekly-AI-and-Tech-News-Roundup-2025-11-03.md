@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Agents, Automation, and AI: A New Week for GitHub Copilot and Cloud Platforms'
 author: TechHub
 date: 2025-11-03 09:00:00 +00:00
@@ -32,7 +32,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-11-03
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup-2025-11-03
 ---
 Welcome to this week’s technology update, highlighting new changes in AI-driven development. There is continued progress for GitHub Copilot, which expands beyond code suggestions into a multi-agent platform embedded across developer workflows. Key updates like Mission Control and Agent HQ, along with new integrations, offer improved coding, code review, and enterprise oversight—extending automation throughout the engineering process.
 

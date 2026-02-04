@@ -60,7 +60,7 @@ public class TagCloudService : ITagCloudService
             ? request.CollectionName
             : null;
 
-        // Get top N tag counts (repository returns cached results - very fast)
+        // Get top N tag counts (repository filters section/collection tags internally)
         var tagCounts = await _contentRepository.GetTagCountsAsync(
             dateFrom: dateFrom,
             dateTo: null,

@@ -1696,7 +1696,7 @@ section_names:
 - ml
 primary_section: "github-copilot"
 feed_name: "TechHub"
-external_url: "/github-copilot/roundups/$slug"
+external_url: "/all/roundups/$slug"
 ---
 
 $($metadata.introduction)

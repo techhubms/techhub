@@ -1,7 +1,9 @@
 using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 using Moq;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Repositories;
@@ -37,11 +39,24 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
         mockMarkdownService.Setup(m => m.ExtractExcerpt(It.IsAny<string>(), It.IsAny<int>()))
             .Returns<string, int>((content, _) => content.Length > 100 ? content[..100] : content);
 
+        // Create minimal AppSettings for repository
+        var appSettings = new AppSettings
+        {
+            Content = new ContentSettings
+            {
+                CollectionsPath = "collections",
+                Sections = new Dictionary<string, SectionConfig>(),
+                CollectionDisplayNames = new Dictionary<string, string>()
+            },
+            BaseUrl = "https://localhost:7245"
+        };
+
         _repository = new SqliteContentRepository(
             _fixture.Connection,
             new Infrastructure.Data.SqliteDialect(),
             _cache,
-            mockMarkdownService.Object);
+            mockMarkdownService.Object,
+            Options.Create(appSettings));
     }
 
     public override void Dispose()

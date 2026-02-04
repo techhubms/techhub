@@ -34,7 +34,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         IMarkdownService markdownService,
         IHostEnvironment environment,
         IMemoryCache cache)
-        : base(cache, markdownService)
+        : base(cache, markdownService, settings)
     {
         ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(markdownService);
@@ -455,6 +455,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
     /// <summary>
     /// Get tag counts from in-memory items using LINQ GROUP BY.
     /// For file-based repository, this is efficient since items are already loaded.
+    /// Automatically excludes section and collection titles from tag counts.
     /// </summary>
     protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
         DateTimeOffset? dateFrom,
@@ -494,9 +495,13 @@ public class FileBasedContentRepository : ContentRepositoryBase
             filtered = filtered.Where(item => item.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
         }
 
-        // Count tags, sort, and limit
+        // Build exclude set from section/collection titles (done in-memory, no async needed for file-based repo)
+        var excludeSet = BuildSectionCollectionExcludeSet();
+
+        // Count tags, filter out excluded tags BEFORE grouping, sort, and limit
         var tagCounts = filtered
             .SelectMany(item => item.Tags)
+            .Where(tag => !excludeSet.Contains(tag)) // Filter section/collection tags BEFORE grouping
             .GroupBy(tag => tag, StringComparer.OrdinalIgnoreCase)
             .Select(g => new TagWithCount { Tag = g.Key, Count = g.Count() })
             .Where(t => t.Count >= minUses)

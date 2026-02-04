@@ -2,14 +2,13 @@
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 
-@using static TechHub.Web.Services.SectionHelper
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
 
-<PageTitle>@GetSectionDisplayName(SectionName) - Tech Hub</PageTitle>
+<PageTitle>@(section?.Title ?? SectionName) - Tech Hub</PageTitle>
 
 <HeadContent>
-    <link rel="alternate" type="application/rss+xml" title="Tech Hub - @GetSectionDisplayName(SectionName) - RSS Feed"
+    <link rel="alternate" type="application/rss+xml" title="Tech Hub - @(section?.Title ?? SectionName) - RSS Feed"
         href="@($"/{SectionName}/feed.xml")" />
 </HeadContent>
 
@@ -38,11 +37,13 @@
     public string? TagsParam { get; set; }
 
     private List<string> selectedTags = new();
+    private TechHub.Core.Models.Section? section;
 
     protected override void OnInitialized()
     {
         // Verify section exists, redirect to 404 if not
-        if (SectionCache.GetSectionByName(SectionName) == null)
+        section = SectionCache.GetSectionByName(SectionName);
+        if (section == null)
         {
             Navigation.NavigateTo("/not-found");
             return;

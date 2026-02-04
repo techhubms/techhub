@@ -1,4 +1,4 @@
-﻿---
+---
 title: AI Agents and Automated Workflows Update Developer Tools and Cloud Platforms
 author: TechHub
 date: 2025-10-13 09:00:00 +00:00
@@ -32,7 +32,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-10-13
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup-2025-10-13
 ---
 Welcome to the weekly tech roundup, where AI agents and automation update how developers work across cloud platforms, coding tools, and data engineering. GitHub Copilot added more agent-driven capabilities, new model options, and deeper integrations with IDEs, terminals, and mobile—helping teams code, collaborate, and troubleshoot with improved speed. Updates to Visual Studio Code and Copilot CLI, alongside new tutorials, showcase how Copilot supports onboarding, accessibility, and community-driven automation efforts.
 

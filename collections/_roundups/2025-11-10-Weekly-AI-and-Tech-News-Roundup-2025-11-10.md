@@ -1,4 +1,4 @@
-﻿---
+---
 title: Updates in AI-Enabled Development, DevOps Automation, and Cloud Security
 author: TechHub
 date: 2025-11-10 09:00:00 +00:00
@@ -31,7 +31,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-11-10
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup-2025-11-10
 ---
 Welcome to this week's tech roundup, where we outline new developments in AI-assisted programming and cloud services. This edition focuses on how GitHub Copilot is evolving—now offering unified agent management, expanded integrations with editors, workflow automation, and controls for enterprise usage. Companies benefit from these updates through more efficient development processes and systematic delivery pipelines. The newsletter also highlights certification opportunities and guides for responsible AI integration, increasing Copilot’s influence in modern development.
 

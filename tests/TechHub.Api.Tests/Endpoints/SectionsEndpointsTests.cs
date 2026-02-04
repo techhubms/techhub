@@ -511,9 +511,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     [Fact]
     public async Task GetContentDetail_WithValidSlug_ReturnsContentWithRenderedHtml()
     {
-        // Arrange - Use a known content item from test data
-        // First get a content item to know its slug
-        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
+        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items");
         var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
@@ -522,7 +521,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         var slug = testItem.Slug;
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{slug}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{slug}");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -568,13 +567,13 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     [Fact]
     public async Task GetContentDetail_IncludesMetadata()
     {
-        // Arrange - Get a valid content item
-        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
+        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items");
         var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
         var testItem = items!.First();
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -587,7 +586,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         detail.Title.Should().NotBeNullOrEmpty();
         detail.Author.Should().NotBeNullOrEmpty();
         detail.DateEpoch.Should().BeGreaterThan(0);
-        detail.CollectionName.Should().Be("news");
+        detail.CollectionName.Should().Be("roundups");
         detail.Tags.Should().NotBeNull();
         detail.Excerpt.Should().NotBeNullOrEmpty();
     }
@@ -599,13 +598,13 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // We can't easily test this without knowing specific draft slugs,
         // but we can verify that any returned content is not marked as draft
 
-        // Arrange - Get any valid content item
-        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
+        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items");
         var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
         var testItem = items!.First();
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -613,6 +612,28 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
         detail.Should().NotBeNull();
         detail!.Draft.Should().BeFalse("Detail endpoint should not return draft content");
+    }
+
+    [Fact]
+    public async Task GetContentDetail_WithExternalUrl_ReturnsNotFound()
+    {
+        // External collections (news, blogs, community) link to original sources,
+        // so detail endpoint returns 404 since there's no internal content to display
+
+        // Arrange - Get a news item (external collection)
+        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var testItem = items!.First();
+
+        // Verify it's actually an external item
+        testItem.LinksExternally().Should().BeTrue("News items should link externally");
+
+        // Act - Try to access detail endpoint
+        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}");
+
+        // Assert - Should return 404 since external items don't have detail pages
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound,
+            "External collections should return 404 for detail endpoint since they link to original sources");
     }
 
     #endregion

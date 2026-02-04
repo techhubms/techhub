@@ -2,6 +2,8 @@ using System.Data;
 using System.Text;
 using Dapper;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
@@ -104,8 +106,9 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         IDbConnection connection,
         ISqlDialect dialect,
         IMemoryCache cache,
-        IMarkdownService markdownService)
-        : base(cache, markdownService)
+        IMarkdownService markdownService,
+        IOptions<AppSettings> settings)
+        : base(cache, markdownService, settings)
     {
         ArgumentNullException.ThrowIfNull(connection);
         ArgumentNullException.ThrowIfNull(dialect);
@@ -430,6 +433,7 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
     /// Get tag counts using in-memory aggregation from tags_csv column.
     /// ULTRA-FAST: Parses comma-delimited tags from filtered content items in-memory.
     /// Uses standard SQL - works with both SQLite and PostgreSQL.
+    /// Automatically excludes section and collection titles from tag counts.
     /// </summary>
     protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
         DateTimeOffset? dateFrom,
@@ -440,6 +444,9 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         int minUses,
         CancellationToken ct)
     {
+        // Build exclude set from section/collection titles
+        var excludeSet = BuildSectionCollectionExcludeSet();
+        
         var sql = new StringBuilder("SELECT tags_csv FROM content_items c");
         var parameters = new DynamicParameters();
 
@@ -494,14 +501,14 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 
             foreach (var tag in tags)
             {
-                if (!string.IsNullOrEmpty(tag))
+                if (!string.IsNullOrEmpty(tag) && !excludeSet.Contains(tag))
                 {
                     tagCounts[tag] = tagCounts.GetValueOrDefault(tag) + 1;
                 }
             }
         }
 
-        // Filter by minimum uses, sort, and limit results
+        // Filter by minimum uses, sort, and limit results (AFTER excluding section/collection tags)
         var results = tagCounts
             .Where(kvp => kvp.Value >= minUses)
             .Select(kvp => new TagWithCount { Tag = kvp.Key, Count = kvp.Value })

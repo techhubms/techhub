@@ -2,6 +2,8 @@ using System.Data;
 using System.Text;
 using Dapper;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
@@ -18,8 +20,9 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
         IDbConnection connection,
         ISqlDialect dialect,
         IMemoryCache cache,
-        IMarkdownService markdownService)
-        : base(connection, dialect, cache, markdownService)
+        IMarkdownService markdownService,
+        IOptions<AppSettings> settings)
+        : base(connection, dialect, cache, markdownService, settings)
     {
     }
 

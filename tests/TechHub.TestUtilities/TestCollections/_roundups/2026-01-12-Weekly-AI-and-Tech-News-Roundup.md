@@ -31,7 +31,6 @@ tags:
 - Coding
 - DevOps
 - Security
-external_url: https://example.com/test
 feed_name: Test Feed
 ---
 Welcome to the weekly tech update, where agentic AI and new developer tools are in focus. GitHub Copilot introduces expanded multi-model options and more customizable workflows for leading IDEs, while Azure releases new automation features, enhancements in high-performance computing, and easier developer experience. AI and machine learning continue to move toward interoperable and secure applications, bringing fresh options for context-driven workflows and scalable enterprise implementations. This week also highlights progress in DevOps automation, changes in cloud security practices, and open source releases that help teams build secure, productive, and adaptive systems.<!--excerpt_end-->

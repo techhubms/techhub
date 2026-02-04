@@ -25,7 +25,7 @@ namespace TechHub.E2E.Tests.Helpers;
 ///        expectedUrlSegment: "/github-copilot");
 ///
 /// 3. Click content card to detail page:
-///    await page.ClickAndNavigateAsync(".content-item-card", nth: 0,
+///    await page.ClickAndNavigateAsync(".card", nth: 0,
 ///        expectedUrlSegment: "/roundups/");
 ///
 /// 4. Click navigation link:
@@ -94,7 +94,7 @@ public static class BlazorHelpers
     ///       expectedUrlSegment: "/videos", waitForActiveState: "Videos");
     ///
     /// Example (content card with href filter):
-    ///   await page.ClickAndNavigateAsync(".content-item-card", filterByHref: "/roundups/",
+    ///   await page.ClickAndNavigateAsync(".card", filterByHref: "/roundups/",
     ///       customWait: p => p.WaitForContentDetailPageAsync());
     /// </summary>
     /// <param name="page">The Playwright page</param>
@@ -639,7 +639,7 @@ public static class BlazorHelpers
     /// Examples:
     ///   await page.AssertElementVisibleBySelectorAsync(".sidebar");
     ///   await page.AssertElementVisibleBySelectorAsync("main article");
-    ///   await page.AssertElementVisibleBySelectorAsync(".content-item-card");
+    ///   await page.AssertElementVisibleBySelectorAsync(".card");
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
@@ -679,7 +679,7 @@ public static class BlazorHelpers
     /// Uses Playwright's auto-retrying count assertion.
     ///
     /// Example:
-    ///   await page.AssertElementCountBySelectorAsync(".content-item-card", 10);
+    ///   await page.AssertElementCountBySelectorAsync(".card", 10);
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
@@ -738,7 +738,7 @@ public static class BlazorHelpers
     /// Use this for conditional logic, not for assertions (use AssertElementCountBySelectorAsync for assertions).
     ///
     /// Example:
-    ///   var count = await page.GetElementCountBySelectorAsync(".content-item-card");
+    ///   var count = await page.GetElementCountBySelectorAsync(".card");
     ///   if (count > 0) { /* do something */ }
     /// </summary>
     /// <param name="page">The Playwright page</param>

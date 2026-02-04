@@ -195,7 +195,7 @@ public class TagCloudServiceTests
         result.Should().Contain(t => t.Tag == "Code Review");
         result.Should().Contain(t => t.Tag == "Developer Tools");
         result.Should().Contain(t => t.Tag == "Collaboration");
-        result.Should().Contain(t => t.Tag == ".NET"); // From multiple sections
+        result.Should().Contain(t => t.Tag == "Coding", "Coding is not a section name and should appear in tag cloud");
     }
 
     #endregion

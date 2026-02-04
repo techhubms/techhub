@@ -360,6 +360,12 @@ public static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
+        // Check if this content item has an external URL - if so, return 404 when accessed via internal route
+        if (item.LinksExternally())
+        {
+            return TypedResults.NotFound();
+        }
+
         return TypedResults.Ok(item);
     }
 }

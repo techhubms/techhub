@@ -125,7 +125,7 @@ public class NavigationTests : IAsyncLifetime
         await Page.GotoRelativeAsync("/github-copilot/news");
 
         // Get first content card
-        var firstCard = Page.Locator(".content-item-card").First;
+        var firstCard = Page.Locator(".card").First;
 
         // Assert - Collection badge should NOT be visible (or should not say "News")
         var collectionBadges = firstCard.Locator(".collection-badge");

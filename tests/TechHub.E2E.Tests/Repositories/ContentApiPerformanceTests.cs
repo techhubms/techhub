@@ -69,8 +69,8 @@ public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory
     [Fact]
     public async Task GetContentDetail_ValidSlug_ReturnsItem_WithinPerformanceThreshold()
     {
-        // Arrange
-        var url = "/api/sections/github-copilot/collections/blogs/github-copilot-levels-of-enlightenment";
+        // Arrange - using roundups collection which links internally (blogs/news/community link externally and return 404)
+        var url = "/api/sections/all/collections/roundups/weekly-ai-and-tech-news-roundup";
 
         // Act - measure HTTP request/response cycle
         var elapsed = await MeasureHttpGetAsync<ContentItemDetail>(_client, url);

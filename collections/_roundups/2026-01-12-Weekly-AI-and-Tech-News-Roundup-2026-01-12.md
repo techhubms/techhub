@@ -1,4 +1,4 @@
-﻿---
+---
 title: Agentic AI, GitHub Copilot Updates, Azure Platform Features, and Improving Secure Cloud Workflows
 author: TechHub
 date: 2026-01-12 09:00:00 +00:00
@@ -33,7 +33,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2026-01-12
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup-2026-01-12
 ---
 Welcome to the weekly tech update, where agentic AI and new developer tools are in focus. GitHub Copilot introduces expanded multi-model options and more customizable workflows for leading IDEs, while Azure releases new automation features, enhancements in high-performance computing, and easier developer experience. AI and machine learning continue to move toward interoperable and secure applications, bringing fresh options for context-driven workflows and scalable enterprise implementations. This week also highlights progress in DevOps automation, changes in cloud security practices, and open source releases that help teams build secure, productive, and adaptive systems.<!--excerpt_end-->
 

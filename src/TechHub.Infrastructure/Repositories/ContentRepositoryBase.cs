@@ -1,5 +1,7 @@
 using System.Text;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
@@ -14,14 +16,20 @@ public abstract class ContentRepositoryBase : IContentRepository
 {
     protected IMemoryCache Cache { get; }
     protected IMarkdownService MarkdownService { get; }
+    private readonly AppSettings _settings;
 
-    protected ContentRepositoryBase(IMemoryCache cache, IMarkdownService markdownService)
+    protected ContentRepositoryBase(
+        IMemoryCache cache,
+        IMarkdownService markdownService,
+        IOptions<AppSettings> settings)
     {
         ArgumentNullException.ThrowIfNull(cache);
         ArgumentNullException.ThrowIfNull(markdownService);
+        ArgumentNullException.ThrowIfNull(settings);
 
         Cache = cache;
         MarkdownService = markdownService;
+        _settings = settings.Value;
     }
 
     /// <summary>
@@ -212,6 +220,44 @@ public abstract class ContentRepositoryBase : IContentRepository
             entry.SetPriority(CacheItemPriority.NeverRemove);
             return await GetTagCountsInternalAsync(dateFrom, dateTo, sectionName, collectionName, maxTags, minUses, ct);
         }) ?? [];
+    }
+
+    // ==================== Protected Helper Methods ====================
+
+    /// <summary>
+    /// Build a set of section and collection titles to exclude from tag clouds.
+    /// Uses cached section configuration data.
+    /// </summary>
+    protected HashSet<string> BuildSectionCollectionExcludeSet()
+    {
+        var excludeSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var sectionsConfig = _settings.Content.Sections;
+        
+        if (sectionsConfig != null)
+        {
+            foreach (var (_, sectionConfig) in sectionsConfig)
+            {
+                // Add section title
+                if (!string.IsNullOrWhiteSpace(sectionConfig.Title))
+                {
+                    excludeSet.Add(sectionConfig.Title);
+                }
+                
+                // Add collection titles
+                if (sectionConfig.Collections != null)
+                {
+                    foreach (var (_, collectionConfig) in sectionConfig.Collections)
+                    {
+                        if (!string.IsNullOrWhiteSpace(collectionConfig.Title))
+                        {
+                            excludeSet.Add(collectionConfig.Title);
+                        }
+                    }
+                }
+            }
+        }
+        
+        return excludeSet;
     }
 
     // ==================== Abstract Internal Methods ====================

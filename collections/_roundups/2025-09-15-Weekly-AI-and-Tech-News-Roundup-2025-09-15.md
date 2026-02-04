@@ -1,4 +1,4 @@
-﻿---
+---
 title: Updates in AI Coding, Azure Features, and Secure DevOps for Modern Teams
 author: TechHub
 date: 2025-09-15 09:00:00 +00:00
@@ -31,7 +31,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-09-15
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup-2025-09-15
 ---
 Welcome to this week's technology review highlighting recent progress in AI tools, developer platforms, cloud services, and security. GitHub Copilot now offers an open source VS Code extension, updated AI model support, flexible integration, and new automation options—enabling developers and organizations to customize workflows, boost transparency, and contribute directly to Copilot’s growth.
 

@@ -2,7 +2,6 @@
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 
-@using static TechHub.Web.Services.SectionHelper
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
@@ -11,7 +10,7 @@
 <HeadContent>
     <link rel="canonical"
         href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}")" />
-    <link rel="alternate" type="application/rss+xml" title="Tech Hub - @GetSectionDisplayName(SectionName) - RSS Feed"
+    <link rel="alternate" type="application/rss+xml" title="Tech Hub - @(section?.Title ?? SectionName) - RSS Feed"
         href="@($"/{SectionName}/feed.xml")" />
 </HeadContent>
 
@@ -61,11 +60,13 @@
     public string Slug { get; set; } = null!;
 
     private TechHub.Core.Models.ContentItemDetail? item;
+    private TechHub.Core.Models.Section? section;
 
     protected override async Task OnInitializedAsync()
     {
         // Verify section exists
-        if (SectionCache.GetSectionByName(SectionName) == null)
+        section = SectionCache.GetSectionByName(SectionName);
+        if (section == null)
         {
             Navigation.NavigateTo("/not-found");
             return;

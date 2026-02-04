@@ -28,6 +28,7 @@ namespace TechHub.ContentFixer;
 /// - Expand template variables inside tags ({% youtube page.variable %} → {% youtube VALUE %})
 /// - Remove {% raw %} and {% endraw %} tags
 /// - Process {{ "/path" | relative_url }} filters
+/// - Transform /github-copilot/roundups URLs to /all/roundups
 /// - Keep {% youtube VIDEO_ID %} tags intact (will be processed at runtime)
 /// - Add section/collection display names as tags for sections/collections this item belongs to
 ///   (e.g., if section_names contains "ai", add "AI" tag; if collection is "blogs", add "Blogs" tag)
@@ -594,6 +595,9 @@ public sealed class Program
 
         // Step 2: Process {{ "/path" | relative_url }} filter → /path
         content = Regex.Replace(content, @"\{\{\s*""([^""]+)""\s*\|\s*relative_url\s*\}\}", "$1");
+
+        // Step 2a: Transform /github-copilot/roundups URLs to /all/roundups
+        content = Regex.Replace(content, @"/github-copilot/roundups\b", "/all/roundups");
 
         // Step 3: Expand page.variable inside tags: {% youtube page.youtube_id %} → {% youtube VIDEO_ID %}
         content = Regex.Replace(content, @"(\{%\s*\w+\s+)page\.(\w+)(\s*%\})", match =>

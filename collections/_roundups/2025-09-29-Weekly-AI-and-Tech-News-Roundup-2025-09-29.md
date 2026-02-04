@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'GitHub Copilot, Azure AI, and DevOps: Updates on Agentic Automation and Cloud Workflows'
 author: TechHub
 date: 2025-09-29 09:00:00 +00:00
@@ -36,7 +36,7 @@ section_names:
 - security
 primary_section: github-copilot
 feed_name: TechHub
-external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2025-09-29
+external_url: /all/roundups/Weekly-AI-and-Tech-News-Roundup-2025-09-29
 ---
 Welcome to this week's tech roundup, where advancements in AI automation and modernization continue to impact cloud, developer, and enterprise ecosystems. GitHub Copilot continues its shift from a code completion solution to an agentic workflow platform, anchored on the Model Context Protocol (MCP) for open, reusable automation across IDE and CLI environments. The release of updated models, including GPT-5-Codex and Claude Opus 4.1, expands developer flexibility, while Copilot adds general availability for coding agents, CLI modernization, and improved support for SQL and enterprise applications—driving more collaborative and extensible development practices.
 

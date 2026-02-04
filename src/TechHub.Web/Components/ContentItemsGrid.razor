@@ -330,7 +330,8 @@
             return collection.DisplayName ?? collection.Title ?? CollectionName;
         }
 
-        return SectionHelper.GetCollectionTitle(CollectionName);
+        // Fallback to title case if not found
+        return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(CollectionName.ToLowerInvariant());
     }
 
     private string GetPageTitle()
@@ -338,7 +339,9 @@
         var collectionDisplay = GetCollectionTitle();
         var isAllSection = SectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
         var isAllCollection = CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
-        var sectionDisplayName = SectionHelper.GetSectionDisplayName(SectionName);
+        
+        var section = SectionCache.GetSectionByName(SectionName);
+        var sectionDisplayName = section?.Title ?? SectionName;
 
         return (isAllSection, isAllCollection) switch
         {
