@@ -25060,5 +25060,41 @@
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/all-things-azure/the-os-for-intelligence-how-github-bridges-the-fragmented-ai-landscape/",
     "timestamp": "2026-02-04 16:14:32 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-eventstream-july-december-2025-updates/",
+    "collection": "news",
+    "timestamp": "2026-02-04 17:17:43 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric and Eventstream are Azure-based analytics services and the content discusses extensive Azure Monitor integration, connectors, and data ingestion architecture (Azure rule 1 and 6). Assigned ML category because the post focuses on building and managing data engineering and analytics pipelines, schema registries, and real-time intelligence for operational analytics (ML rules 1, 2, 4). Did not assign AI because there is no focus on AI APIs, Azure OpenAI, or pre-built AI features; and did not assign Coding because the article details platform features rather than code-level language or framework usage. Excluded Security because while there is mention of security features like Private Link, the main focus is operational analytics and pipeline management, not in-depth security implementation. Content is in English, is technical and non-biographical, and does not trigger any generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github",
+    "collection": "news",
+    "timestamp": "2026-02-04 17:18:24 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the article focuses on enabling AI agents (Claude and Codex) for coding workflows in GitHub Copilot, which are both general-purpose AI models used in development (AI inclusion rule 1). Assigned 'GitHub Copilot' because the entire announcement is about GitHub Copilot capabilities and agent integrations (GitHub Copilot inclusion rules 1, 2, 3). Assigned 'DevOps' because the integration supports workflow automation (assigning issues and pull requests, automating review and coding tasks) within team-based practices, fitting DevOps inclusion rules 2, 5, and 9. Did not assign 'Coding' because there is no technical code walkthrough or discussion of language features; the focus is on enabling and using coding agents rather than writing code itself. No other categories apply."
+  },
+  {
+    "canonical_url": "https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/",
+    "collection": "news",
+    "timestamp": "2026-02-04 17:18:46 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the news highlights native integration of Claude, Codex, and Copilot (all AI coding agents) within GitHub (AI rule 1 and 4). 'GitHub Copilot' category was included due to direct references to Copilot features, workflows, and checks (GitHub Copilot rule 1, 2, and 4). 'DevOps' was added because the update centers around workflow orchestration, code reviews, governance, and org-wide security/metrics—core DevOps practices (DevOps rule 3, 4, 5, 9). 'Coding' is included as the AI agents automate/prioritize aspects of code generation, review, and best practices (Coding rules 2, 4, 5). Azure, ML, and Security were not assigned since the news focuses on GitHub/the coding process, not Azure-specific features, ML workloads, or deep-dives into security implementation."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=GuTQDXKwdJQ",
+    "collection": "videos",
+    "timestamp": "2026-02-04 17:19:38 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were included as the content describes using multiple AI coding agents (Claude, Codex, and Copilot) within the developer workflow, following AI rules 1 and 2 and GitHub Copilot rule 1. 'Coding' is included as the video focuses on code generation, assignment, and review—activities central to programming workflows (Coding rules 4 and 5). 'DevOps' is also included since the management of issues, pull requests, and artifacts within GitHub directly relate to team collaboration, workflow automation, and repository management (DevOps rules 2, 5, and 8). Azure was not included because there was no direct mention or central use of Azure products or services. ML and Security were excluded as there is no content focusing on data science, ML engineering, or security practices/technologies."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=y2zSs6sGCr0",
+    "collection": "videos",
+    "timestamp": "2026-02-04 17:20:12 +00:00",
+    "reason": "Succesfully added: I assigned the 'Azure' category because the video centers on Azure SQL Managed Instance—a core Microsoft Azure cloud service (Azure Category Rule 1). The discussion focuses exclusively on new features, performance benefits, and management improvements within Azure, without broader application development or data analytics content. No AI, ML, Security, Coding, DevOps, or GitHub Copilot topics are presented. The content is not biographical, sales-focused, non-English, workplace, or business strategy; generic exclusion rules do not apply."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/azure-virtual-desktop-is-now-available-in-us-gov-texas-in-azure/ba-p/4485723",
+    "collection": "community",
+    "timestamp": "2026-02-04 17:20:46 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses on Azure Virtual Desktop and a new regional service deployment in Azure Government (Azure inclusion rule 1: Any Azure Service/Technology). There is no substantive coverage of development, AI/ML, DevOps pipeline, Security architecture, or coding implementation, so no other categories were assigned. Community type word count exceeds minimum. No generic exclusion rules apply as the content is technical, newsworthy, and relates directly to Microsoft Azure services."
   }
 ]

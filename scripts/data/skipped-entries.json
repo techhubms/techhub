@@ -11739,5 +11739,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=QNLKV6kx82Q",
     "collection": "videos",
     "timestamp": "2026-02-04 15:15:54 +00:00"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/02/04/updates-in-two-of-our-core-priorities/",
+    "collection": "news",
+    "timestamp": "2026-02-04 17:17:56 +00:00",
+    "reason": "No categories found: Content is excluded based on the Generic Exclusion Rules. This is a broad executive/company announcement about leadership changes and organizational direction, focused on workplace/management matters in security and quality. It targets internal audiences with updates on leadership appointments, organizational reporting lines, and business priorities with very limited or no technical implementation detail. There are no substantive technical explanations, engineering architecture, or technical depth in the area of Microsoft technologies that meet the inclusion requirements for Security, DevOps, or any other category. It also triggers 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/esyNFQCZ_TA",
+    "collection": "videos",
+    "timestamp": "2026-02-04 17:19:16 +00:00",
+    "reason": "No categories found: Content excluded due to missing substantive 'content' field (null). The provided input only includes the description, not the main video transcript or content. As per the workflow, categorization decisions require analysis of the actual full content to determine technical depth, covered technologies, and substantive discussion. Without the main content, it's impossible to accurately assign categories, tags, or provide a meaningful detailed markdown summary."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=4b93U-rZ7xo",
+    "collection": "videos",
+    "timestamp": "2026-02-04 17:19:51 +00:00",
+    "reason": "No categories found: No categories were assigned because the provided content does not contain technical details or substantive discussion about Microsoft technologies, tools, or implementation practices. The video is a short, promotional reflection on whether to learn AI, without instructional substance or any clear technical guidance. The description primarily refers viewers to other resources and channel features, but offers no depth. According to the core processing rules, generic exclusion applies for lacking technical content. Thus, all categories are excluded."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=TOAAKp9NYDw",
+    "collection": "videos",
+    "timestamp": "2026-02-04 17:20:26 +00:00",
+    "reason": "No categories found: Content excluded because the provided input lacks a substantive main content body (content is null), so there is not enough technical detail to judge eligibility for any categories. Additionally, the description is a short event/demo announcement rather than an in-depth technical presentation or article, failing to meet the substantive knowledge-sharing threshold required by inclusion rules."
   }
 ]
