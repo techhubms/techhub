@@ -25006,5 +25006,11 @@
     "reason": "Succesfully added: Assigned 'Coding' category because the tutorial is centered on using Visual Studio Code, a core development tool (Coding rule 5). 'DevOps' is included due to the coverage of source control integration and issue management within the editor (DevOps rules 3 and 8). Did not assign AI or GitHub Copilot categories because, although inline suggestions and IntelliSense are mentioned, there is no clear indication that GitHub Copilot or broader Microsoft AI development platforms are the focus. Azure, Security, and ML do not apply as there is no substantive content on those topics.",
     "canonical_url": "https://www.youtube.com/watch?v=f8_uF_IDV50",
     "timestamp": "2026-02-03 22:08:39 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-03-dependabot-now-supports-oidc-authentication",
+    "reason": "Succesfully added: Assigned 'DevOps' category because the update concerns Dependabot (a DevOps automation tool) and its new workflow for handling credentials. Assigned 'Security' due to its focus on removing static secrets, leveraging OIDC, and enhancing supply chain security (Security rules 1 and 2). Added 'Azure' since Azure DevOps Artifacts is a directly supported registry, and setup will be relevant for Microsoft-centric practitioners. The content is news-type, comes from a technical perspective, and contains actionable implementation guidance, fitting all category inclusion rules. The rules on productivity/non-development exclusion do not apply as this is development tooling.",
+    "timestamp": "2026-02-04 00:07:00 +00:00"
   }
 ]

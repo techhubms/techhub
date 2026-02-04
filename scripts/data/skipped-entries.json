@@ -11709,5 +11709,11 @@
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/issues-with-fslogix-profiles-on-win11-25h2-multiuser-sessionhost/m-p/4491584#M13994",
     "timestamp": "2026-02-03 22:08:40 +00:00"
+  },
+  {
+    "timestamp": "2026-02-03 23:08:07 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Excluded all categories because the full content text is missing (content field is null), so category inclusion cannot be assessed. Without substantive content, it is not possible to determine if the video meets technical, developer-focused, or Microsoft-central content requirements per generic exclusion rules. Additionally, the description alone remains high-level and lacks technical implementation detail, making it insufficient for confident inclusion in any category.",
+    "canonical_url": "https://www.youtube.com/shorts/5_TQburf3bA"
   }
 ]
