@@ -25096,5 +25096,23 @@
     "collection": "community",
     "timestamp": "2026-02-04 17:20:46 +00:00",
     "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses on Azure Virtual Desktop and a new regional service deployment in Azure Government (Azure inclusion rule 1: Any Azure Service/Technology). There is no substantive coverage of development, AI/ML, DevOps pipeline, Security architecture, or coding implementation, so no other categories were assigned. Community type word count exceeds minimum. No generic exclusion rules apply as the content is technical, newsworthy, and relates directly to Microsoft Azure services."
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding because the article heavily focuses on automating the developer environment setup using code-based configuration (Coding rule 4). Assigned DevOps due to the emphasis on environment automation, configuration as code, and setup repeatability (DevOps rule 6 and 9). Assigned GitHub Copilot because the content specifically details using GitHub Copilot CLI to generate and maintain WinGet setup files, qualifying under GitHub Copilot inclusion (rule 1 and 4); per workflow, GitHub Copilot always includes the AI category, but in this article, GitHub Copilot CLI is addressed as an assistant tool for environment configuration—not as an AI-powered coding assistant or code completion, so 'AI' is not included. Azure is mentioned as a tool (Azure Developer CLI), but Azure is not central to the solution or more than ~10% of the substantive content, so the Azure category is not added. ML and Security are not the focus. Generic exclusion rules do not apply; the content is technical, professional, and aimed at practitioners.",
+    "canonical_url": "https://devblogs.microsoft.com/blog/winget-configuration-set-up-your-dev-machine-in-one-command",
+    "collection": "news",
+    "timestamp": "2026-02-04 18:18:20 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the research addresses trust, integrity, and defense of language models—fundamental topics in artificial intelligence—and describes detection methods and scanner tools for LLMs (AI Inclusion Rule 1, 4, 5). Assigned 'Security' because the focus is on backdoor detection, protection against tampering, malware scanning, and model assurance, directly mapping to Microsoft security tools and security architecture patterns (Security Rules 1, 5, 9). No 'Azure' or 'ML' assigned as this primarily discusses AI security at the research and methodology level rather than Azure-specific implementations or low-level ML engineering. No generic exclusion rules apply, as this is technical research for practitioners and developers.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/04/detecting-backdoored-language-models-at-scale/",
+    "collection": "news",
+    "timestamp": "2026-02-04 18:19:04 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the tutorial focuses on using Stable Diffusion, a deep learning AI model, running as a service on Azure Functions (AI rule 1, 4, 5). Assigned Azure category as Azure Container Apps, Azure Functions, and various Azure cloud deployment steps are central to the solution (Azure rules 1, 4, 5). Assigned Coding because the content involves building and deploying API code, explains project source files, demonstrates relevant Python, Docker, and CI/CD scripting (Coding rules 1, 2, 4, 5). Did not assign ML because the primary focus is on orchestrating existing AI inference infrastructure, not training/custom ML development. All generic exclusion rules were considered and do not apply; content is technical, instructional, and meets length/quality requirements.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/serverless-gpu-tutorial-build-an-ai-image-generator-with-azure/ba-p/4492228",
+    "collection": "community",
+    "timestamp": "2026-02-04 18:20:13 +00:00"
   }
 ]

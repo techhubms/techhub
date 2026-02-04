@@ -11763,5 +11763,17 @@
     "collection": "videos",
     "timestamp": "2026-02-04 17:20:26 +00:00",
     "reason": "No categories found: Content excluded because the provided input lacks a substantive main content body (content is null), so there is not enough technical detail to judge eligibility for any categories. Additionally, the description is a short event/demo announcement rather than an in-depth technical presentation or article, failing to meet the substantive knowledge-sharing threshold required by inclusion rules."
+  },
+  {
+    "reason": "No categories found: No categories were assigned due to the generic exclusion rule—this content is a corporate news and transparency update focused on user safety, online community moderation, family safety resources, and digital citizenship in gaming. It does not provide technical implementation detail or developer-focused information about Microsoft technologies, services, or development tools. The focus is on high-level strategy, community safety initiatives, and end-user features rather than coding practices, DevOps, Azure, Security technologies implementation, ML/AI engineering, or developer tools. Therefore, per 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' generic exclusion rules, this does not qualify.",
+    "canonical_url": "https://news.xbox.com/en-us/2026/02/04/xbox-safer-internet-day-transparency-report-2026-minecraft-education/",
+    "collection": "news",
+    "timestamp": "2026-02-04 18:18:40 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is primarily a business case study from Kraft Heinz discussing broad digital innovation strategies, including AI and digital twins, in the context of manufacturing process modernization. While AI and Microsoft are mentioned, there are no substantive technical implementation details, developer guidance, or code/deployment specifics described in the input. The focus is on business outcomes (operational efficiency, capturing expert knowledge, and real-time problem-solving) rather than technical or developer-centric content. This aligns with the generic exclusion rules for business strategy/executive content and high-level industry trends without technical depth or hands-on implementation. Therefore, all categories are excluded.",
+    "canonical_url": "https://www.youtube.com/watch?v=KmcXrEA65Rs",
+    "collection": "videos",
+    "timestamp": "2026-02-04 18:19:40 +00:00"
   }
 ]
