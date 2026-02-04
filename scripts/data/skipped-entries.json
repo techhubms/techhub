@@ -11775,5 +11775,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=KmcXrEA65Rs",
     "collection": "videos",
     "timestamp": "2026-02-04 18:19:40 +00:00"
+  },
+  {
+    "timestamp": "2026-02-04 20:08:03 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=51ZPtNPpj74",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: Content is not primarily in English (title and description are in Spanish; neither the title nor description is 80% English). Furthermore, the 'content' field is null, which means there is no technical material to analyze or categorize. Therefore, no categories can be assigned per the Non-English Content exclusion rule and minimum content requirement.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-02-04 20:08:36 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/3niZQzbolXc",
+    "reason": "No categories found: Content excluded because it is primarily biographical and personal perspective, lacking substantive technical content. The description indicates that the video is about personal experiences using AI outside of work, focusing on daily routines rather than technical implementation or development with Microsoft technologies. This triggers the 'Biographical Focus' generic exclusion rule from Chapter 3. There is no technical detail, code, or Microsoft product usage covered, therefore no categories apply.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-02-04 20:08:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=xFOK4RXW_gI",
+    "reason": "No categories found: All categories were excluded because the content qualifies for the 'Biographical Focus' generic exclusion rule. The primary focus is on Jeremy Likness' personal perspective and experiences with AI outside of work, not on technical implementation, architecture, or development with Microsoft technologies. The description emphasizes an 'unexpected perspective' and the broader impact of AI on daily routines, rather than concrete technical content or guidance. There are no substantive details, technical explanations, code samples, or actionable insights related to any of the Microsoft technology categories. Additionally, the 'content' field is null, leaving only promotional biographical description.",
+    "collection": "videos"
   }
 ]
