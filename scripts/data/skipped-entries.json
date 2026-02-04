@@ -11793,5 +11793,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=xFOK4RXW_gI",
     "reason": "No categories found: All categories were excluded because the content qualifies for the 'Biographical Focus' generic exclusion rule. The primary focus is on Jeremy Likness' personal perspective and experiences with AI outside of work, not on technical implementation, architecture, or development with Microsoft technologies. The description emphasizes an 'unexpected perspective' and the broader impact of AI on daily routines, rather than concrete technical content or guidance. There are no substantive details, technical explanations, code samples, or actionable insights related to any of the Microsoft technology categories. Additionally, the 'content' field is null, leaving only promotional biographical description.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=9rddgZqhk2M",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because of multiple triggers in the generic exclusion rules. The content ('Cerence AI transforming in-car experience') focuses on an end-user/business scenario—integrating AI-powered assistants and Office 365 apps into vehicles. It is primarily about business productivity and user experience (embedding Office 365 apps into cars), which is explicitly excluded under the 'Non-Development Microsoft Products' and 'Business Strategy/Executive Content' exclusions. There is no substantive technical detail, developer tool usage, or technical implementation with Microsoft's developer-focused AI/ML/Cloud services. The mention of hybrid AI models and Office 365 integration is aimed at business/productivity rather than coding, development, or technical architecture, so it does not meet inclusion requirements for 'AI', 'Azure', 'ML', or any other technical categories.",
+    "timestamp": "2026-02-04 23:06:26 +00:00"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "PubDate": "2026-02-04T02:46:48+00:00",
+  "ProcessedDate": "2026-02-04 23:04:11",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "We’ve made it easier to discover and use the latest models across all Copilot features. If you’re a Copilot Pro+, Pro, or Free user, newly released models are now available…\n\nThe post [Simplified Copilot model enablement experience for individual users](https://github.blog/changelog/2026-02-03-simplified-copilot-model-enablement-experience-for-individual-users) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-02-03-simplified-copilot-model-enablement-experience-for-individual-users",
+  "EnhancedContent": "We’ve made it easier to discover and use the latest models across all Copilot features. If you’re a Copilot Pro+, Pro, or Free user, newly released models are now available directly within Copilot—no need to manage policies or visit your settings pages to access them.\n\nWith this change:\n\n- New models are immediately accessible within Copilot features—no extra clicks or visits to settings required.\n- You can use a model by choosing it yourself or by letting GitHub pick one for you when Auto mode is on.\n- Models work immediately once selected.\n\nThis update reduces friction and removes ambiguity around model availability, all while preserving your ability to decide which models you use and when. All existing data-usage policies remain unchanged and continue to apply. Note, this is rolling out over the next day. If you don’t see it yet, please check back soon. Learn more by visiting our [Trust Center](https://copilot.github.trust.page/faq).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Title": "Simplified Copilot model enablement experience for individual users"
+}

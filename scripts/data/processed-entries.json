@@ -25174,5 +25174,11 @@
     "reason": "Succesfully added: Assigned 'AI' because the content highlights AI features such as embeddings and vectors within Microsoft.Extensions.DataIngestion (AI inclusion rule 1 and 4). Assigned 'Coding' because it is a .NET library aimed at developers and discussed in a technical implementation context (Coding rules 1, 2, and 4). I did not assign 'ML' because the primary focus is on application integration with AI features, not on custom ML/data science pipelines. 'Azure', 'DevOps', and 'Security' are not assigned as there is no evidence the discussion significantly covers those topics. The content’s technical level qualifies for inclusion and there are no generic exclusions present.",
     "canonical_url": "https://www.youtube.com/watch?v=pQivzi4n6jM",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-03-simplified-copilot-model-enablement-experience-for-individual-users",
+    "collection": "news",
+    "reason": "Succesfully added: Included both 'AI' and 'GitHub Copilot' categories. The content addresses improvements to GitHub Copilot's AI model selection and enablement, specifically for developers (AI Rule 2 and GitHub Copilot rules 1-4). No generic exclusion rules apply, and this is not about Microsoft 365 Copilot or a business productivity tool (per Copilot Product Distinction). The main focus is on the developer experience with Copilot's AI models, fully matching the inclusion criteria.",
+    "timestamp": "2026-02-04 23:05:51 +00:00"
   }
 ]
