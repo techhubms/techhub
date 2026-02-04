@@ -1,5 +1,4 @@
 @page "/github-copilot/features"
-@rendermode InteractiveServer
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 
@@ -26,22 +25,22 @@
 
             <div class="sidebar-section">
                 <h3 class="sidebar-heading">Filters</h3>
-                <div class="filter-controls">
+                <div class="filter-controls" data-feature-filters>
                     <label class="filter-toggle">
-                        <input type="checkbox" @bind="showGhesOnly" @bind:after="ApplyFilters" />
+                        <input type="checkbox" id="filter-ghes" />
                         <span>Show GHES Support Only</span>
                     </label>
                     <label class="filter-toggle">
-                        <input type="checkbox" @bind="showVideosOnly" @bind:after="ApplyFilters" />
+                        <input type="checkbox" id="filter-videos" />
                         <span>Show Features with Videos Only</span>
                     </label>
                 </div>
             </div>
         </aside>
 
-        <article id="skiptohere" tabindex="-1" class="article-body">
+        <article class="article-body">
             <div class="content-detail-header">
-                <h1 class="page-h1">@pageData.Title</h1>
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
                 @if (!string.IsNullOrWhiteSpace(pageData.Description))
                 {
                     <p class="page-description">@pageData.Description</p>
@@ -97,8 +96,8 @@
 
                 @foreach (var featureSection in pageData.FeatureSections)
                 {
-                    // Filter videos that belong to this tier's plans (e.g., Free videos have "Free" in Plans array)
-                    var sectionVideos = filteredVideoItems.Where(v =>
+                    // Get videos that belong to this tier's plans
+                    var sectionVideos = videoItems.Where(v =>
                         featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
                         .ToList();
 
@@ -115,7 +114,7 @@
 
                                     @if (isAvailable)
                                     {
-                                        <a href="@feature.GetHref(SectionName)" class="card">
+                                        <a href="@feature.GetHref(SectionName)" class="card feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="true">
                                             <div class="card-header">
                                                 <h3 id="@featureId" class="card-title">@feature.Title</h3>
                                             </div>
@@ -131,7 +130,7 @@
                                     }
                                     else
                                     {
-                                        <div class="card-static">
+                                        <div class="card-static feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="false">
                                             <div class="card-header">
                                                 <h3 id="@featureId" class="card-title">@feature.Title</h3>
                                             </div>
@@ -158,32 +157,6 @@
     private const string SectionName = "github-copilot";
     private FeaturesPageData? pageData;
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
-    private List<TechHub.Core.Models.ContentItem> filteredVideoItems = new();
-
-    // Filter state
-    private bool showGhesOnly = false;
-    private bool showVideosOnly = false;
-
-    /// <summary>
-    /// Apply client-side filters to video items based on toggle states
-    /// </summary>
-    private void ApplyFilters()
-    {
-        filteredVideoItems = videoItems;
-
-        if (showGhesOnly)
-        {
-            filteredVideoItems = filteredVideoItems.Where(v => v.GhesSupport).ToList();
-        }
-
-        if (showVideosOnly)
-        {
-            // Show only non-draft features (available now)
-            filteredVideoItems = filteredVideoItems.Where(v => !v.Draft).ToList();
-        }
-
-        // Note: StateHasChanged() not needed because @bind:after triggers re-render automatically
-    }
 
     /// <summary>
     /// Generate HTML content for TOC extraction.
@@ -207,14 +180,12 @@
         {
             sb.Append($"<h2 id=\"{featureSection.Id}\">{featureSection.Title}</h2>");
 
-            // Add h3 for each feature in this section (use videoItems, not filteredVideoItems, so TOC shows all features)
             var sectionVideos = videoItems.Where(v =>
                 featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
                 .ToList();
 
             foreach (var feature in sectionVideos)
             {
-                // Slugify the title for the ID (same as feature card h3)
                 var featureId = $"feature-{feature.Slug}";
                 sb.Append($"<h3 id=\"{featureId}\">{feature.Title}</h3>");
             }
@@ -237,14 +208,10 @@
 
             if (!string.IsNullOrEmpty(pageData.VideoCollection))
             {
-                // Query videos collection from API with ghc_feature=true to get GitHub Copilot features (including drafts)
                 var allVideos = await ApiClient.GetGhcFeaturesAsync();
                 videoItems = (allVideos ?? Enumerable.Empty<TechHub.Core.Models.ContentItem>())
                     .OrderByDescending(v => v.DateEpoch)
                     .ToList();
-
-                // Initialize filtered list with all items
-                filteredVideoItems = videoItems;
             }
         }
         catch (Exception ex)

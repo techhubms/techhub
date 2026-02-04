@@ -66,7 +66,7 @@ try {
         Write-Host "🔍 Processing single file: $FilePath"
         Write-Host "🔧 Fixing markdown formatting with markdownlint-cli2..."
         
-        $result = npx --yes markdownlint-cli2 --fix $absoluteFilePath 2>&1
+        $result = npx --yes markdownlint-cli2 --fix $absoluteFilePath --config "$sourceRoot/.markdownlint-cli2.jsonc" 2>&1
         if ($LASTEXITCODE -ne 0) {
             Write-Host "⚠️  Markdownlint reported issues (exit code: $LASTEXITCODE)" -ForegroundColor Yellow
             Write-Host $result

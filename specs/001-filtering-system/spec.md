@@ -2,10 +2,46 @@
 
 **Feature Branch**: `001-filtering-system`  
 **Created**: 2026-01-16  
-**Status**: Draft  
+**Updated**: 2026-02-03  
+**Status**: In Progress (Partial Implementation)  
 **Input**: Implement sidebar-based tag and date filtering for section and collection pages to help users discover relevant content quickly
 
+## Implementation Status
+
+| Component | Status | Location |
+|-----------|--------|----------|
+| **Backend Infrastructure** | | |
+| TagCloudItem, TagCloudRequest | ✅ Complete | `src/TechHub.Core/Models/Tags/` |
+| FilterRequest, FilterResponse, FilterSummary | ✅ Complete | `src/TechHub.Core/Models/Filter/` |
+| AllTagsResponse, TagWithCount | ✅ Complete | `src/TechHub.Core/Models/Tags/` |
+| FacetRequest, FacetResults | ✅ Complete | `src/TechHub.Core/Models/Facets/` |
+| ITagCloudService, TagCloudService | ✅ Complete | `src/TechHub.Core/Interfaces/`, `src/TechHub.Infrastructure/Services/` |
+| GetFacetsAsync (repository) | ✅ Complete | Fully implemented with filtering support |
+| GetTagCountsAsync (repository) | ✅ Complete | With date/section/collection filtering + caching |
+| Tag cloud endpoint | ⚠️ Partial | Exists, needs filter params (tags, from, to) |
+| **Frontend Components** | | |
+| SidebarTagCloud component | ⚠️ Partial | Basic filtering complete, needs dynamic counts |
+| SidebarTagCloudTests | ✅ Complete | `tests/TechHub.Web.Tests/Components/` |
+| DateRangeSlider component | ❌ Not Started | - |
+| TagDropdownFilter component | ❌ Not Started | - |
+| FilterStateService | ❌ Not Started | - |
+| **Testing** | | |
+| TagFilteringTests (E2E) | ⚠️ Partial | Basic tag filtering complete, dynamic counts not tested |
+| **Dynamic Counts Feature (NEW)** | | |
+| Tag counts with filter parameters | ❌ Not Started | Add params to existing endpoint |
+| Tag disabled state (0 results) | ❌ Not Started | Frontend logic (count === 0) |
+| Date range affects tag counts | ❌ Not Started | Integration with date slider |
+| **Tag Subset Matching** | | |
+| Tag subset matching (word boundaries) | ✅ Complete | Via `content_tags_expanded` table in DB |
+
 ## Clarifications
+
+### Session 2026-02-03 (New Requirements)
+
+- Q: Should tag counts be static or dynamic based on current filter state? → A: **Dynamic counts** - Each tag displays how many content items would remain if that tag is activated (e.g., "AI (901)"). When a tag is already selected, other tags update their counts to show the intersection. Example: if "AI" (901) is selected, "GitHub Copilot" might show (300) indicating 300 items have both tags.
+- Q: What happens to tags that would result in 0 items? → A: Tags that would bring total results to 0 MUST become **disabled** (grayed out, non-clickable). This prevents users from creating empty result sets.
+- Q: Should the date slider affect tag cloud calculations? → A: **Yes** - Tag counts and availability must reflect the selected date range. If user selects "Last 30 days", tag counts should only include content from that period.
+- Q: Excel-style dropdown behavior? → A: Dropdown allows scrolling and searching through ALL tags with their counts. Same dynamic count behavior applies - counts update based on current filter state.
 
 ### Session 2026-01-16
 
@@ -18,24 +54,29 @@
 
 ### User Story 1 - Filter via Sidebar Tag Cloud (Priority: P1)
 
-Users can click tags in the sidebar tag cloud (showing top 20 most-used tags from last 3 months) to filter content, with scoping based on current page context.
+Users can click tags in the sidebar tag cloud (showing top 20 most-used tags) to filter content, with dynamic counts showing how many items each tag would filter to.
 
-**Why this priority**: Primary content discovery mechanism, surfaces trending/popular content, scoped to user's current context.
+**Why this priority**: Primary content discovery mechanism, surfaces trending/popular content, dynamic counts prevent empty result sets.
 
-**Independent Test**: Navigate to section page, verify tag cloud shows top 20 tags for that section, click tag, verify content filters.
+**Status**: ⚠️ Partial - Basic tag filtering ✅ complete (URL params, selection, OR logic), Dynamic counts ❌ pending
+
+**Independent Test**: Navigate to section page, verify tag cloud shows top 20 tags with counts, click tag, verify counts update for remaining tags.
 
 **Acceptance Scenarios**:
 
-1. **Given** I'm on the homepage, **When** I view the sidebar, **Then** I see a tag cloud with top 20 most-used tags across entire website (last 3 months)
-2. **Given** I'm on a section page (e.g., /ai), **When** I view the sidebar, **Then** I see top 20 tags for that section only (last 3 months)
-3. **Given** I'm on a collection page (e.g., /ai/news), **When** I view the sidebar, **Then** I see top 20 tags for that section/collection combo (last 3 months)
-4. **Given** I'm viewing a content item, **When** I view the sidebar, **Then** I see ONLY the tags of that specific article (not top 20)
-5. **Given** I click a tag in the sidebar cloud, **When** the filter applies, **Then** the content list updates to show only items with that tag
-6. **Given** I have one tag selected, **When** I click another tag in the cloud, **Then** the content list shows items matching ANY of the selected tags (OR logic)
-7. **Given** I have tags selected, **When** I click a selected tag again, **Then** it toggles off (deselects), the tag's visual highlight is removed, and content list updates to exclude that tag
-8. **Given** I click a tag to select it, **When** the tag becomes active, **Then** it displays a visual indicator (highlighted background/border) showing it's selected
-9. **Given** I filter by tags, **When** I check the URL, **Then** it includes my selected tags as query parameters (e.g., `?tags=ai,azure`) with no duplicates
-10. **Given** I share the URL with tags, **When** someone opens it, **Then** they see the same filtered view with the same tags selected and visually highlighted
+1. **Given** I'm on a section page (e.g., /ai), **When** I view the sidebar, **Then** I see top 20 tags for that section with item counts (e.g., "AI (901)")
+2. **Given** I'm viewing tags in the cloud, **When** I examine any tag, **Then** it displays the count of items that would be shown if I select it (e.g., "GitHub Copilot (300)")
+3. **Given** I select the "AI" tag (901 items), **When** other tags update, **Then** "GitHub Copilot" now shows the intersection count (e.g., "GitHub Copilot (245)" - items with BOTH tags)
+4. **Given** I have "AI" selected, **When** a tag would result in 0 items, **Then** that tag becomes disabled (grayed out, non-clickable)
+5. **Given** I'm on the homepage, **When** I view the sidebar, **Then** I see a tag cloud with top 20 most-used tags across entire website with counts
+6. **Given** I'm on a collection page (e.g., /ai/news), **When** I view the sidebar, **Then** I see top 20 tags for that section/collection combo with counts
+7. **Given** I'm viewing a content item, **When** I view the sidebar, **Then** I see ONLY that article's tags (no counts needed)
+8. **Given** I click a tag in the sidebar cloud, **When** the filter applies, **Then** the content list updates AND all other tag counts recalculate
+9. **Given** I have one tag selected, **When** I click another tag in the cloud, **Then** the content list shows items matching ANY of the selected tags (OR logic) and counts update
+10. **Given** I have tags selected, **When** I click a selected tag again, **Then** it toggles off, content updates, and all tag counts recalculate
+11. **Given** I click a tag to select it, **When** the tag becomes active, **Then** it displays a visual indicator (highlighted background/border) showing it's selected
+12. **Given** I filter by tags, **When** I check the URL, **Then** it includes my selected tags as query parameters (e.g., `?tags=ai,azure`) with no duplicates
+13. **Given** I share the URL with tags, **When** someone opens it, **Then** they see the same filtered view with the same tags selected and counts reflecting that state
 
 **Tag Click Navigation Behavior**:
 
@@ -58,18 +99,23 @@ When clicking a tag, the navigation behavior depends on the current page context
 
 ### User Story 2 - Filter Content by Date Range (Priority: P1)
 
-Users can select date ranges (Last 7/30/90 days, All Time) to filter content by publication date.
+Users can select date ranges using an interactive slider to filter content by publication date. Date selection affects tag cloud counts.
 
-**Why this priority**: Essential for finding recent content, complements tag filtering.
+**Why this priority**: Essential for finding recent content, directly affects tag availability and counts.
 
-**Independent Test**: Navigate to section page, click "Last 30 days" filter, verify only recent content displays.
+**Status**: ❌ Not started
+
+**Independent Test**: Navigate to section page, use date slider, verify tag counts update based on selected date range.
 
 **Acceptance Scenarios**:
 
-1. **Given** I'm on a section page, **When** I select "Last 30 days", **Then** the content list shows only items from the past 30 days
-2. **Given** I have a date filter active, **When** I select a different date range, **Then** the content updates to that range
-3. **Given** I have date and tag filters active, **When** I view results, **Then** I see items matching BOTH filters (AND logic)
-4. **Given** I select a date range, **When** I check the URL, **Then** it includes the date parameter (e.g., `?date=last-30-days`)
+1. **Given** I'm on a section page, **When** I view the date slider, **Then** it defaults to "last 3 months" (90 days)
+2. **Given** I adjust the date slider to "Last 30 days", **When** the filter applies, **Then** the content list shows only items from the past 30 days
+3. **Given** I change the date range, **When** tags update, **Then** all tag counts recalculate based on the new date range
+4. **Given** I select "Last 7 days", **When** a tag has no items in that period, **Then** that tag becomes disabled (grayed out)
+5. **Given** I have date and tag filters active, **When** I view results, **Then** I see items matching BOTH filters (AND logic)
+6. **Given** I drag the slider handles, **When** I set a custom range, **Then** URL includes `from` and `to` date parameters
+7. **Given** I extend the date range backward, **When** more content becomes available, **Then** tag counts increase and disabled tags may become enabled
 
 ---
 
@@ -127,7 +173,7 @@ Users can use browser back/forward buttons to navigate through filter states.
 Users benefit from intelligent tag matching where selecting a tag shows all content with that tag OR tags that contain it as complete words.
 
 **Why this priority**: Critical for user experience - prevents users from missing relevant content due to tag variations.
-
+**Status**: ✅ Complete (database layer) - Implemented via `content_tags_expanded` table with word-boundary matching
 **Independent Test**: Navigate to section page, click "AI" tag, verify results include items tagged with "AI", "Generative AI", "Azure AI", etc.
 
 **Acceptance Scenarios**:
@@ -164,23 +210,26 @@ Users can select custom date ranges using an interactive slider with from-to con
 
 ### User Story 8 - Excel-Style Tag Dropdown Filter (Priority: P1)
 
-Users can filter content by tags using a modern dropdown interface similar to Excel column filtering, positioned below the date slider. This complements the sidebar tag cloud by providing access to ALL tags, not just the top 20.
+Users can filter content by tags using a modern dropdown interface similar to Excel column filtering, with scrollable list, search, and dynamic counts that update based on current filter state.
 
-**Why this priority**: Space-efficient, provides access to tags not in top 20, intuitive filtering pattern familiar from Excel.
+**Why this priority**: Provides access to ALL tags, intuitive Excel-like filtering, dynamic counts prevent empty results.
 
-**Independent Test**: Click tag dropdown below date slider, search for tag not in top 20, select via checkbox, verify content filters.
+**Status**: ❌ Not started
+
+**Independent Test**: Open tag dropdown, verify counts shown, select a tag, verify other tag counts update dynamically.
 
 **Acceptance Scenarios**:
 
 1. **Given** I'm on a section/collection page, **When** I view the sidebar, **Then** I see a "Filter by Tags" dropdown positioned below the date slider
-2. **Given** I click the tag dropdown, **When** it opens, **Then** I see a searchable list of all available tags with checkboxes
-3. **Given** the dropdown is open, **When** I type in the search box, **Then** the tag list filters to show only matching tags
-4. **Given** I select a tag checkbox, **When** I apply the filter, **Then** content updates to show only items with that tag
-5. **Given** I select multiple tags, **When** filters apply, **Then** content shows items matching ANY selected tag (OR logic)
-6. **Given** I have tags selected, **When** I check the URL, **Then** it includes selected tags (e.g., `?tags=ai,azure`)
-7. **Given** the dropdown shows tag counts, **When** I view the list, **Then** each tag displays the number of items (e.g., "AI (42)")
-8. **Given** I have filters active, **When** I view the dropdown, **Then** selected tags are visually indicated (checkboxes checked)
-9. **Given** the dropdown is open, **When** I click outside or press Escape, **Then** the dropdown closes and filters persist
+2. **Given** I click the tag dropdown, **When** it opens, **Then** I see a scrollable, searchable list of ALL tags with checkboxes and counts
+3. **Given** I view tags in the dropdown, **When** I examine any tag, **Then** it displays the dynamic count (e.g., "AI (901)")
+4. **Given** I select "AI" checkbox (901 items), **When** other tags update, **Then** their counts show the intersection (e.g., "GitHub Copilot (245)")
+5. **Given** I have tags selected, **When** a tag would result in 0 items, **Then** that tag row becomes disabled (grayed out, checkbox disabled)
+6. **Given** the dropdown is open, **When** I type in the search box, **Then** the tag list filters to show only matching tags with their counts
+7. **Given** I select multiple tags, **When** filters apply, **Then** content shows items matching ANY selected tag (OR logic) and counts update
+8. **Given** I scroll through the dropdown, **When** there are 50+ tags, **Then** virtual scrolling provides smooth performance
+9. **Given** the date range changes, **When** I view the dropdown, **Then** all tag counts reflect the new date range
+10. **Given** the dropdown is open, **When** I click outside or press Escape, **Then** the dropdown closes and filters persist
 
 ---
 
@@ -204,22 +253,47 @@ Users see clickable tag clouds on each content item that link directly to filter
 
 ### User Story 10 - Sidebar Tag Cloud Scoping & Display (Priority: P1)
 
-Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used tags from last 3 months, with appropriate scoping based on page type.
+Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used tags, with appropriate scoping based on page type.
 
 **Why this priority**: Core navigation feature, surfaces trending content, adapts to user's browsing context.
+
+**Status**: ✅ Basic scoping complete, ❌ Dynamic counts pending
 
 **Independent Test**: Navigate between homepage/section/collection/content pages, verify tag cloud scoping changes appropriately.
 
 **Acceptance Scenarios**:
 
-1. **Given** I'm on the homepage, **When** I view the sidebar, **Then** I see top 20 tags across entire website (last 3 months)
-2. **Given** I'm on a section page (e.g., /ai), **When** I view the sidebar, **Then** I see top 20 tags for that section only (last 3 months)
-3. **Given** I'm on a collection page (e.g., /ai/news), **When** I view the sidebar, **Then** I see top 20 tags for that section/collection combo (last 3 months)
-4. **Given** I'm viewing a content item, **When** I view the sidebar, **Then** I see ONLY that article's tags (not top 20, not limited to last 3 months)
+1. **Given** I'm on the homepage, **When** I view the sidebar, **Then** I see top 20 tags across entire website (based on current date range)
+2. **Given** I'm on a section page (e.g., /ai), **When** I view the sidebar, **Then** I see top 20 tags for that section only (based on current date range)
+3. **Given** I'm on a collection page (e.g., /ai/news), **When** I view the sidebar, **Then** I see top 20 tags for that section/collection combo (based on current date range)
+4. **Given** I'm viewing a content item, **When** I view the sidebar, **Then** I see ONLY that article's tags (no counts, not limited to date range)
 5. **Given** I view the tag cloud, **When** I examine the display, **Then** tag sizes use 3 discrete tiers (Large/Medium/Small based on quartiles, not continuous scaling)
 6. **Given** I click a tag in the cloud, **When** navigation occurs, **Then** I see content filtered by that tag
-7. **Given** I hover over a tag, **When** I wait briefly, **Then** I see a tooltip showing the count (e.g., "42 items")
+7. **Given** I hover over a tag, **When** I wait briefly, **Then** the count is always visible inline (e.g., "AI (901)")
 8. **Given** there are fewer than 20 qualifying tags with ≥5 uses, **When** I view the cloud, **Then** I see all tags with ≥5 uses (may be fewer than 20)
+
+---
+
+### User Story 11 - Dynamic Tag Counts Based on Filter State (Priority: P1)
+
+Tag counts throughout the UI dynamically update based on current filter state (date range and selected tags), showing users exactly how many items each tag would filter to.
+
+**Why this priority**: Prevents empty result sets, gives users confidence in filter choices, improves UX.
+
+**Status**: ❌ Not started
+
+**Independent Test**: Select a tag, verify all other tags update their counts to show intersection. Change date range, verify counts recalculate.
+
+**Acceptance Scenarios**:
+
+1. **Given** no filters are active, **When** I view tag counts, **Then** each shows total items with that tag (within date range)
+2. **Given** I select "AI" tag (shows 901 items), **When** I view "GitHub Copilot" tag, **Then** it shows intersection count (e.g., 245 items with BOTH tags)
+3. **Given** I have "AI" selected, **When** "Azure" tag would result in 0 items, **Then** "Azure" tag becomes disabled (grayed, non-clickable)
+4. **Given** I deselect a tag, **When** counts recalculate, **Then** previously disabled tags may become enabled again
+5. **Given** I change date range to "Last 7 days", **When** tags update, **Then** counts reflect only items within that period
+6. **Given** I'm in dropdown and sidebar cloud, **When** counts update, **Then** both views show synchronized counts
+7. **Given** API returns counts, **When** user sees UI, **Then** counts are formatted with commas for large numbers (e.g., "1,234")
+8. **Given** counts are calculating, **When** user waits, **Then** a subtle loading indicator shows (not full page block)
 
 ---
 
@@ -230,55 +304,104 @@ Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used
 - What happens when no date range is specified in URL? → Default to last 3 months
 - What happens when tag dropdown has 50+ tags? → Implement virtual scrolling at 50 tag threshold, show top 100 in viewport, require search to efficiently find specific tags
 - What happens when user searches in tag dropdown with no matches? → Show "No tags found" message, allow clearing search
-- What happens when there are no popular tags in last 3 months? → Show message "No recent content" or hide popular tags section
+- What happens when there are no tags with items in selected date range? → Show message "No tags available for this period" and suggest expanding date range
 - What happens when content item has many tags (e.g., 20+)? → Show all tags, allow horizontal scroll or wrapping as needed
 - What happens when user clicks tag on content item vs popular tag cloud? → Both navigate to same filtered view, same behavior
 - What happens when URL has invalid tag names? → Ignore invalid tags, apply only valid ones, log warning
 - What happens when tag matching encounters different casing/punctuation? → Normalize both search term and tags (trim, lowercase, punctuation-agnostic) before word boundary matching
-- What happens when user rapidly clicks multiple tags? → Debounce UI updates, only apply final state
-- What happens on slow connections? → Show loading indicator, don't block UI, allow filter changes during load
+- What happens when user rapidly clicks multiple tags? → Debounce UI updates, only apply final state, batch count recalculations
+- What happens on slow connections? → Show loading indicator on counts, don't block tag interaction, allow filter changes during load
 - What happens when content is already filtered by collection via SubNav? → Combine collection filter with sidebar filters (AND logic)
+- What happens when a tag would result in 0 items if selected? → Tag becomes **disabled** (grayed out, non-clickable, count shows "(0)")
+- What happens when all remaining tags would result in 0 items? → Show message "No additional tags available" below tag cloud
+- What happens when tag counts are loading after filter change? → Show subtle spinner/shimmer on count numbers only, keep tags interactive
+- What happens when date range is set to "All Time" but no old content exists? → Counts simply reflect available content, no special handling needed
 
 ## Requirements
 
 ### Functional Requirements
 
-- **FR-001**: Sidebar MUST display a tag cloud with top 20 most-used tags from last 3 months, scoped to current context
+**Tag Cloud & Display**:
+
+- **FR-001**: Sidebar MUST display a tag cloud with top 20 most-used tags, scoped to current context
 - **FR-001a**: Homepage tag cloud MUST show top 20 tags across entire website
 - **FR-001b**: Section page tag cloud MUST show top 20 tags for that section only
 - **FR-001c**: Collection page tag cloud MUST show top 20 tags for that section/collection combo
-- **FR-001d**: Sidebar tag cloud on content item pages MUST show ONLY that item's tags (not limited to 20 or last 3 months)
+- **FR-001d**: Sidebar tag cloud on content item pages MUST show ONLY that item's tags (no counts)
 - **FR-002**: Sidebar tag cloud tags MUST be clickable and toggle between selected/unselected states
 - **FR-003**: Selected tags MUST be visually distinguished (highlighted, different color, checkmark icon)
 - **FR-004**: System MUST filter content to show items matching ANY selected tag (OR logic within tags)
+
+**Dynamic Tag Counts (NEW)**:
+
+- **FR-020**: Each tag MUST display a count showing how many items would remain if selected (e.g., "AI (901)")
+- **FR-020a**: When no filters are active, count shows total items with that tag (within date range)
+- **FR-020b**: When tags are selected, counts MUST show intersection (items matching existing filters AND the tag)
+- **FR-021**: Tags that would result in 0 items MUST become disabled (grayed out, non-clickable)
+- **FR-021a**: Disabled tags MUST show "(0)" count to indicate why they're disabled
+- **FR-021b**: Disabled tags MUST re-enable when filter state changes and they would yield >0 results
+- **FR-022**: Tag counts MUST update within 200ms of filter state change (debounced for rapid changes)
+- **FR-022a**: During count calculation, counts MUST show subtle loading state (shimmer/spinner)
+- **FR-023**: Counts MUST be formatted with thousand separators (e.g., "1,234" not "1234")
+
+**Date Range Filtering**:
+
 - **FR-005**: System MUST provide date filtering via interactive slider with from-to date range selection
 - **FR-005a**: Date slider MUST default to "last 3 months" when no date range specified in URL
 - **FR-005b**: System MAY provide preset date range buttons (Last 7/30/90 days) as quick shortcuts alongside slider
+- **FR-005c**: Date range changes MUST trigger tag count recalculation
 - **FR-006**: Date range filters MUST combine with tag filters using AND logic (must match date AND any tag)
+
+**Tag Subset Matching**:
+
 - **FR-006a**: System MUST implement tag subset matching using case-insensitive word boundaries with punctuation normalization (hyphens, underscores, and spaces treated as word separators before matching; selecting "ai" matches "AI", "Generative AI", "Azure-AI", "Azure_AI")
 - **FR-006b**: Subset matching MUST use complete word boundaries after normalization ("ai" matches "Azure AI" but not "AIR")
+
+**Excel-Style Dropdown**:
+
 - **FR-007**: System MUST provide Excel-style tag dropdown filter positioned below date slider
 - **FR-007a**: Tag dropdown MUST include search box for filtering tag list
 - **FR-007b**: Tag dropdown MUST show checkboxes for multi-select capability
-- **FR-007c**: Tag dropdown MUST display item counts next to each tag (e.g., "AI (42)")
+- **FR-007c**: Tag dropdown MUST display dynamic item counts next to each tag (e.g., "AI (901)")
 - **FR-007d**: Tag dropdown MUST support virtual scrolling when tag count is ≥50 tags
+- **FR-007e**: Tag dropdown MUST disable tags that would result in 0 items
+- **FR-007f**: Tag dropdown counts MUST stay synchronized with sidebar tag cloud counts
+
+**Content Item Tags**:
+
 - **FR-008**: Content items MUST display tag clouds showing all associated tags
 - **FR-008a**: Tags in content item tag clouds MUST be clickable and navigate to filtered views
 - **FR-008b**: Clicking a tag MUST set that tag as active in the tag dropdown filter
+
+**Tag Cloud Sizing**:
+
 - **FR-009**: Sidebar tag clouds MUST display top 20 most-used tags OR all tags with ≥5 uses (whichever is fewer)
-- **FR-009a**: Tag cloud calculations MUST be based on last 3 months of content (except content item pages)
+- **FR-009a**: Tag cloud calculations MUST be based on the currently selected date range
 - **FR-009b**: Tag cloud sizes MUST use quantile-based sizing with 3 tiers: Large (top 25%), Medium (middle 50%), Small (bottom 25%)
 - **FR-009c**: Each scope (homepage/section/collection) MUST calculate its own top 20 (not global)
-- **FR-009d**: Content item pages MUST show only that item's tags (no top 20 limit, no 3-month limit)
-- **FR-007**: System MUST update the URL query parameters when filters change (e.g., `?tags=ai,azure&date=last-30-days`)
-- **FR-008**: System MUST parse URL parameters on page load and apply corresponding filters automatically
-- **FR-009**: System MUST provide a "Clear All Filters" button that resets all filters and updates URL
-- **FR-010**: System MUST display result count (e.g., "Showing 42 results") when filters are active
-- **FR-011**: System MUST show "No results found" message when filters yield zero items
-- **FR-012**: System MUST preserve filter state when navigating via browser back/forward buttons
-- **FR-013**: Filter operations MUST NOT cause full page reload (client-side filtering only)
-- **FR-014**: Client-side filtering MUST update content list within 50ms after API response received (excludes API response time, which has separate <200ms budget)
-- **FR-015**: All filter controls MUST be keyboard accessible with specific interactions:
+- **FR-009d**: Content item pages MUST show only that item's tags (no top 20 limit, no date range filter)
+
+**URL State Management**:
+
+- **FR-010**: System MUST update the URL query parameters when filters change (e.g., `?tags=ai,azure&from=2024-01-01&to=2024-03-01`)
+- **FR-011**: System MUST parse URL parameters on page load and apply corresponding filters automatically
+- **FR-012**: System MUST provide a "Clear All Filters" button that resets all filters and updates URL
+
+**Result Display**:
+
+- **FR-013**: System MUST display result count (e.g., "Showing 42 results") when filters are active
+- **FR-014**: System MUST show "No results found" message when filters yield zero items
+- **FR-015**: System MUST preserve filter state when navigating via browser back/forward buttons
+
+**Performance**:
+
+- **FR-016**: Filter operations MUST NOT cause full page reload (client-side filtering only)
+- **FR-017**: Client-side filtering MUST update content list within 50ms after API response received
+- **FR-018**: Tag count API MUST respond within 200ms for count calculations
+
+**Accessibility**:
+
+- **FR-019**: All filter controls MUST be keyboard accessible with specific interactions:
   - Tab: Focus navigation between controls
   - Space/Enter: Select/deselect tags, activate buttons
   - Arrow keys: Navigate within dropdown lists
@@ -310,8 +433,18 @@ Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used
 - **SC-012**: Date slider defaults to last 3 months, preventing information overload on initial page load
 - **SC-013**: Excel-style tag dropdown provides intuitive filtering (search works, checkboxes function, counts display)
 - **SC-014**: Tag clouds on content items enable quick navigation to related content
-- **SC-015**: Popular tag clouds accurately reflect trending topics from last 3 months
+- **SC-015**: Popular tag clouds accurately reflect trending topics from selected date range
 - **SC-016**: Tag dropdown handles large tag lists efficiently (virtual scrolling, search performance)
+
+**Dynamic Count Success Criteria (NEW)**:
+
+- **SC-017**: Tag counts update within 200ms of filter state change
+- **SC-018**: Tags with 0 potential results are visually disabled (cannot be clicked)
+- **SC-019**: Selecting a tag updates all other tag counts to show intersection counts
+- **SC-020**: Changing date range recalculates all tag counts correctly
+- **SC-021**: Sidebar tag cloud and dropdown show synchronized counts
+- **SC-022**: Counts are formatted with thousand separators (e.g., "1,234")
+- **SC-023**: Loading state is shown during count calculations (subtle, non-blocking)
 
 ## Implementation Notes
 
@@ -367,32 +500,39 @@ Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used
 
 **SidebarTagCloud Component** (contextually-scoped tag cloud):
 
-- Displays in sidebar above the date slider
-- Shows top 20 most-used tags OR all tags with ≥5 uses (whichever is fewer) from last 3 months (scoped to current page context)
-- Scoping logic:
+- ✅ **Implemented** in `src/TechHub.Web/Components/SidebarTagCloud.razor`
+- ✅ Displays in sidebar
+- ✅ Shows top 20 most-used tags OR all tags with ≥5 uses (whichever is fewer)
+- ✅ Scoping logic implemented:
   - Homepage: Top 20 across entire website
   - Section page: Top 20 for that section
   - Collection page: Top 20 for that section/collection combo
-  - Content item page: Only that item's tags (no limits)
-- Tags are clickable and toggleable (select/deselect)
-- Tag sizes reflect relative popularity using quantile-based sizing:
+  - Content item page: Only that item's tags (no limits, no counts)
+- ✅ Tags are clickable and toggleable (select/deselect)
+- ✅ Tag sizes reflect relative popularity using quantile-based sizing:
   - Large (top 25%): 5 tags - Most popular
   - Medium (middle 50%): 10 tags - Popular
   - Small (bottom 25%): 5 tags - Less popular
-- Selected tags visually highlighted
-- Tooltip shows count on hover
-- Updates URL parameters when tags selected
-- Reads URL parameters on load to restore selected state
-- Emits events when tag selection changes
+- ✅ Selected tags visually highlighted
+- ✅ Updates URL parameters when tags selected
+- ✅ Reads URL parameters on load to restore selected state
+- ✅ Navigation modes: Filter (update in-place) vs Navigate (go to different URL)
+- ❌ **TODO: Dynamic counts** - Show count for each tag (e.g., "AI (901)")
+- ❌ **TODO: Counts update when filters change** (show intersection with selected tags)
+- ❌ **TODO: Disabled state** for tags with 0 potential results (grayed out, non-clickable)
+- ❌ **TODO: Date range integration** - counts update when date range changes
 
 **TagDropdownFilter Component** (Excel-style dropdown - COMPLEMENTARY to cloud):
 
+- ❌ Not yet implemented
 - Positioned below date range slider in sidebar
 - Provides access to ALL tags (not just top 20 in cloud)
 - Dropdown button shows "Filter by Tags" with count of selected tags
-- Opens to reveal searchable tag list with checkboxes
+- Opens to reveal scrollable, searchable tag list with checkboxes
+- **NEW: Each tag shows dynamic count (e.g., "AI (901)")**
+- **NEW: Counts update when filters change (shows intersection)**
+- **NEW: Tags with 0 potential results are disabled (grayed row, disabled checkbox)**
 - Search box filters available tags in real-time
-- Displays tag counts next to each tag (e.g., "AI (42)")
 - Virtual scrolling activates automatically at ≥50 tags for performance
 - Multi-select with checkboxes (OR logic)
 - "Select All" / "Clear All" quick actions
@@ -402,11 +542,13 @@ Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used
 - Keyboard accessible (Tab, Space for checkbox, Arrow keys for navigation)
 - Emits events when tag selection changes
 
-**Date Range Slider Component** (separate component for complex interaction):
+**DateRangeSlider Component** (separate component for complex interaction):
 
+- ❌ Not yet implemented
 - Interactive slider with two draggable handles (from and to dates)
-- **Defaults to last 3 months** when no URL parameters present
+- **Defaults to last 90 days (3 months)** when no URL parameters present
 - Visual date range display (e.g., "Oct 16, 2025 - Jan 16, 2026")
+- **NEW: Date changes trigger tag count recalculation** (calls tagcounts API)
 - Allows extending range backward to show all historical content (no limit)
 - Optional preset buttons (Last 7/30/90 days) for quick access
 - Updates URL parameters when range changes (debounced to prevent excessive updates)
@@ -539,7 +681,7 @@ Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used
 
 ## Backend Implementation Status
 
-### Database Layer (✅ COMPLETE - from spec 011)
+### Database Layer (✅ COMPLETE from spec 011)
 
 The database infrastructure for filtering is **fully implemented** in the repository layer:
 
@@ -550,69 +692,77 @@ The database infrastructure for filtering is **fully implemented** in the reposi
 - Section/collection/date filtering
 - Hash-based incremental content sync
 - Both SQLite (FTS5) and PostgreSQL (tsvector) providers
-- 90 passing repository integration tests
+- `GetTagCountsAsync` with date range, section, collection filtering, caching
+- 90+ passing repository integration tests
 
-**❌ Missing API Layer**:
+**✅ Implemented**:
 
-- No `/api/facets` endpoint to expose `GetFacetsAsync` (needed for dynamic tag counts)
-- `GetFacetsAsync` repository method is stub only - needs full implementation
-- No `/api/search` endpoint (though SearchAsync exists in repository)
+- `GetFacetsAsync` repository method is **fully implemented** in FileBasedContentRepository and database repositories
+- Calculates facet counts with filtering support (tags, sections, collections, date ranges)
+- Used by `SearchAsync` when `IncludeFacets = true`
+- `GetTagCountsAsync` is complete with date/section/collection filtering and caching
 
-**Database Schema** (see [spec 011](../011-azure-search-storage/data-model.md)):
+**❌ Missing: Filter Parameters on Tag Cloud Endpoint**:
 
-```sql
--- Tag subset matching via expanded words table
-CREATE TABLE content_tags_expanded (
-    content_id  TEXT NOT NULL,
-    tag_word    TEXT NOT NULL,  -- "ai", "azure", etc.
-    PRIMARY KEY (content_id, tag_word)
-);
+- Tag cloud endpoint exists: `GET /api/sections/{section}/collections/{collection}/tags`
+- Currently accepts: `maxTags`, `minUses`, `lastDays`
+- **Need to add**: `tags` (selected), `from`, `to` query parameters
+- Then pass these filters to `GetTagCountsAsync` (which already supports them!)
 
--- Query pattern for "AI" tag (matches "AI", "Azure AI", "Generative AI")
-SELECT DISTINCT c.*
-FROM content_items c
-JOIN content_tags_expanded e ON c.id = e.content_id
-WHERE e.tag_word = 'ai';
+**Simple Enhancement Required**:
 
--- AND logic for multiple tags (e.g., "AI" AND "Azure")
-SELECT c.*
-FROM content_items c
-WHERE c.id IN (
-    SELECT content_id
-    FROM content_tags_expanded
-    WHERE tag_word IN ('ai', 'azure')
-    GROUP BY content_id
-    HAVING COUNT(DISTINCT tag_word) = 2
-);
+```http
+# Current (works for static counts)
+GET /api/sections/{section}/collections/{collection}/tags?maxTags=20&lastDays=90
+
+# Enhanced (for dynamic counts with filter state)
+GET /api/sections/{section}/collections/{collection}/tags?maxTags=20&tags=ai&from=2025-11-03&to=2026-02-03
+
+Response (TagCloudItem[] - already has counts!):
+[
+  { "tag": "AI", "count": 901, "size": "Large" },
+  { "tag": "GitHub Copilot", "count": 245, "size": "Medium" },
+  { "tag": "Azure", "count": 0, "size": "Small" }
+]
 ```
+
+**Count Calculation Logic** (already in `GetTagCountsAsync`):
+
+- When **no tags param**: Count = total items with that tag (within date range)
+- When **tags param provided**: Count = items matching **existing tags** OR **this tag** (OR logic)
+- Frontend determines disabled state: `disabled = (count === 0)`
 
 **Performance Targets** (from spec 011):
 
 - Tag filtering < 200ms (4000+ content items)
+- **Tag count calculation < 200ms** (new requirement for dynamic counts)
 - Facet counts 100% accurate using SQL GROUP BY aggregations
 - First sync < 60 seconds, subsequent sync < 1 second
 
 **Action Items for This Spec**:
 
-1. ✅ Backend filtering logic complete (SearchAsync implemented)
-2. ❌ Implement `GetFacetsAsync` for dynamic tag counts
-3. ❌ Create `/api/facets` endpoint
-4. ❌ Build frontend components to consume API
-5. ❌ Add E2E tests for complete filtering workflow
+1. ✅ Backend filtering logic complete (`SearchAsync` implemented)
+2. ✅ Tag subset matching complete (`content_tags_expanded` table)
+3. ✅ `GetTagCountsAsync` complete with filtering support
+4. ✅ `GetFacetsAsync` fully implemented
+5. ❌ Enhance existing tag cloud endpoint to accept filter parameters (tags, from, to)
+6. ❌ Build frontend components to consume enhanced API with dynamic counts
+7. ❌ Add E2E tests for dynamic count behavior
 
 ## Dependencies
 
 - **Completed**: Database schema and repository layer (spec 011)
 - **Completed**: Content sync with hash-based incremental updates (spec 011)
-- **Needs Implementation**: `/api/facets` endpoint for dynamic tag counts
-- **Needs Implementation**: `GetFacetsAsync` repository method
+- **🚨 BLOCKER - Implement First**: Infinite scroll pagination (spec 003) - **MUST complete before dynamic tag counts**
+  - **Why**: Tag counts showing "AI (901)" are misleading if users can only see 20 items
+  - **Impact**: Without infinite scroll, users cannot browse all filtered content
+  - **Recommendation**: Implement 003-infinite-scroll before continuing with dynamic counts feature
+- **Needs Implementation**: Enhanced tag cloud endpoint with filter parameters (add to existing endpoint)
 - **In Progress**: Blazor component architecture for state management
 - **Needed**: URL state management library or custom implementation
 - **Needed**: Visual design for Excel-style tag dropdown
-- **Needed**: Popular tag calculation logic (most-used tags in last 3 months)
 - **Needed**: Virtual scrolling component/library for large tag lists
 - **Needed**: Tag cloud visual design (content items vs popular tags)
-- **Needed**: Infinite scroll integration (003-infinite-scroll spec)
 
 ## Out of Scope
 

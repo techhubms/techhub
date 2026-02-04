@@ -686,7 +686,7 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 
 1. Read [collections/AGENTS.md](collections/AGENTS.md)
 2. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
-3. Use `npx markdownlint-cli2 --fix <file-path>` to fix formatting
+3. Use `npx markdownlint-cli2 --fix <file-path> --config /workspaces/techhub/.markdownlint-cli2.jsonc` to fix formatting
 
 **Working on tests?**
 

@@ -2,36 +2,62 @@
 
 **Feature**: 001-filtering-system  
 **Audience**: Users, Developers, Testers  
-**Date**: 2026-01-16
+**Date**: 2026-01-16  
+**Updated**: 2026-02-03
+
+## Implementation Status
+
+✅ **Currently Available**:
+
+- Basic tag filtering via sidebar tag cloud
+- Tag selection with URL parameters
+- Multiple tag selection (OR logic)
+- Tag cloud scoping (homepage/section/collection/content)
+- Quantile-based tag sizing
+- Tag toggle (click to select/deselect)
+
+❌ **Coming Soon** (in development):
+
+- **Dynamic tag counts** - tags will show item counts (e.g., "AI (901)")
+- **Tag disabled state** - tags with 0 results will be grayed out
+- **Date range slider** - filter by publication date
+- **Excel-style tag dropdown** - search and browse all tags
 
 ## For Users: How to Filter Content
 
 ### Using the Sidebar Tag Cloud
 
-The sidebar tag cloud shows the **top 20 most-used tags** from the last 3 months, scoped to your current page:
+The sidebar tag cloud shows the **top 20 most-used tags** from the last 90 days (or your selected date range), scoped to your current page:
 
-1. **Navigate to a section page** (e.g., `/sections/ai`)
-2. **View the tag cloud** in the sidebar above the date range selector
+1. **Navigate to a section page** (e.g., `/github-copilot`)
+2. **View the tag cloud** in the sidebar
 3. **Click a tag** to filter content - the tag highlights and content updates
 4. **Click again** to deselect the tag
 5. **Click multiple tags** - content shows items matching ANY selected tag (OR logic)
 
-**Tag Cloud Scoping**:
+**Tag Cloud Scoping** ✅ Available Now:
 
 - **Homepage** (`/`): Top 20 tags across entire website
-- **Section page** (`/sections/ai`): Top 20 tags for that section only
-- **Collection page** (`/sections/ai/news`): Top 20 tags for that section+collection
+- **Section page** (`/github-copilot`): Top 20 tags for that section only
+- **Collection page** (`/github-copilot/videos`): Top 20 tags for that section+collection
 - **Content item** (`/blogs/article-name`): Only that article's tags (not limited to 20)
 
-**Tag Sizes**:
+**Tag Sizes** ✅ Available Now:
 
 - **Large tags** (top 25%): Most popular
 - **Medium tags** (middle 50%): Moderately popular
 - **Small tags** (bottom 25%): Less popular
 
+**Dynamic Tag Counts** ❌ Coming Soon:
+
+- Each tag will show a count in parentheses: `AI (901)` means 901 items would show if you click this tag
+- When you select a tag, other tags will update their counts to show the intersection
+- Tags that would result in 0 items will become **disabled** (greyed out, not clickable)
+- The date slider will affect these counts - change the date range and counts will recalculate
+
 ### Using the Excel-Style Tag Dropdown
 
-Can't find your tag in the top 20? Use the dropdown filter:
+❌ **Coming Soon** - Can't find your tag in the top 20? The dropdown filter will provide:
 
 1. **Click "Filter by Tags"** dropdown below the date range selector
 2. **Search for tags** using the search box (finds tags not in top 20)
@@ -39,16 +65,17 @@ Can't find your tag in the top 20? Use the dropdown filter:
 4. **Click outside** or press Escape to close dropdown
 5. **Tags automatically synchronized** with sidebar tag cloud
 
-**Dropdown Features**:
+**Dropdown Features** (when implemented):
 
 - **Search**: Type to filter tag list (e.g., "azure" shows "Azure", "Azure AI", "Azure Functions")
-- **Counts**: Each tag shows usage count (e.g., "AI (42)")
+- **Dynamic Counts**: Each tag shows its intersection count - how many items would show if selected
+- **Disabled Tags**: Tags that would result in 0 items are greyed out and disabled
 - **Virtual scrolling**: Smooth scrolling even with 100+ tags
 - **Select All / Clear All**: Quick actions for bulk selection
 
 ### Using Date Range Filters
 
-Filter content by publication date:
+❌ **Coming Soon** - Filter content by publication date:
 
 1. **Select a preset** button:
    - Last 7 days
@@ -61,14 +88,14 @@ Filter content by publication date:
    - Select "From" and "To" dates using date pickers
    - Click "Apply"
 
-**Date Range + Tags**:
+**Date Range + Tags** (when implemented):
 
 - Date range **AND** tag filters work together
 - Content must match the date range **AND** any selected tag
 
 ### Sharing Filtered Views
 
-Filters are saved in the URL - you can:
+✅ **Available Now** - Filters are saved in the URL - you can:
 
 - **Copy the URL** to share your filtered view with others
 - **Bookmark the URL** to save your filter combination
@@ -77,16 +104,29 @@ Filters are saved in the URL - you can:
 **Example URLs**:
 
 ```text
-/sections/ai?tags=azure&tags=openai&from=2025-10-01
-/sections/github-copilot?from=2025-12-01&to=2026-01-16
-/sections/ai/news?tags=generative-ai
+/github-copilot?tags=vscode
+/ai?tags=azure,openai
+/github-copilot/videos?tags=tutorial
+```
+
+**Coming Soon** (with date range feature):
+
+```text
+/ai?tags=azure&tags=openai&from=2025-10-01
+/github-copilot?from=2025-12-01&to=2026-01-16
+/ai/news?tags=generative-ai&from=2025-11-01
 ```
 
 ### Clearing Filters
 
-- **Click "Clear All Filters"** button in sidebar (only visible when filters active)
-- **Or manually deselect** all tags and reset date range
+✅ **Available Now**:
+
+- **Manually deselect** all tags by clicking them again
 - **Or navigate to page without URL parameters**
+
+❌ **Coming Soon**:
+
+- **Click "Clear All Filters"** button in sidebar (will show when filters are active)
 
 ---
 

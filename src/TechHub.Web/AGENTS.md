@@ -45,6 +45,106 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 - **Never use /assets/ paths for images** - Use `/images/` convention (e.g., `/images/section-backgrounds/`)
 - **Never use `<div>` for main content areas** - Use semantic HTML elements (`<main>`, `<section>`, `<article>`)
 
+## Render Mode Strategy
+
+**CRITICAL**: This section defines when to use Interactive Server render mode vs static SSR. Getting this wrong can break the SignalR circuit or cause components to not render.
+
+### Background
+
+Blazor supports multiple render modes:
+
+- **Static SSR** (default): Component renders on the server and sends HTML to the client. No interactivity, no SignalR connection needed.
+- **Interactive Server** (`@rendermode InteractiveServer`): Component renders interactively using SignalR. Required for user interaction (clicks, inputs).
+- **Interactive Server with Prerender** (`@rendermode @(new InteractiveServerRenderMode(prerender: true))`): Component prerenders during SSR, then hydrates for interactivity via SignalR.
+- **Interactive Server without Prerender** (`@rendermode @(new InteractiveServerRenderMode(prerender: false))`): Component only renders after SignalR circuit is established (shows nothing during SSR).
+
+### When to Use Each Mode
+
+#### Use Static SSR (No Render Mode Attribute)
+
+Use for components that display content but have **no user interaction**:
+
+- Navigation links, headers, footers
+- Content display (article body, headings, paragraphs)
+- Static images and videos
+- Breadcrumbs, metadata display
+
+```razor
+@* No @rendermode attribute - static SSR *@
+<NavHeader />
+<PageHeader />
+<Footer />
+```
+
+#### Use Interactive Server with Prerender (Recommended for Interactive Components)
+
+Use for components that need interactivity AND should be visible during initial page load:
+
+- Tag cloud filters (buttons that filter content)
+- Dropdown menus, accordions
+- Form inputs, search boxes
+- Content grids that respond to filter changes
+
+```razor
+@rendermode @(new InteractiveServerRenderMode(prerender: true))
+```
+
+**Why prerender: true?**
+
+- Component HTML is included in the initial SSR response
+- Content is visible immediately (better perceived performance, SEO)
+- Hydrates to become interactive when SignalR connects
+
+#### Use Interactive Server without Prerender (Rare)
+
+Use only when the component **must not render until SignalR is established**:
+
+- Components that immediately call JavaScript interop on render
+- Components with side effects that shouldn't run twice
+
+```razor
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+```
+
+**Warning**: Components with `prerender: false` will show nothing during SSR. This can cause layout shift and poor user experience.
+
+### SignalR Message Size Considerations
+
+**CRITICAL**: When using `prerender: true`, the component's state is serialized and sent over SignalR during hydration. Large prerendered content can exceed SignalR's default 32KB message limit.
+
+**Symptom**: Console error "The maximum message size of 32768B was exceeded"
+
+**Solution**: Increase the SignalR message size limit in Program.cs:
+
+```csharp
+builder.Services.AddSignalR(options =>
+{
+    options.MaximumReceiveMessageSize = 256 * 1024; // 256KB
+});
+```
+
+### Current Component Configuration
+
+| Component | Render Mode | Why |
+|-----------|-------------|-----|
+| `SidebarTagCloud` | InteractiveServer (prerender: true) | Buttons need click handlers; must show in SSR for SEO |
+| `ContentItemsGrid` | InteractiveServer (prerender: true) | Responds to tag filter changes; must show initial content |
+| `NavHeader` | Static SSR | Links only, no interactivity needed |
+| `PageHeader` | Static SSR | Display only |
+| `SidebarToc` | Static SSR | Links only, no interactivity needed |
+| `Footer` | Static SSR | Display only |
+
+### Testing Interactive Components
+
+When testing components with `PersistentComponentState` (used for SSR → Interactive hydration), use bUnit's built-in support:
+
+```csharp
+// In your test setup
+this.AddBunitPersistentComponentState();
+```
+
+This ensures the `PersistentComponentState` service is properly registered for testing prerendered components.
+
 ## Semantic HTML Structure
 
 **CRITICAL**: All pages must use proper semantic HTML5 elements for accessibility, SEO, and maintainability.
@@ -1572,7 +1672,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 <header class="section-header" style="@StyleAttribute">
     <div class="section-header-content">
         <div class="header-text-overlay">
-            <h1 tabindex="-1">@DisplayTitle</h1>
+            <h1 id="skiptohere">@DisplayTitle</h1>
             @if (!string.IsNullOrEmpty(DisplayDescription))
             {
                 <p class="section-description">@DisplayDescription</p>

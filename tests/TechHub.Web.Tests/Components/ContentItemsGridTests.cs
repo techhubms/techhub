@@ -68,6 +68,7 @@ public class ContentItemsGridTests : BunitContext
 
         Services.AddSingleton(_mockApiClient.Object);
         Services.AddSingleton(_sectionCache);
+        this.AddBunitPersistentComponentState();
     }
 
     [Fact]

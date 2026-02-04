@@ -219,32 +219,6 @@ public class ContentItemTests
         result.Should().Be("Tutorial Video");
     }
 
-    [Fact]
-    public void GetDataEnhanceNav_ReturnsTrue_ForInternalCollections()
-    {
-        // Arrange
-        var contentItem = CreateContentItemWithCollection("videos");
-
-        // Act
-        var result = contentItem.GetDataEnhanceNav();
-
-        // Assert
-        result.Should().Be("true");
-    }
-
-    [Fact]
-    public void GetDataEnhanceNav_ReturnsNull_ForExternalCollections()
-    {
-        // Arrange
-        var contentItem = CreateContentItemWithCollection("news");
-
-        // Act
-        var result = contentItem.GetDataEnhanceNav();
-
-        // Assert
-        result.Should().BeNull();
-    }
-
     #endregion
 
     private static ContentItem CreateContentItemWithCollection(

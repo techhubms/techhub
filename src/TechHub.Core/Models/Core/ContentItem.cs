@@ -323,12 +323,6 @@ public record ContentItem
         LinksExternally() ? $"{Title} - opens in new tab" : Title;
 
     /// <summary>
-    /// Gets the data-enhance-nav attribute for Blazor navigation enhancement (only for internal links)
-    /// </summary>
-    public string? GetDataEnhanceNav() =>
-        LinksExternally() ? null : "true";
-
-    /// <summary>
     /// Computed property: Date as DateTime (UTC)
     /// </summary>
     public DateTime DateUtc => DateTimeOffset.FromUnixTimeSeconds(DateEpoch).UtcDateTime;

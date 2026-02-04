@@ -23,9 +23,11 @@ export function initCollapsibleCards() {
         header.addEventListener('click', function () {
             const content = this.nextElementSibling;
             const toggle = this.querySelector('.sdlc-phase-toggle');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
             if (content && content.classList.contains('sdlc-phase-content')) {
                 content.classList.toggle('expanded');
+                this.setAttribute('aria-expanded', !isExpanded);
                 if (toggle) {
                     toggle.classList.toggle('expanded');
                 }
@@ -42,9 +44,11 @@ export function initCollapsibleCards() {
         header.addEventListener('click', function () {
             const content = this.nextElementSibling;
             const icon = this.querySelector('.sdlc-card-icon');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
             if (content && content.classList.contains('sdlc-card-content')) {
                 content.classList.toggle('expanded');
+                this.setAttribute('aria-expanded', !isExpanded);
                 if (icon) {
                     icon.classList.toggle('expanded');
                 }
@@ -61,15 +65,53 @@ export function initCollapsibleCards() {
         header.addEventListener('click', function () {
             const content = this.nextElementSibling;
             const icon = this.querySelector('.dx-card-icon');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
             if (content && content.classList.contains('dx-card-content')) {
                 content.classList.toggle('expanded');
+                this.setAttribute('aria-expanded', !isExpanded);
                 if (icon) {
                     icon.classList.toggle('expanded');
                 }
             }
         });
     });
+
+    // Feature filters (GitHub Copilot Features page)
+    initFeatureFilters();
+}
+
+/**
+ * Initialize feature card filters
+ */
+function initFeatureFilters() {
+    const filterContainer = document.querySelector('[data-feature-filters]');
+    if (!filterContainer) return;
+
+    const ghesFilter = document.getElementById('filter-ghes');
+    const videosFilter = document.getElementById('filter-videos');
+    const featureCards = document.querySelectorAll('.feature-card');
+
+    if (!ghesFilter || !videosFilter || featureCards.length === 0) return;
+
+    function applyFilters() {
+        const showGhesOnly = ghesFilter.checked;
+        const showVideosOnly = videosFilter.checked;
+
+        featureCards.forEach(card => {
+            const hasGhes = card.dataset.ghes === 'true';
+            const hasVideo = card.dataset.hasVideo === 'true';
+
+            let show = true;
+            if (showGhesOnly && !hasGhes) show = false;
+            if (showVideosOnly && !hasVideo) show = false;
+
+            card.style.display = show ? '' : 'none';
+        });
+    }
+
+    ghesFilter.addEventListener('change', applyFilters);
+    videosFilter.addEventListener('change', applyFilters);
 }
 
 // Auto-initialize on DOMContentLoaded if loaded as a regular script

@@ -217,7 +217,7 @@ For complete frontmatter schema, see [collections/AGENTS.md - Frontmatter Schema
 - **What it does NOT do**: Modify frontmatter (templates already generate correct .NET format)
 - **When to use**: After AI processes content that has markdown formatting issues
 - **Note**: New content from RSS pipeline already has correct frontmatter structure (section_names)
-- **Manual usage**: Run `npx markdownlint-cli2 --fix <file-path>` on any markdown file
+- **Manual usage**: Run `npx markdownlint-cli2 --fix <file-path> --config /workspaces/techhub/.markdownlint-cli2.jsonc` on any markdown file
 
 #### iterative-roundup-generation.ps1
 

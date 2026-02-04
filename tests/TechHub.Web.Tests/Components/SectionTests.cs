@@ -68,6 +68,7 @@ public class SectionTests : BunitContext
         Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
+        this.AddBunitPersistentComponentState();
 
         // Act - Render Section component
         var cut = Render<Section>(parameters => parameters
@@ -147,6 +148,7 @@ public class SectionTests : BunitContext
         Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
+        this.AddBunitPersistentComponentState();
 
         // Act
         var cut = Render<Section>(parameters => parameters

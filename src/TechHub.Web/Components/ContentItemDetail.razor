@@ -2,9 +2,9 @@
 
 @if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
 {
-    <article id="@Id" class="article-body" tabindex="@(string.IsNullOrWhiteSpace(Id) ? null : "-1")">
+    <article id="@Id" class="article-body">
         <div class="content-detail-header">
-            <h1 class="page-h1" tabindex="-1">@Item.Title</h1>
+            <h1 id="skiptohere" class="page-h1">@Item.Title</h1>
 
             <div class="article-metadata">
                 <time datetime="@FormatDateIso(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>
@@ -15,7 +15,7 @@
                 }
             </div>
         </div>
-        @((MarkupString)Item.RenderedHtml)
+        <SafeMarkup Html="@Item.RenderedHtml" />
     </article>
 }
 

@@ -57,8 +57,8 @@ public class MarkdownService : IMarkdownService
     /// <param name="markdown">Raw markdown content</param>
     /// <returns>Rendered HTML with properly formatted links</returns>
     /// <remarks>
-    /// Hash-only links (#section) are preserved as-is and handled client-side by JavaScript
-    /// in nav-helpers.js which converts them to full URL navigation.
+    /// Hash-only links (#section) are fixed at render time by the SafeMarkup component
+    /// to work around the &lt;base href="/"&gt; issue.
     /// </remarks>
     public string RenderToHtml(string markdown)
     {
@@ -90,7 +90,8 @@ public class MarkdownService : IMarkdownService
     }
 
     /// <summary>
-    /// Post-process HTML to add target="_blank" and rel="noopener noreferrer" to external links
+    /// Post-process HTML to add attributes to links:
+    /// - External links: target="_blank" and rel="noopener noreferrer"
     /// </summary>
     private static string AddTargetBlankToExternalLinks(string html)
     {
@@ -111,6 +112,8 @@ public class MarkdownService : IMarkdownService
                     otherAttributes += " target=\"_blank\" rel=\"noopener noreferrer\"";
                 }
             }
+            // Note: Hash-only links (#section) are fixed client-side by nav-helpers.js
+            // to work around <base href="/"> resolving them relative to root
 
             return $"<a href=\"{url}\"{otherAttributes}>";
         });

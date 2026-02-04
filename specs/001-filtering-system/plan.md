@@ -1,11 +1,43 @@
 # Implementation Plan: Sidebar Content Filtering
 
-**Branch**: `dotnet-migration` | **Date**: 2026-01-16 | **Spec**: [spec.md](spec.md)  
+**Branch**: `dotnet-migration` | **Date**: 2026-01-16 | **Updated**: 2026-02-03 | **Spec**: [spec.md](spec.md)  
 **Input**: Feature specification from `/specs/001-filtering-system/spec.md`
 
 ## Summary
 
-Implement client-side tag and date filtering for Tech Hub content discovery. Users can filter content via sidebar tag cloud (top 20 scoped tags), Excel-style tag dropdown (all tags with search), and date range slider (defaults to last 3 months). Filters use OR logic within tags, AND logic between filter types, with URL state preservation and sub-50ms response time.
+Implement client-side tag and date filtering for Tech Hub content discovery. Users can filter content via sidebar tag cloud (top 20 scoped tags with **dynamic counts**), Excel-style tag dropdown (all tags with search and **dynamic counts**), and date range slider (defaults to last 90 days).
+
+**Key Feature - Dynamic Tag Counts**:
+
+- Each tag displays how many items would remain if selected (e.g., "AI (901)")
+- When tags are selected, other tags show **intersection counts** (items matching existing filters AND this tag)
+- Tags that would result in 0 items become **disabled** (grayed out, non-clickable)
+- Date range changes trigger **tag count recalculation**
+
+Filters use OR logic within tags, AND logic between filter types, with URL state preservation and sub-50ms response time.
+
+## Implementation Status
+
+| Component | Status | Notes |
+|-----------|--------|----------|
+| Core Models (Filter/Tags) | ✅ Complete | In `src/TechHub.Core/Models/` (not DTOs/) |
+| FacetRequest, FacetResults | ✅ Complete | In `src/TechHub.Core/Models/Facets/` |
+| ITagCloudService | ✅ Complete | - |
+| TagCloudService | ✅ Complete | Quantile sizing, scoping logic |
+| IContentRepository.GetTagCountsAsync | ✅ Complete | With date/section/collection filtering |
+| IContentRepository.GetFacetsAsync | ✅ Complete | Fully implemented with filtering |
+| SidebarTagCloud | ⚠️ Partial | Basic filtering ✅, dynamic counts ❌ |
+| Tag cloud endpoint | ⚠️ Partial | Exists, needs filter params (tags, from, to) |
+| E2E tests (basic filtering) | ✅ Complete | TagFilteringTests.cs |
+| **Dynamic Counts Feature** | | |
+| Enhanced tag cloud endpoint | ❌ Not started | Add filter params to existing endpoint |
+| Dynamic count frontend | ❌ Not started | Use enhanced API in SidebarTagCloud |
+| Disabled state (UI) | ❌ Not started | Frontend logic (count === 0) |
+| Date range affects counts | ❌ Not started | Integration layer |
+| **Other Components** | | |
+| DateRangeSlider | ❌ Not started | - |
+| TagDropdownFilter | ❌ Not started | - |
+| FilterStateService | ❌ Not started | - |
 
 ## Technical Context
 
@@ -145,81 +177,83 @@ specs/001-filtering-system/
 ### Source Code (repository root)
 
 ```text
-Tech Hub Repository Structure (Existing):
+Tech Hub Repository Structure (Actual Paths - Updated 2026-02-03):
 
 src/
 ├── TechHub.Api/                       # REST API Backend
 │   ├── Endpoints/
-│   │   ├── SectionEndpoints.cs       # Existing: Section endpoints
-│   │   ├── ContentEndpoints.cs       # Existing: Content endpoints
-│   │   ├── FilterEndpoints.cs        # NEW: Advanced filtering endpoints
-│   │   └── RssEndpoints.cs           # Existing: RSS feeds
-│   └── appsettings.json              # MODIFY: Add filter configuration
+│   │   ├── SectionsEndpoints.cs      # ✅ COMPLETE: Section + tag cloud endpoints
+│   │   ├── CustomPagesEndpoints.cs   # Existing
+│   │   └── RssEndpoints.cs           # Existing
+│   └── appsettings.json              # ✅ COMPLETE: Filter configuration
 │
 ├── TechHub.Web/                       # Blazor Frontend
-│   ├── Components/
-│   │   ├── Shared/
-│   │   │   ├── SidebarTagCloud.razor          # NEW: Contextual tag cloud
-│   │   │   ├── TagDropdownFilter.razor        # NEW: Excel-style dropdown
-│   │   │   ├── DateRangeSlider.razor          # NEW: Date range selector
-│   │   │   └── ContentItemTagBadges.razor     # NEW: Tag badges on items
+│   ├── Components/                    # Note: No Shared/ subfolder
+│   │   ├── SidebarTagCloud.razor          # ✅ COMPLETE: Contextual tag cloud
+│   │   ├── SidebarTagCloud.razor.cs       # ✅ COMPLETE: Code-behind
+│   │   ├── SidebarTagCloud.razor.css      # ✅ COMPLETE: Scoped styles
+│   │   ├── TagDropdownFilter.razor        # ❌ TODO: Excel-style dropdown
+│   │   ├── DateRangeSlider.razor          # ❌ TODO: Date range selector
+│   │   ├── ContentItemTagBadges.razor     # ❌ TODO: Tag badges on items
 │   │   └── Pages/
-│   │       ├── Section.razor                  # MODIFY: Add filtering sidebar
-│   │       ├── SectionCollection.razor        # MODIFY: Add filtering sidebar
-│   │       └── ContentItem.razor              # MODIFY: Add tag badges
+│   │       ├── Section.razor                  # ✅ PARTIAL: Has tag cloud
+│   │       ├── SectionCollection.razor        # TODO: Add filtering sidebar
+│   │       └── ContentItem.razor              # TODO: Add tag badges
 │   ├── Services/
-│   │   ├── TechHubApiClient.cs       # MODIFY: Add filter endpoints
-│   │   └── FilterStateService.cs     # NEW: URL state management
+│   │   ├── TechHubApiClient.cs       # ✅ COMPLETE: GetTagCloudAsync
+│   │   ├── ITechHubApiClient.cs      # ✅ COMPLETE: Interface
+│   │   └── FilterStateService.cs     # ❌ TODO: URL state management
 │   └── wwwroot/
-│       ├── css/
-│       │   └── design-tokens.css     # REFERENCE: Tech Hub colors
 │       └── js/
-│           └── filtering.js          # NEW: Client-side filter logic
-│
-# NOTE: Component CSS is scoped via Blazor's CSS isolation (.razor.css files):
-# - Components/Shared/SidebarTagCloud.razor.css
-# - Components/Shared/TagDropdownFilter.razor.css
-# - Components/Shared/DateRangeSlider.razor.css
+│           └── filtering.js          # ❌ TODO: Client-side filter logic
 │
 ├── TechHub.Core/                      # Domain Models & Interfaces
-│   ├── DTOs/
-│   │   ├── FilterRequest.cs          # NEW: Filter request DTO
-│   │   ├── FilterResponse.cs         # NEW: Filtered results DTO
-│   │   └── TagCloudItem.cs           # NEW: Tag cloud item DTO
+│   ├── Models/                        # Note: Uses Models/, not DTOs/
+│   │   ├── Filter/
+│   │   │   ├── FilterRequest.cs          # ✅ COMPLETE
+│   │   │   ├── FilterResponse.cs         # ✅ COMPLETE
+│   │   │   └── FilterSummary.cs          # ✅ COMPLETE
+│   │   └── Tags/
+│   │       ├── TagCloudItem.cs           # ✅ COMPLETE
+│   │       ├── TagCloudRequest.cs        # ✅ COMPLETE
+│   │       ├── AllTagsResponse.cs        # ✅ COMPLETE
+│   │       ├── TagWithCount.cs           # ✅ COMPLETE
+│   │       └── TagCountsResponse.cs      # ❌ TODO: Dynamic counts response
 │   └── Interfaces/
-│       └── IContentRepository.cs     # MODIFY: Add filter methods
+│       ├── ITagCloudService.cs       # ✅ COMPLETE
+│       ├── ITagMatchingService.cs    # ❌ TODO: Subset matching
+│       └── IContentRepository.cs     # TODO: Add GetTagCountsAsync
 │
 └── TechHub.Infrastructure/            # Data Access Implementation
-    ├── Repositories/
-    │   └── FileBasedContentRepository.cs  # MODIFY: Implement filtering
     └── Services/
-        ├── TagCloudService.cs        # NEW: Tag cloud calculation
-        └── TagMatchingService.cs     # NEW: Subset matching logic
+        ├── TagCloudService.cs        # ✅ COMPLETE: Quantile sizing
+        └── TagMatchingService.cs     # ❌ TODO: Subset matching logic
 
 tests/
 ├── TechHub.Web.Tests/                # bUnit Component Tests
-│   ├── Components/
-│   │   ├── SidebarTagCloudTests.cs   # NEW: Tag cloud component tests
-│   │   ├── TagDropdownFilterTests.cs # NEW: Dropdown component tests
-│   │   └── DateRangeSliderTests.cs   # NEW: Slider component tests
-│   └── Services/
-│       └── FilterStateServiceTests.cs # NEW: State management tests
+│   └── Components/
+│       ├── SidebarTagCloudTests.cs   # ✅ COMPLETE
+│       ├── TagDropdownFilterTests.cs # ❌ TODO
+│       └── DateRangeSliderTests.cs   # ❌ TODO
 │
 ├── TechHub.Api.Tests/                # Integration Tests
 │   └── Endpoints/
-│       └── FilterEndpointsTests.cs   # NEW: Filter API integration tests
+│       ├── SectionsEndpointsTests.cs # ✅ COMPLETE: Tag cloud tests
+│       └── TagCountsEndpointTests.cs # ❌ TODO: Dynamic counts
 │
 ├── TechHub.Infrastructure.Tests/     # Unit Tests
 │   └── Services/
-│       ├── TagCloudServiceTests.cs   # NEW: Tag cloud calculation tests
-│       └── TagMatchingServiceTests.cs # NEW: Subset matching tests
+│       ├── TagCloudServiceTests.cs   # ✅ COMPLETE
+│       └── TagMatchingServiceTests.cs # ❌ TODO
 │
 └── TechHub.E2E.Tests/                # Playwright E2E Tests
-    ├── FilteringTests.cs             # NEW: Complete filtering workflows
-    └── TagCloudScopingTests.cs       # NEW: Tag cloud scoping scenarios
+    └── Web/
+        ├── TagFilteringTests.cs      # ✅ COMPLETE: Basic tag filtering
+        ├── DynamicTagCountsTests.cs  # ❌ TODO: Dynamic count tests
+        └── TagCloudScopingTests.cs   # ❌ TODO: Scoping scenarios
 
 docs/
-└── filtering-system.md               # REWRITE: Complete functional documentation
+└── filtering-system.md               # ❌ TODO: Functional documentation
 ```
 
 **Structure Decision**: Tech Hub uses a clean .NET architecture with API backend, Blazor frontend, Core domain, and Infrastructure layers. Filtering components will be added to existing structure following established patterns (Minimal APIs, Blazor SSR, file-based repositories).

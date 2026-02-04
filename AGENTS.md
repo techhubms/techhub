@@ -327,7 +327,7 @@ See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and
 **Step 9 Checklist**:
 
 - [ ] Updated relevant documentation
-- [ ] Fixed markdown linting: `npx markdownlint-cli2 --fix <file>`
+- [ ] Fixed markdown linting: `npx markdownlint-cli2 --fix <file> --config /workspaces/techhub/.markdownlint-cli2.jsonc`
 - [ ] OR: No documentation updates needed
 
 ---

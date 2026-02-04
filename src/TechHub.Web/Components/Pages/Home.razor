@@ -29,7 +29,6 @@
                    class="sidebar-featured-link"
                    target="@latestRoundup.GetTarget()"
                    rel="@latestRoundup.GetRel()"
-                   data-enhance-nav="@latestRoundup.GetDataEnhanceNav()"
                    aria-label="@latestRoundup.GetAriaLabel()">
                     <span class="sidebar-featured-title">@latestRoundup.Title</span>
                     <span class="sidebar-featured-date">@FormatDateShort(latestRoundup.DateEpoch)</span>
@@ -50,7 +49,6 @@
                                 class="sidebar-content-button"
                                 target="@item.GetTarget()"
                                 rel="@item.GetRel()"
-                                data-enhance-nav="@item.GetDataEnhanceNav()"
                                 aria-label="@item.GetAriaLabel()">
                                 <span class="sidebar-content-button-title">@item.Title</span>
                                 <span class="sidebar-content-button-meta">
@@ -76,7 +74,7 @@
             NavigationMode="TagCloudNavigationMode.Navigate" NavigationBaseUrl="/all" />
     </aside>
 
-    <section id="skiptohere" tabindex="-1" class="home-main-content">
+    <section class="home-main-content">
         @if (sections != null && sections.Any())
         {
             <SectionCardsGrid Sections="@sections" />

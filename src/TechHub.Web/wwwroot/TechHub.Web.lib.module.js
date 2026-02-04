@@ -27,44 +27,16 @@ export function afterWebStarted(blazor) {
     window.__blazorWebReady = true;
     console.debug('[TechHub] Blazor Web started');
 
+    // Enable browser's native scroll restoration for back/forward navigation
+    // This prevents any JavaScript from interfering with scroll position restoration
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+    }
+
     // Set up focus scroll compensation for sticky headers
     // When a focusable element receives focus and is behind a sticky header,
     // scroll it into view with proper offset
     setupFocusScrollCompensation();
-
-    // Set up focus management for enhanced navigation (accessibility)
-    // When Blazor navigates via enhanced navigation (SPA-style), focus needs to reset
-    // to the top of the page so keyboard users can navigate from the beginning.
-    // This is a WCAG 2.1 requirement for consistent keyboard navigation after page changes.
-    blazor.addEventListener('enhancedload', () => {
-        // Reset focus to top of page for keyboard navigation
-        // Use requestAnimationFrame to ensure DOM is fully updated
-        requestAnimationFrame(() => {
-            // Scroll to top of page
-            window.scrollTo(0, 0);
-
-            // To reset tab order, we need to move browser's internal focus tracking
-            // to the top of the page. We do this by:
-            // 1. Creating a temporary focusable element at the very top
-            // 2. Focusing it (which resets browser's tab position)
-            // 3. Removing focus and the element
-            // This ensures next Tab press focuses the first element (skip-link)
-
-            const tempFocus = document.createElement('span');
-            tempFocus.setAttribute('tabindex', '-1');
-            tempFocus.style.cssText = 'position:absolute;left:-9999px;top:0;';
-            document.body.insertBefore(tempFocus, document.body.firstChild);
-
-            // Focus without triggering scroll
-            tempFocus.focus({ preventScroll: true });
-
-            // Remove the element after a frame (focus position is now reset)
-            requestAnimationFrame(() => {
-                tempFocus.remove();
-                console.debug('[TechHub] Focus reset after enhanced navigation');
-            });
-        });
-    });
 }
 
 /**

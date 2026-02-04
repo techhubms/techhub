@@ -4,7 +4,6 @@
    class="card"
    target="@Item.GetTarget()"
    rel="@Item.GetRel()"
-   data-enhance-nav="@Item.GetDataEnhanceNav()"
    aria-label="@Item.GetAriaLabel()">
         <div class="card-header">
             <h3 class="card-title">@Item.Title</h3>
@@ -20,7 +19,7 @@
         @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
         {
             <div class="card-description">
-                @((MarkupString)Item.Excerpt)
+                <SafeMarkup Html="@Item.Excerpt" />
             </div>
         }
 

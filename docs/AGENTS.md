@@ -372,7 +372,7 @@ Functional documentation describes WHAT the system does (behavior, contracts, ru
 
 - Follow [../collections/writing-style-guidelines.md](../collections/writing-style-guidelines.md) for tone, voice, and language standards
 - Follow [../collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema) for frontmatter structure
-- Use `npx markdownlint-cli2 --fix <file-path>` to fix markdown formatting issues
+- Use `npx markdownlint-cli2 --fix <file-path> --config /workspaces/techhub/.markdownlint-cli2.jsonc` to fix markdown formatting issues
 
 **For documentation files** (in `docs/`):
 

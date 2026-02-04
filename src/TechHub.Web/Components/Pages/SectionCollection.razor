@@ -25,7 +25,7 @@
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
     </aside>
 
-    <section id="skiptohere" tabindex="-1">
+    <section>
         <ContentItemsGrid SectionName="@SectionName" CollectionName="@CollectionName" FilterTags="@selectedTags"
             @key="@CollectionName" />
     </section>

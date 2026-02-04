@@ -2,14 +2,36 @@
 
 **Feature**: 001-filtering-system  
 **Date**: 2026-01-16  
+**Updated**: 2026-02-03  
 **Phase**: Phase 1 - Design & Contracts
+
+## Implementation Status
+
+| Model | Status | Location |
+|-------|--------|----------|
+| FilterRequest | ✅ Complete | `src/TechHub.Core/Models/Filter/` |
+| FilterResponse | ✅ Complete | `src/TechHub.Core/Models/Filter/` |
+| FilterSummary | ✅ Complete | `src/TechHub.Core/Models/Filter/` |
+| TagCloudItem | ✅ Complete | `src/TechHub.Core/Models/Tags/` |
+| TagCloudRequest | ✅ Complete | `src/TechHub.Core/Models/Tags/` |
+| AllTagsResponse | ✅ Complete | `src/TechHub.Core/Models/Tags/` |
+| TagWithCount | ✅ Complete | `src/TechHub.Core/Models/Tags/` |
+| FacetRequest | ✅ Complete | `src/TechHub.Core/Models/Facets/` |
+| FacetResults | ✅ Complete | `src/TechHub.Core/Models/Facets/` |
+| TagCountsResponse | ❌ TODO | For dynamic counts API endpoint |
+| TagWithCountAndState | ❌ TODO | Tag with count + disabled flag |
+| DateRangePreset | ❌ TODO | Enum for date range presets |
+
+> **Note**: Implementation uses `Models/` namespace, not `DTOs/` as originally specified.
 
 ## Domain Entities
 
-### FilterRequest (DTO - API Input)
+### FilterRequest (Model - API Input)
+
+**File**: `src/TechHub.Core/Models/Filter/FilterRequest.cs` ✅
 
 ```csharp
-namespace TechHub.Core.DTOs;
+namespace TechHub.Core.Models.Filter;
 
 /// <summary>
 /// Request DTO for content filtering operations
@@ -53,10 +75,12 @@ public record FilterRequest
 
 ---
 
-### FilterResponse (DTO - API Output)
+### FilterResponse (Model - API Output)
+
+**File**: `src/TechHub.Core/Models/Filter/FilterResponse.cs` ✅
 
 ```csharp
-namespace TechHub.Core.DTOs;
+namespace TechHub.Core.Models.Filter;
 
 /// <summary>
 /// Response DTO containing filtered content items and metadata
@@ -82,10 +106,12 @@ public record FilterResponse
 
 ---
 
-### FilterSummaryDto (DTO - Filter Metadata)
+### FilterSummary (Model - Filter Metadata)
+
+**File**: `src/TechHub.Core/Models/Filter/FilterSummary.cs` ✅
 
 ```csharp
-namespace TechHub.Core.DTOs;
+namespace TechHub.Core.Models.Filter;
 
 /// <summary>
 /// Summary of filters applied to the current result set
@@ -126,10 +152,12 @@ public record FilterSummaryDto
 
 ---
 
-### TagCloudItem (DTO - Tag Display)
+### TagCloudItem (Model - Tag Display)
+
+**File**: `src/TechHub.Core/Models/Tags/TagCloudItem.cs` ✅
 
 ```csharp
-namespace TechHub.Core.DTOs;
+namespace TechHub.Core.Models.Tags;
 
 /// <summary>
 /// Tag display information for tag cloud rendering
@@ -170,10 +198,12 @@ public enum TagSize
 
 ---
 
-### TagCloudRequest (DTO - Tag Cloud Query)
+### TagCloudRequest (Model - Tag Cloud Query)
+
+**File**: `src/TechHub.Core/Models/Tags/TagCloudRequest.cs` ✅
 
 ```csharp
-namespace TechHub.Core.DTOs;
+namespace TechHub.Core.Models.Tags;
 
 /// <summary>
 /// Request DTO for tag cloud calculation
@@ -247,10 +277,12 @@ public enum TagCloudScope
 
 ---
 
-### AllTagsResponse (DTO - Tag Dropdown Data)
+### AllTagsResponse (Model - Tag Dropdown Data)
+
+**File**: `src/TechHub.Core/Models/Tags/AllTagsResponse.cs` ✅
 
 ```csharp
-namespace TechHub.Core.DTOs;
+namespace TechHub.Core.Models.Tags;
 
 /// <summary>
 /// Response containing all available tags with counts for dropdown filter
@@ -282,6 +314,106 @@ public record TagWithCount
     /// Number of items with this tag
     /// </summary>
     public required int Count { get; init; }
+}
+```
+
+---
+
+### TagCountsResponse (Model - Dynamic Tag Counts)
+
+**File**: `src/TechHub.Core/Models/Tags/TagCountsResponse.cs` ❌ TODO
+
+> **New in 2026-02-03**: Supports dynamic tag counts feature where each tag shows how many items would remain if that tag is selected, based on current filter state.
+
+```csharp
+namespace TechHub.Core.Models.Tags;
+
+/// <summary>
+/// Response containing dynamic tag counts based on current filter state.
+/// Used for Excel-style dropdown and tag cloud with counts (e.g., "AI (901)").
+/// </summary>
+public record TagCountsResponse
+{
+    /// <summary>
+    /// Tags with their dynamic counts based on current filter state.
+    /// Count = number of items that would remain if this tag is selected.
+    /// </summary>
+    public required IReadOnlyList<DynamicTagCount> Tags { get; init; }
+
+    /// <summary>
+    /// Total items matching current filters (before any new tag selection)
+    /// </summary>
+    public required int CurrentTotal { get; init; }
+
+    /// <summary>
+    /// Section scope for the calculation
+    /// </summary>
+    public string? SectionName { get; init; }
+
+    /// <summary>
+    /// Collection scope for the calculation
+    /// </summary>
+    public string? CollectionName { get; init; }
+}
+
+/// <summary>
+/// Tag with dynamic count showing intersection with current filter state.
+/// </summary>
+public record DynamicTagCount
+{
+    /// <summary>
+    /// Tag name
+    /// </summary>
+    public required string Name { get; init; }
+
+    /// <summary>
+    /// Number of items that would remain if this tag is added to current filters.
+    /// For active tags: shows current filtered count.
+    /// For inactive tags: shows intersection count (items with this tag AND current filter).
+    /// </summary>
+    public required int Count { get; init; }
+
+    /// <summary>
+    /// Whether this tag is currently selected/active
+    /// </summary>
+    public required bool IsSelected { get; init; }
+
+    /// <summary>
+    /// Whether this tag is disabled (would result in 0 items)
+    /// </summary>
+    public required bool IsDisabled { get; init; }
+}
+```
+
+**Calculation Rules**:
+
+- **No filters active**: Count = total items with this tag in scope
+- **Tags selected**: Count = items with (selected tags OR this tag) AND date range
+- **Date range active**: Count = items with this tag within date range
+- **IsDisabled**: `true` when Count = 0 (clicking would show no results)
+
+**API Endpoint**: `GET /api/sections/{section}/collections/{collection}/tagcounts`
+
+**Query Parameters**:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `selectedTags` | string[] | Currently selected tags (comma-separated) |
+| `dateFrom` | DateTimeOffset? | Start of date range filter |
+| `dateTo` | DateTimeOffset? | End of date range filter |
+
+**Example Response**:
+
+```json
+{
+  "tags": [
+    { "name": "AI", "count": 901, "isSelected": true, "isDisabled": false },
+    { "name": "GitHub Copilot", "count": 245, "isSelected": false, "isDisabled": false },
+    { "name": "Obsolete Framework", "count": 0, "isSelected": false, "isDisabled": true }
+  ],
+  "currentTotal": 901,
+  "sectionName": "ai",
+  "collectionName": "blogs"
 }
 ```
 

@@ -24,9 +24,9 @@
             <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
-        <article id="skiptohere" tabindex="-1" class="article-body">
+        <article class="article-body">
             <div class="content-detail-header">
-                <h1 class="page-h1">@pageData.Title</h1>
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
                 @if (!string.IsNullOrWhiteSpace(pageData.Description))
                 {
                     <p class="page-description">@pageData.Description</p>

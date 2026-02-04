@@ -1,7 +1,6 @@
 @page "/devops/dx-space"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
-@rendermode InteractiveServer
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
@@ -25,9 +24,9 @@
             <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
-        <article id="skiptohere" tabindex="-1" class="article-body">
+        <article class="article-body">
             <div class="content-detail-header">
-                <h1 class="page-h1">@pageData.Title</h1>
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
                 @if (!string.IsNullOrWhiteSpace(pageData.Description))
                 {
                     <p class="page-description">@pageData.Description</p>
@@ -45,12 +44,12 @@
                 </div>
 
                 @* DORA Section *@
-                <section class="dx-section-card">
-                    <button class="dx-card-header" @onclick="() => ToggleSection(0)" aria-expanded="@IsExpanded(0)">
+                <section class="dx-section-card" data-collapsible>
+                    <button class="dx-card-header" aria-expanded="true">
                         <h2 id="dx-card-dora">@pageData.Dora.Title</h2>
-                        <span class="dx-card-icon @(IsExpanded(0) ? "expanded" : "")">▼</span>
+                        <span class="dx-card-icon expanded">▼</span>
                     </button>
-                    <div class="dx-card-content @(IsExpanded(0) ? "expanded" : "")">
+                    <div class="dx-card-content expanded">
                         <div class="dx-section-intro">
                             <h3 id="dora-intro">@pageData.Dora.IntroHeading</h3>
                             @foreach (var paragraph in pageData.Dora.IntroContent)
@@ -94,12 +93,12 @@
                 </section>
 
                 @* SPACE Section *@
-                <section class="dx-section-card">
-                    <button class="dx-card-header" @onclick="() => ToggleSection(1)" aria-expanded="@IsExpanded(1)">
+                <section class="dx-section-card" data-collapsible>
+                    <button class="dx-card-header" aria-expanded="false">
                         <h2 id="dx-card-space">@pageData.Space.Title</h2>
-                        <span class="dx-card-icon @(IsExpanded(1) ? "expanded" : "")">▼</span>
+                        <span class="dx-card-icon">▼</span>
                     </button>
-                    <div class="dx-card-content @(IsExpanded(1) ? "expanded" : "")">
+                    <div class="dx-card-content">
                         <div class="dx-section-intro">
                             <h3 id="space-intro">@pageData.Space.IntroHeading</h3>
                             @foreach (var paragraph in pageData.Space.IntroContent)
@@ -143,12 +142,12 @@
                 </section>
 
                 @* DevEx Section *@
-                <section class="dx-section-card">
-                    <button class="dx-card-header" @onclick="() => ToggleSection(2)" aria-expanded="@IsExpanded(2)">
+                <section class="dx-section-card" data-collapsible>
+                    <button class="dx-card-header" aria-expanded="false">
                         <h2 id="dx-card-devex">@pageData.DevEx.Title</h2>
-                        <span class="dx-card-icon @(IsExpanded(2) ? "expanded" : "")">▼</span>
+                        <span class="dx-card-icon">▼</span>
                     </button>
-                    <div class="dx-card-content @(IsExpanded(2) ? "expanded" : "")">
+                    <div class="dx-card-content">
                         <div class="dx-section-intro">
                             <h3 id="devex-intro">@pageData.DevEx.IntroHeading</h3>
                             @foreach (var paragraph in pageData.DevEx.IntroContent)
@@ -203,12 +202,12 @@
                 </section>
 
                 @* Relationships Section *@
-                <section class="dx-section-card">
-                    <button class="dx-card-header" @onclick="() => ToggleSection(3)" aria-expanded="@IsExpanded(3)">
+                <section class="dx-section-card" data-collapsible>
+                    <button class="dx-card-header" aria-expanded="false">
                         <h2 id="dx-card-relationships">@pageData.Relationships.Title</h2>
-                        <span class="dx-card-icon @(IsExpanded(3) ? "expanded" : "")">▼</span>
+                        <span class="dx-card-icon">▼</span>
                     </button>
-                    <div class="dx-card-content @(IsExpanded(3) ? "expanded" : "")">
+                    <div class="dx-card-content">
                         <div class="dx-section-intro">
                             <h3 id="relationships-intro">@pageData.Relationships.IntroHeading</h3>
                             <p>@pageData.Relationships.IntroContent</p>
@@ -258,12 +257,12 @@
                 </section>
 
                 @* Getting Started Section *@
-                <section class="dx-section-card">
-                    <button class="dx-card-header" @onclick="() => ToggleSection(4)" aria-expanded="@IsExpanded(4)">
+                <section class="dx-section-card" data-collapsible>
+                    <button class="dx-card-header" aria-expanded="false">
                         <h2 id="dx-card-getting-started">@pageData.GettingStarted.Title</h2>
-                        <span class="dx-card-icon @(IsExpanded(4) ? "expanded" : "")">▼</span>
+                        <span class="dx-card-icon">▼</span>
                     </button>
-                    <div class="dx-card-content @(IsExpanded(4) ? "expanded" : "")">
+                    <div class="dx-card-content">
                         <div class="dx-section-intro">
                             <h3 id="getting-started-intro">@pageData.GettingStarted.IntroHeading</h3>
                             <p>@pageData.GettingStarted.IntroContent</p>
@@ -295,12 +294,12 @@
                 </section>
 
                 @* Tools Section *@
-                <section class="dx-section-card">
-                    <button class="dx-card-header" @onclick="() => ToggleSection(5)" aria-expanded="@IsExpanded(5)">
+                <section class="dx-section-card" data-collapsible>
+                    <button class="dx-card-header" aria-expanded="false">
                         <h2 id="dx-card-tools">@pageData.Tools.Title</h2>
-                        <span class="dx-card-icon @(IsExpanded(5) ? "expanded" : "")">▼</span>
+                        <span class="dx-card-icon">▼</span>
                     </button>
-                    <div class="dx-card-content @(IsExpanded(5) ? "expanded" : "")">
+                    <div class="dx-card-content">
                         <div class="dx-section-intro">
                             <h3 id="tools-intro">@pageData.Tools.IntroHeading</h3>
                             <p>@pageData.Tools.IntroContent</p>
@@ -332,12 +331,12 @@
                 </section>
 
                 @* Best Practices Section *@
-                <section class="dx-section-card">
-                    <button class="dx-card-header" @onclick="() => ToggleSection(6)" aria-expanded="@IsExpanded(6)">
+                <section class="dx-section-card" data-collapsible>
+                    <button class="dx-card-header" aria-expanded="false">
                         <h2 id="dx-card-best-practices">@pageData.BestPractices.Title</h2>
-                        <span class="dx-card-icon @(IsExpanded(6) ? "expanded" : "")">▼</span>
+                        <span class="dx-card-icon">▼</span>
                     </button>
-                    <div class="dx-card-content @(IsExpanded(6) ? "expanded" : "")">
+                    <div class="dx-card-content">
                         <div class="dx-section-intro">
                             <h3 id="best-practices-intro">@pageData.BestPractices.IntroHeading</h3>
                             <p>@pageData.BestPractices.IntroContent</p>
@@ -378,7 +377,6 @@
 @code {
     private TechHub.Core.Models.Section? sectionData;
     private DXSpacePageData? pageData;
-    private HashSet<int> expandedSections = new() { 0 }; // First section expanded by default
 
     private string GetRenderedContent()
     {
@@ -442,18 +440,4 @@
             ErrorService.HandleError(ex, Navigation, Logger);
         }
     }
-
-    private void ToggleSection(int index)
-    {
-        if (expandedSections.Contains(index))
-        {
-            expandedSections.Remove(index);
-        }
-        else
-        {
-            expandedSections.Add(index);
-        }
-    }
-
-    private bool IsExpanded(int index) => expandedSections.Contains(index);
 }

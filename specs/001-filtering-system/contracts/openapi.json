@@ -396,6 +396,127 @@
                     }
                 }
             }
+        },
+        "/api/sections/{section}/collections/{collection}/tagcounts": {
+            "get": {
+                "summary": "Get dynamic tag counts based on current filter state",
+                "description": "Returns all tags with intersection counts showing how many items would remain if each tag is selected. Tags that would result in 0 items are marked as disabled. This endpoint supports Excel-style dropdown filters and dynamic tag cloud updates.",
+                "operationId": "getDynamicTagCounts",
+                "tags": [
+                    "Tags"
+                ],
+                "parameters": [
+                    {
+                        "name": "section",
+                        "in": "path",
+                        "description": "Section name for scoping",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "ai"
+                    },
+                    {
+                        "name": "collection",
+                        "in": "path",
+                        "description": "Collection name for scoping",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "blogs"
+                    },
+                    {
+                        "name": "selectedTags",
+                        "in": "query",
+                        "description": "Currently selected tags (comma-separated). Counts show intersection with these tags.",
+                        "required": false,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "style": "form",
+                        "explode": true,
+                        "example": [
+                            "AI"
+                        ]
+                    },
+                    {
+                        "name": "dateFrom",
+                        "in": "query",
+                        "description": "Start of date range filter (ISO 8601 date)",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        },
+                        "example": "2025-10-01"
+                    },
+                    {
+                        "name": "dateTo",
+                        "in": "query",
+                        "description": "End of date range filter (ISO 8601 date)",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        },
+                        "example": "2026-01-16"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully calculated dynamic tag counts",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TagCountsResponse"
+                                },
+                                "example": {
+                                    "tags": [
+                                        {
+                                            "name": "AI",
+                                            "count": 901,
+                                            "isSelected": true,
+                                            "isDisabled": false
+                                        },
+                                        {
+                                            "name": "GitHub Copilot",
+                                            "count": 245,
+                                            "isSelected": false,
+                                            "isDisabled": false
+                                        },
+                                        {
+                                            "name": "Legacy Framework",
+                                            "count": 0,
+                                            "isSelected": false,
+                                            "isDisabled": true
+                                        }
+                                    ],
+                                    "currentTotal": 901,
+                                    "sectionName": "ai",
+                                    "collectionName": "blogs"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Section or collection not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                },
+                                "example": {
+                                    "error": "Section 'invalid-section' not found"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "components": {

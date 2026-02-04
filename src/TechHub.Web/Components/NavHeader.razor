@@ -2,8 +2,6 @@
 @using TechHub.Web.Services
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
-@implements IDisposable
-@rendermode InteractiveServer
 
 <nav class="main-nav" aria-label="Primary navigation">
     <div class="main-nav-content">
@@ -26,43 +24,22 @@
 </nav>
 
 @code {
-    private string currentSection = "";
-
-    protected override void OnInitialized()
-    {
-        Navigation.LocationChanged += OnLocationChanged;
-        UpdateCurrentSection();
-    }
-
-    private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
-    {
-        UpdateCurrentSection();
-        StateHasChanged();
-    }
-
-    private void UpdateCurrentSection()
+    private string GetCurrentSection()
     {
         var uri = new Uri(Navigation.Uri);
         var path = uri.AbsolutePath.Trim('/');
-
-        // Get the first segment - that's our section
         var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
-        currentSection = segments.Length > 0 ? segments[0] : "";
+        return segments.Length > 0 ? segments[0] : "";
     }
 
     private bool IsActiveSection(string sectionId)
     {
-        return string.Equals(currentSection, sectionId, StringComparison.OrdinalIgnoreCase);
+        return string.Equals(GetCurrentSection(), sectionId, StringComparison.OrdinalIgnoreCase);
     }
 
     private bool IsActivePage(string path)
     {
         var uri = new Uri(Navigation.Uri);
         return string.Equals(uri.AbsolutePath, path, StringComparison.OrdinalIgnoreCase);
-    }
-
-    public void Dispose()
-    {
-        Navigation.LocationChanged -= OnLocationChanged;
     }
 }

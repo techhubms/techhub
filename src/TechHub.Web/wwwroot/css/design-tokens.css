@@ -79,8 +79,8 @@
   --color-purple-border-very-subtle: rgba(189, 147, 249, 0.12); /* Very subtle purple border */
   --color-purple-bg-badge: rgba(139, 92, 246, 0.3); /* Purple badge background */
   --color-purple-bg-badge-hover: rgba(139, 92, 246, 0.5); /* Purple badge hover */
-  --color-purple-bg-dark: rgba(127, 86, 217, 0.08); /* Very subtle dark purple */
-  --color-purple-bg-dark-hover: rgba(127, 86, 217, 0.2); /* Dark purple hover */
+  --color-purple-bg-dark: rgba(127, 86, 217, 0.15); /* Subtle dark purple */
+  --color-purple-bg-dark-hover: rgba(127, 86, 217, 0.25); /* Dark purple hover */
   --color-purple-border: rgba(139, 92, 246, 0.3); /* Purple border */
 
   /* =======================================================================

@@ -74,7 +74,8 @@
         const loaded = {
             highlightJs: false,
             mermaid: false,
-            customPages: false
+            customPages: false,
+            infiniteScroll: null  // Will hold the module reference
         };
 
         // Load Highlight.js for syntax highlighting
@@ -320,6 +321,34 @@
             }
         }
 
+        // Load infinite scroll observer for content grids
+        async function loadInfiniteScroll(scrollTrigger) {
+            // Clean up previous observer on navigation
+            if (loaded.infiniteScroll) {
+                try {
+                    loaded.infiniteScroll.dispose();
+                } catch (e) {
+                    // Ignore cleanup errors
+                }
+                loaded.infiniteScroll = null;
+            }
+
+            // Only set up if trigger element exists (page has infinite scroll)
+            if (!scrollTrigger) return;
+
+            try {
+                const module = await import('./js/infinite-scroll.js');
+                loaded.infiniteScroll = module;
+                
+                // Initialize the observer - the Blazor component exposes LoadNextBatch via DotNet interop
+                // But we need a reference to the component's DotNetObjectReference
+                // For now, just load the module - the component will call observeScrollTrigger
+                console.debug('[InfiniteScroll] Module loaded, waiting for Blazor component to initialize');
+            } catch (error) {
+                console.error('Failed to load infinite scroll:', error);
+            }
+        }
+
         // Load all scripts for current page (runs all loaders in parallel)
         async function loadScriptsForPage() {
             // Query DOM once for all needed elements
@@ -327,12 +356,14 @@
             const mermaidElements = document.querySelectorAll('.mermaid:not([data-processed="true"])');
             const tocElement = document.querySelector('[data-toc-scroll-spy]');
             const collapsibleElements = document.querySelector('[data-collapsible]');
+            const scrollTrigger = document.getElementById('scroll-trigger');
 
             // Load scripts in parallel with independent error handling
             await Promise.all([
                 loadHighlighting(codeElements).catch(err => console.error('Highlighting loader failed:', err)),
                 loadMermaid(mermaidElements.length > 0 ? mermaidElements : null).catch(err => console.error('Mermaid loader failed:', err)),
-                loadCustomPages(collapsibleElements).catch(err => console.error('Custom pages loader failed:', err))
+                loadCustomPages(collapsibleElements).catch(err => console.error('Custom pages loader failed:', err)),
+                loadInfiniteScroll(scrollTrigger).catch(err => console.error('Infinite scroll loader failed:', err))
             ]);
 
             // TOC scroll spy loads last (after other scripts are ready)
@@ -359,7 +390,7 @@
         // Initial load (DOMContentLoaded)
         document.addEventListener('DOMContentLoaded', loadScriptsForPage);
 
-        // After Blazor enhanced navigation
+        // After Blazor enhanced navigation (SPA-style page changes)
         if (typeof Blazor !== 'undefined') {
             Blazor.addEventListener('enhancedload', loadScriptsForPage);
         }

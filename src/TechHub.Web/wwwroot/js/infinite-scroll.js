@@ -1,36 +1,43 @@
 // Infinite scroll using Intersection Observer API
-// Observes when scroll trigger element becomes visible and notifies Blazor component
+// Module for detecting when users scroll near the bottom and triggering load
 
-export function observeScrollTrigger(dotnetHelper, triggerId) {
+let observer = null;
+let dotnetHelper = null;
+
+export function observeScrollTrigger(helper, triggerId) {
+    // Clean up previous observer if any
+    dispose();
+
+    dotnetHelper = helper;
     const trigger = document.getElementById(triggerId);
+
     if (!trigger) {
-        console.warn(`[InfiniteScroll] Trigger element #${triggerId} not found`);
-        return null;
+        console.warn('[InfiniteScroll] Trigger element not found:', triggerId);
+        return;
     }
 
-    console.log('[InfiniteScroll] Setting up Intersection Observer for #' + triggerId);
-
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
         (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    console.log('[InfiniteScroll] Trigger visible, loading next batch');
-                    dotnetHelper.invokeMethodAsync('LoadNextBatch');
-                }
-            });
+            const entry = entries[0];
+            if (entry?.isIntersecting && dotnetHelper) {
+                console.debug('[InfiniteScroll] Loading next batch');
+                dotnetHelper.invokeMethodAsync('LoadNextBatch');
+            }
         },
         {
-            rootMargin: '300px' // Trigger 300px before element becomes visible
+            rootMargin: '300px', // Trigger 300px before element is visible
+            threshold: 0
         }
     );
 
     observer.observe(trigger);
-    console.log('[InfiniteScroll] Observer active');
+    console.debug('[InfiniteScroll] Observer active for:', triggerId);
+}
 
-    return {
-        dispose: () => {
-            console.log('[InfiniteScroll] Disposing observer');
-            observer.disconnect();
-        }
-    };
+export function dispose() {
+    if (observer) {
+        observer.disconnect();
+        observer = null;
+    }
+    dotnetHelper = null;
 }

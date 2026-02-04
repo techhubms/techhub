@@ -1,7 +1,6 @@
 @page "/ai/sdlc"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
-@rendermode InteractiveServer
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
@@ -25,9 +24,9 @@
             <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
-        <article id="skiptohere" tabindex="-1" class="article-body">
+        <article class="article-body">
             <div class="content-detail-header">
-                <h1 class="page-h1">@pageData.Title</h1>
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
                 @if (!string.IsNullOrWhiteSpace(pageData.Description))
                 {
                     <p class="page-description">@pageData.Description</p>
@@ -42,19 +41,16 @@
                 @* SDLC Phases *@
                 <section class="sdlc-phases">
                     <h2>SDLC Phases</h2>
-                    @{
-                        int phaseIndex = 0;
-                        foreach (var phase in pageData.Phases)
-                        {
-                            var currentIndex = phaseIndex;
-                            <div class="sdlc-phase-card sdlc-phase-@phase.Id">
-                                <button class="sdlc-phase-header" type="button" aria-expanded="@IsPhaseExpanded(currentIndex)" @onclick="() => TogglePhase(currentIndex)">
-                                    <span class="sdlc-phase-icon">@phase.Icon</span>
-                                    <h3 id="phase-@phase.Id">@phase.Name</h3>
-                                    <span class="sdlc-phase-toggle @(IsPhaseExpanded(currentIndex) ? "expanded" : "")">▼</span>
-                                </button>
+                    @foreach (var phase in pageData.Phases)
+                    {
+                        <div class="sdlc-phase-card sdlc-phase-@phase.Id" data-collapsible>
+                            <button class="sdlc-phase-header" type="button" aria-expanded="false">
+                                <span class="sdlc-phase-icon">@phase.Icon</span>
+                                <h3 id="phase-@phase.Id">@phase.Name</h3>
+                                <span class="sdlc-phase-toggle">▼</span>
+                            </button>
 
-                                <div class="sdlc-phase-content @(IsPhaseExpanded(currentIndex) ? "expanded" : "")">
+                                <div class="sdlc-phase-content">
                                 <div class="sdlc-phase-what">
                                     <h4>What</h4>
                                     <p>@phase.What</p>
@@ -120,8 +116,6 @@
                                 </div>
                             </div>
                         </div>
-                        phaseIndex++;
-                    }
                     }
                 </section>
 
@@ -241,7 +235,6 @@
 @code {
     private TechHub.Core.Models.Section? sectionData;
     private SDLCPageData? pageData;
-    private HashSet<int> expandedPhases = new(); // No phases expanded by default
 
     private string GetRenderedContent()
     {
@@ -312,18 +305,4 @@
             ErrorService.HandleError(ex, Navigation, Logger);
         }
     }
-
-    private void TogglePhase(int index)
-    {
-        if (expandedPhases.Contains(index))
-        {
-            expandedPhases.Remove(index);
-        }
-        else
-        {
-            expandedPhases.Add(index);
-        }
-    }
-
-    private bool IsPhaseExpanded(int index) => expandedPhases.Contains(index);
 }

@@ -81,6 +81,9 @@ builder.Services.AddSignalR(options =>
     options.ClientTimeoutInterval = TimeSpan.FromSeconds(60);
     options.HandshakeTimeout = TimeSpan.FromSeconds(30);
     options.KeepAliveInterval = TimeSpan.FromSeconds(15);
+    // Increase max message size to handle large prerendered content during hydration
+    // Default is 32KB, but with many content items the state can exceed this
+    options.MaximumReceiveMessageSize = 256 * 1024; // 256KB
 });
 
 // Configure HTTP client for API with service discovery
