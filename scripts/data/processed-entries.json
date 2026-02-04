@@ -25024,5 +25024,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=KRBqLjRjX70",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on integrating AI (GitHub Copilot, MCP) into development (AI inclusion rules 2 and 4). Assigned 'GitHub Copilot' because it is a core technology demonstrated in the workflow (per GitHub Copilot inclusion rules 1 and 2), and as per the Copilot distinction, this is a developer tool. Assigned 'Coding' because the session demonstrates practical code generation, IDE-based code bootstrapping, and development workflow (Coding inclusion rules 2 and 4). Did not assign 'Azure', 'ML', 'DevOps', or 'Security' because there is no mention of Azure, data science/ML, CI/CD operations, or security practices in the session description. Content meets quality, is technical, and productively focused on developer experience."
+  },
+  {
+    "timestamp": "2026-02-04 03:47:42 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content focuses on intelligent agentic workflows and their application within AI-powered developer tools (AI rule 2, 3, and 4). Assigned 'GitHub Copilot' because the article directly addresses features, integrations, and usage tips for GitHub Copilot (GitHub Copilot rules 1–4), and per CRITICAL, 'AI' must also be included. Assigned 'Coding' category since it discusses configuration and usage in developer tools (Visual Studio Code/CLI), structuring custom scripts, and coding assistant functions (Coding rules 2, 4, and 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' because the primary focus is on enhancing the development workflow and Copilot feature configuration, not on deployment, cloud hosting, ML infrastructure, or security engineering specifically.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/integrate-agents-with-skills-in-github-copilot/m-p/4492020#M1391"
   }
 ]
