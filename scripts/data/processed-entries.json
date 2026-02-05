@@ -25192,5 +25192,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the entire news article focuses on a newly released Azure service (Azure NetApp Files Elastic Zone-Redundant Storage) and covers in-depth Azure-specific features and use cases (Azure inclusion rule 1, 4, 5, and 6). Did not assign ML, Coding, AI, DevOps, or Security as the content centers on storage infrastructure, operational resiliency, and enterprise data management—not coding, AI/ML, DevOps workflows, or security posture. No generic exclusions apply as this is a technical product announcement, not sales, biographical, non-English, or business strategy content.",
     "collection": "news",
     "timestamp": "2026-02-05 04:33:21 +00:00"
+  },
+  {
+    "timestamp": "2026-02-05 07:21:56 +00:00",
+    "canonical_url": "https://zure.com/blog/dear-developers-stop-rejecting-me",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned the Coding category because the post discusses handling and validating input in C#, Python, and Bicep, with concrete code samples and advice (Coding inclusion rules 1, 2, 4, 5). Azure is included because Bicep—an Azure resource deployment language—is covered alongside a discussion of deployment pipelines (Azure inclusion rule 1 and 2, plus DevOps connection). DevOps is assigned due to discussion of deployment pipelines, CI/CD, and infrastructure tooling (DevOps rules 5, 6, and 11). Security is included due to extensive explanation of SQL injection, parameterized queries, and secure coding practices (Security inclusion rules 2, 4, 5, 6). No ML or AI categories apply as there is no content on machine learning or artificial intelligence. The post is not biographical, does not focus primarily on career, and passes all generic exclusions. Business/productivity Copilot content is not present."
   }
 ]
