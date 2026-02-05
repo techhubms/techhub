@@ -11805,5 +11805,11 @@
     "collection": "videos",
     "timestamp": "2026-02-05 01:32:42 +00:00",
     "reason": "No categories found: All available information (title, description, tags) centers around the business impact, funding (Series C), and general use of AI-powered design tools in engineering domains such as automotive and aerospace, as well as collaboration with OEMs. There is no substantive indication of technical implementation, Microsoft platform integration, development methodology, or product names. 'AI-powered design tools' is discussed in the context of productivity and business transformation, not in developer implementation terms. The video is likely executive/business-focused and fails inclusion for any technical category. No Microsoft developer platform appears central in the title, description, or tags. This triggers the 'Business Strategy and Executive Content' generic exclusion rule as well as 'Business Productivity Tools (exclude)' under Copilot and AI rules. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/emea/features/turning-genomic-data-into-clinical-impact/",
+    "collection": "news",
+    "timestamp": "2026-02-05 16:15:17 +00:00",
+    "reason": "No categories found: No Microsoft technical category qualifies. While Microsoft is a technology partner, the article does not detail any Microsoft-specific platforms, development, AI, Azure, or technical implementation. Content focuses on healthcare infrastructure, precision medicine, and ethical data sharing rather than Microsoft developer, cloud, coding, or security solutions. Exclusion is per the rules requiring ≥40% substantive Microsoft technology content or clear technical focus on Microsoft platforms. General healthcare innovation without Microsoft technology implementation details does not qualify."
   }
 ]

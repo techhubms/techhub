@@ -25240,5 +25240,23 @@
     "reason": "Succesfully added: Assigned AI category because the content demonstrates building solutions with GitHub Copilot SDK, which falls under developer AI tooling (AI rule 2, AI rule 3, AI rule 4). Assigned GitHub Copilot category due to a focus on GitHub Copilot and its SDK (GitHub Copilot rules 1, 2, and 3). Assigned Coding category because the video highlights coding challenge generation and solution evaluation within a Next.js application (Coding rules 1, 2, and 4). No Azure, DevOps, ML, or Security categories were added since those themes are not present in either the demo or the description.",
     "timestamp": "2026-02-05 15:15:55 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/the-future-of-data-security-is-interoperability-a-technical-look-at-onelake-security/",
+    "collection": "news",
+    "timestamp": "2026-02-05 16:14:35 +00:00",
+    "reason": "Succesfully added: Assigned the Security category because the article deeply discusses data security architecture, especially centralized policy definition and fine-grained access controls, mapped directly to Security rule points 1, 4, 7, 9. Assigned Azure category due to OneLake being part of Microsoft Fabric, a Microsoft cloud platform (Azure rule 1), and its relevance in cloud data security. No Coding, AI, GitHub Copilot, DevOps, or ML categories applied, as the content does not focus on software development, machine learning, DevOps practices, or AI products/services, but rather on technical security governance for enterprise data in Microsoft's cloud stack."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/signal/articles/how-technology-could-help-the-vikings-build-next-years-winning-edge/",
+    "collection": "news",
+    "timestamp": "2026-02-05 16:14:58 +00:00",
+    "reason": "Succesfully added: AI category was included because the article describes the use of Azure AI Foundry and Azure-powered NFL Combine App, which deliver AI capabilities for data insights and player evaluation (AI rule 1 and 4). GitHub Copilot category was included based on explicit mention of the development team using Copilot to streamline code and platform updates (GitHub Copilot rules 1 and 2; requires AI category per critical rule). Azure category was added due to the Viper platform being built and operated on Microsoft Azure infrastructure (Azure rule 1). Security category was added since the article details the use of Microsoft Entra ID for authentication, conditional access, and protection of sensitive team data (Security rule 1 and 3). The article directly references technical implementation, infrastructure, developer workflow, and security controls, qualifying it for all four categories."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/observability-in-generative-ai-building-trust-with-systematic/ba-p/4492231",
+    "collection": "community",
+    "timestamp": "2026-02-05 16:16:11 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article deeply focuses on practices, evaluation, risk management, and observability specific to generative AI, as well as the responsible operation of AI solutions (AI rules 1, 4, 5). Assigned Azure because Microsoft Foundry is an Azure service, and the content discusses its integrations with Azure Monitor and Application Insights (Azure rule 1, 4). Did not assign ML or Coding because the post is not about hands-on ML development or code-level implementations. No DevOps category, since this article, while mentioning operational aspects (GenAIOps), concentrates on evaluation and observability rather than software delivery pipelines or developer workflow methodology. Security was excluded as the main technical depth centers on observability and evaluation for trust, not direct security implementation, though it discusses safety and risk in context. No generic exclusion rules applied as the content is technical, English, and meets word threshold."
   }
 ]
