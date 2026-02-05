@@ -11823,5 +11823,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "timestamp": "2026-02-05 19:17:50 +00:00"
+  },
+  {
+    "reason": "No categories found: Content is excluded as there is insufficient substantive content to categorize. The description only states that this is a continuation of a prior activity about building an app called Markpad, but provides no technical details, content body, tags, or further description. Without main content or substantive information, none of the category inclusion rules can be applied. According to the guidelines, if the technology used and main focus are unclear, categories must be left empty.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Z-2EC6YOv74",
+    "timestamp": "2026-02-05 20:08:36 +00:00"
   }
 ]

@@ -25312,5 +25312,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the content is focused on running AI models using Foundry Local tailored for .NET and C# developers (AI Inclusion Rules 1 and 4). Assigned Coding because it discusses C# and .NET development integrating AI locally (Coding Rules 1 and 4). Did not assign ML because the focus is not on data science or custom model training but rather on AI usage and integration in application development. Azure and DevOps are not central to the discussion, and Security is not mentioned.",
     "timestamp": "2026-02-05 19:17:43 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category since the content is a technical breakdown of a malware campaign (CrashFix ClickFix variant) targeting Windows systems, focusing on browser-based delivery, PowerShell and living-off-the-land techniques, Python RAT deployment, persistence, detection and response—aligning with Security inclusion rules 1, 2, 5, 7, and 9. No AI, DevOps, Azure, ML, Coding, or GitHub Copilot categories apply as the focus is malware delivery, detection, and mitigation rather than development or DevOps processes.",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/05/clickfix-variant-crashfix-deploying-python-rat-trojan/",
+    "timestamp": "2026-02-05 20:08:01 +00:00"
   }
 ]
