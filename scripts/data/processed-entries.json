@@ -25234,5 +25234,11 @@
     "canonical_url": "https://github.blog/changelog/2026-02-05-github-actions-early-february-2026-updates",
     "timestamp": "2026-02-05 14:18:10 +00:00",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the content is fundamentally about GitHub Actions, which is a core DevOps tool, and covers pipeline automation, infrastructure autoscaling, runner management, and security controls (DevOps rules 2, 5, 6, and 7). No Coding, AI, ML, Azure, GitHub Copilot, or Security (as a standalone category) are appropriate, since the central theme is process automation and infrastructure in a DevOps context. Security controls are included, but only as part of GitHub Actions settings for DevOps workflows, not as primary security implementation or architecture guidance. No generic exclusion rules applied—the piece is clearly technical, not biographical, negative, non-English, business-centric, or a sales pitch."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ct_Ymw9RexM",
+    "reason": "Succesfully added: Assigned AI category because the content demonstrates building solutions with GitHub Copilot SDK, which falls under developer AI tooling (AI rule 2, AI rule 3, AI rule 4). Assigned GitHub Copilot category due to a focus on GitHub Copilot and its SDK (GitHub Copilot rules 1, 2, and 3). Assigned Coding category because the video highlights coding challenge generation and solution evaluation within a Next.js application (Coding rules 1, 2, and 4). No Azure, DevOps, ML, or Security categories were added since those themes are not present in either the demo or the description.",
+    "timestamp": "2026-02-05 15:15:55 +00:00",
+    "collection": "videos"
   }
 ]
