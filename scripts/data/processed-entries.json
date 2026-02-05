@@ -25198,5 +25198,11 @@
     "canonical_url": "https://zure.com/blog/dear-developers-stop-rejecting-me",
     "collection": "blogs",
     "reason": "Succesfully added: Assigned the Coding category because the post discusses handling and validating input in C#, Python, and Bicep, with concrete code samples and advice (Coding inclusion rules 1, 2, 4, 5). Azure is included because Bicep—an Azure resource deployment language—is covered alongside a discussion of deployment pipelines (Azure inclusion rule 1 and 2, plus DevOps connection). DevOps is assigned due to discussion of deployment pipelines, CI/CD, and infrastructure tooling (DevOps rules 5, 6, and 11). Security is included due to extensive explanation of SQL injection, parameterized queries, and secure coding practices (Security inclusion rules 2, 4, 5, 6). No ML or AI categories apply as there is no content on machine learning or artificial intelligence. The post is not biographical, does not focus primarily on career, and passes all generic exclusions. Business/productivity Copilot content is not present."
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: I included the 'AI' category because the content is centered on the use of AI, specifically GitHub Copilot, for software testing and QA (AI inclusion rules 1, 4, 5). The 'GitHub Copilot' category is assigned because Copilot is discussed in depth as an essential tool in AI-powered quality engineering, and per rules, both 'GitHub Copilot' and 'AI' must be tagged together for Copilot usage. The 'DevOps' category is included as the post discusses shifting industry practices, engineering processes across the SDLC, automation, workflow, and integrations within modern DevOps/team structures (DevOps rule 5 and 9). 'Coding', 'Azure', 'ML', and 'Security' are not included as the primary focus is on prompt engineering, QA process, and the applied use of GitHub Copilot for test automation, not code-level engineering, cloud, or ML/data science specifics.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/writing-effective-prompts-for-testing-scenarios-ai-assisted/ba-p/4488001",
+    "timestamp": "2026-02-05 08:11:02 +00:00"
   }
 ]
