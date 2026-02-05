@@ -25204,5 +25204,17 @@
     "reason": "Succesfully added: I included the 'AI' category because the content is centered on the use of AI, specifically GitHub Copilot, for software testing and QA (AI inclusion rules 1, 4, 5). The 'GitHub Copilot' category is assigned because Copilot is discussed in depth as an essential tool in AI-powered quality engineering, and per rules, both 'GitHub Copilot' and 'AI' must be tagged together for Copilot usage. The 'DevOps' category is included as the post discusses shifting industry practices, engineering processes across the SDLC, automation, workflow, and integrations within modern DevOps/team structures (DevOps rule 5 and 9). 'Coding', 'Azure', 'ML', and 'Security' are not included as the primary focus is on prompt engineering, QA process, and the applied use of GitHub Copilot for test automation, not code-level engineering, cloud, or ML/data science specifics.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/writing-effective-prompts-for-testing-scenarios-ai-assisted/ba-p/4488001",
     "timestamp": "2026-02-05 08:11:02 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included the 'Coding' category because the content provides in-depth technical advice and code samples for working with Microsoft's WebView2 control in WPF applications (Coding Rule 2 and 4). The primary focus is on code-level solutions, cache management, and reliability patterns for desktop app development with Microsoft technologies. No other categories such as Azure, AI, DevOps, Security, or ML apply per inclusion rules, as the article does not pertain to cloud, DevOps pipelines, security practices, or AI/ML development.",
+    "timestamp": "2026-02-05 10:15:02 +00:00",
+    "canonical_url": "https://weblog.west-wind.com/posts/2026/Feb/04/Reliably-Refreshing-the-WebView2-Control",
+    "collection": "blogs"
+  },
+  {
+    "reason": "Succesfully added: Generic exclusion rules do not apply because this is technical, not biographical, not a sales pitch, not negative, and is in English with sufficient length. Multiple categories qualify: 'AI' (focuses on AI/agentic/SpecKit tools including Microsoft SRE agents and the impact of AI tooling), 'GitHub Copilot' (deep technical coverage of Copilot's new coding agent, code review features, and integration), 'DevOps' (discussion of CI/CD, automation with GitHub Actions, operations with Azure SRE agent), 'Azure' (use of Azure services, Container Apps, Azure SRE/telemetry), 'Coding' (describes agentic code generation, requirements/spec translation, and quality review). Content includes significant technical depth across these categories and centrally features Microsoft technologies and developer tools as required by the category rules.",
+    "timestamp": "2026-02-05 10:15:43 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/an-ai-led-sdlc-building-an-end-to-end-agentic-software/ba-p/4491896",
+    "collection": "community"
   }
 ]
