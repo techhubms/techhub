@@ -25324,5 +25324,11 @@
     "timestamp": "2026-02-05 21:08:20 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/33276/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-05 22:06:04 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-dynatrace-mcp-server-in-azure-sre-agent/ba-p/4492363",
+    "reason": "Succesfully added: Assigned 'Azure' because the guide centers on Azure SRE Agent configuration and integration (Azure rule 1, 4). Assigned 'DevOps' due to focus on operational monitoring, problem tracking, and agent/connector automation (DevOps rule 1, 6, 7). Assigned 'Security' because it details how to analyze and investigate security vulnerabilities within Dynatrace from Azure SRE Agent (Security rule 1, 2, 7). No ML or AI categories were assigned because the integration is about observability, log analytics, and DevOps problem investigation, not AI or ML workflows. The primary content exceeds exclusion thresholds for both word count and technical depth, and does not meet any generic exclusion rule. GitHub Copilot and other Copilot products are not discussed, so those categories are not included.",
+    "collection": "community"
   }
 ]
