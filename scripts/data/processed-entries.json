@@ -25270,5 +25270,23 @@
     "reason": "Succesfully added: Assigned 'AI' category due to the focus on AI integration within the GitHub Copilot CLI (AI inclusion rule 2 and 5). Assigned 'GitHub Copilot' category because the content is centered on GitHub Copilot CLI (GitHub Copilot inclusion rules 1 and 2). Excluded 'Coding', 'Azure', 'DevOps', 'ML', and 'Security' because the provided description and tags do not offer evidence of deep coding tutorials, Azure services integration, DevOps pipelines, advanced ML workloads, or security-focused content. The video centers on the AI-powered developer tooling aspect, per the description.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=GeH0PWdl_Hc"
+  },
+  {
+    "reason": "Succesfully added: Included the Coding category because the announcement directly concerns .NET Framework 3.5, a core Microsoft programming platform (Coding inclusion rule 1). The content focuses on development/deployment aspects relevant for application developers and supports migration planning, but does not involve Azure, AI, ML, DevOps, or Security categories. No generic exclusion rules are triggered, as this is a technical update with clear developer impact.",
+    "timestamp": "2026-02-05 18:14:51 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-framework-3-5-moves-to-standalone-deployment-in-new-versions-of-windows/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the article is focused entirely on the implementation of cybersecurity controls, real-world incident analysis, guidance for operationalizing protections like Baseline Security Mode, and Microsoft's contributions to a major security initiative. No other categories fit since there is no developer tool, code, AI/ML, Azure service, or DevOps process focus. Nearly all content centers around security controls, governance, identity protection, and operational resilience, directly satisfying Security inclusion rules 1-10.",
+    "timestamp": "2026-02-05 18:15:27 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/05/the-security-implementation-gap-why-microsoft-is-supporting-operation-winter-shield/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Coding' category because the content centers around .NET MAUI—a cross-platform UI framework by Microsoft—for developers, with emphasis on technical discussion, developer tools, and integration with Blazor (.NET and Microsoft technologies). No further technical categories (such as Azure or AI) are applicable given the focus is on client-side and cross-platform application development.",
+    "timestamp": "2026-02-05 18:16:05 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=8X03ksPKX6A"
   }
 ]
