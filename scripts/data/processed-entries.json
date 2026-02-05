@@ -25330,5 +25330,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-dynatrace-mcp-server-in-azure-sre-agent/ba-p/4492363",
     "reason": "Succesfully added: Assigned 'Azure' because the guide centers on Azure SRE Agent configuration and integration (Azure rule 1, 4). Assigned 'DevOps' due to focus on operational monitoring, problem tracking, and agent/connector automation (DevOps rule 1, 6, 7). Assigned 'Security' because it details how to analyze and investigate security vulnerabilities within Dynatrace from Azure SRE Agent (Security rule 1, 2, 7). No ML or AI categories were assigned because the integration is about observability, log analytics, and DevOps problem investigation, not AI or ML workflows. The primary content exceeds exclusion thresholds for both word count and technical depth, and does not meet any generic exclusion rule. GitHub Copilot and other Copilot products are not discussed, so those categories are not included.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content is centered around GitHub Actions, which are core CI/CD and automation features used in DevOps workflows (DevOps inclusion rule 2 and 5). No other inclusion rules met for additional categories (e.g., no direct Microsoft technology or coding details). No generic exclusion rules apply, as the content is technical, implementation-focused, and news relevant to operational and automation practices.",
+    "timestamp": "2026-02-05 23:06:36 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-05-github-actions-self-hosted-runner-minimum-version-enforcement-extended"
   }
 ]
