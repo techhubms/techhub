@@ -1,0 +1,17 @@
+{
+  "PubDate": "2026-02-05T17:45:16+00:00",
+  "Description": "Claude Opus 4.6, Anthropic’s latest model, is now rolling out in GitHub Copilot. In early testing, Claude Opus 4.6 excels in agentic coding, with specialization on especially hard tasks requiring…\n\nThe post [Claude Opus 4.6 is now generally available for GitHub Copilot](https://github.blog/changelog/2026-02-05-claude-opus-4-6-is-now-generally-available-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-02-05-claude-opus-4-6-is-now-generally-available-for-github-copilot",
+  "EnhancedContent": "Claude Opus 4.6, Anthropic’s latest model, is now rolling out in GitHub Copilot. In early testing, Claude Opus 4.6 excels in agentic coding, with specialization on especially hard tasks requiring planning and tool calling.\n\n### Availability in GitHub Copilot\n\nClaude Opus 4.6 will be available to [Copilot Pro, Pro+, Business, and Enterprise](https://github.com/features/copilot/plans?utm_source=changelog-opus-45-copilot-plans-cta&amp;utm_medium=blog&amp;utm_campaign=dec25postuniverse) users.\n\nYou’ll be able to select the model in the model picker in:\n\n- Visual Studio Code in all modes: chat, ask, edit, agent\n- Visual Studio in all modes: agent, ask\n- github.com\n- GitHub Mobile iOS and Android\n- GitHub CLI\n- GitHub Copilot coding agent (for Pro and Pro+ accounts only)\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\n### Enabling access\n\nCopilot Enterprise and Copilot Business plan administrators must enable the Claude Opus 4.6 policy in Copilot settings.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot.\n\n### Share your feedback\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your feedback.",
+  "ProcessedDate": "2026-02-05 19:14:45",
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "Title": "Claude Opus 4.6 is now generally available for GitHub Copilot",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

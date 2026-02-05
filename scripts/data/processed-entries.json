@@ -25288,5 +25288,29 @@
     "timestamp": "2026-02-05 18:16:05 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=8X03ksPKX6A"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-05-claude-opus-4-6-is-now-generally-available-for-github-copilot",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories as the content directly announces and details the availability of Claude Opus 4.6 (an advanced AI model) within GitHub Copilot. According to the rules, GitHub Copilot content always receives both these categories. The news type, technical roll-out details, and focus on model selection and Copilot plan integration fully match AI and GitHub Copilot inclusion rules. No exclusion rules apply.",
+    "timestamp": "2026-02-05 19:16:26 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-05-pinned-comments-on-github-issues",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because GitHub Issues is a core tool for issue tracking, collaboration, and workflow in software development projects (DevOps rule 11: GitHub content that doesn't fit GitHub Copilot category). The content focuses on tooling and workflow enhancements relevant to development teams. No other categories apply because the update does not pertain to AI, Copilot, coding topics, Azure, ML, or security.",
+    "timestamp": "2026-02-05 19:16:43 +00:00"
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/blogs/2026/02/05/multi-agent-development",
+    "collection": "news",
+    "reason": "Succesfully added: Included 'AI' category due to the deep focus on AI-enabled development and integration of Claude, Codex, and Copilot agents within VS Code (AI category rules 1, 4, 5). Included 'GitHub Copilot' due to extensive mention of using Copilot alongside other agents, agent subscription, and session management (GitHub Copilot rules 1, 2, 3, 4). Included 'Coding' because all agent features and sessions are aimed at code development and integration workflows (Coding rules 2, 4, 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as the post is not focused on DevOps or cloud deployment, data/ML workloads, or security-specific implementation; it is centered on coding workflows and AI agent orchestration in the IDE.",
+    "timestamp": "2026-02-05 19:17:10 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=N8FCCwb0YhQ",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the content is focused on running AI models using Foundry Local tailored for .NET and C# developers (AI Inclusion Rules 1 and 4). Assigned Coding because it discusses C# and .NET development integrating AI locally (Coding Rules 1 and 4). Did not assign ML because the focus is not on data science or custom model training but rather on AI usage and integration in application development. Azure and DevOps are not central to the discussion, and Security is not mentioned.",
+    "timestamp": "2026-02-05 19:17:43 +00:00"
   }
 ]

@@ -1,0 +1,27 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "FeedName": "DotNet YouTube",
+  "OutputDir": "_videos",
+  "Title": ".NET AI Community Standup: Foundry Local for .NET Devs 🚀",
+  "Author": "dotnet",
+  "Description": "Running AI locally is a real and cool option for modern .NET developers. In this session, we’ll explore Foundry Local and how C# developers can use it to run AI models directly on their machines, without cloud dependencies. We’ll talk architecture, local-first AI scenarios, and how this fits into modern .NET and AI workflows—perfect for devs who want speed, privacy, and full control over their AI stack.\n\n🔗 Links: https://learn.microsoft.com/en-us/collections/07j6h1tpk7z4ym?source=docs\n\n🎙️ Featuring: Bruno Capuano (https://developer.microsoft.com/en-us/advocates/bruno-capuano), Maanav Dalal (https://www.linkedin.com/in/maanavdalal/)\n\n#dotnet #AI #LocalAI #Foundry",
+  "ProcessedDate": "2026-02-05 19:15:31",
+  "EnhancedContent": null,
+  "PubDate": "2026-02-05T18:35:12+00:00",
+  "Tags": [
+    "AI",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnet10",
+    "dotnetdeveloper",
+    "foundry",
+    "localAI",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "Link": "https://www.youtube.com/watch?v=N8FCCwb0YhQ",
+  "FeedLevelAuthor": "dotnet"
+}

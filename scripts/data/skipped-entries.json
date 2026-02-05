@@ -11817,5 +11817,11 @@
     "reason": "No categories found: Content excluded due to the 'Biographical Focus' generic exclusion rule. The description centers on Anders Hejlsberg's personal story and early programming experiences, not on technical implementation, Microsoft-specific technologies, or developer guidance. There is no substantive technical tutorial, educational content, or direct coverage of Microsoft platform products—only career background and inspiration. This triggers the generic exclusion rule for biographical content, so no categories are assigned.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/CRx7eQNPW88"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/languages/grant-revoke-permissions-to-windows-local-certificates-certlm-in/m-p/4492388#M304",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2026-02-05 19:17:50 +00:00"
   }
 ]
