@@ -25318,5 +25318,11 @@
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/05/clickfix-variant-crashfix-deploying-python-rat-trojan/",
     "timestamp": "2026-02-05 20:08:01 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the content is centered on Microsoft Fabric, which is a core Microsoft cloud platform for data warehousing and analytics (Azure rule 1). Assigned ML category because significant focus is placed on large-scale data warehousing, analytics, and the evolution of advanced data platform capabilities—sessions and context show analytics, architecture, and modern data warehousing (ML rule 1 and 4). Assigned Security category because one featured session is specifically on 'Hardening Fabric Warehouse Security,' addressing secure analytics, governance, and platform security features (Security rules 1 and 5). Did not assign AI because the content does not detail use or integration of Microsoft's AI products or services, nor does it detail AI-powered application development. Did not assign Coding, DevOps, or GitHub Copilot because there is no deep programming, DevOps pipeline, GitHub, or code assistant focus. All category assignment decisions are based strictly on the above content per category inclusion rules.",
+    "timestamp": "2026-02-05 21:08:20 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/33276/",
+    "collection": "news"
   }
 ]
