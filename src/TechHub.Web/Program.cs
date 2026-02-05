@@ -201,7 +201,7 @@ app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken
 // Special handling for /all/roundups/feed.xml before general section route
 app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
 {
-    var xml = await apiClient.GetCollectionRssFeedAsync("roundups", ct);
+    var xml = await apiClient.GetCollectionRssFeedAsync("roundups", "all", ct);
     return Results.Content(xml, "application/rss+xml; charset=utf-8");
 })
 .WithName("GetRoundupsRssFeed")

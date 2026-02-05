@@ -6,17 +6,6 @@
 
 **This file is specifically for YOU - an AI coding agent.** It defines the mandatory workflow you must follow for all development tasks.
 
-**Documentation Hierarchy**:
-
-| File | Purpose |
-|------|---------|
-| **This file (AGENTS.md)** | AI workflow - the 10-step process with checklists |
-| **[README.md](README.md)** | General info - project overview, tech stack, terminology, running/testing |
-| **Domain AGENTS.md files** | Technical details - code patterns, framework guidance (e.g., [src/AGENTS.md](src/AGENTS.md)) |
-| **[docs/](docs/)** | Functional docs - WHAT the system does (API specs, features) |
-| **[docs/AGENTS.md](docs/AGENTS.md)** | Documentation strategies - rules for writing and maintaining documentation |
-| **[tests/AGENTS.md](tests/AGENTS.md)** | Testing strategies - testing diamond, patterns, and requirements |
-
 **How to use**: Follow the 10 steps below. Each step has a checklist - complete or explicitly skip each item.
 
 ---
@@ -40,8 +29,6 @@
 - **Always store temp files in `.tmp/`**
 - **Always use PowerShell for scripts** (save as `.ps1`, then execute)
 - **Always follow timezone standard**: `Europe/Brussels`
-- **Always server-side render all content**
-- **Always follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)**
 - **Always be direct and concise** - no filler phrases
 - **Always use `Run` function** (from TechHubRunner.psm1) for all build/test/run operations
 - **Always monitor `Run` with `get_terminal_output`** repeatedly until "This terminal is now free to use"
@@ -66,7 +53,6 @@
 - **Never hardcode section/collection data**
 - **Never assume UTC** (use Europe/Brussels)
 - **Never swallow exceptions without logging**
-- **Never rename identifiers without checking ALL occurrences**
 - **Never run `Start-Sleep` or other commands in terminal executing `Run`** before it completes
 - **Never execute multiple commands in same terminal before `Run` finishes**
 - **Never use `dotnet test` directly for tests**: Use `Run` instead or `Run -TestProject E2E.Tests` if you want to scope to a certain project or even add `-TestName` too
@@ -87,15 +73,18 @@
 
 **Actions**:
 
-1. Read relevant documentation:
+1. MANDATORY & CRITICAL: Read relevant documentation:
    - This file for workflow
-   - [README.md](README.md) for project overview, terminology, running
-   - Domain AGENTS.md for the area you're working in:
-     - [src/AGENTS.md](src/AGENTS.md) - .NET patterns and conventions
-     - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - API patterns
-     - [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - Blazor patterns
-     - [collections/AGENTS.md](collections/AGENTS.md) - Content management
-     - [scripts/AGENTS.md](scripts/AGENTS.md) - PowerShell scripts
+   - Important are the domain AGENTS.md for the area you're working in too. They are nested. Here's an EXAMPLE of how this works when making a change in the API:
+     - [src/AGENTS.md](src/AGENTS.md) - The API resides in the src folder, so read this file first
+     - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - Additionally read this because you're making API changes
+     - [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - If the contract of the API changes, you'll need to make changes here too
+     - [tests/AGENTS.md](tests/AGENTS.md) - As you make code changes, you'll also need to write/update tests
+     - [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - You made changes in the API so you need to read this API tests specific AGENTS.md too
+     - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - The same for this one, if you edited the web project
+     - [docs/AGENTS.md](docs/AGENTS.md) - If you changed functionality or implemented certain requirements, make sure to read this to understand where and how you need to document this
+     - etc
+   - Finally review the [docs/documentation-index.md](docs/documentation-index.md) to find out which files you need to read to understand the functionality of the website. This is critical and you need to read the docs that are mentioned to prevent mistakes. The index file is less than 1000 lines long, so read it all to get a clear picture on what additional documentation to read.
 
 2. Scan the code:
    - Use `read_file` to examine relevant files
@@ -256,7 +245,7 @@
 
 **Running the Website**:
 
-See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and-testing-the-website) for:
+See [docs/running-and-testing.md](docs/running-and-testing.md) for:
 
 - `Run` - Build, test, start servers
 - `Run -WithoutTests` - Start servers without tests
@@ -298,36 +287,31 @@ See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and
 
 ### Step 9: Update Documentation
 
-**🚨 MANDATORY**: Update docs when code behavior changes.
+**🚨 MANDATORY**: Update docs if you made changes.
 
 📖 **MUST READ**: [docs/AGENTS.md](docs/AGENTS.md) for documentation strategies and rules.
 
 **What to Update**:
 
-- Domain AGENTS.md if behavior changed
-- [docs/](docs/) if features changed
-- [README.md](README.md) if developer-facing changes
+- Domain AGENTS.md if implementation changed significantly
+- [docs/](docs/) if ANY features or behavior changed
 - Code comments for complex logic
 
 **How to Find Docs**:
 
+- Review the [docs/documentation-index.md](docs/documentation-index.md) to find out which files you need to update.
 - Use `grep_search` to find docs mentioning modified features
 - Check domain AGENTS.md in directories you modified
 
-**Documentation Placement**:
+**Introducing New Files**:
 
-| Content Type | Location |
-|--------------|----------|
-| AI workflow | This file (AGENTS.md) |
-| Project overview, tech stack, terminology | [README.md](README.md) |
-| Code patterns, framework guidance | Domain AGENTS.md files |
-| System behavior, API specs | [docs/](docs/) |
-| Content writing standards | [collections/](collections/) |
+If you can't find a good place to document something, consider creating a new file!
 
 **Step 9 Checklist**:
 
-- [ ] Updated relevant documentation
+- [ ] Updated relevant documentation by changing existing files or introducing new ones
 - [ ] Fixed markdown linting: `npx markdownlint-cli2 --fix <file> --config /workspaces/techhub/.markdownlint-cli2.jsonc`
+- [ ] Ran `/workspaces/techhub/scripts/Generate-DocumentationIndex.ps1` if you changed ANY headings
 - [ ] OR: No documentation updates needed
 
 ---
@@ -351,81 +335,3 @@ See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and
 - [ ] All files linked
 - [ ] Tests confirmed passing
 - [ ] Task 100% complete
-
----
-
-## Quick Reference
-
-### Running the Website
-
-See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and-testing-the-website) for complete details.
-
-**Common Commands**:
-
-```powershell
-Run                         # Build + all tests + servers (SQLite)
-Run -Docker                 # Build + tests + PostgreSQL stack (Docker)
-Run -WithoutTests           # Build + servers (no tests)
-Run -TestProject Web.Tests  # Run specific test project
-Run -TestProject E2E.Tests  # Run E2E tests (automatically uses Docker)
-Run -StopServers            # CI/CD mode
-```
-
-**🚨 Never use `dotnet test` directly for tests**: Use `Run` instead or `Run -TestProject E2E.Tests` if you want to scope to a certain project or even add `-TestName` too
-
-**🚨 Never use `isBackground: true` for test runs**: Tests complete within 60 seconds - use `isBackground: false` to wait synchronously
-
-**Docker Mode**: `Run -Docker` automatically starts PostgreSQL + API/Web via docker-compose, tears down after tests (or keeps running with `-WithoutTests`). E2E tests automatically use `Run -Docker` internally.
-
-### Documentation Map
-
-| Need | Read |
-|------|------|
-| Project overview, terminology | [README.md](README.md) |
-| **Documentation strategies** | [docs/AGENTS.md](docs/AGENTS.md) |
-| **Testing strategies** | [tests/AGENTS.md](tests/AGENTS.md) |
-| .NET patterns | [src/AGENTS.md](src/AGENTS.md) |
-| API patterns | [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) |
-| Blazor patterns | [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) |
-| E2E test patterns | [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) |
-| PowerShell scripts | [scripts/AGENTS.md](scripts/AGENTS.md) |
-| Content management | [collections/AGENTS.md](collections/AGENTS.md) |
-| API specification | [docs/api-specification.md](docs/api-specification.md) |
-| Content workflows | [docs/content-management.md](docs/content-management.md) |
-
-### Tool Priority
-
-1. **MCP tools** (highest): Playwright MCP, context7 MCP
-2. **Built-in tools**: `replace_string_in_file`, `read_file`, `grep_search`
-3. **CLI** (lowest): GitHub CLI (`gh`), other commands when tools don't support the operation
-
-### Terminal Usage
-
-**🚨 CRITICAL**: Follow these rules to avoid resource waste and orphaned processes.
-
-**isBackground Usage**:
-
-- `isBackground: true` → Long-running processes (servers, watch mode) - spawns new terminal
-- `isBackground: false` → Completing commands (tests, builds) - blocks until done, returns full output
-
-**Terminal Reuse**:
-
-- **ALWAYS reuse existing terminals** for sequential commands
-- **NEVER create new terminals** for each test run
-- The `Run` command already manages server processes - just wait for completion
-
-**Examples**:
-
-```typescript
-// ✅ CORRECT - Test runs
-run_in_terminal("Run -TestProject Infrastructure.Tests", isBackground: false)
-// Blocks until complete (typically < 60s), returns full output when done
-
-// ✅ CORRECT - Starting servers
-run_in_terminal("Run -WithoutTests", isBackground: true)
-// Returns immediately with terminal ID, process runs indefinitely
-
-// ❌ WRONG - Don't use background mode for tests
-run_in_terminal("Run -TestProject Tests", isBackground: true)
-get_terminal_output(id)  // Unnecessary polling
-```

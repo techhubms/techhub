@@ -165,7 +165,7 @@ Pages using `<SidebarToc>` must wrap content in `.article-body` container:
 
 **Scrolling Content**:
 
-- TOC link highlights when corresponding heading crosses detection point (~40% from viewport top)
+- TOC link highlights when corresponding heading crosses detection point (~30% from viewport top)
 - Only one TOC link highlighted at a time (the current/active section)
 - Highlighting updates automatically as user scrolls through content
 

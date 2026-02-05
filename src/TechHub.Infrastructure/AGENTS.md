@@ -238,6 +238,14 @@ item.Tags.Any(t => t.Contains(normalizedTag, StringComparison.OrdinalIgnoreCase)
 
 ## Related Documentation
 
+### Functional Documentation (docs/)
+
+- **[Database](../../docs/database.md)** - Database configuration and sync settings
+- **[Filtering](../../docs/filtering.md)** - Tag filtering and tag cloud algorithm
+- **[Content Processing](../../docs/content-processing.md)** - Content sync workflow
+
+### Implementation Guides (AGENTS.md)
+
 - **[src/AGENTS.md](../AGENTS.md)** - Shared .NET patterns and code quality standards
 - **[src/TechHub.Core/AGENTS.md](../TechHub.Core/AGENTS.md)** - Domain models and interfaces
 - **[src/TechHub.Api/AGENTS.md](../TechHub.Api/AGENTS.md)** - API endpoints that use these repositories

@@ -16,7 +16,7 @@ This document defines the writing style and tone requirements for all content in
 - **Clear, professional English**: Write for international audiences with varying English proficiency
 - **Concise and actionable**: Every sentence should serve a purpose
 - **Active voice preferred**: "The system processes data" instead of "Data is processed by the system"
-- **Consistent terminology**: Use the same terms throughout (see Site Terminology in [README.md](../README.md))
+- **Consistent terminology**: Use the same terms throughout (see [terminology.md](terminology.md))
 
 ### Character and Typography Standards
 

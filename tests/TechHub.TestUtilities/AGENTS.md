@@ -184,3 +184,17 @@ var collection = A.Collection
 - `A.ContentItem` - ContentItem objects
 - `A.Section` - Section objects
 - `A.Collection` - Collection objects
+
+## Related Documentation
+
+### Functional Documentation (docs/)
+
+- **[Testing Strategy](../../docs/testing-strategy.md)** - Testing diamond and database strategy
+- **[Database](../../docs/database.md)** - Database providers used in tests
+
+### Implementation Guides (AGENTS.md)
+
+- **[tests/AGENTS.md](../AGENTS.md)** - Complete testing strategy and patterns
+- **[tests/TechHub.Api.Tests/AGENTS.md](../TechHub.Api.Tests/AGENTS.md)** - API integration tests using these factories
+- **[tests/TechHub.E2E.Tests/AGENTS.md](../TechHub.E2E.Tests/AGENTS.md)** - E2E tests using these factories
+- **[Root AGENTS.md](../../AGENTS.md)** - Complete workflow and principles

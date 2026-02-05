@@ -11,14 +11,6 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 **Documentation Philosophy**: This file describes .NET development patterns - WHAT to use and WHY. Show structure and key decisions, not full implementations. Reference actual source files for complete code.
 
-## Tech Stack
-
-- **.NET**: Latest LTS runtime
-- **C#**: File-scoped namespaces, nullable reference types
-- **ASP.NET Core**: Minimal APIs, dependency injection
-- **Blazor**: Server-Side Rendering (SSR) + WebAssembly
-- **.NET Aspire**: Orchestration and telemetry
-
 ## Port Configuration
 
 **Goal**: HTTPS everywhere, fixed ports, single source of truth (no redundant configuration).
@@ -414,6 +406,18 @@ mcp_context7_query-docs(libraryID: "/xunit/xunit", query: "theories and data-dri
 - **[docs/AGENTS.md](../docs/AGENTS.md)** - Documentation maintenance guidelines
 
 ## Related Documentation
+
+### Functional Documentation (docs/)
+
+- **[Design System](../docs/design-system.md)** - Design tokens, colors, typography, spacing
+- **[Page Structure](../docs/page-structure.md)** - Semantic HTML, layouts, sidebar architecture
+- **[Render Modes](../docs/render-modes.md)** - Blazor render mode strategy (SSR vs Interactive)
+- **[Frontmatter](../docs/frontmatter.md)** - Content frontmatter schema and field definitions
+- **[Testing Strategy](../docs/testing-strategy.md)** - Testing diamond, layer definitions
+- **[Content API](../docs/content-api.md)** - REST API contracts and endpoints
+- **[Filtering](../docs/filtering.md)** - Tag filtering system and tag cloud
+
+### Implementation Guides (AGENTS.md)
 
 - **[Root AGENTS.md](../AGENTS.md)** - AI workflow, starting/stopping website, principles
 - **[tests/AGENTS.md](../tests/AGENTS.md)** - Testing strategies (test code is also source code!)

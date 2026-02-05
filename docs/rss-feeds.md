@@ -78,6 +78,7 @@ Each item in the feed includes:
 - Feeds are sorted by publication date, **newest first**
 - Feeds are limited to the **50 most recent items** for performance
 - Future-dated content (beyond current date in Europe/Brussels timezone) is excluded
+- Draft content is excluded from all RSS feeds
 
 ### Content-Type
 
@@ -101,13 +102,62 @@ Content-Type: application/rss+xml; charset=utf-8
 - **Backend API**: The frontend proxies requests to the secured API backend (`/api/rss/*` endpoints)
 - **Same-Origin**: Feeds are served from the same domain as the website for security and simplicity
 
-## Technical Implementation
+## RSS API Direct Endpoints
+
+These are the backend RSS feed endpoints. For public-facing RSS feeds, use the Blazor Web proxy endpoints described below.
+
+### GET /api/rss/all
+
+Get RSS feed for all content across all sections.
+
+**Response**: `200 OK` with `application/rss+xml; charset=utf-8`
+
+### GET /api/rss/{sectionName}
+
+Get RSS feed for a specific section.
+
+**Parameters**:
+
+- `sectionName` (path): Section identifier (e.g., `ai`, `github-copilot`)
+
+**Response**: `200 OK` or `404 Not Found`
+
+### GET /api/rss/{sectionName}/{collectionName}
+
+Get RSS feed for a specific collection within a section (use `all` for sectionName to get a collection across all sections).
+
+**Parameters**:
+
+- `sectionName` (path): Section identifier or `all` for cross-section
+- `collectionName` (path): Collection name (e.g., `roundups`, `news`, `blogs`)
+
+**Response**: `200 OK` or `404 Not Found`
+
+## RSS Proxy Endpoints (Blazor Web)
+
+The Blazor Web application provides proxy endpoints that serve RSS feeds from the same domain as the website, avoiding cross-origin issues.
+
+### GET /all/feed.xml
+
+Get RSS feed for all content across all sections.
+**Discovery Link**: Available on Home page
+
+### GET /all/roundups/feed.xml
+
+Get RSS feed specifically for weekly roundups collection.
+**Discovery Link**: Roundups page or Footer
+
+### GET /{sectionName}/feed.xml
+
+Get RSS feed for a specific section (e.g., `/ai/feed.xml`).
+**Discovery Link**: Available on Section pages
+
+## Implementation & Testing
 
 **For implementation details**, see:
 
 - [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md) - Frontend RSS proxy endpoints
-- [src/TechHub.Api/AGENTS.md](../src/TechHub.Api/AGENTS.md) - Backend RSS API endpoints  
+- [src/TechHub.Api/AGENTS.md](../src/TechHub.Api/AGENTS.md) - Backend RSS API endpoints
 - [src/TechHub.Infrastructure/AGENTS.md](../src/TechHub.Infrastructure/AGENTS.md) - RssService implementation
-- [docs/api-specification.md](api-specification.md#rss-endpoints) - Internal API contracts
 
 **Testing**: See [tests/TechHub.E2E.Tests/AGENTS.md](../tests/TechHub.E2E.Tests/AGENTS.md) for RSS feed tests.

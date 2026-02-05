@@ -226,7 +226,7 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task GetSectionFeed_ShouldNotIncludeDraftItems()
     {
         // Act - AI section feed (our draft has ai section)
-        var response = await _client.GetAsync("/api/rss/ai");
+        var response = await _client.GetAsync("/api/rss/github-copilot/videos");
         var xml = await response.Content.ReadAsStringAsync();
 
         // Assert

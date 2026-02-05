@@ -54,7 +54,7 @@
 
 - Writing style → [writing-style-guidelines.md](writing-style-guidelines.md)
 - Markdown formatting → Use `npx markdownlint-cli2 --fix <file-path>` for automated fixes
-- Content workflows → [docs/content-management.md](../docs/content-management.md)
+- Content workflows → [docs/content-processing.md](../docs/content-processing.md)
 - RSS processing → [scripts/content-processing/AGENTS.md (future)](../scripts/content-processing/)
 
 ## Collections Structure
@@ -91,64 +91,17 @@ This directory contains the content collections for the Tech Hub site. Each coll
 
 ## Frontmatter Schema
 
-### Required Fields (All Content)
+📖 **Full documentation**: See [docs/frontmatter.md](../docs/frontmatter.md) for complete frontmatter schema, field definitions, and examples.
 
-All content files **must** include these frontmatter fields:
+**Quick Reference** (required fields):
 
-```yaml
----
-layout: "post"                          # Always "post" for collection content
-title: "Content Title"                  # Plain text title
-author: "Author Name"                   # Author or presenter name
-date: 2025-01-15 10:00:00 +01:00       # ISO format with timezone (Europe/Brussels)
-permalink: "/section/collection/slug"   # URL path
-tags: ["Tag1", "Tag2", "Tag3"]         # Topic keywords (can include spaces)
-section_names: ["ai", "github-copilot"] # Normalized section identifiers
----
-```
-
-### Field Definitions
-
-**`layout`**: Always `"post"` for collection content (_news,_videos, _blogs,_community, _roundups)
-
-**`title`**: Content title in plain text (no HTML or markdown)
-
-**`author`**: Author name or presenter name. For YouTube videos, use the actual presenter/demonstrator, not the channel owner.
-
-**`date`**: Publication date in ISO format with timezone
-
-- Format: `YYYY-MM-DD HH:MM:SS +HH:MM`
-- Timezone: Use `+01:00` for Europe/Brussels (or `+02:00` during DST)
-- Filename date must match frontmatter date (date portion only)
-
-**`permalink`**: URL path in format `/section/collection/slug`
-
-- **section**: Primary section (determined automatically by the system)
-- **collection**: Collection name without underscore (e.g., `news`, `videos`, `blogs`)
-- **slug**: URL-friendly version of title
-- Example: `/github-copilot/news/GPT-5-Comes-to-GitHub-Copilot`
-
-**`tags`**: Array of topic keywords in display format (can include spaces and special characters)
-
-- Example: `["AI", "GitHub Copilot", "Visual Studio"]`
-
-**`section_names`**: Array of normalized section identifiers (lowercase, hyphenated)
-
-- Valid values: `["ai", "azure", "github-copilot", "dotnet", "devops", "security", "coding", "ml"]`
-- Content can belong to multiple sections
-- If content includes `"github-copilot"`, it should also include `"ai"` (unless purely about Copilot setup/admin)
-- Primary section for permalink is determined automatically by the system
-
-### Content Source Fields
-
-**Required for all content except roundups** (news, blogs, community, videos):
-
-```yaml
-canonical_url: "https://example.com/article"  # Original source URL (required)
-feed_name: "Feed Display Name"                # RSS feed name (required)
-```
-
-**Not required for roundups** (since they are original Tech Hub content).
+- `layout`: Always `"post"`
+- `title`: Plain text title
+- `author`: Author/presenter name
+- `date`: ISO format with Europe/Brussels timezone
+- `permalink`: `/section/collection/slug`
+- `tags`: Topic keywords array
+- `section_names`: Normalized section identifiers array
 
 ### Collection-Specific Fields
 
@@ -157,40 +110,6 @@ feed_name: "Feed Display Name"                # RSS feed name (required)
 ```yaml
 plans: ["Free", "Pro", "Business"]  # Required - supported subscription tiers
 ghes_support: true                  # Required - GitHub Enterprise Server support
-```
-
-### Frontmatter Examples
-
-**News Article:**
-
-```yaml
----
-layout: "post"
-title: "GPT-5 Comes to GitHub Copilot in Visual Studio"
-author: "Rhea Patel"
-canonical_url: "https://devblogs.microsoft.com/visualstudio/gpt-5-now-available/"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
-date: 2025-08-12 17:10:52 +01:00
-permalink: "/github-copilot/news/GPT-5-Comes-to-GitHub-Copilot-in-Visual-Studio"
-tags: ["AI", "GitHub Copilot", "GPT-5", "Visual Studio"]
-section_names: ["ai", "github-copilot"]
----
-```
-
-**Standard Video:**
-
-```yaml
----
-layout: "post"
-title: "AI-Powered Email Sorting with n8n and OpenAI"
-author: "Alireza Chegini"
-canonical_url: "https://www.youtube.com/watch?v=21HSDwtkHNk"
-date: 2025-06-04 19:00:03 +01:00
-permalink: "/ai/videos/AI-Powered-Email-Sorting"
-tags: ["AI", "Automation", "n8n", "OpenAI"]
-section_names: ["ai"]
----
 ```
 
 **GitHub Copilot Feature:**
@@ -204,7 +123,6 @@ date: 2025-01-15 10:00:00 +01:00
 permalink: "/github-copilot/videos/Multi-File-Editing"
 tags: ["GitHub Copilot", "Features", "Multi-File Editing"]
 section_names: ["ai", "github-copilot"]
-alt-collection: "features"
 plans: ["Business", "Enterprise"]
 ghes_support: false
 ---
@@ -241,7 +159,7 @@ These fields are no longer supported and should **not** be included:
 
 **Purpose**: Serves as a logical introduction to the main content and provides users with a quick overview of what to expect.
 
-> **See also**: [README.md - Site Terminology](../README.md#site-terminology) for complete content organization concepts and structure definitions.
+> **See also**: [docs/terminology.md](../docs/terminology.md) for complete content organization concepts and structure definitions.
 
 **Requirements**:
 
@@ -279,3 +197,17 @@ John Smith introduces the latest updates to GitHub Copilot, including new featur
 - Always comes after the excerpt and the `<!--excerpt_end-->` marker
 - Can be as long as needed
 - Must follow the excerpt logically
+
+## Related Documentation
+
+### Functional Documentation (docs/)
+
+- **[Frontmatter](../docs/frontmatter.md)** - Complete frontmatter schema with field mappings
+- **[Content Processing](../docs/content-processing.md)** - RSS processing and content workflows
+- **[Terminology](../docs/terminology.md)** - Section and collection definitions
+
+### Implementation Guides (AGENTS.md)
+
+- **[Root AGENTS.md](../AGENTS.md)** - AI workflow and development process
+- **[scripts/AGENTS.md](../scripts/AGENTS.md)** - Content processing scripts
+- **[docs/writing-style-guidelines.md](../docs/writing-style-guidelines.md)** - Writing tone and style standards

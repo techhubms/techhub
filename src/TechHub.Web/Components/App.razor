@@ -309,13 +309,14 @@
         }
 
         // Load custom pages interactivity (ES module with explicit init)
-        async function loadCustomPages(collapsibleElements) {
-            if (loaded.customPages || !collapsibleElements) return;
+        async function loadCustomPages(collapsibleElements, expandableElements) {
+            if (loaded.customPages || (!collapsibleElements && !expandableElements)) return;
 
             try {
                 loaded.customPages = true;
                 const module = await import('./js/custom-pages.js');
                 module.initCollapsibleCards();
+                module.initExpandableBadges();
             } catch (error) {
                 console.error('Failed to load custom pages:', error);
             }
@@ -356,13 +357,14 @@
             const mermaidElements = document.querySelectorAll('.mermaid:not([data-processed="true"])');
             const tocElement = document.querySelector('[data-toc-scroll-spy]');
             const collapsibleElements = document.querySelector('[data-collapsible]');
+            const expandableElements = document.querySelector('[data-expand-target]');
             const scrollTrigger = document.getElementById('scroll-trigger');
 
             // Load scripts in parallel with independent error handling
             await Promise.all([
                 loadHighlighting(codeElements).catch(err => console.error('Highlighting loader failed:', err)),
                 loadMermaid(mermaidElements.length > 0 ? mermaidElements : null).catch(err => console.error('Mermaid loader failed:', err)),
-                loadCustomPages(collapsibleElements).catch(err => console.error('Custom pages loader failed:', err)),
+                loadCustomPages(collapsibleElements, expandableElements).catch(err => console.error('Custom pages loader failed:', err)),
                 loadInfiniteScroll(scrollTrigger).catch(err => console.error('Infinite scroll loader failed:', err))
             ]);
 

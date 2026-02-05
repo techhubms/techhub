@@ -65,21 +65,6 @@ Use factory methods to create test objects consistently:
 
 See actual tests in `Models/` for implementation examples.
 
-## Running Tests
-
-**Use the Run function for all test execution** (see [README.md - Starting, Stopping and Testing](../../README.md#starting-stopping-and-testing-the-website)):
-
-```powershell
-# Run all tests (recommended)
-Run
-
-# Run only Core unit tests
-Run -TestProject Core.Tests
-
-# Run specific test class
-Run -TestName ContentItem
-```
-
 ## Best Practices
 
 1. **Test behavior, not implementation** - Focus on what the method does, not how

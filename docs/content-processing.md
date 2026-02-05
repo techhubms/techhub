@@ -1,4 +1,4 @@
-# Content Management
+# Content Processing
 
 ## Overview
 
@@ -16,17 +16,11 @@ The Tech Hub supports both manual and automated content creation. Content is org
 2. **Subsequent startups**: Hash-based diff detects changes (<1s if no changes)
 3. **Configuration**: Set `ContentSync:Enabled = false` in appsettings.json to skip sync for faster local dev
 
-**Providers**:
+For details on supported database providers and their configuration, see [database.md](database.md).
 
-- **FileSystem** (default) - Direct file access, no database (slower filtering)
-- **SQLite** (recommended for local dev) - Fast, FTS5 full-text search, no Docker required
-- **PostgreSQL** (production) - Best performance, tsvector search, requires Docker or cloud instance
+### Manual Content Creation with GitHub Copilot
 
-See [README.md](../README.md#database-configuration) for configuration details.
-
-### 1. Manual Content Creation with GitHub Copilot (Recommended)
-
-The easiest way to create content is using the built-in GitHub Copilot commands:
+The easiest way to add a single contentitem is using the built-in GitHub Copilot commands:
 
 ```text
 /new-article
@@ -40,54 +34,7 @@ This command will:
 - Create the markdown file in the correct location
 - Apply proper formatting (use `npx markdownlint-cli2 --fix` to fix issues)
 
-### 2. Manual File Creation
-
-For direct file creation:
-
-1. **Choose Content Type**: Select the appropriate collection directory (see root [AGENTS.md](../AGENTS.md) Site Terminology section for complete list with descriptions)
-2. **Create the File**: Use naming convention `YYYY-MM-DD-title-slug.md`
-3. **Add Content**: Follow the structure and formatting rules in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema) and [writing-style-guidelines.md](../collections/writing-style-guidelines.md)
-
-### 3. GitHub Copilot Features Content
-
-GitHub Copilot feature demonstration videos are managed through a special collection structure:
-
-**Location**: `_videos/ghc-features/` subfolder
-
-**Special Requirements**:
-
-- Must include `section_names: ["github-copilot", "ai"]` in frontmatter
-- Must include `plans: ["Free"|"Pro"|"Business"|"Pro+"|"Enterprise"]` array to specify which subscription tiers support the feature
-- Must include `ghes_support: true|false` to indicate GitHub Enterprise Server support
-- Must include `alt-collection: "features"` to highlight the Features tab instead of the Videos tab
-- **Date-based filtering**: Videos with future dates are still shown as features but are not clickable as this is the mechanism to distinguish between features that have a demo video or not. So if you create a video for a feature, make sure to set update the date in the filename, frontmatter AND permalink!
-
-**Automatic Integration**:
-
-- Videos in this folder automatically populate the `/github-copilot/features.md` page
-- Features are organized by subscription tier based on the `plans` frontmatter
-- The page dynamically filters features based on publication date and subscription level
-- Replaces the previous `_data/copilot_plans.json` system with a more maintainable video-based approach
-
-### 4. Visual Studio Code Updates Videos
-
-Visual Studio Code update videos are managed through a special collection structure:
-
-**Location**: `_videos/vscode-updates/` subfolder
-
-**Special Requirements**:
-
-- Must include `section_names: ["github-copilot", "ai"]` in frontmatter
-- Must include `alt-collection: "vscode-updates"` to highlight the Visual Studio Code Updates tab instead of the Videos tab
-- Should include `youtube_id` for embedded video playback
-
-**Automatic Integration**:
-
-- Videos in this folder automatically appear on the `/github-copilot/vscode-updates.md` page
-- The latest video is featured prominently at the top of the page
-- Older videos are listed below with links and descriptions
-
-### 5. Automated RSS Content Creation
+### Automated RSS Content Creation
 
 The site automatically processes RSS feeds from Microsoft and technology sources. This system combines automated feed processing with AI-powered content categorization.
 
@@ -111,8 +58,11 @@ This command will:
 
 For detailed information about site structure and terminology, see:
 
-- [Root AGENTS.md](../AGENTS.md) - Site Terminology and Repository Structure sections
+- [Terminology](terminology.md) - Site terminology, sections, and standard values
+- [Repository Structure](repository-structure.md) - Code and content organization
 - [Collections Guide](../collections/AGENTS.md) - Content management overview
+- [Custom Pages](custom-pages.md) - Custom pages and specialized collections
+- [Terminology](terminology.md) - Site terminology and standard values
 
 ## Troubleshooting
 
@@ -120,7 +70,7 @@ For detailed information about site structure and terminology, see:
 
 - **Missing Frontmatter**: Check requirements in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema)
 - **File Naming**: Use `YYYY-MM-DD-title.md` pattern
-- **Sections/Tags**: Verify against site configuration in root [AGENTS.md](../AGENTS.md) Site Terminology section. Note: frontmatter uses `section_names` field with normalized section identifiers ("ai", "github-copilot")
+- **Sections/Tags**: Verify against site configuration in [terminology.md](terminology.md). Note: frontmatter uses `section_names` field with normalized section identifiers ("ai", "github-copilot")
 - **Date Formats**: Use ISO 8601 format: `YYYY-MM-DD HH:MM:SS +00:00`
 
 ### Repair Tools
@@ -138,53 +88,6 @@ scripts/content-processing/fix-markdown-files.ps1 -FilePath "docs/example-file.m
 This script automatically fixes markdown formatting issues like missing blank lines, heading spacing, and list formatting.
 
 **Note**: New content from RSS feeds already has correct frontmatter format (section_names). This script does NOT modify frontmatter - it only fixes AI-generated markdown formatting problems.
-
-## Alternative Collection Tab Highlighting
-
-The `alt-collection` frontmatter field allows content items to highlight a different collection tab in the navigation bar than their default collection would suggest. This is particularly useful for specialized subcollections like GitHub Copilot Features and Visual Studio Code Updates.
-
-### How It Works
-
-By default, videos in the `_videos` collection highlight the "Videos" tab in the navigation. However, videos in the `ghc-features` and `vscode-updates` subfolders should highlight their respective tabs instead:
-
-- Videos in `_videos/ghc-features/` highlight the "Features" tab
-- Videos in `_videos/vscode-updates/` highlight the "Visual Studio Code Updates" tab
-
-### Usage
-
-Add the `alt-collection` field to the frontmatter of your content:
-
-```yaml
----
-layout: "post"
-title: "Your Video Title"
-section_names:
-- github-copilot
-- ai
-alt-collection: "features"  # or "vscode-updates"
----
-```
-
-### Supported Values
-
-- `"features"` - Highlights the Features tab
-- `"vscode-updates"` - Highlights the Visual Studio Code Updates tab
-
-### Implementation Details
-
-The navigation component checks for the `alt-collection` frontmatter field and uses it to determine which collection tab should be highlighted in the GitHub Copilot section. This overrides the default collection-based highlighting logic.
-
-The `alt-collection` value is matched against the URL path of collection links in the navigation. For example, `"features"` matches `/github-copilot/features`, and `"vscode-updates"` matches `/github-copilot/vscode-updates`.
-
-### Testing
-
-End-to-end tests verify that the custom pages work correctly:
-
-- GitHub Copilot Features page (`/github-copilot/features`)
-- Visual Studio Code Updates page (`/github-copilot/vscode-updates`)
-- Other custom pages
-
-Tests are located in the [tests/TechHub.E2E.Tests/Web/](../tests/TechHub.E2E.Tests/Web/) directory (e.g., HandbookTests.cs, LevelsOfEnlightenmentTests.cs, VSCodeUpdatesTests.cs).
 
 ## RSS Feed Processing
 
@@ -248,6 +151,7 @@ RSS Download → Per-Entry Content Fetching → AI Analysis (Azure AI Foundry) �
 - **Individual JSON Files**: Each RSS entry is saved as a separate JSON file in structured directories
 - **Content Enrichment**: Actual web content is fetched and stored alongside RSS metadata
 - **Rate-Limited Fetching**: Individual URL fetching with rate limiting between requests
+- **Error Handling**: Graceful degradation when content fetching fails
 
 **Content Fetching Strategy**:
 

@@ -72,21 +72,6 @@ This directory contains **component tests** for Tech Hub Blazor components using
 
 See actual tests in `Components/` and bUnit documentation for examples.
 
-## Running Tests
-
-**Use the Run function for all test execution** (see [README.md - Starting, Stopping and Testing](../../README.md#starting-stopping-and-testing-the-website)):
-
-```powershell
-# Run all tests (recommended)
-Run
-
-# Run only Web component tests
-Run -TestProject Web.Tests
-
-# Run specific component tests
-Run -TestName SectionCard
-```
-
 ## Best Practices
 
 1. **Use bUnit's TestContext** - Inherit from TestContext base class

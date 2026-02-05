@@ -55,4 +55,10 @@ public class CollectionConfig
     public required string Url { get; init; }
     public required string Description { get; init; }
     public bool Custom { get; init; }
+    
+    /// <summary>
+    /// Display order for custom pages (lower values appear first).
+    /// Only used when Custom=true. Defaults to 0.
+    /// </summary>
+    public int Order { get; init; }
 }

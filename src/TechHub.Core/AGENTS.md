@@ -156,46 +156,15 @@ See [Markdown Frontmatter Mapping](#markdown-frontmatter-mapping) for complete f
 
 ## Markdown Frontmatter Mapping
 
-**Critical reference** for understanding how markdown frontmatter maps to domain properties:
+📖 **Full documentation**: See [docs/frontmatter.md](../../docs/frontmatter.md#frontmatter-to-domain-model-mapping) for complete field definitions and mappings.
 
-**Markdown File Example**:
+**Key Implementation Notes**:
 
-```markdown
----
-title: "Getting Started with GitHub Copilot"
-author: "John Doe"
-date: 2026-01-07
-categories: [ai, github-copilot]
-tags: [machine-learning, productivity, vscode]
-external_url: "https://example.com/original-article"
-viewing_mode: "external"
-video_id: "dQw4w9WgXcQ"
----
-
-This is the excerpt that appears in content lists and RSS feeds.
-
-<!--excerpt_end-->
-
-# Full Article Content
-
-The rest of the markdown content...
-```
-
-**Property Mappings**:
-
-| Frontmatter Field           | Domain Property  | Type                    | Notes                                                                                   |
-| --------------------------- | ---------------- | ----------------------- | --------------------------------------------------------------------------------------- |
-| `title`                     | `Title`          | `string`                | Required                                                                                |
-| `author`                    | `Author`         | `string?`               | Optional                                                                                |
-| `date`                      | `DateEpoch`      | `long`                  | Converted to Unix timestamp in Europe/Brussels timezone                                 |
-| `categories`                | `SectionNames`   | `IReadOnlyList<string>` | Frontmatter contains Section Titles ("AI"), mapped to lowercase section names ("ai")    |
-| `tags`                      | `Tags`           | `IReadOnlyList<string>` | Normalized to lowercase, hyphen-separated                                               |
-| `external_url`              | `ExternalUrl`    | `string?`               | Original source URL                                                                     |
-| `viewing_mode`              | `ViewingMode`    | `string`                | "internal" or "external" (default: "external")                                          |
-| `video_id`                  | `VideoId`        | `string?`               | YouTube video identifier                                                                |
-| Filename                    | `Slug`           | `string`                | `2025-01-15-article.md` → `2025-01-15-article`                                          |
-| Before `<!--excerpt_end-->` | `Excerpt`        | `string`                | Plain text, max 200 words                                                               |
-| Full markdown               | `RenderedHtml`   | `string`                | Processed with Markdig                                                                  |
+- `date` → `DateEpoch`: Converted to Unix timestamp in Europe/Brussels timezone
+- `section_names` → `SectionNames`: Multi-section support (array)
+- `tags` → `Tags`: Normalized to lowercase, hyphen-separated
+- Filename → `Slug`: `2025-01-15-article.md` becomes `2025-01-15-article`
+- Content before `<!--excerpt_end-->` → `Excerpt`: Plain text, max 200 words
 
 **See [src/TechHub.Infrastructure/AGENTS.md](../TechHub.Infrastructure/AGENTS.md)** for implementation details of frontmatter parsing.
 
@@ -215,7 +184,7 @@ The rest of the markdown content...
 
 - `Section` - Section data with collections ([Models/Core/Section.cs](Models/Core/Section.cs))
 - `ContentItem` - Content item (list + detail) ([Models/Core/ContentItem.cs](Models/Core/ContentItem.cs))
-- `Collection` - Collection definition ([Models/Core/Collection.cs](Models/Core/Collection.cs))
+- `Collection` - Collection definition with custom page ordering ([Models/Core/Collection.cs](Models/Core/Collection.cs))
 - `RssChannel` - RSS feed metadata ([Models/Rss/RssChannel.cs](Models/Rss/RssChannel.cs))
 - `RssItem` - RSS feed entry ([Models/Rss/RssItem.cs](Models/Rss/RssItem.cs))
 - `SearchRequest` - Search parameters ([Models/Search/SearchRequest.cs](Models/Search/SearchRequest.cs))
@@ -223,6 +192,68 @@ The rest of the markdown content...
 - `FacetResults` - Facet aggregations ([Models/Facets/FacetResults.cs](Models/Facets/FacetResults.cs))
 - `TagCloudItem` - Tag cloud display item ([Models/Tags/TagCloudItem.cs](Models/Tags/TagCloudItem.cs))
 - `TagWithCount` - Tag with usage count ([Models/Tags/TagWithCount.cs](Models/Tags/TagWithCount.cs))
+
+### Collection Model - Custom Page Ordering
+
+**Collection** ([Models/Core/Collection.cs](Models/Core/Collection.cs)) represents a collection of content with optional custom page ordering:
+
+**Properties**:
+
+- `Name` - Collection identifier (lowercase with hyphens)
+- `Title` - Display title
+- `Url` - Collection URL
+- `Description` - Collection description
+- `DisplayName` - Display name for page titles
+- `IsCustom` - Whether this is a custom page (not a content collection)
+- `Order` - Display order for custom pages (lower values appear first)
+
+**Custom Page Ordering**:
+
+Custom pages (`IsCustom = true`) support explicit ordering via the `Order` property:
+
+- Lower `Order` values appear first
+- If `Order` values are equal, sort alphabetically by `Title`
+- Regular collections (IsCustom = false) don't use `Order` (defaults to 0)
+- Applied in:
+  - `SectionCard.razor` - Homepage section badges
+  - `SubNav.razor` - Horizontal navigation bar
+
+**Configuration Example** (appsettings.json):
+
+```json
+{
+  "Collections": {
+    "features": {
+      "Title": "Features",
+      "Custom": true,
+      "Order": 1
+    },
+    "levels-of-enlightenment": {
+      "Title": "Levels of Enlightenment",
+      "Custom": true,
+      "Order": 2
+    },
+    "handbook": {
+      "Title": "The GitHub Copilot Handbook",
+      "Custom": true,
+      "Order": 3
+    }
+  }
+}
+```
+
+**Usage Pattern**:
+
+```csharp
+// Get ordered custom pages
+var orderedCustomPages = section.Collections
+    .Where(c => c.IsCustom)
+    .OrderBy(c => c.Order)
+    .ThenBy(c => c.Title)
+    .ToList();
+```
+
+**See**: [src/TechHub.Web/AGENTS.md - SectionCard Custom Page Ordering](../TechHub.Web/AGENTS.md#sectioncard-custom-page-ordering-and-expand-badges) for UI implementation details.
 
 ## Repository Interfaces
 
@@ -324,6 +355,14 @@ public required long DateEpoch { get; init; }  // Seconds since Unix epoch
 **See [tests/TechHub.Core.Tests/AGENTS.md](../../tests/TechHub.Core.Tests/AGENTS.md)** for comprehensive unit testing patterns for domain models and business logic.
 
 ## Related Documentation
+
+### Functional Documentation (docs/)
+
+- **[Frontmatter](../../docs/frontmatter.md)** - Frontmatter schema and field mappings to domain models
+- **[Content API](../../docs/content-api.md)** - REST API contracts using these domain models
+- **[Custom Pages](../../docs/custom-pages.md)** - Custom page ordering and configuration
+
+### Implementation Guides (AGENTS.md)
 
 - **[src/AGENTS.md](../AGENTS.md)** - Shared .NET patterns and code quality standards
 - **[src/TechHub.Infrastructure/AGENTS.md](../TechHub.Infrastructure/AGENTS.md)** - Repository implementations that use these interfaces

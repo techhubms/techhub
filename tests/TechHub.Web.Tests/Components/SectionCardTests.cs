@@ -110,17 +110,17 @@ public class SectionCardTests : BunitContext
     }
 
     [Fact]
-    public void SectionCard_DisplaysFirst4Collections_WhenMoreThan4Exist()
+    public void SectionCard_DisplaysAllRegularCollections_AndFirstCustomPage()
     {
-        // Arrange
+        // Arrange - 4 regular collections + 2 custom pages
         var collections = new List<Collection>
         {
-            new("news", "News", "/github-copilot/news", "News", "News", false),
-            new("blogs", "Blogs", "/github-copilot/blogs", "Blogs", "Blogs", false),
-            new("videos", "Videos", "/github-copilot/videos", "Videos", "Videos", false),
-            new("community", "Community", "/github-copilot/community", "Community", "Community Posts", false),
-            new("features", "Features", "/github-copilot/features", "Features", "Features", true),
-            new("handbook", "Handbook", "/github-copilot/handbook", "Handbook", "Handbook", true)
+            new("news", "News", "/github-copilot/news", "News", "News", false, 0),
+            new("blogs", "Blogs", "/github-copilot/blogs", "Blogs", "Blogs", false, 0),
+            new("videos", "Videos", "/github-copilot/videos", "Videos", "Videos", false, 0),
+            new("community", "Community", "/github-copilot/community", "Community", "Community Posts", false, 0),
+            new("features", "Features", "/github-copilot/features", "Features", "Features", true, 1),
+            new("handbook", "Handbook", "/github-copilot/handbook", "Handbook", "Handbook", true, 2)
         };
         var section = new Section("github-copilot", "GitHub Copilot", "Description", "/github-copilot", collections);
 
@@ -128,14 +128,28 @@ public class SectionCardTests : BunitContext
         var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
-        // Assert
-        var badges = cut.FindAll(".badge-purple, .badge-custom");
-        badges.Should().HaveCount(4, "should only show first 4 collections");
+        // Assert - Should show 4 regular collections + 1 custom page = 5 total badges
+        var regularBadges = cut.FindAll(".badge-purple");
+        regularBadges.Should().HaveCount(4, "should show all regular collections");
+        
+        // Find visible custom badges (not inside the hidden expanded container)
+        var visibleCustomBadges = cut.FindAll(".section-collections > .badge-custom");
+        visibleCustomBadges.Should().HaveCount(1, "should show first custom page (by order)");
+        visibleCustomBadges[0].TextContent.Should().Be("Features", "Features has Order=1, should appear first");
 
-        var moreIndicator = cut.Find(".badge-grey");
-        // Normalize whitespace (component HTML has newlines for readability)
-        var normalizedText = System.Text.RegularExpressions.Regex.Replace(moreIndicator.TextContent.Trim(), @"\s+", " ");
-        normalizedText.Should().Be("+2 more");
+        // Should show "+1 more" button for remaining custom page
+        var moreButton = cut.Find(".badge-expandable");
+        var normalizedText = System.Text.RegularExpressions.Regex.Replace(moreButton.TextContent.Trim(), @"\s+", " ");
+        normalizedText.Should().Be("+1 more");
+        
+        // Check that the hidden custom pages container exists and has the remaining custom page
+        var expandableContainer = cut.Find(".custom-pages-expanded");
+        expandableContainer.Should().NotBeNull();
+        expandableContainer.GetAttribute("hidden").Should().NotBeNull("container should be initially hidden");
+        
+        var hiddenCustomBadges = cut.FindAll(".custom-pages-expanded .badge-custom");
+        hiddenCustomBadges.Should().HaveCount(1, "should have 1 custom page in hidden container");
+        hiddenCustomBadges[0].TextContent.Should().Be("Handbook", "Handbook has Order=2, should be in hidden area");
     }
 
     [Fact]
@@ -144,8 +158,8 @@ public class SectionCardTests : BunitContext
         // Arrange
         var collections = new List<Collection>
         {
-            new("news", "News", "/github-copilot/news", "News", "News", false),
-            new("features", "Features", "/github-copilot/features", "Features", "Features", true)
+            new("news", "News", "/github-copilot/news", "News", "News", false,0),
+            new("features", "Features", "/github-copilot/features", "Features", "Features", true, 1)
         };
         var section = new Section("github-copilot", "GitHub Copilot", "Description", "/github-copilot", collections);
 

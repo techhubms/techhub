@@ -142,10 +142,6 @@ function Run {
         Build and start servers without running tests (for debugging or quick start).
 
     .EXAMPLE
-        Run -Rebuild
-        Clean rebuild only, then exit (for fixing build errors).
-
-    .EXAMPLE
         Run -TestProject TechHub.Web.Tests
         Build, run only Web component tests, then keep servers running.
 
@@ -210,7 +206,6 @@ function Run {
         Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor White
         Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor White
         Write-Host "  -StopServers   Stop servers after tests complete (for CI/CD pipelines)" -ForegroundColor White
-        Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor White
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor White
         Write-Host "  -Docker        Start servers using docker compose instead of dotnet run`n" -ForegroundColor White
@@ -220,7 +215,6 @@ function Run {
         Write-Host "  Run -Clean                           Clean build + all tests + servers" -ForegroundColor Gray
         Write-Host "  Run -StopServers                     Build + all tests, stop servers (CI/CD)" -ForegroundColor Gray
         Write-Host "  Run -WithoutTests                    Build + servers (no tests, for debugging)" -ForegroundColor Gray
-        Write-Host "  Run -Rebuild                         Clean rebuild only" -ForegroundColor Gray
         Write-Host "  Run -TestProject powershell          Run only PowerShell tests, keep servers running" -ForegroundColor Gray
         Write-Host "  Run -TestProject Web.Tests           Run only Web tests, keep servers running" -ForegroundColor Gray
         Write-Host "  Run -TestName SectionCard            Run tests matching 'SectionCard', keep servers running" -ForegroundColor Gray

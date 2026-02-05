@@ -16,30 +16,45 @@
     @if (Section.Collections.Any())
     {
         <nav class="section-collections" aria-label="@Section.Title collections">
-            @* Show first 4 collections/pages (both regular and custom) *@
-            @foreach (var collection in Section.Collections.Take(4))
+            @* Show all regular collections *@
+            @foreach (var collection in RegularCollections)
             {
-                @if (collection.IsCustom)
-                {
-                    @* Custom pages *@
-                    <a href="@collection.Url" class="badge-custom"
-                        aria-label="View @collection.Title custom page">
-                        @collection.Title
-                    </a>
-                }
-                else
-                {
-                    @* Regular collections *@
-                    <a href="@collection.Url" class="badge-purple" aria-label="View @collection.Title collection">
-                        @collection.Title
-                    </a>
-                }
+                <a href="@collection.Url" class="badge-purple" aria-label="View @collection.Title collection">
+                    @collection.Title
+                </a>
             }
-            @if (Section.Collections.Count > 4)
+            
+            @* Show first custom page if exists *@
+            @if (CustomPages.Any())
             {
-                <span class="badge-grey"
-                    aria-label="@(Section.Collections.Count - 4) more collections available">+@(Section.Collections.Count - 4)
-                    more</span>
+                var firstCustom = CustomPages.First();
+                <a href="@firstCustom.Url" class="badge-custom"
+                    aria-label="View @firstCustom.Title custom page">
+                    @firstCustom.Title
+                </a>
+                
+                @* Show "+X more" button if there are additional custom pages *@
+                @if (CustomPages.Count > 1)
+                {
+                    var expandId = $"custom-pages-{Section.Name}";
+                    <button type="button" 
+                            class="badge-grey badge-expandable" 
+                            data-expand-target="@expandId"
+                            aria-label="Show @(CustomPages.Count - 1) more custom pages">
+                        +@(CustomPages.Count - 1) more
+                    </button>
+                    
+                    @* Hidden custom pages - revealed when button clicked *@
+                    <span id="@expandId" class="custom-pages-expanded" hidden>
+                        @foreach (var customPage in CustomPages.Skip(1))
+                        {
+                            <a href="@customPage.Url" class="badge-custom"
+                                aria-label="View @customPage.Title custom page">
+                                @customPage.Title
+                            </a>
+                        }
+                    </span>
+                }
             }
         </nav>
     }
@@ -48,4 +63,14 @@
 @code {
     [Parameter, EditorRequired]
     public Section Section { get; set; } = null!;
+    
+    private IEnumerable<Collection> RegularCollections => 
+        Section.Collections.Where(c => !c.IsCustom);
+    
+    private IReadOnlyList<Collection> CustomPages => 
+        Section.Collections
+            .Where(c => c.IsCustom)
+            .OrderBy(c => c.Order)
+            .ThenBy(c => c.Title)
+            .ToList();
 }

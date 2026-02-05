@@ -79,46 +79,15 @@ Run -WithoutTests
 - Add missing test data to fixtures
 - Update expected text/attributes to match current behavior
 
-## Running Tests
-
-### Recommended Approach
-
-**Always use `Run`** - it handles server startup, test execution, and cleanup automatically:
-
-```powershell
-# Run all tests (clean build + all tests, then start servers)
-Run
-
-# Run only E2E tests (clean build + E2E tests, then keep servers running)
-Run -TestProject E2E.Tests
-
-# Run specific E2E tests by name pattern
-Run -TestProject E2E.Tests -TestName UrlRouting
-```
-
-⚠️ **WARNING**: Direct `dotnet test` commands **WILL FAIL** because servers aren't running. Always use `Run` which handles server startup automatically.
-
-### Interactive Debugging with Playwright MCP
+## Interactive Debugging with Playwright MCP
 
 For investigating bugs or exploring UI behavior interactively:
 
 ```powershell
-# Start servers without running tests
-Run -WithoutTests
-
-# Then use Playwright MCP tools directly in GitHub Copilot Chat to:
-# - Navigate pages and inspect elements
-# - Take snapshots and screenshots
-# - Test interactions and verify behavior
-# - Reproduce bugs before writing tests
+Run -WithoutTests  # Start servers without running tests
 ```
 
-**When to use Playwright MCP**:
-
-- Faster than writing tests for initial exploration
-- More powerful than curl/wget for UI testing
-- Investigate bugs, test interactions, verify behavior interactively
-- Afterwards, write E2E tests that reproduce the debugged issues
+Then use Playwright MCP tools in GitHub Copilot Chat to navigate pages, take snapshots, test interactions, and verify behavior. Faster than writing tests for initial exploration.
 
 ## Test Architecture
 

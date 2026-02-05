@@ -114,11 +114,46 @@ function initFeatureFilters() {
     videosFilter.addEventListener('change', applyFilters);
 }
 
+/**
+ * Initialize expandable custom page badges on section cards
+ * Handles "+X more" buttons that reveal and replace with custom pages
+ */
+export function initExpandableBadges() {
+    const expandButtons = document.querySelectorAll('.badge-expandable[data-expand-target]');
+    if (!expandButtons) return;
+
+    expandButtons.forEach(button => {
+        // Skip if already initialized
+        if (button.dataset.initialized) return;
+        button.dataset.initialized = 'true';
+        
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const targetId = this.dataset.expandTarget;
+            const targetElement = document.getElementById(targetId);
+            
+            if (!targetElement) return;
+            
+            // Show the hidden custom pages
+            targetElement.hidden = false;
+            
+            // Remove the expand button (replace with badges permanently)
+            this.remove();
+        });
+    });
+}
+
 // Auto-initialize on DOMContentLoaded if loaded as a regular script
 // (backward compatibility, though we load via dynamic import now)
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCollapsibleCards);
+    document.addEventListener('DOMContentLoaded', () => {
+        initCollapsibleCards();
+        initExpandableBadges();
+    });
 } else {
     // DOM already loaded, initialize immediately
     initCollapsibleCards();
+    initExpandableBadges();
 }

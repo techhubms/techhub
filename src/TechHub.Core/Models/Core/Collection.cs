@@ -11,6 +11,12 @@ public record Collection
     public string Description { get; }
     public string DisplayName { get; }
     public bool IsCustom { get; }
+    
+    /// <summary>
+    /// Display order for custom pages (lower values appear first).
+    /// Only used when IsCustom=true. Defaults to 0.
+    /// </summary>
+    public int Order { get; }
 
     public Collection(
         string name,
@@ -18,7 +24,8 @@ public record Collection
         string url,
         string description,
         string displayName,
-        bool isCustom = false)
+        bool isCustom = false,
+        int order = 0)
     {
         // Validate all required properties
         if (string.IsNullOrWhiteSpace(name))
@@ -62,5 +69,6 @@ public record Collection
         Description = description;
         DisplayName = displayName;
         IsCustom = isCustom;
+        Order = order;
     }
 }

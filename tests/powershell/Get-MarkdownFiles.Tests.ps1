@@ -51,7 +51,7 @@ _site/
             "docs/AGENTS.md",
             
             # Guidelines files (should be excluded by default)
-            "collections/writing-style-guidelines.md",
+            "docs/writing-style-guidelines.md",
             
             # Regular docs files
             "docs/feature-spec.md",

@@ -32,6 +32,14 @@ public static class RssEndpoints
             .Produces(StatusCodes.Status200OK, contentType: "application/rss+xml")
             .Produces(StatusCodes.Status404NotFound);
 
+        // Collection-specific feed (within a section or across all sections)
+        group.MapGet("/{sectionName}/{collectionName}", GetCollectionFeed)
+            .WithName("GetCollectionRssFeed")
+            .WithSummary("Get RSS feed for a collection")
+            .WithDescription("Returns RSS 2.0 feed for content in the specified collection within a section (use 'all' for cross-section)")
+            .Produces(StatusCodes.Status200OK, contentType: "application/rss+xml")
+            .Produces(StatusCodes.Status404NotFound);
+
         return endpoints;
     }
 
@@ -95,6 +103,77 @@ public static class RssEndpoints
         ));
 
         var channel = await rssService.GenerateSectionFeedAsync(section, searchResult.Items);
+        var xml = rssService.SerializeToXml(channel);
+
+        return Results.Content(xml, "application/rss+xml; charset=utf-8");
+    }
+
+    /// <summary>
+    /// Gets RSS feed for a specific collection within a section (or across all sections if sectionName is "all")
+    /// </summary>
+    private static async Task<IResult> GetCollectionFeed(
+        string sectionName,
+        string collectionName,
+        IContentRepository contentRepository,
+        IRssService rssService)
+    {
+        // Validate section exists (unless "all")
+        if (!sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            var section = await contentRepository.GetSectionByNameAsync(sectionName);
+            if (section is null)
+            {
+                return Results.NotFound();
+            }
+        }
+
+        // Determine which sections to search
+        var sectionsToSearch = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
+            ? new[] { "all" }
+            : new[] { sectionName };
+
+        // Validate collection exists in the specified section(s)
+        var allSections = await contentRepository.GetAllSectionsAsync();
+        var matchingCollections = allSections
+            .Where(s => sectionName.Equals("all", StringComparison.OrdinalIgnoreCase) || 
+                       s.Name.Equals(sectionName, StringComparison.OrdinalIgnoreCase))
+            .SelectMany(s => s.Collections)
+            .Where(c => c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        if (matchingCollections.Count == 0)
+        {
+            return Results.NotFound();
+        }
+
+        // Use first matching collection for metadata
+        var collection = matchingCollections.First();
+
+        // Get content for this collection within the specified section(s)
+        var searchResult = await contentRepository.SearchAsync(new SearchRequest(
+            take: 50,
+            sections: sectionsToSearch,
+            collections: [collectionName],
+            tags: []
+        ));
+
+        // Create a virtual section for the feed
+        var feedTitle = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
+            ? collection.Title // e.g., "Videos"
+            : $"{allSections.First(s => s.Name.Equals(sectionName, StringComparison.OrdinalIgnoreCase)).Title} - {collection.Title}"; // e.g., "GitHub Copilot - Videos"
+
+        var feedDescription = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
+            ? collection.Description
+            : $"{collection.Description} in {allSections.First(s => s.Name.Equals(sectionName, StringComparison.OrdinalIgnoreCase)).Title}";
+
+        var virtualSection = new Core.Models.Section(
+            name: collectionName,
+            title: feedTitle,
+            description: feedDescription,
+            url: collection.Url,
+            collections: [collection]);
+
+        var channel = await rssService.GenerateSectionFeedAsync(virtualSection, searchResult.Items);
         var xml = rssService.SerializeToXml(channel);
 
         return Results.Content(xml, "application/rss+xml; charset=utf-8");

@@ -48,48 +48,6 @@ scripts/content-processing/functions/
 
 For complete implementation details, patterns, and best practices, see [scripts/AGENTS.md](../../scripts/AGENTS.md).
 
-## Running Tests
-
-**🚨 ALWAYS prefer the Run function over direct script execution.**
-
-See [README.md - Starting, Stopping and Testing](../../README.md#starting-stopping-and-testing-the-website) for complete documentation.
-
-### Using Run Function (Recommended)
-
-```powershell
-# All PowerShell tests only (fast - no .NET build)
-Run -TestProject powershell
-
-# PowerShell tests by name pattern
-Run -TestProject powershell -TestName "RSS"
-Run -TestProject powershell -TestName "FrontMatter"
-
-# All tests (PowerShell + .NET), then start servers
-Run
-
-# Skip all tests, start servers directly
-Run -WithoutTests
-```
-
-**Aliases**: The following are equivalent:
-
-- `Run -TestProject powershell`
-- `Run -TestProject pester`
-- `Run -TestProject scripts`
-
-### Test Filtering Options
-
-```powershell
-# Run tests matching a name pattern
-Run -TestProject powershell -TestName "RSS"
-Run -TestProject powershell -TestName "FrontMatter"
-Run -TestProject powershell -TestName "should convert basic"
-```
-
-### From VS Code
-
-Use the integrated terminal and run the Run function commands above. The test runner will automatically detect the DevContainer environment.
-
 ## Testing Framework
 
 **Framework**: Pester v5  

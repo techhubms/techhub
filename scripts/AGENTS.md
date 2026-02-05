@@ -56,13 +56,6 @@ You are a PowerShell development specialist working with the Tech Hub's automati
 - Content management → [collections/AGENTS.md](../collections/AGENTS.md)
 - Azure infrastructure → [infra/main.bicep](../infra/main.bicep)
 
-## Tech Stack
-
-- **PowerShell**: 7+ (cross-platform)
-- **Testing Framework**: Pester v5
-- **Key Modules**: HtmlToMarkdown, Az (Azure)
-- **AI Integration**: Azure AI Foundry
-
 ## Directory Structure
 
 ```text
@@ -425,3 +418,17 @@ param(
 - **Processed Entries**: `scripts/data/processed-entries.json`
 - **Skipped Entries**: `scripts/data/skipped-entries.json`
 - **RSS Cache**: `scripts/data/rss-cache/`
+
+## Related Documentation
+
+### Functional Documentation (docs/)
+
+- **[Content Processing](../docs/content-processing.md)** - RSS processing workflow and content creation
+- **[Frontmatter](../docs/frontmatter.md)** - Frontmatter schema for generated content
+- **[RSS Feeds](../docs/rss-feeds.md)** - RSS feed system overview
+
+### Implementation Guides (AGENTS.md)
+
+- **[Root AGENTS.md](../AGENTS.md)** - AI workflow, starting/stopping website, principles
+- **[tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md)** - Pester testing patterns for PowerShell
+- **[collections/AGENTS.md](../collections/AGENTS.md)** - Content management and file organization

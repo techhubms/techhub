@@ -70,10 +70,10 @@ Check domain-specific AGENTS.md files:
 
 Check docs/ directory:
 
-- [docs/api-specification.md](../docs/api-specification.md) - REST API contracts
-- [docs/content-management.md](../docs/content-management.md) - Content workflows
+- [docs/content-api.md](../docs/content-api.md) - REST API contracts
+- [docs/content-processing.md](../docs/content-processing.md) - Content workflows
 - [docs/rss-feeds.md](../docs/rss-feeds.md) - RSS feed specification
-- `docs/filtering-system.md` - **TO BE CREATED** (see specs/001-filtering-system for requirements)
+- [docs/filtering.md](../docs/filtering.md) - Content filtering system
 
 ## Questions?
 

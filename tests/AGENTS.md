@@ -11,40 +11,11 @@ You are a testing specialist for the Tech Hub .NET project. This directory conta
 
 **See Project-Specific Test Patterns**: Each test project has its own AGENTS.md file with detailed patterns and examples. This file provides shared testing principles and navigation.
 
-## Tech Stack
+## Database Strategy
 
-- **.NET**: Latest LTS runtime
-- **xUnit**: Unit and integration test framework
-- **Moq**: Mocking framework
-- **FluentAssertions**: Assertion library
-- **Microsoft.AspNetCore.Mvc.Testing**: API integration testing
-- **bUnit**: Blazor component testing
-- **Playwright .NET**: End-to-end testing
-- **Pester**: PowerShell script testing
-- **C#**: With nullable reference types enabled
+📖 **Full documentation**: See [docs/testing-strategy.md](../docs/testing-strategy.md#database-strategy) for database backends by test type.
 
-## Running Tests
-
-**ALWAYS refer to [README.md - Starting, Stopping and Testing](../README.md#starting-stopping-and-testing-the-website)** for complete instructions on:
-
-- Running all tests with `Run` (then keeps servers running)
-- Interactive debugging with `Run -WithoutTests` (skips all tests)
-- Using Playwright MCP tools for testing
-- Proper terminal management
-
-**Quick command reference** (see README.md for full details):
-
-```powershell
-Run                     # Run all tests, then keep servers running (default workflow)
-Run -WithoutTests       # Skip all tests, start servers (for interactive debugging)
-Run -TestProject Web.Tests  # Run only Web component tests, keep servers running
-Run -TestName SectionCard   # Run tests matching 'SectionCard', keep servers running
-```
-
-**⚠️ CRITICAL E2E TEST WARNING**:
-
-🚫 **NEVER run `dotnet test tests/TechHub.E2E.Tests` directly** - it **WILL FAIL** without servers running!
-✅ **ALWAYS use `Run -TestProject E2E.Tests`** which handles server startup and testing automatically.
+**Summary**: Integration tests use SQLite in-memory for speed. E2E tests use SQLite on disk by default or PostgreSQL via docker-compose. Production uses Azure PostgreSQL.
 
 ## Core Testing Rules
 
@@ -675,7 +646,14 @@ Shared configuration for all test projects (package versions, nullable reference
 // See TechHub.Api.Tests/AGENTS.md for WebApplicationFactory configuration
 ```
 
-## Additional Resources
+## Related Documentation
+
+### Functional Documentation (docs/)
+
+- **[Testing Strategy](../docs/testing-strategy.md)** - Testing diamond, layer definitions, database strategy
+- **[Database](../docs/database.md)** - Database providers for different test scenarios
+
+### External Resources
 
 - [xUnit Documentation](https://xunit.net/)
 - [FluentAssertions Documentation](https://fluentassertions.com/)

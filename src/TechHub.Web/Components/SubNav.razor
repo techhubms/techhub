@@ -50,7 +50,10 @@ else
     Section?.Collections?.Where(c => !c.IsCustom) ?? Enumerable.Empty<Collection>();
 
     private IEnumerable<Collection> CustomPages =>
-    Section?.Collections?.Where(c => c.IsCustom) ?? Enumerable.Empty<Collection>();
+    Section?.Collections?
+        .Where(c => c.IsCustom)
+        .OrderBy(c => c.Order)
+        .ThenBy(c => c.Title) ?? Enumerable.Empty<Collection>();
 
     private bool IsActive(string url)
     {

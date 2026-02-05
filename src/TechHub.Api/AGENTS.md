@@ -36,6 +36,16 @@ TechHub.Api/
 └── TechHub.Api.csproj           # Project file
 ```
 
+## RESTful Design Principles
+
+The API follows RESTful conventions:
+
+1. **Resource hierarchy**: `/sections/{sectionName}/collections/{collectionName}/items`
+2. **Consistent naming**: Both sections and collections use human-readable names (slugs)
+3. **HTTP methods**: GET for retrieval
+4. **Status codes**: 200 OK for success, 404 Not Found for missing resources
+5. **Nested routes**: Resources are organized hierarchically to match domain model
+
 ## Minimal API Patterns
 
 ### Endpoint Organization
@@ -193,6 +203,22 @@ See `ContentEndpoints.cs` for implementation.
 **Frontend Proxies**: See [src/TechHub.Web/AGENTS.md](../TechHub.Web/AGENTS.md) for user-facing RSS feed URLs.
 
 ## Related Documentation
+
+### Functional Documentation (docs/)
+
+- **[Content API](../../docs/content-api.md)** - REST API contracts and endpoint specifications
+- **[RSS Feeds](../../docs/rss-feeds.md)** - RSS feed system and available feeds
+- **[Filtering](../../docs/filtering.md)** - Tag filtering system and tag cloud
+- **[Custom Pages](../../docs/custom-pages.md)** - Custom page API endpoints
+- **[Health Checks](../../docs/health-checks.md)** - Health check endpoints
+
+### Implementation Guides (AGENTS.md)
+
+- **[src/AGENTS.md](../AGENTS.md)** - Shared .NET patterns and code quality standards
+- **[src/TechHub.Core/AGENTS.md](../TechHub.Core/AGENTS.md)** - Domain models these endpoints serve
+- **[src/TechHub.Infrastructure/AGENTS.md](../TechHub.Infrastructure/AGENTS.md)** - Repository implementations
+- **[tests/TechHub.Api.Tests/AGENTS.md](../../tests/TechHub.Api.Tests/AGENTS.md)** - API integration testing patterns
+- **[Root AGENTS.md](../../AGENTS.md)** - Complete workflow and principles
 
 ---
 

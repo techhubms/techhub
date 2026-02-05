@@ -35,10 +35,15 @@ foreach ($doc in $rootDocs) {
 Write-Host "`nFunctional Documentation:" -ForegroundColor Cyan
 $functionalDocs = @(
     "docs/AGENTS.md",
-    "docs/api-specification.md",
-    "docs/content-management.md",
+    "docs/content-api.md",
+    "docs/content-processing.md",
+    "docs/custom-pages.md",
     "docs/rss-feeds.md",
-    "docs/toc-component.md"
+    "docs/toc-component.md",
+    "docs/filtering.md",
+    "docs/database.md",
+    "docs/health-checks.md",
+    "docs/architecture.md"
 )
 foreach ($doc in $functionalDocs) {
     $path = Join-Path $root $doc
@@ -80,7 +85,7 @@ foreach ($doc in $domainDocs) {
 }
 
 Write-Host "`nContent Guidelines:" -ForegroundColor Cyan
-$contentDocs = @("collections/writing-style-guidelines.md")
+$contentDocs = @("docs/writing-style-guidelines.md")
 foreach ($doc in $contentDocs) {
     $path = Join-Path $root $doc
     if (Test-Path $path) {

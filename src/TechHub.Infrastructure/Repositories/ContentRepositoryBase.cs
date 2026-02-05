@@ -70,7 +70,14 @@ public abstract class ContentRepositoryBase : IContentRepository
                 var displayName = collectionDisplayNames.TryGetValue(kvp.Key.ToLowerInvariant(), out var name)
                     ? name
                     : kvp.Value.Title;
-                return new Collection(kvp.Key, kvp.Value.Title, kvp.Value.Url, kvp.Value.Description, displayName, kvp.Value.Custom);
+                return new Collection(
+                    kvp.Key, 
+                    kvp.Value.Title, 
+                    kvp.Value.Url, 
+                    kvp.Value.Description, 
+                   displayName, 
+                    kvp.Value.Custom,
+                    kvp.Value.Order);
             })
             .ToList();
 

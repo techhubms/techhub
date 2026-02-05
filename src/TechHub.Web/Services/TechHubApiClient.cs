@@ -426,23 +426,23 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get RSS feed for a specific collection
+    /// Get RSS feed for a specific collection within a section (or across all sections)
     /// </summary>
-    public virtual async Task<string> GetCollectionRssFeedAsync(string collectionName, CancellationToken cancellationToken = default)
+    public virtual async Task<string> GetCollectionRssFeedAsync(string collectionName, string sectionName = "all", CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogDebug("Fetching RSS feed for collection: {CollectionName}", collectionName);
-            var response = await _httpClient.GetAsync(new Uri($"/api/rss/collection/{collectionName}", UriKind.Relative), cancellationToken);
+            _logger.LogDebug("Fetching RSS feed for collection: {CollectionName} in section: {SectionName}", collectionName, sectionName);
+            var response = await _httpClient.GetAsync(new Uri($"/api/rss/{sectionName}/{collectionName}", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
 
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);
-            _logger.LogDebug("Successfully fetched RSS feed for collection: {CollectionName}", collectionName);
+            _logger.LogDebug("Successfully fetched RSS feed for collection: {CollectionName} in section: {SectionName}", collectionName, sectionName);
             return xml;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch RSS feed for collection {CollectionName}", collectionName);
+            _logger.LogError(ex, "Failed to fetch RSS feed for collection {CollectionName} in section {SectionName}", collectionName, sectionName);
             throw;
         }
     }

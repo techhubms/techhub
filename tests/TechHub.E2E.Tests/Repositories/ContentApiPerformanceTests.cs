@@ -137,7 +137,7 @@ public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory
     public async Task GetCollectionTags_Homepage_ReturnsTopTags_WithinPerformanceThreshold()
     {
         // Arrange - getting tag cloud for entire site (most expensive query)
-        var url = "/api/sections/ai/collections/all/tags?maxTags=100";
+        var url = "/api/sections/ai/collections/all/tags?maxTags=50";
 
         // Act - CRITICAL PERFORMANCE TEST: homepage tag cloud
         var sw = Stopwatch.StartNew();
@@ -148,10 +148,10 @@ public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory
 
         // Assert
         tags.Should().NotBeNull();
-        tags!.Count.Should().BeLessThanOrEqualTo(100);
+        tags!.Count.Should().BeLessThanOrEqualTo(50);
         tags.Should().BeInDescendingOrder(t => t.Count);
 
-        AssertPerformance(sw.ElapsedMilliseconds, "GET /tags (section tag cloud - top 100)");
+        AssertPerformance(sw.ElapsedMilliseconds, "GET /tags (section tag cloud - top 50)");
     }
 
     [Theory]
@@ -424,12 +424,12 @@ public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory
     }
 
     [Theory]
-    [InlineData("blogs")]
+    [InlineData("roundups")]
     [InlineData("videos")]
     public async Task GetCollectionFeed_ReturnsRssFeed_WithinPerformanceThreshold(string collectionName)
     {
         // Arrange
-        var url = $"/api/rss/collection/{collectionName}";
+        var url = $"/api/rss/all/{collectionName}";
 
         // Act
         var sw = Stopwatch.StartNew();

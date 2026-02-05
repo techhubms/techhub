@@ -70,24 +70,6 @@ This directory contains **unit and integration tests** for the Tech Hub Infrastr
 
 See actual tests for implementation examples.
 
-## Running Tests
-
-**Use the Run function for all test execution** (see [README.md - Starting, Stopping and Testing](../../README.md#starting-stopping-and-testing-the-website)):
-
-```powershell
-# Run all tests (recommended)
-Run
-
-# Run only Infrastructure integration tests
-Run -TestProject Infrastructure.Tests
-
-# Run specific test class
-Run -TestName FrontMatterParser
-
-# Or run repository tests only
-Run -TestName Repository
-```
-
 ## Best Practices
 
 1. **Use real files** from `collections/` directory (not mocked)

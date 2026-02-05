@@ -2,6 +2,11 @@
 
 This document describes how tag filtering works in Tech Hub, which is one of the most crucial features of the website.
 
+**Related Documentation**:
+
+- [Content API](content-api.md) - REST API endpoints for content retrieval
+- [Database Configuration](database.md) - Database providers that support filtering
+
 ## Tag Storage and Expansion
 
 ### How Tags Are Stored
@@ -127,65 +132,145 @@ Search: tags=ai,azure
 Results: article-1 ← Single result
 ```
 
-## API Examples
+## Content Filtering API
 
-### Single Tag Filter
+### GET /api/sections/{sectionName}/collections/{collectionName}/items
 
-```bash
-# Find all items tagged with "ai"
-curl "https://localhost:5001/api/sections/all/collections/all/items?tags=ai"
+This is the primary endpoint for content retrieval and filtering. Using `all` for both section and collection (`/api/sections/all/collections/all/items`) allows filtering content across the entire site.
 
-# Find items with exact tag "azure ai foundry"
-curl "https://localhost:5001/api/sections/github-copilot/collections/all/items?tags=azure%20ai%20foundry"
-```
+**Query Parameters**:
 
-### Multiple Tag Filter (AND Logic)
+- `q` (optional): Text search query (searches title, description, tags)
+- `tags` (optional): Comma-separated tags - content must have ALL tags (AND logic)
+- `subcollection` (optional): Filter by subcollection
+- `lastDays` (optional): Filter to content from last N days
+- `take` (optional): Number of items to return (default: 20, max: 50)
+- `skip` (optional): Number of items to skip (for pagination)
 
-```bash
-# Find items with BOTH "ai" AND "azure"
-curl "https://localhost:5001/api/sections/all/collections/all/items?tags=ai,azure"
+**Response**: `200 OK`
 
-# Find items with all three tags
-curl "https://localhost:5001/api/sections/all/collections/all/items?tags=copilot,azure,devops"
-```
+**Examples**:
 
-### Combined with Other Filters
+Filter by sections (use specific section instead of 'all'):
 
 ```bash
-# Tags + Section + Collection
-curl "https://localhost:5001/api/sections/github-copilot/collections/videos/items?tags=ai"
-
-# Tags + Date Range
-curl "https://localhost:5001/api/sections/all/collections/all/items?tags=ai&lastDays=30"
-
-# Tags + Full-Text Search
-curl "https://localhost:5001/api/sections/all/collections/all/items?tags=ai&q=copilot"
+curl -k "https://localhost:5001/api/sections/ai/collections/all/items"
 ```
 
-## Frontend Integration
+Filter by collections (use specific collection instead of 'all'):
 
-The frontend tag filter allows users to search for tags by typing in a text box. The typed value is sent as-is to the API:
+```bash
+curl -k "https://localhost:5001/api/sections/all/collections/news/items"
+```
 
-- User types: "ai" → API receives `tags=ai`
-- User types: "azure ai foundry" → API receives `tags=azure%20ai%20foundry`
-- User selects multiple tags: "ai", "azure" → API receives `tags=ai,azure`
+Global text search:
 
-## Performance Characteristics
+```bash
+curl -k "https://localhost:5001/api/sections/all/collections/all/items?q=blazor"
+```
 
-- **Tag expansion**: Indexed for fast lookups
-- **Bitmask filtering**: Very fast bitwise operations
-- **GROUP BY**: Efficient deduplication
-- **Date ordering**: Uses MAX(date_epoch) with index
+Filter by tags (AND logic):
 
-**Expected Performance**:
+```bash
+curl -k "https://localhost:5001/api/sections/all/collections/all/items?tags=copilot,azure"
+```
 
-- Tag-only queries: < 50ms
-- Tag + Section + Collection: < 100ms
-- Tag + FTS search: < 1000ms
+Complex multi-criteria filter:
+
+```bash
+curl -k "https://localhost:5001/api/sections/ai/collections/videos/items?tags=copilot&lastDays=30"
+```
+
+## Tag Statistics API
+
+### GET /api/sections/{sectionName}/collections/{collectionName}/tags
+
+Get a tag cloud with quantile-based sizing for visual representation. Using `all` allows retrieving tag stats for the entire site.
+
+**Parameters**:
+
+- `maxTags` (query, optional): Maximum number of tags (default: 20)
+- `minUses` (query, optional): Minimum tag usage count (default: 5)
+- `lastDays` (query, optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`, set to `0` to disable default date filter)
+
+**Response**:
+
+```json
+[
+  { "tag": "ai", "count": 152, "size": 2 },
+  { "tag": "github-copilot", "count": 89, "size": 2 },
+  { "tag": "azure", "count": 67, "size": 1 }
+]
+```
+
+### Tag Size Algorithm (Quantile-Based)
+
+Tag sizes are calculated using quantile distribution to ensure consistent visual representation across varying tag counts:
+
+| Quantile | Size Value | CSS Class | Description |
+|----------|------------|-----------|-------------|
+| Top 25% | 2 | `tag-size-large` | Most frequently used tags |
+| Middle 50% | 1 | `tag-size-medium` | Moderately used tags |
+| Bottom 25% | 0 | `tag-size-small` | Less frequently used tags |
+
+**Why Quantile Sizing?**
+
+- Ensures even distribution of sizes regardless of actual count values
+- Prevents a few high-count tags from dominating the visual
+- Adapts automatically to different sections/collections with varying tag frequencies
+
+### Section/Collection Title Exclusion
+
+The tag cloud automatically excludes section and collection titles from the tag list. For example, when viewing the "AI" section, the "AI" tag is filtered out since it's redundant with the section context.
+
+## Tag Cloud UI Behavior
+
+The `SidebarTagCloud` component provides interactive tag filtering with toggle behavior.
+
+### Visual Active State
+
+Selected tags are highlighted with the `.selected` CSS class:
+
+```css
+.tag-cloud-item.selected {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+}
+
+.tag-cloud-item.selected:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+}
+```
+
+### Toggle Behavior
+
+- Clicking a tag toggles it on/off (add to filter or remove from filter)
+- Multiple tags can be selected (AND logic applied)
+- Tags are stored in URL query parameter `?tags=tag1,tag2,tag3`
+- Tags are automatically deduplicated and normalized (lowercased) when parsing from URL
+- Tag comparison uses `StringComparer.OrdinalIgnoreCase`
+
+### URL State Management
+
+- Store selected tags in `HashSet<string>` with `StringComparer.OrdinalIgnoreCase`
+- Initialize from URL with deduplication and normalization (`.ToLowerInvariant()`)
+- Toggle adds/removes tags from set
+- Update URL after each toggle using `NavigationManager`
+
+### Page Integration
+
+- Use `[SupplyParameterFromQuery(Name = "tags")]` for URL binding
+- Parse comma-separated tags with `Uri.UnescapeDataString()`
+- Normalize and deduplicate on parse
+- Use `Distinct(StringComparer.OrdinalIgnoreCase)`
 
 ## Testing
 
-See [tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs](../tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs) for comprehensive test coverage of tag filtering behavior.
+See [tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs](../tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs) for repository level tests and [SectionsEndpointsTests.cs](../tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs) for integration tests.
+
+For UI behavior tests, see [tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs](../tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs).
 
 ## Future Enhancements (Not Currently Implemented)
 
@@ -193,3 +278,6 @@ See [tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs](../te
 2. **Fuzzy matching**: Allow typo tolerance in tag searches
 3. **Tag synonyms**: Map related tags (e.g., "ML" → "Machine Learning")
 4. **Tag hierarchy**: Support parent-child tag relationships
+5. **Pagination**: `?page=1&pageSize=50` for large result sets
+6. **Sorting**: `?sortBy=date&order=desc` for custom ordering
+7. **Tag filtering modes**: `?tagMatch=any` for OR logic (currently AND only)

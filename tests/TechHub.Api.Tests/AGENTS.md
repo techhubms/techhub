@@ -74,21 +74,6 @@ Test classes use `IClassFixture<TechHubApiFactory>` to share the factory across 
 
 See actual tests in `Endpoints/` for implementation examples.
 
-## Running Tests
-
-**Use the Run function for all test execution** (see [README.md - Starting, Stopping and Testing](../../README.md#starting-stopping-and-testing-the-website)):
-
-```powershell
-# Run all tests (recommended)
-Run
-
-# Run only API integration tests
-Run -TestProject Api.Tests
-
-# Run specific test class
-Run -TestName SectionsEndpoints
-```
-
 ## Best Practices
 
 1. **Use FluentAssertions** for readable assertions
