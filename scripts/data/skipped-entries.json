@@ -11811,5 +11811,11 @@
     "collection": "news",
     "timestamp": "2026-02-05 16:15:17 +00:00",
     "reason": "No categories found: No Microsoft technical category qualifies. While Microsoft is a technology partner, the article does not detail any Microsoft-specific platforms, development, AI, Azure, or technical implementation. Content focuses on healthcare infrastructure, precision medicine, and ethical data sharing rather than Microsoft developer, cloud, coding, or security solutions. Exclusion is per the rules requiring ≥40% substantive Microsoft technology content or clear technical focus on Microsoft platforms. General healthcare innovation without Microsoft technology implementation details does not qualify."
+  },
+  {
+    "timestamp": "2026-02-05 17:18:40 +00:00",
+    "reason": "No categories found: Content excluded due to the 'Biographical Focus' generic exclusion rule. The description centers on Anders Hejlsberg's personal story and early programming experiences, not on technical implementation, Microsoft-specific technologies, or developer guidance. There is no substantive technical tutorial, educational content, or direct coverage of Microsoft platform products—only career background and inspiration. This triggers the generic exclusion rule for biographical content, so no categories are assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/CRx7eQNPW88"
   }
 ]

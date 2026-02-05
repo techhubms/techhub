@@ -25258,5 +25258,17 @@
     "collection": "community",
     "timestamp": "2026-02-05 16:16:11 +00:00",
     "reason": "Succesfully added: Assigned AI category because the article deeply focuses on practices, evaluation, risk management, and observability specific to generative AI, as well as the responsible operation of AI solutions (AI rules 1, 4, 5). Assigned Azure because Microsoft Foundry is an Azure service, and the content discusses its integrations with Azure Monitor and Application Insights (Azure rule 1, 4). Did not assign ML or Coding because the post is not about hands-on ML development or code-level implementations. No DevOps category, since this article, while mentioning operational aspects (GenAIOps), concentrates on evaluation and observability rather than software delivery pipelines or developer workflow methodology. Security was excluded as the main technical depth centers on observability and evaluation for trust, not direct security implementation, though it discusses safety and risk in context. No generic exclusion rules applied as the content is technical, English, and meets word threshold."
+  },
+  {
+    "timestamp": "2026-02-05 17:18:07 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content is focused on the use of AI-driven agents automating judgment-heavy engineering tasks (AI rules 1, 4, 5). Assigned DevOps because the article explores new patterns for CI/CD workflows, agentic automation, and operational improvements within development pipelines (DevOps rules 1, 5, 6, 11). Assigned Coding because it addresses code-centric workflows such as code review, test automation, performance optimization, and documentation updates via agentic processes (Coding 4, 5). Did not assign Azure, ML, Security, or GitHub Copilot categories as these topics were not explicitly or centrally covered. No exclusions triggered because the article is technical, implementation-focused, written in English, and meant for developers.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/"
+  },
+  {
+    "timestamp": "2026-02-05 17:19:01 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category due to the focus on AI integration within the GitHub Copilot CLI (AI inclusion rule 2 and 5). Assigned 'GitHub Copilot' category because the content is centered on GitHub Copilot CLI (GitHub Copilot inclusion rules 1 and 2). Excluded 'Coding', 'Azure', 'DevOps', 'ML', and 'Security' because the provided description and tags do not offer evidence of deep coding tutorials, Azure services integration, DevOps pipelines, advanced ML workloads, or security-focused content. The video centers on the AI-powered developer tooling aspect, per the description.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=GeH0PWdl_Hc"
   }
 ]
