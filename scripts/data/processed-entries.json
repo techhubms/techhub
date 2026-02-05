@@ -25186,5 +25186,11 @@
     "collection": "community",
     "timestamp": "2026-02-05 00:08:55 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/join-microsoft-as-we-share-more-on-maia-200-in-the-bay-area/ba-p/4492370"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/enhanced-storage-resiliency-with-azure-netapp-files-elastic-zone-redundant-service/",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the entire news article focuses on a newly released Azure service (Azure NetApp Files Elastic Zone-Redundant Storage) and covers in-depth Azure-specific features and use cases (Azure inclusion rule 1, 4, 5, and 6). Did not assign ML, Coding, AI, DevOps, or Security as the content centers on storage infrastructure, operational resiliency, and enterprise data management—not coding, AI/ML, DevOps workflows, or security posture. No generic exclusions apply as this is a technical product announcement, not sales, biographical, non-English, or business strategy content.",
+    "collection": "news",
+    "timestamp": "2026-02-05 04:33:21 +00:00"
   }
 ]

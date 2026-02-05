@@ -11799,5 +11799,11 @@
     "collection": "videos",
     "reason": "No categories found: No categories assigned because of multiple triggers in the generic exclusion rules. The content ('Cerence AI transforming in-car experience') focuses on an end-user/business scenario—integrating AI-powered assistants and Office 365 apps into vehicles. It is primarily about business productivity and user experience (embedding Office 365 apps into cars), which is explicitly excluded under the 'Non-Development Microsoft Products' and 'Business Strategy/Executive Content' exclusions. There is no substantive technical detail, developer tool usage, or technical implementation with Microsoft's developer-focused AI/ML/Cloud services. The mention of hybrid AI models and Office 365 integration is aimed at business/productivity rather than coding, development, or technical architecture, so it does not meet inclusion requirements for 'AI', 'Azure', 'ML', or any other technical categories.",
     "timestamp": "2026-02-04 23:06:26 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=G_l2-r_6tYE",
+    "collection": "videos",
+    "timestamp": "2026-02-05 01:32:42 +00:00",
+    "reason": "No categories found: All available information (title, description, tags) centers around the business impact, funding (Series C), and general use of AI-powered design tools in engineering domains such as automotive and aerospace, as well as collaboration with OEMs. There is no substantive indication of technical implementation, Microsoft platform integration, development methodology, or product names. 'AI-powered design tools' is discussed in the context of productivity and business transformation, not in developer implementation terms. The video is likely executive/business-focused and fails inclusion for any technical category. No Microsoft developer platform appears central in the title, description, or tags. This triggers the 'Business Strategy and Executive Content' generic exclusion rule as well as 'Business Productivity Tools (exclude)' under Copilot and AI rules. Therefore, no categories are assigned."
   }
 ]
