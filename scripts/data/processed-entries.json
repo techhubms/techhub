@@ -25222,5 +25222,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the entire content is about migrating Azure Container Registry (ACR) and involves various Azure services such as Azure AD tenants, Azure subscriptions, Azure VMs, and networks (Azure rule 1, 2, 4, 5). DevOps category is included because this is an infrastructure/process migration, requiring CI/CD pipeline and configuration practices, PowerShell scripting, automation, and orchestrating resources (DevOps rule 1, 6, 9). Coding, AI, ML, Security, and GitHub Copilot categories do not apply as the content does not focus on software development, AI/ML, or security engineering, nor does it mention GitHub Copilot or code-specific practices.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/aks-tenant-migration-considerations-and-approach/ba-p/4415198"
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/updates/v1_110",
+    "collection": "news",
+    "timestamp": "2026-02-05 12:07:59 +00:00",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content covers features, improvements, and technical updates in Visual Studio Code (Coding rule 5: Microsoft development tools). There is no direct reference to DevOps, AI, Azure, ML, or Security content, and the focus is on development environment enhancements. No generic exclusion rules apply, as this is not biographical, non-English, a sales pitch, or business/management content."
   }
 ]
