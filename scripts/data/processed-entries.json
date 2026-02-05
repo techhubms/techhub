@@ -25180,5 +25180,11 @@
     "collection": "news",
     "reason": "Succesfully added: Included both 'AI' and 'GitHub Copilot' categories. The content addresses improvements to GitHub Copilot's AI model selection and enablement, specifically for developers (AI Rule 2 and GitHub Copilot rules 1-4). No generic exclusion rules apply, and this is not about Microsoft 365 Copilot or a business productivity tool (per Copilot Product Distinction). The main focus is on the developer experience with Copilot's AI models, fully matching the inclusion criteria.",
     "timestamp": "2026-02-04 23:05:51 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content centers on a new AI inference accelerator (Maia 200) developed by Microsoft, fulfilling AI Category rule 1. Assigned Azure category because Maia 200 is presented as foundational to Azure’s AI infrastructure and ecosystem, satisfying Azure inclusion rule 1. Did not assign Coding, DevOps, ML, Security, or GitHub Copilot because the content does not cover programming, DevOps practices, ML workflows, security technologies, or developer tool usage—it focuses on hardware innovation and infrastructure for supporting AI workloads. The content is primarily an announcement but provides sufficient technical and event information to qualify under the predefined inclusion rules.",
+    "collection": "community",
+    "timestamp": "2026-02-05 00:08:55 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/join-microsoft-as-we-share-more-on-maia-200-in-the-bay-area/ba-p/4492370"
   }
 ]
