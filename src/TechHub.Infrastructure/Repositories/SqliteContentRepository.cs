@@ -49,6 +49,10 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
         // This reduces FTS search from 4000+ items to potentially just 10-20
         if (hasTags)
         {
+            // PERFORMANCE: Add take/skip BEFORE building subquery so they're applied there
+            parameters.Add("take", request.Take);
+            parameters.Add("skip", request.Skip);
+            
             var tagsQuery = BuildTagsTableQuery(request, parameters);
 
             sql.Append($@"
@@ -82,10 +86,10 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
                 parameters.Add("query", request.Query);
             }
 
+            // Outer query ORDER BY ensures correct order from content_items.date_epoch
+            // Subquery already limited to top N results
             sql.Append(hasQuery ? " ORDER BY bm25(content_fts)" : " ORDER BY c.date_epoch DESC");
-            sql.Append(" LIMIT @take OFFSET @skip");
-            parameters.Add("take", request.Take);
-            parameters.Add("skip", request.Skip);
+            // Note: No LIMIT here - already applied in subquery for better performance
         }
         else
         {
@@ -125,8 +129,17 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
 
             if (hasCollections)
             {
-                whereClauses.Add("c.collection_name IN @collections");
-                parameters.Add("collections", request.Collections!.Select(c => c.ToLowerInvariant().Trim()).ToList());
+                // Optimization: Use equality for single collection, IN for multiple
+                if (request.Collections!.Count == 1)
+                {
+                    whereClauses.Add("c.collection_name = @collection");
+                    parameters.Add("collection", request.Collections[0].ToLowerInvariant().Trim());
+                }
+                else
+                {
+                    whereClauses.Add("c.collection_name IN @collections");
+                    parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
+                }
             }
 
             if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
@@ -232,7 +245,15 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
             if (request.Collections != null && request.Collections.Count > 0 && 
                 !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
             {
-                sql.Append(" AND collection_name IN @collections");
+                // Match parameter naming from BuildTagsTableQuery
+                if (request.Collections.Count == 1)
+                {
+                    sql.Append(" AND collection_name = @collection");
+                }
+                else
+                {
+                    sql.Append(" AND collection_name IN @collections");
+                }
             }
 
             if (request.DateFrom.HasValue)
@@ -286,7 +307,15 @@ public class SqliteContentRepository : DatabaseContentRepositoryBase
         if (request.Collections != null && request.Collections.Count > 0 && 
             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
-            whereClauses.Add("c.collection_name IN @collections");
+            // Match parameter naming from BuildTagsTableQuery and SearchInternalAsync
+            if (request.Collections.Count == 1)
+            {
+                whereClauses.Add("c.collection_name = @collection");
+            }
+            else
+            {
+                whereClauses.Add("c.collection_name IN @collections");
+            }
         }
 
         if (request.DateFrom.HasValue)

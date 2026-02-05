@@ -113,6 +113,43 @@ Use only when the component **must not render until SignalR is established**:
 
 **Warning**: Components with `prerender: false` will show nothing during SSR. This causes layout shift and poor user experience.
 
+## JavaScript Interop Disposal
+
+Components using JavaScript interop (via `IJSObjectReference`) must handle disposal safely to avoid errors when Blazor Server circuits disconnect.
+
+**Problem**: When users navigate away, close the browser, or experience network issues, the SignalR circuit disconnects. If `DisposeAsync()` is called on a JS module reference after disconnection, it throws `JSDisconnectedException`, which gets logged as an unhandled error.
+
+**Solution**: Wrap ALL JavaScript interop disposal calls in try-catch blocks:
+
+```csharp
+public async ValueTask DisposeAsync()
+{
+    if (jsModule != null)
+    {
+        try
+        {
+            // Both cleanup calls and disposal can fail after circuit disconnect
+            await jsModule.InvokeVoidAsync("dispose");
+            await jsModule.DisposeAsync();
+        }
+        catch
+        {
+            // Ignore disposal errors - circuit may be disconnected
+        }
+    }
+
+    dotNetRef?.Dispose();
+    GC.SuppressFinalize(this);
+}
+```
+
+**Key Points**:
+
+- Catch exceptions from BOTH `InvokeVoidAsync()` AND `DisposeAsync()`
+- Circuit disconnections are normal (navigation, browser close, network issues)
+- Swallowing these specific disposal exceptions is safe and expected
+- See [ContentItemsGrid.razor](../src/TechHub.Web/Components/ContentItemsGrid.razor) for a complete example
+
 ## SignalR Message Size Considerations
 
 When using `prerender: true`, the component's state is serialized and sent over SignalR during hydration. Large prerendered content can exceed SignalR's default 32KB message limit.

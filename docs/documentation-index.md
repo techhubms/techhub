@@ -307,6 +307,7 @@ This index maps the structure of all documentation files in the project.
     - Static SSR (No Render Mode Attribute)
     - Interactive Server with Prerender
     - Interactive Server without Prerender (Rare)
+  - JavaScript Interop Disposal
   - SignalR Message Size Considerations
   - Current Component Configuration
   - Testing Interactive Components

@@ -2,6 +2,7 @@ using Bunit;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.JSInterop;
 using Moq;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
@@ -165,5 +166,21 @@ public class ContentItemsGridTests : BunitContext
             var h1 = cut.Find("h1.page-h1");
             h1.TextContent.Should().Be("Browse All News");
         });
+    }
+
+    [Fact]
+    public async Task ContentItemsGrid_DisposeAsync_DoesNotThrow()
+    {
+        // Arrange
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news"));
+
+        // Wait for component to initialize
+        cut.WaitForAssertion(() => cut.Find("h1.page-h1").TextContent.Should().NotBeNullOrEmpty(), timeout: TimeSpan.FromSeconds(5));
+
+        // Act & Assert - Disposal should not throw
+        var disposeAction = async () => await cut.Instance.DisposeAsync();
+        await disposeAction.Should().NotThrowAsync("disposal should always be safe to call");
     }
 }

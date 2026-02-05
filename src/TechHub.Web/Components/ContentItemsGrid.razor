@@ -356,13 +356,12 @@
             try
             {
                 await scrollModule.InvokeVoidAsync("dispose");
+                await scrollModule.DisposeAsync();
             }
             catch
             {
-                // Ignore disposal errors during navigation
+                // Ignore disposal errors during navigation or circuit disconnection
             }
-
-            await scrollModule.DisposeAsync();
         }
 
         dotNetRef?.Dispose();

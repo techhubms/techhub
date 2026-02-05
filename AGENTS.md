@@ -84,7 +84,7 @@
      - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - The same for this one, if you edited the web project
      - [docs/AGENTS.md](docs/AGENTS.md) - If you changed functionality or implemented certain requirements, make sure to read this to understand where and how you need to document this
      - etc
-   - Finally review the [docs/documentation-index.md](docs/documentation-index.md) to find out which files you need to read to understand the functionality of the website. This is critical and you need to read the docs that are mentioned to prevent mistakes. The index file is less than 1000 lines long, so read it all to get a clear picture on what additional documentation to read.
+   - Critically and finally read the ENTIRE [docs/documentation-index.md](docs/documentation-index.md) file to find out what documentation you need to read to understand the functionality of the website. This is critical and you need to read these docs to prevent mistakes.
 
 2. Scan the code:
    - Use `read_file` to examine relevant files

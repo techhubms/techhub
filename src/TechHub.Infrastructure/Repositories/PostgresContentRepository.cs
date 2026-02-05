@@ -48,6 +48,10 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
         // This reduces tsvector search from 4000+ items to potentially just 10-20
         if (hasTags)
         {
+            // PERFORMANCE: Add take/skip BEFORE building subquery so they're applied there
+            parameters.Add("take", request.Take);
+            parameters.Add("skip", request.Skip);
+            
             var tagsQuery = BuildTagsTableQuery(request, parameters);
 
             sql.Append($@"
@@ -77,9 +81,7 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
                 sql.Append(" ORDER BY c.date_epoch DESC");
             }
 
-            sql.Append(" LIMIT @take OFFSET @skip");
-            parameters.Add("take", request.Take);
-            parameters.Add("skip", request.Skip);
+            // Note: No LIMIT here - already applied in subquery for better performance
         }
         else
         {
@@ -113,8 +115,18 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
 
             if (hasCollections)
             {
-                whereClauses.Add("c.collection_name = ANY(@collections)");
-                parameters.Add("collections", request.Collections!.Select(c => c.ToLowerInvariant().Trim()).ToArray());
+                // Optimization: Use equality for single collection, ANY for multiple
+                // Must match parameter naming from BuildTagsTableQuery
+                if (request.Collections!.Count == 1)
+                {
+                    whereClauses.Add("c.collection_name = @collection");
+                    parameters.Add("collection", request.Collections[0].ToLowerInvariant().Trim());
+                }
+                else
+                {
+                    whereClauses.Add("c.collection_name = ANY(@collections)");
+                    parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToArray());
+                }
             }
 
             if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
@@ -280,7 +292,15 @@ public class PostgresContentRepository : DatabaseContentRepositoryBase
         if (request.Collections != null && request.Collections.Count > 0 && 
             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
-            countSql.Append(" AND c.collection_name = ANY(@collections)");
+            // Match parameter naming from BuildTagsTableQuery
+            if (request.Collections.Count == 1)
+            {
+                countSql.Append(" AND c.collection_name = @collection");
+            }
+            else
+            {
+                countSql.Append(" AND c.collection_name = ANY(@collections)");
+            }
         }
 
         if (request.DateFrom.HasValue)

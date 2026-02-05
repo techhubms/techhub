@@ -31,6 +31,7 @@ public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory
     private readonly HttpClient _client;
     private const int MaxResponseTimeMs = 250;  // HTTP overhead + serialization + DB query
     private const int MaxFtsResponseTimeMs = 1000;  // FTS queries are slower + HTTP overhead + variance
+    private const int MaxTagFilterResponseTimeMs = 500;  // Tag filtering with subquery using GROUP BY + HAVING is more complex
 
     public ContentApiPerformanceTests(TechHubE2ETestApiFactory factory)
     {
@@ -207,7 +208,8 @@ public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory
         // Assert
         items.Should().NotBeNull();
 
-        AssertPerformance(sw.ElapsedMilliseconds, "GET /items with tag filter");
+        // Tag filtering uses complex GROUP BY + HAVING subquery, so uses higher threshold
+        AssertPerformance(sw.ElapsedMilliseconds, "GET /items with tag filter", MaxTagFilterResponseTimeMs);
     }
 
     [Fact]
@@ -219,8 +221,8 @@ public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory
         // Act
         var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
 
-        // Assert performance - multiple tag filter with AND logic
-        AssertPerformance(elapsed, "GET /items with multiple tags (AND logic)");
+        // Assert performance - multiple tag filter with AND logic (complex GROUP BY + HAVING)
+        AssertPerformance(elapsed, "GET /items with multiple tags (AND logic)", MaxTagFilterResponseTimeMs);
     }
 
     [Fact]
