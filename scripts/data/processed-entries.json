@@ -25228,5 +25228,11 @@
     "collection": "news",
     "timestamp": "2026-02-05 12:07:59 +00:00",
     "reason": "Succesfully added: Assigned the 'Coding' category because the content covers features, improvements, and technical updates in Visual Studio Code (Coding rule 5: Microsoft development tools). There is no direct reference to DevOps, AI, Azure, ML, or Security content, and the focus is on development environment enhancements. No generic exclusion rules apply, as this is not biographical, non-English, a sales pitch, or business/management content."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-05-github-actions-early-february-2026-updates",
+    "timestamp": "2026-02-05 14:18:10 +00:00",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content is fundamentally about GitHub Actions, which is a core DevOps tool, and covers pipeline automation, infrastructure autoscaling, runner management, and security controls (DevOps rules 2, 5, 6, and 7). No Coding, AI, ML, Azure, GitHub Copilot, or Security (as a standalone category) are appropriate, since the central theme is process automation and infrastructure in a DevOps context. Security controls are included, but only as part of GitHub Actions settings for DevOps workflows, not as primary security implementation or architecture guidance. No generic exclusion rules applied—the piece is clearly technical, not biographical, negative, non-English, business-centric, or a sales pitch."
   }
 ]
