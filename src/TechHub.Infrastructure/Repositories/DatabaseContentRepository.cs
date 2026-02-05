@@ -1,19 +1,23 @@
 using System.Data;
+using System.Globalization;
 using System.Text;
 using Dapper;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
-/// Base class for database-backed content repositories.
-/// Extends ContentRepositoryBase with shared Dapper-based database operations for SQLite and PostgreSQL.
+/// Database-backed content repository supporting both SQLite and PostgreSQL.
+/// Uses ISqlDialect abstraction to handle database-specific syntax differences.
+/// Supports optional query logging when DatabaseOptions.EnableQueryLogging is enabled.
 /// </summary>
-public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
+public class DatabaseContentRepository : ContentRepositoryBase
 {
     /// <summary>
     /// Column selection for list views - excludes content column for performance.
@@ -72,8 +76,11 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 
     protected IDbConnection Connection { get; }
     protected ISqlDialect Dialect { get; }
+    
+    private readonly ILogger<DatabaseContentRepository>? _logger;
+    private readonly bool _enableQueryLogging;
 
-    static DatabaseContentRepositoryBase()
+    static DatabaseContentRepository()
     {
         // Register custom type handler to convert SQLite's Int64 booleans to C# bool
         SqlMapper.AddTypeHandler(new BooleanTypeHandler());
@@ -102,12 +109,14 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         }
     }
 
-    protected DatabaseContentRepositoryBase(
+    public DatabaseContentRepository(
         IDbConnection connection,
         ISqlDialect dialect,
         IMemoryCache cache,
         IMarkdownService markdownService,
-        IOptions<AppSettings> settings)
+        IOptions<AppSettings> settings,
+        ILogger<DatabaseContentRepository>? logger = null,
+        IOptions<DatabaseOptions>? databaseOptions = null)
         : base(cache, markdownService, settings)
     {
         ArgumentNullException.ThrowIfNull(connection);
@@ -115,6 +124,8 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
 
         Connection = connection;
         Dialect = dialect;
+        _logger = logger;
+        _enableQueryLogging = databaseOptions?.Value.EnableQueryLogging ?? false;
     }
 
     /// <summary>
@@ -517,5 +528,399 @@ public abstract class DatabaseContentRepositoryBase : ContentRepositoryBase
         // Note: @take and @skip are added by caller
 
         return sql.ToString();
+    }
+
+    /// <summary>
+    /// Full-text search implementation using database-specific FTS via ISqlDialect.
+    /// Supports both SQLite FTS5 and PostgreSQL tsvector through dialect abstraction.
+    /// </summary>
+    protected override async Task<SearchResults<ContentItem>> SearchInternalAsync(SearchRequest request, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+
+        var sql = new StringBuilder();
+        var parameters = new DynamicParameters();
+
+        var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
+        var hasTags = request.Tags != null && request.Tags.Count > 0;
+        var hasSections = request.Sections != null && request.Sections.Count > 0 && 
+                          !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase));
+        var hasCollections = request.Collections != null && request.Collections.Count > 0 && 
+                             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase));
+
+        // OPTIMIZATION: When filtering by tags, pre-filter using tags table
+        // This reduces FTS search from 4000+ items to potentially just 10-20
+        if (hasTags)
+        {
+            // PERFORMANCE: Add take/skip BEFORE building subquery so they're applied there
+            parameters.Add("take", request.Take);
+            parameters.Add("skip", request.Skip);
+            
+            var tagsQuery = BuildTagsTableQuery(request, parameters);
+
+            sql.Append($@"
+            SELECT {ListViewColumns}
+            FROM content_items c");
+
+            // Join with FTS if query is provided (now operating on pre-filtered subset!)
+            if (hasQuery)
+            {
+                var ftsJoin = Dialect.GetFullTextJoinClause();
+                if (!string.IsNullOrEmpty(ftsJoin))
+                {
+                    sql.Append($@"
+            {ftsJoin}");
+                }
+            }
+
+            sql.Append(CultureInfo.InvariantCulture, $@"
+            WHERE (c.collection_name, c.slug) IN (
+                {tagsQuery}
+            )
+            AND c.draft = {(request.IncludeDraft ? $"{Dialect.GetBooleanLiteral(false)} OR c.draft = {Dialect.GetBooleanLiteral(true)}" : Dialect.GetBooleanLiteral(false))}");
+
+            if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+                !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                sql.Append(" AND c.subcollection_name = @subcollection");
+                parameters.Add("subcollection", request.Subcollection);
+            }
+
+            if (hasQuery)
+            {
+                sql.Append($@"
+            AND {Dialect.GetFullTextWhereClause("query")}");
+                parameters.Add("query", request.Query);
+                sql.Append($" ORDER BY {Dialect.GetFullTextOrderByClause("query")}");
+            }
+            else
+            {
+                sql.Append(" ORDER BY c.date_epoch DESC");
+            }
+
+            // Note: No LIMIT here - already applied in subquery for better performance
+        }
+        else
+        {
+            // Non-tags path: standard query from content_items
+            sql.Append($@"
+            SELECT {ListViewColumns}
+            FROM content_items c");
+
+            if (hasQuery)
+            {
+                var ftsJoin = Dialect.GetFullTextJoinClause();
+                if (!string.IsNullOrEmpty(ftsJoin))
+                {
+                    sql.Append($@"
+            {ftsJoin}");
+                }
+            }
+
+            // Build WHERE clause
+            var whereClauses = new List<string>();
+
+            if (!request.IncludeDraft)
+            {
+                whereClauses.Add($"c.draft = {Dialect.GetBooleanLiteral(false)}");
+            }
+
+            if (hasQuery)
+            {
+                whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
+                parameters.Add("query", request.Query);
+            }
+
+            if (hasSections)
+            {
+                var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+                if (sectionBitmask > 0)
+                {
+                    whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
+                }
+            }
+
+            if (hasCollections)
+            {
+                // Optimization: Use equality for single collection, dialect-specific clause for multiple
+                if (request.Collections!.Count == 1)
+                {
+                    whereClauses.Add("c.collection_name = @collection");
+                    parameters.Add("collection", request.Collections[0].ToLowerInvariant().Trim());
+                }
+                else
+                {
+                    whereClauses.Add($"c.collection_name {Dialect.GetCollectionFilterClause("collections", request.Collections.Count)}");
+                    // SQLite uses List, PostgreSQL uses Array
+                    var collectionsParam = Dialect.ProviderName == "PostgreSQL" 
+                        ? request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToArray()
+                        : (object)request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList();
+                    parameters.Add("collections", collectionsParam);
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+                !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                whereClauses.Add("c.subcollection_name = @subcollection");
+                parameters.Add("subcollection", request.Subcollection);
+            }
+
+            if (request.DateFrom.HasValue)
+            {
+                whereClauses.Add("c.date_epoch >= @fromDate");
+                parameters.Add("fromDate", ((DateTimeOffset)request.DateFrom.Value).ToUnixTimeSeconds());
+            }
+
+            if (request.DateTo.HasValue)
+            {
+                whereClauses.Add("c.date_epoch <= @toDate");
+                parameters.Add("toDate", ((DateTimeOffset)request.DateTo.Value).ToUnixTimeSeconds());
+            }
+
+            sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
+            sql.Append(hasQuery ? $" ORDER BY {Dialect.GetFullTextOrderByClause("query")}" : " ORDER BY c.date_epoch DESC");
+            sql.Append(" LIMIT @take OFFSET @skip");
+            parameters.Add("take", request.Take);
+            parameters.Add("skip", request.Skip);
+        }
+
+        // Get items and count in a single round-trip
+        var combinedSql = sql.ToString() + ";\n" + BuildCountSql(request);
+
+        using var multi = await Connection.QueryMultipleWithLoggingAsync(
+            new CommandDefinition(combinedSql, parameters, cancellationToken: ct),
+            _logger,
+            _enableQueryLogging);
+
+        var items = await multi.ReadAsync<ContentItem>();
+        var totalCount = await multi.ReadSingleAsync<int>();
+
+        // Compute facets if requested
+        FacetResults? facets = null;
+        if (request.IncludeFacets)
+        {
+            facets = await GetFacetsAsync(new FacetRequest(
+                facetFields: ["tags", "collections", "sections"],
+                tags: request.Tags,
+                sections: request.Sections,
+                collections: request.Collections,
+                dateFrom: request.DateFrom,
+                dateTo: request.DateTo
+            ), ct);
+        }
+
+        return new SearchResults<ContentItem>
+        {
+            Items = [.. items],
+            TotalCount = totalCount,
+            Facets = facets,
+            ContinuationToken = null
+        };
+    }
+
+    /// <summary>
+    /// Build SQL for counting total results using database-specific FTS via ISqlDialect.
+    /// Supports both SQLite FTS5 and PostgreSQL tsvector.
+    /// </summary>
+    private string BuildCountSql(SearchRequest request)
+    {
+        var hasTags = request.Tags != null && request.Tags.Count > 0;
+        var hasSections = request.Sections != null && request.Sections.Count > 0;
+        var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
+
+        if (hasTags)
+        {
+            var sql = new StringBuilder();
+
+            if (hasQuery)
+            {
+                // Count with FTS: pre-filter by tags, then apply FTS match
+                var ftsJoin = Dialect.GetFullTextJoinClause();
+                if (!string.IsNullOrEmpty(ftsJoin))
+                {
+                    sql.Append($@"
+                SELECT COUNT(*) FROM content_items c
+                {ftsJoin}
+                WHERE (c.collection_name, c.slug) IN (
+                    SELECT collection_name, slug FROM content_tags_expanded
+                    WHERE tag_word IN @tags");
+                }
+                else
+                {
+                    // PostgreSQL doesn't need FTS join
+                    sql.Append(@"
+                SELECT COUNT(DISTINCT c.slug)
+                FROM content_items c
+                WHERE (c.collection_name, c.slug) IN (
+                    SELECT DISTINCT collection_name, slug
+                    FROM (");
+
+                    for (int i = 0; i < request.Tags!.Count; i++)
+                    {
+                        if (i > 0)
+                        {
+                            sql.Append(" INTERSECT ");
+                        }
+
+                        sql.Append(@"
+                        SELECT collection_name, slug 
+                        FROM content_tags_expanded 
+                        WHERE tag_word = @tag").Append(i);
+                    }
+
+                    sql.Append(@"
+                    ) AS tag_results
+                )
+                AND c.draft = ").Append(Dialect.GetBooleanLiteral(false)).Append(@"
+                AND ").Append(Dialect.GetFullTextWhereClause("query"));
+
+                    return sql.ToString();
+                }
+            }
+            else
+            {
+                // Count without FTS: use tags table directly
+                if (Dialect.ProviderName == "SQLite")
+                {
+                    sql.Append(@"
+                SELECT COUNT(*) FROM (
+                    SELECT collection_name, slug FROM content_tags_expanded
+                    WHERE tag_word IN @tags");
+                }
+                else
+                {
+                    // PostgreSQL INTERSECT approach
+                    sql.Append(@"
+                SELECT COUNT(DISTINCT c.slug)
+                FROM content_items c
+                WHERE (c.collection_name, c.slug) IN (
+                    SELECT DISTINCT collection_name, slug
+                    FROM (");
+
+                    for (int i = 0; i < request.Tags!.Count; i++)
+                    {
+                        if (i > 0)
+                        {
+                            sql.Append(" INTERSECT ");
+                        }
+
+                        sql.Append(@"
+                        SELECT collection_name, slug 
+                        FROM content_tags_expanded 
+                        WHERE tag_word = @tag").Append(i);
+                    }
+
+                    sql.Append(@"
+                    ) AS tag_results
+                )
+                AND c.draft = ").Append(Dialect.GetBooleanLiteral(false));
+
+                    return sql.ToString();
+                }
+            }
+
+            if (hasSections)
+            {
+                var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+                if (sectionBitmask > 0)
+                {
+                    sql.Append(CultureInfo.InvariantCulture, $" AND (sections_bitmask & {sectionBitmask}) > 0");
+                }
+            }
+
+            if (request.Collections != null && request.Collections.Count > 0 && 
+                !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
+            {
+                // Match parameter naming from BuildTagsTableQuery
+                if (request.Collections.Count == 1)
+                {
+                    sql.Append(" AND collection_name = @collection");
+                }
+                else
+                {
+                    sql.Append($" AND collection_name {Dialect.GetCollectionFilterClause("collections", request.Collections.Count)}");
+                }
+            }
+
+            if (request.DateFrom.HasValue)
+            {
+                sql.Append(" AND date_epoch >= @fromDate");
+            }
+
+            if (request.DateTo.HasValue)
+            {
+                sql.Append(" AND date_epoch <= @toDate");
+            }
+
+            sql.Append(" GROUP BY collection_name, slug HAVING COUNT(*) = @tagCount");
+
+            if (hasQuery && Dialect.ProviderName == "SQLite")
+            {
+                sql.Append($") AND c.draft = {Dialect.GetBooleanLiteral(false)} AND {Dialect.GetFullTextWhereClause("query")}");
+            }
+            else if (!hasQuery)
+            {
+                sql.Append(")");
+            }
+
+            return sql.ToString();
+        }
+
+        // Standard count query
+        var countSql = new StringBuilder($"SELECT COUNT(*) FROM content_items c");
+
+        if (hasQuery)
+        {
+            var ftsJoin = Dialect.GetFullTextJoinClause();
+            if (!string.IsNullOrEmpty(ftsJoin))
+            {
+                countSql.Append($" {ftsJoin}");
+            }
+        }
+
+        var whereClauses = new List<string> { $"c.draft = {Dialect.GetBooleanLiteral(false)}" };
+
+        if (hasQuery)
+        {
+            whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
+        }
+
+        if (hasSections)
+        {
+            var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+            if (sectionBitmask > 0)
+            {
+                whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
+            }
+        }
+
+        if (request.Collections != null && request.Collections.Count > 0 && 
+            !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
+        {
+            // Match parameter naming from BuildTagsTableQuery and SearchInternalAsync
+            if (request.Collections.Count == 1)
+            {
+                whereClauses.Add("c.collection_name = @collection");
+            }
+            else
+            {
+                whereClauses.Add($"c.collection_name {Dialect.GetCollectionFilterClause("collections", request.Collections.Count)}");
+            }
+        }
+
+        if (request.DateFrom.HasValue)
+        {
+            whereClauses.Add("c.date_epoch >= @fromDate");
+        }
+
+        if (request.DateTo.HasValue)
+        {
+            whereClauses.Add("c.date_epoch <= @toDate");
+        }
+
+        countSql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
+
+        return countSql.ToString();
     }
 }

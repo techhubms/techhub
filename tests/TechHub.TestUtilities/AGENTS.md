@@ -13,8 +13,8 @@ Different test types use different data sources:
 | Test Type | Repository | Data Source | Database |
 |-----------|------------|-------------|----------|
 | **Unit Tests** | `FileBasedContentRepository` | TestCollections folder | None (in-memory cache) |
-| **Integration Tests** | `SqliteContentRepository` | TestCollections folder | SQLite in-memory |
-| **E2E Tests** | `SqliteContentRepository` | Production `collections/` | SQLite file (`techhub.db`) |
+| **Integration Tests** | `DatabaseContentRepository` | TestCollections folder | SQLite in-memory |
+| **E2E Tests** | `DatabaseContentRepository` | Production `collections/` | SQLite file (`techhub.db`) |
 
 ### Unit Tests (Core/Infrastructure)
 
@@ -104,7 +104,7 @@ public class MyRepoTests : IClassFixture<DatabaseFixture<MyRepoTests>>
 {
     public MyRepoTests(DatabaseFixture<MyRepoTests> fixture)
     {
-        var repository = new SqliteContentRepository(fixture.Connection, dialect, cache);
+        var repository = new DatabaseContentRepository(fixture.Connection, dialect, cache);
     }
 }
 ```

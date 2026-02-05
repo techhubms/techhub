@@ -14,73 +14,16 @@ public class PostgresDialect : ISqlDialect
 
     public bool SupportsFullTextSearch => true;
 
-    public string GetUpsertContentSql()
+    public string GetTimestampType()
     {
-        return @"
-            INSERT INTO content_items (
-                slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
-                primary_section_name, external_url, author, feed_name, ghes_support, draft, content_hash
-            ) VALUES (
-                @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
-                @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @ContentHash
-            )
-            ON CONFLICT(slug) DO UPDATE SET
-                title = @Title,
-                content = @Content,
-                excerpt = @Excerpt,
-                date_epoch = @DateEpoch,
-                collection_name = @CollectionName,
-                subcollection_name = @SubcollectionName,
-                primary_section_name = @PrimarySectionName,
-                external_url = @ExternalUrl,
-                author = @Author,
-                feed_name = @FeedName,
-                ghes_support = @GhesSupport,
-                draft = @Draft,
-                content_hash = @ContentHash,
-                updated_at = NOW()";
+        // PostgreSQL native timestamp with timezone
+        return "TIMESTAMPTZ";
     }
 
-    public string GetFullTextSearchSql(string searchQuery)
+    public string GetCurrentTimestampDefault()
     {
-        // PostgreSQL tsvector syntax
-        return @"
-            SELECT c.*, ts_rank(c.search_vector, query) AS rank
-            FROM content_items c,
-                 plainto_tsquery('english', @SearchQuery) AS query
-            WHERE c.search_vector @@ query";
-    }
-
-    public string GetRelevanceRankExpression()
-    {
-        return "ts_rank(search_vector, plainto_tsquery('english', @SearchQuery))";
-    }
-
-    public string GetHighlightExpression(string columnName, string searchQuery)
-    {
-        // PostgreSQL ts_headline function
-        return $"ts_headline('english', {columnName}, plainto_tsquery('english', @SearchQuery), 'StartSel=<mark>, StopSel=</mark>')";
-    }
-
-    public string GetPaginationSql(int take, string? continuationToken)
-    {
-        // Keyset pagination for PostgreSQL
-        if (string.IsNullOrEmpty(continuationToken))
-        {
-            return $"ORDER BY date_epoch DESC, id DESC LIMIT {take}";
-        }
-
-        return $"AND (date_epoch, id) < (@CursorDate, @CursorId) ORDER BY date_epoch DESC, id DESC LIMIT {take}";
-    }
-
-    public string CreateMigrationTableSql()
-    {
-        return """
-            CREATE TABLE IF NOT EXISTS _migrations (
-                script_name TEXT PRIMARY KEY,
-                executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-            )
-            """;
+        // PostgreSQL NOW() function
+        return "NOW()";
     }
 
     public object ConvertBooleanParameter(bool value)
@@ -104,5 +47,28 @@ public class PostgresDialect : ISqlDialect
     {
         // PostgreSQL uses native boolean type
         return value ? "true" : "false";
+    }
+    public string GetFullTextJoinClause()
+    {
+        // PostgreSQL uses tsvector column directly, no join needed
+        return string.Empty;
+    }
+
+    public string GetFullTextWhereClause(string paramName)
+    {
+        // PostgreSQL tsvector @@ operator with plainto_tsquery
+        return $"c.search_vector @@ plainto_tsquery('english', @{paramName})";
+    }
+
+    public string GetFullTextOrderByClause(string paramName)
+    {
+        // PostgreSQL ts_rank function (higher is better)
+        return $"ts_rank(c.search_vector, plainto_tsquery('english', @{paramName})) DESC";
+    }
+
+    public string GetCollectionFilterClause(string paramName, int count)
+    {
+        // PostgreSQL uses ANY for array matching (requires array parameter)
+        return $"= ANY(@{paramName})";
     }
 }

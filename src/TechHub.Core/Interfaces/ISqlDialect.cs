@@ -18,39 +18,21 @@ public interface ISqlDialect
     string ParameterPrefix { get; }
 
     /// <summary>
-    /// Get SQL for upserting a content item (INSERT ... ON CONFLICT for both)
-    /// </summary>
-    string GetUpsertContentSql();
-
-    /// <summary>
-    /// Get SQL for full-text search (FTS5 for SQLite, tsvector for PostgreSQL)
-    /// </summary>
-    string GetFullTextSearchSql(string searchQuery);
-
-    /// <summary>
-    /// Get SQL for calculating relevance rank in full-text search
-    /// </summary>
-    string GetRelevanceRankExpression();
-
-    /// <summary>
-    /// Get SQL for highlighting search results
-    /// </summary>
-    string GetHighlightExpression(string columnName, string searchQuery);
-
-    /// <summary>
-    /// Get SQL for LIMIT/OFFSET pagination
-    /// </summary>
-    string GetPaginationSql(int take, string? continuationToken);
-
-    /// <summary>
     /// Supports full-text search natively (true for both SQLite FTS5 and PostgreSQL tsvector)
     /// </summary>
     bool SupportsFullTextSearch { get; }
 
     /// <summary>
-    /// Get SQL for creating the migrations tracking table
+    /// Get SQL type for timestamp columns
+    /// (TEXT for SQLite, TIMESTAMPTZ for PostgreSQL)
     /// </summary>
-    string CreateMigrationTableSql();
+    string GetTimestampType();
+
+    /// <summary>
+    /// Get SQL default expression for current timestamp
+    /// (datetime('now') for SQLite, NOW() for PostgreSQL)
+    /// </summary>
+    string GetCurrentTimestampDefault();
 
     /// <summary>
     /// Convert a boolean value to the appropriate type for this database
@@ -76,4 +58,28 @@ public interface ISqlDialect
     /// (0/1 for SQLite, false/true for PostgreSQL)
     /// </summary>
     string GetBooleanLiteral(bool value);
+
+    /// <summary>
+    /// Get SQL JOIN clause for full-text search
+    /// (INNER JOIN content_fts for SQLite, empty for PostgreSQL which uses tsvector column)
+    /// </summary>
+    string GetFullTextJoinClause();
+
+    /// <summary>
+    /// Get SQL WHERE clause for full-text search matching
+    /// (content_fts MATCH @param for SQLite, search_vector @@ plainto_tsquery for PostgreSQL)
+    /// </summary>
+    string GetFullTextWhereClause(string paramName);
+
+    /// <summary>
+    /// Get SQL ORDER BY clause for full-text search relevance ranking
+    /// (bm25(content_fts) for SQLite, ts_rank(search_vector, plainto_tsquery) DESC for PostgreSQL)
+    /// </summary>
+    string GetFullTextOrderByClause(string paramName);
+
+    /// <summary>
+    /// Get SQL IN clause for collection filtering
+    /// (IN @param for SQLite, = ANY(@param) for PostgreSQL arrays)
+    /// </summary>
+    string GetCollectionFilterClause(string paramName, int count);
 }

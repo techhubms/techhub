@@ -7,6 +7,7 @@ Tech Hub supports three content storage backends configured via `appsettings.jso
 - [Content Processing](content-processing.md) - How content syncs to the database
 - [Filtering](filtering.md) - Tag filtering that leverages database indexes
 - [Running & Testing](running-and-testing.md) - How to run with different database providers
+- [Query Logging](query-logging.md) - Debug and performance monitoring with query logging
 
 ## Supported Providers
 

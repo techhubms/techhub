@@ -299,6 +299,17 @@ This index maps the structure of all documentation files in the project.
     - JavaScript
   - Implementation Reference
 
+## File: [docs/query-logging.md](query-logging.md)
+
+- Query Logging
+  - Configuration
+    - Settings
+  - Security Considerations
+  - Implementation
+  - Output Format
+  - Usage
+  - Related
+
 ## File: [docs/render-modes.md](render-modes.md)
 
 - Render Mode Strategy

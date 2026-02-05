@@ -94,14 +94,14 @@ else if (databaseProvider.Equals("SQLite", StringComparison.OrdinalIgnoreCase))
     builder.Services.AddSingleton<ISqlDialect, SqliteDialect>();
     builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFactory(connectionString));
     builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-    builder.Services.AddTransient<IContentRepository, SqliteContentRepository>();
+    builder.Services.AddTransient<IContentRepository, DatabaseContentRepository>();
 }
 else if (databaseProvider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCase))
 {
     builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
     builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionFactory(connectionString));
     builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-    builder.Services.AddTransient<IContentRepository, PostgresContentRepository>();
+    builder.Services.AddTransient<IContentRepository, DatabaseContentRepository>();
 }
 else
 {

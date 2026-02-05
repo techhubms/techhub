@@ -113,7 +113,12 @@ public class MigrationRunner
 
     private async Task EnsureMigrationTableExistsAsync()
     {
-        var sql = _dialect.CreateMigrationTableSql();
+        var sql = $"""
+            CREATE TABLE IF NOT EXISTS _migrations (
+                script_name TEXT PRIMARY KEY,
+                executed_at {_dialect.GetTimestampType()} NOT NULL DEFAULT ({_dialect.GetCurrentTimestampDefault()})
+            )
+            """;
         await _connection.ExecuteAsync(sql);
     }
 

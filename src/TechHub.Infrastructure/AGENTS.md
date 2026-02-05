@@ -26,9 +26,7 @@ TechHub.Infrastructure/
 │       └── postgres/                          # PostgreSQL migrations
 ├── Repositories/                              # Repository implementations
 │   ├── ContentRepositoryBase.cs               # Abstract base for content repos
-│   ├── DatabaseContentRepositoryBase.cs       # Database-specific base class
-│   ├── SqliteContentRepository.cs             # SQLite with FTS5 implementation
-│   ├── PostgresContentRepository.cs           # PostgreSQL implementation
+│   ├── DatabaseContentRepository.cs           # Unified DB repo (SQLite + PostgreSQL)
 │   └── FileBasedContentRepository.cs          # Legacy file-based (for reference)
 ├── Services/                                  # Infrastructure services
 │   ├── ContentSyncService.cs                  # Sync markdown files to database
@@ -77,17 +75,24 @@ Database provider is configured in `appsettings.json`:
 
 ### Database Content Repository
 
-**Key Pattern**: Query SQLite with Dapper → Map to domain models → Use FTS5 for search.
+**Key Pattern**: Single unified repository using `ISqlDialect` for database-specific SQL → Query with Dapper → Map to domain models → Use FTS (FTS5 for SQLite, tsvector for PostgreSQL).
 
-**Implementation**: `SqliteContentRepository` extends `DatabaseContentRepositoryBase`
+**Implementation**: `DatabaseContentRepository` uses `ISqlDialect` abstraction to support both SQLite and PostgreSQL from a single codebase.
 
 **Important Details**:
 
+- **Unified Codebase**: One repository class handles both SQLite and PostgreSQL
+- **Dialect Abstraction**: `ISqlDialect` interface provides database-specific SQL fragments:
+  - `GetFullTextJoinClause()` - FTS table join (SQLite only)
+  - `GetFullTextWhereClause()` - FTS matching syntax
+  - `GetFullTextOrderByClause()` - Relevance ranking
+  - `GetCollectionFilterClause()` - `IN` vs `ANY` syntax
 - Uses Dapper for lightweight ORM
-- FTS5 for full-text search with BM25 ranking
+- FTS5 for SQLite, tsvector for PostgreSQL
 - Section filtering via bitmask: `WHERE sections_bitmask & @mask > 0`
 - Tag filtering via subquery on `content_tags_expanded` table
 - Pagination via keyset (cursor-based) for performance
+- Optional query logging via `DapperExtensions` when `EnableQueryLogging` is enabled
 
 **Query Optimization**:
 
@@ -169,7 +174,7 @@ builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFac
 builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
 
 // Repositories
-builder.Services.AddTransient<IContentRepository, SqliteContentRepository>();
+builder.Services.AddTransient<IContentRepository, DatabaseContentRepository>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 
 // Services

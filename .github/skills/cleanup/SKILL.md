@@ -40,6 +40,29 @@ Applies `dotnet format` per `.editorconfig` rules.
 
 ---
 
+### Step 2a: CSS Token Analysis
+
+**Script 1**: [Count-TokenUsage.ps1](.github/skills/cleanup/scripts/Count-TokenUsage.ps1)  
+**Script 2**: [Find-UndefinedTokens.ps1](.github/skills/cleanup/scripts/Find-UndefinedTokens.ps1)  
+**Template**: [css-token-analysis-template.md](.github/skills/cleanup/templates/css-token-analysis-template.md)
+
+- Script 1 counts usage of each CSS color token defined in design-tokens.css
+- Script 2 finds CSS color references that don't exist in design-tokens.css
+- Analyze the data to identify:
+  - Unused tokens (candidates for removal)
+  - Single-use tokens (consolidation opportunities)
+  - Undefined references (bugs - must fix)
+- Present summary in chat with your recommendations using template
+- Wait for user input
+
+**Color Token Categories**:
+- **Multi-use (2+)**: Core design tokens, keep these
+- **Single-use (1)**: Review if they should be consolidated with existing tokens
+- **Unused (0)**: Safe to remove unless reserved for future use
+- **Undefined**: BUGS - references that must be fixed or removed
+
+---
+
 ### Step 3: Code Quality Analysis
 
 **Script**: [analyze-code-quality.ps1](.github/skills/cleanup/scripts/analyze-code-quality.ps1)  
@@ -94,25 +117,17 @@ Apply Step 3 decisions. If there was nothing to improve immediately go to step 5
 
 **Roslyn Analyzer Configuration**:
 
-The project uses **Roslynator.Analyzers** (4.12.11+) for build-time dead code detection:
+The project uses **built-in .NET analyzers** for build-time dead code detection configured in `.editorconfig`:
 
-- **Package**: Only `Roslynator.Analyzers` in `Directory.Build.props` (removed Microsoft.CodeAnalysis.NetAnalyzers to avoid duplication)
-- **Configuration**: `.editorconfig` suppresses all Roslynator rules by default, then enables only dead code detection:
-  - `IDE0051`: Unused private member detection
-  - `IDE0052`: Unread private member detection  
-  - `IDE0060`: Remove unused parameter
-  - `RCS1163`: Unused parameter (more comprehensive than IDE0060)
-  - `RCS1213`: Unused member declaration (catches public unused methods in sealed classes)
-  - `RCS1175`: Unused 'this' parameter
+- `IDE0051`: Unused private member detection
+- `IDE0052`: Unread private member detection  
+- `IDE0060`: Remove unused parameter
 - **File-Specific Suppressions**: `src/TechHub.Api/Endpoints/*.cs` suppresses unused parameter warnings (intentional injected dependencies)
-- **Roslynator Config**: `.roslynatorconfig` enables refactorings, compiler fixes, disables formatting (defer to .editorconfig)
 
-**Why Roslynator Only?**
-
-- More comprehensive (500+ rules vs Microsoft's ~300)
-- Detects public unused members (RCS1213) that Microsoft analyzers miss
-- Single source of truth simplifies configuration and reduces warning duplication
-- Proper suppression strategy keeps noise low while maintaining coverage
+**Analysis Settings**: Configured in `Directory.Build.props`:
+- `AnalysisLevel`: latest-all
+- `AnalysisMode`: All  
+- Documentation generation enabled for comprehensive IntelliSense
 
 ---
 
@@ -132,12 +147,38 @@ The project uses **Roslynator.Analyzers** (4.12.11+) for build-time dead code de
 
 ### Step 6: Documentation Review
 
-**Script**: [verify-documentation.ps1](.github/skills/cleanup/scripts/verify-documentation.ps1)
+**Step 6a: Generate Documentation Index**
 
-- Script lists all docs
-- YOU read each, compare with Step 5a analysis
-- Find issues: broken links, outdated examples, missing features, dupes, incomplete cross references
-- Present summary in chat with your recommendations
+**Run**: `/workspaces/techhub/scripts/Generate-DocumentationIndex.ps1`
+
+This creates [docs/documentation-index.md](../../../docs/documentation-index.md) containing:
+- All documentation files (AGENTS.md, README.md, docs/*.md)
+- All H1/H2/H3 headers from each file
+- Relative links to each file
+
+**Step 6b: Run Documentation Quality Checks**
+
+**Run**: [verify-documentation.ps1](.github/skills/cleanup/scripts/verify-documentation.ps1)
+
+This performs quality checks:
+- **Expected Files**: Verifies presence of key documentation files
+- **Broken Links**: Detects broken internal markdown links
+- **Missing AGENTS.md**: Checks if code directories lack AGENTS.md files
+
+**Step 6c: Analyze Documentation**
+
+**No script** - YOU analyze using both outputs.  
+**Read**: [docs/documentation-index.md](../../../docs/documentation-index.md)
+
+Use the index + verification results to:
+- Verify all features are documented (compare with Step 5a)
+- Check documentation is in the right location
+- Identify duplicate or overlapping documentation
+- Fix any broken links found by verify script
+- Ensure missing AGENTS.md files are created if needed
+- Ensure cross-references are complete
+
+Present summary in chat with your recommendations.
 
 ---
 

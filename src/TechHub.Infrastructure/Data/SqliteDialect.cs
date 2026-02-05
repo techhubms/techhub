@@ -14,73 +14,16 @@ public class SqliteDialect : ISqlDialect
 
     public bool SupportsFullTextSearch => true;
 
-    public string GetUpsertContentSql()
+    public string GetTimestampType()
     {
-        return @"
-            INSERT INTO content_items (
-                slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
-                primary_section_name, external_url, author, feed_name, ghes_support, draft, content_hash
-            ) VALUES (
-                @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
-                @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @ContentHash
-            )
-            ON CONFLICT(slug) DO UPDATE SET
-                title = @Title,
-                content = @Content,
-                excerpt = @Excerpt,
-                date_epoch = @DateEpoch,
-                collection_name = @CollectionName,
-                subcollection_name = @SubcollectionName,
-                primary_section_name = @PrimarySectionName,
-                external_url = @ExternalUrl,
-                author = @Author,
-                feed_name = @FeedName,
-                ghes_support = @GhesSupport,
-                draft = @Draft,
-                content_hash = @ContentHash,
-                updated_at = CURRENT_TIMESTAMP";
+        // SQLite stores timestamps as TEXT in ISO8601 format
+        return "TEXT";
     }
 
-    public string GetFullTextSearchSql(string searchQuery)
+    public string GetCurrentTimestampDefault()
     {
-        // SQLite FTS5 syntax - must use table name, not alias, for MATCH and bm25()
-        return @"
-            SELECT c.*, bm25(content_fts) AS rank
-            FROM content_items c
-            JOIN content_fts ON c.rowid = content_fts.rowid
-            WHERE content_fts MATCH @SearchQuery";
-    }
-
-    public string GetRelevanceRankExpression()
-    {
-        return "bm25(content_fts)";
-    }
-
-    public string GetHighlightExpression(string columnName, string searchQuery)
-    {
-        // SQLite FTS5 snippet function
-        return $"snippet(content_fts, -1, '<mark>', '</mark>', '...', 64)";
-    }
-
-    public string GetPaginationSql(int take, string? continuationToken)
-    {
-        // Keyset pagination for SQLite
-        if (string.IsNullOrEmpty(continuationToken))
-        {
-            return $"ORDER BY date_epoch DESC, id DESC LIMIT {take}";
-        }
-
-        return $"AND (date_epoch, id) < (@CursorDate, @CursorId) ORDER BY date_epoch DESC, id DESC LIMIT {take}";
-    }
-
-    public string CreateMigrationTableSql()
-    {
-        return """
-            CREATE TABLE IF NOT EXISTS _migrations (
-                script_name TEXT PRIMARY KEY,
-                executed_at TEXT NOT NULL DEFAULT (datetime('now'))
-            )
-            """;
+        // SQLite datetime function
+        return "datetime('now')";
     }
 
     public object ConvertBooleanParameter(bool value)
@@ -103,5 +46,29 @@ public class SqliteDialect : ISqlDialect
     {
         // SQLite uses 0/1 for booleans
         return value ? "1" : "0";
+    }
+
+    public string GetFullTextJoinClause()
+    {
+        // SQLite uses separate FTS5 virtual table
+        return "INNER JOIN content_fts ON c.rowid = content_fts.rowid";
+    }
+
+    public string GetFullTextWhereClause(string paramName)
+    {
+        // SQLite FTS5 MATCH syntax
+        return $"content_fts MATCH @{paramName}";
+    }
+
+    public string GetFullTextOrderByClause(string paramName)
+    {
+        // SQLite FTS5 bm25() ranking function (lower is better, so no DESC needed)
+        return "bm25(content_fts)";
+    }
+
+    public string GetCollectionFilterClause(string paramName, int count)
+    {
+        // SQLite uses IN for list matching
+        return $"IN @{paramName}";
     }
 }

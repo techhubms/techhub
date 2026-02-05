@@ -20,7 +20,7 @@ namespace TechHub.Infrastructure.Tests.Repositories;
 public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFixture<DatabaseFixture<SqliteContentRepositoryTests>>
 {
     private readonly DatabaseFixture<SqliteContentRepositoryTests> _fixture;
-    private readonly SqliteContentRepository _repository;
+    private readonly DatabaseContentRepository _repository;
     private readonly IMemoryCache _cache;
 
     protected override Core.Interfaces.IContentRepository Repository => _repository;
@@ -51,7 +51,7 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
             BaseUrl = "https://localhost:7245"
         };
 
-        _repository = new SqliteContentRepository(
+        _repository = new DatabaseContentRepository(
             _fixture.Connection,
             new Infrastructure.Data.SqliteDialect(),
             _cache,
