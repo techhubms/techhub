@@ -10,11 +10,11 @@ namespace TechHub.Api.Tests.Endpoints;
 /// Integration tests for Section API endpoints
 /// Tests all 6 section endpoints with mocked file system dependencies
 /// </summary>
-public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
+public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
     private readonly HttpClient _client;
 
-    public SectionsEndpointsTests(TechHubIntegrationTestApiFactory factory)
+    public ContentEndpointsTests(TechHubIntegrationTestApiFactory factory)
     {
         ArgumentNullException.ThrowIfNull(factory);
 

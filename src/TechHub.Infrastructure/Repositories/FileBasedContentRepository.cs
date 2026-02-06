@@ -112,9 +112,11 @@ public class FileBasedContentRepository : ContentRepositoryBase
         {
             entry.SetPriority(CacheItemPriority.NeverRemove);
 
-            // Load all collections in parallel - get collection names from CollectionDisplayNames keys
-            var collectionNames = _settings.Content.CollectionDisplayNames.Keys
-                .Select(name => name.StartsWith('_') ? name : $"_{name}")
+            // Load all collections in parallel - get collection names from all sections
+            var sections = await GetAllSectionsAsync(ct);
+            var collectionNames = sections
+                .SelectMany(s => s.Collections.Select(c => c.Name.StartsWith('_') ? c.Name : $"_{c.Name}"))
+                .Distinct()
                 .ToArray();
 
             var collectionTasks = collectionNames
@@ -201,47 +203,6 @@ public class FileBasedContentRepository : ContentRepositoryBase
     }
 
     /// <summary>
-    /// Internal helper: Get content by section from cached data.
-    /// Optionally filter by collection and subcollection.
-    /// </summary>
-    private async Task<IReadOnlyList<ContentItem>> GetBySectionInternalAsync(
-        string sectionName,
-        string? collectionName,
-        string? subcollectionName,
-        bool includeDraft,
-        int limit,
-        int offset,
-        CancellationToken ct)
-    {
-        ArgumentNullException.ThrowIfNull(sectionName);
-
-        var allItems = await GetAllInternalAsync(includeDraft, int.MaxValue, 0, ct);
-
-        IEnumerable<ContentItem> filtered = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
-            ? allItems
-            : allItems.Where(item =>
-                _sectionNamesCache.TryGetValue(item.Slug, out var sections) &&
-                sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
-
-        // Filter by collection if specified
-        if (!string.IsNullOrWhiteSpace(collectionName))
-        {
-            filtered = filtered.Where(item =>
-                item.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
-        }
-
-        // Filter by subcollection if specified
-        if (!string.IsNullOrWhiteSpace(subcollectionName))
-        {
-            filtered = filtered.Where(item =>
-                item.SubcollectionName != null &&
-                item.SubcollectionName.Equals(subcollectionName, StringComparison.OrdinalIgnoreCase));
-        }
-
-        return [.. filtered.OrderByDescending(x => x.DateEpoch).Skip(offset).Take(limit)];
-    }
-
-    /// <summary>
     /// In-memory search implementation for file-based repository.
     /// Filters cached content by query, tags, sections, collections, and date range.
     /// </summary>
@@ -277,7 +238,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         }
 
         // Section filtering (OR logic) - use cached section_names from frontmatter ("all" means no filter)
-        if (request.Sections is { Count: > 0 } && 
+        if (request.Sections is { Count: > 0 } &&
             !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             filtered = filtered.Where(item =>
@@ -286,7 +247,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         }
 
         // Collection filtering (OR logic) ("all" means no filter)
-        if (request.Collections is { Count: > 0 } && 
+        if (request.Collections is { Count: > 0 } &&
             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             filtered = filtered.Where(item =>
@@ -294,7 +255,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         }
 
         // Subcollection filtering ("all" means no filter)
-        if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+        if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
             !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             filtered = filtered.Where(item =>

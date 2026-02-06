@@ -37,8 +37,6 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// </summary>
     private static IReadOnlyList<Section> InitializeSections(AppSettings settings)
     {
-        var collectionDisplayNames = settings.Content.CollectionDisplayNames;
-
         // Define section display order (matches live site - starts with "all")
         var sectionOrder = new[]
         {
@@ -47,7 +45,7 @@ public abstract class ContentRepositoryBase : IContentRepository
 
         // Convert configuration to Section models
         var sectionsDict = settings.Content.Sections
-            .Select(kvp => ConvertToSection(kvp.Key, kvp.Value, collectionDisplayNames))
+            .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
             .ToDictionary(s => s.Name);
 
         // Order sections according to defined order, then any remaining alphabetically
@@ -62,26 +60,25 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// <summary>
     /// Convert SectionConfig from appsettings.json to Section model.
     /// </summary>
-    private static Section ConvertToSection(string sectionName, SectionConfig config, Dictionary<string, string> collectionDisplayNames)
+    private static Section ConvertToSection(string sectionName, SectionConfig config)
     {
         var collections = config.Collections
             .Select(kvp =>
             {
-                var displayName = collectionDisplayNames.TryGetValue(kvp.Key.ToLowerInvariant(), out var name)
-                    ? name
-                    : kvp.Value.Title;
+                // Use GetTagFromName for display name (e.g., "blogs" -> "Blogs", "vscode-updates" -> "Vscode Updates")
+                var displayName = Collection.GetTagFromName(kvp.Key);
                 return new Collection(
-                    kvp.Key, 
-                    kvp.Value.Title, 
-                    kvp.Value.Url, 
-                    kvp.Value.Description, 
-                   displayName, 
+                    kvp.Key,
+                    kvp.Value.Title,
+                    kvp.Value.Url,
+                    kvp.Value.Description,
+                    displayName,
                     kvp.Value.Custom,
                     kvp.Value.Order);
             })
             .ToList();
 
-        return new Section(sectionName, config.Title, config.Description, config.Url, collections);
+        return new Section(sectionName, config.Title, config.Description, config.Url, config.Tag, collections);
     }
 
     /// <summary>
@@ -210,32 +207,36 @@ public abstract class ContentRepositoryBase : IContentRepository
     // ==================== Protected Helper Methods ====================
 
     /// <summary>
-    /// Build a set of section and collection titles to exclude from tag clouds.
-    /// Uses cached section data from GetAllSectionsAsync.
+    /// Build a set of section and collection tags to exclude from tag clouds.
+    /// Uses section Tags from configuration and programmatically generated collection tags.
+    /// These are structural tags added by ContentFixer for search purposes,
+    /// but shouldn't appear in tag clouds as they're redundant (users already filter by section/collection).
     /// </summary>
     protected async Task<HashSet<string>> BuildSectionCollectionExcludeSet()
     {
         var excludeSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var sections = await GetAllSectionsAsync();
-        
+
         foreach (var section in sections)
         {
-            // Add section title
-            if (!string.IsNullOrWhiteSpace(section.Title))
+            // Add section tag from configuration (e.g., "AI" for ai section, "All" for all section)
+            if (!string.IsNullOrWhiteSpace(section.Tag))
             {
-                excludeSet.Add(section.Title);
+                excludeSet.Add(section.Tag);
             }
-            
-            // Add collection titles
+
+            // Add collection tags generated from collection names
             foreach (var collection in section.Collections)
             {
-                if (!string.IsNullOrWhiteSpace(collection.Title))
+                // Generate tag from collection name (e.g., "blogs" -> "Blogs", "community" -> "Community")
+                var collectionTag = Collection.GetTagFromName(collection.Name);
+                if (!string.IsNullOrWhiteSpace(collectionTag))
                 {
-                    excludeSet.Add(collection.Title);
+                    excludeSet.Add(collectionTag);
                 }
             }
         }
-        
+
         return excludeSet;
     }
 

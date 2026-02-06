@@ -28,7 +28,7 @@ This project implements the REST API backend using ASP.NET Core Minimal APIs. It
 TechHub.Api/
 ├── Program.cs                    # Entry point, DI registration, middleware pipeline
 ├── Endpoints/                    # Minimal API endpoint definitions
-│   ├── SectionsEndpoints.cs      # Section & Content related endpoints
+│   ├── ContentEndpoints.cs       # Section & Content related endpoints
 │   ├── RssEndpoints.cs           # RSS feed generation
 │   └── CustomPagesEndpoints.cs   # Custom page data endpoints
 ├── appsettings.json             # Configuration (sections, collections, paths)
@@ -57,9 +57,9 @@ The API follows RESTful conventions:
 **Example Structure**:
 
 ```csharp
-public static class SectionsEndpoints
+public static class ContentEndpoints
 {
-    public static void MapSectionsEndpoints(this IEndpointRouteBuilder endpoints)
+    public static void MapContentEndpoints(this IEndpointRouteBuilder endpoints)
     {
         var group = endpoints.MapGroup("/api/sections")
             .WithTags("Sections")
@@ -80,14 +80,14 @@ public static class SectionsEndpoints
 }
 ```
 
-**Register in Program.cs**: `app.MapSectionsEndpoints();`
+**Register in Program.cs**: `app.MapContentEndpoints();`
 
 ```csharp
 // Program.cs
 var app = builder.Build();
 
 // Map all endpoints
-app.MapSectionsEndpoints();
+app.MapContentEndpoints();
 app.MapRssEndpoints();
 app.MapCustomPagesEndpoints();
 

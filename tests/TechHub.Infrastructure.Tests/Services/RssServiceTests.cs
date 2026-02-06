@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Services;
 using TechHub.TestUtilities;
@@ -20,7 +21,8 @@ public class RssServiceTests
         var appSettings = ConfigurationHelper.LoadAppSettings();
 
         var options = Options.Create(appSettings);
-        _rssService = new RssService(options);
+        var rssOptions = Options.Create(new RssOptions { MaxItemsInFeed = 50 });
+        _rssService = new RssService(options, rssOptions);
     }
 
     private static Section CreateTestSection() => new(
@@ -28,6 +30,7 @@ public class RssServiceTests
         title: "AI",
         description: "Artificial Intelligence resources",
         url: "/ai",
+        tag: "AI",
         collections:
         [
             new(name: "news", title: "News", url: "/ai/news", description: "Latest AI news", displayName: "News", isCustom: false)

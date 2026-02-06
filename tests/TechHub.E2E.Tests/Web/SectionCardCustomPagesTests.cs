@@ -176,10 +176,11 @@ public class SectionCardCustomPagesTests : IAsyncLifetime
             await expandButton.ClickAsync();
 
             // Get all custom page badges (visible + hidden) in display order
-            var allCustomBadges = new List<string>();
-
-            // Add first visible custom page
-            allCustomBadges.Add(firstVisibleText?.Trim() ?? "");
+            var allCustomBadges = new List<string>
+            {
+                // Add first visible custom page
+                firstVisibleText?.Trim() ?? ""
+            };
 
             // Add hidden custom pages in order
             var targetContainer = Page.Locator($"#{targetId}");

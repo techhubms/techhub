@@ -24,7 +24,7 @@ Execute in order. Don't skip or proceed if a step fails.
 
 ### Step 1: Build & Test
 
-**Run**: `Run -Clean -StopServers`
+**Run**: `Run -Clean -StopServers` with `IsBackground: false` to verify a clean build and test pass.
 
 **Requirements**: 0 errors, all tests pass.
 
@@ -151,7 +151,7 @@ The project uses **built-in .NET analyzers** for build-time dead code detection 
 
 **Run**: `/workspaces/techhub/scripts/Generate-DocumentationIndex.ps1`
 
-This creates [docs/documentation-index.md](../../../docs/documentation-index.md) containing:
+This creates [docs/documentation-index.md](/workspaces/techhub/docs/documentation-index.md) containing:
 - All documentation files (AGENTS.md, README.md, docs/*.md)
 - All H1/H2/H3 headers from each file
 - Relative links to each file
@@ -168,7 +168,7 @@ This performs quality checks:
 **Step 6c: Analyze Documentation**
 
 **No script** - YOU analyze using both outputs.  
-**Read**: [docs/documentation-index.md](../../../docs/documentation-index.md)
+**Read**: [docs/documentation-index.md](/workspaces/techhub/docs/documentation-index.md)
 
 Use the index + verification results to:
 - Verify all features are documented (compare with Step 5a)
@@ -186,7 +186,7 @@ Present summary in chat with your recommendations.
 
 **No script** - YOU analyze.  
 **Template**: [test-review-template.md](.github/skills/cleanup/templates/test-review-template.md)  
-**Read**: [tests/AGENTS.md](../../tests/AGENTS.md)
+**Read**: [tests/AGENTS.md](/workspaces/techhub/tests/AGENTS.md)
 
 - Scan tests for violations (AAA, naming, positioning, coverage)
 - Analyze quality and assign grade (A-F)

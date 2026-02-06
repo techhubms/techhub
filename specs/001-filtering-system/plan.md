@@ -182,7 +182,7 @@ Tech Hub Repository Structure (Actual Paths - Updated 2026-02-03):
 src/
 ├── TechHub.Api/                       # REST API Backend
 │   ├── Endpoints/
-│   │   ├── SectionsEndpoints.cs      # ✅ COMPLETE: Section + tag cloud endpoints
+│   │   ├── ContentEndpoints.cs       # ✅ COMPLETE: Section + tag cloud endpoints
 │   │   ├── CustomPagesEndpoints.cs   # Existing
 │   │   └── RssEndpoints.cs           # Existing
 │   └── appsettings.json              # ✅ COMPLETE: Filter configuration
@@ -238,7 +238,7 @@ tests/
 │
 ├── TechHub.Api.Tests/                # Integration Tests
 │   └── Endpoints/
-│       ├── SectionsEndpointsTests.cs # ✅ COMPLETE: Tag cloud tests
+│       ├── ContentEndpointsTests.cs  # ✅ COMPLETE: Tag cloud tests
 │       └── TagCountsEndpointTests.cs # ❌ TODO: Dynamic counts
 │
 ├── TechHub.Infrastructure.Tests/     # Unit Tests

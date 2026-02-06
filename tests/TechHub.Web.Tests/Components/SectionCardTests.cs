@@ -96,7 +96,7 @@ public class SectionCardTests : BunitContext
             new("news", "News", "/ai/news", "News articles", "News", false),
             new("blogs", "Blogs", "/ai/blogs", "Blog posts", "Blogs", false)
         };
-        var section = new Section("ai", "AI", "AI description", "/ai", collections);
+        var section = new Section("ai", "AI", "AI description", "/ai", "AI", collections);
 
         // Act
         var cut = Render<SectionCard>(parameters => parameters
@@ -122,7 +122,7 @@ public class SectionCardTests : BunitContext
             new("features", "Features", "/github-copilot/features", "Features", "Features", true, 1),
             new("handbook", "Handbook", "/github-copilot/handbook", "Handbook", "Handbook", true, 2)
         };
-        var section = new Section("github-copilot", "GitHub Copilot", "Description", "/github-copilot", collections);
+        var section = new Section("github-copilot", "GitHub Copilot", "Description", "/github-copilot", "GitHub Copilot", collections);
 
         // Act
         var cut = Render<SectionCard>(parameters => parameters
@@ -131,7 +131,7 @@ public class SectionCardTests : BunitContext
         // Assert - Should show 4 regular collections + 1 custom page = 5 total badges
         var regularBadges = cut.FindAll(".badge-purple");
         regularBadges.Should().HaveCount(4, "should show all regular collections");
-        
+
         // Find visible custom badges (not inside the hidden expanded container)
         var visibleCustomBadges = cut.FindAll(".section-collections > .badge-custom");
         visibleCustomBadges.Should().HaveCount(1, "should show first custom page (by order)");
@@ -141,12 +141,12 @@ public class SectionCardTests : BunitContext
         var moreButton = cut.Find(".badge-expandable");
         var normalizedText = System.Text.RegularExpressions.Regex.Replace(moreButton.TextContent.Trim(), @"\s+", " ");
         normalizedText.Should().Be("+1 more");
-        
+
         // Check that the hidden custom pages container exists and has the remaining custom page
         var expandableContainer = cut.Find(".custom-pages-expanded");
         expandableContainer.Should().NotBeNull();
         expandableContainer.GetAttribute("hidden").Should().NotBeNull("container should be initially hidden");
-        
+
         var hiddenCustomBadges = cut.FindAll(".custom-pages-expanded .badge-custom");
         hiddenCustomBadges.Should().HaveCount(1, "should have 1 custom page in hidden container");
         hiddenCustomBadges[0].TextContent.Should().Be("Handbook", "Handbook has Order=2, should be in hidden area");
@@ -161,7 +161,7 @@ public class SectionCardTests : BunitContext
             new("news", "News", "/github-copilot/news", "News", "News", false,0),
             new("features", "Features", "/github-copilot/features", "Features", "Features", true, 1)
         };
-        var section = new Section("github-copilot", "GitHub Copilot", "Description", "/github-copilot", collections);
+        var section = new Section("github-copilot", "GitHub Copilot", "Description", "/github-copilot", "GitHub Copilot", collections);
 
         // Act
         var cut = Render<SectionCard>(parameters => parameters
@@ -206,7 +206,7 @@ public class SectionCardTests : BunitContext
         {
             new("news", "News", "/ai/news", "News articles", "News", false)
         };
-        var section = new Section("ai", "AI", "AI description", "/ai", collections);
+        var section = new Section("ai", "AI", "AI description", "/ai", "AI", collections);
 
         // Act
         var cut = Render<SectionCard>(parameters => parameters
@@ -230,7 +230,7 @@ public class SectionCardTests : BunitContext
         {
             new("dummy", "Dummy", "/security/dummy", "Dummy", "Dummy", false)
         };
-        var section = new Section("security", "Security", "Security content", "/security", collections);
+        var section = new Section("security", "Security", "Security content", "/security", "Security", collections);
 
         // Act
         var cut = Render<SectionCard>(parameters => parameters

@@ -1,7 +1,5 @@
 using FluentAssertions;
 using TechHub.Core.Models;
-using TechHub.Infrastructure.Repositories;
-using Xunit;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
@@ -57,7 +55,7 @@ public class CacheKeyTests
             take: 10,
             sections: ["all"],
             collections: ["all"],
-            tags: tags1.Split(',').ToList(),
+            tags: [.. tags1.Split(',')],
             skip: 0
         );
 
@@ -65,7 +63,7 @@ public class CacheKeyTests
             take: 10,
             sections: ["all"],
             collections: ["all"],
-            tags: tags2.Split(',').ToList(),
+            tags: [.. tags2.Split(',')],
             skip: 0
         );
 
@@ -145,7 +143,7 @@ public class CacheKeyTests
     {
         // Arrange
         var request1 = new FacetRequest(
-            facetFields: fields1.Split(',').ToList(),
+            facetFields: [.. fields1.Split(',')],
             tags: [],
             sections: [],
             collections: [],
@@ -153,7 +151,7 @@ public class CacheKeyTests
         );
 
         var request2 = new FacetRequest(
-            facetFields: fields2.Split(',').ToList(),
+            facetFields: [.. fields2.Split(',')],
             tags: [],
             sections: [],
             collections: [],
@@ -208,11 +206,11 @@ public class CacheKeyTests
         long? dateFromUnix, long? dateToUnix, string? section, int? maxTags, int minUses)
     {
         // Arrange
-        DateTimeOffset? dateFrom = dateFromUnix.HasValue 
-            ? DateTimeOffset.FromUnixTimeSeconds(dateFromUnix.Value) 
+        DateTimeOffset? dateFrom = dateFromUnix.HasValue
+            ? DateTimeOffset.FromUnixTimeSeconds(dateFromUnix.Value)
             : null;
-        DateTimeOffset? dateTo = dateToUnix.HasValue 
-            ? DateTimeOffset.FromUnixTimeSeconds(dateToUnix.Value) 
+        DateTimeOffset? dateTo = dateToUnix.HasValue
+            ? DateTimeOffset.FromUnixTimeSeconds(dateToUnix.Value)
             : null;
 
         var request1 = new TagCountsRequest(

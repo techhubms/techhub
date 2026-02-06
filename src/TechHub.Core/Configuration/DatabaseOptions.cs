@@ -20,5 +20,5 @@ public class DatabaseOptions
     /// WARNING: May expose sensitive data in logs. Only enable for debugging.
     /// Default: false
     /// </summary>
-    public bool EnableQueryLogging { get; set; } = false;
+    public bool EnableQueryLogging { get; set; }
 }

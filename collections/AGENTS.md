@@ -7,7 +7,7 @@
 
 ### ✅ Always Do
 
-- **Always read writing-style-guidelines.md FIRST** before creating or editing ANY content
+- **Always read [docs/writing-style-guidelines.md](../docs/writing-style-guidelines.md) FIRST** before creating or editing ANY content
 - **Always use filename format `YYYY-MM-DD-title-slug.md`** for all content files
 - **Always match filename date with frontmatter date** for `layout: post` files
 - **Always include excerpt section** - Max 200 words, end with `<!--excerpt_end-->`
@@ -22,7 +22,7 @@
 
 ### 🚫 Never Do
 
-- **Never create content without reading guidelines** - writing-style-guidelines.md is REQUIRED reading
+- **Never create content without reading guidelines** - [docs/writing-style-guidelines.md](../docs/writing-style-guidelines.md) is REQUIRED reading
 - **Never skip excerpt section** - All content needs introduction
 - **Never exceed 200 words in excerpt** - Keep intros concise
 - **Never forget `<!--excerpt_end-->` marker** - Required to separate excerpt from main content
@@ -37,7 +37,7 @@
 
 **CRITICAL**: Before creating or editing ANY content in this directory, you MUST read:
 
-- **[writing-style-guidelines.md](writing-style-guidelines.md)** - Tone, voice, language standards, and writing quality requirements
+- **[docs/writing-style-guidelines.md](../docs/writing-style-guidelines.md)** - Tone, voice, language standards, and writing quality requirements
 
 **For markdown formatting issues**: Use `npx markdownlint-cli2 --fix <file-path>` to automatically fix formatting (see [Root AGENTS.md](../AGENTS.md) step 9)
 
@@ -52,7 +52,7 @@
 
 **Related Documentation**:
 
-- Writing style → [writing-style-guidelines.md](writing-style-guidelines.md)
+- Writing style → [docs/writing-style-guidelines.md](../docs/writing-style-guidelines.md)
 - Markdown formatting → Use `npx markdownlint-cli2 --fix <file-path>` for automated fixes
 - Content workflows → [docs/content-processing.md](../docs/content-processing.md)
 - RSS processing → [scripts/content-processing/AGENTS.md (future)](../scripts/content-processing/)

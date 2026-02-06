@@ -24,18 +24,17 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
     {
         // Create minimal dependencies for repository
         var cache = new MemoryCache(new MemoryCacheOptions());
-        
+
         var mockMarkdownService = new Mock<IMarkdownService>();
         mockMarkdownService.Setup(m => m.RenderToHtml(It.IsAny<string>()))
             .Returns<string>(content => $"<p>{content}</p>");
-            
+
         var appSettings = new AppSettings
         {
             Content = new ContentSettings
             {
                 CollectionsPath = "collections",
-                Sections = [],
-                CollectionDisplayNames = []
+                Sections = []
             },
             BaseUrl = "https://localhost:5001"
         };

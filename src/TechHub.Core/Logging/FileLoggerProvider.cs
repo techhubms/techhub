@@ -87,6 +87,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
                             {
                                 writer.WriteLine(logEntry);
                             }
+
                             break; // Success - exit retry loop
                         }
                         catch (IOException) when (i < maxRetries - 1)
@@ -94,11 +95,13 @@ public sealed class FileLoggerProvider : ILoggerProvider
                             // File locked by another process - wait 1ms and retry
                             Thread.Sleep(1);
                         }
+#pragma warning disable CA1031 // Logging must not throw - swallow all exceptions in background write thread
                         catch
                         {
                             // Other errors (permissions, disk full, etc.) - give up
                             break;
                         }
+#pragma warning restore CA1031
                     }
                 }
             }

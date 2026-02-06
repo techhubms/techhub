@@ -210,7 +210,7 @@ public class TabOrderingTests : IAsyncLifetime
 
         // Focus should be on skiptohere (H1) or body (if tabindex was removed quickly)
         var validFocusTargets = new[] { "skiptohere", "h1", "body" };
-        validFocusTargets.Should().Contain(elementInfo, 
+        validFocusTargets.Should().Contain(elementInfo,
             $"after activating skip link, focus should be on primary content element or body, got {elementInfo}");
 
         // Next tab should focus first interactive element within primary content
@@ -243,7 +243,7 @@ public class TabOrderingTests : IAsyncLifetime
         // Assert - After navigation, first tab should focus skip link on new page
         // The application should have reset focus to body during enhanced navigation
         await Page.Keyboard.PressAsync("Tab");
-        
+
         var firstFocusedElement = Page.Locator(":focus");
         var tagName = await firstFocusedElement.EvaluateAsync<string>("el => el.tagName.toLowerCase()");
         var className = await firstFocusedElement.EvaluateAsync<string>("el => el.className || ''");
@@ -311,7 +311,7 @@ public class TabOrderingTests : IAsyncLifetime
         // The application should have reset focus to body during enhanced navigation
         await Page.Keyboard.PressAsync("Tab");
         focusedElement = Page.Locator(":focus");
-        
+
         var tagName = await focusedElement.EvaluateAsync<string>("el => el.tagName.toLowerCase()");
         var className = await focusedElement.EvaluateAsync<string>("el => el.className || ''");
 

@@ -13,14 +13,16 @@ namespace TechHub.Infrastructure.Services;
 public class RssService : IRssService
 {
     private readonly AppSettings _settings;
+    private readonly RssOptions _rssOptions;
     private const string SiteTitle = "Tech Hub";
     private const string Language = "en-us";
-    private const int MaxItemsInFeed = 50;
 
-    public RssService(IOptions<AppSettings> settings)
+    public RssService(IOptions<AppSettings> settings, IOptions<RssOptions> rssOptions)
     {
         ArgumentNullException.ThrowIfNull(settings);
+        ArgumentNullException.ThrowIfNull(rssOptions);
         _settings = settings.Value;
+        _rssOptions = rssOptions.Value;
     }
 
     /// <inheritdoc/>
@@ -34,7 +36,7 @@ public class RssService : IRssService
 
         var sortedItems = items
             .OrderByDescending(x => x.DateEpoch)
-            .Take(MaxItemsInFeed)
+            .Take(_rssOptions.MaxItemsInFeed)
             .ToList();
 
         var rssItems = sortedItems.Select(CreateRssItem).ToList();
@@ -65,14 +67,13 @@ public class RssService : IRssService
 
         var sortedItems = items
             .OrderByDescending(x => x.DateEpoch)
-            .Take(MaxItemsInFeed)
+            .Take(_rssOptions.MaxItemsInFeed)
             .ToList();
 
         var rssItems = sortedItems.Select(CreateRssItem).ToList();
 
-        var collectionTitle = _settings.Content.CollectionDisplayNames.TryGetValue(collectionName, out var displayName)
-            ? displayName
-            : collectionName;
+        // Generate collection title from collection name (e.g., "blogs" -> "Blogs")
+        var collectionTitle = Collection.GetTagFromName(collectionName);
 
         var channel = new RssChannel
         {

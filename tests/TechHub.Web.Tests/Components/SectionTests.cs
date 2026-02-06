@@ -32,6 +32,7 @@ public class SectionTests : BunitContext
                 "Artificial Intelligence",
                 "AI and machine learning content",
                 "/ai",
+                "AI",
                 [
                     new CollectionModel("news", "News", "/ai/news", "Latest AI news", "News", false)
                 ]
@@ -68,7 +69,7 @@ public class SectionTests : BunitContext
         Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
-        this.AddBunitPersistentComponentState();
+        AddBunitPersistentComponentState();
 
         // Act - Render Section component
         var cut = Render<Section>(parameters => parameters
@@ -112,6 +113,7 @@ public class SectionTests : BunitContext
                 "Artificial Intelligence",
                 "AI and machine learning content",
                 "/ai",
+                "AI",
                 [
                     new CollectionModel("news", "News", "/ai/news", "Latest AI news", "News", false)
                 ]
@@ -148,7 +150,7 @@ public class SectionTests : BunitContext
         Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
-        this.AddBunitPersistentComponentState();
+        AddBunitPersistentComponentState();
 
         // Act
         var cut = Render<Section>(parameters => parameters

@@ -71,6 +71,7 @@ public static class RssEndpoints
             title: "Everything",
             description: "All content from Tech Hub",
             url: "/",
+            tag: "All",
             collections: [dummyCollection]);
 
         var channel = await rssService.GenerateSectionFeedAsync(everythingSection, searchResult.Items);
@@ -130,12 +131,12 @@ public static class RssEndpoints
         // Determine which sections to search
         var sectionsToSearch = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
             ? new[] { "all" }
-            : new[] { sectionName };
+            : [sectionName];
 
         // Validate collection exists in the specified section(s)
         var allSections = await contentRepository.GetAllSectionsAsync();
         var matchingCollections = allSections
-            .Where(s => sectionName.Equals("all", StringComparison.OrdinalIgnoreCase) || 
+            .Where(s => sectionName.Equals("all", StringComparison.OrdinalIgnoreCase) ||
                        s.Name.Equals(sectionName, StringComparison.OrdinalIgnoreCase))
             .SelectMany(s => s.Collections)
             .Where(c => c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase))
@@ -171,6 +172,7 @@ public static class RssEndpoints
             title: feedTitle,
             description: feedDescription,
             url: collection.Url,
+            tag: Core.Models.Collection.GetTagFromName(collectionName),
             collections: [collection]);
 
         var channel = await rssService.GenerateSectionFeedAsync(virtualSection, searchResult.Items);

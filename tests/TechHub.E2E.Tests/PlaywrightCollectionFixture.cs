@@ -150,7 +150,6 @@ public class TabOrderingCollection : ICollectionFixture<PlaywrightCollectionFixt
 {
 }
 
-
 [CollectionDefinition("Infinite Scroll Tests")]
 public class InfiniteScrollCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {

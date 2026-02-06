@@ -216,7 +216,7 @@
 }
 
 .badge-expandable:hover {
-  background: var(--color-bg-tertiary);
+  background: var(--color-bg-elevated);
   border-color: var(--color-border-emphasis);
   color: var(--color-text-secondary);
 }

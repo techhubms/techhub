@@ -191,7 +191,7 @@ Get a tag cloud with quantile-based sizing for visual representation. Using `all
 
 - `maxTags` (query, optional): Maximum number of tags (default: 20)
 - `minUses` (query, optional): Minimum tag usage count (default: 5)
-- `lastDays` (query, optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`, set to `0` to disable default date filter)
+- `lastDays` (query, optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`)
 
 **Response**:
 
@@ -268,7 +268,7 @@ Selected tags are highlighted with the `.selected` CSS class:
 
 ## Testing
 
-See [tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs](../tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs) for repository level tests and [SectionsEndpointsTests.cs](../tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs) for integration tests.
+See [tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs](../tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs) for repository level tests and [ContentEndpointsTests.cs](../tests/TechHub.Api.Tests/Endpoints/ContentEndpointsTests.cs) for integration tests.
 
 For UI behavior tests, see [tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs](../tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs).
 

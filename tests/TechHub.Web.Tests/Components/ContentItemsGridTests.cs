@@ -2,7 +2,6 @@ using Bunit;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.JSInterop;
 using Moq;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
@@ -50,6 +49,7 @@ public class ContentItemsGridTests : BunitContext
                 "GitHub Copilot",
                 "GitHub Copilot content",
                 "/github-copilot",
+                "GitHub Copilot",
                 [
                     new Collection("news", "News", "/github-copilot/news", "News", "News", false),
                     new Collection("community", "Community", "/github-copilot/community", "Community", "Community Posts", false),
@@ -61,6 +61,7 @@ public class ContentItemsGridTests : BunitContext
                 "All",
                 "All content",
                 "/all",
+                "All",
                 [
                     new Collection("news", "News", "/all/news", "All news", "News", false)
                 ]
@@ -69,7 +70,7 @@ public class ContentItemsGridTests : BunitContext
 
         Services.AddSingleton(_mockApiClient.Object);
         Services.AddSingleton(_sectionCache);
-        this.AddBunitPersistentComponentState();
+        AddBunitPersistentComponentState();
     }
 
     [Fact]

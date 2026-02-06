@@ -26,14 +26,14 @@ namespace TechHub.E2E.Tests.Repositories;
 /// - Works identically whether using SQLite or PostgreSQL
 /// - When Run -Docker is used, automatically tests against PostgreSQL
 /// </summary>
-public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory>
+public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiFactory>
 {
     private readonly HttpClient _client;
     private const int MaxResponseTimeMs = 250;  // HTTP overhead + serialization + DB query
     private const int MaxFtsResponseTimeMs = 1000;  // FTS queries are slower + HTTP overhead + variance
     private const int MaxTagFilterResponseTimeMs = 500;  // Tag filtering with subquery using GROUP BY + HAVING is more complex
 
-    public ContentApiPerformanceTests(TechHubE2ETestApiFactory factory)
+    public ContentEndpointsPerformanceTests(TechHubE2ETestApiFactory factory)
     {
         _client = factory.CreateClient();
         // Note: Database is seeded once on factory startup via ContentSyncService
@@ -554,5 +554,4 @@ public class ContentApiPerformanceTests : IClassFixture<TechHubE2ETestApiFactory
 
     #endregion
 }
-
 

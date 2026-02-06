@@ -126,9 +126,9 @@
 
 ### Implementation for User Story 1
 
-**API Endpoints** (Note: Tag cloud endpoint already exists in SectionsEndpoints.cs):
+**API Endpoints** (Note: Tag cloud endpoint already exists in ContentEndpoints.cs):
 
-- [X] T027 [US1] Tag cloud endpoint via SectionsEndpoints.cs (GET /api/sections/{section}/collections/{collection}/tags)
+- [X] T027 [US1] Tag cloud endpoint via ContentEndpoints.cs (GET /api/sections/{section}/collections/{collection}/tags)
 
 **Blazor Components** (Actual location: src/TechHub.Web/Components/):
 
@@ -177,7 +177,7 @@
 
 **Integration Tests**:
 
-- [ ] T035 [P] [US2] Add date filtering tests to SectionsEndpointsTests in tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
+- [ ] T035 [P] [US2] Add date filtering tests to ContentEndpointsTests in tests/TechHub.Api.Tests/Endpoints/ContentEndpointsTests.cs
   - Test GET /api/sections/{s}/collections/{c}/items with date range
   - Test GET /api/sections/{s}/collections/{c}/tags with date range
 
@@ -225,7 +225,7 @@
 
 ### Backend Implementation (Simple Enhancement)
 
-- [ ] T090 [US11] Enhance existing tag cloud endpoint in src/TechHub.Api/Endpoints/SectionsEndpoints.cs
+- [ ] T090 [US11] Enhance existing tag cloud endpoint in src/TechHub.Api/Endpoints/ContentEndpoints.cs
   - Add query parameters: `tags` (comma-separated, optional), `from` (optional), `to` (optional)
   - Parse and validate parameters
   - Pass to `GetTagCountsAsync` which already supports all filtering!
@@ -246,7 +246,7 @@
 
 **Integration Tests**:
 
-- [ ] T093 [P] [US11] Enhance TagCloudEndpointTests in tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
+- [ ] T093 [P] [US11] Enhance TagCloudEndpointTests in tests/TechHub.Api.Tests/Endpoints/ContentEndpointsTests.cs
   - Test GET tags endpoint with tags parameter
   - Test GET tags endpoint with from/to parameters
   - Test GET tags endpoint with combined filters

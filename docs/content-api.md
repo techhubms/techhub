@@ -253,7 +253,7 @@ Get tag cloud with quantile-based sizing for visual representation.
 
 - `maxTags` (optional): Maximum number of tags to return (default: 20)
 - `minUses` (optional): Minimum tag usage count (default: 5)
-- `lastDays` (optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`, set to `0` to disable default date filter)
+- `lastDays` (optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`)
 
 **Response**: `200 OK` or `404 Not Found`
 

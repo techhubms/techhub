@@ -446,8 +446,8 @@ public abstract class BaseContentRepositoryTests : IDisposable
 
         // Act
         var results = await Repository.SearchAsync(request);
-        var fromEpoch = request.DateFrom.Value.ToUnixTimeSeconds();
-        var toEpoch = request.DateTo.Value.ToUnixTimeSeconds();
+        var fromEpoch = request.DateFrom!.Value.ToUnixTimeSeconds();
+        var toEpoch = request.DateTo!.Value.ToUnixTimeSeconds();
 
         // Assert - verify exact count and date range logic
         results.Items.Should().HaveCount(Items2024Count, "Should return exactly 17 items from 2024");

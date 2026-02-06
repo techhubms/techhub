@@ -111,12 +111,13 @@ public static class DapperExtensions
         // If DynamicParameters, extract to dictionary for logging
         if (parameters is DynamicParameters dynamicParams)
         {
-            var props = new List<string>();
-
-            // Note: DynamicParameters doesn't expose its internal dictionary publicly
-            // We can only log the type info for security
-            // To get actual values, we'd need reflection which isn't worth the complexity/security risk
-            props.Add($"DynamicParameters({dynamicParams.ParameterNames.Count()} params)");
+            var props = new List<string>
+            {
+                // Note: DynamicParameters doesn't expose its internal dictionary publicly
+                // We can only log the type info for security
+                // To get actual values, we'd need reflection which isn't worth the complexity/security risk
+                $"DynamicParameters({dynamicParams.ParameterNames.Count()} params)"
+            };
 
             return string.Join(", ", props);
         }

@@ -327,7 +327,7 @@ If you can't find a good place to document something, consider creating a new fi
 - Confirmation that tests pass
 - Any important notes or caveats
 
-**File Link Format**: Use `[path/file.ts](path/file.ts)` - NO backticks around file names.
+**File Link Format**: Use `[src/example.cs](src/example.cs)` format - NO backticks around file names.
 
 **Step 10 Checklist**:
 

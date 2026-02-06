@@ -28,11 +28,6 @@ public class ContentSettings
     /// Sections configuration (replaces sections.json file)
     /// </summary>
     public required Dictionary<string, SectionConfig> Sections { get; init; }
-
-    /// <summary>
-    /// Display names for collections in page titles (e.g., "blogs" -> "Blog Posts")
-    /// </summary>
-    public Dictionary<string, string> CollectionDisplayNames { get; init; } = [];
 }
 
 /// <summary>
@@ -43,6 +38,7 @@ public class SectionConfig
     public required string Title { get; init; }
     public required string Description { get; init; }
     public required string Url { get; init; }
+    public required string Tag { get; init; }
     public required Dictionary<string, CollectionConfig> Collections { get; init; }
 }
 
@@ -55,7 +51,7 @@ public class CollectionConfig
     public required string Url { get; init; }
     public required string Description { get; init; }
     public bool Custom { get; init; }
-    
+
     /// <summary>
     /// Display order for custom pages (lower values appear first).
     /// Only used when Custom=true. Defaults to 0.

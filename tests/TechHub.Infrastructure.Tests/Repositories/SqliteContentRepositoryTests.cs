@@ -45,8 +45,7 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
             Content = new ContentSettings
             {
                 CollectionsPath = "collections",
-                Sections = new Dictionary<string, SectionConfig>(),
-                CollectionDisplayNames = new Dictionary<string, string>()
+                Sections = []
             },
             BaseUrl = "https://localhost:7245"
         };

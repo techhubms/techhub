@@ -11,17 +11,8 @@ namespace TechHub.Api.Endpoints;
 /// Unified API endpoints for sections, collections, content items, and tags.
 /// All content access goes through the section hierarchy.
 /// </summary>
-public static class SectionsEndpoints
+public static class ContentEndpoints
 {
-    /// <summary>
-    /// Default number of items to return when no limit is specified.
-    /// </summary>
-    private const int DefaultPageSize = 20;
-
-    /// <summary>
-    /// Maximum number of items that can be requested in a single call.
-    /// </summary>
-    private const int MaxPageSize = 50;
 
     /// <summary>
     /// Maps all section-related endpoints to the application.
@@ -35,7 +26,7 @@ public static class SectionsEndpoints
     /// - /api/sections/{sectionName}/collections/{collectionName}/tags   → Get tag cloud (use "all" for section-level)
     /// - /api/sections/{sectionName}/collections/{collectionName}/{slug} → Get single item detail
     /// </summary>
-    public static IEndpointRouteBuilder MapSectionsEndpoints(this IEndpointRouteBuilder endpoints)
+    public static IEndpointRouteBuilder MapContentEndpoints(this IEndpointRouteBuilder endpoints)
     {
         var group = endpoints.MapGroup("/api/sections")
             .WithTags("Sections")
@@ -79,8 +70,8 @@ public static class SectionsEndpoints
         group.MapGet("/{sectionName}/collections/{collectionName}/items", GetCollectionItems)
             .WithName("GetCollectionItems")
             .WithSummary("Get items in a collection")
-            .WithDescription($"Returns content items from a collection with optional filtering. " +
-                $"Supports: take (default={DefaultPageSize}, max={MaxPageSize}), skip, q (search), tags, subcollection, lastDays, includeDraft.")
+            .WithDescription("Returns content items from a collection with optional filtering. " +
+                "Supports: take (default configured in appsettings), skip, q (search), tags, subcollection, lastDays, includeDraft.")
             .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
@@ -194,14 +185,15 @@ public static class SectionsEndpoints
     private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound>> GetCollectionItems(
         string sectionName,
         string collectionName,
-        [FromQuery] int take = DefaultPageSize,
+        IOptions<ApiOptions> apiOptions,
+        IContentRepository contentRepository,
+        [FromQuery] int? take = null,
         [FromQuery] int skip = 0,
         [FromQuery] string? q = null,
         [FromQuery] string? tags = null,
         [FromQuery] string? subcollection = null,
         [FromQuery] int? lastDays = null,
         [FromQuery] bool includeDraft = false,
-        IContentRepository contentRepository = default!,
         CancellationToken cancellationToken = default)
     {
         // Verify section exists
@@ -224,8 +216,9 @@ public static class SectionsEndpoints
             }
         }
 
-        // Enforce pagination limits
-        var limit = Math.Clamp(take, 1, MaxPageSize);
+        // Enforce pagination limits using configured values
+        var options = apiOptions.Value;
+        var limit = Math.Clamp(take ?? options.DefaultPageSize, 1, options.MaxPageSize);
         var offset = Math.Max(skip, 0);
 
         // Build search request - repository will handle "all" as no filter
@@ -260,7 +253,7 @@ public static class SectionsEndpoints
         [FromQuery] int? minUses = null,
         [FromQuery] int? lastDays = null,
         IContentRepository contentRepository = default!,
-        IOptions<FilteringOptions> filteringOptions = default!,
+        IOptions<TagCloudOptions> tagCloudOptions = default!,
         CancellationToken cancellationToken = default)
     {
         // Verify section exists
@@ -283,11 +276,11 @@ public static class SectionsEndpoints
             }
         }
 
-        var options = filteringOptions.Value;
+        var options = tagCloudOptions.Value;
 
         // Calculate date filter if LastDays is specified
-        DateTimeOffset? dateFrom = (lastDays ?? options.TagCloud.DefaultDateRangeDays) > 0
-            ? DateTimeOffset.UtcNow.AddDays(-(lastDays ?? options.TagCloud.DefaultDateRangeDays))
+        DateTimeOffset? dateFrom = (lastDays ?? options.DefaultDateRangeDays) > 0
+            ? DateTimeOffset.UtcNow.AddDays(-(lastDays ?? options.DefaultDateRangeDays))
             : null;
 
         // Get top N tag counts from repository - repository will handle "all" as no filter
@@ -295,8 +288,8 @@ public static class SectionsEndpoints
             new TagCountsRequest(
                 sectionName: sectionName,
                 collectionName: collectionName,
-                minUses: minUses ?? options.TagCloud.MinimumTagUses,
-                maxTags: maxTags ?? options.TagCloud.DefaultMaxTags,
+                minUses: minUses ?? options.MinimumTagUses,
+                maxTags: maxTags ?? options.DefaultMaxTags,
                 dateFrom: dateFrom
             ),
             cancellationToken);
@@ -307,7 +300,7 @@ public static class SectionsEndpoints
         }
 
         // Apply quantile-based sizing to top N tags
-        var tagCloud = ApplyQuantileSizing([.. tagCounts], options.TagCloud.QuantilePercentiles);
+        var tagCloud = ApplyQuantileSizing([.. tagCounts], options.QuantilePercentiles);
 
         return TypedResults.Ok(tagCloud);
     }

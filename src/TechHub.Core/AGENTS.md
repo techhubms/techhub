@@ -261,8 +261,7 @@ var orderedCustomPages = section.Collections
 
 **Key Repository Interfaces**:
 
-- `ISectionRepository` - Section data access ([Interfaces/ISectionRepository.cs](Interfaces/ISectionRepository.cs))
-- `IContentRepository` - Content item data access ([Interfaces/IContentRepository.cs](Interfaces/IContentRepository.cs))
+- `IContentRepository` - Section and content data access ([Interfaces/IContentRepository.cs](Interfaces/IContentRepository.cs))
 - `IMarkdownService` - Markdown processing ([Interfaces/IMarkdownService.cs](Interfaces/IMarkdownService.cs))
 - `IRssService` - RSS feed generation ([Interfaces/IRssService.cs](Interfaces/IRssService.cs))
 - `IContentSyncService` - Content sync operations ([Interfaces/IContentSyncService.cs](Interfaces/IContentSyncService.cs))

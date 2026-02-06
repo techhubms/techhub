@@ -76,7 +76,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
 
     protected IDbConnection Connection { get; }
     protected ISqlDialect Dialect { get; }
-    
+
     private readonly ILogger<DatabaseContentRepository>? _logger;
     private readonly bool _enableQueryLogging;
 
@@ -302,7 +302,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
     {
         // Build exclude set from section/collection titles
         var excludeSet = await BuildSectionCollectionExcludeSet();
-        
+
         var sql = new StringBuilder("SELECT tags_csv FROM content_items c");
         var parameters = new DynamicParameters();
 
@@ -468,7 +468,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
         parameters.Add("tags", normalizedTags);
 
         // Section filtering using bitmask ("all" means no filter)
-        if (request.Sections != null && request.Sections.Count > 0 && 
+        if (request.Sections != null && request.Sections.Count > 0 &&
             !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             var sectionBitmask = CalculateSectionBitmask(request.Sections);
@@ -479,7 +479,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
         }
 
         // Collection filtering ("all" means no filter)
-        if (request.Collections != null && request.Collections.Count > 0 && 
+        if (request.Collections != null && request.Collections.Count > 0 &&
             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             // Optimization: Use equality for single collection, IN for multiple
@@ -512,13 +512,13 @@ public class DatabaseContentRepository : ContentRepositoryBase
 
         // GROUP BY to prevent duplicates when item matches multiple tags
         sql.Append(" GROUP BY collection_name, slug");
-        
+
         // HAVING COUNT(*) = @tagCount ensures ALL tags must match (AND logic)
         // For single tag: COUNT = 1
         // For multiple tags (e.g., tags=ai,azure): COUNT = 2 (item must have both)
         sql.Append(" HAVING COUNT(*) = @tagCount");
         parameters.Add("tagCount", normalizedTags.Count);
-        
+
         // PERFORMANCE OPTIMIZATION: Apply ORDER BY + LIMIT in subquery
         // Since content_tags_expanded has date_epoch, we can sort and limit HERE
         // This reduces outer query from processing 100s of matches to just the page size (e.g., 20)
@@ -543,9 +543,9 @@ public class DatabaseContentRepository : ContentRepositoryBase
 
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
         var hasTags = request.Tags != null && request.Tags.Count > 0;
-        var hasSections = request.Sections != null && request.Sections.Count > 0 && 
+        var hasSections = request.Sections != null && request.Sections.Count > 0 &&
                           !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase));
-        var hasCollections = request.Collections != null && request.Collections.Count > 0 && 
+        var hasCollections = request.Collections != null && request.Collections.Count > 0 &&
                              !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase));
 
         // OPTIMIZATION: When filtering by tags, pre-filter using tags table
@@ -555,7 +555,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
             // PERFORMANCE: Add take/skip BEFORE building subquery so they're applied there
             parameters.Add("take", request.Take);
             parameters.Add("skip", request.Skip);
-            
+
             var tagsQuery = BuildTagsTableQuery(request, parameters);
 
             sql.Append($@"
@@ -579,7 +579,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
             )
             AND c.draft = {(request.IncludeDraft ? $"{Dialect.GetBooleanLiteral(false)} OR c.draft = {Dialect.GetBooleanLiteral(true)}" : Dialect.GetBooleanLiteral(false))}");
 
-            if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+            if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
                 !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
                 sql.Append(" AND c.subcollection_name = @subcollection");
@@ -652,14 +652,14 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 {
                     whereClauses.Add($"c.collection_name {Dialect.GetCollectionFilterClause("collections", request.Collections.Count)}");
                     // SQLite uses List, PostgreSQL uses Array
-                    var collectionsParam = Dialect.ProviderName == "PostgreSQL" 
+                    var collectionsParam = Dialect.ProviderName == "PostgreSQL"
                         ? request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToArray()
                         : (object)request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList();
                     parameters.Add("collections", collectionsParam);
                 }
             }
 
-            if (!string.IsNullOrWhiteSpace(request.Subcollection) && 
+            if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
                 !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
                 whereClauses.Add("c.subcollection_name = @subcollection");
@@ -702,9 +702,9 @@ public class DatabaseContentRepository : ContentRepositoryBase
         {
             facets = await GetFacetsAsync(new FacetRequest(
                 facetFields: ["tags", "collections", "sections"],
-                tags: request.Tags,
-                sections: request.Sections,
-                collections: request.Collections,
+                tags: request.Tags!,
+                sections: request.Sections!,
+                collections: request.Collections!,
                 dateFrom: request.DateFrom,
                 dateTo: request.DateTo
             ), ct);
@@ -829,7 +829,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 }
             }
 
-            if (request.Collections != null && request.Collections.Count > 0 && 
+            if (request.Collections != null && request.Collections.Count > 0 &&
                 !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
             {
                 // Match parameter naming from BuildTagsTableQuery
@@ -861,7 +861,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
             }
             else if (!hasQuery)
             {
-                sql.Append(")");
+                sql.Append(')');
             }
 
             return sql.ToString();
@@ -895,7 +895,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
             }
         }
 
-        if (request.Collections != null && request.Collections.Count > 0 && 
+        if (request.Collections != null && request.Collections.Count > 0 &&
             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
             // Match parameter naming from BuildTagsTableQuery and SearchInternalAsync

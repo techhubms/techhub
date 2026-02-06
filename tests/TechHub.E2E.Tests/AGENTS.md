@@ -123,11 +123,8 @@ tests/TechHub.E2E.Tests/
 │   │   ├── SectionPageKeyboardNavigationTests.cs ← Keyboard nav (5 tests)
 │   │   └── TagFilteringTests.cs        ← Tag filtering
 ├── Api/                                 ← Direct API testing (no Playwright)
-│   ├── ApiTestFactory.cs               ← Shared WebApplicationFactory for API tests
-│   ├── SectionEndpointsE2ETests.cs     ← Section endpoints (4 tests)
-│   ├── ContentEndpointsE2ETests.cs     ← Content endpoints (23 tests)
-│   ├── ContentEndpointsE2ETests.cs     ← Content endpoints (23 tests)
-│   └── SectionEndpointsE2ETests.cs     ← Section endpoints (4 tests)
+│   ├── ApiCollectionFixture.cs         ← Shared WebApplicationFactory for API tests
+│   └── ContentEndpointsE2ETests.cs     ← Content API endpoints (4 tests)
 ├── Helpers/
 │   └── BlazorHelpers.cs                ← Blazor-specific wait patterns
 ├── PlaywrightCollectionFixture.cs      ← Shared browser configuration
@@ -218,8 +215,12 @@ The `/github-copilot/vscode-updates` page has highlight.js which makes code bloc
 API E2E tests are organized by endpoint group for maintainability:
 
 - **ApiCollectionFixture.cs**: Shared WebApplicationFactory for all API E2E test classes
-- **SectionEndpointsE2ETests.cs**: Tests for GET /api/sections and GET /api/sections/{name}
-- **ContentEndpointsE2ETests.cs**: Tests for GET /api/content, GET /api/content/filter, and tag cloud endpoints
+- **ContentEndpointsE2ETests.cs**: Tests for GET /api/sections and related content endpoints (10 tests)
+  - Section endpoints (4 tests: list, get by name, 404, case-sensitivity)
+  - Collection items with pagination and tag filtering (2 tests)
+  - Content detail endpoint for internal and external collections (2 tests)
+  - Tag cloud endpoint (1 test)
+  - Custom pages endpoint (1 test)
 
 **Pattern**: One test file per logical endpoint group, all sharing the same collection fixture.
 
@@ -233,7 +234,9 @@ API E2E tests are organized by endpoint group for maintainability:
 
 **Performance**: Shared factory reduces API test time from ~12s to ~6.5s by avoiding redundant app startups.
 
-**See**: [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs), [Api/SectionEndpointsE2ETests.cs](Api/SectionEndpointsE2ETests.cs) for complete examples
+**Coverage**: API E2E tests verify production integration (PostgreSQL, real markdown files, HTTP pipeline) for critical endpoints, complementing the comprehensive integration test suite.
+
+**See**: [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs) for complete examples
 
 **Total**: 83 E2E test cases across all Web test files:
 

@@ -9,6 +9,7 @@ public record Section
     public string Title { get; }
     public string Description { get; }
     public string Url { get; }
+    public string Tag { get; }
     public IReadOnlyList<Collection> Collections { get; }
 
     public Section(
@@ -16,6 +17,7 @@ public record Section
         string title,
         string description,
         string url,
+        string tag,
         IReadOnlyList<Collection> collections)
     {
         // Validate all required properties
@@ -49,6 +51,11 @@ public record Section
             throw new ArgumentException("Section URL must start with '/'", nameof(url));
         }
 
+        if (string.IsNullOrWhiteSpace(tag))
+        {
+            throw new ArgumentException("Section tag cannot be empty", nameof(tag));
+        }
+
         ArgumentNullException.ThrowIfNull(collections);
         if (collections.Count == 0)
         {
@@ -59,6 +66,7 @@ public record Section
         Title = title;
         Description = description;
         Url = url;
+        Tag = tag;
         Collections = collections;
     }
 }

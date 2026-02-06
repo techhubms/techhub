@@ -212,9 +212,6 @@ public class ContentSyncService : IContentSyncService
         return newFiles || deletedFiles || changedFiles;
     }
 
-    // Threshold for disabling indexes during sync - only worth it for bulk operations
-    private const int BulkOperationThreshold = 50;
-
     private async Task<SyncResult> IncrementalSyncAsync(CancellationToken ct)
     {
         _logger.LogInformation("Starting incremental content sync...");
@@ -297,16 +294,16 @@ public class ContentSyncService : IContentSyncService
         // Determine if we should use bulk mode (disable indexes) based on change count
         // Skip if caller already enabled bulk mode
         var totalChanges = newFiles.Count + potentiallyChanged.Count + deletedFiles.Count;
-        var usedBulkMode = bulkModeAlreadyEnabled || totalChanges >= BulkOperationThreshold;
+        var usedBulkMode = bulkModeAlreadyEnabled || totalChanges >= _options.BulkOperationThreshold;
 
-        if (!bulkModeAlreadyEnabled && totalChanges >= BulkOperationThreshold)
+        if (!bulkModeAlreadyEnabled && totalChanges >= _options.BulkOperationThreshold)
         {
-            _logger.LogInformation("Using bulk mode for {Count} changes (threshold: {Threshold})", totalChanges, BulkOperationThreshold);
+            _logger.LogInformation("Using bulk mode for {Count} changes (threshold: {Threshold})", totalChanges, _options.BulkOperationThreshold);
             await DisableIndexesAndTriggersAsync();
         }
         else if (totalChanges > 0 && !bulkModeAlreadyEnabled)
         {
-            _logger.LogInformation("Using normal mode for {Count} changes (below threshold: {Threshold})", totalChanges, BulkOperationThreshold);
+            _logger.LogInformation("Using normal mode for {Count} changes (below threshold: {Threshold})", totalChanges, _options.BulkOperationThreshold);
         }
 
         // Process deletions with batched transactions
@@ -410,7 +407,7 @@ public class ContentSyncService : IContentSyncService
                             sParam.ParameterName = $"@s{tagIdx}";
                             sParam.Value = tag.Slug;
                             cmd.Parameters.Add(sParam);
-                            
+
                             var wParam = cmd.CreateParameter();
                             wParam.ParameterName = $"@w{tagIdx}";
                             wParam.Value = tag.Word;
@@ -455,7 +452,7 @@ public class ContentSyncService : IContentSyncService
                             secParam.ParameterName = $"@sec{tagIdx}";
                             secParam.Value = _dialect.ConvertBooleanParameter(tag.IsSecurity == 1);
                             cmd.Parameters.Add(secParam);
-                            
+
                             var bmParam = cmd.CreateParameter();
                             bmParam.ParameterName = $"@bm{tagIdx}";
                             bmParam.Value = tag.SectionsBitmask;
@@ -1146,6 +1143,7 @@ public class ContentSyncOptions
     public bool Enabled { get; set; } = true;
     public bool ForceFullSync { get; set; }
     public int MaxParallelFiles { get; set; } = 10;
+    public int BulkOperationThreshold { get; set; } = 50;
 }
 
 /// <summary>

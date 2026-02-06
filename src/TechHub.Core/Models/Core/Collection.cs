@@ -11,7 +11,7 @@ public record Collection
     public string Description { get; }
     public string DisplayName { get; }
     public bool IsCustom { get; }
-    
+
     /// <summary>
     /// Display order for custom pages (lower values appear first).
     /// Only used when IsCustom=true. Defaults to 0.
@@ -70,5 +70,32 @@ public record Collection
         DisplayName = displayName;
         IsCustom = isCustom;
         Order = order;
+    }
+
+    /// <summary>
+    /// Generate a tag from a collection name by replacing dashes with spaces
+    /// and uppercasing the first letter of each word.
+    /// Examples: "blogs" -> "Blogs", "vscode-updates" -> "Vscode Updates"
+    /// </summary>
+    public static string GetTagFromName(string collectionName)
+    {
+        if (string.IsNullOrWhiteSpace(collectionName))
+        {
+            return string.Empty;
+        }
+
+        // Replace dashes with spaces and split into words
+        var words = collectionName.Replace('-', ' ').Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        
+        // Uppercase first letter of each word
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (words[i].Length > 0)
+            {
+                words[i] = char.ToUpperInvariant(words[i][0]) + words[i][1..];
+            }
+        }
+
+        return string.Join(' ', words);
     }
 }

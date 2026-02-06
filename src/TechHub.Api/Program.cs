@@ -75,7 +75,9 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddMemoryCache();
 
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
-builder.Services.Configure<FilteringOptions>(builder.Configuration.GetSection("AppSettings:Filtering"));
+builder.Services.Configure<TagCloudOptions>(builder.Configuration.GetSection("AppSettings:TagCloud"));
+builder.Services.Configure<ApiOptions>(builder.Configuration.GetSection("AppSettings:Api"));
+builder.Services.Configure<RssOptions>(builder.Configuration.GetSection("AppSettings:Rss"));
 builder.Services.Configure<DatabaseOptions>(builder.Configuration.GetSection("Database"));
 builder.Services.Configure<ContentSyncOptions>(builder.Configuration.GetSection("ContentSync"));
 builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("AppSettings:Content"));
@@ -153,7 +155,7 @@ app.UseHttpsRedirection();
 app.UseCors();
 
 // Map API endpoints
-app.MapSectionsEndpoints();
+app.MapContentEndpoints();
 app.MapCustomPagesEndpoints();
 app.MapRssEndpoints();
 

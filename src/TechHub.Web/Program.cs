@@ -96,7 +96,9 @@ var apiBaseUrl = builder.Configuration["services:api:https:0"]
 
 // Log the resolved API base URL for debugging
 builder.Logging.AddSimpleConsole();
+#pragma warning disable CA2000 // Intentional: Single-use logger for startup diagnostics, disposed with app lifetime
 var startupLogger = LoggerFactory.Create(b => b.AddConsole()).CreateLogger("Startup");
+#pragma warning restore CA2000
 startupLogger.LogInformation("🔗 Connecting to API at: {ApiBaseUrl}", apiBaseUrl);
 
 builder.Services.AddHttpClient<TechHubApiClient>(client =>
@@ -109,11 +111,13 @@ builder.Services.AddHttpClient<TechHubApiClient>(client =>
     // Allow invalid certificates in development (Docker uses self-signed certs)
     var handler = new SocketsHttpHandler
     {
+#pragma warning disable CA5359 // Required for Docker inter-container HTTPS communication in development
         // In Docker, accept any certificate for inter-container communication
         SslOptions = new System.Net.Security.SslClientAuthenticationOptions
         {
             RemoteCertificateValidationCallback = (_, _, _, _) => true
         }
+#pragma warning restore CA5359
     };
     return handler;
 });
@@ -223,7 +227,7 @@ app.MapDefaultEndpoints();
 await app.RunAsync();
 
 // Page timing metrics DTO
-record PageTimingMetrics(
+internal record PageTimingMetrics(
     string Page,
     int Dns,
     int Tcp,

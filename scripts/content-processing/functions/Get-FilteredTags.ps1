@@ -16,9 +16,9 @@ function Get-FilteredTags {
     .PARAMETER Tags
         Array of tags to process
     .PARAMETER Categories  
-        Array of categories (used for validation, no longer added to output)
+        Array of categories/sections
     .PARAMETER Collection
-        Collection name (used for validation, no longer added to output)
+        Collection name
     #>
     param(
         [string[]]$Tags,

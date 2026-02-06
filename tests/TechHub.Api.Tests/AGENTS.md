@@ -13,7 +13,7 @@ This directory contains **integration tests** for the Tech Hub REST API using **
 
 **Test Files**: xUnit test classes that validate API endpoint behavior:
 
-- `Endpoints/SectionsEndpointsTests.cs` - Tests for section & content endpoints
+- `Endpoints/ContentEndpointsTests.cs` - Tests for section & content endpoints
 - `Endpoints/RssEndpointsTests.cs` - Tests for RSS feed generation
 - `Endpoints/CustomPagesEndpointsTests.cs` - Tests for custom page data
 
