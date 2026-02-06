@@ -11829,5 +11829,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=Z-2EC6YOv74",
     "timestamp": "2026-02-05 20:08:36 +00:00"
+  },
+  {
+    "timestamp": "2026-02-06 00:06:16 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content is excluded due to missing substantive main content text. The 'content' field is null and only the description is available, which provides a high-level summary but lacks technical depth or actionable implementation details. According to the workflow, if main content is missing or unavailable, the item cannot be meaningfully categorized or transformed into a structured markdown entry.",
+    "canonical_url": "https://www.youtube.com/watch?v=CKNe3gBnzrc"
   }
 ]

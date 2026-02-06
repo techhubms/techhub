@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Link": "https://www.youtube.com/watch?v=CKNe3gBnzrc",
+  "EnhancedContent": null,
+  "Description": "We’ve been listening to the open source community and shipping \"tiny\", but high-impact improvements that fix daily frustrations for maintainers. In this episode of GitHub Checkout, Andrea and Camilla walk through five5 recent updates, including a new web interface for resolving merge conflicts and native WebP image support.\n\n#OpenSource #GitHub\n\n— CHAPTERS — 00:00 - What are tiny wins? 01:57 - Resolving merge conflicts in the browser 03:47 - WebP image support 05:05 - Clearer PR reviewer status 06:54 - New tab for contributing guidelines 08:19 - Removing 6 million spam notifications 09:50 - Future updates for maintainers\n\nStay up-to-date on all things GitHub by subscribing and following us at:\n\nYouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com.",
+  "ProcessedDate": "2026-02-06 00:05:09",
+  "Author": "GitHub",
+  "Title": "5 quality of life updates for open source maintainers | GitHub Checkout",
+  "PubDate": "2026-02-05T23:32:00+00:00",
+  "FeedLevelAuthor": "GitHub",
+  "Tags": [
+    "GitHub",
+    "OpenSource"
+  ],
+  "FeedName": "GitHub YouTube"
+}
