@@ -25342,5 +25342,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Included 'AI' because the session focuses on building AI-powered applications (AI Inclusion Rule 1). Included 'GitHub Copilot' as the central development tool discussed (GitHub Copilot rule 1). 'Coding' is included because the content is about prototyping and app development (Coding rules 1 and 4). No Azure, DevOps, ML, or Security content is present based on the description.",
     "canonical_url": "https://www.youtube.com/watch?v=33rGM-cpUAI"
+  },
+  {
+    "timestamp": "2026-02-06 01:33:02 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-05-improved-pull-request-files-changed-february-5-updates",
+    "reason": "Succesfully added: Assigned the DevOps category because the content centers on improvements to GitHub's pull request and code review workflows, which are closely tied to DevOps practices (DevOps rule 11: GitHub content, DevOps rule 3: team collaboration, code reviews). No other categories qualified as the update is not about AI, Coding, Azure, ML, or Security. The content is technical and practitioner-focused, not business/strategy or sales. No generic exclusion rules applied.",
+    "collection": "news"
   }
 ]
