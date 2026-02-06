@@ -21,11 +21,10 @@ tags:
 - Visualstudio2026
 - Visualstudioinsiders
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this ASP.NET Community Standup, Daniel Roth and the team discuss upcoming Razor tooling and Hot Reload features for Visual Studio 2026 Insiders, providing .NET developers with insights into the latest platform enhancements.<!--excerpt_end-->
 

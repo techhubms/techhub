@@ -19,7 +19,7 @@ tags:
 - Infrastructure Management
 - Intelligent Automation
 - IT Operations
-- Machine Learning
+- ML
 - Monitoring
 - Observability
 - Operational Pipelines

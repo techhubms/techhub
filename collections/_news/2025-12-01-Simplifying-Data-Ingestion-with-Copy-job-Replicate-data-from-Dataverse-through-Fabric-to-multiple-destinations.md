@@ -21,8 +21,9 @@ tags:
 - Microsoft Fabric
 - Power Platform
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

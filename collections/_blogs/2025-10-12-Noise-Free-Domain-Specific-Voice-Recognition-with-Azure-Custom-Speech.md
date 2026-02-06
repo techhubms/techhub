@@ -14,7 +14,7 @@ tags:
 - Healthcare IT
 - Industrial Applications
 - Language Adaptation
-- Machine Learning
+- ML
 - Noise Reduction
 - REST API
 - Speech Models

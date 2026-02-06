@@ -30,11 +30,10 @@ tags:
 - Widgets
 - Xcode
 - XReleases
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Toine de Boer’s detailed post guides developers through the process of creating iOS widgets with .NET MAUI, from project setup to adding interactive features, focusing on core technical steps for seamless integration.<!--excerpt_end-->
 

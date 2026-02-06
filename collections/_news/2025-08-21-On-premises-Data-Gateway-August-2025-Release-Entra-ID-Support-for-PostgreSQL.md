@@ -20,9 +20,10 @@ tags:
 - Power BI
 - Power BI Desktop
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

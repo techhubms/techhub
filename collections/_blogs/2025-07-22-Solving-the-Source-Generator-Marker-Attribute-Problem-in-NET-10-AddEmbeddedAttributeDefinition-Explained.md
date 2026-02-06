@@ -18,11 +18,11 @@ tags:
 - Roslyn
 - Source Generators
 - VS
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, Andrew Lock delves into addressing the longstanding marker attribute issue in source generators for .NET 10, unveiling the new AddEmbeddedAttributeDefinition() API and its impact on Roslyn-based development.<!--excerpt_end-->
 

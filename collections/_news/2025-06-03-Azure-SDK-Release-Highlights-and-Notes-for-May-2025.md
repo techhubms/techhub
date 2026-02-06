@@ -22,13 +22,13 @@ tags:
 - Stable Release
 - Storage Blob
 - Azure
-- Coding
 - AI
 - Security
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - ai
 - security
 primary_section: ai

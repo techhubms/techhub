@@ -23,14 +23,14 @@ tags:
 - Azure
 - Security
 - DevOps
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
 - security
 - devops
-- coding
+- dotnet
 primary_section: ai
 ---
 In this advanced chapter, Microsoft Developer guides you through best practices and hands-on patterns for creating secure, scalable, and multi-modal MCP-based AI infrastructure, focusing on Microsoft technologies.<!--excerpt_end-->

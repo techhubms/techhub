@@ -16,16 +16,16 @@ tags:
 - Storage Account
 - Terraform
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 In this community post, Unlikely-Ad4624 shares a Terraform module for provisioning Azure service principals with versatile authentication options and secure secret storage.<!--excerpt_end-->
 

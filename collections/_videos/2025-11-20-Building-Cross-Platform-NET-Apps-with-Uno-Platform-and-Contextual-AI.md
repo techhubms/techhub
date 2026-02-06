@@ -29,11 +29,10 @@ tags:
 - WebAssembly
 - Windows
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet presents a community standup featuring Bruno Capuano, Sam Basu, and Jérôme Laban, demonstrating how Uno Platform and contextual AI can streamline cross-platform .NET app development.<!--excerpt_end-->

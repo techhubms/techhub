@@ -15,13 +15,12 @@ tags:
 - Version Control
 - VS
 - VS Extensibility SDK
-- Coding
 - DevOps
 - Community
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Creative-Paper1007 discusses building a Visual Studio extension to add native-like git worktree support, making it easier for developers to manage multiple branches without leaving their IDE.<!--excerpt_end-->
 

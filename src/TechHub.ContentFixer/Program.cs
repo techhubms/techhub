@@ -44,7 +44,7 @@ public sealed class Program
         [".NET"] = "dotnet",
         ["DevOps"] = "devops",
         ["Security"] = "security",
-        ["Coding"] = "coding",
+        ["Coding"] = "dotnet",
         ["Cloud"] = "cloud",
         ["Machine Learning"] = "ml",
         ["ML"] = "ml"
@@ -62,7 +62,6 @@ public sealed class Program
         ["dotnet"] = [".NET", "dotnet"],
         ["devops"] = ["DevOps"],
         ["security"] = ["Security"],
-        ["coding"] = ["Coding"],
         ["cloud"] = ["Cloud"],
         ["ml"] = ["Machine Learning", "ML"],
         ["machine-learning"] = ["Machine Learning", "ML"]
@@ -235,9 +234,25 @@ public sealed class Program
         }
         else if (frontMatter.ContainsKey("section_names"))
         {
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("  ℹ Already has section_names");
-            Console.ResetColor();
+            // Normalize existing section_names (e.g., "coding" → "dotnet")
+            var existingSections = GetListValue(frontMatter, "section_names");
+            var normalizedSections = existingSections.Select(NormalizeSectionName).Where(s => !string.IsNullOrEmpty(s)).ToList();
+            
+            // Check if normalization changed anything
+            if (!existingSections.SequenceEqual(normalizedSections))
+            {
+                frontMatter["section_names"] = normalizedSections;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"  ✓ Normalized section_names: [{string.Join(", ", existingSections)}] → [{string.Join(", ", normalizedSections)}]");
+                Console.ResetColor();
+                changed = true;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine("  ℹ Already has section_names (normalized)");
+                Console.ResetColor();
+            }
         }
         else
         {
@@ -251,6 +266,70 @@ public sealed class Program
             Console.WriteLine("  ✓ Removed tags_normalized");
             Console.ResetColor();
             changed = true;
+        }
+
+        // 2b. Replace "Coding" tag with ".NET" tag
+        if (frontMatter.TryGetValue("tags", out var existingTagsObj))
+        {
+            var existingTags = GetListValue(frontMatter, "tags");
+            var codingIndex = existingTags.FindIndex(t => t.Equals("Coding", StringComparison.OrdinalIgnoreCase));
+            if (codingIndex >= 0)
+            {
+                // Check if .NET already exists
+                var dotNetExists = existingTags.Any(t => t.Equals(".NET", StringComparison.OrdinalIgnoreCase));
+                
+                if (dotNetExists)
+                {
+                    // Just remove "Coding" since .NET already exists
+                    existingTags.RemoveAt(codingIndex);
+                    frontMatter["tags"] = existingTags;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("  ✓ Removed duplicate \"Coding\" tag (.NET already exists)");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    // Replace "Coding" with ".NET"
+                    existingTags[codingIndex] = ".NET";
+                    frontMatter["tags"] = existingTags;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("  ✓ Replaced \"Coding\" tag with \".NET\"");
+                    Console.ResetColor();
+                }
+                changed = true;
+            }
+        }
+
+        // 2c. Replace "Machine Learning" tag with "ML" tag
+        if (frontMatter.TryGetValue("tags", out var existingTagsObj2))
+        {
+            var existingTags = GetListValue(frontMatter, "tags");
+            var mlIndex = existingTags.FindIndex(t => t.Equals("Machine Learning", StringComparison.OrdinalIgnoreCase));
+            if (mlIndex >= 0)
+            {
+                // Check if ML already exists
+                var mlExists = existingTags.Any(t => t.Equals("ML", StringComparison.OrdinalIgnoreCase));
+                
+                if (mlExists)
+                {
+                    // Just remove "Machine Learning" since ML already exists
+                    existingTags.RemoveAt(mlIndex);
+                    frontMatter["tags"] = existingTags;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("  ✓ Removed duplicate \"Machine Learning\" tag (ML already exists)");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    // Replace "Machine Learning" with "ML"
+                    existingTags[mlIndex] = "ML";
+                    frontMatter["tags"] = existingTags;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("  ✓ Replaced \"Machine Learning\" tag with \"ML\"");
+                    Console.ResetColor();
+                }
+                changed = true;
+            }
         }
 
         // 3. Add section/collection display names as tags (for sections/collections this item belongs to)
@@ -489,6 +568,31 @@ public sealed class Program
             changed = true;
         }
 
+        // 5a. Final deduplication of tags (case-insensitive, preserve first occurrence casing)
+        if (frontMatter.TryGetValue("tags", out var finalTagsObj))
+        {
+            var finalTags = GetListValue(frontMatter, "tags");
+            var deduplicatedTags = new List<string>();
+            var seenTagsLower = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            
+            foreach (var tag in finalTags)
+            {
+                if (seenTagsLower.Add(tag))
+                {
+                    deduplicatedTags.Add(tag);
+                }
+            }
+            
+            if (deduplicatedTags.Count != finalTags.Count)
+            {
+                frontMatter["tags"] = deduplicatedTags;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"  ✓ Removed {finalTags.Count - deduplicatedTags.Count} duplicate tag(s)");
+                Console.ResetColor();
+                changed = true;
+            }
+        }
+
         // 6. Fix .html links to use correct /section/collection/slug URLs
         var originalContentBeforeLinks = markdownContent;
         markdownContent = FixHtmlLinks(markdownContent, slugMap);
@@ -565,11 +669,20 @@ public sealed class Program
 
     private static string NormalizeSectionName(string displayName)
     {
+        // First, check if it's a display name (e.g., "Coding", ".NET")
         if (_sectionMapping.TryGetValue(displayName, out var normalized))
         {
             return normalized;
         }
 
+        // Handle backward compatibility: "coding" slug → "dotnet" slug
+        // This covers files that already have lowercase slugs
+        if (displayName.Equals("coding", StringComparison.OrdinalIgnoreCase))
+        {
+            return "dotnet";
+        }
+
+        // Otherwise, convert to slug format
         return displayName.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal);
     }
 

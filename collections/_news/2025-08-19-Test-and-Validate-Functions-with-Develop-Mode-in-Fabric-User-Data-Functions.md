@@ -17,8 +17,9 @@ tags:
 - Region Availability
 - Testing
 - User Data Functions
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ml
 primary_section: ml

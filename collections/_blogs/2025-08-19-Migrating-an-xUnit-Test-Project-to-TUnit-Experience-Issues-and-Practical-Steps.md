@@ -26,11 +26,10 @@ tags:
 - TUnit
 - Verify
 - xUnit
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock shares his experience porting a .NET library to TUnit, a next-gen C# testing framework, explaining benefits versus xUnit, migration steps, and practical challenges faced.<!--excerpt_end-->
 

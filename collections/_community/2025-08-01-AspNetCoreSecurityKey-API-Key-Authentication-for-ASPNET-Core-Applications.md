@@ -16,13 +16,13 @@ tags:
 - NuGet Package
 - OpenAPI
 - Swagger
-- Coding
 - Security
 - Community
+- .NET
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by pwelter34, this article introduces AspNetCore.SecurityKey, a robust API key authentication library for ASP.NET Core. It examines installation steps, configuration options, and advanced customization for securing .NET applications.<!--excerpt_end-->
 

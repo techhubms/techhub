@@ -22,11 +22,11 @@ tags:
 - VS Code Extensions
 - Workflow Automation
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Harald Kirschner and Connor Peet present how VS Code now supports MCP Apps, giving AI coding agents the power to render interactive dashboards, forms, and visualizations in the editor.<!--excerpt_end-->

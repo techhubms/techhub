@@ -13,7 +13,7 @@ tags:
 - Data Lake
 - Gartner Magic Quadrant
 - Kusto Query Language
-- Machine Learning
+- ML
 - MCP Server
 - Microsoft Defender
 - Microsoft Sentinel

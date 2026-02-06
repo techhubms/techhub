@@ -22,11 +22,11 @@ tags:
 - SQL Server
 - Vectorization
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Events presents a session featuring Anna Hoffman and Sirjad Parakkat on how Ivanti utilizes SQL Server 2025’s agentic AI features to enhance service management and simplify IT operations.<!--excerpt_end-->

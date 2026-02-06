@@ -22,11 +22,10 @@ tags:
 - PDF Ingestion
 - Vector Store
 - AI
-- Coding
 - Blogs
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this blog post, Andrew Lock introduces the new .NET AI Chat Web App template, discussing its setup, integration with GitHub Models and Azure OpenAI, and the technical components that enable document-powered chat applications.<!--excerpt_end-->

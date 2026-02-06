@@ -14,11 +14,11 @@ tags:
 - Tool Discovery
 - VS Code
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Visual Studio Code presents a beginner-focused video where Chris Noring explains the essentials of the Model Context Protocol (MCP) and its impact on developer workflows.<!--excerpt_end-->

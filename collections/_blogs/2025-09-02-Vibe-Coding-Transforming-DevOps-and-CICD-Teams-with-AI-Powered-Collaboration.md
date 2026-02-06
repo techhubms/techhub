@@ -39,12 +39,12 @@ tags:
 - Vibe Coding CI/CD
 - Vibe Coding DevOps
 - AI
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

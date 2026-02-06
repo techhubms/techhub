@@ -28,12 +28,11 @@ tags:
 - TypeScript
 - AI
 - Azure
-- Coding
 - Community
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Lee_Stott delivers an in-depth guide for developers and AI engineers on deploying LLMs locally with Microsoft's Foundry Local, highlighting solutions for privacy, cost, and performance.<!--excerpt_end-->

@@ -24,14 +24,13 @@ tags:
 - Project Orchestration
 - Service Defaults
 - Azure
-- Coding
 - DevOps
 - News
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Jeffrey Fritz presents an in-depth walkthrough of the Aspire CLI, illustrating its use for .NET application development—from installation to running, integrating Azure services, and publishing distributed systems.<!--excerpt_end-->
 

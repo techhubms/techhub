@@ -17,7 +17,7 @@ public record ContentItem
     /// <summary>
     /// Primary section name - stored in frontmatter and database.
     /// Computed from section_names using priority order during content sync.
-    /// Priority: github-copilot > ai > ml > coding > azure > devops > security.
+    /// Priority: github-copilot > ai > ml > dotnet > azure > devops > security.
     /// </summary>
     public string PrimarySectionName { get; }
 
@@ -112,7 +112,7 @@ public record ContentItem
         string? tagsCsv = null,
         bool isAi = false,
         bool isAzure = false,
-        bool isCoding = false,
+        bool isDotNet = false,
         bool isDevOps = false,
         bool isGitHubCopilot = false,
         bool isMl = false,
@@ -230,9 +230,9 @@ public record ContentItem
             sections.Add("azure");
         }
 
-        if (isCoding)
+        if (isDotNet)
         {
-            sections.Add("coding");
+            sections.Add("dotnet");
         }
 
         if (isDevOps)
@@ -336,7 +336,7 @@ public record ContentItem
         "github-copilot",
         "ai",
         "ml",
-        "coding",
+        "dotnet",
         "azure",
         "devops",
         "security"
@@ -344,7 +344,7 @@ public record ContentItem
 
     /// <summary>
     /// Computes the primary section name from a list of section names using priority rules.
-    /// Priority order: github-copilot > ai > ml > coding > azure > devops > security.
+    /// Priority order: github-copilot > ai > ml > dotnet > azure > devops > security.
     /// </summary>
     /// <param name="sectionNames">List of section names (e.g., ["ai", "github-copilot"])</param>
     /// <returns>The primary section name, or "all" if no priority section found</returns>

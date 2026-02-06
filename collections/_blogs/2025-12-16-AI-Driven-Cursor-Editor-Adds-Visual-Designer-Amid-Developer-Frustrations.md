@@ -29,11 +29,11 @@ tags:
 - Visual Designer
 - VS Code
 - AI
-- Coding
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Tim Anderson examines the new visual web designer in Cursor, an AI-powered editor based on VS Code, exploring its technical features and developer reactions to bugs and UI changes.<!--excerpt_end-->

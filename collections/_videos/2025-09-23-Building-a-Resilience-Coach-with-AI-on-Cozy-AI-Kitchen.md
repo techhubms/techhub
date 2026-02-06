@@ -27,11 +27,11 @@ tags:
 - Tutorial
 - VS Code
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this episode, John Maeda from Microsoft Developer demonstrates how to design and deploy an AI-powered resilience coach using practical psychology and coding techniques on Cozy AI Kitchen.<!--excerpt_end-->

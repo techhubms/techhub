@@ -27,12 +27,12 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 notanaha explains quantum computing fundamentals and demonstrates, step by step, how to run the quantum teleportation protocol with real code on Azure Quantum using Python and Qiskit.<!--excerpt_end-->

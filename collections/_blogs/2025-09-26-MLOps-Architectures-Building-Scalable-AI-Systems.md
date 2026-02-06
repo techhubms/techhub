@@ -26,8 +26,9 @@ tags:
 - Scalable Systems
 - Solution Architecture
 - AI
-- Machine Learning
+- ML
 - Blogs
+- Machine Learning
 section_names:
 - ai
 - ml

@@ -20,11 +20,10 @@ tags:
 - Orchestration
 - VS
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this session, dotnet introduces the emerging Model Context Protocol (MCP) standard to .NET developers, demonstrating how to integrate MCP into your applications for enhanced AI-driven experiences.<!--excerpt_end-->

@@ -26,8 +26,9 @@ tags:
 - Technical Demo
 - Technology
 - Azure
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - azure
 - ml

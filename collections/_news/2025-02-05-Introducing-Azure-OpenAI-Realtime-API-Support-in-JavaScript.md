@@ -20,12 +20,12 @@ tags:
 - WebSocket
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Deyaaeldeen Almahallawi explains how developers can leverage the new Realtime API in the Azure OpenAI JavaScript library for fast, interactive applications.<!--excerpt_end-->

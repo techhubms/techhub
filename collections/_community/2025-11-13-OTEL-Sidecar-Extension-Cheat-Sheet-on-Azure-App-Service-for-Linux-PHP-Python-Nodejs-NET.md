@@ -27,16 +27,15 @@ tags:
 - Startup Commands
 - Tracing
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 TulikaC shares a practical cheat-sheet for adding OpenTelemetry sidecar extensions to PHP, Python, Node.js, and .NET apps running on Azure App Service for Linux, including setup steps, default settings, debugging tips, and sample repos.<!--excerpt_end-->
 

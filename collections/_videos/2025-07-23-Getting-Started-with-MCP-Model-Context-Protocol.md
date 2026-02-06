@@ -17,11 +17,10 @@ tags:
 - Microsoft
 - Nick Chapsas
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Nick Chapsas presents a session by Dan Clarke introducing the Model Context Protocol (MCP), focusing on how developers can interface consistently with LLMs using Microsoft technologies such as C# and .NET.<!--excerpt_end-->

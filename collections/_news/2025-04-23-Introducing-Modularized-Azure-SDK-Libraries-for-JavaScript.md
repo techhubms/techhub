@@ -22,12 +22,12 @@ tags:
 - Tree Shaking
 - TypeScript
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Qiaoqiao Zhang introduces the new modularized Azure SDK libraries for JavaScript, focusing on bundle size optimization, usability improvements, and architectural enhancements that benefit developers building Azure-integrated applications.<!--excerpt_end-->
 

@@ -16,8 +16,9 @@ tags:
 - Page Blobs
 - Storage Cost Optimization
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

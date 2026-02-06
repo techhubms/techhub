@@ -19,11 +19,10 @@ tags:
 - Windows Desktop
 - WPF
 - X64
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this detailed post, Rick Strahl outlines the key challenges and solutions for deploying .NET Windows Desktop apps that run natively on both x64 and Arm64 platforms, with specific insights from developments on Markdown Monster.<!--excerpt_end-->
 

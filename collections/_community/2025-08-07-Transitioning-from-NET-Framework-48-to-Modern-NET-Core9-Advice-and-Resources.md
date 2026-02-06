@@ -26,11 +26,10 @@ tags:
 - Tim Corey
 - Udemy
 - VS Code
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 RemoveFun747 shares insights and community-driven advice for developers transitioning from legacy .NET Framework 4.8 to modern .NET 9, including learning resources and practical architectural considerations.<!--excerpt_end-->
 

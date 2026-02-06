@@ -15,11 +15,10 @@ tags:
 - NDepend
 - Operators
 - Properties
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 PatrickSmacchia delves into the upcoming C# 14 feature of Extension Members, offering insights on how it expands the language's extensibility.<!--excerpt_end-->
 

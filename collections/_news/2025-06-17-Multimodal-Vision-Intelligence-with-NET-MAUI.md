@@ -20,11 +20,10 @@ tags:
 - Multimodal
 - Prompt Engineering
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this article, David Ortinau details the process of building multimodal, AI-powered image analysis into .NET MAUI apps, leveraging .NET tooling and Microsoft.Extensions.AI.<!--excerpt_end-->

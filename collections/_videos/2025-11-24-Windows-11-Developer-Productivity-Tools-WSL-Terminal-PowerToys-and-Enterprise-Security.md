@@ -23,15 +23,15 @@ tags:
 - Windows Terminal
 - WSL
 - Zero Trust
-- Coding
 - DevOps
 - Security
 - Videos
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Microsoft Events brings together new and updated developer and IT productivity tools for Windows 11, focusing on WSL, Windows Terminal, PowerToys, security, and enterprise management features.<!--excerpt_end-->
 

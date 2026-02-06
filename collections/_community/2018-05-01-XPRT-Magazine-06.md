@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 06
 date: 2018-05-01 00:00:00 +00:00
 author: Xebia
@@ -20,14 +20,14 @@ tags:
 - Web
 - Website Speed
 - DevOps
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - devops
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 feed_name: TechHub
 ---
 XPRT Magazine 06 explores OpenFaaS, DevOps mindset, Kubernetes, Blazor, ChatOps, browser security, mob programming, bots, and more. This issue provides practical strategies and technical insights for building modern, secure, and high-performing solutions.

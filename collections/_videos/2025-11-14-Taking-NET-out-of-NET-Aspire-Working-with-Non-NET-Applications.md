@@ -18,11 +18,11 @@ tags:
 - Production Readiness
 - Python Integration
 - Service Orchestration
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a session on extending .NET Aspire to support applications built with technologies like Python and Node.js, detailing integration tips and benefits for diverse software stacks.<!--excerpt_end-->
 

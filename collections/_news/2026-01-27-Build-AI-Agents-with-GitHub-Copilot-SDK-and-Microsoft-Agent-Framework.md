@@ -12,7 +12,6 @@ tags:
 - AI
 - AI Agents
 - Azure OpenAI
-- Coding
 - Custom Tools
 - File Operations
 - Function Calling
@@ -29,7 +28,7 @@ tags:
 - Streaming Responses
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 ---
 Dmytro Struk explains the new integration between Microsoft Agent Framework and the GitHub Copilot SDK, showing developers how to build AI agents in .NET and Python that leverage Copilot’s powerful features.<!--excerpt_end-->

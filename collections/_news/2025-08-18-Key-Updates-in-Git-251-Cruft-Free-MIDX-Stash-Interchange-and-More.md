@@ -24,13 +24,13 @@ tags:
 - SHA 256
 - Stash Interchange
 - Version Control
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this technical write-up, Taylor Blau guides readers through the most significant improvements and new features in Git 2.51, highlighting technical details and practical implications for developers and DevOps practitioners.<!--excerpt_end-->
 

@@ -20,11 +20,10 @@ tags:
 - Xaml
 - XmlnsDefinition
 - XmlnsPrefix
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 David Ortinau discusses new features in .NET MAUI 10 that streamline XAML development, focusing on implicit and global namespaces to minimize verbosity and improve maintainability.<!--excerpt_end-->
 

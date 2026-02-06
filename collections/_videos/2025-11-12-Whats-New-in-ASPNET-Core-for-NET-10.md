@@ -19,11 +19,10 @@ tags:
 - Performance Improvements
 - Validation
 - Web Application Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents an overview of the latest ASP.NET Core features in .NET 10, showcasing improvements in performance, OpenAPI support, authentication, and modern web development for developers.<!--excerpt_end-->
 

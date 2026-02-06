@@ -20,11 +20,11 @@ tags:
 - Listmonk
 - NuGet Packages
 - PostgreSQL
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Andrew Lock demonstrates how to convert a docker-compose-based deployment for the mailing list manager listmonk into a .NET Aspire app host, leveraging Aspire's modeling tools for improved local development and publish workflows.<!--excerpt_end-->
 

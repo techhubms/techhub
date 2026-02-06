@@ -1,4 +1,4 @@
----
+﻿---
 title: GitHub Copilot Updates, Agent Tools, .NET 10 Release, and Azure Developments
 author: TechHub
 date: 2025-12-08 09:00:00 +00:00
@@ -17,18 +17,19 @@ tags:
 - VS
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- .NET
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

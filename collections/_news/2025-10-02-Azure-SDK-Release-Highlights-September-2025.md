@@ -26,12 +26,11 @@ tags:
 - SDK Release
 - Stable Release
 - Azure
-- Coding
 - News
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Ronnie Geraghty provides an overview of the September 2025 Azure SDK releases, highlighting key updates, new libraries, and where to find detailed release notes for developers across multiple languages.<!--excerpt_end-->
 

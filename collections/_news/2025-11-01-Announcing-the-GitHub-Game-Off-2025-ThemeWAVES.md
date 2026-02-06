@@ -24,13 +24,13 @@ tags:
 - Unreal Engine
 - Version Control
 - WAVES
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Lee Reilly announces the theme WAVES for the GitHub Game Off 2025, outlining how developers can join, create games, and celebrate creativity with the global GitHub community.<!--excerpt_end-->
 

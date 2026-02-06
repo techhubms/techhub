@@ -27,13 +27,13 @@ tags:
 - VS Code Extensions
 - AI
 - Azure
-- Coding
 - GitHub Copilot
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

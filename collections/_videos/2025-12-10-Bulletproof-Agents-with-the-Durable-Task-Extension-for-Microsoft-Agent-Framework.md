@@ -22,12 +22,11 @@ tags:
 - Stateful Agents
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet presents an in-depth session on building resilient and scalable AI agents using the Durable Task Extension for Microsoft Agent Framework, focusing on durability, distributed operation, determinism, and observability.<!--excerpt_end-->

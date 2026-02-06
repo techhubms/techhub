@@ -24,12 +24,12 @@ tags:
 - VS Code Agents
 - VS Code Team
 - AI
-- Coding
 - GitHub Copilot
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

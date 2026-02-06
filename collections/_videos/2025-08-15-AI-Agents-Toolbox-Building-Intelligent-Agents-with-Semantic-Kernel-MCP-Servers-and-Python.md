@@ -31,12 +31,12 @@ tags:
 - Technology
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents a hands-on episode with Evan Mattson, exploring how to build intelligent AI agents using Semantic Kernel, MCP Servers, Python, and Azure AI Foundry, offering practical demos for developers.<!--excerpt_end-->

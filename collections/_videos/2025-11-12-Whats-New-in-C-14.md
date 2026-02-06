@@ -21,11 +21,10 @@ tags:
 - Programming Languages
 - Software Development
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet showcases the newest features of C# 14, detailing language improvements, productivity enhancements, and design insights directly from the core C# team.<!--excerpt_end-->
 

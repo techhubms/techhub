@@ -22,12 +22,12 @@ tags:
 - Real Time Streaming
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 TulikaC outlines how to combine GPT-OSS-20B and a Flask web app as containers within Azure App Service, giving developers a robust pattern for running open-weight language models with cloud scalability and minimal infrastructure overhead.<!--excerpt_end-->

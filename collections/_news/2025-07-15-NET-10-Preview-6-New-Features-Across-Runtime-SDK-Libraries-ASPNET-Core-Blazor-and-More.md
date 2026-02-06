@@ -22,11 +22,10 @@ tags:
 - VS
 - WinForms
 - WPF
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this announcement, the .NET Team details the latest features and improvements in .NET 10 Preview 6, covering updates to the core runtime, SDK, ASP.NET Core, Blazor, .NET MAUI, and more.<!--excerpt_end-->
 

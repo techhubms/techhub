@@ -19,12 +19,12 @@ tags:
 - Software Development
 - Workflow Automation
 - AI
-- Coding
 - GitHub Copilot
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

@@ -20,13 +20,13 @@ tags:
 - Terminal Improvements
 - VS Code
 - VS Code Extensions
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Visual Studio Code's team, joined by engineer Daniel Imms, discusses the August iteration plan and in-depth upgrades to VS Code's terminal, aiming to enhance developer productivity.<!--excerpt_end-->
 

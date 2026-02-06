@@ -28,12 +28,12 @@ tags:
 - Windows Insider
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 stclarke presents a comprehensive overview of Windows accessibility innovations from 2025, emphasizing AI-powered dictation and Voice Access improvements that benefit users with disabilities.<!--excerpt_end-->

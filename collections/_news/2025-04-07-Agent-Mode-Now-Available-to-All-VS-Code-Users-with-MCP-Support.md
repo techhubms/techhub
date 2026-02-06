@@ -22,11 +22,11 @@ tags:
 - VS Code
 - VS Code Extensions
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Isidor Nikolic from the VS Code team introduces Agent Mode, now accessible to all users. This update enables developers to automate coding tasks, customize workflows with MCP servers and extensions, and experience streamlined AI integration in Visual Studio Code.<!--excerpt_end-->

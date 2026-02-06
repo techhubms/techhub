@@ -12,7 +12,7 @@ tags:
 - Developer Tools
 - Function Definitions
 - Live Coding
-- Machine Learning
+- ML
 - Microsoft Foundry
 - Model Integration
 - Multimodal AI

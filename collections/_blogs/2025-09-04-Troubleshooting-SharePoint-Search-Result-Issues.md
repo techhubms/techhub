@@ -19,11 +19,11 @@ tags:
 - SharePoint
 - SharePoint Search
 - User Training
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny provides a practical guide on how to diagnose and resolve issues with SharePoint search, offering actionable steps and highlighting key features for administrators and power users.<!--excerpt_end-->
 

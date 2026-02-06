@@ -13,7 +13,7 @@ tags:
 - Conversational AI
 - Customer Experience
 - E Commerce
-- Machine Learning
+- ML
 - Microsoft Azure
 - Ralph Lauren
 - Retail Technology

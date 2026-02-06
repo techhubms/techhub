@@ -18,12 +18,11 @@ tags:
 - Web App
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this article, dotnet highlights Beth Massi's walkthrough on augmenting a web app with native mobile capabilities and AI integration. Using Blazor and .NET MAUI, along with Microsoft's Azure AI Foundry, Massi showcases how to bring AI and platform-specific enhancements to cross-platform applications. The article also features contributions from David Ortinau and provides links for deeper community engagement.<!--excerpt_end-->

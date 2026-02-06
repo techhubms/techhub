@@ -22,12 +22,12 @@ tags:
 - Service Desk Automation
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 macalde presents the winners and standout technical solutions from the November 2025 Innovation Challenge hackathon, showcasing AI-powered Azure solutions from top developer teams.<!--excerpt_end-->

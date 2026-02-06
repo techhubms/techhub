@@ -20,11 +20,11 @@ tags:
 - Test Generation
 - VS Code
 - AI
-- Coding
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 LeenaShaw demonstrates how to integrate Playwright with the Model Context Protocol (MCP) in VS Code, empowering developers to automate tests using AI-powered workflows and natural language prompts.<!--excerpt_end-->

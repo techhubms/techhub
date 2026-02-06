@@ -15,11 +15,11 @@ tags:
 - Tooling
 - Troubleshooting
 - VS Code
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Visual Studio Code presents practical ways for developers to work effectively with MCP, as explained in this video by Visual Studio Code.<!--excerpt_end-->
 

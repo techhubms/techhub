@@ -18,11 +18,11 @@ tags:
 - VS Code
 - Workspace Integration
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Harald Kirschner explains how integrating Model Context Protocol (MCP) in VS Code empowers AI agents to use external tools, enhancing flexibility and control for developers.<!--excerpt_end-->

@@ -21,11 +21,10 @@ tags:
 - String.join
 - Task Parallelism
 - Utilities
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 zigs leads a community discussion exploring the most effective helper methods and C# extension patterns, sharing useful code snippets that simplify .NET development workflows.<!--excerpt_end-->
 

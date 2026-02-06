@@ -21,13 +21,12 @@ tags:
 - OAuth2
 - OpenID Connect
 - Web API
-- Coding
 - Security
 - Blogs
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 In this article, Marinko Spasojević details how to integrate Keycloak authentication with both a Blazor WebAssembly client application and an ASP.NET Core Web API backend, providing step-by-step guidance and sample configurations.<!--excerpt_end-->
 

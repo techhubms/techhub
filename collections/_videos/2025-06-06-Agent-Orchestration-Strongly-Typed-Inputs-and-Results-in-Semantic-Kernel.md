@@ -21,11 +21,11 @@ tags:
 - Structured Data
 - Type Safe AI
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI presents a guide on leveraging strongly-typed input and output models within Semantic Kernel agent workflows, demonstrating techniques for building scalable, robust AI applications.<!--excerpt_end-->

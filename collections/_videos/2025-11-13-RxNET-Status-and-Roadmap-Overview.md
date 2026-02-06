@@ -18,11 +18,10 @@ tags:
 - Reactive Programming
 - Rx.NET
 - Software Roadmap
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet shares the latest work and future plans for Rx.NET, outlining updates, development priorities, and roadmap insights relevant to .NET developers.<!--excerpt_end-->
 

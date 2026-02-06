@@ -16,11 +16,10 @@ tags:
 - Windows
 - WindowSubClassHelper.cs
 - XAML
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Vor__texx shares their struggle to set a minimum window size in a .NET 8.0 MAUI application, detailing the approaches tried and asking the community for help.<!--excerpt_end-->
 

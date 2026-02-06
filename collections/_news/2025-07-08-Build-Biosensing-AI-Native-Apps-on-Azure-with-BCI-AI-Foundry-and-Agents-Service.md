@@ -24,12 +24,12 @@ tags:
 - TypeAgent
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Written by Govind Kamtamneni with JD Chibuk, this post guides readers through building cognitive biosensing AI apps on Azure using BCI, AI Foundry, and Agent Services. It showcases real-world scenarios, advanced architecture, and opportunities for developers.<!--excerpt_end-->

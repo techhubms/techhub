@@ -17,13 +17,12 @@ tags:
 - Security Key Integration
 - WebAuthn
 - Yubikey
-- Coding
 - Security
 - Videos
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet provides a thorough and practical session on integrating passkey-based passwordless authentication using the WebAuthn protocol within ASP.NET Core applications, including support for hardware and software security keys.<!--excerpt_end-->
 

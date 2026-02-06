@@ -26,13 +26,13 @@ tags:
 - Vector Search
 - AI
 - Azure
-- Coding
 - GitHub Copilot
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

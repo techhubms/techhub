@@ -12,7 +12,7 @@ tags:
 - Digital Transformation
 - Engineering Culture
 - IDP
-- Machine Learning
+- ML
 - Model Lifecycle Management
 - Responsible AI
 - Software Delivery

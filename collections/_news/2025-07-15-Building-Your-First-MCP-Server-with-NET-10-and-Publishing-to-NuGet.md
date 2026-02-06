@@ -21,12 +21,11 @@ tags:
 - VS Code
 - AI
 - GitHub Copilot
-- Coding
 - News
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 Written by Jon Douglas, Joel Verhagen, and Jon Galloway, this article demonstrates how to build, customize, and publish your first Model Context Protocol (MCP) server using .NET 10, enabling discoverable AI integrations via NuGet.<!--excerpt_end-->

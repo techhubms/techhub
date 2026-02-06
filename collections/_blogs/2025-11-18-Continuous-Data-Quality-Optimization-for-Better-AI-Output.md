@@ -18,7 +18,7 @@ tags:
 - Data Pipeline
 - Data Quality
 - Data Validation
-- Machine Learning
+- ML
 - AI
 - Blogs
 section_names:

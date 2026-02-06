@@ -16,11 +16,10 @@ tags:
 - Offline AI
 - Structured Prompts
 - AI
-- Coding
 - Community
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this community tutorial, HassanRezkHabib explains how to build a local MCP server in .NET to connect with local LLMs. The video provides practical guidance for developers aiming for more deterministic and offline LLM workflows.<!--excerpt_end-->

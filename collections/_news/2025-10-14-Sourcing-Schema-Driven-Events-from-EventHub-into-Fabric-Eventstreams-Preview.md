@@ -21,8 +21,9 @@ tags:
 - Schema Registry
 - Type Safety
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

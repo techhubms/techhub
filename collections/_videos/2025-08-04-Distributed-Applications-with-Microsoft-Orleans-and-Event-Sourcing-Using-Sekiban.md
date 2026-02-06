@@ -24,11 +24,10 @@ tags:
 - Sekiban
 - Software Developer
 - VS Code
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Hosted by dotnet with guest Tomohisa Takaoka, this discussion delves into developing distributed applications using Microsoft Orleans, event sourcing, and the Sekiban C# framework.<!--excerpt_end-->
 

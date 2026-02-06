@@ -20,11 +20,10 @@ tags:
 - Remote Tab
 - VS Code
 - Watch Expressions
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this episode, dotnet demonstrates essential debugging techniques for C# game development in Godot, using both Godot and Visual Studio Code tools to help developers confidently troubleshoot common game issues.<!--excerpt_end-->
 

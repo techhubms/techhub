@@ -21,11 +21,11 @@ tags:
 - SDK Preview
 - Self Contained Packaging
 - Spectre.Console
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock details how .NET 10 preview improves .NET tool packaging for NuGet with new self-contained and native AOT deployment options, uncovering benefits, limitations, and practical tips for developers.<!--excerpt_end-->
 

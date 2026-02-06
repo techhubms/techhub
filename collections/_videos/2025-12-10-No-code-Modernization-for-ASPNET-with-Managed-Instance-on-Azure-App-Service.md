@@ -22,12 +22,11 @@ tags:
 - Total Cost Of Ownership
 - Web API
 - Azure
-- Coding
 - Videos
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Presented by dotnet, this session explores how to modernize ASP.NET applications with Managed Instance on Azure App Service, highlighting best practices for seamless migration and integration.<!--excerpt_end-->
 

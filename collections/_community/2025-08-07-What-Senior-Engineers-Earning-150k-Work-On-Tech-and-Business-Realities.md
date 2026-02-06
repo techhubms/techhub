@@ -27,16 +27,15 @@ tags:
 - SSIS
 - Version Control
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Legitimate-School-59 shares a behind-the-scenes look at the technical and business realities for senior engineers earning over 150k, focusing on Azure migrations, large-scale codebase management, security enhancements, and more.<!--excerpt_end-->
 

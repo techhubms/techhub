@@ -22,14 +22,14 @@ tags:
 - Windows Agents
 - ZIP Deploy
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 YaMoef opens a discussion about the limitations of the Solidify tokenization task in Azure DevOps, focusing on multi-platform support and secure handling of secrets. Community responses offer practical deployment strategies.<!--excerpt_end-->
 

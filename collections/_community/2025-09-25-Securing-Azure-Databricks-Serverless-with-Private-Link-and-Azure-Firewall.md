@@ -27,9 +27,10 @@ tags:
 - Virtual Network
 - VNET Peering
 - Azure
-- Machine Learning
+- ML
 - Security
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

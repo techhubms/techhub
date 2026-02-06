@@ -21,11 +21,10 @@ tags:
 - VS
 - WPF
 - XAML
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 nile-code raises a practical WPF/MVVM issue: design previews break when injecting the DataContext from code-behind due to dependency-injected ViewModel constructors. Community members discuss solutions and reference Microsoft documentation and StackOverflow answers.<!--excerpt_end-->
 

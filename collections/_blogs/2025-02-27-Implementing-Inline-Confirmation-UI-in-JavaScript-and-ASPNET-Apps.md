@@ -20,11 +20,11 @@ tags:
 - UI/UX Patterns
 - Vue.js
 - Web Development
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rick Strahl shares a simple and effective technique for handling confirmation prompts inline in JavaScript and ASP.NET web applications, providing code examples and UI best practices.<!--excerpt_end-->
 

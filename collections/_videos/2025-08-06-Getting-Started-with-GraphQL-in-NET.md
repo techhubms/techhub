@@ -16,11 +16,10 @@ tags:
 - Michael Staib
 - Microsoft
 - Nick Chapsas
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nick Chapsas introduces Michael Staib as he demonstrates how to create GraphQL APIs in .NET using the HotChocolate library, helping developers start working with GraphQL in a Microsoft ecosystem.<!--excerpt_end-->
 

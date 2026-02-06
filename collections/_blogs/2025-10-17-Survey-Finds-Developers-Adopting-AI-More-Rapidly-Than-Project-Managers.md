@@ -13,7 +13,7 @@ tags:
 - Career Opportunities
 - Coding Automation
 - Developer Productivity
-- Machine Learning
+- ML
 - Project Management
 - Social Facebook
 - Social LinkedIn

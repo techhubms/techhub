@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 03
 date: 2016-10-01 00:00:00 +00:00
 author: Xebia
@@ -12,7 +12,7 @@ tags:
 - Containers
 - Continuous Delivery
 - IaC
-- Machine Learning
+- ML
 - Magazines
 - Microsoft
 - Mobile Apps

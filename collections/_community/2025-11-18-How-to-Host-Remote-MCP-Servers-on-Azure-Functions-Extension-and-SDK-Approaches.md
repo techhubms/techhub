@@ -35,13 +35,12 @@ tags:
 - TypeScript
 - AI
 - Azure
-- Coding
 - Security
 - Community
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - security
 primary_section: ai
 ---

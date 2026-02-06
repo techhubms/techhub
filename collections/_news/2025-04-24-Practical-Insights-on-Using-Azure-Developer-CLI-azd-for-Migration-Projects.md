@@ -13,14 +13,13 @@ tags:
 - Bicep
 - IaC
 - Azure
-- Coding
 - DevOps
 - News
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this post, Frank Boucher details firsthand lessons from migrating AzUrlShortener to Azure using the Azure Developer CLI (azd). Gain insights into automating IaC with Bicep, managing deployment pipelines, and overcoming real-life migration challenges.<!--excerpt_end-->
 

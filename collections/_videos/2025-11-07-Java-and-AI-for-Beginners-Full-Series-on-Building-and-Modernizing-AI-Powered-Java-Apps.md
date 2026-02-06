@@ -27,12 +27,12 @@ tags:
 - Technology
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents a thorough video guide for developers on integrating AI and Microsoft cloud platform features into Java applications, covering modernization, deployment, and responsible AI practices.<!--excerpt_end-->

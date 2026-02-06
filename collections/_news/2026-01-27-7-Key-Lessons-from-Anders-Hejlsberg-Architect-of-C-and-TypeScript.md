@@ -2,7 +2,7 @@
 external_url: https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/
 title: '7 Key Lessons from Anders Hejlsberg: Architect of C# and TypeScript'
 author: Aaron Winston
-primary_section: coding
+primary_section: dotnet
 feed_name: The GitHub Blog
 date: 2026-01-27 17:17:28 +00:00
 tags:
@@ -10,7 +10,6 @@ tags:
 - AI Tooling
 - Anders Hejlsberg
 - C#
-- Coding
 - Compiler Design
 - Developer Skills
 - Developer Tools
@@ -27,8 +26,9 @@ tags:
 - Software Engineering
 - Technical Leadership
 - Typescript
+- .NET
 section_names:
-- coding
+- dotnet
 ---
 Aaron Winston shares seven essential lessons from Anders Hejlsberg, architect of C# and TypeScript, focusing on fast feedback, scaling, open source practices, and the evolving role of AI in programming.<!--excerpt_end-->
 

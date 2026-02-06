@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 02
 date: 2016-05-01 00:00:00 +00:00
 author: Xebia
@@ -24,13 +24,13 @@ tags:
 - Windows 10 IoT Core
 - Azure
 - DevOps
-- Coding
 - Community
+- .NET
 section_names:
 - azure
 - devops
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 feed_name: TechHub
 ---
 XPRT Magazine 02 explores IoT with Raspberry Pi and Windows 10 IoT Core, DevOps for mobile, Power BI analytics, Azure high availability, Cloudera deployment, .NET Core, Akka.NET, Docker, and scaling Scrum. This issue provides hands-on guidance and real-world insights for modern developers and teams.

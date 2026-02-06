@@ -17,11 +17,11 @@ tags:
 - Static Extension Methods
 - Syntax Changes
 - VS
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Andrew Lock provides a detailed walkthrough of C# 14’s new extension members feature in .NET 10, including how to convert existing extension methods, the new syntax, and updates to his NetEscapades.EnumGenerators package.<!--excerpt_end-->
 

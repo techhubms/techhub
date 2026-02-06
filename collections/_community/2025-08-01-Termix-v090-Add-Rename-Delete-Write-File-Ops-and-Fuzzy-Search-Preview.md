@@ -17,11 +17,10 @@ tags:
 - Terminal
 - Termix
 - User Experience
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 amrohann shares the release of Termix v0.9.0, highlighting new file operation features, fuzzy search, and improvements in this .NET-based terminal file navigator.<!--excerpt_end-->
 

@@ -15,11 +15,11 @@ tags:
 - Programming
 - Social Network Features
 - UI Design
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rywent introduces a prototype cycling app built with C# and MAUI, inviting feedback from the development community as he explores MAUI for cross-platform application design.<!--excerpt_end-->
 

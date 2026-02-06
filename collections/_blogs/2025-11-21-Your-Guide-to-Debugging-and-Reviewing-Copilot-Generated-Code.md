@@ -22,13 +22,13 @@ tags:
 - Test Driven Development
 - Unit Tests
 - AI
-- Coding
 - GitHub Copilot
 - Security
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 - security
 primary_section: github-copilot

@@ -25,14 +25,13 @@ tags:
 - Secret Token
 - Telemetry
 - Azure
-- Coding
 - DevOps
 - Community
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 TulikaC explains how to connect Azure App Service for Linux to Elastic APM using an OpenTelemetry sidecar extension—covering setup steps, app settings, and validation in Kibana.<!--excerpt_end-->
 

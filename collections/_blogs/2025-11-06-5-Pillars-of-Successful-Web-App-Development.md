@@ -41,15 +41,15 @@ tags:
 - Web Application Development
 - Web Architecture
 - Web Security
-- Coding
 - DevOps
 - Security
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Roman Davydov discusses best practices for web app development, emphasizing key pillars such as security, performance, and user-centric design. The article delivers insights valuable to development and DevOps teams.<!--excerpt_end-->
 

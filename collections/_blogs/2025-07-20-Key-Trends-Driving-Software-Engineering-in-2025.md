@@ -28,13 +28,13 @@ tags:
 - Sustainable Software
 - Zero Trust
 - AI
-- Coding
 - DevOps
 - Security
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

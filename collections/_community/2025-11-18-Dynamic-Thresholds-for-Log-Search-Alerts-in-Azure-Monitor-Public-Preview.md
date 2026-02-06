@@ -15,7 +15,7 @@ tags:
 - Dynamic Thresholds
 - Kusto Query Language
 - Log Search Alerts
-- Machine Learning
+- ML
 - Metric Alerts
 - Microsoft
 - Resource Graph

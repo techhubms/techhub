@@ -16,11 +16,11 @@ tags:
 - TagHelpers
 - ViewContext
 - Web Development
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this blog post, Khalid Abuhakmeh explores how to leverage the ITagHelperInitializer interface in ASP.NET Core to provide shared data to TagHelpers, offering practical tips for efficient and maintainable Razor development.<!--excerpt_end-->
 

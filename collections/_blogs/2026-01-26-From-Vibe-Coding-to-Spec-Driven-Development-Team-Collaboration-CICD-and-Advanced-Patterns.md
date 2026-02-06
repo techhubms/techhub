@@ -32,13 +32,12 @@ tags:
 - Vibe Coding
 - AI
 - Azure
-- Coding
 - DevOps
 - Blogs
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

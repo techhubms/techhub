@@ -24,11 +24,10 @@ tags:
 - SQLite
 - Visual Studio Extension
 - VS
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Giorgi Dalakishvili details how the EFCore.Visualizer extension for Visual Studio helps developers analyze and optimize Entity Framework Core query execution plans directly from the IDE.<!--excerpt_end-->
 

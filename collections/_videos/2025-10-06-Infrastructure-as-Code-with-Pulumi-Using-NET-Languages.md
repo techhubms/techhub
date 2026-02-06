@@ -22,13 +22,12 @@ tags:
 - Programming Languages
 - Pulumi
 - Software Developer
-- Coding
 - DevOps
 - Videos
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Co-host Cam Soper demonstrates Pulumi on On .NET Live, showing developers how to use C# and F# for cloud infrastructure as code, leveraging familiar .NET tools and workflows.<!--excerpt_end-->
 

@@ -23,11 +23,11 @@ tags:
 - Microsoft
 - Software Developer
 - VS Code
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Visual Studio Code presents a session featuring Reynald Adolphe and Akbar Mirza on how to connect Figma MCP Server and Code Connect in VS Code to streamline design-to-code workflows.<!--excerpt_end-->
 

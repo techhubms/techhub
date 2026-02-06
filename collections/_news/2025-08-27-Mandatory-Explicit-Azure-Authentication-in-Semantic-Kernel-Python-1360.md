@@ -20,12 +20,12 @@ tags:
 - Service Principal
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Dmytro Struk explains how Semantic Kernel Python 1.36.0 now requires explicit Azure authentication, replacing the former DefaultAzureCredential fallback. Learn the impact of this change and how to update your code.<!--excerpt_end-->

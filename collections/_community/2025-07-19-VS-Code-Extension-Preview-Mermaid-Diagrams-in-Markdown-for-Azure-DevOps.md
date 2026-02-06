@@ -17,14 +17,14 @@ tags:
 - Wiki
 - Work
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 mavsankar presents a new VS Code extension to preview Mermaid diagrams in Markdown files for Azure DevOps documentation. Discover how this tool streamlines documentation and diagram workflows.<!--excerpt_end-->
 

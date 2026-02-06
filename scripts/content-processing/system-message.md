@@ -309,9 +309,9 @@ Include "GitHub Copilot" if ANY of these rules apply:
 - ❌ "How AI power users achieve more with Microsoft 365 Copilot" → No categories (excluded)
 - ❌ "Using Bing Chat to summarize documents" → No categories (excluded)
 
-### Coding Category
+### .NET Category
 
-Include "Coding" if ANY of these rules apply:
+Include ".NET" if ANY of these rules apply:
 
 1. **Microsoft Programming Languages**
    - C#, F#, VB.NET, TypeScript
@@ -329,12 +329,12 @@ Include "Coding" if ANY of these rules apply:
 5. **Microsoft Development Tools**
    - Visual Studio, Visual Studio Code, .NET CLI, NuGet
 
-**Coding Examples:**
+**.NET Examples:**
 
-- ✅ "C# async/await patterns" → Coding
-- ✅ "Entity Framework Core performance tuning" → Coding
-- ✅ "ASP.NET Core minimal APIs guide" → Coding
-- ✅ "Blazor WebAssembly development" → Coding
+- ✅ "C# async/await patterns" → .NET
+- ✅ "Entity Framework Core performance tuning" → .NET
+- ✅ "ASP.NET Core minimal APIs guide" → .NET
+- ✅ "Blazor WebAssembly development" → .NET
 
 ### DevOps Category
 
@@ -374,10 +374,10 @@ Include "DevOps" if ANY of these rules apply:
 
 **DevOps Examples:**
 
-- ✅ "Azure DevOps Pipelines for .NET" → DevOps, Azure, Coding
+- ✅ "Azure DevOps Pipelines for .NET" → DevOps, Azure, .NET
 - ✅ "GitHub Actions CI/CD workflow" → DevOps
 - ✅ "Agile team transformation" → DevOps
-- ✅ "Infrastructure as Code with Terraform" → DevOps, Coding
+- ✅ "Infrastructure as Code with Terraform" → DevOps, .NET
 
 ### Azure Category
 
@@ -413,7 +413,7 @@ Include "Azure" if ANY of these rules apply:
 **Azure Examples:**
 
 - ✅ "Azure Functions serverless development" → Azure
-- ✅ "ARM template best practices" → Azure, DevOps, Coding
+- ✅ "ARM template best practices" → Azure, DevOps, .NET
 - ✅ "Azure OpenAI Service integration" → Azure, AI
 - ✅ "Azure SQL Database performance tuning" → Azure
 - ✅ "Azure Application Insights data ingestion best practices" → Azure
@@ -539,7 +539,7 @@ Include "Security" if ANY of these rules apply:
 - ✅ "Microsoft Entra ID authentication setup" → Security
 - ✅ "Azure Key Vault secrets management" → Security, Azure
 - ✅ "Zero Trust architecture with Microsoft" → Security
-- ✅ "Secure .NET application development" → Security, Coding
+- ✅ "Secure .NET application development" → Security, .NET
 
 ## Chapter 5: Input Format
 
@@ -597,8 +597,8 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 #### Microsoft 365 vs Office 365
 
 - Focus only on development-related aspects
-- SharePoint development → Coding category
-- Teams bot development → Coding category  
+- SharePoint development → .NET category
+- Teams bot development → .NET category  
 - **Microsoft 365 Copilot → No categories** (business productivity, not developer tool)
 - **Copilot for Microsoft 365 → No categories** (business productivity, not developer tool)
 - General end-user features → No categories
@@ -622,7 +622,7 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 - ✅ "React frontend + Azure Functions backend" → Azure (Azure is central backend)
 - ✅ "Python Flask on Azure App Service" → Azure (Azure provides hosting platform)  
 - ❌ "Node.js app with AWS Lambda and Azure AD" → No categories (Azure not central)
-- ✅ "Kubernetes on Azure with custom .NET services" → Azure, Coding (both central)
+- ✅ "Kubernetes on Azure with custom .NET services" → Azure, .NET (both central)
 
 ### Content Quality Edge Cases
 
@@ -766,7 +766,7 @@ Return a JSON object with these 6 fields:
 
 - Array of category names that apply based on inclusion rules
 - Can include multiple categories
-- Use exact category names: "AI", "GitHub Copilot", "Coding", "DevOps", "Azure", "ML", "Security"
+- Use exact category names: "AI", "GitHub Copilot", ".NET", "DevOps", "Azure", "ML", "Security"
 
 **tags** (array of strings, 10+ if possible)
 
@@ -819,11 +819,11 @@ Return a JSON object with only this field:
 ```json
 {
   "title": "Getting Started with Azure OpenAI Service in C#",
-  "categories": ["AI", "Azure", "Coding"],
+  "categories": ["AI", "Azure", ".NET"],
   "tags": ["Azure OpenAI Service", "C#", "API Integration", "Authentication", "GPT-4", "Microsoft Azure", "REST API", "Cloud Development", "AI Development", "Programming Tutorial"],
   "excerpt": "Jane Smith provides a comprehensive tutorial on integrating Azure OpenAI Service into C# applications, covering the essential steps for developers.",
   "content": "# Getting Started with Azure OpenAI Service in C#\n\nThis tutorial demonstrates how to integrate Azure OpenAI Service into C# applications...",
-  "explanation": "Assigned AI category because content focuses on Azure OpenAI Service (AI rule 1). Assigned Azure category because it covers Azure service usage (Azure rule 1). Assigned Coding category because it involves C# development and API integration (Coding rules 1 and 2)."
+  "explanation": "Assigned AI category because content focuses on Azure OpenAI Service (AI rule 1). Assigned Azure category because it covers Azure service usage (Azure rule 1). Assigned .NET category because it involves C# development and API integration (.NET rules 1 and 2)."
 }
 ```
 

@@ -19,11 +19,10 @@ tags:
 - String Manipulation
 - String Overlay
 - System.Console
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 06Hexagram initiates a discussion about overlaying strings in C# console apps without overwriting non-space characters, with community members contributing practical solutions.<!--excerpt_end-->
 

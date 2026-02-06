@@ -27,14 +27,14 @@ tags:
 - Python
 - VNET
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 PuiChee (PC) Chan shares a practical guide on using Azure Developer CLI v1.20.0 and Azure Container Apps to enable build-once, deploy-everywhere patterns with layered infrastructure and robust CI/CD pipelines.<!--excerpt_end-->
 

@@ -22,16 +22,16 @@ tags:
 - Secret Management
 - Software Development
 - Azure
-- Coding
 - DevOps
 - Security
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 In this article, David Fowler explores how Aspire simplifies application development by abstracting environment-specific details, allowing developers to focus on intent, especially when managing secrets via Azure Key Vault.<!--excerpt_end-->
 

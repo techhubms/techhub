@@ -20,11 +20,10 @@ tags:
 - Open Source
 - Software Developer
 - Web Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Hosted by Daniel Roth, Javier Calvarro Nelson, and Larry Ewing, this standup explores upcoming themes and ideas shaping Blazor’s future in .NET 11, fostering community participation.<!--excerpt_end-->
 

@@ -25,11 +25,11 @@ tags:
 - Skill Plugins
 - Workflow Automation
 - AI
-- Coding
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Abdulhamid_Onawole demonstrates how developers can leverage Microsoft Semantic Kernel to intelligently orchestrate existing business logic, preserving workflow reliability while adding natural language control.<!--excerpt_end-->

@@ -20,12 +20,11 @@ tags:
 - REST API
 - Retry Logic
 - Azure
-- Coding
 - Community
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 riturajjana explores .NET background processing with BackgroundService and exponential backoff, guiding developers through a resilient architecture for handling unreliable APIs, and providing complete, production-ready code samples.<!--excerpt_end-->
 

@@ -14,7 +14,7 @@ tags:
 - Incident Response
 - IT Operations
 - Kubernetes
-- Machine Learning
+- ML
 - Monitoring
 - Observability
 - Predictive Analytics

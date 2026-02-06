@@ -19,7 +19,7 @@ tags:
 - Java Development
 - JavaProgramming
 - JavaTutorial
-- Machine Learning
+- ML
 - MachineLearning
 - MCP
 - Microsoft

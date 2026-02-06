@@ -25,14 +25,13 @@ tags:
 - Unit Testing
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
 - Community
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

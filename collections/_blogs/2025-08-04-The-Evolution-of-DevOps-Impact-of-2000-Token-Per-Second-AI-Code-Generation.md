@@ -13,7 +13,7 @@ tags:
 - Development Workflows
 - Engineering
 - IaC
-- Machine Learning
+- ML
 - Open Source AI
 - Productivity
 - Qwen3 Coder

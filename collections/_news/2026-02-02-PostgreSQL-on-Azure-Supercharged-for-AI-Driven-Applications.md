@@ -15,7 +15,6 @@ tags:
 - Azure HorizonDB
 - Azure Monitor
 - Boardvantage
-- Coding
 - Databases
 - DevOps
 - DiskANN
@@ -38,11 +37,12 @@ tags:
 - V6 Compute
 - VS Code
 - Zero ETL
+- .NET
 - Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 - ml

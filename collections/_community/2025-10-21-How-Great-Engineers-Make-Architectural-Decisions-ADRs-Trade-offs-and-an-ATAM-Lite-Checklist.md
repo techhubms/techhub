@@ -25,16 +25,16 @@ tags:
 - Team Guidelines
 - Trade Offs
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Antony_nganga explores how great engineers make architectural decisions by balancing trade-offs and documenting outcomes—featuring ADRs, the Azure Well-Architected Framework, an ATAM-lite checklist, and practical team guidelines.<!--excerpt_end-->
 

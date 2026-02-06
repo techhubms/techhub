@@ -2,7 +2,7 @@
 external_url: https://dotnetfoundation.org/news-events/detail/sponsor-spotlight-sentryblog1
 title: Integrating Sentry Logging with .NET Applications
 author: .NET Foundation News and Blog
-primary_section: coding
+primary_section: dotnet
 feed_name: .NET Foundation's Blog
 date: 2026-01-29 14:44:53 +00:00
 tags:
@@ -10,7 +10,6 @@ tags:
 - Application Monitoring
 - ASP.NET Core
 - Blogs
-- Coding
 - Debugging
 - Error Tracking
 - Logging
@@ -21,7 +20,7 @@ tags:
 - Stack Trace
 - Structured Logs
 section_names:
-- coding
+- dotnet
 ---
 .NET Foundation News and Blog explains how developers can integrate structured logging in Sentry with their .NET, MAUI, and ASP.NET Core projects for enhanced debugging and monitoring.<!--excerpt_end-->
 

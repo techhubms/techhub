@@ -21,11 +21,11 @@ tags:
 - Python
 - Semantic Kernel
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Authored by Friederike Niedtner, this article explores the collaboration between Microsoft's Semantic Kernel and AutoGen agentic AI frameworks, detailing their capabilities, integration roadmap, and resources to help developers choose and leverage these powerful tools.<!--excerpt_end-->

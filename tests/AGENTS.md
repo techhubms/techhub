@@ -1,7 +1,7 @@
 # Testing Strategy for Tech Hub .NET
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `tests/` directory. It complements the [Root AGENTS.md](../AGENTS.md) and [src/AGENTS.md](../src/AGENTS.md).
-> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../AGENTS.md). Project principles (Timezone, Performance) are in [README.md](../README.md). Follow **BOTH**.
+> **RULE**: Follow the 9-step workflow in Root [AGENTS.md](../AGENTS.md).
 
 ## Overview
 

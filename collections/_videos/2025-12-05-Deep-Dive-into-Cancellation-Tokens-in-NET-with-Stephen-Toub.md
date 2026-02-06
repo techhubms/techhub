@@ -29,11 +29,10 @@ tags:
 - Threading
 - Tokens
 - Volatile
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Scott Hanselman and Stephen Toub offer a practical breakdown of cancellation tokens in .NET, explaining their evolution and usage for robust async code.<!--excerpt_end-->
 

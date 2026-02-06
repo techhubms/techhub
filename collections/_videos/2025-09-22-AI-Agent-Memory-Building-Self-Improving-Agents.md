@@ -25,12 +25,12 @@ tags:
 - Technology
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents a deep dive into AI agent memory systems, featuring memory management strategies, self-improvement, and code samples using Mem0, Semantic Kernel, and Azure AI Search.<!--excerpt_end-->

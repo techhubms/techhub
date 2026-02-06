@@ -15,11 +15,11 @@ tags:
 - Memory Management
 - Resource Management
 - Using Statement
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this community post, detroitmatt explores how to make cleanup code reliably run in C# with IAsyncDisposable, highlighting pitfalls with disposable patterns.<!--excerpt_end-->
 

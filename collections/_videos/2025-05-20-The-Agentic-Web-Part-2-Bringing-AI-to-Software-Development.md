@@ -14,7 +14,7 @@ tags:
 - AI Strategy
 - Frank Shaw
 - Jay Parikh
-- Machine Learning
+- ML
 - Microsoft
 - Microsoft Build
 - Microsoft Events

@@ -21,11 +21,11 @@ tags:
 - Semantic Processing
 - Workflow Automation
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI demonstrates how to build and connect intelligent agents using Microsoft Copilot Studio and Semantic Kernel, offering practical demos and hands-on strategies.<!--excerpt_end-->

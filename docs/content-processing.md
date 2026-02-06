@@ -197,7 +197,7 @@ The system analyzes RSS content using comprehensive categorization rules:
 
 - **Microsoft AI**: Azure OpenAI, Copilot services, AI Foundry, Semantic Kernel
 - **GitHub Copilot**: All Copilot editions, features, integrations (always includes AI)
-- **Coding**: Microsoft languages (C#, F#, TypeScript), .NET ecosystem
+- **.NET (dotnet)**: Microsoft languages (C#, F#, TypeScript), .NET ecosystem
 - **DevOps**: Azure DevOps, GitHub Actions, CI/CD, monitoring
 - **Azure**: All Azure services, ARM/Bicep templates, cloud architecture
 

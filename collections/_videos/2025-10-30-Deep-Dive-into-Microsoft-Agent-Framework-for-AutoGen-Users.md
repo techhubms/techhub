@@ -31,12 +31,12 @@ tags:
 - Workflow
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Eric Zhu from Microsoft Developer presents a thorough guide for AutoGen users transitioning to the Microsoft Agent Framework, exploring migration strategies and new multi-agent architecture capabilities.<!--excerpt_end-->

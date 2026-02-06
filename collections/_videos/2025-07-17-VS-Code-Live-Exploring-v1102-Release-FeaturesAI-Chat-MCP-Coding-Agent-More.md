@@ -16,11 +16,11 @@ tags:
 - VS Code
 - VS Code V1.102
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this live session, the Visual Studio Code team—including Olivia McVicker, Isidor Nikolic, and more—uncover the headline features from VS Code v1.102. Discover enhancements like AI chat, MCP updates, and coding agent integration.<!--excerpt_end-->

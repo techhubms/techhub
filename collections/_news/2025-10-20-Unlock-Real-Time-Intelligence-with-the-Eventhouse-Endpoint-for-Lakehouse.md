@@ -21,8 +21,9 @@ tags:
 - SQL
 - Time Series Analysis
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

@@ -23,11 +23,11 @@ tags:
 - Platform Specific Tools
 - Self Contained Deployment
 - Tool Packaging
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock provides a thorough guide on leveraging the new .NET 10 platform-specific tool features, highlighting technical strategies and trade-offs for maintaining compatibility with older .NET SDKs.<!--excerpt_end-->
 

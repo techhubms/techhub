@@ -24,12 +24,12 @@ tags:
 - Streamlit
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 TulikaC walks through building a Python app with Azure AI Vision and GPT-4o-mini to generate image captions, deployed securely to Azure App Service using Streamlit for the UI.<!--excerpt_end-->

@@ -22,12 +22,11 @@ tags:
 - Semantic Kernel
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Shawn Henry outlines the launch of Microsoft Agent Framework as the new foundation for building AI agents, describes its relationship to Semantic Kernel, and provides support and migration guidance for developers.<!--excerpt_end-->

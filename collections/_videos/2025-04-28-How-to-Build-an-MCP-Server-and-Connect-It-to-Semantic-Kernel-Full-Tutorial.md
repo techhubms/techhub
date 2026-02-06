@@ -23,11 +23,11 @@ tags:
 - Server Setup
 - Tutorial
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI presents a hands-on tutorial for developers on building an MCP Server and seamlessly integrating it with Semantic Kernel, highlighting practical AI development using Microsoft technologies.<!--excerpt_end-->

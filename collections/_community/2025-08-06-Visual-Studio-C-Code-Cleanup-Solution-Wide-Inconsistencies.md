@@ -17,11 +17,11 @@ tags:
 - Microsoft
 - Solution Explorer
 - VS
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 kohuept describes persistent problems with running Code Cleanup for C++ solutions in Visual Studio, questioning the inconsistent behavior and Microsoft's support response.<!--excerpt_end-->
 

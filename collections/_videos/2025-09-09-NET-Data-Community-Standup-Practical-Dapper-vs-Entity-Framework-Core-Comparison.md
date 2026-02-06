@@ -25,11 +25,10 @@ tags:
 - ORM
 - Performance
 - Trade Offs
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this .NET Data Community Standup, hosts Nick Cosentino, Jiri Cincura, and Shay Rojansky offer developers practical insights on using Dapper and Entity Framework Core, sharing their lessons and perspective.<!--excerpt_end-->
 

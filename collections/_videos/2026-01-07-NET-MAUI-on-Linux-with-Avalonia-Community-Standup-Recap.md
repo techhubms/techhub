@@ -22,11 +22,10 @@ tags:
 - Open Source
 - Software Developer
 - UI Frameworks
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Hosted by David Ortinau and the .NET community team, this video explores how Avalonia enables .NET MAUI apps to run on Linux, offering new options for cross-platform development.<!--excerpt_end-->
 

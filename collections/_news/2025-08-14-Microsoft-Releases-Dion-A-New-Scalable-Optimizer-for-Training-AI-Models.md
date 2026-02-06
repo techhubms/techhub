@@ -14,7 +14,7 @@ tags:
 - FSDP
 - Large Language Models
 - LLaMA 3
-- Machine Learning
+- ML
 - Microsoft Research
 - Muon Optimizer
 - Optimization Algorithms

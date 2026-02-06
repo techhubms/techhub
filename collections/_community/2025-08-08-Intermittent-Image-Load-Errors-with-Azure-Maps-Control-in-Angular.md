@@ -20,12 +20,12 @@ tags:
 - SVG Not Supported
 - TypeScript
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 JeroenBooij highlights an intermittent error encountered when initializing Azure Maps Control in an Angular application. This discussion offers firsthand insights into troubleshooting and handling SDK image loading issues.<!--excerpt_end-->
 

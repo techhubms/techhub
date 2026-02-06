@@ -20,11 +20,10 @@ tags:
 - VS
 - WinDbg
 - Windows Server
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 scartus initiates a discussion about high memory usage in an ASP.NET Core MVC 8 application, seeking recommendations and insights from the developer community.<!--excerpt_end-->
 

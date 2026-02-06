@@ -21,13 +21,13 @@ tags:
 - Software Dependencies
 - Software Development
 - Tooling
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 David Fowler discusses how Aspire transforms application modeling by making environment configuration and dependencies programmable, enabling automation and improved DevOps practices.<!--excerpt_end-->
 

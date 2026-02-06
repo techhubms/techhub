@@ -21,11 +21,11 @@ tags:
 - Program Optimization
 - TypeScript
 - TypeScript 5.8
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Daniel Rosenwasser and the TypeScript Team unveil TypeScript 5.8 Beta, outlining key new features for developers, including advanced typing improvements and module interoperability.<!--excerpt_end-->
 

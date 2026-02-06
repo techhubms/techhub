@@ -17,7 +17,7 @@ tags:
 - Computer Vision
 - Conversational AI
 - Exam Preparation
-- Machine Learning
+- ML
 - Microsoft
 - Microsoft Azure
 - Microsoft Certified

@@ -29,11 +29,10 @@ tags:
 - WPF
 - XAML
 - Xcode 26
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 The .NET Team introduces .NET 10 Release Candidate 2, emphasizing final quality and stabilization improvements for developers across platforms and frameworks.<!--excerpt_end-->
 

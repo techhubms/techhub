@@ -18,15 +18,14 @@ tags:
 - Package Management
 - Performance
 - Transitive Dependencies
-- Coding
 - DevOps
 - Security
 - News
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Jamie Magee and Brett Forsgren share how Dependabot’s revamped NuGet updater uses .NET’s own tooling to bring faster, more reliable, and more secure dependency updates to developers.<!--excerpt_end-->
 

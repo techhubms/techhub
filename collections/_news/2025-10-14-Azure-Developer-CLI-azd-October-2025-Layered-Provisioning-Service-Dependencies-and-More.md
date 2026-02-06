@@ -33,14 +33,13 @@ tags:
 - Typescript
 - VS Code
 - Azure
-- Coding
 - DevOps
 - News
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 PuiChee (PC) Chan details the October 2025 Azure Developer CLI (azd) releases, introducing layered provisioning, service dependencies, the new azd publish command, and significant improvements to extension management and development features.<!--excerpt_end-->
 

@@ -23,12 +23,12 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 shreyanfern details how to build actionable AI agents using function calling in the VS Code AI Toolkit, including real examples and code for Azure integration.<!--excerpt_end-->

@@ -26,12 +26,11 @@ tags:
 - Vector Search
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Ronnie Geraghty presents the October 2025 Azure SDK release highlights, detailing new and updated libraries for AI, search, and identity scenarios to help developers build and manage Azure-powered solutions.<!--excerpt_end-->

@@ -21,16 +21,16 @@ tags:
 - Sharding
 - WebSockets
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 kevinguo shares how a game studio leveraged Azure Web PubSub to reimagine real-time multiplayer architectures, focusing on scalability, reliability, and cost-effective delivery at global scale.<!--excerpt_end-->
 

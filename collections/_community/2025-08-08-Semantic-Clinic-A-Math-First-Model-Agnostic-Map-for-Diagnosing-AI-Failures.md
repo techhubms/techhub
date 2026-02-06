@@ -27,9 +27,10 @@ tags:
 - System Observability
 - Vector Store
 - AI
-- Machine Learning
+- ML
 - DevOps
 - Community
+- Machine Learning
 section_names:
 - ai
 - ml

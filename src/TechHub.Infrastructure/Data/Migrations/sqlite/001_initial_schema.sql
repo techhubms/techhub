@@ -37,14 +37,14 @@ CREATE TABLE IF NOT EXISTS content_items (
     -- Denormalized section booleans (zero-join filtering)
     is_ai INTEGER NOT NULL DEFAULT 0,
     is_azure INTEGER NOT NULL DEFAULT 0,
-    is_coding INTEGER NOT NULL DEFAULT 0,
+    is_dotnet INTEGER NOT NULL DEFAULT 0,
     is_devops INTEGER NOT NULL DEFAULT 0,
     is_github_copilot INTEGER NOT NULL DEFAULT 0,
     is_ml INTEGER NOT NULL DEFAULT 0,
     is_security INTEGER NOT NULL DEFAULT 0,
     
     -- Bitmask for sections (optimized filtering)
-    -- Bit 0 (1): AI, Bit 1 (2): Azure, Bit 2 (4): Coding, Bit 3 (8): DevOps
+    -- Bit 0 (1): AI, Bit 1 (2): Azure, Bit 2 (4): .NET, Bit 3 (8): DevOps
     -- Bit 4 (16): GitHub Copilot, Bit 5 (32): ML, Bit 6 (64): Security
     sections_bitmask INTEGER NOT NULL DEFAULT 0,
     
@@ -69,14 +69,14 @@ CREATE TABLE IF NOT EXISTS content_tags_expanded (
     date_epoch INTEGER NOT NULL,
     is_ai INTEGER NOT NULL DEFAULT 0,
     is_azure INTEGER NOT NULL DEFAULT 0,
-    is_coding INTEGER NOT NULL DEFAULT 0,
+    is_dotnet INTEGER NOT NULL DEFAULT 0,
     is_devops INTEGER NOT NULL DEFAULT 0,
     is_github_copilot INTEGER NOT NULL DEFAULT 0,
     is_ml INTEGER NOT NULL DEFAULT 0,
     is_security INTEGER NOT NULL DEFAULT 0,
     
     -- Bitmask for sections (optimized filtering)
-    -- Bit 0 (1): AI, Bit 1 (2): Azure, Bit 2 (4): Coding, Bit 3 (8): DevOps
+    -- Bit 0 (1): AI, Bit 1 (2): Azure, Bit 2 (4): .NET, Bit 3 (8): DevOps
     -- Bit 4 (16): GitHub Copilot, Bit 5 (32): ML, Bit 6 (64): Security
     sections_bitmask INTEGER NOT NULL DEFAULT 0,
     

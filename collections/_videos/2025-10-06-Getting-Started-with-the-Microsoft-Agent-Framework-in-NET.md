@@ -25,11 +25,10 @@ tags:
 - Software Developer
 - Software Development
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Join Bruno Capuano and Zack Way as they guide you through the essentials of the Microsoft Agent Framework with .NET, providing hands-on demos and foundational knowledge for building AI-powered agents.<!--excerpt_end-->

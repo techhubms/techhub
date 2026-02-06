@@ -16,7 +16,7 @@ tags:
 - John Savill
 - Large Language Models
 - LLM
-- Machine Learning
+- ML
 - Machine Learning Basics
 - Microsoft Azure AI
 - Neural Networks

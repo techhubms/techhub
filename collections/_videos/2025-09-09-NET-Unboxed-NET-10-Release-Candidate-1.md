@@ -17,11 +17,10 @@ tags:
 - Software Release
 - Visualstudio2026
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 The .NET team, led by dotnet, showcases their top features in .NET 10 Release Candidate 1, providing insights into the latest improvements for developers.<!--excerpt_end-->
 

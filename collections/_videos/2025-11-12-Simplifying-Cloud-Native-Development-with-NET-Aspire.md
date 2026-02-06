@@ -23,14 +23,13 @@ tags:
 - Telemetry
 - VS
 - Azure
-- Coding
 - DevOps
 - Videos
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet presents an overview of .NET Aspire, highlighting how it simplifies the development and monitoring of cloud-native distributed applications for modern .NET developers.<!--excerpt_end-->
 

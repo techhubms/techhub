@@ -23,8 +23,9 @@ tags:
 - Text Analytics For Health
 - AI
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ai
 - azure

@@ -21,11 +21,10 @@ tags:
 - Software Developer
 - Standup
 - UI
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Hosted by the .NET team, this Prague community standup covers live demos, interactive Q&A, and current practices in .NET MAUI. Session highlights feature David Ortinau, Gerald Versluis, and others.<!--excerpt_end-->
 

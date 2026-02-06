@@ -14,7 +14,7 @@ tags:
 - Guido Van Rossum
 - Hugging Face
 - LLM Agents
-- Machine Learning
+- ML
 - News & Insights
 - NumPy
 - Octoverse
@@ -28,11 +28,11 @@ tags:
 - Static Typing
 - TypeScript
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Natalie Guevara interviews Guido van Rossum about Python’s growth, developer-first philosophy, and its centrality in AI and education, including impacts from tools like GitHub Copilot.<!--excerpt_end-->

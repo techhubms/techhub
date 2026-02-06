@@ -27,12 +27,12 @@ tags:
 - Workflow Web UI
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer leads a comprehensive walkthrough of Microsoft Agent Framework Workflows, featuring insights from Evan Mattson and Victor Dibia on workflow orchestration, advanced features, and feedback from the developer community.<!--excerpt_end-->

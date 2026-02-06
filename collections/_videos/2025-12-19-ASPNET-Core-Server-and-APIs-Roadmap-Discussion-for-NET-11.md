@@ -26,11 +26,10 @@ tags:
 - Mike Kistler
 - Server Architecture
 - Software Developer
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this community standup, Daniel Roth, Mike Kistler, and Jose Perez Rodriguez discuss the direction of ASP.NET Core server and APIs for .NET 11, inviting developer feedback and sharing planned improvements.<!--excerpt_end-->
 

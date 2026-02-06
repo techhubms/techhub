@@ -19,11 +19,10 @@ tags:
 - Microsoft Developer
 - Scene Panel
 - VS Code
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a practical walkthrough of the Godot game engine editor, focusing on project setup and editor navigation for C# game developers.<!--excerpt_end-->
 

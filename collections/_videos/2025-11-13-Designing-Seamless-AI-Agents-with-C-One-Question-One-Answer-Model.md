@@ -19,11 +19,10 @@ tags:
 - Developer Tools
 - Pair Programming
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet presents insights from Mark Miller on creating seamless AI agents in C# that move beyond chat-based assistants. This session teaches practical strategies for designing responsive, context-aware AI tools and integrating them into .NET applications.<!--excerpt_end-->

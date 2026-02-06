@@ -17,9 +17,10 @@ tags:
 - Trusted Workspace Access
 - Workspace Outbound Access Protection
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

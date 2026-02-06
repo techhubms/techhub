@@ -26,14 +26,14 @@ tags:
 - Technical Debt
 - Universe25
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - Security
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 - security

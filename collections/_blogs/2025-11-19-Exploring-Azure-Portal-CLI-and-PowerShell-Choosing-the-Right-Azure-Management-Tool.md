@@ -20,14 +20,14 @@ tags:
 - Scripting
 - Windows Automation
 - Azure
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 John Edward presents a comparative analysis of Azure Portal, Azure CLI, and Azure PowerShell, empowering practitioners to choose optimal tools for efficient cloud resource management and automation.<!--excerpt_end-->
 

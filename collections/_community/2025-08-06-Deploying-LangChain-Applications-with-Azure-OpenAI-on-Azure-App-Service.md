@@ -24,12 +24,12 @@ tags:
 - Token Management
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 TulikaC guides readers through deploying a LangChain-powered conversational AI app on Azure App Service, highlighting secure authentication, streaming GPT-4o responses, and rapid deployment techniques.<!--excerpt_end-->

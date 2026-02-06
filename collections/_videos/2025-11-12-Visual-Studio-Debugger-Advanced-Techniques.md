@@ -24,11 +24,10 @@ tags:
 - VS
 - Watch Window
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet presents advanced techniques and AI-powered insights for debugging with Visual Studio, revealing tools and methods that help developers troubleshoot and resolve even the toughest coding issues efficiently.<!--excerpt_end-->

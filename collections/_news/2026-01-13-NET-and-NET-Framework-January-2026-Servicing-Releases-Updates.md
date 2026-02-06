@@ -22,11 +22,10 @@ tags:
 - Versioning
 - WinForms
 - WPF
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rahul Bhandari (MSFT) and Tara Overfield review the .NET and .NET Framework January 2026 servicing updates, summarizing new fixes, changelogs, and download resources for all supported versions.<!--excerpt_end-->
 

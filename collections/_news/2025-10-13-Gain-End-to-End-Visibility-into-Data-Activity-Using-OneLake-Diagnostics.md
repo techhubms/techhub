@@ -22,9 +22,10 @@ tags:
 - Spark
 - Workspace Monitoring
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

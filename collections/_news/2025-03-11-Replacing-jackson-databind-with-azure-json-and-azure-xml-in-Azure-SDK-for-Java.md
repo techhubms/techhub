@@ -20,12 +20,12 @@ tags:
 - Serialization
 - XmlSerializable
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Alan Zimmer explains how the Azure SDK for Java transitioned from jackson-databind to in-house azure-json and azure-xml libraries, exploring the technical motivations, migration details, and integration points with common serialization frameworks.<!--excerpt_end-->
 

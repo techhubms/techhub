@@ -18,8 +18,9 @@ tags:
 - Warehouse
 - Workspace Level Settings
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

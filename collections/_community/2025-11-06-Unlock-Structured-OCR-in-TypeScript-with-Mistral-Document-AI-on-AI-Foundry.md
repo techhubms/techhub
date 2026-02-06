@@ -25,12 +25,12 @@ tags:
 - TypeScript
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Julia Muiruri explores how to leverage Mistral Document AI on Azure AI Foundry to perform advanced OCR and convert scanned documents into structured data, with code samples and Azure-focused best practices.<!--excerpt_end-->

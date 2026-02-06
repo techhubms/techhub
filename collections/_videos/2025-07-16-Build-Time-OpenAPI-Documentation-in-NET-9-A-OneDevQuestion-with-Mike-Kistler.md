@@ -16,11 +16,10 @@ tags:
 - OpenAPI
 - Spectral
 - Web API
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, Mike Kistler shares his top OpenAPI feature in .NET 9—build-time generation—offering insights on how it streamlines API development for .NET professionals.<!--excerpt_end-->
 

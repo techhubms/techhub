@@ -14,7 +14,7 @@ tags:
 - GPT 4.1
 - Improvement
 - Inline Code Suggestions
-- Machine Learning
+- ML
 - Software Development Tools
 - AI
 - GitHub Copilot

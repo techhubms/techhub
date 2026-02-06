@@ -17,8 +17,9 @@ tags:
 - Resource Limits
 - Azure
 - DevOps
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - azure
 - devops

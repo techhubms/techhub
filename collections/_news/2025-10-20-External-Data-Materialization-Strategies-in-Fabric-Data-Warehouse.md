@@ -23,8 +23,9 @@ tags:
 - Schema Inference
 - SQL Views
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

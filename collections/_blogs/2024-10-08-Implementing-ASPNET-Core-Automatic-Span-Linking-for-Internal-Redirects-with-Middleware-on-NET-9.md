@@ -15,13 +15,13 @@ tags:
 - OpenTelemetry
 - Span Linking
 - Tracing
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this detailed post by Steve Gordon, the author demonstrates a practical approach to implementing automatic span linking for internal redirects in ASP.NET Core apps with .NET 9, enhancing traceability and observability.<!--excerpt_end-->
 

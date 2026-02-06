@@ -23,12 +23,12 @@ tags:
 - Technology
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents an overview of MCP, A2A, and NLWeb agentic protocols, explaining their use and code implementation for building AI agents, as part of the "AI Agents for Beginners" course.<!--excerpt_end-->

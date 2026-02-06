@@ -27,15 +27,15 @@ tags:
 - Workflow Optimization
 - Azure
 - DevOps
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
 - devops
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 OkAdministration2514 details how they built a dynamic MCP server that empowers Claude Code users to seamlessly switch Azure DevOps contexts by project directory, offering robust DevOps automation for multi-client work.<!--excerpt_end-->
 

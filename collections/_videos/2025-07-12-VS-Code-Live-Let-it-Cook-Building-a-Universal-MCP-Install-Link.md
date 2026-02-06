@@ -19,12 +19,12 @@ tags:
 - Vibecoding
 - VS Code
 - DevOps
-- Coding
 - Videos
+- .NET
 section_names:
 - devops
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this episode, Sean Roberts, Burke Holland, and Pierce Boggan from Visual Studio Code discuss strategies to build a universal install link for MCPs to streamline developer installation workflows.<!--excerpt_end-->
 

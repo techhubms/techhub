@@ -21,8 +21,9 @@ tags:
 - User Data Functions
 - Workflows
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

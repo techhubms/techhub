@@ -23,11 +23,11 @@ tags:
 - Python
 - Windows AI Foundry
 - AI
-- Coding
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Nandhini_Elango explains how Windows AI Foundry enables developers to run AI models locally on Windows devices, enhancing privacy, speed, and offline capabilities. The article covers hybrid design patterns, integration guidance, and code approaches for practical implementation.<!--excerpt_end-->

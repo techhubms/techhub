@@ -22,11 +22,10 @@ tags:
 - Performance Analysis
 - VS
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this session, Jonathan Peppers demonstrates how AI innovations are transforming .NET diagnostic tooling, offering developers smarter performance analysis, automated debugging, and productivity enhancements.<!--excerpt_end-->

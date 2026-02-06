@@ -13,7 +13,7 @@ tags:
 - Developer Tools
 - GitHub Pages
 - Jekyll
-- Machine Learning
+- ML
 - Microsoft
 - Microsoft Tech Hub
 - OpenAI

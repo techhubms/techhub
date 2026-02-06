@@ -25,12 +25,12 @@ tags:
 - Versioning
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Julia Muiruri shares how to use Azure AI Foundry's Model Router in TypeScript for intelligent model selection per prompt, showing implementation, architecture, and monitoring best practices.<!--excerpt_end-->

@@ -22,14 +22,14 @@ tags:
 - Sidecar Pattern
 - State Management
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 riturajjana presents a detailed guide on using Dapr to build reliable microservices with Azure Container Apps and .NET, providing actionable examples and portal-based setup walkthroughs.<!--excerpt_end-->
 

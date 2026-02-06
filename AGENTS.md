@@ -1,73 +1,57 @@
 # AI Assistant Workflow
 
-🚨 **CRITICAL**: This file defines the **required 10-step development process** for AI coding agents. Follow these steps in order for every task.
-
 ## What is This File?
 
 **This file is specifically for YOU - an AI coding agent.** It defines the mandatory workflow you must follow for all development tasks.
 
-**How to use**: Follow the 10 steps below. Each step has a checklist - complete or explicitly skip each item.
+**How to use**: First read the [absolutely critical rules](#-absolute-critical-rules). Then follow [the 9 step workflow](#the-9-step-workflow). Each step has a checklist - complete or explicitly skip each item.
 
 ---
 
-## The 10-Step Workflow
+## 🚨 ABSOLUTE CRITICAL RULES
 
-### Step 1: Core Rules & Boundaries
+**🚨 REQUIREMENT 1**: NEVER EVER use pattern recognition or "I know what this step should do" thinking. Each step has EXACT instructions - follow them literally, not what you think they should accomplish.
 
-**CRITICAL**: These rules apply to ALL tasks. Review before starting any work.
+**🚨 REQUIREMENT 2**: Do NOT optimize for tokens, speed, or efficiency. This workflow is intentionally verbose and step-by-step for precision. Follow every sub-instruction within each step.
 
-#### ✅ Always Do
+**🚨 REQUIREMENT 3**: Do NOT improvise, combine, reorder, parallelize or alter instructions in any way.
 
-- **Always follow the 10-step workflow in order**
+### ✅ Always Do
+
+- **Always follow the 9-step workflow in order**
 - **Always complete step checklists before moving to the next step**
-- **Always write tests BEFORE implementation** (TDD)
 - **Always prefer tools in this order**: MCP tools → Built-in tools → CLI
 - **Always check for errors after editing files** (`get_errors` tool)
-- **Always run tests after code changes**
 - **Always fix all linter issues**
-- **Always read domain-specific AGENTS.md before making any changes in that domain**
 - **Always store temp files in `.tmp/`**
 - **Always use PowerShell for scripts** (save as `.ps1`, then execute)
 - **Always follow timezone standard**: `Europe/Brussels`
 - **Always be direct and concise** - no filler phrases
-- **Always use `Run` function** (from TechHubRunner.psm1) for all build/test/run operations
+- **Always use `Run` function** (from TechHubRunner.psm1) for all build/test/run operations. Use `isBackground: false` to wait synchronously
 - **Always monitor `Run` with `get_terminal_output`** repeatedly until "This terminal is now free to use"
 - **Always wait for "This terminal is now free to use"** before executing ANY other commands in that terminal
 
-#### ⚠️ Ask First
+### ⚠️ Ask First
 
-- **Ask first before making configuration changes** (package.json, .csproj, appsettings.json)
 - **Ask first before making breaking changes to public APIs**
 - **Ask first before adding new dependencies**
 - **Ask first before making cross-domain changes** (API + Web + Infrastructure)
 - **Ask first before making significant refactoring**
 
-#### 🚫 Never Do
+### 🚫 Never Do
 
-- **Never skip the 10-step workflow**
-- **Never write implementation before tests**
-- **Never skip E2E tests for UI changes**
 - **Never use `| head`, `| tail`, `Select-Object -Last`** (blocks output)
 - **Never paste scripts into terminal** (save as file first)
 - **Never commit secrets or API keys**
 - **Never hardcode section/collection data**
 - **Never assume UTC** (use Europe/Brussels)
 - **Never swallow exceptions without logging**
-- **Never run `Start-Sleep` or other commands in terminal executing `Run`** before it completes
-- **Never execute multiple commands in same terminal before `Run` finishes**
-- **Never use `dotnet test` directly for tests**: Use `Run` instead or `Run -TestProject E2E.Tests` if you want to scope to a certain project or even add `-TestName` too
-- **Never use `isBackground: true` for test runs**: Tests complete within 60 seconds - use `isBackground: false` to wait synchronously
-- **Never create new terminals for each command**: Reuse existing terminals instead of spawning orphaned processes
-
-**Step 1 Checklist**:
-
-- [ ] Reviewed Always/Ask/Never rules
-- [ ] Understand which rules apply to this task
-- [ ] Ready to proceed
 
 ---
 
-### Step 2: Gather Context
+## The 9-Step Workflow
+
+### Step 1: Gather Context
 
 **Before touching any code**, understand what you're working with.
 
@@ -75,7 +59,9 @@
 
 1. MANDATORY & CRITICAL: Read relevant documentation:
    - This file for workflow
-   - Important are the domain AGENTS.md for the area you're working in too. They are nested. Here's an EXAMPLE of how this works when making a change in the API:
+   - The [docs/repository-structure.md](docs/repository-structure.md) repository structure file so you understand what is where
+   - Read the ENTIRE [docs/documentation-index.md](docs/documentation-index.md) file to find out what documentation you need to read to understand the functionality of the website. This is critical and you need to read these docs to prevent mistakes.
+   - Also important are the domain AGENTS.md for the area you're working in too. They are nested. Here's an EXAMPLE of how this works when making a change in the API:
      - [src/AGENTS.md](src/AGENTS.md) - The API resides in the src folder, so read this file first
      - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - Additionally read this because you're making API changes
      - [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - If the contract of the API changes, you'll need to make changes here too
@@ -84,7 +70,6 @@
      - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - The same for this one, if you edited the web project
      - [docs/AGENTS.md](docs/AGENTS.md) - If you changed functionality or implemented certain requirements, make sure to read this to understand where and how you need to document this
      - etc
-   - Critically and finally read the ENTIRE [docs/documentation-index.md](docs/documentation-index.md) file to find out what documentation you need to read to understand the functionality of the website. This is critical and you need to read these docs to prevent mistakes.
 
 2. Scan the code:
    - Use `read_file` to examine relevant files
@@ -97,7 +82,7 @@
 - Use context7 MCP tool for framework documentation
 - Follow existing code patterns
 
-**Step 2 Checklist**:
+**Step 1 Checklist**:
 
 - [ ] Read relevant documentation
 - [ ] Examined related code files
@@ -106,7 +91,7 @@
 
 ---
 
-### Step 3: Create a Plan
+### Step 2: Create a Plan
 
 **Always plan before making changes**.
 
@@ -123,7 +108,7 @@
    - Wait for confirmation if changes are significant
    - Use `manage_todo_list` for complex multi-step work
 
-**Step 3 Checklist**:
+**Step 2 Checklist**:
 
 - [ ] Task broken into logical steps
 - [ ] Files to modify identified
@@ -133,7 +118,7 @@
 
 ---
 
-### Step 4: Research & Validate
+### Step 3: Research & Validate
 
 **Find additional information** for correct implementation.
 
@@ -150,7 +135,7 @@
 - Encountering errors
 - Unsure about best practices
 
-**Step 4 Checklist**:
+**Step 3 Checklist**:
 
 - [ ] Researched framework docs (if applicable)
 - [ ] Verified best practices (if applicable)
@@ -159,7 +144,7 @@
 
 ---
 
-### Step 5: Verify Current Behavior (Optional)
+### Step 4: Verify Current Behavior (Optional)
 
 **If needed**, understand current behavior before changes.
 
@@ -175,16 +160,16 @@
 - Use Playwright MCP tools for browser testing
 - Document current behavior
 
-**See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and-testing-the-website)** for complete instructions.
+**See [docs/running-and-testing.md](docs/running-and-testing.md)** for complete instructions.
 
-**Step 5 Checklist**:
+**Step 4 Checklist**:
 
 - [ ] Current behavior verified
 - [ ] OR: Verification not needed for this task
 
 ---
 
-### Step 6: Write Tests First (TDD)
+### Step 5: Write Tests First (TDD)
 
 **CRITICAL**: Write tests BEFORE implementing changes.
 
@@ -216,7 +201,7 @@
 
 **🚨 E2E tests are MANDATORY for ALL UI changes** - see [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)
 
-**Step 6 Checklist**:
+**Step 5 Checklist**:
 
 - [ ] Ran existing tests first (clean slate)
 - [ ] Wrote failing tests for new behavior
@@ -225,7 +210,7 @@
 
 ---
 
-### Step 7: Implement Changes
+### Step 6: Implement Changes
 
 **NOW implement** to make tests pass.
 
@@ -251,7 +236,7 @@ See [docs/running-and-testing.md](docs/running-and-testing.md) for:
 - `Run -WithoutTests` - Start servers without tests
 - Playwright MCP tools for interactive testing
 
-**Step 7 Checklist**:
+**Step 6 Checklist**:
 
 - [ ] Implemented minimal code to pass tests
 - [ ] Checked for errors after edits
@@ -260,7 +245,7 @@ See [docs/running-and-testing.md](docs/running-and-testing.md) for:
 
 ---
 
-### Step 8: Validate & Fix
+### Step 7: Validate & Fix
 
 **Ensure all tests pass and code quality is high**.
 
@@ -276,7 +261,7 @@ See [docs/running-and-testing.md](docs/running-and-testing.md) for:
    - Verify code follows conventions
    - Check error handling and logging
 
-**Step 8 Checklist**:
+**Step 7 Checklist**:
 
 - [ ] All tests pass
 - [ ] No linting/compilation errors
@@ -285,7 +270,7 @@ See [docs/running-and-testing.md](docs/running-and-testing.md) for:
 
 ---
 
-### Step 9: Update Documentation
+### Step 8: Update Documentation
 
 **🚨 MANDATORY**: Update docs if you made changes.
 
@@ -307,7 +292,7 @@ See [docs/running-and-testing.md](docs/running-and-testing.md) for:
 
 If you can't find a good place to document something, consider creating a new file!
 
-**Step 9 Checklist**:
+**Step 8 Checklist**:
 
 - [ ] Updated relevant documentation by changing existing files or introducing new ones
 - [ ] Fixed markdown linting: `npx markdownlint-cli2 --fix <file> --config /workspaces/techhub/.markdownlint-cli2.jsonc`
@@ -316,7 +301,7 @@ If you can't find a good place to document something, consider creating a new fi
 
 ---
 
-### Step 10: Report Completion
+### Step 9: Report Completion
 
 **Tell the user you're done** with a clear summary.
 
@@ -327,9 +312,9 @@ If you can't find a good place to document something, consider creating a new fi
 - Confirmation that tests pass
 - Any important notes or caveats
 
-**File Link Format**: Use `[src/example.cs](src/example.cs)` format - NO backticks around file names.
+**File Link Format**: Use `[src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md)` format - NO backticks around file names.
 
-**Step 10 Checklist**:
+**Step 9 Checklist**:
 
 - [ ] Summary provided
 - [ ] All files linked

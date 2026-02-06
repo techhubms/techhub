@@ -24,11 +24,11 @@ tags:
 - TypeScript 5.7
 - V8 Compile Caching
 - Variable Initialization
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this detailed announcement, Daniel Rosenwasser introduces the TypeScript 5.7 RC, outlining major feature enhancements and important changes for TypeScript developers.<!--excerpt_end-->
 

@@ -22,12 +22,11 @@ tags:
 - WPF
 - XAML
 - Azure
-- Coding
 - Community
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 IoTGirl showcases how organizations can migrate WPF applications from Bing Maps to Azure Maps using the OnTerra Systems WPF Map Control, offering a smooth transition for developers without major code refactoring.<!--excerpt_end-->
 

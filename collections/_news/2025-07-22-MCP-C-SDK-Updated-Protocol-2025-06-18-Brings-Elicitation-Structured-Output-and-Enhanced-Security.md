@@ -19,12 +19,11 @@ tags:
 - Structured Output
 - Tool Metadata
 - AI
-- Coding
 - Security
 - News
 section_names:
 - ai
-- coding
+- dotnet
 - security
 primary_section: ai
 ---

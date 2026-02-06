@@ -27,11 +27,10 @@ tags:
 - Semantic Kernel
 - Tools
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Authored by Roger Barreto, this article explores practical non-agent integration patterns for Microsoft.Extensions.AI and Semantic Kernel within the .NET AI ecosystem. It guides developers through real code samples for chat completion, embeddings, function calls, dependency injection, and service selection.<!--excerpt_end-->

@@ -21,14 +21,14 @@ tags:
 - TypeScript
 - AI
 - Azure
-- Coding
 - DevOps
 - Security
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

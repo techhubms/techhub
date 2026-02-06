@@ -1,7 +1,7 @@
 # PowerShell Test Suite
 
 > **AI CONTEXT**: This is a **LEAF** context file for PowerShell tests in the `tests/powershell/` directory. It complements the [scripts/AGENTS.md](../../scripts/AGENTS.md) where the implementation lives.
-> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../../AGENTS.md). Project principles are in [README.md](../../README.md). Follow **BOTH**.
+> **RULE**: Follow the 9-step workflow in Root [AGENTS.md](../../AGENTS.md).
 
 ## Overview
 

@@ -16,11 +16,10 @@ tags:
 - Object Mapping
 - Open Source
 - Typed Projections
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, Nick Chapsas explains how the Facet library provides an alternative to traditional mapping in .NET development, leveraging strongly-typed LINQ projections to improve performance and developer experience.<!--excerpt_end-->
 

@@ -24,13 +24,13 @@ tags:
 - Windows Configuration
 - WinGet
 - Winget Studio
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Presented by Demitrius Nelon at Microsoft Ignite 2025, this session dives into WinGet's new capabilities for fast Windows setup and configuration using Desired State Configuration, with code-centric demos for IT professionals and developers.<!--excerpt_end-->
 

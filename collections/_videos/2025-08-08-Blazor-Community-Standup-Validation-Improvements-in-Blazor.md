@@ -22,11 +22,10 @@ tags:
 - Software Developer
 - Software Development
 - Validation
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, the .NET team, including Jon Galloway and others, present the latest validation improvements for Blazor in .NET 10, highlighting support for complex types and how developers can leverage these features.<!--excerpt_end-->
 

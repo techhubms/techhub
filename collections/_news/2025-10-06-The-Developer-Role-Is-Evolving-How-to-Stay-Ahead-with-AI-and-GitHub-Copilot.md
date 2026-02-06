@@ -18,19 +18,19 @@ tags:
 - GitHub Copilot Code Review
 - GitHub Copilot Spaces
 - GitHub Universe
-- Machine Learning
+- ML
 - News & Insights
 - Open Source
 - Python
 - Software Automation
 - Software Strategy
 - AI
-- Coding
 - GitHub Copilot
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

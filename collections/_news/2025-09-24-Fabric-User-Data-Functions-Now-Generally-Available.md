@@ -21,12 +21,13 @@ tags:
 - User Data Functions
 - VS Code
 - Azure
-- Coding
-- Machine Learning
+- ML
 - News
+- .NET
+- Machine Learning
 section_names:
 - azure
-- coding
+- dotnet
 - ml
 primary_section: ml
 ---

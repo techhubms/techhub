@@ -27,14 +27,14 @@ tags:
 - Test Reporting
 - Testing Configuration
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 varghesejoji demonstrates how to use Azure App Testing and Playwright Workspaces for browser-based functional and performance testing, guiding users from local development to cloud-scale parallel test execution with shared reporting.<!--excerpt_end-->
 

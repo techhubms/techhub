@@ -17,7 +17,6 @@ tags:
 - BizTalk Server
 - C#
 - Cloud Automation
-- Coding
 - Community
 - Copilot Studio
 - DevOps
@@ -32,10 +31,11 @@ tags:
 - Test Explorer
 - Unit Testing
 - Workflow Automation
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 ---
 WSilveira curates the February 2026 Logic Apps Aviators Newsletter, offering technical articles and community insights on Azure Logic Apps, BizTalk modernization, agentic workflows, test automation, and cloud integration best practices.<!--excerpt_end-->

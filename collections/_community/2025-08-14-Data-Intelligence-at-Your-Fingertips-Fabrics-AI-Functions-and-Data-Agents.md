@@ -21,8 +21,9 @@ tags:
 - Sentiment Analysis
 - Text Summarization
 - AI
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ai
 - ml

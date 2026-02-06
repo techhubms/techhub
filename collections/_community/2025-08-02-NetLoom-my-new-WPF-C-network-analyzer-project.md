@@ -14,11 +14,10 @@ tags:
 - Network Monitoring
 - Real Time Analytics
 - WPF
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rywent presents NetLoom, a new WPF C# project focused on network monitoring and analysis, sharing its initial goals and features.<!--excerpt_end-->
 

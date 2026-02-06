@@ -23,11 +23,10 @@ tags:
 - Span Types
 - Static Extension
 - Unbound Generic Types
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Bill Wagner introduces the key features of C# 14 shipped with .NET 10, emphasizing extension members, productivity boosters, and performance enhancements for developers.<!--excerpt_end-->
 

@@ -19,9 +19,10 @@ tags:
 - OneLake
 - SQL Audit Logs
 - User Interface
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - ml
 - security

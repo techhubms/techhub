@@ -24,11 +24,11 @@ tags:
 - SharePoint Online
 - SharePoint Server
 - SPFx
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 John Edward offers a hands-on technical guide for optimizing the performance of large SharePoint sites, detailing approaches to architecture, list management, customizations, and ongoing maintenance for Microsoft 365 and on-premises environments.<!--excerpt_end-->
 

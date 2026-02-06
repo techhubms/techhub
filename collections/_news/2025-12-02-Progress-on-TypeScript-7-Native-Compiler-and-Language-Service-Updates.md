@@ -20,11 +20,11 @@ tags:
 - TypeScript
 - TypeScript 7.0
 - VS Code Extension
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Daniel Rosenwasser presents major progress on TypeScript 7, focusing on the transition to a native compiler and language service. The article explores new features, editor support, and guidance for developers migrating to or evaluating TypeScript 7.<!--excerpt_end-->
 

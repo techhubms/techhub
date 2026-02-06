@@ -24,14 +24,13 @@ tags:
 - VS
 - Windows Containers
 - Azure
-- Coding
 - DevOps
 - Videos
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet presents a deep dive into .NET 10's new container features, sharing key improvements for developers building, deploying, and managing containerized applications across cloud and on-premises platforms.<!--excerpt_end-->
 

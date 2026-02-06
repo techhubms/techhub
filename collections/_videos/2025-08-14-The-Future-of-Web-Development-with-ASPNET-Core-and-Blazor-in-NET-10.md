@@ -21,12 +21,11 @@ tags:
 - Web Development
 - WebAuthn
 - AI
-- Coding
 - Security
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 - security
 primary_section: ai
 ---

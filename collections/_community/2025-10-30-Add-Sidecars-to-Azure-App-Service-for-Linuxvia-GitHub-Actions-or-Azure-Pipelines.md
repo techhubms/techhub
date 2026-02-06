@@ -24,14 +24,13 @@ tags:
 - VSTS
 - YAML Templates
 - Azure
-- Coding
 - DevOps
 - Community
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 TulikaC explains how to use GitHub Actions and Azure Pipelines templates to deploy helper sidecars with Azure App Service for Linux, making CI/CD setup seamless for various runtime and container scenarios.<!--excerpt_end-->
 

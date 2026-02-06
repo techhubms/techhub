@@ -12,7 +12,7 @@ tags:
 - Cloud Migration
 - Databricks
 - GitHub Runners
-- Machine Learning
+- ML
 - Microsoft Azure
 - Microsoft Ignite
 - MicrosoftAICloudPartnerProgram
@@ -30,12 +30,12 @@ tags:
 - Workload Deployment
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Events presents insights on how businesses benefit from Arm-based Azure Cobalt 100 VMs, featuring customer stories and technical highlights for developers and IT pros.<!--excerpt_end-->

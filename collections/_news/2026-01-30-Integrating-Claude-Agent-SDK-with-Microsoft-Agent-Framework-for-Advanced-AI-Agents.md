@@ -14,7 +14,6 @@ tags:
 - Azure
 - Azure OpenAI
 - Claude Agent SDK
-- Coding
 - Function Calling
 - MCP Integration
 - Microsoft Agent Framework
@@ -24,10 +23,11 @@ tags:
 - SDK Integration
 - Streaming Responses
 - Workflow Automation
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 ---
 Dmytro Struk explains how to utilize the Claude Agent SDK and Microsoft Agent Framework together to build advanced AI agents. The article features practical examples in Python and explores multi-agent workflows, including integration with Azure OpenAI.<!--excerpt_end-->
 

@@ -17,16 +17,16 @@ tags:
 - Resource Orchestration
 - VS Code Extension
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Dan_Kershaw introduces the general availability of Bicep templates for Microsoft Entra ID, highlighting improved IaC workflows and new deployment integrations.<!--excerpt_end-->
 

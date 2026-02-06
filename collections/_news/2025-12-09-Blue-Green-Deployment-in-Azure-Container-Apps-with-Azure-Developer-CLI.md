@@ -22,14 +22,14 @@ tags:
 - Revision Based Deployment
 - Traffic Splitting
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 PuiChee (PC) Chan provides a technical overview of blue-green deployment in Azure Container Apps using the Azure Developer CLI, with hands-on steps for setup, revision management, and CI/CD automation.<!--excerpt_end-->
 

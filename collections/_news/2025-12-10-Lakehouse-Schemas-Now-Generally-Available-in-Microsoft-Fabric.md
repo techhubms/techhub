@@ -21,8 +21,9 @@ tags:
 - Table Organization
 - Workspace Private Links
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

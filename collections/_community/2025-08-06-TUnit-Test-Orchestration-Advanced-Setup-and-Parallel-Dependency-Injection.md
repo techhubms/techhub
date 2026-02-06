@@ -23,11 +23,10 @@ tags:
 - Testing Framework
 - TUnit
 - VS
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 thomhurst presents a major enhancement to the TUnit testing framework, enabling .NET developers to orchestrate complex integrations—like Docker-based SQL Server, Redis, and RabbitMQ—using powerful nested property injection and parallel initialisation.<!--excerpt_end-->
 

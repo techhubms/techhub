@@ -17,7 +17,6 @@ tags:
 - Failure Modes
 - Hugging Face
 - Importance Weighting
-- Machine Learning
 - Microsoft
 - ML
 - News
@@ -29,6 +28,7 @@ tags:
 - Tool Augmented Agents
 - TRL
 - Variance Amplification
+- Machine Learning
 section_names:
 - ai
 - ml

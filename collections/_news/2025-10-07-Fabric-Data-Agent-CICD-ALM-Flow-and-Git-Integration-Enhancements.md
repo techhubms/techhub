@@ -21,8 +21,9 @@ tags:
 - Version Control
 - Azure
 - DevOps
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - devops

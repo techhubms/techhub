@@ -15,11 +15,10 @@ tags:
 - Quartz
 - Scheduling Library
 - TickerQ
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nick Chapsas introduces TickerQ, a new and improved scheduling library tailored for .NET and C# developers, highlighting its advantages over Quartz and Hangfire.<!--excerpt_end-->
 

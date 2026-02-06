@@ -21,14 +21,14 @@ tags:
 - Resource Handler
 - VS Code
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Sydney Smith provides a comprehensive walkthrough for creating Bicep Local Extensions with .NET, enabling local infrastructure as code workflows without Azure connectivity.<!--excerpt_end-->
 

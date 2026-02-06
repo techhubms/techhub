@@ -20,17 +20,16 @@ tags:
 - DevUI
 - Dotnetdeveloper
 - Jeremy Likness
-- Machine Learning
+- ML
 - Microsoft
 - Practical AI
 - Software Developer
 - Software Engineering
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Bruno Capuano and Jeremy Likness host an unscripted .NET AI Community Standup, offering real-world advice and discussion on building AI applications using the new .NET AI stack.<!--excerpt_end-->

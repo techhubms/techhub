@@ -14,8 +14,9 @@ tags:
 - Real Time Intelligence
 - Swiggy
 - AI
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
 - ml

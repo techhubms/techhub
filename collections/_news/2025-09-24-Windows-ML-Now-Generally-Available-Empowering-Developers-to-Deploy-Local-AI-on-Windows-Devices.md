@@ -27,11 +27,11 @@ tags:
 - Windows App SDK
 - Windows ML
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 stclarke summarizes how Microsoft’s Windows ML is now generally available for developers to deploy, optimize, and manage AI models locally on Windows 11 devices, with deep integration across diverse hardware and tools.<!--excerpt_end-->

@@ -2,13 +2,12 @@
 external_url: https://www.youtube.com/shorts/NzaNeWeI31Y
 title: Anders Hejlsberg on the Origins of TypeScript and Fixing JavaScript
 author: GitHub
-primary_section: coding
+primary_section: dotnet
 feed_name: GitHub YouTube
 date: 2026-01-27 19:00:33 +00:00
 tags:
 - Anders Hejlsberg
 - Code Quality
-- Coding
 - Developer Tools
 - JavaScript
 - Language Design
@@ -19,8 +18,9 @@ tags:
 - TypeScript
 - Videos
 - Web Development
+- .NET
 section_names:
-- coding
+- dotnet
 ---
 In this GitHub video, Anders Hejlsberg discusses with the audience how limitations in JavaScript engineering led to the creation of TypeScript, offering insight into the evolution of scalable web development.<!--excerpt_end-->
 

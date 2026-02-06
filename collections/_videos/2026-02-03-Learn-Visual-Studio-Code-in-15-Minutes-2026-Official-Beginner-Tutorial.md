@@ -2,13 +2,12 @@
 external_url: https://www.youtube.com/watch?v=rNUZm1xLlzo
 title: 'Learn Visual Studio Code in 15 Minutes: 2026 Official Beginner Tutorial'
 author: Visual Studio Code
-primary_section: coding
+primary_section: dotnet
 feed_name: Visual Studio Code YouTube
 date: 2026-02-03 04:32:10 +00:00
 tags:
 - Beginner Tutorial
 - Code Editing
-- Coding
 - Development Tools
 - Editor UI
 - Inline Suggestions
@@ -20,8 +19,9 @@ tags:
 - Source Control
 - Videos
 - VS Code
+- .NET
 section_names:
-- coding
+- dotnet
 ---
 Visual Studio Code's official team, featuring Reynald Adolphe, presents a beginner-friendly 15-minute tutorial covering VS Code setup, editing, and productivity features.<!--excerpt_end-->
 

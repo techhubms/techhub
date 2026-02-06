@@ -25,11 +25,10 @@ tags:
 - Server GC
 - Throughput
 - Tuning
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Maoni presents a comprehensive guide for developers preparing for the .NET 10 release, focusing on how the new DATAS feature in Garbage Collection changes memory and performance profiles, with actionable advice for evaluating, tuning, or disabling this functionality.<!--excerpt_end-->
 

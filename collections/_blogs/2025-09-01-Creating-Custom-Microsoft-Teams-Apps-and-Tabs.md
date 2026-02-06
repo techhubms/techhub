@@ -23,11 +23,11 @@ tags:
 - Teams Toolkit
 - VS Code
 - Web Development
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny details how developers can build custom Microsoft Teams apps and tabs, covering low-code options and full-stack development using Teams Toolkit and Azure AD authentication.<!--excerpt_end-->
 

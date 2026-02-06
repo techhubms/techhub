@@ -13,7 +13,7 @@ tags:
 - IT Outages
 - LLMs
 - Log Management
-- Machine Learning
+- ML
 - Mean Time To Detection
 - Monitoring And Analytics
 - New Relic

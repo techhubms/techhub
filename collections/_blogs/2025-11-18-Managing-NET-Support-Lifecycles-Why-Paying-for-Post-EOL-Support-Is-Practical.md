@@ -29,13 +29,12 @@ tags:
 - STS
 - Support Lifecycle
 - Version Upgrades
-- Coding
 - Security
 - Blogs
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Andrew Lock reviews the .NET support lifecycle and demonstrates how organizations can avoid risks from unsupported versions by leveraging HeroDevs' Never Ending Support for .NET 6.<!--excerpt_end-->
 

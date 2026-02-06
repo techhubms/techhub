@@ -16,12 +16,11 @@ tags:
 - Service Bus
 - Workloads
 - Azure
-- Coding
 - Community
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 LeonardSpencer discusses how to trigger a resource in a .NET Aspire setup upon receiving messages from Azure Service Bus, providing insights for developers building event-driven applications.<!--excerpt_end-->
 

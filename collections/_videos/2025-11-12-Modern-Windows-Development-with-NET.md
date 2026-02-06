@@ -24,11 +24,10 @@ tags:
 - Windows App SDK
 - Windows Development
 - WinUI 3
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a session on using .NET 10, WinUI 3, and the Windows App SDK to modernize Windows desktop application development and leverage the full power of the Windows platform with the latest toolset.<!--excerpt_end-->
 

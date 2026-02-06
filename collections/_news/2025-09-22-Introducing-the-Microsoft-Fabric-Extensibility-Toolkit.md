@@ -27,13 +27,14 @@ tags:
 - Workload Development Kit
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - News
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 primary_section: ai
 ---

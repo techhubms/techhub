@@ -13,7 +13,7 @@ tags:
 - Dev
 - Development
 - Development Tutorial
-- Machine Learning
+- ML
 - Microsoft
 - Microsoft Foundry
 - Model Chat
@@ -25,12 +25,12 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer walks through the process of using Python in Visual Studio Code to chat with Microsoft Foundry models, showing setup, deployment, and code integration in this practical video guide.<!--excerpt_end-->

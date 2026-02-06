@@ -23,13 +23,12 @@ tags:
 - xUnit
 - AI
 - GitHub Copilot
-- Coding
 - Security
 - News
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 - security
 primary_section: github-copilot
 ---

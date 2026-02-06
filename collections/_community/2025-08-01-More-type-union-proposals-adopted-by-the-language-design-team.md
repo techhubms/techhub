@@ -15,11 +15,10 @@ tags:
 - Language Features
 - Type System
 - Type Unions
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 DayYam reports on recent developments in the C# language as the design team adopts more proposals for type unions. The article includes links to official meeting notes and community discussions.<!--excerpt_end-->
 

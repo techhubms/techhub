@@ -27,16 +27,16 @@ tags:
 - Virtual Machines
 - Zero Trust
 - Azure
-- Coding
 - DevOps
 - Security
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny shares actionable strategies and best practices for mastering hybrid cloud environments with Azure Stack, highlighting governance, DevOps, security, and workload management.<!--excerpt_end-->
 

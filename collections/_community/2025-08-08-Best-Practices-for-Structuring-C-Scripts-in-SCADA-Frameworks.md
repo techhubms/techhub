@@ -18,11 +18,11 @@ tags:
 - Scripting
 - Shared Libraries
 - SOLID
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 DouglasRoldan initiates a thoughtful conversation on best practices for writing maintainable and reusable C# scripts within SCADA frameworks, gathering community insights about code structuring and optimization.<!--excerpt_end-->
 

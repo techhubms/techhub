@@ -17,13 +17,13 @@ tags:
 - Productivity
 - Windows
 - Windows Settings
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Kayla Cinnamon presents the newest enhancements to Windows Settings aimed at developers, covering advanced configuration options, long file path support, and streamlined Git integration, now available in File Explorer.<!--excerpt_end-->
 

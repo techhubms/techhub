@@ -15,11 +15,11 @@ tags:
 - Panel
 - Placeholder
 - Webforms
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this community post, canalso describes an issue with removing a Panel from a Placeholder within an ASP.NET ListView using C#, seeking advice on how to perform this task based on a row condition.<!--excerpt_end-->
 

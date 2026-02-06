@@ -22,12 +22,12 @@ tags:
 - REST API
 - Web Application Development
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 sinnypan details the launch and features of the Azure Maps Geocode Autocomplete API, showing developers how to integrate real-time, structured address and place suggestions into mapping platforms and web applications.<!--excerpt_end-->
 

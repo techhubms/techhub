@@ -19,12 +19,12 @@ tags:
 - Renaissance Texts
 - Vector Embeddings
 - Azure
-- Coding
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - azure
-- coding
+- dotnet
 - ml
 primary_section: ml
 ---

@@ -26,11 +26,11 @@ tags:
 - TypeScript
 - Typst
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Cassidy Williams analyzes why typed programming languages are surging in popularity, emphasizing how AI-generated code and tools like Copilot are redefining developer safety nets and code reliability.<!--excerpt_end-->

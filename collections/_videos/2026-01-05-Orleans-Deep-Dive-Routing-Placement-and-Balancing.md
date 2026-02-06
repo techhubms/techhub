@@ -16,11 +16,10 @@ tags:
 - Placement
 - Routing
 - Scalability
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 The dotnet team, joined by Reuben Bond, Ledjon Behluli, David Pine, and Frank Boucher, delivers a technical deep dive into routing, placement, and load balancing in Orleans for .NET developers.<!--excerpt_end-->
 

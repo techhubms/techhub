@@ -16,12 +16,12 @@ tags:
 - TypeScript
 - AI
 - GitHub Copilot
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 In this community article, Abhishekmiz shares their experience using JSON prompting with LLMs like GitHub Copilot, focusing on structured instructions for code generation.<!--excerpt_end-->

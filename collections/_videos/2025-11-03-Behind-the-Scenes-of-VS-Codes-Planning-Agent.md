@@ -17,11 +17,11 @@ tags:
 - Task Planning
 - VS Code
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Bhavya, a software engineer on the VS Code team, discusses the new planning agent in Visual Studio Code and explains its advantages for developers.<!--excerpt_end-->

@@ -15,11 +15,11 @@ tags:
 - Windows 10
 - Workload Installation
 - Xbox Game Bar
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Separate_Detective_9 describes challenges building an Xbox Game Bar widget in C# due to the missing Universal Windows Platform (UWP) workload in Visual Studio 2022, and requests advice or alternatives.<!--excerpt_end-->
 

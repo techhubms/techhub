@@ -17,11 +17,10 @@ tags:
 - Open Source
 - Software Maintenance
 - Sustainability
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nick Chapsas examines the complexities facing .NET open-source libraries, addressing monetization, project sustainability, and whether forking can genuinely 'save' abandoned projects.<!--excerpt_end-->
 

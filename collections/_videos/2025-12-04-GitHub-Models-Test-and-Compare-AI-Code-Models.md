@@ -15,7 +15,7 @@ tags:
 - Developer Tools
 - GitHub Models
 - GitHubModels
-- Machine Learning
+- ML
 - Microsoft Developer
 - Model Evaluation
 - Model Testing

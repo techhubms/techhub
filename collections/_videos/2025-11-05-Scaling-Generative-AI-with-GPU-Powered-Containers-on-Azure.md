@@ -36,14 +36,15 @@ tags:
 - Version Compatibility
 - AI
 - Azure
-- Coding
 - GitHub Copilot
-- Machine Learning
+- ML
 - Videos
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - github-copilot
 - ml
 primary_section: github-copilot

@@ -11,7 +11,7 @@ tags:
 - GPT 4.1
 - GPT 4o
 - IDEs
-- Machine Learning
+- ML
 - Model Deprecation
 - OpenAI
 - Software Development

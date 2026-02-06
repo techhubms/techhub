@@ -15,11 +15,11 @@ tags:
 - VS Code
 - Workshop
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Visual Studio Code presents a workshop on the Model Context Protocol (MCP), hosted by Gwyneth Peña-Siguenza and Marlene Mhangami, introducing MCP fundamentals and practical Python demos.<!--excerpt_end-->

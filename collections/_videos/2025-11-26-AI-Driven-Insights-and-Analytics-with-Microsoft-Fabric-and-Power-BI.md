@@ -22,8 +22,9 @@ tags:
 - Unified Data Platform
 - Unifyyourdataplatform
 - AI
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - ai
 - ml

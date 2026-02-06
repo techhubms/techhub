@@ -20,11 +20,11 @@ tags:
 - Python in Excel
 - SciPy
 - Xl() Function
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Ndeyanta Jallow introduces a powerful new feature in Microsoft Excel allowing users to analyze images programmatically using Python, demonstrating how developers can leverage common libraries for image analysis workflows.<!--excerpt_end-->
 

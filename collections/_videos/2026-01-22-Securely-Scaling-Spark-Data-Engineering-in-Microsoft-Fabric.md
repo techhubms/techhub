@@ -26,9 +26,10 @@ tags:
 - Tech
 - Technology
 - Azure
-- Machine Learning
+- ML
 - Security
 - Videos
+- Machine Learning
 section_names:
 - azure
 - ml

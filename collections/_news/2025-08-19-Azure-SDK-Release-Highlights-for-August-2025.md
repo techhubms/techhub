@@ -27,12 +27,11 @@ tags:
 - Storage Discovery
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Ronnie Geraghty announces the latest Azure SDK updates, highlighting new AI Projects libraries, data movement improvements for .NET, and resource management tools for multiple programming languages. This release is focused on practical features for Azure developers.<!--excerpt_end-->

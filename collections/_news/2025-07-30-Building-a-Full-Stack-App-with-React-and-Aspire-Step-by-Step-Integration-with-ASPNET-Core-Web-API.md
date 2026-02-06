@@ -19,11 +19,10 @@ tags:
 - SQLite
 - Vite
 - VS Code
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this guide, Sayed Ibrahim Hashimi demonstrates how to construct a full-stack TODO application using React and Aspire, coupling a modern front-end with an ASP.NET Core Web API and persistent SQLite storage.<!--excerpt_end-->
 

@@ -25,15 +25,15 @@ tags:
 - Rapid Development
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
 - Security
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 - security

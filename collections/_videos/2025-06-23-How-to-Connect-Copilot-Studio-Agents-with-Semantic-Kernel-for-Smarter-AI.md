@@ -22,12 +22,12 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI demonstrates how to connect Copilot Studio agents with Semantic Kernel, providing a hands-on guide to making AI agents smarter and more dynamic using Microsoft technologies.<!--excerpt_end-->

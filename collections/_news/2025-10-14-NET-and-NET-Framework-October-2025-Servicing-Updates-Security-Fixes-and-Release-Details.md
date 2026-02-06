@@ -22,13 +22,12 @@ tags:
 - Security Update
 - Servicing
 - Vulnerability Management
-- Coding
 - Security
 - News
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Tara Overfield and Victor Israel-Bolarinwa provide a thorough overview of the October 2025 .NET and .NET Framework servicing updates, highlighting key security patches and release details.<!--excerpt_end-->
 

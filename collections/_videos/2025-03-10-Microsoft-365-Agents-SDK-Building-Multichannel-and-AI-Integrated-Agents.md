@@ -21,12 +21,12 @@ tags:
 - Webchat
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this video, Learn Microsoft AI explores how developers can use the Microsoft 365 Agents SDK and Semantic Kernel to build AI-powered, multichannel agents that integrate with Microsoft 365, Teams, and more.<!--excerpt_end-->

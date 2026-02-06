@@ -23,11 +23,11 @@ tags:
 - WASM
 - WebAssembly
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Alexandra Lietzke shares insights from Idan Gazit of GitHub Next on how AI is transforming programming language trends, developer workflows, and the future of software development.<!--excerpt_end-->

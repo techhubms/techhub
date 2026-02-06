@@ -12,7 +12,7 @@ tags:
 - Company News
 - Human Feedback
 - LinkedIn Post
-- Machine Learning
+- ML
 - Microsoft Research
 - Natural Language Processing
 - Physical AI

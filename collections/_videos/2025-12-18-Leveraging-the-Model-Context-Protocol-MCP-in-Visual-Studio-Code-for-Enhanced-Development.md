@@ -16,11 +16,11 @@ tags:
 - Unified Interface
 - VS Code
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Visual Studio Code showcases how developers can leverage the Model Context Protocol (MCP) to interact with external tools, databases, and APIs through AI-powered integrations. Presented by the Visual Studio Code team.<!--excerpt_end-->

@@ -2,7 +2,7 @@
 external_url: https://www.youtube.com/watch?v=wNynE4mwEKI
 title: Introducing Collection Expression Arguments in C# 15 and .NET 11
 author: Nick Chapsas
-primary_section: coding
+primary_section: dotnet
 feed_name: Nick Chapsas YouTube
 date: 2026-01-27 11:45:00 +00:00
 tags:
@@ -11,7 +11,6 @@ tags:
 - C#
 - C# 15
 - C# Features
-- Coding
 - Collection Expression Arguments
 - Language Syntax
 - Microsoft
@@ -19,7 +18,7 @@ tags:
 - Software Development
 - Videos
 section_names:
-- coding
+- dotnet
 ---
 Nick Chapsas discusses the first new feature in C# 15—Collection Expression Arguments—in this video, sharing his insights for C# and .NET developers.<!--excerpt_end-->
 

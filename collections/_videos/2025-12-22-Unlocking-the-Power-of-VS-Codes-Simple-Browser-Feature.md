@@ -16,11 +16,11 @@ tags:
 - VS Code
 - Web Development
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Visual Studio Code’s Justin Chen introduces the Simple Browser feature, detailing its uses for web development, AI workflows, and error analysis, helping developers enhance productivity.<!--excerpt_end-->

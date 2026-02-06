@@ -22,11 +22,11 @@ tags:
 - VS
 - VSIX
 - Vsixmanifest
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Tina Schrepfer presents an overview of the new extension compatibility model in Visual Studio 2026, easing migration for extension developers and users.<!--excerpt_end-->
 

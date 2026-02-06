@@ -22,8 +22,9 @@ tags:
 - S3 Compatibility
 - AI
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ai
 - azure

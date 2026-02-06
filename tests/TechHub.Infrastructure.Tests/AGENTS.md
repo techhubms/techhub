@@ -1,7 +1,7 @@
 # Infrastructure Tests - Tech Hub
 
 > **AI CONTEXT**: This is a **LEAF** context file for Infrastructure tests in the `tests/TechHub.Infrastructure.Tests/` directory. It complements the [tests/AGENTS.md](../AGENTS.md) testing strategy.
-> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../../AGENTS.md). Project principles are in [README.md](../../README.md). Follow **BOTH**.
+> **RULE**: Follow the 9-step workflow in Root [AGENTS.md](../../AGENTS.md).
 
 ## Overview
 
@@ -106,4 +106,4 @@ collections/
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Infrastructure/AGENTS.md](../../src/TechHub.Infrastructure/AGENTS.md) - Infrastructure patterns
 - [Root AGENTS.md](../../AGENTS.md#step-6-write-tests-first-tdd) - When to write tests
-- [README.md](../../README.md#timezone--date-handling) - Timezone requirements
+- [Root AGENTS.md](../../AGENTS.md#step-1-core-rules-boundaries) - Timezone requirements

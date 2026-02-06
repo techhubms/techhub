@@ -15,11 +15,10 @@ tags:
 - Project Configuration
 - SDK Version
 - Target Framework
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, LondonPilot discusses issues with EF Core migrations caused by .NET SDK version mismatches, seeking clarification on the roles of global.json and .csproj target frameworks.<!--excerpt_end-->
 

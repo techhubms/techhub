@@ -19,11 +19,10 @@ tags:
 - Platform Updates
 - Software Developer
 - Software Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this roundup, David Ortinau and Gerald Versluis present the latest .NET 10 and .NET MAUI updates, spotlighting major features and contributions from the developer community.<!--excerpt_end-->
 

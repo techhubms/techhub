@@ -25,16 +25,16 @@ tags:
 - Systemd
 - Virtual File System
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 KashanK explains Microsoft’s latest open-source work to enhance Linux reliability and security on Azure. These efforts support developers and cloud engineers using Linux platforms at scale.<!--excerpt_end-->
 

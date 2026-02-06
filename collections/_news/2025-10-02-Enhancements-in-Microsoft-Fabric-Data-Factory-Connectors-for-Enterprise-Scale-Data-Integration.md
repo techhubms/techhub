@@ -23,9 +23,10 @@ tags:
 - TLS 1.3
 - Upsert
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

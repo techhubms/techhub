@@ -18,11 +18,10 @@ tags:
 - Unit Testing
 - Verify Library
 - xUnit
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this guide, Januarius Njoku demonstrates how to leverage the Verify library for snapshot testing in C#. The article offers practical steps for setup and execution, providing sample code and clear explanations for developers looking to ensure robust object state validation.<!--excerpt_end-->
 

@@ -22,12 +22,12 @@ tags:
 - Wasm Bindgen
 - WebAssembly
 - AI
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

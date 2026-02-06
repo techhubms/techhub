@@ -22,13 +22,13 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - Security
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - security
 primary_section: ai
 ---

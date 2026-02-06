@@ -21,11 +21,10 @@ tags:
 - MAUI
 - Service Discovery
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 This presentation by dotnet introduces the concept of Decision Records in .NET, showing developers how tracking architectural decisions enhances code understanding and maintainability.<!--excerpt_end-->
 

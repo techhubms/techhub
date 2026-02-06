@@ -22,8 +22,9 @@ tags:
 - SQL Managed Instance
 - SQL Server
 - Azure
-- Machine Learning
+- ML
 - Blogs
+- Machine Learning
 section_names:
 - azure
 - ml

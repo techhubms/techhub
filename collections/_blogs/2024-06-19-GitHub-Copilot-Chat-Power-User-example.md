@@ -11,12 +11,12 @@ tags:
 - Prompt Engineering
 - AI
 - GitHub Copilot
-- Coding
 - Blogs
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 In this article, Rob Bos shares his experience leveraging GitHub Copilot Chat to streamline the development of a script designed for interacting with the GitHub API. Rob explains his workflow, detailing the prompts he used and the iterative nature of working with Copilot. <!--excerpt_end--> He openly discusses how initial attempts with Copilot did not yield perfect results and highlights the importance of refining prompts to achieve more accurate, effective code generation.

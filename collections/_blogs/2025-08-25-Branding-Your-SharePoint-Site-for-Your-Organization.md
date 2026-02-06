@@ -20,11 +20,11 @@ tags:
 - Themes
 - User Adoption
 - Web Parts
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny provides a practical, step-by-step guide to branding your SharePoint site, covering customization, design best practices, and tips for creating a unified digital workspace that reflects your organization’s identity.<!--excerpt_end-->
 

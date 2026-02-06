@@ -15,11 +15,11 @@ tags:
 - Language Features
 - Programming
 - Wishlist
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 OnionDeluxe encourages C# enthusiasts to share their most-wanted features for C# 15, following the recent arrival of extension properties.<!--excerpt_end-->
 

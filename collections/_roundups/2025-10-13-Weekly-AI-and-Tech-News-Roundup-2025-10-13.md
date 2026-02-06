@@ -1,4 +1,4 @@
----
+﻿---
 title: AI Agents and Automated Workflows Update Developer Tools and Cloud Platforms
 author: TechHub
 date: 2025-10-13 09:00:00 +00:00
@@ -16,18 +16,19 @@ tags:
 - Zero Trust
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- .NET
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

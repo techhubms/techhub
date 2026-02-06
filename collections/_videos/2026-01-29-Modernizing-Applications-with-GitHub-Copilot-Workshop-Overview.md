@@ -14,7 +14,6 @@ tags:
 - Appmodernization
 - Code
 - Code Conversion
-- Coding
 - Demo
 - Developer
 - Developer Workshop
@@ -27,9 +26,10 @@ tags:
 - Software Development
 - Videos
 - VS Code
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 ---
 Presented by Liam Hampton, this workshop video showcases practical strategies for modernizing applications using GitHub Copilot, focusing on code conversion, prompt breakdown, and developer productivity in VS Code.<!--excerpt_end-->

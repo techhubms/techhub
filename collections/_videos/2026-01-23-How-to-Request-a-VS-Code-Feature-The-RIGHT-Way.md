@@ -19,11 +19,11 @@ tags:
 - Productivity
 - Software Developer
 - VS Code
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, Reynald Adolphe demonstrates how to effectively request new features for Visual Studio Code directly from the editor, helping developers interact productively with the VS Code team.<!--excerpt_end-->
 

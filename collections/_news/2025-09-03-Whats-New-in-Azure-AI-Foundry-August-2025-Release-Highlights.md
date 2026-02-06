@@ -37,12 +37,12 @@ tags:
 - VibeVoice
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Nick Brady summarizes the August 2025 updates to Azure AI Foundry, highlighting the launch of the GPT-5 family, new agent tools like Browser Automation, updated AI/ML models, and significant enhancements to APIs, SDKs, and documentation for Microsoft-centric developers.<!--excerpt_end-->

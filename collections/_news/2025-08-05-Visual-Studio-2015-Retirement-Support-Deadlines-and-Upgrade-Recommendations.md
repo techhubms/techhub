@@ -25,13 +25,13 @@ tags:
 - Version Control
 - Visual Studio Subscriptions
 - VS
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Paul Chapman discusses key support deadlines for Visual Studio editions, urging developers to upgrade to Visual Studio 2022 for modern features and security, including GitHub integration and AI-powered coding.<!--excerpt_end-->
 

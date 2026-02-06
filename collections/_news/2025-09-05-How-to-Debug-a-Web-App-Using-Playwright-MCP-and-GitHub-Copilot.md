@@ -21,12 +21,12 @@ tags:
 - VS Code Extensions
 - Web App Debugging
 - AI
-- Coding
 - GitHub Copilot
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

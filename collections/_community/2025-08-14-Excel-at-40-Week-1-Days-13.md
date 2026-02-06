@@ -18,8 +18,9 @@ tags:
 - Power BI
 - Python in Excel
 - Timeline
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ml
 primary_section: ml

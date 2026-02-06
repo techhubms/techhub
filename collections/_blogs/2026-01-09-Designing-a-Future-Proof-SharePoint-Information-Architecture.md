@@ -19,11 +19,11 @@ tags:
 - Site Collections
 - Site Templates
 - Solution Architecture
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this in-depth article, John Edward outlines the process and principles for designing a scalable, future-ready SharePoint Information Architecture, providing actionable steps and best practices for developers and architects.<!--excerpt_end-->
 

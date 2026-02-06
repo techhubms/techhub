@@ -25,16 +25,15 @@ tags:
 - VS
 - Web Apps
 - Azure
-- Coding
 - DevOps
 - Security
 - Videos
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Byron Tardif presents the latest features of Azure App Service for .NET developers, covering deployment, monitoring, integration with DevOps tools, and strategies for optimizing and securing cloud applications.<!--excerpt_end-->
 

@@ -22,8 +22,9 @@ tags:
 - Primary Key
 - SQL Analytics Endpoint
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

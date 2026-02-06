@@ -16,11 +16,10 @@ tags:
 - Software Maintenance
 - STS
 - Versioning
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nick Chapsas explains recent LTS and STS support changes for .NET from Microsoft, addressing common developer concerns around support cycles and what the new policies mean for the .NET community.<!--excerpt_end-->
 

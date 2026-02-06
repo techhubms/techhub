@@ -11,7 +11,6 @@ tags:
 - ANSI Colors
 - ASCII
 - ASCII Animation
-- Coding
 - Copilot CLI
 - Creative Coding
 - Developer Workflow
@@ -23,9 +22,10 @@ tags:
 - Software Prototyping
 - Terminal Tools
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 ---
 In this video, Cameron Foxly from GitHub demonstrates how he used GitHub Copilot to build an ASCII animation tool for the terminal, detailing the technical and creative steps involved.<!--excerpt_end-->

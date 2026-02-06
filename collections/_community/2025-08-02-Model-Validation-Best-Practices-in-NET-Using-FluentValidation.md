@@ -16,11 +16,10 @@ tags:
 - Maintainability
 - Model Validation
 - Validation Best Practices
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this community post, ErfanBaghdadi seeks advice on best practices for implementing model validation in .NET with FluentValidation, focusing on maintainability and clean code.<!--excerpt_end-->
 

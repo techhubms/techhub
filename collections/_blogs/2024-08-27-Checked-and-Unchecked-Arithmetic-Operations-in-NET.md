@@ -18,11 +18,10 @@ tags:
 - Spectre.Console
 - System.Numerics
 - Unchecked Keyword
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh demonstrates how easily integer overflow can occur in .NET when generating the Fibonacci sequence, and provides practical strategies to avoid overflow errors in critical .NET applications.<!--excerpt_end-->
 

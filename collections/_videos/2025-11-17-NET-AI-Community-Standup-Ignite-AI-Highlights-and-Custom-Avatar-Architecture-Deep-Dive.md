@@ -29,12 +29,11 @@ tags:
 - Technical Deep Dive
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Featuring insights from Bruno Capuano and Pablo Piovano, this session explores the technical implementation of Microsoft's AI Custom Avatar demo using Azure AI Foundry and .NET technologies.<!--excerpt_end-->

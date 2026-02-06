@@ -1,7 +1,7 @@
 # PowerShell Development Agent
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `scripts/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
-> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../AGENTS.md). Project principles are in [README.md](../README.md). Follow **BOTH**.
+> **RULE**: Follow the 9-step workflow in Root [AGENTS.md](../AGENTS.md).
 
 ## Critical PowerShell Rules
 
@@ -271,7 +271,7 @@ tests/powershell/
 
 ### Running Pester Tests
 
-**Recommended** (via Run function - see [README.md - Starting, Stopping and Testing](../README.md#starting-stopping-and-testing-the-website)):
+**Recommended** (via Run function - see [docs/running-and-testing.md](../docs/running-and-testing.md)):
 
 ```powershell
 # All PowerShell tests only (fast - no .NET build)
@@ -329,7 +329,6 @@ Transforms RSS feed items into markdown files with .NET Tech Hub frontmatter str
 "Azure" → "azure"
 "DevOps" → "devops"
 "Security" → "security"
-"Coding" → "coding"
 "Cloud" → "cloud"
 ```
 

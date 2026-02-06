@@ -22,12 +22,13 @@ tags:
 - VS Code
 - VS Code Extensions
 - AI
-- Coding
-- Machine Learning
+- ML
 - Community
+- .NET
+- Machine Learning
 section_names:
 - ai
-- coding
+- dotnet
 - ml
 primary_section: ai
 ---

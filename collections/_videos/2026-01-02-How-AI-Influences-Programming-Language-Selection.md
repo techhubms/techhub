@@ -16,11 +16,11 @@ tags:
 - Statically Typed Languages
 - TypeScript
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 GitHub's Idan Gazit explains how artificial intelligence is affecting programming language popularity, particularly highlighting TypeScript and the importance of static typing in AI-supported coding.<!--excerpt_end-->

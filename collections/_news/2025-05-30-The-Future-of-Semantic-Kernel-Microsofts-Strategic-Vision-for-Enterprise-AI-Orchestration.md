@@ -21,12 +21,11 @@ tags:
 - Vector Data
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Written by Evan Mattson, Mark Wallace, and Nick Brady, this article explores the evolution and strategic trajectory of Semantic Kernel, Microsoft's open-source AI orchestration framework powering enterprise-scale solutions, and outlines the innovation and collaboration shaping its future.<!--excerpt_end-->

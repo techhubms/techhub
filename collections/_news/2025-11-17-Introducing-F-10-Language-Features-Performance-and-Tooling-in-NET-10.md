@@ -21,11 +21,10 @@ tags:
 - Type Subsumption Cache
 - ValueOption
 - VS
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Adam Boniecki reviews what's new in F# 10, including significant language improvements, performance upgrades, and tooling innovations released alongside .NET 10 and Visual Studio 2026.<!--excerpt_end-->
 

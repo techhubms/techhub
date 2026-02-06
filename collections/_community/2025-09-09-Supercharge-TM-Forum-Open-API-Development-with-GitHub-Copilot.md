@@ -21,12 +21,12 @@ tags:
 - TMF629
 - VS Code
 - AI
-- Coding
 - GitHub Copilot
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

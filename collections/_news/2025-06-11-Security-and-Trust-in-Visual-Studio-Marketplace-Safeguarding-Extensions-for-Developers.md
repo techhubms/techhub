@@ -19,15 +19,15 @@ tags:
 - Visual Studio Marketplace
 - VS
 - VS Code
-- Coding
 - DevOps
 - Security
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by Sean, this article delivers a comprehensive overview of efforts to ensure extension security and developer trust in the Visual Studio Marketplace, outlining both current safeguards and planned investments.<!--excerpt_end-->
 

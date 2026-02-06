@@ -11,7 +11,6 @@ tags:
 - Azure
 - Azure DevOps
 - Azure Logic Apps
-- Coding
 - Community
 - Continuous Integration
 - Custom Agents
@@ -30,10 +29,11 @@ tags:
 - Workflow Automation
 - Workflow Discovery
 - XSLT
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 ---
 WSilveira shares how GitHub Copilot custom agents can automate and standardize unit testing for Azure Logic Apps and Data Maps, emphasizing reusable specs, automated mock generation, and robust MSTest implementations.<!--excerpt_end-->

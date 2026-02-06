@@ -22,11 +22,10 @@ tags:
 - UI Programming
 - User Interface
 - VS Code
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet demonstrates how to create responsive user interfaces in Godot with C#, showcasing practical techniques to integrate dynamic UI elements directly with gameplay.<!--excerpt_end-->
 

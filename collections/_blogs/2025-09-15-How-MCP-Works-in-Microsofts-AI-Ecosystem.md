@@ -22,12 +22,12 @@ tags:
 - Tool Standardization
 - AI
 - Azure
-- Coding
 - Blogs
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Dellenny dives deep into Microsoft’s use of the Model Context Protocol (MCP), showing how this open standard powers AI agent integration in Copilot Studio, Azure AI Foundry, Dynamics 365, and beyond.<!--excerpt_end-->

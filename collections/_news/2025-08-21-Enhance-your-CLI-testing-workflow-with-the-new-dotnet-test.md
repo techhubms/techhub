@@ -23,13 +23,12 @@ tags:
 - Testing Frameworks
 - Visual Basic
 - VSTest
-- Coding
 - DevOps
 - News
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Mariam Abdullah introduces the new features of dotnet test in .NET 10, highlighting Microsoft.Testing.Platform (MTP) integration for faster performance and improved CLI diagnostics.<!--excerpt_end-->
 

@@ -15,7 +15,7 @@ tags:
 - IDE Assistants
 - Inspector
 - LLM
-- Machine Learning
+- ML
 - MCP
 - N8n
 - Nuxt
@@ -27,12 +27,12 @@ tags:
 - Unity
 - VS Code
 - AI
-- Coding
 - GitHub Copilot
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

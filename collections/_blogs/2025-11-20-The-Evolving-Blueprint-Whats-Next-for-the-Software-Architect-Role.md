@@ -12,7 +12,7 @@ tags:
 - Distributed Systems
 - Event Driven Architecture
 - Governance
-- Machine Learning
+- ML
 - Microservices
 - MLOps
 - Software Architecture

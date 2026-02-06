@@ -24,14 +24,14 @@ tags:
 - Secure Storage
 - Solution Architecture
 - Azure
-- Coding
 - Security
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny details how to implement the Secret Store Pattern in Azure, guiding developers to use Azure Key Vault for managing credentials and secrets securely in cloud-native applications.<!--excerpt_end-->
 

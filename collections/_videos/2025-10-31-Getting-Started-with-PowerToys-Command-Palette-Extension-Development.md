@@ -15,11 +15,11 @@ tags:
 - Publishing
 - Scaffolding
 - VS
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Microsoft Developer, with Kayla Cinnamon, demonstrates easy steps for building, coding, and publishing new extensions for the PowerToys Command Palette using Visual Studio.<!--excerpt_end-->
 

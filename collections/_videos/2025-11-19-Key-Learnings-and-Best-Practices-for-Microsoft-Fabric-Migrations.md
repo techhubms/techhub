@@ -22,8 +22,9 @@ tags:
 - Retail Data
 - AI
 - Azure
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - ai
 - azure

@@ -21,12 +21,12 @@ tags:
 - VS Code Chat
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 DeepGanguly presents a step-by-step guide to hosting a Model Context Protocol (MCP) server with HTTP transport on Azure Container Apps, enabling integration with external APIs and use in tools like VS Code Chat.<!--excerpt_end-->

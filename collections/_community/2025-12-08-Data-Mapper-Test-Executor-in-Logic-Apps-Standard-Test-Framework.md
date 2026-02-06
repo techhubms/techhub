@@ -20,14 +20,14 @@ tags:
 - XML
 - XSLT
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 WSilveira details how developers can leverage the Data Mapper Test Executor for Logic Apps Standard, offering native capabilities to test data transformations efficiently within automated workflows.<!--excerpt_end-->
 

@@ -22,12 +22,12 @@ tags:
 - Technology
 - TypeScript
 - AI
-- Coding
 - GitHub Copilot
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

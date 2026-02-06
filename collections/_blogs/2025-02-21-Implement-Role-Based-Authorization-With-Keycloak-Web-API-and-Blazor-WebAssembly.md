@@ -18,13 +18,12 @@ tags:
 - Role Based Authorization
 - Roles
 - Web API
-- Coding
 - Security
 - Blogs
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Marinko Spasojević guides readers through implementing role-based authorization using Keycloak with Blazor WebAssembly and Web API, exploring role assignment, claims mapping, and securing both UI and API endpoints in modern .NET applications.<!--excerpt_end-->
 

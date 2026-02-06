@@ -12,16 +12,16 @@ tags:
 - Blogs
 - Code Review
 - Code Validation
-- Coding
 - Developer Productivity
 - Edge Cases
 - GitHub Copilot
 - Prompt Engineering
 - Risk Assessment
 - Software Development
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 ---
 Randy Pagels shares practical guidance for developers on building confidence in GitHub Copilot’s coding output by combining smart trust with targeted verification.<!--excerpt_end-->

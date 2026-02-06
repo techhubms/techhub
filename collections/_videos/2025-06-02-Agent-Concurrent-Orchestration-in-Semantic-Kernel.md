@@ -27,11 +27,11 @@ tags:
 - Semantic Kernel
 - Voting Systems
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI presents an in-depth demo on concurrent orchestration in Semantic Kernel, showcasing how to run multiple AI agents in parallel and aggregate their results in .NET applications.<!--excerpt_end-->

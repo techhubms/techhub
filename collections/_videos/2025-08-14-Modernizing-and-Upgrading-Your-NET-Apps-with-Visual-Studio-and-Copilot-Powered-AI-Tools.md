@@ -20,11 +20,10 @@ tags:
 - Natural Language Programming
 - VS
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 This video by dotnet explores how developers can utilize Visual Studio and Copilot-powered AI tools to efficiently modernize and upgrade .NET apps, featuring automated migrations and AI-supported code fixes.<!--excerpt_end-->

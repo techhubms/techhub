@@ -10,7 +10,7 @@ tags:
 - Code Completion
 - Coding Style
 - Developer Experience
-- Machine Learning
+- ML
 - Personalized AI
 - Software Tools
 - User Habits

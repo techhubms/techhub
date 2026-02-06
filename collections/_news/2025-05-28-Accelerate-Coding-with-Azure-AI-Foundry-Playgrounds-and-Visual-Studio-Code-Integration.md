@@ -23,12 +23,12 @@ tags:
 - VS Code Extension
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Authored by Thasmika Gokal, this article delves into the enhanced AI developer experience provided by Azure AI Foundry playgrounds and the 'Open in VS Code' workflow, detailing integration strategies for seamless prototyping and deployment in Visual Studio Code.<!--excerpt_end-->

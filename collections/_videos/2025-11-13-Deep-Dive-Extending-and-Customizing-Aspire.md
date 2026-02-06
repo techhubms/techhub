@@ -28,14 +28,13 @@ tags:
 - Telemetry
 - VS
 - Azure
-- Coding
 - DevOps
 - Videos
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet presents an in-depth session on extending and customizing .NET Aspire for cloud-native development, highlighting practical ways developers can adapt Aspire to their specific infrastructure and integration needs.<!--excerpt_end-->
 

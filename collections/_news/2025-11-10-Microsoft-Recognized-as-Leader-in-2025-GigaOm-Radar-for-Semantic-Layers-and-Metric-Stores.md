@@ -20,8 +20,9 @@ tags:
 - Power BI
 - Semantic Models
 - AI
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
 - ml

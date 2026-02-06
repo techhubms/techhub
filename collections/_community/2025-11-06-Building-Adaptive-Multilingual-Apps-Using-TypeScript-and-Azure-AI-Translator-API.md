@@ -27,12 +27,12 @@ tags:
 - TypeScript
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Julia Muiruri guides developers through leveraging the 2025-05-01-preview Azure AI Translator API in TypeScript applications, with a focus on adaptive translation, LLM integration, and migration best practices.<!--excerpt_end-->

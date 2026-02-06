@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 07
 date: 2018-10-01 00:00:00 +00:00
 author: Xebia
@@ -18,14 +18,14 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

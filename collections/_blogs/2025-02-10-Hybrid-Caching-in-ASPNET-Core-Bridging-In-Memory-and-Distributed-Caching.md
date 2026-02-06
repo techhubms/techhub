@@ -18,11 +18,10 @@ tags:
 - Microsoft.Extensions.Caching.Hybrid
 - Service Configuration
 - Web Application Performance
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Bozo Spoljaric explains hybrid caching in ASP.NET Core, presenting its implementation, configuration, and practical examples. The article targets developers optimizing data access and scalability in .NET applications by combining local and distributed cache strategies.<!--excerpt_end-->
 

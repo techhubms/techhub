@@ -16,11 +16,10 @@ tags:
 - Questionnaire
 - Questions Filtering
 - SelectMany
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 GreatlyUnknown seeks advice on writing a LINQ query to retrieve questions with selected options from a nested questionnaire structure, sparking a discussion about effective usage of SelectMany in C#.<!--excerpt_end-->
 

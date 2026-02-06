@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 16
 date: 2024-05-01 00:00:00 +00:00
 author: Xebia
@@ -21,15 +21,15 @@ tags:
 - SQL Merge
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
 - Security
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 - security

@@ -29,12 +29,12 @@ tags:
 - SummaryEnricher
 - Vector Databases
 - AI
-- Coding
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
-- coding
+- dotnet
 - ml
 primary_section: ai
 ---

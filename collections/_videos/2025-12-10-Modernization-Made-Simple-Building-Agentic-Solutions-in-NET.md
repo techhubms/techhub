@@ -18,11 +18,10 @@ tags:
 - Software Modernization
 - Tool Orchestration
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet presents a practical session on integrating the Agent Framework with .NET, showing developers how to modernize applications by enabling agentic features such as multi-agent collaboration and memory persistence.<!--excerpt_end-->

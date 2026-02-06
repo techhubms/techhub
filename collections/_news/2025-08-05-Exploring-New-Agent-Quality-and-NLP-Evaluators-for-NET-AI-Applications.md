@@ -22,12 +22,11 @@ tags:
 - Testing
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this post, Shyam Namboodiripad details the latest agent quality and NLP evaluators in the Microsoft.Extensions.AI.Evaluation libraries, offering a comprehensive toolkit for .NET AI application assessment.<!--excerpt_end-->

@@ -21,11 +21,10 @@ tags:
 - Serialization
 - Swashbuckle
 - System.Text.Json
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Darrel Miller and Rachit Kumar Malik announce the largest update ever to OpenAPI.NET, bringing major performance, compatibility, and feature enhancements to help .NET developers keep pace with modern API standards.<!--excerpt_end-->
 

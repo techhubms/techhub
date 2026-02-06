@@ -21,11 +21,11 @@ tags:
 - NullConditional
 - Safer Coding
 - VS
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Learn Microsoft AI demonstrates the new null-conditional assignment feature in C# 14 and .NET 10, showing how these updates can help you write safer, cleaner C# code.<!--excerpt_end-->
 

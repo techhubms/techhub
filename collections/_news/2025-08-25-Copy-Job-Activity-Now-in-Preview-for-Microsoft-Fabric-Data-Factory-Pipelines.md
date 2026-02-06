@@ -17,8 +17,9 @@ tags:
 - No Code Data Engineering
 - Pipeline Automation
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

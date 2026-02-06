@@ -24,12 +24,11 @@ tags:
 - Retry Policy
 - Solution Architecture
 - Azure
-- Coding
 - Blogs
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny details key cloud resilience and availability patterns, comparing their implementation between AWS and Microsoft Azure. Readers discover practical Azure tools and strategies for building robust applications capable of weathering system failures.<!--excerpt_end-->
 

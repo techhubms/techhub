@@ -19,13 +19,12 @@ tags:
 - Traffic Management
 - Windows Containers
 - YARP
-- Coding
 - DevOps
 - Videos
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this session, dotnet demonstrates how to architect a load balancer using YARP to streamline traffic management across multiple Kubernetes clusters and VM-hosted Windows Containers, offering practical insights on scaling, routing, and integrating legacy systems.<!--excerpt_end-->
 

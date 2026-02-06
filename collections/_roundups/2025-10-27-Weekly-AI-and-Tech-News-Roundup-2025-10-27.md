@@ -1,4 +1,4 @@
----
+﻿---
 title: Agentic AI Advancements, GitHub Copilot Progress, Hybrid DevOps, and Secure Cloud Updates
 author: TechHub
 date: 2025-10-27 09:00:00 +00:00
@@ -16,18 +16,18 @@ tags:
 - VS Code
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

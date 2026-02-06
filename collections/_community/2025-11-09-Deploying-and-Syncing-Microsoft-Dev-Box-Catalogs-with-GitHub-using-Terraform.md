@@ -21,14 +21,14 @@ tags:
 - Version Control
 - Virtual Network
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 singhshub outlines how to automate the deployment of Microsoft Dev Box Catalogs with Terraform and keep them synchronized with GitHub, providing a repeatable, secure, and version-controlled cloud development environment for teams.<!--excerpt_end-->
 

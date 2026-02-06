@@ -20,14 +20,13 @@ tags:
 - Sampling
 - Telemetry
 - Azure
-- Coding
 - DevOps
 - Community
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 BiteDowntown3294 shares actionable tips for effective Azure Application Insights logging in .NET, discussing practical configurations, resource links, and the benefits of OpenTelemetry and data sampling.<!--excerpt_end-->
 

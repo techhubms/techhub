@@ -19,11 +19,11 @@ tags:
 - Terminal
 - VS Code
 - Win32 Input Mode
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Visual Studio Code Team shares the January 2026 Insiders update, covering robust terminal upgrades, chat session enhancements, new MCP Apps support, and improvements to extension APIs and settings.<!--excerpt_end-->
 

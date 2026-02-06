@@ -21,11 +21,10 @@ tags:
 - Sync Over Async
 - Task Based Programming
 - ThreadPool
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Delicious_Jaguar_341 shares a thoughtful discussion about advanced async/await usage in .NET, examining performance problems caused by the sync-over-async pattern and providing actionable tips for developers.<!--excerpt_end-->
 

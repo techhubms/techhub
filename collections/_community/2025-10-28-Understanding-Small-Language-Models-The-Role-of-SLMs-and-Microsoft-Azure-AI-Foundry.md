@@ -12,7 +12,7 @@ tags:
 - Inference
 - Large Language Models
 - LLM
-- Machine Learning
+- ML
 - Microsoft
 - On Device AI
 - Parameters

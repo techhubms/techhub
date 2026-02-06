@@ -16,7 +16,7 @@ tags:
 - Enterprise Payments
 - Financial Technology
 - Intelligent Acceptance
-- Machine Learning
+- ML
 - Microsoft Azure
 - Payment Optimization
 - Payment Platform

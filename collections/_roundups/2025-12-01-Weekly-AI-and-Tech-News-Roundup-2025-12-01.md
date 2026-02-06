@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Ignite 2025: Updates in Agentic AI, Cloud, Developer Tools, and Security'
 author: TechHub
 date: 2025-12-01 09:00:00 +00:00
@@ -19,18 +19,19 @@ tags:
 - Zero Trust
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- .NET
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

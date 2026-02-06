@@ -26,12 +26,12 @@ tags:
 - Web App Deployment
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 TulikaC introduces AI Playground for Azure App Service on Linux, a built-in tool that lets developers test prompt interactions with Small Language Models, measure performance, and easily grab code samples for integration.<!--excerpt_end-->

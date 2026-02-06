@@ -21,12 +21,12 @@ tags:
 - Runtime Upgrades
 - Web Apps
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 TulikaC introduces support for Python 3.14 on Azure App Service for Linux, explaining performance improvements and offering migration steps for developers to upgrade and test their web applications.<!--excerpt_end-->
 

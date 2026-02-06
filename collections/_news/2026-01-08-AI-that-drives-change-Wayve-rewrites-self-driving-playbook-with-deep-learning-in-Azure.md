@@ -10,7 +10,7 @@ tags:
 - Cloud Computing
 - Deep Learning
 - Innovation
-- Machine Learning
+- ML
 - Self Driving Cars
 - Wayve
 - AI

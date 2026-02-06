@@ -165,7 +165,7 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
 
         // Act - query section booleans
         var result = await _fixture.Connection.QuerySingleAsync<dynamic>(
-            @"SELECT is_ai, is_github_copilot, is_ml, is_devops, is_azure, is_coding, is_security 
+            @"SELECT is_ai, is_github_copilot, is_ml, is_devops, is_azure, is_dotnet, is_security 
               FROM content_tags_expanded 
               WHERE slug = @Slug AND collection_name = @Collection 
               LIMIT 1",
@@ -189,7 +189,7 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
 
         // Act - query section booleans from content_items
         var result = await _fixture.Connection.QuerySingleAsync<dynamic>(
-            @"SELECT is_ai, is_github_copilot, is_ml, is_devops, is_azure, is_coding, is_security 
+            @"SELECT is_ai, is_github_copilot, is_ml, is_devops, is_azure, is_dotnet, is_security 
               FROM content_items 
               WHERE slug = @Slug AND collection_name = @Collection",
             new { Slug = "github-copilot", Collection = "blogs" });

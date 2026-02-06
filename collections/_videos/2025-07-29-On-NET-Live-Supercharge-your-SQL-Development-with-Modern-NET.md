@@ -15,11 +15,11 @@ tags:
 - SQL
 - SQL Server
 - Static Code Analysis
-- Coding
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
-- coding
+- dotnet
 - ml
 primary_section: ml
 ---

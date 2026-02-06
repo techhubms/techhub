@@ -23,11 +23,10 @@ tags:
 - Support
 - Support Policy
 - Upgrade Strategy
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Jamshed Damkewala outlines Microsoft's decision to extend support for .NET STS releases to 24 months, starting with .NET 9, and explains how this impacts lifecycle policy and developers' upgrade cycles.<!--excerpt_end-->
 

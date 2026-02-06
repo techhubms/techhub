@@ -21,11 +21,11 @@ tags:
 - WM TABLET DELETED
 - WPF
 - WPF Performance
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 shepburn explores a recurring problem where WPF applications freeze or become unresponsive when plugging or unplugging USB devices that provide touch or stylus functionality, sharing observations, a workaround, and its limitations.<!--excerpt_end-->
 

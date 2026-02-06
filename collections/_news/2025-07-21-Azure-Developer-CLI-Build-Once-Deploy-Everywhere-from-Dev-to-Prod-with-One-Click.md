@@ -19,14 +19,14 @@ tags:
 - GitHub Actions
 - IaC
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by PuiChee (PC) Chan and Kristen Womack, this post guides readers through implementing a 'build once, deploy everywhere' CI/CD pipeline using Azure Developer CLI, conditional Bicep templates, and GitHub Actions for efficient dev-to-prod promotions.<!--excerpt_end-->
 

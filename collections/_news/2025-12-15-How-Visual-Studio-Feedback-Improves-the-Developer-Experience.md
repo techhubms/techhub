@@ -19,13 +19,13 @@ tags:
 - Regression Analysis
 - Ticket Triage
 - VS
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Mads Kristensen explains how the Visual Studio team turns user feedback into actionable improvements, detailing the internal workflow and tips for developers to enhance their bug reports.<!--excerpt_end-->
 

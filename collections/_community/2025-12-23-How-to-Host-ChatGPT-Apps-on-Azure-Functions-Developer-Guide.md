@@ -21,12 +21,12 @@ tags:
 - Streamable HTTP
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Lily Ma presents a comprehensive developer guide for building and hosting ChatGPT apps on Azure Functions, covering architecture, integration, and deployment tips.<!--excerpt_end-->

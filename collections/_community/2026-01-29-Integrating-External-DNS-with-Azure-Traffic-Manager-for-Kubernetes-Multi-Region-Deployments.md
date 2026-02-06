@@ -2,7 +2,7 @@
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exploring-traffic-manager-integration-for-external-dns/ba-p/4485690
 title: Integrating External DNS with Azure Traffic Manager for Kubernetes Multi-Region Deployments
 author: samcogan
-primary_section: coding
+primary_section: dotnet
 feed_name: Microsoft Tech Community
 date: 2026-01-29 08:43:34 +00:00
 tags:
@@ -13,7 +13,6 @@ tags:
 - Azure Traffic Manager
 - Blue Green Deployment
 - Cloud Native
-- Coding
 - Community
 - DevOps
 - Disaster Recovery
@@ -27,9 +26,10 @@ tags:
 - Network Architecture
 - Webhook Provider
 - Weighted Routing
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 ---
 Sam Cogan presents a practical proof-of-concept for automating Azure Traffic Manager configuration using External DNS and Kubernetes, enabling multi-region DNS-based load balancing and streamlined deployment workflows.<!--excerpt_end-->

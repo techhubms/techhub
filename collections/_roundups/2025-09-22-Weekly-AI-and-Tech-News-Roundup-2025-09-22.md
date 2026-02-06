@@ -1,4 +1,4 @@
----
+﻿---
 title: AI Agent Workflows, Security Improvements, and Advances in Cloud Technology
 author: TechHub
 date: 2025-09-22 09:00:00 +00:00
@@ -15,18 +15,19 @@ tags:
 - Quantum Computing
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- .NET
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

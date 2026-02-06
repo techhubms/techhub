@@ -26,8 +26,9 @@ tags:
 - Regression
 - AI
 - Azure
-- Machine Learning
+- ML
 - Blogs
+- Machine Learning
 section_names:
 - ai
 - azure

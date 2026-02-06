@@ -23,13 +23,12 @@ tags:
 - VS
 - Web Development
 - WebAuthN
-- Coding
 - Security
 - Videos
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet explores the future of Blazor in .NET 10, highlighting security enhancements, diagnostics, and productivity features for modern, efficient web application development.<!--excerpt_end-->
 

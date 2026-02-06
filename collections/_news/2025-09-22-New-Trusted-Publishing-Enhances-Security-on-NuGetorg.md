@@ -18,15 +18,14 @@ tags:
 - Security Best Practices
 - Trusted Publishing
 - Workflow Automation
-- Coding
 - DevOps
 - Security
 - News
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Evgeny Tvorun and Sean highlight Trusted Publishing on NuGet.org, guiding developers to secure package publishing by using GitHub OIDC tokens instead of long-lived API keys.<!--excerpt_end-->
 

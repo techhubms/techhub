@@ -21,8 +21,9 @@ tags:
 - Workspace Admin
 - Workspace Level Assignment
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

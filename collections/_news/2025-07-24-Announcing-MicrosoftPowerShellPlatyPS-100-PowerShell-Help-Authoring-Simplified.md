@@ -18,11 +18,11 @@ tags:
 - PowerShell Help
 - PowerShell PlatyPS
 - VS Code
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Authored by Jason Helmick and Sean Wheeler, this post introduces Microsoft.PowerShell.PlatyPS 1.0.0, detailing the new capabilities and improvements for PowerShell help file authoring.<!--excerpt_end-->
 

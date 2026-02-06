@@ -20,12 +20,12 @@ tags:
 - Predictive IntelliSense
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Steven Bucher from the PowerShell Team introduces AI Shell Preview 4, diving into its new features: enhanced macOS integration, Entra ID authentication, improved shell commands, a new offline AI agent, and more.<!--excerpt_end-->

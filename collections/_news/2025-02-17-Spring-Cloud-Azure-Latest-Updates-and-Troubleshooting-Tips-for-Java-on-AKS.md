@@ -22,14 +22,14 @@ tags:
 - Spring Cloud Azure
 - TokenCredential
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Moary Chen explores the latest advancements in Spring Cloud Azure with a special focus on Java applications deployed in Azure Kubernetes Service (AKS), offering comprehensive updates and troubleshooting tips.<!--excerpt_end-->
 

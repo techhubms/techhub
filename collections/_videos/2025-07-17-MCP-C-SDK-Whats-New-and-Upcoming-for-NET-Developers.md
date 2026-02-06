@@ -18,11 +18,10 @@ tags:
 - SDK Updates
 - Versions
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this expert-led developer session, featuring Bruno Capuano, Mike Kistler, and Stephen Halter, you'll discover the newest additions to the C# MCP SDK, insights into leveraging AI with .NET, and practical guidance for modern Microsoft-centric app development.<!--excerpt_end-->

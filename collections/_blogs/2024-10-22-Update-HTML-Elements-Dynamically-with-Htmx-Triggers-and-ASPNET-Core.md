@@ -17,11 +17,10 @@ tags:
 - Razor Pages
 - User Profile
 - Web Development
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh walks through using Htmx's HX-Trigger headers with ASP.NET Core Razor Pages to seamlessly update UI elements like avatars upon profile changes, backed by practical code examples and integration tips.<!--excerpt_end-->
 

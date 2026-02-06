@@ -23,14 +23,14 @@ tags:
 - Uv
 - Virtual Environments
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 TulikaC explains recent upgrades for building and deploying Python apps on Azure App Service for Linux, covering modern tools like pyproject.toml, uv, Poetry, and offering improved DevOps workflows.<!--excerpt_end-->
 

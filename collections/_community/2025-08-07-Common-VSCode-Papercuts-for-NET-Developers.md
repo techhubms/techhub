@@ -19,13 +19,12 @@ tags:
 - Productivity
 - Solution Explorer
 - VS Code
-- Coding
 - DevOps
 - Community
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Sure-Natural-9086 leads a community discussion on the usability gaps ('paper cuts') faced by .NET developers using VSCode, with practical suggestions and peer insights.<!--excerpt_end-->
 

@@ -14,11 +14,11 @@ tags:
 - Programming Environment
 - Software Engineering
 - VS Code
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Visual Studio Code’s engineering team, including Alex and Osvaldo, present the latest updates to coding agent integration in VS Code, giving developers actionable insights into new features.<!--excerpt_end-->
 

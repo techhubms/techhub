@@ -11,7 +11,7 @@ tags:
 - Drone Imagery
 - GitHub
 - Humanitarian Mapping
-- Machine Learning
+- ML
 - Microsoft AI For Good Lab
 - Open Source
 - OpenStreetMap

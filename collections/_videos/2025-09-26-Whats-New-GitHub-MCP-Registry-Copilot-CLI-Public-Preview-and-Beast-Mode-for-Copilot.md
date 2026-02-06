@@ -13,7 +13,7 @@ tags:
 - GitHub
 - GitHub MCP Registry
 - GPT 5 Codex
-- Machine Learning
+- ML
 - MCP
 - Public Preview
 - VS Code

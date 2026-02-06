@@ -19,14 +19,14 @@ tags:
 - System Orchestration
 - YAML
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this detailed announcement, Jason Helmick introduces Microsoft Desired State Configuration v3.0.0, highlighting its cross-platform capabilities, integration improvements, and significant differences from classic PowerShell DSC.<!--excerpt_end-->
 

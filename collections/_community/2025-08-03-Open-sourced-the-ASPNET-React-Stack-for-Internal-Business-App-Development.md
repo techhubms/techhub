@@ -16,11 +16,10 @@ tags:
 - Software Development
 - User Management
 - Xams
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 blabmight shares the release of Xams, an open-source ASP.NET Core and React framework designed for streamlined business app development.<!--excerpt_end-->
 

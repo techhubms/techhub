@@ -23,12 +23,12 @@ tags:
 - Performance Based Testing
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 AaronStark delves into the diverse Azure skilling experiences available at Microsoft Ignite 2025, emphasizing the career benefits of hands-on labs, certification pathways, and the integration of AI, Azure, and developer platforms.<!--excerpt_end-->

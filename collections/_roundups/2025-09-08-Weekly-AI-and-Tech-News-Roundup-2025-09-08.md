@@ -1,4 +1,4 @@
----
+﻿---
 title: Latest Updates in AI Development, Cloud Automation, and Enterprise Security
 author: TechHub
 date: 2025-09-08 09:00:00 +00:00
@@ -23,18 +23,18 @@ tags:
 - Workflow Automation
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

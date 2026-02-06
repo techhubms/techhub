@@ -26,8 +26,9 @@ tags:
 - Zero Downtime Deployment
 - Azure
 - DevOps
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - azure
 - devops

@@ -19,11 +19,11 @@ tags:
 - TypeScript
 - TypeScript 5.9
 - VS Code
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Daniel Rosenwasser introduces TypeScript 5.9 Beta, highlighting important compiler and tooling updates. Developers are invited to try out new features and contribute feedback as TypeScript continues to evolve.<!--excerpt_end-->
 

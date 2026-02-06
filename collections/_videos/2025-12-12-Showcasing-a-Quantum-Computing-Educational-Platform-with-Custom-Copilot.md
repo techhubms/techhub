@@ -19,12 +19,11 @@ tags:
 - Simulator
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet hosts Johnny Hooyberghs as he demonstrates an educational quantum computing platform created for Microsoft workshops, featuring interactive Q# programming, live feedback, and a custom Copilot.<!--excerpt_end-->

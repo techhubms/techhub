@@ -26,12 +26,12 @@ tags:
 - VS Code Extension
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 John Savill presents a comprehensive overview of AI features available within Azure Managed PostgreSQL, outlining integration methods, developer tooling, and practical scenarios for leveraging AI and vector search in the Microsoft cloud.<!--excerpt_end-->

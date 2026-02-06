@@ -1,4 +1,4 @@
----
+﻿---
 title: Agentic AI, Context Engineering, and Secure Automation Power Tech Progress
 author: TechHub
 date: 2026-01-05 09:00:00 +00:00
@@ -18,18 +18,19 @@ tags:
 - VS Code
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- .NET
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

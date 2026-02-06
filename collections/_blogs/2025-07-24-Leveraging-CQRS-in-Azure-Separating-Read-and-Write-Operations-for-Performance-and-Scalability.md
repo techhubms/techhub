@@ -27,14 +27,14 @@ tags:
 - Solution Architecture
 - Write Model
 - Azure
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny describes how to apply the CQRS pattern using Microsoft Azure services, guiding developers through separating read and write operations to maximize performance, scalability, and maintainability in modern cloud-native applications.<!--excerpt_end-->
 

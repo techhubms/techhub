@@ -22,14 +22,13 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - GitHub Copilot
 - Security
 - Community
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - github-copilot
 - security
 primary_section: github-copilot

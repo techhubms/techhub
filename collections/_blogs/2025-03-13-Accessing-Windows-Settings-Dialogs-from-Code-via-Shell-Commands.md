@@ -16,11 +16,10 @@ tags:
 - ShellExecute
 - URI Scheme
 - Windows
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rick Strahl discusses how developers can open Windows Settings dialogs directly from code or shell commands using the `ms-settings:` protocol handler. The article provides practical usage examples for applications built with .NET and Windows technologies.<!--excerpt_end-->
 

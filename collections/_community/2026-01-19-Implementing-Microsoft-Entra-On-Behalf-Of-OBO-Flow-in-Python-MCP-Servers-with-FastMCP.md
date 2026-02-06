@@ -24,14 +24,14 @@ tags:
 - Python
 - Service Principal
 - Azure
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Pamela Fox provides an in-depth walkthrough on enabling delegated access in Python MCP servers using Microsoft Entra with the on-behalf-of flow. This technical article guides developers through secure integration steps and code examples.<!--excerpt_end-->
 

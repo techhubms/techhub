@@ -21,14 +21,14 @@ tags:
 - Release Pipeline
 - YAML Pipelines
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 DrippinInSuccess discusses with the community about migrating classic Azure DevOps build and release pipelines to YAML pipelines for an Angular and .NET 8 application. Multiple approaches, tips, and strategies are shared by experienced engineers.<!--excerpt_end-->
 

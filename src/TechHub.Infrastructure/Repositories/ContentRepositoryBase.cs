@@ -40,7 +40,7 @@ public abstract class ContentRepositoryBase : IContentRepository
         // Define section display order (matches live site - starts with "all")
         var sectionOrder = new[]
         {
-            "all", "github-copilot", "ai", "ml", "devops", "azure", "coding", "security"
+            "all", "github-copilot", "ai", "ml", "devops", "azure", "dotnet", "security"
         };
 
         // Convert configuration to Section models
@@ -236,6 +236,10 @@ public abstract class ContentRepositoryBase : IContentRepository
                 }
             }
         }
+
+        //As these are so common and doesn't add much value to tag clouds, we exclude it by default.
+        excludeSet.Add("GitHub");
+        excludeSet.Add("Microsoft");
 
         return excludeSet;
     }

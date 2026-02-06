@@ -30,13 +30,13 @@ tags:
 - VS Code
 - AI
 - GitHub Copilot
-- Coding
 - Azure
 - Videos
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 - azure
 primary_section: github-copilot
 ---

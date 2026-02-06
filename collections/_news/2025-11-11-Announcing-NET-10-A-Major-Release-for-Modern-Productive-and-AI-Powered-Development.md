@@ -36,13 +36,12 @@ tags:
 - WPF
 - AI
 - Azure
-- Coding
 - DevOps
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

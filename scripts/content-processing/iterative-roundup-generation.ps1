@@ -465,7 +465,7 @@ Choose ONE section that best represents the primary focus of the content. Use th
 1. "GitHub Copilot": Content specifically about GitHub Copilot features, usage, integrations, or announcements
    - GitHub Copilot Chat, code completion, enterprise features
    - GitHub Copilot extensions and integrations
-   - Takes priority over "AI" or "Coding" when Copilot is the main focus
+   - Takes priority over "AI" or ".NET" when Copilot is the main focus
 
 2. "ML": Machine learning engineering, data science workflows, model development, AI research
    - Azure ML, data science platforms, model training and deployment
@@ -484,7 +484,7 @@ Choose ONE section that best represents the primary focus of the content. Use th
    - ARM templates, Bicep, Terraform (if Azure) cloud management
    - Use when Azure services are the primary focus, not just mentioned
 
-5. "Coding": .NET ecosystem, programming languages, development frameworks
+5. ".NET": .NET ecosystem, programming languages, development frameworks
    - C#, F#, .NET, ASP.NET Core, development patterns
    - Programming languages, frameworks, development tools, NuGet package manager
    - Only use when development is the main focus and not about GitHub Copilot
@@ -885,7 +885,7 @@ $step3SystemMessage
 
         # Process each section individually to avoid token limits
         $step3Responses = @()
-        $orderedSections = @("GitHub Copilot", "AI", "ML", "Azure", "Coding", "DevOps", "Security")
+        $orderedSections = @("GitHub Copilot", "AI", "ML", "Azure", ".NET", "DevOps", "Security")
         $processedSections = 0
         
         # If resuming from a specific section, load previous section responses
@@ -1228,7 +1228,7 @@ CRITICAL: If no meaningful connections exist between the previous and current ro
 
             # Process each section individually to avoid token limits
             $step4Responses = @()
-            $orderedSections = @("GitHub Copilot", "AI", "ML", "Azure", "Coding", "DevOps", "Security")
+            $orderedSections = @("GitHub Copilot", "AI", "ML", "Azure", ".NET", "DevOps", "Security")
             $processedSections = 0
             
             # Extract section content from Step 3 response for individual processing
@@ -1692,7 +1692,7 @@ section_names:
 - azure
 - devops
 - security
-- coding
+- dotnet
 - ml
 primary_section: "github-copilot"
 feed_name: "TechHub"

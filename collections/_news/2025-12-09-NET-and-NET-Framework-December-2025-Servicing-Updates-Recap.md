@@ -22,11 +22,10 @@ tags:
 - SDK
 - Servicing Release
 - WinForms
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 The .NET Team and Tara Overfield present an overview of the December 2025 .NET and .NET Framework servicing releases, emphasizing non-security fixes for .NET 10.0 and resource links for developers.<!--excerpt_end-->
 

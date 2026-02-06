@@ -20,11 +20,11 @@ tags:
 - State Management
 - Store Pattern
 - Web Development
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Khalid Abuhakmeh explains how to build a persistent counter with Alpine.js, demonstrating concepts similar to Blazor's counter sample and showcasing ASP.NET Core integration.<!--excerpt_end-->
 

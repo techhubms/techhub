@@ -28,14 +28,15 @@ tags:
 - Vector Search
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - Security
 - News
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 - security
 primary_section: ai

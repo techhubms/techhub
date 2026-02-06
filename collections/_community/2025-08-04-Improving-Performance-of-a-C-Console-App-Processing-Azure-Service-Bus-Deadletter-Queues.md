@@ -16,14 +16,14 @@ tags:
 - Performance
 - Subscription
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 TTwelveUnits asks for guidance on making a C# console app method more performant for processing Azure Service Bus deadletter messages, especially for large queues, as part of a nightly Azure DevOps pipeline.<!--excerpt_end-->
 

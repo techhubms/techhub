@@ -20,13 +20,12 @@ tags:
 - VS
 - VS Settings
 - Winget
-- Coding
 - DevOps
 - Videos
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet details how automating onboarding with .NET Aspire, Visual Studio settings, and Winget can dramatically speed up the new engineer setup process and streamline developer workflows.<!--excerpt_end-->
 

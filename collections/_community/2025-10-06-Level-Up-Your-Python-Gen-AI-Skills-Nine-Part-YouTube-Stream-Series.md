@@ -26,12 +26,12 @@ tags:
 - Vision Models
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Pamela Fox presents a comprehensive nine-part YouTube series teaching developers how to harness generative AI in Python, including Azure AI services, LLMs, vision AI, RAG, safety, agents, and real-world coding techniques.<!--excerpt_end-->

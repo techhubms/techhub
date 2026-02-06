@@ -20,11 +20,10 @@ tags:
 - Project Structure
 - Software Architecture
 - Validation
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 jeddthedoge initiates a thoughtful discussion on the complexities of starting a .NET project, with community members providing nuanced perspectives on why .NET emphasizes structure through DTOs, layers, and frameworks like Entity Framework.<!--excerpt_end-->
 

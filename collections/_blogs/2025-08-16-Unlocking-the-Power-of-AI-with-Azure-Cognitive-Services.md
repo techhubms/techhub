@@ -17,7 +17,7 @@ tags:
 - Form Recognizer
 - Language API
 - LUIS
-- Machine Learning
+- ML
 - Microsoft Azure
 - Natural Language Processing
 - Personalizer

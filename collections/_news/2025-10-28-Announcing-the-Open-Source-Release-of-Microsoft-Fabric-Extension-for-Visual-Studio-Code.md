@@ -17,14 +17,14 @@ tags:
 - VS Code Extension
 - Workspace Management
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Microsoft Fabric Blog presents the open-sourcing of the Fabric Core Visual Studio Code extension, enabling developers to better manage and customize Fabric resources while encouraging community contributions.<!--excerpt_end-->
 

@@ -24,14 +24,14 @@ tags:
 - Vite
 - VS Code
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - Security
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 - security

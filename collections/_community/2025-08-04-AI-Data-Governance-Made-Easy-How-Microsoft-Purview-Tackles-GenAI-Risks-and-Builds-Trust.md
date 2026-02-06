@@ -21,9 +21,10 @@ tags:
 - AI
 - Azure
 - DevOps
-- Machine Learning
+- ML
 - Security
 - Community
+- Machine Learning
 section_names:
 - ai
 - azure

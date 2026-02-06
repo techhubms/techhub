@@ -18,11 +18,10 @@ tags:
 - Minimal APIs
 - Session Management
 - Web Development
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Khalid Abuhakmeh discusses practical cookie management in ASP.NET Core, focusing on overcoming size limitations using the ChunkingCookieManager. This guide is ideal for developers confronted with storing substantial session data securely and efficiently.<!--excerpt_end-->
 

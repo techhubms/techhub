@@ -24,13 +24,14 @@ tags:
 - VMs
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - Blogs
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 primary_section: ai
 ---

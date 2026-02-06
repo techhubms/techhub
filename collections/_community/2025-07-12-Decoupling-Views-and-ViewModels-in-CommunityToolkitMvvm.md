@@ -19,11 +19,11 @@ tags:
 - WPF
 - XAML
 - XAML Binding
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 CSharpDev delves into practical approaches for decoupling WPF views from view models using CommunityToolkit.Mvvm, weighing classic ViewModelLocator and modern DI solutions.<!--excerpt_end-->
 

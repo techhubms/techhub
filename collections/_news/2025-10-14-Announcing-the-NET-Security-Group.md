@@ -26,13 +26,12 @@ tags:
 - Support
 - Upstream Projects
 - Vulnerability Disclosure
-- Coding
 - Security
 - News
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Jamshed Damkewala details the launch of the .NET Security Group, where organizations can work directly with Microsoft to distribute .NET security patches and receive early CVE information.<!--excerpt_end-->
 

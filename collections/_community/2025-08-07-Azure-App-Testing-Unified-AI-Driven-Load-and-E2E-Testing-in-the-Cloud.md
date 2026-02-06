@@ -29,14 +29,14 @@ tags:
 - GitHub Copilot
 - Azure
 - DevOps
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - github-copilot
 - azure
 - devops
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 John_Stallo details Azure App Testing, a unified Azure Portal service enabling AI-powered load and end-to-end test automation. Learn how developers can use Playwright, JMeter, Locust, GitHub Copilot, and Azure-native scaling for application quality and performance.<!--excerpt_end-->

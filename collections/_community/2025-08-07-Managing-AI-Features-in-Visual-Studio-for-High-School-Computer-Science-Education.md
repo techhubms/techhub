@@ -21,13 +21,13 @@ tags:
 - VS Code
 - VSCodium
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

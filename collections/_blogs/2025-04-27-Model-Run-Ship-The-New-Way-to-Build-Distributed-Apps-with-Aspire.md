@@ -22,13 +22,12 @@ tags:
 - Software Development
 - Terraform
 - Web Development
-- Coding
 - DevOps
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this post, David Fowler discusses how Aspire streamlines the modeling and deployment of distributed applications, making connections between services explicit and repeatable.<!--excerpt_end-->
 

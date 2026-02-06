@@ -27,14 +27,14 @@ tags:
 - SSMS
 - Virtual Machines
 - Azure
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 John Savill's Technical Training delivers a weekly Azure update, highlighting new features like ExpressRoute resiliency, Cosmos DB improvements, and coding-related integrations for cloud professionals.<!--excerpt_end-->
 

@@ -20,13 +20,12 @@ tags:
 - Single Sign On
 - SSO Architecture
 - User Workflow
-- Coding
 - Security
 - Videos
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 This practical guide by Dustin Kingen demonstrates how to implement centralized SSO using OpenIddict for multiple .NET applications, presenting design strategies and integration tips for improved authentication.<!--excerpt_end-->
 

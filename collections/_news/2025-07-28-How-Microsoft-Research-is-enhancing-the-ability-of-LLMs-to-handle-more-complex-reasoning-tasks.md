@@ -12,7 +12,7 @@ tags:
 - Deep Learning
 - Large Language Models
 - LLM
-- Machine Learning
+- ML
 - Microsoft Research
 - Natural Language Processing
 - Problem Solving

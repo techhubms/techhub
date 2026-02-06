@@ -21,11 +21,10 @@ tags:
 - Real Time Demo
 - Semantic Kernel
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI presents a thorough step-by-step guide on integrating Semantic Kernel plugins with MCP Server, empowering developers to build smart AI-driven applications using Microsoft technologies.<!--excerpt_end-->

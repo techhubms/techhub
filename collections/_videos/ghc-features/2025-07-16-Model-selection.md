@@ -14,12 +14,12 @@ tags:
 - VS Code
 - AI
 - GitHub Copilot
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 primary_section: github-copilot
 feed_name: TechHub
 ---

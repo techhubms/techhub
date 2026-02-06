@@ -19,7 +19,7 @@ tags:
 - Hybrid + Multicloud
 - Hybrid Cloud
 - Internet Of Things
-- Machine Learning
+- ML
 - Microsoft TRELLIS
 - Multimodal Models
 - ND GB200 V6 VMs

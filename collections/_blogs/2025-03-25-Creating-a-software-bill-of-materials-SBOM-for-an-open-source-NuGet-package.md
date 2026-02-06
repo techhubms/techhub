@@ -20,15 +20,14 @@ tags:
 - Software Supply Chain
 - SPDX
 - Syft
-- Coding
 - DevOps
 - Security
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 In this comprehensive guide, Andrew Lock demonstrates how to generate SBOMs for .NET NuGet packages using tools like GitHub's SBOM export, Microsoft's sbom-tool, anchore/sbom-action, and CycloneDX, highlighting practical considerations for developers and operators.<!--excerpt_end-->
 

@@ -23,13 +23,14 @@ tags:
 - Service Principal
 - Workspace Configuration
 - Azure
-- Coding
 - DevOps
-- Machine Learning
+- ML
 - Community
+- .NET
+- Machine Learning
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - ml
 primary_section: ml

@@ -33,7 +33,7 @@ tags:
 - Large Language Models
 - Low Code Development
 - Low Code Platforms
-- Machine Learning
+- ML
 - No Code Platforms
 - No Code Tools
 - Secure Coding
@@ -45,13 +45,13 @@ tags:
 - Technical Debt
 - Vibe Coding
 - AI
-- Coding
 - DevOps
 - Security
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

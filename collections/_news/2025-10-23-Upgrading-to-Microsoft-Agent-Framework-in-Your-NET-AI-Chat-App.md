@@ -26,12 +26,11 @@ tags:
 - Tool Invocation
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Bruno Capuano shows developers how to upgrade a .NET AI chat app to the Microsoft Agent Framework, achieving better architecture, agent orchestration, and deeper Azure OpenAI integration.<!--excerpt_end-->

@@ -30,11 +30,10 @@ tags:
 - Technical Training
 - Textbooker.pl
 - Web Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, dotnet (with guests Tomasz Osmanowski, Michał Siegień, and Tymoteusz Bielski) demonstrates how the .NET platform, Razor Pages, and HTMX can simplify and modernize web development education.<!--excerpt_end-->
 

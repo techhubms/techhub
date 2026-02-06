@@ -5,7 +5,7 @@ date: 2026-01-05 13:01:17 +00:00
 primary_section: github-copilot
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 tags:
 - Agentic Development
@@ -21,7 +21,7 @@ tags:
 - MCP Servers
 - VS Code
 - AI
-- Coding
+- .NET
 - GitHub Copilot
 external_url: https://www.youtube.com/watch?v=dxDqelvVc2U
 feed_name: Visual Studio Code YouTube

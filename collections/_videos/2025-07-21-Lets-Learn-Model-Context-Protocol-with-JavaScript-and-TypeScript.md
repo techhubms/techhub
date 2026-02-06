@@ -25,11 +25,10 @@ tags:
 - Playwright
 - Typescript
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Visual Studio Code hosts Debbie O'Brien and Chris Noring in a hands-on session exploring the Model Context Protocol (MCP), featuring demos and practical guidance for developers new to MCP.<!--excerpt_end-->

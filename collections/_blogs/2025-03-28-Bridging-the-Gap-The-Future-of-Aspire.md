@@ -17,14 +17,14 @@ tags:
 - Service Discovery
 - Terraform
 - Azure
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Written by David Fowler, this post discusses the future direction of Aspire, focusing on how it bridges the gap between application development and cloud infrastructure for both developers and platform engineers.<!--excerpt_end-->
 

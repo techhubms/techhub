@@ -40,7 +40,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 c.tags_csv AS TagsCsv,
                 c.is_ai AS IsAi,
                 c.is_azure AS IsAzure,
-                c.is_coding AS IsCoding,
+                c.is_dotnet AS IsDotNet,
                 c.is_devops AS IsDevOps,
                 c.is_github_copilot AS IsGitHubCopilot,
                 c.is_ml AS IsMl,
@@ -68,7 +68,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 c.tags_csv AS TagsCsv,
                 c.is_ai AS IsAi,
                 c.is_azure AS IsAzure,
-                c.is_coding AS IsCoding,
+                c.is_dotnet AS IsDotNet,
                 c.is_devops AS IsDevOps,
                 c.is_github_copilot AS IsGitHubCopilot,
                 c.is_ml AS IsMl,
@@ -157,7 +157,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
 
     /// <summary>
     /// Calculate bitmask value for section filtering.
-    /// Bit 0 (1) = AI, Bit 1 (2) = Azure, Bit 2 (4) = Coding, Bit 3 (8) = DevOps,
+    /// Bit 0 (1) = AI, Bit 1 (2) = Azure, Bit 2 (4) = .NET, Bit 3 (8) = DevOps,
     /// Bit 4 (16) = GitHub Copilot, Bit 5 (32) = ML, Bit 6 (64) = Security.
     /// </summary>
     /// <param name="sections">Collection of section names to include in bitmask</param>
@@ -189,7 +189,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
         {
             "ai" => 1,
             "azure" => 2,
-            "coding" => 4,
+            "dotnet" => 4,
             "devops" => 8,
             "github-copilot" => 16,
             "ml" => 32,
@@ -266,7 +266,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 UNION ALL
                 SELECT 'azure', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 2) > 0
                 UNION ALL
-                SELECT 'coding', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 4) > 0
+                SELECT 'dotnet', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 4) > 0
                 UNION ALL
                 SELECT 'devops', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 8) > 0
                 UNION ALL

@@ -23,11 +23,10 @@ tags:
 - Testing Workflow
 - VS
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet showcases how AI-enhanced features in Visual Studio assist developers in writing better tests, improving coverage, and automating quality assurance processes.<!--excerpt_end-->

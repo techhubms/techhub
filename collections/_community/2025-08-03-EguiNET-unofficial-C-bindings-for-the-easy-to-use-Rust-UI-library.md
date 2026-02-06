@@ -15,11 +15,11 @@ tags:
 - Rust
 - UI Library
 - Vulkan
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, The-Douglas shares the story behind Egui.NET—a C# wrapper for the egui Rust UI library—highlighting its technical foundations, design motivations, and sample usage for game engine UIs.<!--excerpt_end-->
 

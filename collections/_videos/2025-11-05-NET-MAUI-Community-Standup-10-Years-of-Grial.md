@@ -25,11 +25,10 @@ tags:
 - UI Toolkit
 - UX Divers
 - Xamarin
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 David Ortinau and the UX Divers team reflect on Grial’s decade-long impact in the .NET ecosystem, explore its features for .NET MAUI and Xamarin, and unveil what's new for developers in .NET 10.<!--excerpt_end-->
 

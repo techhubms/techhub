@@ -24,11 +24,10 @@ tags:
 - ZaString
 - Zero Allocation
 - ZString
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 typicalyume presents ZaString, a Span-powered zero-allocation string helper for .NET, and invites detailed feedback from the developer community on its API, safety, and performance.<!--excerpt_end-->
 

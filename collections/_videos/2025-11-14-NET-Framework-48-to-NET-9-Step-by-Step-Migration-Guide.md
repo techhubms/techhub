@@ -22,11 +22,10 @@ tags:
 - Upgrade Process
 - Web API
 - Windows Service
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet explains how their team successfully migrated a 12-year-old .NET Framework application to .NET 9, outlining each critical step and the technical considerations involved.<!--excerpt_end-->
 

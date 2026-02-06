@@ -21,11 +21,10 @@ tags:
 - Technology Trends
 - VS
 - VS Code
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 OnionDeluxe shares insights on the perceived decline of C#’s relevance in today’s job market, exploring the shift in language and tool preferences in engineering roles.<!--excerpt_end-->
 

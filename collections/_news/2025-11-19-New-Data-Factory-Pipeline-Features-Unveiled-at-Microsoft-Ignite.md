@@ -25,8 +25,9 @@ tags:
 - Vacuum Activity
 - AI
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
 - azure

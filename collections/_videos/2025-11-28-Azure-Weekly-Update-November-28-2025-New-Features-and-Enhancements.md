@@ -35,13 +35,14 @@ tags:
 - T SQL
 - Virtual Machine Retirement
 - Azure
-- Coding
 - DevOps
-- Machine Learning
+- ML
 - Videos
+- .NET
+- Machine Learning
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - ml
 primary_section: ml

@@ -15,11 +15,10 @@ tags:
 - Project Naming
 - Service References
 - Shared Libraries
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this instructional video by dotnet, learn how to centralize and manage project and service names in .NET Aspire by using constants instead of magic strings—improving maintainability across your system.<!--excerpt_end-->
 

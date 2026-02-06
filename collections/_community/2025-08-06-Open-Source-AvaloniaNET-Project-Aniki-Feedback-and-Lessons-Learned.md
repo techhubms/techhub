@@ -25,11 +25,10 @@ tags:
 - Regex Source Generator
 - TreatWarningsAsErrors
 - UI Framework
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Loiuy123_ shares insights and receives technical feedback on their first significant open source project, Aniki, a MyAnimeList client built with Avalonia and .NET.<!--excerpt_end-->
 

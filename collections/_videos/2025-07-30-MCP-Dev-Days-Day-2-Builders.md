@@ -19,13 +19,13 @@ tags:
 - AI
 - Azure
 - Security
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
 - security
-- coding
+- dotnet
 primary_section: ai
 ---
 In this video, Microsoft Developer presents Day 2 of MCP Dev Days, delving into the practical implementation of the Model Context Protocol for developers and AI product strategists.<!--excerpt_end-->

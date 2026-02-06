@@ -13,7 +13,7 @@ tags:
 - Conference
 - Developers
 - IoT
-- Machine Learning
+- ML
 - MAUI
 - Mobile Apps
 - Open Source
@@ -23,12 +23,11 @@ tags:
 - Virtual Event
 - Web
 - AI
-- Coding
 - DevOps
 - News
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

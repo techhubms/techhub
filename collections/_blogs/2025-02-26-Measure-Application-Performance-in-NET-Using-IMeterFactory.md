@@ -19,11 +19,10 @@ tags:
 - System.Diagnostics.Metrics
 - Testing
 - Web API
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Authored by Muhammed Saleem, this article explores practical techniques for integrating and utilizing IMeterFactory to measure and optimize application performance in .NET, focusing on metrics collection and monitoring within ASP.NET Core applications.<!--excerpt_end-->
 

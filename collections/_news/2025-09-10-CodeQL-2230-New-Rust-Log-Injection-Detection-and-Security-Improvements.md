@@ -21,15 +21,15 @@ tags:
 - Spring Boot
 - Static Analysis
 - Taint Tracking
-- Coding
 - DevOps
 - Security
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Allison covers the latest in CodeQL 2.23.0, highlighting new Rust log injection detection, security query improvements across languages, and deployment updates for GitHub code scanning users.<!--excerpt_end-->
 

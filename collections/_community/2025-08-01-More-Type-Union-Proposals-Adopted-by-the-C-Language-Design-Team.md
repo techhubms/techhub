@@ -14,11 +14,10 @@ tags:
 - LDM
 - Type System
 - Type Unions
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 DayYam reports on new type union proposals being adopted by the C# language design team, highlighting upcoming changes for C# developers.<!--excerpt_end-->
 

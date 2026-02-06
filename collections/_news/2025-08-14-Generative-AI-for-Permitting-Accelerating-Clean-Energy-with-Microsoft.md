@@ -17,7 +17,7 @@ tags:
 - Hackathon
 - Innovation
 - Kernel Memory
-- Machine Learning
+- ML
 - MCAPS Energy
 - Microsoft AI Solutions
 - Microsoft Garage

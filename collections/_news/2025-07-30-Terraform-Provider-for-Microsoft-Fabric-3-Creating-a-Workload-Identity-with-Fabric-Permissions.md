@@ -17,8 +17,9 @@ tags:
 - Workload Identity
 - DevOps
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - devops
 - azure

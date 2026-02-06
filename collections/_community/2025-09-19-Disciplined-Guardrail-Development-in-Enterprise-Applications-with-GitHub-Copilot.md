@@ -20,13 +20,12 @@ tags:
 - Project Structure
 - Requirements Definition
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - Community
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

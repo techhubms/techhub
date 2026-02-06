@@ -19,13 +19,12 @@ tags:
 - Repository Instructions
 - VS Code
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - News
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

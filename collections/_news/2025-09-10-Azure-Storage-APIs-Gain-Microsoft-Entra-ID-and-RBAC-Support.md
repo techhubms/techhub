@@ -22,14 +22,13 @@ tags:
 - Security Best Practices
 - Storage
 - Azure
-- Coding
 - Security
 - News
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Christine Chen discusses the newly available Microsoft Entra ID and RBAC support for Azure Storage APIs, offering guidance on OAuth-based authentication and updated security practices.<!--excerpt_end-->
 

@@ -22,11 +22,10 @@ tags:
 - React Native
 - React Native Windows
 - TypeScript
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Tim Anderson explores Microsoft's update to React Native Windows 0.81, comparing it with MAUI and analyzing the implications for developers seeking cross-platform frameworks.<!--excerpt_end-->
 

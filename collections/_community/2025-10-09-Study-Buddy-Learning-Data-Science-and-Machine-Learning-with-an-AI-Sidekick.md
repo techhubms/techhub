@@ -20,8 +20,9 @@ tags:
 - VS Code
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ai
 - github-copilot

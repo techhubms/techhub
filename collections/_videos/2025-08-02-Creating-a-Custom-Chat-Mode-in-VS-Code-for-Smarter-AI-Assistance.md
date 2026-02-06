@@ -18,11 +18,11 @@ tags:
 - VS Code
 - VS Code Extensions
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Reynald Adolphe from Visual Studio Code explains how to build a Custom Chat Mode in VS Code, allowing developers to enhance their AI-powered coding environment with features like codebase analysis and GitHub integration.<!--excerpt_end-->

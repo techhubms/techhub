@@ -17,11 +17,10 @@ tags:
 - O NONBLOCK
 - SafeFileHandle
 - Useasync
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this Reddit post, FergoTheGreat examines the behavior of asynchronous file I/O in .NET on Linux, noting possible discrepancies between .NET's async indicators and actual Linux kernel flags.<!--excerpt_end-->
 

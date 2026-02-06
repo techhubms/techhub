@@ -36,16 +36,16 @@ tags:
 - Trivy
 - Velero
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 dhaneshuk presents a thorough walkthrough for building and operating enterprise-grade, multi-tenant AKS clusters, highlighting security, DevOps, cost optimization, and operational know-how for Microsoft consultants and developers.<!--excerpt_end-->
 

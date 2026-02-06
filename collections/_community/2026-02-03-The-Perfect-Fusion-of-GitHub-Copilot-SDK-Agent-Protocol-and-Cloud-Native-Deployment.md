@@ -14,7 +14,6 @@ tags:
 - Azure Container Apps
 - Capability Routing
 - Cloud Native
-- Coding
 - Community
 - Container Deployment
 - Continuous Integration
@@ -30,7 +29,7 @@ tags:
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 ---

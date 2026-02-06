@@ -30,9 +30,10 @@ tags:
 - SSD V2
 - Ultra NVMe
 - Azure
-- Machine Learning
+- ML
 - Security
 - Videos
+- Machine Learning
 section_names:
 - azure
 - ml

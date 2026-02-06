@@ -21,15 +21,15 @@ tags:
 - Taint Tracking
 - TypeScript
 - Vulnerability Detection
-- Coding
 - DevOps
 - Security
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Allison reports on the CodeQL 2.23.2 release, detailing important new security queries for Rust, advanced data flow tracking, and improvements to code scanning accuracy across multiple languages.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 13
 date: 2022-10-01 00:00:00 +00:00
 author: Xebia
@@ -26,14 +26,14 @@ tags:
 - Xpirit USA
 - AI
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

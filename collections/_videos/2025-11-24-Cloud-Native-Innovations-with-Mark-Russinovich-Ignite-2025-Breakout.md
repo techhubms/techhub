@@ -24,14 +24,14 @@ tags:
 - RADIUS
 - Serverless Containers
 - Azure
-- Coding
 - Security
 - Videos
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Microsoft Events features Mark Russinovich discussing core Azure innovations in cloud native computing, containers, security, and multi-cloud solutions as presented at Ignite 2025.<!--excerpt_end-->
 

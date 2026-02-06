@@ -15,11 +15,10 @@ tags:
 - Open Source
 - Python
 - Tools
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Microsoft Developer shares how developers can actively contribute to the MCP (Model Context Protocol) community via code, documentation, and tools. This overview will help developers identify ways to participate and collaborate.<!--excerpt_end-->
 

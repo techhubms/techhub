@@ -17,11 +17,11 @@ tags:
 - Runtime Bugs
 - Static Analysis
 - ThreadAbortException
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock presents an in-depth guide on identifying and mitigating infinite loops caused by ThreadAbortExceptions in .NET Framework applications, illustrating the problem with examples and sharing a custom Roslyn Analyzer solution.<!--excerpt_end-->
 

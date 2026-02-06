@@ -19,11 +19,10 @@ tags:
 - Version Mismatch
 - Windows Runtime
 - Windows Service
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 JY_2013 describes a .NET 8 application failing to start as a Windows service due to a missing Microsoft.NETCore.App version, despite WindowsDesktop.App being present. The post explores runtime dependencies and versioning.<!--excerpt_end-->
 

@@ -17,7 +17,7 @@ tags:
 - Healthcare AI
 - Impact Measurement
 - Juan M. Lavista Ferres
-- Machine Learning
+- ML
 - Microsoft
 - Project SPARROW
 - Synthetic Aperture Radar

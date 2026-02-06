@@ -19,8 +19,9 @@ tags:
 - Unified Data Estate
 - AI
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ai
 - azure

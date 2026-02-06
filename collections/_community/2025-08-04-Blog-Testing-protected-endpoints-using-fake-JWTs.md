@@ -15,13 +15,12 @@ tags:
 - JWT
 - Protected Endpoints
 - Testing
-- Coding
 - Security
 - Community
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 In this post, Kralizek82 explores methods to test protected endpoints in C# applications using fake JWT tokens, providing practical guidance for .NET developers.<!--excerpt_end-->
 

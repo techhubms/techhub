@@ -2,7 +2,7 @@
 external_url: https://www.stevejgordon.co.uk/talk-application-performance-optimisation-in-practice-60-mins
 title: 'Application Performance Optimisation in .NET: Practical Techniques and Tools'
 author: Steve Gordon
-primary_section: coding
+primary_section: dotnet
 feed_name: Steve Gordon's Blog
 date: 2026-01-27 16:31:56 +00:00
 tags:
@@ -13,7 +13,6 @@ tags:
 - Best Practices
 - Blogs
 - Code Optimisation
-- Coding
 - Dotmemory
 - Dottrace
 - Memory Management
@@ -22,7 +21,7 @@ tags:
 - Profiling
 - Software Engineering
 section_names:
-- coding
+- dotnet
 ---
 Steve Gordon offers practical advice for optimising .NET application performance, providing developers with actionable strategies, tool guidance, and real-world examples.<!--excerpt_end-->
 

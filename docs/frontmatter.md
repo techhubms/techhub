@@ -80,7 +80,7 @@ tags: ["AI", "GitHub Copilot", "Visual Studio"]
 
 Array of normalized section identifiers (lowercase, hyphenated):
 
-- Valid values: `["ai", "azure", "github-copilot", "dotnet", "devops", "security", "coding", "ml"]`
+- Valid values: `["ai", "azure", "github-copilot", "dotnet", "devops", "security", "ml"]`
 - Content can belong to multiple sections
 - If content includes `"github-copilot"`, it should also include `"ai"` (unless purely about Copilot setup/admin)
 

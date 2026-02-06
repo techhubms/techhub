@@ -25,8 +25,9 @@ tags:
 - Real Time Data
 - Synapse Data Engineering
 - Azure
-- Machine Learning
+- ML
 - Blogs
+- Machine Learning
 section_names:
 - azure
 - ml

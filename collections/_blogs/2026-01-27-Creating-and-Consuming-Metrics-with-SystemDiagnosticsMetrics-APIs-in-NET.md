@@ -2,7 +2,7 @@
 external_url: https://andrewlock.net/creating-and-consuming-metrics-with-system-diagnostics-metrics-apis/
 title: Creating and Consuming Metrics with System.Diagnostics.Metrics APIs in .NET
 author: Andrew Lock
-primary_section: coding
+primary_section: dotnet
 feed_name: Andrew Lock's Blog
 date: 2026-01-27 10:00:00 +00:00
 tags:
@@ -12,7 +12,6 @@ tags:
 - ASP.NET Core
 - Blogs
 - C#
-- Coding
 - Custom Metrics
 - Datadog
 - Dependency Injection
@@ -27,7 +26,7 @@ tags:
 - System.Diagnostics.Metrics
 - Web API
 section_names:
-- coding
+- dotnet
 - devops
 ---
 Andrew Lock provides a comprehensive walkthrough on leveraging System.Diagnostics.Metrics APIs in .NET, guiding developers through instrumentation concepts, monitoring with dotnet-counters, and building custom metrics for production-grade observability.<!--excerpt_end-->

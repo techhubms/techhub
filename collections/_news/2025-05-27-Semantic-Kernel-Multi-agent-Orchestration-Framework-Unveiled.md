@@ -21,11 +21,10 @@ tags:
 - Sequential Orchestration
 - Workflow Automation
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this post, authors Tao Chen and Chris Rickman introduce and explain the new multi-agent orchestration framework for Semantic Kernel, highlighting orchestration patterns, developer experience, and practical use cases.<!--excerpt_end-->

@@ -23,14 +23,14 @@ tags:
 - Pull Request Automation
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

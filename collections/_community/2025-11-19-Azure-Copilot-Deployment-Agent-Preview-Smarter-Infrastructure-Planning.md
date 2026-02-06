@@ -25,13 +25,13 @@ tags:
 - Well Architected Framework
 - AI
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

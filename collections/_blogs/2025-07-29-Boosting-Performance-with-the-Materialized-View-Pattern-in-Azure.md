@@ -28,8 +28,9 @@ tags:
 - Scheduled Refresh
 - Solution Architecture
 - Azure
-- Machine Learning
+- ML
 - Blogs
+- Machine Learning
 section_names:
 - azure
 - ml

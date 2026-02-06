@@ -15,13 +15,12 @@ tags:
 - Patches
 - Release Notes
 - Servicing Update
-- Coding
 - Security
 - News
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by Tara Overfield and Victor Israel-Bolarinwa, this article outlines the latest servicing updates released for .NET and .NET Framework in July 2025.<!--excerpt_end-->
 

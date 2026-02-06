@@ -23,12 +23,12 @@ tags:
 - YAML Configuration
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 kinfey explains how to leverage Microsoft Foundry, Agent Framework, and VSCode for building powerful multi-agent AI solutions, detailing each step from visual design to code deployment.<!--excerpt_end-->

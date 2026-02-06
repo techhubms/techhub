@@ -15,7 +15,7 @@ tags:
 - IDE Enhancements
 - IDE Integration
 - LLMs
-- Machine Learning
+- ML
 - Model Evaluation
 - Model Training
 - NES
@@ -27,12 +27,12 @@ tags:
 - Synthetic Data
 - VS Code
 - AI
-- Coding
 - GitHub Copilot
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

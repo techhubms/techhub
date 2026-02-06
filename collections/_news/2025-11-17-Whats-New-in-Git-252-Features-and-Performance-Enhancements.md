@@ -22,13 +22,13 @@ tags:
 - SHA 256
 - Sparse Checkout
 - Version Control
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Taylor Blau explores the technical highlights of the Git 2.52 release, discussing new commands, repository maintenance strategies, performance optimizations, and upcoming changes for developers.<!--excerpt_end-->
 

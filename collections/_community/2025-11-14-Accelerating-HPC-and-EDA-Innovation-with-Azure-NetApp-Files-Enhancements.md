@@ -15,7 +15,7 @@ tags:
 - Data Migration
 - HPC
 - Hybrid Cloud
-- Machine Learning
+- ML
 - Object Storage
 - Performance Optimization
 - Quota Reporting

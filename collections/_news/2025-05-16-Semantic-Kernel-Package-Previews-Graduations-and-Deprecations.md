@@ -18,11 +18,10 @@ tags:
 - Python Plugin
 - Semantic Kernel
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Authored by Sophia Lagerkrans-Pandey and Sergey Menshykh, this article details the latest Semantic Kernel .NET updates, highlighting package maturations, deprecations, and technical enhancements for developers.<!--excerpt_end-->

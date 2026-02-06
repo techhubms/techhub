@@ -20,12 +20,11 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Mads Kristensen invites developers to .NET Conf, where Microsoft experts will showcase new features in Visual Studio 2026, .NET 10 upgrades, AI-driven tools, and cloud innovations.<!--excerpt_end-->

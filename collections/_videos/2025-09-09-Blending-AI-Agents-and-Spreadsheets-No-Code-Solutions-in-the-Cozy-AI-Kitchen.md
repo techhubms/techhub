@@ -17,7 +17,7 @@ tags:
 - Executive Summaries
 - Foundry Labs
 - GPT 4.1
-- Machine Learning
+- ML
 - Microsoft
 - Natural Language Processing
 - No Code

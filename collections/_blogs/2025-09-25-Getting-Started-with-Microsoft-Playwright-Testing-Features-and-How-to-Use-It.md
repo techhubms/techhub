@@ -25,14 +25,13 @@ tags:
 - Testing Automation
 - TypeScript
 - Azure
-- Coding
 - DevOps
 - Blogs
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny provides a practical guide to Microsoft Playwright Testing, detailing its key features and how to use it for cross-browser testing, plus guidance on Azure and DevOps integrations.<!--excerpt_end-->
 

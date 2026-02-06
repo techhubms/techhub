@@ -16,11 +16,11 @@ tags:
 - Windows Development
 - Windows Settings
 - Windows Updates
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Microsoft Developer's Kayla Cinnamon highlights new features in Windows Settings aimed at enhancing the developer experience, such as improved advanced options, long file path support, and Git integration.<!--excerpt_end-->
 

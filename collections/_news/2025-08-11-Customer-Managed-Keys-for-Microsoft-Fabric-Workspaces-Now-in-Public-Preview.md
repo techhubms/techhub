@@ -20,9 +20,10 @@ tags:
 - Regulatory Requirements
 - Workspace Encryption
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

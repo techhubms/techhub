@@ -17,9 +17,10 @@ tags:
 - Security Compliance
 - TLS 1.2
 - Transport Layer Security
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - ml
 - security

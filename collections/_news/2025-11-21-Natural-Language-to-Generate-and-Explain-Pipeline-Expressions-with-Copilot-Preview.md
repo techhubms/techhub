@@ -18,8 +18,9 @@ tags:
 - Pipeline Expression Builder
 - Preview Features
 - AI
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
 - ml

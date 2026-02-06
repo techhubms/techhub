@@ -24,14 +24,14 @@ tags:
 - Terraform
 - Virtual Machines
 - Azure
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny presents a practical guide to adopting immutable infrastructure on Azure, detailing the steps, best practices, and tooling for reliable cloud deployments with DevOps workflows.<!--excerpt_end-->
 

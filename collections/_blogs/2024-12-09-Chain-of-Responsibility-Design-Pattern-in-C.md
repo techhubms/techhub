@@ -16,11 +16,10 @@ tags:
 - Request Handling
 - Single Responsibility Principle
 - Software Architecture
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Ahsan Ullah explores the Chain of Responsibility design pattern in this in-depth article, demonstrating how to implement and leverage it for flexible, maintainable C# applications.<!--excerpt_end-->
 

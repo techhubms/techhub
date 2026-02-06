@@ -19,12 +19,11 @@ tags:
 - Steve Sanderson
 - VS
 - AI
-- Coding
 - GitHub Copilot
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

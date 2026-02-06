@@ -21,12 +21,12 @@ tags:
 - Throughput
 - Uvloop
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 eroman details how switching to uvloop as the default event loop in Azure Functions for Python 3.13+ delivers faster async performance with no code changes needed, supported by benchmark data and practical integration notes.<!--excerpt_end-->
 

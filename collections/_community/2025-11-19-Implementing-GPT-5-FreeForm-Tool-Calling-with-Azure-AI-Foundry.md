@@ -22,13 +22,14 @@ tags:
 - VM Sandbox
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - Community
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 primary_section: ai
 ---

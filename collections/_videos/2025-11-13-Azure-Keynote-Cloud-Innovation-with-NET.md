@@ -23,14 +23,13 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - DevOps
 - Security
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

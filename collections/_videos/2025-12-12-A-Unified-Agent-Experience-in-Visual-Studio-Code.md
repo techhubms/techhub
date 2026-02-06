@@ -16,14 +16,14 @@ tags:
 - VS Code
 - VS Code Extensions
 - Azure
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this video, Visual Studio Code experts Josh and Osvaldo explore how developers can leverage new capabilities for managing local, cloud, and background agents through a unified interface.<!--excerpt_end-->
 

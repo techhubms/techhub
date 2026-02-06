@@ -25,11 +25,10 @@ tags:
 - T3 Chat Cloneathon
 - Web Development
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Presented by dotnet and featuring Shaltiel Shmidman, this session explores the development of high-performance, real-time AI chat applications using C#, ASP.NET Core, and SignalR, with demonstrations and expert guidance.<!--excerpt_end-->

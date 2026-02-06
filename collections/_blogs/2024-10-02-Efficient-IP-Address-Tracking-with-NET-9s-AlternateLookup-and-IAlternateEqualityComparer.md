@@ -21,11 +21,10 @@ tags:
 - ReadOnlySpan
 - Span
 - Stackalloc
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this in-depth article, Steve Gordon demonstrates enhancements in .NET 9 and C# 13 collections, focusing on building an efficient, low-allocation dictionary for IP address tracking using AlternateLookup and custom equality comparers.<!--excerpt_end-->
 

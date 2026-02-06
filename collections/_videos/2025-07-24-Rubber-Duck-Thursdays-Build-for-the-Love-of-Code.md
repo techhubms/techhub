@@ -14,11 +14,11 @@ tags:
 - Rubber Duck Thursdays
 - Software Projects
 - Streaming
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 GitHub invites viewers to Rubber Duck Thursdays, a relaxed live coding stream where GitHub staff explore new coding ideas and build projects together.<!--excerpt_end-->
 

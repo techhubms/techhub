@@ -26,13 +26,12 @@ tags:
 - Software Developer
 - Software Engineering
 - Testing
-- Coding
 - DevOps
 - Videos
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this video, Daniel Roth and Maddy Montaquila guide ASP.NET Core developers through Aspire, covering its benefits, practical integration, and real-world tips, as shared on AspiriFridays.<!--excerpt_end-->
 

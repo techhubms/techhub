@@ -19,11 +19,11 @@ tags:
 - Nested Statements
 - Readability
 - While Loop
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Foreign-Radish1641 and other community members analyze whether using `goto` in loops can be clearer than traditional `while` constructs in C#, sharing practical scenarios, examples, and advice.<!--excerpt_end-->
 

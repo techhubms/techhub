@@ -19,12 +19,12 @@ tags:
 - Rust
 - Secure Coding
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Ronnie Geraghty announces the first beta release of the Azure SDK for Rust, providing official support for Rust developers working with Azure services like Identity, Key Vault, Event Hubs, and Cosmos DB.<!--excerpt_end-->
 

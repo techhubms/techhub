@@ -20,11 +20,10 @@ tags:
 - Script Execution
 - Vision Models
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Bruno Capuano demonstrates how to use .NET 10 and local AI models to automatically generate AltText for images using a C# script. The article provides a hands-on example and practical tips.<!--excerpt_end-->

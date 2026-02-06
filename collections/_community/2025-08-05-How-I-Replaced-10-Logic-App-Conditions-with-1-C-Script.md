@@ -16,12 +16,12 @@ tags:
 - Workflow Automation
 - Workflow Optimization
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 maverick-1009 explains a practical approach to consolidating Logic App conditions using C# Inline Code to streamline Azure workflows.<!--excerpt_end-->
 

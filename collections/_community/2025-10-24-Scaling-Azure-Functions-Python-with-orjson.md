@@ -24,12 +24,12 @@ tags:
 - Service Bus
 - Virtual Environment
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 eroman examines how Azure Functions for Python apps benefit from native orjson support, showing measurable performance improvements in latency and throughput for serverless solutions.<!--excerpt_end-->
 

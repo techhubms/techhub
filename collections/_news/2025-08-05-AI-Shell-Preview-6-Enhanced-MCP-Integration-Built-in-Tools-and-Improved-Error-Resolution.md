@@ -18,11 +18,11 @@ tags:
 - Resolve Error
 - Terminal Tools
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Author Steven Bucher shares the latest on AI Shell Preview 6, highlighting richer MCP integration, built-in tools for PowerShell, and improved error resolution features. Learn how these updates foster a more productive, AI-enhanced shell environment.<!--excerpt_end-->

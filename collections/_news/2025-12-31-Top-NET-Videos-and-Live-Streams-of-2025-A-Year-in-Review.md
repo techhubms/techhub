@@ -28,11 +28,10 @@ tags:
 - Performance
 - VS
 - Wrapped
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Jon Galloway provides a detailed look at the top .NET videos and live streams of 2025, spotlighting technical tutorials, community sessions, and cutting-edge developments in the .NET landscape.<!--excerpt_end-->
 

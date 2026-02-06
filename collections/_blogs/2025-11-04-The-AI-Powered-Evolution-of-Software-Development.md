@@ -27,7 +27,7 @@ tags:
 - DevOps Culture
 - Future Of Software Engineering
 - Intelligent Automation
-- Machine Learning
+- ML
 - OpenAI Codex
 - Predictive Maintenance
 - Social Facebook

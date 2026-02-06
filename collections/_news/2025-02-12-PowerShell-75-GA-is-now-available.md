@@ -14,11 +14,11 @@ tags:
 - PowerShell 7.5
 - Quality Improvements
 - Scripting
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Jason Helmick announces the general availability of PowerShell 7.5, highlighting new features, improvements, and community contributions.<!--excerpt_end-->
 

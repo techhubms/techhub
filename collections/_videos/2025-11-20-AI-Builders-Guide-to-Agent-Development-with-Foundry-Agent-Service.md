@@ -25,12 +25,12 @@ tags:
 - Personalization
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Events presents a deep-dive guide for developers on building AI agents with Foundry Agent Service, featuring speakers Salman Quazi, Dan Taylor, and Travis Wilson.<!--excerpt_end-->

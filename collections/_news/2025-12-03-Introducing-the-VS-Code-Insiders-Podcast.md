@@ -20,11 +20,11 @@ tags:
 - Software Engineering
 - VS Code
 - VS Code Insiders
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 James Montemagno introduces the official VS Code Insiders Podcast, featuring in-depth episodes with the developers and community building Visual Studio Code, and covering topics like AI features, accessibility, and open source development.<!--excerpt_end-->
 

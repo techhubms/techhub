@@ -158,6 +158,7 @@ function Get-FilteredTags {
         'modelcontextprotocol'   = 'MCP'
         'mediatr'                = 'MediatR'
         'mscopilot'              = 'Microsoft Copilot'
+        'machinelearning'        = 'ML'
         'ml'                     = 'ML'
         'msbuilds'               = 'MSBuild'
         'mstest'                 = 'MSTest'

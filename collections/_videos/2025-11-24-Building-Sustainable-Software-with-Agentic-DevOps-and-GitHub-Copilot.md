@@ -22,13 +22,13 @@ tags:
 - Sustainable Software
 - Usability Analysis
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

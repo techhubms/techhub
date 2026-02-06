@@ -18,11 +18,11 @@ tags:
 - Terminal Output
 - UI Design
 - VS Code
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Visual Studio Code’s team, with insights from engineer Megan Rogge, shares practical approaches to accessibility—covering screen reader support, accessible interfaces, and culture-driven design decisions.<!--excerpt_end-->
 

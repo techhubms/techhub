@@ -23,8 +23,9 @@ tags:
 - Text Summarization
 - Translation
 - AI
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
 - ml

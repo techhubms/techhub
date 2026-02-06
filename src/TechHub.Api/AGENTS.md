@@ -13,7 +13,7 @@ This project implements the REST API backend using ASP.NET Core Minimal APIs. It
 
 ## Starting & Running
 
-**ALWAYS refer to [README.md - Starting, Stopping and Testing the Website](../../README.md#starting-stopping-and-testing-the-website)** for complete instructions on:
+**ALWAYS refer to [docs/running-and-testing.md](../../docs/running-and-testing.md)** for complete instructions on:
 
 - Starting the website with the `Run` function
 - Running tests with `Run`

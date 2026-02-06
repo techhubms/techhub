@@ -26,13 +26,12 @@ tags:
 - Workspace Settings
 - AI
 - Azure
-- Coding
 - GitHub Copilot
 - Community
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

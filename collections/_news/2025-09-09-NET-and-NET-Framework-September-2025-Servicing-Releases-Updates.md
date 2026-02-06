@@ -21,11 +21,10 @@ tags:
 - Servicing Release
 - Software Updates
 - Windows
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Tara Overfield and Victor Israel-Bolarinwa present a summary of the latest .NET and .NET Framework updates for September 2025, focusing on non-security fixes and resources for developers.<!--excerpt_end-->
 

@@ -19,12 +19,11 @@ tags:
 - Profiling Techniques
 - Software Development
 - VS
-- Coding
 - GitHub Copilot
 - Videos
 - AI
 section_names:
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

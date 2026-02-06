@@ -27,12 +27,11 @@ tags:
 - SDK
 - SDK Release
 - Azure
-- Coding
 - News
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Authored by Hector Norzagaray, this March 2025 Azure SDK release post highlights a major beta launch for Rust developers, updates across numerous programming languages, guidance regarding Node.js 18, and more.<!--excerpt_end-->
 

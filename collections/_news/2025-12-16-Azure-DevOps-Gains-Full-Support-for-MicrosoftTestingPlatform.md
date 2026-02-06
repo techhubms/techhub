@@ -25,14 +25,13 @@ tags:
 - VSTest
 - YAML Pipelines
 - Azure
-- Coding
 - DevOps
 - News
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Youssef Fahmy presents an in-depth look at Azure DevOps' new full support for Microsoft.Testing.Platform, outlining how developers can now run, retry, and publish .NET test results effortlessly.<!--excerpt_end-->
 

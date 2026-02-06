@@ -27,14 +27,13 @@ tags:
 - VS Code
 - Workflow Automation
 - Azure
-- Coding
 - DevOps
 - News
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Kristen Womack delves into Azure Developer CLI (azd) extensions, outlining their features, use cases, installation process, and ways developers can build and contribute extensions to optimize Azure workflow customization.<!--excerpt_end-->
 

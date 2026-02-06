@@ -14,7 +14,7 @@ tags:
 - IASA
 - Image Classification
 - Keras
-- Machine Learning
+- ML
 - Model Deployment
 - Supervised Learning
 - TensorFlow

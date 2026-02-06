@@ -24,11 +24,10 @@ tags:
 - Template
 - WASM
 - WebAssembly
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock explains how to run .NET code in the browser without using Blazor, focusing on browser-side WebAssembly and JavaScript interop techniques, with details relevant to .NET 9 and .NET 10.<!--excerpt_end-->
 

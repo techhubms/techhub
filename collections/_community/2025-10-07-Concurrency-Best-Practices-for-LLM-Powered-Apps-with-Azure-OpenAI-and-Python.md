@@ -23,12 +23,12 @@ tags:
 - Uvicorn
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Pamela Fox shares actionable best practices for building LLM-powered apps on Azure, emphasizing asynchronous Python frameworks to ensure speed and reliability when integrating Azure OpenAI Service and Azure AI Search.<!--excerpt_end-->

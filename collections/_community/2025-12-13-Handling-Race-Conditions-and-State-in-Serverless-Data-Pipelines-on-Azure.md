@@ -22,12 +22,13 @@ tags:
 - Table Storage
 - Workflow Design
 - Azure
-- Coding
-- Machine Learning
+- ML
 - Community
+- .NET
+- Machine Learning
 section_names:
 - azure
-- coding
+- dotnet
 - ml
 primary_section: ml
 ---

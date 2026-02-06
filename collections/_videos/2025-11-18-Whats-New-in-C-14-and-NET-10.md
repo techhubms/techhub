@@ -16,11 +16,10 @@ tags:
 - Microsoft
 - Programming Languages
 - Release Highlights
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nick Chapsas presents a video overview of C# 14 and .NET 10, breaking down notable updates and improvements for .NET and C# developers.<!--excerpt_end-->
 

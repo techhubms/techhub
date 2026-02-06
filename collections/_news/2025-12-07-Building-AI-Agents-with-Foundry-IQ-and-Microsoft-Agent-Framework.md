@@ -30,12 +30,12 @@ tags:
 - Semantic Search
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Farzad Sunavala and Eduard van Valkenburg detail how the Azure AI Search Context Provider and Foundry IQ enable developers to build intelligent, context-aware AI agents using minimal Python code in the Microsoft Agent Framework.<!--excerpt_end-->

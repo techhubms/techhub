@@ -15,11 +15,11 @@ tags:
 - VS Code
 - Web Integration
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents a practical video guide on building AI agents in Visual Studio Code using the AI Toolkit and Model Context Protocol. Discover how to extend your development workflow through four hands-on labs.<!--excerpt_end-->

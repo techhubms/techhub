@@ -23,8 +23,9 @@ tags:
 - T SQL
 - Warehouse Snapshots
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

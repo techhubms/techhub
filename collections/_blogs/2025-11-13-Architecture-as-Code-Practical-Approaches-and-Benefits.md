@@ -20,13 +20,13 @@ tags:
 - Solution Architecture
 - Version Control
 - YAML
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny explains the benefits and practical steps for implementing Architecture as Code, showing developers and DevOps engineers how to keep system architecture aligned and versioned.<!--excerpt_end-->
 

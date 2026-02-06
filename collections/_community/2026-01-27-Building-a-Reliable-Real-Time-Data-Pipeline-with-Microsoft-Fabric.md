@@ -21,8 +21,9 @@ tags:
 - Replication Lag
 - Schema Drift
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

@@ -47,7 +47,7 @@ public class ContentSyncService : IContentSyncService
     /// <summary>
     /// Strongly-typed record for tag words to avoid reflection overhead during bulk insert.
     /// Uses int (0/1) for boolean flags to match SQLite storage format.
-    /// SectionsBitmask: Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security
+    /// SectionsBitmask: Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security
     /// </summary>
     private sealed record TagWord(
         string CollectionName,
@@ -56,7 +56,7 @@ public class ContentSyncService : IContentSyncService
         long DateEpoch,
         int IsAi,
         int IsAzure,
-        int IsCoding,
+        int IsDotNet,
         int IsDevOps,
         int IsGitHubCopilot,
         int IsMl,
@@ -381,7 +381,7 @@ public class ContentSyncService : IContentSyncService
                     {
                         var chunkSize = Math.Min(TagsPerChunk, allBatchTags.Count - chunkStart);
                         var sb = new System.Text.StringBuilder();
-                        sb.Append(_dialect.GetInsertIgnorePrefix("content_tags_expanded", "(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask)"));
+                        sb.Append(_dialect.GetInsertIgnorePrefix("content_tags_expanded", "(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask)"));
 
                         using var cmd = _connection.CreateCommand();
                         cmd.Transaction = transaction;
@@ -430,7 +430,7 @@ public class ContentSyncService : IContentSyncService
 
                             var cParam = cmd.CreateParameter();
                             cParam.ParameterName = $"@c{tagIdx}";
-                            cParam.Value = _dialect.ConvertBooleanParameter(tag.IsCoding == 1);
+                            cParam.Value = _dialect.ConvertBooleanParameter(tag.IsDotNet == 1);
                             cmd.Parameters.Add(cParam);
 
                             var doParam = cmd.CreateParameter();
@@ -636,7 +636,7 @@ public class ContentSyncService : IContentSyncService
             {
                 IsAi = parsed.Sections.Contains("ai"),
                 IsAzure = parsed.Sections.Contains("azure"),
-                IsCoding = parsed.Sections.Contains("coding"),
+                IsDotNet = parsed.Sections.Contains("dotnet"),
                 IsDevOps = parsed.Sections.Contains("devops"),
                 IsGitHubCopilot = parsed.Sections.Contains("github-copilot"),
                 IsMl = parsed.Sections.Contains("ml"),
@@ -648,7 +648,7 @@ public class ContentSyncService : IContentSyncService
             {
                 IsAi = sectionBools.IsAi ? 1 : 0,
                 IsAzure = sectionBools.IsAzure ? 1 : 0,
-                IsCoding = sectionBools.IsCoding ? 1 : 0,
+                IsDotNet = sectionBools.IsDotNet ? 1 : 0,
                 IsDevOps = sectionBools.IsDevOps ? 1 : 0,
                 IsGitHubCopilot = sectionBools.IsGitHubCopilot ? 1 : 0,
                 IsMl = sectionBools.IsMl ? 1 : 0,
@@ -658,10 +658,10 @@ public class ContentSyncService : IContentSyncService
             // Upsert main content item with section booleans
             var insertContentStopwatch = Stopwatch.StartNew();
 
-            // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
+            // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
             var sectionsBitmask = (sectionInts.IsAi * 1) +
                                   (sectionInts.IsAzure * 2) +
-                                  (sectionInts.IsCoding * 4) +
+                                  (sectionInts.IsDotNet * 4) +
                                   (sectionInts.IsDevOps * 8) +
                                   (sectionInts.IsGitHubCopilot * 16) +
                                   (sectionInts.IsMl * 32) +
@@ -671,12 +671,12 @@ public class ContentSyncService : IContentSyncService
                 INSERT INTO content_items (
                     slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
                     primary_section_name, external_url, author, feed_name, ghes_support, draft, plans, tags_csv, content_hash,
-                    is_ai, is_azure, is_coding, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask,
+                    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask,
                     created_at, updated_at
                 ) VALUES (
                     @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
                     @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @Plans, @TagsCsv, @ContentHash,
-                    @IsAi, @IsAzure, @IsCoding, @IsDevOps, @IsGitHubCopilot, @IsMl, @IsSecurity, @SectionsBitmask,
+                    @IsAi, @IsAzure, @IsDotNet, @IsDevOps, @IsGitHubCopilot, @IsMl, @IsSecurity, @SectionsBitmask,
                     CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                 )
                 ON CONFLICT(collection_name, slug) DO UPDATE SET
@@ -696,7 +696,7 @@ public class ContentSyncService : IContentSyncService
                     content_hash = @ContentHash,
                     is_ai = @IsAi,
                     is_azure = @IsAzure,
-                    is_coding = @IsCoding,
+                    is_dotnet = @IsDotNet,
                     is_devops = @IsDevOps,
                     is_github_copilot = @IsGitHubCopilot,
                     is_ml = @IsMl,
@@ -723,7 +723,7 @@ public class ContentSyncService : IContentSyncService
                     ContentHash = parsed.ContentHash,
                     IsAi = _dialect.ConvertBooleanParameter(sectionBools.IsAi),
                     IsAzure = _dialect.ConvertBooleanParameter(sectionBools.IsAzure),
-                    IsCoding = _dialect.ConvertBooleanParameter(sectionBools.IsCoding),
+                    IsDotNet = _dialect.ConvertBooleanParameter(sectionBools.IsDotNet),
                     IsDevOps = _dialect.ConvertBooleanParameter(sectionBools.IsDevOps),
                     IsGitHubCopilot = _dialect.ConvertBooleanParameter(sectionBools.IsGitHubCopilot),
                     IsMl = _dialect.ConvertBooleanParameter(sectionBools.IsMl),
@@ -756,10 +756,10 @@ public class ContentSyncService : IContentSyncService
                 {
                     var tagNormalized = tag.ToLowerInvariant().Trim();
 
-                    // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=Coding, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
+                    // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
                     var bitmask = (sectionInts.IsAi * 1) +
                                   (sectionInts.IsAzure * 2) +
-                                  (sectionInts.IsCoding * 4) +
+                                  (sectionInts.IsDotNet * 4) +
                                   (sectionInts.IsDevOps * 8) +
                                   (sectionInts.IsGitHubCopilot * 16) +
                                   (sectionInts.IsMl * 32) +
@@ -773,7 +773,7 @@ public class ContentSyncService : IContentSyncService
                         parsed.DateEpoch,
                         sectionInts.IsAi,
                         sectionInts.IsAzure,
-                        sectionInts.IsCoding,
+                        sectionInts.IsDotNet,
                         sectionInts.IsDevOps,
                         sectionInts.IsGitHubCopilot,
                         sectionInts.IsMl,
@@ -800,7 +800,7 @@ public class ContentSyncService : IContentSyncService
                             parsed.DateEpoch,
                             sectionInts.IsAi,
                             sectionInts.IsAzure,
-                            sectionInts.IsCoding,
+                            sectionInts.IsDotNet,
                             sectionInts.IsDevOps,
                             sectionInts.IsGitHubCopilot,
                             sectionInts.IsMl,

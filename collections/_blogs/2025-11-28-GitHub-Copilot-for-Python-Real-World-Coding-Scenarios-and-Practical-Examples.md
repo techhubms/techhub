@@ -13,7 +13,7 @@ tags:
 - FastAPI
 - Flask
 - GitHib Copilot
-- Machine Learning
+- ML
 - Matplotlib
 - NumPy
 - Pandas

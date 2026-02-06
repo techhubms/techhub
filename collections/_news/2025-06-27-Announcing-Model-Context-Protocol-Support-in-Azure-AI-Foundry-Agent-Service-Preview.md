@@ -19,12 +19,12 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this announcement, Linda Li details the preview of Model Context Protocol (MCP) support in Azure AI Foundry Agent Service, highlighting easier AI agent integration, open standards, and practical steps for developers.<!--excerpt_end-->

@@ -22,16 +22,16 @@ tags:
 - VNET Integration
 - Windows Registry
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Written by apwestgarth, this announcement details the new Managed Instance on Azure App Service, describing technical features designed to help developers migrate and modernize legacy .NET applications for the cloud with reduced code changes and strong security.<!--excerpt_end-->
 

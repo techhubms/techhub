@@ -19,11 +19,10 @@ tags:
 - Runtime
 - SDK
 - Servicing Release
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Tara Overfield and Victor Israel-Bolarinwa recap the November 2025 servicing updates for .NET and .NET Framework, highlighting new release notes, downloads, and maintenance changes for .NET 8.0 and 9.0.<!--excerpt_end-->
 

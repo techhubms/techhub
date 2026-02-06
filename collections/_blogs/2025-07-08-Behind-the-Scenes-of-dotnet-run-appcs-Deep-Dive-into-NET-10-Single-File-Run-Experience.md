@@ -16,11 +16,11 @@ tags:
 - Source Code Dive
 - Top Level Statements
 - Virtual Project File
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, Andrew Lock uncovers the internal workings of the upcoming .NET 10 feature that allows developers to run single C# files without a separate project file, detailing how the SDK constructs virtual projects and streamlines the build process.<!--excerpt_end-->
 

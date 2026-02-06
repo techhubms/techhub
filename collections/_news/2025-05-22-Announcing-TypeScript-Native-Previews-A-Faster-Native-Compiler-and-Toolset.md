@@ -20,11 +20,11 @@ tags:
 - TypeScript
 - TypeScript Native
 - VS Code Extension
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this detailed announcement, Daniel Rosenwasser unveils the TypeScript Native Previews—offering a natively compiled TypeScript compiler and toolset in Go. The article covers installation, new features, ongoing limitations, and an active roadmap for developers.<!--excerpt_end-->
 

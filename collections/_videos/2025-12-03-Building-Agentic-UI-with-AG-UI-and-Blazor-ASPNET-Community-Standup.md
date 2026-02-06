@@ -23,11 +23,10 @@ tags:
 - UI Development
 - Web Development
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Daniel Roth, Javier Calvarro Nelson, and guest Tyler Slaton lead a session on building agentic UIs with AG-UI and Blazor, offering developers practical guidance on modern web application design.<!--excerpt_end-->

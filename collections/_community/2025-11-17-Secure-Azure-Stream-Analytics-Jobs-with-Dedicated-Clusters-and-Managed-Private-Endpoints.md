@@ -24,16 +24,16 @@ tags:
 - Terraform
 - Zero Trust
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 PratibhaShenoy provides practical guidance for securely configuring Azure Stream Analytics jobs in dedicated clusters using managed identities and private endpoints, emphasizing zero-trust, compliance, and automation.<!--excerpt_end-->
 

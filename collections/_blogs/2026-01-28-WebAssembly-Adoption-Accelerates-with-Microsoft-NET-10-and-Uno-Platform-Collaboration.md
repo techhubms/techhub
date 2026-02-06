@@ -2,14 +2,13 @@
 external_url: https://devclass.com/2026/01/28/webassembly-gaining-adoption-behind-the-scenes-as-technology-advances/
 title: WebAssembly Adoption Accelerates with Microsoft .NET 10 and Uno Platform Collaboration
 author: Tim Anderson
-primary_section: coding
+primary_section: dotnet
 feed_name: DevClass
 date: 2026-01-28 08:44:04 +00:00
 tags:
 - .NET 10
 - AOT Compilation
 - Blogs
-- Coding
 - Cross Browser Support
 - Dart
 - Deno
@@ -30,8 +29,9 @@ tags:
 - Wasm
 - Wasmtime
 - WebAssembly
+- .NET
 section_names:
-- coding
+- dotnet
 ---
 Tim Anderson summarizes Gerard Gallant’s WebAssembly adoption report, examining how .NET 10, Uno Platform, and recent browser innovations expand WebAssembly’s reach for developers.<!--excerpt_end-->
 

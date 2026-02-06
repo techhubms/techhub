@@ -210,7 +210,7 @@ public class NavigationTests : IAsyncLifetime
         // Assert - Should have background image via CSS class (no inline style)
         var classAttr = await headerElement.GetAttributeAsync("class");
         classAttr.Should().NotBeNull();
-        classAttr.Should().MatchRegex("section-bg-(ai|github-copilot|azure|ml|devops|coding|security|all)");
+        classAttr.Should().MatchRegex("section-bg-(ai|github-copilot|azure|ml|devops|dotnet|security|all)");
 
         // Check that there's no grey bar (overlay should cover full height)
         var overlay = headerElement.Locator(".section-overlay");

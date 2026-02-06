@@ -22,14 +22,14 @@ tags:
 - Startup Script
 - Telemetry
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 TulikaC explains how developers can add observability to PHP Linux web apps using Azure App Service sidecar extensions and OpenTelemetry – Azure Monitor. This detailed guide covers setup, deployment, and verification in Application Insights.<!--excerpt_end-->
 

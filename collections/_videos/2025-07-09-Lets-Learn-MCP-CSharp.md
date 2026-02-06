@@ -15,11 +15,10 @@ tags:
 - Microsoft
 - Software Developer
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this comprehensive workshop, Katie Savage and James Montemagno from the dotnet team introduce developers to the Model Context Protocol (MCP), a cutting-edge framework designed to standardize interactions between AI models and client applications. This beginner-friendly session guides participants through creating their first MCP server using C#, providing practical insights into this emerging technology that's shaping the future of AI development. <!--excerpt_end-->

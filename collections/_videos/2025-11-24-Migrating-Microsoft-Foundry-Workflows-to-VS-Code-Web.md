@@ -26,12 +26,12 @@ tags:
 - Workflow Migration
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 April from Microsoft Developer presents a guided video tutorial on migrating Microsoft Foundry workflows to Visual Studio Code for the Web, highlighting essential steps for code-first workflow modification and prototyping.<!--excerpt_end-->

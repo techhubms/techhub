@@ -20,11 +20,10 @@ tags:
 - Single Response Model
 - User Experience
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Mark Miller delivers practical insights on building effective AI agents with C#, showing developers how a single-question, single-answer model can improve user experience and productivity.<!--excerpt_end-->

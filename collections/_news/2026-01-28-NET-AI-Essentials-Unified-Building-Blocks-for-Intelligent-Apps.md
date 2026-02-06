@@ -13,7 +13,6 @@ tags:
 - Azure OpenAI
 - C#
 - ChatClient
-- Coding
 - Dependency Injection
 - Generative AI
 - Large Language Models
@@ -32,7 +31,7 @@ tags:
 - Vector Embeddings
 section_names:
 - ai
-- coding
+- dotnet
 ---
 Jeremy Likness explains core AI building blocks in .NET for developers, highlighting how Microsoft.Extensions.AI provides unified LLM access, structured outputs, and practical middleware for robust intelligent app development.<!--excerpt_end-->
 

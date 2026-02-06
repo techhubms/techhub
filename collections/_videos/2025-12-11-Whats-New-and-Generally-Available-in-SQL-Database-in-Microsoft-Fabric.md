@@ -26,8 +26,9 @@ tags:
 - Tech Release
 - Technology
 - Azure
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - azure
 - ml

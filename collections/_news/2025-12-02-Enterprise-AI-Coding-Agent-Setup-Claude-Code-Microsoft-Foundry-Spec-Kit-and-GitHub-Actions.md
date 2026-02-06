@@ -28,14 +28,14 @@ tags:
 - VS Code Extension
 - AI
 - Azure
-- Coding
 - DevOps
 - Security
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

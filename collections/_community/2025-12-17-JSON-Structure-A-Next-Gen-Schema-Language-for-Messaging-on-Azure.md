@@ -25,12 +25,11 @@ tags:
 - TypeScript
 - VS Code Extension
 - Azure
-- Coding
 - Community
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 clemensv presents JSON Structure, a modern schema language designed for robust data definitions in distributed messaging systems on Azure. This article reviews its features, type system, and integrations, spotlighting practical advantages for developers.<!--excerpt_end-->
 

@@ -17,11 +17,10 @@ tags:
 - TypeScript
 - Union Types
 - VS Live
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 ThinksAboutTooMuch shares insights from a VS Live Redmond session where Mads Torgerson demoed nominal union types for C#, exploring upcoming language features and community reactions.<!--excerpt_end-->
 

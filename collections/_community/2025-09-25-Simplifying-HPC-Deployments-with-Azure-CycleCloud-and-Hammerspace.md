@@ -22,14 +22,14 @@ tags:
 - Scheduled Events
 - SLURM
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 anhoward demonstrates how to simplify high performance computing on Azure by integrating CycleCloud, SLURM, and Hammerspace. The post guides through cluster setup, data management, and automated cleanup for practitioners seeking operational efficiency.<!--excerpt_end-->
 

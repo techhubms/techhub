@@ -16,11 +16,10 @@ tags:
 - Rider IDE
 - System.Net.Http
 - Unit Testing
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Author tparikka discusses the challenges of building and testing .NET Framework 4.8 services on MacOS using Mono, highlighting assembly compatibility issues.<!--excerpt_end-->
 

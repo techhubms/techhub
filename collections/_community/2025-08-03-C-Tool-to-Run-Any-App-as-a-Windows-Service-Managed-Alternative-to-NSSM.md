@@ -15,11 +15,10 @@ tags:
 - Startup Type
 - Windows App Deployment
 - Windows Service
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 AdUnhappy5308 shares details about a new C# tool that runs any app as a Windows service, highlighting its capabilities and differences from NSSM.<!--excerpt_end-->
 

@@ -19,13 +19,13 @@ tags:
 - Pipelines as Code
 - Testing
 - VS Code
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet presents a .NET Conf 2025 session on using C# and Cake SDK to orchestrate GitHub Actions DevOps pipelines, focusing on code-driven workflows, local testing, and leveraging developer skills.<!--excerpt_end-->
 

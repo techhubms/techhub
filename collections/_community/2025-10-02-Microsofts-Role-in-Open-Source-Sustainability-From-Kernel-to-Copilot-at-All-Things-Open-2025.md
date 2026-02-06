@@ -23,15 +23,15 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
 - Security
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 - security

@@ -20,11 +20,10 @@ tags:
 - Token Efficiency
 - Tools
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Sergey Menshykh discusses the new Contextual Function Selection capability in Semantic Kernel, illustrating its practical benefits for AI agent development with dynamic function filtering and performance optimization.<!--excerpt_end-->

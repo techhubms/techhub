@@ -12,7 +12,6 @@ tags:
 - Azure
 - Cloud Computing
 - Cloud Development
-- Coding
 - Computer Vision
 - Console App
 - Dev
@@ -24,10 +23,11 @@ tags:
 - Tech
 - Technology
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 ---
 Microsoft Developer presents a tutorial on creating a free, AI-driven inventory manager using Azure services to automate grocery receipt scanning and inventory tracking.<!--excerpt_end-->
 

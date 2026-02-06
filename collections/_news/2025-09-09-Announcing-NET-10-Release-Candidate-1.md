@@ -27,11 +27,10 @@ tags:
 - Visual Studio Insiders
 - VS Code
 - Windows Forms
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 .NET Team presents the first release candidate of .NET 10, with new features and improvements for libraries, ASP.NET Core, Blazor, .NET MAUI, and more. Learn what's new for developers in this broad platform update.<!--excerpt_end-->
 

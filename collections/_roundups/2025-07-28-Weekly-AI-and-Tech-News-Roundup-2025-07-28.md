@@ -1,4 +1,4 @@
----
+﻿---
 title: GitHub Copilot Evolves, Multi-Agent AI Expands, and Enterprise Cloud Gets Smarter
 author: TechHub
 date: 2025-07-28 09:00:00 +00:00
@@ -16,18 +16,18 @@ tags:
 - Workflow Automation
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

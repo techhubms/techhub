@@ -24,8 +24,9 @@ tags:
 - AI
 - Azure
 - DevOps
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
 - azure

@@ -21,11 +21,10 @@ tags:
 - Signals
 - UI Communication
 - VS Code
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents practical guidance on using Godot C# to handle player interactions, focusing on signals, collision detection, and inter-system communication for dynamic gameplay.<!--excerpt_end-->
 

@@ -84,14 +84,14 @@ public record ContentItemDetail : ContentItem
         string? tagsCsv = null,
         bool isAi = false,
         bool isAzure = false,
-        bool isCoding = false,
+        bool isDotNet = false,
         bool isDevOps = false,
         bool isGitHubCopilot = false,
         bool isMl = false,
         bool isSecurity = false)
         : base(slug, title, author, dateEpoch, collectionName, feedName, primarySectionName,
                excerpt, externalUrl, draft, subcollectionName, plans, ghesSupport,
-               tagsCsv, isAi, isAzure, isCoding, isDevOps, isGitHubCopilot, isMl, isSecurity)
+               tagsCsv, isAi, isAzure, isDotNet, isDevOps, isGitHubCopilot, isMl, isSecurity)
     {
         Content = content;
     }

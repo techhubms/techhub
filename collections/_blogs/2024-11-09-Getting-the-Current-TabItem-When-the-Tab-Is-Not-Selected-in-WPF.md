@@ -20,11 +20,11 @@ tags:
 - UI Development
 - Visual Tree
 - WPF
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, Rick Strahl shares insights into handling hover detection in WPF TabControls, demonstrating how to access non-selected TabItems for context-sensitive operations.<!--excerpt_end-->
 

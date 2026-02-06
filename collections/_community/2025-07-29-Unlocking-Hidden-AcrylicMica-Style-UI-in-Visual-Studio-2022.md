@@ -15,11 +15,11 @@ tags:
 - Shell.Material.Acrylic
 - UI Customization
 - VS
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 YouKnowWhyNo guides readers through enabling a hidden Acrylic/Mica UI style in Visual Studio 2022, offering clear steps for customization.<!--excerpt_end-->
 

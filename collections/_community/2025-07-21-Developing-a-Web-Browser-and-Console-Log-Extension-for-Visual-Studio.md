@@ -16,11 +16,11 @@ tags:
 - User Interface
 - VS
 - WebView2
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 ggobrien explores the idea of creating a Visual Studio extension that embeds a web browser and separate console log panel, enhancing the workflow for web developers.<!--excerpt_end-->
 

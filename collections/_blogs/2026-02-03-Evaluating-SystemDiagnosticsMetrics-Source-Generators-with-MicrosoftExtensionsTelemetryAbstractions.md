@@ -2,7 +2,7 @@
 external_url: https://andrewlock.net/creating-strongly-typed-metics-with-a-source-generator/
 title: Evaluating System.Diagnostics.Metrics Source Generators with Microsoft.Extensions.Telemetry.Abstractions
 author: Andrew Lock
-primary_section: coding
+primary_section: dotnet
 feed_name: Andrew Lock's Blog
 date: 2026-02-03 10:00:00 +00:00
 tags:
@@ -11,7 +11,6 @@ tags:
 - Blogs
 - Boilerplate Reduction
 - C#
-- Coding
 - Counter
 - Instrumentation
 - Meter
@@ -23,8 +22,9 @@ tags:
 - Source Generators
 - Strongly Typed Tags
 - System.Diagnostics.Metrics
+- .NET
 section_names:
-- coding
+- dotnet
 ---
 Andrew Lock dives into the System.Diagnostics.Metrics source generators in Microsoft.Extensions.Telemetry.Abstractions, examining their implementation, generated code, and practical value for .NET developers.<!--excerpt_end-->
 

@@ -31,11 +31,11 @@ tags:
 - VS Code
 - VS Code Extensions
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this episode, Ayan Gupta and Rory demonstrate hands-on development of three different AI-powered apps, showcasing MCP, browser-based LLMs, and Microsoft's Foundry Local. Their step-by-step approach enables Java developers to learn practical AI integration.<!--excerpt_end-->

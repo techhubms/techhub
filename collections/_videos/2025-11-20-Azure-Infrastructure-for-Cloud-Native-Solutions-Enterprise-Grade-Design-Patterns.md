@@ -25,16 +25,16 @@ tags:
 - VMSS
 - Zone Aligned Architecture
 - Azure
-- Coding
 - DevOps
 - Security
 - Videos
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Microsoft Events hosts a deep-dive Ignite breakout, featuring Aaron Davidson, Mario Espinoza, and Igal Figlin. Learn advanced Azure infrastructure patterns for cloud-native architectures, including scaling, security, networking, and Kubernetes deployments.<!--excerpt_end-->
 

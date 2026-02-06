@@ -16,7 +16,6 @@ tags:
 - Azure Spring Apps
 - Bicep
 - Codespaces
-- Coding
 - Configuration Management
 - DevOps
 - Docker
@@ -41,7 +40,7 @@ tags:
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 ---

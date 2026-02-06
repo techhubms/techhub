@@ -23,8 +23,9 @@ tags:
 - Unity Catalog
 - Azure
 - DevOps
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - azure
 - devops

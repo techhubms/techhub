@@ -21,12 +21,12 @@ tags:
 - Software Development
 - Trust in AI
 - AI
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

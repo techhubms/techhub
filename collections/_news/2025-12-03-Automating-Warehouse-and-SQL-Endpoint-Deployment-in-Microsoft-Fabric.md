@@ -22,8 +22,9 @@ tags:
 - SQLCMD Variables
 - Azure
 - DevOps
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - devops

@@ -36,15 +36,16 @@ tags:
 - SSD Ephemeral OS Disk
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - DevOps
 - Security
 - Videos
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 - devops
 - security

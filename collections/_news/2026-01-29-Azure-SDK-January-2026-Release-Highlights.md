@@ -17,7 +17,6 @@ tags:
 - Azure SDK
 - Beta Release
 - Client Libraries
-- Coding
 - DNS
 - Durable Task
 - Front Door
@@ -36,7 +35,7 @@ tags:
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 ---
 Ronnie Geraghty summarizes the January 2026 Azure SDK release, spotlighting significant improvements in AI, real-time communication tools, and expanded platform support for developers.<!--excerpt_end-->
 

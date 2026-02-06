@@ -12,15 +12,14 @@ tags:
 - Developer Demos
 - GPT 5
 - JavaScript
-- Machine Learning
+- ML
 - Microsoft Developer Tools
 - Python
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Presented by Microsoft Developer, this session features Pamela Fox, Burke Holland, Bruno Capuano, and Jon Galloway as they demonstrate practical GPT-5 integrations in Microsoft developer tools.<!--excerpt_end-->

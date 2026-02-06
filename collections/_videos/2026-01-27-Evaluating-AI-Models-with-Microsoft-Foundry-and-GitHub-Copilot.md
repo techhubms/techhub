@@ -23,7 +23,6 @@ tags:
 - GPT 5
 - Grok 4
 - Jupyter Notebooks
-- Machine Learning
 - METEOR
 - Microsoft
 - Microsoft Foundry
@@ -34,6 +33,7 @@ tags:
 - Tech
 - Technology
 - Videos
+- Machine Learning
 section_names:
 - ai
 - azure

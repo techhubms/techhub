@@ -19,16 +19,16 @@ tags:
 - Security Enforcement
 - Token Revocation
 - Azure
-- Coding
 - DevOps
 - Security
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Angel Wong introduces support for Continuous Access Evaluation (CAE) on Azure DevOps, discussing its impact on real-time security and the implications for developers using Microsoft Entra ID.<!--excerpt_end-->
 

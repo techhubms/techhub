@@ -18,7 +18,7 @@ public static class SectionHelper
             "github-copilot" => "GitHub Copilot",
             "ai" => "Artificial Intelligence",
             "ml" => "Machine Learning",
-            "coding" => ".NET",
+            "dotnet" => ".NET",
             "azure" => "Azure",
             "devops" => "DevOps",
             "security" => "Security",

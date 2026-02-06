@@ -27,12 +27,12 @@ tags:
 - Windows
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet presents a walkthrough of building an AI-powered sales dashboard with .NET MAUI and Azure OpenAI, sharing practical insights for developers on predictive analytics and responsive UIs.<!--excerpt_end-->

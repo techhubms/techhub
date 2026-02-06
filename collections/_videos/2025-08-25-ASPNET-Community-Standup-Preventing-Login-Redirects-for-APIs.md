@@ -23,13 +23,12 @@ tags:
 - Software Developer
 - Stephen Halter
 - Web APIs
-- Coding
 - Security
 - Videos
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 In this ASP.NET Community Standup, Daniel Roth and Stephen Halter discuss the improvements in ASP.NET Core for .NET 10 that eliminate login redirects for API endpoints. Presented by the dotnet team, this session is valuable for developers aiming to streamline API authentication workflows.<!--excerpt_end-->
 

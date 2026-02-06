@@ -16,11 +16,11 @@ tags:
 - Python Libraries
 - Python.NET
 - Video Tutorial
-- Coding
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
-- coding
+- dotnet
 - ml
 primary_section: ml
 ---

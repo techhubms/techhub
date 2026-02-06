@@ -18,11 +18,10 @@ tags:
 - IDesignTimeDbContextFactory
 - PostgreSQL
 - VS
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this detailed guide, Khalid Abuhakmeh walks through bridging the development/runtime gap for managing EF Core migrations within .NET Aspire distributed solutions. The post explores solution structure, code snippets, and essential CLI commands.<!--excerpt_end-->
 

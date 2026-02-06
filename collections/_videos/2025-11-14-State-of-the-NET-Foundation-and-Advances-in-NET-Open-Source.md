@@ -20,11 +20,10 @@ tags:
 - Open Source
 - VS
 - Web Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, dotnet discusses the current and future plans of the .NET Foundation, focusing on new open-source projects and how developers can get involved.<!--excerpt_end-->
 

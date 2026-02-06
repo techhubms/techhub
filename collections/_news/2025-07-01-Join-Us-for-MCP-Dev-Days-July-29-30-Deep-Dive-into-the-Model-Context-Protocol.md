@@ -20,15 +20,15 @@ tags:
 - Workshops
 - AI
 - GitHub Copilot
-- Coding
 - DevOps
 - Azure
 - Security
 - News
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 - devops
 - azure
 - security

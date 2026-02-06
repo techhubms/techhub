@@ -24,11 +24,10 @@ tags:
 - UserAccountInformation
 - Windows
 - Windows Age Consent
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Gerald Versluis presents a comprehensive guide to implementing age verification across Android, iOS, and Windows in .NET MAUI apps, with details on meeting upcoming legal compliance requirements.<!--excerpt_end-->
 

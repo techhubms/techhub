@@ -17,11 +17,11 @@ tags:
 - TypeScript Native Preview
 - Visual Studio Insiders
 - VS
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Sayed Ibrahim Hashimi introduces developers to the TypeScript 7 native preview in Visual Studio 2026 Insiders, outlining the setup process, performance benchmarks, known limitations, and feedback channels.<!--excerpt_end-->
 

@@ -19,7 +19,7 @@ tags:
 - Event Grid
 - Large Language Models
 - Logic Apps
-- Machine Learning
+- ML
 - Responsible AI
 - Semantic Kernel
 - AI

@@ -27,12 +27,12 @@ tags:
 - Python Integration
 - Software Developer
 - AI
-- Coding
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - ai
-- coding
+- dotnet
 - ml
 primary_section: ai
 ---

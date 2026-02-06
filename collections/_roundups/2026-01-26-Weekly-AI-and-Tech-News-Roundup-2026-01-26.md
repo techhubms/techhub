@@ -1,4 +1,4 @@
----
+﻿---
 title: Advances in AI Tooling, Platform Engineering, and Security Shape This Week’s Highlights
 author: TechHub
 date: 2026-01-26 09:00:00 +00:00
@@ -14,18 +14,19 @@ tags:
 - Workflow Automation
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- .NET
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

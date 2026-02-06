@@ -16,15 +16,15 @@ tags:
 - VS
 - Azure
 - DevOps
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
 - devops
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 feed_name: TechHub
 ---
 Welcome to the very first XPRT Magazine! This issue features practical articles on API management, Azure Service Fabric, cross-platform mobile development with Ionic, hands-on HoloLens programming, DevOps, microservices, and more. Dive into real-world lessons, technical introductions, and innovative approaches from industry experts.

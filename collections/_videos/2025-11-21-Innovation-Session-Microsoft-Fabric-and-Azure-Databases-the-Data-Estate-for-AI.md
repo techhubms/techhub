@@ -24,8 +24,9 @@ tags:
 - VS Code Extension
 - AI
 - Azure
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - ai
 - azure

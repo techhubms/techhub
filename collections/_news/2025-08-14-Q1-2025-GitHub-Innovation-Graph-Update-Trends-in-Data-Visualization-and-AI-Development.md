@@ -14,7 +14,7 @@ tags:
 - Global Tech Trends
 - Innovation Graph
 - LLM
-- Machine Learning
+- ML
 - News & Insights
 - Open Source Analytics
 - Policy

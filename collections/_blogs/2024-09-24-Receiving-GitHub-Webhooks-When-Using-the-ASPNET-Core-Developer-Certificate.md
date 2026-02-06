@@ -18,13 +18,12 @@ tags:
 - OpenTelemetry
 - Smee.io
 - Webhooks
-- Coding
 - DevOps
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this detailed post, Steve Gordon shares practical steps for developing and testing GitHub webhooks locally within an ASP.NET Core app, detailing webhook setup, certificate management, and smee.io usage.<!--excerpt_end-->
 

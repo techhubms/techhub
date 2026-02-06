@@ -20,11 +20,10 @@ tags:
 - Software Ecosystem
 - Sponsorship
 - Tidelift
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Sean explains how NuGet.org's new Sponsorship feature allows .NET package maintainers to add sponsorship links, making it easier for users to support the open source packages they rely on.<!--excerpt_end-->
 

@@ -26,13 +26,14 @@ tags:
 - Terraform Workflow
 - YAML Pipelines
 - Azure
-- Coding
-- Machine Learning
+- ML
 - DevOps
 - News
+- .NET
+- Machine Learning
 section_names:
 - azure
-- coding
+- dotnet
 - ml
 - devops
 primary_section: ml

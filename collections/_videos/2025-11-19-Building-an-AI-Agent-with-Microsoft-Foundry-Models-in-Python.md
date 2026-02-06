@@ -24,12 +24,12 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer explains how to build an AI agent using Microsoft Foundry models and Python in Visual Studio Code, including deployment, environment setup, and agent tracing.<!--excerpt_end-->

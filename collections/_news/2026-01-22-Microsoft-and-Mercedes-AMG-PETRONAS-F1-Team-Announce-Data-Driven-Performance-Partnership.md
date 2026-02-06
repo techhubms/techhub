@@ -10,7 +10,7 @@ tags:
 - Data Analytics
 - Formula 1
 - LinkedIn Post
-- Machine Learning
+- ML
 - Mercedes AMG PETRONAS F1
 - Microsoft
 - Performance Optimization

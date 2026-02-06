@@ -26,15 +26,15 @@ tags:
 - Static Analysis
 - Swift 6.2.1
 - TypeScript
-- Coding
 - DevOps
 - Security
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Allison outlines CodeQL 2.23.6's key improvements, including new C# security queries and expanded language support, enhancing GitHub code scanning's effectiveness.<!--excerpt_end-->
 

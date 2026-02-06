@@ -21,11 +21,10 @@ tags:
 - SignalR
 - SSE
 - WebSockets
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh showcases how to implement Server-Sent Events with ASP.NET Core Minimal APIs in .NET 10, highlighting practical differences with SignalR and providing sample C# and JavaScript code for real-time feeds.<!--excerpt_end-->
 

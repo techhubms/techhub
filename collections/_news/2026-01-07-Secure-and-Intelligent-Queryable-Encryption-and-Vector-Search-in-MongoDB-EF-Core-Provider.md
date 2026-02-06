@@ -21,11 +21,10 @@ tags:
 - Vector Search
 - Vectorsearch
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Rishit Bhatia and Luce Carter discuss how developers can secure data and enable AI-powered search using Queryable Encryption and Vector Search in the MongoDB EF Core provider, with hands-on guidance and code samples.<!--excerpt_end-->

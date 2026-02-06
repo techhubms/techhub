@@ -21,11 +21,10 @@ tags:
 - Runtime
 - SDK
 - Tracing
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this introduction by Steve Gordon, readers gain foundational knowledge of the .NET muxer (dotnet.exe), an essential component of the .NET ecosystem. Gordon's thorough exploration unveils the inner workings and key mechanisms underpinning the .NET command-line interface.<!--excerpt_end-->
 

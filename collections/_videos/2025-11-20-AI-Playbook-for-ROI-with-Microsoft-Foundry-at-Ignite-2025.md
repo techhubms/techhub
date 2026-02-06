@@ -13,7 +13,7 @@ tags:
 - Governance
 - Hybrid Models
 - InnovatewithAzureAIappsandagents
-- Machine Learning
+- ML
 - Metrics
 - Microsoft Foundry
 - Model Router

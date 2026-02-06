@@ -15,11 +15,10 @@ tags:
 - Validation
 - Value Objects
 - Vogen
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh demonstrates how value objects and the Vogen library can enhance code correctness and readability in C# and .NET. The article is packed with practical code examples and advice for applying value object patterns.<!--excerpt_end-->
 

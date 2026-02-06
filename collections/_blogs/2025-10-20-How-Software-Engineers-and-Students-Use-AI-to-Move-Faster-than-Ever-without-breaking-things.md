@@ -40,7 +40,7 @@ tags:
 - Future Of Work
 - Human AI Collaboration
 - LLMs
-- Machine Learning
+- ML
 - Social Facebook
 - Social LinkedIn
 - Social X

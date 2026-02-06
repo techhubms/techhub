@@ -21,8 +21,9 @@ tags:
 - Scalable Analytics
 - Spark Based Workloads
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

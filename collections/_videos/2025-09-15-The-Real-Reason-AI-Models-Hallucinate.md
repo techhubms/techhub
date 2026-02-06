@@ -13,7 +13,7 @@ tags:
 - GitHub
 - Large Language Models
 - LLM
-- Machine Learning
+- ML
 - Model Confidence
 - OpenAI
 - AI

@@ -25,12 +25,12 @@ tags:
 - Technology
 - VS Code
 - AI
-- Coding
 - Azure
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - azure
 primary_section: ai
 ---

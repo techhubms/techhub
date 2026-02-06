@@ -25,14 +25,13 @@ tags:
 - System.Text.Json
 - Typeinforesolver
 - Azure
-- Coding
 - Security
 - Blogs
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Steve Gordon explains how to use System.Text.Json's TypeInfoResolver modifier for property-level encryption in C#, outlining a practical approach to securing sensitive data that paves the way for future integration with Azure Key Vault.<!--excerpt_end-->
 

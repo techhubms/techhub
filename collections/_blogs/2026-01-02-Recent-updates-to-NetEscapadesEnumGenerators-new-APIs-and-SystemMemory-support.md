@@ -20,11 +20,11 @@ tags:
 - Source Generators
 - StringComparison
 - System.Memory
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock summarizes recent improvements to the NetEscapades.EnumGenerators package, including new APIs, advanced parsing options, and System.Memory support, offering insights for .NET developers seeking faster enum operations.<!--excerpt_end-->
 

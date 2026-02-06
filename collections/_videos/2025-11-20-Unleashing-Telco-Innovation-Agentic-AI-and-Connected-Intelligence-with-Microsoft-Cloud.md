@@ -23,9 +23,10 @@ tags:
 - Unifyyourdataplatform
 - AI
 - Azure
-- Machine Learning
+- ML
 - Security
 - Videos
+- Machine Learning
 section_names:
 - ai
 - azure

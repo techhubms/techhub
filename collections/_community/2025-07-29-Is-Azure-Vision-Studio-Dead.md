@@ -12,7 +12,7 @@ tags:
 - Custom Datasets
 - East US
 - Image Analysis
-- Machine Learning
+- ML
 - Object Detection
 - Vision APIs
 - AI

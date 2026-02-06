@@ -32,12 +32,12 @@ tags:
 - Software Quality
 - Unit Test Generation
 - AI
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

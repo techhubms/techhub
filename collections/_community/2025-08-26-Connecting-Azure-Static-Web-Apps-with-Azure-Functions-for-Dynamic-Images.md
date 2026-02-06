@@ -19,12 +19,11 @@ tags:
 - SkiaSharp
 - Staticwebapp.config.json
 - Azure
-- Coding
 - Community
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 fcc_archivist describes the challenge of connecting an Azure Static Web App with an Azure Functions API that generates images dynamically in C#. The guide covers typical pitfalls and configuration requirements.<!--excerpt_end-->
 

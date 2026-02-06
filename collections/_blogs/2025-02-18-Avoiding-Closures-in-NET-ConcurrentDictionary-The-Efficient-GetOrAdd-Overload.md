@@ -15,11 +15,10 @@ tags:
 - LINQ
 - Memory Leaks
 - Performance
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, Khalid Abuhakmeh delves into the nuances of closures in C#, focusing specifically on their impact in ConcurrentDictionary. He demonstrates code refactoring to avoid closures and highlights the advantages of using the more efficient overload of GetOrAdd.<!--excerpt_end-->
 

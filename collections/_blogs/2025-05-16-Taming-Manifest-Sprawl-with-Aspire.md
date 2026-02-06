@@ -18,13 +18,12 @@ tags:
 - OpenTelemetry
 - Service Modeling
 - Software Development
-- Coding
 - DevOps
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 David Fowler explores how Aspire addresses 'manifest sprawl' by unifying application configuration and deployment manifests into a single, C#-coded model, streamlining workflows for developers.<!--excerpt_end-->
 

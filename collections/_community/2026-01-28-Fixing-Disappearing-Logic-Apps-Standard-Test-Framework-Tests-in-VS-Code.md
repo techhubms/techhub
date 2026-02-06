@@ -2,14 +2,13 @@
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/automated-test-framework-missing-tests-in-test-explorer/ba-p/4490186
 title: Fixing Disappearing Logic Apps Standard Test Framework Tests in VS Code
 author: WSilveira
-primary_section: coding
+primary_section: dotnet
 feed_name: Microsoft Tech Community
 date: 2026-01-28 19:39:04 +00:00
 tags:
 - Automated Test Framework
 - Azure
 - C# DevKit
-- Coding
 - Community
 - Csproj
 - Integration Services
@@ -19,9 +18,10 @@ tags:
 - Package Management
 - Test Explorer
 - VS Code
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 ---
 WSilveira outlines the solution for Logic Apps Standard Automated Test Framework tests disappearing from the VS Code Test Explorer. The post provides step-by-step guidance for updating MSTest package references to restore test discovery.<!--excerpt_end-->
 

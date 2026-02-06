@@ -18,13 +18,12 @@ tags:
 - Kubernetes
 - SQL Server
 - Testcontainers
-- Coding
 - DevOps
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this article, Georgi Georgiev explores essential techniques for validating database connectivity with EF Core, covering both application and infrastructure-level health checks for resilient .NET services.<!--excerpt_end-->
 

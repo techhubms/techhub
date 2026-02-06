@@ -20,14 +20,13 @@ tags:
 - Software Development
 - VS
 - Azure
-- Coding
 - DevOps
 - Videos
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this session by the dotnet team, you'll discover practical techniques for architecting, deploying, and monitoring distributed .NET Aspire applications, from development through to deployment and observability.<!--excerpt_end-->
 

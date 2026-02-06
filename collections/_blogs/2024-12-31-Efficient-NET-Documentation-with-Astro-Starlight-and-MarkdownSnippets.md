@@ -16,11 +16,10 @@ tags:
 - Starlight
 - Technical Documentation
 - Tooling
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Khalid Abuhakmeh explains how developers can use Astro's Starlight in combination with the MarkdownSnippets tool to maintain accurate and up-to-date .NET documentation with live code samples.<!--excerpt_end-->
 

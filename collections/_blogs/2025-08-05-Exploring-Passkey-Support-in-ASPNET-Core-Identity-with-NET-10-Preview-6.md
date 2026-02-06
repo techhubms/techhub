@@ -18,13 +18,13 @@ tags:
 - Template Changes
 - User Authentication
 - WebAuthn
-- Coding
 - Security
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 In this comprehensive post, Andrew Lock examines the new passkey support introduced in ASP.NET Core Identity and the Blazor Web App template as part of .NET 10 preview 6, explaining both user and implementation perspectives.<!--excerpt_end-->
 

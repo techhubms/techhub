@@ -16,11 +16,11 @@ tags:
 - SRE Agent
 - Task Automation
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer’s Govind Kamtamneni explains how the new generation of developer agents helps automate tasks, fix issues, and extend capabilities through open source, with a focus on the SRE Agent.<!--excerpt_end-->

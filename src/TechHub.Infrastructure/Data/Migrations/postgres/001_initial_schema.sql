@@ -38,14 +38,14 @@ CREATE TABLE IF NOT EXISTS content_items (
     -- Denormalized section booleans (zero-join filtering)
     is_ai BOOLEAN NOT NULL DEFAULT FALSE,
     is_azure BOOLEAN NOT NULL DEFAULT FALSE,
-    is_coding BOOLEAN NOT NULL DEFAULT FALSE,
+    is_dotnet BOOLEAN NOT NULL DEFAULT FALSE,
     is_devops BOOLEAN NOT NULL DEFAULT FALSE,
     is_github_copilot BOOLEAN NOT NULL DEFAULT FALSE,
     is_ml BOOLEAN NOT NULL DEFAULT FALSE,
     is_security BOOLEAN NOT NULL DEFAULT FALSE,
     
     -- Bitmask for sections (optimized filtering)
-    -- Bit 0 (1): AI, Bit 1 (2): Azure, Bit 2 (4): Coding, Bit 3 (8): DevOps
+    -- Bit 0 (1): AI, Bit 1 (2): Azure, Bit 2 (4): .NET, Bit 3 (8): DevOps
     -- Bit 4 (16): GitHub Copilot, Bit 5 (32): ML, Bit 6 (64): Security
     sections_bitmask INTEGER NOT NULL DEFAULT 0,
     
@@ -77,14 +77,14 @@ CREATE TABLE IF NOT EXISTS content_tags_expanded (
     date_epoch BIGINT NOT NULL,
     is_ai BOOLEAN NOT NULL DEFAULT FALSE,
     is_azure BOOLEAN NOT NULL DEFAULT FALSE,
-    is_coding BOOLEAN NOT NULL DEFAULT FALSE,
+    is_dotnet BOOLEAN NOT NULL DEFAULT FALSE,
     is_devops BOOLEAN NOT NULL DEFAULT FALSE,
     is_github_copilot BOOLEAN NOT NULL DEFAULT FALSE,
     is_ml BOOLEAN NOT NULL DEFAULT FALSE,
     is_security BOOLEAN NOT NULL DEFAULT FALSE,
     
     -- Bitmask for sections (optimized filtering)
-    -- Bit 0 (1): AI, Bit 1 (2): Azure, Bit 2 (4): Coding, Bit 3 (8): DevOps
+    -- Bit 0 (1): AI, Bit 1 (2): Azure, Bit 2 (4): .NET, Bit 3 (8): DevOps
     -- Bit 4 (16): GitHub Copilot, Bit 5 (32): ML, Bit 6 (64): Security
     sections_bitmask INTEGER NOT NULL DEFAULT 0,
     

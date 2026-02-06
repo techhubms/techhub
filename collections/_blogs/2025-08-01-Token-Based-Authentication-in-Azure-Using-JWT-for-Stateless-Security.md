@@ -26,14 +26,14 @@ tags:
 - Token Based Authentication
 - Token Validation
 - Azure
-- Coding
 - Security
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny presents a comprehensive technical walkthrough on implementing stateless, token-based authentication in Azure using JWT, with practical scenarios for developers and architects.<!--excerpt_end-->
 

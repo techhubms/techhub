@@ -22,16 +22,16 @@ tags:
 - Subnet Design
 - YAML
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 lakshaymalik delivers a comprehensive look at deploying Azure Application Gateway for Containers (AGC) with AKS, comparing overlay and flat network models, security policies, and step-by-step Gateway API setup.<!--excerpt_end-->
 

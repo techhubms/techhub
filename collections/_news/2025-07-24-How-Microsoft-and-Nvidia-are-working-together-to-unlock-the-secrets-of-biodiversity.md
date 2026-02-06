@@ -10,7 +10,7 @@ tags:
 - Company News
 - Data Analysis
 - Environment
-- Machine Learning
+- ML
 - Microsoft
 - Nvidia
 - Partnership

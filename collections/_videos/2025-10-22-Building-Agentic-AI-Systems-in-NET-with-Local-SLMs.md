@@ -34,11 +34,10 @@ tags:
 - Software Developer
 - State Management
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this .NET Live session, Daniel Costea, Cam Soper, Frank Boucher, and Maria Wenzel guide developers through building agentic AI systems with local SLMs, enhanced by Semantic Kernel, in the Microsoft ecosystem.<!--excerpt_end-->

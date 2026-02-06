@@ -21,14 +21,14 @@ tags:
 - Testing
 - Testing Artifacts
 - Azure
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny guides readers through running Playwright end-to-end tests at scale with Azure Playwright Testing, covering setup, configuration, artifact storage, CI/CD pipeline integration, and cloud-scale debugging.<!--excerpt_end-->
 

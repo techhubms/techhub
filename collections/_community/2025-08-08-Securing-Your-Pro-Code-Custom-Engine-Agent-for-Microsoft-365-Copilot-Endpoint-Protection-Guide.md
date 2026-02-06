@@ -23,14 +23,14 @@ tags:
 - Service Principal
 - Tenant Restriction
 - Azure
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 daisami presents a practical guide on securing pro-code custom engine agent endpoints for Microsoft 365 Copilot, detailing application-level controls, code samples, and Azure integration strategies.<!--excerpt_end-->
 

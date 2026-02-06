@@ -19,11 +19,11 @@ tags:
 - OpenAPI
 - Strong Typing
 - VS Code Extension
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Maisa Rissi introduces the public preview of Dart support in Kiota, detailing how developers can generate Dart API clients from OpenAPI specs and highlighting community-driven development.<!--excerpt_end-->
 

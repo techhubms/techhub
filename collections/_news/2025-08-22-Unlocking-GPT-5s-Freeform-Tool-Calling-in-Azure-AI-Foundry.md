@@ -22,12 +22,12 @@ tags:
 - Tool Calling
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Ananya Bishnoi demonstrates how GPT-5’s freeform tool calling in Azure AI Foundry enables developers to chain Python and SQL tools for seamless automation and dynamic workflows.<!--excerpt_end-->

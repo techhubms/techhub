@@ -26,9 +26,10 @@ tags:
 - Vulnerability Assessment
 - AI
 - DevOps
-- Machine Learning
+- ML
 - Security
 - Blogs
+- Machine Learning
 section_names:
 - ai
 - devops

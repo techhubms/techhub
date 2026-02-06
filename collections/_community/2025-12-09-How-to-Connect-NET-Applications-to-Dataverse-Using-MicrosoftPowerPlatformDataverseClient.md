@@ -20,12 +20,11 @@ tags:
 - Permissions
 - Power Platform
 - Azure
-- Coding
 - Community
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 AjayM asks how to connect a .NET application to Microsoft Dataverse using Microsoft.PowerPlatform.Dataverse.Client, focusing on App Registration, credentials, and necessary configuration in Entra ID and Power Platform.<!--excerpt_end-->
 

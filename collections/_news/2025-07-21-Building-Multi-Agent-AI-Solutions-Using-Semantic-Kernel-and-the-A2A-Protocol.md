@@ -24,12 +24,12 @@ tags:
 - Semantic Kernel
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Authored by Kinfey Lo, this article details building interoperable multi-agent AI systems using Microsoft’s Semantic Kernel and the A2A protocol, offering real-world architectural guidance and implementation insights for enterprise solutions.<!--excerpt_end-->

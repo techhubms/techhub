@@ -23,12 +23,12 @@ tags:
 - Workflow Automation
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Events presents Adrian Rami’s demo at Ignite, showcasing how to build enterprise AI applications on the C3 Agentic AI Platform with Microsoft Azure and Fabric, using both low-code and full-code workflows.<!--excerpt_end-->

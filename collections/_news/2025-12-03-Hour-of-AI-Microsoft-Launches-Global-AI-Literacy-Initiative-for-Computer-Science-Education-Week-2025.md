@@ -24,11 +24,11 @@ tags:
 - Minecraft Education
 - Visual Studio Code For Education
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 stclarke presents an overview of Microsoft's Hour of AI initiative, highlighting resources and activities that help educators and students engage with AI coding concepts during Computer Science Education Week 2025.<!--excerpt_end-->

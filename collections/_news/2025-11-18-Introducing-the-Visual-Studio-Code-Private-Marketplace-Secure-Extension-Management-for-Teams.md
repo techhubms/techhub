@@ -18,13 +18,13 @@ tags:
 - Secure Development
 - VS Code
 - VS Code Extensions
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Sean Iyer introduces the Private Marketplace for Visual Studio Code, providing enterprise teams with secure and curated management of extensions through GitHub Enterprise integration.<!--excerpt_end-->
 

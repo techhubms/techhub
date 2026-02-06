@@ -14,7 +14,7 @@ tags:
 - Language Models
 - LightGBM
 - LSTM
-- Machine Learning
+- ML
 - Microsoft Azure
 - Network Security
 - Obfuscation

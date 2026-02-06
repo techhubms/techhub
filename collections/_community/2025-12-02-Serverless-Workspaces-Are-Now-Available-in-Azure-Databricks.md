@@ -23,9 +23,10 @@ tags:
 - Workspace Configuration
 - AI
 - Azure
-- Machine Learning
+- ML
 - Security
 - Community
+- Machine Learning
 section_names:
 - ai
 - azure

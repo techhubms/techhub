@@ -22,13 +22,12 @@ tags:
 - Rollforward
 - Testing
 - Tool Manifest
-- Coding
 - DevOps
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Andrew Lock explores the complexities of authoring and managing .NET tools, offering practical advice on runtime targeting, manifest management, and CI testing for developers.<!--excerpt_end-->
 

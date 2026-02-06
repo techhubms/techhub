@@ -21,14 +21,14 @@ tags:
 - VS Code
 - Workflow Automation
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 travisvu details the Phase I public preview of the new Azure Logic Apps designer, covering key improvements such as draft mode, unified tool views, and developer-focused workflow enhancements.<!--excerpt_end-->
 

@@ -22,14 +22,13 @@ tags:
 - Modernization
 - VS
 - Azure
-- Coding
 - DevOps
 - Videos
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet presents a practical roadmap for modernizing legacy .NET applications with cloud-native techniques, Azure services, and the latest .NET technologies.<!--excerpt_end-->
 

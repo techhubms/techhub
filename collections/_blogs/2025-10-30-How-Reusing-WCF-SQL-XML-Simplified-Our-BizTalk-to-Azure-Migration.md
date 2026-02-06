@@ -21,14 +21,14 @@ tags:
 - XML Integration
 - XSLT Mapping
 - Azure
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Tim D'haeyer shares his experience migrating BizTalk flows to Azure by reusing WCF-SQL XML, enabling a more streamlined integration with SAP and SQL Server. His approach, detailed in this article, helped accelerate migration while preserving reliability.<!--excerpt_end-->
 

@@ -24,12 +24,12 @@ tags:
 - XML
 - XSLT
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 shahparth shares the general availability details of the enhanced Data Mapper UX in Azure Logic Apps (Standard), focusing on new and upcoming features for integration developers.<!--excerpt_end-->
 

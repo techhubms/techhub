@@ -15,13 +15,13 @@ tags:
 - Test Automation
 - Test Synchronization
 - Web Testing
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh introduces a seamless technique for automating tests in Htmx-powered ASP.NET Core applications using Playwright, ensuring stable and reliable results.<!--excerpt_end-->
 

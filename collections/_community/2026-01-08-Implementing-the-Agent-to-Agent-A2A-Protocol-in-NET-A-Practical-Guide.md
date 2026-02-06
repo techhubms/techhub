@@ -25,11 +25,11 @@ tags:
 - Traceability Metadata
 - VS
 - AI
-- Coding
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 MariyamAshai lays out a step-by-step guide for building and integrating Agent-to-Agent protocol-compliant AI agents in .NET, covering setup, practical implementation, and industry-standard best practices.<!--excerpt_end-->

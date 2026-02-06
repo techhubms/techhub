@@ -15,11 +15,10 @@ tags:
 - Tuples
 - Type Constraints
 - Web Applications
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh illustrates how to leverage modern C# features to create type-safe, generic helper methods for extracting enum metadata, offering practical insight for .NET developers.<!--excerpt_end-->
 

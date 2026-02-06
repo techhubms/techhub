@@ -20,11 +20,10 @@ tags:
 - Modern Development
 - Software Packaging
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 This session by the dotnet team discusses why command-line interfaces remain crucial and how .NET's latest features enable developers to build modern, cross-platform CLI apps using smart libraries and robust design patterns.<!--excerpt_end-->
 

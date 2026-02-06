@@ -23,12 +23,12 @@ tags:
 - TypeScript 5.9
 - VS Code
 - AI
-- Coding
 - GitHub Copilot
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

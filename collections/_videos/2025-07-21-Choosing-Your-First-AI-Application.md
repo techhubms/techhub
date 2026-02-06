@@ -18,7 +18,7 @@ tags:
 - Generative AI
 - John Savill
 - LLM
-- Machine Learning
+- ML
 - Project Selection
 - Risk Management
 - ROI

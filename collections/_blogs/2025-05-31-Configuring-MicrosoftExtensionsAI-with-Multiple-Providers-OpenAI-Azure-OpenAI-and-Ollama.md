@@ -19,12 +19,11 @@ tags:
 - Streaming Completions
 - WPF
 - AI
-- Coding
 - Azure
 - Blogs
 section_names:
 - ai
-- coding
+- dotnet
 - azure
 primary_section: ai
 ---

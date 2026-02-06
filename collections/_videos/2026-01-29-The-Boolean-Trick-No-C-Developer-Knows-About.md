@@ -2,7 +2,7 @@
 external_url: https://www.youtube.com/watch?v=g-nfvnxLAVo
 title: The Boolean Trick No C# Developer Knows About
 author: Nick Chapsas
-primary_section: coding
+primary_section: dotnet
 feed_name: Nick Chapsas YouTube
 date: 2026-01-29 11:45:00 +00:00
 tags:
@@ -12,13 +12,12 @@ tags:
 - C# Features
 - C# Tricks
 - Code Tips
-- Coding
 - Programming
 - Software Development
 - Type System
 - Videos
 section_names:
-- coding
+- dotnet
 ---
 Nick Chapsas dives into an unusual Boolean feature in C# that many developers may not know, offering unique insights for improving your understanding of the language.<!--excerpt_end-->
 

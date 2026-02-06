@@ -23,11 +23,10 @@ tags:
 - VS
 - VSTest
 - xUnit
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a walkthrough of the new Microsoft.Testing.Platform for .NET, highlighting its advantages over VSTest and demonstrating integration with popular testing frameworks.<!--excerpt_end-->
 

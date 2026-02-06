@@ -16,11 +16,10 @@ tags:
 - Satellite Assemblies
 - SatelliteResourceLanguages
 - System.CommandLine
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Andrew Lock explores how .NET developers can prevent unnecessary localization satellite assemblies from being included in publish outputs to reduce app size.<!--excerpt_end-->
 

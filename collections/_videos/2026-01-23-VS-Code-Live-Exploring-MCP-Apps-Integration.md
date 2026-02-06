@@ -18,11 +18,11 @@ tags:
 - Software Development
 - UI Development
 - VS Code
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Den Delimarsky, Harald Kirschner, and James Montemagno introduce developers to MCP Apps integration in Visual Studio Code, covering technical workflows and new MCP features.<!--excerpt_end-->
 

@@ -24,10 +24,11 @@ tags:
 - VS Code
 - AI
 - Azure
-- Machine Learning
+- ML
 - DevOps
 - Security
 - News
+- Machine Learning
 section_names:
 - ai
 - azure

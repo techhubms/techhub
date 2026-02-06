@@ -21,12 +21,11 @@ tags:
 - Sponsorship
 - Trusted Publishing
 - AI
-- Coding
 - Security
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 - security
 primary_section: ai
 ---

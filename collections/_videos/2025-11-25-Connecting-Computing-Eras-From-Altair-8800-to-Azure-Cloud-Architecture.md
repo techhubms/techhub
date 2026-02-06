@@ -27,14 +27,14 @@ tags:
 - Terminal
 - UEFI
 - Azure
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Presented by Mark Russinovich and Scott Hanselman, this Ignite 2025 breakout session connects decades of computing innovation, illustrating how architectural patterns from early PCs shape today's Azure-based app development and cloud scaling.<!--excerpt_end-->
 

@@ -17,11 +17,11 @@ tags:
 - Static Site Rendering
 - TagHelper
 - Web Development
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh demonstrates how to build dynamic 'islands' in ASP.NET Core applications with Htmx, using TagHelpers and caching to combine static speed with dynamic server-rendered content.<!--excerpt_end-->
 

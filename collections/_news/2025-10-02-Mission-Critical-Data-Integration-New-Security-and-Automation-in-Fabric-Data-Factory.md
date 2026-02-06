@@ -21,9 +21,10 @@ tags:
 - VNet Gateway
 - Workspace Identity Authentication
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

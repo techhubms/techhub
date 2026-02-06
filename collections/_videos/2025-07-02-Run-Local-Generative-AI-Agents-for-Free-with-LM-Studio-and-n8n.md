@@ -35,11 +35,11 @@ tags:
 - Windows
 - Workflow Automation
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Alireza Chegini presents a comprehensive tutorial for developers on how to set up and run generative AI agents locally with LM Studio and n8n, highlighting installation, workflow creation, and free experimentation.<!--excerpt_end-->

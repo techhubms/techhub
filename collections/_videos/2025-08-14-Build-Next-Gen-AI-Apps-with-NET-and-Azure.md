@@ -19,12 +19,11 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this video session, dotnet demonstrates how to build next-generation AI applications with .NET and Azure, offering practical development guidance and showcasing the latest tools in the Microsoft ecosystem.<!--excerpt_end-->

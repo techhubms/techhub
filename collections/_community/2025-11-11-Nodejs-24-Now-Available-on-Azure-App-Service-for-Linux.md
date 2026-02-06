@@ -19,12 +19,12 @@ tags:
 - Testing
 - V8 Engine
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 TulikaC announces that Node.js 24 LTS is now supported on Azure App Service for Linux, enabling developers to deploy faster, modern JavaScript apps with improved testing and deployment capabilities.<!--excerpt_end-->
 

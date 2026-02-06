@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 18
 date: 2025-05-01 00:00:00 +00:00
 author: Xebia
@@ -20,15 +20,15 @@ tags:
 - Semantic Kernel
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
 - Security
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 - security

@@ -21,8 +21,9 @@ tags:
 - Schema Standardization
 - Streaming Data
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

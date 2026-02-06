@@ -22,8 +22,9 @@ tags:
 - Real Time Data
 - Zero ETL
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

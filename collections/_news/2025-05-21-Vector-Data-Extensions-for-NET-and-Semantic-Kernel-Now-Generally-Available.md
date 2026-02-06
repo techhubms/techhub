@@ -20,11 +20,10 @@ tags:
 - Vector Database
 - Vector Store Connectors
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Written by Wes Steyn and Shay Rojansky, this article introduces the GA release of the Microsoft.Extensions.VectorData.Abstractions library. It focuses on shared abstractions for vector data, integration with AI tooling, and practical usage with Semantic Kernel and .NET.<!--excerpt_end-->

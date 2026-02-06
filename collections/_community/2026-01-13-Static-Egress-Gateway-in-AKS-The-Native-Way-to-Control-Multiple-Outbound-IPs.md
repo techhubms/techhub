@@ -22,16 +22,16 @@ tags:
 - User Defined Routing
 - YADA Demo App
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 pjlewis demonstrates how to manage multiple outbound egress IPs natively in Azure Kubernetes Service using the Static Egress Gateway feature, providing clear, actionable implementation steps and security-focused considerations.<!--excerpt_end-->
 

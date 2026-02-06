@@ -24,14 +24,14 @@ tags:
 - Token Cache
 - Windows Forms
 - Azure
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 jpigott details how developers can use Microsoft Entra ID authentication with Arc-enabled SQL Server in a .NET Windows Forms application, focusing on token management, secure connections, and MSAL integration.<!--excerpt_end-->
 

@@ -25,14 +25,14 @@ tags:
 - Win32Apps
 - Windows
 - Azure
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Jonas Ohmsen presents a PowerShell module called IntuneDebug aimed at simplifying Microsoft Intune policy troubleshooting for Windows devices, with step-by-step usage details and reporting techniques.<!--excerpt_end-->
 

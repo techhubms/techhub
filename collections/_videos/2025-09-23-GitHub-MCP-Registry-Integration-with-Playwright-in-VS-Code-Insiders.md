@@ -25,13 +25,13 @@ tags:
 - VS Code
 - VS Code Insiders
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

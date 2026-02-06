@@ -24,8 +24,9 @@ tags:
 - Spark
 - Workflows
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

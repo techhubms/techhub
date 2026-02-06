@@ -21,13 +21,13 @@ tags:
 - VS Code
 - Workflow Automation
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

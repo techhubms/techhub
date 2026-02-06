@@ -18,11 +18,11 @@ tags:
 - SharePoint
 - SharePoint Embedded
 - SharePoint Online
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny explains SharePoint Embedded, focusing on its API-first architecture that enables developers to integrate enterprise-grade content management into custom apps with secure, compliant storage and flexible billing, using Microsoft 365 and Azure.<!--excerpt_end-->
 

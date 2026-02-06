@@ -19,14 +19,14 @@ tags:
 - Software Development
 - Terraform
 - Azure
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this article, David Fowler introduces Aspire's compiler-inspired approach to application topology, highlighting how it bridges the gap between development and deployment using a resource model and extensible publishing pipeline.<!--excerpt_end-->
 

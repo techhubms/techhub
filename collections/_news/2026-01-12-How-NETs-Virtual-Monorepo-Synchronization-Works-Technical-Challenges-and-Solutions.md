@@ -22,13 +22,12 @@ tags:
 - Unified Build
 - Virtual Monolithic Repository
 - VMR
-- Coding
 - DevOps
 - News
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Přemek Vysoký details the deep technical efforts behind synchronizing .NET’s many repositories in their Virtual Monolithic Repository, highlighting custom solutions, lessons learned, and ongoing DevOps challenges.<!--excerpt_end-->
 

@@ -22,12 +22,11 @@ tags:
 - Modern Web Development
 - VS
 - Azure
-- Coding
 - Videos
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this session, David Fowler and Maddy present a deep dive into .NET Aspire. The discussion provides technical and architectural insights, giving developers practical understanding and advice directly from Aspire’s creator.<!--excerpt_end-->
 

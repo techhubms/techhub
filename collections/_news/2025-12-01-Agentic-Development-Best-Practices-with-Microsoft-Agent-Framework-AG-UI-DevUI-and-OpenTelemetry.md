@@ -23,11 +23,10 @@ tags:
 - OpenTelemetry
 - Python
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Kinfey Lo presents a comprehensive overview of agentic development with Microsoft Agent Framework, detailing how DevUI, AG-UI, and OpenTelemetry accelerate building, debugging, and deploying advanced AI agents in Python and .NET.<!--excerpt_end-->

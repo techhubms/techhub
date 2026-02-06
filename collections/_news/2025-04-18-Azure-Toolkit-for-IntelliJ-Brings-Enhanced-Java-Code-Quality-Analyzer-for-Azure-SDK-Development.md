@@ -21,14 +21,14 @@ tags:
 - Service Bus
 - Storage
 - Azure
-- Coding
 - Security
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Sameeksha Vaity details the latest enhancements to the Azure Toolkit for IntelliJ, highlighting a powerful Java Code Quality Analyzer aimed at improving code quality, security, and performance for developers working with the Azure SDK.<!--excerpt_end-->
 

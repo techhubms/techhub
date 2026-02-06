@@ -15,7 +15,7 @@ tags:
 - Copilot Memory Feature
 - Developer Productivity
 - IDE Integration
-- Machine Learning
+- ML
 - Personalized Coding
 - Privacy Controls
 - User Data Management

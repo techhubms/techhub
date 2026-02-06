@@ -21,11 +21,10 @@ tags:
 - WinUI 3
 - XAML
 - XAML Studio
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Tim Anderson reports on Microsoft open sourcing XAML Studio, offering insights into the tool’s new status, ongoing development, and broader implications for the Windows desktop application developer community.<!--excerpt_end-->
 

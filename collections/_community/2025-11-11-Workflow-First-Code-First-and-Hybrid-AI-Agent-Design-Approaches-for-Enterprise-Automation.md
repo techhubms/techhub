@@ -28,12 +28,12 @@ tags:
 - Workflow Automation
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 PradyH discusses the pros and cons of workflow-first, code-first, and hybrid approaches to building AI Agents for enterprise automation, drawing on practical experiences with Microsoft and open-source tools.<!--excerpt_end-->

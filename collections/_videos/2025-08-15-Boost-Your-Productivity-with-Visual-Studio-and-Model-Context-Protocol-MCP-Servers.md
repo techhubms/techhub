@@ -26,12 +26,12 @@ tags:
 - VS Code Extensions
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents a session on integrating Model Context Protocol (MCP) servers with Visual Studio and VS Code, demonstrating new AI-driven development tools for enhanced productivity.<!--excerpt_end-->

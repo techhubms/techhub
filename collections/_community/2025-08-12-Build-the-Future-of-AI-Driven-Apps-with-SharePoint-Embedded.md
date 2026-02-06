@@ -21,11 +21,11 @@ tags:
 - SharePoint Embedded
 - TechCon ATL
 - AI
-- Coding
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 wbaer demonstrates how developers can leverage SharePoint Embedded to build AI-powered, document-centric applications using Microsoft’s headless content platform. This resource guides practitioners through upcoming events, live demos, and real-world implementation insights.<!--excerpt_end-->

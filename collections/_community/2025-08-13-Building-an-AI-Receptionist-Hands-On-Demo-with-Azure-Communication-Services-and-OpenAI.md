@@ -21,12 +21,12 @@ tags:
 - Webhook
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this post, seankeegan demonstrates how to build an AI-driven SMS receptionist with Azure Communication Services and Azure OpenAI, sharing step-by-step guidance for developers seeking to automate scheduling via conversational text.<!--excerpt_end-->

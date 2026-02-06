@@ -15,11 +15,10 @@ tags:
 - Development Environment
 - Scripts
 - Team Collaboration
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, Fritz guides viewers through the process of adding custom commands to the .NET Aspire dashboard, focusing on developer productivity and environment configuration tasks.<!--excerpt_end-->
 

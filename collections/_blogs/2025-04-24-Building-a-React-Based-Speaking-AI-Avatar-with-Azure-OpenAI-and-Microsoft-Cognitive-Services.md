@@ -21,12 +21,12 @@ tags:
 - WebRTC
 - AI
 - Azure
-- Coding
 - Blogs
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this detailed guide, Harald Binkle demonstrates how to build a React-based AI avatar UI. The tutorial covers integrating Azure OpenAI, Microsoft Cognitive Services, and implementing avatar lip-syncing for truly interactive AI conversations.<!--excerpt_end-->

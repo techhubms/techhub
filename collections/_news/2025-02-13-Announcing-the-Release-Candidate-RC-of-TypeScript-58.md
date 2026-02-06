@@ -19,11 +19,11 @@ tags:
 - Performance Optimization
 - Release Candidate
 - TypeScript
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, Daniel Rosenwasser details the new features and changes in the Release Candidate of TypeScript 5.8, aimed at improving type checking, module interoperability, build performance, and compatibility with modern JavaScript.<!--excerpt_end-->
 

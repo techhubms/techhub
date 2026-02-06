@@ -22,11 +22,11 @@ tags:
 - Project Maintainers
 - RPL
 - Software Business Models
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 This .NET Foundation guide, authored by .NET Foundation News and Blog, explains which licenses are compatible, clarifies common licensing myths, and outlines supported commercial strategies for project maintainers.<!--excerpt_end-->
 

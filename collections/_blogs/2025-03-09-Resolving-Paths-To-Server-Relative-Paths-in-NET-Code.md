@@ -19,11 +19,10 @@ tags:
 - URL Resolution
 - Virtual Paths
 - Web Development
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Rick Strahl describes strategies and provides helper methods for resolving URLs to server-relative paths in .NET code, extending beyond default ASP.NET Core mechanisms.<!--excerpt_end-->
 

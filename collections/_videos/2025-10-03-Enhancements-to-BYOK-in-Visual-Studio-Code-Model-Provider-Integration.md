@@ -17,11 +17,11 @@ tags:
 - Open Source
 - VS Code
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Pierce Boggan, in this Visual Studio Code livestream, explains recent improvements to the BYOK (Bring Your Own Key) feature and how developers can now leverage the Language Model Chat Provider API for integrating language models via extensions.<!--excerpt_end-->

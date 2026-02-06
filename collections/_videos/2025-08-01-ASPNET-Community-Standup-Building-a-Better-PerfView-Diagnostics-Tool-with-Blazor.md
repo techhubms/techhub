@@ -22,11 +22,10 @@ tags:
 - Perfview
 - Software Developer
 - Thread Pool
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Presented by dotnet, this session features Grégoire Verdier and Noah Falk demonstrating the .NET Events Viewer, a Blazor-based diagnostics tool. They share insights on solving thread pool issues, building community tools, and fostering open-source contributions in the .NET ecosystem.<!--excerpt_end-->
 

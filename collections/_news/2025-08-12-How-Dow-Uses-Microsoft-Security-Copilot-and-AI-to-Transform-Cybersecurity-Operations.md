@@ -16,7 +16,7 @@ tags:
 - Generative AI
 - Identity And Access Management
 - Incident Response
-- Machine Learning
+- ML
 - Microsoft
 - Microsoft Security Copilot
 - Responsible AI

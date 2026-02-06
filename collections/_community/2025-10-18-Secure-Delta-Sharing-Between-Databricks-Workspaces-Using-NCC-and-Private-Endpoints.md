@@ -22,9 +22,10 @@ tags:
 - Unity Catalog
 - Workspace Metastore
 - Azure
-- Machine Learning
+- ML
 - Security
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

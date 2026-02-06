@@ -22,12 +22,12 @@ tags:
 - Zone Redundancy
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this blog post, Satish discusses how to implement semantic caching on Azure Managed Redis for AI applications, combining vector search and caching strategies for enhanced performance.<!--excerpt_end-->

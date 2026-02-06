@@ -22,13 +22,13 @@ tags:
 - Quality Assurance
 - UI Engineering
 - WCAG
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Andrea Griffiths presents how GitHub’s Annotation Toolkit enables seamless design-to-code collaboration in Figma, helping developers and designers address accessibility and documentation challenges.<!--excerpt_end-->
 

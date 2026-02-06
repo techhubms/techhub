@@ -16,11 +16,10 @@ tags:
 - Partial Classes
 - Projections
 - Source Generator
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Authored by Voiden0, this article introduces Facet v2, a C# source generator for creating projections and mappings efficiently, highlighting recent improvements driven by community feedback.<!--excerpt_end-->
 

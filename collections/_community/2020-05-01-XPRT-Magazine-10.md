@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 10
 date: 2020-05-01 00:00:00 +00:00
 author: Xebia
@@ -27,14 +27,15 @@ tags:
 - Xpirit Belgium
 - AI
 - Azure
-- Coding
 - DevOps
-- Machine Learning
+- ML
 - Community
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - ml
 primary_section: ai

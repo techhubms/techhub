@@ -28,16 +28,16 @@ tags:
 - VS Code
 - VS Code Extension
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 stevenjma introduces the public preview of the Terraform MSGraph provider and the official Microsoft Terraform VSCode extension, empowering practitioners to automate Microsoft cloud resource management and streamline Infrastructure-as-Code workflows.<!--excerpt_end-->
 

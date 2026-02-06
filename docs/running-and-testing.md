@@ -91,3 +91,36 @@ You can target specific tests to save time:
 
 - **Background Services**: The `Run` command manages background processes for you. You don't need to manually start the API before running E2E tests—the script handles it.
 - **Terminal Reuse**: You can run `Run` commands repeatedly in the same terminal. It detects if servers are already running and only restarts them if binaries have changed.
+
+## Troubleshooting
+
+### Database Schema Changes
+
+If you encounter database-related errors after pulling code changes (especially errors about missing or renamed columns), you may need to rebuild the databases from scratch.
+
+**Symptoms**:
+
+- Error: `column "column_name" of relation "table_name" does not exist`
+- Database migration warnings or failures
+- Content sync failures on startup
+
+**Solution**:
+
+Delete the local database directories to force a clean rebuild:
+
+```powershell
+# First, remove Docker volumes if you've been using -Docker flag
+docker compose down -v
+
+# Then, remove SQLite databases (used in Development mode)
+Remove-Item -Recurse -Force .databases/
+```
+
+After removing the databases:
+
+1. **SQLite (Development mode)**: Run `Run` to recreate the database with the latest schema
+2. **PostgreSQL (Docker mode)**: Run `Run -Docker` to rebuild containers with a fresh database
+
+The ContentSync process will automatically populate the new database with content from the `collections/` directory during startup.
+
+> **Note**: Database schema changes are rare but do happen. Always check the migration scripts in `src/TechHub.Infrastructure/Data/Migrations/` to understand what changed.

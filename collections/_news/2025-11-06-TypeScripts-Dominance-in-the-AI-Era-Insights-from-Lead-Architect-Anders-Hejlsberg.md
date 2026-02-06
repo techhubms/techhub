@@ -21,11 +21,11 @@ tags:
 - Static Typing
 - Typescript
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Aaron Winston interviews Anders Hejlsberg, creator of TypeScript, revealing how the language grew to become GitHub's most-used language in 2025. The article details TypeScript’s evolution, its impact on AI workflows, and what this means for developers today.<!--excerpt_end-->

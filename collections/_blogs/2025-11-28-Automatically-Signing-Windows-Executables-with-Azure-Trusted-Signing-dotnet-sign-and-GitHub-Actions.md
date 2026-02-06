@@ -22,16 +22,15 @@ tags:
 - Windows Executable Signing
 - YAML Workflow
 - Azure
-- Coding
 - DevOps
 - Security
 - Blogs
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Scott Hanselman guides developers through the full process of signing Windows executables using Azure Trusted Signing, dotnet sign, and GitHub Actions. The tutorial blends practical, real-world experience with detailed step-by-step instructions and security insights.<!--excerpt_end-->
 

@@ -23,11 +23,11 @@ tags:
 - Vision Models
 - Windows AI APIs
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Events presents an in-depth session on building and customizing local AI within enterprise apps using Windows AI APIs and Foundry, featuring speakers Connor Al-Joundi and Ivan Razumenic.<!--excerpt_end-->

@@ -25,13 +25,12 @@ tags:
 - Source Build
 - Unified Build
 - Vertical Build
-- Coding
 - DevOps
 - News
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Matt Mitchell takes a deep dive into .NET's transition from distributed builds to the Unified Build strategy, revealing behind-the-scenes engineering and DevOps lessons.<!--excerpt_end-->
 

@@ -19,11 +19,11 @@ tags:
 - Python
 - VS Code
 - AI
-- Coding
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Lee_Stott announces a free October livestream series hosted by Pamela Fox and Gwyneth Peña-Siguenza, designed to help developers advance their Python and generative AI skills through interactive sessions.<!--excerpt_end-->

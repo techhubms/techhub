@@ -21,14 +21,14 @@ tags:
 - Role Based Access Control
 - Token Based Security
 - Azure
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 wassimchegham provides a practical tutorial on securing Node.js-based MCP servers using JWT authentication and authorization, emphasizing scalable, role-based security controls for AI-enabled architectures.<!--excerpt_end-->
 

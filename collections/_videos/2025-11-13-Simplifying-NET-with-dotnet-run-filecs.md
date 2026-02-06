@@ -21,11 +21,10 @@ tags:
 - Unified Development
 - Utility Programs
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet introduces developers to the powerful 'dotnet run file.cs' command, which streamlines C# scripting and direct code execution, focusing on practical use cases for rapid prototyping and automation.<!--excerpt_end-->
 

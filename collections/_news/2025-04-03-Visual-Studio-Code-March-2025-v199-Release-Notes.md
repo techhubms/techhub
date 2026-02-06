@@ -21,11 +21,11 @@ tags:
 - Terminal IntelliSense
 - VS Code
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Visual Studio Code Team details the March 2025 (v1.99) release, showcasing features like agent mode with AI-assisted coding, unified chat, advanced notebook tools, and major improvements to developer productivity.<!--excerpt_end-->

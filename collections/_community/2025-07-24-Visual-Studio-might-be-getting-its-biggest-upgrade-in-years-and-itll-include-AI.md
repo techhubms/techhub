@@ -16,11 +16,11 @@ tags:
 - Upgrade
 - VS
 - AI
-- Coding
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Author thetechminer shares insights into a potential major upgrade for Visual Studio, focusing on AI-driven improvements.<!--excerpt_end-->

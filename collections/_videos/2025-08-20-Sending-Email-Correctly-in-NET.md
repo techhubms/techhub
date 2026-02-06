@@ -16,11 +16,10 @@ tags:
 - Nick Chapsas
 - SMTP
 - Software Engineering
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nick Chapsas, with guest Dylan Beattie, presents a developer-focused walkthrough on properly sending emails in .NET. This guide is crucial for those looking to implement reliable email features.<!--excerpt_end-->
 

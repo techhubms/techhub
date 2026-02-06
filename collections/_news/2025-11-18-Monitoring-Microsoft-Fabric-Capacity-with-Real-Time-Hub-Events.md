@@ -24,8 +24,9 @@ tags:
 - Schema Reference
 - Teams Notification
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

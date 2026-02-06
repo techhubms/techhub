@@ -19,11 +19,11 @@ tags:
 - Visual Studio Insiders
 - VS
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Mads Kristensen introduces Visual Studio 2026 Insiders, highlighting major advances in AI-powered development, improved performance, and a reimagined user experience for professional developers.<!--excerpt_end-->

@@ -22,11 +22,10 @@ tags:
 - Secure Authentication
 - VS
 - Web Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a deep dive into migrating enterprise Blazor applications to .NET 10, emphasizing upgrade strategies, new features, and performance gains.<!--excerpt_end-->
 

@@ -19,13 +19,12 @@ tags:
 - YAML Workflows
 - DevOps
 - Security
-- Coding
 - Blogs
 section_names:
 - devops
 - security
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this blog post, Andrew Lock demonstrates how to create SBOM attestations for your .NET applications or NuGet packages using GitHub Actions, enhancing supply chain security.<!--excerpt_end-->
 

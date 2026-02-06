@@ -18,11 +18,11 @@ tags:
 - NoSQL
 - Provider Development
 - Relational Databases
-- Coding
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
-- coding
+- dotnet
 - ml
 primary_section: ml
 ---

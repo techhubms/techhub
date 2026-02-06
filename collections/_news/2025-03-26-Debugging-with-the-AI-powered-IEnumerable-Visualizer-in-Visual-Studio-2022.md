@@ -21,12 +21,12 @@ tags:
 - VS
 - AI
 - GitHub Copilot
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 Junyu Wang introduces the AI-powered enhancements in Visual Studio 2022’s IEnumerable Visualizer, featuring Copilot Chat integration to streamline LINQ query debugging and refinement.<!--excerpt_end-->

@@ -24,11 +24,11 @@ tags:
 - Strace
 - System.DllNotFoundException
 - Troubleshooting
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock walks through the real-world debugging process for a library loading failure on Alpine Linux when running older .NET Core apps, clearly explaining the steps and ultimate resolution.<!--excerpt_end-->
 

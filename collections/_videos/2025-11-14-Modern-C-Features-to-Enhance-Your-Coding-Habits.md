@@ -18,11 +18,10 @@ tags:
 - LTS Release
 - Productivity
 - Refactoring
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dotnet presents a walkthrough of the latest C# language features from versions 12 to 14, designed to improve coding habits and productivity for developers.<!--excerpt_end-->
 

@@ -27,7 +27,6 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
 - Security
@@ -35,7 +34,7 @@ tags:
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 - security

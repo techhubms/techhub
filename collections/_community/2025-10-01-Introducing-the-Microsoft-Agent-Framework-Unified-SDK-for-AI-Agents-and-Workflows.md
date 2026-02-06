@@ -28,12 +28,11 @@ tags:
 - Workflow Automation
 - AI
 - Azure
-- Coding
 - Community
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Lee Stott presents the Microsoft Agent Framework, guiding developers through its unified, open-source SDK for agentic AI apps with .NET and Python support, multi-agent orchestration, and advanced workflow capabilities.<!--excerpt_end-->

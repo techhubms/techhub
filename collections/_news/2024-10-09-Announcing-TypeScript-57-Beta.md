@@ -15,11 +15,11 @@ tags:
 - Type Checking
 - TypeScript
 - TypeScript 5.7
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Daniel Rosenwasser announces the release of TypeScript 5.7 Beta, offering insights into new language features and improvements.<!--excerpt_end-->
 

@@ -26,14 +26,13 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

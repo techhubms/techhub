@@ -22,11 +22,10 @@ tags:
 - Testing
 - UI Development
 - XAML
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 David Ortinau features guest author Adolfo Marinucci, who explores MauiReactor—a library that makes the MVU architectural pattern accessible for .NET MAUI developers, offering insights on productivity, technical implementation, and practical usage.<!--excerpt_end-->
 

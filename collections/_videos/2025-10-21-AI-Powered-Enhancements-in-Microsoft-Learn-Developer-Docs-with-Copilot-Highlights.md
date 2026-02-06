@@ -19,7 +19,7 @@ tags:
 - Developer Documentation
 - Developer Tools
 - Development
-- Machine Learning
+- ML
 - Microsoft
 - Microsoft Developer
 - Microsoft Learn
@@ -30,13 +30,12 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - GitHub Copilot
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

@@ -27,14 +27,14 @@ tags:
 - VS Code Copilot
 - AI
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

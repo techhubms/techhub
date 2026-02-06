@@ -21,13 +21,12 @@ tags:
 - Workflow Optimization
 - AI
 - Azure
-- Coding
 - DevOps
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

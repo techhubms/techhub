@@ -15,11 +15,10 @@ tags:
 - Separator
 - Standard Library
 - Yield
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh explores how to create an 'intersperse' extension method for IEnumerable in C#, inspired by a JavaScript utility. The article includes code samples, expected outputs, and a detailed explanation of the implementation.<!--excerpt_end-->
 

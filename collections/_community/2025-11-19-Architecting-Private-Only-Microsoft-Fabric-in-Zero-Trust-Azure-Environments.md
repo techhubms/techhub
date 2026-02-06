@@ -26,9 +26,10 @@ tags:
 - Warehouse
 - Zero Trust
 - Azure
-- Machine Learning
+- ML
 - Security
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

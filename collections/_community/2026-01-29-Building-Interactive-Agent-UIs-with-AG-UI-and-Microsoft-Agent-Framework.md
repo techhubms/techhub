@@ -16,7 +16,6 @@ tags:
 - Azure
 - Azure AI Foundry
 - Azure OpenAI
-- Coding
 - Community
 - CrewAI
 - Event Driven Design
@@ -32,7 +31,7 @@ tags:
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 ---
 pratikpanda presents a hands-on guide to building interactive UIs for AI agents using AG-UI and Microsoft Agent Framework. This post explains the motivation, protocol design, architecture, and provides working code for integrating Azure OpenAI with Python FastAPI.<!--excerpt_end-->
 

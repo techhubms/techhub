@@ -22,11 +22,10 @@ tags:
 - Vector Embeddings
 - Web Scraping
 - AI
-- Coding
 - Blogs
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Andrew Lock guides readers through extending the .NET AI Chat Web App template to build a chatbot that understands website content and answers with citations. The post includes code examples, insights, and performance observations.<!--excerpt_end-->

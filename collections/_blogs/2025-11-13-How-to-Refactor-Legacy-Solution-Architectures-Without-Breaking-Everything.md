@@ -20,13 +20,13 @@ tags:
 - Stakeholder Management
 - Strangler Fig Pattern
 - Testing Strategies
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Dellenny shares actionable advice on refactoring legacy solution architectures without causing system failures. The article offers developers practical steps to modernize, test, and evolve existing codebases with minimal disruption.<!--excerpt_end-->
 

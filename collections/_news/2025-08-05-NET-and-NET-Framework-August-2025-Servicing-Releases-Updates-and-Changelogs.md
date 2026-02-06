@@ -16,11 +16,10 @@ tags:
 - Release Notes
 - Runtime
 - Servicing Updates
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Tara Overfield and Victor Israel-Bolarinwa provide a detailed recap of the August 2025 servicing updates for .NET 8.0, .NET 9.0, and the .NET Framework, focusing on new non-security fixes and resources.<!--excerpt_end-->
 

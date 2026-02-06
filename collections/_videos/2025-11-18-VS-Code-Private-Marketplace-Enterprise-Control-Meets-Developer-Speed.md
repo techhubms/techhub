@@ -18,16 +18,16 @@ tags:
 - VS Code
 - VS Code Private Marketplace
 - Azure
-- Coding
 - DevOps
 - Security
 - Videos
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Visual Studio Code’s team introduces Private Marketplace general availability, showing developers and IT how to deploy, secure, and govern VS Code extensions in enterprise environments.<!--excerpt_end-->
 

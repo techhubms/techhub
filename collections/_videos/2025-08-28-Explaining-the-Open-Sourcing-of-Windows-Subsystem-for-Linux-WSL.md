@@ -19,11 +19,11 @@ tags:
 - Virtual Machines
 - Windows Subsystem For Linux
 - WSL
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Microsoft Developer, in this brief video, explains the technical implications of open sourcing WSL, highlighting new opportunities for the community to inspect and contribute to the codebase.<!--excerpt_end-->
 

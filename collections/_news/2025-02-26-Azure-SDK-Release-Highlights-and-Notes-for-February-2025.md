@@ -24,14 +24,13 @@ tags:
 - Python
 - SDK
 - Azure
-- Coding
 - DevOps
 - News
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this news update, Hector Norzagaray summarizes the key highlights and notes from the February 2025 Azure SDK release, including support advisories, new stable and beta library releases, and links to in-depth documentation.<!--excerpt_end-->
 

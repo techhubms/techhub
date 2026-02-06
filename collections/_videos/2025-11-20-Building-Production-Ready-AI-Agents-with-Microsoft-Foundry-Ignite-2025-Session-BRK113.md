@@ -24,12 +24,12 @@ tags:
 - Real Time Context
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session on building, deploying, and scaling AI agents with Microsoft Foundry, featuring technical demonstrations and implementation insights from KPMG.<!--excerpt_end-->

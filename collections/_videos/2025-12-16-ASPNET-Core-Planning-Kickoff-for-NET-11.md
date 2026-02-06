@@ -26,11 +26,10 @@ tags:
 - Planning
 - Roadmap
 - Softaredeveloper
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet hosts a community standup featuring Daniel Roth, Mike Kistler, Jose Perez Rodriguez, and Larry Ewing, discussing ASP.NET Core planning for .NET 11 and inviting developer participation.<!--excerpt_end-->
 

@@ -29,14 +29,14 @@ tags:
 - VS Code Extension
 - AI
 - Azure
-- Coding
 - GitHub Copilot
 - Security
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - github-copilot
 - security
 primary_section: github-copilot

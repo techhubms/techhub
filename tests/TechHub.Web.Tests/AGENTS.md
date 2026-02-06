@@ -1,7 +1,7 @@
 # Blazor Component Tests - Tech Hub
 
 > **AI CONTEXT**: This is a **LEAF** context file for Blazor component tests in the `tests/TechHub.Web.Tests/` directory. It complements the [tests/AGENTS.md](../AGENTS.md) testing strategy.
-> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../../AGENTS.md). Project principles are in [README.md](../../README.md). Follow **BOTH**.
+> **RULE**: Follow the 9-step workflow in Root [AGENTS.md](../../AGENTS.md).
 
 ## Overview
 

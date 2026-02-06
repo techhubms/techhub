@@ -23,11 +23,11 @@ tags:
 - VibeVoice
 - WorkflowBuilder
 - AI
-- Coding
 - Community
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 kinfey presents an in-depth guide on building a local-first, multi-agent podcast studio using Microsoft's Agent Framework, complete with orchestration techniques, local LLM deployment, and advanced audio synthesis methods.<!--excerpt_end-->

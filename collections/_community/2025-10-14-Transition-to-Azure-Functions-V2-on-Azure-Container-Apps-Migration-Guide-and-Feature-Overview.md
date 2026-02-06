@@ -30,14 +30,14 @@ tags:
 - Serverless
 - V1 To V2 Migration
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 DeepGanguly explains the migration from Azure Functions V1 to V2 on Azure Container Apps, highlighting technical improvements, resource model benefits, and a step-by-step guide for deploying serverless functions in container environments.<!--excerpt_end-->
 

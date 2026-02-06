@@ -25,14 +25,14 @@ tags:
 - Telemetry Collection
 - Troubleshooting
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 austonli details Azure Monitor's new public preview features for unified application monitoring on AKS, empowering developers with seamless onboarding and advanced observability.<!--excerpt_end-->
 

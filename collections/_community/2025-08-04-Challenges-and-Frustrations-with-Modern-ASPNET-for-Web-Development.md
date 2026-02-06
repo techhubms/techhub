@@ -19,11 +19,10 @@ tags:
 - VS Code
 - Vue
 - Webforms
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Kingside2 critically examines the current state of ASP.NET and related technologies, highlighting pain points with Webforms, Razor, Blazor, and developer tooling.<!--excerpt_end-->
 

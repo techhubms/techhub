@@ -21,8 +21,9 @@ tags:
 - SQL Endpoint
 - T SQL
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

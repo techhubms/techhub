@@ -35,14 +35,13 @@ tags:
 - Azure
 - DevOps
 - Security
-- Coding
 - News
 section_names:
 - ai
 - azure
 - devops
 - security
-- coding
+- dotnet
 primary_section: ai
 ---
 Authored by Kristen Womack, this news post details the March 2025 Azure Developer CLI (azd) release, covering notable new features, bug fixes, contributions on templates, and enhanced support for AI and Azure services.<!--excerpt_end-->

@@ -12,7 +12,7 @@ tags:
 - Developer Tools
 - GitHub
 - GPT 4.1
-- Machine Learning
+- ML
 - Reinforcement Learning
 - Software Development
 - AI

@@ -17,11 +17,11 @@ tags:
 - VirtualDesktopCmd
 - Windows 11
 - Workspace Customization
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny presents a practical guide to automating virtual desktop management in Windows 11, illustrating use of PowerShell, third-party tools, and scripting for improved efficiency.<!--excerpt_end-->
 

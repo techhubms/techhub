@@ -11,7 +11,7 @@ tags:
 - Continuous Integration
 - Contributed Content
 - DevSecOps
-- Machine Learning
+- ML
 - Pipeline Automation
 - Security Automation
 - Security Monitoring

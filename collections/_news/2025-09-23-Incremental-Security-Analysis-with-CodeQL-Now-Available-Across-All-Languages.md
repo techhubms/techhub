@@ -18,15 +18,15 @@ tags:
 - Security Scanning
 - Static Analysis
 - Swift
-- Coding
 - DevOps
 - Security
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Allison explains GitHub's new incremental analysis for CodeQL, enabling faster and more efficient security scans across all supported languages, including C#, in pull requests.<!--excerpt_end-->
 

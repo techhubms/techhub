@@ -23,11 +23,11 @@ tags:
 - VS Code
 - VS Code V1.103
 - Vscoderelease
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Join Olivia McVicker and the Visual Studio Code team for a live walkthrough of new features in the July v1.103 release, including demos and Q&A for developers.<!--excerpt_end-->
 

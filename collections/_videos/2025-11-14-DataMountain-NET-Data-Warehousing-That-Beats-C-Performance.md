@@ -19,11 +19,11 @@ tags:
 - Spans
 - SQL Performance
 - Vectors
-- Coding
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
-- coding
+- dotnet
 - ml
 primary_section: ml
 ---

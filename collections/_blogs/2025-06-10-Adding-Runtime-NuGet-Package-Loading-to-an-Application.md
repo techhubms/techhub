@@ -16,11 +16,10 @@ tags:
 - NuGet
 - Razor Pages
 - Runtime Extensibility
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, Rick Strahl discusses how to enable runtime extensibility in .NET apps using NuGet package loading and dynamic assembly integration, with practical code samples and insights from his work on LiveReloadServer.<!--excerpt_end-->
 

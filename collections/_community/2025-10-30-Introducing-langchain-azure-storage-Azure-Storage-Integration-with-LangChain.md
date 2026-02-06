@@ -26,12 +26,12 @@ tags:
 - Vector Store
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Kyle Knapp presents langchain-azure-storage, detailing how Microsoft’s official Azure Storage integration enhances LangChain RAG pipelines with secure, scalable, and customizable document loading capabilities.<!--excerpt_end-->

@@ -19,12 +19,12 @@ tags:
 - TypeScript
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Yohan Lasorsa explains how to deploy a Node.js MCP server to Azure Functions using the official Anthropic MCP SDK, including practical advice for automation, infrastructure setup, and cost management.<!--excerpt_end-->

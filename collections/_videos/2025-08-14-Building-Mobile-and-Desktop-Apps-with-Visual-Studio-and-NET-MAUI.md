@@ -22,11 +22,10 @@ tags:
 - UI Development
 - VS
 - XAML
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet discusses how to efficiently build mobile and desktop applications using Visual Studio and .NET MAUI, focusing on solution structure, live UI tools, and upcoming framework updates.<!--excerpt_end-->
 

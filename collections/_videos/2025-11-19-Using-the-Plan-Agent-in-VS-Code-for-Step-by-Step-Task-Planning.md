@@ -17,11 +17,11 @@ tags:
 - Task Planning
 - VS Code
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 James Montemagno demonstrates the Plan agent in Visual Studio Code, showing developers how to break down complex tasks and refine requirements with AI assistance in this instructive video.<!--excerpt_end-->

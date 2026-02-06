@@ -16,12 +16,12 @@ tags:
 - Range Diff
 - Version Control
 - DevOps
-- Coding
 - Blogs
+- .NET
 section_names:
 - devops
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this thorough post, Andrew Lock introduces the git range-diff feature for verifying and understanding tricky git rebases. He uses a practical .NET minimal API example to walk readers through the tool’s capabilities, output, and its potential challenges.<!--excerpt_end-->
 

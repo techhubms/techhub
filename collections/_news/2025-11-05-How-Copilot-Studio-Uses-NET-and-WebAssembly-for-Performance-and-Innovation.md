@@ -24,11 +24,10 @@ tags:
 - WASM
 - WebAssembly
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Daniel Roth explores how Microsoft Copilot Studio utilizes .NET and WebAssembly to optimize the performance and scalability of conversational AI bots, highlighting significant platform enhancements for developers and organizations.<!--excerpt_end-->

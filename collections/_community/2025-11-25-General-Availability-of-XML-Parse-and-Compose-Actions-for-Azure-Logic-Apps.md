@@ -24,12 +24,12 @@ tags:
 - XSD Schema
 - XSLT
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 hcamposu announces the general availability of XML Parse and Compose actions in Azure Logic Apps, offering enhanced XML workflow capabilities for cloud developers.<!--excerpt_end-->
 

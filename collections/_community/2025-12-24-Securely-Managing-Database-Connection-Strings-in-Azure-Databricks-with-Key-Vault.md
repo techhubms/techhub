@@ -20,9 +20,10 @@ tags:
 - Secret Management
 - Secrets Retrieval
 - Azure
-- Machine Learning
+- ML
 - Security
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

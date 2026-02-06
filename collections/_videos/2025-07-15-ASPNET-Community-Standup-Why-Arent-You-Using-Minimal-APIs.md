@@ -18,11 +18,10 @@ tags:
 - Safia Abdalla
 - Web APIs
 - Web Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Hosted by Daniel Roth, Mike Kistler, and Safia Abdalla, this ASP.NET Community Standup delves into the benefits of Minimal APIs and discusses reasons developers may prefer controller-based applications.<!--excerpt_end-->
 

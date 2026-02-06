@@ -15,11 +15,11 @@ tags:
 - SweetAlert
 - User Interaction
 - Web UX
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Khalid Abuhakmeh explains how to enhance destructive operation confirmations in web apps by intercepting Htmx events and displaying user-friendly SweetAlert dialogs instead of native browser confirms.<!--excerpt_end-->
 

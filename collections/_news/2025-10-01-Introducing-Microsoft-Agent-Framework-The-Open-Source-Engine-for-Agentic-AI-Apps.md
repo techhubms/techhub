@@ -33,12 +33,11 @@ tags:
 - Workflow Orchestration
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Takuto Higuchi, Shawn Henry, and Elijah Straight provide a deep dive into the Microsoft Agent Framework, showing how it helps developers build, manage, and scale AI agent systems with robust tools for enterprise, research, and production.<!--excerpt_end-->

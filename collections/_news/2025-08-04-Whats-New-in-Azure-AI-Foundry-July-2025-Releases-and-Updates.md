@@ -31,13 +31,12 @@ tags:
 - TypeScript
 - AI
 - Azure
-- Coding
 - Security
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - security
 primary_section: ai
 ---

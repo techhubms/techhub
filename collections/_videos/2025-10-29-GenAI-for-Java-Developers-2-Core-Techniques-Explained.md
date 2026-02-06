@@ -22,7 +22,7 @@ tags:
 - JavaDevelopment
 - JavaTutorial
 - LLM
-- Machine Learning
+- ML
 - MachineLearning
 - Multi Turn Chat
 - OpenAI

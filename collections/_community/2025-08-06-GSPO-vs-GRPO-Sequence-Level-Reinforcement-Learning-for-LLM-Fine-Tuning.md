@@ -28,8 +28,9 @@ tags:
 - Token Level Sampling
 - Variance Reduction
 - AI
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ai
 - ml

@@ -26,11 +26,10 @@ tags:
 - WebSockets
 - WebSocketStream
 - WinHttpHandler
-- Coding
 - Security
-primary_section: coding
+primary_section: dotnet
 section_names:
-- coding
+- dotnet
 - security
 ---
 Máňa outlines the significant networking improvements in .NET 10, including HTTP, WebSocket API upgrades, and security features relevant to developer scenarios.<!--excerpt_end-->

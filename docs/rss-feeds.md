@@ -34,7 +34,7 @@ Section feeds contain all content tagged with that specific section, regardless 
 | GitHub Copilot  | `/github-copilot/feed.xml`       | GitHub Copilot content                |
 | ML              | `/ml/feed.xml`                   | Machine Learning content              |
 | Azure           | `/azure/feed.xml`                | Azure cloud platform content          |
-| Coding (.NET)   | `/coding/feed.xml`               | .NET and coding content               |
+| .NET            | `/dotnet/feed.xml`               | .NET development content              |
 | DevOps          | `/devops/feed.xml`               | DevOps and automation content         |
 | Security        | `/security/feed.xml`             | Security content                      |
 

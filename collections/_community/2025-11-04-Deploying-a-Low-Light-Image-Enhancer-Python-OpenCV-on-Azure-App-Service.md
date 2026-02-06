@@ -21,12 +21,12 @@ tags:
 - Saturation Boost
 - Web Application
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 TulikaC presents a Python and OpenCV-based web app for enhancing low-light images, with practical deployment instructions for Azure App Service. This guide covers the key steps in setting up the enhancement pipeline and deploying using Azure Developer CLI.<!--excerpt_end-->
 

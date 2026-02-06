@@ -19,13 +19,13 @@ tags:
 - Organization Sharing
 - Version Control
 - Workflow Improvement
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Allison details recent updates to GitHub Spark that enhance organizational sharing, local development, and workflow visibility, delivering a more seamless developer experience.<!--excerpt_end-->
 

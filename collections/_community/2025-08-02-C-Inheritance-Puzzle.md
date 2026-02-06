@@ -15,11 +15,11 @@ tags:
 - Method Overriding
 - Object Oriented Programming
 - Virtual Methods
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 calorap99 shares a challenging C# inheritance puzzle, inviting readers to predict the console output of a code snippet involving constructors and method overriding.<!--excerpt_end-->
 

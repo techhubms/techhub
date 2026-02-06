@@ -17,13 +17,13 @@ tags:
 - Resource Authoring
 - Windows
 - WinGet
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by Jason Helmick, this post announces the general availability of Microsoft Desired State Configuration (DSC) v3.1.0, outlining its new features, improvements, and installation instructions for different platforms.<!--excerpt_end-->
 

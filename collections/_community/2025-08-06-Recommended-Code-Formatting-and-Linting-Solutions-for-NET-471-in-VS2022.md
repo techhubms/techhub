@@ -20,13 +20,12 @@ tags:
 - StyleCop.Analyzers
 - Team Collaboration
 - VS
-- Coding
 - DevOps
 - Community
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Efficient_Edge5500 and other Reddit users exchange candid advice about achieving reliable and enforceable formatting/linting for .NET 4.7.1 projects in Visual Studio 2022, sharing practical tool recommendations and configuration insights.<!--excerpt_end-->
 

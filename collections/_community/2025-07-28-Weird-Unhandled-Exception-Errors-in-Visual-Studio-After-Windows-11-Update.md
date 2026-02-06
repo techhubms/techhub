@@ -15,11 +15,10 @@ tags:
 - Unhandled Exception
 - VS
 - Windows 11
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Quiet_Equivalent_569 details an issue with unhandled exceptions in Visual Studio after a Windows 11 update, looking for troubleshooting advice.<!--excerpt_end-->
 

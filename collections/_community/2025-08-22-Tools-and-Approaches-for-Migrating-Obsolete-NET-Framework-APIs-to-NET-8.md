@@ -15,11 +15,11 @@ tags:
 - Portability Analyzer
 - Project Migration
 - Upgrade Assistant
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 GopalKrishnan shares challenges and seeks advice on migrating a multi-project solution from .NET Framework 4.8 to .NET 8, focusing on identifying and updating obsolete APIs for successful modernization.<!--excerpt_end-->
 

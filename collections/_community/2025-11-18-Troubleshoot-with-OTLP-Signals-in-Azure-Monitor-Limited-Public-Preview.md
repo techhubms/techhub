@@ -25,14 +25,13 @@ tags:
 - Telemetry
 - VMSS
 - Azure
-- Coding
 - DevOps
 - Community
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 SoubhagyaDash discusses Azure Monitor's new support for OpenTelemetry standards and OTLP signal ingestion, guiding developers and operations teams on unified observability and troubleshooting techniques.<!--excerpt_end-->
 

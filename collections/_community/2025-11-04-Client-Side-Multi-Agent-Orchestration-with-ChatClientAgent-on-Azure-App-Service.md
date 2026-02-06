@@ -22,12 +22,12 @@ tags:
 - Workflow Orchestration
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 jordanselig explains how developers can build client-side multi-agent systems on Azure App Service using ChatClientAgent and the Microsoft Agent Framework, sharing architecture insights, code samples, and decision factors.<!--excerpt_end-->

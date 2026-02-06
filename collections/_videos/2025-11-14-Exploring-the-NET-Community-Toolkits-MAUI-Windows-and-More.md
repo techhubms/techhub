@@ -22,11 +22,10 @@ tags:
 - VS
 - Web Development
 - Windows Community Toolkit
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 The .NET team hosts a discussion on Community Toolkits, with insights from maintainers and tips for contributing. Presented by dotnet.<!--excerpt_end-->
 

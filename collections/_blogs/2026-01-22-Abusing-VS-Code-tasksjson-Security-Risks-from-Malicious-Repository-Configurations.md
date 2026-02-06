@@ -20,15 +20,15 @@ tags:
 - Tasks.json
 - VS Code
 - VS Code Settings
-- Coding
 - DevOps
 - Security
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Tim Anderson highlights how attackers weaponize VS Code's tasks.json configuration to execute malicious code, detailing the risks for developers and the security implications.<!--excerpt_end-->
 

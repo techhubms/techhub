@@ -17,11 +17,10 @@ tags:
 - Thread Safety
 - TPL Dataflow
 - WPF
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rick Strahl explores using Parallel.ForEachAsync in .NET to significantly improve the performance of link validation in Markdown Monster by parallelizing HTTP operations. This article walks through before-and-after implementations, practical code, performance data, and key caveats.<!--excerpt_end-->
 

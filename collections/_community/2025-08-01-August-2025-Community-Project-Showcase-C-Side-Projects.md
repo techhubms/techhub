@@ -20,11 +20,11 @@ tags:
 - Tray Application
 - Windows Service
 - WinForms
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 AutoModerator presents this month's r/csharp side project discussion thread, spotlighting innovative member creations—from ASP.NET Core Kanban solutions to open source productivity and utility apps.<!--excerpt_end-->
 

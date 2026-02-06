@@ -15,11 +15,11 @@ tags:
 - MVC
 - SMTP
 - Web Development
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 soumyadipmajumder03 inquires about implementing automated email triggers using MailKit in an ASP.NET Core MVC application. The main focus is integrating the email-sending feature upon form submission.<!--excerpt_end-->
 

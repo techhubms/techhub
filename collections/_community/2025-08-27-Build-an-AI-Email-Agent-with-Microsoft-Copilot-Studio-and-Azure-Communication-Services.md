@@ -22,12 +22,12 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 farhanhussain presents a practical guide to building an AI-powered agent that sends emails using Microsoft Copilot Studio and Azure Communication Services, including backend setup, conversation flow, and troubleshooting.<!--excerpt_end-->

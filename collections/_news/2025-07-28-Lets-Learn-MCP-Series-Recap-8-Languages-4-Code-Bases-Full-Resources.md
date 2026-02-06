@@ -21,11 +21,11 @@ tags:
 - Training
 - TypeScript
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Authored by Katie Savage, this article offers an in-depth recap of Microsoft's Model Context Protocol (MCP) training series, highlighting multilingual resources, practical guides, and upcoming opportunities for developers adopting MCP.<!--excerpt_end-->

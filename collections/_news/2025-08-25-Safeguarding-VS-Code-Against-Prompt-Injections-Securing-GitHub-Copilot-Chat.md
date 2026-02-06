@@ -30,13 +30,13 @@ tags:
 - Web Application Security
 - Workspace Trust
 - AI
-- Coding
 - GitHub Copilot
 - Security
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 - security
 primary_section: github-copilot

@@ -27,12 +27,12 @@ tags:
 - Workflow Automation
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 stclarke introduces Microsoft Agent Framework and Azure AI Foundry enhancements, offering developers unified tools to build, orchestrate, and govern enterprise-grade multi-agent AI systems with integrated observability and responsible AI features.<!--excerpt_end-->

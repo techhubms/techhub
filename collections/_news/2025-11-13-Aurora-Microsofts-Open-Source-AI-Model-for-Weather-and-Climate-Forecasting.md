@@ -14,7 +14,7 @@ tags:
 - Company News
 - Earth Systems Modeling
 - Environmental Data
-- Machine Learning
+- ML
 - Meteorological Services
 - Microsoft Research
 - On The Issues

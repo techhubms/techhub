@@ -22,14 +22,14 @@ tags:
 - Team Customizations
 - Template Artifacts
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this comprehensive post, Dmitry Goncharenko from Microsoft's 1ES team shares how Ready-To-Code Dev Box image templates are used to standardize and automate development environments, demonstrating practical benefits and sharing sample resources.<!--excerpt_end-->
 

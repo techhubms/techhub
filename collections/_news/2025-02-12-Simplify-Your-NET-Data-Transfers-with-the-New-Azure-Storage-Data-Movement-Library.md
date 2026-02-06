@@ -20,12 +20,11 @@ tags:
 - Storage
 - TransferManager
 - Azure
-- Coding
 - News
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Charles Barnett introduces the new Azure Storage Data Movement library for .NET, highlighting its advanced features and modernization, and offering practical guidance for developers.<!--excerpt_end-->
 

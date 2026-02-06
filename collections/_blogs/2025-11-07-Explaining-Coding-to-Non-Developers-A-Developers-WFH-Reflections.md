@@ -20,14 +20,14 @@ tags:
 - Work From Home
 - YAML Pipelines
 - Azure
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this insightful post, Wouter Vercruysse offers an honest look at how developers explain their day-to-day coding and DevOps tasks to non-technical audiences, with stories from real work-from-home experiences.<!--excerpt_end-->
 

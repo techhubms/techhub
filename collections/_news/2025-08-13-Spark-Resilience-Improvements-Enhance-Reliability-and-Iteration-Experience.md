@@ -17,13 +17,13 @@ tags:
 - Reliability
 - Spark
 - Version Control
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Allison shares news about recent resilience improvements to Spark on GitHub, highlighting changes that enhance reliability and simplify the iterative development process for application builders.<!--excerpt_end-->
 

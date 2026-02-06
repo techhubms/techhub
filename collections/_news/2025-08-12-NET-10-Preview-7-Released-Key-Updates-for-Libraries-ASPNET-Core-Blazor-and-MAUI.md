@@ -28,11 +28,10 @@ tags:
 - WebSocketStream
 - Windows Forms
 - WPF
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 .NET Team presents a summary of features and improvements in .NET 10 Preview 7, highlighting updates across the ecosystem and providing links to detailed resources. Authors from the .NET Team offer guidance on how developers can get started with this release.<!--excerpt_end-->
 

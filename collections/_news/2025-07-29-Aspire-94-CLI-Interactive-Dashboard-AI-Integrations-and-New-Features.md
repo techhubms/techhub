@@ -24,12 +24,11 @@ tags:
 - YARP Integration
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Maddy Montaquila introduces the Aspire 9.4 release, showcasing new CLI capabilities, interactive dashboard features, and first-class AI service integrations. Discover what's new for developing modern .NET distributed and AI-enabled applications with enhanced productivity.<!--excerpt_end-->

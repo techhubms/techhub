@@ -24,14 +24,14 @@ tags:
 - TCO Optimization
 - Unifyyourdataplatform
 - Azure
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 This Microsoft Ignite session, delivered by Deborah Chen, Jeffrey Ilse, and Andrew Liu, showcases Sitecore's approach to building a scalable, secure, and cost-effective SaaS platform on Azure, with a focus on Cosmos DB architectural patterns.<!--excerpt_end-->
 

@@ -16,11 +16,11 @@ tags:
 - Strongly Typed Objects
 - YAML
 - YamlDotNet
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh guides developers through building strongly-typed content management solutions by parsing Markdown with YAML frontmatter into C# objects for ASP.NET Core apps.<!--excerpt_end-->
 

@@ -11,13 +11,13 @@ tags:
 - YAML Pipelines
 - AI
 - GitHub Copilot
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 - devops
 primary_section: github-copilot
 ---

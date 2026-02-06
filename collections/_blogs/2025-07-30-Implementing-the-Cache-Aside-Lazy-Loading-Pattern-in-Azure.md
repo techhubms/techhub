@@ -28,12 +28,12 @@ tags:
 - Write Behind Caching
 - Write Through Caching
 - Azure
-- Coding
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny demonstrates how to implement the Cache-Aside (Lazy Loading) pattern for efficient application caching in Azure, using Azure Cache for Redis and .NET Core.<!--excerpt_end-->
 

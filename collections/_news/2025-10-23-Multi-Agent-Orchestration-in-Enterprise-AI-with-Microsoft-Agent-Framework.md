@@ -26,12 +26,11 @@ tags:
 - Workflow Patterns
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Kinfey Lo introduces developers and architects to orchestrating enterprise AI solutions using the Microsoft Agent Framework, emphasizing multi-agent coordination, workflow design patterns, and practical observability for advanced, production-grade systems.<!--excerpt_end-->

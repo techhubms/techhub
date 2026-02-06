@@ -17,7 +17,7 @@ tags:
 - Education Technology
 - Free Credits
 - Kubernetes
-- Machine Learning
+- ML
 - Microsoft Azure
 - Student Credits
 - Student Technology

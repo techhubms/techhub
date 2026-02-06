@@ -11,7 +11,6 @@ tags:
 - AI Orchestration
 - Automation
 - Claude Sonnet 4.5
-- Coding
 - Community
 - Copilot CLI
 - Copilot Skills
@@ -31,9 +30,10 @@ tags:
 - README Processing
 - SLM
 - Small Language Models
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 ---
 kinfey delivers a practical exploration of hybrid AI system design, highlighting how Microsoft Foundry Local and GitHub Copilot SDK automate the conversion of GitHub README files into professional PowerPoint presentations. This article demystifies local and cloud AI model orchestration for real developer scenarios.<!--excerpt_end-->

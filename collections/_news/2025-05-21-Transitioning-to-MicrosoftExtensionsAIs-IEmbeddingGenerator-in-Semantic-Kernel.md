@@ -24,11 +24,10 @@ tags:
 - Type Safety
 - Vector Database
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Roger Barreto examines the transition of Semantic Kernel to the Microsoft.Extensions.AI IEmbeddingGenerator interface, highlighting migration steps, key benefits, and standardized AI service integration in the .NET ecosystem.<!--excerpt_end-->

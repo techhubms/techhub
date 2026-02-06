@@ -21,8 +21,9 @@ tags:
 - On Premises Mirroring
 - OneLake
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

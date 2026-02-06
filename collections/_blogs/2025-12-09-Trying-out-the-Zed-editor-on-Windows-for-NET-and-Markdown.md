@@ -20,11 +20,10 @@ tags:
 - VS Code
 - Windows
 - Zed Editor
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock explores whether the Zed editor on Windows can replace VS Code for .NET and Markdown editing, sharing his installation experience, setup tips, feature comparisons, and impressions.<!--excerpt_end-->
 

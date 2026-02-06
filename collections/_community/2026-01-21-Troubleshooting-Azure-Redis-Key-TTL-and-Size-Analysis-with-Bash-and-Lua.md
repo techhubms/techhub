@@ -21,14 +21,14 @@ tags:
 - Troubleshooting
 - TTL
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 LuisFilipe shares practical Bash and Lua scripts for collecting TTL and key size statistics in Azure Cache for Redis, detailing how to optimize memory, performance, and cache longevity.<!--excerpt_end-->
 

@@ -15,11 +15,11 @@ tags:
 - Interactive Coding
 - Lambda Expressions
 - Project Structure
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 RutabagaJumpy3956 shares their challenges with testing C# code segments without executing the entire program and seeks advice from the community about better approaches.<!--excerpt_end-->
 

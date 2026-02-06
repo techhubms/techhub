@@ -22,8 +22,9 @@ tags:
 - Video Interviews
 - AI
 - DevOps
-- Machine Learning
+- ML
 - Blogs
+- Machine Learning
 section_names:
 - ai
 - devops

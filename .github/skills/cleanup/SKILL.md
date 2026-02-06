@@ -3,6 +3,9 @@ name: cleanup
 description: Comprehensive code cleanup and quality assurance for .NET solutions. Compiles, formats, lints, removes dead code, and synchronizes documentation with code. Use this skill whenever you are asked to cleanup the solution, repository, branch, project, etc.
 ---
 
+> **Path Convention**: All paths in this file are relative to this file's location (`.github/skills/cleanup/`).  
+> Therefore, `../../../` refers to the workspace root (`/workspaces/techhub/`).
+
 # Code Cleanup Skill
 
 Maintain code quality, consistency, and documentation accuracy for Tech Hub.
@@ -28,13 +31,13 @@ Execute in order. Don't skip or proceed if a step fails.
 
 **Requirements**: 0 errors, all tests pass.
 
-**If tests fail**: Read [Starting, Stopping and Testing the Website](/workspaces/techhub/README.md#starting-stopping-and-testing-the-website) in README.md to understand proper test execution, debugging workflows, and using `Run` parameters. Fix all issues and retry before Step 2.
+**If tests fail**: Read [docs/running-and-testing.md](../../../docs/running-and-testing.md) to understand proper test execution, debugging workflows, and using `Run` parameters. Fix all issues and retry before Step 2.
 
 ---
 
 ### Step 2: Code Formatting
 
-**Run**: [format-code.ps1](.github/skills/cleanup/scripts/format-code.ps1)
+**Run**: [format-code.ps1](scripts/format-code.ps1)
 
 Applies `dotnet format` per `.editorconfig` rules.
 
@@ -42,9 +45,9 @@ Applies `dotnet format` per `.editorconfig` rules.
 
 ### Step 2a: CSS Token Analysis
 
-**Script 1**: [Count-TokenUsage.ps1](.github/skills/cleanup/scripts/Count-TokenUsage.ps1)  
-**Script 2**: [Find-UndefinedTokens.ps1](.github/skills/cleanup/scripts/Find-UndefinedTokens.ps1)  
-**Template**: [css-token-analysis-template.md](.github/skills/cleanup/templates/css-token-analysis-template.md)
+**Script 1**: [Count-TokenUsage.ps1](scripts/Count-TokenUsage.ps1)  
+**Script 2**: [Find-UndefinedTokens.ps1](scripts/Find-UndefinedTokens.ps1)  
+**Template**: [css-token-analysis-template.md](templates/css-token-analysis-template.md)
 
 - Script 1 counts usage of each CSS color token defined in design-tokens.css
 - Script 2 finds CSS color references that don't exist in design-tokens.css
@@ -65,8 +68,8 @@ Applies `dotnet format` per `.editorconfig` rules.
 
 ### Step 3: Code Quality Analysis
 
-**Script**: [analyze-code-quality.ps1](.github/skills/cleanup/scripts/analyze-code-quality.ps1)  
-**Template**: [overview-template.md](.github/skills/cleanup/templates/overview-template.md)
+**Script**: [analyze-code-quality.ps1](scripts/analyze-code-quality.ps1)  
+**Template**: [overview-template.md](templates/overview-template.md)
 
 - Script outputs warnings/errors by priority (High/Medium/Low)
 - Analyze the data and provide smart recommendations
@@ -83,8 +86,8 @@ Apply Step 3 decisions. If there was nothing to improve immediately go to step 5
 
 ### Step 5: Dead Code Detection
 
-**Script**: [find-dead-code.ps1](.github/skills/cleanup/scripts/find-dead-code.ps1)  
-**Template**: [dead-code-report-template.md](.github/skills/cleanup/templates/dead-code-report-template.md)
+**Script**: [find-dead-code.ps1](scripts/find-dead-code.ps1)  
+**Template**: [dead-code-report-template.md](templates/dead-code-report-template.md)
 
 - Script finds unused members, commented code, unused CSS
 - Analyze findings, identify false positives
@@ -134,7 +137,7 @@ The project uses **built-in .NET analyzers** for build-time dead code detection 
 ### Step 5a: Project Analysis
 
 **No script** - YOU analyze.  
-**Template**: [project-analysis-template.md](.github/skills/cleanup/templates/project-analysis-template.md)
+**Template**: [project-analysis-template.md](templates/project-analysis-template.md)
 
 1. Analyze implementation (endpoints, components, services, models)
 2. Analyze documentation (API spec, AGENTS.md, functional docs)
@@ -149,16 +152,16 @@ The project uses **built-in .NET analyzers** for build-time dead code detection 
 
 **Step 6a: Generate Documentation Index**
 
-**Run**: `/workspaces/techhub/scripts/Generate-DocumentationIndex.ps1`
+**Run**: `../../../scripts/Generate-DocumentationIndex.ps1`
 
-This creates [docs/documentation-index.md](/workspaces/techhub/docs/documentation-index.md) containing:
+This creates [docs/documentation-index.md](../../../docs/documentation-index.md) containing:
 - All documentation files (AGENTS.md, README.md, docs/*.md)
 - All H1/H2/H3 headers from each file
 - Relative links to each file
 
 **Step 6b: Run Documentation Quality Checks**
 
-**Run**: [verify-documentation.ps1](.github/skills/cleanup/scripts/verify-documentation.ps1)
+**Run**: [verify-documentation.ps1](scripts/verify-documentation.ps1)
 
 This performs quality checks:
 - **Expected Files**: Verifies presence of key documentation files
@@ -168,7 +171,7 @@ This performs quality checks:
 **Step 6c: Analyze Documentation**
 
 **No script** - YOU analyze using both outputs.  
-**Read**: [docs/documentation-index.md](/workspaces/techhub/docs/documentation-index.md)
+**Read**: [docs/documentation-index.md](../../../docs/documentation-index.md)
 
 Use the index + verification results to:
 - Verify all features are documented (compare with Step 5a)
@@ -185,8 +188,8 @@ Present summary in chat with your recommendations.
 ### Step 7: Test Review
 
 **No script** - YOU analyze.  
-**Template**: [test-review-template.md](.github/skills/cleanup/templates/test-review-template.md)  
-**Read**: [tests/AGENTS.md](/workspaces/techhub/tests/AGENTS.md)
+**Template**: [test-review-template.md](templates/test-review-template.md)  
+**Read**: [tests/AGENTS.md](../../../tests/AGENTS.md)
 
 - Scan tests for violations (AAA, naming, positioning, coverage)
 - Analyze quality and assign grade (A-F)
@@ -198,7 +201,7 @@ Present summary in chat with your recommendations.
 ### Step 8: Best Practices
 
 **No script** - YOU use `grep_search`.  
-**Template**: [best-practices-template.md](.github/skills/cleanup/templates/best-practices-template.md)
+**Template**: [best-practices-template.md](templates/best-practices-template.md)
 
 - `grep_search` for anti-patterns
 - Read files to verify context

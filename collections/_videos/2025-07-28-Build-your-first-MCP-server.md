@@ -21,11 +21,11 @@ tags:
 - TypeScript
 - VS Code
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents a video guide to building your first Model Context Protocol (MCP) server, covering environment setup, core development concepts, and cloud deployment.<!--excerpt_end-->

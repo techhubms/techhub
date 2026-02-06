@@ -19,12 +19,12 @@ tags:
 - VS Code Extensions
 - Workflow Automation
 - AI
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

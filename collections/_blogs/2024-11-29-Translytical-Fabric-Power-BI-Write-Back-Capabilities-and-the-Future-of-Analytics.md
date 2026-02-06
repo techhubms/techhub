@@ -20,8 +20,9 @@ tags:
 - VertiPaq
 - Write Back
 - Azure
-- Machine Learning
+- ML
 - Blogs
+- Machine Learning
 section_names:
 - azure
 - ml

@@ -28,13 +28,13 @@ tags:
 - Workflow
 - Workflow Automation
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

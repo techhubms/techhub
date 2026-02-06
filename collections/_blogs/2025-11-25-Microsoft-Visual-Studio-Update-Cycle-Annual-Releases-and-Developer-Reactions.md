@@ -20,13 +20,12 @@ tags:
 - UI Themes
 - Uncategorized
 - VS
-- Coding
 - DevOps
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Tim Anderson details Microsoft’s shift to annual Visual Studio releases, monthly updates, and the impact on developers' costs and workflows, alongside community feedback on licensing and usability.<!--excerpt_end-->
 

@@ -22,12 +22,12 @@ tags:
 - Tutorial
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI's video guides you through deploying an MCP Server to Microsoft Azure and integrating it with Semantic Kernel, with actionable steps tailored for developers and AI enthusiasts.<!--excerpt_end-->

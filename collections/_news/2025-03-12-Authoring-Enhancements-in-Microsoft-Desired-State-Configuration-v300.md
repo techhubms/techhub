@@ -18,14 +18,14 @@ tags:
 - Shell Completion
 - VS Code
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by Jason Helmick, this post introduces key authoring enhancements in Microsoft Desired State Configuration v3.0.0, designed to streamline the configuration and deployment processes for PowerShell and Azure environments.<!--excerpt_end-->
 

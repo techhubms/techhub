@@ -28,12 +28,12 @@ tags:
 - Translation Workflow
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Mohamed Elghazali presents an in-depth developer guide to Adaptive Custom Translation (AdaptCT) in Microsoft Foundry Tools, highlighting streamlined translation customization with Azure-based AI, hand-on API usage, and practical workflow tips.<!--excerpt_end-->

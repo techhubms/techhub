@@ -23,12 +23,12 @@ tags:
 - Service Bus
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 jordanselig delivers a comprehensive guide on developing robust, intelligent AI agents using Microsoft Agent Framework and Azure App Service, addressing long-running workflow scenarios with modern async architectures.<!--excerpt_end-->

@@ -20,11 +20,11 @@ tags:
 - Usability
 - VS
 - Workflow Management
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Mads Kristensen takes an honest look at why changing keyboard shortcuts in Visual Studio 2026 is complicated, detailing the history, profiles, schemes, and technical trade-offs for developers.<!--excerpt_end-->
 

@@ -20,11 +20,10 @@ tags:
 - SQL Server
 - UNLOGGED Tables
 - Write Ahead Logging
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 JaredMeade demonstrates how .NET developers can use Microsoft.Extensions.Caching.Postgres to implement distributed caching with Postgres, highlighting performance, configuration flexibility, and seamless integration.<!--excerpt_end-->
 

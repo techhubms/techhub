@@ -4,6 +4,67 @@ param()
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
+# Function to convert heading text to markdown anchor
+function ConvertTo-MarkdownAnchor {
+    param([string]$Heading)
+    
+    # Remove markdown formatting (# and backticks)
+    $anchor = $Heading -replace '^#+\s*', '' -replace '``', ''
+    
+    # Convert to lowercase
+    $anchor = $anchor.ToLower()
+    
+    # Replace spaces with hyphens
+    $anchor = $anchor -replace '\s+', '-'
+    
+    # Remove special characters (keep alphanumeric and hyphens)
+    $anchor = $anchor -replace '[^a-z0-9\-]', ''
+    
+    # Remove multiple consecutive hyphens
+    $anchor = $anchor -replace '-+', '-'
+    
+    # Remove leading/trailing hyphens
+    $anchor = $anchor.Trim('-')
+    
+    return $anchor
+}
+
+# Function to extract all anchors from a markdown file
+function Get-MarkdownAnchors {
+    param([string]$FilePath)
+    
+    if (-not (Test-Path $FilePath)) {
+        return @()
+    }
+    
+    $content = Get-Content $FilePath -Raw
+    $anchors = @{}
+    
+    # Find all headings
+    $headingPattern = '^(#{1,6})\s+(.+)$'
+    $matches = [regex]::Matches($content, $headingPattern, [System.Text.RegularExpressions.RegexOptions]::Multiline)
+    
+    foreach ($match in $matches) {
+        $headingText = $match.Groups[2].Value
+        $anchor = ConvertTo-MarkdownAnchor $headingText
+        
+        # Handle duplicates by appending -1, -2, etc.
+        if ($anchors.ContainsKey($anchor)) {
+            $counter = 1
+            $uniqueAnchor = "$anchor-$counter"
+            while ($anchors.ContainsKey($uniqueAnchor)) {
+                $counter++
+                $uniqueAnchor = "$anchor-$counter"
+            }
+            $anchor = $uniqueAnchor
+        }
+        
+        $anchors[$anchor] = $true
+    }
+    
+    return $anchors.Keys
+}
+
 # Find the repository root
 $root = $PSScriptRoot
 while ($root -and -not (Test-Path (Join-Path $root "TechHub.slnx"))) {
@@ -127,7 +188,13 @@ foreach ($docPath in $allDocs) {
             continue
         }
         
-        # Remove anchor from path
+        # Extract anchor if present
+        $anchor = $null
+        if ($linkPath -match '#(.+)$') {
+            $anchor = $Matches[1]
+        }
+        
+        # Remove anchor from path for file existence check
         $cleanPath = $linkPath -replace '#.*$', ''
         
         # Resolve relative path
@@ -135,23 +202,44 @@ foreach ($docPath in $allDocs) {
         $targetPath = Join-Path $docDir $cleanPath
         $targetPath = [System.IO.Path]::GetFullPath($targetPath)
         
-        # Check if target exists
+        # Check if target file exists
         if (-not (Test-Path $targetPath)) {
             $brokenLinks += @{
                 SourceFile   = $relativePath
                 LinkText     = $linkText
                 LinkPath     = $linkPath
                 ResolvedPath = $targetPath -replace [regex]::Escape($root), '' -replace '^[\\/]', ''
+                ErrorType    = "MissingFile"
+            }
+        }
+        # If file exists and there's an anchor, validate the anchor
+        elseif ($anchor) {
+            $validAnchors = Get-MarkdownAnchors -FilePath $targetPath
+            if ($validAnchors -notcontains $anchor) {
+                $brokenLinks += @{
+                    SourceFile   = $relativePath
+                    LinkText     = $linkText
+                    LinkPath     = $linkPath
+                    ResolvedPath = $targetPath -replace [regex]::Escape($root), '' -replace '^[\\/]', ''
+                    ErrorType    = "InvalidAnchor"
+                    Anchor       = $anchor
+                }
             }
         }
     }
 }
 
 if ($brokenLinks.Count -gt 0) {
-    Write-Host "  Found $($brokenLinks.Count) potentially broken link(s):" -ForegroundColor Yellow
+    Write-Host "  Found $($brokenLinks.Count) broken link(s):" -ForegroundColor Yellow
     $brokenLinks | ForEach-Object {
-        Write-Host "    ❌ $($_.SourceFile): [$($_.LinkText)]($($_.LinkPath))" -ForegroundColor Red
-        Write-Host "       → Target not found: $($_.ResolvedPath)" -ForegroundColor Gray
+        if ($_.ErrorType -eq "MissingFile") {
+            Write-Host "    ❌ $($_.SourceFile): [$($_.LinkText)]($($_.LinkPath))" -ForegroundColor Red
+            Write-Host "       → File not found: $($_.ResolvedPath)" -ForegroundColor Gray
+        }
+        elseif ($_.ErrorType -eq "InvalidAnchor") {
+            Write-Host "    ❌ $($_.SourceFile): [$($_.LinkText)]($($_.LinkPath))" -ForegroundColor Red
+            Write-Host "       → Anchor '$($_.Anchor)' not found in: $($_.ResolvedPath)" -ForegroundColor Gray
+        }
     }
 }
 else {

@@ -19,11 +19,10 @@ tags:
 - Trivia Games
 - Twitch
 - Virtual Event
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents the .NET Conf 2025 Student Zone—a three-day virtual event featuring live sessions, community speakers, and opportunities for developers to improve their .NET skills.<!--excerpt_end-->
 

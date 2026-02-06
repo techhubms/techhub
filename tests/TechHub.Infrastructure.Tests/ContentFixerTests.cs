@@ -31,7 +31,7 @@ public class ContentFixerTests
 
     [Theory]
     [InlineData("[Link](/blog/2025/04/01/test \"Title\")", "[Link](/blog/test \"Title\")")]
-    [InlineData("[Multiple](/ai/videos/Video-One) and [Another](/coding/blogs/Blog-Two)", "[Multiple](/ai/videos/video-one)", "[Another](/coding/blogs/blog-two)")]
+    [InlineData("[Multiple](/ai/videos/Video-One) and [Another](/dotnet/blogs/Blog-Two)", "[Multiple](/ai/videos/video-one)", "[Another](/dotnet/blogs/blog-two)")]
     public void InternalUrls_ShouldPreserveStructure_WhenLowercasing(string input, params string[] expectedParts)
     {
         // Arrange  

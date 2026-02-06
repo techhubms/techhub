@@ -21,12 +21,12 @@ tags:
 - Serverless
 - Uvloop
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 eroman outlines how switching to uvloop boosts the performance of Azure Functions with Python 3.13+. Serverless apps now run asynchronous workloads faster and scale more efficiently – no code changes needed.<!--excerpt_end-->
 

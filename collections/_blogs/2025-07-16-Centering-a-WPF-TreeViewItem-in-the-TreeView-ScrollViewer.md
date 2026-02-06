@@ -16,11 +16,10 @@ tags:
 - UI Development
 - Visual Tree
 - WPF
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, Rick Strahl addresses a common usability issue with WPF's TreeView, offering .NET code and helper methods to properly center selected items and improve user experience.<!--excerpt_end-->
 

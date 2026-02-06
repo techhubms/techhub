@@ -14,7 +14,7 @@ tags:
 - Financial Data
 - Language Support
 - LicensePlateNumber
-- Machine Learning
+- ML
 - Multilingual AI
 - Natural Language Processing
 - PII Redaction

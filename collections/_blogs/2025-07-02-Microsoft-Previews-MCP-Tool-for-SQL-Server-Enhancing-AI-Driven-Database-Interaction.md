@@ -30,12 +30,11 @@ tags:
 - SQL Tools
 - AI
 - Azure
-- Coding
 - Blogs
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Tim Anderson analyzes Microsoft's MCP tool for SQL Server, highlighting its AI-powered capabilities, practical frustrations, and integration with Node.js, .NET, and Azure SQL for developers.<!--excerpt_end-->

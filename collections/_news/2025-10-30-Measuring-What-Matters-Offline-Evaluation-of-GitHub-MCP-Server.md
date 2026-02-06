@@ -17,7 +17,7 @@ tags:
 - Generative AI
 - GitHub MCP Server
 - LLM Evaluation
-- Machine Learning
+- ML
 - MCP
 - Offline Evaluation
 - Tool Selection

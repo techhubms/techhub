@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 09
 date: 2019-10-01 00:00:00 +00:00
 author: Xebia
@@ -13,20 +13,20 @@ tags:
 - High Quality Releases
 - Inclusive Education
 - IT Future
-- Machine Learning
+- ML
 - Magazines
 - Observability
 - Open Source
 - Pod Security
 - AI
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 primary_section: ai
 feed_name: TechHub

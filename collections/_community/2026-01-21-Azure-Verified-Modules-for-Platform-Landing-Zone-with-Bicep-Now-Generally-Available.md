@@ -24,16 +24,16 @@ tags:
 - Parameter Files
 - Platform Landing Zone
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 ztrocinski announces the general availability of Azure Verified Modules for Platform Landing Zone with Bicep, detailing its architecture, developer experience improvements, and migration plans for classic ALZ-Bicep users.<!--excerpt_end-->
 

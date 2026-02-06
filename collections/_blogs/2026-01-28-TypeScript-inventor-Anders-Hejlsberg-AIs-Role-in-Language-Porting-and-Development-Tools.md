@@ -13,22 +13,22 @@ tags:
 - Blogs
 - C#
 - Code Translation
-- Coding
 - Development
 - Development Tools
 - Go
 - IDEs
 - Language Porting
-- Machine Learning
+- ML
 - MCP
 - Microsoft
 - Native Compiler
 - Programming Languages
 - Semantic Services
 - Typescript
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 ---
 In this piece, Tim Anderson interviews Anders Hejlsberg, Microsoft technical fellow, revealing insights on AI's use in compiler porting and the impact of machine learning on programming languages and developer tooling.<!--excerpt_end-->
 

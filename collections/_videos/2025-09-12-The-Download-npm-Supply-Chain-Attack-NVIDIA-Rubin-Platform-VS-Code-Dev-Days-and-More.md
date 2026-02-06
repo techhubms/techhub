@@ -10,7 +10,7 @@ tags:
 - GitHub MCP
 - GitHub Universe
 - Language Models
-- Machine Learning
+- ML
 - npm
 - NVIDIA Rubin
 - Remote Servers
@@ -20,13 +20,13 @@ tags:
 - VS Code
 - VS Code Dev Days
 - AI
-- Coding
 - DevOps
 - Security
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

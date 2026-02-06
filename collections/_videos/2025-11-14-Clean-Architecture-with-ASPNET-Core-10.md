@@ -21,11 +21,10 @@ tags:
 - Solution Organization
 - Testable Code
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 This video by the .NET team demonstrates how to apply clean architecture principles using ASP.NET Core 10, with guidance on project organization, code maintainability, and refactoring techniques.<!--excerpt_end-->
 

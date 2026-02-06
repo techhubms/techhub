@@ -29,14 +29,15 @@ tags:
 - SQL Analytics
 - AI
 - Azure
-- Coding
 - DevOps
-- Machine Learning
+- ML
 - News
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - ml
 primary_section: ai

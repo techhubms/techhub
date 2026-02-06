@@ -19,11 +19,10 @@ tags:
 - Startup Performance
 - TechEmpower Benchmarks
 - Web Application Performance
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Vectorial1024 provides a well-rounded technical discussion on the performance differences between JIT and AOT compilation for ASP.NET Core, supported by benchmark data and insights into .NET's compilation strategies.<!--excerpt_end-->
 

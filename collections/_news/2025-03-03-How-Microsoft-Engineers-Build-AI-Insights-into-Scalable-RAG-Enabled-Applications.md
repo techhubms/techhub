@@ -14,7 +14,7 @@ tags:
 - Engineering@Microsoft
 - Intelligent Apps
 - Large Language Models
-- Machine Learning
+- ML
 - Microsoft Engineering
 - Microsoft Security Copilot
 - RAG

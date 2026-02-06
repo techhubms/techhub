@@ -16,11 +16,10 @@ tags:
 - XML
 - XSD
 - XSLT
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Authored by technically_a_user, this article delves into practical methods for transforming XML in .NET 8+ systems, comparing XSLT and code-based approaches.<!--excerpt_end-->
 

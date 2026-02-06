@@ -26,15 +26,16 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - DevOps
-- Machine Learning
+- ML
 - Security
 - Blogs
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - ml
 - security

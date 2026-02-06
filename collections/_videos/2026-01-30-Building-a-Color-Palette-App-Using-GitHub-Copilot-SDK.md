@@ -11,7 +11,6 @@ tags:
 - AI Development
 - Application Development
 - Cassidy Williams
-- Coding
 - Color Palette App
 - Debugging
 - GitHub
@@ -23,9 +22,10 @@ tags:
 - SDK
 - Software Engineering
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 ---
 GitHub, with Cassidy Williams, demonstrates how to use the GitHub Copilot SDK and Plan Mode to rapidly build a color palette app, featuring AI-assisted coding and real-time debugging.<!--excerpt_end-->

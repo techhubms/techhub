@@ -17,7 +17,7 @@ tags:
 - GitHub
 - IoT
 - M PESA
-- Machine Learning
+- ML
 - Microsoft
 - Mobile Money
 - Mobile Technology

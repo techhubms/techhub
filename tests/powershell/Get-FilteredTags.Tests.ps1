@@ -306,7 +306,7 @@ Describe "Get-FilteredTags" {
             
             # Should have split the semicolon-separated tags
             $result | Should -Contain "Python"
-            $result | Should -Contain "Machine Learning"
+            $result | Should -Contain "ML"  # "Machine Learning" is normalized to "ML"
             $result | Should -Contain "Kubernetes"
             $result | Should -Contain "Cloud"
             $result | Should -Contain "Single Tag"
@@ -370,7 +370,7 @@ Describe "Get-FilteredTags" {
             
             # Should have properly trimmed all values
             $result | Should -Contain "Python"
-            $result | Should -Contain "Machine Learning"
+            $result | Should -Contain "ML"  # "Machine Learning" is normalized to "ML"
             $result | Should -Contain "Kubernetes"
             $result | Should -Contain "Cloud Computing"
             $result | Should -Contain "Data Science"

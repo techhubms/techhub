@@ -18,9 +18,10 @@ tags:
 - Scheduler API
 - Version Control
 - Azure
-- Machine Learning
+- ML
 - DevOps
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

@@ -21,12 +21,11 @@ tags:
 - SDK
 - TypeScript
 - Azure
-- Coding
 - News
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Hector Norzagaray presents the April 2025 Azure SDK release update, highlighting new stable and beta libraries, essential platform advisories, and resources for further reading.<!--excerpt_end-->
 

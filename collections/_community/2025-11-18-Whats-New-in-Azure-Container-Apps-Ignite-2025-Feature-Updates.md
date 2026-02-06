@@ -36,16 +36,16 @@ tags:
 - Workflow Automation
 - AI
 - Azure
-- Coding
 - DevOps
 - GitHub Copilot
-- Machine Learning
+- ML
 - Security
 - Community
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - github-copilot
 - ml

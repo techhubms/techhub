@@ -19,14 +19,14 @@ tags:
 - Secure Applications
 - Security Best Practices
 - Azure
-- Coding
 - Security
 - Videos
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Heath Stewart of Microsoft Developer presents a session on how to leverage the Azure SDK for Rust to build secure and high-performance cloud applications with robust secrets management and memory safety.<!--excerpt_end-->
 

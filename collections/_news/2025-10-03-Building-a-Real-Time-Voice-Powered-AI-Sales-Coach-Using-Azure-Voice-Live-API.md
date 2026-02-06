@@ -23,12 +23,12 @@ tags:
 - Voice AI
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Aymen Furter introduces a robust blueprint for a voice-powered AI Sales Coach using Azure's new Voice Live API, explaining the technical architecture and how developers can implement a real-time, avatar-driven training solution.<!--excerpt_end-->

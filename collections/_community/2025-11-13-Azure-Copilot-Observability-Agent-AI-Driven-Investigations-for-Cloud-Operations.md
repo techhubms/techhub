@@ -16,7 +16,7 @@ tags:
 - Cloud Automation
 - Infrastructure Monitoring
 - Log Analytics
-- Machine Learning
+- ML
 - Observability
 - Root Cause Analysis
 - Virtual Machines

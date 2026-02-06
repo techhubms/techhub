@@ -10,7 +10,6 @@ tags:
 - Azure
 - Azure SQL Database
 - Certification
-- Coding
 - Cosmos DB
 - Data Engineering
 - Data Science
@@ -33,11 +32,12 @@ tags:
 - Surrogate Keys
 - User Data Functions
 - Warehouse
+- .NET
 - Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 - security
 ---

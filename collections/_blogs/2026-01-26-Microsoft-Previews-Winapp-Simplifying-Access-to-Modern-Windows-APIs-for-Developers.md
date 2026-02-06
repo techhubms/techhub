@@ -18,11 +18,11 @@ tags:
 - Windows API
 - Windows SDK
 - WinUI
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Tim Anderson explains Microsoft's introduction of 'winapp,' a command-line tool designed to ease the adoption of modern Windows APIs outside Visual Studio, and discusses its technical implications for developers.<!--excerpt_end-->
 

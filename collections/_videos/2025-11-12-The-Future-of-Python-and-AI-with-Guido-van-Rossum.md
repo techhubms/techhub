@@ -30,12 +30,12 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer speaks with Guido van Rossum about Python's role in the AI era, leveraging Copilot and TypeAgent, and community-driven best practices.<!--excerpt_end-->

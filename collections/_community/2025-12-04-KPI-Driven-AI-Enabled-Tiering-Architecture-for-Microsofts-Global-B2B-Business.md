@@ -27,8 +27,9 @@ tags:
 - XGBoost
 - AI
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ai
 - azure

@@ -21,14 +21,14 @@ tags:
 - VS Code
 - YAML Pipelines
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 theringe explains practical deployment and build strategies for Azure Linux Web Apps, showing how to use Oryx, runtime scripting, and CI/CD to streamline Python app delivery and troubleshooting.<!--excerpt_end-->
 

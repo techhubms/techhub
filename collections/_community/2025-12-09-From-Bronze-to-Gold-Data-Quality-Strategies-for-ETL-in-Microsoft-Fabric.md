@@ -26,8 +26,9 @@ tags:
 - Silver Layer
 - Time Series Validation
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

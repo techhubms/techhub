@@ -25,11 +25,10 @@ tags:
 - SDK
 - Text To Image
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Jeremy Likness introduces developers to text-to-image features in .NET using Microsoft's AI abstractions, covering practical usage examples and best practices for leveraging MEAI's consistent API approach.<!--excerpt_end-->

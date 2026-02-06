@@ -57,7 +57,7 @@ Current valid section values (slugs) used in the system:
 - `ml` - ML (Machine Learning)
 - `devops` - DevOps
 - `azure` - Azure
-- `coding` - .NET
+- `dotnet` - .NET
 - `security` - Security
 
 ### Collection Names

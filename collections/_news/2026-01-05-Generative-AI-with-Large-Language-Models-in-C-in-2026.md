@@ -28,12 +28,11 @@ tags:
 - Vector Databases
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Jeremy Likness introduces .NET developers to the essentials of generative AI with large language models, focusing on C# and the evolving Microsoft platform ecosystem.<!--excerpt_end-->

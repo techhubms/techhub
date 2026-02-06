@@ -22,8 +22,9 @@ tags:
 - UDF
 - User Data Functions
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

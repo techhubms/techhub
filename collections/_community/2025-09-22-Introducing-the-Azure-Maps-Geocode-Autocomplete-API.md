@@ -22,12 +22,12 @@ tags:
 - Store Locator
 - Web Application
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 sinnypan introduces the Azure Maps Geocode Autocomplete API, detailing its enhanced autocomplete capabilities, technical features, and integration scenarios for developers working with location data.<!--excerpt_end-->
 

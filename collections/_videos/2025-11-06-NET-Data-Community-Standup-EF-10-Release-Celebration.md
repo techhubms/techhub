@@ -21,11 +21,10 @@ tags:
 - Modern .NET
 - ORM
 - Q&A
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dotnet and the EF team host a community standup celebrating the EF 10 release, featuring Jiri Cincura. The event provides .NET developers with valuable insights, Q&A opportunities, and a look at what’s new in Entity Framework 10.<!--excerpt_end-->
 

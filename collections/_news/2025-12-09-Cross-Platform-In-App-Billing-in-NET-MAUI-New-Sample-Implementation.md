@@ -26,11 +26,10 @@ tags:
 - StoreKit 1
 - StoreKit 2
 - Windows
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Gerald Versluis introduces a new .NET MAUI sample for integrating cross-platform in-app billing, guiding developers through platform-specific APIs and architectural best practices.<!--excerpt_end-->
 

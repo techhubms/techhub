@@ -21,13 +21,13 @@ tags:
 - Version Control
 - Web Development
 - AI
-- Coding
 - DevOps
 - GitHub Copilot
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - github-copilot
 primary_section: github-copilot

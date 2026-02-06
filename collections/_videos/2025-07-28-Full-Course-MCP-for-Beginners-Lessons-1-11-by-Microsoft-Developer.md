@@ -15,12 +15,12 @@ tags:
 - Scalability
 - VS Code
 - AI
-- Coding
 - Security
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - security
 primary_section: ai
 ---

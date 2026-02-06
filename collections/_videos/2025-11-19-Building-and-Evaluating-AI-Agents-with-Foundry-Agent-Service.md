@@ -22,12 +22,12 @@ tags:
 - W&B Weave
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Presented by Microsoft Events and Katherin Madche at Ignite 2025, this session demonstrates how to build and evaluate robust AI agents using Foundry Agent Service, Azure Functions, and W&B Weave.<!--excerpt_end-->

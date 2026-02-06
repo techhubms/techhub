@@ -23,13 +23,12 @@ tags:
 - Security Best Practices
 - Security Patterns
 - VS
-- Coding
 - Security
 - Videos
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet presents a behind-the-scenes review of recent .NET security investigations by MSRC, highlighting coding pitfalls, design oversights, and practical strategies for secure .NET development.<!--excerpt_end-->
 

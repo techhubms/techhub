@@ -23,12 +23,12 @@ tags:
 - SQLite
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Bobur Umurzokov showcases how to build a smart shopping assistant using Memori with the Azure AI Foundry Agent service, enabling AI agents to remember customer data and personalize interactions effectively.<!--excerpt_end-->

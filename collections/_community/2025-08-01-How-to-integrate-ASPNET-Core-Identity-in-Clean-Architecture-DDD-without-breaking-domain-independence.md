@@ -16,13 +16,12 @@ tags:
 - Infrastructure
 - Roles
 - User Management
-- Coding
 - Security
 - Community
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Successful_Cycle_465 asks about integrating ASP.NET Core Identity into a Clean Architecture (DDD) app while keeping the domain layer independent, and requests best practices and examples.<!--excerpt_end-->
 

@@ -24,12 +24,12 @@ tags:
 - Token Context
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Written by Ananya Bishnoi, Anthony Mocny, and Govind Kamtamneni, this post introduces codex-mini—a new, fast, and scalable Azure OpenAI model for code generation in CLI environments.<!--excerpt_end-->

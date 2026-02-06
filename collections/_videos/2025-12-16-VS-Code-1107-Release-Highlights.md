@@ -21,11 +21,11 @@ tags:
 - Software Developer
 - Software Development
 - VS Code
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Reynald Adolphe showcases the key highlights from the Visual Studio Code 1.107 release, including editor improvements and new features for developers.<!--excerpt_end-->
 

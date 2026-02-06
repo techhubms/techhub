@@ -33,14 +33,13 @@ tags:
 - Typescript
 - VS Code
 - Azure
-- Coding
 - DevOps
 - News
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Kristen Womack presents an in-depth overview of the Azure Developer CLI (azd) July 2025 release, highlighting major new features, key improvements, bug fixes, updated documentation, and community-driven templates for Azure developers.<!--excerpt_end-->
 

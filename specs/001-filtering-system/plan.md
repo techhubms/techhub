@@ -67,7 +67,7 @@ Filters use OR logic within tags, AND logic between filter types, with URL state
 
 **Evidence**: See spec.md - Testing Strategy section defines unit, integration, component, and E2E test requirements.
 
-### Rule #2: 10-Step Development Workflow ✅
+### Rule #2: 9-step Development Workflow ✅
 
 **Status**: COMPLIANT - Followed during specification phase
 
@@ -621,7 +621,7 @@ ContentItemCard.razor (MODIFIED)
 
 **Status**: ✅ COMPLETE - All 7 constitutional rules verified against final Phase 1 design
 
-### Rule #1: 10-Step Workflow ✅
+### Rule #1: 9-step Workflow ✅
 
 **Verification**: Phase 1 artifacts follow all 10 steps:
 
@@ -636,7 +636,7 @@ ContentItemCard.razor (MODIFIED)
 9. ⏭️ Update documentation (quickstart.md, functional docs)
 10. ⏭️ Report completion (after implementation)
 
-**Design Compliance**: Data models, contracts, and quickstart guide follow 10-step workflow structure.
+**Design Compliance**: Data models, contracts, and quickstart guide follow 9-step workflow structure.
 
 ### Rule #2: Test-Driven Development ✅
 

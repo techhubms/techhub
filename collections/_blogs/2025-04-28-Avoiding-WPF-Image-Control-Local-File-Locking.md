@@ -17,11 +17,10 @@ tags:
 - WPF
 - WPF .NET Windows
 - XAML
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this technical post, Rick Strahl discusses how WPF’s Image control locks local image files, the issues it causes, and presents XAML and custom binding converter strategies—including image caching—to solve the problem efficiently for .NET Windows applications.<!--excerpt_end-->
 

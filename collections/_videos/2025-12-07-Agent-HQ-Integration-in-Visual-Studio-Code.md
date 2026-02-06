@@ -20,11 +20,11 @@ tags:
 - VS Code
 - Workflow Automation
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Olivia Guzzardo McVicker demonstrates how Agent HQ integrates with Visual Studio Code, enabling developers to manage and customize agent sessions for enhanced workflow efficiency.<!--excerpt_end-->

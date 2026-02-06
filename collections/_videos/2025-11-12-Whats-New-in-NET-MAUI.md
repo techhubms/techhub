@@ -21,11 +21,10 @@ tags:
 - User Interface
 - VS
 - XAML
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents an overview of the newest features in .NET MAUI for .NET 10, emphasizing performance, cross-platform development, and enhanced tooling for developers.<!--excerpt_end-->
 

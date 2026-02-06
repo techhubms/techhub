@@ -17,11 +17,10 @@ tags:
 - Raspberry Pi
 - Software Development
 - Tech Conference
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a hands-on journey into automating beer brewing using .NET on Raspberry Pi and Meadow boards, providing guidance for developers interested in IoT device automation.<!--excerpt_end-->
 

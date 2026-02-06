@@ -27,12 +27,11 @@ tags:
 - Support
 - VS
 - AI
-- Coding
 - DevOps
 - News
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 primary_section: ai
 ---

@@ -18,7 +18,7 @@ tags:
 - Diagnostics
 - Investigation Workflow
 - LLMs
-- Machine Learning
+- ML
 - Metric Analysis
 - Observability
 - Resource Health

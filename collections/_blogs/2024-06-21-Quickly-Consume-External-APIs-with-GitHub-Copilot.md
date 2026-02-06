@@ -11,12 +11,12 @@ tags:
 - OpenWeather
 - AI
 - GitHub Copilot
-- Coding
 - Blogs
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 In this article, Jesse Swart's Blog explores how developers can leverage GitHub Copilot to work with external APIs, especially when SDKs or OpenAPI specifications are missing. <!--excerpt_end--> Handling APIs with only documentation (and no formal SDKs or specs) can be a challenge, but tools like GitHub Copilot can greatly simplify the process.

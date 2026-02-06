@@ -21,12 +21,11 @@ tags:
 - Web Application Development
 - AI
 - Azure
-- Coding
 - Community
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 MariselaC announces the Microsoft Ignite 2025 NYC Community Summit, outlining key sessions and topics in AI, Azure, and development. The event brings together local tech leaders, MVPs, and enthusiasts.<!--excerpt_end-->

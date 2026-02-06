@@ -23,11 +23,11 @@ tags:
 - VS Code
 - VS Code Extensions
 - VS Code Features
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Burke Holland and James Montemagno walk through the new Beast mode in Visual Studio Code, offering practical insights for developers seeking enhanced workflows.<!--excerpt_end-->
 

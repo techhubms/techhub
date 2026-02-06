@@ -27,10 +27,11 @@ tags:
 - Sentinel Data Lake
 - VNet Encryption
 - Azure
-- Machine Learning
+- ML
 - DevOps
 - Security
 - Videos
+- Machine Learning
 section_names:
 - azure
 - ml

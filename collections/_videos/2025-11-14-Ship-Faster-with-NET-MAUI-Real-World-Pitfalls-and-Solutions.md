@@ -26,11 +26,10 @@ tags:
 - Third Party Controls
 - Troubleshooting
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a no-nonsense guide for .NET MAUI developers, sharing lessons learned and robust fixes for common real-world app challenges in mobile development.<!--excerpt_end-->
 

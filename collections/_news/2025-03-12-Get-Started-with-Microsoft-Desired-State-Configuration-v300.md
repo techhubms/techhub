@@ -22,13 +22,13 @@ tags:
 - V3.0.0
 - Windows Server
 - YAML
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Jason Helmick walks through the installation and basics of Microsoft Desired State Configuration v3.0.0, helping IT professionals and developers automate infrastructure management using PowerShell.<!--excerpt_end-->
 

@@ -26,12 +26,12 @@ tags:
 - WebSockets
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Pamela Fox demonstrates the value and implementation of streaming for LLM-powered chat applications on Azure, guiding developers through backend and frontend techniques, complete with sample repositories and actionable tips.<!--excerpt_end-->

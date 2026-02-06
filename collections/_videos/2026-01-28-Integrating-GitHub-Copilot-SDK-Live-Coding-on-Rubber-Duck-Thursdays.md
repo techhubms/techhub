@@ -9,7 +9,6 @@ tags:
 - AI
 - AI Developer Tools
 - Application Development
-- Coding
 - Copilot CLI
 - Copilot SDK
 - Developer Productivity
@@ -19,9 +18,10 @@ tags:
 - Programming
 - SDK Integration
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 ---
 GitHub hosts a Rubber Duck Thursdays session where the team demonstrates how to build with GitHub Copilot SDK and Copilot CLI, showing developers practical integration techniques.<!--excerpt_end-->

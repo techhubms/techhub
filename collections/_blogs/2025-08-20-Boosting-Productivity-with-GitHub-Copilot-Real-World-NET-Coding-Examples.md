@@ -24,12 +24,11 @@ tags:
 - XML Documentation
 - xUnit
 - AI
-- Coding
 - GitHub Copilot
 - Blogs
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

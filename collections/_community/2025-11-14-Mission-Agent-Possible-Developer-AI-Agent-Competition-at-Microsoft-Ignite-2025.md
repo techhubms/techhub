@@ -14,7 +14,7 @@ tags:
 - Event
 - GitHub Models Playground
 - Intelligent Solutions
-- Machine Learning
+- ML
 - Microsoft Azure
 - Microsoft Ignite
 - Model Selection

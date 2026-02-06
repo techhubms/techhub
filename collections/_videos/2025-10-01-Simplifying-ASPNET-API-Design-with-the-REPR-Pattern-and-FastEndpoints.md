@@ -25,11 +25,10 @@ tags:
 - Request Validation
 - Response Structuring
 - Software Architecture
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Marcel Medina shares practical API design techniques for .NET developers using the REPR pattern and FastEndpoints, streamlining endpoint development and improving code quality.<!--excerpt_end-->
 

@@ -19,11 +19,10 @@ tags:
 - Shay Rojansky
 - Software Developer
 - Software Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this .NET Data Community Standup, author Lukas Eder demonstrates jOOQ and explores ideas that Entity Framework (EF) developers can learn from. Hosted by Jiri Cincura and Shay Rojansky, this session offers valuable takeaways for .NET data developers.<!--excerpt_end-->
 

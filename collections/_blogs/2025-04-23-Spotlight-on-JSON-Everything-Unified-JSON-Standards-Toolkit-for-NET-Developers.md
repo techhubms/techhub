@@ -19,11 +19,10 @@ tags:
 - NuGet
 - Open Source
 - Web API
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 This post, authored by .NET Foundation News and Blog, introduces JSON Everything—a modular, standards-compliant .NET library that unifies various JSON technologies for modern application development.<!--excerpt_end-->
 

@@ -25,15 +25,15 @@ tags:
 - GitHub Copilot
 - Azure
 - DevOps
-- Coding
 - Security
 - News
+- .NET
 section_names:
 - ai
 - github-copilot
 - azure
 - devops
-- coding
+- dotnet
 - security
 primary_section: github-copilot
 ---

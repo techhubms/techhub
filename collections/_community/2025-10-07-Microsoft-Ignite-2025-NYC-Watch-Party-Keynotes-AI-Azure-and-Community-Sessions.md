@@ -20,12 +20,11 @@ tags:
 - Vector Search
 - AI
 - Azure
-- Coding
 - Community
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Organized by MariselaC, the Microsoft Ignite 2025 NYC Watch Party brings the tech community together for keynotes, AI/ML sessions, .NET, Azure, Power Platform, and networking opportunities in Times Square.<!--excerpt_end-->

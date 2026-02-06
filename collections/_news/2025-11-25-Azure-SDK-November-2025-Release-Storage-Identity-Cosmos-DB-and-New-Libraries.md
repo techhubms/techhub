@@ -29,12 +29,11 @@ tags:
 - SDK
 - WebPubSub
 - Azure
-- Coding
 - News
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Ronnie Geraghty summarizes the new features and improvements in the Azure SDK November 2025 release, including updates for Storage, Identity, Cosmos DB, and a range of new and beta libraries for .NET, Java, Python, and more.<!--excerpt_end-->
 

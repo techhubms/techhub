@@ -23,13 +23,13 @@ tags:
 - Secure Core PC
 - Windows Drivers Rs
 - Windows Security
-- Coding
 - Security
 - Videos
+- .NET
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Microsoft Events presents an in-depth Ignite session featuring David Abzarian and Karan Dhillon, highlighting Surface innovation in Windows device security through memory-safe Rust firmware, open source drivers, and collaborative technology initiatives.<!--excerpt_end-->
 

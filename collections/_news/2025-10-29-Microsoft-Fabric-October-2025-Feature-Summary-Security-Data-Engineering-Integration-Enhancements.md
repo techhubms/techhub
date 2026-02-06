@@ -26,9 +26,10 @@ tags:
 - SQL
 - Workspace Level Private Link
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

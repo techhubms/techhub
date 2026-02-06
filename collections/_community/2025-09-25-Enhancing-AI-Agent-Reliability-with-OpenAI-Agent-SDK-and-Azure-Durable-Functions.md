@@ -23,12 +23,12 @@ tags:
 - Workflow Reliability
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 greenie-msft details strategies for making AI agents more reliable in production using the OpenAI Agent SDK with Azure Durable Functions, showing how automatic state management and durable orchestration reduce failures and lost progress.<!--excerpt_end-->

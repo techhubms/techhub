@@ -21,13 +21,12 @@ tags:
 - Orchestration
 - Productivity
 - VS
-- Coding
 - DevOps
 - Videos
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet and the .NET team present a keynote introducing .NET 10, C# 14, and Visual Studio 2026, highlighting major new features and productivity upgrades for modern app development.<!--excerpt_end-->
 

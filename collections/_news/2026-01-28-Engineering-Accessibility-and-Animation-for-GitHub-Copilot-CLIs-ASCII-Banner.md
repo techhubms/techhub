@@ -12,7 +12,6 @@ tags:
 - ANSI Color Codes
 - ASCII Animation
 - CLI Development
-- Coding
 - Developer Tools
 - Engineering
 - GitHub CLI
@@ -24,9 +23,10 @@ tags:
 - React
 - Terminal Engineering
 - TypeScript
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 ---
 Aaron Winston details the engineering and design challenges behind the animated ASCII banner in GitHub Copilot CLI, highlighting collaboration between design and engineering, accessibility best practices, and the technical creativity required for modern terminal experiences.<!--excerpt_end-->

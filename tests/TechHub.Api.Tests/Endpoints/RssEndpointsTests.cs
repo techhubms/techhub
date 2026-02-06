@@ -78,7 +78,7 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     [InlineData("github-copilot")]
     [InlineData("ml")]
     [InlineData("azure")]
-    [InlineData("coding")]
+    [InlineData("dotnet")]
     [InlineData("devops")]
     [InlineData("security")]
     public async Task GetSectionFeed_ValidSection_ReturnsValidRss(string sectionName)

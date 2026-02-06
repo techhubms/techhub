@@ -25,11 +25,10 @@ tags:
 - Task.Delay
 - Win32 API
 - Windows
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock details the development of 'sleep-pc,' a native AOT .NET tool for putting Windows PCs to sleep after a timeout, highlighting his approach, toolchain choices, and packaging for NuGet.<!--excerpt_end-->
 

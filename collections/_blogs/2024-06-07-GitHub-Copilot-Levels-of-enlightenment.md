@@ -13,12 +13,12 @@ tags:
 - Software Practices
 - AI
 - GitHub Copilot
-- Coding
 - Blogs
+- .NET
 section_names:
 - ai
 - github-copilot
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 In his video series 'Levels of Enlightenment,' Rob Bos shares his journey and practical lessons learned while using GitHub Copilot over the last year and a half. <!--excerpt_end--> Each episode highlights an "aha" moment, outlining strategies to help developers extract greater value from Copilot and improve their software development process.

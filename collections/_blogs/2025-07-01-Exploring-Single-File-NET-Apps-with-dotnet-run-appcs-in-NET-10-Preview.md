@@ -20,11 +20,10 @@ tags:
 - Shebang
 - Single File Programs
 - VS Code
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock introduces and examines the new single-file .NET run experience in .NET 10, highlighting its features, scenarios, and emerging enhancements that simplify C# development.<!--excerpt_end-->
 

@@ -20,13 +20,13 @@ tags:
 - Uncategorized
 - VS
 - Windows Development
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Matt Hernandez introduces Podman integration in Visual Studio 2026 Insiders, showing how developers can create, run, and debug containers securely within the Visual Studio environment.<!--excerpt_end-->
 

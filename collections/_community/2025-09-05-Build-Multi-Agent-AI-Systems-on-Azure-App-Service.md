@@ -22,12 +22,12 @@ tags:
 - Python
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 jordanselig illustrates how to build sophisticated multi-agent AI applications on Azure App Service, combining Azure AI Foundry, .NET Aspire, and MCP tooling for a cloud-native, scalable, and observable solution.<!--excerpt_end-->

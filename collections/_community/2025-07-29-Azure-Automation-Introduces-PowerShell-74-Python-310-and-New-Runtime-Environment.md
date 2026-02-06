@@ -18,14 +18,14 @@ tags:
 - Runtime Environment
 - Script Modernization
 - Azure
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Nikita_Bajaj announces major enhancements to Azure Automation, including support for PowerShell 7.4, Python 3.10, and a new Runtime Environment. The update boosts security, script modernization, control, and operational flexibility for enterprise automation.<!--excerpt_end-->
 

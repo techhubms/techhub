@@ -18,11 +18,10 @@ tags:
 - Performance
 - Programming
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Mads presents an in-depth tour of new and forthcoming features in C#, spotlighting what developers can expect in C# 14. The session emphasizes practical improvements in code safety, performance, and expressiveness.<!--excerpt_end-->
 

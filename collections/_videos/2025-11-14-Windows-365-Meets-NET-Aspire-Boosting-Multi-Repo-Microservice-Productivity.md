@@ -19,13 +19,13 @@ tags:
 - RunAsEmulator Extension
 - Seed Data
 - Windows 365
-- Coding
 - DevOps
 - Videos
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet presents a .NET Conf 2025 session on how Windows 365 uses .NET Aspire and supporting extensions to enhance productivity and collaboration in multi-repo microservice engineering environments.<!--excerpt_end-->
 

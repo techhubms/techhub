@@ -15,11 +15,11 @@ tags:
 - Virtual Machines
 - Windows Subsystem For Linux
 - WSL
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Presented by Craig Loewen from Microsoft Developer, this video discusses the open sourcing of WSL and what developers can explore and build with the newly available code.<!--excerpt_end-->
 

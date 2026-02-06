@@ -25,14 +25,14 @@ tags:
 - Two Factor Authentication
 - VS Code
 - Azure
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 StephenMS shows how to build a secure TOTP authenticator app using Azure Functions and Azure Key Vault, covering secure secret storage, API endpoints, and cloud-native best practices in authentication.<!--excerpt_end-->
 

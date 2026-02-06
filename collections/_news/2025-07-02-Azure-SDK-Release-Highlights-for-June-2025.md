@@ -29,13 +29,13 @@ tags:
 - SDK
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 primary_section: ai
 ---

@@ -21,14 +21,14 @@ tags:
 - UI Improvements
 - Webhooks
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this comprehensive community post, mynster outlines several bugs and feature suggestions for Azure Automation Accounts, aiming to improve reliability, developer experience, and usability for automation engineers.<!--excerpt_end-->
 

@@ -24,8 +24,9 @@ tags:
 - Table Mapping
 - Tenant Transfer
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

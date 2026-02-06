@@ -28,12 +28,11 @@ tags:
 - Workflow Automation
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this .NET Live session, Vic Perdana, Katie Savage, and Maira Wenzel reveal how to use Agent Framework and Azure AI Foundry to create practical, interoperable AI agents. The demo highlights SemantiClip—an open-source project that automatically turns video content into blogs.<!--excerpt_end-->

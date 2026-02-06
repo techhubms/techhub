@@ -19,11 +19,11 @@ tags:
 - Type Inference
 - TypeScript
 - TypeScript 5.9
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Daniel Rosenwasser details the latest features and improvements in the TypeScript 5.9 Release Candidate. This update introduces new configuration defaults, deferred module imports, enhanced editor integration, and improvements based on community feedback.<!--excerpt_end-->
 

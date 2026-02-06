@@ -28,11 +28,10 @@ tags:
 - Testing
 - Workflow Automation
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Luis Quintanilla introduces the Microsoft Agent Framework, guiding .NET developers in building, orchestrating, and deploying AI agents using familiar tools and robust abstractions.<!--excerpt_end-->

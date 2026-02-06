@@ -23,12 +23,12 @@ tags:
 - Service Mesh
 - Solution Architecture
 - Azure
-- Coding
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny provides a detailed guide to service discovery patterns in Microsoft Azure, helping developers and architects ensure reliable microservice communication in cloud-native applications.<!--excerpt_end-->
 

@@ -25,11 +25,10 @@ tags:
 - ProcessRuntime
 - Semantic Kernel
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI guides you through orchestrating multiple AI agents in a Blazor app using the Semantic Kernel framework, sharing code examples and orchestration strategies tailored for .NET developers.<!--excerpt_end-->

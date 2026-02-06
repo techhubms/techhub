@@ -22,8 +22,9 @@ tags:
 - Scheduling
 - SQL Models
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

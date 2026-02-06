@@ -23,11 +23,10 @@ tags:
 - Uno Platform
 - VS
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Presented by the dotnet team, this video showcases how Uno Platform and AI enable developers to quickly generate full-stack, cross-platform .NET applications, while highlighting new productivity features and the latest .NET advancements.<!--excerpt_end-->

@@ -21,8 +21,9 @@ tags:
 - Multi Cloud
 - SAP Datasphere
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

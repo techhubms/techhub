@@ -14,7 +14,6 @@ tags:
 - Code
 - Code Editor
 - Codeeditor
-- Coding
 - Custom Workflows
 - Demo
 - Developer Tools
@@ -26,9 +25,10 @@ tags:
 - Videos
 - VS Code
 - Workflow Automation
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 ---
 The Visual Studio Code team hosts a live event featuring Olivia Guzzardo McVicker and others, exploring advances in agentic development and AI integration for developers.<!--excerpt_end-->
 

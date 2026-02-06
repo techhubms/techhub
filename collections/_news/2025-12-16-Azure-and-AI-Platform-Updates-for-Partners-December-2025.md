@@ -28,9 +28,10 @@ tags:
 - Retrieval Augmented Generation
 - AI
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - ai
 - azure

@@ -16,11 +16,10 @@ tags:
 - Spinner Button
 - UI Feedback
 - UX
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Fragrant_Ride_29 discusses the challenges of displaying a spinner inside a submit button in ASP.NET MVC forms without causing double server requests or breaking the framework's default submission behavior.<!--excerpt_end-->
 

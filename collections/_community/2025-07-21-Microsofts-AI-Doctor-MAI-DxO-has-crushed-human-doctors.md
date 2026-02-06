@@ -11,7 +11,7 @@ tags:
 - ArtificialInteligence
 - Diagnostic Tools
 - Healthcare Innovation
-- Machine Learning
+- ML
 - Mai Dxo
 - Medical Diagnostics
 - Medical Technology

@@ -19,11 +19,10 @@ tags:
 - Validation
 - VS Code
 - WebAuthN
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, the .NET team, including John Galloway, Daniel Roth, Chet Husk, and Joel Verhagen, present the latest enhancements in .NET 10 Preview 6.<!--excerpt_end-->
 

@@ -15,11 +15,11 @@ tags:
 - Type System
 - TypeScript
 - VS Code
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Daniel Rosenwasser announces TypeScript 5.8, detailing new type system features, improved Node.js module interop, and important optimizations. This post guides TypeScript users through the latest enhancements and key behavioral updates.<!--excerpt_end-->
 

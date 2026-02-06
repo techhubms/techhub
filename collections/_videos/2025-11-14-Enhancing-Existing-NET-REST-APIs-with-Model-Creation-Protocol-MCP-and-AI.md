@@ -21,11 +21,10 @@ tags:
 - REST API
 - Web API
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet presents a session on how to integrate Model Creation Protocol (MCP) into existing ASP.NET Core REST APIs, empowering them with AI and making them LLM-friendly.<!--excerpt_end-->

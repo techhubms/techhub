@@ -21,11 +21,10 @@ tags:
 - SpringArm3D
 - Third Person Camera
 - VS Code
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet guides you through building foundational systems in Godot using C#, including scenes, nodes, collision, and third-person camera setups in this practical game development tutorial.<!--excerpt_end-->
 

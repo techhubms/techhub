@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 14
 date: 2023-05-01 00:00:00 +00:00
 author: Xebia
@@ -22,14 +22,14 @@ tags:
 - Zero Trust
 - AI
 - Azure
-- Coding
 - DevOps
 - Security
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

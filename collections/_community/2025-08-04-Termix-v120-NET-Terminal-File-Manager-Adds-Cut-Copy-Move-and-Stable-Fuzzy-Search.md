@@ -17,11 +17,10 @@ tags:
 - Progress Bar
 - Terminal
 - Termix
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, amrohann presents Termix v1.2.0, a .NET-powered terminal file manager, highlighting major new features and installation tips.<!--excerpt_end-->
 

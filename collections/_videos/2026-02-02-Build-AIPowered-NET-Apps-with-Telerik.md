@@ -13,7 +13,6 @@ tags:
 - ASP.NET Core
 - Aspdotnet
 - Blazor
-- Coding
 - Daniel Roth
 - Demo
 - Developer
@@ -30,7 +29,7 @@ tags:
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 ---
 In this video, Ed Charbeneau from Progress Telerik joins Daniel Roth to demonstrate how developers can leverage AI coding tools and intelligent UI components for building smart .NET Blazor applications.<!--excerpt_end-->
 

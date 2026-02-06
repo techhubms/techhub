@@ -19,11 +19,11 @@ tags:
 - Multi Agent Systems
 - Semantic Kernel
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI presents a video on building multi-agent systems through Semantic Kernel, demonstrating how agent orchestration leads to smarter, more adaptive AI solutions.<!--excerpt_end-->

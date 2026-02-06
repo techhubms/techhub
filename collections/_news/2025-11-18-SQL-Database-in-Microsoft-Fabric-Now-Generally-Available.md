@@ -38,9 +38,10 @@ tags:
 - Vector Data
 - AI
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - ai
 - azure

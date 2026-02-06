@@ -19,11 +19,11 @@ tags:
 - User Experience
 - VS
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Mads Kristensen introduces Visual Studio 2026, highlighting a leap in performance, a fresh UI, and the integration of powerful AI features—like native GitHub Copilot support—for developers.<!--excerpt_end-->

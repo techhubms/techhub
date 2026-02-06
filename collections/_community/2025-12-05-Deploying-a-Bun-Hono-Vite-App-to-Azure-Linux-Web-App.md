@@ -22,14 +22,14 @@ tags:
 - VS Code
 - Web Development
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 theringe guides readers through deploying a Bun, Hono, and Vite application to Azure Linux Web App, outlining local development, Azure configuration, and deployment strategies.<!--excerpt_end-->
 

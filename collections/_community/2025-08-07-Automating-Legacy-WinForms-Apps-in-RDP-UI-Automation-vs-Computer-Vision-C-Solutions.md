@@ -31,11 +31,11 @@ tags:
 - Windows Forms
 - Windows Server
 - YOLO
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Grifone87 and the r/csharp community discuss complexities of automating a WinForms insurance system inside an RDP session with C#, weighing UI automation versus computer vision approaches with useful insights and reverse engineering tips.<!--excerpt_end-->
 

@@ -24,11 +24,10 @@ tags:
 - Upskilling
 - Vanilla C#
 - YouTube Teaching
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Ok_Finish_1661 and fellow community members discuss diverse strategies for improving C# and .NET skills, recommending books, side projects, teaching, and advanced topic exploration.<!--excerpt_end-->
 

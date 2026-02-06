@@ -17,11 +17,10 @@ tags:
 - Spring Cloud
 - Steeltoe
 - Web Applications
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 .NET Foundation News and Blog introduces Steeltoe, a robust toolkit for .NET developers focused on building secure, scalable, cloud-native applications and microservices.<!--excerpt_end-->
 

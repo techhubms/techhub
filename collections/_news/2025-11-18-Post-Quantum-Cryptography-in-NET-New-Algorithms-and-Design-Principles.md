@@ -29,13 +29,12 @@ tags:
 - System.Security.Cryptography
 - TLS 1.3
 - X509Certificate2
-- Coding
 - Security
 - News
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Jeremy Barton walks through the integration of post-quantum cryptography (PQC) algorithms in .NET 10, explaining new classes, technical challenges, and practical usage for developers.<!--excerpt_end-->
 

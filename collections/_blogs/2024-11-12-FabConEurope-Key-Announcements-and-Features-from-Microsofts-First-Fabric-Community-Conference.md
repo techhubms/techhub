@@ -21,8 +21,9 @@ tags:
 - Real Time Analytics
 - T SQL Notebooks
 - Azure
-- Machine Learning
+- ML
 - Blogs
+- Machine Learning
 section_names:
 - azure
 - ml

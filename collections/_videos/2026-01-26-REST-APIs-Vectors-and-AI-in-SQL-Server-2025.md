@@ -25,13 +25,14 @@ tags:
 - Vector Data
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - Videos
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 primary_section: ai
 ---

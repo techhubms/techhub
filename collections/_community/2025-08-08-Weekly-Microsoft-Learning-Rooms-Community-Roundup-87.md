@@ -23,14 +23,15 @@ tags:
 - Tech Events
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - Security
 - Community
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 - security
 primary_section: ai

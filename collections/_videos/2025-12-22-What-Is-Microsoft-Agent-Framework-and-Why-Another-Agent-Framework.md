@@ -21,11 +21,10 @@ tags:
 - Semantic Kernel
 - State Management
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI explains the Microsoft Agent Framework, highlighting its evolution from Semantic Kernel and AutoGen, and its advantages for building robust AI agent systems with .NET and Python.<!--excerpt_end-->

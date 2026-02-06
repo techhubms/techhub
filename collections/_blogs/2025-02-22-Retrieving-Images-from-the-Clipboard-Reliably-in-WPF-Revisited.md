@@ -20,11 +20,10 @@ tags:
 - Windows
 - Windows Forms
 - WPF
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Rick Strahl reviews the long-standing problems with image data retrieval from the Windows clipboard in WPF, and demonstrates robust solutions using intermediary bitmaps and pixel format fixes. He includes code samples and performance notes for developers working with UI image handling.<!--excerpt_end-->
 

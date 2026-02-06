@@ -26,11 +26,10 @@ tags:
 - SDK
 - TPA
 - Trusted Platform Assemblies
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock provides a technical walkthrough exploring .NET's boot process using host tracing, offering developers step-by-step insights into muxer, hostfxr, and hostpolicy.dll components.<!--excerpt_end-->
 

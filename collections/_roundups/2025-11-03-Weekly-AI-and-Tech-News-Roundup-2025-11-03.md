@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Agents, Automation, and AI: A New Week for GitHub Copilot and Cloud Platforms'
 author: TechHub
 date: 2025-11-03 09:00:00 +00:00
@@ -16,18 +16,18 @@ tags:
 - VS Code
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

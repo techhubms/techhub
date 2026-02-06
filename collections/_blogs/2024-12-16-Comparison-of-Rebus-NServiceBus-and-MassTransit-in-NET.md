@@ -23,13 +23,12 @@ tags:
 - Rebus
 - Saga Patterns
 - Service Bus
-- Coding
 - Security
 - Blogs
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by Michal Kaminski, this comprehensive comparison explores Rebus, NServiceBus, and MassTransit, guiding .NET developers through their features, implementation, and use cases.<!--excerpt_end-->
 

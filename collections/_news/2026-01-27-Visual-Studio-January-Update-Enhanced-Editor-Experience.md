@@ -2,12 +2,11 @@
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-january-update-enhanced-editor-experience/
 title: Visual Studio January Update — Enhanced Editor Experience
 author: Simona Liao
-primary_section: coding
+primary_section: dotnet
 feed_name: Microsoft VisualStudio Blog
 date: 2026-01-27 18:30:12 +00:00
 tags:
 - Code Completion
-- Coding
 - Colorized Suggestions
 - Copilot Chat Integration
 - Developer Productivity
@@ -25,8 +24,9 @@ tags:
 - Syntactic Line Compression
 - Text Editor Options
 - VS
+- .NET
 section_names:
-- coding
+- dotnet
 ---
 Simona Liao shares the latest Visual Studio January update, focusing on enhanced editor productivity and customization features for developers.<!--excerpt_end-->
 

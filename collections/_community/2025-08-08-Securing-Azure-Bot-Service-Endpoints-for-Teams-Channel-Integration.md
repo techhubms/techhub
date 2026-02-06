@@ -25,14 +25,14 @@ tags:
 - Service Principal
 - Token Authentication
 - Azure
-- Coding
 - Security
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 daisami guides developers through securing Azure Bot Service endpoints for Microsoft Teams, focusing on application-level protections, token validation, and tenant restrictions to safeguard accessible endpoints in ASP.NET Core bots.<!--excerpt_end-->
 

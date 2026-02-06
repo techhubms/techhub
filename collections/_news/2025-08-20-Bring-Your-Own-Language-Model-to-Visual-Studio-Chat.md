@@ -24,11 +24,11 @@ tags:
 - OpenAI
 - VS
 - AI
-- Coding
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Rhea Patel and Samruddhi Khandale introduce a new Visual Studio Chat feature allowing developers to bring their own language models from providers like OpenAI, Anthropic, and Google, enabling customization, flexibility, and direct API integration.<!--excerpt_end-->

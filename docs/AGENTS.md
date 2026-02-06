@@ -7,12 +7,12 @@
 
 | Tier | File | Purpose |
 |------|------|---------|
-| 1 | **[Root AGENTS.md](../AGENTS.md)** | AI workflow - 10-step development process |
-| 2 | **[README.md](../README.md)** | Project overview, tech stack, getting started |
+| 1 | **[Root AGENTS.md](../AGENTS.md)** | AI workflow - 9-step development process |
+| 2 | **[README.md](../README.md)** | Minimal human entry point - what/where to find things |
 | 3 | **Domain AGENTS.md files** | Code patterns, framework guidance, domain rules |
-| 4 | **docs/** (this directory) | WHAT the system does - functional specs |
+| 4 | **docs/** (this directory) | ALL system documentation - architecture, features, specs |
 
-**Precedence**: Domain AGENTS.md (deepest) → Root AGENTS.md → README.md (shallowest)
+**Precedence**: Docs (all detailed docs live here) -> Domain AGENTS.md -> Root AGENTS.md -> README.md (minimal)
 
 **Finding docs**: See [documentation-index.md](documentation-index.md) for complete file listing with summaries.
 
@@ -59,13 +59,17 @@
 | Content Type | Location |
 |--------------|----------|
 | AI development process, workflow steps | Root [AGENTS.md](../AGENTS.md) |
-| Project overview, tech stack, terminology | [README.md](../README.md) |
-| Code patterns, framework guidance, implementation HOW | Domain AGENTS.md files |
-| System behavior, API contracts, features (WHAT & WHY) | docs/ |
+| Human-friendly project intro, quick start | [README.md](../README.md) |
+| Code patterns, framework guidance, implementation explanation | Domain AGENTS.md files |
+| Any functional documentation, architecture, features, tech stack, terminology, specs | docs/ |
 | Writing standards | [writing-style-guidelines.md](writing-style-guidelines.md) |
 | Content frontmatter | [collections/AGENTS.md](../collections/AGENTS.md) |
 
-**Rule of Thumb**: If it helps understand system behavior → docs/. If it helps implement features → AGENTS.md.
+**Rule of Thumb**:
+
+- **README.md** is MINIMAL - only project intro and quick start pointers
+- **docs/** contains ALL detailed documentation - architecture, features, tech stack, terminology, specs
+- **AGENTS.md** files contain implementation guidance for AI agents and developers
 
 **docs/ File Categories**:
 

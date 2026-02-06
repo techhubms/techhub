@@ -31,10 +31,11 @@ tags:
 - WAF Security Copilot
 - Workload Optimization
 - Azure
-- Machine Learning
+- ML
 - DevOps
 - Security
 - Videos
+- Machine Learning
 section_names:
 - azure
 - ml

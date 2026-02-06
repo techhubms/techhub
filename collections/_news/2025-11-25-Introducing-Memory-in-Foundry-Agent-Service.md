@@ -17,7 +17,7 @@ tags:
 - Gpt 4.1
 - Hybrid Retrieval
 - Long Term Memory
-- Machine Learning
+- ML
 - MCP
 - Memory
 - Memory Store

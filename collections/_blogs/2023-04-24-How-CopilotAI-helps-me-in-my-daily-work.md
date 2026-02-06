@@ -15,13 +15,13 @@ tags:
 - AI
 - Azure
 - GitHub Copilot
-- Coding
 - Blogs
+- .NET
 section_names:
 - ai
 - azure
 - github-copilot
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 In this article, Rob Bos shares insights into leveraging AI tools, especially GitHub Copilot, to accelerate application and code generation workflows, focusing on GitHub Actions deployment protection and app setup. <!--excerpt_end-->

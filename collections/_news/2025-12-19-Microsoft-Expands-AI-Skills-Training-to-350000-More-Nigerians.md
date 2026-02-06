@@ -15,7 +15,7 @@ tags:
 - Digital Literacy
 - Ethical AI
 - Lagos Business School
-- Machine Learning
+- ML
 - Microsoft Nigeria
 - Nigeria Digital Transformation
 - Public Sector Training

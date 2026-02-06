@@ -23,11 +23,11 @@ tags:
 - Windows 10
 - Windows 11
 - Xbox Development
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny introduces Remote Tools for Microsoft Edge, showing developers how to set up and use remote debugging across devices like IoT, Xbox, and virtual machines.<!--excerpt_end-->
 

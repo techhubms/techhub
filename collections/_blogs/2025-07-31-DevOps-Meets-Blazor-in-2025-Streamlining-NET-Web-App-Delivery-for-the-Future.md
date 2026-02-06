@@ -21,13 +21,12 @@ tags:
 - Tooling
 - Web App Delivery
 - Workflow
-- Coding
 - DevOps
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Amber Talavera examines how Blazor's evolution and integration with DevOps practices are shaping the future of .NET web application delivery.<!--excerpt_end-->
 

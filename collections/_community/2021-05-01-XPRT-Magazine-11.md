@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 11
 date: 2021-05-01 00:00:00 +00:00
 author: Xebia
@@ -24,15 +24,15 @@ tags:
 - Xpirit
 - AI
 - Azure
-- Coding
 - DevOps
 - Security
 - GitHub Copilot
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - security
 - github-copilot

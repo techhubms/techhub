@@ -25,12 +25,11 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet introduces how to build remote Model Context Protocol (MCP) servers using .NET and Azure, highlighting new features and unlocking collaboration, automation, and scalable hosting options for developers.<!--excerpt_end-->

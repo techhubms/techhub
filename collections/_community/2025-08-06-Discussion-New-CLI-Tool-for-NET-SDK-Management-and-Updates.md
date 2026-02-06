@@ -23,11 +23,10 @@ tags:
 - VS
 - Windows
 - Winget
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 chusk3 shares an invitation from the .NET SDK team, led by PM Chet, for developers to discuss a new CLI tool proposal aimed at streamlining .NET SDK and Runtime installations and updates.<!--excerpt_end-->
 

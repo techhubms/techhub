@@ -26,11 +26,10 @@ tags:
 - Reflection.Emit
 - Stack Allocation
 - Struct
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Andrew Lock explains how to make foreach iteration allocation-free on IEnumerable<T> in .NET, leveraging Reflection.Emit and DynamicMethod for advanced memory optimization, with benchmarks and implications for earlier and modern .NET runtimes.<!--excerpt_end-->
 

@@ -21,14 +21,13 @@ tags:
 - Safe Rollback
 - Teams Integration
 - Azure
-- Coding
 - DevOps
 - Videos
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 dotnet demonstrates how developers can leverage the Azure SRE Agent for proactive reliability in .NET apps, covering instrumentation, real-time detection, and automated incident management.<!--excerpt_end-->
 

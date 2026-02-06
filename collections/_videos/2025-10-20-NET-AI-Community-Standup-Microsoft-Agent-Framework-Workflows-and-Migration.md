@@ -29,12 +29,11 @@ tags:
 - Workflows
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Bruno Capuano and Jose Luis Latorre present an in-depth overview of the Microsoft Agent Framework for .NET developers, focusing on workflows, migration from Semantic Kernel, and building intelligent, autonomous solutions with C# and Azure.<!--excerpt_end-->

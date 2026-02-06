@@ -17,11 +17,10 @@ tags:
 - Nullable Reference Types
 - Programming Best Practices
 - Type System
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a session on the practical reasons for using Nullable Reference Types in .NET, showing how this feature enhances code safety and readability.<!--excerpt_end-->
 

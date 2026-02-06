@@ -21,11 +21,10 @@ tags:
 - Player Movement
 - Scripting
 - VS Code
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet demonstrates C# scripting basics in Godot, guiding viewers through input handling, character movement, and smooth rotation—essential skills for building interactive game elements.<!--excerpt_end-->
 

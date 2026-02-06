@@ -25,11 +25,11 @@ tags:
 - Tech
 - Technology
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents Agent Framework, a new open source SDK for building and orchestrating multi-agent AI systems. The session, featuring Jorge Arteiro, Evan Mattson, Elijah Straight, Eric Zhu, and Victor Dibia, covers core features, migration from Semantic Kernel and AutoGen, and ways to contribute.<!--excerpt_end-->

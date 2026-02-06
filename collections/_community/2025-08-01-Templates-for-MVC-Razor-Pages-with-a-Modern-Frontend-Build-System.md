@@ -15,11 +15,10 @@ tags:
 - Template Repository
 - Web Development
 - Webpack
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this article, baunegaard introduces a minimal template repository for ASP.NET MVC and Razor Pages, featuring a modern Webpack-driven frontend approach.<!--excerpt_end-->
 

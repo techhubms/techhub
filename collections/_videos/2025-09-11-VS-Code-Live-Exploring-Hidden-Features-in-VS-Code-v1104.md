@@ -24,11 +24,11 @@ tags:
 - VS Code
 - VS Code V1.104
 - Vscoderelease
-- Coding
 - Videos
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Pierce Boggan and James Montemagno from Visual Studio Code dive into v1.104’s new and hidden features, offering developers practical tips and deeper insights.<!--excerpt_end-->
 

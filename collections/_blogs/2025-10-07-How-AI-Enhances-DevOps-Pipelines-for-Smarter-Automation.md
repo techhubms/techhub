@@ -25,7 +25,7 @@ tags:
 - Future Of DevOps
 - Intelligent Automation
 - Intelligent DevOps Pipelines
-- Machine Learning
+- ML
 - Machine Learning in DevOps
 - Pipeline Optimization
 - Predictive Analytics

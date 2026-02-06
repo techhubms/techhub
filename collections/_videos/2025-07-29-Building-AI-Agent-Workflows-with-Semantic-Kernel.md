@@ -17,12 +17,12 @@ tags:
 - Video To Blog
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Authored by Microsoft Developer, this video covers building practical AI agents and workflows with Semantic Kernel and Azure AI Foundry, including a demo of SemantiClip.<!--excerpt_end-->

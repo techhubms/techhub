@@ -20,11 +20,11 @@ tags:
 - Team Based Problem Solving
 - VS
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Learn Microsoft AI demonstrates group orchestration in Semantic Kernel, revealing how to coordinate multiple AI agents for complex problem-solving using Visual Studio and real-world examples.<!--excerpt_end-->

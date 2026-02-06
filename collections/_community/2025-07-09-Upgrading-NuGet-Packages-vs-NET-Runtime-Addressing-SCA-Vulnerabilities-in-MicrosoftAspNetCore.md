@@ -19,11 +19,10 @@ tags:
 - SignalR
 - Software Composition Analysis
 - Vulnerability Management
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 MahaauD asks whether upgrading the .NET Runtime alone resolves SCA-detected vulnerabilities for Microsoft.AspNetCore.* NuGet packages, or if manual package updates are also necessary.<!--excerpt_end-->
 

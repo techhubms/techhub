@@ -32,12 +32,12 @@ tags:
 - Windows ML
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Raji Rajagopalan introduces Foundry Local's expansion to Android and on-prem with Arc-enabled Kubernetes, covering new SDK capabilities and on-device AI powered by Microsoft’s open-source models.<!--excerpt_end-->

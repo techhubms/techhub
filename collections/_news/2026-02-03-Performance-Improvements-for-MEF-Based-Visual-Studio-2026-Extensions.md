@@ -2,13 +2,12 @@
 external_url: https://devblogs.microsoft.com/visualstudio/performance-improvements-to-mef-based-editor-productivity-extensions/
 title: Performance Improvements for MEF-Based Visual Studio 2026 Extensions
 author: Tina Schrepfer (LI), Amadeus Wieczorek
-primary_section: coding
+primary_section: dotnet
 feed_name: Microsoft VisualStudio Blog
 date: 2026-02-03 15:00:21 +00:00
 tags:
 - Analyzer
 - Background Loading
-- Coding
 - Editor Productivity
 - Extensibility
 - Extension Development
@@ -25,8 +24,9 @@ tags:
 - VS
 - VS Extensions
 - VSSDK
+- .NET
 section_names:
-- coding
+- dotnet
 ---
 Tina Schrepfer and Amadeus Wieczorek explain how Visual Studio 2026 improves startup times for MEF-based editor extensions, what changes developers need to adjust for, and how to adapt your extension code for performance gains.<!--excerpt_end-->
 

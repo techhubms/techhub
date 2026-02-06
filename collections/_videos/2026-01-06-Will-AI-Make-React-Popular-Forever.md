@@ -10,7 +10,7 @@ tags:
 - Framework Popularity
 - GitHub
 - Haskell
-- Machine Learning
+- ML
 - Programming Languages
 - React
 - Software Development

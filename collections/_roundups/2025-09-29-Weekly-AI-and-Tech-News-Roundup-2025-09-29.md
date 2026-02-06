@@ -1,4 +1,4 @@
----
+﻿---
 title: 'GitHub Copilot, Azure AI, and DevOps: Updates on Agentic Automation and Cloud Workflows'
 author: TechHub
 date: 2025-09-29 09:00:00 +00:00
@@ -20,18 +20,18 @@ tags:
 - VS
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

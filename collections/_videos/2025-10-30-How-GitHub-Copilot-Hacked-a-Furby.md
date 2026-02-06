@@ -13,18 +13,18 @@ tags:
 - Home Assistant
 - Integration
 - IoT
-- Machine Learning
+- ML
 - Programming
 - Python
 - Robotics
 - Toy Hacking
 - AI
-- Coding
 - GitHub Copilot
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

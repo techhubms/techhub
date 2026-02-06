@@ -28,12 +28,12 @@ tags:
 - Windows 365
 - AI
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Satya Nadella demonstrates a custom app for deep research and model orchestration, built and deployed using Azure, GitHub Codespaces, and Windows 365—exploring decision frameworks and future Copilot integration.<!--excerpt_end-->

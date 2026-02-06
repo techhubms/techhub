@@ -30,13 +30,13 @@ tags:
 - SonarSource
 - Technical Debt
 - AI
-- Coding
 - DevOps
 - Security
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

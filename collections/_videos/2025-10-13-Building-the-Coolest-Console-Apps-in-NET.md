@@ -15,11 +15,10 @@ tags:
 - Programming
 - Razor Pages
 - RazorConsole
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this video, Nick Chapsas explores building visually dynamic console applications in .NET using the RazorConsole library, demonstrating how developers can leverage Razor Pages in C# for console app development.<!--excerpt_end-->
 

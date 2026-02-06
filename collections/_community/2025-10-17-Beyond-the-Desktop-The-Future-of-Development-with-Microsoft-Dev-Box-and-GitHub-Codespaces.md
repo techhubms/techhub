@@ -25,14 +25,14 @@ tags:
 - VS Code
 - Windows Development
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Owain O. discusses how pairing Microsoft Dev Box with GitHub Codespaces enables a more flexible and productive developer experience, and shares practical cloud-first workflows for modern engineering teams.<!--excerpt_end-->
 

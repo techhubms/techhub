@@ -15,14 +15,13 @@ tags:
 - Cloud Engineer
 - Cloud Migration
 - Azure
-- Coding
 - DevOps
 - Community
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Author curious_monk77, a C# .NET developer exploring Azure, asks for advice on transitioning to a cloud engineer role and seeks insights into daily activities and skills relevant for Azure platform specialists.<!--excerpt_end-->
 

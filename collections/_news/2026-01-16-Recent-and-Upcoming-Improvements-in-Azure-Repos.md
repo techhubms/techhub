@@ -22,14 +22,14 @@ tags:
 - TFVC
 - VS Code
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Dan Hellem outlines the latest updates and upcoming features in Azure Repos, offering practical guidance on streamlined repository management for developers and DevOps professionals.<!--excerpt_end-->
 

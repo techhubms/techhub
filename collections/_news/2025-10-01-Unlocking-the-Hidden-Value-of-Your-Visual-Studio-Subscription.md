@@ -23,14 +23,14 @@ tags:
 - Visual Studio Subscriptions
 - VS
 - Azure
-- Coding
 - DevOps
 - News
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Jim Harrer uncovers how Visual Studio subscribers can unlock significant value through included benefits, such as Azure credits, Dev/Test software, and learning resources—all accessed via my.visualstudio.com.<!--excerpt_end-->
 

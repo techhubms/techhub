@@ -16,11 +16,10 @@ tags:
 - Performance
 - Sealed Classes
 - Software Engineering
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nick Chapsas explains the rationale behind sealing every class in C#, covering benefits, potential drawbacks, and its impact on code safety and maintainability.<!--excerpt_end-->
 

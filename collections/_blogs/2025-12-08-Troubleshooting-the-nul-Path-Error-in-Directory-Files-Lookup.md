@@ -20,11 +20,10 @@ tags:
 - Symlink
 - System.IO
 - Windows Devices
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rick Strahl analyzes frequent `\\.\nul` device errors breaking file lookups in Markdown Monster, offering insights into the Windows filesystem and practical .NET solutions for developers.<!--excerpt_end-->
 

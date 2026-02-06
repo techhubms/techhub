@@ -23,9 +23,10 @@ tags:
 - Structured Data
 - Unstructured Data
 - Azure
-- Machine Learning
+- ML
 - Security
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

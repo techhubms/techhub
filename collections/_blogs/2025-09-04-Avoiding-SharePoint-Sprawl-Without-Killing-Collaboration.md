@@ -16,11 +16,11 @@ tags:
 - SharePoint
 - SharePoint Governance
 - Site Templates
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny provides actionable strategies to prevent SharePoint sprawl, balancing collaboration and governance for organizations using Microsoft 365.<!--excerpt_end-->
 

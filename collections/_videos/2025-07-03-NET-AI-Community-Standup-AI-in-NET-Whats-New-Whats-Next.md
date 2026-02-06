@@ -10,16 +10,15 @@ tags:
 - .NET 9
 - Bruno Capuano
 - C#
-- Machine Learning
+- ML
 - Microsoft
 - Tanner Gooding
 - Tensor Support
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this article, dotnet introduces an online session that delves into how the .NET ecosystem is amplifying its AI and Machine Learning capabilities. The session, featuring Bruno Capuano and Tanner Gooding, discusses enhancements like tensor support in .NET 9 and previews new features expected in .NET 10. This is an insightful resource for developers eager to leverage intelligent technologies within .NET applications.<!--excerpt_end-->

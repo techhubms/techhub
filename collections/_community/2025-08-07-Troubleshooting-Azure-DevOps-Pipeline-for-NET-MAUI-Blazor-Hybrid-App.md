@@ -21,14 +21,14 @@ tags:
 - Windows Desktop
 - YAML
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Background_March7229 seeks help configuring an Azure DevOps pipeline for a .NET MAUI Blazor Hybrid app, describing errors encountered with runtime packages and pipeline tasks.<!--excerpt_end-->
 

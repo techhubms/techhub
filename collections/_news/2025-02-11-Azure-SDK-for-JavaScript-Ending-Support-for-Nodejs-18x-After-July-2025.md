@@ -16,12 +16,12 @@ tags:
 - SDK Support Policy
 - Typescript
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Authored by Maor Leger, this article details the timeline and implications of ending Node.js 18.x support in the Azure SDK for JavaScript, providing guidance on upgrading and support policies.<!--excerpt_end-->
 

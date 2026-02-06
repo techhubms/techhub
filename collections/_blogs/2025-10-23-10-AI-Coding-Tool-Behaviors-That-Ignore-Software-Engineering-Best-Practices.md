@@ -22,13 +22,13 @@ tags:
 - Software Engineering
 - Unit Testing
 - AI
-- Coding
 - DevOps
 - Security
 - Blogs
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - security
 primary_section: ai

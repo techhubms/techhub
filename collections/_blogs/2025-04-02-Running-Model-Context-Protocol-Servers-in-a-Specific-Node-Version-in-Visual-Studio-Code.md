@@ -20,13 +20,13 @@ tags:
 - DevOps
 - GitHub Copilot
 - AI
-- Coding
 - Blogs
+- .NET
 section_names:
 - devops
 - github-copilot
 - ai
-- coding
+- dotnet
 primary_section: github-copilot
 ---
 In this post, Jesse Houwing details solutions for managing Node versions to run Model Context Protocol (MCP) servers with Visual Studio Code Insiders and Azure Pipelines extensions, sharing practical configurations and troubleshooting insights.<!--excerpt_end-->

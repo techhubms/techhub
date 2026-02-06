@@ -21,11 +21,10 @@ tags:
 - Navigation Properties
 - Row Level Security
 - Soft Delete
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Gergő Vándor presents a comprehensive guide to Entity Framework Core's global query filters, detailing their purpose, implementation, and key considerations for .NET developers.<!--excerpt_end-->
 

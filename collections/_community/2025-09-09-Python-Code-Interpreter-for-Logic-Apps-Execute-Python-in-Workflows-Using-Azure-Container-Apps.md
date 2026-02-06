@@ -21,12 +21,12 @@ tags:
 - Workflow Automation
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 DivSwa details how developers can now use Python Code Interpreter in Logic Apps workflows, powered by Azure Container Apps, to automate structured data analysis using natural language prompts.<!--excerpt_end-->

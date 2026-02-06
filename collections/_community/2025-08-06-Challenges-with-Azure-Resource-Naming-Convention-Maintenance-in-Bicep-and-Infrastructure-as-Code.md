@@ -22,14 +22,14 @@ tags:
 - Terraform
 - User Defined Functions
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 d2peak and the community discuss the challenges of maintaining Azure resource naming conventions in Bicep and azd workflows, weighing Microsoft's outdated tools against custom solutions and automation.<!--excerpt_end-->
 

@@ -21,11 +21,10 @@ tags:
 - Mobile Apps
 - NuGet
 - Page Size Requirement
-- Coding
 - News
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Gerald Versluis explains the upcoming Google Play 16 KB page size mandate for Android apps and how .NET MAUI developers can prepare by upgrading to .NET 9 and ensuring all dependencies are compliant.<!--excerpt_end-->
 

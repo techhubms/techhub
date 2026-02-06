@@ -22,12 +22,11 @@ tags:
 - Software Optimization
 - VS
 - AI
-- Coding
 - GitHub Copilot
 - News
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

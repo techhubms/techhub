@@ -12,7 +12,7 @@ tags:
 - Company News
 - GigaTIME
 - LinkedIn Post
-- Machine Learning
+- ML
 - Medical Innovation
 - Microsoft Research
 - Pathology Slides

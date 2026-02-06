@@ -21,11 +21,11 @@ tags:
 - Win32
 - Windows App SDK
 - WinUI 3
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 lordaimer raises a detailed technical question about integrating advertisements into a native WinUI 3 desktop app using C#, highlighting the lack of ad network support beyond UWP and seeking compliant solutions from the community.<!--excerpt_end-->
 

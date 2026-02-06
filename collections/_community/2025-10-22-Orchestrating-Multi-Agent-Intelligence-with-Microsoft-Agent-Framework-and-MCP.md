@@ -22,12 +22,12 @@ tags:
 - Vector Embeddings
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 heenaugale explores how the Microsoft Agent Framework and Model Context Protocol enable modular AI orchestration, showcasing practical multi-agent collaboration patterns built on Azure technology.<!--excerpt_end-->

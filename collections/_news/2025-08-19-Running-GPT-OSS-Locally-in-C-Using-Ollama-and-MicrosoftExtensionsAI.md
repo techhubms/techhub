@@ -23,11 +23,10 @@ tags:
 - Private AI
 - Streaming Response
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Bruno Capuano demonstrates how developers can run GPT-OSS locally using C#, Ollama, and Microsoft.Extensions.AI libraries to create fast, private, offline-capable AI features.<!--excerpt_end-->

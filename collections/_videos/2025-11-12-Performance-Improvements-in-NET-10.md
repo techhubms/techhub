@@ -24,11 +24,10 @@ tags:
 - Performance Optimization
 - Stephen Toub
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a deep dive into .NET 10's performance improvements, led by Stephen Toub, focusing on key optimizations in runtime, compilers, and libraries that benefit developers across application domains.<!--excerpt_end-->
 

@@ -18,13 +18,12 @@ tags:
 - TypeScript
 - VS
 - VS Code
-- Coding
 - DevOps
 - Community
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this post, RankedMan raises key questions for full-stack developers about IDE choices (Visual Studio vs. VSCode) for backend and frontend work, as well as preferences for organizing code repositories.<!--excerpt_end-->
 

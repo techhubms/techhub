@@ -15,11 +15,10 @@ tags:
 - Programming Concepts
 - Programming Languages
 - Software Development
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Matthew Watt presents ways C# developers can leverage F# in their .NET projects, from building components to contributing to open source, showcasing inclusive strategies for using F# effectively.<!--excerpt_end-->
 

@@ -17,11 +17,10 @@ tags:
 - SemanticPluginForge
 - Tools
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Author Likhan Siddiquee details how SemanticPluginForge offers developers dynamic and flexible metadata management for plugins in the Semantic Kernel ecosystem. The post explains traditional metadata challenges and provides practical steps for integrating the tool into modern .NET development workflows.<!--excerpt_end-->

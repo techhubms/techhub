@@ -23,8 +23,9 @@ tags:
 - PostgreSQL
 - AI
 - Azure
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - ai
 - azure

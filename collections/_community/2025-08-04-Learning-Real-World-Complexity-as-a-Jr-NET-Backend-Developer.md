@@ -16,11 +16,11 @@ tags:
 - EF Core
 - Fullstack Development
 - SQL Server
-- Coding
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
-- coding
+- dotnet
 - ml
 primary_section: ml
 ---

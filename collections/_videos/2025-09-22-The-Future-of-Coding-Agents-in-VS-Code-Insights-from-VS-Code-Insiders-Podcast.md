@@ -16,11 +16,11 @@ tags:
 - VS Code
 - VS Code Extensions
 - AI
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Brigit and Josh from the VS Code team discuss the future of coding agents in Visual Studio Code, sharing insights and updates for developers in this VS Code Insiders Podcast episode.<!--excerpt_end-->

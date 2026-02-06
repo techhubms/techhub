@@ -15,7 +15,7 @@ tags:
 - Continuous Integration
 - DevSecOps
 - Incident Management
-- Machine Learning
+- ML
 - Monitoring
 - Predictive Analytics
 - Resource Optimization

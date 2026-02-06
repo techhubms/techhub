@@ -15,11 +15,11 @@ tags:
 - Spotify API
 - Waybar
 - Windows
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 BuildBazaar introduces SpotifyLikeButton, a C# tool that lets users like or unlike Spotify songs with global hotkeys. Explore how it works, its technical details, and alternative Linux scripts.<!--excerpt_end-->
 

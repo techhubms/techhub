@@ -26,9 +26,10 @@ tags:
 - Word
 - AI
 - Azure
-- Machine Learning
+- ML
 - Security
 - Blogs
+- Machine Learning
 section_names:
 - ai
 - azure

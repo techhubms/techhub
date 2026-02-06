@@ -39,7 +39,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         sections.Should().Contain(s => s.Name == "ml");
         sections.Should().Contain(s => s.Name == "devops");
         sections.Should().Contain(s => s.Name == "azure");
-        sections.Should().Contain(s => s.Name == "coding");
+        sections.Should().Contain(s => s.Name == "dotnet");
         sections.Should().Contain(s => s.Name == "security");
     }
 

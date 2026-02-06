@@ -22,11 +22,11 @@ tags:
 - TypeScript 5.7
 - V8 Compile Cache
 - VS Code
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Daniel Rosenwasser announces the release of TypeScript 5.7, detailing key upgrades for developers. This update offers improved checks, modern JavaScript support, and faster editor experiences.<!--excerpt_end-->
 

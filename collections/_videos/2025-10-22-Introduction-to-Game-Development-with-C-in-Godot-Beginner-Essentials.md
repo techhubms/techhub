@@ -20,11 +20,10 @@ tags:
 - Programming
 - Scenes And Nodes
 - VS
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet introduces newcomers to the essentials of game development with Godot and C#, providing practical lessons that guide users through building interactive games from scratch.<!--excerpt_end-->
 

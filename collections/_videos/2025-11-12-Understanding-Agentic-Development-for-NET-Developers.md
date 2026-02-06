@@ -21,11 +21,10 @@ tags:
 - Planning And Reasoning
 - VS
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet presents the future of AI for .NET developers, focusing on agentic AI: systems that reason, plan, and act to accomplish complex tasks through advanced frameworks and design patterns.<!--excerpt_end-->

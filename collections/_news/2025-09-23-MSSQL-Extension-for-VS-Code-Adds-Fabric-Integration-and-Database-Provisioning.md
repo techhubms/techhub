@@ -21,12 +21,12 @@ tags:
 - VS Code Extension
 - Workspace Authentication
 - Azure
-- Coding
 - News
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Microsoft Fabric Blog showcases new features by introducing Fabric Connectivity and SQL Database provisioning within the MSSQL extension for VS Code, empowering developers with seamless integration and modern SQL development tools.<!--excerpt_end-->
 

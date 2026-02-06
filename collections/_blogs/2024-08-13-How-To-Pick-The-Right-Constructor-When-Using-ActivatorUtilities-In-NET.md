@@ -15,11 +15,10 @@ tags:
 - Reflection
 - Service Provider
 - ServiceCollection
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this detailed guide, Khalid Abuhakmeh demonstrates how to select the appropriate constructor when using ActivatorUtilities for dependency injection in .NET. The author shares practical code examples and explains the impact of using attributes for constructor selection.<!--excerpt_end-->
 

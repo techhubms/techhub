@@ -17,12 +17,11 @@ tags:
 - Solution Architecture
 - Testability
 - AI
-- Coding
 - GitHub Copilot
 - Community
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

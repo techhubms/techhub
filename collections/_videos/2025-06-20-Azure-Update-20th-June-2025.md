@@ -25,8 +25,9 @@ tags:
 - PostgreSQL
 - VNET
 - Azure
-- Machine Learning
+- ML
 - Videos
+- Machine Learning
 section_names:
 - azure
 - ml

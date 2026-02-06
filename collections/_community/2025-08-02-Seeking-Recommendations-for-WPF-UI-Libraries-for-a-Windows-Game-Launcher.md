@@ -17,11 +17,11 @@ tags:
 - Windows
 - WPF
 - XAML
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Author kkassius_ seeks community advice on selecting a WPF UI library to use in their Windows game launcher project, sharing initial goals, challenges, and future customization plans.<!--excerpt_end-->
 

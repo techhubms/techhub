@@ -16,11 +16,10 @@ tags:
 - Structured Logging
 - Task Based Programming
 - Thread Context
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Bozo Spoljaric introduces the AsyncLocal class, revealing how it enables value persistence throughout asynchronous flows in C#. The article offers step-by-step examples and guidance on when and how to effectively use AsyncLocal for more maintainable .NET code.<!--excerpt_end-->
 

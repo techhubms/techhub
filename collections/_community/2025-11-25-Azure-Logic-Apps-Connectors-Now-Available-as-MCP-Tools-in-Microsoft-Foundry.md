@@ -22,12 +22,12 @@ tags:
 - Workflow Development
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 DivSwa introduces the new capability to use Azure Logic Apps connectors as MCP tools within Microsoft Foundry, providing developers with secure, code-free ways to integrate enterprise systems in agentic apps.<!--excerpt_end-->

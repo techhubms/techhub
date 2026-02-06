@@ -25,12 +25,11 @@ tags:
 - VS
 - AI
 - Azure
-- Coding
 - Videos
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 dotnet shares practical insights on boosting Agentic .NET apps in Azure with Redis for semantic caching, vector search, chat storage, and session management using the latest Microsoft agent technologies.<!--excerpt_end-->

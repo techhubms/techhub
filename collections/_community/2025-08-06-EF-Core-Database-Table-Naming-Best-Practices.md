@@ -18,11 +18,10 @@ tags:
 - PascalCase
 - Snake Case
 - Table Naming
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 jemofcourse shares community insights and best practices on naming tables with Entity Framework Core, exploring default behaviors, Fluent API, and naming conventions for database clarity.<!--excerpt_end-->
 

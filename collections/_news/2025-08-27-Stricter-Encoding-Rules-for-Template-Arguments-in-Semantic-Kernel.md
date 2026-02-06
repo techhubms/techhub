@@ -20,11 +20,10 @@ tags:
 - Template Encoding
 - Template Injection
 - AI
-- Coding
 - News
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Dmytro Struk explains recent encoding changes in Semantic Kernel, showing developers how to securely handle template arguments in .NET and Python. The article includes practical guidance and code examples.<!--excerpt_end-->

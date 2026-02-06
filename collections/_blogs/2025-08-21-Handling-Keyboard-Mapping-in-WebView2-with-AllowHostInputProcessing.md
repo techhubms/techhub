@@ -20,11 +20,10 @@ tags:
 - Windows Desktop Development
 - WinForms
 - WPF
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rick Strahl examines the implementation of keyboard mapping and menu accelerator key support in Microsoft WebView2 for .NET and WPF applications, using practical examples from Markdown Monster.<!--excerpt_end-->
 

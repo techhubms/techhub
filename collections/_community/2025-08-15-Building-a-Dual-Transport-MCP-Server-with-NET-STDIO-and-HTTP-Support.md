@@ -24,12 +24,11 @@ tags:
 - WebApplication
 - WebApplicationBuilder
 - Azure
-- Coding
 - Community
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 justinyoo explains how to implement a .NET MCP server with runtime-selectable STDIO and HTTP transports, reducing management overhead and supporting integration with Copilot Studio and other platforms.<!--excerpt_end-->
 

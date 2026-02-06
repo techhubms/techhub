@@ -25,14 +25,14 @@ tags:
 - VNet Peering
 - VNets
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this community article, samcogan breaks down how to manage private pod subnets in Azure Kubernetes Service (AKS) without overlay networking, addressing NAT challenges and actionable deployment steps.<!--excerpt_end-->
 

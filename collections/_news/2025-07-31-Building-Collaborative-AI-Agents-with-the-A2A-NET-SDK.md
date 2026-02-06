@@ -24,12 +24,11 @@ tags:
 - Task Based Communication
 - AI
 - Azure
-- Coding
 - News
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Written by Sergey Menshykh, Adam Sitnik, and Brandon H, this article introduces the A2A .NET SDK, demonstrating how developers can build collaborative AI agents leveraging the Agent2Agent protocol within the Azure AI Foundry environment.<!--excerpt_end-->

@@ -8,17 +8,20 @@ This index maps the structure of all documentation files in the project.
 
 - AI Assistant Workflow
   - What is This File?
-  - The 10-Step Workflow
-    - Step 1: Core Rules & Boundaries
-    - Step 2: Gather Context
-    - Step 3: Create a Plan
-    - Step 4: Research & Validate
-    - Step 5: Verify Current Behavior (Optional)
-    - Step 6: Write Tests First (TDD)
-    - Step 7: Implement Changes
-    - Step 8: Validate & Fix
-    - Step 9: Update Documentation
-    - Step 10: Report Completion
+  - 🚨 ABSOLUTE CRITICAL RULES
+    - ✅ Always Do
+    - ⚠️ Ask First
+    - 🚫 Never Do
+  - The 9-Step Workflow
+    - Step 1: Gather Context
+    - Step 2: Create a Plan
+    - Step 3: Research & Validate
+    - Step 4: Verify Current Behavior (Optional)
+    - Step 5: Write Tests First (TDD)
+    - Step 6: Implement Changes
+    - Step 7: Validate & Fix
+    - Step 8: Update Documentation
+    - Step 9: Report Completion
 
 ## File: [README.md](../README.md)
 
@@ -330,9 +333,24 @@ This index maps the structure of all documentation files in the project.
 
 - Repository Structure
   - Source Code (`src/`)
+    - Core Projects
+    - Infrastructure & Services
+    - Utilities
   - Content (`collections/`)
   - Tests (`tests/`)
+    - Test Projects
+    - Test Utilities & Test Collections
   - Configuration & Documentation
+    - Critical Configuration Files
+    - Documentation (`docs/`)
+    - Automation & Scripts (`scripts/`)
+    - Infrastructure (`infra/`)
+    - Feature Specifications (`specs/`)
+  - Development Environment & Working Directories
+    - `.devcontainer/`
+    - `.databases/`
+    - `.tmp/`
+    - Other Hidden Directories
 
 ## File: [docs/rss-feeds.md](rss-feeds.md)
 
@@ -374,6 +392,8 @@ This index maps the structure of all documentation files in the project.
     - Basic Usage
     - Advanced Usage
     - Important Notes
+  - Troubleshooting
+    - Database Schema Changes
 
 ## File: [docs/seo.md](seo.md)
 

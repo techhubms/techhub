@@ -24,13 +24,12 @@ tags:
 - Open Specification
 - Polyglot Notebook
 - Software Developer
-- Coding
 - Security
 - Videos
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Daniel Roth and Mike Kistler present a hands-on ASP.NET Community Standup covering the MCP (Model Context Protocol) authorization flow, demonstrating secure request authorization to GitHub MCP servers.<!--excerpt_end-->
 

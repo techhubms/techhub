@@ -23,13 +23,12 @@ tags:
 - Service Orchestration
 - Software Development
 - Test Automation
-- Coding
 - DevOps
 - Blogs
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by David Fowler, this article explores Aspire’s role as a modern DevOps toolchain, detailing its design philosophy, core features, and broad support for polyglot distributed app development.<!--excerpt_end-->
 

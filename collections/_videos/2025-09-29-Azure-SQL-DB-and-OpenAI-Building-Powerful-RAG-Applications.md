@@ -28,12 +28,12 @@ tags:
 - Technology
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 Microsoft Developer presents a session led by Indira Bandari exploring how to build Retrieval Augmented Generation (RAG) apps by integrating OpenAI’s GPT models with Azure SQL Database.<!--excerpt_end-->

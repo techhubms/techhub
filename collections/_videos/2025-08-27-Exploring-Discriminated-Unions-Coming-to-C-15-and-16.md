@@ -17,11 +17,10 @@ tags:
 - Programming
 - Software Development
 - Union Types
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nick Chapsas introduces Discriminated Unions in C# 15 and 16, explaining what these new features mean for .NET developers and how they promise to expand the language.<!--excerpt_end-->
 

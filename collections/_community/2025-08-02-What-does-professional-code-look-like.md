@@ -15,11 +15,11 @@ tags:
 - Professional Code
 - Refactoring
 - Software Methodology
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 RipeTide18 discusses challenges faced in backend development and asks how to write professional code, referencing dependency injection and industry methodologies.<!--excerpt_end-->
 

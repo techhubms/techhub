@@ -17,11 +17,10 @@ tags:
 - Simulation
 - SPMD
 - Terrain Simulation
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Presented by dotnet, this session explores the architectural decisions and programming techniques that enable Gaea’s terrain engine to push .NET beyond typical workloads for massive, high-performance simulations.<!--excerpt_end-->
 

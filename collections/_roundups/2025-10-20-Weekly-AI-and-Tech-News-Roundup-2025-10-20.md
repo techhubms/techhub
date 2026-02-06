@@ -1,4 +1,4 @@
----
+﻿---
 title: Updated AI Tools, Open-Source Security, and Azure Integration
 author: TechHub
 date: 2025-10-20 09:00:00 +00:00
@@ -13,18 +13,19 @@ tags:
 - VS Code
 - AI
 - GitHub Copilot
-- Machine Learning
+- ML
 - Azure
-- Coding
 - DevOps
 - Security
 - Roundups
+- .NET
+- Machine Learning
 section_names:
 - ai
 - github-copilot
 - ml
 - azure
-- coding
+- dotnet
 - devops
 - security
 primary_section: github-copilot

@@ -20,13 +20,13 @@ tags:
 - Software Development
 - Software Engineering
 - Strong Typing
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this insightful post, David Fowler shares how Aspire brings the discipline and reusability of software engineering to infrastructure, enabling scalable and composable deployment with strongly-typed resources and hosting integrations.<!--excerpt_end-->
 

@@ -22,12 +22,11 @@ tags:
 - Windows 11
 - Windows ARM
 - Azure
-- Coding
 - Blogs
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Rick Strahl shares his journey and solutions for running SQL Server on a Windows ARM device, providing practical techniques, troubleshooting steps, and community-sourced insight relevant for .NET and SQL Server developers.<!--excerpt_end-->
 

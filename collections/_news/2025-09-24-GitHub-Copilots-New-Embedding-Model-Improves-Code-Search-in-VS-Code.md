@@ -18,7 +18,7 @@ tags:
 - Embedding Model
 - Generative AI
 - Hard Negative Mining
-- Machine Learning
+- ML
 - News & Insights
 - Product
 - Programming Languages
@@ -26,12 +26,12 @@ tags:
 - Semantic Search
 - VS Code
 - AI
-- Coding
 - GitHub Copilot
 - News
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

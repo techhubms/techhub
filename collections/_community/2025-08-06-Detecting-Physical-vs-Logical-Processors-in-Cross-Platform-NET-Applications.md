@@ -20,11 +20,11 @@ tags:
 - SMT
 - Windows API
 - WMI
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Eisenmonoxid1 opens a discussion on how to programmatically distinguish between physical and logical processor cores in cross-platform .NET apps, sharing technical constraints and potential approaches.<!--excerpt_end-->
 

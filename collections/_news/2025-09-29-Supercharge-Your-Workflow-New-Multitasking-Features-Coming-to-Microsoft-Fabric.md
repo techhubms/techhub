@@ -20,8 +20,9 @@ tags:
 - UI Enhancements
 - Usability
 - Workflow Optimization
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ml
 primary_section: ml

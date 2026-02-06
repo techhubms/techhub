@@ -14,11 +14,10 @@ tags:
 - Phased Rollout
 - UI Development
 - WinUI
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Nguyenkien shares news about the WinUI project's phased transition toward open source collaboration, outlining Microsoft’s efforts to involve the community.<!--excerpt_end-->
 

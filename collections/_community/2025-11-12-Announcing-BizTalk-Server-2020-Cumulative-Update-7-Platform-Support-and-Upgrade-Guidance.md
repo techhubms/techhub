@@ -20,14 +20,14 @@ tags:
 - Windows 11
 - Windows Server
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 hcamposu announces the release of BizTalk Server 2020 CU7, focusing on new platform compatibility, upgrade advice, and migration paths to Azure Logic Apps for integration workloads.<!--excerpt_end-->
 

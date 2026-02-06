@@ -30,15 +30,16 @@ tags:
 - VNET Networking
 - AI
 - Azure
-- Coding
 - DevOps
-- Machine Learning
+- ML
 - Security
 - Community
+- .NET
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - devops
 - ml
 - security

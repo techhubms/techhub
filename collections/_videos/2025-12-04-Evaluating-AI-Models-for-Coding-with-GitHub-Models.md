@@ -14,7 +14,7 @@ tags:
 - GitHub
 - GitHub Models
 - GitHubModels
-- Machine Learning
+- ML
 - Model Comparison
 - Prompt Engineering
 - AI

@@ -740,5 +740,5 @@ With multiple developers:
 - Commit after each task or logical group
 - Stop at any checkpoint to validate story independently
 - E2E tests are MANDATORY for ALL UI changes (no exceptions)
-- All tasks follow 10-step AI Assistant Workflow from root AGENTS.md
+- All tasks follow 9-step AI Assistant Workflow from root AGENTS.md
 - Constitution check passed - all 7 rules compliant

@@ -26,12 +26,12 @@ tags:
 - Solution Architecture
 - State Management
 - Azure
-- Coding
 - Blogs
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Dellenny explores the Event Sourcing architectural pattern on Microsoft Azure, offering developers guidance on storing system state as events and utilizing Azure’s cloud services for scalable, maintainable solutions.<!--excerpt_end-->
 

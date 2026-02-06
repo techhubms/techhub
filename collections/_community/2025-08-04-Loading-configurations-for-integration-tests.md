@@ -16,11 +16,10 @@ tags:
 - Microsoft.Extensions.Configuration
 - OS Patching
 - Web API
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Authored by LazyChief_117, this post highlights an integration testing issue in .NET 8 Web APIs, where configuration files intermittently fail to load after certain server updates.<!--excerpt_end-->
 

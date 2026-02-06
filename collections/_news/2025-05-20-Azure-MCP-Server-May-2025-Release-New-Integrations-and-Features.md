@@ -26,16 +26,16 @@ tags:
 - VS Code
 - AI
 - Azure
-- Coding
-- Machine Learning
+- ML
 - DevOps
 - GitHub Copilot
 - Security
 - News
+- Machine Learning
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - ml
 - devops
 - github-copilot

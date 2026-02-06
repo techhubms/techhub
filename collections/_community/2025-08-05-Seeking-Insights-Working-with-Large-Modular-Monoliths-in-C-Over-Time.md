@@ -15,11 +15,10 @@ tags:
 - Software Architecture
 - Solution Organization
 - Team Workflow
-- Coding
 - Community
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Background-Brick-157 seeks community insight on handling large modular monolith solutions in C#, focusing on scalability, module organization, and team impact as these systems grow.<!--excerpt_end-->
 

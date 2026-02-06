@@ -24,14 +24,14 @@ tags:
 - Streaming Data
 - Troubleshooting
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Sunip examines the advanced challenges and strategies for reliable Kafka consumer lag monitoring in Azure Event Hubs, sharing practical techniques and code for practitioners.<!--excerpt_end-->
 

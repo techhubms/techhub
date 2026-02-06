@@ -23,13 +23,13 @@ tags:
 - User Provisioning
 - AI
 - Azure
-- Coding
 - GitHub Copilot
 - Blogs
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 - github-copilot
 primary_section: github-copilot
 ---

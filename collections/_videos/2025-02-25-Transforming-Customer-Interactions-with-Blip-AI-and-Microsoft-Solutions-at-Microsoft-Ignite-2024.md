@@ -19,12 +19,12 @@ tags:
 - Multimodal Interfaces
 - AI
 - Azure
-- Coding
 - Videos
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 In this Microsoft Ignite 2024 video interview, Rick Claus speaks with Sergio Passos of Blip about how his team employs Microsoft technologies and AI—including Azure OpenAI Service and .NET 8 migration—to create next-generation conversational interfaces. Insights from Sergio Passos inform developers and product teams interested in data-driven, AI-powered customer engagement.<!--excerpt_end-->

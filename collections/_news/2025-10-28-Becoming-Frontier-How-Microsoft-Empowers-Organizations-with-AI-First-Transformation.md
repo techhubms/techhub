@@ -19,7 +19,7 @@ tags:
 - Data Driven Insights
 - Digital Twins
 - Industry Solutions
-- Machine Learning
+- ML
 - Microsoft Cloud
 - Natural Language Processing
 - Operational Efficiency

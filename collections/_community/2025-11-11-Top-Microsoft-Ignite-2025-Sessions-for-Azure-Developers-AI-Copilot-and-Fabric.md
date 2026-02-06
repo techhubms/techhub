@@ -22,8 +22,9 @@ tags:
 - Azure
 - DevOps
 - GitHub Copilot
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - ai
 - azure

@@ -21,11 +21,10 @@ tags:
 - Windows
 - Windows Development
 - WPF
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this detailed post, Rick Strahl discusses common challenges and streamlined solutions for handling document load events in WebView2 controls within .NET and WPF applications. He introduces the Westwind.WebView library, focusing on its WaitForDocumentLoaded() helper for more linear, maintainable workflows.<!--excerpt_end-->
 

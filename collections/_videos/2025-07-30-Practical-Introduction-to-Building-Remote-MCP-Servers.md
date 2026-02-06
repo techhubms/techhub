@@ -23,13 +23,13 @@ tags:
 - Technology
 - VS Code
 - AI
-- Coding
 - DevOps
 - Azure
 - Videos
+- .NET
 section_names:
 - ai
-- coding
+- dotnet
 - devops
 - azure
 primary_section: ai

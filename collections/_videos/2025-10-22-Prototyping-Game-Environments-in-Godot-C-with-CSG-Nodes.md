@@ -20,11 +20,10 @@ tags:
 - Rapid Prototyping
 - Scene Management
 - VS Code
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet presents a hands-on guide to prototyping 3D game environments with CSG nodes in Godot using C#. Learn about collision, snapping tools, and best practices for quickly iterating environment layouts.<!--excerpt_end-->
 

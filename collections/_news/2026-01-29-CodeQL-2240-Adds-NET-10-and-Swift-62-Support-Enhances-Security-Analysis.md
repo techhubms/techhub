@@ -2,7 +2,7 @@
 external_url: https://github.blog/changelog/2026-01-29-codeql-2-24-0-adds-swift-6-2-support-net-10-compatibility-and-file-handling-for-minified-javascript
 title: CodeQL 2.24.0 Adds .NET 10 and Swift 6.2 Support, Enhances Security Analysis
 author: Allison
-primary_section: coding
+primary_section: dotnet
 feed_name: The GitHub Blog
 date: 2026-01-29 23:17:01 +00:00
 tags:
@@ -13,7 +13,6 @@ tags:
 - CI/CD
 - Code Scanning
 - CodeQL
-- Coding
 - DevOps
 - DevOps Tools
 - GitHub
@@ -26,8 +25,9 @@ tags:
 - Static Analysis
 - Taint Tracking
 - Vulnerability Detection
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
 - security
 ---

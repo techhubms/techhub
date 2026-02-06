@@ -17,11 +17,11 @@ tags:
 - TypeScript
 - TypeScript 5.9
 - VS Code
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Daniel Rosenwasser details the release of TypeScript 5.9, covering its new features, performance enhancements, and key behavior changes—essential reading for TypeScript developers.<!--excerpt_end-->
 

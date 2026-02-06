@@ -21,13 +21,13 @@ tags:
 - WebClient
 - Azure
 - Security
-- Coding
 - News
+- .NET
 section_names:
 - azure
 - security
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Moary Chen introduces the Spring Cloud Azure Starter Key Vault JCA, showing how to streamline TLS and mTLS for Spring Boot using Azure Key Vault for secure certificate management.<!--excerpt_end-->
 

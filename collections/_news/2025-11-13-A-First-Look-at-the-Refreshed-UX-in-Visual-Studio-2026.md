@@ -18,11 +18,11 @@ tags:
 - User Experience
 - VS
 - Windows Development
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Ruben Rios introduces the new Visual Studio 2026 user experience, highlighting features like refreshed design, improved accessibility, settings, and editor customization aimed at supporting developers’ modern workflows.<!--excerpt_end-->
 

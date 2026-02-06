@@ -21,8 +21,9 @@ tags:
 - Reservation Best Practices
 - SaaS
 - Azure
-- Machine Learning
+- ML
 - Community
+- Machine Learning
 section_names:
 - azure
 - ml

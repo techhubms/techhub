@@ -25,12 +25,11 @@ tags:
 - Streamable HTTP
 - VS Code
 - Azure
-- Coding
 - Community
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 lily-ma presents the early preview of hosting bring-your-own Remote MCP servers on Azure Functions, making it easier for developers to deploy existing MCP SDK-based servers to a highly scalable serverless environment.<!--excerpt_end-->
 

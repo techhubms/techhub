@@ -22,12 +22,12 @@ tags:
 - State Management
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 greenie-msft explains how the durable task extension for the Microsoft Agent Framework simplifies building highly resilient and scalable AI agents on Azure, with practical code samples and best practices for serverless durability.<!--excerpt_end-->

@@ -16,13 +16,12 @@ tags:
 - Production Build
 - Site Configuration
 - Web.config
-- Coding
 - DevOps
 - Community
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Defiant_Priority_801 outlines challenges encountered while deploying an Angular 11 and .NET Framework 4.7 application stack to IIS, particularly struggling with 404 errors after following standard deployment procedures.<!--excerpt_end-->
 

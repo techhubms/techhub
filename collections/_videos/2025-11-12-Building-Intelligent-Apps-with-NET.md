@@ -25,11 +25,10 @@ tags:
 - Unified AI Abstractions
 - VS
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 Hosted by dotnet, this session guides developers on building intelligent apps with .NET, leveraging Microsoft.Extensions.AI and unified AI abstractions for features like semantic search and large language model integration.<!--excerpt_end-->

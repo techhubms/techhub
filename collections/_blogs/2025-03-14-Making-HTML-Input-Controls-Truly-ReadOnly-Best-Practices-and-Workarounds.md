@@ -20,11 +20,11 @@ tags:
 - User Interface
 - Vue.js
 - Web Development
-- Coding
 - Blogs
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Rick Strahl offers practical solutions for improving HTML readonly input controls, providing tips on CSS, tabindex, and UI design trade-offs for web developers.<!--excerpt_end-->
 

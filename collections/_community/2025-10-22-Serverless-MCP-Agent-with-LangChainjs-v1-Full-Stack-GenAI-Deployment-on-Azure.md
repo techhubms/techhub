@@ -27,12 +27,12 @@ tags:
 - Web Components
 - AI
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - ai
 - azure
-- coding
+- dotnet
 primary_section: ai
 ---
 sinedied presents a step-by-step technical walkthrough of building a production-ready serverless AI agent using LangChain.js v1 and MCP, fully deployed and observable on Microsoft Azure.<!--excerpt_end-->

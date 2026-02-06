@@ -2,7 +2,7 @@
 external_url: https://www.stevejgordon.co.uk/the-grand-mystery-of-the-missing-18-bytes
 title: 'Solving .NET Memory Allocation Discrepancies: The Case of the Missing 18 Bytes'
 author: Steve Gordon
-primary_section: coding
+primary_section: dotnet
 feed_name: Steve Gordon's Blog
 date: 2026-01-28 15:33:29 +00:00
 tags:
@@ -12,7 +12,6 @@ tags:
 - BenchmarkDotNet
 - Blogs
 - C#
-- Coding
 - Dotmemory
 - GC.GetTotalAllocatedBytes
 - Heap Allocations
@@ -24,7 +23,7 @@ tags:
 - StringBuilder
 - Visual Studio Profiler
 section_names:
-- coding
+- dotnet
 ---
 Steve Gordon explores an 18-byte discrepancy in .NET memory allocation reports by different profiling tools, offering a technical investigation that benefits developers focused on performance optimization.<!--excerpt_end-->
 

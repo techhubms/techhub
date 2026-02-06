@@ -14,11 +14,11 @@ tags:
 - Open Source
 - Software Design
 - State Machine
-- Coding
 - Community
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 UnityDever shares a custom state machine library for C#, seeking feedback on its architecture and design. The article welcomes constructive suggestions from the development community.<!--excerpt_end-->
 

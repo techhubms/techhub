@@ -17,14 +17,13 @@ tags:
 - NuGet Package
 - Open Source
 - Azure
-- Coding
 - DevOps
 - Community
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Authored by LupusOnFire, this article introduces the .NET Aspire Event Hub Live Explorer—an open-source Blazor tool for local development with Azure Event Hubs.<!--excerpt_end-->
 

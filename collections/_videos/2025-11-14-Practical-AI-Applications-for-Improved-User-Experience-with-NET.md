@@ -22,11 +22,10 @@ tags:
 - User Experience
 - VS
 - AI
-- Coding
 - Videos
 section_names:
 - ai
-- coding
+- dotnet
 primary_section: ai
 ---
 In this session, the .NET team presents practical approaches for leveraging AI and Multi-modal Language Models to deliver a better user experience, highlighting the latest in .NET and developer tooling.<!--excerpt_end-->

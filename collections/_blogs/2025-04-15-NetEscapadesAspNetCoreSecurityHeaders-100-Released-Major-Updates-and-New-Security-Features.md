@@ -17,13 +17,13 @@ tags:
 - Permissions Policy
 - Security Headers
 - Trusted Types
-- Coding
 - Security
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - security
-primary_section: coding
+primary_section: dotnet
 ---
 Andrew Lock introduces NetEscapades.AspNetCore.SecurityHeaders 1.0.0, outlining extensive new features, updates, and best practices for integrating enhanced security headers in ASP.NET Core applications.<!--excerpt_end-->
 

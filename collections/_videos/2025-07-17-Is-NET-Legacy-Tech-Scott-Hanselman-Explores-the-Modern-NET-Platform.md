@@ -16,11 +16,10 @@ tags:
 - Raspberry Pi
 - Scott Hanselman
 - Xbox
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Scott Hanselman, in a #OneDevQuestion video, shares insights into whether .NET is legacy technology, discussing its maturity and ongoing modernization.<!--excerpt_end-->
 

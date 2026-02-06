@@ -15,13 +15,13 @@ tags:
 - IT Tage Frankfurt
 - React
 - VS Code
-- Coding
 - DevOps
 - Blogs
+- .NET
 section_names:
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 In this announcement, Harald Binkle shares details about his talk at IT-Tage Frankfurt 2024, where he will demonstrate Visual Studio Code’s standout features for full-stack development and integration with Azure DevOps and GitHub.<!--excerpt_end-->
 

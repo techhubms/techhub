@@ -19,11 +19,10 @@ tags:
 - Windows
 - Windows Registry
 - ZipFile
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this detailed blog post, Rick Strahl examines .NET's handling of long Windows file paths during zip extraction. He discusses the limitations of ZipFile.ExtractToDirectory, reviews Windows long path support options, and presents alternative coding approaches to overcome path length restrictions in C# projects.<!--excerpt_end-->
 

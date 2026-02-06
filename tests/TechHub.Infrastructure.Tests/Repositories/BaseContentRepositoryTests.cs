@@ -721,14 +721,14 @@ public abstract class BaseContentRepositoryTests : IDisposable
     public virtual async Task PropertyMapping_SectionNames_AreLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
-        // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has section_names: [coding, security]
+        // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has section_names: [dotnet, security]
 
         // Act
         var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
 
         // Assert
         result.Should().NotBeNull();
-        result!.PrimarySectionName.Should().BeOneOf("coding", "security", "Primary section should be one of the assigned sections");
+        result!.PrimarySectionName.Should().BeOneOf("dotnet", "security", "Primary section should be one of the assigned sections");
     }
 
     /// <summary>
@@ -739,14 +739,14 @@ public abstract class BaseContentRepositoryTests : IDisposable
     public virtual async Task PropertyMapping_PrimarySectionName_IsComputedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
-        // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has primary_section: coding
+        // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has primary_section: dotnet
 
         // Act
         var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
 
         // Assert
         result.Should().NotBeNull();
-        result!.PrimarySectionName.Should().Be("coding",
+        result!.PrimarySectionName.Should().Be("dotnet",
             "PrimarySectionName should be computed from section_names");
     }
 

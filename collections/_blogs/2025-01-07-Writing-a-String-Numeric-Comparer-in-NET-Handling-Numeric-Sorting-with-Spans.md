@@ -15,11 +15,10 @@ tags:
 - Sorting
 - Span APIs
 - String Manipulation
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Khalid Abuhakmeh explores building a numeric string comparer in .NET using modern C# features like Span APIs. He shares practical code, discusses challenges, and offers guidance for developers handling complex sorting scenarios.<!--excerpt_end-->
 

@@ -21,8 +21,9 @@ tags:
 - Unified Data Platform
 - AI
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - ai
 - azure

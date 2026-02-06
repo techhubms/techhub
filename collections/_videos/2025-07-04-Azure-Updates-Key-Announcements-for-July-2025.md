@@ -36,14 +36,15 @@ tags:
 - VM Dependency Agent
 - VS Code Extension
 - Azure
-- Coding
-- Machine Learning
+- ML
 - DevOps
 - Security
 - Videos
+- .NET
+- Machine Learning
 section_names:
 - azure
-- coding
+- dotnet
 - ml
 - devops
 - security

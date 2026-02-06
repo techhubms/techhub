@@ -21,14 +21,14 @@ tags:
 - Unit Testing
 - YAML Pipeline
 - Azure
-- Coding
 - DevOps
 - Community
+- .NET
 section_names:
 - azure
-- coding
+- dotnet
 - devops
-primary_section: coding
+primary_section: dotnet
 ---
 Sakshi_Gupta22 provides a step-by-step guide to configuring Azure DevOps pipelines for Angular projects, ensuring 70%+ unit test coverage with automated reporting and quality gates for sustainable delivery.<!--excerpt_end-->
 

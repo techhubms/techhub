@@ -18,11 +18,11 @@ tags:
 - Windows Server Update Services
 - Windows Updates
 - WSUS
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this blog post, Steven Bucher from the PowerShell Team explains important changes to how Microsoft Update handles PowerShell 7 updates, including expected behaviors for LTS, stable, and preview versions.<!--excerpt_end-->
 

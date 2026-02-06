@@ -19,11 +19,11 @@ tags:
 - TypeScript
 - TypeScript 7.0
 - VS Code
-- Coding
 - News
+- .NET
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 Anders Hejlsberg unveils major plans for TypeScript: a native compiler port offering significant speed and memory gains. This announcement details the benchmarks, roadmap, and expected impact on the developer workflow.<!--excerpt_end-->
 

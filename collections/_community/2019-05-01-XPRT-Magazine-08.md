@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 08
 date: 2019-05-01 00:00:00 +00:00
 author: Xebia
@@ -20,16 +20,17 @@ tags:
 - Xamarin
 - DevOps
 - Azure
-- Machine Learning
+- ML
 - AI
-- Coding
 - Community
+- .NET
+- Machine Learning
 section_names:
 - devops
 - azure
 - ml
 - ai
-- coding
+- dotnet
 primary_section: ai
 feed_name: TechHub
 ---

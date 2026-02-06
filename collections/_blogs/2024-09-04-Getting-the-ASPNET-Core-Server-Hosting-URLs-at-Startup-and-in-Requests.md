@@ -17,11 +17,10 @@ tags:
 - Program.cs
 - Startup
 - Urls
-- Coding
 - Blogs
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 In this post, Rick Strahl explores different techniques to retrieve ASP.NET Core application hosting URLs at startup and during requests, providing code samples and practical advice.<!--excerpt_end-->
 

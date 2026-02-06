@@ -21,12 +21,12 @@ tags:
 - Ubuntu
 - Web Applications
 - Azure
-- Coding
 - Community
+- .NET
 section_names:
 - azure
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 TulikaC explains how Azure App Service for Linux is transitioning its new application runtimes to Ubuntu LTS, outlining the changes for developers and the operational benefits of this update.<!--excerpt_end-->
 

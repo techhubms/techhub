@@ -18,11 +18,10 @@ tags:
 - Navigation
 - Roland Vizner
 - State Persistence
-- Coding
 - Videos
 section_names:
-- coding
-primary_section: coding
+- dotnet
+primary_section: dotnet
 ---
 dotnet hosts a Blazor community standup, featuring Roland Vizner's internship demos of new Blazor features and enhancements, with insights from Daniel Roth and Javier Calvarro Nelson.<!--excerpt_end-->
 

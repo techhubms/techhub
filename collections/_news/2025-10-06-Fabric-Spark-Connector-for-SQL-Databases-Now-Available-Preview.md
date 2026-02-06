@@ -20,8 +20,9 @@ tags:
 - SQL Security
 - SQL Server On Azure VM
 - Azure
-- Machine Learning
+- ML
 - News
+- Machine Learning
 section_names:
 - azure
 - ml

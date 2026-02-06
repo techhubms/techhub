@@ -12,7 +12,7 @@ tags:
 - Form Processing
 - Invoice Automation
 - Low Code
-- Machine Learning
+- ML
 - Microsoft AI
 - Object Detection
 - Power Apps
