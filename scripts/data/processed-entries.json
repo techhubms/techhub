@@ -25414,5 +25414,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=0FH_v8iQM5Q",
     "reason": "Succesfully added: Assigned the AI category due to the discussion of OpenClaw, a self-hosted AI assistant platform, which aligns with AI inclusion rule 4 (AI development with Microsoft technologies and AI tools in developer ecosystems). DevOps is included because of detailed coverage of GitHub Actions and Dependabot Proxy (DevOps rules 2 and 5: GitHub DevOps tools and CI/CD practices). Coding is included as content discusses improvements to developer workflow, semantic search in issues, GitHub Actions enhancements, and the closure of Babel 7 (Coding rules 1, 4, and 5: developer tools, coding frameworks, and workflow improvements). No Azure, ML, or Security categories were added as the content does not discuss Azure services, data science/ML workloads, or security-focused topics."
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content centers on ASP.NET Core and Blazor—Microsoft development frameworks for building modern web applications—which falls under Coding rule 1 and 2. AI, DevOps, Azure, ML, Security, and GitHub Copilot categories do not apply as the video does not focus on those areas. There are no exclusion triggers in the description, and the central topic is technical advancement for developers.",
+    "collection": "videos",
+    "timestamp": "2026-02-06 21:08:18 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=XY_mM2FkxHE"
   }
 ]
