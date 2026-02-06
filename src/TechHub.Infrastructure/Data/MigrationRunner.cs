@@ -124,15 +124,15 @@ public class MigrationRunner
 
     private async Task<HashSet<string>> GetExecutedMigrationsAsync()
     {
-        const string sql = "SELECT script_name FROM _migrations";
-        var migrations = await _connection.QueryAsync<string>(sql);
+        const string Sql = "SELECT script_name FROM _migrations";
+        var migrations = await _connection.QueryAsync<string>(Sql);
         return migrations.ToHashSet(StringComparer.OrdinalIgnoreCase);
     }
 
     private async Task RecordMigrationAsync(string scriptFileName)
     {
-        const string sql = "INSERT INTO _migrations (script_name) VALUES (@ScriptName)";
-        await _connection.ExecuteAsync(sql, new { ScriptName = scriptFileName });
+        const string Sql = "INSERT INTO _migrations (script_name) VALUES (@ScriptName)";
+        await _connection.ExecuteAsync(Sql, new { ScriptName = scriptFileName });
     }
 
     private async Task RunMigrationScriptAsync(

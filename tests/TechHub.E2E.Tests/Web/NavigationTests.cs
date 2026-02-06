@@ -308,8 +308,32 @@ public class NavigationTests : IAsyncLifetime
         // Arrange - Start on homepage (which doesn't have TOC)
         await Page.GotoRelativeAsync("/");
 
-        // Act - Navigate to handbook page (which has TOC)
+        // First, check if the handbook link is hidden in an expandable section
         var handbookLink = Page.Locator("a[href*='/github-copilot/handbook']").First;
+        
+        // If link exists but is hidden, click the expand button first
+        if (await handbookLink.CountAsync() > 0)
+        {
+            var isHidden = await handbookLink.IsHiddenAsync();
+            if (isHidden)
+            {
+                // Find and click the expand button in the GitHub Copilot section
+                var githubCopilotSection = Page.Locator("nav[aria-label*='GitHub Copilot collections']");
+                var expandButton = githubCopilotSection.Locator("button.badge-expandable").First;
+                
+                // Only click if button exists
+                if (await expandButton.CountAsync() > 0)
+                {
+                    await expandButton.ClickAsync();
+                    
+                    // Wait for the link to become visible
+                    await Assertions.Expect(handbookLink).ToBeVisibleAsync(
+                        new LocatorAssertionsToBeVisibleOptions { Timeout = 2000 });
+                }
+            }
+        }
+
+        // Act - Navigate to handbook page (which has TOC)
         await handbookLink.ClickBlazorElementAsync();
 
         // Wait for navigation to complete

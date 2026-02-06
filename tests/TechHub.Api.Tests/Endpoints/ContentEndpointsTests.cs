@@ -636,5 +636,73 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
             "External collections should return 404 for detail endpoint since they link to original sources");
     }
 
+    /// <summary>
+    /// INTEGRATION TEST: Verify infinite scrolling with tag filters works correctly with pagination
+    /// This test validates the fix for the bug where infinite scrolling + tag filtering was broken
+    /// </summary>
+    [Fact]
+    public async Task GetCollectionItems_WithTagFilter_PaginatesCorrectly()
+    {
+        // Arrange - Use "AI" tag which exists in test data (25 items per TestDataConstants)
+        const string tag = "AI";
+        const int pageSize = 10;  // Smaller page size to test pagination with test data
+
+        // First, get total count by requesting all items with this tag
+        var allItemsResponse = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&take=100");
+        allItemsResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+        var allItems = await allItemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var totalCount = allItems!.Count;
+
+        // Verify we have enough items to test pagination
+        totalCount.Should().Be(TestDataConstants.FilteredByAiTotalCount, "AI tag should match expected test data count");
+        totalCount.Should().BeGreaterThan(pageSize, "should have enough items to require pagination");
+
+        // Act - Fetch first batch (skip=0, take=10)
+        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip=0&take={pageSize}");
+        batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var batch1 = await batch1Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+
+        // Act - Fetch second batch (skip=10, take=10)
+        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize}&take={pageSize}");
+        batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var batch2 = await batch2Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+
+        // Act - Fetch third batch (skip=20, take=10) to get remaining items
+        var batch3Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize * 2}&take={pageSize}");
+        batch3Response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var batch3 = await batch3Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+
+        // Assert - Batches should work correctly
+        batch1.Should().NotBeNull();
+        batch2.Should().NotBeNull();
+        batch3.Should().NotBeNull();
+
+        batch1!.Should().HaveCount(pageSize, "first batch should contain exactly 10 items");
+        batch1.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)), 
+            "all items in batch 1 should have AI in their tags");
+
+        batch2!.Should().HaveCount(pageSize, "second batch should contain exactly 10 items");
+        batch2.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)), 
+            "all items in batch 2 should have AI in their tags");
+
+        var expectedBatch3Count = totalCount - (pageSize * 2);
+        batch3!.Should().HaveCount(expectedBatch3Count, $"third batch should contain {expectedBatch3Count} remaining items");
+        batch3.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)), 
+            "all items in batch 3 should have AI in their tags");
+
+        // Verify no duplicate items between batches
+        var batch1Slugs = batch1.Select(i => i.Slug).ToHashSet();
+        var batch2Slugs = batch2.Select(i => i.Slug).ToHashSet();
+        var batch3Slugs = batch3.Select(i => i.Slug).ToHashSet();
+        
+        batch1Slugs.Should().NotIntersectWith(batch2Slugs, "batches 1 and 2 should not contain duplicate items");
+        batch1Slugs.Should().NotIntersectWith(batch3Slugs, "batches 1 and 3 should not contain duplicate items");
+        batch2Slugs.Should().NotIntersectWith(batch3Slugs, "batches 2 and 3 should not contain duplicate items");
+
+        // Verify combined count matches total
+        (batch1.Count + batch2.Count + batch3.Count).Should().Be(totalCount, 
+            "combined batches should equal total items with tag filter");
+    }
+
     #endregion
 }

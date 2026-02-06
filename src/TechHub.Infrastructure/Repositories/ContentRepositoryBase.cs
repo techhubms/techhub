@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -35,7 +36,7 @@ public abstract class ContentRepositoryBase : IContentRepository
     /// Initialize sections from configuration.
     /// Converts configuration to Section models and applies ordering.
     /// </summary>
-    private static IReadOnlyList<Section> InitializeSections(AppSettings settings)
+    private static ReadOnlyCollection<Section> InitializeSections(AppSettings settings)
     {
         // Define section display order (matches live site - starts with "all")
         var sectionOrder = new[]

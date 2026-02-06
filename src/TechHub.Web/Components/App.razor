@@ -310,13 +310,21 @@
 
         // Load custom pages interactivity (ES module with explicit init)
         async function loadCustomPages(collapsibleElements, expandableElements) {
-            if (loaded.customPages || (!collapsibleElements && !expandableElements)) return;
+            if (!collapsibleElements && !expandableElements) return;
 
             try {
-                loaded.customPages = true;
                 const module = await import('./js/custom-pages.js');
-                module.initCollapsibleCards();
-                module.initExpandableBadges();
+                
+                // Init collapsible cards only once (they maintain state)
+                if (collapsibleElements && !loaded.customPages) {
+                    module.initCollapsibleCards();
+                    loaded.customPages = true;
+                }
+                
+                // Always re-init expandable badges on each navigation (they're one-time actions)
+                if (expandableElements) {
+                    module.initExpandableBadges();
+                }
             } catch (error) {
                 console.error('Failed to load custom pages:', error);
             }

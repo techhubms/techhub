@@ -686,7 +686,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
         }
 
         // Get items and count in a single round-trip
-        var combinedSql = sql.ToString() + ";\n" + BuildCountSql(request);
+        var combinedSql = sql.ToString() + ";\n" + BuildCountSql(request, parameters);
 
         using var multi = await Connection.QueryMultipleWithLoggingAsync(
             new CommandDefinition(combinedSql, parameters, cancellationToken: ct),
@@ -723,7 +723,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
     /// Build SQL for counting total results using database-specific FTS via ISqlDialect.
     /// Supports both SQLite FTS5 and PostgreSQL tsvector.
     /// </summary>
-    private string BuildCountSql(SearchRequest request)
+    private string BuildCountSql(SearchRequest request, DynamicParameters parameters)
     {
         var hasTags = request.Tags != null && request.Tags.Count > 0;
         var hasSections = request.Sections != null && request.Sections.Count > 0;
@@ -763,10 +763,13 @@ public class DatabaseContentRepository : ContentRepositoryBase
                             sql.Append(" INTERSECT ");
                         }
 
+                        var paramName = $"tag{i}";
+                        parameters.Add(paramName, request.Tags[i].ToLowerInvariant().Trim());
+
                         sql.Append(@"
                         SELECT collection_name, slug 
                         FROM content_tags_expanded 
-                        WHERE tag_word = @tag").Append(i);
+                        WHERE tag_word = @").Append(paramName);
                     }
 
                     sql.Append(@"
@@ -805,10 +808,13 @@ public class DatabaseContentRepository : ContentRepositoryBase
                             sql.Append(" INTERSECT ");
                         }
 
+                        var paramName = $"tag{i}";
+                        parameters.Add(paramName, request.Tags[i].ToLowerInvariant().Trim());
+
                         sql.Append(@"
                         SELECT collection_name, slug 
                         FROM content_tags_expanded 
-                        WHERE tag_word = @tag").Append(i);
+                        WHERE tag_word = @").Append(paramName);
                     }
 
                     sql.Append(@"

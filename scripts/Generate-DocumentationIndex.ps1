@@ -120,13 +120,14 @@ foreach ($FilePath in $FilesToScan) {
                 $OutputContent += "  - $HeaderText"
             }
         }
-        elseif ($Line -match '^###\s+(.+)') {
-            $HeaderText = $matches[1].Trim()
-            # Filter out unwanted H3 headers
-            if ($FilteredHeaders -notcontains $HeaderText) {
-                $OutputContent += "    - $HeaderText"
-            }
-        }
+        # Disabled h3 headers for now as they add a lot of noise and often contain low-value content (e.g. "Parameters", "Returns", "Examples" in code docs)
+        # elseif ($Line -match '^###\s+(.+)') {
+        #     $HeaderText = $matches[1].Trim()
+        #     # Filter out unwanted H3 headers
+        #     if ($FilteredHeaders -notcontains $HeaderText) {
+        #         $OutputContent += "    - $HeaderText"
+        #     }
+        # }
     }
     
     $OutputContent += ""

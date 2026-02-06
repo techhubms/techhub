@@ -17,7 +17,7 @@ namespace TechHub.Infrastructure.Repositories;
 public class FileBasedContentRepository : ContentRepositoryBase
 {
     // Tag split separators (same as ContentSyncService)
-    private static readonly char[] TagSplitSeparators = [' ', '-', '_'];
+    private static readonly char[] _tagSplitSeparators = [' ', '-', '_'];
 
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
@@ -359,7 +359,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
                 foreach (var tag in item.Tags)
                 {
                     // Split tag into words (same logic as ContentSyncService)
-                    var words = tag.Split(TagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
+                    var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
                     foreach (var word in words)
                     {
                         var wordNormalized = word.Trim();
@@ -370,7 +370,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
                         if (!tagWordToSlugs.TryGetValue(wordNormalized, out var slugs))
                         {
-                            slugs = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+                            slugs = new(StringComparer.OrdinalIgnoreCase);
                             tagWordToSlugs[wordNormalized] = slugs;
                         }
 
@@ -436,6 +436,7 @@ public class FileBasedContentRepository : ContentRepositoryBase
         var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
 
         // Apply filters
+        ArgumentNullException.ThrowIfNull(request);
         var filtered = allItems.AsEnumerable();
 
         if (request.DateFrom.HasValue)

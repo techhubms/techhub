@@ -27,9 +27,7 @@
 - **Always use PowerShell for scripts** (save as `.ps1`, then execute)
 - **Always follow timezone standard**: `Europe/Brussels`
 - **Always be direct and concise** - no filler phrases
-- **Always use `Run` function** (from TechHubRunner.psm1) for all build/test/run operations. Use `isBackground: false` to wait synchronously
-- **Always monitor `Run` with `get_terminal_output`** repeatedly until "This terminal is now free to use"
-- **Always wait for "This terminal is now free to use"** before executing ANY other commands in that terminal
+- **Always use `Run` function** for all build/test/run operations, see [docs/running-and-testing.md](docs/running-and-testing.md)** for complete instructions
 
 ### ⚠️ Ask First
 
@@ -60,7 +58,7 @@
 1. MANDATORY & CRITICAL: Read relevant documentation:
    - This file for workflow
    - The [docs/repository-structure.md](docs/repository-structure.md) repository structure file so you understand what is where
-   - Read the ENTIRE [docs/documentation-index.md](docs/documentation-index.md) file to find out what documentation you need to read to understand the functionality of the website. This is critical and you need to read these docs to prevent mistakes.
+   - Read all 500 lines of [docs/documentation-index.md](docs/documentation-index.md) to find out what documentation you need to read to understand the functionality of the website. This is very important and you need to read these docs to prevent mistakes.
    - Also important are the domain AGENTS.md for the area you're working in too. They are nested. Here's an EXAMPLE of how this works when making a change in the API:
      - [src/AGENTS.md](src/AGENTS.md) - The API resides in the src folder, so read this file first
      - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - Additionally read this because you're making API changes

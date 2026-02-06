@@ -104,7 +104,7 @@ startupLogger.LogInformation("🔗 Connecting to API at: {ApiBaseUrl}", apiBaseU
 builder.Services.AddHttpClient<TechHubApiClient>(client =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
-    client.Timeout = TimeSpan.FromSeconds(30);
+    client.Timeout = TimeSpan.FromSeconds(100); // Allow extra time beyond resilience timeout
 })
 .ConfigurePrimaryHttpMessageHandler(() =>
 {
@@ -120,10 +120,19 @@ builder.Services.AddHttpClient<TechHubApiClient>(client =>
 #pragma warning restore CA5359
     };
     return handler;
+})
+.AddStandardResilienceHandler(options =>
+{
+    // Configure timeouts to handle slow API startup (database seeding can take ~60s)
+    // Total: 6 attempts × 10s + 5 retries × 3s = 75s, capped at 90s hard timeout
+    options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(90);
+    options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(10);
+    options.Retry.MaxRetryAttempts = 5;
+    options.Retry.Delay = TimeSpan.FromSeconds(3);
+    options.Retry.BackoffType = Polly.DelayBackoffType.Constant; // Don't use exponential backoff
 });
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
-// Note: Resilience handler is already configured by AddServiceDefaults()
 
 var app = builder.Build();
 

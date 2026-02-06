@@ -147,7 +147,7 @@ public static class DapperExtensions
         var lowerName = name.ToLowerInvariant();
 
         // Sanitize potentially sensitive fields
-        if (lowerName.Contains("password") || lowerName.Contains("secret") || lowerName.Contains("token"))
+        if (lowerName.Contains("password", StringComparison.Ordinal) || lowerName.Contains("secret", StringComparison.Ordinal) || lowerName.Contains("token", StringComparison.Ordinal))
         {
             return "***";
         }

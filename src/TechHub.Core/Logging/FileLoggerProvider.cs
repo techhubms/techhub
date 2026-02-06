@@ -38,7 +38,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
         _filePath = filePath;
 
         // Copy log levels from provided dictionary
-        _logLevels = new Dictionary<string, LogLevel>(StringComparer.OrdinalIgnoreCase);
+        _logLevels = new(StringComparer.OrdinalIgnoreCase);
         _defaultLogLevel = LogLevel.Information;
 
         if (logLevels != null)
@@ -57,7 +57,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
         }
 
         // Initialize background writer thread for non-blocking concurrent writes
-        _writeQueue = new BlockingCollection<string>(boundedCapacity: 10000);
+        _writeQueue = new(boundedCapacity: 10000);
         _cts = new CancellationTokenSource();
         _writerThread = new Thread(ProcessWriteQueue)
         {
@@ -77,8 +77,8 @@ public sealed class FileLoggerProvider : ILoggerProvider
                 foreach (var logEntry in _writeQueue.GetConsumingEnumerable(_cts.Token))
                 {
                     // Retry with exclusive lock (FileShare.None) - handle parallel test processes
-                    const int maxRetries = 100; // 100ms max wait (100 retries × 1ms)
-                    for (int i = 0; i < maxRetries; i++)
+                    const int MaxRetries = 100; // 100ms max wait (100 retries × 1ms)
+                    for (int i = 0; i < MaxRetries; i++)
                     {
                         try
                         {
@@ -90,7 +90,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
 
                             break; // Success - exit retry loop
                         }
-                        catch (IOException) when (i < maxRetries - 1)
+                        catch (IOException) when (i < MaxRetries - 1)
                         {
                             // File locked by another process - wait 1ms and retry
                             Thread.Sleep(1);
@@ -184,7 +184,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
             var localTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, _brusselsTimeZone);
             var logEntry = new StringBuilder(256);
             logEntry.Append('[')
-                    .Append(localTime.ToString("yyyy-MM-dd HH:mm:ss.fff"))
+                    .Append(localTime.ToString("yyyy-MM-dd HH:mm:ss.fff", System.Globalization.CultureInfo.InvariantCulture))
                     .Append("] [")
                     .Append(logLevel)
                     .Append("] ")
