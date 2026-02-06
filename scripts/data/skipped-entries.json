@@ -11835,5 +11835,11 @@
     "collection": "videos",
     "reason": "No categories found: Content is excluded due to missing substantive main content text. The 'content' field is null and only the description is available, which provides a high-level summary but lacks technical depth or actionable implementation details. According to the workflow, if main content is missing or unavailable, the item cannot be meaningfully categorized or transformed into a structured markdown entry.",
     "canonical_url": "https://www.youtube.com/watch?v=CKNe3gBnzrc"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=JfiTSt16H_8",
+    "collection": "videos",
+    "reason": "No categories found: All categories were excluded due to the content falling under multiple generic exclusion rules. The content is primarily biographical, focusing on the author's personal decision to switch from Windows to Mac as a .NET developer, rather than providing substantive technical implementation details involving Microsoft technologies (Biographical Focus exclusion). Additionally, there is substantial discussion of personal experience and lifestyle as a developer, not technical guides or deep technical insights. No qualifying technical category is appropriate per the given workflow.",
+    "timestamp": "2026-02-06 15:14:39 +00:00"
   }
 ]
