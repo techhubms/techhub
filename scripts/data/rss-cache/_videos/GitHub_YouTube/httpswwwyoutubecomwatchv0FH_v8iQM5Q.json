@@ -1,0 +1,18 @@
+{
+  "Title": "The Download: OpenClaw AI agents, Last of Babel 7, GitHub Actions & more",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "PubDate": "2026-02-06T18:38:05+00:00",
+  "Author": "GitHub",
+  "FeedLevelAuthor": "GitHub",
+  "Description": "This week on The Download, Cassidy covers the new semantic search for GitHub Issues and essential updates to GitHub Actions, including a new case function. We also discuss Dependabot Proxy going open source and the rise of OpenClaw, a platform for running AI assistants on your own infrastructure. Plus, we say goodbye to Babel 7.\n\n#GitHubIssues #OpenClaw #AI\n\n▬▬▬▬▬▬ WANT TO LEARN MORE? 🚀 ▬▬▬▬▬▬\n\nGitHub Updates: Dependabot Proxy is now open source: https://github.blog/changelog/2026-02-03-the-dependabot-proxy-is-now-open-source-with-an-mit-license/ GitHub Actions gets improvements: https://github.blog/changelog/2026-01-29-github-actions-smarter-editing-clearer-debugging-and-a-new-case-function/ GitHub Issues semantic search is live: https://github.blog/changelog/2026-01-29-improved-search-for-github-issues-in-public-preview/\n\nOpen Source Updates OpenClaw is out: https://openclaw.ai/blog/introducing-openclaw OpenClaw's Open Source Friday livestream: https://gh.io/clawdbot Final Babel 7 release: https://babeljs.io/blog/2026/01/31/7.29.0\n\n▬▬▬▬▬▬ TIMESTAMPS ⌚ ▬▬▬▬▬▬\n\n00:00 Welcome to The Download 00:30 GitHub Issues gets semantic search 01:19 Improvements to GitHub Actions 02:01 Dependabot Proxy is now open source 02:50 OpenClaw AI assistant platform 03:42 The final release of Babel 7 04:10 Outro\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Tags": [
+    "AI",
+    "GitHubIssues",
+    "OpenClaw"
+  ],
+  "ProcessedDate": "2026-02-06 19:15:12",
+  "EnhancedContent": null,
+  "FeedName": "GitHub YouTube",
+  "Link": "https://www.youtube.com/watch?v=0FH_v8iQM5Q"
+}
