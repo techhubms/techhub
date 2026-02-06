@@ -25384,5 +25384,17 @@
     "timestamp": "2026-02-06 16:13:00 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned 'Azure' category because the post is focused on Azure NAT Gateway, an Azure networking service (Azure rule 1). Assigned 'Security' category because flow logs are used for auditing, security visibility, and compliance (Security rules 2 and 5). Did not assign 'Coding', 'DevOps', 'AI', 'ML', or 'GitHub Copilot' as the article does not discuss application coding, CI/CD, AI integration, ML pipelines, or GitHub Copilot features. None of the generic exclusions apply (the content is technical, not biographical, not a sales pitch, not business/executive-focused, and is well above the minimum length)."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/exlDbnUtSdY",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the video centers on projects using GitHub Copilot SDK, a developer-focused AI tool (AI Rule 2, GitHub Copilot Rules 1–4). Added 'Coding' because submissions involve building software projects, highlighting programming creativity (Coding Rule 4). The content showcases technical implementation and use of developer tools, meeting the relevant categorization criteria.",
+    "timestamp": "2026-02-06 17:17:21 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/chat-with-your-app-service-logs-using-github-copilot/ba-p/4491573",
+    "reason": "Succesfully added: Assigned AI category as content centers on using AI assistants (GitHub Copilot, Claude Code) to interact with Azure App Service observability tools, per AI rule 1 and 2. Assigned GitHub Copilot category since the tool enables Copilot-specific integrations, directly matching the GitHub Copilot rules. Assigned Azure category because the core focus is troubleshooting and debugging Azure App Service, part of Azure services (Azure rule 1). Assigned DevOps category because the content is about application monitoring, troubleshooting, deployment diagnostics, and integrating logging tools—all core aspects of modern DevOps practices, matching DevOps rules 5, 6, and 7. Did not assign Coding as the primary user activity is observability and debugging, not application code development or framework use. No ML or Security as there’s no focus on model building, data science, or security/identity beyond normal RBAC practices.",
+    "timestamp": "2026-02-06 17:17:51 +00:00",
+    "collection": "community"
   }
 ]
