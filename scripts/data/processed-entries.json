@@ -25396,5 +25396,11 @@
     "reason": "Succesfully added: Assigned AI category as content centers on using AI assistants (GitHub Copilot, Claude Code) to interact with Azure App Service observability tools, per AI rule 1 and 2. Assigned GitHub Copilot category since the tool enables Copilot-specific integrations, directly matching the GitHub Copilot rules. Assigned Azure category because the core focus is troubleshooting and debugging Azure App Service, part of Azure services (Azure rule 1). Assigned DevOps category because the content is about application monitoring, troubleshooting, deployment diagnostics, and integrating logging tools—all core aspects of modern DevOps practices, matching DevOps rules 5, 6, and 7. Did not assign Coding as the primary user activity is observability and debugging, not application code development or framework use. No ML or Security as there’s no focus on model building, data science, or security/identity beyond normal RBAC practices.",
     "timestamp": "2026-02-06 17:17:51 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the content is centered on Azure Blob Storage, backup architecture, and technical usage patterns for cloud storage (Azure rules 1, 4, and 5). No other categories apply: there is no direct DevOps content, no AI or ML, no coding or security engineering, and the focus is entirely on Azure cloud architecture and storage scalability. The article is technical, actionable, and developer/architect focused, not promotional or end-user oriented.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-blob-tiering-clarity-truths-and-practical-guidance-for/ba-p/4493156",
+    "timestamp": "2026-02-06 18:13:59 +00:00"
   }
 ]
