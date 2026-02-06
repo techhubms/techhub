@@ -25348,5 +25348,11 @@
     "canonical_url": "https://github.blog/changelog/2026-02-05-improved-pull-request-files-changed-february-5-updates",
     "reason": "Succesfully added: Assigned the DevOps category because the content centers on improvements to GitHub's pull request and code review workflows, which are closely tied to DevOps practices (DevOps rule 11: GitHub content, DevOps rule 3: team collaboration, code reviews). No other categories qualified as the update is not about AI, Coding, Azure, ML, or Security. The content is technical and practitioner-focused, not business/strategy or sales. No generic exclusion rules applied.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/claude-opus-4-6-anthropics-powerful-model-for-coding-agents-and-enterprise-workflows-is-now-available-in-microsoft-foundry-on-azure/",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on integrating Anthropic’s Claude Opus 4.6 (an advanced AI model) within Microsoft Foundry (AI rule 1). Assigned Azure because Microsoft Foundry is delivered on Azure, and Azure operationalizes these AI workflows (Azure rule 1, 4, 5). Added Security because Opus 4.6 is explicitly positioned for cybersecurity, compliance, and secure deployment in regulated industries (Security rules 1, 4, 5). Included Coding due to detailed coverage of applying Opus 4.6 for code automation, review, refactoring, and development lifecycle tasks (Coding rule 4). Did not include ML, since the focus is on applied AI capabilities, agentic automation, and coding, not on custom ML development or data engineering. All category assignments are based entirely on explicit descriptions and use cases highlighted in the content, including developer-centric automation, secure enterprise workflows, and Azure platform integration.",
+    "timestamp": "2026-02-06 03:47:55 +00:00",
+    "collection": "news"
   }
 ]
