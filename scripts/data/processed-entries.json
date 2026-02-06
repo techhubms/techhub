@@ -25360,5 +25360,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/complete-guide-to-deploying-openclaw-on-azure-windows-11-virtual/ba-p/4492001",
     "reason": "Succesfully added: Assigned AI category since this guide is about deploying and configuring an AI assistant platform (OpenClaw) that uses large language models (AI rule 1, 4). Assigned Azure category because the core deployment utilizes Azure VMs, Azure CLI, and covers Azure-specific security and IAM features (Azure rules 1, 2, 5). Assigned Security category because there's an explicit section on security benefits (isolation, zero trust), detailed security setup (NSGs, audit logs, authentication), and hardening recommendations using Azure security offerings (Security rules 1, 3, 9). Coding and DevOps were not added since the main task is integration/deployment/configuration rather than direct application coding or DevOps automation pipelines. ML was not added since there is no substantive focus on data science/ML engineering – the content is primarily AI platform usage and deployment.",
     "collection": "community"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-06 10:13:37 +00:00",
+    "reason": "Succesfully added: Generic exclusion rules do not apply: the content is technical, focuses on implementation, and is not biographical, business, or irrelevant. The Azure category is included because Azure Log Analytics, Azure Monitor, and Azure resources are central to the workflow (Azure rules 1, 2, 4, 5). DevOps is included as this is about automating testing, integrating metrics, and continuous monitoring across clusters (DevOps rules 3, 4, 5, 6, 7). Coding is assigned since Python-based test development and configuration is deeply described (Coding rule 4, 5). ML, AI, Security, and GitHub Copilot categories are NOT assigned—there is no substantive content about AI/ML workloads, security configuration, or Copilot. All assignments are directly based on matching inclusion rule text and clear alignment with code/config implementation focus.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/centralized-cluster-performance-metrics-with-reframe-hpc-and/ba-p/4488077"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-06 10:14:00 +00:00",
+    "reason": "Succesfully added: Content qualifies for the Azure category due to its technical depth on Azure-native architecture best practices, resilience features, and specific Microsoft services for multi-region design (Azure rule 1, 4, 5). Security applies based on the focus on disaster recovery, data replication, and best practices for avoiding single points of failure (Security rules 1, 4, 7, 9). Coding, ML, AI, DevOps, and GitHub Copilot do not apply as the article is architectural/operations focused and does not address development tooling, AI/ML, or code-related practices.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/proactive-resiliency-in-azure-for-specialized-workload-i-e/ba-p/4492260"
   }
 ]
