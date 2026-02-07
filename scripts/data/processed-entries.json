@@ -25426,5 +25426,11 @@
     "timestamp": "2026-02-07 00:09:06 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-microsoft-azure-network-adapter-mana-support-for/ba-p/4493279",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-06-codeql-2-24-1-improves-maven-private-registry-support-and-improves-query-accuracy",
+    "reason": "Succesfully added: Assigned the Security category because the content focuses on CodeQL, GitHub's static analysis engine, which is central to code security (Security inclusion rules 1, 2, 5). The post details features for finding and remediating vulnerabilities and discusses specific security queries. Assigned the DevOps category because CodeQL is integrated into CI/CD via GitHub code scanning and GitHub Actions, and improvements impact automated software delivery pipelines (DevOps inclusion rules 2, 5, 9, 11). Coding was not added because the primary focus is tool capabilities and security engine updates, not programming concepts or code patterns. Azure, AI, ML, and GitHub Copilot were not included as neither Azure, nor AI/ML development, nor GitHub Copilot features are directly addressed.",
+    "timestamp": "2026-02-07 01:32:46 +00:00",
+    "collection": "news"
   }
 ]
