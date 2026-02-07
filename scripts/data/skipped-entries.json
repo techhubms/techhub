@@ -11841,5 +11841,11 @@
     "collection": "videos",
     "reason": "No categories found: All categories were excluded due to the content falling under multiple generic exclusion rules. The content is primarily biographical, focusing on the author's personal decision to switch from Windows to Mac as a .NET developer, rather than providing substantive technical implementation details involving Microsoft technologies (Biographical Focus exclusion). Additionally, there is substantial discussion of personal experience and lifestyle as a developer, not technical guides or deep technical insights. No qualifying technical category is appropriate per the given workflow.",
     "timestamp": "2026-02-06 15:14:39 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/help-hub-spoke-architecture-and-routing-via-nva/m-p/4493100#M764",
+    "collection": "community",
+    "timestamp": "2026-02-06 22:04:24 +00:00"
   }
 ]

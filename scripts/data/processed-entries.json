@@ -25420,5 +25420,11 @@
     "collection": "videos",
     "timestamp": "2026-02-06 21:08:18 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=XY_mM2FkxHE"
+  },
+  {
+    "reason": "Succesfully added: Category 'Azure' was assigned because the content is focused on an Azure hardware update (Azure rule 1: Any Azure Service/Technology), specifically the introduction of the Azure Network Adapter (MANA) for VM SKUs. No other categories fit: there is no discussion of AI, machine learning, code, DevOps, or direct security implementation, although security is mentioned as a benefit. The content avoids generic exclusion (no biographical focus, job/career, sales pitch, etc.), and is technical, informative, and within the accepted length.",
+    "timestamp": "2026-02-07 00:09:06 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-microsoft-azure-network-adapter-mana-support-for/ba-p/4493279",
+    "collection": "community"
   }
 ]
