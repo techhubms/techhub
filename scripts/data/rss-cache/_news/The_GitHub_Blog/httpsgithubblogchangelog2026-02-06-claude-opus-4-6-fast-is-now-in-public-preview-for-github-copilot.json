@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "Fast mode for Claude Opus 4.6 is now rolling out in a research preview on GitHub Copilot. This high-speed option delivers output token speeds up to 2.5x faster, while maintaining the same intelligence as Opus 4.6. This release is early and experimental, focused on significantly faster inference.\n\n### Availability in GitHub Copilot\n\nFast mode for Claude Opus 4.6 will be available to [Copilot Enterprise](https://github.com/features/copilot/plans?utm_source=changelog-opus-46-fast-copilot-plans-cta&amp;utm_medium=blog&amp;utm_campaign=modellaunches) users.\n\nYou’ll be able to select the model in the model picker in:\n\n- Visual Studio Code in all modes: chat, ask, edit, agent\n- [Copilot CLI](https://github.com/github/copilot-cli)\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\n### Enabling access\n\nCopilot Enterprise plan administrators must enable the Fast mode for Claude Opus 4.6 policy in Copilot settings.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see our [documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot.\n\n### Share your feedback\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your feedback.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2026-02-06-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot",
+  "Description": "Fast mode for Claude Opus 4.6 is now rolling out in a research preview on GitHub Copilot. This high-speed option delivers output token speeds up to 2.5x faster, while maintaining…\n\nThe post [Fast mode for Claude Opus 4.6 is now in preview for GitHub Copilot](https://github.blog/changelog/2026-02-06-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "ProcessedDate": "2026-02-07 19:06:46",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "PubDate": "2026-02-07T02:02:23+00:00",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "Title": "Fast mode for Claude Opus 4.6 is now in preview for GitHub Copilot"
+}

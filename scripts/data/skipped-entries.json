@@ -11847,5 +11847,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/help-hub-spoke-architecture-and-routing-via-nva/m-p/4493100#M764",
     "collection": "community",
     "timestamp": "2026-02-06 22:04:24 +00:00"
+  },
+  {
+    "timestamp": "2026-02-07 16:05:58 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: insufficient substantive technical detail about Microsoft technologies. The title and description indicate the focus is on 'OpenClaw', a self-hosted AI agent platform. The integration examples (WhatsApp, Discord, Slack) and lack of specific Microsoft technology references indicate this video is not substantially focused on Microsoft ecosystems, services, or developer tooling. The only Microsoft-adjacent mention is GitHub, but the content appears centered around an open source, platform-agnostic project, not a Microsoft product or development scenario. There is also no information on Azure, GitHub Copilot, Coding with Microsoft technologies, or any qualifying category inclusion. As the content does not meet the minimum threshold for Microsoft technology centrality (≥40%), all categories are excluded.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/6bBqno3tp-A"
   }
 ]
