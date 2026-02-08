@@ -6,7 +6,6 @@ feed_name: DevOps Blog
 date: 2025-11-06 14:43:11 +00:00
 tags:
 - Autoscaling
-- Cloud
 - Cloud Cost
 - Cloud Discounts
 - Cloud Economics

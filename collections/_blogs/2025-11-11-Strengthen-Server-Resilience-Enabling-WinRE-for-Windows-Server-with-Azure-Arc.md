@@ -11,7 +11,6 @@ tags:
 - Azure Connected Machine Agent
 - Azure Policy
 - Centralized Governance
-- Cloud
 - Compliance
 - Configuration Management
 - Disaster Recovery

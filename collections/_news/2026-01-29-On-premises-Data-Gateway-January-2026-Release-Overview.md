@@ -18,7 +18,6 @@ tags:
 - Pipeline Activities
 - Power BI
 - Power BI Desktop
-- Machine Learning
 section_names:
 - ml
 ---

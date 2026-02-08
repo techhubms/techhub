@@ -38,7 +38,6 @@ tags:
 - VS Code
 - Zero ETL
 - .NET
-- Machine Learning
 section_names:
 - ai
 - azure

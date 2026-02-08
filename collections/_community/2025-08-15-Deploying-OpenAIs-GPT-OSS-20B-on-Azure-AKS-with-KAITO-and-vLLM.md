@@ -28,7 +28,6 @@ tags:
 - Azure
 - ML
 - Community
-- Machine Learning
 section_names:
 - ai
 - azure

@@ -18,7 +18,6 @@ tags:
 - SQL Server
 - ML
 - Community
-- Machine Learning
 section_names:
 - dotnet
 - ml

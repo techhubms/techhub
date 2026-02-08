@@ -7,7 +7,7 @@
 
 | Tier | File | Purpose |
 |------|------|---------|
-| 1 | **[Root AGENTS.md](../AGENTS.md)** | AI workflow - 9-step development process |
+| 1 | **[Root AGENTS.md](../AGENTS.md)** | AI workflow - 8-step development process |
 | 2 | **[README.md](../README.md)** | Minimal human entry point - what/where to find things |
 | 3 | **Domain AGENTS.md files** | Code patterns, framework guidance, domain rules |
 | 4 | **docs/** (this directory) | ALL system documentation - architecture, features, specs |

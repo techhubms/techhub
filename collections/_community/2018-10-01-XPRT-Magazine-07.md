@@ -7,7 +7,6 @@ tags:
 - Automation
 - Azure Security
 - Bots
-- Cloud
 - Containers
 - Kubernetes
 - Magazines

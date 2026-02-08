@@ -16,7 +16,6 @@ tags:
 - Azure Stack Hub
 - Azure Update
 - Certification
-- Cloud
 - Cloud Data
 - Cloud Platform
 - Cloud Security
@@ -41,7 +40,6 @@ tags:
 - Security
 - Videos
 - .NET
-- Machine Learning
 section_names:
 - azure
 - dotnet

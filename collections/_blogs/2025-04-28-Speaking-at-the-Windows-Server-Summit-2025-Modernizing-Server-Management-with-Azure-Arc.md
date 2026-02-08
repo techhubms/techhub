@@ -7,7 +7,6 @@ date: 2025-04-28 13:56:14 +00:00
 tags:
 - Azure Adaptive Cloud
 - Azure Arc
-- Cloud
 - Cloud Technology
 - Connectivity
 - Event

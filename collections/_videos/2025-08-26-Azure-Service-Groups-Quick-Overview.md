@@ -8,7 +8,6 @@ tags:
 - Azure Cloud
 - Azure Resource Management
 - Azure Service Groups
-- Cloud
 - Cloud Architecture
 - Cloud Computing
 - Cloud Management

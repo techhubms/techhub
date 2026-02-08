@@ -109,7 +109,7 @@ See [tests/AGENTS.md](../tests/AGENTS.md) for testing strategies, TDD workflow, 
 
 ### Critical Configuration Files
 
-- **`AGENTS.md`** - Root AI assistant workflow (9-step development process) - **READ THIS FIRST**
+- **`AGENTS.md`** - Root AI assistant workflow (8-step development process) - **READ THIS FIRST**
 - **`appsettings.json`** - Application configuration (API, Web projects)
   - Section and collection definitions
   - Database connection strings

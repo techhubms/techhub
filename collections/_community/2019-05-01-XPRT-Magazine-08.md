@@ -8,7 +8,6 @@ tags:
 - Automation
 - Azure Service Bus
 - Chaos Engineering
-- Cloud
 - Data Science
 - Event Sourcing
 - Kubernetes
@@ -24,7 +23,6 @@ tags:
 - AI
 - Community
 - .NET
-- Machine Learning
 section_names:
 - devops
 - azure

@@ -17,7 +17,6 @@ tags:
 - Azure Fleet Manager
 - Azure Migrate
 - Azure Update
-- Cloud
 - Cloud Infrastructure
 - Container Insights
 - John Savill

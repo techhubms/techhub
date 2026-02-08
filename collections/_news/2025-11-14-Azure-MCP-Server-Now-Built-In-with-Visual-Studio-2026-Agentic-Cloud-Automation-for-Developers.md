@@ -15,7 +15,6 @@ tags:
 - Azure Functions
 - Azure MCP Server
 - CI/CD Workflows
-- Cloud
 - Cloud Resource Management
 - Copilot
 - Cosmos DB

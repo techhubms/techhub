@@ -9,7 +9,6 @@ tags:
 - Azure Cloud
 - Azure Storage
 - Azure Updates
-- Cloud
 - Cloud Computing
 - Cosmos DB
 - DocumentDB

@@ -14,7 +14,6 @@ tags:
 - Azure Machine Learning
 - Azure Storage
 - Azure Update
-- Cloud
 - Cloud Infrastructure
 - Incident Management
 - Microsoft
@@ -28,7 +27,6 @@ tags:
 - DevOps
 - ML
 - Videos
-- Machine Learning
 section_names:
 - azure
 - devops

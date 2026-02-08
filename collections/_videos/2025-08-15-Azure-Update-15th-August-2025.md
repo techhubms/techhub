@@ -14,7 +14,6 @@ tags:
 - Azure Monitor
 - Azure PostgreSQL
 - Azure Updates
-- Cloud
 - Cosmos DB For MongoDB
 - Customer Managed Keys
 - Databricks Connector

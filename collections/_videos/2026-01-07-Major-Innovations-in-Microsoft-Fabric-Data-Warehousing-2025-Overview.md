@@ -31,7 +31,6 @@ tags:
 - ML
 - Security
 - Videos
-- Machine Learning
 section_names:
 - azure
 - ml

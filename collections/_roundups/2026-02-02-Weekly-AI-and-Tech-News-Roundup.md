@@ -23,7 +23,6 @@ tags:
 - Roundups
 - SDKs
 - Security
-- Machine Learning
 section_names:
 - ai
 - github-copilot

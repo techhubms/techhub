@@ -15,7 +15,6 @@ tags:
 - Azure News
 - Azure Services
 - Azure Updates
-- Cloud
 - Cloud Architecture
 - Cloud Security
 - Data Lake
@@ -31,7 +30,6 @@ tags:
 - DevOps
 - Security
 - Videos
-- Machine Learning
 section_names:
 - azure
 - ml

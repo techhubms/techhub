@@ -9,7 +9,6 @@ tags:
 - AI in DevOps
 - Alert Fatigue
 - CIS
-- Cloud
 - Cloud Compliance
 - Cloud Security
 - Contributed Content

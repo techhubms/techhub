@@ -24,7 +24,6 @@ tags:
 - DevOps
 - ML
 - Blogs
-- Machine Learning
 section_names:
 - ai
 - devops

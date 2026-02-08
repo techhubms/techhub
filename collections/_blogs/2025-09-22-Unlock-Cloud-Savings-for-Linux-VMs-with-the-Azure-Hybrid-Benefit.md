@@ -10,7 +10,6 @@ tags:
 - Azure Pricing Calculator
 - Azure Reserved Instances
 - BYOS
-- Cloud
 - Cloud Cost Optimization
 - Cloud Migration
 - Enterprise IT

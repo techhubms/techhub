@@ -9,7 +9,6 @@ tags:
 - Azure DevOps
 - Azure SQL
 - CI/CD
-- Cloud
 - Cloud Computing
 - Continuous Deployment
 - Data Exposed

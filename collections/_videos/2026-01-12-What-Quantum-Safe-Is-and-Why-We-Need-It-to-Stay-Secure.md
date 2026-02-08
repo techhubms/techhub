@@ -6,7 +6,6 @@ feed_name: John Savill's Technical Training
 date: 2026-01-12 14:39:56 +00:00
 tags:
 - Azure Cloud
-- Cloud
 - Cloud Security
 - Cryptography
 - Cybersecurity

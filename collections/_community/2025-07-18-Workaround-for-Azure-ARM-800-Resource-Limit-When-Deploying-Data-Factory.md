@@ -19,7 +19,6 @@ tags:
 - DevOps
 - ML
 - Community
-- Machine Learning
 section_names:
 - azure
 - devops

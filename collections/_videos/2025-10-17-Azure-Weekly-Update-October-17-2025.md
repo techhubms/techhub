@@ -13,7 +13,6 @@ tags:
 - Azure Functions
 - Azure Storage
 - Azure Update
-- Cloud
 - Cloud Infrastructure
 - Cloud Security
 - Custom Vision

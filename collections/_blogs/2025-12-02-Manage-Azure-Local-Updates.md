@@ -10,7 +10,6 @@ tags:
 - Azure Portal
 - Azure Update Manager
 - Best Practices
-- Cloud
 - Cloud Infrastructure
 - Hybrid Cloud
 - Microsoft

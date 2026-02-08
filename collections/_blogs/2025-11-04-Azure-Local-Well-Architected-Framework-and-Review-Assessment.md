@@ -11,7 +11,6 @@ tags:
 - Azure Arc
 - Azure Local
 - Azure Well Architected Framework
-- Cloud
 - Cloud Architecture
 - Cost Optimization
 - Edge Computing

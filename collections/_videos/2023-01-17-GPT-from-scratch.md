@@ -9,7 +9,6 @@ tags:
 - PyTorch
 - ML
 - Videos
-- Machine Learning
 section_names:
 - ml
 primary_section: ml

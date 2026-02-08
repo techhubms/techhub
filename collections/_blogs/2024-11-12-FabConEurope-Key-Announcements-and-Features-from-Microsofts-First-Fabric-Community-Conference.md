@@ -23,7 +23,6 @@ tags:
 - Azure
 - ML
 - Blogs
-- Machine Learning
 section_names:
 - azure
 - ml

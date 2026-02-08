@@ -1,7 +1,7 @@
 # PowerShell Development Agent
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `scripts/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
-> **RULE**: Follow the 9-step workflow in Root [AGENTS.md](../AGENTS.md).
+> **RULE**: Follow the 8-step workflow in Root [AGENTS.md](../AGENTS.md).
 
 ## Critical PowerShell Rules
 

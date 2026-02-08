@@ -12,7 +12,6 @@ tags:
 - Azure Virtual Machines
 - Capacity
 - Capacity Reservation
-- Cloud
 - Cloud Architecture
 - Microsoft
 - Microsoft Azure

@@ -19,7 +19,6 @@ tags:
 - Azure Security
 - Azure SQL
 - Azure Updates
-- Cloud
 - Cloud Infrastructure
 - Cosmos DB
 - Durable Functions
@@ -49,7 +48,6 @@ tags:
 - Security
 - Videos
 - .NET
-- Machine Learning
 section_names:
 - ai
 - azure

@@ -6,7 +6,6 @@ feed_name: Thomas Maurer's Blog
 date: 2025-11-13 14:50:54 +00:00
 tags:
 - Audit Requirements
-- Cloud
 - Cloud Compliance
 - Cloud Security
 - Cloud Trust

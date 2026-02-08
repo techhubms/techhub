@@ -32,7 +32,6 @@ tags:
 - ML
 - Videos
 - .NET
-- Machine Learning
 section_names:
 - azure
 - dotnet

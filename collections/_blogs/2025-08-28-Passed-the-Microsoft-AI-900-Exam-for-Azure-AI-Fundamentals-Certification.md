@@ -12,7 +12,6 @@ tags:
 - Azure Machine Learning
 - Azure OpenAI Service
 - Certification
-- Cloud
 - Cloud Computing
 - Computer Vision
 - Conversational AI

@@ -41,7 +41,6 @@ tags:
 - ML
 - Security
 - Community
-- Machine Learning
 section_names:
 - ai
 - azure

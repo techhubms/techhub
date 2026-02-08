@@ -78,8 +78,27 @@ public interface ISqlDialect
     string GetFullTextOrderByClause(string paramName);
 
     /// <summary>
+    /// Get SQL IN clause for list filtering (collections, tags, etc.)
+    /// (IN @param for SQLite, = ANY(@param) for PostgreSQL arrays)
+    /// </summary>
+    /// <param name="paramName">Parameter name (without @ prefix)</param>
+    /// <param name="count">Number of items in the list (unused but kept for compatibility)</param>
+    string GetListFilterClause(string paramName, int count);
+
+    /// <summary>
+    /// Convert a list of values to the appropriate parameter type for this database.
+    /// (List for SQLite/Dapper IN expansion, Array for PostgreSQL ANY operator)
+    /// </summary>
+    /// <typeparam name="T">Type of list elements</typeparam>
+    /// <param name="values">Values to convert</param>
+    /// <returns>List for SQLite, Array for PostgreSQL</returns>
+    object ConvertListParameter<T>(IEnumerable<T> values);
+
+    /// <summary>
+    /// DEPRECATED: Use GetListFilterClause instead.
     /// Get SQL IN clause for collection filtering
     /// (IN @param for SQLite, = ANY(@param) for PostgreSQL arrays)
     /// </summary>
+    [Obsolete("Use GetListFilterClause instead for consistent list filtering")]
     string GetCollectionFilterClause(string paramName, int count);
 }

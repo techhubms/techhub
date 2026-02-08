@@ -13,7 +13,6 @@ tags:
 - Azure File Share
 - Azure Load Testing
 - Azure Updates
-- Cloud
 - Cloud Infrastructure
 - GitHub Copilot SDK
 - Microsoft

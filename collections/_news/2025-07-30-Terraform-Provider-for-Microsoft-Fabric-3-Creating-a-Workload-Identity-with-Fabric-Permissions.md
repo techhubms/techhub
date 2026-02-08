@@ -19,7 +19,6 @@ tags:
 - Azure
 - ML
 - News
-- Machine Learning
 section_names:
 - devops
 - azure

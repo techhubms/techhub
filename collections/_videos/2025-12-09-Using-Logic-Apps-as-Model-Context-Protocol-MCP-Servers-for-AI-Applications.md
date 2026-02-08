@@ -11,7 +11,6 @@ tags:
 - Authentication
 - Azure Cloud
 - Azure Tools
-- Cloud
 - Connectors
 - Integration
 - Logic Apps

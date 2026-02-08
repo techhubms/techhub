@@ -9,7 +9,6 @@ tags:
 - AI Agents
 - Automation
 - Azure Virtual Machines
-- Cloud
 - Cloud Architecture
 - Cloud PC
 - Company News

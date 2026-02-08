@@ -24,7 +24,6 @@ tags:
 - ML
 - News
 - .NET
-- Machine Learning
 section_names:
 - azure
 - dotnet

@@ -12,7 +12,6 @@ tags:
 - Azure Cloud
 - Azure Scripting
 - Capacity
-- Cloud
 - Cloud Architecture
 - Disaster Recovery
 - High Availability

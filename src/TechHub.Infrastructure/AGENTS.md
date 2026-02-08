@@ -86,7 +86,9 @@ Database provider is configured in `appsettings.json`:
   - `GetFullTextJoinClause()` - FTS table join (SQLite only)
   - `GetFullTextWhereClause()` - FTS matching syntax
   - `GetFullTextOrderByClause()` - Relevance ranking
-  - `GetCollectionFilterClause()` - `IN` vs `ANY` syntax
+  - `GetListFilterClause()` - List filtering (`IN @param` for SQLite, `= ANY(@param)` for PostgreSQL)
+  - `ConvertListParameter<T>()` - Convert lists to proper parameter type (List for SQLite, Array for PostgreSQL)
+  - `GetBooleanLiteral()` - Boolean literals (0/1 for SQLite, true/false for PostgreSQL)
 - Uses Dapper for lightweight ORM
 - FTS5 for SQLite, tsvector for PostgreSQL
 - Section filtering via bitmask: `WHERE sections_bitmask & @mask > 0`

@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 05
 date: 2017-05-01 00:00:00 +00:00
 author: Xebia
@@ -7,7 +7,6 @@ tags:
 - ARM Templates
 - Automation
 - Best Practices
-- Cloud
 - Cloud Transition
 - Communities
 - Containers

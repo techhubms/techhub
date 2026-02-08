@@ -12,7 +12,6 @@ tags:
 - Azure AI Foundry
 - Azure Firewall
 - Azure Migrate
-- Cloud
 - Cosmos DB
 - DocumentDB
 - Elastic SAN
@@ -25,7 +24,6 @@ tags:
 - Azure
 - ML
 - Videos
-- Machine Learning
 section_names:
 - ai
 - azure

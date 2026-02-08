@@ -9,7 +9,6 @@ tags:
 - .NET 10
 - .NET Conf
 - Blazor
-- Cloud
 - Conference
 - Developers
 - IoT

@@ -8,7 +8,6 @@ tags:
 - Agentic Commerce
 - AI Powered Payments
 - Checkout.com
-- Cloud
 - Cloud Infrastructure
 - Collaborative Innovation
 - Company News

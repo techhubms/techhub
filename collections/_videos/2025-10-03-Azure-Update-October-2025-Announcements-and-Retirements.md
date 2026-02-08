@@ -16,7 +16,6 @@ tags:
 - Azure Machine Learning
 - Azure Update
 - BlobFuse
-- Cloud
 - Cloud Security
 - Data Labelling
 - Data Lake
@@ -37,7 +36,6 @@ tags:
 - ML
 - Security
 - Videos
-- Machine Learning
 section_names:
 - ai
 - azure

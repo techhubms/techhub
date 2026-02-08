@@ -29,7 +29,6 @@ tags:
 - AI
 - ML
 - Videos
-- Machine Learning
 section_names:
 - ai
 - dotnet

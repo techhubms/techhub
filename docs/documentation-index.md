@@ -4,448 +4,54 @@
 
 This index maps the structure of all documentation files in the project.
 
-## File: [AGENTS.md](../AGENTS.md)
-
-- AI Assistant Workflow
-  - What is This File?
-  - 🚨 ABSOLUTE CRITICAL RULES
-  - The 9-Step Workflow
-
-## File: [README.md](../README.md)
-
-- Tech Hub
-  - Quick Start
-  - Project Documentation
-
-## File: [docs/AGENTS.md](AGENTS.md)
-
-- Documentation Management Guide
-  - Documentation Hierarchy
-  - Core Philosophy
-  - Critical Rules
-  - Content Placement Decision
-  - Documentation Standards
-  - AGENTS.md Best Practices
-
-## File: [docs/architecture.md](architecture.md)
-
-- Architecture
-  - .NET Aspire
-  - Running with Aspire
-
-## File: [docs/caching.md](caching.md)
-
-- Browser Caching
-  - Cache Strategy Overview
-  - Fingerprinting
-  - Cache Headers Explained
-  - Static Files Middleware
-  - Performance Benefits
-  - Image Multi-Format Support
-  - Image Path Convention
-  - Implementation Reference
-
-## File: [docs/content-api.md](content-api.md)
-
-- Content API
-  - Data Model
-  - Endpoints
-  - Performance Characteristics
-  - Testing
-
-## File: [docs/content-processing.md](content-processing.md)
-
-- Content Processing
-  - Content Creation Methods
-  - Publishing Content
-  - Troubleshooting
-  - RSS Feed Processing
-
-## File: [docs/custom-pages.md](custom-pages.md)
-
-- Custom Pages API
-  - Endpoints
-  - Response Format
-  - Implementation
-  - Content Sources for Custom Pages
-  - Custom Page Ordering
-
-## File: [docs/database.md](database.md)
-
-- Database Configuration
-  - Supported Providers
-  - Content Sync Configuration
-  - Database Schema
-
-## File: [docs/design-system.md](design-system.md)
-
-- Design System
-  - Design Tokens - Single Source of Truth
-  - Color Palette
-  - Typography
-  - Spacing
-  - Breakpoints
-  - CSS Architecture
-  - Hover Effects
-  - Image Handling
-  - Implementation Reference
-
-## File: [docs/filtering.md](filtering.md)
-
-- Content Filtering System
-  - Tag Storage and Expansion
-  - Tag Filtering Behavior
-  - Implementation Details
-  - Content Filtering API
-  - Tag Statistics API
-  - Tag Cloud UI Behavior
-  - Testing
-  - Future Enhancements (Not Currently Implemented)
-
-## File: [docs/frontmatter.md](frontmatter.md)
-
-- Frontmatter Schema
-  - File Structure
-  - Required Fields (All Content)
-  - Field Definitions
-  - Content Source Fields
-  - Collection-Specific Fields
-  - Frontmatter to Domain Model Mapping
-  - Example Files
-  - Excerpt Section
-  - Example: Roundup
-  - Deprecated Fields (Do Not Use)
-  - File Naming Convention
-  - Implementation Reference
-
-## File: [docs/health-checks.md](health-checks.md)
-
-- Health Checks
-  - Endpoints
-  - Implementation Details
-
-## File: [docs/javascript.md](javascript.md)
-
-- JavaScript Architecture
-  - When JavaScript Is Required
-  - Loading Strategies
-  - Fingerprinting (Cache Busting)
-  - Local JavaScript Files
-  - Conditional Loading
-  - External CDN Libraries
-  - Navigation Helpers
-  - TOC Scroll-Spy
-  - Adding New JavaScript Files
-  - Implementation Reference
-
-## File: [docs/page-structure.md](page-structure.md)
-
-- Page Structure
-  - Semantic HTML Structure
-  - Semantic Element Usage
-  - Page Layout Classes
-  - Sticky Header Architecture
-  - Sidebar Component Architecture
-  - Skeleton Loading States
-  - Mobile Navigation
-  - Infinite Scroll Pagination
-  - Implementation Reference
-
-## File: [docs/query-logging.md](query-logging.md)
-
-- Query Logging
-  - Configuration
-  - Security Considerations
-  - Implementation
-  - Output Format
-  - Usage
-  - Related
-
-## File: [docs/render-modes.md](render-modes.md)
-
-- Render Mode Strategy
-  - Background
-  - When to Use Each Mode
-  - JavaScript Interop Disposal
-  - SignalR Message Size Considerations
-  - Current Component Configuration
-  - Testing Interactive Components
-  - Decision Flowchart
-  - Best Practices
-  - Implementation Reference
-
-## File: [docs/repository-structure.md](repository-structure.md)
-
-- Repository Structure
-  - Source Code (`src/`)
-  - Content (`collections/`)
-  - Tests (`tests/`)
-  - Configuration & Documentation
-  - Development Environment & Working Directories
-
-## File: [docs/rss-feeds.md](rss-feeds.md)
-
-- RSS Feed System
-  - Available RSS Feeds
-  - Feed Format
-  - Feed Behavior
-  - Integration with Site
-  - RSS API Direct Endpoints
-  - RSS Proxy Endpoints (Blazor Web)
-  - Implementation & Testing
-
-## File: [docs/running-and-testing.md](running-and-testing.md)
-
-- Running and Testing
-  - Basic Usage
-  - Advanced Usage
-  - URLs and Access Points
-  - Development Environment
-  - Troubleshooting
-
-## File: [docs/seo.md](seo.md)
-
-- SEO (Search Engine Optimization)
-  - Server-Side Rendering (SSR)
-  - Schema.org Structured Data
-  - Page Titles
-  - Meta Description
-  - Canonical URLs
-  - Open Graph Tags
-  - Twitter Cards
-  - RSS Feeds
-  - Semantic HTML
-  - URL Structure
-  - Implementation Reference
-
-## File: [docs/technology-stack.md](technology-stack.md)
-
-- Technology Stack
-  - Runtime & Core Frameworks
-  - Frontend
-  - Infrastructure
-  - Testing
-  - Scripting
-
-## File: [docs/terminology.md](terminology.md)
-
-- Site Terminology
-  - Core Concepts
-  - Collection Types
-  - Standard Values
-- Specialized Collections & Classification
-  - Specialized Collections
-  - Alt-Collection
-
-## File: [docs/testing-strategy.md](testing-strategy.md)
-
-- Testing Strategy
-  - Testing Diamond
-  - Why Testing Diamond?
-  - Test Distribution Philosophy
-  - Database Strategy
-  - Test Layer Definitions
-  - Test Layer Mapping
-  - Test Doubles Terminology
-  - When to Use Real vs Stub/Mock
-  - Testing Singleton Services
-  - Implementation Reference
-
-## File: [docs/toc-component.md](toc-component.md)
-
-- Table of Contents Component
-  - Component Overview
-  - Usage Pattern
-  - Scroll Spy Architecture
-  - Content Container Requirements
-  - Expected Behavior
-
-## File: [docs/writing-style-guidelines.md](writing-style-guidelines.md)
-
-- Writing Style Guidelines
-  - Core Writing Principles
-  - Specific Guidelines for AI Models
-  - What to Avoid
-  - What to Embrace
-  - Content-Specific Guidelines
-  - Quality Checks
-  - Examples
-
-## File: [src/AGENTS.md](../src/AGENTS.md)
-
-- Source Code Development Guide
-  - Port Configuration
-  - Critical Development Rules
-  - Directory Structure
-  - Code Quality Standards
-  - Shared .NET Patterns
-  - Documentation Resources
-
-## File: [src/TechHub.Api/AGENTS.md](../src/TechHub.Api/AGENTS.md)
-
-- TechHub.Api Development Guide
-  - Starting & Running
-  - Project Structure
-  - RESTful Design Principles
-  - Minimal API Patterns
-  - Dependency Injection
-  - Configuration
-  - Testing
-  - Common Patterns
-
-## File: [src/TechHub.Core/AGENTS.md](../src/TechHub.Core/AGENTS.md)
-
-- TechHub.Core Development Guide
-  - Project Structure
-  - Core Principles
-  - Domain Model Patterns
-  - Markdown Frontmatter Mapping
-  - Model Patterns
-  - Repository Interfaces
-  - URL Generation Methods
-  - Unix Epoch Timestamp Usage
-  - Model Conversion Extensions
-  - Validation Patterns
-  - Testing
-
-## File: [src/TechHub.Infrastructure/AGENTS.md](../src/TechHub.Infrastructure/AGENTS.md)
-
-- TechHub.Infrastructure Development Guide
-  - Project Structure
-  - Database Architecture
-  - Repository Patterns
-  - Content Synchronization
-  - Markdown Processing
-  - Service Registration
-  - Tag Services
-  - Error Handling
-  - Testing
-
-## File: [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md)
-
-- Blazor Frontend Development Guide
-  - Critical Rules
-  - Render Mode Strategy
-  - Semantic HTML & Page Structure
-  - Design System
-  - Component Patterns
-  - File Structure
-  - Image Conventions
-  - Static Files & Browser Caching
-  - Testing Components
-  - Common Patterns
-
-## File: [collections/AGENTS.md](../collections/AGENTS.md)
-
-- Collections Management Guide
-  - Critical Content Rules
-  - When to Use This Guide
-  - Collections Structure
-  - Content Organization
-  - Frontmatter Schema
-
-## File: [scripts/AGENTS.md](../scripts/AGENTS.md)
-
-- PowerShell Development Agent
-  - Critical PowerShell Rules
-  - When to Use This Guide
-  - Directory Structure
-  - PowerShell Syntax Rules
-  - Script Standards
-  - Key Scripts
-  - PowerShell Testing Standards
-  - Common Functions
-  - Best Practices
-  - Running Scripts
-  - Data File Locations
-
-## File: [tests/AGENTS.md](../tests/AGENTS.md)
-
-- Testing Strategy for Tech Hub .NET
-  - Database Strategy
-  - Core Testing Rules
-  - Test Doubles Terminology
-  - Unit Testing Patterns
-  - Integration Testing Patterns
-  - Directory Structure
-  - Testing Strategy
-  - Understanding Test Layers - Detailed Definitions
-  - Test Project Navigation
-  - Cross-References to Source Code
-  - Shared Testing Utilities
-
-## File: [tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md)
-
-- PowerShell Test Suite
-  - What This Directory Contains
-  - Where the Implementation Lives
-  - Testing Framework
-  - Test File Naming Convention
-  - Test Structure
-  - Testing Best Practices
-  - Common Test Patterns
-  - Test Data Management
-  - Coverage Requirements
-  - Troubleshooting
-  - Key Testing Rules
-
-## File: [tests/TechHub.Api.Tests/AGENTS.md](../tests/TechHub.Api.Tests/AGENTS.md)
-
-- API Integration Tests - Tech Hub
-  - What This Directory Contains
-  - Testing Strategy
-  - Test Patterns
-  - Best Practices
-  - Common Pitfalls
-
-## File: [tests/TechHub.Core.Tests/AGENTS.md](../tests/TechHub.Core.Tests/AGENTS.md)
-
-- Core Unit Tests - Tech Hub
-  - What This Directory Contains
-  - Testing Strategy
-  - Test Patterns
-  - Best Practices
-  - Common Pitfalls
-
-## File: [tests/TechHub.E2E.Tests/AGENTS.md](../tests/TechHub.E2E.Tests/AGENTS.md)
-
-- E2E Tests - Tech Hub
-  - Critical Rules
-  - Understanding Timeout Failures
-  - Interactive Debugging with Playwright MCP
-  - Test Architecture
-  - Writing New Tests
-  - TOC Scroll Synchronization Patterns
-  - Maintenance
-
-## File: [tests/TechHub.Infrastructure.Tests/AGENTS.md](../tests/TechHub.Infrastructure.Tests/AGENTS.md)
-
-- Infrastructure Tests - Tech Hub
-  - What This Directory Contains
-  - Testing Strategy
-  - Test Patterns
-  - Best Practices
-  - Common Pitfalls
-  - Test Data Location
-
-## File: [tests/TechHub.TestUtilities/AGENTS.md](../tests/TechHub.TestUtilities/AGENTS.md)
-
-- TechHub.TestUtilities
-  - Purpose
-  - Test Data Strategy
-  - TechHubApiFactory Classes
-  - TestCollectionsSeeder
-  - DatabaseFixture
-  - Configuration
-  - Dependencies
-  - Test Builders (`A` Pattern)
-
-## File: [tests/TechHub.Web.Tests/AGENTS.md](../tests/TechHub.Web.Tests/AGENTS.md)
-
-- Blazor Component Tests - Tech Hub
-  - What This Directory Contains
-  - Testing Strategy
-  - Test Patterns
-  - Best Practices
-  - Common Pitfalls
-
+## Syntax
+
+Output format: `- [filepath](link): "H1": "H2": "H3", "H3"; "H2"; "H2"`
+
+- `:` goes a level deeper (H1 -> H2 -> H3)
+- `,` separates items at the same level
+- `;` goes back up a level
+
+## Index
+
+- [AGENTS.md](../AGENTS.md): "AI Assistant Workflow": "What is This File?"; "🚨 ABSOLUTE CRITICAL RULES": "✅ Always Do", "⚠️ Ask First", "🚫 Never Do"; "The 8-Step Workflow": "Step 1": "Understand the codebase and create a plan before touching any code", "Step 2": "Research and validate information for correct implementation", "Step 3": "Verify current behavior before making changes (Optional)", "Step 4": "Write tests BEFORE implementing changes (TDD)", "Step 5": "Implement changes to make tests pass", "Step 6": "Validate all tests pass and code quality is high", "Step 7": "Update documentation if you made changes", "Step 8": "Report completion with a clear summary"
+- [README.md](../README.md): "Tech Hub": "Quick Start"; "Project Documentation"
+- [docs/AGENTS.md](AGENTS.md): "Documentation Management Guide": "Documentation Hierarchy"; "Core Philosophy"; "Critical Rules": "✅ Always Do", "⚠️ Ask First", "🚫 Never Do"; "Content Placement Decision"; "Documentation Standards"; "AGENTS.md Best Practices"
+- [docs/architecture.md](architecture.md): "Architecture": ".NET Aspire": "Capabilities", "Port Configuration", "Service Model", "Shared Configuration"; "Running with Aspire"
+- [docs/caching.md](caching.md): "Browser Caching": "Cache Strategy Overview"; "Fingerprinting": "How Fingerprinting Works", "Fingerprinted Asset Detection"; "Cache Headers Explained": "`max-age`", "`immutable`", "`must-revalidate`"; "Static Files Middleware": "Implementation Architecture", "File Type Detection"; "Performance Benefits"; "Image Multi-Format Support": "Format Selection", "Compression Benefits"; "Image Path Convention"; "Implementation Reference"
+- [docs/content-api.md](content-api.md): "Content API": "Data Model": "Section", "Content Item (ContentItem)", "Linking Strategy (Internal vs. External)", "ContentItem Navigation Methods"; "Endpoints": "Sections", "Content Items", "Content Detail", "Tag Cloud", "Error Responses", "404 Not Found"; "Performance Characteristics"; "Testing"
+- [docs/content-processing.md](content-processing.md): "Content Processing": "Content Creation Methods": "Database Synchronization", "Manual Content Creation with GitHub Copilot", "Automated RSS Content Creation"; "Publishing Content"; "Troubleshooting": "Common Issues", "Repair Tools"; "RSS Feed Processing": "Feed Configuration", "Adding New Feeds", "Processing Pipeline", "Azure AI Foundry Integration", "Branch Strategy", "AI Content Analysis", "Content Output", "Processing Scripts", "Error Handling", "Automatic Deployment"
+- [docs/custom-pages.md](custom-pages.md): "Custom Pages API": "Endpoints": "Developer Experience Space", "GitHub Copilot Handbook", "Levels of Enlightenment", "GitHub Copilot Features", "GenAI Basics", "GenAI Advanced", "GenAI Applied", "SDLC (Software Development Life Cycle)"; "Response Format"; "Implementation"; "Content Sources for Custom Pages": "GitHub Copilot Features Content", "Visual Studio Code Updates"; "Custom Page Ordering": "Configuration", "Ordering Rules", "Homepage Badge Display"
+- [docs/database.md](database.md): "Database Configuration": "Supported Providers": "Option 1": "FileSystem (No Database)", "Option 2": "SQLite (Recommended for Local Development)", "Option 3": "PostgreSQL (Production + E2E Tests)"; "Content Sync Configuration"; "Database Schema": "Main Tables", "Design Decisions", "Query Patterns", "Schema Location"
+- [docs/design-system.md](design-system.md): "Design System": "Design Tokens - Single Source of Truth": "Core Principle", "Adding New Design Tokens", "Design Token Categories"; "Color Palette": "Purple Accents (Tech Hub Brand)", "Background Colors", "Text Colors"; "Typography": "Font Stack", "Font Sizes"; "Spacing"; "Breakpoints"; "CSS Architecture": "Global CSS (wwwroot/css/)", "Component-Scoped CSS (.razor.css files)", "When to Use Global vs Component-Scoped CSS", "CSS Bundle Configuration"; "Hover Effects": "Allowed in Hover Effects", "Forbidden in Hover Effects"; "Image Handling": "Section Background Images", "File Structure", "Adding a New Section"; "Implementation Reference"
+- [docs/filtering.md](filtering.md): "Content Filtering System": "Tag Storage and Expansion": "How Tags Are Stored", "Why Tag Expansion?"; "Tag Filtering Behavior": "Single Tag Search", "Multiple Tag Search (AND Logic)", "Examples"; "Implementation Details": "Query Structure", "Duplicate Prevention"; "Content Filtering API": "GET /api/sections/{sectionName}/collections/{collectionName}/items"; "Tag Statistics API": "GET /api/sections/{sectionName}/collections/{collectionName}/tags", "Tag Size Algorithm (Quantile-Based)", "Section/Collection Title Exclusion"; "Tag Cloud UI Behavior": "Visual Active State", "Toggle Behavior", "URL State Management", "Page Integration"; "Testing"; "Future Enhancements (Not Currently Implemented)"
+- [docs/frontmatter.md](frontmatter.md): "Frontmatter Schema": "File Structure"; "Required Fields (All Content)"; "Field Definitions": "Layout", "Title", "Author", "Date", "Permalink", "Tags", "Section Names"; "Content Source Fields"; "Collection-Specific Fields": "GitHub Copilot Features (`_videos/ghc-features/`)"; "Frontmatter to Domain Model Mapping"; "Example Files": "News Article", "Standard Video", "GitHub Copilot Feature"; "Excerpt Section": "Definition", "Purpose", "Requirements", "Example", "Processing"; "Example": "Roundup"; "Deprecated Fields (Do Not Use)"; "File Naming Convention"; "Implementation Reference"
+- [docs/health-checks.md](health-checks.md): "Health Checks": "Endpoints": "GET /health", "GET /alive"; "Implementation Details"
+- [docs/javascript.md](javascript.md): "JavaScript Architecture": "When JavaScript Is Required"; "Loading Strategies"; "Fingerprinting (Cache Busting)": "Static Scripts", "Dynamic Imports", "How ImportMap Works"; "Local JavaScript Files"; "Conditional Loading": "Element Detection", "Performance Benefits"; "External CDN Libraries": "Current Libraries", "Updating CDN Library Versions"; "Navigation Helpers"; "TOC Scroll-Spy"; "Adding New JavaScript Files"; "Implementation Reference"
+- [docs/page-structure.md](page-structure.md): "Page Structure": "Semantic HTML Structure": "Required Structure by Page Type"; "Semantic Element Usage": "Element Guidelines", "Choosing Between `<section>` and `<article>`", "Common Mistakes to Avoid"; "Page Layout Classes"; "Sticky Header Architecture": "The Problem", "The Solution", "How It Works", "Benefits"; "Sidebar Component Architecture": "Responsibility Pattern", "Example Page with Sidebar", "Available Sidebar Components", "Sidebar Component Semantic HTML"; "Skeleton Loading States": "When to Use Skeletons", "Why Skeletons Matter", "Skeleton Layout Architecture"; "Mobile Navigation": "Responsive Behavior", "Hamburger Menu Pattern", "Mobile CSS"; "Infinite Scroll Pagination": "Configuration", "Pattern", "JavaScript"; "Implementation Reference"
+- [docs/query-logging.md](query-logging.md): "Query Logging": "Configuration": "Settings"; "Security Considerations"; "Implementation"; "Output Format"; "Usage"; "Related"
+- [docs/render-modes.md](render-modes.md): "Render Mode Strategy": "Background"; "When to Use Each Mode": "Static SSR (No Render Mode Attribute)", "Interactive Server with Prerender", "Interactive Server without Prerender (Rare)"; "JavaScript Interop Disposal"; "SignalR Message Size Considerations"; "Current Component Configuration"; "Testing Interactive Components"; "Decision Flowchart"; "Best Practices"; "Implementation Reference"
+- [docs/repository-structure.md](repository-structure.md): "Repository Structure": "Source Code (`src/`)": "Core Projects", "Infrastructure & Services", "Utilities"; "Content (`collections/`)"; "Tests (`tests/`)": "Test Projects", "Test Utilities & Test Collections"; "Configuration & Documentation": "Critical Configuration Files", "Documentation (`docs/`)", "Automation & Scripts (`scripts/`)", "Infrastructure (`infra/`)", "Feature Specifications (`specs/`)"; "Development Environment & Working Directories": "`.devcontainer/`", "`.databases/`", "`.tmp/`", "Other Hidden Directories"
+- [docs/rss-feeds.md](rss-feeds.md): "RSS Feed System": "Available RSS Feeds": "Everything Feed", "Roundups Feed", "Section Feeds"; "Feed Format": "Feed Metadata", "Feed Items", "Content Rendering"; "Feed Behavior": "Sorting and Limiting", "Content-Type"; "Integration with Site": "UI Integration", "Feed Architecture"; "RSS API Direct Endpoints": "GET /api/rss/all", "GET /api/rss/{sectionName}", "GET /api/rss/{sectionName}/{collectionName}"; "RSS Proxy Endpoints (Blazor Web)": "GET /all/feed.xml", "GET /all/roundups/feed.xml", "GET /{sectionName}/feed.xml"; "Implementation & Testing"
+- [docs/running-and-testing.md](running-and-testing.md): "Running and Testing": "CRITICAL INFORMATION"; "Basic Usage"; "Advanced Usage"; "URLs and Access Points"; "Development Environment": "Option 1": "GitHub Codespaces (Browser)", "Option 2": "DevContainer (VS Code)"; "Troubleshooting": "Database Schema Changes"
+- [docs/seo.md](seo.md): "SEO (Search Engine Optimization)": "Server-Side Rendering (SSR)"; "Schema.org Structured Data": "Article Schema", "Implementation Pattern"; "Page Titles"; "Meta Description"; "Canonical URLs"; "Open Graph Tags"; "Twitter Cards"; "RSS Feeds"; "Semantic HTML"; "URL Structure"; "Implementation Reference"
+- [docs/technology-stack.md](technology-stack.md): "Technology Stack": "Runtime & Core Frameworks"; "Frontend"; "Infrastructure"; "Testing"; "Scripting"
+- [docs/terminology.md](terminology.md): "Site Terminology": "Core Concepts": "Naming Convention"; "Collection Types"; "Standard Values": "Section Names", "Collection Names"; "Specialized Collections & Classification": "Specialized Collections"; "Alt-Collection": "Use Case", "Behavior"
+- [docs/testing-strategy.md](testing-strategy.md): "Testing Strategy": "Testing Diamond"; "Why Testing Diamond?"; "Test Distribution Philosophy"; "Database Strategy"; "Test Layer Definitions": "E2E Tests (End-to-End)", "Integration Tests", "Unit Tests", "Component Tests"; "Test Layer Mapping"; "Test Doubles Terminology"; "When to Use Real vs Stub/Mock": "Use REAL Implementations", "Stub/Mock (Only These Cases)", "NEVER Allowed in Unit Tests"; "Testing Singleton Services"; "Implementation Reference"
+- [docs/toc-component.md](toc-component.md): "Table of Contents Component": "Component Overview"; "Usage Pattern": "Basic Usage", "Generating HTML Content", "Component Features"; "Scroll Spy Architecture": "Detection Point", "Scroll Height Requirement", "How Scroll Spy Works"; "Content Container Requirements": "Required Structure", "HTML Content Generation"; "Expected Behavior": "User Interactions", "Accessibility Expectations"
+- [docs/writing-style-guidelines.md](writing-style-guidelines.md): "Writing Style Guidelines": "Core Writing Principles": "Tone and Voice", "Language Standards", "Character and Typography Standards", "Punctuation and Sentence Flow"; "Specific Guidelines for AI Models": "Common AI Writing Patterns to Avoid", "Positive Patterns to Embrace", "Writing Quality Checks for AI"; "What to Avoid": "Exaggerated Language", "Vague or Generic Language", "Technical Jargon Without Context"; "What to Embrace": "Authentic Language", "Clear Structure"; "Content-Specific Guidelines": "Technical Documentation", "Article Excerpts and Descriptions", "User Interface Text"; "Quality Checks": "Before Publishing", "Content Review Process"; "Examples": "Good vs. Poor Writing", "Content Type Examples"
+- [src/AGENTS.md](../src/AGENTS.md): "Source Code Development Guide": "Port Configuration"; "Critical Development Rules": "Starting", "Running", "and Testing", "✅ Always Do", "⚠️ Ask First", "🚫 Never Do"; "Directory Structure"; "Code Quality Standards": "Code Analysis Configuration", "EditorConfig Standards", "Code Analysis Settings", "Strategic Warning Suppressions", "Code Quality Results", "Usage in Development"; "Shared .NET Patterns": "Dependency Injection Service Lifetimes", "Markdown Frontmatter Mapping"; "Documentation Resources": "Functional Documentation (docs/)", "Implementation Guides (AGENTS.md)"
+- [src/TechHub.Api/AGENTS.md](../src/TechHub.Api/AGENTS.md): "TechHub.Api Development Guide": "Starting & Running"; "Project Structure"; "RESTful Design Principles"; "Minimal API Patterns": "Endpoint Organization", "OpenAPI Documentation", "Endpoint Handler Patterns", "Response Patterns", "Error Handling"; "Dependency Injection"; "Configuration"; "Testing"; "Common Patterns": "Filtering and Querying", "RSS Feed Generation", "Functional Documentation (docs/)", "Implementation Guides (AGENTS.md)"
+- [src/TechHub.Core/AGENTS.md](../src/TechHub.Core/AGENTS.md): "TechHub.Core Development Guide": "Project Structure"; "Core Principles": "No External Dependencies", "Immutability by Default"; "Domain Model Patterns": "Entity Design", "Value Object Pattern", "Unified Model Pattern (No Separate DTOs)", "Content Item Model"; "Markdown Frontmatter Mapping"; "Model Patterns": "Collection Model - Custom Page Ordering"; "Repository Interfaces"; "URL Generation Methods"; "Unix Epoch Timestamp Usage"; "Model Conversion Extensions"; "Validation Patterns"; "Testing": "Functional Documentation (docs/)", "Implementation Guides (AGENTS.md)"
+- [src/TechHub.Infrastructure/AGENTS.md](../src/TechHub.Infrastructure/AGENTS.md): "TechHub.Infrastructure Development Guide": "Project Structure"; "Database Architecture": "Provider Configuration", "Schema Overview"; "Repository Patterns": "Database Content Repository"; "Content Synchronization": "ContentSyncService"; "Markdown Processing": "Frontmatter Parsing", "Markdown to HTML Conversion"; "Service Registration"; "Tag Services": "Tag Cloud Service", "Tag Filtering"; "Error Handling"; "Testing": "Functional Documentation (docs/)", "Implementation Guides (AGENTS.md)"
+- [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md): "Blazor Frontend Development Guide": "Critical Rules": "✅ Always Do", "⚠️ Ask First", "🚫 Never Do"; "Render Mode Strategy"; "Semantic HTML & Page Structure"; "Design System": "CSS Architecture", "JavaScript Architecture", "Page Structure and Sidebar Components"; "Component Patterns": "Razor Variable Naming Conflicts", "Client-Side Navigation Without Re-Renders", "Skeleton Loading States", "Article Sidebar Component", "Basic Component Structure", "API Client Usage", "RSS Feed Proxy Endpoints", "Component with Background Image", "Date Formatting"; "File Structure"; "Image Conventions"; "Static Files & Browser Caching"; "Testing Components"; "Common Patterns": "Error Boundary", "Loading States", "Responsive Grid", "Infinite Scroll Pagination", "Conditional JavaScript Loading", "JavaScript Utilities", "Component Catalog Organization", "Schema.org Structured Data", "Render Mode Selection", "Custom Page Patterns", "Mobile Navigation (Hamburger Menu)", "Tag Filtering Behavior", "Functional Documentation (docs/)", "Implementation Guides (AGENTS.md)"
+- [collections/AGENTS.md](../collections/AGENTS.md): "Collections Management Guide": "Critical Content Rules": "✅ Always Do", "⚠️ Ask First", "🚫 Never Do"; "When to Use This Guide"; "Collections Structure"; "Content Organization"; "Frontmatter Schema": "Collection-Specific Fields", "Deprecated Fields (Do Not Use)", "Excerpt Section", "Content Section", "Functional Documentation (docs/)", "Implementation Guides (AGENTS.md)"
+- [scripts/AGENTS.md](../scripts/AGENTS.md): "PowerShell Development Agent": "Critical PowerShell Rules": "✅ Always Do", "⚠️ Ask First", "🚫 Never Do"; "When to Use This Guide"; "Directory Structure"; "PowerShell Syntax Rules": "Correct Examples", "Wrong Examples (Never Use)"; "Script Standards": "Parameter Definitions", "Function Paths Pattern", "Error Handling"; "Key Scripts": "Content Processing (in `content-processing/`)", "Infrastructure", "Testing"; "PowerShell Testing Standards": "Test File Location", "Running Pester Tests"; "Common Functions": "Get-SourceRoot.ps1", "Invoke-AiApiCall.ps1", "Convert-RssToMarkdown.ps1", "Feed.ps1"; "Best Practices": "Commands", "Pipeline Operations", "Parameter Validation"; "Running Scripts": "From Repository Root", "From GitHub Actions"; "Data File Locations": "Functional Documentation (docs/)", "Implementation Guides (AGENTS.md)"
+- [tests/AGENTS.md](../tests/AGENTS.md): "Testing Strategy for Tech Hub .NET": "Database Strategy"; "Core Testing Rules"; "Test Doubles Terminology"; "Unit Testing Patterns": "AAA Pattern (Arrange-Act-Assert)", "Test Naming Convention", "Theory Tests for Parameterization", "Testing Singleton Services", "Test Fixtures (IClassFixture\<T\>)"; "Integration Testing Patterns": "Test Data File Conventions", "HTTP Pipeline Testing"; "Directory Structure"; "Testing Strategy": "Testing Diamond", "Test Layer Mapping"; "Understanding Test Layers - Detailed Definitions": "E2E Tests (End-to-End)", "Integration Tests", "Unit Tests", "Component Tests (Blazor)", "PowerShell Tests"; "Test Project Navigation"; "Cross-References to Source Code"; "Shared Testing Utilities": "Directory.Build.props", "Common Test Helpers", "Functional Documentation (docs/)", "External Resources"
+- [tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md): "PowerShell Test Suite": "What This Directory Contains"; "Where the Implementation Lives"; "Testing Framework"; "Test File Naming Convention"; "Test Structure"; "Testing Best Practices": "Do's", "Don'ts"; "Common Test Patterns": "Testing Function Output", "Testing Error Handling", "Mocking External Calls"; "Test Data Management"; "Coverage Requirements"; "Troubleshooting": "Tests Not Found", "Function Not Found", "Import Errors"; "Key Testing Rules"
+- [tests/TechHub.Api.Tests/AGENTS.md](../tests/TechHub.Api.Tests/AGENTS.md): "API Integration Tests - Tech Hub": "What This Directory Contains"; "Testing Strategy"; "Test Patterns": "Using WebApplicationFactory", "What to Test"; "Best Practices"; "Common Pitfalls"
+- [tests/TechHub.Core.Tests/AGENTS.md](../tests/TechHub.Core.Tests/AGENTS.md): "Core Unit Tests - Tech Hub": "What This Directory Contains"; "Testing Strategy"; "Test Patterns": "What to Test in Domain Models", "Test Data Factories"; "Best Practices"; "Common Pitfalls"
+- [tests/TechHub.E2E.Tests/AGENTS.md](../tests/TechHub.E2E.Tests/AGENTS.md): "E2E Tests - Tech Hub": "Critical Rules"; "Understanding Timeout Failures"; "Interactive Debugging with Playwright MCP"; "Test Architecture": "Structure", "Test Organization Strategy", "API Test Organization", "Shared Page Pattern", "Browser Configuration", "Performance Optimizations", "Blazor JavaScript Initializers (Ready Detection)"; "Writing New Tests": "Test Naming Convention", "Playwright Expect Assertions and Wait Patterns", "Using BlazorHelpers", "Assertion Style", "Writing New Test Classes"; "TOC Scroll Synchronization Patterns": "The Problem": "Race Conditions", "Solution 1": "Playwright Polling (Recommended)", "Solution 2": "Event-Based Waiting (Helper Methods)", "Pattern for TOC Tests", "Common TOC Test Scenarios", "Debugging TOC Issues", "Performance Notes", "Related Files"; "Maintenance": "When to Update Tests", "Test Stability"
+- [tests/TechHub.Infrastructure.Tests/AGENTS.md](../tests/TechHub.Infrastructure.Tests/AGENTS.md): "Infrastructure Tests - Tech Hub": "What This Directory Contains"; "Testing Strategy"; "Test Patterns": "Testing Singleton Services", "What to Test"; "Best Practices"; "Common Pitfalls"; "Test Data Location"
+- [tests/TechHub.TestUtilities/AGENTS.md](../tests/TechHub.TestUtilities/AGENTS.md): "TechHub.TestUtilities": "Purpose"; "Test Data Strategy": "Unit Tests (Core/Infrastructure)", "Integration Tests (API)", "E2E Tests"; "TechHubApiFactory Classes": "TechHubIntegrationTestApiFactory", "TechHubE2ETestApiFactory"; "TestCollectionsSeeder"; "DatabaseFixture"; "Configuration": "Integration Test Configuration", "E2E Test Configuration"; "Dependencies"; "Test Builders (`A` Pattern)": "Functional Documentation (docs/)", "Implementation Guides (AGENTS.md)"
+- [tests/TechHub.Web.Tests/AGENTS.md](../tests/TechHub.Web.Tests/AGENTS.md): "Blazor Component Tests - Tech Hub": "What This Directory Contains"; "Testing Strategy"; "Test Patterns": "What to Test", "Key bUnit Patterns"; "Best Practices"; "Common Pitfalls"

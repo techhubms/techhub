@@ -13,7 +13,6 @@ tags:
 - Azure Cloud
 - Azure Foundry
 - Backend Models
-- Cloud
 - Generative AI
 - LLM
 - Microsoft

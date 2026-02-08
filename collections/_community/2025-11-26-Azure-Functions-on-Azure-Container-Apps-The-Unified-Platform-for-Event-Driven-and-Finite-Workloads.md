@@ -32,7 +32,6 @@ tags:
 - ML
 - Community
 - .NET
-- Machine Learning
 section_names:
 - ai
 - azure

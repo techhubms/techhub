@@ -5,7 +5,6 @@ author: Thomas Maurer
 feed_name: Thomas Maurer's Blog
 date: 2025-04-01 12:18:55 +00:00
 tags:
-- Cloud
 - Cloud Architecture
 - Cloud Computing
 - Hybrid Cloud

@@ -10,7 +10,6 @@ tags:
 - AI Models
 - Azure AI Search
 - Azure Cloud
-- Cloud
 - Collections
 - Embedding
 - Foundry IQ

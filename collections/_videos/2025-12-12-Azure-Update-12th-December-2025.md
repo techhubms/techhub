@@ -12,7 +12,6 @@ tags:
 - Azure Files Premium
 - Azure Sphere OS
 - Certification
-- Cloud
 - Cloud Updates
 - Dashboard Teams
 - FIPS Compliance

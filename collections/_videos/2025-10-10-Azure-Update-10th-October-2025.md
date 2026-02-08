@@ -13,7 +13,6 @@ tags:
 - Azure Files Premium
 - Azure Migrate
 - Azure Update
-- Cloud
 - Cloud Infrastructure
 - Container Insights
 - Kubernetes Fleet Manager

@@ -12,7 +12,6 @@ tags:
 - Azure ML SDK
 - Azure Update
 - Blob SFTP
-- Cloud
 - Cloud Development
 - Cloud Services
 - Confidential Ledger
@@ -28,7 +27,6 @@ tags:
 - Azure
 - ML
 - Videos
-- Machine Learning
 section_names:
 - ai
 - azure

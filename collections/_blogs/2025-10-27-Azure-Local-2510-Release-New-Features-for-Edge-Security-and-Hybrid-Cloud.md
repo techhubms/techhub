@@ -7,7 +7,6 @@ date: 2025-10-27 09:05:14 +00:00
 tags:
 - Azure Arc
 - Azure Local
-- Cloud
 - Deployment
 - Edge Computing
 - Hybrid Cloud

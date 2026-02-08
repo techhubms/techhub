@@ -12,7 +12,6 @@ tags:
 - Azure Local
 - Azure Management
 - Azure Policy
-- Cloud
 - Cloud Security
 - Compliance
 - Digital Sovereignty

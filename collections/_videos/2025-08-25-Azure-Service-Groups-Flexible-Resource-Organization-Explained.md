@@ -10,7 +10,6 @@ tags:
 - Azure Monitoring
 - Azure Resource Manager
 - Azure Service Groups
-- Cloud
 - Cloud Resource Organization
 - Control Plane
 - Entra Id

@@ -19,7 +19,6 @@ tags:
 - Static Code Analysis
 - ML
 - Videos
-- Machine Learning
 section_names:
 - dotnet
 - ml

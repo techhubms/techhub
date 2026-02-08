@@ -265,7 +265,7 @@ public partial class SidebarTagCloud : ComponentBase
         // Update URL with new tag selection
         UpdateUrlWithTags();
 
-        // Raise event with current selection
+        // Raise event to notify parent component
         await OnSelectionChanged.InvokeAsync([.. _selectedTagsInternal]);
     }
 

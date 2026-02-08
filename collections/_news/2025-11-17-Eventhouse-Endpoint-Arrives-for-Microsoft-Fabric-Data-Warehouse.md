@@ -23,7 +23,6 @@ tags:
 - Unified Architecture
 - ML
 - News
-- Machine Learning
 section_names:
 - ml
 primary_section: ml

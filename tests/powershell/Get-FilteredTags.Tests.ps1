@@ -308,7 +308,7 @@ Describe "Get-FilteredTags" {
             $result | Should -Contain "Python"
             $result | Should -Contain "ML"  # "Machine Learning" is normalized to "ML"
             $result | Should -Contain "Kubernetes"
-            $result | Should -Contain "Cloud"
+            $result | Should -Not -Contain "Cloud" # Cloud is a common word and should be filtered out
             $result | Should -Contain "Single Tag"
             # Note: "Blogs" is a collection name and is now included
             $result | Should -Contain "Blogs"

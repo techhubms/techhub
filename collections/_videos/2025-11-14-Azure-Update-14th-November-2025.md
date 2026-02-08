@@ -17,7 +17,6 @@ tags:
 - Azure Network Manager
 - Azure Updates
 - Backup
-- Cloud
 - Cloud Infrastructure
 - Flatcar Container Linux
 - GPT 5.1

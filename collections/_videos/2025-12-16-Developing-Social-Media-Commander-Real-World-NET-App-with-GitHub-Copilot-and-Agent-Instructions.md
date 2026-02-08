@@ -11,7 +11,6 @@ tags:
 - Avalonia
 - Blue Sky Integration
 - CI/CD Automation
-- Cloud
 - Cloud Computing
 - Copilot Integration
 - Cross Platform App

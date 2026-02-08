@@ -35,7 +35,6 @@ tags:
 - ML
 - Security
 - Blogs
-- Machine Learning
 section_names:
 - ai
 - devops

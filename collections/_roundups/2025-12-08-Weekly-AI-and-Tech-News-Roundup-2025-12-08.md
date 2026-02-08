@@ -23,7 +23,6 @@ tags:
 - Security
 - Roundups
 - .NET
-- Machine Learning
 section_names:
 - ai
 - github-copilot

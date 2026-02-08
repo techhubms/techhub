@@ -23,7 +23,6 @@ tags:
 - Serverless Workspaces
 - Unity Catalog
 - Workspace Governance
-- Machine Learning
 section_names:
 - azure
 - ml

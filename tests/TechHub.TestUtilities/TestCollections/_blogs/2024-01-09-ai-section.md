@@ -11,6 +11,6 @@ section_names:
 tags:
 - Test Tag
 - AI
-- Cloud
+- Cloud Computing
 ---
 Post in AI section for section filtering tests.

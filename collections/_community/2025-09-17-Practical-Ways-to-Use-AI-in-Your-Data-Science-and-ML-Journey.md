@@ -22,7 +22,6 @@ tags:
 - GitHub Copilot
 - ML
 - Community
-- Machine Learning
 section_names:
 - ai
 - github-copilot

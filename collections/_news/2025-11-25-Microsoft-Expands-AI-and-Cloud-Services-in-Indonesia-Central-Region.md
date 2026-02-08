@@ -31,7 +31,6 @@ tags:
 - GitHub Copilot
 - ML
 - News
-- Machine Learning
 section_names:
 - ai
 - azure

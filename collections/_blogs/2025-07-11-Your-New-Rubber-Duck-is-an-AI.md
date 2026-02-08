@@ -7,7 +7,6 @@ date: 2025-07-11 07:29:51 +00:00
 tags:
 - Automation
 - Chatgpt
-- Cloud
 - Code Review
 - Collaboration
 - Copilot

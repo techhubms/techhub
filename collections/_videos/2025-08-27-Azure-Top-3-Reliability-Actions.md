@@ -11,7 +11,6 @@ tags:
 - Azure Networking
 - Azure Regions
 - Azure Resilience
-- Cloud
 - Cloud Reliability
 - Disaster Recovery
 - Microsoft Cloud

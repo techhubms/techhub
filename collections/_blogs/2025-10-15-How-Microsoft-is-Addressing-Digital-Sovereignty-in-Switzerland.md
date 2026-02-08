@@ -8,7 +8,6 @@ tags:
 - Azure Arc
 - Azure Local
 - Azure Policy
-- Cloud
 - Compliance
 - Confidential Computing
 - Data Guardian

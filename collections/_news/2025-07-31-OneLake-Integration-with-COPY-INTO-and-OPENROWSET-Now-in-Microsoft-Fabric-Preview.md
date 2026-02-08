@@ -24,7 +24,6 @@ tags:
 - Workspace Permissions
 - ML
 - News
-- Machine Learning
 section_names:
 - ml
 primary_section: ml

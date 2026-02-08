@@ -11,7 +11,6 @@ tags:
 - Azure PaaS
 - Azure SaaS
 - Azure Well Architected Framework
-- Cloud
 - Cloud Architecture
 - Cost Optimization
 - Ethical AI

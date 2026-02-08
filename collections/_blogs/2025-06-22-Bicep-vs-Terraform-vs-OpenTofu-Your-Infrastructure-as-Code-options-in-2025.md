@@ -7,7 +7,6 @@ date: 2025-06-22 09:00:00 +00:00
 tags:
 - ARM Templates
 - Bicep
-- Cloud
 - Cloud Automation
 - GitHub Actions
 - Hashicorp

@@ -14,7 +14,6 @@ tags:
 - Azure Monitor Workspace
 - Azure SQL Database
 - Azure Updates
-- Cloud
 - Cloud Infrastructure
 - Cloud Security
 - Draft & Deploy
@@ -35,7 +34,6 @@ tags:
 - DevOps
 - Security
 - Videos
-- Machine Learning
 section_names:
 - azure
 - ml

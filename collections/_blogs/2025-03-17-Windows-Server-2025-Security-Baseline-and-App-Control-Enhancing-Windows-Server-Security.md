@@ -7,7 +7,6 @@ date: 2025-03-17 10:33:20 +00:00
 tags:
 - App Control
 - Azure Arc
-- Cloud
 - Hybrid Cloud
 - Microsoft
 - Microsoft Azure

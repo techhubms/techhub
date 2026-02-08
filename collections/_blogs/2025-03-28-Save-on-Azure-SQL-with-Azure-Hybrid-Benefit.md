@@ -9,7 +9,6 @@ tags:
 - Azure Hybrid Benefit
 - Azure SQL
 - Azure Virtual Machines
-- Cloud
 - Cloud Migration
 - Cost Optimization
 - Data Management
@@ -24,7 +23,6 @@ tags:
 - Azure
 - ML
 - Blogs
-- Machine Learning
 section_names:
 - azure
 - ml

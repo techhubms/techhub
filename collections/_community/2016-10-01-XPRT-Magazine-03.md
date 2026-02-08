@@ -8,7 +8,6 @@ tags:
 - Automation
 - Azure Machine Learning
 - Bot Framework
-- Cloud
 - Containers
 - Continuous Delivery
 - IaC

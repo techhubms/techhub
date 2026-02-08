@@ -25,7 +25,6 @@ tags:
 - Spark Structured Streaming
 - Streaming Analytics
 - Streaming Data
-- Machine Learning
 section_names:
 - ai
 - azure

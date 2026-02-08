@@ -8,7 +8,6 @@ tags:
 - Azure Cloud
 - Azure Files
 - Azure Storage
-- Cloud
 - Cloud Storage
 - Directory Lease
 - File Shares

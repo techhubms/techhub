@@ -15,7 +15,6 @@ tags:
 - Azure NetApp Files
 - Azure Updates
 - Blob Storage
-- Cloud
 - Cloud Security
 - CNAME Certificate Validation
 - DC EC Esv6 VMs

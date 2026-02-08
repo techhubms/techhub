@@ -24,7 +24,6 @@ tags:
 - Python
 - Service Principal
 - Workspace Identity
-- Machine Learning
 section_names:
 - azure
 - ml

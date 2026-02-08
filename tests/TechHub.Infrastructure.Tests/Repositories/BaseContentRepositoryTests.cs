@@ -247,7 +247,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         result.Should().NotBeNull("TestCollections should contain the test article");
         result!.Slug.Should().Be("test-article");
         result.Title.Should().Be("Test Article with AI and Azure Tags");
-        result.Tags.Should().BeEquivalentTo(["AI", "Azure", "Cloud"]);
+        result.Tags.Should().BeEquivalentTo(["AI", "Azure", "Cloud Computing"]);
         result.PrimarySectionName.Should().BeOneOf("ai", "cloud");
     }
 

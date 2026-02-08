@@ -10,7 +10,6 @@ tags:
 - Azure Files NFS
 - Azure Migrate
 - Azure Storage Mover
-- Cloud
 - CrowdStrike
 - Fabric Data Factory
 - Johnsavillstechnicaltraining
@@ -27,7 +26,6 @@ tags:
 - Security
 - ML
 - Videos
-- Machine Learning
 section_names:
 - ai
 - azure

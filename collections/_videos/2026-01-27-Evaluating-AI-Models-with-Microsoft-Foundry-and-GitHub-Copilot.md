@@ -33,7 +33,6 @@ tags:
 - Tech
 - Technology
 - Videos
-- Machine Learning
 section_names:
 - ai
 - azure

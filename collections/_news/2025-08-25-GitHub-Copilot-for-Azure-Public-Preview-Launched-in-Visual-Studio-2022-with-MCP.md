@@ -15,7 +15,6 @@ tags:
 - Azure Key Vault
 - Azure MCP Server
 - Azure SQL Database
-- Cloud
 - Cloud Development
 - Copilot
 - Copilot Chat

@@ -7,7 +7,6 @@ tags:
 - .NET Foundation
 - API Management
 - Automation
-- Cloud
 - EventStorming
 - Healthcare
 - High Quality Releases

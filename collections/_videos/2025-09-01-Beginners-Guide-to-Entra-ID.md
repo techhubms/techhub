@@ -10,7 +10,6 @@ tags:
 - Application Integration
 - Azure Active Directory
 - Azure AD
-- Cloud
 - Cloud Security
 - Conditional Access
 - Device Management

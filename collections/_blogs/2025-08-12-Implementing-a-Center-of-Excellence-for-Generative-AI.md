@@ -15,7 +15,6 @@ tags:
 - Azure OpenAI
 - Center Of Excellence
 - Center Of Exellence
-- Cloud
 - CoE
 - CoE Strategy
 - Enterprise AI

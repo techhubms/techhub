@@ -22,7 +22,6 @@ tags:
 - AI
 - ML
 - News
-- Machine Learning
 section_names:
 - ai
 - ml

@@ -5,7 +5,6 @@ author: Dellenny
 feed_name: Dellenny's Blog
 date: 2025-11-10 10:49:25 +00:00
 tags:
-- Cloud
 - Compliance
 - Encryption
 - GDPR

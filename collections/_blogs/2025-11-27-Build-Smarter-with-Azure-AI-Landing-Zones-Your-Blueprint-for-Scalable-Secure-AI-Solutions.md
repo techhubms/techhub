@@ -8,7 +8,6 @@ tags:
 - Azure AI
 - Azure AI Landing Zones
 - Azure Essentials Show
-- Cloud
 - Cloud Architecture
 - Cloud Best Practices
 - Deployment Automation

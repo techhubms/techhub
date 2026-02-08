@@ -6,7 +6,6 @@ tags:
 - .NET 10
 - Agentic AI
 - Automation
-- Cloud
 - Coding Agents
 - Compliance
 - MCP
@@ -20,7 +19,6 @@ tags:
 - Security
 - Roundups
 - .NET
-- Machine Learning
 section_names:
 - ai
 - github-copilot

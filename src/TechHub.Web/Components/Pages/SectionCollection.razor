@@ -91,6 +91,9 @@
         {
             selectedTags = new List<string>();
         }
+        
+        // Ensure component tree is notified of state change
+        StateHasChanged();
     }
 
     private void CleanupUrlWithDeduplicatedTags()

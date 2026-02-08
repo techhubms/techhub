@@ -7,7 +7,6 @@ date: 2025-09-16 12:29:00 +00:00
 tags:
 - Active Directory
 - Authentication
-- Cloud
 - Cloud Security
 - Commvault
 - Cybersecurity

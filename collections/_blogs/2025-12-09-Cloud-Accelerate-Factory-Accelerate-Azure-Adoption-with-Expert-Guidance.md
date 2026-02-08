@@ -10,7 +10,6 @@ tags:
 - Azure Essentials Show
 - Azure Migration
 - Azure Modernization
-- Cloud
 - Cloud Accelerate Factory
 - Cloud Adoption
 - Cloud Migration

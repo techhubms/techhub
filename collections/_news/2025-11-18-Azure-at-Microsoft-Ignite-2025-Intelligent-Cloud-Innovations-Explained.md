@@ -37,7 +37,6 @@ tags:
 - ML
 - Security
 - News
-- Machine Learning
 section_names:
 - ai
 - azure

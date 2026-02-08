@@ -9,7 +9,6 @@ tags:
 - Backend Development
 - Career Transition
 - CI/CD
-- Cloud
 - Developer Skills
 - Engineering Practices
 - Infrastructure

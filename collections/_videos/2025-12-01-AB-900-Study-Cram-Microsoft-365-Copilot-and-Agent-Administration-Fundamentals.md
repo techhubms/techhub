@@ -8,7 +8,6 @@ tags:
 - AB 900
 - AI Agents
 - Azure Cloud
-- Cloud
 - Cloud Security
 - Copilot
 - Copilot Studio

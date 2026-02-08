@@ -14,7 +14,6 @@ tags:
 - Azure Red Hat OpenShift
 - Azure Services
 - Certification
-- Cloud
 - Cloud Updates
 - Cosmos DB
 - GQL in KQL

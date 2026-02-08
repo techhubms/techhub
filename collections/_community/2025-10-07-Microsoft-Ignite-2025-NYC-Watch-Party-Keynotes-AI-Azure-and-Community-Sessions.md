@@ -10,7 +10,6 @@ tags:
 - Automation
 - Azure AI Foundry
 - Azure Load Balancer
-- Cloud
 - Copilot Studio
 - Microsoft Ignite
 - MVP

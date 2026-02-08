@@ -19,7 +19,6 @@ tags:
 - Azure Security
 - Azure Updates
 - BlobNFS
-- Cloud
 - Cloud Migration
 - Cosmos DB
 - Databricks Unity Catalog
@@ -41,7 +40,6 @@ tags:
 - Security
 - Videos
 - .NET
-- Machine Learning
 section_names:
 - ai
 - azure

@@ -6,7 +6,6 @@ feed_name: Thomas Maurer's Blog
 date: 2025-05-07 10:44:34 +00:00
 tags:
 - Azure Essentials Show
-- Cloud
 - Cloud Computing
 - Cost Optimization
 - ISV

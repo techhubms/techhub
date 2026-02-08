@@ -14,7 +14,6 @@ tags:
 - Azure Migration
 - Azure SQL
 - Azure Updates
-- Cloud
 - Cloud Security
 - Custom Maintenance Windows
 - Entra ID Authentication
@@ -33,7 +32,6 @@ tags:
 - ML
 - Security
 - Videos
-- Machine Learning
 section_names:
 - azure
 - ml

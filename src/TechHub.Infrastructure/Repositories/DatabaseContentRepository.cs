@@ -417,7 +417,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
 
         if (request.Collections != null && request.Collections.Count > 0)
         {
-            // Optimization: Use equality for single collection, IN for multiple
+            // Optimization: Use equality for single collection, dialect-specific clause for multiple
             if (request.Collections.Count == 1)
             {
                 whereClauses.Add("c.collection_name = @collection");
@@ -425,8 +425,9 @@ public class DatabaseContentRepository : ContentRepositoryBase
             }
             else
             {
-                whereClauses.Add("c.collection_name IN @collections");
-                parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
+                whereClauses.Add($"c.collection_name {Dialect.GetListFilterClause("collections", request.Collections.Count)}");
+                var normalizedCollections = request.Collections.Select(c => c.ToLowerInvariant().Trim());
+                parameters.Add("collections", Dialect.ConvertListParameter(normalizedCollections));
             }
         }
 
@@ -450,7 +451,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
     /// Uses GROUP BY + HAVING COUNT(*) = N for multi-tag AND logic.
     /// Returns (collection_name, slug) pairs.
     /// </summary>
-    protected static string BuildTagsTableQuery(SearchRequest request, DynamicParameters parameters)
+    protected string BuildTagsTableQuery(SearchRequest request, DynamicParameters parameters)
     {
         ArgumentNullException.ThrowIfNull(request);
         ArgumentNullException.ThrowIfNull(parameters);
@@ -463,9 +464,9 @@ public class DatabaseContentRepository : ContentRepositoryBase
         // If user searches "azure ai foundry", we look for exact match "azure ai foundry" in tag_word
         // If user searches "ai", we look for exact match "ai" in tag_word
         // Tags are pre-split during storage, so this provides word-level matching
-        var normalizedTags = request.Tags!.Select(t => t.ToLowerInvariant().Trim()).ToList();
-        whereClauses.Add("tag_word IN @tags");
-        parameters.Add("tags", normalizedTags);
+        var normalizedTags = request.Tags!.Select(t => t.ToLowerInvariant().Trim());
+        whereClauses.Add($"tag_word {Dialect.GetListFilterClause("tags", request.Tags.Count)}");
+        parameters.Add("tags", Dialect.ConvertListParameter(normalizedTags));
 
         // Section filtering using bitmask ("all" means no filter)
         if (request.Sections != null && request.Sections.Count > 0 &&
@@ -482,7 +483,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
         if (request.Collections != null && request.Collections.Count > 0 &&
             !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
-            // Optimization: Use equality for single collection, IN for multiple
+            // Optimization: Use equality for single collection, dialect-specific clause for multiple
             if (request.Collections.Count == 1)
             {
                 whereClauses.Add("collection_name = @collection");
@@ -490,8 +491,9 @@ public class DatabaseContentRepository : ContentRepositoryBase
             }
             else
             {
-                whereClauses.Add("collection_name IN @collections");
-                parameters.Add("collections", request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList());
+                whereClauses.Add($"collection_name {Dialect.GetListFilterClause("collections", request.Collections.Count)}");
+                var normalizedCollections = request.Collections.Select(c => c.ToLowerInvariant().Trim());
+                parameters.Add("collections", Dialect.ConvertListParameter(normalizedCollections));
             }
         }
 
@@ -517,7 +519,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
         // For single tag: COUNT = 1
         // For multiple tags (e.g., tags=ai,azure): COUNT = 2 (item must have both)
         sql.Append(" HAVING COUNT(*) = @tagCount");
-        parameters.Add("tagCount", normalizedTags.Count);
+        parameters.Add("tagCount", request.Tags!.Count);
 
         // PERFORMANCE OPTIMIZATION: Apply ORDER BY + LIMIT in subquery
         // Since content_tags_expanded has date_epoch, we can sort and limit HERE
@@ -650,12 +652,9 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 }
                 else
                 {
-                    whereClauses.Add($"c.collection_name {Dialect.GetCollectionFilterClause("collections", request.Collections.Count)}");
-                    // SQLite uses List, PostgreSQL uses Array
-                    var collectionsParam = Dialect.ProviderName == "PostgreSQL"
-                        ? request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToArray()
-                        : (object)request.Collections.Select(c => c.ToLowerInvariant().Trim()).ToList();
-                    parameters.Add("collections", collectionsParam);
+                    whereClauses.Add($"c.collection_name {Dialect.GetListFilterClause("collections", request.Collections.Count)}");
+                    var normalizedCollections = request.Collections.Select(c => c.ToLowerInvariant().Trim());
+                    parameters.Add("collections", Dialect.ConvertListParameter(normalizedCollections));
                 }
             }
 
@@ -738,13 +737,12 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 // Count with FTS: pre-filter by tags, then apply FTS match
                 var ftsJoin = Dialect.GetFullTextJoinClause();
                 if (!string.IsNullOrEmpty(ftsJoin))
-                {
-                    sql.Append($@"
+                {  sql.Append($@"
                 SELECT COUNT(*) FROM content_items c
                 {ftsJoin}
                 WHERE (c.collection_name, c.slug) IN (
                     SELECT collection_name, slug FROM content_tags_expanded
-                    WHERE tag_word IN @tags");
+                    WHERE tag_word {Dialect.GetListFilterClause("tags", request.Tags!.Count)}");
                 }
                 else
                 {
@@ -786,10 +784,10 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 // Count without FTS: use tags table directly
                 if (Dialect.ProviderName == "SQLite")
                 {
-                    sql.Append(@"
+                    sql.Append($@"
                 SELECT COUNT(*) FROM (
                     SELECT collection_name, slug FROM content_tags_expanded
-                    WHERE tag_word IN @tags");
+                    WHERE tag_word {Dialect.GetListFilterClause("tags", request.Tags!.Count)}");
                 }
                 else
                 {
@@ -845,7 +843,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 }
                 else
                 {
-                    sql.Append($" AND collection_name {Dialect.GetCollectionFilterClause("collections", request.Collections.Count)}");
+                    sql.Append($" AND collection_name {Dialect.GetListFilterClause("collections", request.Collections.Count)}");
                 }
             }
 
@@ -911,7 +909,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
             }
             else
             {
-                whereClauses.Add($"c.collection_name {Dialect.GetCollectionFilterClause("collections", request.Collections.Count)}");
+                whereClauses.Add($"c.collection_name {Dialect.GetListFilterClause("collections", request.Collections.Count)}");
             }
         }
 

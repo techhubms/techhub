@@ -33,7 +33,6 @@ tags:
 - User Data Functions
 - Warehouse
 - .NET
-- Machine Learning
 section_names:
 - ai
 - azure

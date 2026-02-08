@@ -18,7 +18,6 @@ tags:
 - Azure SQL Database
 - Certification
 - Claude Opus
-- Cloud
 - DevOps Master Class
 - Entra ID
 - Foundry
@@ -39,7 +38,6 @@ tags:
 - ML
 - Videos
 - .NET
-- Machine Learning
 section_names:
 - azure
 - dotnet

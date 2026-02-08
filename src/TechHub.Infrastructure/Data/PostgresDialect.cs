@@ -71,4 +71,16 @@ public class PostgresDialect : ISqlDialect
         // PostgreSQL uses ANY for array matching (requires array parameter)
         return $"= ANY(@{paramName})";
     }
+
+    public string GetListFilterClause(string paramName, int count)
+    {
+        // PostgreSQL uses ANY for array matching (same as GetCollectionFilterClause)
+        return $"= ANY(@{paramName})";
+    }
+
+    public object ConvertListParameter<T>(IEnumerable<T> values)
+    {
+        // PostgreSQL requires Array<T> for ANY operator
+        return values.ToArray();
+    }
 }

@@ -27,7 +27,6 @@ tags:
 - Security
 - Community
 - .NET
-- Machine Learning
 section_names:
 - ai
 - azure

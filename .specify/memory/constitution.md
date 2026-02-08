@@ -64,20 +64,18 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 **Reference**: See [Root AGENTS.md - Step 6: Write Tests First](../../AGENTS.md#step-6-write-tests-first-tdd) for complete TDD workflow.  
 **Implementation**: See [tests/AGENTS.md](../../tests/AGENTS.md) for testing strategies across all layers.
 
-### 2. 9-step Development Workflow
+### 2. 8-step Development Workflow
 
 **🚨 MANDATORY**: EVERY development task MUST follow this workflow in order.
 
-1. **Core Rules & Boundaries** - Review always/ask/never rules
-2. **Gather Context** - Read documentation and code
-3. **Create a Plan** - Break down task into steps
-4. **Research & Validate** - Use context7 MCP for latest docs
-5. **Verify Current Behavior** - Use Playwright MCP for testing (optional)
-6. **Write Tests First** - TDD (see rule #1)
-7. **Implement Changes** - Make tests pass
-8. **Validate & Fix** - Run all tests, fix errors
-9. **Update Documentation** - Keep docs in sync
-10. **Report Completion** - Summarize changes
+1. **Understand and Plan** - Gather context, read documentation, break down task
+2. **Research & Validate** - Use context7 MCP for latest docs
+3. **Verify Current Behavior** - Use Playwright MCP for testing (optional)
+4. **Write Tests First** - TDD (see rule #1)
+5. **Implement Changes** - Make tests pass
+6. **Validate & Fix** - Run all tests, fix errors
+7. **Update Documentation** - Keep docs in sync
+8. **Report Completion** - Summarize changes
 
 **Reference**: See [Root AGENTS.md - AI Assistant Workflow](../../AGENTS.md#ai-assistant-workflow) for detailed instructions on each step.
 

@@ -23,7 +23,6 @@ tags:
 - ML
 - Security
 - News
-- Machine Learning
 section_names:
 - ml
 - security

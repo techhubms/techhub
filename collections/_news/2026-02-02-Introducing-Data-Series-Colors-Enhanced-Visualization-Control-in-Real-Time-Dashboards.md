@@ -20,7 +20,6 @@ tags:
 - Pie Chart
 - Real Time Dashboards
 - Time Series Analysis
-- Machine Learning
 section_names:
 - ml
 ---

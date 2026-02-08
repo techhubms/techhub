@@ -15,7 +15,6 @@ tags:
 - Azure Cloud
 - Azure OpenAI Service
 - Azure Ultra Disk
-- Cloud
 - Cloud News
 - GPT 5o
 - Hybrid Deployment

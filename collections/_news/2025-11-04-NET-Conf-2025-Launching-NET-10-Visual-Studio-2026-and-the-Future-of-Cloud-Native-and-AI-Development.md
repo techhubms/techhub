@@ -16,7 +16,6 @@ tags:
 - Azure Keynote
 - Blazor
 - C# 14
-- Cloud
 - Cloud Native
 - Community Sessions
 - Containers
@@ -39,7 +38,6 @@ tags:
 - ML
 - Security
 - News
-- Machine Learning
 section_names:
 - ai
 - azure

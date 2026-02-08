@@ -13,7 +13,6 @@ tags:
 - Azure MCP Server
 - Azure SDK
 - Azure Service Bus
-- Cloud
 - Data Analytics
 - Developer Best Practices
 - Documentation
@@ -31,7 +30,6 @@ tags:
 - GitHub Copilot
 - Security
 - News
-- Machine Learning
 section_names:
 - ai
 - azure

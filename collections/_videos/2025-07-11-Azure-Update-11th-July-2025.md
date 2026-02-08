@@ -13,7 +13,6 @@ tags:
 - Azure Cloud
 - Azure Firewall
 - Azure Learning
-- Cloud
 - Cloud Migration
 - Cloud Updates
 - Codex Mini

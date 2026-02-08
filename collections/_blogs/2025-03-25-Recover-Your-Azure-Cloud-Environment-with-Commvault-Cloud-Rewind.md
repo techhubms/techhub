@@ -6,7 +6,6 @@ feed_name: Thomas Maurer's Blog
 date: 2025-03-25 14:45:56 +00:00
 tags:
 - Azure Infrastructure
-- Cloud
 - Cloud Computing
 - Cloud Recovery
 - Cloud Rewind

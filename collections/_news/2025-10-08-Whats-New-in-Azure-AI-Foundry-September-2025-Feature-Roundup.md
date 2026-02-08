@@ -46,7 +46,6 @@ tags:
 - Security
 - News
 - .NET
-- Machine Learning
 section_names:
 - ai
 - azure

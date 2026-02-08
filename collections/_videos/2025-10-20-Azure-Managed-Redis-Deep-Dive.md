@@ -8,7 +8,6 @@ tags:
 - Authentication
 - Azure Cloud
 - Azure Managed Redis
-- Cloud
 - Cloud Architecture
 - Cluster Policy
 - Data Durability

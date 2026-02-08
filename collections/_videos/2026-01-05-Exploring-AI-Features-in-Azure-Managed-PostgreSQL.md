@@ -9,7 +9,6 @@ tags:
 - Azure Cloud
 - Azure Foundry
 - Azure PostgreSQL
-- Cloud
 - Database
 - Database AI
 - Embedding

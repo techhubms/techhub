@@ -1,13 +1,15 @@
 # Running and Testing
 
-The `Run` script is your primary tool for running the application and executing tests. It automatically handles the complex setup of starting dependent services (databases, API) required.
+The `Run` command is your primary tool for running the application and executing tests. It automatically handles the complex setup of starting dependent services (databases, API) required.
 
 ## CRITICAL INFORMATION
 
 - **Always use `isBackground: false`** to wait synchronously**
 - **Always monitor `Run` with `get_terminal_output`** repeatedly until "This terminal is now free to use"
 - **Always wait for "This terminal is now free to use"** before executing ANY other commands in that terminal
+- **Never run `Start-Sleep` or other wait commands in terminal executing `Run`** for waiting. Always use `get_terminal_output` as described above
 
+- **Automatic Availability**: The `Run` command is automatically loaded in every new PowerShell session and can be executed from any directory within the workspace.
 - **Background Services**: The `Run` command manages background processes for you. You don't need to manually start the API before running E2E tests—the script handles it.
 - **Terminal Reuse**: You can run `Run` commands repeatedly in the same terminal. It detects if servers are already running and only restarts them if binaries have changed.
 

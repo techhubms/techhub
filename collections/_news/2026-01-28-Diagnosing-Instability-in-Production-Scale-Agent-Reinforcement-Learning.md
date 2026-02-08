@@ -28,7 +28,6 @@ tags:
 - Tool Augmented Agents
 - TRL
 - Variance Amplification
-- Machine Learning
 section_names:
 - ai
 - ml

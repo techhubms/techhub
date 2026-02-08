@@ -13,7 +13,6 @@ tags:
 - Azure Cloud
 - Azure Networking
 - Azure Security
-- Cloud
 - Cloud Security
 - Control Plane
 - Deployment

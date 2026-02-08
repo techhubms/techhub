@@ -11,7 +11,6 @@ tags:
 - AI Orchestration
 - Azure AI Foundry
 - Azure Essentials Show
-- Cloud
 - Cloud AI
 - Enterprise Automation
 - Large Language Models

@@ -26,7 +26,6 @@ tags:
 - GitHub Copilot
 - ML
 - Videos
-- Machine Learning
 section_names:
 - ai
 - azure

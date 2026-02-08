@@ -37,7 +37,6 @@ tags:
 - Statistics Refresh
 - Streaming Data
 - VS Code
-- Machine Learning
 section_names:
 - ai
 - azure

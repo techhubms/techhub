@@ -8,7 +8,6 @@ tags:
 - AI Platforms
 - Azure Accelerate
 - Business Critical Applications
-- Cloud
 - Cloud Security
 - Cloud Security Ambitioning
 - Cloud Workloads

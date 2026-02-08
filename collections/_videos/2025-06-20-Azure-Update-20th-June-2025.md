@@ -15,7 +15,6 @@ tags:
 - Azure Red Hat OpenShift
 - Azure Region
 - Azure SQL Managed Instance
-- Cloud
 - Cloud Updates
 - Kubernetes
 - Linux VM Diagnostics
@@ -27,7 +26,6 @@ tags:
 - Azure
 - ML
 - Videos
-- Machine Learning
 section_names:
 - azure
 - ml

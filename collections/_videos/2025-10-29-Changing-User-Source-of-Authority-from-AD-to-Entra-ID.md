@@ -8,7 +8,6 @@ tags:
 - Access Management
 - Active Directory
 - Azure AD
-- Cloud
 - Cloud Identity
 - Cloud Security
 - Entra Id

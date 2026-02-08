@@ -9,7 +9,6 @@ tags:
 - Bots
 - Browser Security
 - ChatOps
-- Cloud
 - FaaS
 - Kubernetes
 - Magazines

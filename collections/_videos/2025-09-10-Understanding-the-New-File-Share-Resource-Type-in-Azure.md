@@ -9,7 +9,6 @@ tags:
 - Azure File Share
 - Azure Storage
 - Billing
-- Cloud
 - Cloud Infrastructure
 - Cloud Storage
 - File Share

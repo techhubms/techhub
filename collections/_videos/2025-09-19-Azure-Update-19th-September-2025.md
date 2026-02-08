@@ -18,7 +18,6 @@ tags:
 - Azure PostgreSQL
 - Azure Update
 - Azure VMware
-- Cloud
 - Cloud Infrastructure
 - DCa/ECa V6
 - Distributed Tracing

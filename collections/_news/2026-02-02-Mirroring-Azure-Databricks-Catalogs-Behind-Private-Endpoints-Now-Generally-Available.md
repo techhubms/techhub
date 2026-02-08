@@ -23,7 +23,6 @@ tags:
 - Unity Catalog
 - Virtual Network
 - VNet Data Gateway
-- Machine Learning
 section_names:
 - azure
 - ml

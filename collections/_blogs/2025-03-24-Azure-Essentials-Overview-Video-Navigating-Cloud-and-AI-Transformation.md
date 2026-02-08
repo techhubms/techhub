@@ -10,7 +10,6 @@ tags:
 - Azure Essentials Show
 - Azure Marketing
 - Azure OpenAI
-- Cloud
 - Cloud Adoption
 - Cloud Computing
 - Cloud Migration

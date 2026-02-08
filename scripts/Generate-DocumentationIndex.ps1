@@ -4,13 +4,20 @@
 
 .DESCRIPTION
     Scans AGENTS.md, README.md, and all markdown files in the docs/ directory.
-    Extracts H1 (#), H2 (##), and H3 (###) headers.
+    Extracts H1 (#) and H2 (##) headers.
     Compiles them into a single 'documentation-index.md' file in the docs/ directory.
-    This index serves as a searchable map of all documentation topics.
+    Each file is listed on a single line with headers separated by semicolons.
 
     Filters out:
     - "Overview" sections (should be directly under H1)
     - "Related Documentation" / "Additional Resources" sections (always last, low value in index)
+
+    Output format:
+    - [filepath](link): "H1": "H2": "H3", "H3"; "H2"; "H2"
+    Where:
+    - `:` goes a level deeper (H1 -> H2 -> H3)
+    - `,` separates items at the same level
+    - `;` goes back up a level
 
 .EXAMPLE
     ./scripts/Generate-DocumentationIndex.ps1
@@ -23,6 +30,23 @@ $Root = (Get-Location).Path
 $OutputFile = Join-Path $Root "docs/documentation-index.md"
 
 Write-Host "Generating documentation index..." -ForegroundColor Cyan
+
+# Helper function to format a header section
+function Format-HeaderSection {
+    param($H1, $H2s, $H3s)
+    
+    # Attach any remaining H3s to the last H2
+    if ($H2s.Count -gt 0 -and $H3s.Count -gt 0) {
+        $LastH2Index = $H2s.Count - 1
+        $H2s[$LastH2Index] = "$($H2s[$LastH2Index]): $($H3s -join ', ')"
+    }
+    
+    if ($H2s.Count -gt 0) {
+        return "$H1`: $($H2s -join '; ')"
+    } else {
+        return $H1
+    }
+}
 
 # Headers to filter out from the index (case-insensitive)
 $FilteredHeaders = @(
@@ -74,6 +98,16 @@ $OutputContent = @(
     "> **Auto-generated file**. Do not edit manually. Run ``scripts/Generate-DocumentationIndex.ps1`` to update.",
     "",
     "This index maps the structure of all documentation files in the project.",
+    "",
+    "## Syntax",
+    "",
+    "Output format: ``- [filepath](link): `"H1`": `"H2`": `"H3`", `"H3`"; `"H2`"; `"H2`"``",
+    "",
+    "- ``:`` goes a level deeper (H1 -> H2 -> H3)",
+    "- ``,`` separates items at the same level",
+    "- ``;`` goes back up a level",
+    "",
+    "## Index",
     ""
 )
 
@@ -94,11 +128,15 @@ foreach ($FilePath in $FilesToScan) {
         $LinkPath = "../$FilePath"
     }
 
-    $OutputContent += "## File: [$FilePath]($LinkPath)"
-    $OutputContent += ""
+    # Get filename for display
+    $FileName = [System.IO.Path]::GetFileName($FilePath)
 
     $Lines = Get-Content -Path $FullPath
     $InCodeBlock = $false
+    $H1Sections = @()
+    $CurrentH1 = $null
+    $CurrentH2s = @()
+    $CurrentH3s = @()
 
     foreach ($Line in $Lines) {
         # Skip code blocks to avoid capturing comments as headers
@@ -108,29 +146,61 @@ foreach ($FilePath in $FilesToScan) {
         }
         if ($InCodeBlock) { continue }
 
-        # Match headers and filter unwanted ones
-        if ($Line -match '^#\s+(.+)') {
+        # Match H1 headers (single #)
+        if ($Line -match '^#\s+(.+)$' -and $Line -notmatch '^##') {
             $HeaderText = $matches[1].Trim()
-            $OutputContent += "- $HeaderText"
-        }
-        elseif ($Line -match '^##\s+(.+)') {
-            $HeaderText = $matches[1].Trim()
-            # Filter out unwanted H2 headers
+            # Filter out unwanted headers
             if ($FilteredHeaders -notcontains $HeaderText) {
-                $OutputContent += "  - $HeaderText"
+                # Save previous H2 with its H3s before moving to new H1
+                if ($null -ne $CurrentH1) {
+                    $H1Sections += (Format-HeaderSection $CurrentH1 $CurrentH2s $CurrentH3s)
+                }
+                $CurrentH1 = $HeaderText
+                $CurrentH2s = @()
+                $CurrentH3s = @()
             }
         }
-        # Disabled h3 headers for now as they add a lot of noise and often contain low-value content (e.g. "Parameters", "Returns", "Examples" in code docs)
-        # elseif ($Line -match '^###\s+(.+)') {
-        #     $HeaderText = $matches[1].Trim()
-        #     # Filter out unwanted H3 headers
-        #     if ($FilteredHeaders -notcontains $HeaderText) {
-        #         $OutputContent += "    - $HeaderText"
-        #     }
-        # }
+        # Match H2 headers (double ##)
+        elseif ($Line -match '^##\s+(.+)$' -and $Line -notmatch '^###') {
+            $HeaderText = $matches[1].Trim()
+            # Filter out unwanted headers
+            if ($FilteredHeaders -notcontains $HeaderText) {
+                # Save previous H2 with its H3s
+                if ($CurrentH2s.Count -gt 0 -and $CurrentH3s.Count -gt 0) {
+                    $LastH2Index = $CurrentH2s.Count - 1
+                    $CurrentH2s[$LastH2Index] = "$($CurrentH2s[$LastH2Index]): $($CurrentH3s -join ', ')"
+                }
+                $CurrentH2s += $HeaderText
+                $CurrentH3s = @()
+            }
+        }
+        # Match H3 headers (triple ###)
+        elseif ($Line -match '^###\s+(.+)$' -and $Line -notmatch '^####') {
+            $HeaderText = $matches[1].Trim()
+            # Filter out unwanted headers
+            if ($FilteredHeaders -notcontains $HeaderText) {
+                $CurrentH3s += $HeaderText
+            }
+        }
     }
     
-    $OutputContent += ""
+    # Don't forget the last H1 section
+    if ($null -ne $CurrentH1) {
+        # Attach any remaining H3s to the last H2
+        if ($CurrentH2s.Count -gt 0 -and $CurrentH3s.Count -gt 0) {
+            $LastH2Index = $CurrentH2s.Count - 1
+            $CurrentH2s[$LastH2Index] = "$($CurrentH2s[$LastH2Index]): $($CurrentH3s -join ', ')"
+        }
+        if ($CurrentH2s.Count -gt 0) {
+            $H1Sections += "$CurrentH1`: $($CurrentH2s -join '; ')"
+        } else {
+            $H1Sections += $CurrentH1
+        }
+    }
+    
+    # Build single line output: - [filepath](link): "H1": "H2": "H3", "H3"; "H2"; "H2"
+    $HeadersString = $H1Sections -join "; "
+    $OutputContent += "- [$FilePath]($LinkPath): `"$($HeadersString -replace ': ', '": "' -replace '; ', '"; "' -replace ', ', '", "')`""
 }
 
 # Write to file

@@ -240,6 +240,7 @@ public abstract class ContentRepositoryBase : IContentRepository
 
         //As these are so common and doesn't add much value to tag clouds, we exclude it by default.
         excludeSet.Add("GitHub");
+        excludeSet.Add("Copilot");
         excludeSet.Add("Microsoft");
 
         return excludeSet;

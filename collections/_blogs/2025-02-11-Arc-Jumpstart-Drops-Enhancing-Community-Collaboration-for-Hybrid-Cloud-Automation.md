@@ -8,7 +8,6 @@ tags:
 - Arc Jumpstart
 - Automation
 - Azure Arc
-- Cloud
 - Cloud Native
 - Community Collaboration
 - Edge Computing

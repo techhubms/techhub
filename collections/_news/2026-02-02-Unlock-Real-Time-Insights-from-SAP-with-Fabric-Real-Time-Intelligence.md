@@ -25,7 +25,6 @@ tags:
 - Real Time Decision Making
 - SAP Datasphere
 - SAP Integration
-- Machine Learning
 section_names:
 - ai
 - azure

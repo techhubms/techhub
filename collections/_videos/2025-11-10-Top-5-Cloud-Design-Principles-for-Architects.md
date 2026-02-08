@@ -7,7 +7,6 @@ date: 2025-11-10 15:01:30 +00:00
 tags:
 - Architect
 - AWS
-- Cloud
 - Cloud Architecture
 - Cloud Consulting
 - Cloud Engineer

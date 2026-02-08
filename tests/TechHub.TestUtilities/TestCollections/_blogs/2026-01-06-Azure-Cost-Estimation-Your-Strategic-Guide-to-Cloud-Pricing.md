@@ -15,7 +15,7 @@ tags:
 - Azure Pricing
 - Azure Pricing Calculator
 - Budgeting
-- Cloud
+- Cloud Computing
 - Cloud Architecture
 - Cloud Pricing
 - Cloud Strategy

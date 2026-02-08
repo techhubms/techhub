@@ -153,7 +153,13 @@
         }
     }
 
-    private string GetStateKey() => $"ContentItemsGrid_{SectionName}_{CollectionName}";
+    private string GetStateKey()
+    {
+        var tagsKey = FilterTags != null && FilterTags.Count > 0
+            ? "_tags_" + string.Join(",", FilterTags.OrderBy(t => t))
+            : "";
+        return $"ContentItemsGrid_{SectionName}_{CollectionName}{tagsKey}";
+    }
 
     private Task PersistState()
     {
@@ -194,12 +200,8 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        // JS interop is allowed after the component becomes interactive
-        if (firstRender && hasMoreContent && scrollModule == null)
-        {
-            await SetupScrollObserver();
-        }
-        else if (needsObserverSetup && scrollModule == null)
+        // Setup observer on first render, or re-attach when filters change
+        if ((firstRender || needsObserverSetup) && hasMoreContent)
         {
             needsObserverSetup = false;
             await SetupScrollObserver();
@@ -210,16 +212,21 @@
     {
         try
         {
-            scrollModule = await JSRuntime.InvokeAsync<IJSObjectReference>(
+            // Only load module once
+            scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
                 "import", "/js/infinite-scroll.js");
-            dotNetRef = DotNetObjectReference.Create(this);
+            
+            // Only create dotNetRef once (avoid memory leak)
+            dotNetRef ??= DotNetObjectReference.Create(this);
 
+            // (Re-)attach observer to current scroll-trigger element
+            // JS dispose() handles cleanup of previous observer
             await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
-            Logger.LogDebug("Infinite scroll observer initialized");
+            Logger.LogDebug("Infinite scroll observer attached");
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to initialize infinite scroll");
+            Logger.LogError(ex, "Failed to setup infinite scroll");
         }
     }
 
@@ -299,6 +306,9 @@
         finally
         {
             isLoadingMore = false;
+            // Re-attach observer after render if there's more content
+            // (Blazor may have replaced the scroll-trigger DOM element)
+            needsObserverSetup = hasMoreContent;
             StateHasChanged();
         }
     }

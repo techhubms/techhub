@@ -10,7 +10,6 @@ tags:
 - Azure Cloud
 - Azure News
 - Azure Updates
-- Cloud
 - Cloud Computing
 - Cosmos DB
 - John Savill

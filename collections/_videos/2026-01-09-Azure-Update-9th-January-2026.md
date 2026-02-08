@@ -9,7 +9,6 @@ tags:
 - Azure Cloud
 - Azure News
 - Azure Updates
-- Cloud
 - Cloud Native
 - Dragon HD Omni
 - Geo Replication

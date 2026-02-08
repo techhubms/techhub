@@ -18,7 +18,6 @@ tags:
 - Video Tutorial
 - ML
 - Videos
-- Machine Learning
 section_names:
 - dotnet
 - ml

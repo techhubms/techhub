@@ -12,7 +12,6 @@ tags:
 - Business Observability
 - Business Of DevOps
 - Business Outcomes
-- Cloud
 - Cloud Observability
 - Contributed Content
 - Cost Optimization

@@ -11,7 +11,6 @@ tags:
 - Azure AI Foundry
 - Azure Skills Challenge
 - Certification
-- Cloud
 - Data Platforms
 - Developer
 - Hands On Labs

@@ -9,7 +9,6 @@ tags:
 - AKS
 - Azure Cloud
 - Azure Container Storage
-- Cloud
 - Cloud Storage
 - Container Storage Interface
 - Containers

@@ -12,7 +12,6 @@ tags:
 - Azure Linux 3.0
 - Azure Regions
 - Azure Storage Mover
-- Cloud
 - Cloud Services
 - Cloud Updates
 - Containerization

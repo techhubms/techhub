@@ -10,7 +10,6 @@ tags:
 - Azure Pricing Calculator
 - Azure Workloads
 - Budgeting
-- Cloud
 - Cloud Cost Estimation
 - Cloud Optimization
 - Collaboration

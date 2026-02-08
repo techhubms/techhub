@@ -20,7 +20,6 @@ tags:
 - DevOps
 - Security
 - Roundups
-- Machine Learning
 section_names:
 - ai
 - github-copilot

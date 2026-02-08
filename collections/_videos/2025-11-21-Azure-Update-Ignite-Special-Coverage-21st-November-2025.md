@@ -21,7 +21,6 @@ tags:
 - Azure Networking
 - Azure SQL
 - Azure Storage
-- Cloud
 - Cloud Infrastructure
 - Ignite
 - Kubernetes
@@ -35,7 +34,6 @@ tags:
 - ML
 - Security
 - Videos
-- Machine Learning
 section_names:
 - ai
 - azure

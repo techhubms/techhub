@@ -8,7 +8,6 @@ tags:
 - Account Recovery
 - Au10tix
 - Azure Cloud
-- Cloud
 - Cloud Security
 - Entra Id
 - Government ID

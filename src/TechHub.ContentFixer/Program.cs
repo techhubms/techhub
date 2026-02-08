@@ -51,34 +51,47 @@ public sealed class Program
     };
 
     /// <summary>
-    /// Reverse mapping: URL slug → display name(s)
-    /// Used to determine which tag names to remove based on section_names.
+    /// Reverse mapping: URL slug → Tag name
+    /// Maps section slugs to their Tag values from appsettings.json.
+    /// Used to determine which tag names to add/remove based on section_names.
     /// </summary>
-    private static readonly Dictionary<string, List<string>> _sectionSlugToDisplayNames = new()
+    private static readonly Dictionary<string, string> _sectionSlugToTag = new()
     {
-        ["ai"] = ["AI", "Artificial Intelligence"],
-        ["azure"] = ["Azure"],
-        ["github-copilot"] = ["GitHub Copilot"],
-        ["dotnet"] = [".NET", "dotnet"],
-        ["devops"] = ["DevOps"],
-        ["security"] = ["Security"],
-        ["cloud"] = ["Cloud"],
-        ["ml"] = ["Machine Learning", "ML"],
-        ["machine-learning"] = ["Machine Learning", "ML"]
+        ["all"] = "All",
+        ["ai"] = "AI",
+        ["azure"] = "Azure",
+        ["github-copilot"] = "GitHub Copilot",
+        ["dotnet"] = ".NET",
+        ["devops"] = "DevOps",
+        ["security"] = "Security",
+        ["ml"] = "ML"
     };
 
     /// <summary>
-    /// Collection name → display name(s)
-    /// Used to determine which tag names to remove based on collection.
+    /// Collection name → Tag name
+    /// Maps collection names to their display names used as tags.
+    /// Used to determine which tag names to add based on collection.
     /// </summary>
-    private static readonly Dictionary<string, List<string>> _collectionToDisplayNames = new()
+    private static readonly Dictionary<string, string> _collectionToTag = new()
     {
-        ["news"] = ["News"],
-        ["blogs"] = ["Blogs"],
-        ["videos"] = ["Videos"],
-        ["community"] = ["Community"],
-        ["roundups"] = ["Roundups"],
-        ["events"] = ["Events"]
+        ["news"] = "News",
+        ["blogs"] = "Blogs",
+        ["videos"] = "Videos",
+        ["community"] = "Community",
+        ["roundups"] = "Roundups"
+    };
+
+    /// <summary>
+    /// Deprecated tag names that should be removed from frontmatter.
+    /// These are old tag names that have been replaced by the canonical tags in _sectionSlugToTag.
+    /// </summary>
+    private static readonly HashSet<string> _deprecatedTags = new(StringComparer.OrdinalIgnoreCase)
+    {
+        "Machine Learning",    // → ML
+        "Artificial Intelligence", // → AI
+        "Cloud",               // Deprecated section, no longer in use
+        "dotnet",              // → .NET (case difference)
+        "Coding"               // → .NET
     };
 
     private static async Task<int> Main(string[] args)
@@ -268,66 +281,19 @@ public sealed class Program
             changed = true;
         }
 
-        // 2b. Replace "Coding" tag with ".NET" tag
-        if (frontMatter.TryGetValue("tags", out var existingTagsObj))
+        // 2b. Remove deprecated tags (old tag names that have been replaced)
+        if (frontMatter.TryGetValue("tags", out var tagsForCleanup))
         {
-            var existingTags = GetListValue(frontMatter, "tags");
-            var codingIndex = existingTags.FindIndex(t => t.Equals("Coding", StringComparison.OrdinalIgnoreCase));
-            if (codingIndex >= 0)
+            var tagsBeforeCleanup = GetListValue(frontMatter, "tags");
+            var tagsAfterCleanup = tagsBeforeCleanup.Where(t => !_deprecatedTags.Contains(t)).ToList();
+            
+            if (tagsAfterCleanup.Count != tagsBeforeCleanup.Count)
             {
-                // Check if .NET already exists
-                var dotNetExists = existingTags.Any(t => t.Equals(".NET", StringComparison.OrdinalIgnoreCase));
-                
-                if (dotNetExists)
-                {
-                    // Just remove "Coding" since .NET already exists
-                    existingTags.RemoveAt(codingIndex);
-                    frontMatter["tags"] = existingTags;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("  ✓ Removed duplicate \"Coding\" tag (.NET already exists)");
-                    Console.ResetColor();
-                }
-                else
-                {
-                    // Replace "Coding" with ".NET"
-                    existingTags[codingIndex] = ".NET";
-                    frontMatter["tags"] = existingTags;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("  ✓ Replaced \"Coding\" tag with \".NET\"");
-                    Console.ResetColor();
-                }
-                changed = true;
-            }
-        }
-
-        // 2c. Replace "Machine Learning" tag with "ML" tag
-        if (frontMatter.TryGetValue("tags", out var existingTagsObj2))
-        {
-            var existingTags = GetListValue(frontMatter, "tags");
-            var mlIndex = existingTags.FindIndex(t => t.Equals("Machine Learning", StringComparison.OrdinalIgnoreCase));
-            if (mlIndex >= 0)
-            {
-                // Check if ML already exists
-                var mlExists = existingTags.Any(t => t.Equals("ML", StringComparison.OrdinalIgnoreCase));
-                
-                if (mlExists)
-                {
-                    // Just remove "Machine Learning" since ML already exists
-                    existingTags.RemoveAt(mlIndex);
-                    frontMatter["tags"] = existingTags;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("  ✓ Removed duplicate \"Machine Learning\" tag (ML already exists)");
-                    Console.ResetColor();
-                }
-                else
-                {
-                    // Replace "Machine Learning" with "ML"
-                    existingTags[mlIndex] = "ML";
-                    frontMatter["tags"] = existingTags;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("  ✓ Replaced \"Machine Learning\" tag with \"ML\"");
-                    Console.ResetColor();
-                }
+                var removedTags = tagsBeforeCleanup.Except(tagsAfterCleanup, StringComparer.OrdinalIgnoreCase).ToList();
+                frontMatter["tags"] = tagsAfterCleanup;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"  ✓ Removed {removedTags.Count} deprecated tag(s): {string.Join(", ", removedTags)}");
+                Console.ResetColor();
                 changed = true;
             }
         }
@@ -342,28 +308,19 @@ public sealed class Program
         var tagSectionNames = GetListValue(frontMatter, "section_names");
         var tagsToAdd = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
-        // Add section display names for sections this item belongs to
+        // Add section tags for sections this item belongs to
         foreach (var sectionName in tagSectionNames)
         {
-            if (_sectionSlugToDisplayNames.TryGetValue(sectionName, out var displayNames))
+            if (_sectionSlugToTag.TryGetValue(sectionName, out var tag))
             {
-                foreach (var displayName in displayNames)
-                {
-                    // Only add primary display name (first in list)
-                    tagsToAdd.Add(displayNames[0]);
-                    break;
-                }
+                tagsToAdd.Add(tag);
             }
         }
 
-        // Add collection display names for the collection this item belongs to
-        if (_collectionToDisplayNames.TryGetValue(collection, out var collectionDisplayNames))
+        // Add collection tag for the collection this item belongs to
+        if (_collectionToTag.TryGetValue(collection, out var collectionTag))
         {
-            // Only add primary display name (first in list)
-            if (collectionDisplayNames.Count > 0)
-            {
-                tagsToAdd.Add(collectionDisplayNames[0]);
-            }
+            tagsToAdd.Add(collectionTag);
         }
 
         // Special rule: If "GitHub Copilot" is being added, also add "AI"

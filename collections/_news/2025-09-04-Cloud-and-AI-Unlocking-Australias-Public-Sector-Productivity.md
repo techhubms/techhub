@@ -6,7 +6,6 @@ feed_name: Microsoft News
 date: 2025-09-04 14:32:28 +00:00
 tags:
 - AI Tools
-- Cloud
 - Cloud Adoption
 - Company News
 - Cybersecurity

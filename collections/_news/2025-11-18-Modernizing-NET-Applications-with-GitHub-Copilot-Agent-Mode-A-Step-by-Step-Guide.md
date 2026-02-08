@@ -11,7 +11,6 @@ tags:
 - Automated Testing
 - Azure Migration
 - CI/CD
-- Cloud
 - Cloud Readiness
 - Code Assessment
 - Dependency Management

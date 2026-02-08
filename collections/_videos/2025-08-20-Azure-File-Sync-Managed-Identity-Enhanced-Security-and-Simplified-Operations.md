@@ -11,7 +11,6 @@ tags:
 - Azure File Sync
 - Azure Storage
 - Certificates
-- Cloud
 - Cloud Security
 - Entra Id
 - File Share

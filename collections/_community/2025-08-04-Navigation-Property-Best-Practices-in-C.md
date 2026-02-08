@@ -17,7 +17,6 @@ tags:
 - ORM
 - ML
 - Community
-- Machine Learning
 section_names:
 - dotnet
 - ml

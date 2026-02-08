@@ -9,7 +9,6 @@ tags:
 - Azure Backup
 - Azure Cloud
 - Azure Database For PostgreSQL
-- Cloud
 - Cloud Database
 - Connection Pooling
 - Database

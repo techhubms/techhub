@@ -1,18 +1,18 @@
 function Get-FilteredTags {
     <#
     .SYNOPSIS
-        Filters and enhances tags, removing section/collection names
+        Filters and enhances tags
     .DESCRIPTION
         This function processes tags by:
-        1. Removing all known section/collection names (AI, Azure, Blogs, etc.)
+        1. Removing deprecated section/collection names (Cloud, Machine Learning, etc.)
         2. Normalizing tag format (custom mappings + word mappings)
         3. Removing common filter words
         4. Removing duplicates and empty entries
         5. Returns array of processed tags
         
-        NOTE: Section/collection names are no longer added as tags. With the .NET
-        migration, we can query by section/collection dynamically, so adding them
-        as tags just clutters the tag cloud with obvious values.
+        NOTE: Current section/collection tags (AI, Azure, Blogs, etc.) are preserved
+        if they appear in the input tags. This allows AI to assign them as content tags.
+        Only deprecated tags are removed (Cloud, Machine Learning, Coding, etc.).
     .PARAMETER Tags
         Array of tags to process
     .PARAMETER Categories  
@@ -281,6 +281,20 @@ function Get-FilteredTags {
     # Special rule: If "GitHub Copilot" tag exists, also add "AI" tag
     if ($allTags | Where-Object { $_ -eq 'GitHub Copilot' }) {
         $allTags += 'AI'
+    }
+    
+    # Remove deprecated tags (old tag names that have been replaced)
+    # These are legacy section/collection tags that are no longer valid
+    $deprecatedTags = @(
+        'Machine Learning',    # → ML
+        'Artificial Intelligence', # → AI
+        'Cloud',               # Deprecated section, no longer in use
+        'Coding'               # → .NET
+    )
+    
+    $allTags = $allTags | Where-Object {
+        $tag = $_
+        $deprecatedTags -notcontains $tag
     }
     
     # Remove case-insensitive duplicates, keeping the first (most uppercase) version

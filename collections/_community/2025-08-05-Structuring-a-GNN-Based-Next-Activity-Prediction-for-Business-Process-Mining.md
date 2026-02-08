@@ -22,7 +22,6 @@ tags:
 - Python
 - ML
 - Community
-- Machine Learning
 section_names:
 - ml
 primary_section: ml

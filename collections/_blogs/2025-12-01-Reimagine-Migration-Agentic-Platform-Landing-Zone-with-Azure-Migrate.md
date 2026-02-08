@@ -11,7 +11,6 @@ tags:
 - Azure Essentials Show
 - Azure Landing Zone
 - Azure Migrate
-- Cloud
 - Cloud Governance
 - Cloud Migration
 - Compliance

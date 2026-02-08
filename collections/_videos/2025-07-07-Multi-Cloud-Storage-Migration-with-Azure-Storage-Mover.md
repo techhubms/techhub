@@ -13,7 +13,6 @@ tags:
 - Azure Portal
 - Azure Storage
 - Azure Storage Mover
-- Cloud
 - Cloud Migration
 - Cloud Storage
 - Data Migration

@@ -12,7 +12,6 @@ tags:
 - Azure Cloud
 - Azure Virtual Machines
 - Budgeting
-- Cloud
 - Cloud Architecture
 - Compute
 - Deployment

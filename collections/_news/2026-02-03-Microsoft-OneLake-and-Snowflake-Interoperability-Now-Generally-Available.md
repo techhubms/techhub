@@ -25,7 +25,6 @@ tags:
 - Real Time Analytics
 - Snowflake
 - SQLCon
-- Machine Learning
 section_names:
 - azure
 - ml

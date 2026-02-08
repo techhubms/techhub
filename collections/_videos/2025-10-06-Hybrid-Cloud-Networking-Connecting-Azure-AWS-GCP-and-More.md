@@ -7,7 +7,6 @@ date: 2025-10-06 14:11:52 +00:00
 tags:
 - AWS
 - Azure Cloud
-- Cloud
 - Cloud Architecture
 - Cloud Exchange
 - Direct Connect

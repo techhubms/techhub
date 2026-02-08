@@ -71,4 +71,16 @@ public class SqliteDialect : ISqlDialect
         // SQLite uses IN for list matching
         return $"IN @{paramName}";
     }
+
+    public string GetListFilterClause(string paramName, int count)
+    {
+        // SQLite uses IN for list matching (same as GetCollectionFilterClause)
+        return $"IN @{paramName}";
+    }
+
+    public object ConvertListParameter<T>(IEnumerable<T> values)
+    {
+        // SQLite with Dapper uses List<T> for IN clause expansion
+        return values.ToList();
+    }
 }

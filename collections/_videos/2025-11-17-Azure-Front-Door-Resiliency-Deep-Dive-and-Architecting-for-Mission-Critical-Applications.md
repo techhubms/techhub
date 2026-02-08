@@ -10,7 +10,6 @@ tags:
 - Azure Front Door
 - Azure Traffic Manager
 - CDN
-- Cloud
 - Cloud Architecture
 - Cloud Network
 - Cross Tenant Impact

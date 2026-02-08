@@ -30,7 +30,6 @@ tags:
 - AI
 - ML
 - Community
-- Machine Learning
 section_names:
 - ai
 - ml

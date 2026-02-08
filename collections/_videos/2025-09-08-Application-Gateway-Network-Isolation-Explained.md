@@ -11,7 +11,6 @@ tags:
 - Azure Networking
 - Azure Security
 - Azure Virtual Network
-- Cloud
 - Cloud Networking
 - Microsoft
 - Microsoft Azure

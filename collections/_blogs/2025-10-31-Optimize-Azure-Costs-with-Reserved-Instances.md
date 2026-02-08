@@ -12,7 +12,6 @@ tags:
 - Azure VM
 - Best Practices
 - Billing
-- Cloud
 - Cloud Cost Management
 - Cloud Strategy
 - Cost Optimization

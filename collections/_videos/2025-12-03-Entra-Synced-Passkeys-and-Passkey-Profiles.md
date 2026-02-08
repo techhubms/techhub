@@ -9,7 +9,6 @@ tags:
 - Authentication
 - Azure Cloud
 - Azure Identity
-- Cloud
 - Cloud Synced Passkey
 - Device Bound Passkey
 - Digital Identity

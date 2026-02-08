@@ -11,7 +11,6 @@ tags:
 - Azure NetApp Files
 - Azure SQL Database
 - Azure Updates
-- Cloud
 - Cloud Security
 - Cosmos DB
 - Foundry

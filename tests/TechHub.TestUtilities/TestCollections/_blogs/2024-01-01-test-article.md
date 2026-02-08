@@ -8,7 +8,7 @@ section_names:
 tags:
 - AI
 - Azure
-- Cloud
+- Cloud Computing
 external_url: https://example.com/test
 author: Test Author
 feed_name: Test Feed

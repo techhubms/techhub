@@ -20,7 +20,6 @@ tags:
 - Azure
 - ML
 - News
-- Machine Learning
 section_names:
 - azure
 - ml

@@ -11,7 +11,6 @@ tags:
 - Azure Cloud
 - Azure Networking
 - Azure Service Operator
-- Cloud
 - Cloud Security
 - Container Security
 - Firewall

@@ -1,7 +1,7 @@
 # Collections Management Guide
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `collections/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
-> **RULE**: Follow the 9-step workflow in Root [AGENTS.md](../AGENTS.md). Project principles are in [README.md](../README.md). Follow **BOTH**.
+> **RULE**: Follow the 8-step workflow in Root [AGENTS.md](../AGENTS.md). Project principles are in [README.md](../README.md). Follow **BOTH**.
 
 ## Critical Content Rules
 
