@@ -378,6 +378,6 @@ The sidebar is not limited to table of contents. Consider these additional uses:
 
 - Mobile navigation layout (covered in 011-mobile-navigation spec)
 - Content creation or authoring (content already exists, just needs proper component usage)
-- Search/filtering integration (covered in 001-filtering-system and 002-search specs)
+- Search/filtering integration (see [docs/filtering.md](/docs/filtering.md) and [002-search](../002-search/) spec)
 - Analytics tracking (covered in 006-google-analytics spec)
 - SEO metadata beyond canonical URLs (covered in 005-seo spec)

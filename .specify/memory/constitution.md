@@ -1,37 +1,43 @@
 <!--
-SYNC IMPACT REPORT - Constitution Amendment (2026-01-16)
+SYNC IMPACT REPORT - Constitution Amendment (2026-02-08)
 =========================================================
 
-VERSION CHANGE: 2.0.0 → 2.1.0 (MINOR bump)
+VERSION CHANGE: 2.1.0 → 3.0.0 (MAJOR bump)
 
-REASON FOR MINOR BUMP:
-- Added new ABSOLUTELY CRITICAL rule #7: Documentation Updates
-- Non-breaking addition to governance rules
-- Codifies existing best practice into mandatory requirement
-- Adds clear reference to docs/AGENTS.md for placement guidance
+REASON FOR MAJOR BUMP:
+- Complete overhaul to align with current project reality
+- Root AGENTS.md completely rewritten with 8-step workflow
+- Extensive documentation now exists in docs/ (25+ files)
+- Documentation placement strategy fully defined
+- Simplified and modernized governance structure
+- Breaking changes to how constitution references other files
 
 CHANGES:
-- ADDED: Rule #7 - Documentation Updates (mandatory updates when behavior changes)
-- ADDED: Three-tier documentation system explanation (functional/technical/content)
-- ADDED: Reference to docs/AGENTS.md for placement strategy
-- ADDED: Critical rules about where to place different doc types
-- VERSION: Bumped to 2.1.0
+- REWRITTEN: All 7 rules simplified and aligned with current reality
+- UPDATED: All references to point to actual current documentation
+- UPDATED: Examples now reference real docs (page-structure.md, filtering.md, etc.)
+- UPDATED: Core principles section streamlined
+- REMOVED: Outdated references to non-existent documentation
+- REMOVED: Verbose explanations now covered by comprehensive docs/
+- VERSION: Bumped to 3.0.0
 
-TEMPLATE CONSISTENCY STATUS:
-✅ plan-template.md: Aligned with .NET project structure expectations
-✅ spec-template.md: User stories prioritized, independent testing emphasized, documentation section added
-✅ tasks-template.md: TDD workflow matches constitution requirements
-✅ All AGENTS.md files reviewed and referenced appropriately
-✅ docs/AGENTS.md: Contains complete placement strategy and guidelines
+DOCUMENTATION STATUS:
+✅ docs/: 25+ comprehensive documentation files covering all aspects
+✅ Root AGENTS.md: Complete 8-step workflow with checklists
+✅ Domain AGENTS.md files: Comprehensive implementation guides
+✅ docs/AGENTS.md: Complete documentation placement strategy
+✅ docs/documentation-index.md: Auto-generated searchable index
+✅ docs/running-and-testing.md: Complete testing and running guide
+✅ All specs updated to reference correct documentation
 
 FOLLOW-UP ACTIONS:
-✅ Added Rule #7 to ABSOLUTELY CRITICAL Rules section
-✅ Version bumped to 2.1.0 (MINOR - new governance rule added)
-✅ Last Amended date remains 2026-01-16
-✅ Verified alignment with docs/AGENTS.md documentation placement strategy
-✅ All spec files updated with documentation requirements
+✅ Constitution simplified - delegates to comprehensive docs
+✅ Version bumped to 3.0.0 (MAJOR - breaking reference changes)
+✅ Last Amended date updated to 2026-02-08
+✅ Verified all file references are accurate
+✅ Removed redundant content now in docs/
 
-LAST REVIEW: 2026-01-16
+LAST REVIEW: 2026-02-08
 NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 -->
 
@@ -50,48 +56,62 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 
 **These are the NON-NEGOTIABLE foundation rules that ALL development MUST follow:**
 
-### 1. Test-Driven Development (TDD)
+### 1. Follow the 8-Step Development Workflow
 
-**🚨 MANDATORY**: Tests MUST be written BEFORE implementation code.
+**🚨 MANDATORY**: EVERY development task MUST follow the exact 8-step workflow defined in the root AGENTS.md.
 
-- **For bug fixes**: Write failing test that reproduces bug, THEN fix it
-- **For new features**: Write tests defining expected behavior, THEN implement
-- **E2E tests are MANDATORY** for ALL UI/frontend changes (URL routing, components, buttons, navigation)
-- **Never skip tests**: Run `Run` after ANY code change to verify
-- **Clean slate principle**: Fix ALL broken tests before starting new work
-- **No exceptions**: Documentation-only changes are the ONLY case where tests can be skipped
+1. **Review codebase** - Understand existing code and create initial plan
+2. **Gather context** - Read docs, validate plan with framework documentation (context7 MCP)
+3. **Verify current behavior** - Use Playwright MCP to test (optional)
+4. **Write tests first (TDD)** - Tests before implementation, always
+5. **Implement changes** - Make tests pass with minimal code
+6. **Validate quality** - All tests pass, no errors/warnings
+7. **Update documentation** - Keep docs synchronized with code
+8. **Report completion** - Summarize changes with file links
 
-**Reference**: See [Root AGENTS.md - Step 6: Write Tests First](../../AGENTS.md#step-6-write-tests-first-tdd) for complete TDD workflow.  
-**Implementation**: See [tests/AGENTS.md](../../tests/AGENTS.md) for testing strategies across all layers.
+**Each step has a checklist** - complete or explicitly skip each item before proceeding.
 
-### 2. 8-step Development Workflow
+**Reference**: See [Root AGENTS.md](../../AGENTS.md) for complete step-by-step instructions with checklists.  
+**Testing**: See [tests/AGENTS.md](../../tests/AGENTS.md) for testing diamond strategy (integration → unit → E2E).  
+**Running**: See [docs/running-and-testing.md](../../docs/running-and-testing.md) for `Run` function and test execution.
 
-**🚨 MANDATORY**: EVERY development task MUST follow this workflow in order.
+### 2. Domain-Specific AGENTS.md Files
 
-1. **Understand and Plan** - Gather context, read documentation, break down task
-2. **Research & Validate** - Use context7 MCP for latest docs
-3. **Verify Current Behavior** - Use Playwright MCP for testing (optional)
-4. **Write Tests First** - TDD (see rule #1)
-5. **Implement Changes** - Make tests pass
-6. **Validate & Fix** - Run all tests, fix errors
-7. **Update Documentation** - Keep docs in sync
-8. **Report Completion** - Summarize changes
-
-**Reference**: See [Root AGENTS.md - AI Assistant Workflow](../../AGENTS.md#ai-assistant-workflow) for detailed instructions on each step.
-
-### 3. Domain-Specific AGENTS.md Files
-
-**🚨 MANDATORY**: ALWAYS read the domain-specific AGENTS.md file BEFORE editing code in that domain.
-
-**Why**: Each domain (src/, tests/, scripts/, collections/, etc.) has specialized patterns, rules, and examples that complement the root AGENTS.md.
+**🚨 MANDATORY**: ALWAYS read the relevant AGENTS.md file BEFORE working in that area.
 
 **Key Files**:
 
-- [src/AGENTS.md](../../src/AGENTS.md) - .NET development patterns across all projects
-- [tests/AGENTS.md](../../tests/AGENTS.md) - Testing strategies (testing diamond: integration, unit, component, E2E)
+- [Root AGENTS.md](../../AGENTS.md) - 8-step workflow for ALL development
+- [src/AGENTS.md](../../src/AGENTS.md) - .NET patterns across all projects  
+- [tests/AGENTS.md](../../tests/AGENTS.md) - Testing diamond (integration → unit → E2E)
 - [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) - Blazor component patterns
 - [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) - API endpoint patterns
-- [collections/AGENTS.md](../../collections/AGENTS.md) - Content creation and markdown guidelines
+- [docs/AGENTS.md](../../docs/AGENTS.md) - Documentation placement strategy
+- [collections/AGENTS.md](../../collections/AGENTS.md) - Content authoring guidelines
+
+**They are nested**: When working on API changes, read src/AGENTS.md → TechHub.Api/AGENTS.md → TechHub.Web/AGENTS.md (if contract changes) → tests/AGENTS.md → tests/TechHub.Api.Tests/AGENTS.md.
+
+**Reference**: See [docs/documentation-index.md](../../docs/documentation-index.md) for complete documentation map.
+
+### 3. Documentation Updates Are Mandatory
+
+**🚨 MANDATORY**: Documentation MUST be updated when code behavior changes.
+
+**Critical Rules**:
+
+- ✅ **Functional docs** (WHAT the system does) → [docs/](../../docs/) directory
+- ✅ **Technical docs** (HOW to implement) → Domain AGENTS.md files  
+- ✅ **Content guidelines** (writing standards) → [collections/](../../collections/) directory
+- 🚫 **Never skip docs** when functionality changes - work is NOT complete until docs sync
+- 🚫 **Never duplicate** - link to existing docs instead
+- 🚫 **Never mix functional and technical** - keep separate
+
+**Process**:
+
+1. Search for existing docs: `grep_search` in docs/ and AGENTS.md files
+2. Update relevant files or create new ones if needed
+3. Fix markdown linting: `npx markdownlint-cli2 --fix <file> --config .markdownlint-cli2.jsonc`
+4. Regenerate index if headings changed: `scripts/Generate-DocumentationIndex.ps1`
 
 **Reference**: See [docs/AGENTS.md](../../docs/AGENTS.md) for complete documentation placement strategy.
 
@@ -101,21 +121,19 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 
 - **Single source of truth**: `appsettings.json` defines ALL sections, collections, and structure
 - **New features work by configuration**: Adding sections/collections requires ONLY config changes, not code
-- **Code stays synchronized**: All components derive structure from configuration automatically
 - **Never hardcode values**: Section names, collection types, paths, etc. must come from config
 
 **Reference**: See [docs/terminology.md](../../docs/terminology.md) for section/collection concepts.
 
 ### 5. Server-Side Rendering First
 
-**🚨 MANDATORY**: ALL content MUST be fully rendered server-side for initial page load.
+**🚨 MANDATORY**: ALL content MUST be fully rendered server-side for initial page load (SEO + performance).
 
-- **SEO requirement**: Search engines must see complete content without JavaScript
-- **Performance requirement**: Users must see complete content immediately
-- **Progressive enhancement**: JavaScript ONLY enhances server-rendered content, never creates it
-- **The ONLY exception**: `assets/js/sections.js` may modify collection state on page load based on URL parameters
+- **SEO**: Search engines must see complete content without JavaScript
+- **Performance**: Users must see content immediately (no loading spinners)
+- **Progressive enhancement**: JavaScript ONLY enhances server-rendered content
 
-**Reference**: See [docs/render-modes.md](../../docs/render-modes.md) and [docs/seo.md](../../docs/seo.md) for SSR and performance principles.
+**Reference**: See [docs/render-modes.md](../../docs/render-modes.md) and [docs/seo.md](../../docs/seo.md).
 
 ### 6. Accessibility Standards (WCAG 2.1 AA)
 
@@ -123,131 +141,83 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 
 - **Keyboard navigation**: All interactive elements accessible via keyboard
 - **Screen readers**: Proper ARIA labels, semantic HTML
-- **Color contrast**: Minimum 4.5:1 for normal text, 3:1 for large text
-- **Focus indicators**: Visible focus states on all interactive elements
-- **Never rely on color alone**: Provide text alternatives
+- **Color contrast**: 4.5:1 for normal text, 3:1 for large text
+- **Focus indicators**: Visible focus states
 
-**Reference**: See [docs/design-system.md](../../docs/design-system.md) for design system and accessibility standards.
+**Reference**: See [docs/design-system.md](../../docs/design-system.md).
 
-### 7. Documentation Updates
+### 7. Zero Warnings Policy
 
-**🚨 MANDATORY**: Documentation MUST be updated whenever code behavior changes.
+**🚨 MANDATORY**: Fix ALL compilation warnings and linter errors immediately.
 
-- **Not optional**: Documentation updates are part of "task complete" - work is NOT done until docs are updated
-- **Search first**: Use `grep_search` to find existing documentation before assuming it doesn't exist
-- **Three-tier system**: Understand where documentation belongs (functional docs, AGENTS.md files, README.md)
-- **Update all affected files**: Changes may require updates to multiple documentation files
-- **Placement guidance**: See [docs/AGENTS.md](../../docs/AGENTS.md) for complete instructions on:
-  - Where to place functional documentation (docs/)
-  - Where to place technical documentation (AGENTS.md files)
-  - Where to place content guidelines (collections/)
-  - What belongs in each file type
-  - How to avoid duplication
+- **Run `get_errors` after every file edit** - catch issues early
+- **All tests must pass**: Run `Run` to build + test before considering work complete
+- **Markdown linting**: Fix with `npx markdownlint-cli2 --fix <file> --config .markdownlint-cli2.jsonc`
+- **No exceptions**: Warnings are not acceptable technical debt
 
-**Critical Rules**:
-
-- ✅ **Functional documentation** (WHAT the system does) → `docs/` directory
-- ✅ **Technical documentation** (HOW to implement) → Domain-specific AGENTS.md files
-- ✅ **Content guidelines** (writing standards) → `collections/` directory
-- 🚫 **Never skip documentation** when behavior changes
-- 🚫 **Never duplicate content** - link to existing docs instead
-- 🚫 **Never mix functional and technical** - keep them separate
-
-**Reference**: See [docs/AGENTS.md](../../docs/AGENTS.md) for documentation placement strategy and complete guidelines.
+**Reference**: See [docs/running-and-testing.md](../../docs/running-and-testing.md) for `Run` function details.
 
 ## Core Development Principles
 
-### Modern .NET/Blazor Architecture
+### Modern .NET/Blazor Stack
 
-- **.NET 10**: Latest LTS runtime with C# 13
-- **Blazor Hybrid Rendering**: SSR for SEO + WebAssembly for interactivity
-- **Clean Architecture**: Separation of concerns (Core, Infrastructure, API, Web)
-- **.NET Aspire**: Orchestration, service discovery, OpenTelemetry
-- **Repository Pattern**: File-based initially, database-ready architecture
+- **.NET 10**: Latest LTS with C# 13
+- **Blazor Hybrid**: SSR for SEO + WebAssembly for interactivity
+- **Clean Architecture**: Core → Infrastructure → API → Web
+- **.NET Aspire**: Orchestration, service discovery, telemetry
 
-**Reference**: See [docs/technology-stack.md](../../docs/technology-stack.md) for complete technology details.  
-**Implementation**: See [src/AGENTS.md](../../src/AGENTS.md) for .NET development patterns.
+**Reference**: See [docs/technology-stack.md](../../docs/technology-stack.md) and [docs/architecture.md](../../docs/architecture.md).
 
-### Quality & Testing
+### Quality & Testing (Testing Diamond)
 
-- **Test Diamond**: Integration tests (widest) → Unit (edge cases) → E2E (critical paths)
-- **Integration tests are most important**: All API functionality must have integration test coverage
-- **API boundary is crucial**: Focus testing on what's exposed through the API
-- **80% minimum code coverage** for unit tests
-- **Zero warnings policy**: Fix all build warnings immediately
-- **Continuous validation**: Run tests after EVERY code change
-- **No flaky tests**: Fix or remove, never ignore
+- **Integration tests are most important**: All API functionality at the boundary
+- **Unit tests for edge cases**: Fast feedback on complex logic
+- **E2E tests for critical paths**: User journeys and UI interactions
+- **80% minimum coverage**: For unit tests
+- **Clean slate principle**: Fix ALL broken tests before new work
 
-**Reference**: See [tests/AGENTS.md](../../tests/AGENTS.md) for comprehensive testing strategies.
+**Reference**: See [tests/AGENTS.md](../../tests/AGENTS.md) and [docs/testing-strategy.md](../../docs/testing-strategy.md).
 
-### Performance & User Experience
+### Performance & UX
 
-- **Client-side performance is paramount**: After initial load, all interactions must be responsive
-- **Pre-compute during build**: Calculate once at build time for optimal runtime performance
-- **Never sacrifice functionality**: Use intelligent caching and pre-computation instead
-- **Mobile-first responsive design**: Proper rendering regardless of device and screen size
+- **Server-side rendering**: Complete content on initial load (no spinners)
+- **Client-side performance**: Responsive interactions after load
+- **Pre-compute at build**: Calculate once, cache intelligently
+- **Mobile-first responsive**: Proper rendering on all devices
 - **No horizontal scrollbars**: EVER
 
-**Reference**: See [docs/render-modes.md](../../docs/render-modes.md) and [docs/seo.md](../../docs/seo.md) for SSR and performance principles.
-
-## Pending Features (Not Yet Implemented)
-
-These features are planned but not yet implemented. See `specs/` directory for detailed specifications:
-
-### High Priority
-
-- **Tagging/Filtering System** - Client-side content filtering by date, tags, text search ([specs/019-filtering-system/](../../specs/019-filtering-system/))
-- **Infinite Scrolling** - Progressive content loading with Intersection Observer ([specs/020-infinite-scroll/](../../specs/020-infinite-scroll/))
-- **Fully Responsive Design** - Hamburger menu, collapsible navigation, proper mobile rendering ([specs/029-mobile-navigation/](../../specs/029-mobile-navigation/))
-
-### Medium Priority
-
-- **Custom Pages** - Levels of Enlightenment, feature showcases ([specs/028-advanced-ui-features/](../../specs/028-advanced-ui-features/))
-- **Search Functionality** - Full-text search across all content ([specs/022-search/](../../specs/022-search/))
-- **SEO Optimization** - Meta tags, structured data, sitemaps ([specs/023-seo/](../../specs/023-seo/))
-
-### Lower Priority
-
-- **Distributed Caching** - Redis for performance optimization (may not be needed)
-- **Google Analytics** - Usage tracking ([specs/024-google-analytics/](../../specs/024-google-analytics/))
-- **Content Publish Flag** - Draft/published workflow ([specs/027-content-publish-flag/](../../specs/027-content-publish-flag/))
+**Reference**: See [docs/render-modes.md](../../docs/render-modes.md), [docs/seo.md](../../docs/seo.md), and [docs/page-structure.md](../../docs/page-structure.md).
 
 ## Development Methodology
 
-This project follows **Spec-Driven Development (SDD)** using the spec-kit methodology:
+This project follows **Spec-Driven Development** using SpecKit:
 
-1. **Constitution** → Define project principles and constraints (this file)
-2. **Specification** → Document exact behavior before implementation (`specs/*/spec.md`)
-3. **Planning** → Break work into small, testable tasks (`specs/*/plan.md`)
-4. **Implementation** → Write code that matches specifications (following TDD)
-5. **Verification** → Validate implementation against specs (all tests passing)
+1. **Constitution** → Project principles (this file)
+2. **Specification** → Exact behavior before implementation (`specs/*/spec.md`)
+3. **Planning** → Break into testable tasks (`specs/*/plan.md`, `specs/*/tasks.md`)
+4. **Implementation** → Follow TDD and 8-step workflow
+5. **Verification** → All tests pass, docs updated
 
-**Template Files**:
-
-- [spec-template.md](../templates/spec-template.md) - Feature specifications with user stories
-- [plan-template.md](../templates/plan-template.md) - Implementation planning
-- [tasks-template.md](../templates/tasks-template.md) - Task breakdown and tracking
+**Reference**: See [Root AGENTS.md](../../AGENTS.md) for the mandatory 8-step workflow.
 
 ## Governance
 
-- **This constitution supersedes all other practices** - Non-negotiable foundation
-- **Amendments require justification** - Version bumps follow semantic versioning:
-  - MAJOR: Breaking changes to governance or core principles
+- **This constitution supersedes all practices** - Non-negotiable foundation
+- **Amendments require justification** - Version follows semantic versioning:
+  - MAJOR: Breaking changes to governance or core principles  
   - MINOR: New principles or significant expansions
-  - PATCH: Clarifications, wording fixes, non-semantic refinements
-- **All code reviews must verify constitution compliance**
-- **Specs define authoritative behavior** - `/specs/NNN-feature-name/spec.md` files are the contract
-- **AGENTS.md files provide implementation guidance** - Domain-specific patterns and rules
+  - PATCH: Clarifications, wording fixes
+- **All code reviews verify compliance** with constitution
+- **Specs define authoritative behavior** - `specs/*/spec.md` are the contract
 
 ## Version History
 
-**Version**: 2.1.0  
+**Version**: 3.0.0  
 **Ratified**: 2026-01-01  
-**Last Amended**: 2026-01-16  
+**Last Amended**: 2026-02-08
 
 **Major Milestones**:
 
-- v1.0.0 (2026-01-01): Initial constitution for Jekyll migration
-- v1.2.0 (2026-01-02): Removed backwards compatibility constraints
-- v2.0.0 (2026-01-16): Complete rewrite for modern .NET/Blazor focus
-- v2.1.0 (2026-01-16): Added mandatory documentation update rule (#7) with placement guidance
+- v1.0.0 (2026-01-01): Initial constitution for .NET migration
+- v2.0.0 (2026-01-16): Modern .NET/Blazor focus, added documentation rule
+- v3.0.0 (2026-02-08): Complete overhaul - aligned with 8-step workflow, comprehensive docs/, simplified rules

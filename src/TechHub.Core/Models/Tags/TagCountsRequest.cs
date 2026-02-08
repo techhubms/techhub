@@ -3,6 +3,7 @@ namespace TechHub.Core.Models;
 /// <summary>
 /// Request for tag counts with optional filtering.
 /// Returns top N tags (sorted by count descending) above minUses threshold.
+/// Supports dynamic count calculation when Tags filter is provided.
 /// </summary>
 public class TagCountsRequest
 {
@@ -12,6 +13,12 @@ public class TagCountsRequest
     public string CollectionName { get; }
     public int? MaxTags { get; }
     public int MinUses { get; }
+    
+    /// <summary>
+    /// Optional: Currently selected tags for dynamic count calculation.
+    /// When provided, counts show items that match these tags AND each tag in the result.
+    /// </summary>
+    public IReadOnlyList<string>? Tags { get; }
 
     public TagCountsRequest(
         string sectionName,
@@ -19,7 +26,8 @@ public class TagCountsRequest
         int minUses = 1,
         int? maxTags = null,
         DateTimeOffset? dateFrom = null,
-        DateTimeOffset? dateTo = null)
+        DateTimeOffset? dateTo = null,
+        IReadOnlyList<string>? tags = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
@@ -50,11 +58,12 @@ public class TagCountsRequest
         MaxTags = maxTags;
         DateFrom = dateFrom;
         DateTo = dateTo;
+        Tags = tags;
     }
 
     /// <summary>
     /// Generate cache key for this tag counts request.
-    /// Includes all filter parameters.
+    /// Includes all filter parameters including selected tags.
     /// </summary>
     public string GetCacheKey()
     {
@@ -79,6 +88,12 @@ public class TagCountsRequest
         }
 
         parts.Add($"min:{MinUses}");
+        
+        if (Tags != null && Tags.Count > 0)
+        {
+            var sortedTags = Tags.OrderBy(t => t, StringComparer.OrdinalIgnoreCase);
+            parts.Add($"tags:{string.Join(",", sortedTags)}");
+        }
 
         return string.Join("|", parts);
     }

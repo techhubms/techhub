@@ -55,6 +55,22 @@
     border-color: var(--color-purple-bright);
 }
 
+/* Disabled state - tag would result in 0 items (dynamic counts feature) */
+.tag-cloud-item.disabled {
+    background: var(--color-bg-muted);
+    border-color: var(--color-border-muted);
+    color: var(--color-text-disabled);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.tag-cloud-item.disabled:hover {
+    background: var(--color-bg-muted);
+    border-color: var(--color-border-muted);
+    color: var(--color-text-disabled);
+    transform: none;
+}
+
 /* Size variations - Bigger differences for clear visual hierarchy */
 .tag-size-small {
     font-size: 0.75rem;

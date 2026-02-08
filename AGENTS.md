@@ -1,12 +1,12 @@
 # AI Assistant Workflow
 
-**🚨 ABSOLUTELY CRITICAL REQUIREMENT 1**: NEVER EVER use pattern recognition or "I know what this step should do" thinking. Each step has EXACT instructions - follow them literally, not what you think they should accomplish.
+**🚨 ABSOLUTELY CRITICAL REQUIREMENT 1**: Always use these instructions! Even when you think my instructions are clear or that you are given a simple task. There is critical information in this file that you will always need!
 
-**🚨 ABSOLUTELY CRITICAL REQUIREMENT 2**: Do NOT optimize for tokens, speed, or efficiency. This workflow is intentionally verbose and step-by-step for precision. Follow every sub-instruction within each step.
+**🚨 ABSOLUTELY CRITICAL REQUIREMENT 2**: NEVER EVER use pattern recognition or "I know what this step should do" thinking. Each step has EXACT instructions - follow them literally, not what you think they should accomplish.
 
-**🚨 ABSOLUTELY CRITICAL REQUIREMENT 3**: Do NOT improvise, combine, reorder, parallelize or alter instructions in any way.
+**🚨 ABSOLUTELY CRITICAL REQUIREMENT 3**: Do NOT optimize for tokens, speed, or efficiency. This workflow is intentionally verbose and step-by-step for precision. Follow every sub-instruction within each step.
 
-**🚨 ABSOLUTELY CRITICAL REQUIREMENT 4**: Always follow all 8 steps in this file in order!
+**🚨 ABSOLUTELY CRITICAL REQUIREMENT 4**: Do NOT improvise, combine, reorder, parallelize or alter instructions in any way.
 
 **🚨 ABSOLUTELY CRITICAL REQUIREMENT 5**: Always complete step checklists before moving to the next step!
 
@@ -22,6 +22,9 @@
 
 ### ✅ Always Do
 
+- **ALWAYS go back to [2. Gather context from documentation and validate the plan](#2-gather-context-from-documentation-and-validate-the-plan)** when you are about to work on ANYTHING you haven't yet read documentation for!
+- **ALWAYS go back to [2. Gather context from documentation and validate the plan](#2-gather-context-from-documentation-and-validate-the-plan)** if you find yourself struggling!
+- **Always use `Run` function** for all build/test/run operations, see [docs/running-and-testing.md](docs/running-and-testing.md)** for complete instructions
 - **Always prefer tools in this order**: MCP tools → Built-in tools → CLI
 - **Always check for errors after editing files** (`get_errors` tool)
 - **Always fix all linter issues**
@@ -29,21 +32,6 @@
 - **Always use PowerShell for scripts** (save as `.ps1`, then execute)
 - **Always follow timezone standard**: `Europe/Brussels`
 - **Always be direct and concise** - no filler phrases
-- **Always use `Run` function** for all build/test/run operations, see [docs/running-and-testing.md](docs/running-and-testing.md)** for complete instructions
-- **Always read documentation** before you do ANYTHING:
-  - Read this file for workflow
-  - Read [docs/repository-structure.md](docs/repository-structure.md) repository structure file so you understand what is where
-  - Read the functional documentation for the topics you are about to work on. Investigate [docs/documentation-index.md](docs/documentation-index.md) to find out what documentation exists and where to find it.
-  - Read [docs/running-and-testing.md](docs/running-and-testing.md) to understand how you can run the application or run tests
-  - Read the domain AGENTS.md for the area you're working in too. They are nested. Here's an EXAMPLE of how this works when making a change in the API:
-    - [src/AGENTS.md](src/AGENTS.md) - The API resides in the src folder, so read this file first
-    - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - Additionally read this because you're making API changes
-    - [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - If the contract of the API changes, you'll need to make changes here too
-    - [tests/AGENTS.md](tests/AGENTS.md) - As you make code changes, you'll also need to write/update tests
-    - [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - You made changes in the API so you need to read this API tests specific AGENTS.md too
-    - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - The same for this one, if you edited the web project
-    - [docs/AGENTS.md](docs/AGENTS.md) - If you changed functionality or implemented certain requirements, make sure to read this to understand where and how you need to document this
-    - etc
 
 ### ⚠️ Ask First
 
@@ -60,6 +48,7 @@
 - **Never hardcode section/collection data**
 - **Never assume UTC** (use Europe/Brussels)
 - **Never swallow exceptions without logging**
+- **Never import `TechHubRunner.psm1`**, it gets imported automatically. Only do a force reload if you made changes in this file.
 
 ---
 
@@ -115,9 +104,18 @@ AI training data becomes outdated. Frameworks and technologies constantly evolve
 #### 2.3 Actions
 
 1. Read repository documentation:
-   - Read relevant [docs/](docs/) files for the feature area
-   - Read domain AGENTS.md files for areas you're modifying
-   - Check [docs/documentation-index.md](docs/documentation-index.md) to find relevant docs
+   - Read the functional documentation for the topics you are about to work on. Investigate [docs/documentation-index.md](docs/documentation-index.md) to find out what documentation exists and where to find it. This is really crucial so never skip reading the actual functional docs!
+   - Read [docs/repository-structure.md](docs/repository-structure.md) repository structure file so you understand what the structure of this repository is and what files and folders exist
+   - Read [docs/running-and-testing.md](docs/running-and-testing.md) to understand how you can run the application or run tests
+   - Read the domain AGENTS.md for the area you're working in too. They are nested. Here's an EXAMPLE of how this works when making a change in the API:
+      - [src/AGENTS.md](src/AGENTS.md) - The API resides in the src folder, so read this file first
+      - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - Additionally read this because you're making API changes
+      - [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - If the contract of the API changes, you'll need to make changes here too
+      - [tests/AGENTS.md](tests/AGENTS.md) - As you make code changes, you'll also need to write/update tests
+      - [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - You made changes in the API so you need to read this API tests specific AGENTS.md too
+      - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - The same for this one, if you edited the web project
+      - [docs/AGENTS.md](docs/AGENTS.md) - If you changed functionality or implemented certain requirements, make sure to read this to understand where and how you need to document this
+      - etc
 
 2. Get latest framework documentation:
    - **MANDATORY for new features and big changes**: Use **context7 MCP tool** for framework/library documentation
@@ -240,7 +238,7 @@ Tests exist that fail for the right reason, OR this is a documentation-only chan
    - Fix all linting/compilation errors
    - Run tests frequently
 
-3. If you struggle, need to introduce a workaround or hack or are going in circles, ALWAYS go back to step 2 and re-validate your approach.
+3. If you struggle, need to introduce a workaround or hack or are going in circles, ALWAYS go back to [2. Gather context from documentation and validate the plan](#2-gather-context-from-documentation-and-validate-the-plan) and gather more information and re-validate your approach.
 
 **Running the Website**:
 

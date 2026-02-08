@@ -33,11 +33,27 @@
                 };
 
                 var isSelected = _selectedTagsInternal.Contains(tagItem.Tag.Trim().ToLowerInvariant());
-                var cssClass = $"tag-cloud-item {sizeClass} {(isSelected ? "selected" : "")}".Trim();
+                var isDisabled = tagItem.Count == 0;
+                var cssClass = $"tag-cloud-item {sizeClass} {(isSelected ? "selected" : "")} {(isDisabled ? "disabled" : "")}".Trim();
 
-                <button type="button" class="@cssClass" @onclick="() => HandleTagClick(tagItem.Tag)">
-                    @tagItem.Tag
-                </button>
+                @if (isDisabled)
+                {
+                    <button type="button" 
+                            class="@cssClass" 
+                            disabled="true"
+                            aria-disabled="true">
+                        @tagItem.Tag (@tagItem.Count.ToString("N0"))
+                    </button>
+                }
+                else
+                {
+                    <button type="button" 
+                            class="@cssClass" 
+                            @onclick="() => HandleTagClick(tagItem.Tag)"
+                            aria-disabled="false">
+                        @tagItem.Tag (@tagItem.Count.ToString("N0"))
+                    </button>
+                }
             }
         </div>
     }

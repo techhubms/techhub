@@ -112,6 +112,8 @@ public partial class SidebarTagCloud : ComponentBase
     private bool _isLoading = true;
     private bool _hasError;
     private bool _hasInitialized; // Track if we've loaded tags to prevent double-load flicker
+    private HashSet<string> _previousSelectedTags = []; // Track previous state to detect changes
+    private IReadOnlyList<TagCloudItem>? _initialTags; // Store initial tag order (no filters) for consistency
 
     protected override async Task OnInitializedAsync()
     {
@@ -129,6 +131,8 @@ public partial class SidebarTagCloud : ComponentBase
             _selectedTagsInternal = new HashSet<string>(
                 SelectedTags.Select(t => t.Trim().ToLowerInvariant()),
                 StringComparer.OrdinalIgnoreCase);
+            
+            _previousSelectedTags = new HashSet<string>(_selectedTagsInternal, StringComparer.OrdinalIgnoreCase);
         }
 
         await LoadTagsAsync();
@@ -139,6 +143,17 @@ public partial class SidebarTagCloud : ComponentBase
         // Always sync selectedTagsInternal with SelectedTags parameter
         // This is critical for Filter mode where URL changes trigger parameter updates
         SyncSelectedTagsFromParameter();
+
+        // Reload tag cloud if selected tags have changed (for dynamic counts)
+        if (!_selectedTagsInternal.SetEquals(_previousSelectedTags))
+        {
+            Logger.LogDebug("Selected tags changed, reloading tag cloud for dynamic counts. Previous: [{Previous}], Current: [{Current}]",
+                string.Join(", ", _previousSelectedTags),
+                string.Join(", ", _selectedTagsInternal));
+
+            _previousSelectedTags = new HashSet<string>(_selectedTagsInternal, StringComparer.OrdinalIgnoreCase);
+            await LoadTagsAsync();
+        }
     }
 
     /// <summary>
@@ -195,17 +210,69 @@ public partial class SidebarTagCloud : ComponentBase
             var effectiveSectionName = string.IsNullOrWhiteSpace(SectionName) ? "all" : SectionName;
             var effectiveCollectionName = string.IsNullOrWhiteSpace(CollectionName) ? "all" : CollectionName;
 
-            Logger.LogDebug("Loading tag cloud for section: {SectionName}, collection: {CollectionName}",
-                effectiveSectionName, effectiveCollectionName);
+            Logger.LogDebug("Loading tag cloud for section: {SectionName}, collection: {CollectionName}, with {FilterCount} filter tags",
+                effectiveSectionName, effectiveCollectionName, _selectedTagsInternal.Count);
 
-            _tags = await ApiClient.GetTagCloudAsync(
+            // Create filter list from selected tags (for dynamic counts)
+            List<string>? filterTags = _selectedTagsInternal.Count > 0
+                ? [.. _selectedTagsInternal]
+                : null;
+
+            // CRITICAL: To show disabled tags (count=0), we need the initial tag list.
+            // If we have filters but no initial tags yet, load initial tags first.
+            if (filterTags != null && _initialTags == null)
+            {
+                Logger.LogDebug("Loading initial tags (no filters) to establish baseline for disabled tags");
+                
+                var initialApiTags = await ApiClient.GetTagCloudAsync(
+                    effectiveSectionName,
+                    effectiveCollectionName,
+                    MaxTags,
+                    MinUses,
+                    LastDays,
+                    selectedTags: null, // No filters for initial load
+                    fromDate: null,
+                    toDate: null);
+
+                if (initialApiTags != null)
+                {
+                    _initialTags = initialApiTags;
+                }
+            }
+
+            // Now load tags with filters (if any)
+            var apiTags = await ApiClient.GetTagCloudAsync(
                 effectiveSectionName,
                 effectiveCollectionName,
                 MaxTags,
                 MinUses,
-                LastDays);
+                LastDays,
+                selectedTags: filterTags,
+                fromDate: null, // Date range filtering will be added in spec 001b
+                toDate: null);
 
-            Logger.LogDebug("Successfully loaded {Count} tags", _tags?.Count ?? 0);
+            Logger.LogDebug("Successfully loaded {Count} tags with dynamic counts (filter: {HasFilter})",
+                apiTags?.Count ?? 0, filterTags != null);
+
+            // Store initial tags if this is the first load (no filters)
+            if (filterTags == null && apiTags != null)
+            {
+                _initialTags = apiTags;
+                _tags = apiTags;
+            }
+            else if (_initialTags != null && apiTags != null)
+            {
+                // Merge filtered results with initial order:
+                // - Preserve initial tag order
+                // - Update counts from filtered results
+                // - Show tags with count=0 as disabled (in initial list but not in filtered results)
+                _tags = MergeWithInitialOrder(_initialTags, apiTags);
+            }
+            else
+            {
+                // Fallback: use API results directly
+                _tags = apiTags;
+            }
         }
         // Suppress CA1031: Catching all exceptions is appropriate for component error handling
         // We log the error and set hasError flag to show error UI to user
@@ -222,6 +289,51 @@ public partial class SidebarTagCloud : ComponentBase
         {
             _isLoading = false;
         }
+    }
+
+    /// <summary>
+    /// Merges filtered tag results with initial tag order to maintain consistent ordering and sizing.
+    /// Tags from initial order are preserved, with counts updated from filtered results.
+    /// Tag sizes remain constant (based on initial unfiltered counts) regardless of filtering.
+    /// Tags not in filtered results get count=0 (shown as disabled).
+    /// </summary>
+    private static List<TagCloudItem> MergeWithInitialOrder(
+        IReadOnlyList<TagCloudItem> initialTags,
+        IReadOnlyList<TagCloudItem> filteredTags)
+    {
+        // Build lookup of filtered tag counts
+        var filteredCountsLookup = filteredTags.ToDictionary(
+            t => t.Tag,
+            t => t,
+            StringComparer.OrdinalIgnoreCase);
+
+        // Merge: preserve initial order AND size, update counts from filtered results
+        var merged = new List<TagCloudItem>();
+        foreach (var initialTag in initialTags)
+        {
+            if (filteredCountsLookup.TryGetValue(initialTag.Tag, out var filteredTag))
+            {
+                // Tag exists in filtered results - update count but preserve initial size
+                merged.Add(new TagCloudItem
+                {
+                    Tag = initialTag.Tag,
+                    Count = filteredTag.Count,
+                    Size = initialTag.Size  // Keep original size based on unfiltered counts
+                });
+            }
+            else
+            {
+                // Tag not in filtered results - show as disabled with count=0
+                merged.Add(new TagCloudItem
+                {
+                    Tag = initialTag.Tag,
+                    Count = 0,
+                    Size = initialTag.Size
+                });
+            }
+        }
+
+        return merged;
     }
 
     private async Task HandleTagClick(string tag)
@@ -261,6 +373,12 @@ public partial class SidebarTagCloud : ComponentBase
             Logger.LogDebug("Selected tag: {Tag}", normalizedTag);
         }
 #pragma warning restore CA1868 // Unnecessary call to 'Contains(item)'
+
+        // Update previous tags for change detection
+        _previousSelectedTags = new HashSet<string>(_selectedTagsInternal, StringComparer.OrdinalIgnoreCase);
+
+        // Reload tag cloud immediately with new filter state
+        await LoadTagsAsync();
 
         // Update URL with new tag selection
         UpdateUrlWithTags();

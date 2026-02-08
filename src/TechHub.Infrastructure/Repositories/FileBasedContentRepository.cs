@@ -428,15 +428,17 @@ public class FileBasedContentRepository : ContentRepositoryBase
     /// Get tag counts from in-memory items using LINQ GROUP BY.
     /// For file-based repository, this is efficient since items are already loaded.
     /// Automatically excludes section and collection titles from tag counts.
+    /// Supports dynamic counts: when Tags filter is provided, counts show items matching ALL selected tags AND each tag.
     /// </summary>
     protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
         TagCountsRequest request,
         CancellationToken ct)
     {
+        ArgumentNullException.ThrowIfNull(request);
+        
         var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
 
         // Apply filters
-        ArgumentNullException.ThrowIfNull(request);
         var filtered = allItems.AsEnumerable();
 
         if (request.DateFrom.HasValue)
@@ -461,6 +463,31 @@ public class FileBasedContentRepository : ContentRepositoryBase
         if (!string.IsNullOrWhiteSpace(request.CollectionName) && !request.CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             filtered = filtered.Where(item => item.CollectionName.Equals(request.CollectionName, StringComparison.OrdinalIgnoreCase));
+        }
+
+        // DYNAMIC COUNTS: Tag filtering for intersection
+        // When tags filter is provided, only count tags in items that have ALL selected tags
+        if (request.Tags != null && request.Tags.Count > 0)
+        {
+            filtered = filtered.Where(item =>
+            {
+                // Check if item has ALL selected tags (using word-level matching)
+                return request.Tags.All(selectedTag =>
+                    item.Tags.Any(itemTag =>
+                    {
+                        // Normalize both tags for comparison
+                        var normalizedItemTag = itemTag.ToLowerInvariant().Trim();
+                        var normalizedSelectedTag = selectedTag.ToLowerInvariant().Trim();
+                        
+                        // Check if selectedTag is contained as a complete word in itemTag
+                        // E.g., "ai" matches "AI", "Azure AI", "AI Agents" but not "AIR"
+                        if (normalizedItemTag == normalizedSelectedTag) return true;
+                        
+                        // Word boundary matching
+                        var words = normalizedItemTag.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries);
+                        return words.Contains(normalizedSelectedTag);
+                    }));
+            });
         }
 
         // Build exclude set from section/collection titles

@@ -166,9 +166,9 @@ Azure infrastructure as code (Bicep templates):
 
 Detailed specifications for major features that still need to be built (following SpecKit structure):
 
-- `001-filtering-system/` - Content filtering and tag system
-- `002-search/` - Search functionality
-- `003-infinite-scroll/` - Infinite scroll pagination
+- `001a-tag-counting/` - Dynamic tag counts feature
+- `001b-date-range-slider/` - Date range filtering
+- `001c-tag-dropdown-filter/` - Excel-style tag dropdown
 - `004-custom-pages/` - Custom markdown pages
 - `005-mobile-navigation/` - Mobile navigation
 - `006-seo/` - SEO optimization

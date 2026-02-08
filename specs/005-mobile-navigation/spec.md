@@ -141,7 +141,7 @@ Desktop users see the traditional horizontal navigation menu without any hamburg
 ### Reference Documentation
 
 - [src/TechHub.Web/AGENTS.md](/src/TechHub.Web/AGENTS.md) - Blazor component patterns
-- [docs/filtering-system.md](/docs/filtering-system.md) - **NEEDS COMPLETE REWRITE** (see 001-filtering-system spec) - State management patterns (if menu state needs to persist across pages)
+- [docs/filtering.md](/docs/filtering.md) - Content filtering system (for state management patterns if menu state needs to persist)
 
 ### Current Status
 

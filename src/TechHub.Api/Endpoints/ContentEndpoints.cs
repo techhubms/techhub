@@ -245,13 +245,17 @@ public static class ContentEndpoints
     /// <summary>
     /// GET /api/sections/{sectionName}/collections/{collectionName}/tags - Get tag cloud for a collection
     /// Supports "all" as a virtual collection name - falls back to section-level tags.
+    /// Supports dynamic tag counts based on current filter state (tags, date range).
     /// </summary>
-    private static async Task<Results<Ok<IReadOnlyList<TagCloudItem>>, NotFound>> GetCollectionTags(
+    private static async Task<Results<Ok<IReadOnlyList<TagCloudItem>>, NotFound, BadRequest<string>>> GetCollectionTags(
         string sectionName,
         string collectionName,
         [FromQuery] int? maxTags = null,
         [FromQuery] int? minUses = null,
         [FromQuery] int? lastDays = null,
+        [FromQuery] string? tags = null,
+        [FromQuery] string? from = null,
+        [FromQuery] string? to = null,
         IContentRepository contentRepository = default!,
         IOptions<TagCloudOptions> tagCloudOptions = default!,
         CancellationToken cancellationToken = default)
@@ -278,10 +282,40 @@ public static class ContentEndpoints
 
         var options = tagCloudOptions.Value;
 
-        // Calculate date filter if LastDays is specified
-        DateTimeOffset? dateFrom = (lastDays ?? options.DefaultDateRangeDays) > 0
-            ? DateTimeOffset.UtcNow.AddDays(-(lastDays ?? options.DefaultDateRangeDays))
-            : null;
+        // Parse date range parameters (from/to take precedence over lastDays)
+        DateTimeOffset? dateFrom = null;
+        DateTimeOffset? dateTo = null;
+
+        if (!string.IsNullOrWhiteSpace(from))
+        {
+            if (!DateTimeOffset.TryParse(from, null, System.Globalization.DateTimeStyles.AssumeUniversal, out var parsedFrom))
+            {
+                return TypedResults.BadRequest($"Invalid 'from' date format: {from}. Expected ISO 8601 format (e.g., 2024-01-15).");
+            }
+            dateFrom = parsedFrom;
+        }
+
+        if (!string.IsNullOrWhiteSpace(to))
+        {
+            if (!DateTimeOffset.TryParse(to, null, System.Globalization.DateTimeStyles.AssumeUniversal, out var parsedTo))
+            {
+                return TypedResults.BadRequest($"Invalid 'to' date format: {to}. Expected ISO 8601 format (e.g., 2024-01-15).");
+            }
+            dateTo = parsedTo;
+        }
+
+        // Fall back to lastDays if from/to not specified
+        if (dateFrom == null && dateTo == null && (lastDays ?? options.DefaultDateRangeDays) > 0)
+        {
+            dateFrom = DateTimeOffset.UtcNow.AddDays(-(lastDays ?? options.DefaultDateRangeDays));
+        }
+
+        // Parse selected tags filter (for dynamic counts)
+        List<string>? selectedTags = null;
+        if (!string.IsNullOrWhiteSpace(tags))
+        {
+            selectedTags = [.. tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)];
+        }
 
         // Get top N tag counts from repository - repository will handle "all" as no filter
         var tagCounts = await contentRepository.GetTagCountsAsync(
@@ -290,7 +324,9 @@ public static class ContentEndpoints
                 collectionName: collectionName,
                 minUses: minUses ?? options.MinimumTagUses,
                 maxTags: maxTags ?? options.DefaultMaxTags,
-                dateFrom: dateFrom
+                dateFrom: dateFrom,
+                dateTo: dateTo,
+                tags: selectedTags
             ),
             cancellationToken);
 

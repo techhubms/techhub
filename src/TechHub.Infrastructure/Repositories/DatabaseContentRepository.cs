@@ -295,17 +295,19 @@ public class DatabaseContentRepository : ContentRepositoryBase
     /// ULTRA-FAST: Parses comma-delimited tags from filtered content items in-memory.
     /// Uses standard SQL - works with both SQLite and PostgreSQL.
     /// Automatically excludes section and collection titles from tag counts.
+    /// Supports dynamic counts: when Tags filter is provided, counts show items matching ALL selected tags AND each tag.
     /// </summary>
     protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
         TagCountsRequest request,
         CancellationToken ct)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         // Build exclude set from section/collection titles
         var excludeSet = await BuildSectionCollectionExcludeSet();
 
-        var sql = new StringBuilder("SELECT tags_csv FROM content_items c");
+        var sql = new StringBuilder();
         var parameters = new DynamicParameters();
-
         var whereClauses = new List<string> { $"c.draft = {Dialect.GetBooleanLiteral(false)}" };
 
         // Section filtering via bitmask column
@@ -338,6 +340,25 @@ public class DatabaseContentRepository : ContentRepositoryBase
             parameters.Add("dateTo", request.DateTo.Value.ToUnixTimeSeconds());
         }
 
+        // DYNAMIC COUNTS: Tag filtering for intersection
+        // When tags filter is provided, only count tags in items that have ALL selected tags
+        if (request.Tags != null && request.Tags.Count > 0)
+        {
+            // Join with content_tags_expanded to find items with ALL selected tags
+            // This creates dynamic counts showing intersection with selected tags
+            var normalizedTags = request.Tags.Select(t => t.ToLowerInvariant().Trim());
+            whereClauses.Add($@"(c.collection_name, c.slug) IN (
+                    SELECT collection_name, slug 
+                    FROM content_tags_expanded
+                    WHERE tag_word {Dialect.GetListFilterClause("selectedTags", request.Tags.Count)}
+                    GROUP BY collection_name, slug
+                    HAVING COUNT(*) = @tagCount
+                )");
+            parameters.Add("selectedTags", Dialect.ConvertListParameter(normalizedTags));
+            parameters.Add("tagCount", request.Tags.Count);
+        }
+
+        sql.Append("SELECT tags_csv FROM content_items c");
         sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
 
         var tagsCsvRows = await Connection.QueryAsync<string>(

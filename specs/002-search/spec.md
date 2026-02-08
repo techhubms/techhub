@@ -201,12 +201,12 @@ ORDER BY rank DESC;
 
 ### Reference Documentation
 
-- [docs/filtering-system.md](/docs/filtering-system.md) - **NEEDS COMPLETE REWRITE** (see 001-filtering-system spec for details)
+- [docs/filtering.md](/docs/filtering.md) - Content filtering system documentation
 - [src/TechHub.Web/AGENTS.md](/src/TechHub.Web/AGENTS.md) - Blazor component patterns
 
 ### Documentation Requirements
 
-**Functional Documentation Required**: After implementation, update `docs/filtering-system.md` to include search functionality:
+**Functional Documentation Required**: After implementation, update `docs/filtering.md` to include search functionality:
 
 **Required Content**:
 
@@ -215,8 +215,6 @@ ORDER BY rank DESC;
 - **Debouncing**: User experience of delayed search execution
 - **URL State**: Search parameter format, encoding, bookmarking
 - **Performance**: Search performance characteristics, optimization strategies
-
-**Guidelines**: See [001-filtering-system/spec.md](../001-filtering-system/spec.md) for complete functional documentation guidelines.
 
 **Technical Documentation** (implementation details belong here):
 

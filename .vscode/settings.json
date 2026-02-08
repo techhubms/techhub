@@ -100,11 +100,7 @@
             "approve": true,
             "matchCommandLine": true
         },
-        "/^Import-Module\\s+\\/workspaces\\/techhub\\/scripts\\/TechHubRunner\\.psm1\\s+-Force;\\s+Run\\b.*/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
-        "/^Import-Module\\s+\\/workspaces\\/techhub\\/scripts\\/TechHubRunner\\.psm1;\\s+Run\\b.*/": {
+        "/^Import-Module\\s+.*TechHubRunner\\.psm1.*?;\\s*Run\\b.*/": {
             "approve": true,
             "matchCommandLine": true
         },

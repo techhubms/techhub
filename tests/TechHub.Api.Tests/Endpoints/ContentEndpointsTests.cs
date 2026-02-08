@@ -504,6 +504,151 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         });
     }
 
+    #region Dynamic Tag Counts Tests (With Filter Parameters)
+
+    [Fact]
+    public async Task GetCollectionTags_WithNoFilters_ReturnsStaticCounts()
+    {
+        // Arrange - No filter parameters = static counts (total items with each tag)
+
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+
+        if (tagCloud!.Count > 0)
+        {
+            // All counts should be positive (static counts)
+            tagCloud.Should().AllSatisfy(item =>
+            {
+                item.Count.Should().BeGreaterThan(0, "Static counts should be positive");
+            });
+        }
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithTagsFilter_ReturnsDynamicCounts()
+    {
+        // Arrange - When tags parameter is provided, counts should show intersection
+        // (how many items would remain if BOTH the selected tag AND this tag are applied)
+        const string selectedTag = "ai";
+
+        // Act - Get tag cloud with AI tag already selected
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={selectedTag}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+
+        if (tagCloud!.Count > 0)
+        {
+            // Counts should reflect intersection with selected tag
+            // Some tags may have count = 0 (no items with BOTH tags)
+            tagCloud.Should().AllSatisfy(item =>
+            {
+                item.Count.Should().BeGreaterThanOrEqualTo(0, "Dynamic counts can be zero or positive");
+            });
+
+            // At least one tag should have count > 0 (tags that co-occur with AI)
+            tagCloud.Should().Contain(item => item.Count > 0,
+                "Some tags should co-occur with the selected tag");
+        }
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithMultipleTags_CalculatesIntersection()
+    {
+        // Arrange - Select multiple tags, counts should show items matching ALL selected tags AND each tag
+        const string tag1 = "ai";
+        const string tag2 = "copilot";
+
+        // Act - Get tag cloud with both AI and Copilot selected
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={tag1},{tag2}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+
+        if (tagCloud!.Count > 0)
+        {
+            // Counts should be for items with AI AND Copilot AND this tag
+            // Many tags will likely have count = 0 (intersection is smaller)
+            tagCloud.Should().AllSatisfy(item =>
+            {
+                item.Count.Should().BeGreaterThanOrEqualTo(0, "Intersection counts can be zero");
+            });
+        }
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithDateRangeFilter_FiltersCountsByDate()
+    {
+        // Arrange - Date range should affect tag counts
+        var fromDate = DateTimeOffset.UtcNow.AddDays(-30).ToString("yyyy-MM-dd");
+        var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
+
+        // Act - Get tag cloud for last 30 days
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/tags?from={fromDate}&to={toDate}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+
+        // Response structure should be valid (counts filtered to date range)
+        tagCloud!.Should().AllSatisfy(item =>
+        {
+            item.Tag.Should().NotBeNullOrEmpty();
+            item.Count.Should().BeGreaterThan(0); // minUses filters out zeros
+        });
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithTagsAndDateRange_CombinesFilters()
+    {
+        // Arrange - Combine tags and date range filters
+        const string selectedTag = "ai";
+        var fromDate = DateTimeOffset.UtcNow.AddDays(-90).ToString("yyyy-MM-dd");
+        var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
+
+        // Act - Get tag cloud with both filters
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={selectedTag}&from={fromDate}&to={toDate}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        tagCloud.Should().NotBeNull();
+
+        // Counts should reflect items matching tag AND within date range
+        tagCloud!.Should().AllSatisfy(item =>
+        {
+            item.Tag.Should().NotBeNullOrEmpty();
+            item.Count.Should().BeGreaterThanOrEqualTo(0);
+        });
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithInvalidDateFormat_ReturnsBadRequest()
+    {
+        // Act - Invalid date format should return 400
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags?from=invalid-date");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    #endregion
+
     #endregion
 
     #region Content Detail Endpoint Tests

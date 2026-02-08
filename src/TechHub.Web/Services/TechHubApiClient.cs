@@ -223,6 +223,9 @@ public class TechHubApiClient : ITechHubApiClient
         int? maxTags = null,
         int? minUses = null,
         int? lastDays = null,
+        List<string>? selectedTags = null,
+        string? fromDate = null,
+        string? toDate = null,
         CancellationToken cancellationToken = default)
     {
         try
@@ -241,6 +244,24 @@ public class TechHubApiClient : ITechHubApiClient
             if (lastDays.HasValue)
             {
                 queryParams.Add($"lastDays={lastDays.Value}");
+            }
+
+            // Dynamic counts: Add selected tags parameter (for intersection counts)
+            if (selectedTags != null && selectedTags.Count > 0)
+            {
+                var tagsParam = string.Join(",", selectedTags.Select(t => Uri.EscapeDataString(t)));
+                queryParams.Add($"tags={tagsParam}");
+            }
+
+            // Dynamic counts: Add date range parameters
+            if (!string.IsNullOrWhiteSpace(fromDate))
+            {
+                queryParams.Add($"from={Uri.EscapeDataString(fromDate)}");
+            }
+
+            if (!string.IsNullOrWhiteSpace(toDate))
+            {
+                queryParams.Add($"to={Uri.EscapeDataString(toDate)}");
             }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
@@ -361,6 +382,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// Get tag cloud for specified scope.
     /// Uses /api/sections/{sectionName}/collections/{collectionName}/tags endpoint.
     /// Pass "all" as collectionName for section-level tag cloud.
+    /// Supports dynamic counts via selectedTags and date range parameters.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
@@ -369,12 +391,15 @@ public class TechHubApiClient : ITechHubApiClient
         int? maxTags = null,
         int? minUses = null,
         int? lastDays = null,
+        List<string>? selectedTags = null,
+        string? fromDate = null,
+        string? toDate = null,
         CancellationToken cancellationToken = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
 
-        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, cancellationToken);
+        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, selectedTags, fromDate, toDate, cancellationToken);
     }
 
     // ================================================================

@@ -13,9 +13,11 @@ Specs are organized by feature, numbered in priority order:
 
 | # | Feature | Status | Priority |
 | --- | ------- | ------ | -------- |
-| 001 | [Filtering System](001-filtering-system/) | ✅ Spec Complete | HIGH |
+| 001a | [Tag Counting](001a-tag-counting/) | 🔄 In Progress (95%) | HIGH |
+| 001b | [Date Range Slider](001b-date-range-slider/) | ⏳ Planned | HIGH |
+| 001c | [Tag Dropdown Filter](001c-tag-dropdown-filter/) | ⏳ Planned | HIGH |
 | 002 | [Search](002-search/) | ✅ Spec Complete | HIGH |
-| 003 | [Infinite Scroll](003-infinite-scroll/) | ✅ Spec Complete | MEDIUM |
+| 003 | Infinite Scroll | ✅ Complete & Archived | MEDIUM |
 | 004 | [Custom Pages](004-custom-pages/) | ✅ Spec Complete | HIGH |
 | 005 | [Mobile Navigation](005-mobile-navigation/) | ✅ Spec Complete | HIGH |
 | 006 | [SEO Optimization](006-seo/) | ✅ Spec Complete | MEDIUM |
@@ -29,6 +31,7 @@ Specs are organized by feature, numbered in priority order:
 - 🔄 **In Progress** - Currently implementing
 - ⏳ **Planned** - Not started, spec may need updates
 - ⚠️ **Partial** - Some functionality exists, needs completion/refinement
+- ✅ **Complete & Archived** - Fully implemented, spec archived, see [docs/](../docs/) for documentation
 
 ## How to Use Specs
 

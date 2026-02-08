@@ -187,11 +187,79 @@ curl -k "https://localhost:5001/api/sections/ai/collections/videos/items?tags=co
 
 Get a tag cloud with quantile-based sizing for visual representation. Using `all` allows retrieving tag stats for the entire site.
 
+**Supports dynamic tag counts**: When filter parameters are provided (`tags`, `from`, `to`), the counts update to show how many items would remain if that tag is selected.
+
 **Parameters**:
 
 - `maxTags` (query, optional): Maximum number of tags (default: 20)
 - `minUses` (query, optional): Minimum tag usage count (default: 5)
 - `lastDays` (query, optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`)
+- `tags` (query, optional): Comma-separated list of currently selected tags for dynamic count calculation
+- `from` (query, optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`)
+- `to` (query, optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`)
+
+**Static Counts (No Filter)**:
+
+```bash
+curl -k "https://localhost:5001/api/sections/ai/collections/all/tags?maxTags=20"
+```
+
+Response shows total items with each tag:
+
+```json
+[
+  { "tag": "AI", "count": 901, "size": 2 },
+  { "tag": "GitHub Copilot", "count": 567, "size": 2 },
+  { "tag": "Azure", "count": 423, "size": 1 }
+]
+```
+
+**Dynamic Counts (With Tags Filter)**:
+
+When tags are selected, counts show items matching **ALL selected tags AND this tag** (intersection):
+
+```bash
+curl -k "https://localhost:5001/api/sections/ai/collections/all/tags?tags=ai&maxTags=20"
+```
+
+Response shows intersection counts:
+
+```json
+[
+  { "tag": "GitHub Copilot", "count": 245, "size": 2 },  // Items with BOTH AI AND Copilot
+  { "tag": "Azure", "count": 178, "size": 1 },           // Items with BOTH AI AND Azure
+  { "tag": "Machine Learning", "count": 0, "size": 0 }   // No items with BOTH (would be disabled in UI)
+]
+```
+
+**Dynamic Counts (With Date Range)**:
+
+Date range filters affect tag counts:
+
+```bash
+curl -k "https://localhost:5001/api/sections/ai/collections/all/tags?from=2024-01-01&to=2024-06-30&maxTags=20"
+```
+
+Counts reflect only items within the date range.
+
+**Combined Filters**:
+
+All filters can be combined:
+
+```bash
+curl -k "https://localhost:5001/api/sections/ai/collections/all/tags?tags=ai,copilot&from=2024-01-01&to=2024-06-30&maxTags=20"
+```
+
+Counts show items with **AI AND Copilot AND this tag** within the date range.
+
+**Error Handling**:
+
+Invalid date formats return `400 Bad Request`:
+
+```bash
+curl -k "https://localhost:5001/api/sections/ai/collections/all/tags?from=invalid-date"
+# Returns: 400 Bad Request with error message
+```
 
 **Response**:
 

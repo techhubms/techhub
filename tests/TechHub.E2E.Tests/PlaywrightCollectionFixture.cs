@@ -154,3 +154,8 @@ public class TabOrderingCollection : ICollectionFixture<PlaywrightCollectionFixt
 public class InfiniteScrollCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }
+
+[CollectionDefinition("Dynamic Tag Counts Tests")]
+public class DynamicTagCountsCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}

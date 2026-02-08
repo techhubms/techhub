@@ -72,7 +72,9 @@ public class TagFilteringTests : IAsyncLifetime
         var uri = new Uri(currentUrl);
         var tagsParam = System.Web.HttpUtility.ParseQueryString(uri.Query).Get("tags");
         tagsParam.Should().NotBeNullOrEmpty("Tags parameter should have a value");
-        var normalizedTagText = tagText?.Trim().ToLowerInvariant() ?? "";
+        
+        // Extract tag name from "TagName (count)" format
+        var normalizedTagText = ExtractTagNameFromText(tagText).ToLowerInvariant();
         tagsParam.Should().Contain(normalizedTagText, $"Expected tags parameter to contain '{normalizedTagText}'");
     }
 
@@ -108,7 +110,7 @@ public class TagFilteringTests : IAsyncLifetime
         var uri = new Uri(urlAfterSecondClick);
         var tagsParam = System.Web.HttpUtility.ParseQueryString(uri.Query).Get("tags");
 
-        var normalizedTagText = tagText?.Trim().ToLowerInvariant() ?? "";
+        var normalizedTagText = ExtractTagNameFromText(tagText).ToLowerInvariant();
 
         if (string.IsNullOrEmpty(tagsParam))
         {
@@ -411,5 +413,29 @@ public class TagFilteringTests : IAsyncLifetime
         // This replaces the arbitrary Task.Delay - the afterServerStarted callback sets
         // window.__blazorServerReady when the SignalR circuit is fully established
         await Page.WaitForBlazorReadyAsync();
+    }
+
+    /// <summary>
+    /// Helper method to extract tag name from "TagName (count)" format
+    /// </summary>
+    private static string ExtractTagNameFromText(string? tagText)
+    {
+        if (string.IsNullOrWhiteSpace(tagText))
+        {
+            return "";
+        }
+
+        // Normalize whitespace first (TextContent might have extra spaces/newlines)
+        tagText = System.Text.RegularExpressions.Regex.Replace(tagText.Trim(), @"\s+", " ");
+
+        // Remove count in parentheses: "AI (901)" -> "AI"
+        var match = System.Text.RegularExpressions.Regex.Match(tagText, @"^(.+?)\s*\(\d{1,3}(?:,\d{3})*\)$");
+        if (match.Success)
+        {
+            return match.Groups[1].Value.Trim();
+        }
+
+        // If no count found, return as-is
+        return tagText.Trim();
     }
 }
