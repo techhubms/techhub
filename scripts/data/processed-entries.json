@@ -25456,5 +25456,11 @@
     "reason": "Succesfully added: Assigned 'AI' category because the content discusses new AI model functionality (Claude Opus 4.6 Fast mode) within GitHub Copilot, matching AI inclusion rule 1. Assigned 'GitHub Copilot' because the feature directly enhances GitHub Copilot, per GitHub Copilot rules 1 and 2. No other categories qualify since the focus is on model speed and integration, not coding practices, Azure, DevOps, or security. The content is technical, targets developers, and does not trigger any generic exclusion rules.",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-02-07-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the entire content is about orchestrating pipelines in Azure Synapse Analytics, a core Microsoft Azure service (Azure rules 1, 4, 5). Assigned ML category because content focuses on orchestration of analytical data pipelines, workload classification, and priority scheduling for business intelligence and analytics workloads—central themes for data engineering and analytics platforms (ML rule 1, 2, 3, 4). Did not assign AI because although a Copilot-style agent is suggested for future automation, AI is not a core subject or implementation focus here. Did not assign DevOps because while orchestration is discussed, the article is narrowly focused on pipeline scheduling for data analytics rather than the broad DevOps tooling or practices. Did not assign Security or Coding as security practices and hands-on coding patterns are not a focus.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/smart-pipelines-orchestration-designing-predictable-data/ba-p/4491766",
+    "timestamp": "2026-02-08 10:05:08 +00:00",
+    "collection": "community"
   }
 ]
