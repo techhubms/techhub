@@ -25528,5 +25528,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-the-trusted-catalog-for-organizations-worldwide/",
     "reason": "Succesfully added: Assigned the Azure category because OneLake and the OneLake catalog are central features of the Microsoft Fabric cloud platform (Azure rule 1 and 4). Assigned the ML category because OneLake/Fabric is designed for analytics, data science, and BI workloads, including features relevant to ML/data engineering (ML rules 1, 2, 4, 5). Assigned Security because of the substantial coverage of data access management, governance, sensitivity labeling, role-based controls, and integration with Microsoft Purview (Security rules 1, 2, 3, 4, 10). Assigned AI because the content discusses enabling AI and analytics workloads with governable, trusted data, the use of Copilot Studio, and data foundations for generative AI (AI rules 1, 4, and 5). Product descriptions and specific integration scenarios with Power BI, Purview, Copilot Studio, and security APIs all support this categorization.",
     "timestamp": "2026-02-09 21:13:25 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the content is about Visual Studio Code, agent integration, and new developer-facing features (Coding rule 5). The video focuses on developer tooling improvements in VS Code rather than DevOps, AI, ML, Azure, or Security themes. Tags were extracted from the title, provided tags, and contextual developer tooling keywords. Content is technical and developer-oriented, meeting inclusion criteria.",
+    "canonical_url": "https://www.youtube.com/watch?v=FjvtWeG6EEo",
+    "collection": "videos",
+    "timestamp": "2026-02-09 22:11:19 +00:00"
   }
 ]
