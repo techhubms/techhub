@@ -25516,5 +25516,11 @@
     "timestamp": "2026-02-09 19:30:51 +00:00",
     "reason": "Succesfully added: Assigned the AI category because the announcement is about GPT-5.3-Codex, OpenAI's agentic coding model, integrated into GitHub Copilot (AI Rule 1, 2). 'GitHub Copilot' category is included because the model is being deployed specifically in GitHub Copilot and the content details its use there (GitHub Copilot Rule 1). Coding and other categories were not assigned because, while the context is developer tooling, the content focuses on the model rollout rather than software/code examples or DevOps processes.",
     "canonical_url": "https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content highlights a new semantic search feature on GitHub Issues, which relies on natural language processing and machine learning (AI Inclusion rule 1). Did not assign DevOps or Coding because the video focuses on search capabilities for Issues, not development workflows or code. GitHub Copilot is not mentioned, so that category does not apply. Azure, ML, and Security categories are not relevant here, as the main focus is AI-powered search within GitHub Issues.",
+    "canonical_url": "https://www.youtube.com/shorts/CkipZAiH8RE",
+    "timestamp": "2026-02-09 20:11:37 +00:00",
+    "collection": "videos"
   }
 ]
