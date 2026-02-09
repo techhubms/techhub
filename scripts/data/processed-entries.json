@@ -25492,5 +25492,17 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the update centers on GitHub Apps and API access, which are key tools in enterprise DevOps, automation, and team management workflows (DevOps rule 11). No 'AI', 'GitHub Copilot', 'Coding', 'Azure', 'ML', or 'Security' categories were assigned since the content is purely about DevOps practices and tooling for team management, not code, Azure, or AI/ML. It is an official news update relevant to team collaboration and automation, and all information is technical and non-biographical.",
     "canonical_url": "https://github.blog/changelog/2026-02-09-github-apps-can-now-utilize-public-preview-enterprise-teams-apis-via-fine-grained-permissions"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because Microsoft Fabric is a central Azure-based data analytics platform, and the content focuses on tenant-level data governance features (Azure inclusion rule 1). Assigned Security because the main topic is sensitivity labels, information protection, and compliance automation—meeting multiple Security inclusion rules (items 1, 2, and 4). ML and AI are not directly discussed, nor is coding, DevOps, or GitHub Copilot. No generic exclusion rule applies: the content is technical, non-promotional, in English, of sufficient depth, and not business/executive focused. Tags were selected to cover all technical and governance aspects highlighted.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/governance-on-autopilot-the-power-of-default-domain-labels-in-fabric-generally-available/",
+    "timestamp": "2026-02-09 17:21:53 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Applied the Azure category because the On-premises Data Gateway is a key Azure service for hybrid data integration, and the content is focused on technical administration, update processes, and automation in a Microsoft cloud environment (Azure inclusion rules 1, 4, 6). The article is technical and aimed at IT administrators, with implementation steps relevant to maintaining and operating Azure-integrated services. No other category qualifies: 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'ML', and 'Security' are not central topics in this update-focused content.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/manual-update-for-on-premises-data-gateway-public-preview/",
+    "timestamp": "2026-02-09 17:22:14 +00:00"
   }
 ]

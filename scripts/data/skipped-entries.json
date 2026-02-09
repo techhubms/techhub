@@ -11871,5 +11871,11 @@
     "reason": "No categories found: No categories assigned. The content is a conceptual reflection on the interpretation of AI-generated 'one-shot' code prompts, with a focus on semantics, prompt engineering, and the culture of programming. It does not contain substantial technical implementation details, actionable guidance on Microsoft developer technologies, product/service walkthroughs, or concrete discussion of Microsoft AI tools or platforms. Although the author, Scott Hanselman, is a Microsoft employee and there are mentions of Azure hosting in the blog infrastructure, the main content does not address any Microsoft technology, platform, or developer tool according to the inclusion rules. There is no description or demonstration of AI services, GitHub Copilot, ML workloads, Azure, Coding, DevOps, or Security topics relevant to the platform's technology categories. The post is opinion-based and does not meet the depth or technical focus required by the category inclusion rules.",
     "canonical_url": "https://www.hanselman.com/blog/the-danger-of-glamourizing-one-shots",
     "timestamp": "2026-02-08 22:06:13 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content description discusses Anders Hejlsberg's reflections on programming languages such as Rust, Go, and Python, mentioning his respect for them and their unique features. There is no substantive technical content about Microsoft technologies or development practices; the focus is on general programming language appreciation, not implementation details, development frameworks, or Microsoft product ecosystems. No mention of hands-on coding with Microsoft tools, architecture, DevOps, AI, ML, Azure, or Security. Therefore, none of the category inclusion rules are met.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/k9ykThSvRLA",
+    "timestamp": "2026-02-09 17:22:49 +00:00"
   }
 ]
