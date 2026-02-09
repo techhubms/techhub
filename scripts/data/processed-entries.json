@@ -25480,5 +25480,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-13-january-2026/ba-p/4493090",
     "reason": "Succesfully added: Categories were assigned as follows: 'Azure' because all improvements and features described are central to Microsoft Azure services, management, and architecture (Azure rules 1, 4, 5). 'DevOps' was included due to the toolkit’s focus on automation, deployment, PowerShell exports, Bicep template reorganization, and cross-team collaboration (DevOps rules 4, 5, 6, 8). 'Security' was added due to enhancements covered for Key Vault purge protection, RBAC controls, and compliance-driven deployment options (Security rules 1, 3, 8, 9). Though AI automation is mentioned as 'coming soon,' the current update does not contain sufficient actionable AI feature details to warrant the 'AI' or 'ML' categories. Coding was omitted because the article focuses on platform configuration and DevOps practices over code or app development."
+  },
+  {
+    "timestamp": "2026-02-09 12:11:41 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on AI-powered enterprise knowledge tools from Microsoft, specifically the 'Microsoft IQ' suite (AI inclusion rules 1 and 4). Assigned Azure because the solution is built on Microsoft Azure AI capabilities and targets enterprise scenarios (Azure inclusion rule 1). Did not assign Coding, ML, DevOps, Security, or GitHub Copilot because the content does not cover coding, machine learning engineering, DevOps practices, security architecture, or Copilot functionalities.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=1ri8HSbN4q4"
   }
 ]
