@@ -25474,5 +25474,11 @@
     "reason": "Succesfully added: Assigned 'AI' category because the content focuses entirely on AI-driven development practices and model selection within GitHub Copilot, which is an AI-powered developer tool (AI Rule 2). 'GitHub Copilot' category is assigned because the article’s core subject is optimizing developer workflows with GitHub Copilot, including a technical comparison of different Copilot-supported AI models, feature explanations, and enterprise adoption (GitHub Copilot category rules 1, 2, 4). No other categories qualify: content does not cover writing code directly (so not 'Coding'), and there is no DevOps, Azure, ML, or Security content. Model selection, workflow optimization, and Copilot features are the sole focus.",
     "timestamp": "2026-02-09 08:13:08 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-02-09 10:21:26 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-13-january-2026/ba-p/4493090",
+    "reason": "Succesfully added: Categories were assigned as follows: 'Azure' because all improvements and features described are central to Microsoft Azure services, management, and architecture (Azure rules 1, 4, 5). 'DevOps' was included due to the toolkit’s focus on automation, deployment, PowerShell exports, Bicep template reorganization, and cross-team collaboration (DevOps rules 4, 5, 6, 8). 'Security' was added due to enhancements covered for Key Vault purge protection, RBAC controls, and compliance-driven deployment options (Security rules 1, 3, 8, 9). Though AI automation is mentioned as 'coming soon,' the current update does not contain sufficient actionable AI feature details to warrant the 'AI' or 'ML' categories. Coding was omitted because the article focuses on platform configuration and DevOps practices over code or app development."
   }
 ]
