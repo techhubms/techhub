@@ -11853,5 +11853,23 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule: insufficient substantive technical detail about Microsoft technologies. The title and description indicate the focus is on 'OpenClaw', a self-hosted AI agent platform. The integration examples (WhatsApp, Discord, Slack) and lack of specific Microsoft technology references indicate this video is not substantially focused on Microsoft ecosystems, services, or developer tooling. The only Microsoft-adjacent mention is GitHub, but the content appears centered around an open source, platform-agnostic project, not a Microsoft product or development scenario. There is also no information on Azure, GitHub Copilot, Coding with Microsoft technologies, or any qualifying category inclusion. As the content does not meet the minimum threshold for Microsoft technology centrality (≥40%), all categories are excluded.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/6bBqno3tp-A"
+  },
+  {
+    "timestamp": "2026-02-08 15:05:51 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules for Non-Development Microsoft Products (Chapter 3). The article centers on Microsoft 365 Copilot and general Copilot agents in business productivity and collaboration contexts, not developer tools or coding solutions. The examples focus on productivity enhancements (email sorting, document formatting, transcribing meeting notes) and HITL concepts for business workflows, with specific references to M365 Copilot and other productivity assistants. There are no substantive discussions of GitHub Copilot, Copilot Studio, coding/development, technical architecture, Azure, or other eligible Microsoft developer products. As per Copilot Product Distinction (Chapter 2 and Clarifications), Microsoft 365 Copilot and related business productivity Copilot agents must be excluded. No categories assigned.",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/human-in-the-loop-where-copilot-agents-should-and-shouldnt-act-alone/"
+  },
+  {
+    "collection": "blogs",
+    "reason": "No categories found: Content was excluded due to the absence of substantive technical or development-focused discussion related to Microsoft technologies or any predefined category. The post is primarily a reflective, philosophical piece on software craftsmanship, the evolution of development tools, and changes in the software industry, but it does not contain technical implementation details, educational guidance, or content tied to any specific Microsoft technology, product, or development methodology. This falls under generic exclusion rules as high-level commentary or musings without actionable technical content.",
+    "canonical_url": "https://www.hanselman.com/blog/is-the-craft-dead",
+    "timestamp": "2026-02-08 22:06:00 +00:00"
+  },
+  {
+    "collection": "blogs",
+    "reason": "No categories found: No categories assigned. The content is a conceptual reflection on the interpretation of AI-generated 'one-shot' code prompts, with a focus on semantics, prompt engineering, and the culture of programming. It does not contain substantial technical implementation details, actionable guidance on Microsoft developer technologies, product/service walkthroughs, or concrete discussion of Microsoft AI tools or platforms. Although the author, Scott Hanselman, is a Microsoft employee and there are mentions of Azure hosting in the blog infrastructure, the main content does not address any Microsoft technology, platform, or developer tool according to the inclusion rules. There is no description or demonstration of AI services, GitHub Copilot, ML workloads, Azure, Coding, DevOps, or Security topics relevant to the platform's technology categories. The post is opinion-based and does not meet the depth or technical focus required by the category inclusion rules.",
+    "canonical_url": "https://www.hanselman.com/blog/the-danger-of-glamourizing-one-shots",
+    "timestamp": "2026-02-08 22:06:13 +00:00"
   }
 ]

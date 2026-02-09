@@ -25462,5 +25462,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/smart-pipelines-orchestration-designing-predictable-data/ba-p/4491766",
     "timestamp": "2026-02-08 10:05:08 +00:00",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=GMAoTeD9siU",
+    "reason": "Succesfully added: Assigned the AI category because the episode focuses heavily on subagents, agent orchestration, and model selection, all central to Microsoft's AI infrastructure in VS Code (AI inclusion rule 1, 4, 5). Assigned GitHub Copilot because VS Code Copilot Agents and subagents are part of the GitHub Copilot developer ecosystem (GitHub Copilot inclusion rules 1–4). Assigned Coding because the episode targets development workflows, coding practices, and technical integration within VS Code (Coding rules 1, 4, 5). Azure, ML, DevOps, and Security do not apply as the content does not focus on cloud, data science, operations, or security implementations.",
+    "timestamp": "2026-02-09 08:12:41 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/choosing-the-right-model-in-github-copilot-a-practical-guide-for/ba-p/4491623",
+    "reason": "Succesfully added: Assigned 'AI' category because the content focuses entirely on AI-driven development practices and model selection within GitHub Copilot, which is an AI-powered developer tool (AI Rule 2). 'GitHub Copilot' category is assigned because the article’s core subject is optimizing developer workflows with GitHub Copilot, including a technical comparison of different Copilot-supported AI models, feature explanations, and enterprise adoption (GitHub Copilot category rules 1, 2, 4). No other categories qualify: content does not cover writing code directly (so not 'Coding'), and there is no DevOps, Azure, ML, or Security content. Model selection, workflow optimization, and Copilot features are the sole focus.",
+    "timestamp": "2026-02-09 08:13:08 +00:00",
+    "collection": "community"
   }
 ]
