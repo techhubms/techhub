@@ -207,13 +207,32 @@ public abstract class ContentRepositoryBase : IContentRepository
 
     // ==================== Protected Helper Methods ====================
 
+    // High-frequency tags excluded from all tag clouds.
+    // These appear on most content items and don't provide filtering value.
+    private static readonly string[] HighFrequencyExcludedTags = ["github", "copilot", "microsoft"];
+
+    /// <summary>
+    /// Get the cached set of tags to exclude from tag clouds.
+    /// Cached for the lifetime of the application since it's based on static configuration.
+    /// Returns a case-insensitive HashSet for efficient contains checks and SQL filtering.
+    /// Includes: section tags, collection tags, and high-frequency terms (github, copilot, microsoft).
+    /// </summary>
+    protected async Task<HashSet<string>> GetExcludeTagsSetAsync()
+    {
+        return await Cache.GetOrCreateAsync("excludetags:set", async entry =>
+        {
+            entry.SetPriority(CacheItemPriority.NeverRemove);
+            return await BuildExcludeTagsSetAsync();
+        }) ?? [];
+    }
+
     /// <summary>
     /// Build a set of section and collection tags to exclude from tag clouds.
     /// Uses section Tags from configuration and programmatically generated collection tags.
     /// These are structural tags added by ContentFixer for search purposes,
     /// but shouldn't appear in tag clouds as they're redundant (users already filter by section/collection).
     /// </summary>
-    protected async Task<HashSet<string>> BuildSectionCollectionExcludeSet()
+    private async Task<HashSet<string>> BuildExcludeTagsSetAsync()
     {
         var excludeSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var sections = await GetAllSectionsAsync();
@@ -238,10 +257,11 @@ public abstract class ContentRepositoryBase : IContentRepository
             }
         }
 
-        //As these are so common and doesn't add much value to tag clouds, we exclude it by default.
-        excludeSet.Add("GitHub");
-        excludeSet.Add("Copilot");
-        excludeSet.Add("Microsoft");
+        // Add high-frequency tags (already defined in HighFrequencyExcludedTags array)
+        foreach (var tag in HighFrequencyExcludedTags)
+        {
+            excludeSet.Add(tag);
+        }
 
         return excludeSet;
     }

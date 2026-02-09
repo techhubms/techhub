@@ -91,6 +91,22 @@
     padding: 0.3125rem 0.875rem;
 }
 
+/* Tag count width classes - Based on original (unfiltered) digit count
+   This prevents layout shift when count changes from "123" to "5" during filtering
+   Width is determined by the initial count, not the current filtered count */
+.tag-count-1d,
+.tag-count-2d,
+.tag-count-3d,
+.tag-count-4d {
+    display: inline-block;
+    text-align: right;
+}
+
+.tag-count-1d { min-width: 1ch; }  /* Single digit: 1-9 */
+.tag-count-2d { min-width: 2ch; }  /* Two digits: 10-99 */
+.tag-count-3d { min-width: 3ch; }  /* Three digits: 100-999 */
+.tag-count-4d { min-width: 4ch; }  /* Four digits: 1000+ */
+
 /* Text/status messages within the sidebar section */
 .sidebar-text {
     color: var(--color-text-secondary);

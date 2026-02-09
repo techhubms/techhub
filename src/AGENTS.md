@@ -11,46 +11,7 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 **Documentation Philosophy**: This file describes .NET development patterns - WHAT to use and WHY. Show structure and key decisions, not full implementations. Reference actual source files for complete code.
 
-## Port Configuration
-
-**Goal**: HTTPS everywhere, fixed ports, single source of truth (no redundant configuration).
-
-**Strategy**: Define ports in `launchSettings.json` only. Aspire reads these automatically - no explicit endpoint configuration needed in AppHost.
-
-**Fixed Ports**:
-
-- API: 5001 (HTTPS) - Defined in [TechHub.Api/Properties/launchSettings.json](TechHub.Api/Properties/launchSettings.json)
-- Web: 5003 (HTTPS) - Defined in [TechHub.Web/Properties/launchSettings.json](TechHub.Web/Properties/launchSettings.json)
-- Aspire Dashboard: 18888 (HTTP)
-
-**Benefits**:
-
-- Same ports whether running via Aspire (`Run`) or directly (`dotnet run`)
-- No duplicate endpoint definitions
-- Single source of truth prevents configuration drift
-
 ## Critical Development Rules
-
-### Starting, Running, and Testing
-
-**ALWAYS refer to [docs/running-and-testing.md](../docs/running-and-testing.md)** for complete instructions on:
-
-- Starting the website with the `Run` function
-- Running all tests with `Run`
-- Interactive debugging with `Run -WithoutTests`
-- Using Playwright MCP tools for testing
-- Proper terminal management and safety
-- Building/testing individual projects
-
-**Quick command reference** (see root AGENTS.md for full details):
-
-```powershell
-Run                     # Build + all tests + servers (default development workflow)
-Run -WithoutTests       # Build + servers (skip tests for quick start/debugging)
-Run -TestProject Web.Tests    # Run only Web tests, keep servers running
-Run -TestName SectionCard     # Run tests matching 'SectionCard', keep servers running
-Run -Clean              # Clean build + all tests + servers (when dependencies change)
-```
 
 ### ✅ Always Do
 
@@ -240,12 +201,6 @@ See [Directory.Build.props](../Directory.Build.props) for complete list with det
 
 ### Code Quality Results
 
-**Current Status** (After Configuration):
-
-- **Build Status**: 0 warnings, 0 errors ✅
-- **Tests**: 100% passing required ✅
-- **Code Analysis**: All issues either fixed or intentionally suppressed with documented rationale
-
 **Key Learnings**:
 
 1. **Clean builds are essential** - Incremental builds can mask warnings due to MSBuild result caching
@@ -254,17 +209,11 @@ See [Directory.Build.props](../Directory.Build.props) for complete list with det
 4. **Document decisions** - All suppressions include XML comments explaining why they're intentional
 5. **EditorConfig handles style** - Many style warnings (like IDE0011 braces) are better handled by formatting tools
 
-### Usage in Development
-
 **In Visual Studio / VS Code**:
 
 - EditorConfig rules are automatically applied as you type
 - Code analysis warnings appear in the Problems panel
 - Quick fixes and refactorings respect the configured rules
-
-**Command Line**:
-
-Use `Run` instead - see [### Starting, Running, and Testing](#starting-running-and-testing)
 
 **Customizing Suppressions**:
 
@@ -367,6 +316,24 @@ builder.Services.AddHttpClient<ITechHubApiClient, TechHubApiClient>(client =>
 ### Markdown Frontmatter Mapping
 
 **See [TechHub.Core/AGENTS.md](TechHub.Core/AGENTS.md#markdown-frontmatter-mapping)** for complete mapping documentation showing how markdown frontmatter fields map to domain model properties.
+
+## Port Configuration
+
+**Goal**: HTTPS everywhere, fixed ports, single source of truth (no redundant configuration).
+
+**Strategy**: Define ports in `launchSettings.json` only. Aspire reads these automatically - no explicit endpoint configuration needed in AppHost.
+
+**Fixed Ports**:
+
+- API: 5001 (HTTPS) - Defined in [TechHub.Api/Properties/launchSettings.json](TechHub.Api/Properties/launchSettings.json)
+- Web: 5003 (HTTPS) - Defined in [TechHub.Web/Properties/launchSettings.json](TechHub.Web/Properties/launchSettings.json)
+- Aspire Dashboard: 18888 (HTTP)
+
+**Benefits**:
+
+- Same ports whether running via Aspire (`Run`) or directly (`dotnet run`)
+- No duplicate endpoint definitions
+- Single source of truth prevents configuration drift
 
 ## Documentation Resources
 

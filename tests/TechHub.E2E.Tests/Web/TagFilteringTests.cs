@@ -415,6 +415,139 @@ public class TagFilteringTests : IAsyncLifetime
         await Page.WaitForBlazorReadyAsync();
     }
 
+    [Fact]
+    public async Task TagCounts_ShouldBeConsistent_RegardlessOfClickOrder()
+    {
+        // This test reproduces the bug where tag counts differ based on click order
+        //
+        // Scenario from bug report:
+        // go to /github-copilot?tags=copilot%20coding%20agent,vs%20code
+        // - agent mode: 2
+        // - pull requests: 5
+        //
+        // If you click "agent mode" first → pull requests goes to 0
+        // If you click "pull requests" first → agent mode goes to 1
+        //
+        // Expected: Counts should be symmetric. The intersection of 
+        // (copilot coding agent AND vs code AND agent mode AND pull requests) 
+        // should be the same regardless of order clicked
+
+        // Arrange - Start at /github-copilot with 2 tags selected
+        await Page.GotoRelativeAsync("/github-copilot?tags=copilot%20coding%20agent,vs%20code");
+        await WaitForTagCloudReadyAsync();
+
+        // Capture initial tag counts for "agent mode" and "pull requests"
+        var agentModeTag = Page.Locator(".tag-cloud-item")
+            .Filter(new() { HasTextRegex = new Regex(@"^agent mode\s*\(", RegexOptions.IgnoreCase) });
+        var pullRequestsTag = Page.Locator(".tag-cloud-item")
+            .Filter(new() { HasTextRegex = new Regex(@"^pull requests\s*\(", RegexOptions.IgnoreCase) });
+
+        var agentModeInitialText = await agentModeTag.TextContentAsync();
+        var pullRequestsInitialText = await pullRequestsTag.TextContentAsync();
+
+        // Extract counts from "tag name (count)" format
+        var agentModeInitialCount = ExtractCountFromTagText(agentModeInitialText);
+        var pullRequestsInitialCount = ExtractCountFromTagText(pullRequestsInitialText);
+
+        agentModeInitialCount.Should().BeGreaterThan(0, "agent mode should have a count > 0");
+        pullRequestsInitialCount.Should().BeGreaterThan(0, "pull requests should have a count > 0");
+
+        // Test Path 1: Click agent mode first
+        await agentModeTag.ClickBlazorElementAsync();
+        await WaitForTagCloudReadyAsync();
+
+        pullRequestsTag = Page.Locator(".tag-cloud-item")
+            .Filter(new() { HasTextRegex = new Regex(@"^pull requests\s*\(", RegexOptions.IgnoreCase) });
+        var pullRequestsAfterAgentMode = await pullRequestsTag.TextContentAsync();
+        var pullRequestsCountPath1 = ExtractCountFromTagText(pullRequestsAfterAgentMode);
+
+        // Reset - go back to initial state
+        await Page.GotoRelativeAsync("/github-copilot?tags=copilot%20coding%20agent,vs%20code");
+        await WaitForTagCloudReadyAsync();
+
+        // Test Path 2: Click pull requests first
+        pullRequestsTag = Page.Locator(".tag-cloud-item")
+            .Filter(new() { HasTextRegex = new Regex(@"^pull requests\s*\(", RegexOptions.IgnoreCase) });
+        await pullRequestsTag.ClickBlazorElementAsync();
+        await WaitForTagCloudReadyAsync();
+
+        agentModeTag = Page.Locator(".tag-cloud-item")
+            .Filter(new() { HasTextRegex = new Regex(@"^agent mode\s*\(", RegexOptions.IgnoreCase) });
+        var agentModeAfterPullRequests = await agentModeTag.TextContentAsync();
+        var agentModeCountPath2 = ExtractCountFromTagText(agentModeAfterPullRequests);
+
+        // Assert - The counts should be identical regardless of order
+        // Both represent the intersection of: copilot coding agent AND vs code AND agent mode AND pull requests
+        pullRequestsCountPath1.Should().Be(agentModeCountPath2,
+            "The count for intersection should be symmetric: " +
+            "clicking 'agent mode' then seeing 'pull requests' count should equal " +
+            "clicking 'pull requests' then seeing 'agent mode' count. " +
+            $"Path 1 (agent mode → pull requests count): {pullRequestsCountPath1}, " +
+            $"Path 2 (pull requests → agent mode count): {agentModeCountPath2}");
+    }
+
+    [Fact]
+    public async Task TagButtons_ShouldMaintainSameSize_AfterFiltering()
+    {
+        // This test ensures tag button sizes remain constant even when counts decrease due to filtering
+        // This prevents layout shift and jumping around as users filter content
+
+        // Arrange - Navigate to section page without filters
+        await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForTagCloudReadyAsync();
+
+        // Get initial sizes for all visible tags
+        var tagButtons = Page.Locator(".tag-cloud-item");
+        var tagCount = await tagButtons.CountAsync();
+        tagCount.Should().BeGreaterThan(5, "Should have multiple tags to test");
+
+        // Capture initial widths of first 5 tags
+        var initialWidths = new Dictionary<string, double>();
+        for (int i = 0; i < Math.Min(5, tagCount); i++)
+        {
+            var tag = tagButtons.Nth(i);
+            var tagText = await tag.TextContentAsync();
+            var tagName = ExtractTagNameFromText(tagText);
+            var boundingBox = await tag.BoundingBoxAsync();
+            
+            if (boundingBox != null)
+            {
+                initialWidths[tagName] = boundingBox.Width;
+            }
+        }
+
+        initialWidths.Count.Should().Be(Math.Min(5, tagCount), "Should have captured initial widths");
+
+        // Act - Select first tag to filter
+        var firstTag = tagButtons.First;
+        await firstTag.ClickBlazorElementAsync();
+        await WaitForTagCloudReadyAsync();
+
+        // Assert - Tag button widths should remain the same
+        // Even if counts decreased (e.g., from "123" to "5"), button should maintain its width
+        tagButtons = Page.Locator(".tag-cloud-item");
+        for (int i = 0; i < Math.Min(5, await tagButtons.CountAsync()); i++)
+        {
+            var tag = tagButtons.Nth(i);
+            var tagText = await tag.TextContentAsync();
+            var tagName = ExtractTagNameFromText(tagText);
+
+            if (initialWidths.TryGetValue(tagName, out var initialWidth))
+            {
+                var boundingBox = await tag.BoundingBoxAsync();
+                boundingBox.Should().NotBeNull($"Tag '{tagName}' should have a bounding box");
+
+                var currentWidth = boundingBox!.Width;
+
+                // Allow small floating point differences (< 1px) but no significant layout shift
+                ((double)currentWidth).Should().BeApproximately((double)initialWidth, 2.0,
+                    $"Tag '{tagName}' width should remain constant after filtering " +
+                    $"(was {initialWidth}px, now {currentWidth}px). " +
+                    "This prevents layout jumping as users interact with filters.");
+            }
+        }
+    }
+
     /// <summary>
     /// Helper method to extract tag name from "TagName (count)" format
     /// </summary>
@@ -437,5 +570,33 @@ public class TagFilteringTests : IAsyncLifetime
 
         // If no count found, return as-is
         return tagText.Trim();
+    }
+
+    /// <summary>
+    /// Helper method to extract count from "TagName (count)" format
+    /// </summary>
+    private static int ExtractCountFromTagText(string? tagText)
+    {
+        if (string.IsNullOrWhiteSpace(tagText))
+        {
+            return 0;
+        }
+
+        // Normalize whitespace
+        tagText = System.Text.RegularExpressions.Regex.Replace(tagText.Trim(), @"\s+", " ");
+
+        // Extract count: "tag name (123)" -> 123
+        // Handle comma-separated thousands: "tag name (1,234)" -> 1234
+        var match = System.Text.RegularExpressions.Regex.Match(tagText, @"\((\d{1,3}(?:,\d{3})*)\)$");
+        if (match.Success)
+        {
+            var countString = match.Groups[1].Value.Replace(",", "");
+            if (int.TryParse(countString, out var count))
+            {
+                return count;
+            }
+        }
+
+        return 0;
     }
 }

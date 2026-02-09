@@ -11,7 +11,7 @@ public class TagCountsRequest
     public DateTimeOffset? DateTo { get; }
     public string SectionName { get; }
     public string CollectionName { get; }
-    public int? MaxTags { get; }
+    public int MaxTags { get; }
     public int MinUses { get; }
     
     /// <summary>
@@ -20,14 +20,22 @@ public class TagCountsRequest
     /// </summary>
     public IReadOnlyList<string>? Tags { get; }
 
+    /// <summary>
+    /// Optional: Specific tags to get counts for.
+    /// When provided, only returns counts for these exact tags (filtered by Tags intersection).
+    /// Used to get updated counts for a baseline set of tags when filters change.
+    /// </summary>
+    public IReadOnlyList<string>? TagsToCount { get; }
+
     public TagCountsRequest(
         string sectionName,
         string collectionName,
+        int maxTags,
         int minUses = 1,
-        int? maxTags = null,
         DateTimeOffset? dateFrom = null,
         DateTimeOffset? dateTo = null,
-        IReadOnlyList<string>? tags = null)
+        IReadOnlyList<string>? tags = null,
+        IReadOnlyList<string>? tagsToCount = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
@@ -37,14 +45,14 @@ public class TagCountsRequest
             throw new ArgumentException($"MinUses must be at least 1, got {minUses}", nameof(minUses));
         }
 
-        if (maxTags.HasValue && maxTags.Value < 1)
+        if (maxTags < 1)
         {
-            throw new ArgumentException($"MaxTags must be at least 1, got {maxTags.Value}", nameof(maxTags));
+            throw new ArgumentException($"MaxTags must be at least 1, got {maxTags}", nameof(maxTags));
         }
 
-        if (maxTags.HasValue && maxTags.Value > 50)
+        if (maxTags > 50)
         {
-            throw new ArgumentException($"MaxTags cannot exceed 50, got {maxTags.Value}", nameof(maxTags));
+            throw new ArgumentException($"MaxTags cannot exceed 50, got {maxTags}", nameof(maxTags));
         }
 
         if (dateFrom.HasValue && dateTo.HasValue && dateFrom > dateTo)
@@ -59,6 +67,7 @@ public class TagCountsRequest
         DateFrom = dateFrom;
         DateTo = dateTo;
         Tags = tags;
+        TagsToCount = tagsToCount;
     }
 
     /// <summary>
@@ -82,10 +91,7 @@ public class TagCountsRequest
         parts.Add($"s:{SectionName}");
         parts.Add($"c:{CollectionName}");
 
-        if (MaxTags.HasValue)
-        {
-            parts.Add($"max:{MaxTags.Value}");
-        }
+        parts.Add($"max:{MaxTags}");
 
         parts.Add($"min:{MinUses}");
         
@@ -93,6 +99,12 @@ public class TagCountsRequest
         {
             var sortedTags = Tags.OrderBy(t => t, StringComparer.OrdinalIgnoreCase);
             parts.Add($"tags:{string.Join(",", sortedTags)}");
+        }
+
+        if (TagsToCount != null && TagsToCount.Count > 0)
+        {
+            var sortedTagsToCount = TagsToCount.OrderBy(t => t, StringComparer.OrdinalIgnoreCase);
+            parts.Add($"ttc:{string.Join(",", sortedTagsToCount)}");
         }
 
         return string.Join("|", parts);

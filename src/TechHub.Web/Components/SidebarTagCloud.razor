@@ -35,6 +35,11 @@
                 var isSelected = _selectedTagsInternal.Contains(tagItem.Tag.Trim().ToLowerInvariant());
                 var isDisabled = tagItem.Count == 0;
                 var cssClass = $"tag-cloud-item {sizeClass} {(isSelected ? "selected" : "")} {(isDisabled ? "disabled" : "")}".Trim();
+                
+                // Get initial count from _initialTags to determine width class (prevents layout shift)
+                var initialCount = _initialTags?.FirstOrDefault(t => t.Tag.Equals(tagItem.Tag, StringComparison.OrdinalIgnoreCase))?.Count ?? tagItem.Count;
+                var digitCount = initialCount.ToString("N0").Replace(",", "").Length;
+                var countWidthClass = $"tag-count-{digitCount}d";
 
                 @if (isDisabled)
                 {
@@ -42,7 +47,7 @@
                             class="@cssClass" 
                             disabled="true"
                             aria-disabled="true">
-                        @tagItem.Tag (@tagItem.Count.ToString("N0"))
+                        @tagItem.Tag (<span class="@countWidthClass">@tagItem.Count.ToString("N0")</span>)
                     </button>
                 }
                 else
@@ -51,7 +56,7 @@
                             class="@cssClass" 
                             @onclick="() => HandleTagClick(tagItem.Tag)"
                             aria-disabled="false">
-                        @tagItem.Tag (@tagItem.Count.ToString("N0"))
+                        @tagItem.Tag (<span class="@countWidthClass">@tagItem.Count.ToString("N0")</span>)
                     </button>
                 }
             }

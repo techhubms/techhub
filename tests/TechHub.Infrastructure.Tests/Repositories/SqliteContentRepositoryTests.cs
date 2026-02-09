@@ -114,23 +114,26 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
     /// <summary>
     /// Test: content_tags_expanded table is populated with word expansions
     /// Why: Enables substring matching (e.g., "AI" matches "AI Engineering")
+    /// Tag words preserve original case from markdown frontmatter.
     /// </summary>
     [Fact]
     public async Task ContentTagsExpanded_WordExpansion_IsPopulated()
     {
         // Arrange - data already seeded from TestCollections
-        // Expected: Tags like "GitHub Copilot" are expanded to words: "github", "copilot"
+        // Expected: Tags like "GitHub Copilot" stored with original case
+        // Word expansions also preserve original case from split
 
-        // Act - query expanded tags
+        // Act - query expanded tags (case-insensitive comparison via LOWER)
         var expandedWords = await _fixture.Connection.QueryAsync<string>(
-            "SELECT DISTINCT tag_word FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection ORDER BY tag_word",
+            "SELECT DISTINCT tag_word FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection ORDER BY LOWER(tag_word)",
             new { Slug = "github-copilot", Collection = "blogs" });
 
-        // Assert
-        expandedWords.Should().NotBeEmpty("expanded tags should exist");
-        expandedWords.Should().Contain("github", "multi-word tag 'GitHub Copilot' should expand to 'github'");
-        expandedWords.Should().Contain("copilot", "multi-word tag 'GitHub Copilot' should expand to 'copilot'");
-        expandedWords.Should().Contain("ai", "single-word tag 'AI' should be included");
+        // Assert - tags preserve original case, use case-insensitive comparison
+        var lowerWords = expandedWords.Select(w => w.ToLowerInvariant()).ToList();
+        lowerWords.Should().NotBeEmpty("expanded tags should exist");
+        lowerWords.Should().Contain("github", "multi-word tag 'GitHub Copilot' should expand to word containing 'github'");
+        lowerWords.Should().Contain("copilot", "multi-word tag 'GitHub Copilot' should expand to word containing 'copilot'");
+        lowerWords.Should().Contain("ai", "single-word tag 'AI' should be included");
     }
 
     /// <summary>

@@ -113,7 +113,7 @@ public partial class SidebarTagCloud : ComponentBase
     private bool _hasError;
     private bool _hasInitialized; // Track if we've loaded tags to prevent double-load flicker
     private HashSet<string> _previousSelectedTags = []; // Track previous state to detect changes
-    private IReadOnlyList<TagCloudItem>? _initialTags; // Store initial tag order (no filters) for consistency
+    private IReadOnlyList<TagCloudItem>? _initialTags; // Store baseline tag list (loaded WITHOUT any filters)
 
     protected override async Task OnInitializedAsync()
     {
@@ -218,54 +218,70 @@ public partial class SidebarTagCloud : ComponentBase
                 ? [.. _selectedTagsInternal]
                 : null;
 
-            // CRITICAL: To show disabled tags (count=0), we need the initial tag list.
-            // If we have filters but no initial tags yet, load initial tags first.
-            if (filterTags != null && _initialTags == null)
+            // CRITICAL: Establish baseline on first load WITHOUT any filters.
+            // This ensures the tag cloud shows all globally relevant tags.
+            // When users add/remove filters, we only update counts, never add/remove tags.
+            if (_initialTags == null)
             {
-                Logger.LogDebug("Loading initial tags (no filters) to establish baseline for disabled tags");
+                // First load - establish baseline with NO filters to get complete tag list
+                Logger.LogDebug("Loading baseline tags WITHOUT filters to establish complete tag list");
                 
-                var initialApiTags = await ApiClient.GetTagCloudAsync(
+                var baselineApiTags = await ApiClient.GetTagCloudAsync(
                     effectiveSectionName,
                     effectiveCollectionName,
                     MaxTags,
                     MinUses,
                     LastDays,
-                    selectedTags: null, // No filters for initial load
+                    selectedTags: null, // NO filters for baseline - get global tags
                     fromDate: null,
                     toDate: null);
 
-                if (initialApiTags != null)
+                if (baselineApiTags != null)
                 {
-                    _initialTags = initialApiTags;
+                    _initialTags = baselineApiTags;
                 }
             }
 
             // Now load tags with filters (if any)
-            var apiTags = await ApiClient.GetTagCloudAsync(
-                effectiveSectionName,
-                effectiveCollectionName,
-                MaxTags,
-                MinUses,
-                LastDays,
-                selectedTags: filterTags,
-                fromDate: null, // Date range filtering will be added in spec 001b
-                toDate: null);
+            // When baseline tags exist and filters are active, request counts for exactly the baseline tags.
+            // This ensures consistent tag coverage regardless of how positions change in sorted results.
+            var tagsToCount = _initialTags != null && filterTags != null && filterTags.Count > 0
+                ? _initialTags.Select(t => t.Tag).ToList()
+                : null;
 
-            Logger.LogDebug("Successfully loaded {Count} tags with dynamic counts (filter: {HasFilter})",
-                apiTags?.Count ?? 0, filterTags != null);
-
-            // Store initial tags if this is the first load (no filters)
-            if (filterTags == null && apiTags != null)
+            // OPTIMIZATION: Skip the filtered API call if no filters are active
+            // In that case, baseline IS the current state (same parameters, same results)
+            IReadOnlyList<TagCloudItem>? apiTags;
+            if (filterTags == null || filterTags.Count == 0)
             {
-                _initialTags = apiTags;
-                _tags = apiTags;
+                // No filters - use baseline directly (avoid redundant API call)
+                apiTags = _initialTags;
+                Logger.LogDebug("No filters active - using baseline tags directly (skipping redundant API call)");
             }
-            else if (_initialTags != null && apiTags != null)
+            else
             {
-                // Merge filtered results with initial order:
-                // - Preserve initial tag order
-                // - Update counts from filtered results
-                // - Show tags with count=0 as disabled (in initial list but not in filtered results)
+                // Filters active - load filtered counts
+                apiTags = await ApiClient.GetTagCloudAsync(
+                    effectiveSectionName,
+                    effectiveCollectionName,
+                    MaxTags,
+                    MinUses,
+                    LastDays,
+                    selectedTags: filterTags,
+                    tagsToCount: tagsToCount,
+                    fromDate: null, // Date range filtering will be added in spec 001b
+                    toDate: null);
+
+                Logger.LogDebug("Successfully loaded {Count} tags with dynamic counts for {FilterCount} filter tags",
+                    apiTags?.Count ?? 0, filterTags.Count);
+            }
+
+            if (_initialTags != null && apiTags != null)
+            {
+                // Merge with baseline:
+                // - Preserve baseline tag order and list
+                // - Update counts from current filtered results
+                // - Show tags with count=0 as disabled (not in current filter but in baseline)
                 _tags = MergeWithInitialOrder(_initialTags, apiTags);
             }
             else
@@ -301,11 +317,26 @@ public partial class SidebarTagCloud : ComponentBase
         IReadOnlyList<TagCloudItem> initialTags,
         IReadOnlyList<TagCloudItem> filteredTags)
     {
-        // Build lookup of filtered tag counts
-        var filteredCountsLookup = filteredTags.ToDictionary(
-            t => t.Tag,
-            t => t,
-            StringComparer.OrdinalIgnoreCase);
+        // Build lookup of filtered tag counts, handling duplicates by summing their counts
+        // Duplicates can occur when API returns same tag with different casings (e.g., "Mcp" and "mcp")
+        var filteredCountsLookup = new Dictionary<string, TagCloudItem>(StringComparer.OrdinalIgnoreCase);
+        foreach (var filteredTag in filteredTags)
+        {
+            if (filteredCountsLookup.TryGetValue(filteredTag.Tag, out var existing))
+            {
+                // Duplicate found - sum the counts
+                filteredCountsLookup[filteredTag.Tag] = new TagCloudItem
+                {
+                    Tag = existing.Tag, // Keep first casing
+                    Count = existing.Count + filteredTag.Count,
+                    Size = existing.Size
+                };
+            }
+            else
+            {
+                filteredCountsLookup[filteredTag.Tag] = filteredTag;
+            }
+        }
 
         // Merge: preserve initial order AND size, update counts from filtered results
         var merged = new List<TagCloudItem>();

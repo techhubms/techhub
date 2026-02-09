@@ -187,14 +187,17 @@ Dev container configuration for VS Code and GitHub Codespaces:
 - **`devcontainer.json`** - Container configuration, extensions, settings
 - **`post-create.sh`** - Post-creation setup script. Add ALL dependencies needed for the devcontainer here
 
-### `.databases/`
+### `.databases/sqlite/techhub.db`
 
-Local database storage (gitignored):
+Local database storage (gitignored) when running without Docker / Postgres.
 
-- **`postgres/`** - PostgreSQL data directory (when running in Docker)
-- **`sqlite/`** - SQLite database files (for local development and testing)
+Delete the entire sqlite directory if you need a fresh database. It will automatically get recreated based on our source collection files.
 
-Delete these directories if you need a fresh database. They'll automatically get recreated based on our source collection files.
+### `.databases/postgres/**`
+
+Local database storage (gitignored) when running in Docker with Postgres support.
+
+Delete the entire postgres directory if you need a fresh database. It will automatically get recreated based on our source collection files.
 
 ### `.tmp/`
 

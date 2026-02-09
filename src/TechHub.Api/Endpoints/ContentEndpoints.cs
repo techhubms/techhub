@@ -254,6 +254,7 @@ public static class ContentEndpoints
         [FromQuery] int? minUses = null,
         [FromQuery] int? lastDays = null,
         [FromQuery] string? tags = null,
+        [FromQuery] string? tagsToCount = null,
         [FromQuery] string? from = null,
         [FromQuery] string? to = null,
         IContentRepository contentRepository = default!,
@@ -317,6 +318,13 @@ public static class ContentEndpoints
             selectedTags = [.. tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)];
         }
 
+        // Parse tagsToCount filter (for getting counts of specific baseline tags)
+        List<string>? parsedTagsToCount = null;
+        if (!string.IsNullOrWhiteSpace(tagsToCount))
+        {
+            parsedTagsToCount = [.. tagsToCount.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)];
+        }
+
         // Get top N tag counts from repository - repository will handle "all" as no filter
         var tagCounts = await contentRepository.GetTagCountsAsync(
             new TagCountsRequest(
@@ -326,7 +334,8 @@ public static class ContentEndpoints
                 maxTags: maxTags ?? options.DefaultMaxTags,
                 dateFrom: dateFrom,
                 dateTo: dateTo,
-                tags: selectedTags
+                tags: selectedTags,
+                tagsToCount: parsedTagsToCount
             ),
             cancellationToken);
 

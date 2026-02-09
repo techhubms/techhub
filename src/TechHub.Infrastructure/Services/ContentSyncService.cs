@@ -48,11 +48,14 @@ public class ContentSyncService : IContentSyncService
     /// Strongly-typed record for tag words to avoid reflection overhead during bulk insert.
     /// Uses int (0/1) for boolean flags to match SQLite storage format.
     /// SectionsBitmask: Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security
+    /// TagDisplay: Original case tag name for full tags (null for word expansions)
     /// </summary>
     private sealed record TagWord(
         string CollectionName,
         string Slug,
-        string Word,
+        string Word,           // Always lowercase for efficient querying
+        string? TagDisplay,    // Original case, only for full tags (is_full_tag=1)
+        int IsFullTag,         // 1 = actual tag, 0 = word expansion
         long DateEpoch,
         int IsAi,
         int IsAzure,
@@ -376,12 +379,12 @@ public class ContentSyncService : IContentSyncService
                 var insertTagsStopwatch = Stopwatch.StartNew();
                 if (allBatchTags.Count > 0)
                 {
-                    const int TagsPerChunk = 90; // 90 tags × 12 params = 1080 parameters (SQLite/PostgreSQL both support this)
+                    const int TagsPerChunk = 70; // 70 tags × 14 params = 980 parameters (SQLite/PostgreSQL both support this)
                     for (int chunkStart = 0; chunkStart < allBatchTags.Count; chunkStart += TagsPerChunk)
                     {
                         var chunkSize = Math.Min(TagsPerChunk, allBatchTags.Count - chunkStart);
                         var sb = new System.Text.StringBuilder();
-                        sb.Append(_dialect.GetInsertIgnorePrefix("content_tags_expanded", "(collection_name, slug, tag_word, date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask)"));
+                        sb.Append(_dialect.GetInsertIgnorePrefix("content_tags_expanded", "(collection_name, slug, tag_word, tag_display, is_full_tag, date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask)"));
 
                         using var cmd = _connection.CreateCommand();
                         cmd.Transaction = transaction;
@@ -395,7 +398,7 @@ public class ContentSyncService : IContentSyncService
                                 sb.Append(", ");
                             }
 
-                            sb.Append(System.Globalization.CultureInfo.InvariantCulture, $"(@cn{tagIdx}, @s{tagIdx}, @w{tagIdx}, @de{tagIdx}, @ai{tagIdx}, @az{tagIdx}, @c{tagIdx}, @do{tagIdx}, @gc{tagIdx}, @ml{tagIdx}, @sec{tagIdx}, @bm{tagIdx})");
+                            sb.Append(System.Globalization.CultureInfo.InvariantCulture, $"(@cn{tagIdx}, @s{tagIdx}, @w{tagIdx}, @td{tagIdx}, @ft{tagIdx}, @de{tagIdx}, @ai{tagIdx}, @az{tagIdx}, @c{tagIdx}, @do{tagIdx}, @gc{tagIdx}, @ml{tagIdx}, @sec{tagIdx}, @bm{tagIdx})");
 
                             // Add parameters using database-agnostic approach
                             var cnParam = cmd.CreateParameter();
@@ -412,6 +415,16 @@ public class ContentSyncService : IContentSyncService
                             wParam.ParameterName = $"@w{tagIdx}";
                             wParam.Value = tag.Word;
                             cmd.Parameters.Add(wParam);
+
+                            var tdParam = cmd.CreateParameter();
+                            tdParam.ParameterName = $"@td{tagIdx}";
+                            tdParam.Value = tag.TagDisplay ?? (object)DBNull.Value;
+                            cmd.Parameters.Add(tdParam);
+
+                            var ftParam = cmd.CreateParameter();
+                            ftParam.ParameterName = $"@ft{tagIdx}";
+                            ftParam.Value = _dialect.ConvertBooleanParameter(tag.IsFullTag == 1);
+                            cmd.Parameters.Add(ftParam);
 
                             var deParam = cmd.CreateParameter();
                             deParam.ParameterName = $"@de{tagIdx}";
@@ -754,7 +767,7 @@ public class ContentSyncService : IContentSyncService
             {
                 foreach (var tag in parsed.Tags)
                 {
-                    var tagNormalized = tag.ToLowerInvariant().Trim();
+                    var tagTrimmed = tag.Trim();
 
                     // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
                     var bitmask = (sectionInts.IsAi * 1) +
@@ -765,11 +778,13 @@ public class ContentSyncService : IContentSyncService
                                   (sectionInts.IsMl * 32) +
                                   (sectionInts.IsSecurity * 64);
 
-                    // Add the full tag (lowercased) for exact matching
+                    // Add the full tag (lowercase in tag_word for querying, original case in tag_display for display)
                     tagWords.Add(new TagWord(
                         parsed.CollectionName,
                         parsed.Slug,
-                        tagNormalized,
+                        tagTrimmed.ToLowerInvariant(), // Lowercase for efficient querying
+                        tagTrimmed,                    // Original case preserved for display
+                        1, // is_full_tag = true
                         parsed.DateEpoch,
                         sectionInts.IsAi,
                         sectionInts.IsAzure,
@@ -785,10 +800,10 @@ public class ContentSyncService : IContentSyncService
                     var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
                     foreach (var word in words)
                     {
-                        var wordNormalized = word.ToLowerInvariant().Trim();
+                        var wordTrimmed = word.Trim();
 
                         // Skip if it's the same as the full tag (already added above)
-                        if (wordNormalized == tagNormalized)
+                        if (string.Equals(wordTrimmed, tagTrimmed, StringComparison.OrdinalIgnoreCase))
                         {
                             continue;
                         }
@@ -796,7 +811,9 @@ public class ContentSyncService : IContentSyncService
                         tagWords.Add(new TagWord(
                             parsed.CollectionName,
                             parsed.Slug,
-                            wordNormalized,
+                            wordTrimmed.ToLowerInvariant(), // Lowercase for efficient querying
+                            null,                          // No display text for word expansions
+                            0, // is_full_tag = false (word expansion)
                             parsed.DateEpoch,
                             sectionInts.IsAi,
                             sectionInts.IsAzure,

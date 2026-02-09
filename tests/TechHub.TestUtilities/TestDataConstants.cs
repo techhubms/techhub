@@ -6,24 +6,24 @@ namespace TechHub.TestUtilities;
 /// Update these when test data changes.
 /// </summary>
 /// <remarks>
-/// Last updated: 2026-01-28 after adding real production data to TestCollections.
+/// Last updated: 2026-02-09 after adding tag symmetry test data (4 new blog files).
 /// 
 /// Test data composition:
-/// - 32 published items total
+/// - 36 published items total (was 32, added 4 for tag symmetry bug test)
 /// - 3 draft items (not counted in published totals)
-/// - Collections: blogs (18), news (7), videos (4), community (2), roundups (1)
-/// - Tag distributions: AI (12 items), DevOps (1 item)
-/// - Date ranges: 2024 items (17), 2026 items (15)
+/// - Collections: blogs (22), news (7), videos (4), community (2), roundups (1)
+/// - Tag distributions: AI (12 items), DevOps (1 item), GitHub Copilot (4 tag symmetry test items)
+/// - Date ranges: 2024 items (17), 2026 items (19)
 /// </remarks>
 public static class TestDataConstants
 {
     // Total counts
-    public const int TotalPublishedItems = 32;
+    public const int TotalPublishedItems = 36;
     public const int TotalDraftItems = 3;
     public const int TotalItems = TotalPublishedItems + TotalDraftItems;
 
     // Collection counts (published only)
-    public const int BlogsCount = 18;
+    public const int BlogsCount = 22;
     public const int NewsCount = 7;
     public const int VideosCount = 4;  // Includes root videos + subcollections
     public const int CommunityCount = 2;
@@ -37,7 +37,7 @@ public static class TestDataConstants
 
     // Date range counts (published items only)
     public const int Items2024Count = 17;
-    public const int Items2026Count = 15;
+    public const int Items2026Count = 19;
 
     // Facet-specific counts (context-dependent based on filtering)
     /// <summary>AI tag appears in facets with this count when no filters applied</summary>

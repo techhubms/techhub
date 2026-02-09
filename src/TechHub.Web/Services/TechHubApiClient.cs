@@ -224,6 +224,7 @@ public class TechHubApiClient : ITechHubApiClient
         int? minUses = null,
         int? lastDays = null,
         List<string>? selectedTags = null,
+        List<string>? tagsToCount = null,
         string? fromDate = null,
         string? toDate = null,
         CancellationToken cancellationToken = default)
@@ -251,6 +252,13 @@ public class TechHubApiClient : ITechHubApiClient
             {
                 var tagsParam = string.Join(",", selectedTags.Select(t => Uri.EscapeDataString(t)));
                 queryParams.Add($"tags={tagsParam}");
+            }
+
+            // Specific tags to get counts for (baseline tags)
+            if (tagsToCount != null && tagsToCount.Count > 0)
+            {
+                var tagsToCountParam = string.Join(",", tagsToCount.Select(t => Uri.EscapeDataString(t)));
+                queryParams.Add($"tagsToCount={tagsToCountParam}");
             }
 
             // Dynamic counts: Add date range parameters
@@ -392,6 +400,7 @@ public class TechHubApiClient : ITechHubApiClient
         int? minUses = null,
         int? lastDays = null,
         List<string>? selectedTags = null,
+        List<string>? tagsToCount = null,
         string? fromDate = null,
         string? toDate = null,
         CancellationToken cancellationToken = default)
@@ -399,7 +408,7 @@ public class TechHubApiClient : ITechHubApiClient
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
 
-        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, selectedTags, fromDate, toDate, cancellationToken);
+        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, selectedTags, tagsToCount, fromDate, toDate, cancellationToken);
     }
 
     // ================================================================

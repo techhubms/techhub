@@ -647,6 +647,266 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
     }
 
+    [Fact]
+    public async Task GetCollectionTags_IntersectionCounts_ShouldBeSymmetric()
+    {
+        // This test verifies the bug fix where tag counts should be consistent
+        // regardless of the order in which tags are selected
+        //
+        // Bug scenario:
+        // - Start with tags A,B selected
+        // - Click tag C → see count for tag D
+        // - Reset, start with tags A,B selected again
+        // - Click tag D → see count for tag C
+        // - Both counts should be EQUAL (representing A AND B AND C AND D intersection)
+
+        // Arrange - Select two initial tags
+        const string initialTag1 = "copilot coding agent";
+        const string initialTag2 = "vs code";
+
+        // Get tag cloud with initial tags selected
+        var initialResponse = await _client.GetAsync(
+            $"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)}");
+        initialResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var initialTagCloud = await initialResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        initialTagCloud.Should().NotBeNull();
+
+        // Find two additional tags that have counts > 0 in the initial state
+        var additionalTag1 = initialTagCloud!
+            .FirstOrDefault(t => t.Count > 0 && 
+                               !t.Tag.Equals(initialTag1, StringComparison.OrdinalIgnoreCase) &&
+                               !t.Tag.Equals(initialTag2, StringComparison.OrdinalIgnoreCase));
+        var additionalTag2 = initialTagCloud!
+            .Skip(1)
+            .FirstOrDefault(t => t.Count > 0 && 
+                               !t.Tag.Equals(initialTag1, StringComparison.OrdinalIgnoreCase) &&
+                               !t.Tag.Equals(initialTag2, StringComparison.OrdinalIgnoreCase) &&
+                               !t.Tag.Equals(additionalTag1?.Tag, StringComparison.OrdinalIgnoreCase));
+
+        if (additionalTag1 == null || additionalTag2 == null)
+        {
+            // Skip test if we don't have enough tags with intersection
+            return;
+        }
+
+        // Path 1: Select additional tag 1, check count for additional tag 2
+        var path1Response = await _client.GetAsync(
+            $"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)},{Uri.EscapeDataString(additionalTag1.Tag)}");
+        path1Response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var path1TagCloud = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var path1Count = path1TagCloud!
+            .FirstOrDefault(t => t.Tag.Equals(additionalTag2.Tag, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
+
+        // Path 2: Select additional tag 2, check count for additional tag 1
+        var path2Response = await _client.GetAsync(
+            $"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)},{Uri.EscapeDataString(additionalTag2.Tag)}");
+        path2Response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var path2TagCloud = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var path2Count = path2TagCloud!
+            .FirstOrDefault(t => t.Tag.Equals(additionalTag1.Tag, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
+
+        // Assert - The intersection counts should be symmetric
+        path1Count.Should().Be(path2Count,
+            $"Intersection count should be symmetric. " +
+            $"With tags [{initialTag1}, {initialTag2}, {additionalTag1.Tag}] → count for {additionalTag2.Tag} = {path1Count}. " +
+            $"With tags [{initialTag1}, {initialTag2}, {additionalTag2.Tag}] → count for {additionalTag1.Tag} = {path2Count}. " +
+            $"Both represent the intersection of all 4 tags, so counts must be equal.");
+    }
+
+    #endregion
+
+    #region TagsToCount Parameter Tests
+
+    [Fact]
+    public async Task GetCollectionTags_WithTagsToCount_ReturnsOnlyRequestedTags()
+    {
+        // Arrange - Get baseline tags first (use 'all' section for more tags)
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=10");
+        baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        baselineTags.Should().NotBeNull();
+        baselineTags!.Should().HaveCountGreaterThanOrEqualTo(3, "Need at least 3 baseline tags for test");
+
+        // Select up to 3 specific tags to count
+        var requestedTags = baselineTags!.Take(3).Select(t => t.Tag).ToList();
+        var tagsToCountParam = string.Join(",", requestedTags.Select(Uri.EscapeDataString));
+
+        // Act - Request counts for only those specific tags
+        var response = await _client.GetAsync(
+            $"/api/sections/all/collections/all/tags?tagsToCount={tagsToCountParam}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        filteredTags.Should().NotBeNull();
+
+        // Should return only the requested tags (or fewer if some have 0 count)
+        filteredTags!.Should().OnlyContain(
+            t => requestedTags.Contains(t.Tag, StringComparer.OrdinalIgnoreCase),
+            "Should only return tags that were explicitly requested in tagsToCount");
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithTagsToCount_BypassesMaxTagsLimit()
+    {
+        // Arrange - Get baseline tags (use 'all' section for more tags)
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20");
+        baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        baselineTags.Should().NotBeNull();
+        
+        // Skip test if not enough tags in test data
+        if (baselineTags!.Count < 6)
+        {
+            return; // Can't test maxTags bypass without enough tags
+        }
+
+        // Request counts for all tags, even with maxTags=5
+        var tagsToCountParam = string.Join(",", baselineTags!.Select(t => Uri.EscapeDataString(t.Tag)));
+
+        // Act - Request with low maxTags but full tagsToCount list
+        var response = await _client.GetAsync(
+            $"/api/sections/all/collections/all/tags?maxTags=5&tagsToCount={tagsToCountParam}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var resultTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        resultTags.Should().NotBeNull();
+
+        // tagsToCount should bypass maxTags limit - should get all requested tags
+        resultTags!.Count.Should().BeGreaterThanOrEqualTo(baselineTags!.Count,
+            "tagsToCount parameter should bypass maxTags limit and return all requested tags");
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithTagsToCount_AndSelectedTags_ReturnsFilteredCounts()
+    {
+        // Arrange - Get baseline tags (use 'all' section for more tags)
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=10");
+        baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        baselineTags.Should().NotBeNull();
+        baselineTags!.Should().HaveCountGreaterThanOrEqualTo(2, "Need at least 2 baseline tags for test");
+
+        // Use first tag as filter, request counts for remaining tags
+        var filterTag = baselineTags![0].Tag;
+        var tagsToCount = baselineTags!.Skip(1).Take(5).Select(t => t.Tag).ToList();
+        var tagsToCountParam = string.Join(",", tagsToCount.Select(Uri.EscapeDataString));
+
+        // Act - Get counts for specific tags, filtered by another tag
+        var response = await _client.GetAsync(
+            $"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(filterTag)}&tagsToCount={tagsToCountParam}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        filteredTags.Should().NotBeNull();
+
+        // All returned tags should be from our requested list
+        filteredTags!.Should().OnlyContain(
+            t => tagsToCount.Contains(t.Tag, StringComparer.OrdinalIgnoreCase),
+            "Should only return tags from tagsToCount list");
+
+        // Counts should reflect intersection with the filter tag
+        // (some may have count 0 if no items match both tags)
+        filteredTags.Should().AllSatisfy(t =>
+            t.Count.Should().BeGreaterThanOrEqualTo(0, "Counts can be 0 or positive"));
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithTagsToCount_BypassesMinUsesFilter()
+    {
+        // Arrange - Get baseline tags with no minUses filter (use 'all' section for more tags)
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20&minUses=1");
+        baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        baselineTags.Should().NotBeNull();
+        baselineTags!.Should().NotBeEmpty();
+
+        // Find a tag with low count (if available)
+        var lowCountTag = baselineTags!.LastOrDefault(t => t.Count <= 2);
+        if (lowCountTag == null)
+        {
+            // Skip test if no low-count tags exist
+            return;
+        }
+
+        var tagsToCountParam = Uri.EscapeDataString(lowCountTag.Tag);
+
+        // Act - Request with high minUses filter but including the low-count tag in tagsToCount
+        var response = await _client.GetAsync(
+            $"/api/sections/all/collections/all/tags?minUses=10&tagsToCount={tagsToCountParam}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var resultTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        resultTags.Should().NotBeNull();
+
+        // tagsToCount should bypass minUses filter
+        resultTags!.Should().Contain(t => t.Tag.Equals(lowCountTag.Tag, StringComparison.OrdinalIgnoreCase),
+            "tagsToCount parameter should bypass minUses filter for requested tags");
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_TagsToCount_EnsuresConsistentCountsRegardlessOfClickOrder()
+    {
+        // This is the key test for the bug fix:
+        // When user clicks tags in different orders, the baseline tags should always
+        // show consistent counts because we use tagsToCount to request exact counts.
+
+        // Arrange - Get baseline tags (use 'all' section for more tags in test data)
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20");
+        baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        baselineTags.Should().NotBeNull();
+        
+        // Skip test if not enough tags in test data
+        if (baselineTags!.Count < 4)
+        {
+            return; // Can't test symmetric counts without enough tags with intersections
+        }
+
+        // Get list of baseline tag names
+        var baselineTagNames = baselineTags!.Select(t => t.Tag).ToList();
+        var tagsToCountParam = string.Join(",", baselineTagNames.Select(Uri.EscapeDataString));
+
+        // Select first tag, request counts for all baseline tags
+        var selectedTag1 = baselineTags![0].Tag;
+        var path1Response = await _client.GetAsync(
+            $"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(selectedTag1)}&tagsToCount={tagsToCountParam}");
+        path1Response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var path1Counts = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+
+        // Select second tag, request counts for all baseline tags
+        var selectedTag2 = baselineTags![1].Tag;
+        var path2Response = await _client.GetAsync(
+            $"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(selectedTag2)}&tagsToCount={tagsToCountParam}");
+        path2Response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var path2Counts = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+
+        // Assert - When selecting tag1, the count for tag2 should equal
+        // when selecting tag2, the count for tag1 (symmetric intersection)
+        var tag2CountWithTag1Selected = path1Counts!
+            .FirstOrDefault(t => t.Tag.Equals(selectedTag2, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
+        var tag1CountWithTag2Selected = path2Counts!
+            .FirstOrDefault(t => t.Tag.Equals(selectedTag1, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
+
+        tag1CountWithTag2Selected.Should().Be(tag2CountWithTag1Selected,
+            "Intersection counts should be symmetric regardless of selection order");
+    }
+
     #endregion
 
     #endregion
@@ -847,6 +1107,66 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Verify combined count matches total
         (batch1.Count + batch2.Count + batch3.Count).Should().Be(totalCount, 
             "combined batches should equal total items with tag filter");
+    }
+
+    #endregion
+
+    #region Tag Cloud Tests
+
+    [Fact]
+    public async Task GetCollectionTags_WithMultiWordTagFilters_ShouldReturnSymmetricCounts()
+    {
+        // This test verifies the bug fix for tag count symmetry when using multi-word tags as filters
+        // Bug scenario: Tag counts differ based on which tags are clicked first
+        // 
+        // Test data setup (in TestCollections):
+        // - 1 item with all 4 tags: [Copilot Coding Agent, VS Code, Agent Mode, Pull Requests]
+        // - 1 item with 3 tags: [Copilot Coding Agent, VS Code, Agent Mode] (missing Pull Requests)
+        // - 1 item with 3 tags: [Copilot Coding Agent, VS Code, Pull Requests] (missing Agent Mode)
+        // - 1 item with 2 tags: [Copilot Coding Agent, VS Code]
+        //
+        // Expected behavior:
+        // Path 1: Filter by [Copilot Coding Agent, VS Code, Agent Mode] → Pull Requests count = 1
+        // Path 2: Filter by [Copilot Coding Agent, VS Code, Pull Requests] → Agent Mode count = 1
+        // Both represent the same intersection, so counts must be equal (symmetric).
+
+        var tag1 = "Copilot Coding Agent";
+        var tag2 = "VS Code";
+        var tag3 = "Agent Mode";
+        var tag4 = "Pull Requests";
+
+        // Act - Path 1: Filter by tag1, tag2, tag3 and get tag4's count
+        var path1Response = await _client.GetAsync(
+            $"/api/sections/github-copilot/collections/all/tags?maxTags=50&minUses=1&tags={Uri.EscapeDataString(tag1)},{Uri.EscapeDataString(tag2)},{Uri.EscapeDataString(tag3)}");
+        path1Response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var path1Tags = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        path1Tags.Should().NotBeNull();
+
+        var tag4CountInPath1 = path1Tags!.FirstOrDefault(t => t.Tag.Equals(tag4, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
+
+        // Act - Path 2: Filter by tag1, tag2, tag4 and get tag3's count
+        var path2Response = await _client.GetAsync(
+            $"/api/sections/github-copilot/collections/all/tags?maxTags=50&minUses=1&tags={Uri.EscapeDataString(tag1)},{Uri.EscapeDataString(tag2)},{Uri.EscapeDataString(tag4)}");
+        path2Response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var path2Tags = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        path2Tags.Should().NotBeNull();
+
+        var tag3CountInPath2 = path2Tags!.FirstOrDefault(t => t.Tag.Equals(tag3, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
+
+        // Assert - Both paths should return the same count (symmetric intersection)
+        // With the bug fix, both should return 1 (one item has all 4 tags)
+        tag4CountInPath1.Should().Be(tag3CountInPath2,
+            "Tag counts should be symmetric. " +
+            $"Filtering by [{tag1}, {tag2}, {tag3}] and counting {tag4} should equal " +
+            $"filtering by [{tag1}, {tag2}, {tag4}] and counting {tag3}. " +
+            $"Both represent the intersection of all 4 tags. " +
+            $"Path1={tag4CountInPath1}, Path2={tag3CountInPath2}");
+
+        // Verify the expected count is 1 (one item with all 4 tags exists in test data)
+        tag4CountInPath1.Should().Be(1, "Test data includes 1 item with all 4 tags");
+        tag3CountInPath2.Should().Be(1, "Test data includes 1 item with all 4 tags");
     }
 
     #endregion

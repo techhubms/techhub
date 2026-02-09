@@ -67,11 +67,18 @@ CREATE TABLE IF NOT EXISTS content_items (
 -- Expanded Tags Table (Denormalized)
 -- ========================================
 -- Purpose: Word-level tag matching with denormalized filters
--- Example: "GitHub Copilot" → rows for "github" and "copilot"
+-- Example: "GitHub Copilot" tag creates rows:
+--   - tag_word="github copilot", tag_display="GitHub Copilot", is_full_tag=true (actual tag)
+--   - tag_word="github", tag_display=NULL, is_full_tag=false (word expansion)
+--   - tag_word="copilot", tag_display=NULL, is_full_tag=false (word expansion)
+-- tag_word is always lowercase for efficient querying (no LOWER() needed)
+-- tag_display preserves original case only for full tags (is_full_tag=true)
 CREATE TABLE IF NOT EXISTS content_tags_expanded (
     collection_name TEXT NOT NULL,
     slug TEXT NOT NULL,
-    tag_word TEXT NOT NULL,              -- Lowercase word from tag
+    tag_word TEXT NOT NULL,              -- Lowercase for efficient querying (e.g., "github copilot")
+    tag_display TEXT,                    -- Original case for full tags only (e.g., "GitHub Copilot")
+    is_full_tag BOOLEAN NOT NULL DEFAULT FALSE, -- true = actual tag, false = word expansion
     
     -- Denormalized from content_items (eliminates joins)
     date_epoch BIGINT NOT NULL,
@@ -136,6 +143,7 @@ CREATE INDEX IF NOT EXISTS idx_items_date ON content_items(
 CREATE INDEX IF NOT EXISTS idx_content_search ON content_items USING GIN(search_vector);
 
 -- content_tags_expanded indexes - Support various tag query patterns
+-- tag_word is always lowercase, so no LOWER() function needed in indexes or queries
 -- All indexes include collection_name and slug for covering index optimization
 -- 1. For queries with tag + collection + section + date (e.g., tag search with all filters)
 CREATE INDEX IF NOT EXISTS idx_tags_word_collection_date_sections ON content_tags_expanded(
@@ -162,3 +170,21 @@ CREATE INDEX IF NOT EXISTS idx_tags_word_date ON content_tags_expanded(
     collection_name,
     slug
 );
+
+-- 4. For display tag queries (getting actual tags with original case for dropdowns/UI)
+-- Partial index on is_full_tag=TRUE makes this small and efficient
+CREATE INDEX IF NOT EXISTS idx_tags_display ON content_tags_expanded(
+    collection_name,
+    sections_bitmask,
+    date_epoch DESC,
+    tag_display
+) WHERE is_full_tag = TRUE;
+
+-- 5. For tag count/aggregation queries (tag cloud, tag counts)
+-- Covers GROUP BY tag_word with section filtering and tag_display output
+-- Partial index on is_full_tag=TRUE reduces index size significantly
+CREATE INDEX IF NOT EXISTS idx_tags_fulltag_word ON content_tags_expanded(
+    tag_word,
+    sections_bitmask,
+    tag_display
+) WHERE is_full_tag = TRUE;

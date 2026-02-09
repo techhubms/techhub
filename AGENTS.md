@@ -22,8 +22,7 @@
 
 ### ✅ Always Do
 
-- **ALWAYS go back to [2. Gather context from documentation and validate the plan](#2-gather-context-from-documentation-and-validate-the-plan)** when you are about to work on ANYTHING you haven't yet read documentation for!
-- **ALWAYS go back to [2. Gather context from documentation and validate the plan](#2-gather-context-from-documentation-and-validate-the-plan)** if you find yourself struggling!
+- **ALWAYS go back to [2. Gather context from documentation and validate the plan](#2-gather-context-from-documentation-and-validate-the-plan)** when you are about to work on ANYTHING you haven't yet read documentation fo or if you find yourself struggling!
 - **Always use `Run` function** for all build/test/run operations, see [docs/running-and-testing.md](docs/running-and-testing.md)** for complete instructions
 - **Always prefer tools in this order**: MCP tools → Built-in tools → CLI
 - **Always check for errors after editing files** (`get_errors` tool)
@@ -48,7 +47,8 @@
 - **Never hardcode section/collection data**
 - **Never assume UTC** (use Europe/Brussels)
 - **Never swallow exceptions without logging**
-- **Never import `TechHubRunner.psm1`**, it gets imported automatically. Only do a force reload if you made changes in this file.
+- **Never use `Import-Module` to load `TechHubRunner.psm1` or the `Run` command**, it gets imported automatically. Only do a force reload if you made changes in the psm1 file.
+- **Never use lowlevel `dotnet` or `Stop-Process` or `kill`** commands, the `Run` command takes care of all that! If you really want to, you can call `Stop-Servers` to kill running processes.
 
 ---
 
@@ -63,12 +63,12 @@
 
 #### 1.2 Actions
 
-1. Explore the code:
+1. Read [docs/repository-structure.md](docs/repository-structure.md) repository structure file so you understand what the structure of this repository is and what files and folders exist
+2. Explore the code:
    - Use `read_file` to examine relevant code files
    - Use `grep_search` or `semantic_search` to find related patterns
    - Check existing tests to understand expected behavior
-
-2. Create an initial plan:
+3. Create an initial plan:
    - Identify logical steps
    - List files that need modification
    - Determine tests needed
@@ -103,28 +103,27 @@ AI training data becomes outdated. Frameworks and technologies constantly evolve
 
 #### 2.3 Actions
 
-1. Read repository documentation:
-   - Read the functional documentation for the topics you are about to work on. Investigate [docs/documentation-index.md](docs/documentation-index.md) to find out what documentation exists and where to find it. This is really crucial so never skip reading the actual functional docs!
-   - Read [docs/repository-structure.md](docs/repository-structure.md) repository structure file so you understand what the structure of this repository is and what files and folders exist
-   - Read [docs/running-and-testing.md](docs/running-and-testing.md) to understand how you can run the application or run tests
-   - Read the domain AGENTS.md for the area you're working in too. They are nested. Here's an EXAMPLE of how this works when making a change in the API:
-      - [src/AGENTS.md](src/AGENTS.md) - The API resides in the src folder, so read this file first
-      - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - Additionally read this because you're making API changes
-      - [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - If the contract of the API changes, you'll need to make changes here too
-      - [tests/AGENTS.md](tests/AGENTS.md) - As you make code changes, you'll also need to write/update tests
-      - [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - You made changes in the API so you need to read this API tests specific AGENTS.md too
-      - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - The same for this one, if you edited the web project
-      - [docs/AGENTS.md](docs/AGENTS.md) - If you changed functionality or implemented certain requirements, make sure to read this to understand where and how you need to document this
-      - etc
-
-2. Get latest framework documentation:
+1. Read the functional documentation for the topics you are about to work on. Investigate [docs/documentation-index.md](docs/documentation-index.md) to find out what documentation exists and where to find it. This is really crucial so never skip reading the actual functional docs!
+2. Read the domain AGENTS.md for the area you're working in too. They are nested. Below this list is an EXAMPLE of what to do!
+3. Get latest framework documentation:
    - **MANDATORY for new features and big changes**: Use **context7 MCP tool** for framework/library documentation
    - For bug fixes: Context7 is optional unless you're unsure about the correct approach
-
-3. Validate and refine the plan:
+4. Validate and refine the plan:
    - Compare your initial plan against documentation and best practices
    - Update the plan if better approaches exist
    - Communicate the validated plan to user (if changes are significant)
+
+**EXAMPLE for which AGENTS.md to read when making an API change**
+
+You're making an API change, which can affect many parts of the application so you MUST read multiple AGENTS.md files:
+
+- [src/AGENTS.md](src/AGENTS.md) - The API resides in the src folder, so read this file first to validate any general sourcecode assumptions you might have made
+- [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - Additionally read this because you're making API changes and this will will contain specifics about the API
+- [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - If the contract of the API changes, you'll need to make changes here too so it's crucial you understand the web project
+- [tests/AGENTS.md](tests/AGENTS.md) - As you make code changes, you'll also need to write/update tests
+- [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - You will make change in the API so you need to read this API tests specific AGENTS.md too
+- [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - The same for this one, if you are going to edit the web project then read up on the web project tests
+- [docs/AGENTS.md](docs/AGENTS.md) - If you are going to change functionality or implement certain requirements, make sure to read this to understand where and how you need to document this
 
 #### 2.4 Checklist
 
@@ -153,11 +152,10 @@ Plan is validated against documentation and best practices, OR this is a simple 
 
 #### 3.2 Actions
 
-- Start website: `Run -WithoutTests` (runs as background process)
-- Use Playwright MCP tools for browser testing
-- Document current behavior
-
-**See [docs/running-and-testing.md](docs/running-and-testing.md)** for complete instructions.
+1. Read [docs/running-and-testing.md](docs/running-and-testing.md) to understand how you can run the application
+2. Start website: `Run -WithoutTests` (runs as background process)
+3. Use Playwright MCP tools for browser testing
+4. Document current behavior
 
 #### 3.3 Checklist
 
@@ -178,15 +176,15 @@ Current behavior is documented, OR verification was not needed.
 - You are ready to start coding
 - You have NOT written implementation code yet
 
-📖 **MUST READ**: [tests/AGENTS.md](tests/AGENTS.md) for testing strategies, patterns, and requirements.
-
 #### 4.2 Actions
 
-1. Start with clean slate:
+1. Read [docs/running-and-testing.md](docs/running-and-testing.md) to understand how you can run precisely the tests that need to run
+2. Read [tests/AGENTS.md](tests/AGENTS.md) for testing strategies, patterns, and requirements.
+3. Read domain AGENTS.md files depending on what kind of tests you want to create
+4. Start with clean slate:
    - Run ALL tests first: `Run`
    - Fix any broken tests before proceeding
-
-2. Write failing tests:
+5. Write failing tests:
    - For bugs: Write test that reproduces the bug
    - For features: Write tests defining expected behavior
    - Run tests - verify they fail for the right reason
@@ -224,29 +222,19 @@ Tests exist that fail for the right reason, OR this is a documentation-only chan
 - Step 4 completed (failing tests exist)
 - Tests are failing for the expected reason
 
-📖 **MUST READ**: [src/AGENTS.md](src/AGENTS.md) for .NET patterns, plus the domain-specific AGENTS.md for the area you're modifying.
-
 #### 5.2 Actions
 
-1. Write minimal code:
+1. Read [docs/running-and-testing.md](docs/running-and-testing.md) to understand how you can run tests
+2. Read the appropriate `AGENTS.md` files for the projects you are about to change
+3. Write minimal code:
    - Write ONLY enough code to make tests pass
    - Follow existing patterns and conventions
    - Use `replace_string_in_file` for edits
-
-2. Check quality:
+4. Check quality:
    - Run `get_errors` after each file edit
    - Fix all linting/compilation errors
    - Run tests frequently
-
-3. If you struggle, need to introduce a workaround or hack or are going in circles, ALWAYS go back to [2. Gather context from documentation and validate the plan](#2-gather-context-from-documentation-and-validate-the-plan) and gather more information and re-validate your approach.
-
-**Running the Website**:
-
-See [docs/running-and-testing.md](docs/running-and-testing.md) for:
-
-- `Run` - Build, test, start servers
-- `Run -WithoutTests` - Start servers without tests
-- Playwright MCP tools for interactive testing
+5. If you struggle, need to introduce a workaround or hack or are going in circles, ALWAYS go back to [2. Gather context from documentation and validate the plan](#2-gather-context-from-documentation-and-validate-the-plan) and gather more information and re-validate your approach.
 
 #### 5.3 Checklist
 
@@ -270,12 +258,9 @@ Tests pass with minimal implementation code.
 
 #### 6.2 Actions
 
-1. Run full test suite:
-   - `Run` to run all tests
-   - Or `Run -TestProject <name>` for scoped testing
-   - ALL tests must pass
-
-2. Check quality:
+1. Read [docs/running-and-testing.md](docs/running-and-testing.md) to understand how you can run tests
+2. Run full test suite
+3. Check quality:
    - Use `get_errors` for linting/compilation
    - Verify code follows conventions
    - Check error handling and logging
@@ -300,26 +285,18 @@ All tests pass, no linting errors, code follows conventions.
 - Step 6 completed (all tests pass)
 - You made changes that affect functionality or behavior
 
-📖 **MUST READ**: [docs/AGENTS.md](docs/AGENTS.md) for documentation strategies and rules.
-
 #### 7.2 Actions
 
-1. Identify what to update:
-   - Domain AGENTS.md if implementation changed significantly
-   - [docs/](docs/) if ANY features or behavior changed
-   - Code comments for complex logic
-
+1. Read [docs/AGENTS.md](docs/AGENTS.md) to identify what you need to update
 2. Find relevant docs:
    - Review the [docs/documentation-index.md](docs/documentation-index.md) to find out which files you need to update.
    - Use `grep_search` to find docs mentioning modified features
    - Check domain AGENTS.md in directories you modified
-
+   - **Introduce new files** if needed!
 3. Update and validate:
    - Make documentation changes
    - Fix markdown linting
    - Regenerate documentation index if headings changed
-
-**Introducing New Files**: If you can't find a good place to document something, consider creating a new file!
 
 #### 7.3 Checklist
 
@@ -344,12 +321,9 @@ Documentation is updated, OR no documentation updates were needed.
 
 #### 8.2 Actions
 
-- Provide concise summary of changes
-- Link to all modified files
-- Confirm that tests pass
-- Note any important caveats or follow-up items
-
-**File Link Format**: Use `[src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md)` format - NO backticks around file names.
+1. Provide concise summary of changes
+2. Confirm that tests pass
+3. Note any important caveats or follow-up items
 
 #### 8.3 Checklist
 

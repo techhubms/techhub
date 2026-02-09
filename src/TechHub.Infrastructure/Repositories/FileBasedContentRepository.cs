@@ -429,13 +429,14 @@ public class FileBasedContentRepository : ContentRepositoryBase
     /// For file-based repository, this is efficient since items are already loaded.
     /// Automatically excludes section and collection titles from tag counts.
     /// Supports dynamic counts: when Tags filter is provided, counts show items matching ALL selected tags AND each tag.
+    /// Uses word-level counting: "VS" count includes items with "VS" OR "VS Code" tags.
     /// </summary>
     protected override async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
         TagCountsRequest request,
         CancellationToken ct)
     {
         ArgumentNullException.ThrowIfNull(request);
-        
+
         var allItems = await GetAllInternalAsync(includeDraft: false, limit: int.MaxValue, offset: 0, ct);
 
         // Apply filters
@@ -478,11 +479,11 @@ public class FileBasedContentRepository : ContentRepositoryBase
                         // Normalize both tags for comparison
                         var normalizedItemTag = itemTag.ToLowerInvariant().Trim();
                         var normalizedSelectedTag = selectedTag.ToLowerInvariant().Trim();
-                        
+
                         // Check if selectedTag is contained as a complete word in itemTag
                         // E.g., "ai" matches "AI", "Azure AI", "AI Agents" but not "AIR"
                         if (normalizedItemTag == normalizedSelectedTag) return true;
-                        
+
                         // Word boundary matching
                         var words = normalizedItemTag.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries);
                         return words.Contains(normalizedSelectedTag);
@@ -490,24 +491,82 @@ public class FileBasedContentRepository : ContentRepositoryBase
             });
         }
 
-        // Build exclude set from section/collection titles
-        var excludeSet = await BuildSectionCollectionExcludeSet();
+        // Get cached exclude set from section/collection titles
+        var excludeSet = await GetExcludeTagsSetAsync();
 
-        // Count tags, filter out excluded tags BEFORE grouping, sort, and limit
-        var tagCounts = filtered
-            .SelectMany(item => item.Tags)
-            .Where(tag => !excludeSet.Contains(tag)) // Filter section/collection tags BEFORE grouping
-            .GroupBy(tag => tag, StringComparer.OrdinalIgnoreCase)
-            .Select(g => new TagWithCount { Tag = g.Key, Count = g.Count() })
-            .Where(t => t.Count >= request.MinUses)
+        // Materialize filtered items for word-level counting
+        var filteredList = filtered.ToList();
+
+        // Build a lookup set for TagsToCount (case-insensitive) if provided
+        var tagsToCountSet = request.TagsToCount != null && request.TagsToCount.Count > 0
+            ? request.TagsToCount.ToHashSet(StringComparer.OrdinalIgnoreCase)
+            : null;
+
+        // STEP 1: Get unique display tags (preserves original case)
+        // Key = lowercase tag, Value = original display name (first occurrence wins)
+        var displayTags = new Dictionary<string, string>(StringComparer.Ordinal);
+
+        foreach (var item in filteredList)
+        {
+            foreach (var tag in item.Tags)
+            {
+                if (string.IsNullOrEmpty(tag) || excludeSet.Contains(tag))
+                {
+                    continue;
+                }
+
+                var key = tag.ToLowerInvariant();
+
+                // If TagsToCount is specified, only include tags in that list
+                if (tagsToCountSet != null && !tagsToCountSet.Contains(key))
+                {
+                    continue;
+                }
+
+                // Keep first occurrence's casing for display
+                displayTags.TryAdd(key, tag);
+            }
+        }
+
+        // STEP 2: Get word-level counts
+        // For each display tag, count items where the tag matches (full tag OR word in multi-word tag)
+        var tagCounts = new Dictionary<string, int>(StringComparer.Ordinal);
+
+        foreach (var tagKey in displayTags.Keys)
+        {
+            // Count items where this tag matches via word-level matching
+            var count = filteredList.Count(item =>
+                item.Tags.Any(itemTag =>
+                {
+                    var normalizedItemTag = itemTag.ToLowerInvariant().Trim();
+
+                    // Exact match
+                    if (normalizedItemTag == tagKey) return true;
+
+                    // Word-level match: check if tagKey is a word in the multi-word tag
+                    var words = normalizedItemTag.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries);
+                    return words.Contains(tagKey);
+                }));
+
+            tagCounts[tagKey] = count;
+        }
+
+        // STEP 3: Build results - display tags with their word-level counts
+        var results = displayTags
+            .Where(kvp => tagCounts.TryGetValue(kvp.Key, out var count) && (tagsToCountSet != null || count >= request.MinUses))
+            .Select(kvp => new TagWithCount { Tag = kvp.Value, Count = tagCounts[kvp.Key] })
             .OrderByDescending(t => t.Count)
-            .ThenBy(t => t.Tag, StringComparer.OrdinalIgnoreCase);
+            .ThenBy(t => t.Tag, StringComparer.OrdinalIgnoreCase)
+            .AsEnumerable();
 
-        var result = request.MaxTags.HasValue
-            ? tagCounts.Take(request.MaxTags.Value).ToList()
-            : [.. tagCounts];
+        // When TagsToCount is specified, return all requested tags (no limit)
+        // Otherwise, limit by MaxTags for top-N queries
+        if (tagsToCountSet == null)
+        {
+            return [.. results.Take(request.MaxTags)];
+        }
 
-        return result;
+        return [.. results];
     }
 
     // ==================== Private File Loading Methods ====================

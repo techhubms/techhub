@@ -188,6 +188,95 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
         AssertPerformance(elapsed, $"GET /tags ({sectionName}/{collectionName} - top 30)");
     }
 
+    [Fact]
+    public async Task GetCollectionTags_WithTagsToCount_ReturnsSpecificTags_WithinPerformanceThreshold()
+    {
+        // Arrange - First get baseline tags to know which tags to request
+        var baselineUrl = "/api/sections/github-copilot/collections/all/tags?maxTags=20";
+        var baselineResponse = await _client.GetAsync(baselineUrl);
+        baselineResponse.EnsureSuccessStatusCode();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        baselineTags.Should().NotBeNull();
+        baselineTags!.Count.Should().BeGreaterThan(5, "Need baseline tags for test");
+
+        // Build tagsToCount parameter with all baseline tag names
+        var tagsToCountParam = string.Join(",", baselineTags!.Select(t => Uri.EscapeDataString(t.Tag)));
+        var url = $"/api/sections/github-copilot/collections/all/tags?tagsToCount={tagsToCountParam}";
+
+        // Act - PERFORMANCE TEST: tagsToCount with ~20 specific tags
+        var sw = Stopwatch.StartNew();
+        var response = await _client.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        var tags = await response.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        sw.Stop();
+
+        // Assert
+        tags.Should().NotBeNull();
+        // Should return all requested tags (tagsToCount bypasses maxTags)
+        tags!.Count.Should().BeGreaterThan(0);
+
+        // Performance should be similar to normal tag cloud query
+        AssertPerformance(sw.ElapsedMilliseconds, "GET /tags with tagsToCount (20 specific tags)");
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithTagsToCount_AndTagFilter_ReturnsFilteredCounts_WithinPerformanceThreshold()
+    {
+        // Arrange - Get baseline tags first
+        var baselineUrl = "/api/sections/github-copilot/collections/all/tags?maxTags=20";
+        var baselineResponse = await _client.GetAsync(baselineUrl);
+        baselineResponse.EnsureSuccessStatusCode();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        baselineTags.Should().NotBeNull();
+        baselineTags!.Count.Should().BeGreaterThan(2, "Need baseline tags for test");
+
+        // Use first tag as filter, request counts for remaining tags
+        var filterTag = Uri.EscapeDataString(baselineTags![0].Tag);
+        var tagsToCountParam = string.Join(",", baselineTags!.Skip(1).Select(t => Uri.EscapeDataString(t.Tag)));
+        var url = $"/api/sections/github-copilot/collections/all/tags?tags={filterTag}&tagsToCount={tagsToCountParam}";
+
+        // Act - CRITICAL PERFORMANCE TEST: This is what happens when filtering tags in UI
+        var sw = Stopwatch.StartNew();
+        var response = await _client.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        var tags = await response.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        sw.Stop();
+
+        // Assert
+        tags.Should().NotBeNull();
+
+        // Tag filtering with tagsToCount uses intersection counting (more complex query)
+        AssertPerformance(sw.ElapsedMilliseconds, "GET /tags with tagsToCount + tag filter (intersection)", MaxTagFilterResponseTimeMs);
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_TagsToCount_VsNormal_SimilarPerformance()
+    {
+        // This test ensures tagsToCount doesn't introduce significant performance regression
+
+        // Arrange - Get baseline tags
+        var baselineUrl = "/api/sections/github-copilot/collections/all/tags?maxTags=20";
+        var baselineResponse = await _client.GetAsync(baselineUrl);
+        baselineResponse.EnsureSuccessStatusCode();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        baselineTags!.Count.Should().BeGreaterThan(5, "Need baseline tags for test");
+
+        var tagsToCountParam = string.Join(",", baselineTags!.Select(t => Uri.EscapeDataString(t.Tag)));
+
+        // Act - Compare normal query vs tagsToCount query
+        var normalUrl = "/api/sections/github-copilot/collections/all/tags?maxTags=20";
+        var tagsToCountUrl = $"/api/sections/github-copilot/collections/all/tags?tagsToCount={tagsToCountParam}";
+
+        var normalElapsed = await MeasureHttpGetAsync<IReadOnlyList<TagCloudItem>>(_client, normalUrl);
+        var tagsToCountElapsed = await MeasureHttpGetAsync<IReadOnlyList<TagCloudItem>>(_client, tagsToCountUrl);
+
+        // Assert - tagsToCount should not be significantly slower than normal query
+        // Allow 50% overhead for the additional filtering logic
+        var maxAllowedTime = normalElapsed * 1.5 + 50; // 50% overhead + 50ms buffer for variance
+        tagsToCountElapsed.Should().BeLessThan((long)maxAllowedTime,
+            $"tagsToCount query ({tagsToCountElapsed}ms) should not be significantly slower than normal query ({normalElapsed}ms)");
+    }
+
     #endregion
 
     #region Filtered Items Tests

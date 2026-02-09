@@ -203,7 +203,7 @@ public class CacheKeyTests
     [InlineData(null, null, null, 10, 2)]  // Different MinUses
     [InlineData(1704067200L, null, null, 10, 1)]  // Different DateFrom (L suffix for long)
     public void TagCountsRequest_GetCacheKey_ShouldDifferForDifferentParameters(
-        long? dateFromUnix, long? dateToUnix, string? section, int? maxTags, int minUses)
+        long? dateFromUnix, long? dateToUnix, string? section, int maxTags, int minUses)
     {
         // Arrange
         DateTimeOffset? dateFrom = dateFromUnix.HasValue

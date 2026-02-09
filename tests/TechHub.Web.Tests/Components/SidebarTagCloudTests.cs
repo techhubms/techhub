@@ -41,6 +41,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -77,6 +78,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -108,6 +110,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
@@ -146,6 +149,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
@@ -190,6 +194,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -226,6 +231,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -259,6 +265,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -290,6 +297,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -318,6 +326,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -330,6 +339,7 @@ public class SidebarTagCloudTests : BunitContext
 
         // Assert
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
+        // Component loads baseline + filtered tags (2 calls when no filters, more when filters active)
         _mockApiClient.Verify(x => x.GetTagCloudAsync(
             "ai",
             "all",
@@ -337,9 +347,10 @@ public class SidebarTagCloudTests : BunitContext
             It.IsAny<int?>(),
             It.IsAny<int?>(),
             It.IsAny<List<string>?>(),
+            It.IsAny<List<string>?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
-            It.IsAny<CancellationToken>()), Times.Once);
+            It.IsAny<CancellationToken>()), Times.AtLeastOnce);
     }
 
     [Fact]
@@ -355,6 +366,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -367,6 +379,7 @@ public class SidebarTagCloudTests : BunitContext
 
         // Assert
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
+        // Component loads baseline + filtered tags (2 calls when no filters, more when filters active)
         _mockApiClient.Verify(x => x.GetTagCloudAsync(
             "ai",
             "news",
@@ -374,9 +387,10 @@ public class SidebarTagCloudTests : BunitContext
             It.IsAny<int?>(),
             It.IsAny<int?>(),
             It.IsAny<List<string>?>(),
+            It.IsAny<List<string>?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
-            It.IsAny<CancellationToken>()), Times.Once);
+            It.IsAny<CancellationToken>()), Times.AtLeastOnce);
     }
 
     /// <summary>
