@@ -11877,5 +11877,41 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/k9ykThSvRLA",
     "timestamp": "2026-02-09 17:22:49 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-02-09 19:30:28 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the news post primarily consists of a non-descriptive, external link to another article and does not include any substantive technical information about Microsoft technologies, AI implementation, or developer-focused details. The actual article content is not present in the input, only a short blurb and an image caption. According to content quality exclusions, promotional or placeholder content without educational or technical value is excluded.",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/retail/2026/02/09/how-agentic-commerce-is-becoming-the-new-front-door-to-retail/"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-09 19:31:16 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/marketplace-office-hour-for-customers-april-2026/ec-p/4493911#M682"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-09 19:31:16 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/marketplace-office-hour-for-customers-february-2026/ec-p/4493907#M680"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-09 19:31:16 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/marketplace-office-hour-for-customers-june-2026/ec-p/4493921#M684"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-09 19:31:16 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/marketplace-office-hour-for-customers-march-2026/ec-p/4493909#M681"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-09 19:31:16 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/marketplace-office-hour-for-customers-may-2026/ec-p/4493912#M683"
   }
 ]

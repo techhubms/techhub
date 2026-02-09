@@ -25510,5 +25510,11 @@
     "timestamp": "2026-02-09 18:15:52 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/09/prompt-attack-breaks-llm-safety/",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on the technical behavior, alignment, and adaptation of language and diffusion models—covering fine-tuning, model robustness, and adversarial techniques (AI inclusion rules 1, 4, and 5). Assigned 'Security' because the core threat discussed is undermining model safety and the implications for building more secure, resilient generative AI systems (Security inclusion rules 1, 4, and 9). Did not assign 'Azure' as there is no focus on Azure cloud or platform services; did not assign 'ML' as the article does not cover building ML infrastructure or algorithms from scratch, but rather the use and safety alignment of existing models. 'Coding', 'DevOps', and 'GitHub Copilot' are also not relevant, as the article is on AI alignment and system safety, not programming, DevOps practices, or Copilot."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-02-09 19:30:51 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the announcement is about GPT-5.3-Codex, OpenAI's agentic coding model, integrated into GitHub Copilot (AI Rule 1, 2). 'GitHub Copilot' category is included because the model is being deployed specifically in GitHub Copilot and the content details its use there (GitHub Copilot Rule 1). Coding and other categories were not assigned because, while the context is developer tooling, the content focuses on the model rollout rather than software/code examples or DevOps processes.",
+    "canonical_url": "https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "PubDate": "2026-02-09T17:41:21+00:00",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Description": "GPT-5.3-Codex, OpenAI’s latest agentic coding model, is now rolling out in GitHub Copilot. In early testing, GPT-5.3-Codex reaches new high scores on benchmarks we use to evaluate coding, agentic, and…\n\nThe post [GPT-5.3-Codex is now generally available for GitHub Copilot](https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "GPT-5.3-Codex is now generally available for GitHub Copilot",
+  "EnhancedContent": "GPT-5.3-Codex, OpenAI’s latest agentic coding model, is now rolling out in GitHub Copilot. In early testing, GPT-5.3-Codex reaches new high scores on benchmarks we use to evaluate coding, agentic, and real-world capabilities. It also has improved reasoning and execution in complex, tool-driven, long-running workflows which help it to deliver up to 25% faster performance than GPT-5.2-Codex on agentic coding tasks.\n\n### Availability in GitHub Copilot\n\nGPT-5.3-Codex will be available to [Copilot Pro, Pro+, Business, and Enterprise](https://github.com/features/copilot/plans?utm_source=changelog-codex53-cta&amp;utm_medium=changelog&amp;utm_campaign=newmodels) users.\n\nYou’ll be able to select the model in the model picker in:\n\n- Visual Studio Code in all modes: chat, ask, edit, agent\n- github.com\n- GitHub Mobile iOS and Android\n- GitHub CLI\n- GitHub Copilot Coding Agent\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\n### Enabling access\n\nCopilot Enterprise and Copilot Business plan administrators must enable the GPT-5.3-Codex policy in Copilot settings.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see [our documentation on available models](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=changelog-codex53-cta&amp;utm_medium=changelog&amp;utm_campaign=newmodels) and get started with Copilot.\n\n### Share your feedback\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations?utm_source=changelog-codex53-cta&amp;utm_medium=changelog&amp;utm_campaign=newmodels) to share your feedback.",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-02-09 19:28:06",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Link": "https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot",
+  "FeedName": "The GitHub Blog"
+}
