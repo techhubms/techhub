@@ -25486,5 +25486,11 @@
     "reason": "Succesfully added: Assigned the AI category because the content focuses on AI-powered enterprise knowledge tools from Microsoft, specifically the 'Microsoft IQ' suite (AI inclusion rules 1 and 4). Assigned Azure because the solution is built on Microsoft Azure AI capabilities and targets enterprise scenarios (Azure inclusion rule 1). Did not assign Coding, ML, DevOps, Security, or GitHub Copilot because the content does not cover coding, machine learning engineering, DevOps practices, security architecture, or Copilot functionalities.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=1ri8HSbN4q4"
+  },
+  {
+    "timestamp": "2026-02-09 14:22:38 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the update centers on GitHub Apps and API access, which are key tools in enterprise DevOps, automation, and team management workflows (DevOps rule 11). No 'AI', 'GitHub Copilot', 'Coding', 'Azure', 'ML', or 'Security' categories were assigned since the content is purely about DevOps practices and tooling for team management, not code, Azure, or AI/ML. It is an official news update relevant to team collaboration and automation, and all information is technical and non-biographical.",
+    "canonical_url": "https://github.blog/changelog/2026-02-09-github-apps-can-now-utilize-public-preview-enterprise-teams-apis-via-fine-grained-permissions"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-02-09 14:21:04",
+  "Title": "GitHub Apps can now utilize public preview Enterprise Teams APIs via fine-grained permissions",
+  "EnhancedContent": "GitHub Enterprise administrators can now use GitHub Apps with the **enterprise teams** fine-grained permissions to access Enterprise Teams API endpoints. Previously, these endpoints required a personal access token (classic), but this update provides a more secure approach for enterprise team management.\n\nThe new `enterprise teams` fine-grained permission offers both `read` and `write` access levels to an enterprise-level Github App. These new fine-grained permissions allow create, update, and delete operations enabling Enterprise administrators to securely manage their teams at scale with programmatic app integrations.\n\nTo learn more, read about [GitHub Apps authentication](https://docs.github.com/enterprise-cloud@latest/apps/creating-github-apps/authenticating-with-a-github-app/about-authentication-with-a-github-app) or [Enterprise Teams API endpoints](https://docs.github.com/enterprise-cloud@latest/rest/enterprise-teams?apiVersion=2022-11-28). If you have feedback, join us in [this discussion](https://github.com/orgs/community/discussions/177040).\n\n![Social](https://github.com/user-attachments/assets/0cf73a0e-df5f-453e-8f70-f19a126130fe)",
+  "Tags": [
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2026-02-09-github-apps-can-now-utilize-public-preview-enterprise-teams-apis-via-fine-grained-permissions",
+  "OutputDir": "_news",
+  "PubDate": "2026-02-09T14:03:31+00:00",
+  "Description": "GitHub Enterprise administrators can now use GitHub Apps with the enterprise teams fine-grained permissions to access Enterprise Teams API endpoints. Previously, these endpoints required a personal access token (classic), but…\n\nThe post [GitHub Apps can now utilize public preview Enterprise Teams APIs via fine-grained permissions](https://github.blog/changelog/2026-02-09-github-apps-can-now-utilize-public-preview-enterprise-teams-apis-via-fine-grained-permissions) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison"
+}
