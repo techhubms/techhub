@@ -25600,5 +25600,17 @@
     "timestamp": "2026-02-10 17:25:09 +00:00",
     "reason": "Succesfully added: Categories assigned according to explicit content focus: 'AI' is assigned because the article focuses entirely on manipulation, exploitation, and defense of AI assistant memory and recommendation systems, matching AI category rule 1 and 4. 'Security' is assigned because it is a security research-focused article, details both the threat and defensive controls, detection queries, and is authored by the Microsoft Defender Security Research Team (Security rules 1, 5, and 7). Coding, DevOps, ML, GitHub Copilot, and Azure are not assigned; the technical focus is on AI system security rather than coding, DevOps pipelines, or direct Azure service implementation.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-10 18:19:08 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/can-high-temperature-superconductors-transform-the-power-infrastructure-of-datacenters/",
+    "reason": "Succesfully added: Assigned the Azure category because the article centers on Microsoft's use of high-temperature superconductors to enhance efficiency and capacity in its Azure datacenters (Azure rules 1, 4, and 5). The content discusses infrastructure-level improvements and operational strategies for Azure cloud environments but does not provide direct technical implementation detail relating to Coding, DevOps, AI, ML, or Security—focusing instead on power delivery and physical/datacenter infrastructure. No generic exclusion rules apply since the piece is technical, written in English, and directly targets datacenter technology.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-10 18:19:29 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/education/blog/2026/02/safer-internet-day-2026-helping-students-become-ai%e2%80%91aware-safe-and-smart-online/",
+    "reason": "Succesfully added: I assigned the 'AI' category because the article focuses significantly on building AI awareness in students, highlights the influence of AI in digital lives, and discusses AI-powered tools (AI rule 1, 4, 5). The 'Security' category is justified due to detailed emphasis on cybersecurity practices, Microsoft Education Security Toolkit, Zero Trust frameworks, and digital safety education (Security rules 1, 2, 4, 6, 7, and 9). Categories like 'Azure', 'Coding', 'DevOps', and 'ML' were not included as the content does not focus on programming, development frameworks, specific Azure technical implementations, or machine learning engineering. No generic exclusions apply.",
+    "collection": "news"
   }
 ]
