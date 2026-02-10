@@ -11925,5 +11925,11 @@
     "timestamp": "2026-02-10 13:31:46 +00:00",
     "reason": "No categories found: Excluded all categories due to Generic Exclusion Rules. The content is an announcement for a community AI challenge event ('Agents League'), inviting people to participate, register, and win badges/prizes. There are no technical implementation details, tutorials, or substantive technical content provided. Content only includes event details and registration information, lacking educational or technical depth as required for inclusion. This matches 'Sales Pitches' and 'Promotional content without educational value' in the generic exclusion list.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/emea/features/building-qiddiya-city-how-copilot-helps-abdulrahman-alali-navigate-a-project-of-unprecedented-scale/",
+    "reason": "No categories found: No categories assigned. The content centers on an individual, Abdulrahman AlAli, and how Copilot assists him in his role navigating the Qiddiya City project. There is insufficient technical implementation or development detail—it's primarily a personal/professional spotlight (see Generic Exclusion Rule: Biographical Focus). Additionally, there are no specifics confirming that Copilot refers to GitHub Copilot (developer tool); context suggests it is either Microsoft 365 Copilot or another business productivity Copilot, which are explicitly excluded under Non-Development Microsoft Products rules. There is also no evidence of substantial technical content or Microsoft technology development focus.",
+    "collection": "news",
+    "timestamp": "2026-02-10 16:22:11 +00:00"
   }
 ]

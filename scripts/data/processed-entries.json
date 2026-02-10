@@ -25570,5 +25570,11 @@
     "reason": "Succesfully added: Assigned DevOps category because the content focuses on automation tooling, configuration management, and audit log enhancements in GitHub (see DevOps rule 2: GitHub DevOps tools, rule 6: infrastructure and automation, and rule 7: monitoring and operations). Assigned Security category since the feature centers on supply chain security, tracking of vulnerability update settings, compliance, and detecting unauthorized changes (see Security rules 1, 4, 5, and 7). The content does not warrant Azure, ML, AI, Coding, or GitHub Copilot categories: it's about GitHub platform features for organizational security and DevOps, not specific code, AI, or ML functionalities.",
     "timestamp": "2026-02-10 15:25:34 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-02-10-track-additional-dependabot-configuration-changes-in-audit-logs"
+  },
+  {
+    "canonical_url": "https://www.thomasmaurer.ch/2026/02/deploy-vms-on-azure-local-with-portal-cli-bicep-iac/",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses on deploying and managing VMs using Azure Local, Azure Arc, Azure Portal, and Azure CLI (Azure inclusion rule 1, 2, 4, 5). Added 'DevOps' because the article covers Infrastructure-as-Code with Bicep, automation concepts, and CI/CD-aligned deployment approaches (DevOps inclusion rules 2, 5, 6). Included 'Coding' because Bicep templates and CLI scripting for VM automation are covered in-depth, aligning with development and coding practices using Microsoft technologies (Coding rules 2, 4). No other categories apply as AI, GitHub Copilot, ML, and Security are not covered.",
+    "collection": "blogs",
+    "timestamp": "2026-02-10 16:22:52 +00:00"
   }
 ]
