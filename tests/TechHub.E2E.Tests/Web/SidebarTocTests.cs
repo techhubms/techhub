@@ -136,9 +136,20 @@ public class SidebarTocTests : IAsyncLifetime
             Assert.Fail($"Not enough headings with IDs found on {url}");
         }
 
-        // Act - Scroll to second heading
-        _ = headings.Nth(1);
-        await Page.EvaluateAndWaitForScrollAsync("document.querySelectorAll('h2[id], h3[id]')[1].scrollIntoView()");
+        // Act - Scroll to second heading using native Playwright mouse wheel
+        // Calculate scroll position needed to reach second heading
+        var secondHeadingY = await Page.EvaluateAsync<int>(
+            "document.querySelectorAll('h2[id], h3[id]')[1].getBoundingClientRect().top + window.scrollY - 150"
+        );
+        await Page.Mouse.WheelAsync(0, secondHeadingY);
+        
+        // Wait for scroll to complete (position stabilizes)
+        await Page.WaitForFunctionAsync(
+            @"(targetY) => {
+                return Math.abs(window.scrollY - targetY) < 100;
+            }",
+            secondHeadingY,
+            new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
 
         // Assert - Active TOC link should update
         var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
@@ -168,9 +179,19 @@ public class SidebarTocTests : IAsyncLifetime
         var lastHeading = headings.Last;
         var lastHeadingId = await lastHeading.GetAttributeAsync("id");
 
-        // Act - Scroll to the absolute bottom of the page
-        // This ensures the last section heading crosses the 30% detection line
-        await Page.EvaluateAndWaitForScrollAsync("window.scrollTo(0, document.documentElement.scrollHeight)");
+        // Act - Scroll to bottom using native Playwright mouse wheel
+        // Get total scroll height to determine how much to scroll
+        var scrollHeight = await Page.EvaluateAsync<int>("document.documentElement.scrollHeight - window.innerHeight");
+        
+        // Use mouse wheel to scroll - this fires proper scroll events unlike window.scrollTo()
+        await Page.Mouse.WheelAsync(0, scrollHeight);
+        
+        // Wait for scroll to reach bottom
+        await Page.WaitForFunctionAsync(
+            @"() => {
+                return Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50;
+            }",
+            new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
 
         // Get the last TOC link - use href$= to match the end of the href (hash part)
         var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
@@ -224,18 +245,27 @@ public class SidebarTocTests : IAsyncLifetime
         // Arrange - Navigate to page with hash anchor
         await Page.GotoRelativeAsync("/ai/genai-basics#types-of-prompts-and-messages");
 
-        // Wait for page to settle (allow scroll animation to complete)
-        await Page.WaitForTimeoutAsync(500);
+        // Wait for browser to scroll to anchor position
+        await Page.WaitForFunctionAsync(
+            "() => window.scrollY > 0",
+            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 50 });
 
         // Get initial scroll position (should already be at anchor)
         var initialScrollY = await Page.EvaluateAsync<double>("window.scrollY");
 
         // Act - Click the TOC link for the same section (should already be there)
         var tocLink = Page.Locator(".sidebar-toc a[href$='#types-of-prompts-and-messages']");
-        await tocLink.ClickAsync();
+        await tocLink.ClickBlazorElementAsync(waitForUrlChange: false);
 
-        // Wait for any scroll animation
-        await Page.WaitForTimeoutAsync(500);
+        // Wait for any scroll to settle
+        await Page.WaitForFunctionAsync(
+            @"() => {
+                if (!window.__lastScrollY) window.__lastScrollY = window.scrollY;
+                const stable = Math.abs(window.scrollY - window.__lastScrollY) < 2;
+                window.__lastScrollY = window.scrollY;
+                return stable;
+            }",
+            new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 100 });
 
         // Get final scroll position
         var finalScrollY = await Page.EvaluateAsync<double>("window.scrollY");
@@ -267,9 +297,7 @@ public class SidebarTocTests : IAsyncLifetime
 
         // Act
         await Page.GotoRelativeAsync(url);
-
-        // Wait briefly for any console errors to be logged
-        await Page.WaitForTimeoutAsync(100);
+        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert
         // Filter out expected/benign errors:

@@ -84,9 +84,7 @@ public class VSCodeUpdatesTests : IAsyncLifetime
 
         // Act
         await Page.GotoRelativeAsync(PageUrl);
-
-        // Wait briefly for any console errors to be logged
-        await Page.WaitForTimeoutAsync(500);
+        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert - No console errors (filter WebSocket connection errors from Blazor)
         var errors = consoleMessages

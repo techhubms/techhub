@@ -674,12 +674,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Find two additional tags that have counts > 0 in the initial state
         var additionalTag1 = initialTagCloud!
-            .FirstOrDefault(t => t.Count > 0 && 
+            .FirstOrDefault(t => t.Count > 0 &&
                                !t.Tag.Equals(initialTag1, StringComparison.OrdinalIgnoreCase) &&
                                !t.Tag.Equals(initialTag2, StringComparison.OrdinalIgnoreCase));
         var additionalTag2 = initialTagCloud!
             .Skip(1)
-            .FirstOrDefault(t => t.Count > 0 && 
+            .FirstOrDefault(t => t.Count > 0 &&
                                !t.Tag.Equals(initialTag1, StringComparison.OrdinalIgnoreCase) &&
                                !t.Tag.Equals(initialTag2, StringComparison.OrdinalIgnoreCase) &&
                                !t.Tag.Equals(additionalTag1?.Tag, StringComparison.OrdinalIgnoreCase));
@@ -760,7 +760,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
         baselineTags.Should().NotBeNull();
-        
+
         // Skip test if not enough tags in test data
         if (baselineTags!.Count < 6)
         {
@@ -871,7 +871,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
         baselineTags.Should().NotBeNull();
-        
+
         // Skip test if not enough tags in test data
         if (baselineTags!.Count < 4)
         {
@@ -1083,29 +1083,29 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         batch3.Should().NotBeNull();
 
         batch1!.Should().HaveCount(pageSize, "first batch should contain exactly 10 items");
-        batch1.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)), 
+        batch1.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
             "all items in batch 1 should have AI in their tags");
 
         batch2!.Should().HaveCount(pageSize, "second batch should contain exactly 10 items");
-        batch2.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)), 
+        batch2.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
             "all items in batch 2 should have AI in their tags");
 
         var expectedBatch3Count = totalCount - (pageSize * 2);
         batch3!.Should().HaveCount(expectedBatch3Count, $"third batch should contain {expectedBatch3Count} remaining items");
-        batch3.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)), 
+        batch3.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
             "all items in batch 3 should have AI in their tags");
 
         // Verify no duplicate items between batches
         var batch1Slugs = batch1.Select(i => i.Slug).ToHashSet();
         var batch2Slugs = batch2.Select(i => i.Slug).ToHashSet();
         var batch3Slugs = batch3.Select(i => i.Slug).ToHashSet();
-        
+
         batch1Slugs.Should().NotIntersectWith(batch2Slugs, "batches 1 and 2 should not contain duplicate items");
         batch1Slugs.Should().NotIntersectWith(batch3Slugs, "batches 1 and 3 should not contain duplicate items");
         batch2Slugs.Should().NotIntersectWith(batch3Slugs, "batches 2 and 3 should not contain duplicate items");
 
         // Verify combined count matches total
-        (batch1.Count + batch2.Count + batch3.Count).Should().Be(totalCount, 
+        (batch1.Count + batch2.Count + batch3.Count).Should().Be(totalCount,
             "combined batches should equal total items with tag filter");
     }
 

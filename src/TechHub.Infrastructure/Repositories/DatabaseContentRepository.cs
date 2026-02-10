@@ -310,7 +310,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
 
         // Build filter parameters (shared between both query paths)
         var (filterClause, parameters) = BuildTagCountFilters(request);
-        
+
         // Route to appropriate query path
         if (request.TagsToCount != null && request.TagsToCount.Count > 0)
         {
@@ -332,7 +332,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
         var filters = new List<string>();
 
         // Section filter (bitmask)
-        if (!string.IsNullOrWhiteSpace(request.SectionName) && 
+        if (!string.IsNullOrWhiteSpace(request.SectionName) &&
             !request.SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             var bitmask = CalculateSectionBitmask(request.SectionName);
@@ -343,7 +343,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
         }
 
         // Collection filter
-        if (!string.IsNullOrWhiteSpace(request.CollectionName) && 
+        if (!string.IsNullOrWhiteSpace(request.CollectionName) &&
             !request.CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             filters.Add("collection_name = @collectionName");
@@ -850,7 +850,8 @@ public class DatabaseContentRepository : ContentRepositoryBase
                 // Count with FTS: pre-filter by tags, then apply FTS match
                 var ftsJoin = Dialect.GetFullTextJoinClause();
                 if (!string.IsNullOrEmpty(ftsJoin))
-                {  sql.Append($@"
+                {
+                    sql.Append($@"
                 SELECT COUNT(*) FROM content_items c
                 {ftsJoin}
                 WHERE (c.collection_name, c.slug) IN (

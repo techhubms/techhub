@@ -131,7 +131,7 @@ public partial class SidebarTagCloud : ComponentBase
             _selectedTagsInternal = new HashSet<string>(
                 SelectedTags.Select(t => t.Trim().ToLowerInvariant()),
                 StringComparer.OrdinalIgnoreCase);
-            
+
             _previousSelectedTags = new HashSet<string>(_selectedTagsInternal, StringComparer.OrdinalIgnoreCase);
         }
 
@@ -225,7 +225,7 @@ public partial class SidebarTagCloud : ComponentBase
             {
                 // First load - establish baseline with NO filters to get complete tag list
                 Logger.LogDebug("Loading baseline tags WITHOUT filters to establish complete tag list");
-                
+
                 var baselineApiTags = await ApiClient.GetTagCloudAsync(
                     effectiveSectionName,
                     effectiveCollectionName,

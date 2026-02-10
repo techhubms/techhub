@@ -72,7 +72,7 @@ public class TagFilteringTests : IAsyncLifetime
         var uri = new Uri(currentUrl);
         var tagsParam = System.Web.HttpUtility.ParseQueryString(uri.Query).Get("tags");
         tagsParam.Should().NotBeNullOrEmpty("Tags parameter should have a value");
-        
+
         // Extract tag name from "TagName (count)" format
         var normalizedTagText = ExtractTagNameFromText(tagText).ToLowerInvariant();
         tagsParam.Should().Contain(normalizedTagText, $"Expected tags parameter to contain '{normalizedTagText}'");
@@ -296,7 +296,13 @@ public class TagFilteringTests : IAsyncLifetime
             new PageWaitForFunctionOptions { Timeout = 5000 });
 
         // Wait for cards to stabilize after Blazor re-render
-        await Page.WaitForTimeoutAsync(500);
+        await Page.WaitForFunctionAsync(
+            @"() => {
+                const cards = document.querySelectorAll('.card');
+                return cards.length > 0;
+            }",
+            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+        await Page.WaitForBlazorReadyAsync();
 
         var itemsAfterFirstTag = await Page.Locator(".card").CountAsync();
         itemsAfterFirstTag.Should().BeLessThanOrEqualTo(allItems, "Filtering by one tag should reduce or maintain item count");
@@ -318,7 +324,13 @@ public class TagFilteringTests : IAsyncLifetime
             await Page.WaitForBlazorReadyAsync();
 
             // Wait for cards to stabilize after Blazor re-render
-            await Page.WaitForTimeoutAsync(500);
+            await Page.WaitForFunctionAsync(
+                @"() => {
+                    const cards = document.querySelectorAll('.card');
+                    return cards.length >= 0;
+                }",
+                new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+            await Page.WaitForBlazorReadyAsync();
 
             var itemsAfterSecondTag = await Page.Locator(".card").CountAsync();
 
@@ -509,7 +521,7 @@ public class TagFilteringTests : IAsyncLifetime
             var tagText = await tag.TextContentAsync();
             var tagName = ExtractTagNameFromText(tagText);
             var boundingBox = await tag.BoundingBoxAsync();
-            
+
             if (boundingBox != null)
             {
                 initialWidths[tagName] = boundingBox.Width;

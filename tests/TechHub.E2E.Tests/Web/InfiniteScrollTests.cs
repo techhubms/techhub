@@ -73,13 +73,18 @@ public class InfiniteScrollTests : IAsyncLifetime
         initialCount.Should().Be(20);
 
         // Act - Scroll to the bottom to trigger next batch load
-        var scrollTrigger = Page.Locator("#scroll-trigger");
-        await scrollTrigger.ScrollIntoViewIfNeededAsync();
-
-        // Wait for new items to load (should have 40 items now)
+        // Use polling that scrolls on each iteration - this handles the race condition where
+        // the IntersectionObserver may not yet be attached (set up in OnAfterRenderAsync)
         await Page.WaitForFunctionAsync(
-            "() => document.querySelectorAll('.card').length >= 40",
-            new PageWaitForFunctionOptions { Timeout = 10000, PollingInterval = 100 });
+            @"(expectedCount) => {
+                const trigger = document.getElementById('scroll-trigger');
+                if (trigger) {
+                    trigger.scrollIntoView({ behavior: 'auto', block: 'end' });
+                }
+                return document.querySelectorAll('.card').length >= expectedCount;
+            }",
+            40,
+            new PageWaitForFunctionOptions { Timeout = 15000, PollingInterval = 200 });
 
         // Assert
         var newCount = await Page.Locator(".card").CountAsync();
@@ -98,28 +103,26 @@ public class InfiniteScrollTests : IAsyncLifetime
             "() => document.querySelectorAll('.card').length > 0",
             new PageWaitForFunctionOptions { Timeout = 10000, PollingInterval = 100 });
 
-        // Act - Keep scrolling until we see the end message or scroll trigger disappears
-        var endMessage = Page.Locator(".end-of-content");
-        var maxScrollAttempts = 20;
-
-        for (var i = 0; i < maxScrollAttempts; i++)
-        {
-            if (await endMessage.IsVisibleAsync())
-            {
-                break;
-            }
-
-            var scrollTrigger = Page.Locator("#scroll-trigger");
-            if (await scrollTrigger.CountAsync() == 0)
-            {
-                break;
-            }
-
-            await scrollTrigger.ScrollIntoViewIfNeededAsync();
-            await Page.WaitForTimeoutAsync(500);
-        }
+        // Act - Keep scrolling until we see the end message or all content is loaded
+        // Use a single WaitForFunctionAsync that scrolls on each poll iteration
+        // This is more robust than a C# loop because it handles IntersectionObserver timing
+        await Page.WaitForFunctionAsync(
+            @"() => {
+                // If end-of-content is visible, we're done
+                if (document.querySelector('.end-of-content')) {
+                    return true;
+                }
+                // Otherwise, scroll the trigger into view to load more
+                const trigger = document.getElementById('scroll-trigger');
+                if (trigger) {
+                    trigger.scrollIntoView({ behavior: 'auto', block: 'end' });
+                }
+                return false;
+            }",
+            new PageWaitForFunctionOptions { Timeout = 30000, PollingInterval = 500 });
 
         // Assert - End message should be visible
+        var endMessage = Page.Locator(".end-of-content");
         await Assertions.Expect(endMessage).ToBeVisibleAsync(
             new LocatorAssertionsToBeVisibleOptions { Timeout = 5000 });
 
@@ -145,13 +148,18 @@ public class InfiniteScrollTests : IAsyncLifetime
         // Get first item's title to verify it stays
         var firstItemTitle = await Page.Locator(".card").First.Locator("h3").TextContentAsync();
 
-        // Act - Load second batch
-        var scrollTrigger = Page.Locator("#scroll-trigger");
-        await scrollTrigger.ScrollIntoViewIfNeededAsync();
-
+        // Act - Load second batch by scrolling to trigger
+        // Use polling that scrolls on each iteration to handle IntersectionObserver timing
         await Page.WaitForFunctionAsync(
-            "() => document.querySelectorAll('.card').length >= 40",
-            new PageWaitForFunctionOptions { Timeout = 10000, PollingInterval = 100 });
+            @"(expectedCount) => {
+                const trigger = document.getElementById('scroll-trigger');
+                if (trigger) {
+                    trigger.scrollIntoView({ behavior: 'auto', block: 'end' });
+                }
+                return document.querySelectorAll('.card').length >= expectedCount;
+            }",
+            40,
+            new PageWaitForFunctionOptions { Timeout = 15000, PollingInterval = 200 });
 
         // Assert - First item should still be there with same title
         var firstItemAfterLoad = await Page.Locator(".card").First.Locator("h3").TextContentAsync();

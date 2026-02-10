@@ -482,7 +482,10 @@ public class FileBasedContentRepository : ContentRepositoryBase
 
                         // Check if selectedTag is contained as a complete word in itemTag
                         // E.g., "ai" matches "AI", "Azure AI", "AI Agents" but not "AIR"
-                        if (normalizedItemTag == normalizedSelectedTag) return true;
+                        if (normalizedItemTag == normalizedSelectedTag)
+                        {
+                            return true;
+                        }
 
                         // Word boundary matching
                         var words = normalizedItemTag.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries);
@@ -541,7 +544,10 @@ public class FileBasedContentRepository : ContentRepositoryBase
                     var normalizedItemTag = itemTag.ToLowerInvariant().Trim();
 
                     // Exact match
-                    if (normalizedItemTag == tagKey) return true;
+                    if (normalizedItemTag == tagKey)
+                    {
+                        return true;
+                    }
 
                     // Word-level match: check if tagKey is a word in the multi-word tag
                     var words = normalizedItemTag.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries);

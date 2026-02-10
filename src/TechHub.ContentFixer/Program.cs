@@ -250,7 +250,7 @@ public sealed class Program
             // Normalize existing section_names (e.g., "coding" → "dotnet")
             var existingSections = GetListValue(frontMatter, "section_names");
             var normalizedSections = existingSections.Select(NormalizeSectionName).Where(s => !string.IsNullOrEmpty(s)).ToList();
-            
+
             // Check if normalization changed anything
             if (!existingSections.SequenceEqual(normalizedSections))
             {
@@ -286,7 +286,7 @@ public sealed class Program
         {
             var tagsBeforeCleanup = GetListValue(frontMatter, "tags");
             var tagsAfterCleanup = tagsBeforeCleanup.Where(t => !_deprecatedTags.Contains(t)).ToList();
-            
+
             if (tagsAfterCleanup.Count != tagsBeforeCleanup.Count)
             {
                 var removedTags = tagsBeforeCleanup.Except(tagsAfterCleanup, StringComparer.OrdinalIgnoreCase).ToList();
@@ -531,7 +531,7 @@ public sealed class Program
             var finalTags = GetListValue(frontMatter, "tags");
             var deduplicatedTags = new List<string>();
             var seenTagsLower = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            
+
             foreach (var tag in finalTags)
             {
                 if (seenTagsLower.Add(tag))
@@ -539,7 +539,7 @@ public sealed class Program
                     deduplicatedTags.Add(tag);
                 }
             }
-            
+
             if (deduplicatedTags.Count != finalTags.Count)
             {
                 frontMatter["tags"] = deduplicatedTags;

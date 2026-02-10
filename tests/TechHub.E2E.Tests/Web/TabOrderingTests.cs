@@ -200,8 +200,11 @@ public class TabOrderingTests : IAsyncLifetime
         await Page.Keyboard.PressAsync("Tab"); // Focus skip link
         await Page.Keyboard.PressAsync("Enter"); // Activate skip link
 
-        // Wait for focus to move (skip link JS uses requestAnimationFrame)
-        await Task.Delay(300);
+        // Wait for focus to move to the target element
+        // The skip link navigates to #skiptohere - browser moves focus to that anchor target
+        await Page.WaitForFunctionAsync(
+            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }",
+            new PageWaitForFunctionOptions { Timeout = 2000, PollingInterval = 50 });
 
         // Assert - Get what's currently focused
         var elementInfo = await Page.EvaluateAsync<string>(
@@ -234,14 +237,16 @@ public class TabOrderingTests : IAsyncLifetime
         // Act - Click on the first section card to navigate (simpler than tabbing through)
         // This directly tests that after navigation, tab order restarts with skip link
         var firstSectionCard = Page.Locator("a.section-card").First;
-        await firstSectionCard.ClickAsync();
+        await firstSectionCard.ClickBlazorElementAsync();
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
-        // Wait for enhanced navigation to complete and application to reset focus
-        await Task.Delay(200);
+        // Wait for enhanced navigation to complete and focus to reset to body
+        // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation
+        await Page.WaitForFunctionAsync(
+            "() => document.activeElement === document.body || document.activeElement === document.documentElement",
+            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 50 });
 
         // Assert - After navigation, first tab should focus skip link on new page
-        // The application should have reset focus to body during enhanced navigation
         await Page.Keyboard.PressAsync("Tab");
 
         var firstFocusedElement = Page.Locator(":focus");
@@ -277,7 +282,11 @@ public class TabOrderingTests : IAsyncLifetime
 
         // Step 2: Enter to activate skip link
         await Page.Keyboard.PressAsync("Enter");
-        await Task.Delay(300); // Wait for focus to move (JS uses requestAnimationFrame)
+
+        // Wait for focus to move to #skiptohere target (browser navigation to hash)
+        await Page.WaitForFunctionAsync(
+            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }",
+            new PageWaitForFunctionOptions { Timeout = 2000, PollingInterval = 50 });
 
         // Verify focus moved (could be on H1 or body depending on timing)
         var focusInfo = await Page.EvaluateAsync<string>(
@@ -300,8 +309,11 @@ public class TabOrderingTests : IAsyncLifetime
         await Page.Keyboard.PressAsync("Enter");
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
-        // Wait for enhanced navigation to complete
-        await Task.Delay(100);
+        // Wait for enhanced navigation to complete and focus to reset to body
+        // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation
+        await Page.WaitForFunctionAsync(
+            "() => document.activeElement === document.body || document.activeElement === document.documentElement",
+            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 50 });
 
         // Step 5: Verify we're on a new page (not homepage)
         var currentUrl = Page.Url;

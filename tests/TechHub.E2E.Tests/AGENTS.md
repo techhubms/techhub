@@ -6,38 +6,7 @@ End-to-end tests using Playwright to verify complete user workflows and function
 
 ## Critical Rules
 
-🚫 **NEVER use `Task.Delay()` or `Thread.Sleep()` in E2E tests**
-
-These are anti-patterns that cause flaky tests and slow execution:
-
-```csharp
-// ❌ NEVER DO THIS
-await Task.Delay(300); // Arbitrary wait - flaky and slow
-await Task.Delay(100); // "Small delay" - still wrong!
-
-// ✅ USE PLAYWRIGHT POLLING INSTEAD
-// Wait for specific condition with WaitForFunctionAsync
-await Page.WaitForFunctionAsync(
-    "() => document.activeElement?.classList.contains('skip-link')",
-    new() { Timeout = 2000, PollingInterval = 50 });
-
-// Wait for element state with Expect assertions (auto-retry)
-await Assertions.Expect(element).ToBeVisibleAsync();
-await Assertions.Expect(element).ToHaveClassAsync(new Regex("active"));
-
-// Wait for DOM condition
-await Page.WaitForFunctionAsync(
-    "() => document.querySelectorAll('.card').length > 0",
-    new() { Timeout = 5000, PollingInterval = 100 });
-```
-
-**Why `Task.Delay` is harmful**:
-
-- **Flaky**: Fixed delays may be too short on slow machines, causing intermittent failures
-- **Slow**: Fixed delays are always too long when tests pass quickly
-- **Unreadable**: Doesn't express what condition you're waiting for
-
-**Use instead**: `WaitForFunctionAsync()`, `Expect().ToBeVisibleAsync()`, `Expect().ToHaveClassAsync()`, `WaitForSelectorAsync()`
+🚫 **NEVER use `Task.Delay()`, `Thread.Sleep()`, or `WaitForTimeoutAsync()` in E2E tests** — see [Wait Pattern Best Practices](#wait-pattern-best-practices) for what to use instead.
 
 ## Understanding Timeout Failures
 
@@ -374,74 +343,186 @@ Examples:
 - `ClickCollectionButton_UpdatesURL`
 - `AllCollection_ShowsAllContentFromSection`
 
-### Playwright Expect Assertions and Wait Patterns
+### Wait Pattern Best Practices
 
-**CRITICAL**: Use Playwright's built-in `Expect` assertions instead of explicit waits for better performance and reliability.
+This section consolidates ALL guidance on waiting and timing. Follow these patterns to write stable, fast, non-flaky tests.
 
-**✅ PREFER: Playwright Expect Assertions**
-
-Playwright's `Expect` assertions have intelligent auto-waiting and polling built-in:
+#### Golden Rule: Never Use Arbitrary Delays
 
 ```csharp
-// ✅ BEST - Auto-retrying assertion with smart waiting
+// ❌ NEVER - These are ALWAYS wrong
+await Task.Delay(300);
+await Page.WaitForTimeoutAsync(500);
+await Thread.Sleep(100);
+
+// ✅ ALWAYS - Wait for a specific condition
+await Assertions.Expect(element).ToBeVisibleAsync();
+await Page.WaitForFunctionAsync("() => condition", options);
+await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+```
+
+**Why arbitrary delays are harmful**:
+
+- **Flaky**: Too short on slow machines → intermittent failures
+- **Slow**: Always too long when tests pass quickly
+- **Unclear**: Doesn't express what condition you're actually waiting for
+
+#### Quick Reference: What To Use Instead
+
+| Waiting for... | ❌ Anti-pattern | ✅ Correct pattern |
+|---|---|---|
+| Element to appear | `WaitForTimeoutAsync(500)` | `Assertions.Expect(el).ToBeVisibleAsync()` |
+| CSS class applied | `WaitForTimeoutAsync(1000)` | `Assertions.Expect(el).ToHaveClassAsync(new Regex("expanded"))` |
+| Console errors after load | `WaitForTimeoutAsync(500)` | `Page.WaitForLoadStateAsync(LoadState.NetworkIdle)` |
+| Blazor re-render complete | `WaitForTimeoutAsync(500)` | `Page.WaitForBlazorReadyAsync()` |
+| DOM condition (card count) | `WaitForTimeoutAsync(500)` | `Page.WaitForFunctionAsync("() => document.querySelectorAll('.card').length > 0")` |
+| JS lib init (highlight.js) | `WaitForTimeoutAsync(500)` | `Page.WaitForFunctionAsync("() => document.querySelector('pre code.hljs') !== null")` |
+| Scroll to finish | `WaitForTimeoutAsync(200)` | `Page.WaitForFunctionAsync` polling scroll position |
+| Expand/collapse toggle | `WaitForTimeoutAsync(1000)` | `Assertions.Expect(content).ToHaveClassAsync(new Regex("expanded"))` |
+| No navigation occurred | `WaitForTimeoutAsync(200)` | `Page.WaitForBlazorReadyAsync()` then assert URL unchanged |
+| Browser paint settle | `Task.Delay(100)` | `WaitForFunctionAsync` with double `requestAnimationFrame` |
+
+#### Pattern 1: Expand/Collapse Animations
+
+Custom pages use `classList.toggle('expanded')` — an immediate class toggle with no CSS transition. Wait for the class directly:
+
+```csharp
+// ❌ WRONG
+await header.ClickBlazorElementAsync(waitForUrlChange: false);
+await Page.WaitForTimeoutAsync(1000);
+
+// ✅ CORRECT - Wait for class to appear
+await header.ClickBlazorElementAsync(waitForUrlChange: false);
+await Assertions.Expect(content).ToHaveClassAsync(
+    new Regex("expanded"),
+    new() { Timeout = 3000 });
+```
+
+#### Pattern 2: Console Error Tests
+
+When checking for console errors after page load, use `NetworkIdle` to ensure all scripts and resources have loaded:
+
+```csharp
+// ❌ WRONG
+await Page.GotoRelativeAsync(url);
+await Page.WaitForTimeoutAsync(500);
+
+// ✅ CORRECT
+await Page.GotoRelativeAsync(url);
+await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+```
+
+**Note on NetworkIdle**: It adds ~500ms delay after all network activity stops. Only use it for console error tests and network monitoring — NOT for regular navigation. For navigation, the default `DOMContentLoaded` is sufficient.
+
+#### Pattern 3: JavaScript Library Initialization
+
+Wait for the library to apply its effects to the DOM:
+
+```csharp
+// ❌ WRONG
+await Page.WaitForTimeoutAsync(500); // Hope highlight.js ran
+
+// ✅ CORRECT - Wait for hljs classes to appear
+await Page.WaitForFunctionAsync(
+    "() => document.querySelector('pre code.hljs') !== null",
+    new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+```
+
+#### Pattern 4: Scroll Position Stability
+
+After scrolling with `Mouse.WheelAsync()`, wait for scroll position to reach the target:
+
+```csharp
+// ❌ WRONG
+await Page.Mouse.WheelAsync(0, targetY);
+await Page.WaitForTimeoutAsync(200);
+
+// ✅ CORRECT - Poll for scroll position
+await Page.Mouse.WheelAsync(0, targetY);
+await Page.WaitForFunctionAsync(
+    @"(targetY) => Math.abs(window.scrollY - targetY) < 100",
+    targetY,
+    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+```
+
+For scrolling to the bottom of the page:
+
+```csharp
+await Page.Mouse.WheelAsync(0, scrollHeight);
+await Page.WaitForFunctionAsync(
+    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
+    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+```
+
+#### Pattern 5: Browser Paint/Layout Settle
+
+When the browser needs to complete a paint cycle after DOM mutations (e.g., after mermaid diagram rendering):
+
+```csharp
+// ❌ WRONG
+await Task.Delay(100);
+
+// ✅ CORRECT - Double requestAnimationFrame ensures paint completed
+await page.WaitForFunctionAsync(
+    "() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve(true))))",
+    new PageWaitForFunctionOptions { Timeout = 2000 });
+```
+
+#### Pattern 6: Verifying No Navigation Occurred
+
+After an action that should NOT navigate (e.g., clicking an expand button):
+
+```csharp
+// ❌ WRONG
+await button.ClickBlazorElementAsync(waitForUrlChange: false);
+await Page.WaitForTimeoutAsync(200);
+
+// ✅ CORRECT - Wait for JS to complete, then check URL
+var initialUrl = Page.Url;
+await button.ClickBlazorElementAsync(waitForUrlChange: false);
+await Page.WaitForBlazorReadyAsync();
+Page.Url.Should().Be(initialUrl, "clicking expand should not navigate");
+```
+
+#### Pattern 7: Blazor Re-render After Filtering
+
+After actions that trigger Blazor re-renders (e.g., tag filtering):
+
+```csharp
+// ❌ WRONG
+await tagButton.ClickBlazorElementAsync();
+await Page.WaitForTimeoutAsync(500);
+
+// ✅ CORRECT - Wait for DOM to update
+await tagButton.ClickBlazorElementAsync();
+await Page.WaitForFunctionAsync(
+    "() => document.querySelectorAll('.card').length > 0",
+    new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+await Page.WaitForBlazorReadyAsync();
+```
+
+#### Prefer Playwright Expect Assertions
+
+Playwright's `Expect` assertions have intelligent auto-waiting and polling built-in. Always prefer them over explicit waits followed by manual checks:
+
+```csharp
+// ✅ BEST - Auto-retrying with smart polling
 await Assertions.Expect(element).ToBeVisibleAsync();
 await Assertions.Expect(element).ToContainTextAsync("expected text");
 await Assertions.Expect(element).ToHaveClassAsync(new Regex("active"));
 
 // ❌ AVOID - Explicit wait then manual check
-await element.WaitForAsync(new() { State = WaitForSelectorState.Visible, Timeout = 5000 });
+await element.WaitForAsync(new() { State = WaitForSelectorState.Visible });
 var isVisible = await element.IsVisibleAsync();
 isVisible.Should().BeTrue();
 ```
 
-**Why Expect is better**:
+**Performance summary**:
 
-- Automatically polls until condition is met (smarter than fixed waits)
-- Clearer test intent - assertion shows what you're verifying
-- Better error messages when assertions fail
-- Faster - only waits as long as needed, not fixed timeout
-
-**🚫 AVOID: NetworkIdle Waits**
-
-NetworkIdle waits add a **500ms delay** after ALL network activity stops - expensive and usually unnecessary:
-
-```csharp
-// ❌ SLOW - Waits 500ms after all network requests complete
-await Page.WaitForURLAsync("**/ai", new() { WaitUntil = WaitUntilState.NetworkIdle });
-
-// ✅ FAST - Default wait (DOMContentLoaded) is sufficient
-await Page.WaitForURLAsync("**/ai");
-```
-
-**When NetworkIdle is needed**: Only if you specifically need to wait for ALL network requests to complete (rare - usually only for screenshot tests or network monitoring).
-
-**Default Wait Behavior**:
-
-Playwright's default wait strategy (`WaitUntilState.Load` or `WaitUntilState.DOMContentLoaded`) is sufficient for most navigation scenarios:
-
-- Page content is loaded and ready
-- Blazor JavaScript has initialized (via our `WaitForBlazorReadyAsync()`)
-- Elements are interactive
-
-**Performance Impact**:
-
-- NetworkIdle wait: Adds fixed 500ms delay per occurrence
-- Explicit WaitForAsync: Waits full timeout even if condition met earlier  
-- Expect assertions: Polls intelligently, exits as soon as condition is met
-
-**Examples from our codebase**:
-
-```csharp
-// Navigation without NetworkIdle (fast)
-await Page.WaitForURLAsync("**/ai/genai-basics");
-
-// Element visibility with Expect (smart polling)
-await Assertions.Expect(tocElement).ToBeVisibleAsync();
-
-// Class detection with polling (handles async DOM updates)
-await Assertions.Expect(link).ToHaveClassAsync(new Regex("active"),
-    new LocatorAssertionsToHaveClassOptions { Timeout = 500 });
-```
+- `Expect` assertions: Polls intelligently, exits as soon as condition is met (fastest)
+- `WaitForFunctionAsync`: Polls at configurable intervals (good for custom conditions)
+- `WaitForLoadStateAsync(NetworkIdle)`: Fixed ~500ms delay after network quiet (use sparingly)
+- `WaitForTimeoutAsync` / `Task.Delay`: Fixed delay regardless of state (NEVER use)
 
 ### Using BlazorHelpers
 
@@ -554,21 +635,18 @@ using Microsoft.Playwright;             // For Assertions
 
 ### Solution 2: Event-Based Waiting (Helper Methods)
 
-The `ClickAndWaitForScrollAsync()` and `EvaluateAndWaitForScrollAsync()` helpers use browser's native `scrollend` event:
+The `ClickAndWaitForScrollAsync()` helper uses browser's native `scrollend` event:
 
 ```csharp
 // Click TOC link and wait for scroll to complete
 await secondLink.ClickAndWaitForScrollAsync();
-
-// Execute scroll and wait for completion
-await Page.EvaluateAndWaitForScrollAsync("window.scrollBy(0, 500)");
 ```
 
 **How it works**:
 
 1. Set up `scrollend` event listener (fires when scrolling stops)
 2. Set up `scroll` event listener (detects if scroll started)
-3. Execute action (click link or run JavaScript)
+3. Execute action (click link)
 4. Wait for `scrollend` event
 5. Wait 2 RAF cycles for TOC scroll-spy to update
 6. Timeout after 50ms if no scroll detected (already at target)
@@ -595,6 +673,91 @@ So we need:
 - 2nd RAF: TOC scroll-spy's RAF callback executes
 
 **IMPORTANT**: Even after `ClickAndWaitForScrollAsync()`, still use Playwright polling for assertions (Solution 1). The helper ensures scrolling completes, but the final class update timing can still vary.
+
+### Solution 3: Native Scrolling for Programmatic Tests
+
+**CRITICAL**: When testing scroll-spy behavior without user clicks, you **MUST** use native Playwright scrolling methods that fire scroll events. Programmatic JavaScript methods like `window.scrollTo()` do **NOT** fire scroll events in headless browsers.
+
+**Why JavaScript scrolling fails**:
+
+```csharp
+// ❌ WRONG - Does NOT fire scroll events in headless Playwright
+await Page.EvaluateAsync("window.scrollTo(0, 1000)");
+// Result: Page scrolls but scroll-spy never updates (0 scroll events fired)
+```
+
+In headless browsers, `window.scrollTo()` executes synchronously and completes instantly without triggering scroll/scrollend events that the TOC scroll-spy depends on.
+
+**Use native Playwright scrolling instead**:
+
+```csharp
+// ✅ CORRECT - Simulates real mouse wheel scrolling, fires scroll events
+var secondHeadingY = await Page.EvaluateAsync<int>(
+    "document.querySelectorAll('h2[id], h3[id]')[1].getBoundingClientRect().top + window.scrollY - 150"
+);
+await Page.Mouse.WheelAsync(0, secondHeadingY);
+
+// Wait for scroll to reach target position
+await Page.WaitForFunctionAsync(
+    @"(targetY) => Math.abs(window.scrollY - targetY) < 100",
+    secondHeadingY,
+    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+
+// Then verify with polling
+await Assertions.Expect(secondLink).ToHaveClassAsync(
+    new Regex("active"),
+    new LocatorAssertionsToHaveClassOptions { Timeout = 500 }
+);
+```
+
+**How `Mouse.WheelAsync()` works**:
+
+- Simulates actual user mouse wheel input
+- Fires native browser scroll events (scroll, scrollend)
+- Triggers TOC scroll-spy event handlers just like real user scrolling
+- Takes `deltaX` and `deltaY` parameters (typically `deltaX=0`, `deltaY=scrollAmount`)
+
+**Pattern for scrolling to specific elements**:
+
+```csharp
+// Calculate scroll position to element
+var targetY = await Page.EvaluateAsync<int>(
+    "element.getBoundingClientRect().top + window.scrollY - offsetFromTop"
+);
+
+// Scroll with native mouse wheel
+await Page.Mouse.WheelAsync(0, targetY);
+
+// Wait for scroll to reach target
+await Page.WaitForFunctionAsync(
+    @"(targetY) => Math.abs(window.scrollY - targetY) < 100",
+    targetY,
+    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+```
+
+**Pattern for scrolling to bottom**:
+
+```csharp
+// Calculate total scrollable height
+var scrollHeight = await Page.EvaluateAsync<int>(
+    "document.documentElement.scrollHeight - window.innerHeight"
+);
+
+// Scroll to bottom with native mouse wheel
+await Page.Mouse.WheelAsync(0, scrollHeight);
+
+// Wait for scroll to reach bottom
+await Page.WaitForFunctionAsync(
+    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
+    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+```
+
+**When to use native scrolling**:
+
+- ✅ Testing scroll-spy updates when programmatically scrolling (without clicking)
+- ✅ Testing "scroll to bottom" scenarios for last heading detection
+- ✅ Any test that needs to trigger scroll event handlers
+- ❌ **NOT** needed when using `ClickAndWaitForScrollAsync()` (already handles events)
 
 ### Pattern for TOC Tests
 
@@ -637,7 +800,20 @@ await Assertions.Expect(tocLink).ToHaveClassAsync(new Regex("active"),
 **Scenario 2: Scroll to bottom and verify last heading active**
 
 ```csharp
-await Page.EvaluateAndWaitForScrollAsync("window.scrollTo(0, document.body.scrollHeight)");
+// Calculate total scrollable height
+var scrollHeight = await Page.EvaluateAsync<int>(
+    "document.documentElement.scrollHeight - window.innerHeight"
+);
+
+// Scroll to bottom with native mouse wheel (fires scroll events)
+await Page.Mouse.WheelAsync(0, scrollHeight);
+
+// Wait for scroll to reach bottom
+await Page.WaitForFunctionAsync(
+    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
+    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+
+// Verify last heading is active
 var lastHeadingLink = Page.Locator(".sidebar-toc a").Last;
 await Assertions.Expect(lastHeadingLink).ToHaveClassAsync(new Regex("active"),
     new LocatorAssertionsToHaveClassOptions { Timeout = 500 });
@@ -672,10 +848,7 @@ toggleTocDebug()  // Shows red line at detection position (30% from top)
 **Check timing in tests**:
 
 ```csharp
-// Add delays to observe behavior (remove before committing)
-await Page.WaitForTimeoutAsync(1000);  // 1 second delay
-
-// Check class list manually
+// Check class list manually for debugging
 var classes = await link.GetAttributeAsync("class");
 Console.WriteLine($"Classes: {classes}");
 ```
@@ -692,13 +865,14 @@ Console.WriteLine($"Classes: {classes}");
 - Playwright polling adds ~100-500ms per assertion (acceptable for reliability)
 - `scrollend` event is more reliable than arbitrary delays  
 - TOC-specific tests: ~500-1000ms per test (legitimate - includes scrolling, RAF callbacks, and active class detection)
-- General navigation tests: <200ms per test after removing NetworkIdle waits (see [Playwright Expect Assertions and Wait Patterns](#playwright-expect-assertions-and-wait-patterns))
+- General navigation tests: <200ms per test after removing NetworkIdle waits (see [Wait Pattern Best Practices](#wait-pattern-best-practices))
 
 ### Related Files
 
 - [toc-scroll-spy.js](../../src/TechHub.Web/wwwroot/js/toc-scroll-spy.js) - Production TOC scroll-spy implementation
-- [BlazorHelpers.cs](Helpers/BlazorHelpers.cs) - Scroll synchronization helpers (`ClickAndWaitForScrollAsync`, `EvaluateAndWaitForScrollAsync`)
-- [VSCodeUpdatesTests.cs](Web/VSCodeUpdatesTests.cs) - Reference implementation for TOC tests
+- [BlazorHelpers.cs](Helpers/BlazorHelpers.cs) - Scroll synchronization helper (`ClickAndWaitForScrollAsync`)
+- [SidebarTocTests.cs](Web/SidebarTocTests.cs) - Reference implementation for TOC tests with native scrolling
+- [VSCodeUpdatesTests.cs](Web/VSCodeUpdatesTests.cs) - Additional TOC test examples
 - [LevelsOfEnlightenmentTests.cs](Web/LevelsOfEnlightenmentTests.cs) - Multiple TOC test scenarios
 - [HandbookTests.cs](Web/HandbookTests.cs) - TOC keyboard navigation tests
 

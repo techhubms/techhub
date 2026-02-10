@@ -134,7 +134,7 @@ public class SectionCardCustomPagesTests : IAsyncLifetime
             isHidden.Should().BeTrue("custom pages container should be initially hidden");
 
             // Click to expand
-            await expandButton.ClickAsync();
+            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
             // Assert - Container should now be visible
             await Assertions.Expect(targetContainer).ToBeVisibleAsync();
@@ -178,7 +178,7 @@ public class SectionCardCustomPagesTests : IAsyncLifetime
             var firstVisibleText = await firstVisibleCustom.TextContentAsync();
 
             // Expand to see all custom pages
-            await expandButton.ClickAsync();
+            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
             // Get all custom page badges (visible + hidden) in display order
             var allCustomBadges = new List<string>
@@ -228,10 +228,10 @@ public class SectionCardCustomPagesTests : IAsyncLifetime
 
             // Act - Click expand button should not navigate
             var initialUrl = Page.Url;
-            await expandButton.ClickAsync();
+            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
-            // Small wait to ensure no navigation occurred
-            await Page.WaitForTimeoutAsync(200);
+            // Wait for any JS handlers to complete
+            await Page.WaitForBlazorReadyAsync();
 
             // Assert - Should still be on homepage
             Page.Url.Should().Be(initialUrl, "clicking expand button should not navigate away from homepage");
@@ -286,7 +286,7 @@ public class SectionCardCustomPagesTests : IAsyncLifetime
             var targetId = await expandButton.GetAttributeAsync("data-expand-target");
 
             // Expand to reveal hidden custom pages
-            await expandButton.ClickAsync();
+            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
             var targetContainer = Page.Locator($"#{targetId}");
             var hiddenBadges = targetContainer.Locator(".badge-custom");
@@ -333,8 +333,8 @@ public class SectionCardCustomPagesTests : IAsyncLifetime
             // Act - Click expand button
             var expandButton = expandButtons.First;
 
-            await expandButton.ClickAsync();
-            await Page.WaitForTimeoutAsync(100);
+            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
+            await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
             // Assert - No JavaScript errors
             consoleErrors.Should().BeEmpty("expanding custom pages should not cause JavaScript errors");

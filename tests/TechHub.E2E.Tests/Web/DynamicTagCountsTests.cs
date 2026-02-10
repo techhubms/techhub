@@ -221,6 +221,7 @@ public class DynamicTagCountsTests : IAsyncLifetime
                     return count >= 1000;
                 }
             }
+
             return false;
         });
 
@@ -278,8 +279,9 @@ public class DynamicTagCountsTests : IAsyncLifetime
 
             await disabledTag.ClickAsync(new LocatorClickOptions { Force = true, Timeout = 1000 });
 
-            // Small wait to see if anything happens
-            await Page.WaitForTimeoutAsync(200);
+            // Verify nothing changed by waiting briefly for any potential navigation
+            // and then checking URL hasn't changed
+            await Page.WaitForBlazorReadyAsync();
 
             // Assert - URL should not change (tag should not be selected)
             Page.Url.Should().Be(urlBeforeClick, "Clicking disabled tag should not change URL or filter state");
@@ -313,7 +315,10 @@ public class DynamicTagCountsTests : IAsyncLifetime
         foreach (var tagElement in tagElements)
         {
             var text = await tagElement.TextContentAsync();
-            if (text == null) continue;
+            if (text == null)
+            {
+                continue;
+            }
 
             // Parse "TagName (123)" or "TagName (1,234)"
             var match = System.Text.RegularExpressions.Regex.Match(text, @"(.+?)\s\((\d+(?:,\d{3})*)\)");

@@ -61,8 +61,10 @@ public class HighlightingTests : IAsyncLifetime
         // Arrange & Act
         await Page.GotoRelativeAsync("/ai/genai-advanced");
 
-        // Wait for highlight.js to initialize
-        await Page.WaitForTimeoutAsync(500);
+        // Wait for highlight.js to initialize and apply syntax highlighting classes
+        await Page.WaitForFunctionAsync(
+            "() => document.querySelector('pre code.hljs') !== null || document.querySelector('pre code[class*=\"language-\"]') !== null",
+            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
 
         // Assert - Check for code blocks with highlighting
         var codeBlocks = Page.Locator("pre code");
@@ -88,9 +90,7 @@ public class HighlightingTests : IAsyncLifetime
 
         // Act
         await Page.GotoRelativeAsync("/ai/genai-advanced");
-
-        // Wait for highlight.js to initialize
-        await Page.WaitForTimeoutAsync(500);
+        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert - No console errors (filter WebSocket connection errors from Blazor)
         var errors = consoleMessages

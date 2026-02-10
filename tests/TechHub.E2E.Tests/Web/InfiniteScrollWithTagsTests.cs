@@ -47,7 +47,7 @@ public class InfiniteScrollWithTagsTests : IAsyncLifetime
     {
         // This test validates that when navigating directly with a tag filter,
         // the correct content (external news links) is displayed.
-        
+
         const string tag = "copilot";
 
         // Navigate directly to the page with tag filter applied
@@ -58,13 +58,10 @@ public class InfiniteScrollWithTagsTests : IAsyncLifetime
             "() => document.querySelectorAll('.card').length > 0",
             new PageWaitForFunctionOptions { Timeout = 10000, PollingInterval = 100 });
 
-        // Wait a bit more for any Blazor interactivity to settle
-        await Page.WaitForTimeoutAsync(500);
-
         // Verify we have content
         var cardCount = await Page.Locator(".card").CountAsync();
         cardCount.Should().BeGreaterThan(0, "should have content cards displayed with tag filter");
-        
+
         // Verify URL still has the tag filter (wasn't cleared)
         Page.Url.Should().Contain($"tags={tag}", "URL should preserve tag filter");
 
@@ -73,7 +70,7 @@ public class InfiniteScrollWithTagsTests : IAsyncLifetime
         var firstCard = Page.Locator("a.card").First;
         await Assertions.Expect(firstCard).ToBeVisibleAsync(
             new LocatorAssertionsToBeVisibleOptions { Timeout = 5000 });
-        
+
         var href = await firstCard.GetAttributeAsync("href");
         href.Should().NotBeNullOrEmpty("card should have an href attribute");
         href.Should().StartWith("https://", "news items should link to external URLs");
@@ -88,7 +85,7 @@ public class InfiniteScrollWithTagsTests : IAsyncLifetime
 
         // Act - Navigate and apply tag filter
         await Page.GotoRelativeAsync("/github-copilot/news");
-        
+
         // Wait for initial load
         await Page.WaitForFunctionAsync(
             "() => document.querySelectorAll('.card').length > 0",
@@ -96,37 +93,54 @@ public class InfiniteScrollWithTagsTests : IAsyncLifetime
 
         // Apply tag filter
         var tagButton = Page.Locator($"button.tag-cloud-item:has-text('{tagDisplay}')").First;
-        await tagButton.ClickAsync();
-        
-        // Wait for filter to apply
+        await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
+
+        // Wait for filter to apply and content to load
         await Page.WaitForBlazorUrlContainsAsync($"tags={tagUrl}");
-        await Page.WaitForTimeoutAsync(1000);
+        
+        // Wait for filtered content to render (cards should appear)
+        await Page.WaitForFunctionAsync(
+            "() => document.querySelectorAll('.card').length > 0",
+            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
 
         // Capture first batch count
         var firstBatchCount = await Page.Locator(".card").CountAsync();
         firstBatchCount.Should().BeGreaterThan(0, "should have items after filtering");
 
-        // Scroll to load second batch
+        // Only test infinite scroll if there's more content available
         var scrollTrigger = Page.Locator("#scroll-trigger");
-        if (await scrollTrigger.CountAsync() > 0)
+        var initialScrollTriggerExists = await scrollTrigger.CountAsync() > 0;
+        
+        if (initialScrollTriggerExists)
         {
-            await scrollTrigger.ScrollIntoViewIfNeededAsync();
-            await Page.WaitForTimeoutAsync(1000);
-        }
-
-        // Capture count after scroll
-        var afterScrollCount = await Page.Locator(".card").CountAsync();
-
-        // Assert - More items should be loaded
-        if (await scrollTrigger.CountAsync() > 0)
-        {
+            // Use polling that scrolls on each iteration to handle IntersectionObserver timing
+            // The observer is set up in OnAfterRenderAsync and might not be ready immediately
+            await Page.WaitForFunctionAsync(
+                @"(expectedCount) => {
+                    const trigger = document.getElementById('scroll-trigger');
+                    if (trigger) {
+                        trigger.scrollIntoView({ behavior: 'auto', block: 'end' });
+                    }
+                    return document.querySelectorAll('.card').length > expectedCount;
+                }",
+                firstBatchCount,
+                new PageWaitForFunctionOptions { Timeout = 15000, PollingInterval = 200 });
+                
+            // Capture count after scroll
+            var afterScrollCount = await Page.Locator(".card").CountAsync();
             afterScrollCount.Should().BeGreaterThan(firstBatchCount,
                 "scrolling should load additional items when more are available");
+        }
+        else
+        {
+            // If no scroll trigger exists, it means first batch loaded all available items
+            // This is valid - just verify we got some items
+            firstBatchCount.Should().BeGreaterThan(0, "should have loaded at least some filtered items");
         }
 
         // Verify URL still contains tag filter (URL normalizes to lowercase)
         var currentUrl = Page.Url;
-        currentUrl.Should().Contain($"tags={tagUrl}", 
+        currentUrl.Should().Contain($"tags={tagUrl}",
             "tag filter should be preserved in URL during infinite scroll");
 
         // Verify tag button still has 'selected' class (component uses CSS class, not aria-pressed)

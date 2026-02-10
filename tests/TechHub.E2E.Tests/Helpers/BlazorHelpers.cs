@@ -205,9 +205,12 @@ public static class BlazorHelpers
                 new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 100 }
             );
 
-            // Additional 100ms for browser scrolling to settle after diagram rendering
-            // This prevents scroll-related timing issues in tests
-            await Task.Delay(100);
+            // Wait for browser layout to settle after diagram rendering
+            // Using requestAnimationFrame ensures the browser has completed a paint cycle
+            await page.WaitForFunctionAsync(
+                "() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve(true))))",
+                new PageWaitForFunctionOptions { Timeout = 2000 }
+            );
         }
         catch (TimeoutException)
         {
@@ -335,6 +338,22 @@ public static class BlazorHelpers
                     return false;
                 }
             ", new PageWaitForFunctionOptions { Timeout = timeoutMs });
+
+            // CRITICAL: Wait for dynamically loaded JavaScript modules to finish initializing
+            // After Blazor is ready, the page loads additional JS modules (custom-pages.js, infinite-scroll.js, etc.)
+            // These modules attach event handlers and initialize interactive elements.
+            // We must wait for them to complete before interacting with elements they control.
+            await page.WaitForFunctionAsync(@"
+                () => {
+                    // If scripts are currently loading, wait
+                    if (window.__scriptsLoading === true) {
+                        return false;
+                    }
+                    
+                    // Scripts are ready (either completed loading or not needed for this page)
+                    return window.__scriptsReady === true || window.__scriptsLoading === false;
+                }
+            ", new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 50 });
         }
         catch (TimeoutException)
         {
@@ -938,109 +957,17 @@ public static class BlazorHelpers
     }
 
     /// <summary>
-    /// Executes JavaScript that triggers scrolling and automatically waits for scroll to complete + TOC update.
-    ///
-    /// This is a smart wrapper that:
-    /// 1. Sets up scrollend event listener BEFORE executing JavaScript (same event TOC scroll-spy uses)
-    /// 2. Executes the provided JavaScript (which triggers scrolling)
-    /// 3. Waits for scrollend event (fired when scrolling stops)
-    /// 4. Waits one additional animation frame for TOC scroll-spy to update active class
-    /// 5. Returns when everything is complete or max timeout is reached
-    ///
-    /// Use this instead of manual EvaluateAsync + WaitForTimeoutAsync patterns.
-    ///
-    /// Examples:
-    ///   // Scroll to bottom
-    ///   await page.EvaluateAndWaitForScrollAsync("window.scrollTo(0, document.documentElement.scrollHeight)");
-    ///
-    ///   // Scroll element into view
-    ///   await page.EvaluateAndWaitForScrollAsync("document.querySelector('.section').scrollIntoView()");
-    ///
-    ///   // Smooth scroll with custom options
-    ///   await page.EvaluateAndWaitForScrollAsync("window.scrollTo({ top: 1000, behavior: 'smooth' })");
-    ///
-    ///   // Scroll by offset
-    ///   await page.EvaluateAndWaitForScrollAsync("window.scrollBy(0, 500)");
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="jsExpression">JavaScript expression that triggers scrolling</param>
-    /// <param name="maxTimeoutMs">Maximum time in ms to wait for scroll to complete (default: 1000ms)</param>
-    /// <returns>Task that completes when scrolling finishes and TOC updates, or timeout is reached</returns>
-    public static async Task EvaluateAndWaitForScrollAsync(
-        this IPage page,
-        string jsExpression,
-        int maxTimeoutMs = 1000)
-    {
-        // Use scrollend event (same as TOC scroll-spy) + RAF for TOC update
-        // This ensures we don't miss any scroll events that happen immediately after execution
-        await page.EvaluateAsync($@"
-            ({{ jsCode, maxTimeout }}) => {{
-                return new Promise((resolve) => {{
-                    let maxTimer;
-                    let scrollDetected = false;
-                    
-                    const cleanup = () => {{
-                        window.removeEventListener('scrollend', onScrollEnd);
-                        window.removeEventListener('scroll', onScroll);
-                        clearTimeout(maxTimer);
-                    }};
-                    
-                    const onScrollEnd = () => {{
-                        // Wait TWO animation frames for TOC scroll-spy to update active class:
-                        // 1st RAF: scrollend fires
-                        // 2nd RAF: TOC scroll-spy's handleScroll() RAF callback executes updateActiveHeading()
-                        requestAnimationFrame(() => {{
-                            requestAnimationFrame(() => {{
-                                cleanup();
-                                resolve();
-                            }});
-                        }});
-                    }};
-                    
-                    const onScroll = () => {{
-                        scrollDetected = true;
-                    }};
-                    
-                    // Set up maximum timeout (fallback if no scroll detected or scroll hangs)
-                    maxTimer = setTimeout(() => {{
-                        cleanup();
-                        resolve();
-                    }}, maxTimeout);
-                    
-                    // Set up scroll listeners BEFORE executing the JavaScript
-                    window.addEventListener('scrollend', onScrollEnd, {{ once: true }});
-                    window.addEventListener('scroll', onScroll, {{ passive: true }});
-                    
-                    // Execute the provided JavaScript code
-                    eval(jsCode);
-                    
-                    // If no scroll detected after 50ms, assume no scroll (e.g., already at target)
-                    setTimeout(() => {{
-                        if (!scrollDetected) {{
-                            cleanup();
-                            resolve();
-                        }}
-                    }}, 50);
-                }});
-            }}
-        ", new { jsCode = jsExpression, maxTimeout = maxTimeoutMs });
-    }
-
-    /// <summary>
     /// Waits for scrolling to complete by detecting scroll inactivity.
     ///
     /// This function uses a debounce pattern - it waits for NO scroll events
     /// to occur for the specified timeout duration. This ensures we only
     /// proceed after scrolling has truly finished.
     ///
-    /// NOTE: Prefer using EvaluateAndWaitForScrollAsync() which sets up the listener
-    /// BEFORE executing JavaScript, ensuring no scroll events are missed.
-    ///
-    /// Only use this if you've already triggered scrolling externally
-    /// (e.g., via ScrollIntoViewIfNeededAsync or other Playwright methods).
+    /// Use this after triggering scrolling via native Playwright methods
+    /// like Mouse.WheelAsync() or ScrollIntoViewIfNeededAsync().
     ///
     /// Example:
-    ///   await element.ScrollIntoViewIfNeededAsync();
+    ///   await page.Mouse.WheelAsync(0, 1000);
     ///   await page.WaitForScrollEndAsync();
     /// </summary>
     /// <param name="page">The Playwright page</param>

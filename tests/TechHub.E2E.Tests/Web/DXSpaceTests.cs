@@ -118,12 +118,12 @@ public class DXSpaceTests : IAsyncLifetime
         else
         {
             // Act - Click to expand
-            await sectionHeader.ClickAsync();
-            await Page.WaitForTimeoutAsync(1000); // Wait for animation
+            await sectionHeader.ClickBlazorElementAsync(waitForUrlChange: false);
 
-            // Assert - Content should be visible after click
-            var expandedClasses = await sectionContent.GetAttributeAsync("class");
-            expandedClasses.Should().Contain("expanded", "Section content should expand when header is clicked");
+            // Assert - Content should get the 'expanded' class after click
+            await Assertions.Expect(sectionContent).ToHaveClassAsync(
+                new System.Text.RegularExpressions.Regex("expanded"),
+                new() { Timeout = 3000 });
         }
     }
 
@@ -134,9 +134,6 @@ public class DXSpaceTests : IAsyncLifetime
         await Page.GotoRelativeAsync(PageUrl);
 
         // DORA section is expanded by default, so no need to click
-        // Just wait for the page to fully render
-        await Page.WaitForTimeoutAsync(500); // Wait for initial render
-
         // Assert - Should have metrics grid
         var metricsGrid = Page.Locator(".dx-metrics-grid");
         await metricsGrid.AssertElementVisibleAsync();
@@ -160,8 +157,11 @@ public class DXSpaceTests : IAsyncLifetime
 
         // Expand SPACE section
         var spaceHeader = Page.Locator(".dx-card-header").Filter(new() { HasText = "SPACE" }).First;
-        await spaceHeader.ClickAsync();
-        await Page.WaitForTimeoutAsync(1000); // Wait for expansion animation
+        var spaceContent = Page.Locator(".dx-card-content").Filter(new() { Has = Page.Locator(".dx-space-grid") });
+        await spaceHeader.ClickBlazorElementAsync(waitForUrlChange: false);
+        await Assertions.Expect(spaceContent).ToHaveClassAsync(
+            new System.Text.RegularExpressions.Regex("expanded"),
+            new() { Timeout = 3000 });
 
         // Assert - Should have SPACE grid
         var spaceGrid = Page.Locator(".dx-space-grid");
@@ -188,8 +188,11 @@ public class DXSpaceTests : IAsyncLifetime
 
         // Expand DevEx section
         var devExHeader = Page.Locator(".dx-card-header").Filter(new() { HasText = "Developer Experience" }).First;
-        await devExHeader.ClickAsync();
-        await Page.WaitForTimeoutAsync(1000); // Wait for expansion animation
+        var devExContent = devExHeader.Locator("xpath=following-sibling::div[contains(@class, 'dx-card-content')]").First;
+        await devExHeader.ClickBlazorElementAsync(waitForUrlChange: false);
+        await Assertions.Expect(devExContent).ToHaveClassAsync(
+            new System.Text.RegularExpressions.Regex("expanded"),
+            new() { Timeout = 3000 });
 
         // Assert - Should have DevEx pillars grid
         var pillarsGrid = Page.Locator(".dx-devex-grid");

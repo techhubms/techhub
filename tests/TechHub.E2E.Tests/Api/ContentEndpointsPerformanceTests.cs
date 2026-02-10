@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using System.Net.Http.Json;
 using FluentAssertions;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.TestUtilities;
 
@@ -17,8 +19,8 @@ namespace TechHub.E2E.Tests.Repositories;
 /// - Tests work with both SQLite (default) and PostgreSQL (Run -Docker)
 /// 
 /// Performance thresholds:
-/// - Non-FTS queries: 250ms (includes HTTP overhead + JSON serialization)
-/// - FTS queries: 1000ms (full-text search + ranking + HTTP overhead)
+/// - PostgreSQL: 200ms standard, 800ms FTS, 400ms tag filtering (stricter due to superior performance)
+/// - SQLite: 300ms standard, 1200ms FTS, 600ms tag filtering (relaxed due to temp B-tree overhead)
 /// 
 /// Why HTTP-based tests?
 /// - Measures real-world performance including all layers (HTTP, middleware, serialization, DB)
@@ -29,13 +31,27 @@ namespace TechHub.E2E.Tests.Repositories;
 public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiFactory>
 {
     private readonly HttpClient _client;
-    private const int MaxResponseTimeMs = 250;  // HTTP overhead + serialization + DB query
-    private const int MaxFtsResponseTimeMs = 1000;  // FTS queries are slower + HTTP overhead + variance
-    private const int MaxTagFilterResponseTimeMs = 500;  // Tag filtering with subquery using GROUP BY + HAVING is more complex
+    private readonly bool _isPostgreSQL;
+    
+    // PostgreSQL thresholds (stricter - in-memory hash aggregation)
+    private const int PostgresMaxResponseTimeMs = 200;
+    private const int PostgresMaxFtsResponseTimeMs = 500;
+    private const int PostgresMaxTagFilterResponseTimeMs = 300;
+    
+    // SQLite thresholds (relaxed - uses temp B-trees for GROUP BY/ORDER BY)
+    private const int SqliteMaxResponseTimeMs = 300;
+    private const int SqliteMaxFtsResponseTimeMs = 1000;
+    private const int SqliteMaxTagFilterResponseTimeMs = 500;
 
     public ContentEndpointsPerformanceTests(TechHubE2ETestApiFactory factory)
     {
         _client = factory.CreateClient();
+        
+        // Detect database provider from configuration
+        var config = factory.Services.GetRequiredService<IConfiguration>();
+        var provider = config["Database:Provider"] ?? "SQLite";
+        _isPostgreSQL = provider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCase);
+        
         // Note: Database is seeded once on factory startup via ContentSyncService
     }
 
@@ -51,16 +67,31 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
         return sw.ElapsedMilliseconds;
     }
 
-    private static void AssertPerformance(long elapsedMs, string operationName, int? thresholdMs = null)
+    private void AssertPerformance(long elapsedMs, string operationName, int? overrideThresholdMs = null)
     {
-        var threshold = thresholdMs ?? MaxResponseTimeMs;
+        // Use override threshold if provided, otherwise use database-specific threshold
+        var threshold = overrideThresholdMs ?? (_isPostgreSQL ? PostgresMaxResponseTimeMs : SqliteMaxResponseTimeMs);
+        var dbType = _isPostgreSQL ? "PostgreSQL" : "SQLite";
+        
         if (elapsedMs > threshold)
         {
             throw new Exception(
-                $"Performance degradation detected in {operationName}: " +
+                $"Performance degradation detected in {operationName} ({dbType}): " +
                 $"{elapsedMs}ms > {threshold}ms threshold. " +
                 $"Check database indexes, query plans, and HTTP middleware overhead.");
         }
+    }
+    
+    private void AssertFtsPerformance(long elapsedMs, string operationName)
+    {
+        var threshold = _isPostgreSQL ? PostgresMaxFtsResponseTimeMs : SqliteMaxFtsResponseTimeMs;
+        AssertPerformance(elapsedMs, operationName, threshold);
+    }
+    
+    private void AssertTagFilterPerformance(long elapsedMs, string operationName)
+    {
+        var threshold = _isPostgreSQL ? PostgresMaxTagFilterResponseTimeMs : SqliteMaxTagFilterResponseTimeMs;
+        AssertPerformance(elapsedMs, operationName, threshold);
     }
 
     #endregion
@@ -246,7 +277,7 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
         tags.Should().NotBeNull();
 
         // Tag filtering with tagsToCount uses intersection counting (more complex query)
-        AssertPerformance(sw.ElapsedMilliseconds, "GET /tags with tagsToCount + tag filter (intersection)", MaxTagFilterResponseTimeMs);
+        AssertTagFilterPerformance(sw.ElapsedMilliseconds, "GET /tags with tagsToCount + tag filter (intersection)");
     }
 
     [Fact]
@@ -298,7 +329,7 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
         items.Should().NotBeNull();
 
         // Tag filtering uses complex GROUP BY + HAVING subquery, so uses higher threshold
-        AssertPerformance(sw.ElapsedMilliseconds, "GET /items with tag filter", MaxTagFilterResponseTimeMs);
+        AssertTagFilterPerformance(sw.ElapsedMilliseconds, "GET /items with tag filter");
     }
 
     [Fact]
@@ -311,7 +342,7 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
         var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
 
         // Assert performance - multiple tag filter with AND logic (complex GROUP BY + HAVING)
-        AssertPerformance(elapsed, "GET /items with multiple tags (AND logic)", MaxTagFilterResponseTimeMs);
+        AssertTagFilterPerformance(elapsed, "GET /items with multiple tags (AND logic)");
     }
 
     [Fact]
@@ -337,7 +368,7 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
         var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
 
         // Assert performance - FTS uses higher threshold
-        AssertPerformance(elapsed, "GET /items with search query (FTS)", MaxFtsResponseTimeMs);
+        AssertFtsPerformance(elapsed, "GET /items with search query (FTS)");
     }
 
     [Fact]
@@ -350,7 +381,7 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
         var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
 
         // Assert performance - FTS with filters uses higher threshold
-        AssertPerformance(elapsed, "GET /items with search + filters (FTS + tags + date)", MaxFtsResponseTimeMs);
+        AssertFtsPerformance(elapsed, "GET /items with search + filters (FTS + tags + date)");
     }
 
     [Fact]

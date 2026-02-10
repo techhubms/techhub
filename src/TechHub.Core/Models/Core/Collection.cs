@@ -86,7 +86,7 @@ public record Collection
 
         // Replace dashes with spaces and split into words
         var words = collectionName.Replace('-', ' ').Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        
+
         // Uppercase first letter of each word
         for (int i = 0; i < words.Length; i++)
         {

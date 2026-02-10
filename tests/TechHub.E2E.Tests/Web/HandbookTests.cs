@@ -69,7 +69,20 @@ public class HandbookTests : IAsyncLifetime
 
         // Check book cover image
         var bookCover = hero.Locator("img");
-        await bookCover.AssertElementVisibleAsync();
+        
+        // Wait for image element to be visible in the DOM (Playwright auto-retries)
+        await Assertions.Expect(bookCover).ToBeVisibleAsync(
+            new LocatorAssertionsToBeVisibleOptions { Timeout = 10000 });
+        
+        // Wait for the image to be fully loaded (not just present in DOM)
+        // Lazy loading may delay actual image data loading
+        await Page.WaitForFunctionAsync(
+            "() => { const img = document.querySelector('.handbook-hero img'); return img?.complete === true && img?.naturalHeight > 0; }",
+            new PageWaitForFunctionOptions { Timeout = 10000, PollingInterval = 200 });
+
+        // Verify image attributes
+        var src = await bookCover.GetAttributeAsync("src");
+        src.Should().Contain("ghc-handbook.jpg", "book cover image should be present");
 
         // Check title
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "The GitHub Copilot Handbook", level: 1);
@@ -107,9 +120,7 @@ public class HandbookTests : IAsyncLifetime
 
         // Act
         await Page.GotoRelativeAsync(PageUrl);
-
-        // Wait briefly for any console errors to be logged
-        await Page.WaitForTimeoutAsync(500);
+        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert - No console errors (filter WebSocket connection errors from Blazor)
         var errors = consoleMessages

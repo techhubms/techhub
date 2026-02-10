@@ -360,6 +360,9 @@
 
         // Load all scripts for current page (runs all loaders in parallel)
         async function loadScriptsForPage() {
+            // Set loading flag for E2E tests
+            window.__scriptsLoading = true;
+            
             // Query DOM once for all needed elements
             const codeElements = document.querySelector('pre code');
             const mermaidElements = document.querySelectorAll('.mermaid:not([data-processed="true"])');
@@ -378,6 +381,10 @@
 
             // TOC scroll spy loads last (after other scripts are ready)
             await loadTocScrollSpy(tocElement);
+            
+            // Set ready flag for E2E tests
+            window.__scriptsReady = true;
+            window.__scriptsLoading = false;
         }
 
         // Helper: Load external script

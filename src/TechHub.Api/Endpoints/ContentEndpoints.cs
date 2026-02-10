@@ -293,6 +293,7 @@ public static class ContentEndpoints
             {
                 return TypedResults.BadRequest($"Invalid 'from' date format: {from}. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
+
             dateFrom = parsedFrom;
         }
 
@@ -302,6 +303,7 @@ public static class ContentEndpoints
             {
                 return TypedResults.BadRequest($"Invalid 'to' date format: {to}. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
+
             dateTo = parsedTo;
         }
 

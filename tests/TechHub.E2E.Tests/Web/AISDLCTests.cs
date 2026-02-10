@@ -120,12 +120,12 @@ public class AISDLCTests : IAsyncLifetime
         contentClasses.Should().NotContain("expanded", "Phase content should be collapsed by default");
 
         // Act - Click to expand
-        await phaseHeader.ClickAsync();
-        await Page.WaitForTimeoutAsync(1000); // Wait for animation
+        await phaseHeader.ClickBlazorElementAsync(waitForUrlChange: false);
 
-        // Assert - Content should be visible after click
-        var expandedClasses = await phaseContent.GetAttributeAsync("class");
-        expandedClasses.Should().Contain("expanded", "Phase content should expand when header is clicked");
+        // Assert - Content should get the 'expanded' class after click
+        await Assertions.Expect(phaseContent).ToHaveClassAsync(
+            new System.Text.RegularExpressions.Regex("expanded"),
+            new() { Timeout = 3000 });
     }
 
     [Fact]
@@ -156,11 +156,13 @@ public class AISDLCTests : IAsyncLifetime
 
         // Expand first phase
         var firstPhaseHeader = Page.Locator(".sdlc-phase-header").First;
-        await firstPhaseHeader.ClickAsync();
-        await Page.WaitForTimeoutAsync(1000); // Wait for expansion
+        var firstPhaseContent = Page.Locator(".sdlc-phase-content").First;
+        await firstPhaseHeader.ClickBlazorElementAsync(waitForUrlChange: false);
+        await Assertions.Expect(firstPhaseContent).ToHaveClassAsync(
+            new System.Text.RegularExpressions.Regex("expanded"),
+            new() { Timeout = 3000 });
 
         // Assert - Expanded phase should show AI enhancements
-        var firstPhaseContent = Page.Locator(".sdlc-phase-content").First;
         var aiSection = firstPhaseContent.Locator(".sdlc-phase-ai");
         await aiSection.AssertElementVisibleAsync();
 

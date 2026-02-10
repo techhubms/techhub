@@ -13,7 +13,7 @@ public class TagCountsRequest
     public string CollectionName { get; }
     public int MaxTags { get; }
     public int MinUses { get; }
-    
+
     /// <summary>
     /// Optional: Currently selected tags for dynamic count calculation.
     /// When provided, counts show items that match these tags AND each tag in the result.
@@ -94,7 +94,7 @@ public class TagCountsRequest
         parts.Add($"max:{MaxTags}");
 
         parts.Add($"min:{MinUses}");
-        
+
         if (Tags != null && Tags.Count > 0)
         {
             var sortedTags = Tags.OrderBy(t => t, StringComparer.OrdinalIgnoreCase);
