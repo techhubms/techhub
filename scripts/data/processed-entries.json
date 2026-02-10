@@ -25552,5 +25552,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/adding-ai-personality-to-browser-games/ba-p/4490892",
     "collection": "community",
     "reason": "Succesfully added: The content is a detailed, technical walk-through of using Microsoft Foundry Local to embed AI-driven commentary into browser-based games. The main solution is architected with Microsoft's local AI stack (Foundry Local, small language models), and involves implementing event-driven, asynchronous commentary via JavaScript and Node.js. The 'AI' category is included as the piece is focused on Microsoft's AI platform and developer implementation. No other categories apply: though there is mention of code, the primary topic is AI integration architecture (not general Microsoft coding, cloud, or ML). 'Azure', 'DevOps', 'Security', and 'ML' rules do not qualify given the details and technical focus presented. Code examples, technical explanations, and clear references to Microsoft products and their documentation support these decisions."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: The content is centered on Microsoft's Foundry Local and Agent Framework for enterprise AI agent application development, discussing privacy-preserving local model execution, agent orchestration, evaluation (including Microsoft security/Red Team tools), telemetry via .NET Aspire, and integration with Azure. Per 'AI' inclusion rule 1, it features AI development using Microsoft platforms and discusses the orchestration, evaluation, and deployment of AI agents—triggering the 'AI' category. Azure-specific identity and telemetry tools, Foundry Local (a Microsoft Azure AI service extension), and direct code usage justify the 'Azure' category (Azure rules 1, 3, and 4). Coding and ML categories are not assigned because although Python and ML models are discussed, the focus is AI application orchestration, evaluation, and deployment, not low-level code or custom model-building (see Rule Hierarchy and AI vs ML distinctions).",
+    "canonical_url": "https://devblogs.microsoft.com/semantic-kernel/from-local-models-to-agent-workflows-building-a-deep-research-solution-with-microsoft-agent-framework-on-microsoft-foundry-local/",
+    "timestamp": "2026-02-10 11:18:59 +00:00"
+  },
+  {
+    "collection": "blogs",
+    "reason": "Succesfully added: AI category included because the post centers on AI agent concepts, generative AI capabilities, and agentic architectures built on Microsoft Fabric (AI Rule 1, 3, 4, 5). Azure is included due to Microsoft Fabric being a flagship Azure data platform and all agent deployment/operation occurring within Azure infrastructure (Azure Rule 1, 4, 5). ML is included because the article discusses enterprise data analytics, real-time data processing, knowledge modeling, and intelligence workflows that are key aspects of modern ML/data engineering (ML Rules 1, 2, 4, 6, 9). Did not assign 'Coding' since the article focuses on concepts, architecture, and capabilities rather than explicit code, programming tools, or developer frameworks. 'DevOps' and 'Security' are not central themes and were not assigned. Generic exclusions do not apply: content is technical, in English, not biographical, not sales-focused, and meets all quality standards.",
+    "canonical_url": "https://zure.com/blog/fabric-iq-agents-operate-hand-to-hand-with-enterprise-data",
+    "timestamp": "2026-02-10 11:19:44 +00:00"
   }
 ]
