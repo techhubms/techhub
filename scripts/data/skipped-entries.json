@@ -11913,5 +11913,11 @@
     "timestamp": "2026-02-09 19:31:16 +00:00",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/marketplace-office-hour-for-customers-may-2026/ec-p/4493912#M683"
+  },
+  {
+    "timestamp": "2026-02-10 08:14:02 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ybzUy3J6K_E",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned. Although the episode is part of Azure Essentials and targets developers and engineers, the content is fundamentally focused on financial concepts (NPV, ROI, investment decision-making) rather than technical implementation, architecture, or hands-on cloud/development work. According to the generic exclusion rules, this qualifies as business/finance strategy content without sufficient technical depth on Azure service usage, deployment, coding, DevOps, AI, ML, or security. Therefore, per Chapter 3 (Business Strategy and Executive Content – excludes high-level business strategy or financial discussions without technical implementation), no categories apply despite the cloud context."
   }
 ]

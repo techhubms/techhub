@@ -25546,5 +25546,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-arc-jumpstart-template-for-hybrid-logic-apps-deployment/ba-p/4493996",
     "collection": "community",
     "reason": "Succesfully added: Assigned 'Azure' because the article details Azure Arc, AKS, and several Azure services as central to the solution (Azure inclusion rule 1, 4, 5, 6). Assigned 'DevOps' because the approach automates infrastructure deployment, employs deployment scripts, leverages GitHub-hosted templates, and focuses on operationalizing hybrid environments (DevOps inclusion rules 2, 5, 6, 7). 'Coding', 'AI', 'ML', 'Security' are not assigned because the content does not focus on application coding practices, AI/ML technologies, or security architectures; rather, it centers around infrastructure provisioning and integration."
+  },
+  {
+    "timestamp": "2026-02-10 08:14:35 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/adding-ai-personality-to-browser-games/ba-p/4490892",
+    "collection": "community",
+    "reason": "Succesfully added: The content is a detailed, technical walk-through of using Microsoft Foundry Local to embed AI-driven commentary into browser-based games. The main solution is architected with Microsoft's local AI stack (Foundry Local, small language models), and involves implementing event-driven, asynchronous commentary via JavaScript and Node.js. The 'AI' category is included as the piece is focused on Microsoft's AI platform and developer implementation. No other categories apply: though there is mention of code, the primary topic is AI integration architecture (not general Microsoft coding, cloud, or ML). 'Azure', 'DevOps', 'Security', and 'ML' rules do not qualify given the details and technical focus presented. Code examples, technical explanations, and clear references to Microsoft products and their documentation support these decisions."
   }
 ]
