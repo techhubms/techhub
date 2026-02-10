@@ -25534,5 +25534,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=FjvtWeG6EEo",
     "collection": "videos",
     "timestamp": "2026-02-09 22:11:19 +00:00"
+  },
+  {
+    "timestamp": "2026-02-10 01:34:53 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-application-insights-sdk-3-x-for-net/ba-p/4493988",
+    "reason": "Succesfully added: Assigned Azure category because the content is focused on Azure Monitor, Application Insights, and Azure-based observability tools (Azure inclusion rule 1). Assigned DevOps category because it involves instrumentation, observability, telemetry, and developer/operations collaboration (DevOps rules 6 and 7). Assigned Coding category due to .NET SDK upgrade, API usage, and developer-focused migration steps (Coding rules 1, 2, and 4). Did NOT assign AI, ML, Security, or GitHub Copilot because there are no relevant AI/ML features, security or identity content, or coverage of GitHub Copilot usage. No generic exclusion rule applies; content is substantially technical and intended for a developer and DevOps audience.",
+    "collection": "community"
   }
 ]
