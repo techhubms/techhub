@@ -25612,5 +25612,17 @@
     "canonical_url": "https://www.microsoft.com/en-us/education/blog/2026/02/safer-internet-day-2026-helping-students-become-ai%e2%80%91aware-safe-and-smart-online/",
     "reason": "Succesfully added: I assigned the 'AI' category because the article focuses significantly on building AI awareness in students, highlights the influence of AI in digital lives, and discusses AI-powered tools (AI rule 1, 4, 5). The 'Security' category is justified due to detailed emphasis on cybersecurity practices, Microsoft Education Security Toolkit, Zero Trust frameworks, and digital safety education (Security rules 1, 2, 4, 6, 7, and 9). Categories like 'Azure', 'Coding', 'DevOps', and 'ML' were not included as the content does not focus on programming, development frameworks, specific Azure technical implementations, or machine learning engineering. No generic exclusions apply.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the content focuses on .NET, .NET Framework, ASP.NET Core, Entity Framework Core, and related developer frameworks and libraries (Coding rule 1 and 2). Assigned Security because a CVE security vulnerability (CVE-2026-21218) is discussed and resolved, and security improvements are highlighted (Security rule 1 and 2). Did not assign DevOps, ML, Azure, or AI, as these aspects are not covered in a substantive way in the recap.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-february-2026-servicing-updates/",
+    "timestamp": "2026-02-10 19:25:59 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the session centers on leveraging AI agents, background workflows, and model switching in VS Code for app creation (AI inclusion rules 1, 4, and 5). Assigned the Coding category because the show demonstrates converting natural language into code, app bootstrapping, feature development, and overall code creation inside a development environment (Coding rules 2, 4, and 5). Did not assign the GitHub Copilot category, as while Copilot is linked, the content's focus is on VS Code AI agents and natural language programming, not directly on Copilot's suite of features. Did not assign Azure or ML as the content does not focus on Azure, ML engineering, or advanced data science workflows.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=vWLeCW90Ojo",
+    "timestamp": "2026-02-10 19:26:55 +00:00"
   }
 ]
