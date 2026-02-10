@@ -25624,5 +25624,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=vWLeCW90Ojo",
     "timestamp": "2026-02-10 19:26:55 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' because the content centers on Azure DevOps Server patching, a core DevOps tool and process (DevOps rules 1, 5, 6). Assigned 'Azure' because Azure DevOps Server is a Microsoft Azure-branded service (Azure rule 1). Assigned 'Security' because the release emphasizes staying on the latest, most secure version and patch management—a key security practice (Security rules 1 and 7). The content is technical, actionable, and targets server administrators and DevOps practitioners, with no generic exclusion criteria triggered.",
+    "collection": "news",
+    "timestamp": "2026-02-10 21:15:12 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/devops/february-patches-for-azure-devops-server-5/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because Semantic Link is an AI-enabling component in Microsoft Fabric (AI inclusion rule 1 and 4). Assigned ML category because the content addresses data science workflows, analytics, advanced predictions, and notebook integration with semantic models (ML inclusion rules 2, 4, and 9). Did not assign Azure, as the focus is on Microsoft Fabric rather than Azure-branded services. Coding was not added since the article is about workflows, automation, and integration, not direct programming or software engineering practices. DevOps and Security do not apply because the focus is on data, automation, and AI/ML, without coverage of pipelines, developer workflows, or security services.",
+    "collection": "news",
+    "timestamp": "2026-02-10 21:15:31 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/supercharge-ai-bi-and-data-engineering-with-semantic-link-generally-available/"
   }
 ]
