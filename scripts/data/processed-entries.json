@@ -25576,5 +25576,29 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses on deploying and managing VMs using Azure Local, Azure Arc, Azure Portal, and Azure CLI (Azure inclusion rule 1, 2, 4, 5). Added 'DevOps' because the article covers Infrastructure-as-Code with Bicep, automation concepts, and CI/CD-aligned deployment approaches (DevOps inclusion rules 2, 5, 6). Included 'Coding' because Bicep templates and CLI scripting for VM automation are covered in-depth, aligning with development and coding practices using Microsoft technologies (Coding rules 2, 4). No other categories apply as AI, GitHub Copilot, ML, and Security are not covered.",
     "collection": "blogs",
     "timestamp": "2026-02-10 16:22:52 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/adaptive-time-series-visualization-at-scale-with-microsoft-fabric/",
+    "timestamp": "2026-02-10 17:23:57 +00:00",
+    "reason": "Succesfully added: Assigned ML category because the content centers on advanced data engineering, analytics, and time series modeling for operational data—addressing machine learning/data science workloads (ML Rule 1, 2, 4, 5). Assigned Azure category because Microsoft Fabric, KQL databases, and Power BI are Azure-based services (Azure Rule 1, 4, 5). Did not include AI: while anomaly detection is present, there's no explicit use of AI, pre-built ML APIs, or model training discussed. Did not assign Coding or DevOps: the article focuses on data engineering and visualization practices rather than software development or DevOps techniques. Security is not covered. Rule references: ML Inclusion (ML Rule 1, 2, 4, and 5), Azure Inclusion (Azure Rule 1, 4, and 5).",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/02/09/building-a-safer-digital-future-together/",
+    "timestamp": "2026-02-10 17:24:20 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content repeatedly discusses responsible and safe AI, including risks, youth workshops on AI, AI-powered educational initiatives, and responsible AI design (AI inclusion rules 1, 4, 5). Added 'Security' because the article centers on online safety, digital risks, cyberbullying, digital parenting controls, and Microsoft's platform-level protection and transparency work (Security inclusion rules 1, 2, 3, 4, and 7). Excluded other categories as there is no deep technical detail about coding, DevOps processes, Azure services specifically, or hands-on ML/data science development. The content fits the 'AI' and 'Security' categories under the provided definitions and passes all inclusion/exclusion criteria.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/10/80-of-fortune-500-use-active-ai-agents-observability-governance-and-security-shape-the-new-frontier/",
+    "timestamp": "2026-02-10 17:24:45 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content focuses on organizational adoption of AI agents—specifically agents built with Microsoft Copilot Studio and Agent Builder (AI rules 1 and 3, with explicit mention of Copilot Studio as a developer/maker tool). Assigned the 'Security' category because the article addresses governance, observability, Zero Trust, access management, and practical cybersecurity approaches around AI agents (Security rules 1, 2, and 9). Did not assign the 'Coding', 'DevOps', 'Azure', or 'ML' categories because there is no detailed coverage of software development practices, DevOps tooling, Azure platform engineering, or custom machine learning development. The report's focus is on enterprise security controls, agent governance, and AI risk management, matching the assigned categories.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/",
+    "timestamp": "2026-02-10 17:25:09 +00:00",
+    "reason": "Succesfully added: Categories assigned according to explicit content focus: 'AI' is assigned because the article focuses entirely on manipulation, exploitation, and defense of AI assistant memory and recommendation systems, matching AI category rule 1 and 4. 'Security' is assigned because it is a security research-focused article, details both the threat and defensive controls, detection queries, and is authored by the Microsoft Defender Security Research Team (Security rules 1, 5, and 7). Coding, DevOps, ML, GitHub Copilot, and Azure are not assigned; the technical focus is on AI system security rather than coding, DevOps pipelines, or direct Azure service implementation.",
+    "collection": "news"
   }
 ]
