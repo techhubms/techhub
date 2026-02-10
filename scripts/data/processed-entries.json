@@ -25636,5 +25636,11 @@
     "collection": "news",
     "timestamp": "2026-02-10 21:15:31 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/supercharge-ai-bi-and-data-engineering-with-semantic-link-generally-available/"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-1/",
+    "timestamp": "2026-02-10 23:13:39 +00:00",
+    "reason": "Succesfully added: The 'Coding' category is assigned because the announcement and changelog are focused on major updates for .NET developers, including new language features, SDK updates, libraries, frameworks (ASP.NET Core, Blazor, .NET MAUI), and tooling. The update is entirely technical and developer-focused, with detailed information about code-level features, API changes, and programming workflows, covering multiple rule triggers under the Coding inclusion section. No other categories (like DevOps, AI, Azure, ML, Security) are applicable as the preview announcement does not focus on CI/CD, cloud, AI/ML, or security features. The tags are crafted by extracting product, library, and topic names mentioned in the post, following tag rules for technical depth and relevance.",
+    "collection": "news"
   }
 ]

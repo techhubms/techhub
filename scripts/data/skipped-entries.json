@@ -11931,5 +11931,11 @@
     "reason": "No categories found: No categories assigned. The content centers on an individual, Abdulrahman AlAli, and how Copilot assists him in his role navigating the Qiddiya City project. There is insufficient technical implementation or development detail—it's primarily a personal/professional spotlight (see Generic Exclusion Rule: Biographical Focus). Additionally, there are no specifics confirming that Copilot refers to GitHub Copilot (developer tool); context suggests it is either Microsoft 365 Copilot or another business productivity Copilot, which are explicitly excluded under Non-Development Microsoft Products rules. There is also no evidence of substantial technical content or Microsoft technology development focus.",
     "collection": "news",
     "timestamp": "2026-02-10 16:22:11 +00:00"
+  },
+  {
+    "reason": "No categories found: All category inclusion rules require substantive technical content. This submission only includes a description for a video episode ('Cozy AI Kitchen') without the actual content. The description mentions the use of AI agents, natural language, and VS Code for app building, but without the content itself, there are no technical details or depth to assess category assignment. As per quality standards, decisions must be based solely on the provided content. Since 'content' is null and the description is insufficiently detailed, no categories can be assigned.",
+    "timestamp": "2026-02-10 22:14:15 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/2QDgtETRs_0",
+    "collection": "videos"
   }
 ]
