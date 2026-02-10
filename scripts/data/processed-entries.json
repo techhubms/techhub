@@ -25564,5 +25564,11 @@
     "reason": "Succesfully added: AI category included because the post centers on AI agent concepts, generative AI capabilities, and agentic architectures built on Microsoft Fabric (AI Rule 1, 3, 4, 5). Azure is included due to Microsoft Fabric being a flagship Azure data platform and all agent deployment/operation occurring within Azure infrastructure (Azure Rule 1, 4, 5). ML is included because the article discusses enterprise data analytics, real-time data processing, knowledge modeling, and intelligence workflows that are key aspects of modern ML/data engineering (ML Rules 1, 2, 4, 6, 9). Did not assign 'Coding' since the article focuses on concepts, architecture, and capabilities rather than explicit code, programming tools, or developer frameworks. 'DevOps' and 'Security' are not central themes and were not assigned. Generic exclusions do not apply: content is technical, in English, not biographical, not sales-focused, and meets all quality standards.",
     "canonical_url": "https://zure.com/blog/fabric-iq-agents-operate-hand-to-hand-with-enterprise-data",
     "timestamp": "2026-02-10 11:19:44 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category because the content focuses on automation tooling, configuration management, and audit log enhancements in GitHub (see DevOps rule 2: GitHub DevOps tools, rule 6: infrastructure and automation, and rule 7: monitoring and operations). Assigned Security category since the feature centers on supply chain security, tracking of vulnerability update settings, compliance, and detecting unauthorized changes (see Security rules 1, 4, 5, and 7). The content does not warrant Azure, ML, AI, Coding, or GitHub Copilot categories: it's about GitHub platform features for organizational security and DevOps, not specific code, AI, or ML functionalities.",
+    "timestamp": "2026-02-10 15:25:34 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-10-track-additional-dependabot-configuration-changes-in-audit-logs"
   }
 ]

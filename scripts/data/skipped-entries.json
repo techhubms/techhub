@@ -11919,5 +11919,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=ybzUy3J6K_E",
     "collection": "videos",
     "reason": "No categories found: No categories were assigned. Although the episode is part of Azure Essentials and targets developers and engineers, the content is fundamentally focused on financial concepts (NPV, ROI, investment decision-making) rather than technical implementation, architecture, or hands-on cloud/development work. According to the generic exclusion rules, this qualifies as business/finance strategy content without sufficient technical depth on Azure service usage, deployment, coding, DevOps, AI, ML, or security. Therefore, per Chapter 3 (Business Strategy and Executive Content – excludes high-level business strategy or financial discussions without technical implementation), no categories apply despite the cloud context."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/kEgPOpb8jZE",
+    "timestamp": "2026-02-10 13:31:46 +00:00",
+    "reason": "No categories found: Excluded all categories due to Generic Exclusion Rules. The content is an announcement for a community AI challenge event ('Agents League'), inviting people to participate, register, and win badges/prizes. There are no technical implementation details, tutorials, or substantive technical content provided. Content only includes event details and registration information, lacking educational or technical depth as required for inclusion. This matches 'Sales Pitches' and 'Promotional content without educational value' in the generic exclusion list.",
+    "collection": "videos"
   }
 ]
