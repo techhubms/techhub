@@ -25690,5 +25690,17 @@
     "reason": "Succesfully added: Assigned the AI category because this content centers on integrating Azure OpenAI (GPT-5-mini) for AI-powered observability agents (AI category, rule 1). The Azure category is warranted because deployment, resource integration, and platform hosting are done on Azure App Service, including managed identity, VNet, and other Azure services (Azure rules 1, 2, 4). DevOps is included because the post covers team workflows, deployment automation with Azure Developer CLI, tools for shared diagnostics, and continuous operations (DevOps rules 1, 5, 6). GitHub Copilot is not assigned because while its usage is referenced in the local scenario, the hosted solution’s primary AI focus is Azure OpenAI and not a Copilot-specific product, and most of the architectural and integration details are about Azure cloud resources, not GitHub Copilot directly. ML is not assigned because, while AI is central, there is no significant discussion of advanced data science, custom ML model engineering, or data analytics workflows as would be required by ML category rules. Security is not assigned since, although authentication, RBAC, and Entra ID are mentioned, the main focus is on observability and team workflow enablement, not security implementation or architecture.",
     "timestamp": "2026-02-11 16:22:41 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-02-11 18:17:42 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet-available-in-visual-studio/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories as the content is centered on GitHub Copilot testing for .NET, which is an AI-powered developer tool (AI rule 2, GitHub Copilot rule 1). 'Coding' is included because the entire feature and article focus on code, unit testing, and developer workflows in C# (Coding rules 1, 2). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' since these areas are not part of the central discussion. The tags were selected to reflect the specific technologies (GitHub Copilot, .NET, Visual Studio), methodologies (unit testing, test automation), and code/testing frameworks mentioned throughout the content."
+  },
+  {
+    "timestamp": "2026-02-11 18:18:10 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/beyond-the-prompt-why-and-how-to-fine-tune-your-own-models/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the article is centrally about applying and customizing AI/LLM models using Microsoft platforms (AI rule 1). Assigned Azure because it details fine-tuning on Azure infrastructure, uses Azure-specific tools, and describes deployment on Azure (Azure rule 1, 4). Assigned ML because it covers data preparation, model fine-tuning, and training processes, which are core ML engineering activities (ML rules 1, 5, 10, 11). 'Coding', 'DevOps', 'Security', or 'GitHub Copilot' categories are not assigned because the focus is not on writing application code, CI/CD, security aspects, or on Copilot. All statements are technical and implementation focused, making it clearly on-topic."
   }
 ]
