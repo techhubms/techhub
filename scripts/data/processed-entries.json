@@ -25744,5 +25744,17 @@
     "timestamp": "2026-02-11 21:12:16 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=LGx8YieBjIA",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-02-11 22:07:28 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/XZ9ZAwVpHxc",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the content centers around evaluation tools for AI models (AI rule 1: Microsoft AI Products/Services, specifically Azure AI and Foundry). Assigned Azure category due to the explicit references to Azure AI and Microsoft Foundry as the core platforms (Azure rule 1: Any Azure Service/Technology). Did not assign ML, Coding, DevOps, GitHub Copilot, or Security as the description and title indicate an emphasis on evaluation tools rather than development frameworks, CI/CD, coding specifics, or security. The content fits the inclusion thresholds for AI and Azure based on the supplied metadata and description."
+  },
+  {
+    "timestamp": "2026-02-11 22:07:50 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/accelerating-ai-adoption-through-microsoft-marketplace/ec-p/4493907#M680",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'AI' category because the content is centered on discovering, deploying, and integrating AI-powered solutions via the Microsoft Marketplace (AI rule 1 and 5). No other categories apply: the post discusses use cases, deployment, and integration, but doesn't detail coding, DevOps, Azure resource management, ML development, or security aspects. The content is sufficiently detailed, in English, and focused on technical implementation for practitioners rather than business executives, so none of the exclusion rules are triggered."
   }
 ]

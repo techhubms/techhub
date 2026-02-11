@@ -1,0 +1,22 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Description": "Assessing evaluation tools. Full video: https://youtu.be/o5o\\_pmMXJUs?si=CVMvCsSM1Fq1AYvh",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2026-02-11T21:15:22+00:00",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/shorts/XZ9ZAwVpHxc",
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-02-11 22:06:22",
+  "Title": "GPT-5 pro Evaluation Challenge #azureai #aievaluation #microsoftfoundry",
+  "OutputDir": "_videos"
+}
