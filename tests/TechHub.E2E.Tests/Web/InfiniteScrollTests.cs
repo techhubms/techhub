@@ -43,7 +43,6 @@ public class InfiniteScrollTests : PlaywrightTestBase
         initialCount.Should().Be(20);
 
         // Act - Scroll to the bottom to trigger next batch load
-        // Uses JS scrollIntoView + scrollBy for reliable IntersectionObserver triggering
         await Page.ScrollToLoadMoreAsync(expectedItemCount: 40);
 
         // Assert
@@ -64,7 +63,6 @@ public class InfiniteScrollTests : PlaywrightTestBase
             new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 100 });
 
         // Act - Keep scrolling until we see the end message or all content is loaded
-        // Uses JS scrollIntoView + scrollBy for reliable IntersectionObserver triggering
         await Page.ScrollToEndOfContentAsync();
 
         // Assert - End message should be visible
@@ -95,7 +93,6 @@ public class InfiniteScrollTests : PlaywrightTestBase
         var firstItemTitle = await Page.Locator(".card").First.Locator("h3").TextContentAsync();
 
         // Act - Load second batch by scrolling to trigger
-        // Uses JS scrollIntoView + scrollBy for reliable IntersectionObserver triggering
         await Page.ScrollToLoadMoreAsync(expectedItemCount: 40);
 
         // Assert - First item should still be there with same title

@@ -76,8 +76,9 @@
         "--no-build",
         "--verbosity",
         "normal",
-        "--filter",
-        "FullyQualifiedName!~E2E"
+        "--",
+        "--filter-not-namespace",
+        "TechHub.E2E.Tests"
       ],
       "problemMatcher": "$msCompile",
       "group": "test",

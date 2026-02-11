@@ -9,5 +9,7 @@
     <NoWarn>$(NoWarn);CA1711</NoWarn>
     <!-- Suppress IDisposable warnings for test fixtures -->
     <NoWarn>$(NoWarn);CA1001</NoWarn>
+    <!-- Use Microsoft Testing Platform (MTP) runner instead of VSTest -->
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
   </PropertyGroup>
 </Project>

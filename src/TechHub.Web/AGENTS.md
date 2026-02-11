@@ -119,7 +119,7 @@ if (!builder.Environment.IsDevelopment())
 
 **CRITICAL PRINCIPLE**: Blazor handles most interactivity server-side. JavaScript is ONLY for:
 
-1. **Browser-native features** Blazor can't access (scroll position, IntersectionObserver, history API)
+1. **Browser-native features** Blazor can't access (scroll position, scroll events, history API)
 2. **Enhanced navigation hooks** (Blazor `enhancedload` event for SPA-style page transitions)
 3. **Third-party libraries** (Highlight.js, Mermaid) that require JavaScript execution
 
@@ -741,7 +741,37 @@ Source: [ASP.NET Core Blazor project structure](https://github.com/dotnet/aspnet
 
 **Path Convention**: Use `/images/` prefix (NOT `/assets/`)
 
-**Multi-Format Support**: All images provided in three formats for optimal performance:
+### Image Loading Strategy
+
+**`loading` attribute rules**:
+
+- **Hero images / above-the-fold content**: Always use eager loading (omit the `loading` attribute entirely). These are LCP (Largest Contentful Paint) candidates and must load immediately.
+- **Below-the-fold images**: Use `loading="lazy"` for deferred loading.
+- **Always include `width` and `height` attributes** on `<img>` tags: Prevents layout shift (CLS) and gives the browser proper dimensions for lazy loading decisions.
+
+```html
+<!-- ✅ CORRECT - Hero image: eager load (default) + explicit dimensions -->
+<img src="hero.jpg" width="1216" height="1500" alt="Hero image" />
+
+<!-- ✅ CORRECT - Below-fold image: lazy load + explicit dimensions -->
+<img src="thumbnail.jpg" loading="lazy" width="400" height="300" alt="Thumbnail" />
+
+<!-- ❌ WRONG - Hero with lazy loading (hurts LCP, breaks headless browser tests) -->
+<img src="hero.jpg" loading="lazy" alt="Hero image" />
+
+<!-- ❌ WRONG - Missing width/height (causes layout shift) -->
+<img src="image.jpg" alt="Image" />
+```
+
+**Why this matters**:
+
+- `loading="lazy"` on hero images delays LCP, harming Core Web Vitals scores
+- `loading="lazy"` does **NOT** trigger reliably in headless browsers (e.g., Playwright) for programmatic scrolls, causing flaky E2E tests
+- Missing `width`/`height` causes Cumulative Layout Shift (CLS) as images load
+
+### Multi-Format Support
+
+All images provided in three formats for optimal performance:
 
 - **JPEG XL (`.jxl`)**: Best compression, modern browsers (Chrome 109+, Edge 109+)
 - **WebP (`.webp`)**: Good compression, wide browser support
@@ -861,9 +891,10 @@ else if (data != null)
 **Configuration**:
 
 - **Items per batch**: 20 items
-- **Prefetch trigger**: `rootMargin: '300px'` (trigger 300px before sentinel is visible)
+- **Prefetch trigger**: 300px margin (trigger when `#scroll-trigger` is within 300px of viewport)
 - **Sentinel element**: `#scroll-trigger` (1px height div, removed when no more items)
-- **Ready signal**: `window.__ioObserverReady` (set `true` after `observer.observe()`, `false` on `dispose()`)
+- **Ready signal**: `window.__scrollListenerReady[triggerId]` (set `true` after scroll listener attached, deleted on `dispose()`)
+- **Mechanism**: Standard scroll events + `getBoundingClientRect()` (same pattern as TOC scroll-spy)
 
 **Pattern**:
 
@@ -906,28 +937,36 @@ else if (data != null)
 
 **JavaScript** (`wwwroot/js/infinite-scroll.js`):
 
+Uses `window.addEventListener('scroll', ...)` with **synchronous** position checking via `getBoundingClientRect()` — deliberately **no** `requestAnimationFrame` throttling. Unlike TOC scroll-spy (which updates UI on every frame), infinite scroll only needs to detect when the trigger is near the viewport and call `LoadNextBatch`, which is already debounced by the Blazor component's `isLoadingMore` flag. Avoiding rAF also ensures this works in headless Chrome with `--disable-gpu` where `requestAnimationFrame` callbacks are never delivered.
+
 ```javascript
-export function observeScrollTrigger(helper, triggerId) {
+export function observeScrollTrigger(helper, triggerElementId) {
     dispose();
-    const trigger = document.getElementById(triggerId);
 
-    observer = new IntersectionObserver((entries) => {
-        if (entries[0]?.isIntersecting && dotnetHelper) {
-            dotnetHelper.invokeMethodAsync('LoadNextBatch');
+    const trigger = document.getElementById(triggerElementId);
+    if (!trigger) return;
+
+    // Synchronous scroll handler — no rAF needed (see rationale above)
+    function handleScroll() {
+        const el = document.getElementById(triggerElementId);
+        if (!el) return;
+        if (el.getBoundingClientRect().top <= window.innerHeight + 300) {
+            helper.invokeMethodAsync('LoadNextBatch');
         }
-    }, { rootMargin: '300px', threshold: 0 });
+    }
 
-    observer.observe(trigger);
-    window.__ioObserverReady = true;  // Signal for E2E tests
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.__scrollListenerReady ??= {};
+    window.__scrollListenerReady[triggerElementId] = true;  // Scoped by triggerId
+    handleScroll(); // Check immediately in case trigger is already visible
 }
 
 export function dispose() {
-    if (observer) { observer.disconnect(); observer = null; }
-    window.__ioObserverReady = false;
+    // removes listener, deletes __scrollListenerReady[activeTriggerId]
 }
 ```
 
-**Ready Signal Pattern**: The `__ioObserverReady` flag follows the same pattern as `__blazorServerReady` and `__scriptsReady`. It solves a timing race: after each batch load, Blazor re-renders and re-attaches the observer in `OnAfterRenderAsync`. Without the signal, E2E tests may scroll before the new observer is attached, causing the IO callback to never fire.
+**Ready Signal Pattern**: The `__scrollListenerReady` object is keyed by `triggerId` so multiple concurrent listeners don't interfere (one component's `dispose()` won't invalidate another's readiness). It follows the same concept as `__blazorServerReady` and `__scriptsReady` — solving the timing race where Blazor re-attaches the scroll listener in `OnAfterRenderAsync` after each batch load, but E2E tests may scroll before the new listener is attached.
 
 ### Conditional JavaScript Loading
 

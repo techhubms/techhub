@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.TestUtilities;
 
-namespace TechHub.E2E.Tests.Repositories;
+namespace TechHub.E2E.Tests.Api;
 
 /// <summary>
 /// E2E Performance tests using HTTP API calls for REALISTIC production measurements.
@@ -28,7 +28,8 @@ namespace TechHub.E2E.Tests.Repositories;
 /// - Works identically whether using SQLite or PostgreSQL
 /// - When Run -Docker is used, automatically tests against PostgreSQL
 /// </summary>
-public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiFactory>
+[Collection("API E2E Tests")]
+public class ContentEndpointsPerformanceTests
 {
     private readonly HttpClient _client;
     private readonly bool _isPostgreSQL;
@@ -43,12 +44,14 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
     private const int SqliteMaxFtsResponseTimeMs = 1000;
     private const int SqliteMaxTagFilterResponseTimeMs = 500;
 
-    public ContentEndpointsPerformanceTests(TechHubE2ETestApiFactory factory)
+    public ContentEndpointsPerformanceTests(ApiCollectionFixture fixture)
     {
-        _client = factory.CreateClient();
+        ArgumentNullException.ThrowIfNull(fixture);
+
+        _client = fixture.Factory.CreateClient();
 
         // Detect database provider from configuration
-        var config = factory.Services.GetRequiredService<IConfiguration>();
+        var config = fixture.Factory.Services.GetRequiredService<IConfiguration>();
         var provider = config["Database:Provider"] ?? "SQLite";
         _isPostgreSQL = provider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCase);
 

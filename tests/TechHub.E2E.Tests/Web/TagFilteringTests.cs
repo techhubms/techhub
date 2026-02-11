@@ -58,34 +58,39 @@ public class TagFilteringTests : PlaywrightTestBase
         // Act 1 - Click first tag button to select it
         var tagButton = Page.Locator(".tag-cloud-item").First;
         var tagText = await tagButton.TextContentAsync();
+        var normalizedTagText = ExtractTagNameFromText(tagText).ToLowerInvariant();
 
         // Click and wait for URL change
         await tagButton.ClickBlazorElementAsync();
 
-        var urlAfterFirstClick = Page.Url;
-        urlAfterFirstClick.Should().Contain("tags=", "First click should add tag to URL");
-
-        // Wait for tag cloud to be ready again after URL change
-        // Blazor Server may re-render the component when URL params change
+        // Wait for URL to contain the tag and for the tag cloud to re-render
+        await Page.WaitForConditionAsync(
+            "(tag) => window.location.href.toLowerCase().includes('tags=' + encodeURIComponent(tag).toLowerCase())",
+            normalizedTagText,
+            new() { Timeout = BlazorHelpers.DefaultNavigationTimeout, PollingInterval = 100 });
         await WaitForTagCloudReadyAsync();
+
+        // Verify the tag button shows selected state before proceeding
+        var selectedTag = Page.Locator(".tag-cloud-item.selected").First;
+        await Assertions.Expect(selectedTag).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
 
         // Act 2 - Click the same tag button again to deselect it
         // Re-acquire locator after Blazor re-render to avoid stale reference
-        tagButton = Page.Locator(".tag-cloud-item").First;
+        tagButton = Page.Locator(".tag-cloud-item.selected").First;
         // On section pages (Filter mode), deselecting the last tag may not trigger a URL change
         // (Blazor considers "no tags" the default state and may skip pushState).
         // Use waitForUrlChange: false to avoid timeout, then wait for Blazor re-render.
         await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
-        // Wait for Blazor to process the toggle and re-render
+        // Wait for Blazor to process the toggle: the selected class should be removed
+        await Assertions.Expect(Page.Locator(".tag-cloud-item.selected")).ToHaveCountAsync(0,
+            new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
         await WaitForTagCloudReadyAsync();
 
         // Assert - URL should no longer contain the tag parameter or be empty
         var urlAfterSecondClick = Page.Url;
         var uri = new Uri(urlAfterSecondClick);
         var tagsParam = System.Web.HttpUtility.ParseQueryString(uri.Query).Get("tags");
-
-        var normalizedTagText = ExtractTagNameFromText(tagText).ToLowerInvariant();
 
         if (string.IsNullOrEmpty(tagsParam))
         {

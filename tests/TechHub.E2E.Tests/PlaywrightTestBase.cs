@@ -42,14 +42,34 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
 
     public virtual async ValueTask DisposeAsync()
     {
-        if (_page != null)
+        // Per Playwright docs: BrowserContext.CloseAsync() gracefully closes all pages
+        // belonging to the context, ensuring page close events fire properly.
+        // This must happen before Browser.CloseAsync() in the fixture.
+        // DisposeAsync() releases underlying resources after graceful close.
+        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        try
         {
-            await _page.CloseAsync();
+            if(_page != null)
+            {
+                await _page.CloseAsync().WaitAsync(cts.Token);
+            }
+        }
+        catch (Exception)
+        {
+            // Best-effort context cleanup
         }
 
-        if (_context != null)
+        try
         {
-            await _context.DisposeAsync();
+            if (_context != null)
+            {
+                await _context.CloseAsync().WaitAsync(cts.Token);
+                await _context.DisposeAsync().AsTask().WaitAsync(cts.Token);
+            }
+        }
+        catch (Exception)
+        {
+            // Best-effort context cleanup
         }
     }
 }

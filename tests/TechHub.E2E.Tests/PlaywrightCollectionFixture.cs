@@ -40,7 +40,14 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
     {
         if (Browser != null)
         {
-            await Browser.CloseAsync();
+            try
+            {
+                await Browser.CloseAsync();
+            }
+            catch (Exception)
+            {
+                // Best-effort browser cleanup
+            }
         }
 
         Playwright?.Dispose();

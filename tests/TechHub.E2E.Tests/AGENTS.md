@@ -215,7 +215,7 @@ API E2E tests are organized by endpoint group for maintainability:
 
 **Total**: 215 E2E test cases across all test files.
 
-Note: Test count includes common component tests, page-specific tests, feature tests (infinite scroll, tag filtering, date range slider, dynamic tag counts, keyboard navigation), accessibility tests, API E2E tests, and IntersectionObserver proof tests.
+Note: Test count includes common component tests, page-specific tests, feature tests (infinite scroll, tag filtering, date range slider, dynamic tag counts, keyboard navigation), accessibility tests, and API E2E tests.
 
 ### Shared Page Pattern
 
@@ -403,7 +403,7 @@ await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 | Browser paint settle | `Task.Delay(100)` | `WaitForFunctionAsync` with double `requestAnimationFrame` |
 | Infinite scroll next batch | `Mouse.WheelAsync()` or `loading="eager"` | `Page.ScrollToLoadMoreAsync(expectedCount)` |
 | Infinite scroll end | Manual wheel scrolling loop | `Page.ScrollToEndOfContentAsync()` |
-| Lazy-loaded element visible | `loading="eager"` attribute hack | `element.ScrollIntoViewAsync()` or `element.ScrollIntoViewIfNeededAsync()` |
+| Lazy-loaded element visible | `loading="eager"` attribute hack | Fix in source: remove `loading="lazy"` for above-fold/hero images (see Pattern 10) |
 | Focus after navigation reset | `Locator(":focus").EvaluateAsync()` | `WaitForConditionAsync` + `Page.EvaluateAsync()` |
 | Custom timeout value | `Timeout = 10000` (hardcoded) | `BlazorHelpers.DefaultAssertionTimeout` (5000ms) |
 
@@ -530,20 +530,29 @@ await Page.WaitForFunctionAsync(
 await Page.WaitForBlazorReadyAsync();
 ```
 
-#### Pattern 8: Infinite Scroll (IntersectionObserver)
+#### Pattern 8: Infinite Scroll (scroll event based)
 
-IntersectionObserver fires callbacks during rendering frames. In headless Chrome, IO works correctly — flaky tests are caused by a **timing race**, not a capability issue. The race: Blazor re-attaches the observer in `OnAfterRenderAsync` after each batch load, but tests may scroll before the new observer is attached.
+Infinite scroll uses standard scroll events with `getBoundingClientRect()` — the same pattern as the TOC scroll-spy. When the user scrolls near the `#scroll-trigger` element (within 300px), the JS module calls Blazor's `LoadNextBatch`.
 
-**Solution**: `infinite-scroll.js` sets `window.__ioObserverReady = true` after `observer.observe()` and resets it to `false` in `dispose()`. Tests wait for this signal before scrolling.
+The **timing race** to watch for: Blazor re-attaches the scroll listener in `OnAfterRenderAsync` after each batch load, but tests may scroll before the new listener is attached. The `__scrollListenerReady[triggerId]` signal solves this (scoped per trigger element to avoid interference between concurrent listeners).
+
+**⚠️ CRITICAL: `scrollTo()` does NOT fire scroll events in headless Chrome**
+
+Unlike the TOC tests which use `Mouse.WheelAsync()`, infinite scroll helpers use `window.scrollTo()` for precise positioning. However, `window.scrollTo()` does **NOT** fire `scroll` events in headless Chrome/Playwright. The scroll helpers work around this by explicitly dispatching a scroll event after each `scrollTo()` call:
+
+```javascript
+// Inside BlazorHelpers scroll helpers:
+window.scrollTo(0, targetY);
+window.dispatchEvent(new Event('scroll'));  // ← REQUIRED for headless Chrome
+```
+
+This is already handled in `ScrollToLoadMoreAsync` and `ScrollToEndOfContentAsync`. If you ever write custom scroll logic for infinite scroll tests, you **MUST** include `window.dispatchEvent(new Event('scroll'))` after any `window.scrollTo()` call.
 
 ```csharp
-// ❌ WRONG - scroll before IO observer is attached
+// ❌ WRONG - scroll before listener is attached
 await Page.Mouse.WheelAsync(0, scrollHeight);
 
-// ❌ WRONG - use loading="eager" to bypass lazy loading
-// This masks the real issue and disables the feature being tested
-
-// ✅ CORRECT - use ScrollToLoadMoreAsync (waits for __ioObserverReady)
+// ✅ CORRECT - use ScrollToLoadMoreAsync (waits for __scrollListenerReady['scroll-trigger'])
 await Page.ScrollToLoadMoreAsync(expectedItemCount: 40);
 
 // ✅ CORRECT - use ScrollToEndOfContentAsync for end-of-collection tests
@@ -552,13 +561,14 @@ await Page.ScrollToEndOfContentAsync();
 
 **How the scroll helpers work** (see `BlazorHelpers.cs`):
 
-1. Wait for `window.__ioObserverReady === true` (observer attached)
-2. Scroll `#scroll-trigger` into view with `scrollIntoView({ behavior: 'instant' })`
-3. Double `requestAnimationFrame` to ensure IO callback is delivered
-4. Wait for new items to appear in the DOM
-5. Loop until target count reached or end-of-content marker appears
+1. Wait for `window.__scrollListenerReady?.['scroll-trigger'] === true` (scroll listener attached)
+2. Use `WaitForFunctionAsync` with `window.scrollTo()` + `window.dispatchEvent(new Event('scroll'))` on each poll iteration
+3. The dispatched scroll event triggers the infinite-scroll JS handler
+4. JS checks trigger position via `getBoundingClientRect()` → calls `LoadNextBatch`
+5. Wait for new items to appear in the DOM
+6. Loop until target count reached or end-of-content marker appears
 
-**Key insight**: Never use `Mouse.WheelAsync()` for infinite scroll tests — use `scrollIntoView()` on the `#scroll-trigger` sentinel instead. `scrollIntoView` guarantees the sentinel enters the viewport, triggering the IO callback reliably.
+**Why `dispatchEvent` instead of `Mouse.WheelAsync()`?** The infinite scroll helpers use `scrollTo()` for deterministic positioning (scroll to exact bottom), whereas TOC tests use `Mouse.WheelAsync()` because they need delta-based scrolling to specific headings. Both approaches work, but `scrollTo()` requires the explicit `dispatchEvent` workaround in headless browsers.
 
 #### Pattern 9: Focus Detection After Programmatic Focus Reset
 
@@ -574,6 +584,37 @@ await Page.Keyboard.PressAsync("Tab");
 await Page.WaitForConditionAsync(
     "() => document.activeElement && document.activeElement !== document.body");
 var focusedTag = await Page.EvaluateAsync<string>("() => document.activeElement.tagName");
+```
+
+#### Pattern 10: Lazy-Loaded Images in Headless Browsers
+
+`loading="lazy"` on `<img>` tags does **NOT** work reliably in headless Chrome when elements are scrolled into view programmatically. The browser's lazy loading heuristic requires real user scroll gestures and sufficient element dimensions to trigger.
+
+**Root cause**: In headless mode, lazy loading depends on the IntersectionObserver internally, which may not fire for programmatic scrolls (even with explicit `width`/`height` attributes on the image).
+
+**The fix is always in the source code, not in tests**:
+
+```html
+<!-- ❌ WRONG - Hero/above-fold images should never be lazy-loaded -->
+<img src="image.jpg" loading="lazy" />
+
+<!-- ✅ CORRECT - Eager load (default) + explicit dimensions for layout stability -->
+<img src="image.jpg" width="1216" height="1500" />
+```
+
+**Rules**:
+
+- **Hero images** and **above-the-fold content**: Always use eager loading (omit `loading` attribute entirely). These are LCP (Largest Contentful Paint) candidates and should load immediately for performance.
+- **Below-the-fold images**: `loading="lazy"` is fine for production users, but be aware tests may need `ScrollIntoViewAsync()` to trigger loading.
+- **Always include `width` and `height` attributes**: Prevents layout shift (CLS) and gives the browser dimensions for lazy loading decisions.
+
+**Test pattern for eagerly-loaded images**:
+
+```csharp
+// Wait for image to fully load (eager images load with the page)
+await Page.WaitForConditionAsync(
+    "() => { const img = document.querySelector('.hero img');" +
+    "return img && img.complete === true && img.naturalHeight > 0; }");
 ```
 
 #### Prefer Playwright Expect Assertions
@@ -628,8 +669,8 @@ isVisible.Should().BeTrue();
 | `GetHrefAsync()` | Get href attribute from element | 5s |
 | `WaitForSelectorWithTimeoutAsync()` | Wait for selector with timeout | 5s |
 | `WaitForConditionAsync()` | Wait for JS condition (string or options overloads) | 5s |
-| `ScrollToLoadMoreAsync()` | Scroll infinite scroll until item count reached | 15s |
-| `ScrollToEndOfContentAsync()` | Scroll infinite scroll until end-of-content marker | 30s |
+| `ScrollToLoadMoreAsync()` | Scroll infinite scroll until item count reached | 5s |
+| `ScrollToEndOfContentAsync()` | Scroll infinite scroll until end-of-content marker | 5s |
 | `ScrollIntoViewAsync()` | Scroll element into viewport via JS `scrollIntoView()` | - |
 | `ScrollIntoViewIfNeededAsync()` | Scroll element into viewport (native Playwright) | - |
 
@@ -958,7 +999,7 @@ Console.WriteLine($"Classes: {classes}");
 ### Related Files
 
 - [toc-scroll-spy.js](../../src/TechHub.Web/wwwroot/js/toc-scroll-spy.js) - Production TOC scroll-spy implementation
-- [infinite-scroll.js](../../src/TechHub.Web/wwwroot/js/infinite-scroll.js) - IntersectionObserver-based infinite scroll with `__ioObserverReady` signal
+- [infinite-scroll.js](../../src/TechHub.Web/wwwroot/js/infinite-scroll.js) - Scroll-event-based infinite scroll with `__scrollListenerReady[triggerId]` signal
 - [BlazorHelpers.cs](Helpers/BlazorHelpers.cs) - Scroll synchronization helpers (`ClickAndWaitForScrollAsync`, `ScrollToLoadMoreAsync`, `ScrollToEndOfContentAsync`)
 - [SidebarTocTests.cs](Web/SidebarTocTests.cs) - Reference implementation for TOC tests with native scrolling
 - [InfiniteScrollTests.cs](Web/InfiniteScrollTests.cs) - Infinite scroll pagination tests

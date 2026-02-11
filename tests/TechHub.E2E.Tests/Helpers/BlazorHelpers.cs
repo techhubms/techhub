@@ -128,16 +128,15 @@ public static class BlazorHelpers
     // ============================================================================
 
     /// <summary>
-    /// Scrolls the page to trigger IntersectionObserver-based infinite scroll and waits for
-    /// the expected number of items to load.
+    /// Scrolls the page to trigger scroll-event-based infinite scroll and waits
+    /// for the expected number of items to load.
     ///
-    /// Strategy:
-    /// 1. Wait for __ioObserverReady (set by infinite-scroll.js when observer is attached)
-    /// 2. Scroll #scroll-trigger into view with scrollIntoView
-    /// 3. Wait for a double requestAnimationFrame to ensure Chrome processes the rendering
-    ///    frame that delivers IntersectionObserver entries
-    /// 4. Poll for the expected item count (Blazor re-renders after LoadNextBatch)
-    /// 5. After each batch loads, wait for __ioObserverReady again (Blazor re-attaches observer)
+    /// Uses <c>window.scrollTo</c> to scroll to the bottom of the page on each poll
+    /// iteration. After scrolling, a synthetic <c>scroll</c> event is dispatched because
+    /// headless Chrome does not fire scroll events from programmatic <c>scrollTo</c> calls.
+    /// The infinite-scroll.js handler listens for these events and uses
+    /// <c>getBoundingClientRect</c> to check whether the trigger element is near the
+    /// viewport, invoking <c>LoadNextBatch</c> when it is.
     /// </summary>
     /// <param name="page">The page to scroll</param>
     /// <param name="expectedItemCount">Minimum number of items expected after scroll</param>
@@ -146,78 +145,35 @@ public static class BlazorHelpers
     public static async Task ScrollToLoadMoreAsync(
         this IPage page,
         int expectedItemCount,
-        int timeoutMs = 15_000,
-        string itemSelector = ".card")
+        int timeoutMs = DefaultAssertionTimeout,
+        string itemSelector = ".card",
+        string triggerId = "scroll-trigger")
     {
-        var deadline = DateTime.UtcNow.AddMilliseconds(timeoutMs);
+        // Wait for the scroll listener to be attached before scrolling.
+        // Readiness is scoped by triggerId so multiple concurrent listeners don't interfere.
+        await page.WaitForConditionAsync(
+            $"() => window.__scrollListenerReady?.['{triggerId}'] === true",
+            timeoutMs);
 
-        while (DateTime.UtcNow < deadline)
-        {
-            // Check if we already have enough items
-            var currentCount = await page.EvaluateAsync<int>(
-                $"() => document.querySelectorAll('{itemSelector}').length");
-            if (currentCount >= expectedItemCount)
-            {
-                return;
-            }
-
-            // Wait for the IntersectionObserver to be attached by Blazor's OnAfterRenderAsync.
-            // infinite-scroll.js sets window.__ioObserverReady = true after observer.observe().
-            // This eliminates the race between "Blazor re-attaches observer" and "test scrolls".
-            var remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
-            if (remainingMs <= 0)
-            {
-                break;
-            }
-
-            await page.WaitForConditionAsync(
-                "() => window.__ioObserverReady === true",
-                Math.Min(remainingMs, 5000));
-
-            // Scroll #scroll-trigger into view + double rAF to force a rendering frame.
-            // IntersectionObserver entries are delivered during rendering frames.
-            await page.EvaluateAsync(@"() => {
-                const trigger = document.getElementById('scroll-trigger');
-                if (trigger) trigger.scrollIntoView({ behavior: 'instant', block: 'end' });
-            }");
-            await page.EvaluateAsync(
-                "() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))");
-
-            // Wait for Blazor to process LoadNextBatch and re-render with new items.
-            // After re-render, __ioObserverReady is reset to false then set to true again
-            // when the new observer is attached — the next loop iteration waits for it.
-            try
-            {
-                remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
-                if (remainingMs <= 0)
-                {
-                    break;
-                }
-
-                await page.WaitForConditionAsync(
-                    $"() => document.querySelectorAll('{itemSelector}').length >= {expectedItemCount}",
-                    new PageWaitForFunctionOptions { Timeout = Math.Min(remainingMs, 5000), PollingInterval = 100 });
-                return;
-            }
-            catch (TimeoutException)
-            {
-                // Not loaded yet — scroll again
-            }
-        }
-
-        var finalCount = await page.EvaluateAsync<int>(
-            $"() => document.querySelectorAll('{itemSelector}').length");
-        if (finalCount < expectedItemCount)
-        {
-            throw new TimeoutException(
-                $"Infinite scroll failed: expected at least {expectedItemCount} items but found {finalCount} after {timeoutMs}ms.");
-        }
+        // On each poll: scroll to bottom and dispatch a synthetic scroll event.
+        // Headless Chrome does not fire scroll events from programmatic scrollTo,
+        // so the explicit dispatchEvent is required for the infinite-scroll.js handler
+        // to detect the trigger element's position via getBoundingClientRect().
+        await page.WaitForFunctionAsync(
+            @"(expectedCount) => {
+                window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
+                window.dispatchEvent(new Event('scroll'));
+                return document.querySelectorAll('" + itemSelector + @"').length >= expectedCount;
+            }",
+            expectedItemCount,
+            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 200 });
     }
 
     /// <summary>
     /// Scrolls repeatedly until an end-of-content element appears or timeout is reached.
     /// Used for testing that infinite scroll reaches the end of a finite collection.
-    /// Uses the same __ioObserverReady signal as ScrollToLoadMoreAsync.
+    /// Uses the same <c>window.scrollTo</c> + synthetic event strategy as
+    /// <see cref="ScrollToLoadMoreAsync"/>.
     /// </summary>
     /// <param name="page">The page to scroll</param>
     /// <param name="endSelector">CSS selector for the end-of-content marker (default: ".end-of-content")</param>
@@ -225,77 +181,26 @@ public static class BlazorHelpers
     public static async Task ScrollToEndOfContentAsync(
         this IPage page,
         string endSelector = ".end-of-content",
-        int timeoutMs = 30_000)
+        int timeoutMs = DefaultAssertionTimeout,
+        string triggerId = "scroll-trigger")
     {
-        var deadline = DateTime.UtcNow.AddMilliseconds(timeoutMs);
+        // Wait for the scroll listener to be attached before scrolling.
+        // Readiness is scoped by triggerId so multiple concurrent listeners don't interfere.
+        await page.WaitForConditionAsync(
+            $"() => window.__scrollListenerReady?.['{triggerId}'] === true",
+            timeoutMs);
 
-        while (DateTime.UtcNow < deadline)
-        {
-            // Check if end marker exists
-            var endExists = await page.EvaluateAsync<bool>(
-                $"() => document.querySelector('{endSelector}') !== null");
-            if (endExists)
-            {
-                return;
-            }
-
-            // Wait for IO observer to be attached before scrolling
-            var remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
-            if (remainingMs <= 0)
-            {
-                break;
-            }
-
-            // If scroll-trigger exists, wait for observer; otherwise content may have ended
-            var hasTrigger = await page.EvaluateAsync<bool>(
-                "() => document.getElementById('scroll-trigger') !== null");
-            if (!hasTrigger)
-            {
-                // No trigger means content has ended — check for end marker one more time
-                endExists = await page.EvaluateAsync<bool>(
-                    $"() => document.querySelector('{endSelector}') !== null");
-                if (endExists)
-                {
-                    return;
-                }
-
-                break;
-            }
-
-            await page.WaitForConditionAsync(
-                "() => window.__ioObserverReady === true",
-                Math.Min(remainingMs, 5000));
-
-            // Scroll trigger into view + double rAF
-            await page.EvaluateAsync(@"() => {
-                const trigger = document.getElementById('scroll-trigger');
-                if (trigger) trigger.scrollIntoView({ behavior: 'instant', block: 'end' });
-            }");
-            await page.EvaluateAsync(
-                "() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))");
-
-            // Wait for content to load
-            try
-            {
-                remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
-                if (remainingMs <= 0)
-                {
-                    break;
-                }
-
-                await page.WaitForConditionAsync(
-                    $"() => document.querySelector('{endSelector}') !== null",
-                    new PageWaitForFunctionOptions { Timeout = Math.Min(remainingMs, 5000), PollingInterval = 100 });
-                return;
-            }
-            catch (TimeoutException)
-            {
-                // Not at end yet, keep scrolling
-            }
-        }
-
-        throw new TimeoutException(
-            $"Infinite scroll did not reach end of content ('{endSelector}') within {timeoutMs}ms.");
+        // On each poll: scroll to bottom and dispatch a synthetic scroll event.
+        // See ScrollToLoadMoreAsync for why the explicit dispatchEvent is required.
+        await page.WaitForFunctionAsync(
+            @"() => {
+                if (document.querySelector('" + endSelector + @"')) return true;
+                window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
+                window.dispatchEvent(new Event('scroll'));
+                return false;
+            }",
+            null, // no JS arg — must be explicit so options parameter is bound correctly
+            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 200 });
     }
 
     // ============================================================================

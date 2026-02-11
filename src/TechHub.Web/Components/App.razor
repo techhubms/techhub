@@ -330,9 +330,9 @@
             }
         }
 
-        // Load infinite scroll observer for content grids
+        // Load infinite scroll listener for content grids
         async function loadInfiniteScroll(scrollTrigger) {
-            // Clean up previous observer on navigation
+            // Clean up previous scroll listener on navigation
             if (loaded.infiniteScroll) {
                 try {
                     loaded.infiniteScroll.dispose();

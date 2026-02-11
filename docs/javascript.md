@@ -6,7 +6,7 @@ Tech Hub uses a minimal JavaScript approach where Blazor handles most interactiv
 
 JavaScript is ONLY for:
 
-1. **Browser-native features** Blazor can't access (scroll position, IntersectionObserver, history API)
+1. **Browser-native features** Blazor can't access (scroll position, scroll events, history API)
 2. **Enhanced navigation hooks** (Blazor `enhancedload` event for SPA-style page transitions)
 3. **Third-party libraries** (Highlight.js, Mermaid) that require JavaScript execution
 

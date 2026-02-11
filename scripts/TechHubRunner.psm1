@@ -294,13 +294,24 @@ function Run {
     }
 
     # Run external command, display output, return $true if exit code is 0
+    # Uses Start-Process so the child process inherits the terminal directly
+    # (no PowerShell pipeline involved). This preserves ANSI color output
+    # and prevents output from being captured as part of the function's return value.
     function Invoke-ExternalCommand {
         param(
             [string]$Command,
             [string[]]$Arguments
         )
-        & $Command @Arguments | Out-Host
-        return $LASTEXITCODE -eq 0
+        $proc = Start-Process -FilePath $Command -ArgumentList $Arguments -NoNewWindow -Wait -PassThru
+        return $proc.ExitCode -eq 0
+    }
+
+    # Get the compiled test binary path from a .csproj path
+    function Get-TestBinaryPath {
+        param([string]$CsprojPath)
+        $projectDir = Split-Path $CsprojPath -Parent
+        $projectName = [System.IO.Path]::GetFileNameWithoutExtension($CsprojPath)
+        return Join-Path $projectDir "bin/$configuration/net10.0/$projectName"
     }
 
     # Resolve a test project name to its full .csproj path
@@ -618,59 +629,70 @@ function Run {
             }
         }
         
-        # Determine what to test: specific project or solution
-        $testTarget = $solutionPath
-        $filterParts = @("FullyQualifiedName!~E2E")
+        # Determine test targets: specific project or all non-E2E projects
+        $testTargets = @()
+        $testsDir = Join-Path $workspaceRoot "tests"
         
         if ($TestProject) {
-            # Try to resolve TestProject to a specific .csproj file
+            # Specific project requested
             $projectPath = Resolve-TestProjectPath $TestProject
             if ($projectPath) {
-                $testTarget = $projectPath
-                # When testing a specific project, no need for E2E exclusion filter
-                $filterParts = @()
+                $testTargets += $projectPath
                 Write-Info "Testing project: $(Split-Path $projectPath -Leaf)"
             }
             else {
-                # Fall back to filter-based approach if project not found
-                $filterParts += "FullyQualifiedName~$TestProject"
+                Write-Error "Could not resolve test project: $TestProject"
+                return $false
+            }
+        }
+        else {
+            # Run non-E2E test projects in fixed order: inner layers first, outer layers last
+            # This ensures core failures surface before dependent layer tests run
+            $projectOrder = @(
+                "TechHub.Core.Tests",
+                "TechHub.Infrastructure.Tests",
+                "TechHub.Api.Tests",
+                "TechHub.Web.Tests"
+            )
+            foreach ($projectName in $projectOrder) {
+                $csprojPath = Join-Path $testsDir "$projectName/$projectName.csproj"
+                if (Test-Path $csprojPath) {
+                    $testTargets += $csprojPath
+                }
             }
         }
         
+        # Build extra filter args
+        $extraFilters = @()
         if ($TestName) {
-            $filterParts += "FullyQualifiedName~$TestName"
+            $extraFilters += @("--filter-method", "*$TestName*")
         }
         
-        # Build test arguments
-        $testArgs = @(
-            "test",
-            $testTarget,
-            "--configuration", $configuration,
-            "--no-build",
-            "--settings", (Join-Path $workspaceRoot ".runsettings"),
-            "--blame-hang-timeout", "1m"
-        )
-        
-        # Add filter only if we have filter parts
-        if ($filterParts.Count -gt 0) {
-            $filter = $filterParts -join "&"
-            $testArgs += "--filter"
-            $testArgs += $filter
-        }
-        
-        $success = Invoke-ExternalCommand "dotnet" $testArgs
-        
-        if (-not $success) {
-            Write-Host ""
-            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  ✗ UNIT/INTEGRATION TESTS FAILED - Cannot continue           ║" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-            Write-Host ""
-            Write-Host "  Tests failed - fix the failing tests above" -ForegroundColor Yellow
-            Write-Host ""
-            return $false
+        # Run each test project
+        foreach ($testTarget in $testTargets) {
+            $projectName = [System.IO.Path]::GetFileNameWithoutExtension($testTarget)
+            Write-Info "Running: $projectName"
+            
+            $binaryPath = Get-TestBinaryPath $testTarget
+            $testArgs = @("--output", "Detailed")
+            if ($extraFilters.Count -gt 0) {
+                $testArgs += $extraFilters
+            }
+            
+            $success = Invoke-ExternalCommand $binaryPath $testArgs
+            
+            if (-not $success) {
+                Write-Host ""
+                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "║  ✗ UNIT/INTEGRATION TESTS FAILED - Cannot continue           ║" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                Write-Host ""
+                Write-Host "  $projectName failed - fix the failing tests above" -ForegroundColor Yellow
+                Write-Host ""
+                return $false
+            }
         }
         
         Write-Host ""
@@ -1004,24 +1026,16 @@ function Run {
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
         Write-Host ""
         
-        # Build Phase 1 filter: PerformanceTests + optional TestName
-        $phase1Filter = "FullyQualifiedName~PerformanceTests"
-        if ($TestName) {
-            $phase1Filter = "FullyQualifiedName~PerformanceTests&FullyQualifiedName~$TestName"
-        }
-        
+        # Run ALL performance tests - validates API endpoints are responsive and within thresholds
+        # This also serves as warmup before the full E2E suite runs
+        $e2eBinaryPath = Get-TestBinaryPath $e2eTestProjectPath
         $apiPerfTestArgs = @(
-            "test",
-            $e2eTestProjectPath,
-            "--configuration", $configuration,
-            "--no-build",
-            "--settings", (Join-Path $workspaceRoot ".runsettings"),
-            "--logger", "console;verbosity=detailed",
-            "--blame-hang-timeout", "1m",
-            "--filter", $phase1Filter
+            "--output", "Detailed",
+            "--show-live-output", "on",
+            "--filter-class", "*PerformanceTests*"
         )
         
-        $apiPerfSuccess = Invoke-ExternalCommand "dotnet" $apiPerfTestArgs
+        $apiPerfSuccess = Invoke-ExternalCommand $e2eBinaryPath $apiPerfTestArgs
         
         if (-not $apiPerfSuccess) {
             Write-Host ""
@@ -1052,24 +1066,19 @@ function Run {
         Write-Host ""
             
         $e2eTestArgs = @(
-            "test",
-            $e2eTestProjectPath,
-            "--configuration", $configuration,
-            "--no-build",
-            "--settings", (Join-Path $workspaceRoot ".runsettings"),
-            "--logger", "console;verbosity=detailed",
-            "--blame-hang-timeout", "1m",
-            "--filter", "FullyQualifiedName!~PerformanceTests"
+            "--output", "Detailed",
+            "--show-live-output", "on",
+            "--filter-not-class", "*PerformanceTests*"
         )
             
         # Add additional name filter if specified
         if ($TestName) {
-            # Combine with existing PerformanceTests exclusion
-            $e2eTestArgs[-1] = "FullyQualifiedName!~PerformanceTests&FullyQualifiedName~$TestName"
+            $e2eTestArgs += "--filter-method"
+            $e2eTestArgs += "*$TestName*"
         }
             
         # Run E2E tests
-        $e2eSuccess = Invoke-ExternalCommand "dotnet" $e2eTestArgs
+        $e2eSuccess = Invoke-ExternalCommand $e2eBinaryPath $e2eTestArgs
             
         if (-not $e2eSuccess) {
             Write-Host ""
@@ -1149,7 +1158,7 @@ function Run {
                     
                     # ONLY kill if it's a test-related process (vstest, testhost, dotnet test)
                     # DO NOT kill MSBuild workers, build processes, or watch processes
-                    if ($cmdLine -match "vstest|testhost|dotnet.*test") {
+                    if ($cmdLine -match "vstest|testhost|dotnet.*test|TechHub\..*\.Tests") {
                         if (-not $Silent) {
                             $parentPid = ps -o ppid= -p $proc.Id 2>$null | ForEach-Object { $_.Trim() }
                             Write-Info ("Killing orphaned test process: PID {0} (Parent: {1})" -f $proc.Id, $parentPid)

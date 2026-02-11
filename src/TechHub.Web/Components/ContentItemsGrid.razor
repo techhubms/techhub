@@ -121,7 +121,7 @@
     // JS interop
     private IJSObjectReference? scrollModule;
     private DotNetObjectReference<ContentItemsGrid>? dotNetRef;
-    private bool needsObserverSetup;
+    private bool needsScrollListenerSetup;
 
     // State persistence (prevents double-fetch during prerender -> interactive transition)
     private PersistingComponentStateSubscription _persistSubscription;
@@ -151,7 +151,7 @@
             currentBatch = restored.CurrentBatch;
             hasMoreContent = restored.HasMoreContent;
             isLoading = false;
-            needsObserverSetup = hasMoreContent;
+            needsScrollListenerSetup = hasMoreContent;
             Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
         }
         else
@@ -214,15 +214,15 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        // Setup observer on first render, or re-attach when filters change
-        if ((firstRender || needsObserverSetup) && hasMoreContent)
+        // Setup scroll listener on first render, or re-attach when filters change
+        if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
         {
-            needsObserverSetup = false;
-            await SetupScrollObserver();
+            needsScrollListenerSetup = false;
+            await SetupScrollListener();
         }
     }
 
-    private async Task SetupScrollObserver()
+    private async Task SetupScrollListener()
     {
         try
         {
@@ -233,10 +233,10 @@
             // Only create dotNetRef once (avoid memory leak)
             dotNetRef ??= DotNetObjectReference.Create(this);
 
-            // (Re-)attach observer to current scroll-trigger element
-            // JS dispose() handles cleanup of previous observer
+            // (Re-)attach scroll listener to current scroll-trigger element
+            // JS dispose() handles cleanup of previous listener
             await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
-            Logger.LogDebug("Infinite scroll observer attached");
+            Logger.LogDebug("Infinite scroll listener attached");
         }
         catch (Exception ex)
         {
@@ -265,8 +265,8 @@
         finally
         {
             isLoading = false;
-            // Request observer setup in next OnAfterRenderAsync (where JS interop is allowed)
-            needsObserverSetup = hasMoreContent;
+            // Request scroll listener setup in next OnAfterRenderAsync (where JS interop is allowed)
+            needsScrollListenerSetup = hasMoreContent;
             StateHasChanged();
         }
     }
@@ -322,9 +322,9 @@
         finally
         {
             isLoadingMore = false;
-            // Re-attach observer after render if there's more content
+            // Re-attach scroll listener after render if there's more content
             // (Blazor may have replaced the scroll-trigger DOM element)
-            needsObserverSetup = hasMoreContent;
+            needsScrollListenerSetup = hasMoreContent;
             StateHasChanged();
         }
     }

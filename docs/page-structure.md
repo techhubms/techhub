@@ -312,7 +312,7 @@ Long content lists use infinite scroll for progressive loading.
 ### Configuration
 
 - **Items per batch**: 20 items
-- **Prefetch trigger**: 80% scroll threshold (load more when user is 80% down the page)
+- **Trigger margin**: 300px above viewport bottom (loads next batch before user reaches the end)
 - **URL parameter preservation**: Maintains filters/search when loading more
 
 ### Pattern
@@ -327,25 +327,25 @@ Long content lists use infinite scroll for progressive loading.
 
 @if (hasMore)
 {
-    <div id="load-more-trigger" style="height: 1px;"></div>
+    <div id="scroll-trigger" style="height: 1px;"></div>
 }
 
 @code {
     private List<ContentItem> visibleItems = new();
     private bool hasMore = true;
     private const int PageSize = 20;
-    
+
     [JSInvokable]
-    public async Task LoadMore()
+    public async Task LoadNextBatch()
     {
         var nextBatch = await ApiClient.GetContentAsync(
             section: sectionName,
             page: currentPage++,
             pageSize: PageSize);
-        
+
         if (nextBatch.Count < PageSize)
             hasMore = false;
-        
+
         visibleItems.AddRange(nextBatch);
         StateHasChanged();
     }
@@ -354,19 +354,24 @@ Long content lists use infinite scroll for progressive loading.
 
 ### JavaScript
 
-Uses IntersectionObserver to detect when the trigger element becomes visible:
+Uses scroll events and `getBoundingClientRect()` to detect when the trigger element
+is near the viewport bottom (same pattern as the TOC scroll-spy). Sets
+`window.__scrollListenerReady[triggerId] = true` when the listener is attached so
+E2E tests can wait for it before scrolling. Readiness is scoped by trigger element ID
+so multiple concurrent listeners don't interfere.
 
 ```javascript
-window.setupInfiniteScroll = (elementId, dotNetRef) => {
-    const trigger = document.getElementById(elementId);
-    const observer = new IntersectionObserver(async (entries) => {
-        if (entries[0].isIntersecting) {
-            await dotNetRef.invokeMethodAsync('LoadMore');
-        }
-    }, { threshold: 0.8 }); // 80% visible
-    
-    observer.observe(trigger);
-};
+function handleScroll() {
+    const trigger = document.getElementById(triggerId);
+    if (!trigger) return;
+
+    const rect = trigger.getBoundingClientRect();
+    if (rect.top <= window.innerHeight + 300) {
+        dotnetHelper.invokeMethodAsync('LoadNextBatch');
+    }
+}
+
+window.addEventListener('scroll', handleScroll, { passive: true });
 ```
 
 ## Implementation Reference

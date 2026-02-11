@@ -1,0 +1,4 @@
+{
+  "$schema": "https://xunit.net/schema/current/testconfig.mtp.schema.json",
+  "methodDisplay": "classAndMethod"
+}
