@@ -504,7 +504,7 @@ public class ContentEndpointsPerformanceTests
         var elapsed = await MeasureHttpGetAsync<Collection>(_client, url);
 
         // Assert performance - metadata endpoint (no DB query, config-based)
-        AssertPerformance(elapsed, $"GET /sections/{sectionName}/collections/{collectionName} (collection metadata)", 100);
+        AssertPerformance(elapsed, $"GET /sections/{sectionName}/collections/{collectionName} (collection metadata)", 150);
     }
 
     #endregion

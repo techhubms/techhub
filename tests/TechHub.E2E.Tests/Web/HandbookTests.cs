@@ -41,16 +41,12 @@ public class HandbookTests : PlaywrightTestBase
         // Check book cover image
         var bookCover = hero.Locator("img");
 
-        // Scroll hero into view so lazy images load.
-        // Use a longer timeout because lazy-loaded images need to:
-        // 1. Enter the viewport (triggers browser's lazy loading)
-        // 2. Fetch the image over the network
-        // 3. Decode and render (naturalHeight becomes > 0)
-        await bookCover.ScrollIntoViewAsync();
+        // The hero image loads eagerly (no loading="lazy") so it should be
+        // fully loaded by the time Playwright sees the page.
         await Page.WaitForConditionAsync(
             "() => { const img = document.querySelector('.handbook-hero img'); return img?.complete === true && img?.naturalHeight > 0; }",
-            DefaultNavigationTimeout,
-            pollingIntervalMs: 250);
+            DefaultAssertionTimeout,
+            pollingIntervalMs: 200);
 
         // Verify image attributes
         var src = await bookCover.GetAttributeAsync("src");

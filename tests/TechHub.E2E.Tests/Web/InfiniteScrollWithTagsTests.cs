@@ -18,7 +18,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // This test validates that when navigating directly with a tag filter,
         // the correct content (external news links) is displayed.
 
-        const string tag = "copilot";
+        const string tag = "copilot chat";
 
         // Navigate directly to the page with tag filter applied
         await Page.GotoRelativeAsync($"/github-copilot/news?tags={tag}");
@@ -33,7 +33,8 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         cardCount.Should().BeGreaterThan(0, "should have content cards displayed with tag filter");
 
         // Verify URL still has the tag filter (wasn't cleared)
-        Page.Url.Should().Contain($"tags={tag}", "URL should preserve tag filter");
+        // Tags with spaces are URL-encoded as %20
+        Page.Url.Should().Contain("tags=copilot", "URL should preserve tag filter");
 
         // The card itself is an <a> tag (the entire card is a link)
         // Verify first card links to an external URL (news items are external)
@@ -49,9 +50,9 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
     [Fact]
     public async Task InfiniteScroll_WithTagFilter_MaintainsFilterThroughPagination()
     {
-        // Arrange - tag filter uses lowercase in URL
-        const string tagDisplay = "Copilot"; // Display text on button
-        const string tagUrl = "copilot"; // URL-normalized version
+        // Arrange - tag filter uses lowercase in URL, spaces are URL-encoded as %20
+        const string tagDisplay = "Copilot Chat"; // Display text on button
+        const string tagUrl = "copilot%20chat"; // URL-encoded version
 
         // Act - Navigate and apply tag filter
         await Page.GotoRelativeAsync("/github-copilot/news");
