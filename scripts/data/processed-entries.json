@@ -25678,5 +25678,17 @@
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/",
     "reason": "Succesfully added: Assigned Azure category because the content is about deploying applications using Azure App Service and related Azure infrastructure practices (Azure rule 1, 2, and 4). Assigned DevOps because azd deploy is a deployment and CI/CD-related tool (DevOps rule 5, 6, and 11 apply), and the topic focuses on improving deployment flows and automation. Coding is included because the article discusses infrastructure as code (Bicep) and provides code snippets for deployment automation (Coding rule 5, 4). AI, GitHub Copilot, ML, and Security were not assigned since no Microsoft AI, Copilot, ML, or security services or practices are covered."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/unlock-language-specific-rich-symbol-context-using-new-find_symbol-tool/",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content discusses new Copilot Chat (agent mode) features in Visual Studio, which is a developer-focused Copilot integration (AI rule 2, GitHub Copilot rules 1–4). Assigned 'Coding' because the tool enhances development workflows for code navigation, refactoring, and code comprehension in C#, C++, TypeScript, and related languages (Coding rules 1 and 2). No Azure, DevOps, ML, or Security categories apply, as there is no focus on cloud deployment, pipelines, data science, or security tooling.",
+    "timestamp": "2026-02-11 16:21:39 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-local-mcp-server-to-hosted-web-agent-app-service/ba-p/4493241",
+    "reason": "Succesfully added: Assigned the AI category because this content centers on integrating Azure OpenAI (GPT-5-mini) for AI-powered observability agents (AI category, rule 1). The Azure category is warranted because deployment, resource integration, and platform hosting are done on Azure App Service, including managed identity, VNet, and other Azure services (Azure rules 1, 2, 4). DevOps is included because the post covers team workflows, deployment automation with Azure Developer CLI, tools for shared diagnostics, and continuous operations (DevOps rules 1, 5, 6). GitHub Copilot is not assigned because while its usage is referenced in the local scenario, the hosted solution’s primary AI focus is Azure OpenAI and not a Copilot-specific product, and most of the architectural and integration details are about Azure cloud resources, not GitHub Copilot directly. ML is not assigned because, while AI is central, there is no significant discussion of advanced data science, custom ML model engineering, or data analytics workflows as would be required by ML category rules. Security is not assigned since, although authentication, RBAC, and Entra ID are mentioned, the main focus is on observability and team workflow enablement, not security implementation or architecture.",
+    "timestamp": "2026-02-11 16:22:41 +00:00",
+    "collection": "community"
   }
 ]
