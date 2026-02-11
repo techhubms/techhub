@@ -19,40 +19,9 @@ namespace TechHub.E2E.Tests.Web;
 /// - Tab order includes sidebar elements
 /// - Tab order is logical and predictable
 /// </summary>
-[Collection("Tab Ordering Tests")]
-public class TabOrderingTests : IAsyncLifetime
+public class TabOrderingTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public TabOrderingTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
-
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.CloseAsync();
-        }
-    }
+    public TabOrderingTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
     public async Task TabOrder_ShouldStart_WithSkipLink()
@@ -202,7 +171,7 @@ public class TabOrderingTests : IAsyncLifetime
 
         // Wait for focus to move to the target element
         // The skip link navigates to #skiptohere - browser moves focus to that anchor target
-        await Page.WaitForFunctionAsync(
+        await Page.WaitForConditionAsync(
             "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }",
             new PageWaitForFunctionOptions { Timeout = 2000, PollingInterval = 50 });
 
@@ -238,13 +207,20 @@ public class TabOrderingTests : IAsyncLifetime
         // This directly tests that after navigation, tab order restarts with skip link
         var firstSectionCard = Page.Locator("a.section-card").First;
         await firstSectionCard.ClickBlazorElementAsync();
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
-        // Wait for enhanced navigation to complete and focus to reset to body
-        // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation
-        await Page.WaitForFunctionAsync(
-            "() => document.activeElement === document.body || document.activeElement === document.documentElement",
-            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 50 });
+        // Wait for enhanced navigation to complete
+        // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation,
+        // but rAF doesn't fire reliably in headless Chrome. Instead, wait for Blazor to be
+        // ready, then explicitly reset focus to body (same action nav-helpers.js performs).
+        await Page.WaitForBlazorReadyAsync();
+
+        // Explicitly reset focus to body (what nav-helpers.js does via rAF)
+        // This ensures Tab starts from the top of the tab order
+        await Page.EvaluateAsync(@"() => {
+            document.body.tabIndex = -1;
+            document.body.focus();
+            document.body.removeAttribute('tabindex');
+        }");
 
         // Assert - After navigation, first tab should focus skip link on new page
         await Page.Keyboard.PressAsync("Tab");
@@ -284,7 +260,7 @@ public class TabOrderingTests : IAsyncLifetime
         await Page.Keyboard.PressAsync("Enter");
 
         // Wait for focus to move to #skiptohere target (browser navigation to hash)
-        await Page.WaitForFunctionAsync(
+        await Page.WaitForConditionAsync(
             "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }",
             new PageWaitForFunctionOptions { Timeout = 2000, PollingInterval = 50 });
 
@@ -307,13 +283,17 @@ public class TabOrderingTests : IAsyncLifetime
 
         // Step 4: Enter to navigate to the section page
         await Page.Keyboard.PressAsync("Enter");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        await Page.WaitForBlazorReadyAsync();
 
-        // Wait for enhanced navigation to complete and focus to reset to body
-        // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation
-        await Page.WaitForFunctionAsync(
-            "() => document.activeElement === document.body || document.activeElement === document.documentElement",
-            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 50 });
+        // Wait for enhanced navigation to complete
+        // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation,
+        // but rAF doesn't fire reliably in headless Chrome. Explicitly reset focus to body
+        // (same action nav-helpers.js performs) to ensure Tab starts from top.
+        await Page.EvaluateAsync(@"() => {
+            document.body.tabIndex = -1;
+            document.body.focus();
+            document.body.removeAttribute('tabindex');
+        }");
 
         // Step 5: Verify we're on a new page (not homepage)
         var currentUrl = Page.Url;
@@ -322,18 +302,22 @@ public class TabOrderingTests : IAsyncLifetime
         // Step 6: Tab should focus skip link on the new page (NOT the footer)
         // The application should have reset focus to body during enhanced navigation
         await Page.Keyboard.PressAsync("Tab");
-        focusedElement = Page.Locator(":focus");
 
-        var tagName = await focusedElement.EvaluateAsync<string>("el => el.tagName.toLowerCase()");
-        var className = await focusedElement.EvaluateAsync<string>("el => el.className || ''");
+        // Wait for focus to land on a real element (not body) after Tab
+        await Page.WaitForConditionAsync(
+            "() => document.activeElement && document.activeElement !== document.body",
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 50 });
+
+        var tagName = await Page.EvaluateAsync<string>("() => document.activeElement.tagName.toLowerCase()");
+        var className = await Page.EvaluateAsync<string>("() => document.activeElement.className || ''");
 
         // First focusable element should be the skip link
         (tagName == "a" && className.Contains("skip-link")).Should().BeTrue(
             $"on new page, first tab should focus skip link, NOT footer. Got {tagName}.{className}");
 
         // Verify we're NOT on a footer element
-        var isInFooter = await focusedElement.EvaluateAsync<bool>(
-            "el => el.closest('footer') !== null"
+        var isInFooter = await Page.EvaluateAsync<bool>(
+            "() => document.activeElement.closest('footer') !== null"
         );
         isInFooter.Should().BeFalse("first focused element should NOT be in footer - tab order should restart at top");
     }

@@ -1,0 +1,68 @@
+@rendermode @(new InteractiveServerRenderMode(prerender: true))
+
+@* Date range slider component for filtering content by publication date *@
+<nav class="sidebar-section" aria-label="Filter by date range">
+    <h2 class="sidebar-h2">Date Range</h2>
+
+    <div class="date-range-slider">
+        <div class="date-range-display" aria-live="polite">
+            <span class="date-range-label">@FormatDate(CurrentFromDate) – @FormatDate(CurrentToDate)</span>
+        </div>
+
+        <div class="slider-container" @ref="_sliderContainer">
+            <div class="slider-track">
+                <div class="slider-fill" style="left: @GetFillLeft()%; width: @GetFillWidth()%;"></div>
+            </div>
+
+            <input type="range"
+                   class="slider-input slider-from"
+                   min="0"
+                   max="@SliderSteps"
+                   value="@_fromSliderPos"
+                   step="1"
+                   @oninput="HandleFromInput"
+                   @onchange="HandleFromChange"
+                   aria-label="Start date"
+                   aria-valuetext="@FormatDate(CurrentFromDate)" />
+
+            <input type="range"
+                   class="slider-input slider-to"
+                   min="0"
+                   max="@SliderSteps"
+                   value="@_toSliderPos"
+                   step="1"
+                   @oninput="HandleToInput"
+                   @onchange="HandleToChange"
+                   aria-label="End date"
+                   aria-valuetext="@FormatDate(CurrentToDate)" />
+        </div>
+
+        <div class="slider-labels">
+            <span class="slider-label-min">@FormatDate(_absoluteMinDate)</span>
+            <span class="slider-label-max">@FormatDate(_absoluteMaxDate)</span>
+        </div>
+
+        <div class="date-presets">
+            <button type="button"
+                    class="date-preset-button @(IsPresetActive(7) ? "active" : "")"
+                    @onclick="() => ApplyPreset(7)"
+                    aria-label="Last 7 days">7d</button>
+            <button type="button"
+                    class="date-preset-button @(IsPresetActive(30) ? "active" : "")"
+                    @onclick="() => ApplyPreset(30)"
+                    aria-label="Last 30 days">30d</button>
+            <button type="button"
+                    class="date-preset-button @(IsPresetActive(90) ? "active" : "")"
+                    @onclick="() => ApplyPreset(90)"
+                    aria-label="Last 90 days">90d</button>
+            <button type="button"
+                    class="date-preset-button @(IsPresetActive(365) ? "active" : "")"
+                    @onclick="() => ApplyPreset(365)"
+                    aria-label="Last year">1y</button>
+            <button type="button"
+                    class="date-preset-button @(IsPresetActive(0) ? "active" : "")"
+                    @onclick="() => ApplyPreset(0)"
+                    aria-label="All time">All</button>
+        </div>
+    </div>
+</nav>

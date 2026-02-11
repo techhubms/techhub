@@ -18,14 +18,18 @@
 
 <main class="page-with-sidebar">
     <aside class="sidebar">
+        <DateRangeSlider FromDate="@fromDate" ToDate="@toDate"
+            OnDateRangeChanged="HandleDateRangeChanged" />
         <SidebarTagCloud SectionName="@SectionName" Title="Popular Tags"
             NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
+            FromDate="@fromDateString" ToDate="@toDateString"
             OnSelectionChanged="HandleTagSelectionChanged" />
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
     </aside>
 
     <section>
-        <ContentItemsGrid SectionName="@SectionName" CollectionName="all" FilterTags="@selectedTags" />
+        <ContentItemsGrid SectionName="@SectionName" CollectionName="all" FilterTags="@selectedTags"
+            FromDate="@fromDateString" ToDate="@toDateString" />
     </section>
 </main>
 
@@ -36,8 +40,18 @@
     [SupplyParameterFromQuery(Name = "tags")]
     public string? TagsParam { get; set; }
 
+    [SupplyParameterFromQuery(Name = "from")]
+    public string? FromParam { get; set; }
+
+    [SupplyParameterFromQuery(Name = "to")]
+    public string? ToParam { get; set; }
+
     private List<string> selectedTags = new();
     private TechHub.Core.Models.Section? section;
+    private DateOnly? fromDate;
+    private DateOnly? toDate;
+    private string? fromDateString;
+    private string? toDateString;
 
     protected override void OnInitialized()
     {
@@ -49,13 +63,15 @@
             return;
         }
 
-        // Parse tags from URL
+        // Parse tags and dates from URL
         ParseTagsFromUrl();
+        ParseDatesFromUrl();
     }
 
     protected override void OnParametersSet()
     {
         ParseTagsFromUrl();
+        ParseDatesFromUrl();
     }
 
     private void ParseTagsFromUrl()
@@ -75,7 +91,7 @@
             // If duplicates were removed, clean up the URL
             if (rawTags.Count != selectedTags.Count)
             {
-                CleanupUrlWithDeduplicatedTags();
+                UpdateUrl();
             }
         }
         else
@@ -84,22 +100,69 @@
         }
     }
 
-    private void CleanupUrlWithDeduplicatedTags()
+    private void ParseDatesFromUrl()
     {
-        if (selectedTags.Count == 0)
+        fromDate = ParseDate(FromParam);
+        toDate = ParseDate(ToParam);
+        fromDateString = fromDate?.ToString("yyyy-MM-dd");
+        toDateString = toDate?.ToString("yyyy-MM-dd");
+    }
+
+    private static DateOnly? ParseDate(string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
         {
-            Navigation.NavigateTo($"/{SectionName}", replace: true);
+            return null;
         }
-        else
+
+        return DateOnly.TryParse(value, out var date) ? date : null;
+    }
+
+    private void UpdateUrl()
+    {
+        var basePath = $"/{SectionName}";
+        var queryParams = new List<string>();
+
+        if (selectedTags.Count > 0)
         {
             var tagsParam = string.Join(",", selectedTags.Select(t => Uri.EscapeDataString(t)));
-            Navigation.NavigateTo($"/{SectionName}?tags={tagsParam}", replace: true);
+            queryParams.Add($"tags={tagsParam}");
         }
+
+        if (fromDate.HasValue)
+        {
+            queryParams.Add($"from={fromDate.Value:yyyy-MM-dd}");
+        }
+
+        if (toDate.HasValue)
+        {
+            queryParams.Add($"to={toDate.Value:yyyy-MM-dd}");
+        }
+
+        var url = queryParams.Count > 0
+            ? $"{basePath}?{string.Join("&", queryParams)}"
+            : basePath;
+
+        Navigation.NavigateTo(url, replace: true);
     }
 
     private void HandleTagSelectionChanged(List<string> tags)
     {
         selectedTags = tags;
+        StateHasChanged();
+    }
+
+    private void HandleDateRangeChanged(DateRangeChangedEventArgs args)
+    {
+        fromDate = args.FromDate;
+        toDate = args.ToDate;
+        fromDateString = fromDate?.ToString("yyyy-MM-dd");
+        toDateString = toDate?.ToString("yyyy-MM-dd");
+
+        // URL update is handled by the DateRangeSlider component directly,
+        // because this parent page is static SSR and cannot call NavigateTo
+        // during the interactive phase.
+
         StateHasChanged();
     }
 }

@@ -64,6 +64,7 @@ Files in `wwwroot/js/`:
 | `nav-helpers.js` | Back to top, back to previous buttons | Static (every page) | IIFE |
 | `toc-scroll-spy.js` | TOC scroll highlighting, history management | Dynamic (pages with TOC) | ES Module |
 | `custom-pages.js` | Collapsible sections for SDLC/DX pages | Dynamic (pages with `[data-collapsible]`) | ES Module |
+| `date-range-slider.js` | Client-side slider clamping (prevents handles crossing) | Dynamic (via Blazor JS interop) | ES Module |
 
 Special file in `wwwroot/`:
 

@@ -9,40 +9,9 @@ namespace TechHub.E2E.Tests.Web;
 /// E2E tests for tag filtering functionality including toggle behavior and visual state.
 /// Tests SidebarTagCloud component for tag-based content filtering.
 /// </summary>
-[Collection("Tag Filtering Tests")]
-public class TagFilteringTests : IAsyncLifetime
+public class TagFilteringTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public TagFilteringTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
-
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.DisposeAsync();
-        }
-    }
+    public TagFilteringTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
     public async Task TagButton_WhenClicked_AddsTagToUrl()
@@ -62,7 +31,7 @@ public class TagFilteringTests : IAsyncLifetime
 
         // Wait for URL to change (navigation should happen)
         await Page.WaitForURLAsync(url => url.Contains("tags=") || url != urlBeforeClick,
-            new() { Timeout = 10000 });
+            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
 
         // Assert - URL should contain the tag parameter
         var currentUrl = Page.Url;
@@ -103,7 +72,13 @@ public class TagFilteringTests : IAsyncLifetime
         // Act 2 - Click the same tag button again to deselect it
         // Re-acquire locator after Blazor re-render to avoid stale reference
         tagButton = Page.Locator(".tag-cloud-item").First;
-        await tagButton.ClickBlazorElementAsync();
+        // On section pages (Filter mode), deselecting the last tag may not trigger a URL change
+        // (Blazor considers "no tags" the default state and may skip pushState).
+        // Use waitForUrlChange: false to avoid timeout, then wait for Blazor re-render.
+        await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
+
+        // Wait for Blazor to process the toggle and re-render
+        await WaitForTagCloudReadyAsync();
 
         // Assert - URL should no longer contain the tag parameter or be empty
         var urlAfterSecondClick = Page.Url;
@@ -291,12 +266,12 @@ public class TagFilteringTests : IAsyncLifetime
         await Page.WaitForBlazorReadyAsync();
 
         // Wait for URL to update with tag parameter (confirms navigation happened)
-        await Page.WaitForFunctionAsync(
+        await Page.WaitForConditionAsync(
             "() => window.location.search.includes('tags=')",
             new PageWaitForFunctionOptions { Timeout = 5000 });
 
         // Wait for cards to stabilize after Blazor re-render
-        await Page.WaitForFunctionAsync(
+        await Page.WaitForConditionAsync(
             @"() => {
                 const cards = document.querySelectorAll('.card');
                 return cards.length > 0;
@@ -324,7 +299,7 @@ public class TagFilteringTests : IAsyncLifetime
             await Page.WaitForBlazorReadyAsync();
 
             // Wait for cards to stabilize after Blazor re-render
-            await Page.WaitForFunctionAsync(
+            await Page.WaitForConditionAsync(
                 @"() => {
                     const cards = document.querySelectorAll('.card');
                     return cards.length >= 0;

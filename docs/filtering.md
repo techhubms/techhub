@@ -1,6 +1,6 @@
 # Content Filtering System
 
-This document describes how tag filtering works in Tech Hub, which is one of the most crucial features of the website.
+This document describes how content filtering works in Tech Hub, covering both tag filtering and date range filtering — two of the most crucial features of the website.
 
 **Related Documentation**:
 
@@ -334,11 +334,89 @@ Selected tags are highlighted with the `.selected` CSS class:
 - Normalize and deduplicate on parse
 - Use `Distinct(StringComparer.OrdinalIgnoreCase)`
 
+## Date Range Filtering
+
+### Overview
+
+The `DateRangeSlider` component provides interactive date range filtering with a dual-handle slider and preset buttons. It defaults to showing the last 90 days of content and integrates with the tag cloud so tag counts recalculate when the date range changes.
+
+### Default Behavior
+
+- **Default range**: Last 90 days (configurable via `DefaultLastDays` parameter)
+- **Slider range**: Earliest content date to today
+- **Presets**: 7d, 30d, 90d, 1y, All — clicking applies the range immediately
+
+### URL State Management
+
+Date range is stored as query parameters:
+
+- `from=2024-10-16` — Start date (ISO 8601 format)
+- `to=2026-01-16` — End date (ISO 8601 format)
+
+**Parameter handling**:
+
+- If no date parameters in URL: defaults to last 90 days
+- URL is updated via `history.replaceState` (no full page reload)
+- When combined with tags: `?tags=ai,azure&from=2024-01-01&to=2024-06-30`
+- Existing query parameters (tags) are preserved when dates change
+
+### Render Mode Architecture
+
+The `DateRangeSlider` is an **interactive island** (`InteractiveServerRenderMode` with prerender) hosted inside static SSR parent pages (`Section.razor`, `SectionCollection.razor`). Because the parent pages are static SSR, they cannot call `NavigationManager.NavigateTo()` during the interactive phase. The slider handles URL updates directly by injecting its own `NavigationManager` within the interactive context.
+
+### Integration with Tag Cloud
+
+When the date range changes:
+
+1. `DateRangeSlider` fires `OnDateRangeChanged` event
+2. Parent page passes new dates to `SidebarTagCloud` as `FromDate`/`ToDate` parameters
+3. Tag cloud reloads counts using the new date range
+4. Tags with zero items within the range become disabled
+
+Date parameters are passed through to the tag cloud API: `GET /api/sections/{sectionName}/collections/{collectionName}/tags?from=...&to=...`
+
+### Integration with Content Grid
+
+The parent page passes `FromDate`/`ToDate` as formatted strings to `ContentItemsGrid`, which includes them in API requests. Infinite scroll respects the date range — subsequent batches load only content within the selected range.
+
+### Content Filtering API with Dates
+
+#### Items Endpoint
+
+```bash
+# Content from a specific date range
+curl -k "https://localhost:5001/api/sections/ai/collections/all/items?from=2024-01-01&to=2024-06-30"
+
+# Combined with tags
+curl -k "https://localhost:5001/api/sections/ai/collections/all/items?tags=copilot&from=2024-01-01&to=2024-12-31"
+```
+
+When `from`/`to` are provided, they take precedence over `lastDays`. Invalid date formats return `400 Bad Request`.
+
+#### Tags Endpoint
+
+```bash
+# Tag counts within a date range
+curl -k "https://localhost:5001/api/sections/ai/collections/all/tags?from=2024-01-01&to=2024-06-30"
+
+# Combined with tag selection
+curl -k "https://localhost:5001/api/sections/ai/collections/all/tags?tags=ai&from=2024-01-01&to=2024-06-30"
+```
+
+### Accessibility
+
+- Slider inputs have `aria-label` attributes ("From date" / "To date")
+- Date display uses `aria-live="polite"` for screen reader announcements
+- Preset buttons indicate active state
+- Component wrapped in `<nav aria-label="Filter by date range">` landmark
+
 ## Testing
 
 See [tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs](../tests/TechHub.Infrastructure.Tests/Repositories/TagFilteringTests.cs) for repository level tests and [ContentEndpointsTests.cs](../tests/TechHub.Api.Tests/Endpoints/ContentEndpointsTests.cs) for integration tests.
 
-For UI behavior tests, see [tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs](../tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs).
+For tag cloud UI behavior tests, see [tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs](../tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs).
+
+For date range slider component tests, see [tests/TechHub.Web.Tests/Components/DateRangeSliderTests.cs](../tests/TechHub.Web.Tests/Components/DateRangeSliderTests.cs). For date range E2E tests, see [tests/TechHub.E2E.Tests/Web/DateRangeSliderTests.cs](../tests/TechHub.E2E.Tests/Web/DateRangeSliderTests.cs).
 
 ## Future Enhancements (Not Currently Implemented)
 

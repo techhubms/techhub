@@ -1,6 +1,7 @@
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
+using static TechHub.E2E.Tests.Helpers.BlazorHelpers;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -11,41 +12,11 @@ namespace TechHub.E2E.Tests.Web;
 /// Common component tests (TOC, keyboard nav) are in:
 /// - SidebarTocTests.cs: Table of contents behavior
 /// </summary>
-[Collection("Custom Pages TOC Tests")]
-public class HandbookTests : IAsyncLifetime
+public class HandbookTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public HandbookTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
+    public HandbookTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     private const string PageUrl = "/github-copilot/handbook";
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.CloseAsync();
-        }
-    }
 
     [Fact]
     public async Task Handbook_ShouldLoad_Successfully()
@@ -69,16 +40,13 @@ public class HandbookTests : IAsyncLifetime
 
         // Check book cover image
         var bookCover = hero.Locator("img");
-        
-        // Wait for image element to be visible in the DOM (Playwright auto-retries)
-        await Assertions.Expect(bookCover).ToBeVisibleAsync(
-            new LocatorAssertionsToBeVisibleOptions { Timeout = 10000 });
-        
-        // Wait for the image to be fully loaded (not just present in DOM)
-        // Lazy loading may delay actual image data loading
-        await Page.WaitForFunctionAsync(
+
+        // Scroll hero into view so lazy images load, then wait for the image to complete
+        await bookCover.ScrollIntoViewAsync();
+        await Assertions.Expect(bookCover).ToBeVisibleAsync();
+        await Page.WaitForConditionAsync(
             "() => { const img = document.querySelector('.handbook-hero img'); return img?.complete === true && img?.naturalHeight > 0; }",
-            new PageWaitForFunctionOptions { Timeout = 10000, PollingInterval = 200 });
+            DefaultAssertionTimeout);
 
         // Verify image attributes
         var src = await bookCover.GetAttributeAsync("src");
@@ -119,8 +87,8 @@ public class HandbookTests : IAsyncLifetime
         Page.Console += (_, msg) => consoleMessages.Add(msg);
 
         // Act
+        // GotoRelativeAsync waits for __scriptsReady (all JS modules loaded)
         await Page.GotoRelativeAsync(PageUrl);
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert - No console errors (filter WebSocket connection errors from Blazor)
         var errors = consoleMessages

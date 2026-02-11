@@ -136,8 +136,8 @@
             try {
                 // Load library only once
                 if (!loaded.mermaid) {
-                    loaded.mermaid = true;
                     await loadScript(CDN.mermaid.cdnUrl);
+                    loaded.mermaid = true;
 
                 const config = {
                     startOnLoad: false,

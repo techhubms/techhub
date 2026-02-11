@@ -60,8 +60,9 @@ public static class JsFiles
     /// </summary>
     public static readonly string[] DynamicLoad =
     [
-        "js/toc-scroll-spy.js",  // ES module - Loaded when [data-toc-scroll-spy] exists
-        "js/custom-pages.js"     // ES module - Loaded when [data-collapsible] exists
+        "js/toc-scroll-spy.js",     // ES module - Loaded when [data-toc-scroll-spy] exists
+        "js/custom-pages.js",       // ES module - Loaded when [data-collapsible] exists
+        "js/date-range-slider.js"   // ES module - Loaded by DateRangeSlider component for client-side clamping
     ];
 
     /// <summary>

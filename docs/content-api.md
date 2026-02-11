@@ -177,6 +177,8 @@ Get items in a specific collection within a section. Use `all` as collectionName
 - `tags` (optional): Comma-separated tags (AND logic - items must have all tags)
 - `subcollection` (optional): Filter by subcollection
 - `lastDays` (optional): Filter to content from last N days
+- `from` (optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`). Takes precedence over `lastDays`
+- `to` (optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`). Takes precedence over `lastDays`
 - `includeDraft` (optional): Include draft content (default: false)
 
 **Response**: `200 OK` or `404 Not Found`
@@ -254,8 +256,11 @@ Get tag cloud with quantile-based sizing for visual representation.
 - `maxTags` (optional): Maximum number of tags to return (default: 20)
 - `minUses` (optional): Minimum tag usage count (default: 5)
 - `lastDays` (optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`)
+- `tags` (optional): Comma-separated list of currently selected tags for dynamic count calculation
+- `from` (optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`). Takes precedence over `lastDays`
+- `to` (optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`). Takes precedence over `lastDays`
 
-**Response**: `200 OK` or `404 Not Found`
+**Response**: `200 OK`, `404 Not Found`, or `400 Bad Request` (invalid date format)
 
 ```bash
 curl -k "https://localhost:5001/api/sections/all/collections/all/tags?maxTags=30"

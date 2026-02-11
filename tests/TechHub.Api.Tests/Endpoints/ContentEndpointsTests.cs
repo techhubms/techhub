@@ -1170,4 +1170,119 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     #endregion
+
+    #region Content Items - Date Range Filtering
+
+    [Fact]
+    public async Task GetCollectionItems_WithDateRange_ReturnsFilteredItems()
+    {
+        // Arrange - Use a date range that should include some items
+        var fromDate = DateTimeOffset.UtcNow.AddDays(-90).ToString("yyyy-MM-dd");
+        var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        items.Should().NotBeNull();
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithInvalidFromDate_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?from=not-a-date");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithInvalidToDate_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?to=invalid");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithDateRangeAndTags_CombinesFilters()
+    {
+        // Arrange - Combine tags and date range
+        const string tag = "AI";
+        var fromDate = DateTimeOffset.UtcNow.AddDays(-365).ToString("yyyy-MM-dd");
+        var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&from={fromDate}&to={toDate}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        items.Should().NotBeNull();
+        items!.Should().OnlyContain(item =>
+            item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
+            "all items should have AI in their tags");
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithDateRangeAndPagination_WorksCorrectly()
+    {
+        // Arrange
+        var fromDate = DateTimeOffset.UtcNow.AddYears(-3).ToString("yyyy-MM-dd");
+        var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
+        const int pageSize = 5;
+
+        // Act - Get first page
+        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip=0&take={pageSize}");
+        batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var batch1 = await batch1Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+
+        // Act - Get second page
+        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip={pageSize}&take={pageSize}");
+        batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var batch2 = await batch2Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+
+        // Assert
+        batch1.Should().NotBeNull();
+        batch1!.Should().HaveCount(pageSize, "first batch should have requested page size");
+
+        batch2.Should().NotBeNull();
+
+        // Verify no overlap
+        var batch1Slugs = batch1.Select(i => i.Slug).ToHashSet();
+        var batch2Slugs = batch2!.Select(i => i.Slug).ToHashSet();
+        batch1Slugs.Overlaps(batch2Slugs).Should().BeFalse("batches should not contain duplicate items");
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_FromDateTakesPrecedenceOverLastDays()
+    {
+        // Arrange - from/to should take precedence over lastDays
+        var fromDate = DateTimeOffset.UtcNow.AddYears(-2).ToString("yyyy-MM-dd");
+        var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
+
+        // Act - Provide both from/to and lastDays
+        var responseWithFromTo = await _client.GetAsync(
+            $"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&lastDays=7");
+        var responseWithLastDays = await _client.GetAsync(
+            "/api/sections/all/collections/all/items?lastDays=7");
+
+        // Assert
+        responseWithFromTo.StatusCode.Should().Be(HttpStatusCode.OK);
+        responseWithLastDays.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var itemsWithFromTo = await responseWithFromTo.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var itemsWithLastDays = await responseWithLastDays.Content.ReadFromJsonAsync<List<ContentItem>>();
+
+        // from/to with 2 years should return more (or equal) items than lastDays=7
+        itemsWithFromTo!.Count.Should().BeGreaterThanOrEqualTo(itemsWithLastDays!.Count,
+            "from/to with 2 years range should include at least as many items as lastDays=7");
+    }
+
+    #endregion
 }

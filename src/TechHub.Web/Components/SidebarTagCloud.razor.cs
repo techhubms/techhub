@@ -107,6 +107,18 @@ public partial class SidebarTagCloud : ComponentBase
     [Parameter]
     public IReadOnlyList<string>? Tags { get; set; }
 
+    /// <summary>
+    /// Optional from-date for date range filtering (yyyy-MM-dd format)
+    /// </summary>
+    [Parameter]
+    public string? FromDate { get; set; }
+
+    /// <summary>
+    /// Optional to-date for date range filtering (yyyy-MM-dd format)
+    /// </summary>
+    [Parameter]
+    public string? ToDate { get; set; }
+
     private IReadOnlyList<TagCloudItem>? _tags;
     private HashSet<string> _selectedTagsInternal = [];
     private bool _isLoading = true;
@@ -114,6 +126,8 @@ public partial class SidebarTagCloud : ComponentBase
     private bool _hasInitialized; // Track if we've loaded tags to prevent double-load flicker
     private HashSet<string> _previousSelectedTags = []; // Track previous state to detect changes
     private IReadOnlyList<TagCloudItem>? _initialTags; // Store baseline tag list (loaded WITHOUT any filters)
+    private string? _previousFromDate;
+    private string? _previousToDate;
 
     protected override async Task OnInitializedAsync()
     {
@@ -144,10 +158,20 @@ public partial class SidebarTagCloud : ComponentBase
         // This is critical for Filter mode where URL changes trigger parameter updates
         SyncSelectedTagsFromParameter();
 
-        // Reload tag cloud if selected tags have changed (for dynamic counts)
-        if (!_selectedTagsInternal.SetEquals(_previousSelectedTags))
+        // Check if dates changed
+        var datesChanged = _previousFromDate != FromDate || _previousToDate != ToDate;
+        if (datesChanged)
         {
-            Logger.LogDebug("Selected tags changed, reloading tag cloud for dynamic counts. Previous: [{Previous}], Current: [{Current}]",
+            Logger.LogDebug("Date range changed, resetting baseline. From: {From}, To: {To}", FromDate, ToDate);
+            _previousFromDate = FromDate;
+            _previousToDate = ToDate;
+            _initialTags = null; // Reset baseline so it reloads with new date range
+        }
+
+        // Reload tag cloud if selected tags or dates have changed (for dynamic counts)
+        if (datesChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
+        {
+            Logger.LogDebug("Tags or dates changed, reloading tag cloud. Previous tags: [{Previous}], Current: [{Current}]",
                 string.Join(", ", _previousSelectedTags),
                 string.Join(", ", _selectedTagsInternal));
 
@@ -233,8 +257,8 @@ public partial class SidebarTagCloud : ComponentBase
                     MinUses,
                     LastDays,
                     selectedTags: null, // NO filters for baseline - get global tags
-                    fromDate: null,
-                    toDate: null);
+                    fromDate: FromDate,
+                    toDate: ToDate);
 
                 if (baselineApiTags != null)
                 {
@@ -269,8 +293,8 @@ public partial class SidebarTagCloud : ComponentBase
                     LastDays,
                     selectedTags: filterTags,
                     tagsToCount: tagsToCount,
-                    fromDate: null, // Date range filtering will be added in spec 001b
-                    toDate: null);
+                    fromDate: FromDate,
+                    toDate: ToDate);
 
                 Logger.LogDebug("Successfully loaded {Count} tags with dynamic counts for {FilterCount} filter tags",
                     apiTags?.Count ?? 0, filterTags.Count);
@@ -422,18 +446,29 @@ public partial class SidebarTagCloud : ComponentBase
     {
         var currentUri = new Uri(NavigationManager.Uri);
         var basePath = currentUri.GetLeftPart(UriPartial.Path);
+        var queryParams = new List<string>();
 
-        if (_selectedTagsInternal.Count == 0)
+        if (_selectedTagsInternal.Count > 0)
         {
-            // No tags selected - navigate to URL without tags parameter
-            NavigationManager.NavigateTo(basePath, replace: true);
-        }
-        else
-        {
-            // Build URL with tags parameter
             var tagsParam = string.Join(",", _selectedTagsInternal.Select(t => Uri.EscapeDataString(t.ToLowerInvariant())));
-            var targetUrl = $"{basePath}?tags={tagsParam}";
-            NavigationManager.NavigateTo(targetUrl, replace: true);
+            queryParams.Add($"tags={tagsParam}");
         }
+
+        // Preserve date range in URL
+        if (!string.IsNullOrEmpty(FromDate))
+        {
+            queryParams.Add($"from={FromDate}");
+        }
+
+        if (!string.IsNullOrEmpty(ToDate))
+        {
+            queryParams.Add($"to={ToDate}");
+        }
+
+        var targetUrl = queryParams.Count > 0
+            ? $"{basePath}?{string.Join("&", queryParams)}"
+            : basePath;
+
+        NavigationManager.NavigateTo(targetUrl, replace: true);
     }
 }

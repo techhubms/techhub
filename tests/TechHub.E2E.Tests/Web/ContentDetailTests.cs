@@ -12,44 +12,14 @@ namespace TechHub.E2E.Tests.Web;
 /// PATTERN: These tests navigate directly to content URLs (not click-through) since
 /// roundup detail pages are the main testable internal content pages.
 /// </summary>
-[Collection("Content Detail Tests")]
-public class ContentDetailTests : IAsyncLifetime
+public class ContentDetailTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
+    public ContentDetailTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
-    public ContentDetailTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
-
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
     private const string BaseUrl = BlazorHelpers.BaseUrl;
 
     // Test with a known roundup URL - more reliable than clicking through
     private const string TestRoundupUrl = "/all/roundups";
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.DisposeAsync();
-        }
-    }
 
     /// <summary>
     /// Helper to navigate to a roundup detail Page.

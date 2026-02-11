@@ -1,0 +1,182 @@
+/* ============================================================================
+   DateRangeSlider Component Styles
+   
+   Interactive dual-handle slider for date range filtering.
+   Uses design tokens from design-tokens.css exclusively.
+   ============================================================================ */
+
+.date-range-slider {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+/* Date range display label */
+.date-range-display {
+    text-align: center;
+}
+
+.date-range-label {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Slider container positions the dual-handle inputs */
+.slider-container {
+    position: relative;
+    height: 32px;
+    margin: 0 8px;
+}
+
+/* Background track */
+.slider-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    transform: translateY(-50%);
+    background: var(--color-border-default);
+    border-radius: var(--radius-full);
+    pointer-events: none;
+}
+
+/* Active fill between handles */
+.slider-fill {
+    position: absolute;
+    height: 100%;
+    background: var(--color-purple-dark);
+    border-radius: var(--radius-full);
+    pointer-events: none;
+}
+
+/* Shared range input reset and styling */
+.slider-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    pointer-events: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* Thumb styling - WebKit (Chrome, Safari, Edge) */
+.slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-purple-bright);
+    border: 2px solid var(--color-bg-default);
+    cursor: pointer;
+    pointer-events: all;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    margin-top: -7px;
+}
+
+.slider-input::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px var(--color-purple-bg-subtle);
+}
+
+.slider-input:focus-visible::-webkit-slider-thumb {
+    outline: 2px solid var(--color-purple-bright);
+    outline-offset: 2px;
+}
+
+/* Thumb styling - Firefox */
+.slider-input::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-purple-bright);
+    border: 2px solid var(--color-bg-default);
+    cursor: pointer;
+    pointer-events: all;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.slider-input::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px var(--color-purple-bg-subtle);
+}
+
+.slider-input:focus-visible::-moz-range-thumb {
+    outline: 2px solid var(--color-purple-bright);
+    outline-offset: 2px;
+}
+
+/* Track styling - Firefox (hide built-in track since we use custom) */
+.slider-input::-moz-range-track {
+    background: transparent;
+    border: none;
+    height: 4px;
+}
+
+/* Track styling - WebKit */
+.slider-input::-webkit-slider-runnable-track {
+    background: transparent;
+    border: none;
+    height: 4px;
+}
+
+/* Min/Max labels for slider range endpoints */
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-label-min,
+.slider-label-max {
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-xs);
+}
+
+/* Preset buttons row */
+.date-presets {
+    display: flex;
+    gap: var(--spacing-1);
+    flex-wrap: wrap;
+}
+
+.date-preset-button {
+    flex: 1;
+    min-width: 0;
+    padding: 4px 8px;
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: center;
+}
+
+.date-preset-button:hover {
+    background: var(--color-purple-bg-subtle);
+    border-color: var(--color-purple-border-subtle);
+    color: var(--color-text-primary);
+}
+
+.date-preset-button.active {
+    background: var(--color-purple-bg-dark);
+    border-color: var(--color-purple-dark);
+    color: var(--color-purple-bright);
+}
+
+.date-preset-button:focus-visible {
+    outline: 2px solid var(--color-purple-bright);
+    outline-offset: 2px;
+}

@@ -28,7 +28,7 @@ These apply to ALL tests across all layers:
 - Test real implementation - NEVER duplicate production logic in tests
 - Mock only external dependencies (file system, HTTP clients, external APIs)
 - Run tests after code changes: `Run` or `Run -TestProject <project>` to scope tests
-- Use `async Task` for async tests - NEVER `async void`
+- Use `async Task` or `async ValueTask` for async tests - NEVER `async void`
 - Test public APIs - Don't test implementation details
 - Dispose resources in test cleanup
 - Fix or remove flaky tests - NEVER ignore them
@@ -50,7 +50,7 @@ These apply to ALL tests across all layers:
 - Never assume test execution order
 - Never commit failing tests
 - Never write tests without assertions
-- Never use `async void` in tests (use `async Task`)
+- Never use `async void` in tests (use `async Task` or `async ValueTask`)
 - Never skip test cleanup (dispose resources)
 - Never ignore flaky tests (fix or remove)
 - Never remove tests without removing unused production code
@@ -220,12 +220,14 @@ public class MarkdownServiceTests
 
 **Key Rules**:
 
-- Fixture class implements `IDisposable` for cleanup
+- Fixture class implements `IAsyncDisposable` (or `IDisposable`) for cleanup
 - Test class uses `IClassFixture<TFixture>` interface
 - Fixture is injected via constructor
 - Each test class gets ONE shared fixture instance
 
-See xUnit documentation for implementation details.
+**xUnit v3 Assembly Fixtures**: For sharing a fixture across ALL test classes in an assembly (not just one class), use `[assembly: AssemblyFixture(typeof(TFixture))]`. This replaces the xUnit v2 collection definition pattern.
+
+See xUnit v3 documentation for implementation details.
 
 ## Integration Testing Patterns
 
@@ -340,8 +342,8 @@ The **testing diamond** approach prioritizes integration tests as the most valua
 
 | Layer           | Framework                     | Projects             | Purpose                                              | Priority | External Dependencies | Local Dependencies (Filesystem) |
 |-----------------|-------------------------------|----------------------|------------------------------------------------------|----------|----------------------|---------------------------------|
-| **Integration** | xUnit + WebApplicationFactory | Api                  | **API endpoints with real internal services**        | **🔥 HIGHEST** | ❌ Stub/Mock         | ✅ Real (we control it)         |
-| **Unit**        | xUnit + Stubs                 | Core, Infrastructure | Edge cases, complex logic, quick feedback            | **High** | ❌ NEVER             | ❌ NEVER                        |
+| **Integration** | xUnit v3 + WebApplicationFactory | Api                  | **API endpoints with real internal services**        | **🔥 HIGHEST** | ❌ Stub/Mock         | ✅ Real (we control it)         |
+| **Unit**        | xUnit v3 + Stubs                 | Core, Infrastructure | Edge cases, complex logic, quick feedback            | **High** | ❌ NEVER             | ❌ NEVER                        |
 | **E2E**         | Playwright .NET + HttpClient  | E2E                  | Critical user journeys, complete workflows           | **High** | ✅ Real              | ✅ Real                         |
 | **Component**   | bUnit                         | Web                  | Blazor component rendering & logic                   | Medium | ❌ Stub/Mock         | ❌ Stub/Mock                    |
 | **PowerShell**  | Pester                        | powershell/          | Automation scripts                                   | Medium | ❌ Mock              | ✅ Real (test files)            |
@@ -620,21 +622,26 @@ When testing code from source projects, refer to implementation patterns:
 
 ### Directory.Build.props
 
-Shared configuration for all test projects (package versions, nullable reference types):
+Shared configuration for all test projects (CA warning suppressions for test conventions):
 
 ```xml
 <Project>
-  <Import Project="../Directory.Build.props" />
-  
-  <ItemGroup>
-    <PackageReference Include="xunit" />
-    <PackageReference Include="xunit.runner.visualstudio" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" />
-    <PackageReference Include="FluentAssertions" />
-    <PackageReference Include="Moq" />
-  </ItemGroup>
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CA1707</NoWarn>   <!-- Test naming with underscores -->
+    <NoWarn>$(NoWarn);CA2234</NoWarn>   <!-- HttpClient URI warnings -->
+    <NoWarn>$(NoWarn);CA1711</NoWarn>   <!-- Async method naming -->
+    <NoWarn>$(NoWarn);CA1001</NoWarn>   <!-- IDisposable for test fixtures -->
+  </PropertyGroup>
 </Project>
 ```
+
+**Test packages** (in each project's `.csproj`, not centralized):
+
+- `xunit.v3` 3.2.2 — xUnit v3 test framework
+- `xunit.runner.visualstudio` 3.1.5 — VSTest adapter for test discovery
+- `Microsoft.NET.Test.Sdk` 18.0.1 — Classic VSTest host
+- `FluentAssertions` — Assertion library
+- `Moq` — Mocking framework (where needed)
 
 ### Common Test Helpers
 
@@ -655,7 +662,7 @@ Shared configuration for all test projects (package versions, nullable reference
 
 ### External Resources
 
-- [xUnit Documentation](https://xunit.net/)
+- [xUnit v3 Documentation](https://xunit.net/docs/getting-started/v3/cmdline)
 - [FluentAssertions Documentation](https://fluentassertions.com/)
 - [Moq Documentation](https://github.com/devlooped/moq)
 - [bUnit Documentation](https://bunit.dev/)

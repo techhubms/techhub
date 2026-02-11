@@ -8,42 +8,11 @@ namespace TechHub.E2E.Tests.Web;
 /// E2E tests for URL routing, collection navigation, and "all" collection functionality
 /// These tests document and verify the expected behavior of URL-based navigation
 /// </summary>
-[Collection("URL Routing Tests")]
-public class UrlRoutingTests : IAsyncLifetime
+public class UrlRoutingTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public UrlRoutingTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
-
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
+    public UrlRoutingTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     private const string ApiUrl = "https://localhost:5001";
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.DisposeAsync();
-        }
-    }
 
     #region URL Routing Tests
 
@@ -404,12 +373,12 @@ public class UrlRoutingTests : IAsyncLifetime
     public async Task CopiedURL_SharesExactCollectionState()
     {
         // Arrange
-        var page1 = await _context!.NewPageWithDefaultsAsync();
+        var page1 = await Context.NewPageWithDefaultsAsync();
         await page1.GotoRelativeAsync("/ml/videos");
         var sharedUrl = page1.Url;
 
         // Act - Open shared URL in new tab/page
-        var page2 = await _context!.NewPageWithDefaultsAsync();
+        var page2 = await Context.NewPageWithDefaultsAsync();
         await page2.GotoAndWaitForBlazorAsync(sharedUrl);
         await page2.Locator(".card").First.AssertElementVisibleAsync();
 

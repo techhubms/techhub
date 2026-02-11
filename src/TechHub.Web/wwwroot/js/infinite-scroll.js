@@ -31,6 +31,11 @@ export function observeScrollTrigger(helper, triggerId) {
     );
 
     observer.observe(trigger);
+
+    // Signal that the observer is attached and ready to fire.
+    // E2E tests wait for this before scrolling to ensure timing is correct.
+    // Same pattern as __blazorServerReady / __scriptsReady.
+    window.__ioObserverReady = true;
     console.debug('[InfiniteScroll] Observer active for:', triggerId);
 }
 
@@ -40,4 +45,5 @@ export function dispose() {
         observer = null;
     }
     dotnetHelper = null;
+    window.__ioObserverReady = false;
 }

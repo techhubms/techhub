@@ -89,14 +89,22 @@ tests/TechHub.E2E.Tests/
 │   │   ├── NavigationTests.cs          ← Section navigation, styling (8 tests)
 │   │   ├── RssTests.cs                 ← RSS feeds (9 tests)
 │   │   ├── SectionCardLayoutTests.cs   ← Section cards (3 tests)
+│   │   ├── SectionCardCustomPagesTests.cs ← Custom page section cards
 │   │   ├── SectionPageKeyboardNavigationTests.cs ← Keyboard nav (5 tests)
-│   │   └── TagFilteringTests.cs        ← Tag filtering
+│   │   ├── TagFilteringTests.cs        ← Tag filtering
+│   │   ├── DateRangeSliderTests.cs     ← Date range slider filtering
+│   │   ├── DynamicTagCountsTests.cs    ← Dynamic tag count updates
+│   │   ├── InfiniteScrollTests.cs      ← Infinite scroll pagination
+│   │   └── InfiniteScrollWithTagsTests.cs ← Infinite scroll with tag filtering
+│   └── Proof Tests                     ← Standalone verification tests
+│       └── IntersectionObserverProofTests.cs ← IO works in headless Chrome (11 tests)
 ├── Api/                                 ← Direct API testing (no Playwright)
 │   ├── ApiCollectionFixture.cs         ← Shared WebApplicationFactory for API tests
 │   └── ContentEndpointsE2ETests.cs     ← Content API endpoints (4 tests)
 ├── Helpers/
 │   └── BlazorHelpers.cs                ← Blazor-specific wait patterns
-├── PlaywrightCollectionFixture.cs      ← Shared browser configuration
+├── PlaywrightCollectionFixture.cs      ← Shared browser (assembly fixture)
+├── PlaywrightTestBase.cs               ← Abstract base class for Web E2E tests
 └── xunit.runner.json                   ← Parallel execution settings
 ```
 
@@ -207,37 +215,50 @@ API E2E tests are organized by endpoint group for maintainability:
 
 **See**: [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs) for complete examples
 
-**Total**: 83 E2E test cases across all Web test files:
+**Total**: 215 E2E test cases across all test files.
 
-- Common Component Tests: 16 tests (2 Mermaid + 2 console + 3 navigation + 7 TOC + 2 TOC console)
-- Page-Specific Tests: 48 tests
-- Feature Tests: 45+ tests
-- Accessibility Tests: 9 tests (4 tab highlighting + 5 tab ordering)
-
-Note: Updated after test reorganization (merged homepage tests, added navigation tests to Mermaid/TOC, added GenAIAdvancedTests, added accessibility tests)
+Note: Test count includes common component tests, page-specific tests, feature tests (infinite scroll, tag filtering, date range slider, dynamic tag counts, keyboard navigation), accessibility tests, API E2E tests, and IntersectionObserver proof tests.
 
 ### Shared Page Pattern
 
-**CRITICAL**: All test classes use a consistent shared page pattern:
+**CRITICAL**: All Web E2E test classes extend the `PlaywrightTestBase` abstract base class, which handles per-test browser context and page lifecycle.
 
 **Key Elements**:
 
-- `[Collection("Feature Name")]` attribute for browser sharing
-- `IAsyncLifetime` interface for async setup/teardown  
-- Primary constructor: Inject `PlaywrightCollectionFixture`
-- Private fields: `_fixture`, `_context`, `_page`
-- Property: `IPage Page => _page ?? throw ...` (clean access, no `!` operators)
-- `InitializeAsync()`: Create context and page with `NewPageWithDefaultsAsync()`
-- `DisposeAsync()`: Close page and dispose context
+- Extend `PlaywrightTestBase` (no `[Collection]` attribute needed)
+- `PlaywrightCollectionFixture` is shared via **assembly fixture** (`[assembly: AssemblyFixture(...)]` in xUnit v3)
+- Primary constructor: call `base(fixture)`
+- Protected properties: `Page` and `Context` for clean access (no `!` operators)
+- `InitializeAsync()`: Creates context and page with `NewPageWithDefaultsAsync()`
+- `DisposeAsync()`: Closes page and disposes context
+- Both lifecycle methods return `ValueTask` (xUnit v3 requirement)
+
+**Example**:
+
+```csharp
+public class MyFeatureTests : PlaywrightTestBase
+{
+    public MyFeatureTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
+
+    [Fact]
+    public async Task Feature_Action_ExpectedResult()
+    {
+        await Page.GotoRelativeAsync("/my-page");
+        // ... test code using Page property
+    }
+}
+```
 
 **Benefits**:
 
 - Each test method gets its own fresh page
 - Automatic cleanup even if test fails
-- Clean test code - use `Page` property instead of `_page!` everywhere
+- Clean test code — use `Page` property instead of `_page!` everywhere
 - No manual page cleanup in test methods
+- No boilerplate — constructor, fields, and lifecycle are handled by the base class
+- `Context` property available for multi-page tests (e.g., `UrlRoutingTests`)
 
-**See**: [Web/UrlRoutingTests.cs](Web/UrlRoutingTests.cs), [Web/NavigationTests.cs](Web/NavigationTests.cs) for complete examples
+**See**: [PlaywrightTestBase.cs](PlaywrightTestBase.cs) for the base class, [Web/NavigationTests.cs](Web/NavigationTests.cs) for a complete example
 
 ### Browser Configuration
 
@@ -276,7 +297,8 @@ All browser launch options are centralized in [PlaywrightCollectionFixture.cs](P
 
 - ONE browser launch for all Web test classes
 - Each test gets isolated context (separate cookies, storage)
-- Defined in [PlaywrightCollectionFixture.cs](PlaywrightCollectionFixture.cs), shared via xUnit Collection Fixtures
+- `PlaywrightCollectionFixture` is shared via **xUnit v3 assembly fixture** (`[assembly: AssemblyFixture(...)]`)
+- All Web test classes extend `PlaywrightTestBase` — no `[Collection]` attributes needed
 
 **API Tests (WebApplicationFactory)**:
 
@@ -373,7 +395,7 @@ await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 |---|---|---|
 | Element to appear | `WaitForTimeoutAsync(500)` | `Assertions.Expect(el).ToBeVisibleAsync()` |
 | CSS class applied | `WaitForTimeoutAsync(1000)` | `Assertions.Expect(el).ToHaveClassAsync(new Regex("expanded"))` |
-| Console errors after load | `WaitForTimeoutAsync(500)` | `Page.WaitForLoadStateAsync(LoadState.NetworkIdle)` |
+| Console errors after load | `WaitForTimeoutAsync(500)` | `GotoRelativeAsync` already waits for `__scriptsReady` — no extra wait needed |
 | Blazor re-render complete | `WaitForTimeoutAsync(500)` | `Page.WaitForBlazorReadyAsync()` |
 | DOM condition (card count) | `WaitForTimeoutAsync(500)` | `Page.WaitForFunctionAsync("() => document.querySelectorAll('.card').length > 0")` |
 | JS lib init (highlight.js) | `WaitForTimeoutAsync(500)` | `Page.WaitForFunctionAsync("() => document.querySelector('pre code.hljs') !== null")` |
@@ -381,6 +403,11 @@ await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 | Expand/collapse toggle | `WaitForTimeoutAsync(1000)` | `Assertions.Expect(content).ToHaveClassAsync(new Regex("expanded"))` |
 | No navigation occurred | `WaitForTimeoutAsync(200)` | `Page.WaitForBlazorReadyAsync()` then assert URL unchanged |
 | Browser paint settle | `Task.Delay(100)` | `WaitForFunctionAsync` with double `requestAnimationFrame` |
+| Infinite scroll next batch | `Mouse.WheelAsync()` or `loading="eager"` | `Page.ScrollToLoadMoreAsync(expectedCount)` |
+| Infinite scroll end | Manual wheel scrolling loop | `Page.ScrollToEndOfContentAsync()` |
+| Lazy-loaded element visible | `loading="eager"` attribute hack | `element.ScrollIntoViewAsync()` or `element.ScrollIntoViewIfNeededAsync()` |
+| Focus after navigation reset | `Locator(":focus").EvaluateAsync()` | `WaitForConditionAsync` + `Page.EvaluateAsync()` |
+| Custom timeout value | `Timeout = 10000` (hardcoded) | `BlazorHelpers.DefaultAssertionTimeout` (5000ms) |
 
 #### Pattern 1: Expand/Collapse Animations
 
@@ -400,19 +427,23 @@ await Assertions.Expect(content).ToHaveClassAsync(
 
 #### Pattern 2: Console Error Tests
 
-When checking for console errors after page load, use `NetworkIdle` to ensure all scripts and resources have loaded:
+`GotoRelativeAsync` already waits for `window.__scriptsReady` (set after all JS modules finish loading). No additional wait is needed — by the time it returns, any console errors from script loading have already been emitted.
 
 ```csharp
-// ❌ WRONG
+// ❌ WRONG - arbitrary delay
 await Page.GotoRelativeAsync(url);
 await Page.WaitForTimeoutAsync(500);
 
-// ✅ CORRECT
+// ❌ WRONG - NetworkIdle is unreliable with Blazor Server's always-active WebSocket
 await Page.GotoRelativeAsync(url);
 await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+
+// ✅ CORRECT - GotoRelativeAsync already waits for __scriptsReady
+await Page.GotoRelativeAsync(url);
+// Just assert console errors here — scripts are already loaded
 ```
 
-**Note on NetworkIdle**: It adds ~500ms delay after all network activity stops. Only use it for console error tests and network monitoring — NOT for regular navigation. For navigation, the default `DOMContentLoaded` is sufficient.
+**Why NOT `NetworkIdle`**: Blazor Server maintains a persistent SignalR WebSocket connection. `NetworkIdle` waits for 500ms of zero network activity, which may never happen because the WebSocket counts as an active connection. This causes flaky timeouts.
 
 #### Pattern 3: JavaScript Library Initialization
 
@@ -501,6 +532,52 @@ await Page.WaitForFunctionAsync(
 await Page.WaitForBlazorReadyAsync();
 ```
 
+#### Pattern 8: Infinite Scroll (IntersectionObserver)
+
+IntersectionObserver fires callbacks during rendering frames. In headless Chrome, IO works correctly — flaky tests are caused by a **timing race**, not a capability issue. The race: Blazor re-attaches the observer in `OnAfterRenderAsync` after each batch load, but tests may scroll before the new observer is attached.
+
+**Solution**: `infinite-scroll.js` sets `window.__ioObserverReady = true` after `observer.observe()` and resets it to `false` in `dispose()`. Tests wait for this signal before scrolling.
+
+```csharp
+// ❌ WRONG - scroll before IO observer is attached
+await Page.Mouse.WheelAsync(0, scrollHeight);
+
+// ❌ WRONG - use loading="eager" to bypass lazy loading
+// This masks the real issue and disables the feature being tested
+
+// ✅ CORRECT - use ScrollToLoadMoreAsync (waits for __ioObserverReady)
+await Page.ScrollToLoadMoreAsync(expectedItemCount: 40);
+
+// ✅ CORRECT - use ScrollToEndOfContentAsync for end-of-collection tests
+await Page.ScrollToEndOfContentAsync();
+```
+
+**How the scroll helpers work** (see `BlazorHelpers.cs`):
+
+1. Wait for `window.__ioObserverReady === true` (observer attached)
+2. Scroll `#scroll-trigger` into view with `scrollIntoView({ behavior: 'instant' })`
+3. Double `requestAnimationFrame` to ensure IO callback is delivered
+4. Wait for new items to appear in the DOM
+5. Loop until target count reached or end-of-content marker appears
+
+**Key insight**: Never use `Mouse.WheelAsync()` for infinite scroll tests — use `scrollIntoView()` on the `#scroll-trigger` sentinel instead. `scrollIntoView` guarantees the sentinel enters the viewport, triggering the IO callback reliably.
+
+#### Pattern 9: Focus Detection After Programmatic Focus Reset
+
+After Blazor's enhanced navigation, `document.activeElement` resets to `<body>`. When testing that Tab restarts from the beginning, don't use `Locator(":focus").EvaluateAsync()` — the `:focus` locator will timeout because `<body>` doesn't match any element Playwright can find.
+
+```csharp
+// ❌ WRONG - :focus locator times out after focus reset to body
+await Page.Keyboard.PressAsync("Tab");
+var focusedTag = await Page.Locator(":focus").EvaluateAsync<string>("el => el.tagName");
+
+// ✅ CORRECT - wait for real focus, then evaluate directly on the page
+await Page.Keyboard.PressAsync("Tab");
+await Page.WaitForConditionAsync(
+    "() => document.activeElement && document.activeElement !== document.body");
+var focusedTag = await Page.EvaluateAsync<string>("() => document.activeElement.tagName");
+```
+
 #### Prefer Playwright Expect Assertions
 
 Playwright's `Expect` assertions have intelligent auto-waiting and polling built-in. Always prefer them over explicit waits followed by manual checks:
@@ -552,6 +629,11 @@ isVisible.Should().BeTrue();
 | `TextContentWithTimeoutAsync()` | Get text content with timeout | 5s |
 | `GetHrefAsync()` | Get href attribute from element | 5s |
 | `WaitForSelectorWithTimeoutAsync()` | Wait for selector with timeout | 5s |
+| `WaitForConditionAsync()` | Wait for JS condition (string or options overloads) | 5s |
+| `ScrollToLoadMoreAsync()` | Scroll infinite scroll until item count reached | 15s |
+| `ScrollToEndOfContentAsync()` | Scroll infinite scroll until end-of-content marker | 30s |
+| `ScrollIntoViewAsync()` | Scroll element into viewport via JS `scrollIntoView()` | - |
+| `ScrollIntoViewIfNeededAsync()` | Scroll element into viewport (native Playwright) | - |
 
 ### Assertion Style
 
@@ -568,20 +650,28 @@ Assert.Equal("/github-copilot/all", Page.Url);
 
 ### Writing New Test Classes
 
-**Required structure for E2E test classes**:
+**Required structure for Web E2E test classes**:
 
-1. **Collection attribute**: `[Collection("Feature Name Tests")]` for browser sharing
-2. **Primary constructor**: Inject `PlaywrightCollectionFixture`
-3. **IAsyncLifetime**: Implement for async setup/teardown
-4. **Page property**: `private IPage Page => _page ?? throw ...` for clean access
-5. **InitializeAsync**: Create context and page with `NewPageWithDefaultsAsync()`
-6. **DisposeAsync**: Close page and dispose context
+1. **Extend `PlaywrightTestBase`**: Inherits page lifecycle, fixture injection, and cleanup
+2. **Primary constructor**: Call `base(fixture)` with `PlaywrightCollectionFixture`
+3. **No `[Collection]` attribute needed**: The fixture is shared via assembly fixture (xUnit v3)
+4. **Use `Page` property**: Clean access to the current test's page
+5. **Override `InitializeAsync`/`DisposeAsync`**: Only if extra setup/teardown is needed (call `base` first)
 
-**Add collection definition** to `PlaywrightCollectionFixture.cs`:
+**Minimal test class**:
 
 ```csharp
-[CollectionDefinition("Feature Name Tests")]
-public class FeatureNameCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
+public class MyFeatureTests : PlaywrightTestBase
+{
+    public MyFeatureTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
+
+    [Fact]
+    public async Task Feature_Action_ExpectedResult()
+    {
+        await Page.GotoRelativeAsync("/my-page");
+        // assertions...
+    }
+}
 ```
 
 See existing test classes in `Web/` for complete examples.
@@ -870,8 +960,12 @@ Console.WriteLine($"Classes: {classes}");
 ### Related Files
 
 - [toc-scroll-spy.js](../../src/TechHub.Web/wwwroot/js/toc-scroll-spy.js) - Production TOC scroll-spy implementation
-- [BlazorHelpers.cs](Helpers/BlazorHelpers.cs) - Scroll synchronization helper (`ClickAndWaitForScrollAsync`)
+- [infinite-scroll.js](../../src/TechHub.Web/wwwroot/js/infinite-scroll.js) - IntersectionObserver-based infinite scroll with `__ioObserverReady` signal
+- [BlazorHelpers.cs](Helpers/BlazorHelpers.cs) - Scroll synchronization helpers (`ClickAndWaitForScrollAsync`, `ScrollToLoadMoreAsync`, `ScrollToEndOfContentAsync`)
 - [SidebarTocTests.cs](Web/SidebarTocTests.cs) - Reference implementation for TOC tests with native scrolling
+- [IntersectionObserverProofTests.cs](Web/IntersectionObserverProofTests.cs) - Standalone proof that IO works in headless Chrome (11 tests)
+- [InfiniteScrollTests.cs](Web/InfiniteScrollTests.cs) - Infinite scroll pagination tests
+- [InfiniteScrollWithTagsTests.cs](Web/InfiniteScrollWithTagsTests.cs) - Infinite scroll with tag filtering
 - [VSCodeUpdatesTests.cs](Web/VSCodeUpdatesTests.cs) - Additional TOC test examples
 - [LevelsOfEnlightenmentTests.cs](Web/LevelsOfEnlightenmentTests.cs) - Multiple TOC test scenarios
 - [HandbookTests.cs](Web/HandbookTests.cs) - TOC keyboard navigation tests

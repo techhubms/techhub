@@ -98,6 +98,12 @@
     [Parameter]
     public List<string>? FilterTags { get; set; }
 
+    [Parameter]
+    public string? FromDate { get; set; }
+
+    [Parameter]
+    public string? ToDate { get; set; }
+
     // Content state
     private List<ContentItem> contentItems = [];
     private bool isLoading = true;
@@ -109,6 +115,8 @@
     // Change detection
     private string previousCollectionName = string.Empty;
     private List<string>? previousFilterTags;
+    private string? previousFromDate;
+    private string? previousToDate;
 
     // JS interop
     private IJSObjectReference? scrollModule;
@@ -158,7 +166,10 @@
         var tagsKey = FilterTags != null && FilterTags.Count > 0
             ? "_tags_" + string.Join(",", FilterTags.OrderBy(t => t))
             : "";
-        return $"ContentItemsGrid_{SectionName}_{CollectionName}{tagsKey}";
+        var dateKey = (!string.IsNullOrEmpty(FromDate) || !string.IsNullOrEmpty(ToDate))
+            ? $"_dates_{FromDate}_{ToDate}"
+            : "";
+        return $"ContentItemsGrid_{SectionName}_{CollectionName}{tagsKey}{dateKey}";
     }
 
     private Task PersistState()
@@ -190,10 +201,13 @@
         }
 
         var tagsChanged = !TagsAreEqual(FilterTags, previousFilterTags);
-        if (tagsChanged)
+        var datesChanged = FromDate != previousFromDate || ToDate != previousToDate;
+        if (tagsChanged || datesChanged)
         {
             previousFilterTags = FilterTags?.ToList();
-            // Tags changed - reload data from API with new filters
+            previousFromDate = FromDate;
+            previousToDate = ToDate;
+            // Filters changed - reload data from API with new filters
             await LoadInitialBatch();
         }
     }
@@ -271,7 +285,9 @@
             CollectionName, 
             take: BatchSize, 
             skip: skip,
-            tags: tagsParam);
+            tags: tagsParam,
+            fromDate: FromDate,
+            toDate: ToDate);
             
         var newItems = items?.ToList() ?? [];
 

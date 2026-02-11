@@ -71,9 +71,10 @@ public static class ContentEndpoints
             .WithName("GetCollectionItems")
             .WithSummary("Get items in a collection")
             .WithDescription("Returns content items from a collection with optional filtering. " +
-                "Supports: take (default configured in appsettings), skip, q (search), tags, subcollection, lastDays, includeDraft.")
+                "Supports: take (default configured in appsettings), skip, q (search), tags, subcollection, lastDays, from, to, includeDraft.")
             .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
+            .Produces(StatusCodes.Status404NotFound)
+            .Produces(StatusCodes.Status400BadRequest);
 
         group.MapGet("/{sectionName}/collections/{collectionName}/tags", GetCollectionTags)
             .WithName("GetCollectionTags")
@@ -182,7 +183,7 @@ public static class ContentEndpoints
     /// GET /api/sections/{sectionName}/collections/{collectionName}/items - Get items in a collection
     /// Supports "all" as a virtual collection name - returns all items in the section.
     /// </summary>
-    private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound>> GetCollectionItems(
+    private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound, BadRequest<string>>> GetCollectionItems(
         string sectionName,
         string collectionName,
         IOptions<ApiOptions> apiOptions,
@@ -193,6 +194,8 @@ public static class ContentEndpoints
         [FromQuery] string? tags = null,
         [FromQuery] string? subcollection = null,
         [FromQuery] int? lastDays = null,
+        [FromQuery] string? from = null,
+        [FromQuery] string? to = null,
         [FromQuery] bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
@@ -221,6 +224,42 @@ public static class ContentEndpoints
         var limit = Math.Clamp(take ?? options.DefaultPageSize, 1, options.MaxPageSize);
         var offset = Math.Max(skip, 0);
 
+        // Parse explicit date range parameters (from/to take precedence over lastDays)
+        DateTimeOffset? dateFrom = null;
+        DateTimeOffset? dateTo = null;
+
+        if (!string.IsNullOrWhiteSpace(from))
+        {
+            if (!DateTimeOffset.TryParse(from, null, System.Globalization.DateTimeStyles.AssumeUniversal, out var parsedFrom))
+            {
+                return TypedResults.BadRequest($"Invalid 'from' date format: {from}. Expected ISO 8601 format (e.g., 2024-01-15).");
+            }
+
+            dateFrom = parsedFrom;
+        }
+
+        if (!string.IsNullOrWhiteSpace(to))
+        {
+            if (!DateTimeOffset.TryParse(to, null, System.Globalization.DateTimeStyles.AssumeUniversal, out var parsedTo))
+            {
+                return TypedResults.BadRequest($"Invalid 'to' date format: {to}. Expected ISO 8601 format (e.g., 2024-01-15).");
+            }
+
+            dateTo = parsedTo;
+        }
+
+        // Fall back to lastDays if from/to not specified
+        if (dateFrom == null && dateTo == null && lastDays.HasValue)
+        {
+            dateFrom = DateTimeOffset.UtcNow.AddDays(-lastDays.Value);
+        }
+
+        // Defensive: swap dates if from > to (can happen due to client race conditions)
+        if (dateFrom.HasValue && dateTo.HasValue && dateFrom > dateTo)
+        {
+            (dateFrom, dateTo) = (dateTo, dateFrom);
+        }
+
         // Build search request - repository will handle "all" as no filter
         var request = new SearchRequest(
             take: limit,
@@ -232,9 +271,8 @@ public static class ContentEndpoints
                 ? []
                 : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
             subcollection: subcollection,
-            dateFrom: lastDays.HasValue
-                ? DateTimeOffset.UtcNow.AddDays(-lastDays.Value)
-                : null,
+            dateFrom: dateFrom,
+            dateTo: dateTo,
             includeDraft: includeDraft
         );
 
@@ -311,6 +349,12 @@ public static class ContentEndpoints
         if (dateFrom == null && dateTo == null && (lastDays ?? options.DefaultDateRangeDays) > 0)
         {
             dateFrom = DateTimeOffset.UtcNow.AddDays(-(lastDays ?? options.DefaultDateRangeDays));
+        }
+
+        // Defensive: swap dates if from > to (can happen due to client race conditions)
+        if (dateFrom.HasValue && dateTo.HasValue && dateFrom > dateTo)
+        {
+            (dateFrom, dateTo) = (dateTo, dateFrom);
         }
 
         // Parse selected tags filter (for dynamic counts)

@@ -194,6 +194,19 @@ export class TocScrollSpy {
         const detectionLineFromTop = this.cachedDetectionLine;
         const tolerance = 5; // Allow 5px tolerance
 
+        // Bottom-of-page detection: when scrolled to the very bottom, activate the last heading.
+        // This ensures all sections are reachable via scrolling - a standard scroll spy UX pattern.
+        const scrollBottom = window.innerHeight + window.scrollY;
+        const pageHeight = document.documentElement.scrollHeight;
+        if (pageHeight - scrollBottom < 50 && this.headings.length > 0) {
+            const lastHeading = this.headings[this.headings.length - 1];
+            const lastId = lastHeading.getAttribute('id');
+            if (lastId && this.tocLinks.has(lastId)) {
+                this.setActive(lastId);
+                return;
+            }
+        }
+
         // Find the heading CLOSEST to our detection line (30% from top of content area)
         // Pick the heading that's above the line and closest to it
         let targetId = null;

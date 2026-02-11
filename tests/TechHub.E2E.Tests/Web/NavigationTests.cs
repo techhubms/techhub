@@ -9,40 +9,9 @@ namespace TechHub.E2E.Tests.Web;
 /// E2E tests for navigation improvements and URL structure
 /// Tests for user story requirements: section ordering, URL structure, and navigation flow
 /// </summary>
-[Collection("Navigation Tests")]
-public class NavigationTests : IAsyncLifetime
+public class NavigationTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public NavigationTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
-
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.DisposeAsync();
-        }
-    }
+    public NavigationTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
     public async Task Homepage_SectionsAreOrderedCorrectly()

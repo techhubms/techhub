@@ -13,41 +13,11 @@ namespace TechHub.E2E.Tests.Web;
 /// - SidebarTocTests.cs: Table of contents behavior
 /// - MermaidTests.cs: Diagram rendering
 /// </summary>
-[Collection("Custom Pages Tests")]
-public class GenAIAppliedTests : IAsyncLifetime
+public class GenAIAppliedTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public GenAIAppliedTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
+    public GenAIAppliedTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     private const string PageUrl = "/ai/genai-applied";
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.CloseAsync();
-        }
-    }
 
     [Fact]
     public async Task GenAIApplied_ShouldLoad_Successfully()

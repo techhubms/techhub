@@ -99,7 +99,7 @@ Tech Hub uses different database backends for different testing scenarios:
 
 **Coverage Requirement**: All functionality exposed via the API must have integration test coverage.
 
-**Framework**: xUnit + WebApplicationFactory
+**Framework**: xUnit v3 + WebApplicationFactory
 
 ### Unit Tests
 
@@ -120,7 +120,7 @@ Tech Hub uses different database backends for different testing scenarios:
 
 **Key Principle**: If code can break in scenarios only reproducible via unit tests, but these paths are NEVER exposed via the API - what does it matter? Focus on scenarios that can actually happen through the API.
 
-**Framework**: xUnit
+**Framework**: xUnit v3
 
 ### Component Tests
 
@@ -139,8 +139,8 @@ Tech Hub uses different database backends for different testing scenarios:
 
 | Layer | Framework | Projects | External Dependencies | Local Dependencies (Filesystem) |
 |-------|-----------|----------|----------------------|--------------------------------|
-| **Integration** | xUnit + WebApplicationFactory | Api | Stub/Mock | Real (we control it) |
-| **Unit** | xUnit + Stubs | Core, Infrastructure | NEVER | NEVER |
+| **Integration** | xUnit v3 + WebApplicationFactory | Api | Stub/Mock | Real (we control it) |
+| **Unit** | xUnit v3 + Stubs | Core, Infrastructure | NEVER | NEVER |
 | **E2E** | Playwright .NET + HttpClient | E2E | Real | Real |
 | **Component** | bUnit | Web | Stub/Mock | Stub/Mock |
 | **PowerShell** | Pester | powershell/ | Mock | Real (test files) |

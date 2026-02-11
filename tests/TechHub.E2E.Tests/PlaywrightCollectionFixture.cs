@@ -1,10 +1,12 @@
 using Microsoft.Playwright;
 
+[assembly: AssemblyFixture(typeof(TechHub.E2E.Tests.PlaywrightCollectionFixture))]
+
 namespace TechHub.E2E.Tests;
 
 /// <summary>
-/// Collection fixture for sharing Playwright browser instance across multiple test classes.
-/// This significantly reduces overhead by creating the browser once per test collection.
+/// Assembly fixture for sharing a single Playwright browser instance across all Web E2E test classes.
+/// This significantly reduces overhead by creating the browser once per test assembly.
 /// Each test class gets an isolated browser context for proper test isolation.
 /// </summary>
 public class PlaywrightCollectionFixture : IAsyncLifetime
@@ -12,7 +14,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
     public IPlaywright? Playwright { get; private set; }
     public IBrowser? Browser { get; private set; }
 
-    public async Task InitializeAsync()
+    public async ValueTask InitializeAsync()
     {
         Playwright = await Microsoft.Playwright.Playwright.CreateAsync();
 
@@ -34,7 +36,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
         });
     }
 
-    public async Task DisposeAsync()
+    public async ValueTask DisposeAsync()
     {
         if (Browser != null)
         {
@@ -63,99 +65,4 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
             IgnoreHTTPSErrors = true, // Ignore HTTPS errors in test environment
         });
     }
-}
-
-/// <summary>
-/// xUnit collection definitions for E2E tests.
-/// Each test class gets its own collection to enable parallel execution.
-/// All collections share the same PlaywrightCollectionFixture instance (one browser).
-/// </summary>
-[CollectionDefinition("URL Routing Tests")]
-public class UrlRoutingCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Navigation Tests")]
-public class NavigationCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("RSS Tests")]
-public class RssCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Content Detail Tests")]
-public class ContentDetailCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("About Page Tests")]
-public class AboutPageCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Home Page Tests")]
-public class HomePageCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Custom Pages Tests")]
-public class CustomPagesCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Section Card Layout Tests")]
-public class SectionCardLayoutCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Section Page Keyboard Navigation Tests")]
-public class SectionPageKeyboardNavigationCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Tag Filtering Tests")]
-public class TagFilteringCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Custom Pages TOC Tests")]
-public class CustomPagesTocCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Sidebar TOC Tests")]
-public class SidebarTocCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Mermaid Tests")]
-public class MermaidCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Highlighting Tests")]
-public class HighlightingCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Tab Highlighting Tests")]
-public class TabHighlightingCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Tab Ordering Tests")]
-public class TabOrderingCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Infinite Scroll Tests")]
-public class InfiniteScrollCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Dynamic Tag Counts Tests")]
-public class DynamicTagCountsCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
 }

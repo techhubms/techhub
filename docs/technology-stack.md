@@ -22,7 +22,7 @@
 
 ## Testing
 
-- **xUnit**: Unit and integration test framework
+- **xUnit v3**: Unit and integration test framework (assembly fixtures, `ValueTask`-based lifecycle)
 - **Moq**: Mocking framework
 - **FluentAssertions**: Assertion library
 - **Microsoft.AspNetCore.Mvc.Testing**: API integration testing

@@ -144,7 +144,7 @@ public class TechHubApiClient : ITechHubApiClient
 
     /// <summary>
     /// Get items in a collection with optional filtering
-    /// GET /api/sections/{sectionName}/collections/{collectionName}/items?take=&amp;skip=&amp;q=&amp;tags=&amp;subcollection=&amp;lastDays=&amp;includeDraft=
+    /// GET /api/sections/{sectionName}/collections/{collectionName}/items?take=&amp;skip=&amp;q=&amp;tags=&amp;subcollection=&amp;lastDays=&amp;from=&amp;to=&amp;includeDraft=
     /// </summary>
     public virtual async Task<IEnumerable<ContentItem>?> GetCollectionItemsAsync(
         string sectionName,
@@ -155,6 +155,8 @@ public class TechHubApiClient : ITechHubApiClient
         string? tags = null,
         string? subcollection = null,
         int? lastDays = null,
+        string? fromDate = null,
+        string? toDate = null,
         bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
@@ -189,6 +191,16 @@ public class TechHubApiClient : ITechHubApiClient
             if (lastDays.HasValue)
             {
                 queryParams.Add($"lastDays={lastDays.Value}");
+            }
+
+            if (!string.IsNullOrEmpty(fromDate))
+            {
+                queryParams.Add($"from={Uri.EscapeDataString(fromDate)}");
+            }
+
+            if (!string.IsNullOrEmpty(toDate))
+            {
+                queryParams.Add($"to={Uri.EscapeDataString(toDate)}");
             }
 
             if (includeDraft)

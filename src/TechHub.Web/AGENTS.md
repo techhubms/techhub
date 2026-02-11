@@ -861,8 +861,9 @@ else if (data != null)
 **Configuration**:
 
 - **Items per batch**: 20 items
-- **Prefetch trigger**: 80% scroll threshold (trigger when user is 80% down the page)
-- **URL parameter preservation**: Maintain filters/search when loading more
+- **Prefetch trigger**: `rootMargin: '300px'` (trigger 300px before sentinel is visible)
+- **Sentinel element**: `#scroll-trigger` (1px height div, removed when no more items)
+- **Ready signal**: `window.__ioObserverReady` (set `true` after `observer.observe()`, `false` on `dispose()`)
 
 **Pattern**:
 
@@ -878,57 +879,55 @@ else if (data != null)
 
 @if (hasMore)
 {
-    <div id="load-more-trigger" style="height: 1px;"></div>
+    <div id="scroll-trigger" style="height: 1px;"></div>
 }
 
 @code {
     private List<ContentItem> visibleItems = new();
     private bool hasMore = true;
-    private int currentPage = 1;
-    private const int PageSize = 20;
-    
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+        if (firstRender || hasMore)
         {
-            // Set up intersection observer at 80% threshold
-            await JS.InvokeVoidAsync("setupInfiniteScroll", "load-more-trigger", 
-                DotNetObjectReference.Create(this));
+            await JS.InvokeVoidAsync("infiniteScroll.observeScrollTrigger",
+                DotNetObjectReference.Create(this), "scroll-trigger");
         }
     }
-    
+
     [JSInvokable]
-    public async Task LoadMore()
+    public async Task LoadNextBatch()
     {
-        currentPage++;
-        var nextBatch = await ApiClient.GetContentAsync(
-            section: sectionName,
-            page: currentPage,
-            pageSize: PageSize);
-        
-        if (nextBatch.Count < PageSize)
-            hasMore = false;
-        
-        visibleItems.AddRange(nextBatch);
+        // Load next batch, update visibleItems, set hasMore = false when done
         StateHasChanged();
     }
 }
 ```
 
-**JavaScript** (wwwroot/js/infinite-scroll.js):
+**JavaScript** (`wwwroot/js/infinite-scroll.js`):
 
 ```javascript
-window.setupInfiniteScroll = (elementId, dotNetRef) => {
-    const trigger = document.getElementById(elementId);
-    const observer = new IntersectionObserver(async (entries) => {
-        if (entries[0].isIntersecting) {
-            await dotNetRef.invokeMethodAsync('LoadMore');
+export function observeScrollTrigger(helper, triggerId) {
+    dispose();
+    const trigger = document.getElementById(triggerId);
+
+    observer = new IntersectionObserver((entries) => {
+        if (entries[0]?.isIntersecting && dotnetHelper) {
+            dotnetHelper.invokeMethodAsync('LoadNextBatch');
         }
-    }, { threshold: 0.8 }); // 80% visible
-    
+    }, { rootMargin: '300px', threshold: 0 });
+
     observer.observe(trigger);
-};
+    window.__ioObserverReady = true;  // Signal for E2E tests
+}
+
+export function dispose() {
+    if (observer) { observer.disconnect(); observer = null; }
+    window.__ioObserverReady = false;
+}
 ```
+
+**Ready Signal Pattern**: The `__ioObserverReady` flag follows the same pattern as `__blazorServerReady` and `__scriptsReady`. It solves a timing race: after each batch load, Blazor re-renders and re-attaches the observer in `OnAfterRenderAsync`. Without the signal, E2E tests may scroll before the new observer is attached, causing the IO callback to never fire.
 
 ### Conditional JavaScript Loading
 

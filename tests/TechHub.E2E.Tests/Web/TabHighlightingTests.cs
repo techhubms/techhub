@@ -18,40 +18,9 @@ namespace TechHub.E2E.Tests.Web;
 /// - Tag buttons show visible focus outline
 /// - Skip link shows visible focus outline
 /// </summary>
-[Collection("Tab Highlighting Tests")]
-public class TabHighlightingTests : IAsyncLifetime
+public class TabHighlightingTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public TabHighlightingTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
-
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.CloseAsync();
-        }
-    }
+    public TabHighlightingTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
     public async Task FocusedLinks_ShouldShow_VisibleOutline()
@@ -172,7 +141,7 @@ public class TabHighlightingTests : IAsyncLifetime
         await Assertions.Expect(skipLink).ToBeVisibleAsync(new() { Timeout = 2000 });
 
         // Wait for focus to settle on the skip link using Playwright polling
-        await Page.WaitForFunctionAsync(
+        await Page.WaitForConditionAsync(
             "() => document.activeElement && document.activeElement.classList.contains('skip-link')",
             new PageWaitForFunctionOptions { Timeout = 2000, PollingInterval = 50 });
 

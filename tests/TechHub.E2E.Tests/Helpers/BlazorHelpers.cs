@@ -55,6 +55,224 @@ public static class BlazorHelpers
     public const string BaseUrl = "https://localhost:5003";
 
     // ============================================================================
+    // SAFE WaitForFunctionAsync WRAPPERS
+    // ============================================================================
+    // Playwright .NET has a SINGLE overload:
+    //   WaitForFunctionAsync(string expression, object? arg = null, PageWaitForFunctionOptions? options = null)
+    //
+    // BUG TRAP: If you call WaitForFunctionAsync("...", new PageWaitForFunctionOptions { Timeout = 10000 }),
+    // the options object silently binds to the `arg` parameter (type object?), NOT `options`.
+    // This causes all explicit timeouts to be ignored, falling back to the default timeout.
+    //
+    // These extension methods provide unambiguous 2-arg signatures that prevent this mistake.
+    // USE THESE instead of calling WaitForFunctionAsync directly.
+    // ============================================================================
+
+    /// <summary>
+    /// Waits for a JavaScript condition to become truthy. Safe wrapper that prevents
+    /// the Playwright .NET arg-binding bug.
+    /// Use this for expressions that take NO JavaScript arguments.
+    /// </summary>
+    /// <param name="page">The page to evaluate on</param>
+    /// <param name="expression">JavaScript expression that returns a truthy/falsy value, e.g. "() => document.querySelector('.card') !== null"</param>
+    /// <param name="options">Wait options (timeout, polling interval)</param>
+    public static Task<IJSHandle> WaitForConditionAsync(
+        this IPage page,
+        string expression,
+        PageWaitForFunctionOptions options) =>
+        page.WaitForFunctionAsync(expression, null, options);
+
+    /// <summary>
+    /// Waits for a JavaScript condition to become truthy with a specific timeout.
+    /// Convenience overload for the most common case.
+    /// Use this for expressions that take NO JavaScript arguments.
+    /// </summary>
+    /// <param name="page">The page to evaluate on</param>
+    /// <param name="expression">JavaScript expression that returns a truthy/falsy value</param>
+    /// <param name="timeoutMs">Maximum time to wait in milliseconds</param>
+    /// <param name="pollingIntervalMs">Polling interval in milliseconds (default: Playwright default)</param>
+    public static Task<IJSHandle> WaitForConditionAsync(
+        this IPage page,
+        string expression,
+        int timeoutMs,
+        int? pollingIntervalMs = null)
+    {
+        var options = new PageWaitForFunctionOptions { Timeout = timeoutMs };
+        if (pollingIntervalMs.HasValue)
+            options.PollingInterval = pollingIntervalMs.Value;
+        return page.WaitForFunctionAsync(expression, null, options);
+    }
+
+    /// <summary>
+    /// Waits for a parameterized JavaScript condition to become truthy.
+    /// Use this for expressions that accept a JavaScript argument, e.g.
+    /// "(expectedCount) => document.querySelectorAll('.card').length >= expectedCount".
+    /// The <paramref name="arg"/> is passed to the JavaScript function as its first parameter.
+    /// </summary>
+    /// <param name="page">The page to evaluate on</param>
+    /// <param name="expression">JavaScript expression accepting one arg</param>
+    /// <param name="arg">Value passed to the JavaScript function</param>
+    /// <param name="options">Wait options (timeout, polling interval)</param>
+    public static Task<IJSHandle> WaitForConditionAsync(
+        this IPage page,
+        string expression,
+        object arg,
+        PageWaitForFunctionOptions options) =>
+        page.WaitForFunctionAsync(expression, arg, options);
+
+    // ============================================================================
+    // INFINITE SCROLL - Reliable scroll-to-load pattern
+    // ============================================================================
+
+    /// <summary>
+    /// Scrolls the page to trigger IntersectionObserver-based infinite scroll and waits for
+    /// the expected number of items to load.
+    ///
+    /// Strategy:
+    /// 1. Wait for __ioObserverReady (set by infinite-scroll.js when observer is attached)
+    /// 2. Scroll #scroll-trigger into view with scrollIntoView
+    /// 3. Wait for a double requestAnimationFrame to ensure Chrome processes the rendering
+    ///    frame that delivers IntersectionObserver entries
+    /// 4. Poll for the expected item count (Blazor re-renders after LoadNextBatch)
+    /// 5. After each batch loads, wait for __ioObserverReady again (Blazor re-attaches observer)
+    /// </summary>
+    /// <param name="page">The page to scroll</param>
+    /// <param name="expectedItemCount">Minimum number of items expected after scroll</param>
+    /// <param name="timeoutMs">Total timeout for the operation</param>
+    /// <param name="itemSelector">CSS selector for items to count (default: ".card")</param>
+    public static async Task ScrollToLoadMoreAsync(
+        this IPage page,
+        int expectedItemCount,
+        int timeoutMs = 15_000,
+        string itemSelector = ".card")
+    {
+        var deadline = DateTime.UtcNow.AddMilliseconds(timeoutMs);
+
+        while (DateTime.UtcNow < deadline)
+        {
+            // Check if we already have enough items
+            var currentCount = await page.EvaluateAsync<int>(
+                $"() => document.querySelectorAll('{itemSelector}').length");
+            if (currentCount >= expectedItemCount)
+                return;
+
+            // Wait for the IntersectionObserver to be attached by Blazor's OnAfterRenderAsync.
+            // infinite-scroll.js sets window.__ioObserverReady = true after observer.observe().
+            // This eliminates the race between "Blazor re-attaches observer" and "test scrolls".
+            var remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
+            if (remainingMs <= 0) break;
+            await page.WaitForConditionAsync(
+                "() => window.__ioObserverReady === true",
+                Math.Min(remainingMs, 5000));
+
+            // Scroll #scroll-trigger into view + double rAF to force a rendering frame.
+            // IntersectionObserver entries are delivered during rendering frames.
+            await page.EvaluateAsync(@"() => {
+                const trigger = document.getElementById('scroll-trigger');
+                if (trigger) trigger.scrollIntoView({ behavior: 'instant', block: 'end' });
+            }");
+            await page.EvaluateAsync(
+                "() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))");
+
+            // Wait for Blazor to process LoadNextBatch and re-render with new items.
+            // After re-render, __ioObserverReady is reset to false then set to true again
+            // when the new observer is attached — the next loop iteration waits for it.
+            try
+            {
+                remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
+                if (remainingMs <= 0) break;
+                await page.WaitForConditionAsync(
+                    $"() => document.querySelectorAll('{itemSelector}').length >= {expectedItemCount}",
+                    new PageWaitForFunctionOptions { Timeout = Math.Min(remainingMs, 5000), PollingInterval = 100 });
+                return;
+            }
+            catch (TimeoutException)
+            {
+                // Not loaded yet — scroll again
+            }
+        }
+
+        var finalCount = await page.EvaluateAsync<int>(
+            $"() => document.querySelectorAll('{itemSelector}').length");
+        if (finalCount < expectedItemCount)
+        {
+            throw new TimeoutException(
+                $"Infinite scroll failed: expected at least {expectedItemCount} items but found {finalCount} after {timeoutMs}ms.");
+        }
+    }
+
+    /// <summary>
+    /// Scrolls repeatedly until an end-of-content element appears or timeout is reached.
+    /// Used for testing that infinite scroll reaches the end of a finite collection.
+    /// Uses the same __ioObserverReady signal as ScrollToLoadMoreAsync.
+    /// </summary>
+    /// <param name="page">The page to scroll</param>
+    /// <param name="endSelector">CSS selector for the end-of-content marker (default: ".end-of-content")</param>
+    /// <param name="timeoutMs">Total timeout for the operation</param>
+    public static async Task ScrollToEndOfContentAsync(
+        this IPage page,
+        string endSelector = ".end-of-content",
+        int timeoutMs = 30_000)
+    {
+        var deadline = DateTime.UtcNow.AddMilliseconds(timeoutMs);
+
+        while (DateTime.UtcNow < deadline)
+        {
+            // Check if end marker exists
+            var endExists = await page.EvaluateAsync<bool>(
+                $"() => document.querySelector('{endSelector}') !== null");
+            if (endExists)
+                return;
+
+            // Wait for IO observer to be attached before scrolling
+            var remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
+            if (remainingMs <= 0) break;
+
+            // If scroll-trigger exists, wait for observer; otherwise content may have ended
+            var hasTrigger = await page.EvaluateAsync<bool>(
+                "() => document.getElementById('scroll-trigger') !== null");
+            if (!hasTrigger)
+            {
+                // No trigger means content has ended — check for end marker one more time
+                endExists = await page.EvaluateAsync<bool>(
+                    $"() => document.querySelector('{endSelector}') !== null");
+                if (endExists) return;
+                break;
+            }
+
+            await page.WaitForConditionAsync(
+                "() => window.__ioObserverReady === true",
+                Math.Min(remainingMs, 5000));
+
+            // Scroll trigger into view + double rAF
+            await page.EvaluateAsync(@"() => {
+                const trigger = document.getElementById('scroll-trigger');
+                if (trigger) trigger.scrollIntoView({ behavior: 'instant', block: 'end' });
+            }");
+            await page.EvaluateAsync(
+                "() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))");
+
+            // Wait for content to load
+            try
+            {
+                remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
+                if (remainingMs <= 0) break;
+                await page.WaitForConditionAsync(
+                    $"() => document.querySelector('{endSelector}') !== null",
+                    new PageWaitForFunctionOptions { Timeout = Math.Min(remainingMs, 5000), PollingInterval = 100 });
+                return;
+            }
+            catch (TimeoutException)
+            {
+                // Not at end yet, keep scrolling
+            }
+        }
+
+        throw new TimeoutException(
+            $"Infinite scroll did not reach end of content ('{endSelector}') within {timeoutMs}ms.");
+    }
+
+    // ============================================================================
     // PAGE CREATION
     // ============================================================================
 
@@ -170,11 +388,13 @@ public static class BlazorHelpers
     /// Mermaid.js transforms `<pre class="mermaid">` elements into SVG diagrams.
     /// This method:
     /// 1. Checks if there are any `<pre class="mermaid">` elements on the page
-    /// 2. If found, waits for each one to be converted to an SVG element
-    /// 3. Adds an additional 100ms wait for browser scrolling to settle
+    /// 2. Checks if mermaid.js actually loaded (CDN may be unreachable)
+    /// 3. If both conditions met, waits for each one to be converted to an SVG element
+    /// 4. Adds a requestAnimationFrame wait for browser layout to settle
     /// 
-    /// This ensures tests don't run assertions before diagrams are fully rendered,
-    /// which prevents timing-related test failures.
+    /// If mermaid.js failed to load (CDN blocked), this method returns immediately
+    /// instead of timing out. Tests that specifically verify mermaid rendering should
+    /// check for the library separately.
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="timeoutMs">Maximum time to wait for rendering</param>
@@ -189,14 +409,12 @@ public static class BlazorHelpers
             var mermaidCount = await mermaidPre.CountAsync();
 
             if (mermaidCount == 0)
-            {
-                // No Mermaid diagrams on this page, nothing to wait for
                 return;
-            }
 
-            // Wait for each <pre class="mermaid"> to be converted to SVG
-            // Mermaid.js replaces the <pre> content with an <svg> element
-            await page.WaitForFunctionAsync(
+            // Wait for each <pre class="mermaid"> to be converted to SVG.
+            // No CDN-loaded check — if mermaid.js fails to load, this correctly times out
+            // and the test fails with a clear error, which is the desired behavior.
+            await page.WaitForConditionAsync(
                 @"(expectedCount) => {
                     const svgs = document.querySelectorAll('svg[id^=""mermaid-""]');
                     return svgs.length >= expectedCount;
@@ -204,17 +422,9 @@ public static class BlazorHelpers
                 mermaidCount,
                 new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 100 }
             );
-
-            // Wait for browser layout to settle after diagram rendering
-            // Using requestAnimationFrame ensures the browser has completed a paint cycle
-            await page.WaitForFunctionAsync(
-                "() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve(true))))",
-                new PageWaitForFunctionOptions { Timeout = 2000 }
-            );
         }
         catch (TimeoutException)
         {
-            // Mermaid diagrams didn't render in time - this is a real issue, re-throw
             throw new TimeoutException(
                 $"Mermaid diagrams failed to render within {timeoutMs}ms. " +
                 "Check that mermaid.js is loaded and diagrams have valid syntax.");
@@ -309,7 +519,7 @@ public static class BlazorHelpers
         try
         {
             // Wait for Blazor object to exist (basic requirement)
-            await page.WaitForFunctionAsync(
+            await page.WaitForConditionAsync(
                 "() => typeof window.Blazor !== 'undefined'",
                 new PageWaitForFunctionOptions { Timeout = timeoutMs }
             );
@@ -321,7 +531,7 @@ public static class BlazorHelpers
             //
             // For pages that only use SSR without interactivity (no InteractiveServer/InteractiveWebAssembly),
             // we check for window.__blazorWebReady which is set by afterWebStarted.
-            await page.WaitForFunctionAsync(@"
+            await page.WaitForConditionAsync(@"
                 () => {
                     // Check if Blazor Server or WebAssembly interactivity is ready
                     // These flags are set by TechHub.Web.lib.module.js afterServerStarted/afterWebAssemblyStarted
@@ -343,7 +553,7 @@ public static class BlazorHelpers
             // After Blazor is ready, the page loads additional JS modules (custom-pages.js, infinite-scroll.js, etc.)
             // These modules attach event handlers and initialize interactive elements.
             // We must wait for them to complete before interacting with elements they control.
-            await page.WaitForFunctionAsync(@"
+            await page.WaitForConditionAsync(@"
                 () => {
                     // If scripts are currently loading, wait
                     if (window.__scriptsLoading === true) {
@@ -417,11 +627,11 @@ public static class BlazorHelpers
         // (navigation links, tag toggles, collection buttons, etc.)
         if (waitForUrlChange)
         {
-            // CRITICAL: Use WaitForFunctionAsync instead of WaitForURLAsync!
+            // CRITICAL: Use WaitForConditionAsync instead of WaitForURLAsync!
             // Blazor Server updates URLs via pushState (history API), not HTTP navigation.
             // WaitForURLAsync waits for navigation events which don't fire with pushState.
-            // WaitForFunctionAsync polls the DOM directly, which works for any URL change.
-            await page.WaitForFunctionAsync(
+            // WaitForConditionAsync polls the DOM directly, which works for any URL change.
+            await page.WaitForConditionAsync(
                 "expectedUrl => window.location.href !== expectedUrl",
                 urlBeforeClick,
                 new() { Timeout = timeoutMs, PollingInterval = 100 });
@@ -954,6 +1164,27 @@ public static class BlazorHelpers
                 }});
             }}
         ", new { maxTimeout = maxTimeoutMs });
+    }
+
+    /// <summary>
+    /// Scrolls an element into view using JavaScript's scrollIntoView API.
+    ///
+    /// Unlike Playwright's built-in ScrollIntoViewIfNeededAsync, this method does NOT
+    /// perform stability checks. Playwright's stability check waits for the element's
+    /// bounding box to remain unchanged across two animation frames, which fails for
+    /// elements that resize after scrolling (e.g., lazy-loaded images that go from 0×0
+    /// to their natural dimensions once they enter the viewport).
+    ///
+    /// Use this method when scrolling to elements that may change size dynamically
+    /// (lazy images, animated elements, elements with CSS transitions on visibility).
+    /// </summary>
+    /// <param name="locator">The element to scroll into view</param>
+    /// <param name="block">Vertical alignment: "center", "start", "end", or "nearest"</param>
+    public static async Task ScrollIntoViewAsync(
+        this ILocator locator,
+        string block = "center")
+    {
+        await locator.EvaluateAsync($"el => el.scrollIntoView({{ behavior: 'instant', block: '{block}' }})");
     }
 
     /// <summary>

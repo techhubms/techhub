@@ -20,40 +20,9 @@ namespace TechHub.E2E.Tests.Web;
 /// focusable, which changes tab order. This is expected behavior and doesn't affect
 /// keyboard accessibility of interactive elements.
 /// </summary>
-[Collection("Highlighting Tests")]
-public class HighlightingTests : IAsyncLifetime
+public class HighlightingTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public HighlightingTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
-
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.CloseAsync();
-        }
-    }
+    public HighlightingTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
     public async Task CodeBlocks_ShouldHave_SyntaxHighlighting()
@@ -62,7 +31,7 @@ public class HighlightingTests : IAsyncLifetime
         await Page.GotoRelativeAsync("/ai/genai-advanced");
 
         // Wait for highlight.js to initialize and apply syntax highlighting classes
-        await Page.WaitForFunctionAsync(
+        await Page.WaitForConditionAsync(
             "() => document.querySelector('pre code.hljs') !== null || document.querySelector('pre code[class*=\"language-\"]') !== null",
             new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
 
@@ -88,9 +57,8 @@ public class HighlightingTests : IAsyncLifetime
         var consoleMessages = new List<IConsoleMessage>();
         Page.Console += (_, msg) => consoleMessages.Add(msg);
 
-        // Act
+        // Act - GotoRelativeAsync waits for __scriptsReady (all JS modules loaded)
         await Page.GotoRelativeAsync("/ai/genai-advanced");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert - No console errors (filter WebSocket connection errors from Blazor)
         var errors = consoleMessages

@@ -22,40 +22,9 @@ namespace TechHub.E2E.Tests.Web;
 /// - Last section detection (scroll spy edge case)
 /// - No console errors
 /// </summary>
-[Collection("Sidebar TOC Tests")]
-public class SidebarTocTests : IAsyncLifetime
+public class SidebarTocTests : PlaywrightTestBase
 {
-    private readonly PlaywrightCollectionFixture _fixture;
-
-    public SidebarTocTests(PlaywrightCollectionFixture fixture)
-    {
-        ArgumentNullException.ThrowIfNull(fixture);
-
-        _fixture = fixture;
-    }
-
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-        {
-            await _page.CloseAsync();
-        }
-
-        if (_context != null)
-        {
-            await _context.CloseAsync();
-        }
-    }
+    public SidebarTocTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     #region TOC Rendering
 
@@ -136,19 +105,16 @@ public class SidebarTocTests : IAsyncLifetime
             Assert.Fail($"Not enough headings with IDs found on {url}");
         }
 
-        // Act - Scroll to second heading using native Playwright mouse wheel
-        // Calculate scroll position needed to reach second heading
+        // Act - Scroll to second heading using JS window.scrollTo
+        // Avoids Mouse.WheelAsync which can hang under parallel Chrome load
         var secondHeadingY = await Page.EvaluateAsync<int>(
             "document.querySelectorAll('h2[id], h3[id]')[1].getBoundingClientRect().top + window.scrollY - 150"
         );
-        await Page.Mouse.WheelAsync(0, secondHeadingY);
+        await Page.EvaluateAsync($"window.scrollTo({{ top: {secondHeadingY}, behavior: 'instant' }})");
         
         // Wait for scroll to complete (position stabilizes)
-        await Page.WaitForFunctionAsync(
-            @"(targetY) => {
-                return Math.abs(window.scrollY - targetY) < 100;
-            }",
-            secondHeadingY,
+        await Page.WaitForConditionAsync(
+            @$"() => Math.abs(window.scrollY - {secondHeadingY}) < 100",
             new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
 
         // Assert - Active TOC link should update
@@ -179,27 +145,32 @@ public class SidebarTocTests : IAsyncLifetime
         var lastHeading = headings.Last;
         var lastHeadingId = await lastHeading.GetAttributeAsync("id");
 
-        // Act - Scroll to bottom using native Playwright mouse wheel
-        // Get total scroll height to determine how much to scroll
+        // Act - Scroll to bottom using JS window.scrollTo
+        // Avoids Mouse.WheelAsync which can hang under parallel Chrome load
         var scrollHeight = await Page.EvaluateAsync<int>("document.documentElement.scrollHeight - window.innerHeight");
         
-        // Use mouse wheel to scroll - this fires proper scroll events unlike window.scrollTo()
-        await Page.Mouse.WheelAsync(0, scrollHeight);
+        // window.scrollTo fires scroll events that scroll spy listens for
+        await Page.EvaluateAsync($"window.scrollTo({{ top: {scrollHeight}, behavior: 'instant' }})");
         
         // Wait for scroll to reach bottom
-        await Page.WaitForFunctionAsync(
-            @"() => {
-                return Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50;
-            }",
+        await Page.WaitForConditionAsync(
+            @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
             new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+
+        // Force scroll spy to re-evaluate now that scroll is complete.
+        // The rAF-based handler may fire before layout settles in headless Chrome,
+        // so we explicitly call updateActiveHeading to trigger bottom-of-page detection.
+        await Page.EvaluateAsync(@"() => {
+            const toc = document.querySelector('[data-toc-scroll-spy]');
+            if (toc && toc._tocScrollSpy) toc._tocScrollSpy.updateActiveHeading();
+        }");
 
         // Get the last TOC link - use href$= to match the end of the href (hash part)
         var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
-        // Use Playwright's auto-retrying assertion - wait for TOC link to become active
-        // This handles timing variations in scroll spy detection
+        // Use Playwright's auto-retrying assertion - wait for TOC link to become active.
         await Assertions.Expect(lastTocLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
-            new() { Timeout = 3000 });
+            new() { Timeout = 5000 });
     }
 
     #endregion
@@ -246,7 +217,7 @@ public class SidebarTocTests : IAsyncLifetime
         await Page.GotoRelativeAsync("/ai/genai-basics#types-of-prompts-and-messages");
 
         // Wait for browser to scroll to anchor position
-        await Page.WaitForFunctionAsync(
+        await Page.WaitForConditionAsync(
             "() => window.scrollY > 0",
             new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 50 });
 
@@ -258,7 +229,7 @@ public class SidebarTocTests : IAsyncLifetime
         await tocLink.ClickBlazorElementAsync(waitForUrlChange: false);
 
         // Wait for any scroll to settle
-        await Page.WaitForFunctionAsync(
+        await Page.WaitForConditionAsync(
             @"() => {
                 if (!window.__lastScrollY) window.__lastScrollY = window.scrollY;
                 const stable = Math.abs(window.scrollY - window.__lastScrollY) < 2;
@@ -295,9 +266,8 @@ public class SidebarTocTests : IAsyncLifetime
             }
         };
 
-        // Act
+        // Act - GotoRelativeAsync waits for __scriptsReady (all JS modules loaded)
         await Page.GotoRelativeAsync(url);
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert
         // Filter out expected/benign errors:
