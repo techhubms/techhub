@@ -78,7 +78,7 @@ public class SqliteContentRepositoryTests : BaseContentRepositoryTests, IClassFi
         var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: [], query: "TechHubSpecialKeyword");
 
         // Act
-        var results = await Repository.SearchAsync(request);
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotBeEmpty("FTS should find item with unique keyword");

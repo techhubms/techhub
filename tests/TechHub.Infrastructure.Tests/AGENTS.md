@@ -105,5 +105,5 @@ collections/
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Infrastructure/AGENTS.md](../../src/TechHub.Infrastructure/AGENTS.md) - Infrastructure patterns
-- [Root AGENTS.md](../../AGENTS.md#step-6-write-tests-first-tdd) - When to write tests
-- [Root AGENTS.md](../../AGENTS.md#step-1-core-rules-boundaries) - Timezone requirements
+- [Root AGENTS.md](../../AGENTS.md#4-write-tests-before-implementing-changes-tdd) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#absolute-critical-rules) - Timezone requirements

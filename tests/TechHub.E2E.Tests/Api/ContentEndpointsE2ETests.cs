@@ -31,12 +31,12 @@ public class ContentEndpointsE2ETests
     public async Task GetAllSections_ReturnsRealSections()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections");
+        var response = await _client.GetAsync("/api/sections", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var sections = await response.Content.ReadFromJsonAsync<List<Section>>();
+        var sections = await response.Content.ReadFromJsonAsync<List<Section>>(TestContext.Current.CancellationToken);
         sections.Should().NotBeNull();
         sections!.Should().NotBeEmpty();
 
@@ -57,12 +57,12 @@ public class ContentEndpointsE2ETests
     public async Task GetSectionByName_ReturnsRealSection()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai");
+        var response = await _client.GetAsync("/api/sections/ai", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var section = await response.Content.ReadFromJsonAsync<Section>();
+        var section = await response.Content.ReadFromJsonAsync<Section>(TestContext.Current.CancellationToken);
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");
@@ -73,7 +73,7 @@ public class ContentEndpointsE2ETests
     public async Task GetSectionByName_InvalidSection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/nonexistent");
+        var response = await _client.GetAsync("/api/sections/nonexistent", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -83,8 +83,8 @@ public class ContentEndpointsE2ETests
     public async Task GetAllSections_CaseSensitive_ExactMatchRequired()
     {
         // Act - Try with different casing
-        var upperResponse = await _client.GetAsync("/api/sections/AI");
-        var mixedResponse = await _client.GetAsync("/api/sections/GitHub-Copilot");
+        var upperResponse = await _client.GetAsync("/api/sections/AI", TestContext.Current.CancellationToken);
+        var mixedResponse = await _client.GetAsync("/api/sections/GitHub-Copilot", TestContext.Current.CancellationToken);
 
         // Assert - Section names are case-sensitive in URLs
         upperResponse.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -95,12 +95,12 @@ public class ContentEndpointsE2ETests
     public async Task GetCollectionItems_ReturnsRealContentWithPagination()
     {
         // Act - Get first page of AI news items
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/items?take=10");
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/items?take=10", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().HaveCountLessThanOrEqualTo(10, "take parameter should limit results");
@@ -119,12 +119,12 @@ public class ContentEndpointsE2ETests
     public async Task GetCollectionItems_WithSkipAndTake_ReturnsPaginatedResults()
     {
         // Act - Get page with skip offset to test pagination with larger datasets
-        var response = await _client.GetAsync("/api/sections/all/collections/all/items?skip=500&take=20");
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?skip=500&take=20", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().HaveCountLessThanOrEqualTo(20, "take parameter should limit results");
 
@@ -144,12 +144,12 @@ public class ContentEndpointsE2ETests
     public async Task GetCollectionItems_WithTagFilter_ReturnsFilteredContent()
     {
         // Act - Filter by tags (using common tags that should exist in real data)
-        var response = await _client.GetAsync("/api/sections/github-copilot/collections/all/items?tags=GitHub%20Copilot&take=20");
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/all/items?tags=GitHub%20Copilot&take=20", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty("GitHub Copilot section should have items with the tag");
 
@@ -164,19 +164,19 @@ public class ContentEndpointsE2ETests
     public async Task GetContentDetail_ReturnsRealContentWithRenderedHtml()
     {
         // Arrange - Get a real item first (using roundups which link internally)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items?take=1");
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items?take=1", TestContext.Current.CancellationToken);
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         var testItem = items.First();
 
         // Act - Get content detail
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
+        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>(TestContext.Current.CancellationToken);
         detail.Should().NotBeNull();
         detail!.Slug.Should().Be(testItem.Slug);
         detail.Title.Should().NotBeNullOrEmpty();
@@ -190,14 +190,14 @@ public class ContentEndpointsE2ETests
     public async Task GetContentDetail_ExternalCollection_ReturnsNotFound()
     {
         // Arrange - Get a news item (external collection)
-        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items?take=1");
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items?take=1", TestContext.Current.CancellationToken);
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         var newsItem = items.First();
 
         // Act - Try to get detail for external content
-        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{newsItem.Slug}");
+        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{newsItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert - External collections should return 404 since they link to original sources
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -207,12 +207,12 @@ public class ContentEndpointsE2ETests
     public async Task GetCollectionTags_ReturnsRealTagCloudData()
     {
         // Act - Get tag cloud for AI section (using 'all' collection for section-wide tags)
-        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags?maxTags=20");
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags?maxTags=20", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
         tagCloud!.Should().NotBeEmpty("AI section should have tags");
 
@@ -236,12 +236,12 @@ public class ContentEndpointsE2ETests
     public async Task GetCustomPage_DXSpace_ReturnsStructuredData()
     {
         // Act
-        var response = await _client.GetAsync("/api/custom-pages/dx-space");
+        var response = await _client.GetAsync("/api/custom-pages/dx-space", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var data = await response.Content.ReadFromJsonAsync<DXSpacePageData>();
+        var data = await response.Content.ReadFromJsonAsync<DXSpacePageData>(TestContext.Current.CancellationToken);
         data.Should().NotBeNull();
         data!.Title.Should().Be("Developer Experience Space");
         data.Dora.Should().NotBeNull();

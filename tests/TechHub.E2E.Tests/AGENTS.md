@@ -96,8 +96,6 @@ tests/TechHub.E2E.Tests/
 │   │   ├── DynamicTagCountsTests.cs    ← Dynamic tag count updates
 │   │   ├── InfiniteScrollTests.cs      ← Infinite scroll pagination
 │   │   └── InfiniteScrollWithTagsTests.cs ← Infinite scroll with tag filtering
-│   └── Proof Tests                     ← Standalone verification tests
-│       └── IntersectionObserverProofTests.cs ← IO works in headless Chrome (11 tests)
 ├── Api/                                 ← Direct API testing (no Playwright)
 │   ├── ApiCollectionFixture.cs         ← Shared WebApplicationFactory for API tests
 │   └── ContentEndpointsE2ETests.cs     ← Content API endpoints (4 tests)
@@ -963,7 +961,6 @@ Console.WriteLine($"Classes: {classes}");
 - [infinite-scroll.js](../../src/TechHub.Web/wwwroot/js/infinite-scroll.js) - IntersectionObserver-based infinite scroll with `__ioObserverReady` signal
 - [BlazorHelpers.cs](Helpers/BlazorHelpers.cs) - Scroll synchronization helpers (`ClickAndWaitForScrollAsync`, `ScrollToLoadMoreAsync`, `ScrollToEndOfContentAsync`)
 - [SidebarTocTests.cs](Web/SidebarTocTests.cs) - Reference implementation for TOC tests with native scrolling
-- [IntersectionObserverProofTests.cs](Web/IntersectionObserverProofTests.cs) - Standalone proof that IO works in headless Chrome (11 tests)
 - [InfiniteScrollTests.cs](Web/InfiniteScrollTests.cs) - Infinite scroll pagination tests
 - [InfiniteScrollWithTagsTests.cs](Web/InfiniteScrollWithTagsTests.cs) - Infinite scroll with tag filtering
 - [VSCodeUpdatesTests.cs](Web/VSCodeUpdatesTests.cs) - Additional TOC test examples

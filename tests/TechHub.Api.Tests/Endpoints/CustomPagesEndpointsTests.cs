@@ -29,7 +29,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     public async Task GetSpecificCustomPage_ReturnsOk(string endpoint)
     {
         // Act
-        var response = await _client.GetAsync(endpoint);
+        var response = await _client.GetAsync(endpoint, TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -39,12 +39,12 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     public async Task GetDXSpaceData_ReturnsStructuredData()
     {
         // Act
-        var response = await _client.GetAsync("/api/custom-pages/dx-space");
+        var response = await _client.GetAsync("/api/custom-pages/dx-space", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var data = await response.Content.ReadFromJsonAsync<DXSpacePageData>();
+        var data = await response.Content.ReadFromJsonAsync<DXSpacePageData>(TestContext.Current.CancellationToken);
         data.Should().NotBeNull();
         data!.Title.Should().Be("Developer Experience Space");
         data.Dora.Should().NotBeNull();

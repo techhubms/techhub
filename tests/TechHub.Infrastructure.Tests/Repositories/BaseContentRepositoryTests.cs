@@ -37,7 +37,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().HaveCount(TotalPublishedItems, "Should return exactly 32 published items from TestCollections");
@@ -60,7 +60,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/*.md files exist
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: []));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: []), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().HaveCount(BlogsCount, "Should return exactly 18 blog posts from TestCollections");
@@ -78,7 +78,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().HaveCount(TotalPublishedItems, "Should return all 32 published items from TestCollections");
@@ -99,7 +99,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: [], includeDraft: false));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: [], includeDraft: false), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotContain(item => item.Slug == "draft-article",
@@ -118,7 +118,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: [], includeDraft: true));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: [], includeDraft: true), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().Contain(item => item.Slug == "draft-article" && item.Draft,
@@ -137,7 +137,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _ghc-features/*.md and _vscode-updates/*.md exist, and optionally _videos/*.md
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotBeEmpty("TestCollections should contain video content");
@@ -163,7 +163,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: Files with section_names: [ai] exist
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: []));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotBeEmpty("TestCollections should contain AI section content");
@@ -179,7 +179,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotBeEmpty("TestCollections should contain multiple items");
@@ -200,7 +200,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true and section_names: [ai]
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: [], includeDraft: false));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: [], includeDraft: false), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotContain(item => item.Slug == "draft-article",
@@ -219,7 +219,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true and section_names: [ai]
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: [], includeDraft: true));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: [], includeDraft: true), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().Contain(item => item.Slug == "draft-article" && item.Draft,
@@ -241,7 +241,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2024-01-01-test-article.md exists
 
         // Act
-        var result = await Repository.GetBySlugAsync("blogs", "test-article");
+        var result = await Repository.GetBySlugAsync("blogs", "test-article", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull("TestCollections should contain the test article");
@@ -261,7 +261,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var result = await Repository.GetBySlugAsync("blogs", "non-existent-slug");
+        var result = await Repository.GetBySlugAsync("blogs", "non-existent-slug", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().BeNull("Non-existent slug should return null");
@@ -278,7 +278,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
 
         // Act
-        var result = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: false);
+        var result = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: false, ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().BeNull("Draft items should not be returned when includeDraft=false");
@@ -295,7 +295,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
 
         // Act
-        var result = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: true);
+        var result = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: true, ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull("Draft items should be returned when includeDraft=true");
@@ -318,7 +318,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _vscode-updates/2025-01-10-vscode-update.md exists
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []), TestContext.Current.CancellationToken);
 
         // Assert: Find the vscode-updates item
         var vscodeItem = results.Items.FirstOrDefault(v => v.SubcollectionName == "vscode-updates");
@@ -340,7 +340,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _ghc-features/*.md exists
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []));
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []), TestContext.Current.CancellationToken);
 
         // Assert: Find a ghc-features item
         var ghcFeatureItem = results.Items.FirstOrDefault(v => v.SubcollectionName == "ghc-features");
@@ -365,7 +365,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: ["AI"]);
 
         // Act
-        var results = await Repository.SearchAsync(request);
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - verify exact count and filtering logic
         var actualCount = results.Items.Count;
@@ -391,7 +391,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: []);
 
         // Act
-        var results = await Repository.SearchAsync(request);
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - verify positive and negative cases
         results.Items.Should().NotBeEmpty("TestCollections should contain items in ai section");
@@ -413,7 +413,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: []);
 
         // Act
-        var results = await Repository.SearchAsync(request);
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - verify exact count and filtering logic
         results.Items.Should().HaveCount(BlogsCount, "Should return exactly 18 blog items");
@@ -445,7 +445,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         );
 
         // Act
-        var results = await Repository.SearchAsync(request);
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
         var fromEpoch = request.DateFrom!.Value.ToUnixTimeSeconds();
         var toEpoch = request.DateTo!.Value.ToUnixTimeSeconds();
 
@@ -472,7 +472,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new SearchRequest(take: 3, sections: ["all"], collections: ["all"], tags: []);
 
         // Act
-        var results = await Repository.SearchAsync(request);
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - verify pagination works correctly with known total
         results.Items.Should().HaveCount(3, "Should return exactly 3 items when Take=3");
@@ -491,7 +491,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []);
 
         // Act
-        var results = await Repository.SearchAsync(request);
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotContain(item => item.Draft,
@@ -513,7 +513,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new FacetRequest(facetFields: ["tags"], tags: [], sections: [], collections: []);
 
         // Act
-        var results = await Repository.GetFacetsAsync(request);
+        var results = await Repository.GetFacetsAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - verify facet structure and accuracy
         results.Facets.Should().ContainKey("tags", "Should return tag facets when requested");
@@ -525,7 +525,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
             f.Value.Equals("AI", StringComparison.OrdinalIgnoreCase));
         if (aiTagFacet != null)
         {
-            var allItemsResult = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []));
+            var allItemsResult = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
             // Count PUBLISHED items that have tags containing "ai" as a word (substring match)
             var actualAiCount = allItemsResult.Items.Where(i => !i.Draft).Count(i =>
                 i.Tags.Any(t => t.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries)
@@ -546,7 +546,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new FacetRequest(facetFields: ["collections"], tags: [], sections: [], collections: []);
 
         // Act
-        var results = await Repository.GetFacetsAsync(request);
+        var results = await Repository.GetFacetsAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - verify facet structure and hardcoded expected counts
         results.Facets.Should().ContainKey("collections", "Should return collection facets when requested");
@@ -578,7 +578,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new FacetRequest(facetFields: ["sections"], tags: [], sections: [], collections: []);
 
         // Act
-        var results = await Repository.GetFacetsAsync(request);
+        var results = await Repository.GetFacetsAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - verify facet structure
         results.Facets.Should().ContainKey("sections", "Should return section facets when requested");
@@ -601,7 +601,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var request = new FacetRequest(facetFields: ["tags"], tags: [], sections: [], collections: []);
 
         // Act
-        var results = await Repository.GetFacetsAsync(request);
+        var results = await Repository.GetFacetsAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - verify total count matches known expected value
         results.TotalCount.Should().Be(TotalPublishedItems,
@@ -620,7 +620,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         var filteredRequest = new FacetRequest(facetFields: ["tags"], tags: ["AI"], sections: [], collections: []);
 
         // Act
-        var filteredResults = await Repository.GetFacetsAsync(filteredRequest);
+        var filteredResults = await Repository.GetFacetsAsync(filteredRequest, TestContext.Current.CancellationToken);
 
         // Assert - verify filtered counts reflect reduced scope
         filteredResults.TotalCount.Should().Be(AiTagCount,
@@ -645,7 +645,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Note: Slugs are normalized to lowercase
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull("TestCollections should contain the .NET 10 news item");
@@ -664,7 +664,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has author: Máňa
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -683,7 +683,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has feed_name: Microsoft .NET Blog
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -702,7 +702,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has multiple tags
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -724,7 +724,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has section_names: [dotnet, security]
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -742,7 +742,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has primary_section: dotnet
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -761,7 +761,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has date: 2025-12-08 18:05:00 +00:00
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -785,7 +785,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _news/*.md files should have CollectionName = "news"
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -804,7 +804,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: 2025-12-08-NET-10-Networking-Improvements.md -> slug: net-10-networking-improvements (lowercased)
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -822,7 +822,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -841,7 +841,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: Content before <!--excerpt_end--> marker
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -860,8 +860,8 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2024-01-02-draft-article.md has draft: true
 
         // Act
-        var draftResult = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: true);
-        var publishedResult = await Repository.GetBySlugAsync("blogs", "test-article");
+        var draftResult = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: true, ct: TestContext.Current.CancellationToken);
+        var publishedResult = await Repository.GetBySlugAsync("blogs", "test-article", ct: TestContext.Current.CancellationToken);
 
         // Assert
         draftResult.Should().NotBeNull("Draft article should exist");
@@ -881,7 +881,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements");
+        var result = await Repository.GetBySlugAsync("news", "net-10-networking-improvements", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull();
@@ -901,7 +901,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         //           has external_url: https://www.youtube.com/watch?v=dxDqelvVc2U
 
         // Act
-        var result = await Repository.GetBySlugAsync("videos", "hands-on-lab-the-power-of-github-copilot-in-visual-studio-code");
+        var result = await Repository.GetBySlugAsync("videos", "hands-on-lab-the-power-of-github-copilot-in-visual-studio-code", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull("TestCollections should contain the video item");
@@ -920,7 +920,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
         // Expected: _blogs/2026-01-02-From-Tool-to-Teammate-Using-GitHub-Copilot-as-a-Collaborative-Partner.md
 
         // Act
-        var result = await Repository.GetBySlugAsync("blogs", "from-tool-to-teammate-using-github-copilot-as-a-collaborative-partner");
+        var result = await Repository.GetBySlugAsync("blogs", "from-tool-to-teammate-using-github-copilot-as-a-collaborative-partner", ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Should().NotBeNull("TestCollections should contain the blog post");

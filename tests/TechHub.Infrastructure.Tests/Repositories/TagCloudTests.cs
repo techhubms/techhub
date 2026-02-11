@@ -59,7 +59,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
         );
 
         // Act
-        var tagCounts = await _repository.GetTagCountsAsync(request);
+        var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
 
         // Assert
         tagCounts.Should().NotContain(t => t.Tag.Equals("AI", StringComparison.OrdinalIgnoreCase),
@@ -93,7 +93,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
         );
 
         // Act
-        var tagCounts = await _repository.GetTagCountsAsync(request);
+        var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
 
         // Assert
         tagCounts.Should().NotContain(t => t.Tag.Equals("Blogs", StringComparison.OrdinalIgnoreCase),
@@ -128,7 +128,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
         );
 
         // Act
-        var tagCounts = await _repository.GetTagCountsAsync(request);
+        var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - should contain actual content tags from test data
         tagCounts.Should().NotBeEmpty("Tag cloud should contain content tags");

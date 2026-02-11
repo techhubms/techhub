@@ -111,7 +111,7 @@ public class SidebarTocTests : PlaywrightTestBase
             "document.querySelectorAll('h2[id], h3[id]')[1].getBoundingClientRect().top + window.scrollY - 150"
         );
         await Page.EvaluateAsync($"window.scrollTo({{ top: {secondHeadingY}, behavior: 'instant' }})");
-        
+
         // Wait for scroll to complete (position stabilizes)
         await Page.WaitForConditionAsync(
             @$"() => Math.abs(window.scrollY - {secondHeadingY}) < 100",
@@ -148,10 +148,10 @@ public class SidebarTocTests : PlaywrightTestBase
         // Act - Scroll to bottom using JS window.scrollTo
         // Avoids Mouse.WheelAsync which can hang under parallel Chrome load
         var scrollHeight = await Page.EvaluateAsync<int>("document.documentElement.scrollHeight - window.innerHeight");
-        
+
         // window.scrollTo fires scroll events that scroll spy listens for
         await Page.EvaluateAsync($"window.scrollTo({{ top: {scrollHeight}, behavior: 'instant' }})");
-        
+
         // Wait for scroll to reach bottom
         await Page.WaitForConditionAsync(
             @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",

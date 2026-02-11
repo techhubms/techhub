@@ -74,7 +74,7 @@ public class RssServiceTests
         var items = CreateTestItems();
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Assert
         channel.Should().NotBeNull();
@@ -93,7 +93,7 @@ public class RssServiceTests
         var items = CreateTestItems();
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Assert
         channel.Items.First().Title.Should().Be("Test Article 1"); // Newer date
@@ -121,7 +121,7 @@ public class RssServiceTests
             .ToList();
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Assert
         channel.Items.Should().HaveCount(50);
@@ -135,7 +135,7 @@ public class RssServiceTests
         var items = CreateTestItems();
 
         // Act
-        var act = async () => await _rssService.GenerateSectionFeedAsync(section!, items);
+        var act = async () => await _rssService.GenerateSectionFeedAsync(section!, items, TestContext.Current.CancellationToken);
 
         // Assert
         await act.Should().ThrowAsync<ArgumentNullException>()
@@ -150,7 +150,7 @@ public class RssServiceTests
         IReadOnlyList<ContentItem>? items = null;
 
         // Act
-        var act = async () => await _rssService.GenerateSectionFeedAsync(section, items!);
+        var act = async () => await _rssService.GenerateSectionFeedAsync(section, items!, TestContext.Current.CancellationToken);
 
         // Assert
         await act.Should().ThrowAsync<ArgumentNullException>()
@@ -165,7 +165,7 @@ public class RssServiceTests
         var items = CreateTestItems();
 
         // Act
-        var channel = await _rssService.GenerateCollectionFeedAsync(collection, items);
+        var channel = await _rssService.GenerateCollectionFeedAsync(collection, items, TestContext.Current.CancellationToken);
 
         // Assert
         channel.Should().NotBeNull();
@@ -186,7 +186,7 @@ public class RssServiceTests
         var items = CreateTestItems();
 
         // Act
-        var act = async () => await _rssService.GenerateCollectionFeedAsync(collection!, items);
+        var act = async () => await _rssService.GenerateCollectionFeedAsync(collection!, items, TestContext.Current.CancellationToken);
 
         // Assert
         await act.Should().ThrowAsync<ArgumentException>();
@@ -200,7 +200,7 @@ public class RssServiceTests
         IReadOnlyList<ContentItem>? items = null;
 
         // Act
-        var act = async () => await _rssService.GenerateCollectionFeedAsync(collection, items!);
+        var act = async () => await _rssService.GenerateCollectionFeedAsync(collection, items!, TestContext.Current.CancellationToken);
 
         // Assert
         await act.Should().ThrowAsync<ArgumentNullException>()
@@ -229,7 +229,7 @@ public class RssServiceTests
         };
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Assert
         channel.Items.First().Description.Should().Be("Test excerpt");
@@ -243,7 +243,7 @@ public class RssServiceTests
         var items = CreateTestItems();
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Assert
         var externalItem = channel.Items.Last(); // Second item is external
@@ -273,7 +273,7 @@ public class RssServiceTests
         };
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, internalItems);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, internalItems, TestContext.Current.CancellationToken);
 
         // Assert
         var internalItem = channel.Items.First();
@@ -289,7 +289,7 @@ public class RssServiceTests
         var items = CreateTestItems();
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Assert
         channel.Items.First().Author.Should().Be("John Doe");
@@ -304,7 +304,7 @@ public class RssServiceTests
         var items = CreateTestItems();
 
         // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Assert
         channel.Items.Should().HaveCount(2);
@@ -315,7 +315,7 @@ public class RssServiceTests
     {
         // Arrange
         var items = CreateTestItems();
-        var channel = await _rssService.GenerateSectionFeedAsync(CreateTestSection(), items);
+        var channel = await _rssService.GenerateSectionFeedAsync(CreateTestSection(), items, TestContext.Current.CancellationToken);
 
         // Act
         var xml = _rssService.SerializeToXml(channel);
@@ -372,7 +372,7 @@ public class RssServiceTests
                 .WithExcerpt("Excerpt with \"quotes\" & <tags>")                .WithExternalUrl("https://example.com/test")                .WithRenderedHtml("<p>Content</p>")
                 .BuildDetail()
         };
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Act
         var xml = _rssService.SerializeToXml(channel);
@@ -390,7 +390,7 @@ public class RssServiceTests
         // Arrange
         var section = CreateTestSection();
         var items = CreateTestItems();
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
+        var channel = await _rssService.GenerateSectionFeedAsync(section, items, TestContext.Current.CancellationToken);
 
         // Act
         var xml = _rssService.SerializeToXml(channel);

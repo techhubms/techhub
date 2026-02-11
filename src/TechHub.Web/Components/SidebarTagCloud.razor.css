@@ -57,17 +57,17 @@
 
 /* Disabled state - tag would result in 0 items (dynamic counts feature) */
 .tag-cloud-item.disabled {
-    background: var(--color-bg-muted);
-    border-color: var(--color-border-muted);
-    color: var(--color-text-disabled);
+    background: var(--color-bg-default);
+    border-color: var(--color-border-default);
+    color: var(--color-text-tertiary);
     cursor: not-allowed;
     opacity: 0.5;
 }
 
 .tag-cloud-item.disabled:hover {
-    background: var(--color-bg-muted);
-    border-color: var(--color-border-muted);
-    color: var(--color-text-disabled);
+    background: var(--color-bg-default);
+    border-color: var(--color-border-default);
+    color: var(--color-text-tertiary);
     transform: none;
 }
 

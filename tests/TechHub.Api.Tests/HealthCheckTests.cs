@@ -23,7 +23,7 @@ public class HealthCheckTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task Health_ReturnsHealthyResponse()
     {
         // Act
-        var response = await _client.GetAsync("/health");
+        var response = await _client.GetAsync("/health", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -31,7 +31,7 @@ public class HealthCheckTests : IClassFixture<TechHubIntegrationTestApiFactory>
         // Verify response is plain text
         response.Content.Headers.ContentType?.MediaType.Should().Be("text/plain");
 
-        var content = await response.Content.ReadAsStringAsync();
+        var content = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         content.Should().Be("Healthy", "Health check should return 'Healthy' when application is running");
     }
 
@@ -39,13 +39,13 @@ public class HealthCheckTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task Alive_ReturnsSuccessResponse()
     {
         // Act
-        var response = await _client.GetAsync("/alive");
+        var response = await _client.GetAsync("/alive", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
         // Aspire's /alive endpoint returns a simple success response
-        var content = await response.Content.ReadAsStringAsync();
+        var content = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         content.Should().NotBeNullOrEmpty("Alive endpoint should return a response");
     }
 
@@ -56,7 +56,7 @@ public class HealthCheckTests : IClassFixture<TechHubIntegrationTestApiFactory>
         // This test verifies the exact route matching
 
         // Act
-        var response = await _client.GetAsync("/health");
+        var response = await _client.GetAsync("/health", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK, "Lowercase /health should work");
@@ -72,7 +72,7 @@ public class HealthCheckTests : IClassFixture<TechHubIntegrationTestApiFactory>
         var responses = new List<HttpResponseMessage>();
         for (int i = 0; i < 5; i++)
         {
-            var response = await _client.GetAsync("/health");
+            var response = await _client.GetAsync("/health", TestContext.Current.CancellationToken);
             responses.Add(response);
         }
 

@@ -87,4 +87,4 @@ See actual tests in `Models/` for implementation examples.
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Core/AGENTS.md](../../src/TechHub.Core/AGENTS.md) - Domain model patterns
-- [Root AGENTS.md](../../AGENTS.md#step-6-write-tests-first-tdd) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#4-write-tests-before-implementing-changes-tdd) - When to write tests

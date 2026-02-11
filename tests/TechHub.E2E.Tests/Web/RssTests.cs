@@ -1,6 +1,5 @@
 using System.Xml.Linq;
 using FluentAssertions;
-using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;

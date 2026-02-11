@@ -64,7 +64,7 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         );
 
         // Act
-        var result = await _repository.SearchAsync(request);
+        var result = await _repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - multiple items should have "ai" tag (either direct or expanded from multi-word tags)
         result.Items.Should().NotBeEmpty("AI is a common tag in test data");
@@ -88,7 +88,7 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         );
 
         // Act
-        var result = await _repository.SearchAsync(request);
+        var result = await _repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - all returned items must have BOTH tags
         result.Items.Should().NotBeEmpty("Test data includes items with both tags");
@@ -125,8 +125,8 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         );
 
         // Act
-        var page1 = await _repository.SearchAsync(request1);
-        var page2 = await _repository.SearchAsync(request2);
+        var page1 = await _repository.SearchAsync(request1, TestContext.Current.CancellationToken);
+        var page2 = await _repository.SearchAsync(request2, TestContext.Current.CancellationToken);
 
         // Assert - pages should NOT be identical (the bug we fixed)
         if (page1.Items.Count > 0 && page2.Items.Count > 0)
@@ -164,8 +164,8 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         );
 
         // Act
-        var resultUpper = await _repository.SearchAsync(requestUpper);
-        var resultLower = await _repository.SearchAsync(requestLower);
+        var resultUpper = await _repository.SearchAsync(requestUpper, TestContext.Current.CancellationToken);
+        var resultLower = await _repository.SearchAsync(requestLower, TestContext.Current.CancellationToken);
 
         // Assert - case should not matter
         resultUpper.Items.Count.Should().Be(resultLower.Items.Count,
@@ -192,7 +192,7 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         );
 
         // Act
-        var result = await _repository.SearchAsync(request);
+        var result = await _repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - items should be ordered by date descending
         result.Items.Should().NotBeEmpty();
@@ -217,7 +217,7 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         );
 
         // Act
-        var result = await _repository.SearchAsync(request);
+        var result = await _repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - all items should be in the github-copilot section
         result.Items.Should().NotBeEmpty("Test data has GitHub Copilot items");
@@ -245,7 +245,7 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         );
 
         // Act
-        var result = await _repository.SearchAsync(request);
+        var result = await _repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert
         result.Items.Should().BeEmpty("Non-existent tag should return no results");
@@ -268,8 +268,8 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         );
 
         // Act - call twice
-        var result1 = await _repository.SearchAsync(request);
-        var result2 = await _repository.SearchAsync(request);
+        var result1 = await _repository.SearchAsync(request, TestContext.Current.CancellationToken);
+        var result2 = await _repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - results should be identical
         result1.Items.Count.Should().Be(result2.Items.Count,

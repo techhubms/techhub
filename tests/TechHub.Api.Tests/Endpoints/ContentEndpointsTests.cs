@@ -25,12 +25,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetAllSections_ReturnsAllSections()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections");
+        var response = await _client.GetAsync("/api/sections", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var sections = await response.Content.ReadFromJsonAsync<List<Section>>();
+        var sections = await response.Content.ReadFromJsonAsync<List<Section>>(TestContext.Current.CancellationToken);
         sections.Should().NotBeNull();
         sections!.Should().HaveCount(8);
         sections.Should().Contain(s => s.Name == "all");
@@ -47,8 +47,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetAllSections_ReturnsCorrectStructure()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections");
-        var sections = await response.Content.ReadFromJsonAsync<List<Section>>();
+        var response = await _client.GetAsync("/api/sections", TestContext.Current.CancellationToken);
+        var sections = await response.Content.ReadFromJsonAsync<List<Section>>(TestContext.Current.CancellationToken);
 
         // Assert
         var aiSection = sections!.First(s => s.Name == "ai");
@@ -71,12 +71,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionByName_WithValidName_ReturnsSection()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai");
+        var response = await _client.GetAsync("/api/sections/ai", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var section = await response.Content.ReadFromJsonAsync<Section>();
+        var section = await response.Content.ReadFromJsonAsync<Section>(TestContext.Current.CancellationToken);
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");
@@ -87,7 +87,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionByName_WithInvalidName_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/invalid");
+        var response = await _client.GetAsync("/api/sections/invalid", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -97,12 +97,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionItems_WithValidSection_ReturnsItems()
     {
         // Act - Use collections/all endpoint to get all items in a section
-        var response = await _client.GetAsync("/api/sections/ai/collections/all/items");
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // AI section has items
     }
@@ -111,7 +111,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionItems_WithInvalidSection_ReturnsNotFound()
     {
         // Act - Use collections/all endpoint for invalid section
-        var response = await _client.GetAsync("/api/sections/invalid/collections/all/items");
+        var response = await _client.GetAsync("/api/sections/invalid/collections/all/items", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -121,12 +121,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollections_WithValidSection_ReturnsCollections()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/github-copilot/collections");
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var collections = await response.Content.ReadFromJsonAsync<List<Collection>>();
+        var collections = await response.Content.ReadFromJsonAsync<List<Collection>>(TestContext.Current.CancellationToken);
         collections.Should().NotBeNull();
         collections!.Should().HaveCount(8);
         collections.Should().Contain(c => c.Name == "news");
@@ -143,7 +143,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollections_WithInvalidSection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/invalid/collections");
+        var response = await _client.GetAsync("/api/sections/invalid/collections", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -153,12 +153,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollection_WithValidParameters_ReturnsCollection()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/news");
+        var response = await _client.GetAsync("/api/sections/ai/collections/news", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var collection = await response.Content.ReadFromJsonAsync<Collection>();
+        var collection = await response.Content.ReadFromJsonAsync<Collection>(TestContext.Current.CancellationToken);
         collection.Should().NotBeNull();
         collection!.Name.Should().Be("news");
         collection.Title.Should().Be("News");
@@ -169,7 +169,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollection_WithInvalidSection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/invalid/collections/news");
+        var response = await _client.GetAsync("/api/sections/invalid/collections/news", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -179,7 +179,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollection_WithInvalidCollection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/invalid");
+        var response = await _client.GetAsync("/api/sections/ai/collections/invalid", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -189,12 +189,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollectionItems_WithValidParameters_ReturnsItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // AI news collection has items
         items.Should().AllSatisfy(item =>
@@ -207,12 +207,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollectionItems_FiltersCorrectly()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/items");
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/items", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // GitHub Copilot videos collection has items
         items.Should().AllSatisfy(item =>
@@ -227,7 +227,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollectionItems_WithInvalidSection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/invalid/collections/news/items");
+        var response = await _client.GetAsync("/api/sections/invalid/collections/news/items", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -237,7 +237,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollectionItems_WithInvalidCollection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/invalid/items");
+        var response = await _client.GetAsync("/api/sections/ai/collections/invalid/items", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -247,8 +247,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollectionItems_GeneratesCorrectUrls_ForInternalCollections()
     {
         // Act - Use videos collection in github-copilot section (links internally, not news/blogs/community which link externally)
-        var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/items");
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/items", TestContext.Current.CancellationToken);
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
 
         // Assert - Internal collections generate URLs with primary section and slug WITHOUT date prefix
         // All URL components are lowercase
@@ -264,8 +264,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollectionItems_ReturnsExternalUrls_ForExternalCollections()
     {
         // Act - News collection links externally
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
 
         // Assert - External collections (news, blogs, community) return ExternalUrl
         items.Should().NotBeEmpty();
@@ -282,8 +282,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionByName_ReturnsCorrectSection(string sectionName, string expectedSection)
     {
         // Act
-        var response = await _client.GetAsync($"/api/sections/{sectionName}");
-        var section = await response.Content.ReadFromJsonAsync<Section>();
+        var response = await _client.GetAsync($"/api/sections/{sectionName}", TestContext.Current.CancellationToken);
+        var section = await response.Content.ReadFromJsonAsync<Section>(TestContext.Current.CancellationToken);
 
         // Assert
         section!.Name.Should().Be(expectedSection);
@@ -293,12 +293,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionItems_ShouldNotIncludeDraftItems()
     {
         // Act - Use collections/all endpoint to get all items in a section
-        var response = await _client.GetAsync("/api/sections/ai/collections/all/items");
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
 
         // Should not include draft items
@@ -309,12 +309,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSectionCollectionItems_ShouldNotIncludeDraftItems()
     {
         // Act - News collection in AI section (our draft is ai + news)
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
 
         // Should not include draft news items
@@ -333,7 +333,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // The same serialization path is used by Swagger UI
 
         // Act: Make HTTP request to get sections
-        var response = await _client.GetAsync("/api/sections");
+        var response = await _client.GetAsync("/api/sections", TestContext.Current.CancellationToken);
 
         // Assert: Should return success
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -342,10 +342,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         response.Content.Headers.ContentType?.MediaType.Should().Be("application/json");
 
         // Verify we can deserialize the response
-        var jsonString = await response.Content.ReadAsStringAsync();
+        var jsonString = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         jsonString.Should().NotBeEmpty();
 
-        var sections = await response.Content.ReadFromJsonAsync<List<Section>>();
+        var sections = await response.Content.ReadFromJsonAsync<List<Section>>(TestContext.Current.CancellationToken);
         sections.Should().NotBeNull();
         sections.Should().NotBeEmpty();
 
@@ -367,12 +367,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Arrange - Use AI collection with "all" to get section-wide tags (more likely to have results)
 
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags");
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
 
         // Tag cloud may be empty if no content matches the default filters (lastDays, minUses)
@@ -402,12 +402,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Arrange - Use "all" collection to get section-wide tag cloud
 
         // Act
-        var response = await _client.GetAsync("/api/sections/github-copilot/collections/all/tags");
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/all/tags", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
         tagCloud!.Should().NotBeEmpty("GitHub Copilot section should have tags across all collections");
     }
@@ -416,7 +416,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithInvalidSection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/invalid-section/collections/news/tags");
+        var response = await _client.GetAsync("/api/sections/invalid-section/collections/news/tags", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -426,7 +426,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithInvalidCollection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/invalid-collection/tags");
+        var response = await _client.GetAsync("/api/sections/ai/collections/invalid-collection/tags", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -436,12 +436,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithMaxTagsParameter_RespectsLimit()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?maxTags=5");
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?maxTags=5", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
         tagCloud!.Should().HaveCountLessThanOrEqualTo(5, "maxTags parameter should limit results");
     }
@@ -450,12 +450,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithMinUsesParameter_FiltersLowCountTags()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?minUses=3");
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?minUses=3", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
 
         // Verify all tags meet minimum usage threshold
@@ -469,12 +469,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithLastDaysParameter_FiltersOldContent()
     {
         // Act - Request tags from last 30 days only
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?lastDays=30");
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/tags?lastDays=30", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
 
         // Tag cloud should only include tags from recent content
@@ -490,12 +490,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithMultipleParameters_CombinesFilters()
     {
         // Act - Combine multiple filtering parameters
-        var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/tags?maxTags=3&minUses=2&lastDays=90");
+        var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/tags?maxTags=3&minUses=2&lastDays=90", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
         tagCloud!.Should().HaveCountLessThanOrEqualTo(3, "maxTags should be respected");
         tagCloud!.Should().AllSatisfy(item =>
@@ -512,12 +512,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Arrange - No filter parameters = static counts (total items with each tag)
 
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags");
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
 
         if (tagCloud!.Count > 0)
@@ -538,12 +538,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         const string selectedTag = "ai";
 
         // Act - Get tag cloud with AI tag already selected
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={selectedTag}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={selectedTag}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
 
         if (tagCloud!.Count > 0)
@@ -569,12 +569,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         const string tag2 = "copilot";
 
         // Act - Get tag cloud with both AI and Copilot selected
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={tag1},{tag2}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={tag1},{tag2}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
 
         if (tagCloud!.Count > 0)
@@ -596,12 +596,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
 
         // Act - Get tag cloud for last 30 days
-        var response = await _client.GetAsync($"/api/sections/ai/collections/all/tags?from={fromDate}&to={toDate}");
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/tags?from={fromDate}&to={toDate}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
 
         // Response structure should be valid (counts filtered to date range)
@@ -621,12 +621,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
 
         // Act - Get tag cloud with both filters
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={selectedTag}&from={fromDate}&to={toDate}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={selectedTag}&from={fromDate}&to={toDate}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         tagCloud.Should().NotBeNull();
 
         // Counts should reflect items matching tag AND within date range
@@ -641,7 +641,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithInvalidDateFormat_ReturnsBadRequest()
     {
         // Act - Invalid date format should return 400
-        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags?from=invalid-date");
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags?from=invalid-date", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
@@ -665,11 +665,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         const string initialTag2 = "vs code";
 
         // Get tag cloud with initial tags selected
-        var initialResponse = await _client.GetAsync(
-            $"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)}");
+        var initialResponse = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)}", TestContext.Current.CancellationToken);
         initialResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var initialTagCloud = await initialResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var initialTagCloud = await initialResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         initialTagCloud.Should().NotBeNull();
 
         // Find two additional tags that have counts > 0 in the initial state
@@ -691,20 +690,18 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         }
 
         // Path 1: Select additional tag 1, check count for additional tag 2
-        var path1Response = await _client.GetAsync(
-            $"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)},{Uri.EscapeDataString(additionalTag1.Tag)}");
+        var path1Response = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)},{Uri.EscapeDataString(additionalTag1.Tag)}", TestContext.Current.CancellationToken);
         path1Response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var path1TagCloud = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var path1TagCloud = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         var path1Count = path1TagCloud!
             .FirstOrDefault(t => t.Tag.Equals(additionalTag2.Tag, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
 
         // Path 2: Select additional tag 2, check count for additional tag 1
-        var path2Response = await _client.GetAsync(
-            $"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)},{Uri.EscapeDataString(additionalTag2.Tag)}");
+        var path2Response = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)},{Uri.EscapeDataString(additionalTag2.Tag)}", TestContext.Current.CancellationToken);
         path2Response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var path2TagCloud = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var path2TagCloud = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         var path2Count = path2TagCloud!
             .FirstOrDefault(t => t.Tag.Equals(additionalTag1.Tag, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
 
@@ -724,10 +721,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithTagsToCount_ReturnsOnlyRequestedTags()
     {
         // Arrange - Get baseline tags first (use 'all' section for more tags)
-        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=10");
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=10", TestContext.Current.CancellationToken);
         baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         baselineTags.Should().NotBeNull();
         baselineTags!.Should().HaveCountGreaterThanOrEqualTo(3, "Need at least 3 baseline tags for test");
 
@@ -736,13 +733,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var tagsToCountParam = string.Join(",", requestedTags.Select(Uri.EscapeDataString));
 
         // Act - Request counts for only those specific tags
-        var response = await _client.GetAsync(
-            $"/api/sections/all/collections/all/tags?tagsToCount={tagsToCountParam}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         filteredTags.Should().NotBeNull();
 
         // Should return only the requested tags (or fewer if some have 0 count)
@@ -755,10 +751,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithTagsToCount_BypassesMaxTagsLimit()
     {
         // Arrange - Get baseline tags (use 'all' section for more tags)
-        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20");
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20", TestContext.Current.CancellationToken);
         baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         baselineTags.Should().NotBeNull();
 
         // Skip test if not enough tags in test data
@@ -771,13 +767,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var tagsToCountParam = string.Join(",", baselineTags!.Select(t => Uri.EscapeDataString(t.Tag)));
 
         // Act - Request with low maxTags but full tagsToCount list
-        var response = await _client.GetAsync(
-            $"/api/sections/all/collections/all/tags?maxTags=5&tagsToCount={tagsToCountParam}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?maxTags=5&tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var resultTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var resultTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         resultTags.Should().NotBeNull();
 
         // tagsToCount should bypass maxTags limit - should get all requested tags
@@ -789,10 +784,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithTagsToCount_AndSelectedTags_ReturnsFilteredCounts()
     {
         // Arrange - Get baseline tags (use 'all' section for more tags)
-        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=10");
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=10", TestContext.Current.CancellationToken);
         baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         baselineTags.Should().NotBeNull();
         baselineTags!.Should().HaveCountGreaterThanOrEqualTo(2, "Need at least 2 baseline tags for test");
 
@@ -802,13 +797,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var tagsToCountParam = string.Join(",", tagsToCount.Select(Uri.EscapeDataString));
 
         // Act - Get counts for specific tags, filtered by another tag
-        var response = await _client.GetAsync(
-            $"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(filterTag)}&tagsToCount={tagsToCountParam}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(filterTag)}&tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         filteredTags.Should().NotBeNull();
 
         // All returned tags should be from our requested list
@@ -826,10 +820,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithTagsToCount_BypassesMinUsesFilter()
     {
         // Arrange - Get baseline tags with no minUses filter (use 'all' section for more tags)
-        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20&minUses=1");
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20&minUses=1", TestContext.Current.CancellationToken);
         baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         baselineTags.Should().NotBeNull();
         baselineTags!.Should().NotBeEmpty();
 
@@ -844,13 +838,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var tagsToCountParam = Uri.EscapeDataString(lowCountTag.Tag);
 
         // Act - Request with high minUses filter but including the low-count tag in tagsToCount
-        var response = await _client.GetAsync(
-            $"/api/sections/all/collections/all/tags?minUses=10&tagsToCount={tagsToCountParam}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?minUses=10&tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var resultTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var resultTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         resultTags.Should().NotBeNull();
 
         // tagsToCount should bypass minUses filter
@@ -866,10 +859,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // show consistent counts because we use tagsToCount to request exact counts.
 
         // Arrange - Get baseline tags (use 'all' section for more tags in test data)
-        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20");
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=20", TestContext.Current.CancellationToken);
         baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         baselineTags.Should().NotBeNull();
 
         // Skip test if not enough tags in test data
@@ -884,17 +877,15 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Select first tag, request counts for all baseline tags
         var selectedTag1 = baselineTags![0].Tag;
-        var path1Response = await _client.GetAsync(
-            $"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(selectedTag1)}&tagsToCount={tagsToCountParam}");
+        var path1Response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(selectedTag1)}&tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
         path1Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var path1Counts = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var path1Counts = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
 
         // Select second tag, request counts for all baseline tags
         var selectedTag2 = baselineTags![1].Tag;
-        var path2Response = await _client.GetAsync(
-            $"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(selectedTag2)}&tagsToCount={tagsToCountParam}");
+        var path2Response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={Uri.EscapeDataString(selectedTag2)}&tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
         path2Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var path2Counts = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var path2Counts = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
 
         // Assert - When selecting tag1, the count for tag2 should equal
         // when selecting tag2, the count for tag1 (symmetric intersection)
@@ -917,8 +908,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_WithValidSlug_ReturnsContentWithRenderedHtml()
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items");
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
 
@@ -926,12 +917,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var slug = testItem.Slug;
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{slug}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
+        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>(TestContext.Current.CancellationToken);
         detail.Should().NotBeNull();
         detail!.Slug.Should().Be(slug);
         detail.Title.Should().NotBeNullOrEmpty();
@@ -943,7 +934,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_WithInvalidSection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/invalid-section/collections/news/test-slug");
+        var response = await _client.GetAsync("/api/sections/invalid-section/collections/news/test-slug", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -953,7 +944,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_WithInvalidCollection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/invalid-collection/test-slug");
+        var response = await _client.GetAsync("/api/sections/ai/collections/invalid-collection/test-slug", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -963,7 +954,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_WithInvalidSlug_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/non-existent-slug-12345");
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/non-existent-slug-12345", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -973,17 +964,17 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_IncludesMetadata()
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items");
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         var testItem = items!.First();
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
+        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>(TestContext.Current.CancellationToken);
         detail.Should().NotBeNull();
 
         // Verify all metadata is populated
@@ -1004,17 +995,17 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // but we can verify that any returned content is not marked as draft
 
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items");
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         var testItem = items!.First();
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>();
+        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>(TestContext.Current.CancellationToken);
         detail.Should().NotBeNull();
         detail!.Draft.Should().BeFalse("Detail endpoint should not return draft content");
     }
@@ -1026,15 +1017,15 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // so detail endpoint returns 404 since there's no internal content to display
 
         // Arrange - Get a news item (external collection)
-        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items");
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
+        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         var testItem = items!.First();
 
         // Verify it's actually an external item
         testItem.LinksExternally().Should().BeTrue("News items should link externally");
 
         // Act - Try to access detail endpoint
-        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}");
+        var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert - Should return 404 since external items don't have detail pages
         response.StatusCode.Should().Be(HttpStatusCode.NotFound,
@@ -1053,9 +1044,9 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         const int pageSize = 10;  // Smaller page size to test pagination with test data
 
         // First, get total count by requesting all items with this tag
-        var allItemsResponse = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&take=100");
+        var allItemsResponse = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&take=100", TestContext.Current.CancellationToken);
         allItemsResponse.StatusCode.Should().Be(HttpStatusCode.OK);
-        var allItems = await allItemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var allItems = await allItemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         var totalCount = allItems!.Count;
 
         // Verify we have enough items to test pagination
@@ -1063,19 +1054,19 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         totalCount.Should().BeGreaterThan(pageSize, "should have enough items to require pagination");
 
         // Act - Fetch first batch (skip=0, take=10)
-        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip=0&take={pageSize}");
+        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip=0&take={pageSize}", TestContext.Current.CancellationToken);
         batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch1 = await batch1Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var batch1 = await batch1Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
 
         // Act - Fetch second batch (skip=10, take=10)
-        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize}&take={pageSize}");
+        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize}&take={pageSize}", TestContext.Current.CancellationToken);
         batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch2 = await batch2Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var batch2 = await batch2Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
 
         // Act - Fetch third batch (skip=20, take=10) to get remaining items
-        var batch3Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize * 2}&take={pageSize}");
+        var batch3Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize * 2}&take={pageSize}", TestContext.Current.CancellationToken);
         batch3Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch3 = await batch3Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var batch3 = await batch3Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
 
         // Assert - Batches should work correctly
         batch1.Should().NotBeNull();
@@ -1136,21 +1127,19 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var tag4 = "Pull Requests";
 
         // Act - Path 1: Filter by tag1, tag2, tag3 and get tag4's count
-        var path1Response = await _client.GetAsync(
-            $"/api/sections/github-copilot/collections/all/tags?maxTags=50&minUses=1&tags={Uri.EscapeDataString(tag1)},{Uri.EscapeDataString(tag2)},{Uri.EscapeDataString(tag3)}");
+        var path1Response = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?maxTags=50&minUses=1&tags={Uri.EscapeDataString(tag1)},{Uri.EscapeDataString(tag2)},{Uri.EscapeDataString(tag3)}", TestContext.Current.CancellationToken);
         path1Response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var path1Tags = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var path1Tags = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         path1Tags.Should().NotBeNull();
 
         var tag4CountInPath1 = path1Tags!.FirstOrDefault(t => t.Tag.Equals(tag4, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
 
         // Act - Path 2: Filter by tag1, tag2, tag4 and get tag3's count
-        var path2Response = await _client.GetAsync(
-            $"/api/sections/github-copilot/collections/all/tags?maxTags=50&minUses=1&tags={Uri.EscapeDataString(tag1)},{Uri.EscapeDataString(tag2)},{Uri.EscapeDataString(tag4)}");
+        var path2Response = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?maxTags=50&minUses=1&tags={Uri.EscapeDataString(tag1)},{Uri.EscapeDataString(tag2)},{Uri.EscapeDataString(tag4)}", TestContext.Current.CancellationToken);
         path2Response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var path2Tags = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>();
+        var path2Tags = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         path2Tags.Should().NotBeNull();
 
         var tag3CountInPath2 = path2Tags!.FirstOrDefault(t => t.Tag.Equals(tag3, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
@@ -1181,11 +1170,11 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
     }
 
@@ -1193,7 +1182,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionItems_WithInvalidFromDate_ReturnsBadRequest()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/all/collections/all/items?from=not-a-date");
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?from=not-a-date", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
@@ -1203,7 +1192,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionItems_WithInvalidToDate_ReturnsBadRequest()
     {
         // Act
-        var response = await _client.GetAsync("/api/sections/all/collections/all/items?to=invalid");
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?to=invalid", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
@@ -1218,11 +1207,11 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&from={fromDate}&to={toDate}");
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&from={fromDate}&to={toDate}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
         items.Should().NotBeNull();
         items!.Should().OnlyContain(item =>
             item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
@@ -1238,14 +1227,14 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         const int pageSize = 5;
 
         // Act - Get first page
-        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip=0&take={pageSize}");
+        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip=0&take={pageSize}", TestContext.Current.CancellationToken);
         batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch1 = await batch1Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var batch1 = await batch1Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
 
         // Act - Get second page
-        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip={pageSize}&take={pageSize}");
+        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip={pageSize}&take={pageSize}", TestContext.Current.CancellationToken);
         batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch2 = await batch2Response.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var batch2 = await batch2Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
 
         // Assert
         batch1.Should().NotBeNull();
@@ -1267,17 +1256,15 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
 
         // Act - Provide both from/to and lastDays
-        var responseWithFromTo = await _client.GetAsync(
-            $"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&lastDays=7");
-        var responseWithLastDays = await _client.GetAsync(
-            "/api/sections/all/collections/all/items?lastDays=7");
+        var responseWithFromTo = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&lastDays=7", TestContext.Current.CancellationToken);
+        var responseWithLastDays = await _client.GetAsync("/api/sections/all/collections/all/items?lastDays=7", TestContext.Current.CancellationToken);
 
         // Assert
         responseWithFromTo.StatusCode.Should().Be(HttpStatusCode.OK);
         responseWithLastDays.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var itemsWithFromTo = await responseWithFromTo.Content.ReadFromJsonAsync<List<ContentItem>>();
-        var itemsWithLastDays = await responseWithLastDays.Content.ReadFromJsonAsync<List<ContentItem>>();
+        var itemsWithFromTo = await responseWithFromTo.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var itemsWithLastDays = await responseWithLastDays.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
 
         // from/to with 2 years should return more (or equal) items than lastDays=7
         itemsWithFromTo!.Count.Should().BeGreaterThanOrEqualTo(itemsWithLastDays!.Count,

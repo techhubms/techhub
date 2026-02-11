@@ -67,7 +67,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
 
         // Wait for filter to apply and content to load
         await Page.WaitForBlazorUrlContainsAsync($"tags={tagUrl}");
-        
+
         // Wait for filtered content to render (cards should appear)
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0",
@@ -80,12 +80,12 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // Only test infinite scroll if there's more content available
         var scrollTrigger = Page.Locator("#scroll-trigger");
         var initialScrollTriggerExists = await scrollTrigger.CountAsync() > 0;
-        
+
         if (initialScrollTriggerExists)
         {
             // Scroll to load more items using JS scrollIntoView + scrollBy approach
             await Page.ScrollToLoadMoreAsync(expectedItemCount: firstBatchCount + 1);
-                
+
             // Capture count after scroll
             var afterScrollCount = await Page.Locator(".card").CountAsync();
             afterScrollCount.Should().BeGreaterThan(firstBatchCount,

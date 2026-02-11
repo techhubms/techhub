@@ -32,12 +32,12 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 {
     private readonly HttpClient _client;
     private readonly bool _isPostgreSQL;
-    
+
     // PostgreSQL thresholds (stricter - in-memory hash aggregation)
     private const int PostgresMaxResponseTimeMs = 200;
     private const int PostgresMaxFtsResponseTimeMs = 500;
     private const int PostgresMaxTagFilterResponseTimeMs = 300;
-    
+
     // SQLite thresholds (relaxed - uses temp B-trees for GROUP BY/ORDER BY)
     private const int SqliteMaxResponseTimeMs = 300;
     private const int SqliteMaxFtsResponseTimeMs = 1000;
@@ -46,12 +46,12 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
     public ContentEndpointsPerformanceTests(TechHubE2ETestApiFactory factory)
     {
         _client = factory.CreateClient();
-        
+
         // Detect database provider from configuration
         var config = factory.Services.GetRequiredService<IConfiguration>();
         var provider = config["Database:Provider"] ?? "SQLite";
         _isPostgreSQL = provider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCase);
-        
+
         // Note: Database is seeded once on factory startup via ContentSyncService
     }
 
@@ -60,9 +60,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
     private static async Task<long> MeasureHttpGetAsync<T>(HttpClient client, string url)
     {
         var sw = Stopwatch.StartNew();
-        var response = await client.GetAsync(url);
+        var response = await client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        _ = await response.Content.ReadFromJsonAsync<T>();
+        _ = await response.Content.ReadFromJsonAsync<T>(TestContext.Current.CancellationToken);
         sw.Stop();
         return sw.ElapsedMilliseconds;
     }
@@ -72,7 +72,7 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
         // Use override threshold if provided, otherwise use database-specific threshold
         var threshold = overrideThresholdMs ?? (_isPostgreSQL ? PostgresMaxResponseTimeMs : SqliteMaxResponseTimeMs);
         var dbType = _isPostgreSQL ? "PostgreSQL" : "SQLite";
-        
+
         if (elapsedMs > threshold)
         {
             throw new Exception(
@@ -81,13 +81,13 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
                 $"Check database indexes, query plans, and HTTP middleware overhead.");
         }
     }
-    
+
     private void AssertFtsPerformance(long elapsedMs, string operationName)
     {
         var threshold = _isPostgreSQL ? PostgresMaxFtsResponseTimeMs : SqliteMaxFtsResponseTimeMs;
         AssertPerformance(elapsedMs, operationName, threshold);
     }
-    
+
     private void AssertTagFilterPerformance(long elapsedMs, string operationName)
     {
         var threshold = _isPostgreSQL ? PostgresMaxTagFilterResponseTimeMs : SqliteMaxTagFilterResponseTimeMs;
@@ -123,9 +123,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Act - measure paginated collection query
         var sw = Stopwatch.StartNew();
-        var response = await _client.GetAsync(url);
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        var items = await response.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert
@@ -173,9 +173,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Act - CRITICAL PERFORMANCE TEST: homepage tag cloud
         var sw = Stopwatch.StartNew();
-        var response = await _client.GetAsync(url);
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        var tags = await response.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        var tags = await response.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert
@@ -224,9 +224,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
     {
         // Arrange - First get baseline tags to know which tags to request
         var baselineUrl = "/api/sections/github-copilot/collections/all/tags?maxTags=20";
-        var baselineResponse = await _client.GetAsync(baselineUrl);
+        var baselineResponse = await _client.GetAsync(baselineUrl, TestContext.Current.CancellationToken);
         baselineResponse.EnsureSuccessStatusCode();
-        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>(TestContext.Current.CancellationToken);
         baselineTags.Should().NotBeNull();
         baselineTags!.Count.Should().BeGreaterThan(5, "Need baseline tags for test");
 
@@ -236,9 +236,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Act - PERFORMANCE TEST: tagsToCount with ~20 specific tags
         var sw = Stopwatch.StartNew();
-        var response = await _client.GetAsync(url);
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        var tags = await response.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        var tags = await response.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert
@@ -255,9 +255,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
     {
         // Arrange - Get baseline tags first
         var baselineUrl = "/api/sections/github-copilot/collections/all/tags?maxTags=20";
-        var baselineResponse = await _client.GetAsync(baselineUrl);
+        var baselineResponse = await _client.GetAsync(baselineUrl, TestContext.Current.CancellationToken);
         baselineResponse.EnsureSuccessStatusCode();
-        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>(TestContext.Current.CancellationToken);
         baselineTags.Should().NotBeNull();
         baselineTags!.Count.Should().BeGreaterThan(2, "Need baseline tags for test");
 
@@ -268,9 +268,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Act - CRITICAL PERFORMANCE TEST: This is what happens when filtering tags in UI
         var sw = Stopwatch.StartNew();
-        var response = await _client.GetAsync(url);
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        var tags = await response.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        var tags = await response.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert
@@ -287,9 +287,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Arrange - Get baseline tags
         var baselineUrl = "/api/sections/github-copilot/collections/all/tags?maxTags=20";
-        var baselineResponse = await _client.GetAsync(baselineUrl);
+        var baselineResponse = await _client.GetAsync(baselineUrl, TestContext.Current.CancellationToken);
         baselineResponse.EnsureSuccessStatusCode();
-        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>();
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<IReadOnlyList<TagCloudItem>>(TestContext.Current.CancellationToken);
         baselineTags!.Count.Should().BeGreaterThan(5, "Need baseline tags for test");
 
         var tagsToCountParam = string.Join(",", baselineTags!.Select(t => Uri.EscapeDataString(t.Tag)));
@@ -320,9 +320,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Act - tag filtering (critical for filtering UI)
         var sw = Stopwatch.StartNew();
-        var response = await _client.GetAsync(url);
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        var items = await response.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>();
+        var items = await response.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert
@@ -516,9 +516,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Act - RSS feed generation (XML serialization)
         var sw = Stopwatch.StartNew();
-        var response = await _client.GetAsync(url);
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        _ = await response.Content.ReadAsStringAsync();
+        _ = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert performance - RSS feed generation includes XML formatting
@@ -536,9 +536,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Act
         var sw = Stopwatch.StartNew();
-        var response = await _client.GetAsync(url);
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        _ = await response.Content.ReadAsStringAsync();
+        _ = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert performance
@@ -555,9 +555,9 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
         // Act
         var sw = Stopwatch.StartNew();
-        var response = await _client.GetAsync(url);
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        _ = await response.Content.ReadAsStringAsync();
+        _ = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert performance
@@ -674,4 +674,3 @@ public class ContentEndpointsPerformanceTests : IClassFixture<TechHubE2ETestApiF
 
     #endregion
 }
-

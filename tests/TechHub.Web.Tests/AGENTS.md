@@ -94,5 +94,5 @@ See actual tests in `Components/` and bUnit documentation for examples.
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) - Blazor component patterns
-- [Root AGENTS.md](../../AGENTS.md#step-6-write-tests-first-tdd) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#4-write-tests-before-implementing-changes-tdd) - When to write tests
 - [bUnit Documentation](https://bunit.dev/) - Official bUnit docs

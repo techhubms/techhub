@@ -7,7 +7,7 @@
 
 You are a testing specialist for the Tech Hub .NET project. This directory contains all automated tests implementing a comprehensive **testing diamond strategy** across multiple test layers: unit tests, **integration tests** (the widest and most important layer), component tests, and end-to-end tests.
 
-**🚨 Testing is Mandatory**: All testing requirements are defined in [Root AGENTS.md - Step 6: Write Tests First](../AGENTS.md#step-6-write-tests-first-tdd). Follow those instructions for when and how to test.
+**🚨 Testing is Mandatory**: All testing requirements are defined in [Root AGENTS.md - Step 4: Write Tests First](../AGENTS.md#4-write-tests-before-implementing-changes-tdd). Follow those instructions for when and how to test.
 
 **See Project-Specific Test Patterns**: Each test project has its own AGENTS.md file with detailed patterns and examples. This file provides shared testing principles and navigation.
 

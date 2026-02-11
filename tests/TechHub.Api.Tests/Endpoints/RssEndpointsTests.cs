@@ -23,19 +23,19 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task GetAllContentFeed_ReturnsValidRss()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/all");
+        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
 
         // Assert
         if (response.StatusCode != HttpStatusCode.OK)
         {
-            var errorContent = await response.Content.ReadAsStringAsync();
+            var errorContent = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
             throw new Exception($"Expected OK but got {response.StatusCode}. Response: {errorContent}");
         }
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         response.Content.Headers.ContentType?.ToString().Should().Be("application/rss+xml; charset=utf-8");
 
-        var xml = await response.Content.ReadAsStringAsync();
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         xml.Should().NotBeEmpty();
 
         // Validate RSS structure
@@ -56,8 +56,8 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task GetAllContentFeed_ContainsItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/all");
-        var xml = await response.Content.ReadAsStringAsync();
+        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         // Assert
         var doc = XDocument.Parse(xml);
@@ -84,13 +84,13 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task GetSectionFeed_ValidSection_ReturnsValidRss(string sectionName)
     {
         // Act
-        var response = await _client.GetAsync($"/api/rss/{sectionName}");
+        var response = await _client.GetAsync($"/api/rss/{sectionName}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         response.Content.Headers.ContentType?.ToString().Should().Be("application/rss+xml; charset=utf-8");
 
-        var xml = await response.Content.ReadAsStringAsync();
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         var doc = XDocument.Parse(xml);
         var channel = doc.Descendants("channel").First();
 
@@ -104,7 +104,7 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task GetSectionFeed_InvalidSection_ReturnsNotFound()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/nonexistent");
+        var response = await _client.GetAsync("/api/rss/nonexistent", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -114,8 +114,8 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task RssFeed_ItemsAreSortedByDateDescending()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/all");
-        var xml = await response.Content.ReadAsStringAsync();
+        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         // Assert
         var doc = XDocument.Parse(xml);
@@ -136,8 +136,8 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task RssFeed_ItemsAreLimitedTo50()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/all");
-        var xml = await response.Content.ReadAsStringAsync();
+        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         // Assert
         var doc = XDocument.Parse(xml);
@@ -149,8 +149,8 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task RssFeed_PubDateIsRfc1123Format()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/all");
-        var xml = await response.Content.ReadAsStringAsync();
+        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         // Assert
         var doc = XDocument.Parse(xml);
@@ -168,8 +168,8 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task RssFeed_GuidIsPermalink()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/all");
-        var xml = await response.Content.ReadAsStringAsync();
+        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         // Assert
         var doc = XDocument.Parse(xml);
@@ -185,8 +185,8 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task RssFeed_SpecialCharactersAreEscaped()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/all");
-        var xml = await response.Content.ReadAsStringAsync();
+        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         // Assert - If XML parses successfully, special characters were properly escaped
         var doc = XDocument.Parse(xml);
@@ -205,8 +205,8 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task GetAllContentFeed_ShouldNotIncludeDraftItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/rss/all");
-        var xml = await response.Content.ReadAsStringAsync();
+        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         // Assert
         var doc = XDocument.Parse(xml);
@@ -226,8 +226,8 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
     public async Task GetSectionFeed_ShouldNotIncludeDraftItems()
     {
         // Act - AI section feed (our draft has ai section)
-        var response = await _client.GetAsync("/api/rss/github-copilot/videos");
-        var xml = await response.Content.ReadAsStringAsync();
+        var response = await _client.GetAsync("/api/rss/github-copilot/videos", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         // Assert
         var doc = XDocument.Parse(xml);

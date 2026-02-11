@@ -326,7 +326,7 @@ public class DatabaseContentRepository : ContentRepositoryBase
     /// Build WHERE clause filters for tag count queries.
     /// Shared by both TagsToCount and TopN query paths.
     /// </summary>
-    private (string filterClause, DynamicParameters parameters) BuildTagCountFilters(TagCountsRequest request)
+    private static (string filterClause, DynamicParameters parameters) BuildTagCountFilters(TagCountsRequest request)
     {
         var parameters = new DynamicParameters();
         var filters = new List<string>();

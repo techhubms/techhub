@@ -99,7 +99,10 @@ public static class BlazorHelpers
     {
         var options = new PageWaitForFunctionOptions { Timeout = timeoutMs };
         if (pollingIntervalMs.HasValue)
+        {
             options.PollingInterval = pollingIntervalMs.Value;
+        }
+
         return page.WaitForFunctionAsync(expression, null, options);
     }
 
@@ -154,13 +157,19 @@ public static class BlazorHelpers
             var currentCount = await page.EvaluateAsync<int>(
                 $"() => document.querySelectorAll('{itemSelector}').length");
             if (currentCount >= expectedItemCount)
+            {
                 return;
+            }
 
             // Wait for the IntersectionObserver to be attached by Blazor's OnAfterRenderAsync.
             // infinite-scroll.js sets window.__ioObserverReady = true after observer.observe().
             // This eliminates the race between "Blazor re-attaches observer" and "test scrolls".
             var remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
-            if (remainingMs <= 0) break;
+            if (remainingMs <= 0)
+            {
+                break;
+            }
+
             await page.WaitForConditionAsync(
                 "() => window.__ioObserverReady === true",
                 Math.Min(remainingMs, 5000));
@@ -180,7 +189,11 @@ public static class BlazorHelpers
             try
             {
                 remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
-                if (remainingMs <= 0) break;
+                if (remainingMs <= 0)
+                {
+                    break;
+                }
+
                 await page.WaitForConditionAsync(
                     $"() => document.querySelectorAll('{itemSelector}').length >= {expectedItemCount}",
                     new PageWaitForFunctionOptions { Timeout = Math.Min(remainingMs, 5000), PollingInterval = 100 });
@@ -222,11 +235,16 @@ public static class BlazorHelpers
             var endExists = await page.EvaluateAsync<bool>(
                 $"() => document.querySelector('{endSelector}') !== null");
             if (endExists)
+            {
                 return;
+            }
 
             // Wait for IO observer to be attached before scrolling
             var remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
-            if (remainingMs <= 0) break;
+            if (remainingMs <= 0)
+            {
+                break;
+            }
 
             // If scroll-trigger exists, wait for observer; otherwise content may have ended
             var hasTrigger = await page.EvaluateAsync<bool>(
@@ -236,7 +254,11 @@ public static class BlazorHelpers
                 // No trigger means content has ended — check for end marker one more time
                 endExists = await page.EvaluateAsync<bool>(
                     $"() => document.querySelector('{endSelector}') !== null");
-                if (endExists) return;
+                if (endExists)
+                {
+                    return;
+                }
+
                 break;
             }
 
@@ -256,7 +278,11 @@ public static class BlazorHelpers
             try
             {
                 remainingMs = (int)(deadline - DateTime.UtcNow).TotalMilliseconds;
-                if (remainingMs <= 0) break;
+                if (remainingMs <= 0)
+                {
+                    break;
+                }
+
                 await page.WaitForConditionAsync(
                     $"() => document.querySelector('{endSelector}') !== null",
                     new PageWaitForFunctionOptions { Timeout = Math.Min(remainingMs, 5000), PollingInterval = 100 });
@@ -409,7 +435,9 @@ public static class BlazorHelpers
             var mermaidCount = await mermaidPre.CountAsync();
 
             if (mermaidCount == 0)
+            {
                 return;
+            }
 
             // Wait for each <pre class="mermaid"> to be converted to SVG.
             // No CDN-loaded check — if mermaid.js fails to load, this correctly times out

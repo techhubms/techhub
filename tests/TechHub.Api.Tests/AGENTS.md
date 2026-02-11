@@ -94,4 +94,4 @@ See actual tests in `Endpoints/` for implementation examples.
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) - API development patterns
-- [Root AGENTS.md](../../AGENTS.md#step-6-write-tests-first-tdd) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#4-write-tests-before-implementing-changes-tdd) - When to write tests
