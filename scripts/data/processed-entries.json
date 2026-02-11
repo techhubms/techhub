@@ -25756,5 +25756,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/accelerating-ai-adoption-through-microsoft-marketplace/ec-p/4493907#M680",
     "collection": "community",
     "reason": "Succesfully added: Assigned 'AI' category because the content is centered on discovering, deploying, and integrating AI-powered solutions via the Microsoft Marketplace (AI rule 1 and 5). No other categories apply: the post discusses use cases, deployment, and integration, but doesn't detail coding, DevOps, Azure resource management, ML development, or security aspects. The content is sufficiently detailed, in English, and focused on technical implementation for practitioners rather than business executives, so none of the exclusion rules are triggered."
+  },
+  {
+    "timestamp": "2026-02-11 23:09:06 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-s-default-outbound-access-changes-guidance-for-azure/m-p/4494462#M14000",
+    "reason": "Succesfully added: Categories 'Azure' and 'Security' are assigned. 'Azure' is included as the content is centered on Azure platform changes, specifically networking features and VNet configuration (Azure inclusion rule 1, 4, 5). 'Security' is relevant because the post covers isolation, compliance, and best practices for secure explicit outbound connectivity (Security inclusion rule 1, 4, 9). 'DevOps' and 'Coding' were not assigned because the focus is not on CI/CD, development tools, or programming. 'AI', 'ML', and 'GitHub Copilot' are not mentioned or relevant according to the inclusion rules. There are no generic exclusion triggers; the content is sufficiently technical, detailed, in English, and clearly practitioner-focused with actionable guidance."
   }
 ]
