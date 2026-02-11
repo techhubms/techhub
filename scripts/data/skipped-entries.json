@@ -11937,5 +11937,11 @@
     "timestamp": "2026-02-10 22:14:15 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/2QDgtETRs_0",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://dellenny.com/data-boundaries-and-permissions-in-an-agentic-copilot-world/",
+    "reason": "No categories found: All content, tags, and linked material focus on agentic Copilots in the business productivity context, specifically Microsoft 365 Copilot (M365 Copilot). This is confirmed by repeated mentions of 'M365 Copilot', scenarios such as scheduling meetings, updating CRM records, and integrating with enterprise tools like CRM, HRIS, ERP, and cloud storage. The article addresses data boundaries, permissions, and security/governance for Copilots in the context of office productivity, not developer tools or technical implementation. Per the generic exclusion rules, content about Microsoft 365 Copilot or productivity Copilots is excluded (Non-Development Microsoft Products, CRITICAL: Copilot Product Distinction). There is no substantial development, AI engineering, or code-focused implementation using Microsoft AI services or developer tools. Thus, no categories are assigned.",
+    "timestamp": "2026-02-11 09:17:04 +00:00",
+    "collection": "blogs"
   }
 ]

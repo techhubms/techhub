@@ -25654,5 +25654,11 @@
     "timestamp": "2026-02-11 08:12:52 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-two-weeks-three-tracks-one-challenge/ba-p/4492102",
     "reason": "Succesfully added: Assigned 'AI' category because the core focus is building AI agents with Microsoft AI platforms (GitHub Copilot, Foundry, Copilot Studio), matching AI category rules 1, 3, and 4. Added 'GitHub Copilot' since one track is dedicated specifically to using Copilot in code-driven development and prizes include GitHub Copilot Pro, fulfilling GitHub Copilot rule 1. Did not include other categories (Coding, DevOps, Azure, ML, Security) because the content centers on the competition format and AI agent tool usage rather than hands-on code implementation, DevOps pipelines, Azure cloud solutions, direct ML workflows, or security practices. Mention of Microsoft 365 Copilot is in an extension/dev context (Copilot Studio/M365 Agents Toolkit), but does not qualify for additional categories beyond AI."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/accelerating-scom-to-azure-monitor-migrations-with-automated/ba-p/4493593",
+    "reason": "Succesfully added: Assigned Azure category because the content is centered on Azure Monitor, ARM templates, Log Analytics, and migration to Azure services (Azure inclusion rules 1, 2, 4, 5). Assigned DevOps because the migration relies on infrastructure-as-code practices, automation, deployment pipelines, and covers monitoring—key DevOps responsibilities (DevOps rules 5, 6). No Coding category, as the focus is on configuration/infrastructure, not core code development. No AI, ML, Security, or GitHub Copilot content appears. The content meets all quality standards, is technical and implementation-focused, and not promotional or biographical.",
+    "timestamp": "2026-02-11 09:17:45 +00:00",
+    "collection": "community"
   }
 ]
