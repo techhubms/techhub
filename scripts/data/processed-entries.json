@@ -25660,5 +25660,11 @@
     "reason": "Succesfully added: Assigned Azure category because the content is centered on Azure Monitor, ARM templates, Log Analytics, and migration to Azure services (Azure inclusion rules 1, 2, 4, 5). Assigned DevOps because the migration relies on infrastructure-as-code practices, automation, deployment pipelines, and covers monitoring—key DevOps responsibilities (DevOps rules 5, 6). No Coding category, as the focus is on configuration/infrastructure, not core code development. No AI, ML, Security, or GitHub Copilot content appears. The content meets all quality standards, is technical and implementation-focused, and not promotional or biographical.",
     "timestamp": "2026-02-11 09:17:45 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content centers on solving integration issues involving Azure Event Grid, Azure Communication Services, and the Azure Portal (Azure rules 1–4). Assigned the Security category because it focuses on secure webhook authentication and authorization using Microsoft Entra ID (Security rules 1, 3, and 4). Did not assign ML, AI, Coding, DevOps, or GitHub Copilot, as the article does not focus on these aspects: it is about configuration and role assignment, not coding, AI/ML development, or DevOps pipelines. Dynamics 365 is discussed only in terms of integration, not as a business productivity article. Generic exclusion rules do not apply as the content is technical, in-depth, not biographical or sales-related, and meets the minimum length for community content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-fix-azure-event-grid-entra-authentication-issue-for-acs/m-p/4494308#M22430",
+    "timestamp": "2026-02-11 12:12:55 +00:00",
+    "collection": "community"
   }
 ]
