@@ -1,0 +1,24 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=8OAvFiczZ2k",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "PubDate": "2026-02-11T20:34:57+00:00",
+  "ProcessedDate": "2026-02-11 21:10:41",
+  "Description": "Join us for a walkthrough Rx.NET (Reactive Extensions for .NET) v7, and future plans!\n\n🎙️ Featuring: Ian Griffiths, Katie Savage, Frank Boucher, Cam Soper\n\n#dotnet #dotnetdeveloper",
+  "OutputDir": "_videos",
+  "Title": "On .NET Live | Rx.NET v7 and Futures",
+  "Tags": [
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "rxdotnet",
+    "softwaredeveloper"
+  ],
+  "Author": "dotnet"
+}
