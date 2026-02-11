@@ -25642,5 +25642,11 @@
     "timestamp": "2026-02-10 23:13:39 +00:00",
     "reason": "Succesfully added: The 'Coding' category is assigned because the announcement and changelog are focused on major updates for .NET developers, including new language features, SDK updates, libraries, frameworks (ASP.NET Core, Blazor, .NET MAUI), and tooling. The update is entirely technical and developer-focused, with detailed information about code-level features, API changes, and programming workflows, covering multiple rule triggers under the Coding inclusion section. No other categories (like DevOps, AI, Azure, ML, Security) are applicable as the preview announcement does not focus on CI/CD, cloud, AI/ML, or security features. The tags are crafted by extracting product, library, and topic names mentioned in the post, following tag rules for technical depth and relevance.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-11 01:34:02 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-us/blog/32624",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because of extensive focus on Azure SQL and SQL Server (Azure rule 1). Assigned ML category due to Microsoft Fabric and Power BI sessions focused on data engineering and analytics, which fall under ML/data engineering inclusion (ML rules 1 and 4). Assigned AI category because of content regarding AI-powered experiences and Copilot integrations (AI rules 1, 4, and 5). Coding, DevOps, and Security were not included because the content is broadly about the event agenda and networking, rather than technical development, deployment practices, or security implementation. Exclusion rules don’t apply since the content is professional, technical, in English, and centrally about Microsoft development/data platforms."
   }
 ]
