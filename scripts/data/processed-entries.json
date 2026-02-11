@@ -25672,5 +25672,11 @@
     "timestamp": "2026-02-11 14:24:06 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=37LHUPvT1gU"
+  },
+  {
+    "timestamp": "2026-02-11 15:20:08 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/",
+    "reason": "Succesfully added: Assigned Azure category because the content is about deploying applications using Azure App Service and related Azure infrastructure practices (Azure rule 1, 2, and 4). Assigned DevOps because azd deploy is a deployment and CI/CD-related tool (DevOps rule 5, 6, and 11 apply), and the topic focuses on improving deployment flows and automation. Coding is included because the article discusses infrastructure as code (Bicep) and provides code snippets for deployment automation (Coding rule 5, 4). AI, GitHub Copilot, ML, and Security were not assigned since no Microsoft AI, Copilot, ML, or security services or practices are covered."
   }
 ]
