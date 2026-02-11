@@ -25648,5 +25648,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-us/blog/32624",
     "collection": "news",
     "reason": "Succesfully added: Assigned Azure category because of extensive focus on Azure SQL and SQL Server (Azure rule 1). Assigned ML category due to Microsoft Fabric and Power BI sessions focused on data engineering and analytics, which fall under ML/data engineering inclusion (ML rules 1 and 4). Assigned AI category because of content regarding AI-powered experiences and Copilot integrations (AI rules 1, 4, and 5). Coding, DevOps, and Security were not included because the content is broadly about the event agenda and networking, rather than technical development, deployment practices, or security implementation. Exclusion rules don’t apply since the content is professional, technical, in English, and centrally about Microsoft development/data platforms."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-11 08:12:52 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-two-weeks-three-tracks-one-challenge/ba-p/4492102",
+    "reason": "Succesfully added: Assigned 'AI' category because the core focus is building AI agents with Microsoft AI platforms (GitHub Copilot, Foundry, Copilot Studio), matching AI category rules 1, 3, and 4. Added 'GitHub Copilot' since one track is dedicated specifically to using Copilot in code-driven development and prizes include GitHub Copilot Pro, fulfilling GitHub Copilot rule 1. Did not include other categories (Coding, DevOps, Azure, ML, Security) because the content centers on the competition format and AI agent tool usage rather than hands-on code implementation, DevOps pipelines, Azure cloud solutions, direct ML workflows, or security practices. Mention of Microsoft 365 Copilot is in an extension/dev context (Copilot Studio/M365 Agents Toolkit), but does not qualify for additional categories beyond AI."
   }
 ]
