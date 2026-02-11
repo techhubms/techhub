@@ -11943,5 +11943,11 @@
     "reason": "No categories found: All content, tags, and linked material focus on agentic Copilots in the business productivity context, specifically Microsoft 365 Copilot (M365 Copilot). This is confirmed by repeated mentions of 'M365 Copilot', scenarios such as scheduling meetings, updating CRM records, and integrating with enterprise tools like CRM, HRIS, ERP, and cloud storage. The article addresses data boundaries, permissions, and security/governance for Copilots in the context of office productivity, not developer tools or technical implementation. Per the generic exclusion rules, content about Microsoft 365 Copilot or productivity Copilots is excluded (Non-Development Microsoft Products, CRITICAL: Copilot Product Distinction). There is no substantial development, AI engineering, or code-focused implementation using Microsoft AI services or developer tools. Thus, no categories are assigned.",
     "timestamp": "2026-02-11 09:17:04 +00:00",
     "collection": "blogs"
+  },
+  {
+    "reason": "No categories found: Content excluded due to insufficient substantive content. The 'content' field is null, and the description only states 'Quick overview of Fabric IQ.' Without access to the actual video transcript, text content, or more detail, it is impossible to evaluate inclusion rules for any Microsoft technology categories. According to the core processing rules, decisions must be based on provided content only—never by pattern recognition or inference from tags or video titles. Therefore, no categories can be assigned.",
+    "timestamp": "2026-02-11 14:23:46 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/VzGTZGta3_4"
   }
 ]

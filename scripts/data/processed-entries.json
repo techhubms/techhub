@@ -25666,5 +25666,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-fix-azure-event-grid-entra-authentication-issue-for-acs/m-p/4494308#M22430",
     "timestamp": "2026-02-11 12:12:55 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because Fabric IQ is presented as an AI-powered capability within Microsoft Fabric (AI rule 1) and focuses on AI-driven insights. Assigned Azure because Fabric is a core Azure service and the content discusses integration with Azure (Azure rule 1). ML category is included as the walkthrough addresses turning data into business knowledge, entities/relationships, ontologies, and digital twins—all key ML/data analytics concepts (ML rules 1, 2, 3, and 4). No generic exclusion rules apply: the content is in English, not biographical, not a sales pitch, not business productivity-focused, and the full video outline substantiates instructional technical coverage.",
+    "timestamp": "2026-02-11 14:24:06 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=37LHUPvT1gU"
   }
 ]
