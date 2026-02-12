@@ -1000,14 +1000,8 @@ function Run {
         Write-Step "Running E2E tests"
         Write-Host ""
             
-        # Optimize thread count based on environment
-        if ($env:CI) {
-            Write-Info "CI environment detected - using default 4 threads from xunit.runner.json"
-        }
-        else {
-            Write-Info "Local environment - using 8 threads for faster execution"
-            $env:XUNIT_MAX_PARALLEL_THREADS = 8
-        }
+        # Thread count is configured in testconfig.json ("2x" = 2× CPU threads)
+        # xUnit v3 uses testconfig.json, not environment variables
         
         # Phase 1: Run API Performance tests first (warmup + performance validation)
         Write-Host ""

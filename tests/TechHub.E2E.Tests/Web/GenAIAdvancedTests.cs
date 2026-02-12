@@ -46,7 +46,7 @@ public class GenAIAdvancedTests : PlaywrightTestBase
         var consoleMessages = new List<IConsoleMessage>();
         Page.Console += (_, msg) => consoleMessages.Add(msg);
 
-        // Act - GotoRelativeAsync waits for __scriptsReady (all JS modules loaded)
+        // Act 
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - No console errors (filter WebSocket connection errors from Blazor)

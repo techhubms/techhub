@@ -1,6 +1,7 @@
 @page "/"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@inject IJSRuntime JS
 @implements IDisposable
 
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
@@ -132,6 +133,16 @@ new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon(
         }
         // Fallback to title case
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (sections != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initCustomPages");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
     }
 
 protected override async Task OnInitializedAsync()

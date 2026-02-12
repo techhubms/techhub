@@ -303,7 +303,6 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var expandButton = expandButtons.First;
 
             await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
-            // GotoRelativeAsync already waited for __scriptsReady (all JS modules loaded)
 
             // Assert - No JavaScript errors
             consoleErrors.Should().BeEmpty("expanding custom pages should not cause JavaScript errors");

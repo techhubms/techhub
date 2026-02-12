@@ -266,7 +266,7 @@ public class SidebarTocTests : PlaywrightTestBase
             }
         };
 
-        // Act - GotoRelativeAsync waits for __scriptsReady (all JS modules loaded)
+        // Act
         await Page.GotoRelativeAsync(url);
 
         // Assert

@@ -4,6 +4,7 @@
 @using TechHub.Web.Services
 @implements IDisposable
 
+@inject IJSRuntime JS
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -73,6 +74,18 @@
     private string selectedVideoSlug = "";
     private PersistingComponentStateSubscription? _persistSubscription;
     private bool _restoredFromPersistedState;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (selectedVideoDetail != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initHighlighting");
+            await JS.InvokeVoidAsync("initMermaid");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {

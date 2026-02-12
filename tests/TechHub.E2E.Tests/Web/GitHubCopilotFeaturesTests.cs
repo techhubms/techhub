@@ -149,7 +149,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         };
 
         // Act
-        // GotoRelativeAsync waits for __scriptsReady (all JS modules loaded)
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - Should have no console errors (filter WebSocket connection errors from Blazor)

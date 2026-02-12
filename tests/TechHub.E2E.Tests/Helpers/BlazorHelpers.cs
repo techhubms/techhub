@@ -451,50 +451,34 @@ public static class BlazorHelpers
     {
         try
         {
-            // Wait for Blazor object to exist (basic requirement)
-            await page.WaitForConditionAsync(
-                "() => typeof window.Blazor !== 'undefined'",
-                new PageWaitForFunctionOptions { Timeout = timeoutMs }
-            );
-
-            // Wait for Blazor interactivity to be ready
-            // This uses the official JavaScript initializer callback (afterServerStarted or afterWebAssemblyStarted)
-            // which sets window.__blazorServerReady or window.__blazorWasmReady when the circuit is established
-            // and event handlers are attached.
+            // Single combined check for all readiness conditions:
+            // 1. Blazor runtime exists
+            // 2. Interactive runtime is ready (Server/WASM circuit established, or SSR-only page)
+            // 3. Page scripts finished loading (mermaid, highlight.js, custom-pages, etc.)
             //
-            // For pages that only use SSR without interactivity (no InteractiveServer/InteractiveWebAssembly),
-            // we check for window.__blazorWebReady which is set by afterWebStarted.
+            // Previously these were 3 separate WaitForConditionAsync calls, each requiring
+            // its own browser round-trip and polling cycle. Combining them into one eliminates
+            // ~100-200ms overhead per navigation across 200+ navigations in the E2E suite.
             await page.WaitForConditionAsync(@"
                 () => {
-                    // Check if Blazor Server or WebAssembly interactivity is ready
-                    // These flags are set by TechHub.Web.lib.module.js afterServerStarted/afterWebAssemblyStarted
-                    if (window.__blazorServerReady === true || window.__blazorWasmReady === true) {
-                        return true;
-                    }
-                    
-                    // Check for SSR-only pages (Blazor Web started but no interactive runtime)
-                    if (window.__blazorWebReady === true) {
-                        return true;
-                    }
-                    
-                    // Not ready yet
-                    return false;
-                }
-            ", new PageWaitForFunctionOptions { Timeout = timeoutMs });
+                    // Step 1: Blazor runtime must exist
+                    if (typeof window.Blazor === 'undefined') return false;
 
-            // CRITICAL: Wait for dynamically loaded JavaScript modules to finish initializing
-            // After Blazor is ready, the page loads additional JS modules (custom-pages.js, infinite-scroll.js, etc.)
-            // These modules attach event handlers and initialize interactive elements.
-            // We must wait for them to complete before interacting with elements they control.
-            await page.WaitForConditionAsync(@"
-                () => {
-                    // If scripts are currently loading, wait
-                    if (window.__scriptsLoading === true) {
+                    // Step 2: Interactive runtime or SSR must be ready
+                    // Flags set by TechHub.Web.lib.module.js afterServerStarted/afterWebAssemblyStarted/afterWebStarted
+                    if (window.__blazorServerReady !== true && 
+                        window.__blazorWasmReady !== true && 
+                        window.__blazorWebReady !== true) {
                         return false;
                     }
-                    
-                    // Scripts are ready (either completed loading or not needed for this page)
-                    return window.__scriptsReady === true || window.__scriptsLoading === false;
+
+                    // Step 3: Page scripts must be done loading
+                    // __scriptsLoading is set true when loadScriptsForPage starts,
+                    // __scriptsReady is set true when it completes
+                    if (window.__scriptsLoading === true) return false;
+                    if (window.__scriptsReady === true || window.__scriptsLoading === false) return true;
+
+                    return false;
                 }
             ", new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 50 });
         }

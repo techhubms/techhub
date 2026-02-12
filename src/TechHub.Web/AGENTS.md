@@ -171,6 +171,7 @@ await loadScript('/js/file.js');
 | File                 | Purpose                                     | Loading                                   | Format    |
 | -------------------- | ------------------------------------------- | ----------------------------------------- | --------- |
 | `nav-helpers.js`     | Back to top, back to previous buttons       | Static (every page)                       | IIFE      |
+| `page-scripts.js`    | CDN loading + init functions for pages      | Static ES module (every page)             | ES Module |
 | `toc-scroll-spy.js`  | TOC scroll highlighting, history management | Dynamic (pages with TOC)                  | ES Module |
 | `custom-pages.js`    | Collapsible sections for SDLC/DX pages      | Dynamic (pages with `[data-collapsible]`) | ES Module |
 
@@ -707,7 +708,7 @@ src/TechHub.Web/
     - `SidebarPageInfo.razor` - Custom page metadata display
 - **Framework Components** (must stay in root):
   - `Routes.razor` - Blazor router (framework requirement)
-  - `App.razor` - Application entry point with global script loading (framework requirement)
+  - `App.razor` - Application entry point with CDN config bridge (framework requirement)
 
 **Why This Structure?**
 
@@ -970,83 +971,70 @@ export function dispose() {
 
 ### Conditional JavaScript Loading
 
-**Pattern**: Only load heavy JavaScript libraries on pages that actually need them, not globally on every page.
+**Pattern**: Only load heavy JavaScript libraries on pages that actually need them, not globally on every page. Each page component calls the init functions it needs from its own `OnAfterRenderAsync`.
 
 **Problem**: Loading Highlight.js (~68KB + 8 language files), Mermaid diagrams, TOC scroll-spy, and custom page interactivity on every page significantly slows down initial page load for simple list/section pages that don't use them.
 
-**Solution**: Global script loader in `App.razor` with element detection - loads libraries dynamically only when their target elements exist on the page.
+**Solution**: Component-level script initialization via `page-scripts.js`. Each page component calls specific init functions from `OnAfterRenderAsync` after its DOM is fully rendered.
 
-#### Dynamic Script Loading
+#### Component-Level Script Loading
 
-**Location**: [Components/App.razor](Components/App.razor)
+**Location**: [wwwroot/js/page-scripts.js](wwwroot/js/page-scripts.js)
 
 **How It Works**:
 
-1. **Element Detection**: On every page load and `enhancedload` event, checks for specific elements:
-   - `pre code` → Load Highlight.js (syntax highlighting)
-   - `.mermaid` → Load Mermaid (diagrams)
-   - `[data-toc-scroll-spy]` → Initialize TOC scroll spy
-   - `[data-collapsible]` → Load custom pages interactivity
+1. **`page-scripts.js`** is loaded as an ES module on every page. It exposes init functions on `window`:
+   - `initHighlighting()` → Loads Highlight.js CDN + applies syntax highlighting
+   - `initMermaid()` → Loads Mermaid CDN + renders diagrams
+   - `initTocScrollSpy()` → Imports `toc-scroll-spy.js` module
+   - `initCustomPages()` → Imports `custom-pages.js` module (collapsible cards, expandable badges)
+   - `markScriptsLoading()` / `markScriptsReady()` → E2E test signals
 
-2. **Dynamic Loading**: When elements are found, dynamically injects:
-   - CSS `<link>` tags (for Highlight.js theme)
-   - External `<script>` tags (for libraries)
-   - ES6 module imports (for local scripts)
+2. **Each page component** calls only the init functions it needs from `OnAfterRenderAsync`:
 
-3. **One-Time Loading**: Tracks what's already loaded to avoid duplicate script injection
+```razor
+@inject IJSRuntime JS
 
-**Performance Benefits**:
-
-- **Simple Pages** (Home, Section, Collection): ~0 extra JS (just element checks, <1ms)
-- **Content Pages** (Handbook, Features, ContentItem): Libraries load only when needed
-- **No Manual Parameters**: Pages don't need to declare what they use - automatic detection
-
-**Example Flow**:
-
-```javascript
-// In App.razor - runs on every page load/navigation
-async function loadScriptsForPage() {
-    // 1. Check for code blocks
-    if (document.querySelector('pre code')) {
-        // Inject Highlight.js CSS + JS (only once)
-        // Then call hljs.highlightAll()
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (pageData != null)  // Guard: only when data is loaded
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initHighlighting");
+            await JS.InvokeVoidAsync("initMermaid");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
     }
-    
-    // 2. Check for Mermaid diagrams
-    if (document.querySelector('.mermaid')) {
-        // Load Mermaid library (only once)
-        // Then call mermaid.run()
-    }
-    
-    // 3. Check for TOC
-    if (document.querySelector('[data-toc-scroll-spy]')) {
-        // Import toc-scroll-spy.js module
-        // Then call initTocScrollSpy()
-    }
-    
-    // 4. Check for collapsible sections
-    if (document.querySelector('[data-collapsible]')) {
-        // Load custom-pages.js (only once)
-    }
-}
-
-        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
-    </script>
-}
-
-@if (LoadTocScrollSpy)
-{
 }
 ```
 
+3. **CDN config** is bridged from C# to JS via a small inline script in `App.razor` that sets `window.TechHubCDN`
+
+4. **One-Time Loading**: `page-scripts.js` tracks loaded state internally to avoid duplicate CDN fetches
+
+**Which Components Call What**:
+
+| Component | Init Functions | Guard Condition |
+|---|---|---|
+| `Home.razor` | `initCustomPages` | `sections != null` |
+| `ContentItem.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | `item != null` |
+| `GenAI.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | `pageData != null` |
+| `DXSpace.razor` | `initCustomPages`, `initTocScrollSpy` | `pageData != null` |
+| `GitHubCopilotHandbook.razor` | `initCustomPages`, `initTocScrollSpy` | `pageData != null` |
+| `GitHubCopilotFeatures.razor` | `initCustomPages`, `initTocScrollSpy` | `pageData != null` |
+| `GitHubCopilotLevels.razor` | `initCustomPages`, `initTocScrollSpy` | `pageData != null` |
+| `GitHubCopilotVSCodeUpdates.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | `selectedVideoDetail != null` |
+| `AISDLC.razor` | `initCustomPages`, `initTocScrollSpy` | `pageData != null` |
+
 **Key Benefits**:
 
-- ✅ **Automatic Detection** - No manual parameters needed on pages
+- ✅ **Reliable Timing** - Scripts run after each component's DOM is rendered (not before)
 - ✅ **Faster Initial Load** - Simple pages load zero extra JavaScript
-- ✅ **Smart Loading** - Only loads libraries when elements exist
+- ✅ **Smart Loading** - Only loads libraries when the component actually needs them
 - ✅ **One-Time Injection** - Tracks loaded state to avoid duplicates
-- ✅ **Clean Page Code** - Pages don't need script declarations
-- ✅ **Progressive Enhancement** - Works on initial load and after navigation
+- ✅ **Works with Client-Side Navigation** - `OnAfterRenderAsync` fires on every render, not just first render
 
 ### JavaScript Utilities
 

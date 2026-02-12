@@ -3,6 +3,7 @@
 @using TechHub.Web.Services
 @implements IDisposable
 
+@inject IJSRuntime JS
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
@@ -68,6 +69,18 @@
     private string? _previousSectionName;
     private string? _previousCollectionName;
     private string? _previousSlug;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (item != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initHighlighting");
+            await JS.InvokeVoidAsync("initMermaid");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {

@@ -3,6 +3,7 @@
 @using TechHub.Web.Services
 @implements IDisposable
 
+@inject IJSRuntime JS
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -195,6 +196,17 @@
         }
 
         return sb.ToString();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (pageData != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initCustomPages");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
     }
 
     protected override async Task OnInitializedAsync()

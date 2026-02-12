@@ -103,7 +103,7 @@ tests/TechHub.E2E.Tests/
 │   └── BlazorHelpers.cs                ← Blazor-specific wait patterns
 ├── PlaywrightCollectionFixture.cs      ← Shared browser (assembly fixture)
 ├── PlaywrightTestBase.cs               ← Abstract base class for Web E2E tests
-└── xunit.runner.json                   ← Parallel execution settings
+└── testconfig.json                     ← Parallel execution settings (xUnit v3)
 ```
 
 ### Test Organization Strategy
@@ -304,10 +304,10 @@ All browser launch options are centralized in [PlaywrightCollectionFixture.cs](P
 - Reduces API test time from ~12s (3 factories × 4s each) to ~6.5s (parallel execution)
 - All API test classes use `[Collection("API E2E Tests")]` to share fixture
 
-**2. Parallel Test Execution** (4x throughput):
+**2. Parallel Test Execution** (scales to CPU):
 
 - Test collections run in parallel
-- Configured in [xunit.runner.json](xunit.runner.json): `maxParallelThreads: 4` (fixed thread count)
+- Configured in [testconfig.json](testconfig.json): `maxParallelThreads: "2x"` (2× CPU threads, auto-scales to machine)
 - Each collection gets isolated resources (browser contexts, HTTP clients)
 
 **3. Optimized Timeouts** (fail fast):
@@ -337,7 +337,7 @@ Until step 3 completes, clicking buttons does nothing. Tests that click too earl
 - `afterServerStarted()` - Sets `window.__blazorServerReady = true`  
 - `afterWebAssemblyStarted()` - Sets `window.__blazorWasmReady = true`
 
-**Test Detection**: `BlazorHelpers.WaitForBlazorReadyAsync()` waits for these flags using `page.WaitForFunctionAsync()`
+**Test Detection**: `BlazorHelpers.WaitForBlazorReadyAsync()` uses a single combined `WaitForConditionAsync` call that checks all three conditions (Blazor runtime exists, interactive runtime ready, page scripts loaded) in one browser round-trip for minimal overhead.
 
 **Key Methods That Use This**:
 

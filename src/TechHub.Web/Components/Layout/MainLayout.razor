@@ -1,5 +1,4 @@
 ﻿@inherits LayoutComponentBase
-@inject IJSRuntime JS
 
 @Body
 
@@ -29,18 +28,3 @@
         <button class="dismiss-button" aria-label="Dismiss error message">Close</button>
     </div>
 </div>
-
-@code {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            // Load page scripts (mermaid, highlight.js, custom-pages, etc.) after Blazor
-            // has finished DOM reconciliation. This ensures scripts operate on the final
-            // interactive DOM, not the prerendered HTML that Blazor may replace.
-            // Subsequent navigations are handled by the pushState/popstate watcher
-            // in TechHub.Web.lib.module.js.
-            await JS.InvokeVoidAsync("loadScriptsForPage");
-        }
-    }
-}
