@@ -11991,5 +11991,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=4r33WnvLeCw",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The description consists primarily of promotional and social media links, as well as a general, non-technical overview about GitHub as a platform. There is no substantive content in the description, title, or tags that covers specific Microsoft technologies, coding practices, development techniques, or technical implementations. The content does not present technical depth or actionable educational value, and thus qualifies as a sales/promotion exclusion. Additionally, no main content text was provided to evaluate further.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: This post is primarily a question posed to the community, seeking help and gathering experiences around the behavior of AOBO (Admin-On-Behalf-Of) for Azure NCE subscriptions and CSP delegation. It describes a technical scenario but does not provide new technical implementation, solution steps, or deep technical analysis beyond framing the problem and asking if others have experienced the same thing. According to the Generic Exclusion Rules, question-only content and help-seeking posts without substantive answers or solutions are excluded from categorization. No categories are assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/admin-on-behalf-of-issue-when-purchasing-subscription/m-p/4494521#M824",
+    "collection": "community",
+    "timestamp": "2026-02-12 20:07:56 +00:00"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/latam/features/ai/cemex-luca-bot-ai-agent/?lang=en",
+    "timestamp": "2026-02-12 21:09:28 +00:00",
+    "reason": "No categories found: Content excluded because it is business strategy and executive workflow content focusing primarily on efficiency improvements for executives and business leaders, as described in the article. The narrative centers around 'how top executives work, plan, and make better informed decisions', the impact on 'senior leaders', 'executive committee members', and global heads, with emphasis on 'operational efficiencies', 'financial information visibility', and 'real-time executive decision making'. There is no coverage of technical implementation, architecture, APIs, developer workflows, or any Microsoft technology/development-focused aspect. According to Generic Exclusion Rules (Business Strategy and Executive Content), such high-level business/organizational stories without technical depth or developer relevance are excluded from categorization.",
+    "collection": "news"
   }
 ]

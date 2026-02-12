@@ -25870,5 +25870,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/enrich-power-bi-reports-with-machine-learning-in-microsoft-fabric/",
     "reason": "Succesfully added: The content qualifies for the ML category as it features the construction and deployment of a machine learning model in Microsoft Fabric, using LightGBM and SMOTE for predictive analytics (ML rules 1, 2, 3, 6, 8, 9, 11). The AI category is included because the workflow leverages Microsoft Fabric and Power BI for platform-integrated AI/ML (AI rules 1 and 4). Azure is included since Microsoft Fabric is a cloud-based offering within the Azure ecosystem, and the process integrates services like OneLake, Delta Lake, and Power BI. Coding is not assigned because the focus is primarily on data science, ML workflows, and system orchestration rather than development or architectural patterns in .NET or Microsoft-specific languages. Security and DevOps are not included, as the content does not focus on those aspects.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/",
+    "timestamp": "2026-02-12 21:09:57 +00:00",
+    "reason": "Succesfully added: Assigned only the DevOps category. The article is centrally focused on open source workflow and contribution management, describing community and GitHub approaches to scaling contribution review and maintaining project health—these directly align with DevOps themes (development methodologies, collaboration practices, CI/CD workflow, automation, developer experience). Although AI is mentioned in the context of challenges (AI-generated pull requests/reports), the content is NOT about AI technology, products, or development; thus, AI and GitHub Copilot categories do not apply. Coding, Azure, ML, and Security categories are not touched: there’s no substantive technical content on development, cloud, ML/data science, or security implementation. Exclusion of other categories is due to lack of focus on those areas.",
+    "collection": "news"
   }
 ]
