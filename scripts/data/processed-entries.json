@@ -25876,5 +25876,11 @@
     "timestamp": "2026-02-12 21:09:57 +00:00",
     "reason": "Succesfully added: Assigned only the DevOps category. The article is centrally focused on open source workflow and contribution management, describing community and GitHub approaches to scaling contribution review and maintaining project health—these directly align with DevOps themes (development methodologies, collaboration practices, CI/CD workflow, automation, developer experience). Although AI is mentioned in the context of challenges (AI-generated pull requests/reports), the content is NOT about AI technology, products, or development; thus, AI and GitHub Copilot categories do not apply. Coding, Azure, ML, and Security categories are not touched: there’s no substantive technical content on development, cloud, ML/data science, or security implementation. Exclusion of other categories is due to lack of focus on those areas.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/12/copilot-studio-agent-security-top-10-risks-detect-prevent/",
+    "reason": "Succesfully added: Assigned 'AI' because the content is about Copilot Studio agents—AI-powered workflow automation—and discusses AI agent risk scenarios (AI rule 1, 4, 5). 'Security' is included because the entire article is focused on identifying, detecting, and mitigating security risks using Microsoft Defender (Security rules 1, 2, 4, 9). Did not assign 'DevOps', 'Coding', 'Azure', 'ML', or 'GitHub Copilot', as there is no discussion of code development, engineering practices, model-building, or GitHub Copilot usage. Instead, the focus is on configuration, risk management, and secure operation of AI agents, primarily using Copilot Studio and Defender. No generic exclusion rules triggered; content is technical, English, and meant for practitioner security audiences.",
+    "timestamp": "2026-02-12 22:07:52 +00:00",
+    "collection": "news"
   }
 ]
