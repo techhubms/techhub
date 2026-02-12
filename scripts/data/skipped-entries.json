@@ -11979,5 +11979,17 @@
     "timestamp": "2026-02-12 18:18:32 +00:00",
     "collection": "videos",
     "reason": "No categories found: No categories were assigned because the provided content does not contain substantive technical content. The 'content' field is null and the description is a brief event announcement with no detail. There is no evidence from the title or description that Microsoft technologies, GitHub Copilot, or specific AI frameworks from Microsoft are discussed or central. No category inclusion criteria are met, and the absence of meaningful technical content triggers exclusion (focus on actual content rule, Chapter 2)."
+  },
+  {
+    "timestamp": "2026-02-12 19:23:37 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2026/02/12/assessing-healthcares-agentic-ai-readiness-new-research-from-microsoft-and-the-health-management-academy/",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules. The content is a short news announcement providing an external link to Microsoft research about healthcare and AI readiness but lacks substantive technical detail about Microsoft technologies, developer tools, or implementation guidance. The actual content is largely composed of a title, a reposted image, publication date, reading time, and external links with no technical depth, code, or actionable information. It does not meet the threshold for inclusion under any category (AI, Azure, etc.) and is more in line with a brief company announcement or news headline.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-12 19:24:11 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=4r33WnvLeCw",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The description consists primarily of promotional and social media links, as well as a general, non-technical overview about GitHub as a platform. There is no substantive content in the description, title, or tags that covers specific Microsoft technologies, coding practices, development techniques, or technical implementations. The content does not present technical depth or actionable educational value, and thus qualifies as a sales/promotion exclusion. Additionally, no main content text was provided to evaluate further.",
+    "collection": "videos"
   }
 ]
