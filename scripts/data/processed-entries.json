@@ -25786,5 +25786,17 @@
     "reason": "Succesfully added: Assigned 'AI' category because the content describes a multi-agent AI system using large language models, orchestration, and AI-driven features (AI rule 4). Assigned 'Azure' because it utilizes multiple Azure services including Azure Databricks, Azure Cosmos DB, Azure App Service, and leverages Microsoft Entra ID for authentication (Azure rule 1,4). Assigned 'Security' due to the focus on RBAC enforcement, secure identity delegation, OBO flows, zero trust architecture, and human-in-the-loop safeguards (Security rules 1,3,4,9). Did not assign 'ML' because ML/data science engineering is not central; the focus is on secure AI agent orchestration. Did not assign 'Coding' or 'DevOps' since code-level and CI/CD practices are not the main subject.",
     "timestamp": "2026-02-12 07:23:39 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Included AI category because the solution centers on AI-powered multi-agent systems, LangGraph orchestration, LLMs, and Databricks Genie (AI Inclusion Rule 1, 4, 5). Azure category is assigned due to extensive use of Azure services: Azure App Service, Azure Cosmos DB, Azure Databricks, and references to Microsoft Entra ID (Azure Inclusion Rule 1, 4). Security category added because the focus is on identity, RBAC, OAuth/OBO flow, zero-trust, user impersonation, token management, and enforcement of access controls with Microsoft Entra ID—all core security topics according to Security Inclusion Rules 1, 2, 3, and 9. Did not assign ML: while Databricks and analytics are involved, the content is primarily about secure AI agent orchestration and delegated access, not advanced analytics or custom ML development. Did not assign Coding or DevOps, as the focus is high-level architecture rather than language/framework implementation or deployment strategy.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-a-multi-agent-ai-solution-focused-on-user-context-the/ba-p/4493308",
+    "collection": "community",
+    "timestamp": "2026-02-12 08:12:15 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centers on teaching AI development concepts—embeddings, prompt engineering, workflow orchestration—using Microsoft's Foundry Local (AI inclusion rules 1 and 4). No other categories apply as the core focus is not traditional coding, DevOps, ML/data engineering, or security per provided definitions; it's on utilizing and educating around AI developer tools. Technical tags reflect AI learning, gamification, JavaScript and Node.js implementation, Foundry Local, and associated educational as well as architectural concepts.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/teaching-ai-development-through-gamification/ba-p/4490755",
+    "collection": "community",
+    "timestamp": "2026-02-12 08:12:40 +00:00"
   }
 ]
