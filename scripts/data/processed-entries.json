@@ -25762,5 +25762,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-s-default-outbound-access-changes-guidance-for-azure/m-p/4494462#M14000",
     "reason": "Succesfully added: Categories 'Azure' and 'Security' are assigned. 'Azure' is included as the content is centered on Azure platform changes, specifically networking features and VNet configuration (Azure inclusion rule 1, 4, 5). 'Security' is relevant because the post covers isolation, compliance, and best practices for secure explicit outbound connectivity (Security inclusion rule 1, 4, 9). 'DevOps' and 'Coding' were not assigned because the focus is not on CI/CD, development tools, or programming. 'AI', 'ML', and 'GitHub Copilot' are not mentioned or relevant according to the inclusion rules. There are no generic exclusion triggers; the content is sufficiently technical, detailed, in English, and clearly practitioner-focused with actionable guidance."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because a significant portion of the report focuses on a Copilot-specific outage, including root cause and recovery steps, which matches AI category rule 2 and GitHub Copilot rules 1 and 2. 'DevOps' is assigned due to extensive details about operational failures, rollbacks, monitoring, incident response, and platform reliability efforts, matching DevOps rules 5, 6, and 7. No other categories are appropriate as the report does not discuss coding practices, general Azure services, or ML development. Exclusion rules do not apply; content is technical, operational, and highly relevant.",
+    "canonical_url": "https://github.blog/news-insights/company-news/github-availability-report-january-2026/",
+    "timestamp": "2026-02-12 00:07:33 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Generic exclusion rules do not apply: Content is technical, tutorial-oriented, and not biographical, a sales pitch, question-only, negative, or non-English. Community content is well above the 200-word threshold. Categories assigned: 'Azure' because the article is centered on Microsoft Azure Kubernetes Service (AKS) and configuration steps specific to Azure (Azure rule 1, 4, 5). 'DevOps' applies because the content extensively covers deployment practices, networking setup, command-line automation, and observability tooling—key areas of DevOps methodology (DevOps rules 1, 4, 6, 7, 9). 'Security' is justified due to the strong focus on networking, network security policies, and the use of Calico—which is known for its security capabilities (Security rules 1, 2, 3, 7, 9). 'AI', 'GitHub Copilot', 'Coding', and 'ML' are not included as the article does not focus on AI/ML, Copilot, code/application development, or data engineering. The explanation cites relevant sections and rule numbers for category mapping.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-iptables-scaling-aks-networking-with-nftables-and-project/ba-p/4494467",
+    "timestamp": "2026-02-12 00:08:24 +00:00",
+    "collection": "community"
   }
 ]

@@ -1,0 +1,18 @@
+{
+  "PubDate": "2026-02-11T23:12:34+00:00",
+  "Title": "GitHub availability report: January 2026",
+  "Author": "Jakub Oleksy",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/news-insights/company-news/github-availability-report-january-2026/",
+  "EnhancedContent": "In January, we experienced two incidents that resulted in degraded performance across GitHub services.\n\n**January 13 09:38 UTC (lasting 46 minutes)**\n\nOn January 13, 2026, from 09:25 to 10:11 UTC, GitHub Copilot experienced a service outage with error rates averaging 18% and peaking at 100%. This impacted chat features across Copilot Chat, VS Code, JetBrains IDEs, and other dependent products. The incident was triggered by a configuration error introduced during a model update and was initially mitigated by rolling back the change. A secondary recovery phase extended until 10:46 UTC due to upstream provider Open AI experiencing degraded availability for GPT‑4.1 model.\n\nWe have completed a detailed root‑cause review and are implementing stronger monitors, improved test environments, and tighter configuration safeguards to prevent recurrence and accelerate detection and mitigation of future issues.\n\n**January 15 16:56 UTC (lasting 1 hour and 40 minutes)**\n\nOn January 15, 2026, between 16:40 UTC and 18:20 UTC, we observed increased latency and timeouts across issues, pull requests, notifications, actions, repositories, API, account login, and an internal service, Alive, that powers live updates on GitHub. An average 1.8% of combined web and API requests saw failure, peaking briefly at 10% early on. The majority of impact was observed for unauthenticated users, but authenticated users were impacted as well.\n\nThis was caused by an infrastructure update to some of our data stores. Upgrading this infrastructure to a new major version resulted in unexpected resource contention, leading to distributed impact in the form of slow queries and increased timeouts across services that depend on these datasets. We mitigated this by rolling back to the previous stable version.\n\nWe are working to improve our validation process for these types of upgrades to catch issues that only occur under high load before full release, improve detection time, and reduce mitigation times in the future.\n\n**Looking ahead**\n\nPlease note that the incidents that occurred on February 9, 2026, will be included in next month’s February Availability Report. In the meantime, you can refer to [incident report](https://www.githubstatus.com/incidents/lcw3tg2f6zsd) on the GitHub Status site for more details.\n\nFollow our [status page](https://www.githubstatus.com/) for real-time updates on status changes and post-incident recaps. To learn more about what we’re working on, check out the engineering section on the [GitHub Blog](https://github.blog/category/engineering/).\n\n## Tags:\n\n- [GitHub Availability Report](https://github.blog/tag/github-availability-report/)\n\n## Written by\n\n![Jakub Oleksy](https://avatars.githubusercontent.com/u/6147691?v=4&#038;s=200)",
+  "Tags": [
+    "Company news",
+    "GitHub Availability Report",
+    "News & insights"
+  ],
+  "FeedUrl": "https://github.blog/feed/",
+  "Description": "In January, we experienced two incidents that resulted in degraded performance across GitHub services.\n\nThe post [GitHub availability report: January 2026](https://github.blog/news-insights/company-news/github-availability-report-january-2026/) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-02-12 00:05:29",
+  "FeedLevelAuthor": "The GitHub Blog"
+}
