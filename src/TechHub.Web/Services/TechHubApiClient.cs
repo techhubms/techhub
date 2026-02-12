@@ -239,6 +239,7 @@ public class TechHubApiClient : ITechHubApiClient
         List<string>? tagsToCount = null,
         string? fromDate = null,
         string? toDate = null,
+        string? searchQuery = null,
         CancellationToken cancellationToken = default)
     {
         try
@@ -282,6 +283,12 @@ public class TechHubApiClient : ITechHubApiClient
             if (!string.IsNullOrWhiteSpace(toDate))
             {
                 queryParams.Add($"to={Uri.EscapeDataString(toDate)}");
+            }
+
+            // Text search filter
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                queryParams.Add($"q={Uri.EscapeDataString(searchQuery)}");
             }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
@@ -415,12 +422,13 @@ public class TechHubApiClient : ITechHubApiClient
         List<string>? tagsToCount = null,
         string? fromDate = null,
         string? toDate = null,
+        string? searchQuery = null,
         CancellationToken cancellationToken = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
 
-        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, selectedTags, tagsToCount, fromDate, toDate, cancellationToken);
+        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, selectedTags, tagsToCount, fromDate, toDate, searchQuery, cancellationToken);
     }
 
     // ================================================================

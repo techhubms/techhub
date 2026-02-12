@@ -1,6 +1,7 @@
 @page "/{sectionName}/{collectionName}/{slug}"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@implements IDisposable
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
@@ -49,6 +50,9 @@
     [Inject] public required ErrorService ErrorService { get; set; }
     [Inject] public required ILogger<ContentItem> Logger { get; set; }
     [Inject] public required SectionCache SectionCache { get; set; }
+    [Inject] public required PersistentComponentState ApplicationState { get; set; }
+
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     [Parameter]
     public string SectionName { get; set; } = null!;
@@ -61,6 +65,9 @@
 
     private TechHub.Core.Models.ContentItemDetail? item;
     private TechHub.Core.Models.Section? section;
+    private string? _previousSectionName;
+    private string? _previousCollectionName;
+    private string? _previousSlug;
 
     protected override async Task OnInitializedAsync()
     {
@@ -71,15 +78,36 @@
             Navigation.NavigateTo("/not-found");
             return;
         }
-        
-        // Note: Don't load item here - OnParametersSetAsync will be called next
-        // and handles both initial load and parameter changes
+
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        // Initialize change-tracking fields from current parameter values
+        _previousSectionName = SectionName;
+        _previousCollectionName = CollectionName;
+        _previousSlug = Slug;
+
+        if (!string.IsNullOrEmpty(SectionName) && !string.IsNullOrEmpty(CollectionName) && !string.IsNullOrEmpty(Slug))
+        {
+            await LoadItem();
+        }
     }
 
     protected override async Task OnParametersSetAsync()
     {
-        if (!string.IsNullOrEmpty(SectionName) && !string.IsNullOrEmpty(CollectionName) && !string.IsNullOrEmpty(Slug))
+        // Only reload when route parameters actually change (e.g., navigating between content items)
+        if (SectionName != _previousSectionName || CollectionName != _previousCollectionName || Slug != _previousSlug)
         {
+            _previousSectionName = SectionName;
+            _previousCollectionName = CollectionName;
+            _previousSlug = Slug;
+
+            section = SectionCache.GetSectionByName(SectionName);
+            if (section == null)
+            {
+                Navigation.NavigateTo("/not-found");
+                return;
+            }
+
             await LoadItem();
         }
     }
@@ -88,6 +116,13 @@
     {
         try
         {
+            var stateKey = $"content-item-{SectionName}-{CollectionName}-{Slug}";
+            if (ApplicationState.TryTakeFromJson<TechHub.Core.Models.ContentItemDetail>(stateKey, out var restored) && restored != null)
+            {
+                item = restored;
+                return;
+            }
+
             item = await ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), CollectionName.ToLowerInvariant(),
             Slug.ToLowerInvariant());
 
@@ -101,6 +136,22 @@
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
+    }
+
+    private Task PersistState()
+    {
+        if (item != null)
+        {
+            var stateKey = $"content-item-{SectionName}-{CollectionName}-{Slug}";
+            ApplicationState.PersistAsJson(stateKey, item);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
     }
 
     private void ScrollToTop()

@@ -5,7 +5,7 @@
 
 ## Overview
 
-This project implements the Blazor frontend with server-side rendering (SSR) and optional WebAssembly interactivity. It consumes the TechHub.Api through TechHubApiClient and renders content using the Tech Hub design system.
+This project implements the Blazor frontend with global InteractiveServer render mode and prerendering. It consumes the TechHub.Api through TechHubApiClient and renders content using the Tech Hub design system.
 
 **When to read this file**: When creating or modifying Blazor components, pages, layouts, or understanding frontend architecture.
 
@@ -19,7 +19,7 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 ### ✅ Always Do
 
 - **Always use design tokens exclusively** - ALL colors, spacing, typography from `wwwroot/css/design-tokens.css` (see [docs/design-system.md](../../docs/design-system.md))
-- **Always server-side render initial content** - Use SSR for SEO and performance
+- **Always use PersistentComponentState for pages with async data** - Prevents duplicate API calls during prerender→hydration
 - **Always progressive enhancement** - Core functionality works without JavaScript
 - **Always use TechHubApiClient for all API calls** - Typed HTTP client in `Services/TechHubApiClient.cs`
 - **Always follow Blazor component patterns** - See [Root AGENTS.md](../../AGENTS.md) for .NET/Blazor framework-specific guidance
@@ -1284,43 +1284,48 @@ export function initExpandableBadges() {
 
 ### Render Mode Selection
 
-**Criteria for choosing SSR vs WebAssembly**:
+**TechHub uses global InteractiveServer render mode** with prerendering enabled. All components are interactive by default — no per-component `@rendermode` directives needed.
 
-**Use SSR (Server-Side Rendering)** when:
+**Key patterns**:
 
-- Content is static and doesn't change after initial render
-- SEO is critical (search engines see complete HTML)
-- Initial page load speed is priority
-- No complex client-side interactivity needed
+- Use `PersistentComponentState` for all pages that load async data (prevents double API calls)
+- Use `RendererInfo.IsInteractive` to guard JS interop in `OnAfterRenderAsync`
+- Child filter components emit `EventCallback` events; parent pages handle URL state
+- `HttpContext` is only available during the prerender pass
 
-**Use WebAssembly (InteractiveWebAssembly)** when:
-
-- Rich client-side interactivity required (filtering, search, infinite scroll)
-- Reduced server load is important (processing moves to client)
-- Real-time updates or complex UI state management
-- Offline support or PWA features needed
-
-**Hybrid Approach** (Recommended):
-
-- Initial page render with SSR (fast load, SEO-friendly)
-- Enhanced interactivity with WebAssembly for specific components
-- Use `@rendermode InteractiveWebAssembly` on interactive components only
+📖 See [docs/render-modes.md](../../docs/render-modes.md) for complete architecture documentation.
 
 **Example**:
 
 ```razor
-@* Page uses SSR by default *@
 @page "/github-copilot"
+@implements IDisposable
+@inject PersistentComponentState ApplicationState
 
 <PageHeader Section="@section" />
 
-@* Static content rendered server-side *@
-<div class="section-description">
-    @section.Description
-</div>
+<ContentItemsGrid Section="@section" />
 
-@* Interactive filtering uses WebAssembly *@
-<ContentItemsGrid Section="@section" @rendermode="InteractiveWebAssembly" />
+@code {
+    private Section? section;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<Section>("section-data", out var restored) && restored != null)
+        {
+            section = restored;
+            return;
+        }
+
+        section = await ApiClient.GetSectionAsync("github-copilot");
+    }
+
+    private Task PersistState() { ... }
+    public void Dispose() { _persistSubscription?.Dispose(); GC.SuppressFinalize(this); }
+}
 ```
 
 ### Custom Page Patterns

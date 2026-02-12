@@ -76,9 +76,9 @@
 }
 
 .section-bg-coding {
-  background-image: image-set(url('/images/section-thumbnails/coding.jxl') type('image/jxl'),
-      url('/images/section-thumbnails/coding.webp') type('image/webp'),
-      url('/images/section-thumbnails/coding.jpg') type('image/jpeg'));
+  background-image: image-set(url('/images/section-thumbnails/dotnet.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/dotnet.webp') type('image/webp'),
+      url('/images/section-thumbnails/dotnet.jpg') type('image/jpeg'));
 }
 
 .section-bg-security {

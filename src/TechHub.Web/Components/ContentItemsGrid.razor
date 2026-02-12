@@ -3,7 +3,6 @@
 @using TechHub.Web.Services
 @using Microsoft.JSInterop
 @using Microsoft.AspNetCore.Components.Web
-@rendermode @(new InteractiveServerRenderMode(prerender: true))
 @inject TechHubApiClient ApiClient
 @inject SectionCache SectionCache
 @inject ILogger<ContentItemsGrid> Logger
@@ -142,6 +141,9 @@
     {
         previousCollectionName = CollectionName;
         previousFilterTags = FilterTags?.ToList();
+        previousSearchQuery = SearchQuery;
+        previousFromDate = FromDate;
+        previousToDate = ToDate;
 
         // Register for state persistence (called during prerender to save state)
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
@@ -223,6 +225,13 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        // JS interop is not available during prerendering — only set up scroll listener
+        // after the interactive circuit is established.
+        if (!RendererInfo.IsInteractive)
+        {
+            return;
+        }
+
         // Setup scroll listener on first render, or re-attach when filters change
         if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
         {

@@ -15,6 +15,12 @@ public class TagCountsRequest
     public int MinUses { get; }
 
     /// <summary>
+    /// Optional: Text search query for full-text search filtering.
+    /// When provided, tag counts are restricted to content items matching this search query.
+    /// </summary>
+    public string? SearchQuery { get; }
+
+    /// <summary>
     /// Optional: Currently selected tags for dynamic count calculation.
     /// When provided, counts show items that match these tags AND each tag in the result.
     /// </summary>
@@ -35,7 +41,8 @@ public class TagCountsRequest
         DateTimeOffset? dateFrom = null,
         DateTimeOffset? dateTo = null,
         IReadOnlyList<string>? tags = null,
-        IReadOnlyList<string>? tagsToCount = null)
+        IReadOnlyList<string>? tagsToCount = null,
+        string? searchQuery = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
@@ -68,6 +75,7 @@ public class TagCountsRequest
         DateTo = dateTo;
         Tags = tags;
         TagsToCount = tagsToCount;
+        SearchQuery = searchQuery;
     }
 
     /// <summary>
@@ -105,6 +113,11 @@ public class TagCountsRequest
         {
             var sortedTagsToCount = TagsToCount.OrderBy(t => t, StringComparer.OrdinalIgnoreCase);
             parts.Add($"ttc:{string.Join(",", sortedTagsToCount)}");
+        }
+
+        if (!string.IsNullOrWhiteSpace(SearchQuery))
+        {
+            parts.Add($"q:{SearchQuery.Trim().ToLowerInvariant()}");
         }
 
         return string.Join("|", parts);

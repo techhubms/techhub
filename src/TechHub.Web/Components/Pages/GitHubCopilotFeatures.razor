@@ -1,11 +1,13 @@
 @page "/github-copilot/features"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@implements IDisposable
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotFeatures> Logger
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>@(pageData?.Title ?? "GitHub Copilot Features") - Tech Hub</PageTitle>
 
@@ -157,6 +159,7 @@
     private const string SectionName = "github-copilot";
     private FeaturesPageData? pageData;
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     /// <summary>
     /// Generate HTML content for TOC extraction.
@@ -194,8 +197,17 @@
         return sb.ToString();
     }
 
-    protected override async Task OnParametersSetAsync()
+    protected override async Task OnInitializedAsync()
     {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<PersistedFeaturesData>("copilot-features-data", out var restored) && restored != null)
+        {
+            pageData = restored.PageData;
+            videoItems = restored.VideoItems ?? new();
+            return;
+        }
+
         try
         {
             pageData = await ApiClient.GetFeaturesDataAsync();
@@ -218,5 +230,27 @@
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("copilot-features-data", new PersistedFeaturesData
+        {
+            PageData = pageData,
+            VideoItems = videoItems
+        });
+        return Task.CompletedTask;
+    }
+
+    private sealed class PersistedFeaturesData
+    {
+        public FeaturesPageData? PageData { get; set; }
+        public List<TechHub.Core.Models.ContentItem>? VideoItems { get; set; }
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
     }
 }

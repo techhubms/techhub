@@ -55,9 +55,9 @@
 }
 
 .section-banner-bg-coding {
-    background-image: image-set(url('/images/section-backgrounds/coding.jxl') type('image/jxl'),
-            url('/images/section-backgrounds/coding.webp') type('image/webp'),
-            url('/images/section-backgrounds/coding.jpg') type('image/jpeg'));
+    background-image: image-set(url('/images/section-backgrounds/dotnet.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/dotnet.webp') type('image/webp'),
+            url('/images/section-backgrounds/dotnet.jpg') type('image/jpeg'));
 }
 
 .section-banner-bg-security {

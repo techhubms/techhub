@@ -1,6 +1,5 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.JSInterop;
 
 namespace TechHub.Web.Components;
@@ -16,10 +15,11 @@ public sealed class DateRangeChangedEventArgs : EventArgs
 
 /// <summary>
 /// Interactive date range slider for filtering content by publication date.
-/// Provides dual-handle slider, preset buttons, and URL-synced state.
+/// Provides dual-handle slider, preset buttons, and callback-driven state.
 /// Uses exponential mapping so recent dates have finer granularity.
 /// Defaults to last 90 days when no date range is specified.
 /// Client-side JS clamping prevents handles from crossing; server-side Math.Clamp is a fallback.
+/// Emits date range changes via callback; parent handles URL state.
 /// </summary>
 public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
 {
@@ -32,9 +32,6 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
 
     [Inject]
     private ILogger<DateRangeSlider> Logger { get; set; } = default!;
-
-    [Inject]
-    private NavigationManager Navigation { get; set; } = default!;
 
     [Inject]
     private IJSRuntime JS { get; set; } = default!;
@@ -110,12 +107,17 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
         _minEpoch = DateToEpoch(_absoluteMinDate);
         _maxEpoch = DateToEpoch(_absoluteMaxDate);
 
+        // Initialize change-tracking fields from current parameter values
+        // This prevents false change detection in OnParametersSet
+        _previousFromDate = FromDate;
+        _previousToDate = ToDate;
+
         InitializeFromParameters();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+        if (firstRender && RendererInfo.IsInteractive)
         {
             try
             {
@@ -268,47 +270,6 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
         Logger.LogDebug("Date range changed: {From} to {To}", args.FromDate, args.ToDate);
 
         await OnDateRangeChanged.InvokeAsync(args);
-
-        // Update the URL directly from this interactive component.
-        // The parent page (Section/SectionCollection) is static SSR and cannot
-        // call NavigateTo during the interactive phase. So the URL update must
-        // happen here, in the interactive component's circuit.
-        UpdateUrlWithDates(args.FromDate, args.ToDate);
-    }
-
-    /// <summary>
-    /// Updates the browser URL with from/to query parameters while preserving
-    /// other query parameters (e.g., tags). Called from the interactive component
-    /// context where NavigationManager has an active SignalR circuit.
-    /// </summary>
-    private void UpdateUrlWithDates(DateOnly fromDate, DateOnly toDate)
-    {
-        var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
-        var basePath = uri.AbsolutePath;
-
-        // Parse existing query parameters so we can preserve them (e.g., tags)
-        var existingParams = QueryHelpers.ParseQuery(uri.Query);
-        var queryParams = new Dictionary<string, string?>();
-
-        foreach (var kvp in existingParams)
-        {
-            // Skip from/to - we'll add our own
-            if (!string.Equals(kvp.Key, "from", StringComparison.OrdinalIgnoreCase) &&
-                !string.Equals(kvp.Key, "to", StringComparison.OrdinalIgnoreCase))
-            {
-                queryParams[kvp.Key] = kvp.Value.ToString();
-            }
-        }
-
-        queryParams["from"] = fromDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-        queryParams["to"] = toDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-
-        var newUrl = QueryHelpers.AddQueryString(basePath, queryParams);
-        Navigation.NavigateTo(newUrl, new NavigationOptions 
-        { 
-            ReplaceHistoryEntry = true,
-            ForceLoad = false  // Use enhanced navigation to preserve focus
-        });
     }
 
     private bool IsPresetActive(int days)

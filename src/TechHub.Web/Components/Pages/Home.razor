@@ -1,6 +1,7 @@
 @page "/"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@implements IDisposable
 
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
 
@@ -91,6 +92,9 @@
     [Inject] public required NavigationManager Navigation { get; set; }
     [Inject] public required ErrorService ErrorService { get; set; }
     [Inject] public required ILogger<Home> Logger { get; set; }
+    [Inject] public required PersistentComponentState ApplicationState { get; set; }
+
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     private static readonly SidebarRssLinks.RssLink[] rssLinks = [
     new("RSS Feed - All Content", "/all/feed.xml"),
@@ -130,8 +134,18 @@ new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon(
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
     }
 
-protected override async Task OnParametersSetAsync()
+protected override async Task OnInitializedAsync()
 {
+    _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+    if (ApplicationState.TryTakeFromJson<PersistedHomeData>("home-data", out var restored) && restored != null)
+    {
+        sections = restored.Sections;
+        latestRoundup = restored.LatestRoundup;
+        latestItems = restored.LatestItems;
+        return;
+    }
+
 try
 {
 // Fetch all content in parallel - using database-optimized endpoints
@@ -150,6 +164,30 @@ catch (Exception ex)
 ErrorService.HandleError(ex, Navigation, Logger);
 }
 }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("home-data", new PersistedHomeData
+        {
+            Sections = sections?.ToList(),
+            LatestRoundup = latestRoundup,
+            LatestItems = latestItems?.ToList()
+        });
+        return Task.CompletedTask;
+    }
+
+    private sealed class PersistedHomeData
+    {
+        public List<TechHub.Core.Models.Section>? Sections { get; set; }
+        public TechHub.Core.Models.ContentItem? LatestRoundup { get; set; }
+        public List<TechHub.Core.Models.ContentItem>? LatestItems { get; set; }
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
 
     private static string FormatDateShort(long epochSeconds) =>
         DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("MMM dd, yyyy");

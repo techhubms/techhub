@@ -1,125 +1,213 @@
 # Render Mode Strategy
 
-This document defines when to use Blazor's different render modes: Static SSR vs Interactive Server.
+This document defines TechHub's Blazor render mode architecture: global InteractiveServer with prerendering.
 
-## Background
+## Architecture
 
-Blazor supports multiple render modes:
+TechHub uses **global InteractiveServer** render mode with prerendering enabled. This means:
 
-| Mode | Description | SignalR Required | Use Case |
-|------|-------------|------------------|----------|
-| **Static SSR** | Renders on server, sends HTML | No | Display + simple JS interactions |
-| **Interactive Server** | Renders interactively via SignalR | Yes | Server logic or additional data needed |
-| **Interactive Server (prerender: true)** | Prerenders during SSR, then hydrates | Yes | Interactive + SEO (use PersistentComponentState) |
-| **Interactive Server (prerender: false)** | Only renders after SignalR connects | Yes | JS interop on render |
-
-## When to Use Each Mode
-
-### Static SSR (No Render Mode Attribute)
-
-Use for components that **don't require server-side logic or additional data** on interaction:
-
-- Navigation links, headers, footers
-- Content display (article body, headings, paragraphs)
-- Static images and videos
-- Breadcrumbs, metadata display
-- **Simple interactive elements** (toggles, accordions, dropdowns) - handle with JavaScript
+- All components run in InteractiveServer mode (set at the router level in `Routes.razor`)
+- Prerendering is enabled by default, so initial page loads render complete HTML on the server
+- After prerendering, the SignalR circuit connects and the app becomes interactive
+- No per-component `@rendermode` directives are needed
 
 ```razor
-@* No @rendermode attribute - static SSR *@
-<NavHeader />
-<PageHeader />
-<Footer />
-<Accordion />  @* Uses JavaScript for toggle behavior *@
+@* Routes.razor - global render mode *@
+<Router AppAssembly="typeof(Program).Assembly"
+        @rendermode="InteractiveServer">
 ```
-
-**When to use JavaScript for interactivity:**
-
-If the interaction is purely client-side (show/hide, toggle classes, DOM manipulation), use Static SSR with JavaScript:
-
-```html
-<!-- Static SSR component with JS interaction -->
-<button onclick="document.getElementById('details').classList.toggle('hidden')">
-    Toggle Details
-</button>
-<div id="details" class="hidden">...</div>
-```
-
-This avoids SignalR overhead and provides instant user feedback.
-
-### Interactive Server with Prerender
-
-Use **only** when the component requires **server-side logic or additional data** on interaction:
-
-- Tag cloud filters that trigger server-side data queries
-- Form submissions that validate/process on the server
-- Components that fetch additional data based on user actions
-- Content grids that require server-side filtering/sorting
 
 ```razor
-@rendermode @(new InteractiveServerRenderMode(prerender: true))
+@* App.razor - HeadOutlet also interactive *@
+<HeadOutlet @rendermode="InteractiveServer" />
 ```
 
-**Why prerender: true?**
+## Why Global InteractiveServer?
 
-- Component HTML is included in the initial SSR response
-- Content is visible immediately (better perceived performance, SEO)
-- Hydrates to become interactive when SignalR connects
+| Benefit | Description |
+|---------|-------------|
+| **Simplified architecture** | No per-component render mode decisions |
+| **Consistent interactivity** | All components are interactive by default |
+| **SEO preserved** | Prerendering ensures search engines see complete HTML |
+| **No mixed-mode complexity** | Eliminates SSR boundary issues, parameter serialization problems |
 
-**CRITICAL: Avoid Double Data Loading**
+## Component Lifecycle: `OnInitializedAsync` vs `OnParametersSetAsync`
 
-When using `prerender: true`, data is loaded during SSR AND during hydration. Use `PersistentComponentState` to load data once:
+Blazor components have two key lifecycle methods for loading data:
+
+| Method | When It Runs | Use For |
+|--------|--------------|---------|
+| `OnInitializedAsync` | **Once** per component instance | Initial data loading, one-time setup |
+| `OnParametersSetAsync` | On **every** parameter set (initial + every re-render) | Reacting to actual parameter changes |
+
+### Rule of Thumb
+
+> **Put data loading in `OnInitializedAsync`.** Only use `OnParametersSetAsync` when the component must react to parameter changes (e.g., route parameters changing while the component stays mounted).
+
+### Why This Matters
+
+With global InteractiveServer and prerendering, `OnParametersSetAsync` runs on every render cycle. While `PersistentComponentState.TryTakeFromJson` guards the hydration re-render (since it's one-shot), any subsequent re-render would bypass that guard and trigger duplicate API calls. Using `OnInitializedAsync` avoids this entirely because it runs only once.
+
+### The `previous*` Change-Tracking Pattern
+
+When a component **must** react to parameter changes (e.g., route parameters that change while the component stays mounted), use `previous*` tracking fields:
+
+1. **Declare tracking fields** for each parameter that triggers data reloading
+2. **Initialize them in `OnInitializedAsync`** from the current parameter values
+3. **Compare in `OnParametersSetAsync`** and only reload when values actually change
+4. **Update tracking fields** after loading new data
 
 ```csharp
-@inject PersistentComponentState ApplicationState
-
-private List<Item> items = new();
+// Step 1: Declare tracking fields
+private string? _previousSectionName;
+private string? _previousSlug;
 
 protected override async Task OnInitializedAsync()
 {
-    // Try to restore data from SSR
-    if (!ApplicationState.TryTakeFromJson<List<Item>>("items", out var restored))
+    // Step 2: Initialize tracking fields from current parameters
+    _previousSectionName = SectionName;
+    _previousSlug = Slug;
+
+    // Initial data load
+    await LoadData();
+}
+
+protected override async Task OnParametersSetAsync()
+{
+    // Step 3: Only reload when parameters actually changed
+    if (SectionName != _previousSectionName || Slug != _previousSlug)
     {
-        // Data not in state - load it (during SSR)
-        items = await LoadItemsAsync();
-        
-        // Persist for hydration
-        ApplicationState.RegisterOnPersisting(() =>
-        {
-            ApplicationState.PersistAsJson("items", items);
-            return Task.CompletedTask;
-        });
-    }
-    else
-    {
-        // Data restored from SSR - reuse it (during hydration)
-        items = restored;
+        // Step 4: Update tracking fields
+        _previousSectionName = SectionName;
+        _previousSlug = Slug;
+
+        await LoadData();
     }
 }
 ```
 
-This ensures data is loaded **once** during SSR and reused during hydration.
+**Why initialize tracking fields?** Without initialization, tracking fields default to `null`. If a parameter arrives as `""` (empty string), the comparison `"" != null` evaluates to `true`, causing a false change detection and a spurious data reload.
 
-### Interactive Server without Prerender (Rare)
+### Components Using This Pattern
 
-Use only when the component **must not render until SignalR is established**:
+| Component | Tracking Fields | Triggers Reload On |
+|-----------|----------------|-------------------|
+| `ContentItemsGrid.razor` | `previousCollectionName`, `previousFilterTags`, `previousSearchQuery`, `previousFromDate`, `previousToDate` | Collection, filter, search, or date change |
+| `ContentItem.razor` | `_previousSectionName`, `_previousCollectionName`, `_previousSlug` | Route parameter change |
+| `GenAI.razor` | `_previousPageType` | Route change between genai-basics/applied/advanced |
+| `SidebarTagCloud.razor` | `_previousFromDate`, `_previousToDate` | Date range filter change |
+| `DateRangeSlider.razor` | `_previousFromDate`, `_previousToDate` | External date parameter change |
 
-- Components that immediately call JavaScript interop on render
-- Components with side effects that shouldn't run twice
+### Pages That Only Use `OnInitializedAsync`
 
-```razor
-@rendermode @(new InteractiveServerRenderMode(prerender: false))
+Pages without changing parameters put all data loading in `OnInitializedAsync` and do not need `OnParametersSetAsync` at all:
+
+- `Home.razor`
+- `GitHubCopilotLevels.razor`
+- `GitHubCopilotFeatures.razor`
+- `GitHubCopilotHandbook.razor`
+- `AISDLC.razor`
+- `DXSpace.razor`
+
+## PersistentComponentState (Critical Pattern)
+
+When prerendering is enabled, components render **twice**: once during SSR and once when the SignalR circuit connects. Use `PersistentComponentState` to persist data from SSR and restore it during hydration, preventing duplicate API calls.
+
+**Pattern**:
+
+```csharp
+@implements IDisposable
+@inject PersistentComponentState ApplicationState
+
+private MyData? data;
+private PersistingComponentStateSubscription? _persistSubscription;
+
+protected override async Task OnInitializedAsync()
+{
+    _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+    if (ApplicationState.TryTakeFromJson<MyData>("state-key", out var restored) && restored != null)
+    {
+        data = restored;
+        return;
+    }
+
+    // Only executes during SSR prerender - data persisted for hydration
+    data = await ApiClient.LoadDataAsync();
+}
+
+private Task PersistState()
+{
+    if (data != null)
+    {
+        ApplicationState.PersistAsJson("state-key", data);
+    }
+    return Task.CompletedTask;
+}
+
+public void Dispose()
+{
+    _persistSubscription?.Dispose();
+    GC.SuppressFinalize(this);
+}
 ```
 
-**Warning**: Components with `prerender: false` will show nothing during SSR. This causes layout shift and poor user experience.
+**State key conventions**:
+
+- Use descriptive, unique keys: `"home-data"`, `"content-item-{Section}-{Collection}-{Slug}"`
+- For pages with route parameters, include them in the key to avoid stale data
+- Use a sealed `PersistedXxxData` class when persisting multiple fields
+
+**Pages using PersistentComponentState**:
+
+| Page | State Key Pattern | Data Persisted |
+|------|-------------------|----------------|
+| `Home.razor` | `home-data` | Sections list |
+| `ContentItem.razor` | `content-item-{Section}-{Collection}-{Slug}` | Content detail |
+| `ContentItemsGrid.razor` | `grid-state-{Section}-{Collection}` | Grid items |
+| `DXSpace.razor` | `dxspace-data` | Section + page data |
+| `GitHubCopilotFeatures.razor` | `copilot-features-data` | Page + video items |
+| `GitHubCopilotHandbook.razor` | `copilot-handbook-data` | Page data |
+| `GitHubCopilotLevels.razor` | `copilot-levels-data` | Page data |
+| `GitHubCopilotVSCodeUpdates.razor` | `vscode-updates-{VideoSlug}` | Video items + detail |
+| `GenAI.razor` | `genai-{PageType}` | Section + page data |
+| `AISDLC.razor` | `ai-sdlc-data` | Section + page data |
+
+## RendererInfo.IsInteractive Guard
+
+During prerendering, JavaScript interop is not available. Use `RendererInfo.IsInteractive` to guard JS calls in `OnAfterRenderAsync`:
+
+```csharp
+protected override async Task OnAfterRenderAsync(bool firstRender)
+{
+    if (!RendererInfo.IsInteractive) return;
+
+    if (firstRender)
+    {
+        // Safe to call JS interop here
+        await JSRuntime.InvokeVoidAsync("initComponent");
+    }
+}
+```
+
+## HttpContext During Prerendering
+
+`HttpContext` is only available during prerendering (SSR pass), not after hydration. For components that need HTTP context (setting status codes, reading headers):
+
+```csharp
+@inject IHttpContextAccessor HttpContextAccessor
+
+// Available during prerender, null during interactive
+var httpContext = HttpContextAccessor.HttpContext;
+if (httpContext is { Response.StatusCode: 200 })
+{
+    httpContext.Response.StatusCode = 404;
+}
+```
 
 ## JavaScript Interop Disposal
 
-Components using JavaScript interop (via `IJSObjectReference`) must handle disposal safely to avoid errors when Blazor Server circuits disconnect.
-
-**Problem**: When users navigate away, close the browser, or experience network issues, the SignalR circuit disconnects. If `DisposeAsync()` is called on a JS module reference after disconnection, it throws `JSDisconnectedException`, which gets logged as an unhandled error.
-
-**Solution**: Wrap ALL JavaScript interop disposal calls in try-catch blocks:
+Components using JavaScript interop must handle disposal safely to avoid errors when SignalR circuits disconnect:
 
 ```csharp
 public async ValueTask DisposeAsync()
@@ -128,7 +216,6 @@ public async ValueTask DisposeAsync()
     {
         try
         {
-            // Both cleanup calls and disposal can fail after circuit disconnect
             await jsModule.InvokeVoidAsync("dispose");
             await jsModule.DisposeAsync();
         }
@@ -143,20 +230,9 @@ public async ValueTask DisposeAsync()
 }
 ```
 
-**Key Points**:
+## SignalR Message Size
 
-- Catch exceptions from BOTH `InvokeVoidAsync()` AND `DisposeAsync()`
-- Circuit disconnections are normal (navigation, browser close, network issues)
-- Swallowing these specific disposal exceptions is safe and expected
-- See [ContentItemsGrid.razor](../src/TechHub.Web/Components/ContentItemsGrid.razor) for a complete example
-
-## SignalR Message Size Considerations
-
-When using `prerender: true`, the component's state is serialized and sent over SignalR during hydration. Large prerendered content can exceed SignalR's default 32KB message limit.
-
-**Symptom**: Console error "The maximum message size of 32768B was exceeded"
-
-**Solution**: Increase the SignalR message size limit in Program.cs:
+Large prerendered content can exceed SignalR's default 32KB message limit. The limit is configured in `Program.cs`:
 
 ```csharp
 builder.Services.AddSignalR(options =>
@@ -165,55 +241,31 @@ builder.Services.AddSignalR(options =>
 });
 ```
 
-## Current Component Configuration
+## URL State Management
 
-| Component | Render Mode | Reason |
-|-----------|-------------|--------|
-| `SidebarTagCloud` | InteractiveServer (prerender: true) | Buttons need click handlers; must show in SSR for SEO |
-| `ContentItemsGrid` | InteractiveServer (prerender: true) | Responds to tag filter changes; must show initial content |
-| `NavHeader` | Static SSR | Links only, no interactivity needed |
-| `PageHeader` | Static SSR | Display only |
-| `SidebarToc` | Static SSR | Links only, no interactivity needed |
-| `Footer` | Static SSR | Display only |
+Parent pages manage URL state through `NavigationManager.GetUriWithQueryParameters`:
+
+```csharp
+private void UpdateUrl()
+{
+    var queryParams = new Dictionary<string, object?> { ... };
+    var url = Navigation.GetUriWithQueryParameters(queryParams);
+    Navigation.NavigateTo(url, new NavigationOptions { ReplaceHistoryEntry = true });
+}
+```
+
+Child filter components (SidebarSearch, SidebarTagCloud, DateRangeSlider) emit `EventCallback` events. Parent pages handle these events and update the URL.
 
 ## Testing Interactive Components
 
-When testing components with `PersistentComponentState` (used for SSR → Interactive hydration), use bUnit's built-in support:
+For bUnit tests with `PersistentComponentState`:
 
 ```csharp
-// In your test setup
 this.AddBunitPersistentComponentState();
 ```
 
-This ensures the `PersistentComponentState` service is properly registered for testing prerendered components.
-
-## Decision Flowchart
-
-```text
-Does the interaction require server-side logic or additional data?
-├── No → Use Static SSR + JavaScript (no @rendermode attribute)
-│         Examples: toggles, accordions, show/hide, DOM manipulation
-│
-└── Yes → Does the component need to be visible in initial page load?
-    ├── Yes → Use InteractiveServer with prerender: true
-    │         ⚠️  MUST use PersistentComponentState to avoid double data loading
-    │
-    └── No → Does it call JS interop immediately on render?
-        ├── Yes → Use InteractiveServer with prerender: false
-        └── No → Use InteractiveServer with prerender: true
-                  ⚠️  MUST use PersistentComponentState to avoid double data loading
-```
-
-## Best Practices
-
-1. **Default to Static SSR + JavaScript** - Use for simple interactions (toggles, show/hide)
-2. **Use Interactive Server only when needed** - Server logic or additional data required
-3. **Always use PersistentComponentState with prerender: true** - Prevents double data loading
-4. **Prefer prerender: true over false** - Better UX and SEO
-5. **Watch message sizes** - Monitor SignalR payload sizes for interactive components
-6. **Test hydration** - Ensure components load data once and work correctly after hydration
-
 ## Implementation Reference
 
-- **Blazor component patterns**: [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md)
+- **Component patterns**: [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md)
 - **Component tests**: [tests/TechHub.Web.Tests/AGENTS.md](../tests/TechHub.Web.Tests/AGENTS.md)
+- **Reference implementation**: [ContentItemsGrid.razor](../src/TechHub.Web/Components/ContentItemsGrid.razor)

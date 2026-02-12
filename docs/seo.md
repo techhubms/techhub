@@ -4,14 +4,14 @@ Tech Hub implements SEO best practices to ensure content is discoverable and pro
 
 ## Server-Side Rendering (SSR)
 
-All content is server-side rendered by default. This ensures:
+All content is server-side rendered via Blazor's global InteractiveServer mode with prerendering enabled. This ensures:
 
 - Search engines see complete HTML content
-- Fast initial page load (no JavaScript required for content)
+- Fast initial page load (prerendered HTML delivered before SignalR connects)
 - Proper meta tags in initial response
 - Social media previews work correctly
 
-See [render-modes.md](render-modes.md) for details on when to use SSR vs interactive modes.
+See [render-modes.md](render-modes.md) for the render mode architecture and PersistentComponentState pattern.
 
 ## Schema.org Structured Data
 

@@ -1,5 +1,6 @@
 using Bunit;
 using FluentAssertions;
+using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -10,10 +11,17 @@ using CollectionModel = TechHub.Core.Models.Collection;
 namespace TechHub.Web.Tests.Components;
 
 /// <summary>
-/// Tests for Section.razor component with skeleton layout architecture
+/// Tests for SectionCollection.razor component with skeleton layout architecture.
+/// SectionCollection handles both /{sectionName} and /{sectionName}/{collectionName} routes,
+/// defaulting to "all" when no collection is specified.
 /// </summary>
 public class SectionTests : BunitContext
 {
+    public SectionTests()
+    {
+        // Section renders child components (DateRangeSlider, ContentItemsGrid) that use JS interop
+        JSInterop.Mode = JSRuntimeMode.Loose;
+    }
     [Fact]
     public void Section_RendersWithPageStructure()
     {
@@ -68,6 +76,7 @@ public class SectionTests : BunitContext
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
 
@@ -76,9 +85,10 @@ public class SectionTests : BunitContext
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
         AddBunitPersistentComponentState();
+        SetRendererInfo(new RendererInfo("Server", true));
 
-        // Act - Render Section component
-        var cut = Render<Section>(parameters => parameters
+        // Act - Render SectionCollection component (replaces Section.razor)
+        var cut = Render<SectionCollection>(parameters => parameters
             .Add(p => p.SectionName, "ai"));
 
         // Assert - Use WaitForAssertion to wait for async rendering
@@ -155,6 +165,7 @@ public class SectionTests : BunitContext
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
 
@@ -163,9 +174,10 @@ public class SectionTests : BunitContext
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
         AddBunitPersistentComponentState();
+        SetRendererInfo(new RendererInfo("Server", true));
 
         // Act
-        var cut = Render<Section>(parameters => parameters
+        var cut = Render<SectionCollection>(parameters => parameters
             .Add(p => p.SectionName, "ai"));
 
         // Assert - Use WaitForAssertion to wait for async rendering

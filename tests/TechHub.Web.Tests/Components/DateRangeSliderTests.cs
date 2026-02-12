@@ -16,6 +16,9 @@ public class DateRangeSliderTests : BunitContext
         // DateRangeSlider imports a JS module for client-side clamping.
         // Use loose mode so the import call doesn't throw in test context.
         JSInterop.Mode = JSRuntimeMode.Loose;
+
+        // DateRangeSlider uses RendererInfo.IsInteractive in OnAfterRenderAsync
+        SetRendererInfo(new RendererInfo("Server", true));
     }
     [Fact]
     public void DateRangeSlider_RendersWithCorrectStructure()

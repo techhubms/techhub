@@ -5,7 +5,7 @@
 - .NET 10 (latest LTS)
 - C# 13 with file-scoped namespaces and nullable reference types
 - ASP.NET Core Minimal APIs with dependency injection
-- Blazor SSR + WebAssembly
+- Blazor InteractiveServer with prerendering
 - .NET Aspire for orchestration and telemetry
 
 ## Frontend

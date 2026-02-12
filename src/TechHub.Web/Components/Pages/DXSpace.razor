@@ -1,11 +1,13 @@
 @page "/devops/dx-space"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@implements IDisposable
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
 @inject ILogger<DXSpace> Logger
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>@(pageData?.Title ?? "DX Space") - Tech Hub</PageTitle>
 
@@ -423,8 +425,17 @@
         return sb.ToString();
     }
 
-    protected override async Task OnParametersSetAsync()
+    protected override async Task OnInitializedAsync()
     {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<PersistedDXSpaceData>("dxspace-data", out var restored) && restored != null)
+        {
+            sectionData = restored.SectionData;
+            pageData = restored.PageData;
+            return;
+        }
+
         try
         {
             sectionData = await ApiClient.GetSectionAsync("devops");
@@ -439,5 +450,29 @@
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("dxspace-data", new PersistedDXSpaceData
+        {
+            SectionData = sectionData,
+            PageData = pageData
+        });
+        return Task.CompletedTask;
+    }
+
+    private sealed class PersistedDXSpaceData
+    {
+        public TechHub.Core.Models.Section? SectionData { get; set; }
+        public DXSpacePageData? PageData { get; set; }
+    }
+
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
     }
 }

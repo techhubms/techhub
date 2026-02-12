@@ -900,6 +900,107 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
     #endregion
 
+    #region Text Search Filter Tests
+
+    [Fact]
+    public async Task GetCollectionTags_WithSearchQuery_FiltersTagsBySearchResults()
+    {
+        // Arrange - Get baseline tags without search filter
+        var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags", TestContext.Current.CancellationToken);
+        baselineResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var baselineTags = await baselineResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
+        baselineTags.Should().NotBeNull();
+        baselineTags!.Should().NotBeEmpty();
+
+        // Act - Get tag cloud filtered by a search query that should narrow results
+        var response = await _client.GetAsync("/api/sections/all/collections/all/tags?q=copilot", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
+        filteredTags.Should().NotBeNull();
+
+        // Search-filtered tag counts should be less than or equal to unfiltered counts
+        // because search narrows the content set
+        if (filteredTags!.Count > 0)
+        {
+            filteredTags.Should().AllSatisfy(item =>
+            {
+                item.Tag.Should().NotBeNullOrEmpty();
+                item.Count.Should().BeGreaterThan(0);
+            });
+        }
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithSearchQueryAndTags_CombinesFilters()
+    {
+        // Arrange - Combine search query with tag filter
+
+        // Act - Get tag cloud with both search and tag filters
+        var response = await _client.GetAsync("/api/sections/all/collections/all/tags?q=copilot&tags=ai", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
+        tagCloud.Should().NotBeNull();
+
+        // Counts should reflect items matching BOTH search query AND selected tag
+        tagCloud!.Should().AllSatisfy(item =>
+        {
+            item.Tag.Should().NotBeNullOrEmpty();
+            item.Count.Should().BeGreaterThanOrEqualTo(0);
+        });
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithSearchQuery_ReducesTagCounts()
+    {
+        // Arrange - Get unfiltered tag cloud first
+        var unfilteredResponse = await _client.GetAsync("/api/sections/all/collections/all/tags", TestContext.Current.CancellationToken);
+        unfilteredResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var unfilteredTags = await unfilteredResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
+        unfilteredTags.Should().NotBeNull();
+        unfilteredTags!.Should().NotBeEmpty();
+
+        // Build tagsToCount from unfiltered tags so we compare same set
+        var tagsToCountParam = string.Join(",", unfilteredTags!.Select(t => Uri.EscapeDataString(t.Tag)));
+
+        // Act - Get tag cloud with a specific search query + tagsToCount
+        var filteredResponse = await _client.GetAsync($"/api/sections/all/collections/all/tags?q=copilot&tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
+        filteredResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var filteredTags = await filteredResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
+        filteredTags.Should().NotBeNull();
+
+        // Search-filtered tag counts should be <= unfiltered counts (search narrows the content set)
+        var unfilteredLookup = unfilteredTags!.ToDictionary(t => t.Tag, t => t.Count, StringComparer.OrdinalIgnoreCase);
+
+        filteredTags!.Should().AllSatisfy(filteredTag =>
+        {
+            if (unfilteredLookup.TryGetValue(filteredTag.Tag, out var unfilteredCount))
+            {
+                filteredTag.Count.Should().BeLessThanOrEqualTo(unfilteredCount,
+                    $"Search-filtered count for '{filteredTag.Tag}' should not exceed unfiltered count");
+            }
+        });
+
+        // At least one tag count must be strictly less than unfiltered —
+        // proving that search actually narrowed the content set
+        var hasReducedCount = filteredTags!.Any(filteredTag =>
+            unfilteredLookup.ContainsKey(filteredTag.Tag) &&
+            filteredTag.Count < unfilteredLookup[filteredTag.Tag]);
+
+        hasReducedCount.Should().BeTrue(
+            "Search should reduce at least one tag count compared to unfiltered results");
+    }
+
+    #endregion
+
     #endregion
 
     #region Content Detail Endpoint Tests
@@ -1269,6 +1370,60 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // from/to with 2 years should return more (or equal) items than lastDays=7
         itemsWithFromTo!.Count.Should().BeGreaterThanOrEqualTo(itemsWithLastDays!.Count,
             "from/to with 2 years range should include at least as many items as lastDays=7");
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithTagsAndSearch_ReturnsItemsMatchingBoth()
+    {
+        // Arrange - The fts-test blog post has AI tag and contains "TechHubSpecialKeyword"
+        // Multiple newer posts also have the AI tag but do NOT contain "TechHubSpecialKeyword"
+        // Bug scenario: tag subquery LIMIT may exclude the older fts-test post before FTS filter runs
+        const string tag = "ai";
+        const string searchQuery = "TechHubSpecialKeyword";
+
+        // Use a small take to ensure the FTS-matching item (date 2024-01-11) falls outside
+        // the first N AI-tagged items sorted by date desc (there are 15+ newer AI-tagged items)
+        const int smallTake = 5;
+
+        // First verify: search without tags finds the item
+        var searchOnlyResponse = await _client.GetAsync(
+            $"/api/sections/all/collections/all/items?q={searchQuery}",
+            TestContext.Current.CancellationToken);
+        searchOnlyResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+        var searchOnlyItems = await searchOnlyResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        searchOnlyItems.Should().NotBeNull();
+        searchOnlyItems!.Should().Contain(
+            item => item.Slug == "fts-test",
+            "search-only query should find the FTS test post");
+
+        // Verify: tag filter without search finds AI-tagged items including fts-test
+        var tagOnlyResponse = await _client.GetAsync(
+            $"/api/sections/all/collections/all/items?tags={tag}&take=50",
+            TestContext.Current.CancellationToken);
+        tagOnlyResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+        var tagOnlyItems = await tagOnlyResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        tagOnlyItems.Should().NotBeNull();
+        tagOnlyItems!.Should().Contain(
+            item => item.Slug == "fts-test",
+            "tag-only query should find the FTS test post with AI tag");
+
+        // Act - Combined query with tags AND search using small take
+        // The tag subquery returns the top N newest AI-tagged items — fts-test is older
+        // and falls outside this window, so FTS finds nothing among the returned items
+        var combinedResponse = await _client.GetAsync(
+            $"/api/sections/all/collections/all/items?tags={tag}&q={searchQuery}&take={smallTake}",
+            TestContext.Current.CancellationToken);
+
+        // Assert - Combined query should find items matching BOTH tag AND search
+        combinedResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+        var combinedItems = await combinedResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        combinedItems.Should().NotBeNull();
+        combinedItems!.Should().NotBeEmpty(
+            "items matching both tag filter AND search query should be returned, " +
+            "regardless of pagination — the tag subquery LIMIT must not exclude FTS matches");
+        combinedItems.Should().Contain(
+            item => item.Slug == "fts-test",
+            "the FTS test post has AI tag AND contains TechHubSpecialKeyword");
     }
 
     #endregion

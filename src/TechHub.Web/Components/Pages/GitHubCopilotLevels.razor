@@ -1,11 +1,13 @@
 @page "/github-copilot/levels-of-enlightenment"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@implements IDisposable
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotLevels> Logger
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>@(pageData?.Title ?? "GitHub Copilot Levels") - Tech Hub</PageTitle>
 
@@ -87,6 +89,7 @@
 
 @code {
     private LevelsPageData? pageData;
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     /// <summary>
     /// Generate HTML content for TOC extraction.
@@ -114,8 +117,16 @@
         return sb.ToString();
     }
 
-    protected override async Task OnParametersSetAsync()
+    protected override async Task OnInitializedAsync()
     {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<LevelsPageData>("copilot-levels-data", out var restored) && restored != null)
+        {
+            pageData = restored;
+            return;
+        }
+
         try
         {
             pageData = await ApiClient.GetLevelsDataAsync();
@@ -129,4 +140,20 @@
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
-    }}
+    }
+
+    private Task PersistState()
+    {
+        if (pageData != null)
+        {
+            ApplicationState.PersistAsJson("copilot-levels-data", pageData);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

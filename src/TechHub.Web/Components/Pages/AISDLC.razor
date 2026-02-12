@@ -1,11 +1,13 @@
 @page "/ai/sdlc"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@implements IDisposable
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
 @inject ILogger<AISDLC> Logger
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>@(pageData?.Title ?? "AI SDLC") - Tech Hub</PageTitle>
 
@@ -235,6 +237,7 @@
 @code {
     private TechHub.Core.Models.Section? sectionData;
     private SDLCPageData? pageData;
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     private string GetRenderedContent()
     {
@@ -288,8 +291,17 @@
         return sb.ToString();
     }
 
-    protected override async Task OnParametersSetAsync()
+    protected override async Task OnInitializedAsync()
     {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<PersistedAISDLCData>("ai-sdlc-data", out var restored) && restored != null)
+        {
+            sectionData = restored.SectionData;
+            pageData = restored.PageData;
+            return;
+        }
+
         try
         {
             sectionData = await ApiClient.GetSectionAsync("ai");
@@ -304,5 +316,30 @@
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
+    }
+
+    private Task PersistState()
+    {
+        if (sectionData != null && pageData != null)
+        {
+            ApplicationState.PersistAsJson("ai-sdlc-data", new PersistedAISDLCData
+            {
+                SectionData = sectionData,
+                PageData = pageData
+            });
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    private sealed class PersistedAISDLCData
+    {
+        public TechHub.Core.Models.Section? SectionData { get; set; }
+        public SDLCPageData? PageData { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 @using TechHub.Core.Models
-@rendermode @(new InteractiveServerRenderMode(prerender: true))
+@implements IDisposable
 
 @* Tag cloud component for sidebar filtering *@
 <nav class="sidebar-section" aria-label="Filter by tags">

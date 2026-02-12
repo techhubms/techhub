@@ -2,11 +2,13 @@
 @page "/github-copilot/vscode-updates/{VideoSlug}"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@implements IDisposable
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotVSCodeUpdates> Logger
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>@GetPageTitle() - Tech Hub</PageTitle>
 
@@ -69,14 +71,24 @@
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
     private TechHub.Core.Models.ContentItemDetail? selectedVideoDetail;
     private string selectedVideoSlug = "";
+    private PersistingComponentStateSubscription? _persistSubscription;
+    private bool _restoredFromPersistedState;
 
     protected override async Task OnInitializedAsync()
     {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
         await LoadPageData();
     }
 
     protected override async Task OnParametersSetAsync()
     {
+        // Skip if data was just restored from persisted state (avoids duplicate API call during hydration)
+        if (_restoredFromPersistedState)
+        {
+            _restoredFromPersistedState = false;
+            return;
+        }
+
         // When URL parameter changes, reload the selected video
         if (videoItems.Any())
         {
@@ -86,6 +98,17 @@
 
     private async Task LoadPageData()
     {
+        var stateKey = $"vscode-updates-{VideoSlug ?? "index"}";
+
+        if (ApplicationState.TryTakeFromJson<PersistedVSCodeUpdatesData>(stateKey, out var restored) && restored != null)
+        {
+            videoItems = restored.VideoItems ?? new();
+            selectedVideoDetail = restored.SelectedVideoDetail;
+            selectedVideoSlug = restored.SelectedVideoSlug ?? "";
+            _restoredFromPersistedState = true;
+            return;
+        }
+
         try
         {
             var allVideos = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName);
@@ -142,5 +165,30 @@
 
         // Otherwise use the page title
         return "Visual Studio Code Updates";
+    }
+
+    private Task PersistState()
+    {
+        var stateKey = $"vscode-updates-{VideoSlug ?? "index"}";
+        ApplicationState.PersistAsJson(stateKey, new PersistedVSCodeUpdatesData
+        {
+            VideoItems = videoItems,
+            SelectedVideoDetail = selectedVideoDetail,
+            SelectedVideoSlug = selectedVideoSlug
+        });
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    private sealed class PersistedVSCodeUpdatesData
+    {
+        public List<TechHub.Core.Models.ContentItem>? VideoItems { get; set; }
+        public TechHub.Core.Models.ContentItemDetail? SelectedVideoDetail { get; set; }
+        public string? SelectedVideoSlug { get; set; }
     }
 }

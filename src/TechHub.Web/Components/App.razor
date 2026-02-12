@@ -10,7 +10,7 @@
     <base href="/" />
 
     <ImportMap />
-    <HeadOutlet />
+    <HeadOutlet @rendermode="InteractiveServer" />
 
     @if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
     {
@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <Routes />
+    <Routes @rendermode="InteractiveServer" />
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
 

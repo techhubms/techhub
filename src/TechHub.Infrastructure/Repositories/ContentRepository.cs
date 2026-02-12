@@ -569,7 +569,7 @@ public class ContentRepository : IContentRepository
         ArgumentNullException.ThrowIfNull(request);
 
         // Build filter parameters (shared between both query paths)
-        var (filterClause, parameters) = BuildTagCountFilters(request);
+        var (filterClause, parameters) = BuildTagCountFilters(request, Dialect);
 
         // Route to appropriate query path
         if (request.TagsToCount != null && request.TagsToCount.Count > 0)
@@ -585,8 +585,9 @@ public class ContentRepository : IContentRepository
     /// <summary>
     /// Build WHERE clause filters for tag count queries.
     /// Shared by both TagsToCount and TopN query paths.
+    /// Requires ISqlDialect for database-specific full-text search syntax.
     /// </summary>
-    private static (string filterClause, DynamicParameters parameters) BuildTagCountFilters(TagCountsRequest request)
+    private static (string filterClause, DynamicParameters parameters) BuildTagCountFilters(TagCountsRequest request, ISqlDialect dialect)
     {
         var parameters = new DynamicParameters();
         var filters = new List<string>();
@@ -637,6 +638,19 @@ public class ContentRepository : IContentRepository
                 WHERE tag_word IN ({tagParams})
                 GROUP BY collection_name, slug
                 HAVING COUNT(*) = {request.Tags.Count})");
+        }
+
+        // Full-text search filter (restricts to content items matching search query)
+        if (!string.IsNullOrWhiteSpace(request.SearchQuery) && dialect.SupportsFullTextSearch)
+        {
+            var ftsJoin = dialect.GetFullTextJoinClause();
+            var ftsJoinClause = string.IsNullOrEmpty(ftsJoin) ? "" : $" {ftsJoin}";
+            var ftsWhere = dialect.GetFullTextWhereClause("searchQuery");
+
+            filters.Add($@"(collection_name, slug) IN (
+                SELECT c.collection_name, c.slug FROM content_items c{ftsJoinClause}
+                WHERE {ftsWhere})");
+            parameters.Add("searchQuery", request.SearchQuery);
         }
 
         var filterClause = filters.Count > 0 ? string.Join(" AND ", filters) : "";
@@ -898,9 +912,18 @@ public class ContentRepository : IContentRepository
         // Since content_tags_expanded has date_epoch, we can sort and limit HERE
         // This reduces outer query from processing 100s of matches to just the page size (e.g., 20)
         // Result: 40-50% faster queries (348ms → 199ms in benchmarks)
+        //
+        // CRITICAL: Only apply LIMIT here when NO search query is present.
+        // When a search query IS present, the outer query applies an additional FTS filter
+        // that further reduces results. If we LIMIT here, we may exclude items that would
+        // match the FTS filter, causing the combined tags+search query to incorrectly
+        // return zero results (the FTS-matching items get pruned before FTS runs).
         sql.Append(" ORDER BY MAX(date_epoch) DESC");
-        sql.Append(" LIMIT @take OFFSET @skip");
-        // Note: @take and @skip are added by caller
+        if (string.IsNullOrWhiteSpace(request.Query))
+        {
+            sql.Append(" LIMIT @take OFFSET @skip");
+            // Note: @take and @skip are added by caller
+        }
 
         return sql.ToString();
     }
@@ -967,13 +990,16 @@ public class ContentRepository : IContentRepository
             AND {Dialect.GetFullTextWhereClause("query")}");
                 parameters.Add("query", request.Query);
                 sql.Append($" ORDER BY {Dialect.GetFullTextOrderByClause("query")}");
+                // LIMIT is applied here because the tag subquery skips it when search is present
+                // (to avoid pruning items before FTS filter runs)
+                sql.Append(" LIMIT @take OFFSET @skip");
             }
             else
             {
                 sql.Append(" ORDER BY c.date_epoch DESC");
             }
 
-            // Note: No LIMIT here - already applied in subquery for better performance
+            // Note: When no search query, LIMIT is already applied in tag subquery for better performance
         }
         else
         {

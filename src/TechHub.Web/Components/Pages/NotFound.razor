@@ -22,8 +22,10 @@
 
     protected override void OnInitialized()
     {
-        // Set 404 status code for this page
-        if (HttpContext != null && HttpContext.Response.StatusCode == 200)
+        // HttpContext is only available during prerendering (not in interactive mode).
+        // Setting the status code during prerender is sufficient — search engines and
+        // HTTP clients see the 404 status on the initial response.
+        if (HttpContext is { Response.StatusCode: 200 })
         {
             HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
         }

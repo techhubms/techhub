@@ -3,11 +3,13 @@
 @page "/ai/genai-advanced"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
+@implements IDisposable
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
 @inject ILogger<GenAI> Logger
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>@(pageData?.Title ?? PageType) - Tech Hub</PageTitle>
 
@@ -90,6 +92,8 @@
 @code {
     private TechHub.Core.Models.Section? sectionData;
     private GenAIPageData? pageData;
+    private PersistingComponentStateSubscription? _persistSubscription;
+    private string? _previousPageType;
     private string PageType => DeterminePageType();
 
     /// <summary>
@@ -158,8 +162,34 @@
         return sb.ToString();
     }
 
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+        _previousPageType = PageType;
+        await LoadPageData();
+    }
+
     protected override async Task OnParametersSetAsync()
     {
+        // Only reload when the page type changes (navigating between genai-basics/applied/advanced)
+        var currentPageType = PageType;
+        if (currentPageType != _previousPageType)
+        {
+            _previousPageType = currentPageType;
+            await LoadPageData();
+        }
+    }
+
+    private async Task LoadPageData()
+    {
+        var stateKey = $"genai-{PageType}";
+        if (ApplicationState.TryTakeFromJson<PersistedGenAIData>(stateKey, out var restored) && restored != null)
+        {
+            sectionData = restored.SectionData;
+            pageData = restored.PageData;
+            return;
+        }
+
         try
         {
             sectionData = await ApiClient.GetSectionAsync("ai");
@@ -182,5 +212,31 @@
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
+    }
+
+    private Task PersistState()
+    {
+        if (sectionData != null && pageData != null)
+        {
+            var stateKey = $"genai-{PageType}";
+            ApplicationState.PersistAsJson(stateKey, new PersistedGenAIData
+            {
+                SectionData = sectionData,
+                PageData = pageData
+            });
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    private sealed class PersistedGenAIData
+    {
+        public TechHub.Core.Models.Section? SectionData { get; set; }
+        public GenAIPageData? PageData { get; set; }
     }
 }

@@ -23,6 +23,7 @@ internal interface ITechHubApiClient
     /// <param name="tagsToCount">Specific tags to get counts for (baseline tags)</param>
     /// <param name="fromDate">Start date filter</param>
     /// <param name="toDate">End date filter</param>
+    /// <param name="searchQuery">Text search query to filter tag counts by matching content</param>
     /// <param name="cancellationToken">Cancellation token</param>
     Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
         string sectionName,
@@ -34,5 +35,6 @@ internal interface ITechHubApiClient
         List<string>? tagsToCount = null,
         string? fromDate = null,
         string? toDate = null,
+        string? searchQuery = null,
         CancellationToken cancellationToken = default);
 }

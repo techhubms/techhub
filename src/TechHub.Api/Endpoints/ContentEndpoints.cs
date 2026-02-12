@@ -295,6 +295,7 @@ public static class ContentEndpoints
         [FromQuery] string? tagsToCount = null,
         [FromQuery] string? from = null,
         [FromQuery] string? to = null,
+        [FromQuery] string? q = null,
         IContentRepository contentRepository = default!,
         IOptions<TagCloudOptions> tagCloudOptions = default!,
         CancellationToken cancellationToken = default)
@@ -381,7 +382,8 @@ public static class ContentEndpoints
                 dateFrom: dateFrom,
                 dateTo: dateTo,
                 tags: selectedTags,
-                tagsToCount: parsedTagsToCount
+                tagsToCount: parsedTagsToCount,
+                searchQuery: string.IsNullOrWhiteSpace(q) ? null : q.Trim()
             ),
             cancellationToken);
 

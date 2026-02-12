@@ -27,6 +27,7 @@ public class SidebarTagCloudTests : BunitContext
     {
         _mockApiClient = new Mock<ITechHubApiClient>();
         Services.AddSingleton(_mockApiClient.Object);
+        AddBunitPersistentComponentState();
     }
 
     [Fact]
@@ -42,6 +43,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -81,6 +83,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -112,6 +115,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -151,6 +155,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -197,6 +202,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -234,6 +240,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -268,6 +275,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .Returns(tcs.Task!);
 
@@ -300,6 +308,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .Returns(Task.FromException<IReadOnlyList<TagCloudItem>?>(
                 new HttpRequestException("API error")));
@@ -329,6 +338,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<List<string>?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -350,6 +360,7 @@ public class SidebarTagCloudTests : BunitContext
             It.IsAny<List<string>?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
+            It.IsAny<string?>(),
             It.IsAny<CancellationToken>()), Times.AtLeastOnce);
     }
 
@@ -367,6 +378,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
@@ -388,6 +400,7 @@ public class SidebarTagCloudTests : BunitContext
             It.IsAny<int?>(),
             It.IsAny<List<string>?>(),
             It.IsAny<List<string>?>(),
+            It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<CancellationToken>()), Times.AtLeastOnce);

@@ -1,3 +1,4 @@
+@page "/{sectionName}"
 @page "/{sectionName}/{collectionName}"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
@@ -5,7 +6,7 @@
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
 
-<PageTitle>@(collection?.Title ?? CollectionName) - @(section?.Title ?? SectionName) - Tech Hub</PageTitle>
+<PageTitle>@PageTitleText</PageTitle>
 
 <HeadContent>
     <link rel="alternate" type="application/rss+xml" title="Tech Hub - @(section?.Title ?? SectionName) - RSS Feed"
@@ -24,6 +25,7 @@
         <SidebarTagCloud SectionName="@SectionName" CollectionName="@CollectionName"
             Title="Popular Tags" NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
             FromDate="@fromDateString" ToDate="@toDateString"
+            SearchQuery="@searchQuery"
             OnSelectionChanged="HandleTagSelectionChanged" />
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
     </aside>
@@ -40,7 +42,7 @@
     public string SectionName { get; set; } = null!;
 
     [Parameter]
-    public string CollectionName { get; set; } = null!;
+    public string? CollectionName { get; set; }
 
     [SupplyParameterFromQuery(Name = "tags")]
     public string? TagsParam { get; set; }
@@ -62,9 +64,16 @@
     private DateOnly? toDate;
     private string? fromDateString;
     private string? toDateString;
+    private bool IsAll => string.Equals(CollectionName, "all", StringComparison.OrdinalIgnoreCase);
+    private string PageTitleText => IsAll
+        ? $"{section?.Title ?? SectionName} - Tech Hub"
+        : $"{collection?.Title ?? CollectionName} - {section?.Title ?? SectionName} - Tech Hub";
 
     protected override void OnInitialized()
     {
+        // Default to "all" when accessed via /{sectionName} route
+        CollectionName ??= "all";
+
         // Verify section exists, redirect to 404 if not
         section = SectionCache.GetSectionByName(SectionName);
         if (section == null)
@@ -73,9 +82,12 @@
             return;
         }
 
-        // Get collection
-        collection = section.Collections.FirstOrDefault(c => 
-            c.Name.Equals(CollectionName, StringComparison.OrdinalIgnoreCase));
+        // Get collection (not applicable for "all")
+        if (!IsAll)
+        {
+            collection = section.Collections.FirstOrDefault(c =>
+                c.Name.Equals(CollectionName, StringComparison.OrdinalIgnoreCase));
+        }
 
         // Parse tags and dates from URL
         ParseTagsFromUrl();
@@ -114,9 +126,6 @@
         {
             selectedTags = new List<string>();
         }
-        
-        // Ensure component tree is notified of state change
-        StateHasChanged();
     }
 
     private void ParseSearchFromUrl()
@@ -144,35 +153,16 @@
 
     private void UpdateUrl()
     {
-        var basePath = $"/{SectionName}/{CollectionName}";
-        var queryParams = new List<string>();
-
-        if (!string.IsNullOrWhiteSpace(searchQuery))
+        var queryParams = new Dictionary<string, object?>
         {
-            queryParams.Add($"search={Uri.EscapeDataString(searchQuery)}");
-        }
+            ["search"] = string.IsNullOrWhiteSpace(searchQuery) ? null : searchQuery,
+            ["tags"] = selectedTags.Count > 0 ? string.Join(",", selectedTags.Select(t => Uri.EscapeDataString(t))) : null,
+            ["from"] = fromDate?.ToString("yyyy-MM-dd"),
+            ["to"] = toDate?.ToString("yyyy-MM-dd")
+        };
 
-        if (selectedTags.Count > 0)
-        {
-            var tagsParam = string.Join(",", selectedTags.Select(t => Uri.EscapeDataString(t)));
-            queryParams.Add($"tags={tagsParam}");
-        }
-
-        if (fromDate.HasValue)
-        {
-            queryParams.Add($"from={fromDate.Value:yyyy-MM-dd}");
-        }
-
-        if (toDate.HasValue)
-        {
-            queryParams.Add($"to={toDate.Value:yyyy-MM-dd}");
-        }
-
-        var url = queryParams.Count > 0
-            ? $"{basePath}?{string.Join("&", queryParams)}"
-            : basePath;
-
-        Navigation.NavigateTo(url, replace: true);
+        var url = Navigation.GetUriWithQueryParameters(queryParams);
+        Navigation.NavigateTo(url, new NavigationOptions { ReplaceHistoryEntry = true });
     }
 
     private void HandleSearchQueryChanged(string query)
@@ -184,7 +174,7 @@
     private void HandleTagSelectionChanged(List<string> tags)
     {
         selectedTags = tags;
-        StateHasChanged();
+        UpdateUrl();
     }
 
     private void HandleDateRangeChanged(DateRangeChangedEventArgs args)
@@ -193,11 +183,6 @@
         toDate = args.ToDate;
         fromDateString = fromDate?.ToString("yyyy-MM-dd");
         toDateString = toDate?.ToString("yyyy-MM-dd");
-
-        // URL update is handled by the DateRangeSlider component directly,
-        // because this parent page is static SSR and cannot call NavigateTo
-        // during the interactive phase.
-
-        StateHasChanged();
+        UpdateUrl();
     }
 }

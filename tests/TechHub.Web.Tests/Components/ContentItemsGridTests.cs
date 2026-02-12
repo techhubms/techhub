@@ -1,5 +1,6 @@
 using Bunit;
 using FluentAssertions;
+using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -73,6 +74,9 @@ public class ContentItemsGridTests : BunitContext
         Services.AddSingleton(_mockApiClient.Object);
         Services.AddSingleton(_sectionCache);
         AddBunitPersistentComponentState();
+
+        // ContentItemsGrid uses RendererInfo.IsInteractive in OnAfterRenderAsync
+        SetRendererInfo(new RendererInfo("Server", true));
     }
 
     [Fact]

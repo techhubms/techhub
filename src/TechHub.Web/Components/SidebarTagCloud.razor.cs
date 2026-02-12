@@ -23,11 +23,12 @@ public enum TagCloudNavigationMode
 }
 
 /// <summary>
-/// Tag cloud component for sidebar filtering
-/// Displays tags with usage counts and size categories
-/// Supports multiple tag selection with OR logic
+/// Tag cloud component for sidebar filtering.
+/// Displays tags with usage counts and size categories.
+/// Supports multiple tag selection with OR logic.
+/// Emits tag selection changes via callback; parent handles URL state.
 /// </summary>
-public partial class SidebarTagCloud : ComponentBase
+public partial class SidebarTagCloud : ComponentBase, IDisposable
 {
     [Inject]
     private ITechHubApiClient ApiClient { get; set; } = default!;
@@ -37,6 +38,9 @@ public partial class SidebarTagCloud : ComponentBase
 
     [Inject]
     private NavigationManager NavigationManager { get; set; } = default!;
+
+    [Inject]
+    private PersistentComponentState ApplicationState { get; set; } = default!;
 
     /// <summary>
     /// Title for the tag cloud section
@@ -119,6 +123,13 @@ public partial class SidebarTagCloud : ComponentBase
     [Parameter]
     public string? ToDate { get; set; }
 
+    /// <summary>
+    /// Optional text search query for filtering tag counts by matching content.
+    /// When provided, tag counts reflect only content items matching this search.
+    /// </summary>
+    [Parameter]
+    public string? SearchQuery { get; set; }
+
     private IReadOnlyList<TagCloudItem>? _tags;
     private HashSet<string> _selectedTagsInternal = [];
     private bool _isLoading = true;
@@ -128,6 +139,8 @@ public partial class SidebarTagCloud : ComponentBase
     private IReadOnlyList<TagCloudItem>? _initialTags; // Store baseline tag list (loaded WITHOUT any filters)
     private string? _previousFromDate;
     private string? _previousToDate;
+    private string? _previousSearchQuery;
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     protected override async Task OnInitializedAsync()
     {
@@ -139,7 +152,14 @@ public partial class SidebarTagCloud : ComponentBase
 
         _hasInitialized = true;
 
-        // Initialize selected tags from parameter (deduplicate and normalize)
+        _persistSubscription ??= ApplicationState.RegisterOnPersisting(PersistTagCloudState);
+
+        // Initialize all change-tracking fields from current parameter values
+        // This prevents false change detection in OnParametersSetAsync
+        _previousFromDate = FromDate;
+        _previousToDate = ToDate;
+        _previousSearchQuery = SearchQuery;
+
         if (SelectedTags != null)
         {
             _selectedTagsInternal = new HashSet<string>(
@@ -147,6 +167,17 @@ public partial class SidebarTagCloud : ComponentBase
                 StringComparer.OrdinalIgnoreCase);
 
             _previousSelectedTags = new HashSet<string>(_selectedTagsInternal, StringComparer.OrdinalIgnoreCase);
+        }
+
+        // Try to restore persisted state from prerender (avoids duplicate API call)
+        var stateKey = GetPersistedStateKey();
+        if (ApplicationState.TryTakeFromJson<PersistedTagCloudData>(stateKey, out var restored) && restored != null)
+        {
+            _tags = restored.Tags;
+            _initialTags = restored.InitialTags;
+            _isLoading = false;
+            Logger.LogDebug("Restored tag cloud from persisted state for key {Key}", stateKey);
+            return;
         }
 
         await LoadTagsAsync();
@@ -168,8 +199,17 @@ public partial class SidebarTagCloud : ComponentBase
             _initialTags = null; // Reset baseline so it reloads with new date range
         }
 
-        // Reload tag cloud if selected tags or dates have changed (for dynamic counts)
-        if (datesChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
+        // Check if search query changed
+        var searchChanged = _previousSearchQuery != SearchQuery;
+        if (searchChanged)
+        {
+            Logger.LogDebug("Search query changed, resetting baseline. Query: {Query}", SearchQuery);
+            _previousSearchQuery = SearchQuery;
+            _initialTags = null; // Reset baseline so it reloads with new search scope
+        }
+
+        // Reload tag cloud if selected tags, dates, or search have changed (for dynamic counts)
+        if (datesChanged || searchChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
         {
             Logger.LogDebug("Tags or dates changed, reloading tag cloud. Previous tags: [{Previous}], Current: [{Current}]",
                 string.Join(", ", _previousSelectedTags),
@@ -258,7 +298,8 @@ public partial class SidebarTagCloud : ComponentBase
                     LastDays,
                     selectedTags: null, // NO filters for baseline - get global tags
                     fromDate: FromDate,
-                    toDate: ToDate);
+                    toDate: ToDate,
+                    searchQuery: SearchQuery);
 
                 if (baselineApiTags != null)
                 {
@@ -294,7 +335,8 @@ public partial class SidebarTagCloud : ComponentBase
                     selectedTags: filterTags,
                     tagsToCount: tagsToCount,
                     fromDate: FromDate,
-                    toDate: ToDate);
+                    toDate: ToDate,
+                    searchQuery: SearchQuery);
 
                 Logger.LogDebug("Successfully loaded {Count} tags with dynamic counts for {FilterCount} filter tags",
                     apiTags?.Count ?? 0, filterTags.Count);
@@ -401,7 +443,7 @@ public partial class SidebarTagCloud : ComponentBase
             var targetUrl = $"{baseUrl}?tags={encodedTag}";
 
             Logger.LogDebug("Navigating to {Url} with tag {Tag}", targetUrl, tag);
-            NavigationManager.NavigateTo(targetUrl, new NavigationOptions { ForceLoad = false });
+            NavigationManager.NavigateTo(targetUrl);
         }
         else
         {
@@ -435,44 +477,40 @@ public partial class SidebarTagCloud : ComponentBase
         // Reload tag cloud immediately with new filter state
         await LoadTagsAsync();
 
-        // Update URL with new tag selection
-        UpdateUrlWithTags();
-
-        // Raise event to notify parent component
+        // Raise event to notify parent component (parent handles URL state)
         await OnSelectionChanged.InvokeAsync([.. _selectedTagsInternal]);
     }
 
-    private void UpdateUrlWithTags()
+    private string GetPersistedStateKey()
     {
-        var currentUri = new Uri(NavigationManager.Uri);
-        var basePath = currentUri.GetLeftPart(UriPartial.Path);
-        var queryParams = new List<string>();
+        var section = string.IsNullOrWhiteSpace(SectionName) ? "all" : SectionName;
+        var collection = string.IsNullOrWhiteSpace(CollectionName) ? "all" : CollectionName;
+        return $"tag-cloud-{section}-{collection}";
+    }
 
-        if (_selectedTagsInternal.Count > 0)
+    private Task PersistTagCloudState()
+    {
+        // Only persist if we loaded tags from API (not when Tags parameter is provided directly)
+        if (Tags == null || Tags.Count == 0)
         {
-            var tagsParam = string.Join(",", _selectedTagsInternal.Select(t => Uri.EscapeDataString(t.ToLowerInvariant())));
-            queryParams.Add($"tags={tagsParam}");
+            ApplicationState.PersistAsJson(GetPersistedStateKey(), new PersistedTagCloudData
+            {
+                Tags = _tags?.ToList(),
+                InitialTags = _initialTags?.ToList()
+            });
         }
+        return Task.CompletedTask;
+    }
 
-        // Preserve date range in URL
-        if (!string.IsNullOrEmpty(FromDate))
-        {
-            queryParams.Add($"from={FromDate}");
-        }
+    private sealed class PersistedTagCloudData
+    {
+        public List<TagCloudItem>? Tags { get; set; }
+        public List<TagCloudItem>? InitialTags { get; set; }
+    }
 
-        if (!string.IsNullOrEmpty(ToDate))
-        {
-            queryParams.Add($"to={ToDate}");
-        }
-
-        var targetUrl = queryParams.Count > 0
-            ? $"{basePath}?{string.Join("&", queryParams)}"
-            : basePath;
-
-        NavigationManager.NavigateTo(targetUrl, new NavigationOptions 
-        { 
-            ReplaceHistoryEntry = true,
-            ForceLoad = false  // Use enhanced navigation to preserve focus
-        });
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
     }
 }

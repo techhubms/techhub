@@ -106,6 +106,8 @@
 
     protected override void OnInitialized()
     {
+        // HttpContext is only available during prerendering.
+        // Capture TraceIdentifier during prerender; fall back to Activity.Current in interactive mode.
         RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
         LastException = ErrorService.GetLastException();
     }
