@@ -25798,5 +25798,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/teaching-ai-development-through-gamification/ba-p/4490755",
     "collection": "community",
     "timestamp": "2026-02-12 08:12:40 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-11-github-mobile-model-picker-for-copilot-coding-agent",
+    "timestamp": "2026-02-12 11:16:42 +00:00",
+    "reason": "Succesfully added: The content is eligible for both 'GitHub Copilot' and 'AI' categories. The primary focus is on a new feature in GitHub Mobile that allows Copilot Pro and Pro+ users to select AI models (including Anthropic and OpenAI models) for their Copilot coding agent sessions, directly tying into Copilot usage (GitHub Copilot rule 1) and AI model selection (AI rule 1). There are no generic exclusion triggers, and the technical depth is appropriate. Categories such as Coding or DevOps are not assigned since the content is a usage update rather than a development or workflow tutorial.",
+    "collection": "news"
   }
 ]
