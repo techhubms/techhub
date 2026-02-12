@@ -25774,5 +25774,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-iptables-scaling-aks-networking-with-nftables-and-project/ba-p/4494467",
     "timestamp": "2026-02-12 00:08:24 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-02-12 01:34:17 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category as content is focused entirely on Azure Monitor—an Azure-native cloud service—for data ingestion, transformation, and analytics in hybrid and multi-cloud environments (Azure inclusion rule 1). The post details configuration, supported KQL operations, and best practices for cloud data workflows without delving into broader ML, AI, Coding, DevOps, or Security topics by Tech Hub guidelines. No generic exclusion rules apply: it's technical, English, and focused on implementation, not business, job, or opinion content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-azure-monitor-pipeline-transformations/ba-p/4491980"
   }
 ]
