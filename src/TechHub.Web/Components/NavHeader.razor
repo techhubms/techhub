@@ -2,6 +2,7 @@
 @using TechHub.Web.Services
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
+@implements IDisposable
 
 <nav class="main-nav" aria-label="Primary navigation">
     <div class="main-nav-content">
@@ -24,6 +25,16 @@
 </nav>
 
 @code {
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += OnLocationChanged;
+    }
+
+    private async void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+
     private string GetCurrentSection()
     {
         var uri = new Uri(Navigation.Uri);
@@ -41,5 +52,10 @@
     {
         var uri = new Uri(Navigation.Uri);
         return string.Equals(uri.AbsolutePath, path, StringComparison.OrdinalIgnoreCase);
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
     }
 }

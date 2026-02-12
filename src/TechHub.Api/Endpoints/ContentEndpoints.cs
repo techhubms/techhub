@@ -183,7 +183,7 @@ public static class ContentEndpoints
     /// GET /api/sections/{sectionName}/collections/{collectionName}/items - Get items in a collection
     /// Supports "all" as a virtual collection name - returns all items in the section.
     /// </summary>
-    private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound, BadRequest<string>>> GetCollectionItems(
+    private static async Task<Results<Ok<CollectionItemsResponse>, NotFound, BadRequest<string>>> GetCollectionItems(
         string sectionName,
         string collectionName,
         IOptions<ApiOptions> apiOptions,
@@ -277,7 +277,7 @@ public static class ContentEndpoints
         );
 
         var content = await contentRepository.SearchAsync(request, cancellationToken);
-        return TypedResults.Ok(content.Items.AsEnumerable());
+        return TypedResults.Ok(new CollectionItemsResponse(content.Items, content.TotalCount));
     }
 
     /// <summary>

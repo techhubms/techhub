@@ -13,7 +13,7 @@
 <PageTitle>@GetPageTitle() - Tech Hub</PageTitle>
 
 <HeadContent>
-    <link rel="canonical" href="https://tech.hub.ms/github-copilot/vscode-updates" />
+    <link rel="canonical" href="@($"{Navigation.BaseUri.TrimEnd('/')}/github-copilot/vscode-updates")" />
 </HeadContent>
 
 <SkipLink />
@@ -111,8 +111,8 @@
 
         try
         {
-            var allVideos = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName);
-            videoItems = (allVideos ?? Enumerable.Empty<TechHub.Core.Models.ContentItem>())
+            var result = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName);
+            videoItems = (result?.Items ?? [])
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();
 

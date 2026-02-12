@@ -102,7 +102,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // AI section has items
     }
@@ -194,7 +194,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // AI news collection has items
         items.Should().AllSatisfy(item =>
@@ -212,7 +212,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // GitHub Copilot videos collection has items
         items.Should().AllSatisfy(item =>
@@ -248,7 +248,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Act - Use videos collection in github-copilot section (links internally, not news/blogs/community which link externally)
         var response = await _client.GetAsync("/api/sections/github-copilot/collections/videos/items", TestContext.Current.CancellationToken);
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Assert - Internal collections generate URLs with primary section and slug WITHOUT date prefix
         // All URL components are lowercase
@@ -265,7 +265,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Act - News collection links externally
         var response = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Assert - External collections (news, blogs, community) return ExternalUrl
         items.Should().NotBeEmpty();
@@ -298,7 +298,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
 
         // Should not include draft items
@@ -314,7 +314,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
 
         // Should not include draft news items
@@ -1010,7 +1010,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
         var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
 
@@ -1066,7 +1066,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
         var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var testItem = items!.First();
 
         // Act
@@ -1097,7 +1097,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
         var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var testItem = items!.First();
 
         // Act
@@ -1119,7 +1119,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Arrange - Get a news item (external collection)
         var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var testItem = items!.First();
 
         // Verify it's actually an external item
@@ -1147,7 +1147,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // First, get total count by requesting all items with this tag
         var allItemsResponse = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&take=100", TestContext.Current.CancellationToken);
         allItemsResponse.StatusCode.Should().Be(HttpStatusCode.OK);
-        var allItems = await allItemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var allItems = (await allItemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var totalCount = allItems!.Count;
 
         // Verify we have enough items to test pagination
@@ -1157,17 +1157,17 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Act - Fetch first batch (skip=0, take=10)
         var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip=0&take={pageSize}", TestContext.Current.CancellationToken);
         batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch1 = await batch1Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var batch1 = (await batch1Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Act - Fetch second batch (skip=10, take=10)
         var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize}&take={pageSize}", TestContext.Current.CancellationToken);
         batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch2 = await batch2Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var batch2 = (await batch2Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Act - Fetch third batch (skip=20, take=10) to get remaining items
         var batch3Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize * 2}&take={pageSize}", TestContext.Current.CancellationToken);
         batch3Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch3 = await batch3Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var batch3 = (await batch3Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Assert - Batches should work correctly
         batch1.Should().NotBeNull();
@@ -1275,7 +1275,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
     }
 
@@ -1312,7 +1312,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
         items!.Should().OnlyContain(item =>
             item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
@@ -1330,12 +1330,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Act - Get first page
         var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip=0&take={pageSize}", TestContext.Current.CancellationToken);
         batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch1 = await batch1Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var batch1 = (await batch1Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Act - Get second page
         var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip={pageSize}&take={pageSize}", TestContext.Current.CancellationToken);
         batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var batch2 = await batch2Response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var batch2 = (await batch2Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Assert
         batch1.Should().NotBeNull();
@@ -1364,8 +1364,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         responseWithFromTo.StatusCode.Should().Be(HttpStatusCode.OK);
         responseWithLastDays.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var itemsWithFromTo = await responseWithFromTo.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
-        var itemsWithLastDays = await responseWithLastDays.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var itemsWithFromTo = (await responseWithFromTo.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
+        var itemsWithLastDays = (await responseWithLastDays.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // from/to with 2 years should return more (or equal) items than lastDays=7
         itemsWithFromTo!.Count.Should().BeGreaterThanOrEqualTo(itemsWithLastDays!.Count,
@@ -1390,7 +1390,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
             $"/api/sections/all/collections/all/items?q={searchQuery}",
             TestContext.Current.CancellationToken);
         searchOnlyResponse.StatusCode.Should().Be(HttpStatusCode.OK);
-        var searchOnlyItems = await searchOnlyResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var searchOnlyItems = (await searchOnlyResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         searchOnlyItems.Should().NotBeNull();
         searchOnlyItems!.Should().Contain(
             item => item.Slug == "fts-test",
@@ -1401,7 +1401,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
             $"/api/sections/all/collections/all/items?tags={tag}&take=50",
             TestContext.Current.CancellationToken);
         tagOnlyResponse.StatusCode.Should().Be(HttpStatusCode.OK);
-        var tagOnlyItems = await tagOnlyResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var tagOnlyItems = (await tagOnlyResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         tagOnlyItems.Should().NotBeNull();
         tagOnlyItems!.Should().Contain(
             item => item.Slug == "fts-test",
@@ -1416,7 +1416,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Assert - Combined query should find items matching BOTH tag AND search
         combinedResponse.StatusCode.Should().Be(HttpStatusCode.OK);
-        var combinedItems = await combinedResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
+        var combinedItems = (await combinedResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         combinedItems.Should().NotBeNull();
         combinedItems!.Should().NotBeEmpty(
             "items matching both tag filter AND search query should be returned, " +

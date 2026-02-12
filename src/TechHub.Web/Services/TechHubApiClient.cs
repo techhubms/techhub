@@ -146,7 +146,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// Get items in a collection with optional filtering
     /// GET /api/sections/{sectionName}/collections/{collectionName}/items?take=&amp;skip=&amp;q=&amp;tags=&amp;subcollection=&amp;lastDays=&amp;from=&amp;to=&amp;includeDraft=
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItem>?> GetCollectionItemsAsync(
+    public virtual async Task<CollectionItemsResponse?> GetCollectionItemsAsync(
         string sectionName,
         string collectionName,
         int? take = null,
@@ -212,11 +212,11 @@ public class TechHubApiClient : ITechHubApiClient
             var url = $"/api/sections/{sectionName}/collections/{collectionName}/items{queryString}";
 
             _logger.LogDebug("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(url, cancellationToken);
+            var result = await _httpClient.GetFromJsonAsync<CollectionItemsResponse>(url, cancellationToken);
 
-            _logger.LogDebug("Successfully fetched {Count} items for collection {SectionName}/{CollectionName}",
-                items?.Count() ?? 0, sectionName, collectionName);
-            return items;
+            _logger.LogDebug("Successfully fetched {Count} items (total: {TotalCount}) for collection {SectionName}/{CollectionName}",
+                result?.Items.Count ?? 0, result?.TotalCount ?? 0, sectionName, collectionName);
+            return result;
         }
         catch (HttpRequestException ex)
         {
@@ -363,7 +363,8 @@ public class TechHubApiClient : ITechHubApiClient
         CancellationToken cancellationToken = default)
     {
         // Use "all" virtual section and "all" collection to get items across everything
-        return await GetCollectionItemsAsync("all", "all", take: count, cancellationToken: cancellationToken);
+        var result = await GetCollectionItemsAsync("all", "all", take: count, cancellationToken: cancellationToken);
+        return result?.Items;
     }
 
     /// <summary>
@@ -374,14 +375,13 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            // Get latest 1 item from roundups collection in all sections
-            var items = await GetCollectionItemsAsync(
+            var result = await GetCollectionItemsAsync(
                 "all",
                 "roundups",
                 take: 1,
                 cancellationToken: cancellationToken);
 
-            return items?.FirstOrDefault();
+            return result?.Items.FirstOrDefault();
         }
         catch (HttpRequestException ex)
         {
@@ -397,12 +397,13 @@ public class TechHubApiClient : ITechHubApiClient
     public virtual async Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(
         CancellationToken cancellationToken = default)
     {
-        return await GetCollectionItemsAsync(
+        var result = await GetCollectionItemsAsync(
             "github-copilot",
             "videos",
             subcollection: "ghc-features",
             includeDraft: true,
             cancellationToken: cancellationToken);
+        return result?.Items;
     }
 
     /// <summary>

@@ -75,7 +75,7 @@
       url('/images/section-thumbnails/devops.jpg') type('image/jpeg'));
 }
 
-.section-bg-coding {
+.section-bg-dotnet {
   background-image: image-set(url('/images/section-thumbnails/dotnet.jxl') type('image/jxl'),
       url('/images/section-thumbnails/dotnet.webp') type('image/webp'),
       url('/images/section-thumbnails/dotnet.jpg') type('image/jpeg'));

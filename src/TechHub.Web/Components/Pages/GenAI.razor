@@ -13,7 +13,7 @@
 
 <PageTitle>@(pageData?.Title ?? PageType) - Tech Hub</PageTitle>
 
-@if (sectionData != null && pageData != null)
+@if (pageData != null)
 {
     <HeadContent>
         <link rel="canonical" href="@GetCanonicalUrl()" />
@@ -90,7 +90,6 @@
 }
 
 @code {
-    private TechHub.Core.Models.Section? sectionData;
     private GenAIPageData? pageData;
     private PersistingComponentStateSubscription? _persistSubscription;
     private string? _previousPageType;
@@ -116,13 +115,7 @@
     /// </summary>
     private string GetCanonicalUrl()
     {
-        return PageType switch
-        {
-            "basics" => "https://tech.hub.ms/ai/genai-basics",
-            "applied" => "https://tech.hub.ms/ai/genai-applied",
-            "advanced" => "https://tech.hub.ms/ai/genai-advanced",
-            _ => "https://tech.hub.ms/ai/genai-basics"
-        };
+        return $"{Navigation.BaseUri.TrimEnd('/')}/ai/genai-{PageType}";
     }
 
     /// <summary>
@@ -164,9 +157,24 @@
 
     protected override async Task OnInitializedAsync()
     {
+        Navigation.LocationChanged += OnLocationChanged;
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
         _previousPageType = PageType;
         await LoadPageData();
+    }
+
+    private async void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        var currentPageType = PageType;
+        if (currentPageType != _previousPageType)
+        {
+            _previousPageType = currentPageType;
+            await InvokeAsync(async () =>
+            {
+                await LoadPageData();
+                StateHasChanged();
+            });
+        }
     }
 
     protected override async Task OnParametersSetAsync()
@@ -183,27 +191,24 @@
     private async Task LoadPageData()
     {
         var stateKey = $"genai-{PageType}";
-        if (ApplicationState.TryTakeFromJson<PersistedGenAIData>(stateKey, out var restored) && restored != null)
+        if (ApplicationState.TryTakeFromJson<GenAIPageData>(stateKey, out var restored) && restored != null)
         {
-            sectionData = restored.SectionData;
-            pageData = restored.PageData;
+            pageData = restored;
             return;
         }
 
         try
         {
-            sectionData = await ApiClient.GetSectionAsync("ai");
-
             // Load appropriate page data based on route
             pageData = PageType switch
             {
                 "basics" => await ApiClient.GetGenAIBasicsDataAsync(),
                 "applied" => await ApiClient.GetGenAIAppliedDataAsync(),
                 "advanced" => await ApiClient.GetGenAIAdvancedDataAsync(),
-                _ => await ApiClient.GetGenAIBasicsDataAsync()
+                _ => null
             };
 
-            if (sectionData == null || pageData == null)
+            if (pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
             }
@@ -216,27 +221,19 @@
 
     private Task PersistState()
     {
-        if (sectionData != null && pageData != null)
+        if (pageData != null)
         {
             var stateKey = $"genai-{PageType}";
-            ApplicationState.PersistAsJson(stateKey, new PersistedGenAIData
-            {
-                SectionData = sectionData,
-                PageData = pageData
-            });
+            ApplicationState.PersistAsJson(stateKey, pageData);
         }
         return Task.CompletedTask;
     }
 
     public void Dispose()
     {
+        Navigation.LocationChanged -= OnLocationChanged;
         _persistSubscription?.Dispose();
         GC.SuppressFinalize(this);
     }
 
-    private sealed class PersistedGenAIData
-    {
-        public TechHub.Core.Models.Section? SectionData { get; set; }
-        public GenAIPageData? PageData { get; set; }
-    }
 }

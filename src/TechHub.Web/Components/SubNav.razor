@@ -10,6 +10,7 @@
 
 @using TechHub.Core.Models
 @inject NavigationManager Navigation
+@implements IDisposable
 
 @if (Section != null)
 {
@@ -54,6 +55,22 @@ else
         .Where(c => c.IsCustom)
         .OrderBy(c => c.Order)
         .ThenBy(c => c.Title) ?? Enumerable.Empty<Collection>();
+
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        // Re-render to update active state when the URL changes
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
+    }
 
     private bool IsActive(string url)
     {

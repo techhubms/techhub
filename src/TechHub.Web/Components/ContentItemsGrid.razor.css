@@ -4,6 +4,13 @@
    Handles the content area of section pages and content grid.
    ============================================================================ */
 
+/* Total count badge next to page title */
+.content-count {
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  font-size: 0.7em;
+}
+
 /* Error state */
 .collection-content .error {
   padding: var(--spacing-6);

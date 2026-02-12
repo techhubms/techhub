@@ -44,6 +44,11 @@ export function afterWebStarted(blazor) {
  * This is the callback that fires when Blazor Server is fully interactive
  * and event handlers are attached.
  * 
+ * With global InteractiveServer mode, this replaces DOMContentLoaded/enhancedload
+ * as the trigger for loading page scripts (mermaid, highlight.js, custom pages, etc.).
+ * Blazor may replace prerendered DOM elements during hydration, so scripts must
+ * run AFTER the circuit is established to operate on the final DOM.
+ * 
  * @param {Object} blazor - The Blazor instance
  */
 export function afterServerStarted(blazor) {
@@ -51,6 +56,17 @@ export function afterServerStarted(blazor) {
     // This is the signal that @onclick handlers are attached and ready
     window.__blazorServerReady = true;
     console.debug('[TechHub] Blazor Server circuit ready - event handlers attached');
+
+    // Page scripts (mermaid, highlight.js, etc.) are loaded by MainLayout.razor's
+    // OnAfterRenderAsync(firstRender: true) which fires after Blazor finishes DOM
+    // reconciliation. This avoids the race condition where scripts run on
+    // prerendered DOM that Blazor then replaces.
+
+    // Set up navigation change detection for InteractiveServer mode.
+    // Blazor Router uses history.pushState for navigation but does NOT fire
+    // 'enhancedload'. We intercept pushState to detect page changes and
+    // re-run page scripts on the new DOM.
+    setupNavigationWatcher();
 }
 
 /**
@@ -109,4 +125,46 @@ function setupFocusScrollCompensation() {
     });
 
     console.debug('[TechHub] Focus scroll compensation enabled');
+}
+
+/**
+ * Sets up navigation change detection for InteractiveServer mode.
+ * 
+ * With global InteractiveServer, Blazor Router navigates via SignalR and updates
+ * the URL using history.pushState. There is no 'enhancedload' event. We intercept
+ * pushState to detect page navigations and re-run page scripts so that mermaid
+ * diagrams, syntax highlighting, and interactive elements are initialized on
+ * the new page content.
+ * 
+ * We do NOT intercept replaceState because it's used for in-page state changes
+ * (toc-scroll-spy hash updates, tag/search/date filter query params) that don't
+ * change the page content — Blazor components handle their own re-rendering.
+ * 
+ * The script loaders are idempotent — they check for unprocessed elements and
+ * exit quickly if nothing needs doing.
+ */
+function setupNavigationWatcher() {
+    // Intercept history.pushState (Blazor Router page navigation)
+    const originalPushState = history.pushState;
+    history.pushState = function (...args) {
+        originalPushState.apply(this, args);
+        scheduleScriptLoad();
+    };
+
+    // Also handle popstate (back/forward button)
+    window.addEventListener('popstate', () => {
+        scheduleScriptLoad();
+    });
+
+    function scheduleScriptLoad() {
+        if (typeof window.loadScriptsForPage === 'function') {
+            // Small delay to let Blazor finish rendering after navigation
+            setTimeout(() => {
+                console.debug('[TechHub] Navigation detected, re-running page scripts');
+                window.loadScriptsForPage();
+            }, 100);
+        }
+    }
+
+    console.debug('[TechHub] Navigation watcher enabled for InteractiveServer mode');
 }

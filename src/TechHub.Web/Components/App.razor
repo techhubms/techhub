@@ -80,7 +80,17 @@
 
         // Load Highlight.js for syntax highlighting
         async function loadHighlighting(codeElements) {
-            if (loaded.highlightJs || !codeElements) return;
+            if (!codeElements) return;
+
+            // If already loaded, just re-highlight new elements
+            if (loaded.highlightJs) {
+                try {
+                    hljs.highlightAll();
+                } catch (e) {
+                    console.warn('Failed to re-highlight:', e);
+                }
+                return;
+            }
 
             loaded.highlightJs = true;
 
@@ -315,8 +325,9 @@
             try {
                 const module = await import('./js/custom-pages.js');
                 
-                // Init collapsible cards only once (they maintain state)
-                if (collapsibleElements && !loaded.customPages) {
+                // Re-init collapsible cards on each navigation
+                // Blazor may replace DOM elements, requiring new event handlers
+                if (collapsibleElements) {
                     module.initCollapsibleCards();
                     loaded.customPages = true;
                 }
@@ -360,7 +371,8 @@
 
         // Load all scripts for current page (runs all loaders in parallel)
         async function loadScriptsForPage() {
-            // Set loading flag for E2E tests
+            // Reset ready flag and set loading flag for E2E tests
+            window.__scriptsReady = false;
             window.__scriptsLoading = true;
             
             // Query DOM once for all needed elements
@@ -404,13 +416,12 @@
             });
         }
 
-        // Initial load (DOMContentLoaded)
-        document.addEventListener('DOMContentLoaded', loadScriptsForPage);
-
-        // After Blazor enhanced navigation (SPA-style page changes)
-        if (typeof Blazor !== 'undefined') {
-            Blazor.addEventListener('enhancedload', loadScriptsForPage);
-        }
+        // Expose loadScriptsForPage globally so the Blazor JS initializer can call it
+        // after the SignalR circuit is established and on subsequent navigations.
+        // With global InteractiveServer mode, DOMContentLoaded and enhancedload are
+        // unreliable because Blazor may replace prerendered DOM elements during hydration.
+        // Instead, TechHub.Web.lib.module.js handles timing via afterServerStarted.
+        window.loadScriptsForPage = loadScriptsForPage;
     </script>
 </body>
 

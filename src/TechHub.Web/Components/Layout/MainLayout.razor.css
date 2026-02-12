@@ -118,7 +118,6 @@
 }
 
 #blazor-error-ui .error-message {
-  flex: 1;
   min-width: 0;
 }
 

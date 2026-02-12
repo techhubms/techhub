@@ -11,7 +11,7 @@
 @implements IAsyncDisposable
 
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionTitle() content">
-    <h1 id="skiptohere" class="page-h1">@GetPageTitle()</h1>
+    <h1 id="skiptohere" class="page-h1">@GetPageTitle() <span class="content-count">(@totalCount)</span></h1>
 
     @if (isLoading && !contentItems.Any())
     {
@@ -108,6 +108,7 @@
 
     // Content state
     private List<ContentItem> contentItems = [];
+    private long totalCount;
     private bool isLoading = true;
     private bool isLoadingMore;
     private bool hasMoreContent = true;
@@ -156,6 +157,7 @@
             contentItems = restored.Items;
             currentBatch = restored.CurrentBatch;
             hasMoreContent = restored.HasMoreContent;
+            totalCount = restored.TotalCount;
             isLoading = false;
             needsScrollListenerSetup = hasMoreContent;
             Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
@@ -188,7 +190,8 @@
         {
             Items = contentItems,
             CurrentBatch = currentBatch,
-            HasMoreContent = hasMoreContent
+            HasMoreContent = hasMoreContent,
+            TotalCount = totalCount
         });
         return Task.CompletedTask;
     }
@@ -198,6 +201,7 @@
         public List<ContentItem> Items { get; set; } = [];
         public int CurrentBatch { get; set; }
         public bool HasMoreContent { get; set; }
+        public long TotalCount { get; set; }
     }
 
     protected override async Task OnParametersSetAsync()
@@ -298,7 +302,7 @@
             ? string.Join(",", FilterTags)
             : null;
         
-        var items = await ApiClient.GetCollectionItemsAsync(
+        var result = await ApiClient.GetCollectionItemsAsync(
             SectionName, 
             CollectionName, 
             take: BatchSize, 
@@ -308,7 +312,10 @@
             fromDate: FromDate,
             toDate: ToDate);
             
-        var newItems = items?.ToList() ?? [];
+        var newItems = result?.Items.ToList() ?? [];
+
+        // Update total count from API response (always reflects current filters)
+        totalCount = result?.TotalCount ?? 0;
 
         if (newItems.Count < BatchSize)
         {

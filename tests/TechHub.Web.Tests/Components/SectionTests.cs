@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
+using TechHub.Core.Models;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
 using CollectionModel = TechHub.Core.Models.Collection;
@@ -61,7 +62,7 @@ public class SectionTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
-            .ReturnsAsync([]);
+            .ReturnsAsync(new CollectionItemsResponse([], 0));
 
         // Mock ITechHubApiClient for SidebarTagCloud component
         var mockApiInterface = new Mock<ITechHubApiClient>();
@@ -150,7 +151,7 @@ public class SectionTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
-            .ReturnsAsync([]);
+            .ReturnsAsync(new CollectionItemsResponse([], 0));
 
         // Mock ITechHubApiClient for SidebarTagCloud component
         var mockApiInterface = new Mock<ITechHubApiClient>();

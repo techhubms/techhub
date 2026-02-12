@@ -14,7 +14,7 @@
 @if (pageData != null)
 {
     <HeadContent>
-        <link rel="canonical" href="https://tech.hub.ms/github-copilot/handbook" />
+        <link rel="canonical" href="@($"{Navigation.BaseUri.TrimEnd('/')}/github-copilot/handbook")" />
     </HeadContent>
 
     <SkipLink />

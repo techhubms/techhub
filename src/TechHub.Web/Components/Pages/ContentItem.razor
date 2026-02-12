@@ -10,7 +10,7 @@
 
 <HeadContent>
     <link rel="canonical"
-        href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}")" />
+        href="@($"{Navigation.BaseUri.TrimEnd('/')}/{SectionName.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}")" />
     <link rel="alternate" type="application/rss+xml" title="Tech Hub - @(section?.Title ?? SectionName) - RSS Feed"
         href="@($"/{SectionName}/feed.xml")" />
 </HeadContent>

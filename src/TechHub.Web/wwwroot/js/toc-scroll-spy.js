@@ -276,6 +276,11 @@ export class TocScrollSpy {
             newLink.classList.add('active');
             this.currentActiveId = headingId;
 
+            // Update URL hash without polluting browser history
+            // replaceState keeps back button clean (only TOC clicks create history entries)
+            const newUrl = `${window.location.pathname}${window.location.search}#${headingId}`;
+            history.replaceState(null, '', newUrl);
+
             // Add active class to current heading
             newHeading.classList.add('toc-active-heading');
 

@@ -41,7 +41,7 @@ public class ContentItemsGridTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
-            .ReturnsAsync([]);
+            .ReturnsAsync(new TechHub.Core.Models.CollectionItemsResponse([], 0));
 
         // Initialize SectionCache with test data
         _sectionCache = new SectionCache();

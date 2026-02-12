@@ -11,10 +11,10 @@
 
 <PageTitle>@(pageData?.Title ?? "AI SDLC") - Tech Hub</PageTitle>
 
-@if (sectionData != null && pageData != null)
+@if (pageData != null)
 {
     <HeadContent>
-        <link rel="canonical" href="https://tech.hub.ms/ai/sdlc" />
+        <link rel="canonical" href="@($"{Navigation.BaseUri.TrimEnd('/')}/ai/sdlc")" />
     </HeadContent>
 
     <SkipLink />
@@ -235,7 +235,6 @@
 }
 
 @code {
-    private TechHub.Core.Models.Section? sectionData;
     private SDLCPageData? pageData;
     private PersistingComponentStateSubscription? _persistSubscription;
 
@@ -295,19 +294,17 @@
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
-        if (ApplicationState.TryTakeFromJson<PersistedAISDLCData>("ai-sdlc-data", out var restored) && restored != null)
+        if (ApplicationState.TryTakeFromJson<SDLCPageData>("ai-sdlc-data", out var restored) && restored != null)
         {
-            sectionData = restored.SectionData;
-            pageData = restored.PageData;
+            pageData = restored;
             return;
         }
 
         try
         {
-            sectionData = await ApiClient.GetSectionAsync("ai");
             pageData = await ApiClient.GetSDLCDataAsync();
 
-            if (sectionData == null || pageData == null)
+            if (pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
             }
@@ -320,13 +317,9 @@
 
     private Task PersistState()
     {
-        if (sectionData != null && pageData != null)
+        if (pageData != null)
         {
-            ApplicationState.PersistAsJson("ai-sdlc-data", new PersistedAISDLCData
-            {
-                SectionData = sectionData,
-                PageData = pageData
-            });
+            ApplicationState.PersistAsJson("ai-sdlc-data", pageData);
         }
         return Task.CompletedTask;
     }
@@ -337,9 +330,4 @@
         GC.SuppressFinalize(this);
     }
 
-    private sealed class PersistedAISDLCData
-    {
-        public TechHub.Core.Models.Section? SectionData { get; set; }
-        public SDLCPageData? PageData { get; set; }
-    }
 }

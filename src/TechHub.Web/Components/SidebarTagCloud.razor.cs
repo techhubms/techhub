@@ -140,6 +140,8 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
     private string? _previousFromDate;
     private string? _previousToDate;
     private string? _previousSearchQuery;
+    private string? _previousSectionName;
+    private string? _previousCollectionName;
     private PersistingComponentStateSubscription? _persistSubscription;
 
     protected override async Task OnInitializedAsync()
@@ -159,6 +161,8 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
         _previousFromDate = FromDate;
         _previousToDate = ToDate;
         _previousSearchQuery = SearchQuery;
+        _previousSectionName = SectionName;
+        _previousCollectionName = CollectionName;
 
         if (SelectedTags != null)
         {
@@ -189,6 +193,19 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
         // This is critical for Filter mode where URL changes trigger parameter updates
         SyncSelectedTagsFromParameter();
 
+        // Check if section or collection changed (navigating between collections)
+        var scopeChanged = !string.Equals(_previousSectionName, SectionName, StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_previousCollectionName, CollectionName, StringComparison.OrdinalIgnoreCase);
+        if (scopeChanged)
+        {
+            Logger.LogDebug("Section/collection scope changed from {PrevSection}/{PrevCollection} to {Section}/{Collection}",
+                _previousSectionName, _previousCollectionName, SectionName, CollectionName);
+            _previousSectionName = SectionName;
+            _previousCollectionName = CollectionName;
+            _initialTags = null; // Reset baseline for new scope
+            _previousSelectedTags = new HashSet<string>(StringComparer.OrdinalIgnoreCase); // Reset change tracking
+        }
+
         // Check if dates changed
         var datesChanged = _previousFromDate != FromDate || _previousToDate != ToDate;
         if (datesChanged)
@@ -208,8 +225,8 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
             _initialTags = null; // Reset baseline so it reloads with new search scope
         }
 
-        // Reload tag cloud if selected tags, dates, or search have changed (for dynamic counts)
-        if (datesChanged || searchChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
+        // Reload tag cloud if selected tags, dates, search, or scope have changed (for dynamic counts)
+        if (scopeChanged || datesChanged || searchChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
         {
             Logger.LogDebug("Tags or dates changed, reloading tag cloud. Previous tags: [{Previous}], Current: [{Current}]",
                 string.Join(", ", _previousSelectedTags),

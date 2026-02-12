@@ -64,6 +64,8 @@
     private DateOnly? toDate;
     private string? fromDateString;
     private string? toDateString;
+    private string? _previousSectionName;
+    private string? _previousCollectionName;
     private bool IsAll => string.Equals(CollectionName, "all", StringComparison.OrdinalIgnoreCase);
     private string PageTitleText => IsAll
         ? $"{section?.Title ?? SectionName} - Tech Hub"
@@ -93,10 +95,44 @@
         ParseTagsFromUrl();
         ParseSearchFromUrl();
         ParseDatesFromUrl();
+
+        // Initialize change tracking
+        _previousSectionName = SectionName;
+        _previousCollectionName = CollectionName;
     }
 
     protected override void OnParametersSet()
     {
+        // Default to "all" when accessed via /{sectionName} route
+        // Must be here (not just OnInitialized) because Blazor reuses the component
+        // instance when navigating between /{sectionName} and /{sectionName}/{collectionName}
+        CollectionName ??= "all";
+
+        // Detect section/collection changes and reset filters
+        var scopeChanged = !string.Equals(_previousSectionName, SectionName, StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_previousCollectionName, CollectionName, StringComparison.OrdinalIgnoreCase);
+
+        if (scopeChanged)
+        {
+            _previousSectionName = SectionName;
+            _previousCollectionName = CollectionName;
+
+            // Update section and collection references
+            section = SectionCache.GetSectionByName(SectionName);
+            collection = !IsAll
+                ? section?.Collections.FirstOrDefault(c =>
+                    c.Name.Equals(CollectionName, StringComparison.OrdinalIgnoreCase))
+                : null;
+
+            // Clear filters when navigating between collections
+            selectedTags = new List<string>();
+            searchQuery = string.Empty;
+            fromDate = null;
+            toDate = null;
+            fromDateString = null;
+            toDateString = null;
+        }
+
         ParseTagsFromUrl();
         ParseSearchFromUrl();
         ParseDatesFromUrl();
@@ -156,7 +192,7 @@
         var queryParams = new Dictionary<string, object?>
         {
             ["search"] = string.IsNullOrWhiteSpace(searchQuery) ? null : searchQuery,
-            ["tags"] = selectedTags.Count > 0 ? string.Join(",", selectedTags.Select(t => Uri.EscapeDataString(t))) : null,
+            ["tags"] = selectedTags.Count > 0 ? string.Join(",", selectedTags) : null,
             ["from"] = fromDate?.ToString("yyyy-MM-dd"),
             ["to"] = toDate?.ToString("yyyy-MM-dd")
         };

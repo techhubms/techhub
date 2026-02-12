@@ -11,10 +11,10 @@
 
 <PageTitle>@(pageData?.Title ?? "DX Space") - Tech Hub</PageTitle>
 
-@if (sectionData != null && pageData != null)
+@if (pageData != null)
 {
     <HeadContent>
-        <link rel="canonical" href="https://tech.hub.ms/devops/dx-space" />
+        <link rel="canonical" href="@($"{Navigation.BaseUri.TrimEnd('/')}/devops/dx-space")" />
     </HeadContent>
 
     <SkipLink />
@@ -377,7 +377,6 @@
 }
 
 @code {
-    private TechHub.Core.Models.Section? sectionData;
     private DXSpacePageData? pageData;
 
     private string GetRenderedContent()
@@ -429,19 +428,17 @@
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
-        if (ApplicationState.TryTakeFromJson<PersistedDXSpaceData>("dxspace-data", out var restored) && restored != null)
+        if (ApplicationState.TryTakeFromJson<DXSpacePageData>("dxspace-data", out var restored) && restored != null)
         {
-            sectionData = restored.SectionData;
-            pageData = restored.PageData;
+            pageData = restored;
             return;
         }
 
         try
         {
-            sectionData = await ApiClient.GetSectionAsync("devops");
             pageData = await ApiClient.GetDXSpaceDataAsync();
 
-            if (sectionData == null || pageData == null)
+            if (pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
             }
@@ -454,18 +451,8 @@
 
     private Task PersistState()
     {
-        ApplicationState.PersistAsJson("dxspace-data", new PersistedDXSpaceData
-        {
-            SectionData = sectionData,
-            PageData = pageData
-        });
+        ApplicationState.PersistAsJson("dxspace-data", pageData);
         return Task.CompletedTask;
-    }
-
-    private sealed class PersistedDXSpaceData
-    {
-        public TechHub.Core.Models.Section? SectionData { get; set; }
-        public DXSpacePageData? PageData { get; set; }
     }
 
     private PersistingComponentStateSubscription? _persistSubscription;
