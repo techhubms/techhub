@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2026-02-12 17:22:07",
+  "Link": "https://www.youtube.com/watch?v=0npMvuh7qNc",
+  "PubDate": "2026-02-12T16:51:11+00:00",
+  "OutputDir": "_videos",
+  "Author": "GitHub",
+  "Description": "Mitchell Hashimoto joins Open Source Friday to demo vouch, a trust management system for open source. We’ll talk about why projects are moving toward explicit trust models in the AI era, how the lightweight VOUCHED.td trust list works, and how vouch integrates with GitHub via Actions to gate issues and PRs, plus workflows for vouching and denouncing contributors.",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Tags": [],
+  "FeedLevelAuthor": "GitHub",
+  "FeedName": "GitHub YouTube",
+  "Title": "Open Source Friday with Mitchell Hashimoto",
+  "EnhancedContent": null
+}

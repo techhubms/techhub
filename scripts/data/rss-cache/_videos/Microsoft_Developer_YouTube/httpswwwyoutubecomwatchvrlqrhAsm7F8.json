@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-02-12 17:22:21",
+  "Link": "https://www.youtube.com/watch?v=rlqrhAsm7F8",
+  "PubDate": "2026-02-12T17:01:24+00:00",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "Description": "In this epsiode, we highlight the upcoming retirement of Azure Data Studio on February 28th and walk you through what’s new in the MSSQL Extension for VS Code. You’ll see how to easily migrate your existing ADS connections and get a sneak peek at future features—including database backup support and the SQL Profiler experience. We’ll also tour the VS Code Roadmap, where you can track upcoming releases, watch demos, and submit feature requests to help shape what’s next for SQL tooling in VS Code!\n\n✅ Chapters: 0:00 Introduction 1:35 Demo 4:14 Demo 7:00 Demo 9:45 What's next ✔️Resources: View the links below to get a closer look at the extension, watch all of our demos, and view our detailed roadmap: aka.ms/vscode-mssql aka.ms/vscode-mssql-demos aka.ms/vscode-mssql-blogs aka.ms/vscode-mssql-roadmap\n\n📌 Let's connect: Twitter - Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "Title": "Azure Data Studio Is Retiring—Here’s What’s Next for SQL Developers in VS Code",
+  "EnhancedContent": null
+}

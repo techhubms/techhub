@@ -25810,5 +25810,35 @@
     "canonical_url": "https://www.thomasmaurer.ch/2026/02/sovereign-landing-zones-for-microsoft-azure-slz-explained/",
     "timestamp": "2026-02-12 15:17:17 +00:00",
     "reason": "Succesfully added: I assigned the 'Azure' category because the content centers on Microsoft Azure architecture and platform-level solutions, specifically the concept of Sovereign Landing Zones (Azure rule 1, 4, and 5). The article focuses on technical implementation and architectural enforcement for regulated environments rather than general business or management strategy, so no generic exclusion rules apply. No other category (such as Security, DevOps, or ML) is prominent, as the primary focus is on Azure's cloud foundational capabilities and organizational compliance. The tags reflect the core technologies, methodologies, and compliance architecture discussed."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'AI' category because the entire content centers on Microsoft's AI skilling programs, AI literacy credentials, education sector AI training, and partnerships to deliver AI education at scale (AI inclusion rule 1, 4, 5, and 6). No other categories apply: there is no technical coding, Azure usage, DevOps, security, or ML engineering covered—focus is education and capacity building around AI, matching only the 'AI' category requirements.",
+    "timestamp": "2026-02-12 17:23:04 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/emea/2026/02/microsoft-accelerates-ai-skilling-in-saudi-arabia-helping-3-million-people-acquire-ai-skills-by-2030/"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on integrating vouch with GitHub Actions for workflow automation, contributor management, and governance, aligning with DevOps rule 2 (GitHub DevOps Tools), rule 5 (CI/CD and Deployment), rule 3 (Team Collaboration/Organization), and rule 9 (Developer Experience). Security is not the main technical focus, but 'trust management' and 'gatekeeping contributions' are discussed as workflow/automated governance mechanisms rather than in-depth technical security or Microsoft security services. AI is discussed only at a context level, not as a core technology or implementation detail, so AI category is not assigned. Coding and Azure are not central. No generic exclusion rules apply.",
+    "timestamp": "2026-02-12 17:23:46 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=0npMvuh7qNc"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Content qualified for 'AI' (use of Azure OpenAI for summarization), 'GitHub Copilot' (proactive use of Copilot Pro in VS Code for development), 'Coding' (.NET solution development and scripting), 'Azure' (usage of Azure SQL Database, App Service, Entra ID), and 'Security' (role-based access, managed identity, secure authentication implementation). Each selected category is directly supported by multiple mentions in the description; generic exclusions do not apply as the content is technical, development-focused, and deeply Microsoft-centric.",
+    "timestamp": "2026-02-12 17:24:09 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=PamhXD0m4fs"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Included Azure category because the content focuses on SQL development with Azure Data Studio and Microsoft SQL Server, both of which are Azure-related services (Azure rule 1). Included Coding category because it discusses developer tooling, code editors (VS Code), and extensions for SQL workflows (Coding rules 2 and 5). AI, ML, Security, GitHub Copilot, and DevOps categories were not included as the content is specific to SQL development workflows and tooling, not general DevOps, security, machine learning, or AI integrations.",
+    "timestamp": "2026-02-12 17:24:30 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=rlqrhAsm7F8"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because Azure SRE Agent leverages AI for incident response and compliance automation, aligning with AI inclusion rule 4. Assigned Azure category due to the central use of Azure Databricks, Azure Container Apps, and Azure SRE Agent (Azure inclusion rules 1 and 4). Assigned DevOps category because the content focuses on incident response, compliance automation, operational runbooks, and integration with DevOps tools like PagerDuty and ServiceNow (DevOps rules 3, 5, 6, 7). Assigned Security category because automated compliance, governance, and remediation of best practices in Databricks involve security best practices and mitigation workflows (Security rules 1, 4, 7, 9). Rule hierarchy maintained as the content qualifies for several categories; none of the generic exclusion rules apply.",
+    "timestamp": "2026-02-12 17:25:05 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-driven-azure-sre-for-databricks/ba-p/4494630"
   }
 ]
