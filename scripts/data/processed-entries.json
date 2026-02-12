@@ -25780,5 +25780,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category as content is focused entirely on Azure Monitor—an Azure-native cloud service—for data ingestion, transformation, and analytics in hybrid and multi-cloud environments (Azure inclusion rule 1). The post details configuration, supported KQL operations, and best practices for cloud data workflows without delving into broader ML, AI, Coding, DevOps, or Security topics by Tech Hub guidelines. No generic exclusion rules apply: it's technical, English, and focused on implementation, not business, job, or opinion content.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-azure-monitor-pipeline-transformations/ba-p/4491980"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-multi-agent-ai-with-user-context-entra-id-obo-for/ba-p/4493308",
+    "reason": "Succesfully added: Assigned 'AI' category because the content describes a multi-agent AI system using large language models, orchestration, and AI-driven features (AI rule 4). Assigned 'Azure' because it utilizes multiple Azure services including Azure Databricks, Azure Cosmos DB, Azure App Service, and leverages Microsoft Entra ID for authentication (Azure rule 1,4). Assigned 'Security' due to the focus on RBAC enforcement, secure identity delegation, OBO flows, zero trust architecture, and human-in-the-loop safeguards (Security rules 1,3,4,9). Did not assign 'ML' because ML/data science engineering is not central; the focus is on secure AI agent orchestration. Did not assign 'Coding' or 'DevOps' since code-level and CI/CD practices are not the main subject.",
+    "timestamp": "2026-02-12 07:23:39 +00:00",
+    "collection": "community"
   }
 ]
