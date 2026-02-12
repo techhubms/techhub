@@ -25840,5 +25840,29 @@
     "reason": "Succesfully added: Assigned AI category because Azure SRE Agent leverages AI for incident response and compliance automation, aligning with AI inclusion rule 4. Assigned Azure category due to the central use of Azure Databricks, Azure Container Apps, and Azure SRE Agent (Azure inclusion rules 1 and 4). Assigned DevOps category because the content focuses on incident response, compliance automation, operational runbooks, and integration with DevOps tools like PagerDuty and ServiceNow (DevOps rules 3, 5, 6, 7). Assigned Security category because automated compliance, governance, and remediation of best practices in Databricks involve security best practices and mitigation workflows (Security rules 1, 4, 7, 9). Rule hierarchy maintained as the content qualifies for several categories; none of the generic exclusion rules apply.",
     "timestamp": "2026-02-12 17:25:05 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-driven-azure-sre-for-databricks/ba-p/4494630"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/engineering-at-microsoft/how-we-built-the-microsoft-learn-mcp-server/",
+    "timestamp": "2026-02-12 18:16:48 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'AI' category due to the central focus on AI agents, Model Context Protocol, and integration with GitHub Copilot (AI inclusion rule 1 and 2). The server and its protocol cater directly to agent-based access for AI-powered tools. Assigned the 'Azure' category as the implementation details include hosting on Azure App Service and integration with Azure cloud technologies (Azure rule 1 and 4). Assigned the 'Coding' category since the primary use-case is enabling developers and AI agents to retrieve coding documentation and code samples to assist in software development workflows (Coding rule 4 and 5). GitHub Copilot is referenced, but the focus is not on Copilot's usage directly so 'GitHub Copilot' is not assigned; instead, the focus is on infrastructure powering any agent including Copilot. No DevOps, Security, or ML category as those aspects are not central to the article."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/sql-database-in-fabric-built-for-saas-ready-for-ai/",
+    "timestamp": "2026-02-12 18:17:08 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric is a core Azure platform, and the content describes its architecture and services (Azure rule 1, 4, 5, 6). 'AI' is included since the article covers AI readiness, Copilot integration, and machine learning workflow integration using Microsoft services (AI rule 1, 4, 5). 'ML' is included due to direct references to machine learning scenarios, Spark analytics, and enabling ML workflows (ML rules 1-4). 'Coding' is included as the content discusses developer tooling (VS Code, SQL projects), Copilot integration for query generation, and use of T-SQL (Coding rule 1, 5). The Copilot integration is discussed in a development and SQL authoring context, so 'Copilot' is not added as a category, but strictly as a tag. The news source is technical and does not trigger any exclusion rules."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/12/your-complete-guide-to-microsoft-experiences-at-rsac-2026-conference/",
+    "timestamp": "2026-02-12 18:17:34 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: I assigned the AI category because the news content repeatedly emphasizes the transformation and impact of agentic AI, Microsoft AI agents, and AI risk/governance strategies (AI inclusion rules 1, 4, 5). The Security category is assigned because the main focus is on securing AI, security platforms, and how Microsoft's tools protect the AI stack across identity, data, and cloud (Security rules 1, 4, 5, 9). There is no substantial technical content fitting other categories (e.g., Coding, Azure, ML, DevOps) given the strategic, event-focused nature. Generic exclusions do not apply. Executive focus is present, but the depth of technical implementation at sessions keeps it in-scope per clarifications."
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/agentic-cloud-operations-a-new-way-to-run-the-cloud/",
+    "timestamp": "2026-02-12 18:18:01 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Applied AI category because the focus is on Azure Copilot's AI-powered agentic operations (AI Rule 1). Applied Azure category since all features, workflows, and examples revolve around Azure cloud operations (Azure Rule 1). Applied DevOps category since the content covers lifecycle management, deployment automation, observability, governance, and operational optimization within cloud teams (DevOps Rules 1, 5, 7). Coding/ML/Security categories were not assigned as there is no direct code-level development, data science workflow, or security engineering focus, though governance/compliance are mentioned at a high level."
   }
 ]

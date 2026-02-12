@@ -11973,5 +11973,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/avd-federation-with-external-identities/idi-p/4494593",
     "timestamp": "2026-02-12 15:17:39 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=tZ4FdO-zjeE",
+    "timestamp": "2026-02-12 18:18:32 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the provided content does not contain substantive technical content. The 'content' field is null and the description is a brief event announcement with no detail. There is no evidence from the title or description that Microsoft technologies, GitHub Copilot, or specific AI frameworks from Microsoft are discussed or central. No category inclusion criteria are met, and the absence of meaningful technical content triggers exclusion (focus on actual content rule, Chapter 2)."
   }
 ]
