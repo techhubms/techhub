@@ -37,7 +37,6 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Run -Docker` | Run E2E tests using the production Docker stack (PostgreSQL). |
 | `Run -Rebuild` | Perform a clean rebuild only, then exit (no tests/run). |
 | `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). |
-| `Run -StopServers` | Stops the servers after tests ran. Can be useful in a CI/CD environment. |
 | `Stop-Servers` (without Run in front!) | Stops the servers directly. |
 
 ## URLs and Access Points

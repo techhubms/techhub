@@ -91,7 +91,7 @@ public class ContentItemsGridTests : BunitContext
         cut.WaitForAssertion(() =>
         {
             var h1 = cut.Find("h1.page-h1");
-            h1.TextContent.Should().Be("Browse All GitHub Copilot Content");
+            h1.TextContent.Should().Be("Browse All GitHub Copilot Content (0)");
         });
     }
 
@@ -107,7 +107,7 @@ public class ContentItemsGridTests : BunitContext
         cut.WaitForAssertion(() =>
         {
             var h1 = cut.Find("h1.page-h1");
-            h1.TextContent.Should().Be("Browse GitHub Copilot News");
+            h1.TextContent.Should().Be("Browse GitHub Copilot News (0)");
         });
     }
 
@@ -123,7 +123,7 @@ public class ContentItemsGridTests : BunitContext
         cut.WaitForAssertion(() =>
         {
             var h1 = cut.Find("h1.page-h1");
-            h1.TextContent.Should().Be("Browse GitHub Copilot Community Posts");
+            h1.TextContent.Should().Be("Browse GitHub Copilot Community Posts (0)");
         });
     }
 
@@ -139,7 +139,7 @@ public class ContentItemsGridTests : BunitContext
         cut.WaitForAssertion(() =>
         {
             var h1 = cut.Find("h1.page-h1");
-            h1.TextContent.Should().Be("Browse GitHub Copilot Videos");
+            h1.TextContent.Should().Be("Browse GitHub Copilot Videos (0)");
         });
     }
 
@@ -155,7 +155,7 @@ public class ContentItemsGridTests : BunitContext
         cut.WaitForAssertion(() =>
         {
             var h1 = cut.Find("h1.page-h1");
-            h1.TextContent.Should().Be("Browse All Posts");
+            h1.TextContent.Should().Be("Browse All Posts (0)");
         });
     }
 
@@ -171,7 +171,7 @@ public class ContentItemsGridTests : BunitContext
         cut.WaitForAssertion(() =>
         {
             var h1 = cut.Find("h1.page-h1");
-            h1.TextContent.Should().Be("Browse All News");
+            h1.TextContent.Should().Be("Browse All News (0)");
         });
     }
 

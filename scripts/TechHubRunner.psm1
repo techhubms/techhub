@@ -102,10 +102,6 @@ function Run {
     .PARAMETER WithoutTests
         Skip all tests and start servers directly (for debugging or interactive development).
 
-    .PARAMETER StopServers
-        Stop servers after all tests complete. Use this for CI/CD pipelines where servers
-        should exit after test validation. For development, omit this to keep servers running.
-
     .PARAMETER Rebuild
         Do a clean rebuild only, then exit (don't run tests or start servers).
 
@@ -170,9 +166,6 @@ function Run {
         [switch]$WithoutTests,
     
         [Parameter(Mandatory = $false)]
-        [switch]$StopServers,
-    
-        [Parameter(Mandatory = $false)]
         [switch]$Rebuild,
 
         [Parameter(Mandatory = $false)]
@@ -205,7 +198,6 @@ function Run {
         Write-Host "  -Help          Show this help message" -ForegroundColor White
         Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor White
         Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor White
-        Write-Host "  -StopServers   Stop servers after tests complete (for CI/CD pipelines)" -ForegroundColor White
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor White
         Write-Host "  -Docker        Start servers using docker compose instead of dotnet run`n" -ForegroundColor White
@@ -213,18 +205,16 @@ function Run {
         Write-Host "EXAMPLES:" -ForegroundColor Yellow
         Write-Host "  Run                                  Build + all tests + servers (default)" -ForegroundColor Gray
         Write-Host "  Run -Clean                           Clean build + all tests + servers" -ForegroundColor Gray
-        Write-Host "  Run -StopServers                     Build + all tests, stop servers (CI/CD)" -ForegroundColor Gray
         Write-Host "  Run -WithoutTests                    Build + servers (no tests, for debugging)" -ForegroundColor Gray
-        Write-Host "  Run -TestProject powershell          Run only PowerShell tests, keep servers running" -ForegroundColor Gray
-        Write-Host "  Run -TestProject Web.Tests           Run only Web tests, keep servers running" -ForegroundColor Gray
-        Write-Host "  Run -TestName SectionCard            Run tests matching 'SectionCard', keep servers running" -ForegroundColor Gray
-        Write-Host "  Run -StopServers -TestProject E2E -TestName Nav  CI/CD: Run E2E navigation tests, then stop" -ForegroundColor Gray
+        Write-Host "  Run -TestProject powershell          Run only PowerShell tests" -ForegroundColor Gray
+        Write-Host "  Run -TestProject Web.Tests           Run only Web tests" -ForegroundColor Gray
+        Write-Host "  Run -TestName SectionCard            Run tests matching 'SectionCard'" -ForegroundColor Gray
+        Write-Host "  Run -TestProject E2E -TestName Nav   Run E2E navigation tests matching 'Nav'" -ForegroundColor Gray
         Write-Host "  Run -Docker                          Build + tests + servers via Docker containers`n" -ForegroundColor Gray
         
         Write-Host "COMMON WORKFLOWS:" -ForegroundColor Yellow
-        Write-Host "  CI/CD (test + stop):       Run -StopServers" -ForegroundColor Gray
-        Write-Host "  TDD (test-driven dev):     Run (auto-detects changes)" -ForegroundColor Gray
         Write-Host "  Development mode:          Run" -ForegroundColor Gray
+        Write-Host "  TDD (test-driven dev):     Run (auto-detects changes)" -ForegroundColor Gray
         Write-Host "  Debug/explore:             Run -WithoutTests" -ForegroundColor Gray
         Write-Host "  Fix dependencies:          Run -Clean`n" -ForegroundColor Gray
         
@@ -1375,16 +1365,8 @@ function Run {
                 $e2eSuccess = Invoke-E2ETests -TestName $TestName
             }
             
-            # All tests passed - stop servers if requested, otherwise keep running
-            if ($StopServers -and $runE2E) {
-                Write-Host ""
-                Write-Info "Stopping servers..."
-                Stop-Servers
-                Write-Success "Servers stopped"
-            }
-            
             # Show appropriate success message - servers run in background now
-            if ($runE2E -and -not $StopServers) {
+            if ($runE2E) {
                 Write-Host ""
                 if ($e2eSuccess) {
                     Write-Success "All tests passed! Servers are running in background."
@@ -1412,8 +1394,7 @@ function Run {
         }
     
         # Servers are running in background - show info
-        # (Either started with -WithoutTests, or E2E tests ran without -StopServers)
-        if ($WithoutTests -or ($runE2E -and -not $StopServers)) {
+        if ($WithoutTests -or $runE2E) {
             Write-Step "Services (running in background)"
             Write-Info "API: https://localhost:5001 (Swagger: https://localhost:5001/swagger)"
             Write-Info "Web: https://localhost:5003"

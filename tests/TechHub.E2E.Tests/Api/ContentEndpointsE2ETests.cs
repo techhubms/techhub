@@ -100,9 +100,10 @@ public class ContentEndpointsE2ETests
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
-        items.Should().NotBeNull();
-        items!.Should().NotBeEmpty();
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        var items = result!.Items;
+        items.Should().NotBeEmpty();
         items.Should().HaveCountLessThanOrEqualTo(10, "take parameter should limit results");
 
         // Verify items have expected structure
@@ -124,9 +125,10 @@ public class ContentEndpointsE2ETests
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
-        items.Should().NotBeNull();
-        items!.Should().HaveCountLessThanOrEqualTo(20, "take parameter should limit results");
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        var items = result!.Items;
+        items.Should().HaveCountLessThanOrEqualTo(20, "take parameter should limit results");
 
         // With 4000+ items in production, skip=500 should return results
         items.Should().NotBeEmpty("production dataset should have items beyond offset 500");
@@ -149,12 +151,13 @@ public class ContentEndpointsE2ETests
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
-        items.Should().NotBeNull();
-        items!.Should().NotBeEmpty("GitHub Copilot section should have items with the tag");
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        var items = result!.Items;
+        items.Should().NotBeEmpty("GitHub Copilot section should have items with the tag");
 
         // All items should contain the filter tag (tags are case-sensitive)
-        items!.Should().AllSatisfy(item =>
+        items.Should().AllSatisfy(item =>
         {
             item.Tags.Should().Contain("GitHub Copilot", "all items should match the tag filter");
         });
@@ -165,10 +168,10 @@ public class ContentEndpointsE2ETests
     {
         // Arrange - Get a real item first (using roundups which link internally)
         var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items?take=1", TestContext.Current.CancellationToken);
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
-        items.Should().NotBeNull();
-        items!.Should().NotBeEmpty();
-        var testItem = items.First();
+        var itemsResult = await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        itemsResult.Should().NotBeNull();
+        itemsResult!.Items.Should().NotBeEmpty();
+        var testItem = itemsResult.Items.First();
 
         // Act - Get content detail
         var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
@@ -191,10 +194,10 @@ public class ContentEndpointsE2ETests
     {
         // Arrange - Get a news item (external collection)
         var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items?take=1", TestContext.Current.CancellationToken);
-        var items = await itemsResponse.Content.ReadFromJsonAsync<List<ContentItem>>(TestContext.Current.CancellationToken);
-        items.Should().NotBeNull();
-        items!.Should().NotBeEmpty();
-        var newsItem = items.First();
+        var itemsResult = await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        itemsResult.Should().NotBeNull();
+        itemsResult!.Items.Should().NotBeEmpty();
+        var newsItem = itemsResult.Items.First();
 
         // Act - Try to get detail for external content
         var response = await _client.GetAsync($"/api/sections/ai/collections/news/{newsItem.Slug}", TestContext.Current.CancellationToken);

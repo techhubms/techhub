@@ -146,7 +146,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Get total item count across all GitHub Copilot collections from API
         var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/sections/github-copilot/collections/all/items");
         var allItems = await apiResponse.JsonAsync();
-        var totalItemCount = allItems.Value.GetArrayLength();
+        var totalItemCount = allItems.Value.GetProperty("items").GetArrayLength();
 
         // Act - Navigate to /github-copilot/all
         await Page.GotoRelativeAsync("/github-copilot/all");
@@ -169,7 +169,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Get total item count across ALL sections and collections from API
         var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/sections/all/collections/all/items");
         var allItems = await apiResponse.JsonAsync();
-        var totalItemCount = allItems.Value.GetArrayLength();
+        var totalItemCount = allItems.Value.GetProperty("items").GetArrayLength();
 
         // Act - Navigate to /all/all
         await Page.GotoRelativeAsync("/all/all");
@@ -189,7 +189,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Get total news count across all sections from API
         var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/sections/all/collections/news/items");
         var allNewsItems = await apiResponse.JsonAsync();
-        var totalNewsCount = allNewsItems.Value.GetArrayLength();
+        var totalNewsCount = allNewsItems.Value.GetProperty("items").GetArrayLength();
 
         // Act - Navigate to /all/news
         await Page.GotoRelativeAsync("/all/news");

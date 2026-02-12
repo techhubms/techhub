@@ -408,7 +408,14 @@ param(
   shell: pwsh
   run: |
     Import-Module ./scripts/TechHubRunner.psm1 -Force
-    Run -StopServers
+    try
+    {
+        Run
+    }
+    finally
+    {
+        Stop-Servers
+    }
 ```
 
 ## Data File Locations

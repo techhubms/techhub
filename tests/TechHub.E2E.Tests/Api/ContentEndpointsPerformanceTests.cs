@@ -128,12 +128,12 @@ public class ContentEndpointsPerformanceTests
         var sw = Stopwatch.StartNew();
         var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        var items = await response.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>(TestContext.Current.CancellationToken);
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert
-        items.Should().NotBeNull();
-        items!.Should().AllSatisfy(item => item.CollectionName.Should().Be("blogs"));
+        result.Should().NotBeNull();
+        result!.Items.Should().AllSatisfy(item => item.CollectionName.Should().Be("blogs"));
 
         AssertPerformance(sw.ElapsedMilliseconds, "GET /items (blogs collection - 20 items)");
     }
@@ -145,7 +145,7 @@ public class ContentEndpointsPerformanceTests
         var url = "/api/sections/github-copilot/collections/videos/items?take=20";
 
         // Act
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance
         AssertPerformance(elapsed, "GET /items (videos collection - 20 items)");
@@ -158,7 +158,7 @@ public class ContentEndpointsPerformanceTests
         var url = "/api/sections/ai/collections/all/items?take=20";
 
         // Act
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance - section-level query
         AssertPerformance(elapsed, "GET /items (all collections in section - 20 items)");
@@ -325,11 +325,11 @@ public class ContentEndpointsPerformanceTests
         var sw = Stopwatch.StartNew();
         var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
         response.EnsureSuccessStatusCode();
-        var items = await response.Content.ReadFromJsonAsync<IEnumerable<ContentItem>>(TestContext.Current.CancellationToken);
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
         sw.Stop();
 
         // Assert
-        items.Should().NotBeNull();
+        result.Should().NotBeNull();
 
         // Tag filtering uses complex GROUP BY + HAVING subquery, so uses higher threshold
         AssertTagFilterPerformance(sw.ElapsedMilliseconds, "GET /items with tag filter");
@@ -342,7 +342,7 @@ public class ContentEndpointsPerformanceTests
         var url = "/api/sections/ai/collections/all/items?tags=AI,GitHub&take=20";
 
         // Act
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance - multiple tag filter with AND logic (complex GROUP BY + HAVING)
         AssertTagFilterPerformance(elapsed, "GET /items with multiple tags (AND logic)");
@@ -355,7 +355,7 @@ public class ContentEndpointsPerformanceTests
         var url = "/api/sections/ai/collections/all/items?lastDays=30&take=20";
 
         // Act
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance - date range filtering
         AssertPerformance(elapsed, "GET /items with date filter (last 30 days)");
@@ -368,7 +368,7 @@ public class ContentEndpointsPerformanceTests
         var url = "/api/sections/ai/collections/all/items?q=copilot&take=20";
 
         // Act - full-text search query
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance - FTS uses higher threshold
         AssertFtsPerformance(elapsed, "GET /items with search query (FTS)");
@@ -381,7 +381,7 @@ public class ContentEndpointsPerformanceTests
         var url = "/api/sections/ai/collections/all/items?q=copilot&tags=AI&lastDays=90&take=20";
 
         // Act
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance - FTS with filters uses higher threshold
         AssertFtsPerformance(elapsed, "GET /items with search + filters (FTS + tags + date)");
@@ -394,7 +394,7 @@ public class ContentEndpointsPerformanceTests
         var url = "/api/sections/github-copilot/collections/videos/items?subcollection=ghc-features&take=20";
 
         // Act
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance - subcollection filtering
         AssertPerformance(elapsed, "GET /items with subcollection filter");
@@ -414,7 +414,7 @@ public class ContentEndpointsPerformanceTests
         var url = $"/api/sections/ai/collections/all/items?take=20&skip={skip}";
 
         // Act - test pagination at different offsets
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance - should be consistent across pages
         AssertPerformance(elapsed, $"GET /items with skip={skip}");
@@ -437,7 +437,7 @@ public class ContentEndpointsPerformanceTests
         var url = $"/api/sections/{sectionName}/collections/{collectionName}/items?take=20";
 
         // Act - verify performance across different sections
-        var elapsed = await MeasureHttpGetAsync<IEnumerable<ContentItem>>(_client, url);
+        var elapsed = await MeasureHttpGetAsync<CollectionItemsResponse>(_client, url);
 
         // Assert performance - should be consistent across sections
         AssertPerformance(elapsed, $"GET /items ({sectionName}/{collectionName})");

@@ -27,7 +27,7 @@ Execute in order. Don't skip or proceed if a step fails.
 
 ### Step 1: Build & Test
 
-**Run**: `Run -Clean -StopServers` with `IsBackground: false` to verify a clean build and test pass.
+**Run**: `Run -Clean` with `IsBackground: false` to verify a clean build and test pass.
 
 **Requirements**: 0 errors, all tests pass.
 
@@ -215,7 +215,7 @@ Present summary in chat with your recommendations.
 
 ### Step 9: Final Validation
 
-**Run to verify nothing broke**: Execute `Run -Clean -StopServers`
+**Run to verify nothing broke**: Execute `Run -Clean`
 
 **Checklist**:
 
