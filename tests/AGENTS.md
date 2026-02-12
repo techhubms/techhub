@@ -59,7 +59,7 @@ These apply to ALL tests across all layers:
 
 **Test Double** is the generic term for any pretend object used in place of a real object for testing purposes (like a stunt double in movies). There are several types:
 
-**Stub** provides canned answers to calls made during tests. Stubs use **state verification** - you check the final state after the test runs. Example: `FileBasedContentRepository` pointing to TestCollections returns predefined test data and you assert on the results.
+**Stub** provides canned answers to calls made during tests. Stubs use **state verification** - you check the final state after the test runs. Example: `TestCollectionsSeeder` loading predefined markdown files into an in-memory database and you assert on query results.
 
 **Mock** is pre-programmed with expectations about which calls it should receive. Mocks use **behavior verification** - you verify that specific methods were called with expected parameters. Example: Using Moq to verify a method was called exactly once.
 
@@ -400,10 +400,10 @@ The **testing diamond** approach prioritizes integration tests as the most valua
 
 **✅ What's Real** (we control these):
 
-- ✅ **Filesystem** - We control markdown files, test data
+- ✅ **Database** - We control test data via seeding
 - ✅ **Internal services** - Real MarkdownService, real TagMatchingService
 - ✅ **Real API pipeline** - Controllers, middleware, routing
-- ✅ **Real data access** - FileBasedContentRepository loading actual files
+- ✅ **Real data access** - ContentRepository querying actual database
 
 **❌ What's Stubbed/Mocked** (external to our control):
 
@@ -483,23 +483,23 @@ The **testing diamond** approach prioritizes integration tests as the most valua
 
 **Key Principle**: **Test real code with real implementations**. Only create test doubles (stubs/mocks) at the **boundary** where your code would touch filesystem or external systems.
 
-**Correct Example**: `TagCloudServiceTests.cs` tests `TagCloudService`:
+**Correct Example**: Testing a service with repository:
 
 ```csharp
 // ✅ CORRECT: Real service being tested
 var service = new TagCloudService(repository, options);
 
-// ✅ CORRECT: FileBasedContentRepository with TestCollections provides canned data
-var repository = new FileBasedContentRepository(
-    Options.Create(settings),  // ✅ CORRECT: Points to TestCollections directory
-    markdownService,           // ✅ CORRECT: Real simple service
-    tagMatchingService,        // ✅ CORRECT: Real simple service  
-    environment,               // ✅ CORRECT: Real environment (or mock if needed)
-    cache                      // ✅ CORRECT: Real MemoryCache
+// ✅ CORRECT: Use ContentRepository with in-memory database
+var fixture = new DatabaseFixture<MyTest>();
+var repository = new DatabaseContentRepository(
+    fixture.Connection,        // ✅ CORRECT: In-memory SQLite connection
+    new SqliteDialect(),       // ✅ CORRECT: Real SQL dialect
+    cache,                     // ✅ CORRECT: Real MemoryCache
+    mockMarkdownService.Object // ✅ CORRECT: Mock markdown service if needed
 );
 ```
 
-**Why**: We use `FileBasedContentRepository` pointing to TestCollections because it provides consistent test data without manual file creation. We use real `MarkdownService` and `TagMatchingService` because they're just simple classes with no filesystem/external access.
+**Why**: We use `DatabaseContentRepository` with in-memory SQLite because it provides consistent test data via database seeding. We use real services for simple classes without external dependencies.
 
 **Wrong Example** - Over-mocking:
 
@@ -518,9 +518,9 @@ mockMarkdownService.Setup(m => m.RenderToHtml(It.IsAny<string>()))
 **Decision Tree - Should I Mock This?**:
 
 ```text
-Does this class touch filesystem or external systems?
+Does this class touch database or external systems?
 │
-├─ YES → Use FileBasedContentRepository with TestCollections for IContentRepository
+├─ YES → Use DatabaseContentRepository with DatabaseFixture for IContentRepository
 │
 └─ NO → Use real implementation (e.g., MarkdownService)
     │

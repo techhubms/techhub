@@ -15,7 +15,7 @@ namespace TechHub.Infrastructure.Tests.Repositories;
 /// </summary>
 public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
 {
-    private readonly DatabaseContentRepository _repository;
+    private readonly ContentRepository _repository;
 
     public TagCloudTests(DatabaseFixture<TagCloudTests> fixture)
     {
@@ -32,7 +32,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
         // Load real AppSettings from appsettings.json - includes section/collection configuration
         var appSettings = ConfigurationHelper.LoadAppSettings();
 
-        _repository = new DatabaseContentRepository(
+        _repository = new ContentRepository(
             fixture.Connection,
             new Infrastructure.Data.SqliteDialect(),
             cache,

@@ -86,28 +86,23 @@ builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("App
 var databaseProvider = builder.Configuration["Database:Provider"] ?? "SQLite";
 var connectionString = builder.Configuration["Database:ConnectionString"] ?? "Data Source=.databases/sqlite/techhub.db";
 
-if (databaseProvider.Equals("FileSystem", StringComparison.OrdinalIgnoreCase))
-{
-    // FileSystem: Read markdown files directly (no database)
-    builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
-}
-else if (databaseProvider.Equals("SQLite", StringComparison.OrdinalIgnoreCase))
+if (databaseProvider.Equals("SQLite", StringComparison.OrdinalIgnoreCase))
 {
     builder.Services.AddSingleton<ISqlDialect, SqliteDialect>();
     builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFactory(connectionString));
     builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-    builder.Services.AddTransient<IContentRepository, DatabaseContentRepository>();
+    builder.Services.AddTransient<IContentRepository, ContentRepository>();
 }
 else if (databaseProvider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCase))
 {
     builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
     builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionFactory(connectionString));
     builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-    builder.Services.AddTransient<IContentRepository, DatabaseContentRepository>();
+    builder.Services.AddTransient<IContentRepository, ContentRepository>();
 }
 else
 {
-    throw new InvalidOperationException($"Unsupported database provider: {databaseProvider}. Use 'FileSystem', 'SQLite', or 'PostgreSQL'.");
+    throw new InvalidOperationException($"Unsupported database provider: {databaseProvider}. Use 'SQLite' or 'PostgreSQL'.");
 }
 
 // Register singleton services - none currently

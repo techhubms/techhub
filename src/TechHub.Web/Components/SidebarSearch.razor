@@ -1,0 +1,29 @@
+@rendermode @(new InteractiveServerRenderMode(prerender: true))
+
+@* Search box component for sidebar filtering *@
+<nav class="sidebar-section" aria-label="Search content">
+    <h2 class="sidebar-h2">Search</h2>
+    
+    <div class="search-box">
+        <input 
+            type="search" 
+            class="search-input" 
+            placeholder="Search content..."
+            aria-label="Search content by title, description, or tags"
+            value="@_searchQueryInternal"
+            maxlength="100"
+            @oninput="HandleInput"
+            @onkeydown="HandleKeyDown" />
+        
+        @if (!string.IsNullOrWhiteSpace(_searchQueryInternal))
+        {
+            <button 
+                type="button" 
+                class="search-clear-button" 
+                aria-label="Clear search"
+                @onclick="ClearSearch">
+                <span aria-hidden="true">✕</span>
+            </button>
+        }
+    </div>
+</nav>

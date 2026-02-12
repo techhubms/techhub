@@ -1,0 +1,83 @@
+/* Search box styling */
+.search-box {
+    position: relative;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: var(--spacing-1) var(--spacing-1) var(--spacing-1) var(--spacing-2);
+    padding-right: var(--spacing-5); /* Space for clear button */
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-default);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-base);
+    line-height: var(--line-height-body);
+    transition: border-color var(--duration-fast), box-shadow var(--duration-fast);
+}
+
+/* Hide all native search input decorations and clear buttons */
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    display: none;
+}
+
+/* Hide clear button in IE/Edge */
+.search-input::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-purple-medium);
+}
+
+/* Only show focus ring when navigating with keyboard */
+.search-input:focus-visible {
+    outline: none;
+    border-color: var(--color-purple-medium);
+    box-shadow: 0 0 0 3px var(--color-purple-border-subtle);
+}
+
+.search-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* Clear button */
+.search-clear-button {
+    position: absolute;
+    right: var(--spacing-1);
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: var(--spacing-1);
+    border-radius: var(--radius-sm);
+    line-height: 1;
+    font-size: var(--font-size-lg);
+    transition: color var(--duration-fast), background-color var(--duration-fast);
+    z-index: 10;
+}
+
+.search-clear-button:hover {
+    color: var(--color-text-primary);
+    background-color: var(--color-purple-bg-subtle);
+}
+
+.search-clear-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-purple-border-subtle);
+}
+
+.search-clear-button:active {
+    transform: translateY(-50%) scale(0.95);
+}

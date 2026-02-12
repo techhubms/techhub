@@ -39,7 +39,7 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
             BaseUrl = "https://localhost:5001"
         };
 
-        _repository = new DatabaseContentRepository(
+        _repository = new ContentRepository(
             fixture.Connection,
             new SqliteDialect(),
             cache,

@@ -401,7 +401,7 @@ public partial class SidebarTagCloud : ComponentBase
             var targetUrl = $"{baseUrl}?tags={encodedTag}";
 
             Logger.LogDebug("Navigating to {Url} with tag {Tag}", targetUrl, tag);
-            NavigationManager.NavigateTo(targetUrl);
+            NavigationManager.NavigateTo(targetUrl, new NavigationOptions { ForceLoad = false });
         }
         else
         {
@@ -469,6 +469,10 @@ public partial class SidebarTagCloud : ComponentBase
             ? $"{basePath}?{string.Join("&", queryParams)}"
             : basePath;
 
-        NavigationManager.NavigateTo(targetUrl, replace: true);
+        NavigationManager.NavigateTo(targetUrl, new NavigationOptions 
+        { 
+            ReplaceHistoryEntry = true,
+            ForceLoad = false  // Use enhanced navigation to preserve focus
+        });
     }
 }

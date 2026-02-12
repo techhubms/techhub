@@ -26,8 +26,7 @@ TechHub.Infrastructure/
 │       └── postgres/                          # PostgreSQL migrations
 ├── Repositories/                              # Repository implementations
 │   ├── ContentRepositoryBase.cs               # Abstract base for content repos
-│   ├── DatabaseContentRepository.cs           # Unified DB repo (SQLite + PostgreSQL)
-│   └── FileBasedContentRepository.cs          # Legacy file-based (for reference)
+│   └── ContentRepository.cs                   # Database repository (SQLite + PostgreSQL)
 ├── Services/                                  # Infrastructure services
 │   ├── ContentSyncService.cs                  # Sync markdown files to database
 │   ├── FrontMatterParser.cs                   # YAML frontmatter parsing
@@ -77,7 +76,7 @@ Database provider is configured in `appsettings.json`:
 
 **Key Pattern**: Single unified repository using `ISqlDialect` for database-specific SQL → Query with Dapper → Map to domain models → Use FTS (FTS5 for SQLite, tsvector for PostgreSQL).
 
-**Implementation**: `DatabaseContentRepository` uses `ISqlDialect` abstraction to support both SQLite and PostgreSQL from a single codebase.
+**Implementation**: `ContentRepository` uses `ISqlDialect` abstraction to support both SQLite and PostgreSQL from a single codebase.
 
 **Important Details**:
 
@@ -176,7 +175,7 @@ builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFac
 builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
 
 // Repositories
-builder.Services.AddTransient<IContentRepository, DatabaseContentRepository>();
+builder.Services.AddTransient<IContentRepository, ContentRepository>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 
 // Services

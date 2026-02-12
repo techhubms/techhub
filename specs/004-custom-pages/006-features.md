@@ -20,7 +20,7 @@ The GitHub Copilot Features page is the **most visited custom page** and serves 
 - SidebarToc component integrated with h2 AND h3 elements
 - Enhanced with video integration from `collections/_videos/ghc-features/`
 - Domain models updated with Plans (IReadOnlyList<string>) and GhesSupport (bool)
-- FileBasedContentRepository parses 'plans' and 'ghes_support' frontmatter
+- FrontMatterParser parses 'plans' and 'ghes_support' from frontmatter
 - API endpoints map Plans and GhesSupport to DTOs
 - Feature cards render with GHES badges, video badges, and clickable links
 - Interactive sidebar filters: "Show features with GHES support" and "Show features with videos"
@@ -145,18 +145,20 @@ The GitHub Copilot Features page is the **most visited custom page** and serves 
 
 ### Task 2: Video Integration Enhancement ✅ **COMPLETE**
 
-**Files**: 
+**Files**:
+
 - `src/TechHub.Web/Components/Pages/GitHubCopilotFeatures.razor`
 - `src/TechHub.Core/Models/ContentItem.cs`
 - `src/TechHub.Core/DTOs/ContentItemDto.cs`
-- `src/TechHub.Infrastructure/Repositories/FileBasedContentRepository.cs`
+- `src/TechHub.Infrastructure/Services/FrontMatterParser.cs`
 - `src/TechHub.Api/Endpoints/ContentEndpoints.cs`
 
 **Status**: ✅ Complete
 
 **Implemented**:
+
 - ✅ Added Plans (IReadOnlyList<string>) and GhesSupport (bool) to domain models
-- ✅ FileBasedContentRepository parses 'plans' and 'ghes_support' from frontmatter
+- ✅ FrontMatterParser parses 'plans' and 'ghes_support' from frontmatter
 - ✅ API endpoints map Plans and GhesSupport to DTOs
 - ✅ GitHubCopilotFeatures page queries ghc-features collection
 - ✅ Feature cards render with video badges (when date <= now)
@@ -176,6 +178,7 @@ The GitHub Copilot Features page is the **most visited custom page** and serves 
 **Status**: ⚠️ Basic tests exist, need enhancement for video integration
 
 **Existing Tests** (from GitHubCopilotFeaturesTests.cs):
+
 - ✅ `GitHubCopilotFeatures_ShouldLoad_Successfully`
 - ✅ `GitHubCopilotFeatures_ShouldDisplay_Content`
 - ✅ `GitHubCopilotFeatures_ShouldDisplay_SubscriptionTiers`
@@ -279,7 +282,7 @@ Run -TestProject E2E.Tests -TestName Features
 - [ ] Feature cards verified (icons, titles, descriptions, links)
 - [x] Razor component updated with video integration
 - [x] Domain models updated (Plans, GhesSupport properties)
-- [x] FileBasedContentRepository parses frontmatter (plans, ghes_support)
+- [x] FrontMatterParser parses frontmatter (plans, ghes_support)
 - [x] API endpoints map new properties to DTOs
 - [x] Feature cards render with video badges
 - [x] Feature cards render with GHES badges

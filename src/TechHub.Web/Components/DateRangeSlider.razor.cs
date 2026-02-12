@@ -304,7 +304,11 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
         queryParams["to"] = toDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
 
         var newUrl = QueryHelpers.AddQueryString(basePath, queryParams);
-        Navigation.NavigateTo(newUrl, replace: true);
+        Navigation.NavigateTo(newUrl, new NavigationOptions 
+        { 
+            ReplaceHistoryEntry = true,
+            ForceLoad = false  // Use enhanced navigation to preserve focus
+        });
     }
 
     private bool IsPresetActive(int days)

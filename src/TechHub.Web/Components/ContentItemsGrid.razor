@@ -99,6 +99,9 @@
     public List<string>? FilterTags { get; set; }
 
     [Parameter]
+    public string? SearchQuery { get; set; }
+
+    [Parameter]
     public string? FromDate { get; set; }
 
     [Parameter]
@@ -115,6 +118,7 @@
     // Change detection
     private string previousCollectionName = string.Empty;
     private List<string>? previousFilterTags;
+    private string? previousSearchQuery;
     private string? previousFromDate;
     private string? previousToDate;
 
@@ -166,10 +170,13 @@
         var tagsKey = FilterTags != null && FilterTags.Count > 0
             ? "_tags_" + string.Join(",", FilterTags.OrderBy(t => t))
             : "";
+        var searchKey = !string.IsNullOrWhiteSpace(SearchQuery)
+            ? $"_search_{SearchQuery}"
+            : "";
         var dateKey = (!string.IsNullOrEmpty(FromDate) || !string.IsNullOrEmpty(ToDate))
             ? $"_dates_{FromDate}_{ToDate}"
             : "";
-        return $"ContentItemsGrid_{SectionName}_{CollectionName}{tagsKey}{dateKey}";
+        return $"ContentItemsGrid_{SectionName}_{CollectionName}{tagsKey}{searchKey}{dateKey}";
     }
 
     private Task PersistState()
@@ -201,10 +208,12 @@
         }
 
         var tagsChanged = !TagsAreEqual(FilterTags, previousFilterTags);
+        var searchChanged = SearchQuery != previousSearchQuery;
         var datesChanged = FromDate != previousFromDate || ToDate != previousToDate;
-        if (tagsChanged || datesChanged)
+        if (tagsChanged || searchChanged || datesChanged)
         {
             previousFilterTags = FilterTags?.ToList();
+            previousSearchQuery = SearchQuery;
             previousFromDate = FromDate;
             previousToDate = ToDate;
             // Filters changed - reload data from API with new filters
@@ -285,6 +294,7 @@
             CollectionName, 
             take: BatchSize, 
             skip: skip,
+            query: SearchQuery,
             tags: tagsParam,
             fromDate: FromDate,
             toDate: ToDate);

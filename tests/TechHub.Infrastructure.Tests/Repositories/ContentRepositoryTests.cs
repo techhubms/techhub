@@ -1,26 +1,69 @@
+using Dapper;
 using FluentAssertions;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
+using Moq;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
+using TechHub.Infrastructure.Repositories;
+using TechHub.TestUtilities;
 using static TechHub.TestUtilities.TestDataConstants;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
 /// <summary>
-/// Base class for content repository integration tests.
-/// Contains the superset of assertions that ALL repository types (FileBased, SQLite, PostgreSQL) must support.
-/// Derived classes must implement CreateRepository() to provide their specific repository implementation.
-/// All test data comes from TestCollections directory - NO manual insertions allowed.
+/// Integration tests for content repository.
+/// Contains the superset of assertions that the repository must support.
+/// Tests SQLite-specific functionality like FTS5 full-text search.
+/// Uses in-memory SQLite database with migrations applied and TestCollections seeding.
 /// </summary>
 /// <remarks>
 /// Expected counts are defined in TestDataConstants.cs in TestUtilities project.
 /// Update TestDataConstants when test data changes.
 /// </remarks>
-public abstract class BaseContentRepositoryTests : IDisposable
+public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepositoryTests>>, IDisposable
 {
+    private readonly DatabaseFixture<ContentRepositoryTests> _fixture;
+    private readonly ContentRepository _repository;
+    private readonly IMemoryCache _cache;
 
-    protected abstract IContentRepository Repository { get; }
+    protected IContentRepository Repository => _repository;
 
-    public virtual void Dispose()
+    public ContentRepositoryTests(DatabaseFixture<ContentRepositoryTests> fixture)
+    {
+        _fixture = fixture;
+        _cache = new MemoryCache(new MemoryCacheOptions());
+
+        // Create a mock markdown service for rendering
+        var mockMarkdownService = new Mock<IMarkdownService>();
+        mockMarkdownService.Setup(m => m.RenderToHtml(It.IsAny<string>()))
+            .Returns<string>(content => $"<p>{content}</p>");
+        mockMarkdownService.Setup(m => m.ProcessYouTubeEmbeds(It.IsAny<string>()))
+            .Returns<string>(content => content);
+        mockMarkdownService.Setup(m => m.ExtractExcerpt(It.IsAny<string>(), It.IsAny<int>()))
+            .Returns<string, int>((content, _) => content.Length > 100 ? content[..100] : content);
+
+        // Create minimal AppSettings for repository
+        var appSettings = new AppSettings
+        {
+            Content = new ContentSettings
+            {
+                CollectionsPath = "collections",
+                Sections = []
+            },
+            BaseUrl = "https://localhost:7245"
+        };
+
+        _repository = new ContentRepository(
+            _fixture.Connection,
+            new Infrastructure.Data.SqliteDialect(),
+            _cache,
+            mockMarkdownService.Object,
+            Options.Create(appSettings));
+    }
+
+    public void Dispose()
     {
         GC.SuppressFinalize(this);
     }
@@ -32,7 +75,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Core functionality - repository must load all published content
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_ReturnsAllNonDraftItems()
+    public async Task SearchAsync_ReturnsAllNonDraftItems()
     {
         // Arrange - data already seeded from TestCollections
 
@@ -54,7 +97,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Users need to view content from specific collections (news, videos, blogs, etc.)
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_FiltersByCollection()
+    public async Task SearchAsync_FiltersByCollection()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/*.md files exist
@@ -73,7 +116,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: The /all/all collection page should show all content across all collections
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_NoFilters_ReturnsAllContent()
+    public async Task SearchAsync_NoFilters_ReturnsAllContent()
     {
         // Arrange - data already seeded from TestCollections
 
@@ -93,7 +136,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Draft items should NOT appear by default, only when explicitly requested
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_ExcludesDraftItemsByDefault()
+    public async Task SearchAsync_ExcludesDraftItemsByDefault()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
@@ -112,7 +155,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: When explicitly requesting drafts, they should be included (e.g., for preview/admin)
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_IncludesDraftItemsWhenRequested()
+    public async Task SearchAsync_IncludesDraftItemsWhenRequested()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
@@ -131,7 +174,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     ///      Subcollections are part of the collection hierarchy
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_VideosCollection_IncludesSubcollections()
+    public async Task SearchAsync_VideosCollection_IncludesSubcollections()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _ghc-features/*.md and _vscode-updates/*.md exist, and optionally _videos/*.md
@@ -150,14 +193,14 @@ public abstract class BaseContentRepositoryTests : IDisposable
 
     #endregion
 
-    #region SearchAsync Tests
+    #region SearchAsync Tests - Section Filtering
 
     /// <summary>
     /// Test: SearchAsync filters content by section name
     /// Why: Sections display content filtered by section name (ai, github-copilot, etc.)
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_FiltersBySection()
+    public async Task SearchAsync_FiltersBySection()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: Files with section_names: [ai] exist
@@ -174,7 +217,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: The /all section page should show all content across all sections
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_AllSection_ReturnsAllContent()
+    public async Task SearchAsync_AllSection_ReturnsAllContent()
     {
         // Arrange - data already seeded from TestCollections
 
@@ -194,7 +237,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: When viewing a section, draft items should NOT appear unless explicitly requested
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_Section_ExcludesDraftItemsByDefault()
+    public async Task SearchAsync_Section_ExcludesDraftItemsByDefault()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true and section_names: [ai]
@@ -213,7 +256,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: When explicitly requesting drafts (e.g., preview mode), both published AND draft items returned
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_Section_IncludesDraftItemsWhenRequested()
+    public async Task SearchAsync_Section_IncludesDraftItemsWhenRequested()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true and section_names: [ai]
@@ -235,7 +278,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Display individual content detail pages by URL slug
     /// </summary>
     [Fact]
-    public virtual async Task GetBySlugAsync_ExistingItem_ReturnsItem()
+    public async Task GetBySlugAsync_ExistingItem_ReturnsItem()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-01-test-article.md exists
@@ -256,7 +299,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Graceful handling of missing content (404 pages)
     /// </summary>
     [Fact]
-    public virtual async Task GetBySlugAsync_NonExistentItem_ReturnsNull()
+    public async Task GetBySlugAsync_NonExistentItem_ReturnsNull()
     {
         // Arrange - data already seeded from TestCollections
 
@@ -272,7 +315,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Draft items should NOT be accessible by slug unless explicitly requested
     /// </summary>
     [Fact]
-    public virtual async Task GetBySlugAsync_DraftItem_ExcludedByDefault()
+    public async Task GetBySlugAsync_DraftItem_ExcludedByDefault()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
@@ -289,7 +332,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: When explicitly requesting drafts (e.g., preview mode), they should be accessible
     /// </summary>
     [Fact]
-    public virtual async Task GetBySlugAsync_DraftItem_IncludedWhenRequested()
+    public async Task GetBySlugAsync_DraftItem_IncludedWhenRequested()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
@@ -312,7 +355,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     ///      e.g., /github-copilot/videos/slug (not /github-copilot/vscode-updates/slug)
     /// </summary>
     [Fact]
-    public virtual async Task SubcollectionItems_HaveCorrectUrlWithCollectionInPath()
+    public async Task SubcollectionItems_HaveCorrectUrlWithCollectionInPath()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _vscode-updates/2025-01-10-vscode-update.md exists
@@ -334,7 +377,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     ///      e.g., /github-copilot/videos/slug (not /github-copilot/ghc-features/slug)
     /// </summary>
     [Fact]
-    public virtual async Task GhcFeaturesSubcollectionItems_HaveCorrectUrlWithCollectionInPath()
+    public async Task GhcFeaturesSubcollectionItems_HaveCorrectUrlWithCollectionInPath()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _ghc-features/*.md exists
@@ -352,14 +395,14 @@ public abstract class BaseContentRepositoryTests : IDisposable
 
     #endregion
 
-    #region SearchAsync Tests
+    #region SearchAsync Tests - Filtering and Pagination
 
     /// <summary>
     /// Test: SearchAsync with tag filter returns matching items
     /// Why: Users need to filter content by tags across all collections
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_TagFilter_FiltersCorrectly()
+    public async Task SearchAsync_TagFilter_FiltersCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: ["AI"]);
@@ -383,7 +426,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Users need to filter content by section
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_SectionFilter_FiltersCorrectly()
+    public async Task SearchAsync_SectionFilter_FiltersCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // "test-article" has sections: ["ai", "cloud"]
@@ -406,7 +449,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Users need to filter content by collection type
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_CollectionFilter_FiltersCorrectly()
+    public async Task SearchAsync_CollectionFilter_FiltersCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // _blogs/ and _news/ directories exist with different content
@@ -431,7 +474,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Users need to filter content by date range (e.g., last 30 days)
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_DateRangeFilter_FiltersCorrectly()
+    public async Task SearchAsync_DateRangeFilter_FiltersCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // 2024 items exist, 2023 items exist (old-post), 2025+ items exist
@@ -466,7 +509,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Pagination must work correctly for infinite scroll
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_Pagination_ReturnsCorrectCount()
+    public async Task SearchAsync_Pagination_ReturnsCorrectCount()
     {
         // Arrange - data already seeded from TestCollections
         var request = new SearchRequest(take: 3, sections: ["all"], collections: ["all"], tags: []);
@@ -485,7 +528,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Draft items should never appear in search results
     /// </summary>
     [Fact]
-    public virtual async Task SearchAsync_ExcludesDrafts()
+    public async Task SearchAsync_ExcludesDrafts()
     {
         // Arrange - data already seeded from TestCollections
         var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []);
@@ -507,7 +550,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Faceted navigation requires accurate tag counts
     /// </summary>
     [Fact]
-    public virtual async Task GetFacetsAsync_ReturnsTagCounts()
+    public async Task GetFacetsAsync_ReturnsTagCounts()
     {
         // Arrange - data already seeded from TestCollections
         var request = new FacetRequest(facetFields: ["tags"], tags: [], sections: [], collections: []);
@@ -540,7 +583,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Faceted navigation requires accurate collection counts
     /// </summary>
     [Fact]
-    public virtual async Task GetFacetsAsync_ReturnsCollectionCounts()
+    public async Task GetFacetsAsync_ReturnsCollectionCounts()
     {
         // Arrange - data already seeded from TestCollections
         var request = new FacetRequest(facetFields: ["collections"], tags: [], sections: [], collections: []);
@@ -572,7 +615,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Faceted navigation requires accurate section counts
     /// </summary>
     [Fact]
-    public virtual async Task GetFacetsAsync_ReturnsSectionCounts()
+    public async Task GetFacetsAsync_ReturnsSectionCounts()
     {
         // Arrange - data already seeded from TestCollections
         var request = new FacetRequest(facetFields: ["sections"], tags: [], sections: [], collections: []);
@@ -595,7 +638,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Total count is needed for pagination and UI display
     /// </summary>
     [Fact]
-    public virtual async Task GetFacetsAsync_ReturnsTotalCount()
+    public async Task GetFacetsAsync_ReturnsTotalCount()
     {
         // Arrange - data already seeded from TestCollections
         var request = new FacetRequest(facetFields: ["tags"], tags: [], sections: [], collections: []);
@@ -613,7 +656,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: When filtering by a tag, other facet counts should reflect the filtered scope
     /// </summary>
     [Fact]
-    public virtual async Task GetFacetsAsync_FilteredByTags_ShowsIntersectionCounts()
+    public async Task GetFacetsAsync_FilteredByTags_ShowsIntersectionCounts()
     {
         // Arrange - data already seeded from TestCollections
         // Filter by AI tag and check that counts are for AI-filtered content only
@@ -638,7 +681,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: News, blogs, and community items need external URLs to redirect to original sources
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_ExternalUrl_IsLoadedCorrectly()
+    public async Task PropertyMapping_ExternalUrl_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has external_url set
@@ -658,7 +701,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Content attribution requires correct author information
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_Author_IsLoadedCorrectly()
+    public async Task PropertyMapping_Author_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has author: Máňa
@@ -677,7 +720,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: RSS feeds and source attribution require feed_name
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_FeedName_IsLoadedCorrectly()
+    public async Task PropertyMapping_FeedName_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has feed_name: Microsoft .NET Blog
@@ -696,7 +739,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Tags are used for filtering, related content, and tag clouds
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_Tags_AreLoadedCorrectly()
+    public async Task PropertyMapping_Tags_AreLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has multiple tags
@@ -718,7 +761,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Sections determine where content appears in the navigation
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_SectionNames_AreLoadedCorrectly()
+    public async Task PropertyMapping_SectionNames_AreLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has section_names: [dotnet, security]
@@ -736,7 +779,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Primary section determines the item's main categorization and priority order
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_PrimarySectionName_IsComputedCorrectly()
+    public async Task PropertyMapping_PrimarySectionName_IsComputedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has primary_section: dotnet
@@ -755,7 +798,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Date sorting and filtering depends on correct DateEpoch values
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_DateEpoch_IsLoadedCorrectly()
+    public async Task PropertyMapping_DateEpoch_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _news/2025-12-08-NET-10-Networking-Improvements.md has date: 2025-12-08 18:05:00 +00:00
@@ -779,7 +822,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Collection routing and filtering depends on correct CollectionName
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_CollectionName_IsLoadedCorrectly()
+    public async Task PropertyMapping_CollectionName_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _news/*.md files should have CollectionName = "news"
@@ -798,7 +841,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: URL routing depends on correct slug values
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_Slug_IsDerivedFromFilename()
+    public async Task PropertyMapping_Slug_IsDerivedFromFilename()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: 2025-12-08-NET-10-Networking-Improvements.md -> slug: net-10-networking-improvements (lowercased)
@@ -817,7 +860,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Title is displayed in content cards and detail pages
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_Title_IsLoadedCorrectly()
+    public async Task PropertyMapping_Title_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
 
@@ -835,7 +878,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Excerpt is shown in content cards and RSS feeds
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_Excerpt_IsLoadedCorrectly()
+    public async Task PropertyMapping_Excerpt_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: Content before <!--excerpt_end--> marker
@@ -854,7 +897,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Draft content should be excluded from public views
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_Draft_IsLoadedCorrectly()
+    public async Task PropertyMapping_Draft_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-02-draft-article.md has draft: true
@@ -876,7 +919,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Internal navigation uses the Url property
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_Url_IsComputedCorrectly()
+    public async Task PropertyMapping_Url_IsComputedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
 
@@ -894,7 +937,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Video collection items need external URLs for YouTube embedding
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_ExternalUrl_YouTubeVideo_IsLoadedCorrectly()
+    public async Task PropertyMapping_ExternalUrl_YouTubeVideo_IsLoadedCorrectly()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _videos/2026-01-05-Hands-On-Lab-The-Power-of-GitHub-Copilot-in-Visual-Studio-Code.md
@@ -914,7 +957,7 @@ public abstract class BaseContentRepositoryTests : IDisposable
     /// Why: Blogs redirect to external sources and need all properties populated
     /// </summary>
     [Fact]
-    public virtual async Task PropertyMapping_BlogWithExternalUrl_AllPropertiesLoaded()
+    public async Task PropertyMapping_BlogWithExternalUrl_AllPropertiesLoaded()
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2026-01-02-From-Tool-to-Teammate-Using-GitHub-Copilot-as-a-Collaborative-Partner.md
@@ -936,6 +979,147 @@ public abstract class BaseContentRepositoryTests : IDisposable
         result.Tags.Should().Contain("Code Review");
         result.Tags.Should().Contain("Developer Tools");
         result.Draft.Should().BeFalse();
+    }
+
+    #endregion
+
+    #region SQLite-Specific Tests (FTS5 Full-Text Search)
+
+    /// <summary>
+    /// Test: Full-text search finds items by unique content keyword
+    /// Why: SQLite FTS5 provides fast full-text search that other repositories don't have
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_FullTextSearch_FindsMatchingItems()
+    {
+        // Arrange - data already seeded from TestCollections
+        // Expected: _blogs/2024-01-11-fts-test.md contains "TechHubSpecialKeyword"
+        var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: [], query: "TechHubSpecialKeyword");
+
+        // Act
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert
+        results.Items.Should().NotBeEmpty("FTS should find item with unique keyword");
+        results.Items.Should().Contain(item => item.Slug == "fts-test",
+            "Should find the fts-test article by its unique content");
+    }
+
+    #endregion
+
+    #region SQLite-Specific Tests (Denormalized Tags)
+
+    /// <summary>
+    /// Test: tags_csv column is populated during sync
+    /// Why: Allows in-memory tag parsing without joins
+    /// </summary>
+    [Fact]
+    public async Task GetBySlugAsync_TagsCsvColumn_IsPopulated()
+    {
+        // Arrange - data already seeded from TestCollections
+        // Expected: 2024-01-07-github-copilot.md has tags
+
+        // Act - query database directly to verify tags_csv
+        var result = await _fixture.Connection.QuerySingleOrDefaultAsync<string>(
+            "SELECT tags_csv FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = "github-copilot", Collection = "blogs" });
+
+        // Assert
+        result.Should().NotBeNull("tags_csv should be populated");
+        result.Should().Contain(",GitHub Copilot,", "tags should be comma-delimited with leading/trailing commas");
+        result.Should().Contain(",AI,", "should contain AI tag");
+    }
+
+    /// <summary>
+    /// Test: content_tags_expanded table is populated with word expansions
+    /// Why: Enables substring matching (e.g., "AI" matches "AI Engineering")
+    /// Tag words preserve original case from markdown frontmatter.
+    /// </summary>
+    [Fact]
+    public async Task ContentTagsExpanded_WordExpansion_IsPopulated()
+    {
+        // Arrange - data already seeded from TestCollections
+        // Expected: Tags like "GitHub Copilot" stored with original case
+        // Word expansions also preserve original case from split
+
+        // Act - query expanded tags (case-insensitive comparison via LOWER)
+        var expandedWords = await _fixture.Connection.QueryAsync<string>(
+            "SELECT DISTINCT tag_word FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection ORDER BY LOWER(tag_word)",
+            new { Slug = "github-copilot", Collection = "blogs" });
+
+        // Assert - tags preserve original case, use case-insensitive comparison
+        var lowerWords = expandedWords.Select(w => w.ToLowerInvariant()).ToList();
+        lowerWords.Should().NotBeEmpty("expanded tags should exist");
+        lowerWords.Should().Contain("github", "multi-word tag 'GitHub Copilot' should expand to word containing 'github'");
+        lowerWords.Should().Contain("copilot", "multi-word tag 'GitHub Copilot' should expand to word containing 'copilot'");
+        lowerWords.Should().Contain("ai", "single-word tag 'AI' should be included");
+    }
+
+    /// <summary>
+    /// Test: content_tags_expanded has denormalized date_epoch
+    /// Why: Enables filtering by tag and date without joining to content_items
+    /// </summary>
+    [Fact]
+    public async Task ContentTagsExpanded_DateEpoch_IsDenormalized()
+    {
+        // Arrange - data already seeded
+
+        // Act - query expanded tags with date
+        var result = await _fixture.Connection.QuerySingleOrDefaultAsync<long>(
+            "SELECT date_epoch FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection LIMIT 1",
+            new { Slug = "github-copilot", Collection = "blogs" });
+
+        // Assert
+        result.Should().BeGreaterThan(0, "date_epoch should be populated");
+        // 2024-01-07 = 1704585600 (approximate)
+        result.Should().BeInRange(1704500000, 1705000000, "date should match article date");
+    }
+
+    /// <summary>
+    /// Test: content_tags_expanded has denormalized section boolean columns
+    /// Why: Enables filtering by section without joining to content_sections
+    /// </summary>
+    [Fact]
+    public async Task ContentTagsExpanded_SectionBooleans_ArePopulated()
+    {
+        // Arrange - data already seeded
+        // Expected: Article is in "github-copilot" section only
+
+        // Act - query section booleans
+        var result = await _fixture.Connection.QuerySingleAsync<dynamic>(
+            @"SELECT is_ai, is_github_copilot, is_ml, is_devops, is_azure, is_dotnet, is_security 
+              FROM content_tags_expanded 
+              WHERE slug = @Slug AND collection_name = @Collection 
+              LIMIT 1",
+            new { Slug = "github-copilot", Collection = "blogs" });
+
+        // Assert
+        ((int)result.is_github_copilot).Should().Be(1, "article should be in 'github-copilot' section");
+        ((int)result.is_ai).Should().Be(0, "article should NOT be in 'ai' section");
+        ((int)result.is_devops).Should().Be(0, "article should NOT be in 'devops' section");
+    }
+
+    /// <summary>
+    /// Test: content_items has denormalized section boolean columns
+    /// Why: Enables zero-join filtering by section on main table
+    /// </summary>
+    [Fact]
+    public async Task ContentItems_SectionBooleans_ArePopulated()
+    {
+        // Arrange - data already seeded
+        // Expected: Article is in "github-copilot" section only
+
+        // Act - query section booleans from content_items
+        var result = await _fixture.Connection.QuerySingleAsync<dynamic>(
+            @"SELECT is_ai, is_github_copilot, is_ml, is_devops, is_azure, is_dotnet, is_security 
+              FROM content_items 
+              WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = "github-copilot", Collection = "blogs" });
+
+        // Assert
+        ((int)result.is_github_copilot).Should().Be(1, "article should be in 'github-copilot' section");
+        ((int)result.is_ai).Should().Be(0, "article should NOT be in 'ai' section");
+        ((int)result.is_devops).Should().Be(0, "article should NOT be in 'devops' section");
     }
 
     #endregion

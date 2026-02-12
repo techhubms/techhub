@@ -18,6 +18,7 @@
 
 <main class="page-with-sidebar">
     <aside class="sidebar">
+        <SidebarSearch SearchQuery="@searchQuery" OnSearchQueryChanged="HandleSearchQueryChanged" />
         <DateRangeSlider FromDate="@fromDate" ToDate="@toDate"
             OnDateRangeChanged="HandleDateRangeChanged" />
         <SidebarTagCloud SectionName="@SectionName" CollectionName="@CollectionName"
@@ -29,7 +30,7 @@
 
     <section>
         <ContentItemsGrid SectionName="@SectionName" CollectionName="@CollectionName" FilterTags="@selectedTags"
-            FromDate="@fromDateString" ToDate="@toDateString"
+            SearchQuery="@searchQuery" FromDate="@fromDateString" ToDate="@toDateString"
             @key="@CollectionName" />
     </section>
 </main>
@@ -44,6 +45,9 @@
     [SupplyParameterFromQuery(Name = "tags")]
     public string? TagsParam { get; set; }
 
+    [SupplyParameterFromQuery(Name = "search")]
+    public string? SearchParam { get; set; }
+
     [SupplyParameterFromQuery(Name = "from")]
     public string? FromParam { get; set; }
 
@@ -51,6 +55,7 @@
     public string? ToParam { get; set; }
 
     private List<string> selectedTags = new();
+    private string searchQuery = string.Empty;
     private TechHub.Core.Models.Section? section;
     private TechHub.Core.Models.Collection? collection;
     private DateOnly? fromDate;
@@ -74,12 +79,14 @@
 
         // Parse tags and dates from URL
         ParseTagsFromUrl();
+        ParseSearchFromUrl();
         ParseDatesFromUrl();
     }
 
     protected override void OnParametersSet()
     {
         ParseTagsFromUrl();
+        ParseSearchFromUrl();
         ParseDatesFromUrl();
     }
 
@@ -112,6 +119,11 @@
         StateHasChanged();
     }
 
+    private void ParseSearchFromUrl()
+    {
+        searchQuery = SearchParam ?? string.Empty;
+    }
+
     private void ParseDatesFromUrl()
     {
         fromDate = ParseDate(FromParam);
@@ -135,6 +147,11 @@
         var basePath = $"/{SectionName}/{CollectionName}";
         var queryParams = new List<string>();
 
+        if (!string.IsNullOrWhiteSpace(searchQuery))
+        {
+            queryParams.Add($"search={Uri.EscapeDataString(searchQuery)}");
+        }
+
         if (selectedTags.Count > 0)
         {
             var tagsParam = string.Join(",", selectedTags.Select(t => Uri.EscapeDataString(t)));
@@ -156,6 +173,12 @@
             : basePath;
 
         Navigation.NavigateTo(url, replace: true);
+    }
+
+    private void HandleSearchQueryChanged(string query)
+    {
+        searchQuery = query;
+        UpdateUrl();
     }
 
     private void HandleTagSelectionChanged(List<string> tags)

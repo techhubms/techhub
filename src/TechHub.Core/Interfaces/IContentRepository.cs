@@ -8,14 +8,6 @@ namespace TechHub.Core.Interfaces;
 /// </summary>
 public interface IContentRepository
 {
-    // ==================== Initialization ====================
-
-    /// <summary>
-    /// Initialize repository (database query after content sync completes).
-    /// Called once at startup after content sync.
-    /// </summary>
-    Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken ct = default);
-
     // ==================== Existing Methods (Database-Backed) ====================
 
     /// <summary>

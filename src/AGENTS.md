@@ -261,7 +261,7 @@ These patterns apply across all .NET projects. **See project-specific AGENTS.md 
 
 **Transient** - Lightweight, stateless, new instance each time:
 
-- `IContentRepository` (DatabaseContentRepository - uses scoped IDbConnection)
+- `IContentRepository` (ContentRepository - uses scoped IDbConnection)
 - `IMarkdownService`, `IRssService`, `ITagCloudService`
 - `IContentSyncService`, `MigrationRunner`
 

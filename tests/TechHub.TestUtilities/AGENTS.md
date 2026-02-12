@@ -12,22 +12,23 @@ Different test types use different data sources:
 
 | Test Type | Repository | Data Source | Database |
 |-----------|------------|-------------|----------|
-| **Unit Tests** | `FileBasedContentRepository` | TestCollections folder | None (in-memory cache) |
-| **Integration Tests** | `DatabaseContentRepository` | TestCollections folder | SQLite in-memory |
-| **E2E Tests** | `DatabaseContentRepository` | Production `collections/` | SQLite file (`techhub.db`) |
+| **Unit Tests** | Mock/Stub or In-Memory | Test data in code or builders | None |
+| **Integration Tests** | `ContentRepository` | TestCollections folder | SQLite in-memory |
+| **E2E Tests** | `ContentRepository` | Production `collections/` | SQLite file (`techhub.db`) |
 
 ### Unit Tests (Core/Infrastructure)
 
-Use `FileBasedContentRepository` pointing to `TestCollections/`:
+Unit tests should use mocks, stubs, or test builders to avoid database dependencies:
 
 ```csharp
-var testCollectionsPath = "/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections";
-_repository = new FileBasedContentRepository(
-    Options.Create(new AppSettings { Content = new ContentSettings { CollectionsPath = testCollectionsPath } }),
-    markdownService, mockEnvironment.Object, cache);
+// Use test builders for creating test data
+var item = A.ContentItem
+    .WithCollectionName("news")
+    .WithExternalUrl("https://example.com/news")
+    .Build();
 ```
 
-**Why**: Fast, no database overhead, tests file parsing and business logic.
+**Why**: Fast, no database overhead, isolated testing of business logic.
 
 ### Integration Tests (API)
 
@@ -104,7 +105,7 @@ public class MyRepoTests : IClassFixture<DatabaseFixture<MyRepoTests>>
 {
     public MyRepoTests(DatabaseFixture<MyRepoTests> fixture)
     {
-        var repository = new DatabaseContentRepository(fixture.Connection, dialect, cache);
+        var repository = new ContentRepository(fixture.Connection, dialect, cache, markdownService, appSettings);
     }
 }
 ```
@@ -170,17 +171,20 @@ var collection = A.Collection
 ```
 
 **Key Benefits**:
+
 - Sensible defaults for all required properties
 - Only specify what's different for your test
 - Fluent API with IntelliSense support
 - Guaranteed valid objects (constructor validation)
 
 **Default Values**:
+
 - `ContentItem`: roundups collection (no ExternalUrl required), ai section, valid slug/title/author
 - `Section`: ai section with blogs and news collections
 - `Collection`: blogs collection with standard properties
 
 **Available Builders**:
+
 - `A.ContentItem` - ContentItem objects
 - `A.Section` - Section objects
 - `A.Collection` - Collection objects

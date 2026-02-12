@@ -1,11 +1,62 @@
 # Content Filtering System
 
-This document describes how content filtering works in Tech Hub, covering both tag filtering and date range filtering — two of the most crucial features of the website.
+This document describes how content filtering works in Tech Hub, covering tag filtering, date range filtering, and text search — the most crucial features of the website for content discovery.
 
 **Related Documentation**:
 
 - [Content API](content-api.md) - REST API endpoints for content retrieval
 - [Database Configuration](database.md) - Database providers that support filtering
+
+## Text Search
+
+### Search Behavior
+
+The search box allows users to filter content by typing text queries. Search is performed across:
+
+- **Title**: Article/post titles
+- **Excerpt/Description**: Brief descriptions or excerpts
+- **Content**: Full article body text (when using full-text search providers)
+- **Tags**: All tags associated with the content
+
+### Search Implementation
+
+**Frontend**: The `SidebarSearch` component provides a search input with:
+
+- 300ms debounce delay to reduce API calls while typing
+- Clear button (X icon) to remove the search query
+- Keyboard support (Escape key clears the search)
+- URL parameter synchronization (`?search=query`)
+
+**Backend**: Full-text search is implemented at the database level:
+
+- **SQLite**: Uses FTS5 (Full-Text Search 5) with BM25 ranking
+- **PostgreSQL**: Uses `tsvector` with `ts_rank` relevance scoring
+- Both providers support weighted search (title > excerpt > content)
+
+### Search + Filter Combination
+
+Search combines with other filters using **AND logic**:
+
+- Search "copilot" + tag "ai" → Items containing "copilot" AND tagged with "ai"
+- Search "blazor" + last 30 days → Items containing "blazor" AND published in last 30 days
+- All filters (search + tags + date range) work together
+
+### URL Parameters
+
+Search state is preserved in the URL for sharing and bookmarking:
+
+```text
+?search=copilot                          # Search only
+?search=copilot&tags=ai                  # Search + tag filter
+?search=copilot&tags=ai&from=2024-01-01  # Search + tag + date filter
+```
+
+**Implementation Details**:
+
+- Query parameter: `search` (URL-encoded)
+- Empty/removed when search is cleared
+- Combined with `tags`, `from`, `to` parameters
+- Supports browser back/forward navigation
 
 ## Tag Storage and Expansion
 
@@ -169,16 +220,22 @@ Global text search:
 curl -k "https://localhost:5001/api/sections/all/collections/all/items?q=blazor"
 ```
 
+Combine search with tags:
+
+```bash
+curl -k "https://localhost:5001/api/sections/all/collections/all/items?q=copilot&tags=ai,azure"
+```
+
 Filter by tags (AND logic):
 
 ```bash
 curl -k "https://localhost:5001/api/sections/all/collections/all/items?tags=copilot,azure"
 ```
 
-Complex multi-criteria filter:
+Complex multi-criteria filter (search + tags + date):
 
 ```bash
-curl -k "https://localhost:5001/api/sections/ai/collections/videos/items?tags=copilot&lastDays=30"
+curl -k "https://localhost:5001/api/sections/ai/collections/videos/items?q=blazor&tags=copilot&lastDays=30"
 ```
 
 ## Tag Statistics API
@@ -346,7 +403,7 @@ The `DateRangeSlider` component provides interactive date range filtering with a
 - **Slider range**: Earliest content date to today
 - **Presets**: 7d, 30d, 90d, 1y, All — clicking applies the range immediately
 
-### URL State Management
+### Date Range URL State Management
 
 Date range is stored as query parameters:
 
