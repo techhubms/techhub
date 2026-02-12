@@ -25882,5 +25882,11 @@
     "reason": "Succesfully added: Assigned 'AI' because the content is about Copilot Studio agents—AI-powered workflow automation—and discusses AI agent risk scenarios (AI rule 1, 4, 5). 'Security' is included because the entire article is focused on identifying, detecting, and mitigating security risks using Microsoft Defender (Security rules 1, 2, 4, 9). Did not assign 'DevOps', 'Coding', 'Azure', 'ML', or 'GitHub Copilot', as there is no discussion of code development, engineering practices, model-building, or GitHub Copilot usage. Instead, the focus is on configuration, risk management, and secure operation of AI agents, primarily using Copilot Studio and Defender. No generic exclusion rules triggered; content is technical, English, and meant for practitioner security audiences.",
     "timestamp": "2026-02-12 22:07:52 +00:00",
     "collection": "news"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/macos-sso-no-longer-fully-functional-on-avd-win11-25h2/m-p/4494544#M14001",
+    "timestamp": "2026-02-12 23:07:01 +00:00",
+    "reason": "Succesfully added: Included the Azure category because the issue directly relates to Azure Virtual Desktop, which is a Microsoft Azure cloud service (Azure rule 1). The Security category is included as the post addresses identity authentication (SSO), Entra ID, and token renewal problems (Security rules 1, 2, 3, 4). No Coding, DevOps, AI, ML, or GitHub Copilot categories apply, as there are no code samples, development patterns, or automation topics in the content. The community post is well above 200 words and focuses on technical troubleshooting, not biographical or business strategy, so none of the generic exclusion rules triggered."
   }
 ]
