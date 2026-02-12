@@ -1,0 +1,14 @@
+{
+  "Description": "Spent months figuring out why federated SSO breaks for external users accessing Azure Virtual Desktop. Turns out Azure AD ignores custom federation when the user's domain is verified elsewhere—forces B2B routing, kills Windows SSO.\n\nBuilt a workaround using proxy domains and a federation hub.\n\nCurious—how are others solving this? Or just telling customers SSO isn't possible? I can't find any roadmap agenda.",
+  "ProcessedDate": "2026-02-12 15:16:21",
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Author": "Dazzler",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "Spent months figuring out why federated SSO breaks for external users accessing Azure Virtual Desktop. Turns out Azure AD ignores custom federation when the user's domain is verified elsewhere—forces B2B routing, kills Windows SSO.\n\nBuilt a workaround using proxy domains and a federation hub.\n\nCurious—how are others solving this? Or just telling customers SSO isn't possible? I can't find any roadmap agenda.",
+  "Tags": [],
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/avd-federation-with-external-identities/idi-p/4494593",
+  "PubDate": "2026-02-12T14:49:47+00:00",
+  "Title": "AVD Federation with external identities"
+}

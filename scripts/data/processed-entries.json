@@ -25804,5 +25804,11 @@
     "timestamp": "2026-02-12 11:16:42 +00:00",
     "reason": "Succesfully added: The content is eligible for both 'GitHub Copilot' and 'AI' categories. The primary focus is on a new feature in GitHub Mobile that allows Copilot Pro and Pro+ users to select AI models (including Anthropic and OpenAI models) for their Copilot coding agent sessions, directly tying into Copilot usage (GitHub Copilot rule 1) and AI model selection (AI rule 1). There are no generic exclusion triggers, and the technical depth is appropriate. Categories such as Coding or DevOps are not assigned since the content is a usage update rather than a development or workflow tutorial.",
     "collection": "news"
+  },
+  {
+    "collection": "blogs",
+    "canonical_url": "https://www.thomasmaurer.ch/2026/02/sovereign-landing-zones-for-microsoft-azure-slz-explained/",
+    "timestamp": "2026-02-12 15:17:17 +00:00",
+    "reason": "Succesfully added: I assigned the 'Azure' category because the content centers on Microsoft Azure architecture and platform-level solutions, specifically the concept of Sovereign Landing Zones (Azure rule 1, 4, and 5). The article focuses on technical implementation and architectural enforcement for regulated environments rather than general business or management strategy, so no generic exclusion rules apply. No other category (such as Security, DevOps, or ML) is prominent, as the primary focus is on Azure's cloud foundational capabilities and organizational compliance. The tags reflect the core technologies, methodologies, and compliance architecture discussed."
   }
 ]
