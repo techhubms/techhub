@@ -25930,5 +25930,17 @@
     "timestamp": "2026-02-13 15:15:29 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the content is centered on AI-powered coding agents used for automation in repositories (AI inclusion rule 1 and 4). Assigned GitHub Copilot category since Copilot is prominently mentioned as a supported AI agent (GitHub Copilot inclusion rule 1 and 2), and per rules, 'AI' is always included alongside it. The DevOps category is included based on the use of GitHub Actions for repository automation workflows (DevOps rule 2 and 5). Coding, Azure, ML, and Security are not assigned because there is no specific mention of coding patterns/technologies (Coding), Azure services (Azure), custom ML/data science (ML), or deep technical discussion of security implementation (Security), although security/guardrails are referenced as features."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content focuses on the Copilot coding agent, which is an AI-powered developer tool (AI rules 1, 2 and GitHub Copilot rules 1-4). Assigned 'DevOps' due to the emphasis on GitHub Actions, CI/CD, and runner management (DevOps rules 2, 5). Assigned 'Azure' because the changes specifically impact organizations using Azure private networking in their workflow runner setups (Azure rule 2). The post is purely technical, targets configuration and operational changes for developer workflows, and does not trigger any generic exclusion rules.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-13-network-configuration-changes-for-copilot-coding-agent",
+    "timestamp": "2026-02-13 16:13:47 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the video is a roundup of new Microsoft Azure features, services, and regional expansions, specifically mentioning services like Azure Monitor, AKS, Databricks, Azure SQL Database, and related tools (Azure inclusion rules 1, 4, and 5). No other category is applicable, as the content is focused on platform updates and does not delve into coding, ML, AI, DevOps, or Security technical practices. The description and chapter list confirm an Azure-centric technical news update.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=gFh0kpFrND8",
+    "timestamp": "2026-02-13 16:14:28 +00:00"
   }
 ]
