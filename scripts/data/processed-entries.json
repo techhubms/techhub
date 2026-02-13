@@ -25888,5 +25888,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/macos-sso-no-longer-fully-functional-on-avd-win11-25h2/m-p/4494544#M14001",
     "timestamp": "2026-02-12 23:07:01 +00:00",
     "reason": "Succesfully added: Included the Azure category because the issue directly relates to Azure Virtual Desktop, which is a Microsoft Azure cloud service (Azure rule 1). The Security category is included as the post addresses identity authentication (SSO), Entra ID, and token renewal problems (Security rules 1, 2, 3, 4). No Coding, DevOps, AI, ML, or GitHub Copilot categories apply, as there are no code samples, development patterns, or automation topics in the content. The community post is well above 200 words and focuses on technical troubleshooting, not biographical or business strategy, so none of the generic exclusion rules triggered."
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the content centers on automating Azure governance, leveraging ARM API, Azure MCP, and addressing Azure Well-Architected Framework compliance (Azure inclusion rules 1, 4, 5). Assigned Security because of heavy focus on security assessments (e.g., NSG, Key Vault, encryption, compliance, risk reduction), including intricate security posture management (Security inclusion rules 1, 2, 4, 5, 9). Assigned DevOps because the workflow is automation- and CI/CD-focused, integrates with DevOps platforms (Azure DevOps, ServiceNow), mentions IaC, scheduling, and automates infra compliance (DevOps inclusion rules 3, 5, 6, 9, 10). Not eligible for AI, Coding, ML, or GitHub Copilot as the article primarily describes agent-driven automation and compliance rather than coding, machine learning, or AI platform usage.",
+    "timestamp": "2026-02-13 00:09:59 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-waf-compliance-with-mcp-driven-sre-agent/ba-p/4494687"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: The 'Azure' category is assigned because the content is entirely about Azure services, features, and reference architectures (Azure Inclusion Rule 1, 4, 5). The 'Security' category is assigned because the document details security controls, governance, IAM, cryptography, audit, and compliance (Security Rules 1-9). 'Coding', 'DevOps', 'ML', 'AI', and 'GitHub Copilot' are NOT assigned, as there's no developer programming, AI/ML solution building, or DevOps pipeline/process discussion present. The content is a detailed technical guide, not sales, executive/strategy, job, career, or biographical/negative content, so no generic exclusions apply.",
+    "timestamp": "2026-02-13 00:10:20 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-landing-zone-and-compliance-for-banks-indian-banks/ba-p/4491951"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the article centers on the use of AI-driven tools from Microsoft (AI inclusion rules 1, 4, 5, 6). Assigned GitHub Copilot because it covers GitHub Copilot’s modernization features and best practices (GitHub Copilot rules 1-4; always include AI with GitHub Copilot). Assigned Azure because Azure Migrate and Azure Copilot are central (Azure inclusion rules 1, 4). Assigned DevOps for extensive discussion of CI/CD, Azure DevOps, modern operational patterns, and automation (DevOps rules 1, 2, 4, 5, 6, 8). Assigned Coding for its focus on refactoring, upgrading codebases, and using coding assistant tools (Coding rules 1, 2, 4, 5). Assigned Security due to explicit mention of security vulnerability detection and remediation as part of these modernization processes (Security rule 2 and 6).",
+    "timestamp": "2026-02-13 00:10:44 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/modernizing-for-the-ai-era-accelerating-application/ba-p/4490596"
   }
 ]
