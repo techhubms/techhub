@@ -133,9 +133,6 @@ public class TabOrderingTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/ai/genai-basics");
 
-        // Wait for Blazor interactivity (sidebar has interactive tag cloud)
-        await Page.WaitForBlazorReadyAsync();
-
         // Act - Tab through elements until we find one in sidebar
         var foundSidebarElement = false;
         var maxTabs = 100; // Safety limit (need to get past nav and main content)

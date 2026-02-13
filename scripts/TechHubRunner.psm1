@@ -54,6 +54,8 @@ function Stop-Servers {
         param([string]$Message)
         Write-Host "✓ $Message" -ForegroundColor Green
     }
+
+    Stop-OrphanedTestProcesses -Silent:$Silent
     
     # Also stop Docker containers (safe to call even if not running)
     docker compose down --remove-orphans 2>&1 | Out-Null
@@ -80,6 +82,118 @@ function Stop-Servers {
         Start-Sleep -Milliseconds 300
         if (-not $Silent) {
             & $writeSuccess "Server cleanup completed"
+        }
+    }
+}
+
+# Stop all orphaned test-related processes (browsers, test runners)
+function Stop-AllOrphanedProcesses {
+    param(
+        [switch]$Silent
+    )
+    
+    $cleanedAny = $false
+    
+    # Kill orphaned Playwright/Chromium processes
+    # Use simpler name-based matching to avoid CommandLine hangs
+    $playwrightProcesses = Get-Process -Name "chromium", "chrome", "headless_shell" -ErrorAction SilentlyContinue
+    if ($playwrightProcesses) {
+        if (-not $Silent) {
+            Write-Host "  Killing orphaned browser processes:" -ForegroundColor Gray
+        }
+        $playwrightProcesses | ForEach-Object { 
+            if (-not $Silent) {
+                Write-Host ("    - PID {0}: {1}" -f $_.Id, $_.ProcessName) -ForegroundColor Gray
+            }
+            try { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue } catch { }
+        }
+        $cleanedAny = $true
+    }
+    
+    # Kill orphaned vstest/testhost processes
+    $testProcesses = Get-Process -Name "testhost", "vstest" -ErrorAction SilentlyContinue
+    if ($testProcesses) {
+        if (-not $Silent) {
+            Write-Host "  Killing orphaned test processes:" -ForegroundColor Gray
+        }
+        $testProcesses | ForEach-Object { 
+            if (-not $Silent) {
+                Write-Host ("    - PID {0}: {1}" -f $_.Id, $_.ProcessName) -ForegroundColor Gray
+            }
+            try { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue } catch { }
+        }
+        $cleanedAny = $true
+    }
+    
+    # Kill orphaned TEST processes only (vstest, testhost in command line)
+    # DO NOT kill MSBuild workers - they might be from active dotnet watch/build!
+    # SKIP VS Code extension processes (parent is ServiceHost/Controller/LanguageServer)
+    $dotnetProcesses = Get-Process -Name "dotnet" -ErrorAction SilentlyContinue
+    if ($dotnetProcesses) {
+        foreach ($proc in $dotnetProcesses) {
+            try {
+                # Get command line to check if it's a test process
+                $cmdLine = cat "/proc/$($proc.Id)/cmdline" 2>$null | tr '\0' ' '
+                
+                # Skip VS Code processes
+                if ($cmdLine -match "vscode-server|csdevkit|csharp") {
+                    continue
+                }
+                
+                # ONLY kill if it's a test-related process (vstest, testhost, dotnet test)
+                # DO NOT kill MSBuild workers, build processes, or watch processes
+                if ($cmdLine -match "vstest|testhost|dotnet.*test|TechHub\..*\.Tests") {
+                    if (-not $Silent) {
+                        $parentPid = ps -o ppid= -p $proc.Id 2>$null | ForEach-Object { $_.Trim() }
+                        Write-Host ("  Killing orphaned test process: PID {0} (Parent: {1})" -f $proc.Id, $parentPid) -ForegroundColor Gray
+                    }
+                    kill -9 $proc.Id 2>$null
+                    $cleanedAny = $true
+                }
+            }
+            catch {
+                # Process might have already exited - that's OK
+            }
+        }
+    }
+    
+    return $cleanedAny
+}
+
+# Stop orphaned test processes (browsers, testhost, vstest)
+# Call at start to clean up from previous runs, and for cleanup between test iterations
+# Does NOT touch server processes - those are managed by Stop-Servers
+function Stop-OrphanedTestProcesses {
+    param(
+        [switch]$Silent
+    )
+    
+    if (-not $Silent) {
+        Write-Host "`n==> Cleaning up orphaned test processes" -ForegroundColor Cyan
+    }
+    
+    $cleanedAny = $false
+    
+    # Note: Log files are NOT cleaned up here
+    # They are only removed when servers are actually (re)started in Start-AppHost
+    
+    # Kill orphaned processes by name/command (browsers, test runners)
+    # DO NOT kill server processes - smart restart logic handles that
+    if (Stop-AllOrphanedProcesses -Silent:$Silent) {
+        $cleanedAny = $true
+    }
+    
+    # Brief pause to let OS release resources
+    if ($cleanedAny) {
+        Start-Sleep -Milliseconds 300
+    }
+    
+    if (-not $Silent) {
+        if ($cleanedAny) {
+            Write-Host "✓ Cleanup completed" -ForegroundColor Green
+        }
+        else {
+            Write-Host "  No orphaned processes found" -ForegroundColor Gray
         }
     }
 }
@@ -412,6 +526,13 @@ function Run {
     # Returns: @{ Success = $true/$false; SrcRebuilt = $true/$false }
     function Invoke-Build {
         Write-Step "Building solution ($configuration)"
+        
+        # Clean up potentially locked files from previous test runs (using fast bash commands)
+        # This prevents "The process cannot access the file" errors when running multiple test iterations
+        bash -c "find '$workspaceRoot/tests' -type d -name 'TestResults' -exec rm -rf {} + 2>/dev/null"
+        bash -c "find '$workspaceRoot/tests' -type f -name 'MvcTestingAppManifest.json' -exec rm -f {} + 2>/dev/null"
+        bash -c "find '$workspaceRoot/tests' -type f -path '*/obj/*.trx' -exec rm -f {} + 2>/dev/null"
+        bash -c "find '$workspaceRoot/tests' -type f \( -path '*/obj/*.coverage' -o -path '*/obj/*.cobertura.xml' \) -exec rm -f {} + 2>/dev/null"
         
         # Capture DLL timestamps BEFORE build to detect actual recompilation
         $srcProjects = @('Api', 'Web', 'Core', 'Infrastructure', 'ServiceDefaults')
@@ -765,7 +886,8 @@ function Run {
     function Start-AppHost {
         param(
             [string]$Environment,
-            [switch]$UseDocker
+            [switch]$UseDocker,
+            [bool]$SrcRebuilt = $false
         )
         
         # Check if servers are already running and healthy in the correct mode
@@ -844,7 +966,15 @@ function Run {
             Write-Info "Logging docker compose output to: $dockerLogFile"
             
             # Start containers in detached mode, capture output
-            docker compose up --build -d 2>&1 | Tee-Object -FilePath $dockerLogFile | Out-Null
+            # Only rebuild images if source was actually recompiled (optimization for validation runs)
+            if ($SrcRebuilt) {
+                Write-Info "Rebuilding Docker images (source code changed)..."
+                docker compose up --build -d 2>&1 | Tee-Object -FilePath $dockerLogFile | Out-Null
+            }
+            else {
+                Write-Info "Starting Docker containers (reusing existing images)..."
+                docker compose up -d 2>&1 | Tee-Object -FilePath $dockerLogFile | Out-Null
+            }
             if ($LASTEXITCODE -ne 0) {
                 Write-Error "Docker Compose failed to start. Check $dockerLogFile for details."
                 Write-Host ""
@@ -1087,116 +1217,8 @@ function Run {
 
 
     # Kill ALL potentially orphaned processes (browsers, test runners, dotnet processes)
-    function Stop-AllOrphanedProcesses {
-        param(
-            [switch]$Silent
-        )
-        
-        $cleanedAny = $false
-        
-        # Kill orphaned Playwright/Chromium processes
-        # Use simpler name-based matching to avoid CommandLine hangs
-        $playwrightProcesses = Get-Process -Name "chromium", "chrome", "headless_shell" -ErrorAction SilentlyContinue
-        if ($playwrightProcesses) {
-            if (-not $Silent) {
-                Write-Info "Killing orphaned browser processes:"
-            }
-            $playwrightProcesses | ForEach-Object { 
-                if (-not $Silent) {
-                    Write-Info ("  - PID {0}: {1}" -f $_.Id, $_.ProcessName)
-                }
-                try { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue } catch { }
-            }
-            $cleanedAny = $true
-        }
-        
-        # Kill orphaned vstest/testhost processes
-        $testProcesses = Get-Process -Name "testhost", "vstest" -ErrorAction SilentlyContinue
-        if ($testProcesses) {
-            if (-not $Silent) {
-                Write-Info "Killing orphaned test processes:"
-            }
-            $testProcesses | ForEach-Object { 
-                if (-not $Silent) {
-                    Write-Info ("  - PID {0}: {1}" -f $_.Id, $_.ProcessName)
-                }
-                try { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue } catch { }
-            }
-            $cleanedAny = $true
-        }
-        
-        # Kill orphaned TEST processes only (vstest, testhost in command line)
-        # DO NOT kill MSBuild workers - they might be from active dotnet watch/build!
-        # SKIP VS Code extension processes (parent is ServiceHost/Controller/LanguageServer)
-        $dotnetProcesses = Get-Process -Name "dotnet" -ErrorAction SilentlyContinue
-        if ($dotnetProcesses) {
-            foreach ($proc in $dotnetProcesses) {
-                try {
-                    # Get command line to check if it's a test process
-                    $cmdLine = cat "/proc/$($proc.Id)/cmdline" 2>$null | tr '\0' ' '
-                    
-                    # Skip VS Code processes
-                    if ($cmdLine -match "vscode-server|csdevkit|csharp") {
-                        continue
-                    }
-                    
-                    # ONLY kill if it's a test-related process (vstest, testhost, dotnet test)
-                    # DO NOT kill MSBuild workers, build processes, or watch processes
-                    if ($cmdLine -match "vstest|testhost|dotnet.*test|TechHub\..*\.Tests") {
-                        if (-not $Silent) {
-                            $parentPid = ps -o ppid= -p $proc.Id 2>$null | ForEach-Object { $_.Trim() }
-                            Write-Info ("Killing orphaned test process: PID {0} (Parent: {1})" -f $proc.Id, $parentPid)
-                        }
-                        kill -9 $proc.Id 2>$null
-                        $cleanedAny = $true
-                    }
-                }
-                catch {
-                    # Process might have already exited - that's OK
-                }
-            }
-        }
-        
-        return $cleanedAny
-    }
-    
-    # Stop orphaned test processes (browsers, testhost, vstest)
-    # Call at start to clean up from previous runs, and in finally block for cleanup
-    # Does NOT touch server processes - those are managed by Stop-Servers
-    function Stop-OrphanedTestProcesses {
-        param(
-            [switch]$Silent
-        )
-        
-        if (-not $Silent) {
-            Write-Step "Cleaning up orphaned test processes"
-        }
-        
-        $cleanedAny = $false
-        
-        # Note: Log files are NOT cleaned up here
-        # They are only removed when servers are actually (re)started in Start-AppHost
-        
-        # Kill orphaned processes by name/command (browsers, test runners)
-        # DO NOT kill server processes - smart restart logic handles that
-        if (Stop-AllOrphanedProcesses -Silent:$Silent) {
-            $cleanedAny = $true
-        }
-        
-        # Brief pause to let OS release resources
-        if ($cleanedAny) {
-            Start-Sleep -Milliseconds 300
-        }
-        
-        if (-not $Silent) {
-            if ($cleanedAny) {
-                Write-Success "Cleanup completed"
-            }
-            else {
-                Write-Info "No orphaned processes found"
-            }
-        }
-    }
+    # These functions have been moved to module level (after Stop-Servers)
+    # so they can be called from both Stop-Servers and Run
 
     # Main execution
     try {
@@ -1215,10 +1237,10 @@ function Run {
             Write-Step "Running PowerShell/Pester tests"
             $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
             if ($pwshSuccess -ne $true) {
-                return
+                return $false
             }
             Write-Host ""
-            return
+            return $true
         }
         
         # Regular mode: .NET build/test/server workflow
@@ -1226,7 +1248,7 @@ function Run {
         # Validate prerequisites
         $prereqsSucceeded = Test-Prerequisites
         if ($prereqsSucceeded -eq $false) {
-            return
+            return $false
         }
         
         # Clean up any remaining orphaned test/build processes
@@ -1237,7 +1259,7 @@ function Run {
         if ($Clean) {
             $cleanSucceeded = Invoke-Clean
             if ($cleanSucceeded -eq $false) {
-                return
+                return $false
             }
         }
         
@@ -1246,7 +1268,7 @@ function Run {
             # Production/Staging: Publish (which builds implicitly)
             $publishSucceeded = Invoke-Publish
             if ($publishSucceeded -eq $false) {
-                return
+                return $false
             }
             # Set buildResult for restart logic (publish always rebuilds)
             $buildResult = @{ Success = $true; SrcRebuilt = $true }
@@ -1255,7 +1277,7 @@ function Run {
             # Development: Build only
             $buildResult = Invoke-Build
             if ($buildResult.Success -eq $false) {
-                return
+                return $false
             }
         }
         
@@ -1301,7 +1323,7 @@ function Run {
         # Rebuild mode: Clean rebuild only, then EXIT
         if ($Rebuild) {
             Write-Success "`nBuild completed successfully!"
-            return
+            return $true
         }
         
         # Test by default unless -WithoutTests specified
@@ -1331,7 +1353,7 @@ function Run {
             if ($runPowerShell) {
                 $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
                 if ($pwshSuccess -ne $true) {
-                    return
+                    return $false
                 }
                 Write-Host ""
             }
@@ -1340,17 +1362,17 @@ function Run {
             if ($runUnitIntegration) {
                 $unitSuccess = Invoke-UnitAndIntegrationTests -TestProject $TestProject -TestName $TestName
                 if ($unitSuccess -ne $true) {
-                    return
+                    return $false
                 }
             }
             
             # PHASE 3: Start servers if needed for E2E tests
             if ($runE2E) {
-                $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker
+                $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker -SrcRebuilt $buildResult.SrcRebuilt
                 if ($serversStarted -ne $true) {
                     # Server startup failed - ALWAYS clean up (can't leave non-running servers)
                     Stop-Servers
-                    return
+                    return $false
                 }
             }
         
@@ -1374,16 +1396,16 @@ function Run {
                 Write-Host ""
                 Write-Success "All tests passed!"
                 Write-Host ""
-                return
+                return $true
             }
         }
         else {
             # -WithoutTests: Start servers directly
-            $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker
+            $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker -SrcRebuilt $buildResult.SrcRebuilt
             if ($serversStarted -ne $true) {
                 # Server startup failed - ALWAYS clean up (can't leave non-running servers)
                 Stop-Servers
-                return
+                return $false
             }
         }
     
@@ -1418,6 +1440,12 @@ function Run {
             
             Write-Host ""
         }
+
+        # Return success/failure based on what ran
+        if (-not $WithoutTests -and $runE2E) {
+            return $e2eSuccess
+        }
+        return $true
     }
     catch {
         Write-Error "`nFunction failed: $($_.Exception.Message)"
@@ -1437,4 +1465,4 @@ function Run {
 }
 
 # Export functions
-Export-ModuleMember -Function Run, Stop-Servers
+Export-ModuleMember -Function Run, Stop-Servers, Stop-OrphanedTestProcesses

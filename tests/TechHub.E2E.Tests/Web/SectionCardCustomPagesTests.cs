@@ -199,9 +199,6 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var initialUrl = Page.Url;
             await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
-            // Wait for any JS handlers to complete
-            await Page.WaitForBlazorReadyAsync();
-
             // Assert - Should still be on homepage
             Page.Url.Should().Be(initialUrl, "clicking expand button should not navigate away from homepage");
 

@@ -246,11 +246,10 @@ public class DynamicTagCountsTests : PlaywrightTestBase
             var disabledTag = Page.Locator(".tag-cloud-item.disabled").First;
             var urlBeforeClick = Page.Url;
 
-            await disabledTag.ClickAsync(new LocatorClickOptions { Force = true, Timeout = 1000 });
-
-            // Verify nothing changed by waiting briefly for any potential navigation
-            // and then checking URL hasn't changed
-            await Page.WaitForBlazorReadyAsync();
+            // Use the shared helper but disable URL wait since we expect NO change
+            await disabledTag.ClickBlazorElementAsync(
+                timeoutMs: BlazorHelpers.DefaultAssertionTimeout,
+                waitForUrlChange: false);
 
             // Assert - URL should not change (tag should not be selected)
             Page.Url.Should().Be(urlBeforeClick, "Clicking disabled tag should not change URL or filter state");

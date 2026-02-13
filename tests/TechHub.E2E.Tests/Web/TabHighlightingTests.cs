@@ -61,9 +61,6 @@ public class TabHighlightingTests : PlaywrightTestBase
         // Arrange - Use section index page which has tag cloud buttons in sidebar
         await Page.GotoRelativeAsync("/ai");
 
-        // Wait for Blazor interactivity (tag cloud buttons are interactive)
-        await Page.WaitForBlazorReadyAsync();
-
         // Act - Use pure keyboard navigation to trigger :focus-visible
         // Tab through the page until we find a button
         ILocator? focusedElement = null;
@@ -96,8 +93,6 @@ public class TabHighlightingTests : PlaywrightTestBase
         // Arrange - Use section page that has tag cloud sidebar (not custom pages)
         await Page.GotoRelativeAsync("/ai");
 
-        // Wait for Blazor interactivity and tag cloud to render
-        await Page.WaitForBlazorReadyAsync();
         var tagButton = Page.Locator(".tag-cloud-item").First;
         await Assertions.Expect(tagButton).ToBeVisibleAsync(new() { Timeout = 5000 });
 

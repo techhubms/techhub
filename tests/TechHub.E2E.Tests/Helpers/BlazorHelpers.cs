@@ -472,13 +472,15 @@ public static class BlazorHelpers
                         return false;
                     }
 
-                    // Step 3: Page scripts must be done loading
-                    // __scriptsLoading is set true when loadScriptsForPage starts,
-                    // __scriptsReady is set true when it completes
+                    // Step 3: Page scripts must not be actively loading
+                    // __scriptsLoading is set true by markScriptsLoading() when page scripts start,
+                    // and set false by markScriptsReady() when they complete.
+                    // Only block if scripts are ACTIVELY loading. If both flags are undefined,
+                    // the page has no page scripts (e.g., SectionCollection.razor) — proceed immediately.
+                    // WaitForMermaidDiagramsAsync() handles mermaid-specific waits separately.
                     if (window.__scriptsLoading === true) return false;
-                    if (window.__scriptsReady === true || window.__scriptsLoading === false) return true;
 
-                    return false;
+                    return true;
                 }
             ", new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 50 });
         }

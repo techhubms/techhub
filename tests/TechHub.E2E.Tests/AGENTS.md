@@ -337,7 +337,7 @@ Until step 3 completes, clicking buttons does nothing. Tests that click too earl
 - `afterServerStarted()` - Sets `window.__blazorServerReady = true`  
 - `afterWebAssemblyStarted()` - Sets `window.__blazorWasmReady = true`
 
-**Test Detection**: `BlazorHelpers.WaitForBlazorReadyAsync()` uses a single combined `WaitForConditionAsync` call that checks all three conditions (Blazor runtime exists, interactive runtime ready, page scripts loaded) in one browser round-trip for minimal overhead.
+**Test Detection**: `BlazorHelpers.WaitForBlazorReadyAsync()` uses a single combined `WaitForConditionAsync` call that checks: Blazor runtime exists, interactive runtime ready, and page scripts are not actively loading. Pages without page scripts (e.g., `SectionCollection.razor`) resolve immediately — the check only blocks if `__scriptsLoading` is explicitly `true`.
 
 **Key Methods That Use This**:
 
@@ -393,7 +393,7 @@ await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 |---|---|---|
 | Element to appear | `WaitForTimeoutAsync(500)` | `Assertions.Expect(el).ToBeVisibleAsync()` |
 | CSS class applied | `WaitForTimeoutAsync(1000)` | `Assertions.Expect(el).ToHaveClassAsync(new Regex("expanded"))` |
-| Console errors after load | `WaitForTimeoutAsync(500)` | `GotoRelativeAsync` already waits for `__scriptsReady` — no extra wait needed |
+| Console errors after load | `WaitForTimeoutAsync(500)` | `GotoRelativeAsync` already waits for Blazor ready + scripts not loading — no extra wait needed |
 | Blazor re-render complete | `WaitForTimeoutAsync(500)` | `Page.WaitForBlazorReadyAsync()` |
 | DOM condition (card count) | `WaitForTimeoutAsync(500)` | `Page.WaitForFunctionAsync("() => document.querySelectorAll('.card').length > 0")` |
 | JS lib init (highlight.js) | `WaitForTimeoutAsync(500)` | `Page.WaitForFunctionAsync("() => document.querySelector('pre code.hljs') !== null")` |
@@ -425,7 +425,7 @@ await Assertions.Expect(content).ToHaveClassAsync(
 
 #### Pattern 2: Console Error Tests
 
-`GotoRelativeAsync` already waits for `window.__scriptsReady` (set after all JS modules finish loading). No additional wait is needed — by the time it returns, any console errors from script loading have already been emitted.
+`GotoRelativeAsync` already waits for Blazor readiness and ensures page scripts are not actively loading. No additional wait is needed — by the time it returns, any console errors from script loading have already been emitted.
 
 ```csharp
 // ❌ WRONG - arbitrary delay
@@ -436,7 +436,7 @@ await Page.WaitForTimeoutAsync(500);
 await Page.GotoRelativeAsync(url);
 await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
-// ✅ CORRECT - GotoRelativeAsync already waits for __scriptsReady
+// ✅ CORRECT - GotoRelativeAsync already waits for Blazor ready + scripts not loading
 await Page.GotoRelativeAsync(url);
 // Just assert console errors here — scripts are already loaded
 ```

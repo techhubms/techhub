@@ -130,7 +130,10 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var tiersGrid = Page.Locator(".features-tiers-grid");
         await tiersGrid.AssertElementVisibleAsync();
 
-        // Verify grid has proper styling (check computed styles)
+        // Wait for CSS isolation styles to load before checking computed style
+        await Page.WaitForConditionAsync(
+            "() => { const el = document.querySelector('.features-tiers-grid'); return el && window.getComputedStyle(el).display === 'grid'; }",
+            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
         var gridDisplay = await tiersGrid.EvaluateAsync<string>("el => window.getComputedStyle(el).display");
         gridDisplay.Should().Be("grid", "Tier cards should use CSS Grid layout");
     }

@@ -266,10 +266,6 @@ public class TagFilteringTests : PlaywrightTestBase
         var firstTagText = (await firstTagButton.TextContentAsync())?.Trim().ToLowerInvariant() ?? "";
         await firstTagButton.ClickBlazorElementAsync();
 
-        // Wait for content to update after tag filter
-        // Use Playwright's polling to detect when content has finished loading
-        await Page.WaitForBlazorReadyAsync();
-
         // Wait for URL to update with tag parameter (confirms navigation happened)
         await Page.WaitForConditionAsync(
             "() => window.location.search.includes('tags=')",
@@ -282,7 +278,6 @@ public class TagFilteringTests : PlaywrightTestBase
                 return cards.length > 0;
             }",
             new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
-        await Page.WaitForBlazorReadyAsync();
 
         var itemsAfterFirstTag = await Page.Locator(".card").CountAsync();
         itemsAfterFirstTag.Should().BeLessThanOrEqualTo(allItems, "Filtering by one tag should reduce or maintain item count");
@@ -300,9 +295,6 @@ public class TagFilteringTests : PlaywrightTestBase
         {
             await secondTagButton.ClickBlazorElementAsync();
 
-            // Wait for content to update after second tag filter
-            await Page.WaitForBlazorReadyAsync();
-
             // Wait for cards to stabilize after Blazor re-render
             await Page.WaitForConditionAsync(
                 @"() => {
@@ -310,7 +302,6 @@ public class TagFilteringTests : PlaywrightTestBase
                     return cards.length >= 0;
                 }",
                 new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
-            await Page.WaitForBlazorReadyAsync();
 
             var itemsAfterSecondTag = await Page.Locator(".card").CountAsync();
 

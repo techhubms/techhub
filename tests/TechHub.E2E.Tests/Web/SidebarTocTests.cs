@@ -155,7 +155,7 @@ public class SidebarTocTests : PlaywrightTestBase
         // Wait for scroll to reach bottom
         await Page.WaitForConditionAsync(
             @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
-            new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultElementTimeout, PollingInterval = 50 });
 
         // Force scroll spy to re-evaluate now that scroll is complete.
         // The rAF-based handler may fire before layout settles in headless Chrome,
@@ -170,7 +170,7 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Use Playwright's auto-retrying assertion - wait for TOC link to become active.
         await Assertions.Expect(lastTocLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
-            new() { Timeout = 5000 });
+            new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
     }
 
     #endregion
@@ -306,7 +306,7 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Wait for TOC scroll spy to initialize and activate at least one link
         var activeTocLinks = Page.Locator(".sidebar-toc a.active");
-        await Assertions.Expect(activeTocLinks.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(activeTocLinks.First).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
 
         // Verify at least one TOC link has active class (overview section should be active)
         var activeCount = await activeTocLinks.CountAsync();
