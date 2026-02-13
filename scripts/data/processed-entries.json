@@ -25906,5 +25906,11 @@
     "reason": "Succesfully added: Assigned AI category because the article centers on the use of AI-driven tools from Microsoft (AI inclusion rules 1, 4, 5, 6). Assigned GitHub Copilot because it covers GitHub Copilot’s modernization features and best practices (GitHub Copilot rules 1-4; always include AI with GitHub Copilot). Assigned Azure because Azure Migrate and Azure Copilot are central (Azure inclusion rules 1, 4). Assigned DevOps for extensive discussion of CI/CD, Azure DevOps, modern operational patterns, and automation (DevOps rules 1, 2, 4, 5, 6, 8). Assigned Coding for its focus on refactoring, upgrading codebases, and using coding assistant tools (Coding rules 1, 2, 4, 5). Assigned Security due to explicit mention of security vulnerability detection and remediation as part of these modernization processes (Security rule 2 and 6).",
     "timestamp": "2026-02-13 00:10:44 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/modernizing-for-the-ai-era-accelerating-application/ba-p/4490596"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-february-2026-update/ba-p/4493673",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the content centers on AI agent development, tooling, and integration inside VS Code, with references to AI-focused platforms and workflows (AI rules 1 and 4). Assigned Azure category as Microsoft Foundry, Azure-related SDK integrations, and resource usage for Phi Silica are prominent, meeting Azure (1, 4, 5). Coding category is assigned due to detailed developer workflows (test case authoring in pytest, SDK use, agent code scaffolding) per Coding (2, 4, 5). GitHub Copilot appears, but is not the main focus or driver of the article, so 'GitHub Copilot' category is omitted (only included if Copilot is the central subject, per GitHub Copilot rule 1).",
+    "timestamp": "2026-02-13 08:12:10 +00:00"
   }
 ]
