@@ -25966,5 +25966,11 @@
     "timestamp": "2026-02-13 19:18:11 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' because the toolkit targets migration to Azure Logic Apps (Azure rule 1 and 4). 'Coding' applies as the content details command-line tooling, .NET components, and migration code structure (Coding rule 2 and 4). 'DevOps' is included since the content addresses modernization processes, automation, solution migration workflow, and batch tooling, central to integration DevOps (DevOps rules 6, 9, and 5). Excluded AI, ML, Security, and GitHub Copilot as there is no direct focus on those areas in either the toolkit's operation or the migration process. The content is technical, detailed, and focused on relevant categories per the outlined rules.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/a-biztalk-migration-tool-from-orchestrations-to-logic-apps/ba-p/4494876"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category as the article describes implementing an agentic AI-powered application (Pantone's Palette Generator) using Microsoft AI services and architecture (AI inclusion rule 1 and 4). Azure is assigned because Azure Cosmos DB and Microsoft Foundry are central, providing the real-time, scalable data layer and integration foundation for the solution (Azure rules 1 and 4). The ML category was not included as, while vector search and embeddings are discussed, the main focus is on deploying agent-driven AI experiences rather than hands-on data science or ML modeling. Coding and DevOps categories are not assigned because the article discusses architecture, design, and integration—rather than code-level or process/development methodologies. Security is not covered in the content.",
+    "collection": "news",
+    "timestamp": "2026-02-13 21:11:00 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/the-data-behind-the-design-how-pantone-built-agentic-ai-with-an-ai-ready-database/"
   }
 ]
