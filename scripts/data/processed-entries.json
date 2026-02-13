@@ -25942,5 +25942,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=gFh0kpFrND8",
     "timestamp": "2026-02-13 16:14:28 +00:00"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/2026/02/13/global-technology-leaders-launch-trusted-tech-alliance/",
+    "collection": "news",
+    "timestamp": "2026-02-13 17:17:05 +00:00",
+    "reason": "Succesfully added: Assigned the Security category because the announcement is centered on establishing security, transparency, and data protection standards for the technology supply chain (Security inclusion rules 1, 3, 4, 9). Assigned the AI category due to consistent references to AI as a critical part of the trusted technology stack and several member statements highlighting trusted AI, responsible AI infrastructure, and AI-driven innovation (AI inclusion rules 1, 4, 5). Did not assign other categories because there is no hands-on coding, Azure-specific, ML/data engineering, or DevOps process detail—this is a cross-sector security and trust framework involving Microsoft but not focusing on technical implementation steps."
   }
 ]
