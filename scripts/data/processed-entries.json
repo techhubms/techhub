@@ -25912,5 +25912,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because the content centers on AI agent development, tooling, and integration inside VS Code, with references to AI-focused platforms and workflows (AI rules 1 and 4). Assigned Azure category as Microsoft Foundry, Azure-related SDK integrations, and resource usage for Phi Silica are prominent, meeting Azure (1, 4, 5). Coding category is assigned due to detailed developer workflows (test case authoring in pytest, SDK use, agent code scaffolding) per Coding (2, 4, 5). GitHub Copilot appears, but is not the main focus or driver of the article, so 'GitHub Copilot' category is omitted (only included if Copilot is the central subject, per GitHub Copilot rule 1).",
     "timestamp": "2026-02-13 08:12:10 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content is centered around using AI agents—including GitHub Copilot, Claude Code, and Codex—for developer automation in GitHub repos (AI rules 1 and 2). Assigned GitHub Copilot because Copilot is one of the major agent choices (GitHub Copilot rule 1–4), with technical detail on Copilot's usage for workflow automation. Assigned DevOps because it's all about automating repository tasks, CI/CD process improvement, and operational workflows using GitHub Actions and agentic automation (DevOps rules 1–6). Not assigning Azure, ML, Coding, or Security because the article focuses on workflow/process automation, not core code/app development or ML engineering, nor on Azure services or deep security implementation.",
+    "canonical_url": "https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/",
+    "collection": "news",
+    "timestamp": "2026-02-13 14:16:33 +00:00"
   }
 ]
