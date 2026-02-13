@@ -73,7 +73,7 @@ public interface ISqlDialect
 
     /// <summary>
     /// Get SQL ORDER BY clause for full-text search relevance ranking
-    /// (bm25(content_fts) for SQLite, ts_rank(search_vector, plainto_tsquery) DESC for PostgreSQL)
+    /// (content_fts.rank for SQLite FTS5, ts_rank(search_vector, plainto_tsquery) DESC for PostgreSQL)
     /// </summary>
     string GetFullTextOrderByClause(string paramName);
 
