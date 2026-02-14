@@ -25972,5 +25972,11 @@
     "collection": "news",
     "timestamp": "2026-02-13 21:11:00 +00:00",
     "canonical_url": "https://azure.microsoft.com/en-us/blog/the-data-behind-the-design-how-pantone-built-agentic-ai-with-an-ai-ready-database/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on fine-tuning large language models with Direct Preference Optimization using the Microsoft Foundry SDK, which is a Microsoft AI product/service (AI rule 1, 3, 4). Assigned 'ML' because the article details custom model training, data preparation, and technical ML engineering (ML rules 1, 5, 10, 11). Did not assign 'Azure' as a main category since the focus is on model training/fine-tuning operations with SDK rather than broader Azure service management or deployment. No 'DevOps', 'Coding', 'Security', or 'GitHub Copilot' relevance in content.",
+    "timestamp": "2026-02-14 00:08:34 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/dpo-fine-tuning-using-microsoft-foundry-sdk/"
   }
 ]

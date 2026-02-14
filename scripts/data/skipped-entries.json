@@ -12003,5 +12003,11 @@
     "timestamp": "2026-02-12 21:09:28 +00:00",
     "reason": "No categories found: Content excluded because it is business strategy and executive workflow content focusing primarily on efficiency improvements for executives and business leaders, as described in the article. The narrative centers around 'how top executives work, plan, and make better informed decisions', the impact on 'senior leaders', 'executive committee members', and global heads, with emphasis on 'operational efficiencies', 'financial information visibility', and 'real-time executive decision making'. There is no coverage of technical implementation, architecture, APIs, developer workflows, or any Microsoft technology/development-focused aspect. According to Generic Exclusion Rules (Business Strategy and Executive Content), such high-level business/organizational stories without technical depth or developer relevance are excluded from categorization.",
     "collection": "news"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the update focuses on administrative controls for user profile display settings in GitHub Enterprise. It does not cover developer workflows, DevOps pipelines, coding practices, AI, ML, Azure integration, or specific security implementations relevant to the defined categories. The content is about administrative UX and configuration, not technical development or operational integration with Microsoft developer technologies.",
+    "timestamp": "2026-02-13 22:08:14 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-13-you-can-now-show-profile-names-alongside-user-handles",
+    "collection": "news"
   }
 ]
