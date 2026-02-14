@@ -25990,5 +25990,11 @@
     "reason": "Succesfully added: Assigned 'AI' category because the content is focused on GitHub Copilot, which is an AI-powered developer tool (AI rule 2, 5). Assigned 'GitHub Copilot' category because the update describes new features and improvements for GitHub Copilot in JetBrains IDEs, including Agent Skills, user experience adjustments, and settings management (GitHub Copilot rule 1, 2, 3, 4). Did not assign other categories (such as Coding) because the primary focus is tool improvements and usage rather than code or programming technique. No exclusion rules are triggered as the content is technical, focused on developer tools, in English, and does not fall under any business-only or general productivity contexts.",
     "collection": "news",
     "timestamp": "2026-02-14 02:55:04 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/modern-sharepoint-architecture-best-practices-for-scalable-intranets-in-2026/",
+    "timestamp": "2026-02-14 11:05:33 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned 'Coding' category because the article is deeply technical and addresses architectural best practices, implementation steps, integration with SPFx (SharePoint Framework), Power Automate, and site provisioning workflows—meeting Coding rule 4 (Coding practices with Microsoft technologies) and rule 5 (Microsoft Development Tools). Added 'Security' because the content addresses security/compliance measures such as DLP, sensitivity labels, and retention policies per Security rules 1, 2, and 4. Did not assign 'Azure', 'DevOps', or 'ML' as these topics are not substantively central or discussed. Did not assign 'AI' or 'GitHub Copilot' because AI is mentioned only as a future trend without technical implementation, and GitHub Copilot is not relevant to this content."
   }
 ]
