@@ -25996,5 +25996,11 @@
     "timestamp": "2026-02-14 11:05:33 +00:00",
     "collection": "blogs",
     "reason": "Succesfully added: Assigned 'Coding' category because the article is deeply technical and addresses architectural best practices, implementation steps, integration with SPFx (SharePoint Framework), Power Automate, and site provisioning workflows—meeting Coding rule 4 (Coding practices with Microsoft technologies) and rule 5 (Microsoft Development Tools). Added 'Security' because the content addresses security/compliance measures such as DLP, sensitivity labels, and retention policies per Security rules 1, 2, and 4. Did not assign 'Azure', 'DevOps', or 'ML' as these topics are not substantively central or discussed. Did not assign 'AI' or 'GitHub Copilot' because AI is mentioned only as a future trend without technical implementation, and GitHub Copilot is not relevant to this content."
+  },
+  {
+    "reason": "Succesfully added: Assigned only the 'AI' category because the content explicitly describes how the TypeScript team uses AI to automate development tasks, specifically porting pull requests (AI category, rule 4 and 5). Although 'TypeScript' and 'GitHub' are mentioned, there's no evidence of direct code-level programming discussions or GitHub Copilot usage, so 'Coding,' 'DevOps,' or 'GitHub Copilot' categories are not applicable. No generic exclusion rules are triggered since the content is in English, technically substantive, and not focused on business productivity tools.",
+    "timestamp": "2026-02-14 18:04:43 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/2djTIalOr1M",
+    "collection": "videos"
   }
 ]

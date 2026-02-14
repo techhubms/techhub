@@ -12009,5 +12009,11 @@
     "timestamp": "2026-02-13 22:08:14 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-02-13-you-can-now-show-profile-names-alongside-user-handles",
     "collection": "news"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the input content lacks substantive technical information (content is null, the title is 'Happy Valentines Day!', and there is no description). This triggers the generic exclusion for content without meaningful technical detail, as there is no opportunity to apply any inclusion rules or determine relevance to Microsoft technologies. Additionally, there is no evidence of technical categories or context in the title, tags, or source.",
+    "timestamp": "2026-02-14 17:07:56 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/5H8Ipcibw9w"
   }
 ]
