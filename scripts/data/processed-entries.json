@@ -25978,5 +25978,11 @@
     "reason": "Succesfully added: Assigned 'AI' because the content centers on fine-tuning large language models with Direct Preference Optimization using the Microsoft Foundry SDK, which is a Microsoft AI product/service (AI rule 1, 3, 4). Assigned 'ML' because the article details custom model training, data preparation, and technical ML engineering (ML rules 1, 5, 10, 11). Did not assign 'Azure' as a main category since the focus is on model training/fine-tuning operations with SDK rather than broader Azure service management or deployment. No 'DevOps', 'Coding', 'Security', or 'GitHub Copilot' relevance in content.",
     "timestamp": "2026-02-14 00:08:34 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/foundry/dpo-fine-tuning-using-microsoft-foundry-sdk/"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-13-updated-status-experience",
+    "reason": "Succesfully added: DevOps category is assigned due to the focus on platform monitoring, incident management, and service availability, which are core DevOps practices (DevOps rules 6, 7, and 11). GitHub Copilot category is assigned because the improvements specifically mention identifying incident impacts on Copilot features and models (GitHub Copilot rule 1 and 2). AI category is also included, as GitHub Copilot is a developer-focused AI tool and per workflow, any inclusion of GitHub Copilot requires including AI (AI rule 2 and corresponding critical distinction). Azure and Coding categories are not assigned because the update is about usage of GitHub platform tools rather than application development or Azure services.",
+    "collection": "news",
+    "timestamp": "2026-02-14 01:32:29 +00:00"
   }
 ]
