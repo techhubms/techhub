@@ -25984,5 +25984,11 @@
     "reason": "Succesfully added: DevOps category is assigned due to the focus on platform monitoring, incident management, and service availability, which are core DevOps practices (DevOps rules 6, 7, and 11). GitHub Copilot category is assigned because the improvements specifically mention identifying incident impacts on Copilot features and models (GitHub Copilot rule 1 and 2). AI category is also included, as GitHub Copilot is a developer-focused AI tool and per workflow, any inclusion of GitHub Copilot requires including AI (AI rule 2 and corresponding critical distinction). Azure and Coding categories are not assigned because the update is about usage of GitHub platform tools rather than application development or Azure services.",
     "collection": "news",
     "timestamp": "2026-02-14 01:32:29 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-13-new-features-and-improvements-in-github-copilot-in-jetbrains-ides-2",
+    "reason": "Succesfully added: Assigned 'AI' category because the content is focused on GitHub Copilot, which is an AI-powered developer tool (AI rule 2, 5). Assigned 'GitHub Copilot' category because the update describes new features and improvements for GitHub Copilot in JetBrains IDEs, including Agent Skills, user experience adjustments, and settings management (GitHub Copilot rule 1, 2, 3, 4). Did not assign other categories (such as Coding) because the primary focus is tool improvements and usage rather than code or programming technique. No exclusion rules are triggered as the content is technical, focused on developer tools, in English, and does not fall under any business-only or general productivity contexts.",
+    "collection": "news",
+    "timestamp": "2026-02-14 02:55:04 +00:00"
   }
 ]
