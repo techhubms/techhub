@@ -26002,5 +26002,11 @@
     "timestamp": "2026-02-14 18:04:43 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/2djTIalOr1M",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the article discusses leveraging GitHub Copilot (an AI-powered tool) for generating Mermaid diagrams and integrating AI assistance directly into the development workflow (AI rule 2 and 4). Assigned 'GitHub Copilot' category because it covers using Copilot within Visual Studio to generate diagrams (GitHub Copilot inclusion rules 1, 2, 4). Assigned 'Coding' because it describes coding-related workflows, Markdown/diagram syntax, code-adjacent documentation, and developer experience within Visual Studio (Coding rules 1, 4, 5). Did not assign Azure, DevOps, ML, or Security as those topics are not central or are only mentioned as possible use cases. Generic exclusions do not apply because the content is technical, in English, and not biographical, sales-oriented, or negative.",
+    "timestamp": "2026-02-15 11:05:39 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/visualize-workflows-and-architecture-with-mermaid-charts-in-visual-studio-2026/"
   }
 ]
