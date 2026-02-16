@@ -26008,5 +26008,11 @@
     "timestamp": "2026-02-15 11:05:39 +00:00",
     "collection": "blogs",
     "canonical_url": "https://dellenny.com/visualize-workflows-and-architecture-with-mermaid-charts-in-visual-studio-2026/"
+  },
+  {
+    "timestamp": "2026-02-16 03:57:03 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned based on these rules: 'AI' due to focused discussion of Claude Opus 4.6, a Microsoft-provided AI model integrated in coding workflows (AI rule 1, 2); 'GitHub Copilot' since the post centers around Copilot features including Agents and model choice (GitHub Copilot rules 1, 2, 4); 'Coding' due to the detailed description of building a document analyzer, code refactoring, unit tests, and UI development (Coding rules 1, 4, 5). No Azure-specific architecture or ML-specific pipeline implementation is covered in depth, so 'Azure' or 'ML' are not assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/using-claude-opus-4-6-in-github-copilot/m-p/4495127#M1393"
   }
 ]
