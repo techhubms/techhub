@@ -12021,5 +12021,11 @@
     "timestamp": "2026-02-15 18:05:09 +00:00",
     "collection": "videos",
     "reason": "No categories found: No categories were assigned because the content is primarily an interview or opinion piece with Anders Hejlsberg discussing the challenges of building new programming languages. There is no substantive technical content about Microsoft's developer technologies, tools, or development practices, nor detail on coding with Microsoft platforms. The content is focused on motivational advice and general barriers in language design, lacking technical demonstrations or guidance. Based on the rules, high-level discussions without actionable technical depth or Microsoft-specific development details do not qualify for any categories."
+  },
+  {
+    "timestamp": "2026-02-16 18:10:12 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/slow-response-times-in-different-regions/m-p/4495180#M22433"
   }
 ]

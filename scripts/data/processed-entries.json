@@ -26038,5 +26038,11 @@
     "collection": "videos",
     "timestamp": "2026-02-16 17:14:46 +00:00",
     "reason": "Succesfully added: Assigned Coding category because the content focuses on TypeScript, a Microsoft programming language, and discusses open source development practices (Coding rule 1 and 4). Excluded DevOps and AI categories as the primary focus is on software community and programming language practices, not automated workflows or AI platforms. Excluded others due to lack of direct technical coverage of Azure, security, ML, or GitHub Copilot. The content meets quality standards with technical context and learning value."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/devops/condensed-views-on-kanban-and-sprint-boards/",
+    "timestamp": "2026-02-16 21:06:57 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on Azure DevOps Boards, a central DevOps tool (DevOps rule 1). Assigned the Azure category since the feature is part of Azure DevOps, an Azure-based service (Azure rule 1). No other categories apply, as the content does not involve AI, ML, Coding, Security, or GitHub Copilot. The post explicitly details a UI/feature enhancement relevant for developer and DevOps teams, not end users. Generic exclusion rules do not apply—it's not biographical, sales content, too short, or business/productivity focused.",
+    "collection": "news"
   }
 ]

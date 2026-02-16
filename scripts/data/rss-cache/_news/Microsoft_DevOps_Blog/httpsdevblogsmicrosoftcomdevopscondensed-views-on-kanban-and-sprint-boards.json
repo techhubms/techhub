@@ -1,0 +1,20 @@
+{
+  "Title": "Condensed views on Kanban and Sprint boards",
+  "Description": "One of the challenges teams face when working with large boards or displaying multiple fields on work item cards is limited screen space. This became even more noticeable with the rollout of the New Boards hub, which introduced additional spacing and padding for improved readability. While this enhances clarity, it can also reduce the number […]\n\nThe post [Condensed views on Kanban and Sprint boards](https://devblogs.microsoft.com/devops/condensed-views-on-kanban-and-sprint-boards/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "ProcessedDate": "2026-02-16 21:05:09",
+  "Author": "Dan Hellem",
+  "OutputDir": "_news",
+  "Tags": [
+    "#DevOps",
+    "Azure & Cloud",
+    "Azure Boards",
+    "Azure DevOps",
+    "Community"
+  ],
+  "EnhancedContent": "One of the challenges teams face when working with large boards or displaying multiple fields on work item cards is limited screen space. This became even more noticeable with the rollout of the New Boards hub, which introduced additional spacing and padding for improved readability. While this enhances clarity, it can also reduce the number of cards visible at once.\n\nFor example, if a work item contains a dozen or more tags and several custom fields, a single card can easily consume a significant portion of your vertical space. In [Delivery Plans](https://learn.microsoft.com/en-us/azure/devops/boards/plans/review-team-plans), we addressed this challenge with the condensed view option, where only the work item Id and title are displayed.\n\nWe’re excited to bring the same condensed view capability to both the Kanban and Sprint board pages. With a single click, you can now toggle between the standard card layout and a more compact view that shows only titles.\n\nBefore…\n\n[![before image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACcQAAAWEAQMAAADcRQdmAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABxElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOBnxEIAAZk6G6YAAAAASUVORK5CYII=)](https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2026/02/before-scaled.webp)\n\nAfter…\n\n[![after image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACcQAAAV7AQMAAAA4gayqAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABwklEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAPA7k4AAGSGsIYAAAAAElFTkSuQmCC)](https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2026/02/after-scaled.webp)\n\nAs you can see, the condensed view allows you to see significantly more cards on the screen at once, making it easier to scan, triage, and manage large backlogs.\n\nThis feature is rolling out as part of the current release and is expected to reach all organizations by early March.",
+  "PubDate": "2026-02-16T20:53:30+00:00",
+  "FeedName": "Microsoft DevOps Blog",
+  "Link": "https://devblogs.microsoft.com/devops/condensed-views-on-kanban-and-sprint-boards/",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "FeedLevelAuthor": "Azure DevOps Blog"
+}
