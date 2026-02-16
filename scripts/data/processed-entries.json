@@ -26014,5 +26014,11 @@
     "collection": "community",
     "reason": "Succesfully added: Categories assigned based on these rules: 'AI' due to focused discussion of Claude Opus 4.6, a Microsoft-provided AI model integrated in coding workflows (AI rule 1, 2); 'GitHub Copilot' since the post centers around Copilot features including Agents and model choice (GitHub Copilot rules 1, 2, 4); 'Coding' due to the detailed description of building a document analyzer, code refactoring, unit tests, and UI development (Coding rules 1, 4, 5). No Azure-specific architecture or ML-specific pipeline implementation is covered in depth, so 'Azure' or 'ML' are not assigned.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/using-claude-opus-4-6-in-github-copilot/m-p/4495127#M1393"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-join-the-reasoning-agents-track/ba-p/4494394",
+    "collection": "community",
+    "reason": "Succesfully added: The post is focused on an AI agent competition using Microsoft Foundry, which is an Azure-based AI platform for building agent systems. The AI category is assigned because the article centers on building intelligent agents, supported by Microsoft AI technologies (AI rule 1). Azure is included since Microsoft Foundry operates as an Azure solution and the event integrates with other Azure capabilities (Azure rule 1). The Coding category is not directly included as the post is more about the event, architecture, and using high-level tools than specific code development patterns. GitHub Copilot is referenced as a recommended tool, but is not the main subject so the GitHub Copilot category is not included. The ML and Security categories do not apply as there is no focus on data science, ML engineering, or security content.",
+    "timestamp": "2026-02-16 10:18:01 +00:00"
   }
 ]
