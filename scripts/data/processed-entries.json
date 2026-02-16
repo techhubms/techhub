@@ -26020,5 +26020,11 @@
     "collection": "community",
     "reason": "Succesfully added: The post is focused on an AI agent competition using Microsoft Foundry, which is an Azure-based AI platform for building agent systems. The AI category is assigned because the article centers on building intelligent agents, supported by Microsoft AI technologies (AI rule 1). Azure is included since Microsoft Foundry operates as an Azure solution and the event integrates with other Azure capabilities (Azure rule 1). The Coding category is not directly included as the post is more about the event, architecture, and using high-level tools than specific code development patterns. GitHub Copilot is referenced as a recommended tool, but is not the main subject so the GitHub Copilot category is not included. The ML and Security categories do not apply as there is no focus on data science, ML engineering, or security content.",
     "timestamp": "2026-02-16 10:18:01 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-02-16 11:15:42 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the content thoroughly examines Azure and Azure Local, focusing on architecture and service features (Azure rule 1, 2, 4, and 5). Assigned Security category because significant content addresses compliance, data sovereignty, identity management (with Entra), encryption, external key management, and regulatory requirements (Security rules 1, 3, 4, 5, 7, and 9). Did not add 'AI', 'Coding', 'DevOps', 'ML', or 'GitHub Copilot' because there is no focus on development, coding, machine learning, AI platforms, or DevOps practices. The assignment is supported by the chapter breakdown, resource links, and tag words in the input.",
+    "canonical_url": "https://www.youtube.com/watch?v=Q6Anv-8a-I0"
   }
 ]
