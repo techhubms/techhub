@@ -26032,5 +26032,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/visualize-workflows-and-architecture-with-mermaid-charts-in/m-p/4495253#M190",
     "timestamp": "2026-02-16 16:12:43 +00:00",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/HezS7yguU30",
+    "collection": "videos",
+    "timestamp": "2026-02-16 17:14:46 +00:00",
+    "reason": "Succesfully added: Assigned Coding category because the content focuses on TypeScript, a Microsoft programming language, and discusses open source development practices (Coding rule 1 and 4). Excluded DevOps and AI categories as the primary focus is on software community and programming language practices, not automated workflows or AI platforms. Excluded others due to lack of direct technical coverage of Azure, security, ML, or GitHub Copilot. The content meets quality standards with technical context and learning value."
   }
 ]
