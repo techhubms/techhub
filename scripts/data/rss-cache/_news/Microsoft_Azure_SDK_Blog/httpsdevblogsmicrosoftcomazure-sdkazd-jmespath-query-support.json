@@ -1,0 +1,18 @@
+{
+  "PubDate": "2026-02-17T18:19:18+00:00",
+  "FeedName": "Microsoft Azure SDK Blog",
+  "FeedUrl": "https://devblogs.microsoft.com/azure-sdk/feed/",
+  "EnhancedContent": "# JMESPath support comes to azd JSON output\n\n*Now you can filter and transform azd JSON output using JMESPath queries*\n\n## What’s new?\n\nThe Azure Developer CLI (`azd` ) now supports [JMESPath](https://jmespath.org/) queries on JSON output, including error messages. Pass `--query` to extract exactly what you need.\n\n## Why it matters\n\nBeing able to filter and transform JSON output directly in your terminal reduces the need for external tools or manual parsing, enhancing developer productivity. Whether you’re building scripts, automation, or need to inspect a specific part of your noisy config, JMESPath queries offer a simple solution right within the `azd` toolset.\n\n## How to use it\n\nIn `azd` versions 1.23.4 or later, `--query` can be used alongside `-o json` , but only with commands that return JSON output.\n\n### Examples\n\n1. Show a subsection of the configuration:\n\n``` azd config show -o json --query \"template.sources\" ```\n\n**Output:**\n\n```json { \"awesome-azd\": { \"key\": \"awesome-azd\", \"location\": \"https://aka.ms/awesome-azd/templates.json\", \"name\": \"Awesome AZD\", \"type\": \"awesome-azd\" } } ```\n2. Get the default environment name in a script:\n\n``` ENV_NAME=$(azd env list -o json --query \"[?IsDefault].Name | [0]\") echo \"Deploying to $ENV_NAME\" ```\n\n**Output:**\n\n``` production ```\n3. In `azd`\nversions 1.23.5 or later, you can extract error messages in automation. For example, when not authenticated and running this command:\n\n``` azd auth token -o json --query \"data.message\" ```\n\n**Output:**\n\n``` \"\\nERROR: not logged in, run `azd auth login` to login\\n\" ```\n\nExplore more query options in the [JMESPath documentation](https://jmespath.org/tutorial.html).\n\n## Feedback\n\nQuestions or ideas? [File an issue](https://github.com/Azure/azure-dev/issues) or [start a discussion](https://github.com/Azure/azure-dev/discussions). Want to help shape `azd` ? [Sign up for user research](https://aka.ms/azd-user-research-signup).\n\n*Introduced in [PR #6664](https://github.com/Azure/azure-dev/pull/6664). Expanded in [PR #6735](https://github.com/Azure/azure-dev/pull/6735).*",
+  "FeedLevelAuthor": "Azure SDK Blog",
+  "Tags": [
+    "azd",
+    "Azure SDK",
+    "azure-developer-cli"
+  ],
+  "ProcessedDate": "2026-02-17 19:19:49",
+  "Title": "JMESPath support comes to azd JSON output",
+  "Link": "https://devblogs.microsoft.com/azure-sdk/azd-jmespath-query-support/",
+  "OutputDir": "_news",
+  "Description": "Run JMESPath queries on azd JSON output, including error messages.\n\nThe post [JMESPath support comes to azd JSON output](https://devblogs.microsoft.com/azure-sdk/azd-jmespath-query-support/) appeared first on [Azure SDK Blog](https://devblogs.microsoft.com/azure-sdk).",
+  "Author": "Scott Addie"
+}
