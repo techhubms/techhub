@@ -12039,5 +12039,11 @@
     "canonical_url": "https://news.microsoft.com/source/emea/features/ai-tools-small-businesses-kenya/",
     "timestamp": "2026-02-17 15:16:56 +00:00",
     "collection": "news"
+  },
+  {
+    "reason": "No categories found: All categories were excluded per the generic exclusion rules. The content focuses on 3D printing physical models of GitHub branding assets, which is not related to software development, coding, DevOps, AI, ML, Azure, or Security. There is no mention of development, Microsoft-specific technologies, or relevant technical implementation in the Microsoft ecosystem. The tags and description confirm the focus is on physical fabrication, not developer tools or code, thus no categories were assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/l-Nc6Yndhkw",
+    "timestamp": "2026-02-17 17:23:04 +00:00"
   }
 ]

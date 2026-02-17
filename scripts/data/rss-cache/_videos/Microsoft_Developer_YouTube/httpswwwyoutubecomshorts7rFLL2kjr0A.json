@@ -1,0 +1,22 @@
+{
+  "Link": "https://www.youtube.com/shorts/7rFLL2kjr0A",
+  "PubDate": "2026-02-17T16:31:20+00:00",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "Getting Started with Agents in VS Code",
+  "ProcessedDate": "2026-02-17 17:21:23",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Description": "Full episode at https://aka.ms/CAIK-ElijahKing\n\nWelcome back to the Cozy AI Kitchen, where we cook up delightful creations with AI, design, and developer tools. Today, John Maeda welcomes Elijah King, Product Designer on the VS Code team, to show how anyone — yes, even non‑developers — can build fully functional apps using natural language, AI agents, and VS Code. In this episode, Elijah transforms from designer to design engineer, guiding us through the creation of a no‑code iOS chatbot app powered by VS Code’s new multi‑agent background workflow and model switching — all with just prompts. You’ll see how fast and intuitive app development becomes when AI handles the heavy lifting and you focus on ideas. Whether you're a designer curious about coding, a developer exploring agent‑powered workflows, or a creator dreaming up your next app — this episode shows how tools are making software creation more accessible than ever. 🍳 Let’s get cooking.",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube",
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos"
+}

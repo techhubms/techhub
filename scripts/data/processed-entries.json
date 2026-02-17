@@ -26074,5 +26074,35 @@
     "canonical_url": "https://github.blog/changelog/2026-02-17-custom-properties-and-rule-insights-improvements",
     "reason": "Succesfully added: Assigned the DevOps category because the content describes new GitHub features directly impacting repository policy enforcement, governance, and administrative visibility—all fundamental DevOps concerns (DevOps rules 2, 5, 8). It is not exclusively about coding, AI, Azure, ML, or Security, so none of those additional categories apply. The improvements are targeted at administrators and organization governance, fitting the DevOps and collaboration scope. The tags were extracted to match the technical and administrative nature of features described.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the content focuses on Microsoft Fabric, a core Azure data platform, and its integration with Snowflake (Azure category rule 1 and 4). Assigned 'Security' because the primary topic is securing authentication for data connections using cryptographic keys (Security rules 1 and 2). Not assigned 'ML', 'AI', 'Coding', or 'DevOps' since the content does not discuss machine learning, artificial intelligence, software development, or DevOps processes. No generic exclusions apply—the post is technical, English, not biographical, sufficiently detailed, and not a sales pitch or business strategy piece.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/snowflake-key-pair-authentication-generally-available/",
+    "timestamp": "2026-02-17 17:22:28 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the episode centers on AI agents powering app development in VS Code, following AI inclusion rule 1 and 4. Assigned 'Coding' because the content explores workflows for application development (including no-code scenarios) within a developer tool, in line with Coding inclusion rule 4 and 5. Azure is mentioned as a tag, but is not central to the workflow. No generic exclusion rules apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/7rFLL2kjr0A",
+    "timestamp": "2026-02-17 17:23:24 +00:00"
+  },
+  {
+    "reason": "Succesfully added: AI category assigned as the core topic is centralized governance and orchestration for AI services (per AI inclusion rule 1), with deep focus on generative AI, multi-model routing, and policy management for AI usage. Azure is included because Azure API Management is the enabling platform and its technical features (including policy extensibility, integration with Application Insights, authentication, and circuit breaker) are central to the solution (Azure inclusion rules 1, 2, 4). Content is highly technical, with clear architecture, implementation detail, and is not a sales pitch, biographical, or business-only strategy. No Coding or DevOps categories: the focus is integration architecture and API management, not code implementation patterns or developer workflow automation. No ML category: content is about AI service mediation and governance, not about data science, analytics engineering, or ML model development.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-api-management-unified-ai-gateway-design-pattern/ba-p/4495436",
+    "timestamp": "2026-02-17 17:23:55 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the scenario and all technologies involved (VNet, Azure Firewall, vWAN, function apps, route tables) are Azure-centric and technical (Azure inclusion rules 1, 2, 4, 5). Also assigned 'Security' since there is a focus on Azure Firewall, outbound filtering, IP Groups, and traffic security (Security inclusion rules 1, 2, 4). Did NOT assign DevOps or AI/ML/Coding because there is no content related to code development, DevOps workflows, or data/AI tasks. The content is technical troubleshooting, not biographical, sales, or business strategy, so generic exclusions and length minimums do NOT apply.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/help-how-is-vnet-traffic-reaching-vwan-on-prem-when-the-vnet-isn/m-p/4495408#M767",
+    "timestamp": "2026-02-17 17:24:20 +00:00"
+  },
+  {
+    "reason": "Succesfully added: AI and ML categories were not assigned because the content does not discuss machine learning or AI platforms, nor does it cover AI-driven features. GitHub Copilot and Coding categories are excluded since there is no mention of programming code, languages, frameworks, or developer workflow. DevOps is not assigned because, while there is platform configuration, the article focuses on network transport configuration rather than build/release automation, CI/CD, or team methodologies. Azure is included as the central technology (all workflow steps occur in Azure Virtual Desktop and Azure Portal), and Security is included because the content is specifically about enforcing network boundaries, secure connection behaviors, private networking, and policy enforcement, which fall under Security category rule 1 (Microsoft Security Services) and rule 4 (Cloud Security with Microsoft). Generic exclusion rules do not apply (content is technical, not business/executive, biographical, or non-English; community post exceeds the word count threshold).",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/rdp-shortpath-udp-over-private-link-is-now-generally-available/ba-p/4494644",
+    "timestamp": "2026-02-17 17:24:41 +00:00"
   }
 ]
