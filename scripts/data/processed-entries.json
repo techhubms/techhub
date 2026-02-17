@@ -26176,5 +26176,29 @@
     "reason": "Succesfully added: Assigned Azure category because the content is fundamentally about implementing integration with Azure Logic Apps, utilizing Azure Blob Storage, and employing Azure's workflow services (Azure Category Rule 1). Assigned AI category because the implementation and scenario specifically include AI-powered validation and agent-based analysis (AI Category Rule 1, 3, 4, 5), and references to OpenAI and Copilot-assisted development are present. Did NOT assign ML because while validation and analysis are agent-driven and AI-powered, the in-depth ML/data science development aspects (custom models, advanced feature engineering, etc.) are deferred to 'Part 2' and not the main focus here. Coding, DevOps, and Security do not apply; the article presents workflow construction, not code-level development, CI/CD practices, or security implementation details. All exclusion rules were checked: the content is technical, not career-oriented, not a sales pitch, not overly negative, and focuses on Microsoft-centric integration approaches.",
     "timestamp": "2026-02-17 19:27:00 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: I assigned the Coding category because the entire announcement centers on upcoming PowerShell, DSC, and OpenSSH features relevant to software development and engineering workflows (Coding rules 1, 2, and 4). Azure category applies due to substantial coverage of Azure Container Registry, Microsoft Artifact Registry, and planned improvements for module publishing (Azure rules 2 and 6); PowerShell modules are deeply integrated into Azure automation and management pipelines. Security is included because of repeated emphasis on security and compliance improvements, Entra ID authentication for SSH, and secure AI integration (Security rules 1, 2, and 3). The AI category was not added since direct, detailed technical coverage of Microsoft AI services is limited (only a plan for MCP integration); ML was not added as there are no advanced data science/analytics engineering features described. GitHub Copilot was not mentioned. No generic exclusion rules applied as this is a developer-focused roadmap update in English with technical depth.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/powershell/powershell-openssh-and-dsc-team-investments-for-2026/",
+    "timestamp": "2026-02-17 20:10:19 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is centered on a new GitHub Copilot feature, fitting AI rule 2 and GitHub Copilot inclusion rule 1. 'Coding' is also included because the feature enables code-related task delegation and review workflows within Visual Studio, matching Coding rules 2 and 4. Azure, DevOps, ML, and Security categories do not apply since the focus is on Copilot features inside Visual Studio, not cloud, DevOps, ML/data workflows, or security implementations.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-17-delegate-tasks-to-copilot-coding-agent-from-visual-studio",
+    "timestamp": "2026-02-17 20:10:42 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the update centers on credential management, incident response actions, and enterprise account protection within GitHub (Security rules 2, 3, 4, 5, 7, and 8). Assigned DevOps because it directly impacts enterprise DevOps workflows, credential lifecycle management, and organizational response procedures (DevOps rules 3, 4, 9, and 11). No Coding, AI, ML, GitHub Copilot, or Azure categories apply because the content does not address software development, AI/ML tooling, or platform-specific coding aspects. Content is in English, technical, and not excluded by any generic rule.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-17-enterprise-wide-credential-management-tools-for-incident-response",
+    "timestamp": "2026-02-17 20:11:00 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the content centers on Azure Virtual Desktop environments and host management (Azure rule 1). Assigned 'Security' because identity cleanup (Entra ID, Intune) and Defender artifacts are integral to the process (Security rules 1, 2, 3, 8). Assigned 'DevOps' due to governance, automation, lifecycle management, and integration with scaling plans (DevOps rules 3, 5, 6). Coding/AI/ML not included because the content focuses on operational lifecycle, not code development or AI/ML. The community post exceeds 200 words of meaningful content and is in English.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/improper-avd-host-decommissioning-a-practical-governance/m-p/4495437#M14006",
+    "timestamp": "2026-02-17 20:11:43 +00:00"
   }
 ]
