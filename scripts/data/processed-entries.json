@@ -26044,5 +26044,11 @@
     "timestamp": "2026-02-16 21:06:57 +00:00",
     "reason": "Succesfully added: Assigned the DevOps category because the content focuses on Azure DevOps Boards, a central DevOps tool (DevOps rule 1). Assigned the Azure category since the feature is part of Azure DevOps, an Azure-based service (Azure rule 1). No other categories apply, as the content does not involve AI, ML, Coding, Security, or GitHub Copilot. The post explicitly details a UI/feature enhancement relevant for developer and DevOps teams, not end users. Generic exclusion rules do not apply—it's not biographical, sales content, too short, or business/productivity focused.",
     "collection": "news"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-17 08:12:45 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-smart-building-hvac-digital-twin-with-ai-copilot/ba-p/4490784",
+    "reason": "Succesfully added: Assigned the AI category because the implementation leverages Microsoft Foundry Local as an AI copilot (AI inclusion rule 1) and demonstrates natural language interaction, context awareness, and conversational analytics for facilities management (AI rule 4). Assigned Coding because the post provides detailed, hands-on technical code in JavaScript/React/Node.js, with design and implementation details for simulation, visualization, and backend architecture (Coding rules 1, 2, and 4). Did not assign Azure, ML, Security, or DevOps: there is no direct use of Azure services, ML frameworks with custom training/data science, or explicit DevOps tooling as per inclusion rules. The focus remains on AI-powered application development and digital twin coding/architecture."
   }
 ]
