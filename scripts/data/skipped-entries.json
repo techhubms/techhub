@@ -12027,5 +12027,11 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/slow-response-times-in-different-regions/m-p/4495180#M22433"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/Db9PSZoMPw0",
+    "timestamp": "2026-02-17 11:16:13 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content cannot be processed because the 'content' field is null. According to the workflow, actual content is required to assess substantive coverage, determine centrality of Microsoft technologies, and properly apply inclusion and exclusion rules. Without main content, there is no way to evaluate scope, technical depth, or to extract structured output. Thus, no categories can be assigned."
   }
 ]

@@ -26050,5 +26050,11 @@
     "timestamp": "2026-02-17 08:12:45 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-smart-building-hvac-digital-twin-with-ai-copilot/ba-p/4490784",
     "reason": "Succesfully added: Assigned the AI category because the implementation leverages Microsoft Foundry Local as an AI copilot (AI inclusion rule 1) and demonstrates natural language interaction, context awareness, and conversational analytics for facilities management (AI rule 4). Assigned Coding because the post provides detailed, hands-on technical code in JavaScript/React/Node.js, with design and implementation details for simulation, visualization, and backend architecture (Coding rules 1, 2, and 4). Did not assign Azure, ML, Security, or DevOps: there is no direct use of Azure services, ML frameworks with custom training/data science, or explicit DevOps tooling as per inclusion rules. The focus remains on AI-powered application development and digital twin coding/architecture."
+  },
+  {
+    "canonical_url": "https://andrewlock.net/creating-standard-and-observable-instruments/",
+    "timestamp": "2026-02-17 11:15:46 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: Included Coding category because the article is a technical guide for .NET developers on using the System.Diagnostics.Metrics APIs and instrumenting applications for observability (Coding rules 1, 2, and 4). Did not assign Azure, AI, DevOps, ML, Security, or GitHub Copilot since the article does not focus on those platforms, services, or tools; it's an in-depth .NET instrumentation tutorial. All tags were extracted based on key technologies, instrument types, and methodology in the content and code samples."
   }
 ]
