@@ -12033,5 +12033,11 @@
     "timestamp": "2026-02-17 11:16:13 +00:00",
     "collection": "videos",
     "reason": "No categories found: Content cannot be processed because the 'content' field is null. According to the workflow, actual content is required to assess substantive coverage, determine centrality of Microsoft technologies, and properly apply inclusion and exclusion rules. Without main content, there is no way to evaluate scope, technical depth, or to extract structured output. Thus, no categories can be assigned."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule—this piece primarily discusses the broad impact of AI on small business owners in Kenya but does not demonstrate technical depth, actionable Microsoft technology information, or developer-centered implementation details. The description and content indicate a high-level, business-oriented overview targeting end users and small business operators, not technical practitioners. There is no evidence of Microsoft AI platforms, developer tooling, coding, or architecture, and the content is focused on digital transformation outcomes for business, which falls under the 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' exclusions.",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/ai-tools-small-businesses-kenya/",
+    "timestamp": "2026-02-17 15:16:56 +00:00",
+    "collection": "news"
   }
 ]

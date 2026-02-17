@@ -26062,5 +26062,17 @@
     "timestamp": "2026-02-17 14:18:51 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=T1Ay91zvkok",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-02-17 16:17:44 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/with-shriram-one-financial-services-travel-with-the-customer/",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content repeatedly details that Shriram One is built on Microsoft Azure, with a focus on cloud-native architecture and services (Azure rule 1 and 4). 'Security' is included since the article explains how Microsoft Defender for Cloud and Microsoft Sentinel are integral to the app’s security and compliance (Security rule 1). The 'AI' category is included, as the app employs analytics, personalization models, and chatbots powered by AI and machine learning (AI rules 3, 5, and 6). 'Coding', 'DevOps', and 'ML' were not assigned as there’s no focus on code-level development, DevOps methodologies, or hands-on data science/ML engineering—the coverage for AI and ML focuses on using Microsoft platform features rather than technical implementation or engineering from scratch.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-17 16:18:08 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-17-custom-properties-and-rule-insights-improvements",
+    "reason": "Succesfully added: Assigned the DevOps category because the content describes new GitHub features directly impacting repository policy enforcement, governance, and administrative visibility—all fundamental DevOps concerns (DevOps rules 2, 5, 8). It is not exclusively about coding, AI, Azure, ML, or Security, so none of those additional categories apply. The improvements are targeted at administrators and organization governance, fitting the DevOps and collaboration scope. The tags were extracted to match the technical and administrative nature of features described.",
+    "collection": "news"
   }
 ]
