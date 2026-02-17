@@ -26206,5 +26206,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=Osvu53c0yYg",
     "reason": "Succesfully added: Included the AI category because the event focuses on agentic development, AI-powered extensions, Copilot CLI integration, and topics like 'How VS Code Builds with AI', per AI inclusion rules 1, 3, and 4. Coding category is assigned because Visual Studio Code is a development environment, and the content centers on developer workflows, code editing, tool extensions, and best practices (Coding rules 1, 2, and 4). GitHub Copilot was not included as a primary focus is on Copilot CLI and general AI/agentic features, not Copilot product usage specifically. Azure, DevOps, ML, and Security were not included as the content does not focus on those specific technologies or practices."
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the session centers on building AI-powered applications and agent orchestration in .NET (AI rules 1, 4). Assigned 'Coding' because it focuses on implementing and integrating these capabilities using C# and .NET, which is a Microsoft programming language and framework (Coding rules 1-3). 'Azure' was not assigned directly as Azure integration is mentioned only peripherally and not as a central topic in this session.",
+    "timestamp": "2026-02-17 22:06:41 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=nHZC-tl_ado"
   }
 ]

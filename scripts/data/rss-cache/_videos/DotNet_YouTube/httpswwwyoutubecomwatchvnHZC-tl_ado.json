@@ -1,0 +1,26 @@
+{
+  "Link": "https://www.youtube.com/watch?v=nHZC-tl_ado",
+  "FeedName": "DotNet YouTube",
+  "OutputDir": "_videos",
+  "Author": "dotnet",
+  "FeedLevelAuthor": "dotnet",
+  "Title": ".NET AI Community Standup: Squad: AI agent teams for any project",
+  "PubDate": "2026-02-17T21:26:14+00:00",
+  "ProcessedDate": "2026-02-17 22:05:32",
+  "Description": "AI agents are reshaping how we build intelligent applications — and now C# developers can jump right in. In this session, we’ll explore SQUAD for C# .NET Developers, based on the open-source project at https://github.com/bradygaster/squad.\n\nJoin us as we break down how SQUAD enables orchestration patterns for AI-powered solutions using familiar .NET tools and workflows. We’ll walk through real-world scenarios, show how to integrate AI capabilities into your apps, and discuss how SQUAD fits into the broader AI + .NET ecosystem If you're building modern cloud-native apps and want to infuse them with intelligent, multi-agent capabilities — this session is for you.\n\n🔗 Links: Docs: https://learn.microsoft.com/en-us/collections/8xymaztozmzn2z?source=docs SQUAD Repo: https://github.com/bradygaster/squad\n\n🎙️ Featuring: Bruno Capuano: https://developer.microsoft.com/en-us/advocates/bruno-capuano Brady Gaster: https://www.linkedin.com/in/bradygaster/\n\n#dotnet #AI #Azure #CSharp",
+  "EnhancedContent": null,
+  "Tags": [
+    "AI",
+    "demo",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnet10",
+    "dotnetdeveloper",
+    "dotnetten",
+    "microsoft",
+    "softwaredeveloper",
+    "SQUAD"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+}
