@@ -26056,5 +26056,11 @@
     "timestamp": "2026-02-17 11:15:46 +00:00",
     "collection": "blogs",
     "reason": "Succesfully added: Included Coding category because the article is a technical guide for .NET developers on using the System.Diagnostics.Metrics APIs and instrumenting applications for observability (Coding rules 1, 2, and 4). Did not assign Azure, AI, DevOps, ML, Security, or GitHub Copilot since the article does not focus on those platforms, services, or tools; it's an in-depth .NET instrumentation tutorial. All tags were extracted based on key technologies, instrument types, and methodology in the content and code samples."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the video centers on prompt engineering in the context of LLM workflows and AI-powered developer tools, directly addressing AI inclusion rules (AI rules 1, 4, 5). Assigned 'GitHub Copilot' because the content explicitly focuses on prompt patterns and usage for GitHub Copilot and is produced by GitHub; by critical rules, 'AI' must always be included when 'GitHub Copilot' is assigned. 'Coding', 'Azure', 'DevOps', 'ML', and 'Security' were not assigned because the video does not discuss coding frameworks, Azure/cloud, broader DevOps practices, machine learning engineering, or security topics.",
+    "timestamp": "2026-02-17 14:18:51 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=T1Ay91zvkok",
+    "collection": "videos"
   }
 ]

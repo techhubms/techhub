@@ -1,0 +1,14 @@
+{
+  "Description": "Open Source Friday is back. This week we’re live with Fatih Kadir Akın (@f), the maintainer behind prompts.chat.\n\nprompts.chat is an open source repo focused on practical prompt patterns you can reuse. If you use GitHub Copilot or any LLM workflow, you know the real time sink is not writing a prompt. It’s iterating until it reliably works. This project turns that iteration into something you can copy, adapt, and improve with the community.\n\nRepo: https://github.com/f/prompts.chat Follow Fatih: https://x.com/fkadev",
+  "FeedLevelAuthor": "GitHub",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=T1Ay91zvkok",
+  "FeedName": "GitHub YouTube",
+  "Title": "Open Source Friday with Prompt.chat",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Tags": [],
+  "PubDate": "2026-02-17T13:57:24+00:00",
+  "ProcessedDate": "2026-02-17 14:17:34",
+  "Author": "GitHub"
+}
