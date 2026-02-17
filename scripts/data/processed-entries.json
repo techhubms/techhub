@@ -26104,5 +26104,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/rdp-shortpath-udp-over-private-link-is-now-generally-available/ba-p/4494644",
     "timestamp": "2026-02-17 17:24:41 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Coding category as the article covers technical enhancements for developers, including new APIs, SDKs, PowerShell scripting, and developer tools to integrate and manage MIDI features in Windows 11. Although the main context is music technology, the improvements and tools are squarely aimed at developers creating MIDI-aware applications, which fits the Coding inclusion rules (Microsoft development tools, APIs, and code-related features). There are no DevOps, Azure, AI, ML, Security, or GitHub Copilot elements present. Content is not about business productivity, end-user features, or business strategy, and is technical and developer-focused.",
+    "timestamp": "2026-02-17 18:16:34 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2026/02/17/making-music-with-midi-just-got-a-real-boost-in-windows-11/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on repository management, branch protection, policy enforcement, team collaboration, and review workflows—key DevOps topics (DevOps rules 2, 3, 5, 9). No other categories are appropriate, as the content is about process and automation for code review—not coding, AI, ML, Security, or Azure services.",
+    "timestamp": "2026-02-17 18:17:09 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-17-required-reviewer-rule-is-now-generally-available"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: The content qualifies for the Azure category under Chapter 4, Azure inclusion rules 1 and 4, as it focuses on an Azure platform feature (Virtual Machine Scale Sets) and its operational capabilities in cloud infrastructure. No other categories are appropriate: there is no development/code sample (no Coding), no DevOps process, AI, ML, Security, or GitHub Copilot content present. The post is technical, focused on Azure service usage and monitoring, and contains instructions for practitioners, meeting Tech Hub content standards. No generic exclusion rules apply.",
+    "timestamp": "2026-02-17 18:17:53 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-automatic-zone-balance-for-virtual-machine-scale/ba-p/4494476"
   }
 ]

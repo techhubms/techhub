@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2026-02-17 18:14:16",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "The required reviewer rule for repository rulesets is now generally available, giving you granular control over who must approve changes to specific branches and files across your organization or enterprise.…\n\nThe post [Required reviewer rule is now generally available](https://github.blog/changelog/2026-02-17-required-reviewer-rule-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Title": "Required reviewer rule is now generally available",
+  "EnhancedContent": "The required reviewer rule for repository rulesets is now generally available, giving you granular control over who must approve changes to specific branches and files across your organization or enterprise.\n\n## What’s new since public preview\n\nSince the [public preview](https://github.blog/changelog/2025-11-04-required-review-by-specific-teams-now-available-in-rulesets/), we’ve added support for negation patterns using `!` — just like `.gitignore` . You can now exclude specific files or folders from a review requirement, making it easier to define precise policies without overly broad rules.\n\nWith the required reviewer rule, you can:\n\n- Require a specific number of approvals from designated teams before merging into protected branches\n- Target specific files and folders using pattern matching, with `!`\nnegation to exclude paths\n- Scale review policies consistently across repositories, organizations, or your entire enterprise\n\n## How this differs from CODEOWNERS\n\nWhile CODEOWNERS defines ownership, this rule focuses on policy enforcement. It makes it simple to require specific approvals on sensitive branches and critical code paths, all while scaling seamlessly across your enterprise.\n\nFor example, you can ensure that `*.sql` changes always have a review from your data platform team or that changes to authentication files and folders always have two reviews from your security team before they merge into your `main` branch.\n\nThe required reviewer rule augments CODEOWNERS files but doesn’t replace them. CODEOWNERS files remain the best way to manage ownership, support individuals as reviewers, and request reviews even when not required.\n\nLearn more in [our documentation about rulesets](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/repositories).",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-02-17-required-reviewer-rule-is-now-generally-available",
+  "PubDate": "2026-02-17T15:35:39+00:00",
+  "Tags": [
+    "collaboration tools",
+    "platform governance",
+    "Release"
+  ]
+}

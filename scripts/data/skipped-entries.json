@@ -12045,5 +12045,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/l-Nc6Yndhkw",
     "timestamp": "2026-02-17 17:23:04 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: All available content—title, description, and content body—lacks substantive technical details and does not discuss Microsoft technologies or solutions directly. The content consists mainly of a featured image, a link to a healthcare AI research article, and reference to a news post about DTECH 2026, but does not provide any actionable technical content, implementation detail, or description of Microsoft AI services, frameworks, or development activity. No category inclusion rules are triggered, and generic exclusion applies due to insufficient technical substance.",
+    "timestamp": "2026-02-17 18:16:47 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/energy-and-resources/power-and-utilities/2026/02/17/dtech-2026-how-microsoft-and-our-partners-are-accelerating-ai-innovation-for-utilities/"
   }
 ]
