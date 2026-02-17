@@ -26212,5 +26212,17 @@
     "reason": "Succesfully added: Assigned 'AI' category because the session centers on building AI-powered applications and agent orchestration in .NET (AI rules 1, 4). Assigned 'Coding' because it focuses on implementing and integrating these capabilities using C# and .NET, which is a Microsoft programming language and framework (Coding rules 1-3). 'Azure' was not assigned directly as Azure integration is mentioned only peripherally and not as a central topic in this session.",
     "timestamp": "2026-02-17 22:06:41 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=nHZC-tl_ado"
+  },
+  {
+    "timestamp": "2026-02-17 23:06:48 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content introduces a new REST API for GitHub enterprise billing usage reporting, which directly supports enterprise administration, automation, and operations (DevOps inclusion rules 2, 6, and 7). No other categories were added because there is no AI, coding, Azure, ML, or security focus. The product is core GitHub, and there is no mention of Copilot or code development guidance.",
+    "canonical_url": "https://github.blog/changelog/2026-02-17-api-access-to-billing-usage-reports-in-public-preview"
+  },
+  {
+    "timestamp": "2026-02-17 23:07:38 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because the content is entirely focused on Azure technologies: Log Analytics Workspace, Azure Monitor, Azure Functions, Private Link, and VNet integration (Azure rules 1-5). Assigned 'Security' because the main architectural concern is securely enabling internal-only Log Analytics queries via network security controls, authentication, and access management (Security rules 1, 3, 4, 7, and 9). Assigned 'DevOps' because the SRE Agent pattern, automation, cross-resource group automation/deployment using CLI, and the focus on operational troubleshooting and investigation are core DevOps practices (DevOps rules 1, 3, 5, 6, 9). No 'AI', 'ML', 'Coding', or 'GitHub Copilot' categories were assigned, as the content does not cover pre-built Microsoft AI services, custom ML/data science implementations, code-focused tutorials, or Copilot-specific features.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-azure-sre-agent-can-investigate-resources-in-a-private/ba-p/4494911"
   }
 ]
