@@ -226,7 +226,7 @@ For complete frontmatter schema, see [collections/AGENTS.md - Frontmatter Schema
 
 ### Infrastructure
 
-#### infra/Deploy-Infrastructure.ps1
+
 
 - Azure infrastructure deployment via Bicep
 - Three modes: validate, whatif, deploy
@@ -393,7 +393,7 @@ param(
 
 # Infrastructure
 
-./infra/Deploy-Infrastructure.ps1 -Mode validate
+az deployment sub validate --location westeurope --template-file ./infra/main.bicep --parameters ./infra/parameters/staging.bicepparam
 ```
 
 ### From GitHub Actions

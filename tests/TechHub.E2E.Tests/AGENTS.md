@@ -405,7 +405,7 @@ await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 | Infinite scroll end | Manual wheel scrolling loop | `Page.ScrollToEndOfContentAsync()` |
 | Lazy-loaded element visible | `loading="eager"` attribute hack | Fix in source: remove `loading="lazy"` for above-fold/hero images (see Pattern 10) |
 | Focus after navigation reset | `Locator(":focus").EvaluateAsync()` | `WaitForConditionAsync` + `Page.EvaluateAsync()` |
-| Custom timeout value | `Timeout = 10000` (hardcoded) | `BlazorHelpers.DefaultAssertionTimeout` (5000ms) |
+| Custom timeout value | `Timeout = 5000` (hardcoded) | `BlazorHelpers.DefaultAssertionTimeout` (5000ms) |
 
 #### Pattern 1: Expand/Collapse Animations
 
@@ -454,7 +454,7 @@ await Page.WaitForTimeoutAsync(500); // Hope highlight.js ran
 // ✅ CORRECT - Wait for hljs classes to appear
 await Page.WaitForFunctionAsync(
     "() => document.querySelector('pre code.hljs') !== null",
-    new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+    new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultElementTimeout, PollingInterval = 50 });
 ```
 
 #### Pattern 4: Scroll Position Stability
@@ -526,7 +526,7 @@ await Page.WaitForTimeoutAsync(500);
 await tagButton.ClickBlazorElementAsync();
 await Page.WaitForFunctionAsync(
     "() => document.querySelectorAll('.card').length > 0",
-    new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+    new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultElementTimeout, PollingInterval = 50 });
 await Page.WaitForBlazorReadyAsync();
 ```
 

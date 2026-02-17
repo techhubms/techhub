@@ -92,8 +92,7 @@ public class DXSpaceTests : PlaywrightTestBase
 
             // Assert - Content should get the 'expanded' class after click
             await Assertions.Expect(sectionContent).ToHaveClassAsync(
-                new System.Text.RegularExpressions.Regex("expanded"),
-                new() { Timeout = 3000 });
+                new System.Text.RegularExpressions.Regex("expanded"));
         }
     }
 
@@ -130,8 +129,7 @@ public class DXSpaceTests : PlaywrightTestBase
         var spaceContent = Page.Locator(".dx-card-content").Filter(new() { Has = Page.Locator(".dx-space-grid") });
         await spaceHeader.ClickBlazorElementAsync(waitForUrlChange: false);
         await Assertions.Expect(spaceContent).ToHaveClassAsync(
-            new System.Text.RegularExpressions.Regex("expanded"),
-            new() { Timeout = 3000 });
+            new System.Text.RegularExpressions.Regex("expanded"));
 
         // Assert - Should have SPACE grid
         var spaceGrid = Page.Locator(".dx-space-grid");
@@ -161,8 +159,7 @@ public class DXSpaceTests : PlaywrightTestBase
         var devExContent = devExHeader.Locator("xpath=following-sibling::div[contains(@class, 'dx-card-content')]").First;
         await devExHeader.ClickBlazorElementAsync(waitForUrlChange: false);
         await Assertions.Expect(devExContent).ToHaveClassAsync(
-            new System.Text.RegularExpressions.Regex("expanded"),
-            new() { Timeout = 3000 });
+            new System.Text.RegularExpressions.Regex("expanded"));
 
         // Assert - Should have DevEx pillars grid
         var pillarsGrid = Page.Locator(".dx-devex-grid");

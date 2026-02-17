@@ -1,0 +1,372 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Allow cancellation of in-progress runs when new commits are pushed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
+  security-events: write
+
+jobs:
+  build:
+    name: Build .NET Solution
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore TechHub.slnx
+
+      - name: Build solution
+        run: dotnet build TechHub.slnx --configuration Release --no-restore
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: |
+            **/bin/Release/
+            **/obj/Release/
+          retention-days: 1
+
+  test-unit:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore TechHub.slnx
+
+      - name: Run unit tests
+        run: |
+          dotnet test TechHub.slnx \
+            --configuration Release \
+            --no-restore \
+            --logger "trx;LogFileName=test-results.trx" \
+            --collect:"XPlat Code Coverage" \
+            -- --filter-not-namespace TechHub.E2E.Tests
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: unit-test-results
+          path: '**/TestResults/**'
+          retention-days: 7
+
+  test-integration:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore TechHub.slnx
+
+      - name: Run integration tests
+        run: |
+          dotnet test tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj \
+            --configuration Release \
+            --no-restore \
+            --logger "trx;LogFileName=integration-test-results.trx" \
+            --collect:"XPlat Code Coverage"
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integration-test-results
+          path: '**/TestResults/**'
+          retention-days: 7
+
+  test-e2e:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore TechHub.slnx
+
+      - name: Build solution
+        run: dotnet build TechHub.slnx --configuration Release --no-restore
+
+      - name: Install Playwright dependencies
+        run: |
+          cd tests/TechHub.E2E.Tests
+          pwsh bin/Release/net9.0/playwright.ps1 install --with-deps
+
+      - name: Run E2E tests
+        run: |
+          dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
+            --configuration Release \
+            --no-build \
+            --logger "trx;LogFileName=e2e-test-results.trx"
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e2e-test-results
+          path: '**/TestResults/**'
+          retention-days: 7
+
+      - name: Upload Playwright traces
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-traces
+          path: tests/TechHub.E2E.Tests/bin/Release/net9.0/playwright-traces/
+          retention-days: 7
+
+  lint:
+    name: Lint & Format Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Restore .NET dependencies
+        run: dotnet restore TechHub.slnx
+
+      - name: Check dotnet format
+        run: |
+          dotnet format TechHub.slnx --verify-no-changes --verbosity diagnostic
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Run markdownlint
+        run: |
+          npx markdownlint-cli2 "**/*.md" "#node_modules" "#.tmp"
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore TechHub.slnx
+
+      - name: Run dependency vulnerability scan
+        run: |
+          dotnet list TechHub.slnx package --vulnerable --include-transitive
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@0.32.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          severity: 'CRITICAL,HIGH'
+          exit-code: '0'
+          skip-dirs: 'node_modules,.tmp'
+
+      - name: Upload Trivy results to GitHub Security
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: 'trivy-results.sarif'
+
+  code-coverage:
+    name: Code Coverage Report
+    runs-on: ubuntu-latest
+    needs: [test-unit, test-integration]
+    if: always()
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download unit test results
+        uses: actions/download-artifact@v4
+        with:
+          name: unit-test-results
+          path: unit-coverage
+
+      - name: Download integration test results
+        uses: actions/download-artifact@v4
+        with:
+          name: integration-test-results
+          path: integration-coverage
+
+      - name: Generate coverage report summary
+        run: |
+          echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Coverage reports generated from:" >> $GITHUB_STEP_SUMMARY
+          echo "- Unit tests" >> $GITHUB_STEP_SUMMARY
+          echo "- Integration tests" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📁 Coverage artifacts available for download" >> $GITHUB_STEP_SUMMARY
+
+  quality-gate:
+    name: Quality Gate
+    runs-on: ubuntu-latest
+    needs: [build, test-unit, test-integration, test-e2e, lint, security]
+    if: always()
+    
+    steps:
+      - name: Check quality gate
+        run: |
+          echo "## 🎯 Quality Gate Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Check each job result
+          BUILD_STATUS="${{ needs.build.result }}"
+          UNIT_STATUS="${{ needs.test-unit.result }}"
+          INTEGRATION_STATUS="${{ needs.test-integration.result }}"
+          E2E_STATUS="${{ needs.test-e2e.result }}"
+          LINT_STATUS="${{ needs.lint.result }}"
+          SECURITY_STATUS="${{ needs.security.result }}"
+          
+          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
+          
+          # Build
+          if [ "$BUILD_STATUS" = "success" ]; then
+            echo "| 🏗️ Build | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 🏗️ Build | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Unit Tests
+          if [ "$UNIT_STATUS" = "success" ]; then
+            echo "| 🧪 Unit Tests | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 🧪 Unit Tests | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Integration Tests
+          if [ "$INTEGRATION_STATUS" = "success" ]; then
+            echo "| 🔗 Integration Tests | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 🔗 Integration Tests | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # E2E Tests
+          if [ "$E2E_STATUS" = "success" ]; then
+            echo "| 🌐 E2E Tests | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 🌐 E2E Tests | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Lint
+          if [ "$LINT_STATUS" = "success" ]; then
+            echo "| 📝 Linting & Formatting | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 📝 Linting & Formatting | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Security
+          if [ "$SECURITY_STATUS" = "success" ]; then
+            echo "| 🔒 Security Scan | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 🔒 Security Scan | ⚠️ Issues Found |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Overall result
+          if [ "$BUILD_STATUS" = "success" ] && \
+             [ "$UNIT_STATUS" = "success" ] && \
+             [ "$INTEGRATION_STATUS" = "success" ] && \
+             [ "$E2E_STATUS" = "success" ] && \
+             [ "$LINT_STATUS" = "success" ]; then
+            echo "### ✅ All quality gates passed! 🎉" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            # PR-specific guidance
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              echo "**Next Steps:**" >> $GITHUB_STEP_SUMMARY
+              echo "- 🎉 This PR is ready for review and merge!" >> $GITHUB_STEP_SUMMARY
+              echo "- 📊 Code coverage reports available in artifacts" >> $GITHUB_STEP_SUMMARY
+              if [ "$SECURITY_STATUS" != "success" ]; then
+                echo "- ⚠️ Note: Security scan found issues - review Security tab" >> $GITHUB_STEP_SUMMARY
+              fi
+            fi
+            
+            exit 0
+          else
+            echo "### ❌ Quality gate failed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Please fix the failing checks before merging:**" >> $GITHUB_STEP_SUMMARY
+            
+            if [ "$BUILD_STATUS" != "success" ]; then
+              echo "- 🏗️ Build failed - check compilation errors" >> $GITHUB_STEP_SUMMARY
+            fi
+            if [ "$UNIT_STATUS" != "success" ] || [ "$INTEGRATION_STATUS" != "success" ] || [ "$E2E_STATUS" != "success" ]; then
+              echo "- 🧪 Tests failed - see test results in job logs" >> $GITHUB_STEP_SUMMARY
+            fi
+            if [ "$LINT_STATUS" != "success" ]; then
+              echo "- 📝 Code formatting issues - run \`dotnet format\` and \`markdownlint-cli2 --fix\`" >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "📖 See [testing documentation](docs/testing-strategy.md) for help" >> $GITHUB_STEP_SUMMARY
+            
+            exit 1
+          fi

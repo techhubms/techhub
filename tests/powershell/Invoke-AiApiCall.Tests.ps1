@@ -3,11 +3,11 @@ Describe "Invoke-AiApiCall" {
         
         # Test constants
         $script:TestToken = "test-token-12345"
-        $script:TestModel = "gpt-4"
+        $script:TestEnvironment = "staging"
+        $script:TestModel = "gpt-4.1"
         $script:TestSystemMessage = "You are a helpful assistant."
         $script:TestUserMessage = "Hello, world!"
-        $script:TestEndpoint = "https://test.openai.azure.com/openai/deployments/gpt-4/chat/completions"
-        $script:AzureEndpoint = "https://test.openai.azure.com/openai/deployments/gpt-4/chat/completions"
+        $script:TestEndpoint = "https://oai-techhub-staging.services.ai.azure.com/models/gpt-4.1/chat/completions"
     }
 
     BeforeEach {
@@ -26,6 +26,10 @@ Describe "Invoke-AiApiCall" {
         Mock Get-SourceRoot { return "/workspaces/techhub" }
         Mock Out-File { }
         Mock Start-Sleep { }
+        
+        # Mock the centralized config functions
+        Mock Get-AzureOpenAIEndpoint { return $script:TestEndpoint }
+        Mock Get-AzureOpenAIModelName { return $script:TestModel }
     }
     
     Context "Parameter Validation" {
@@ -33,8 +37,8 @@ Describe "Invoke-AiApiCall" {
             (Get-Command Invoke-AiApiCall).Parameters['Token'].Attributes | Where-Object { $_.GetType().Name -eq 'ParameterAttribute' } | ForEach-Object { $_.Mandatory } | Should -Contain $true
         }
         
-        It "Should have mandatory Model parameter" {
-            (Get-Command Invoke-AiApiCall).Parameters['Model'].Attributes | Where-Object { $_.GetType().Name -eq 'ParameterAttribute' } | ForEach-Object { $_.Mandatory } | Should -Contain $true
+        It "Should have mandatory Environment parameter" {
+            (Get-Command Invoke-AiApiCall).Parameters['Environment'].Attributes | Where-Object { $_.GetType().Name -eq 'ParameterAttribute' } | ForEach-Object { $_.Mandatory } | Should -Contain $true
         }
         
         It "Should have mandatory SystemMessage parameter" {
@@ -43,10 +47,6 @@ Describe "Invoke-AiApiCall" {
         
         It "Should have mandatory UserMessage parameter" {
             (Get-Command Invoke-AiApiCall).Parameters['UserMessage'].Attributes | Where-Object { $_.GetType().Name -eq 'ParameterAttribute' } | ForEach-Object { $_.Mandatory } | Should -Contain $true
-        }
-        
-        It "Should have mandatory Endpoint parameter" {
-            (Get-Command Invoke-AiApiCall).Parameters['Endpoint'].Attributes | Where-Object { $_.GetType().Name -eq 'ParameterAttribute' } | ForEach-Object { $_.Mandatory } | Should -Contain $true
         }
     }
     
@@ -61,7 +61,7 @@ Describe "Invoke-AiApiCall" {
                 }
             }
             
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $AzureEndpoint
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
             
             $result | Should -Be "Azure success"
         }
@@ -75,11 +75,13 @@ Describe "Invoke-AiApiCall" {
                 }
             }
             
-            Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $AzureEndpoint
+            Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
         }
         
         It "Should throw for unsupported endpoints" {
-            { Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint "https://unsupported.com/api" } | Should -Throw "*Unsupported endpoint*"
+            Mock Get-AzureOpenAIEndpoint { return "https://unsupported.com/api" }
+            
+            { Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage } | Should -Throw "*Unsupported endpoint*"
         }
     }
     
@@ -91,7 +93,7 @@ Describe "Invoke-AiApiCall" {
                 }
             }
             
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
             
             $result | Should -Be "Hello from AI!"
         }
@@ -112,7 +114,7 @@ Describe "Invoke-AiApiCall" {
                 }
             }
             
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
             
             $result | Should -Be "Validated"
         }
@@ -131,7 +133,7 @@ Describe "Invoke-AiApiCall" {
             
             Mock Invoke-WebRequest { throw "Request too large" }
             
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
             
             $errorObject = $result | ConvertFrom-Json
             $errorObject.Error | Should -Be $true
@@ -152,7 +154,7 @@ Describe "Invoke-AiApiCall" {
             
             Mock Invoke-WebRequest { throw "Rate limited" }
             
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
             
             $errorObject = $result | ConvertFrom-Json
             $errorObject.Error | Should -Be $true
@@ -175,7 +177,7 @@ Describe "Invoke-AiApiCall" {
             
             Mock Invoke-WebRequest { throw "Content filtered" }
             
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
             
             $errorObject = $result | ConvertFrom-Json
             $errorObject.Error | Should -Be $true
@@ -189,7 +191,7 @@ Describe "Invoke-AiApiCall" {
                 }
             }
             
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
             
             $errorObject = $result | ConvertFrom-Json
             $errorObject.Error | Should -Be $true
@@ -213,7 +215,7 @@ Describe "Invoke-AiApiCall" {
             
             Mock Start-Sleep { param($Seconds) }
             
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
             
             $result | Should -Be "Success after retries"
             $script:callCount | Should -Be 3
@@ -225,13 +227,13 @@ Describe "Invoke-AiApiCall" {
         It "Should respect MaxRetries parameter" {
             Mock Invoke-WebRequest { throw "Always fails" }
             
-            { Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint -MaxRetries 1 } | Should -Throw
+            { Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -MaxRetries 1 } | Should -Throw
         }
     }
     
     Context "WhatIf Support" {
         It "Should return dummy response in WhatIf mode" {
-            $result = Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint -WhatIf
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -WhatIf
             
             $result | Should -Match "Sample Article Title"
             
@@ -242,7 +244,7 @@ Describe "Invoke-AiApiCall" {
         It "Should display WhatIf information" {
             Mock Write-Host { }
             
-            Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint -WhatIf
+            Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -WhatIf
             
             Should -Invoke Write-Host -ParameterFilter { $Object -like "*What if*" }
             Should -Invoke Write-Host -ParameterFilter { $Object -like "*Model: $TestModel*" }
@@ -259,7 +261,7 @@ Describe "Invoke-AiApiCall" {
             
             Mock Start-Sleep { param($Seconds) }
             
-            Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint -RateLimitPreventionDelay 10
+            Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -RateLimitPreventionDelay 10
             
             Should -Invoke Start-Sleep -ParameterFilter { $Seconds -eq 10 }
         }
@@ -268,7 +270,7 @@ Describe "Invoke-AiApiCall" {
             Mock Invoke-WebRequest { throw "API failure" }
             Mock Start-Sleep { param($Seconds) }
             
-            { Invoke-AiApiCall -Token $TestToken -Model $TestModel -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -Endpoint $TestEndpoint -MaxRetries 0 -RateLimitPreventionDelay 5 } | Should -Throw
+            { Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage -MaxRetries 0 -RateLimitPreventionDelay 5 } | Should -Throw
             
             Should -Invoke Start-Sleep -ParameterFilter { $Seconds -eq 5 }
         }

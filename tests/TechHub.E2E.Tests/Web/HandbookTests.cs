@@ -44,9 +44,7 @@ public class HandbookTests : PlaywrightTestBase
         // The hero image loads eagerly (no loading="lazy") so it should be
         // fully loaded by the time Playwright sees the page.
         await Page.WaitForConditionAsync(
-            "() => { const img = document.querySelector('.handbook-hero img'); return img?.complete === true && img?.naturalHeight > 0; }",
-            DefaultAssertionTimeout,
-            pollingIntervalMs: 200);
+            "() => { const img = document.querySelector('.handbook-hero img'); return img?.complete === true && img?.naturalHeight > 0; }");
 
         // Verify image attributes
         var src = await bookCover.GetAttributeAsync("src");

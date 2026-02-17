@@ -4,18 +4,21 @@ function Invoke-AiApiCall {
         [Parameter(Mandatory = $true)]
         [string]$Token,
         [Parameter(Mandatory = $true)]
-        [string]$Model,
+        [ValidateSet('staging', 'prod')]
+        [string]$Environment,
         [Parameter(Mandatory = $true)]
         [string]$SystemMessage,
         [Parameter(Mandatory = $true)]
         [string]$UserMessage,
         [Parameter(Mandatory = $false)]
         [int]$MaxRetries = 3,
-        [Parameter(Mandatory = $true)]
-        [string]$Endpoint,
         [Parameter(Mandatory = $false)]
         [int]$RateLimitPreventionDelay = 15
     )
+
+    # Get endpoint and model from centralized config based on environment
+    $endpoint = Get-AzureOpenAIEndpoint -Environment $Environment
+    $model = Get-AzureOpenAIModelName
 
     $messages = @(
         @{
@@ -29,7 +32,7 @@ function Invoke-AiApiCall {
     )
 
     $apiRequestBody = @{
-        "model"    = $Model
+        "model"    = $model
         "messages" = $messages
     } | ConvertTo-Json -Depth 10 -Compress
 
@@ -38,8 +41,8 @@ function Invoke-AiApiCall {
     }
     
     # Determine authentication and URL based on endpoint
-    $uri = $Endpoint
-    if ($Endpoint -like "*.azure.com*") {
+    $uri = $endpoint
+    if ($endpoint -like "*.azure.com*") {
         $headers["api-key"] = $Token
         
         # Add API version if not already in URL
@@ -53,12 +56,12 @@ function Invoke-AiApiCall {
         }
     }
     else {
-        throw "Unsupported endpoint: $Endpoint. Only Azure AI Foundry endpoints (*.azure.com) are supported."
+        throw "Unsupported endpoint: $endpoint. Only Azure AI Foundry endpoints (*.azure.com) are supported."
     }
 
     if ($PSCmdlet.ShouldProcess("AI API", "Send chat completion request")) {
         Write-Host "Sending request to: $uri" -ForegroundColor Cyan
-        Write-Host "Model: $Model" -ForegroundColor Cyan
+        Write-Host "Model: $model" -ForegroundColor Cyan
         Write-Host "Request body length: $($apiRequestBody.Length) characters" -ForegroundColor Cyan
         
         $retryCount = 0

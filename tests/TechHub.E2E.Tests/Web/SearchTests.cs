@@ -20,7 +20,7 @@ public class SearchTests : PlaywrightTestBase
 
         // Assert - Search box should be visible and accessible
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
-        await Assertions.Expect(searchInput).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+        await searchInput.AssertElementVisibleAsync();
 
         // Verify accessibility
         var ariaLabel = await searchInput.GetAttributeAsync("aria-label");
@@ -39,9 +39,8 @@ public class SearchTests : PlaywrightTestBase
         await searchInput.FillAsync("copilot");
 
         // Wait for debounce + URL update
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('search=')",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.WaitForUrlConditionAsync(
+            "() => window.location.href.includes('search=')");
 
         // Assert - URL should contain search parameter
         var currentUrl = Page.Url;
@@ -77,7 +76,7 @@ public class SearchTests : PlaywrightTestBase
 
         // Assert - Clear button should appear (auto-retries via Expect)
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
-        await Assertions.Expect(clearButton).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+        await clearButton.AssertElementVisibleAsync();
     }
 
     [Fact]
@@ -94,9 +93,8 @@ public class SearchTests : PlaywrightTestBase
         await clearButton.ClickAsync();
 
         // Wait for URL to update (search parameter removed via Blazor pushState)
-        await Page.WaitForConditionAsync(
-            "() => !window.location.href.includes('search=')",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.WaitForUrlConditionAsync(
+            "() => !window.location.href.includes('search=')");
 
         // Assert - Search should be cleared
         var inputValue = await searchInput.InputValueAsync();
@@ -117,18 +115,16 @@ public class SearchTests : PlaywrightTestBase
         await tagButton.ClickBlazorElementAsync();
 
         // Wait for tags parameter to appear in URL after tag click
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('tags=')",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.WaitForUrlConditionAsync(
+            "() => window.location.href.includes('tags=')");
 
         // Act 2 - Add search query
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
         await searchInput.FillAsync("copilot");
 
         // Wait for debounce + URL update (replaces unreliable Task.Delay)
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('search=')",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.WaitForUrlConditionAsync(
+            "() => window.location.href.includes('search=')");
 
         // Assert - URL should contain both search and tags parameters
         var currentUrl = Page.Url;
@@ -146,16 +142,21 @@ public class SearchTests : PlaywrightTestBase
     public async Task Search_WhenCleared_KeepsOtherFilters()
     {
         // Arrange - Navigate with both search and tags parameters
-        await Page.GotoRelativeAsync("/github-copilot?search=test&tags=vs%20code");
+        // Use longer timeout as page needs to load + apply search + apply tag filter
+        await Page.GotoRelativeAsync("/github-copilot?search=test&tags=vs%20code",
+            options: new PageGotoOptions { Timeout = BlazorHelpers.BrowserLaunchTimeout });
+
+        // Wait for search input to be populated (ensures Blazor has processed URL params)
+        var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
+        await Assertions.Expect(searchInput).ToHaveValueAsync("test");
 
         // Act - Clear only the search
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
         await clearButton.ClickAsync();
 
         // Wait for URL to update (search parameter removed via Blazor)
-        await Page.WaitForConditionAsync(
-            "() => !window.location.href.includes('search=')",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.WaitForUrlConditionAsync(
+            "() => !window.location.href.includes('search=')");
 
         // Assert - Tags should remain, search should be removed
         var currentUrl = Page.Url;
@@ -177,9 +178,8 @@ public class SearchTests : PlaywrightTestBase
         await searchInput.PressAsync("Escape");
 
         // Wait for URL to update (search parameter removed via Blazor)
-        await Page.WaitForConditionAsync(
-            "() => !window.location.href.includes('search=')",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.WaitForUrlConditionAsync(
+            "() => !window.location.href.includes('search=')");
 
         // Assert - Search should be cleared
         var inputValue = await searchInput.InputValueAsync();
@@ -200,13 +200,12 @@ public class SearchTests : PlaywrightTestBase
         await searchInput.FillAsync("xyzabc123nonexistent");
 
         // Wait for debounce + URL update before checking results
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('search=')",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.WaitForUrlConditionAsync(
+            "() => window.location.href.includes('search=')");
 
         // Assert - Should show "no results" message (auto-retries via Expect)
         var noResultsMessage = Page.Locator("text=/no.*results/i").Or(Page.Locator(".no-content"));
-        await Assertions.Expect(noResultsMessage).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+        await noResultsMessage.AssertElementVisibleAsync();
     }
 
     [Fact]
@@ -220,9 +219,8 @@ public class SearchTests : PlaywrightTestBase
         await searchInput.FillAsync("copilot");
 
         // Wait for debounce + URL update
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('search=')",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.WaitForUrlConditionAsync(
+            "() => window.location.href.includes('search=')");
 
         // Assert - URL should contain search parameter
         var currentUrl = Page.Url;

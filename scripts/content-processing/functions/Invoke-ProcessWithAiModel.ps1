@@ -4,13 +4,12 @@ function Invoke-ProcessWithAiModel {
         [Parameter(Mandatory = $true)]
         [string]$Token,
         [Parameter(Mandatory = $true)]
-        [string]$Model,
+        [ValidateSet('staging', 'prod')]
+        [string]$Environment,
         [Parameter(Mandatory = $true)]
         [hashtable]$InputData,
         [Parameter(Mandatory = $false)]
         [int]$MaxRetries = 3,
-        [Parameter(Mandatory = $true)]
-        [string]$Endpoint,
         [Parameter(Mandatory = $false)]
         [int]$RateLimitPreventionDelay = 15
     )
@@ -27,11 +26,10 @@ function Invoke-ProcessWithAiModel {
         # Call the generic AI API function with individual messages
         $response = Invoke-AiApiCall `
             -Token $Token `
-            -Model $Model `
+            -Environment $Environment `
             -SystemMessage $systemMessage `
             -UserMessage $inputDataJson `
             -MaxRetries $MaxRetries `
-            -Endpoint $Endpoint `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         # Parse the response as JSON first (since Invoke-AiApiCall content could be invalid JSON)
@@ -51,9 +49,8 @@ function Invoke-ProcessWithAiModel {
     }
     else {
         Write-Host "What if: Would process RSS content with AI model"
-        Write-Host "What if: Model: $Model"
+        Write-Host "What if: Environment: $Environment"
         Write-Host "What if: InputData keys: $($InputData.Keys -join ', ')"
-        Write-Host "What if: Endpoint: $Endpoint"
         
         # Return a dummy response object for WhatIf mode
         return [PSCustomObject]@{

@@ -186,21 +186,6 @@ app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
-// Page timing endpoint - receives client-side performance metrics
-app.MapPost("/api/page-timing", (PageTimingMetrics metrics, ILogger<Program> logger) =>
-{
-    logger.LogInformation(
-        "Page {Page} loaded: DNS={DnsMs}ms, TCP={TcpMs}ms, Request={RequestMs}ms, Response={ResponseMs}ms, " +
-        "DOMParse={DomParseMs}ms, TimeToInteractive={TimeToInteractiveMs}ms, DOMReady={DomReadyMs}ms, TotalLoad={TotalLoadMs}ms",
-        metrics.Page, metrics.Dns, metrics.Tcp, metrics.Request, metrics.Response,
-        metrics.DomParse, metrics.TimeToInteractive, metrics.DomReady, metrics.TotalLoad
-    );
-    return Results.Ok();
-})
-.WithName("LogPageTiming")
-.DisableAntiforgery()  // Allow POST without antiforgery token
-.ExcludeFromDescription();
-
 // RSS feed proxy endpoints - serve feeds from same domain as website
 app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
 {
@@ -234,16 +219,3 @@ app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClien
 app.MapDefaultEndpoints();
 
 await app.RunAsync();
-
-// Page timing metrics DTO
-internal record PageTimingMetrics(
-    string Page,
-    int Dns,
-    int Tcp,
-    int Request,
-    int Response,
-    int DomParse,
-    int TimeToInteractive,
-    int DomReady,
-    int TotalLoad
-);

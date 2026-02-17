@@ -347,7 +347,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Other buttons should NOT have "active" class - verify Blogs button exists but is not active
         var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.AssertElementVisibleAsync();
-        var blogsClass = await blogsButton.GetAttributeAsync("class", new() { Timeout = BlazorHelpers.DefaultElementTimeout });
+        var blogsClass = await blogsButton.GetAttributeAsync("class");
         blogsClass.Should().NotContain("active",
             "non-selected collection buttons should not have the 'active' class");
     }

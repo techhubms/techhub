@@ -143,6 +143,7 @@ PowerShell automation scripts for development and maintenance tasks:
   - `Run` - Build, test, and start servers (use this for all build/test operations)
   - `Run -WithoutTests` - Start servers without running tests
   - `Run -TestProject <name>` - Run specific test project
+
 - **`Generate-DocumentationIndex.ps1`** - Generates `docs/documentation-index.md` from doc headings
 - **`Generate-DevCertificate.ps1`** - Creates HTTPS dev certificates
 - **`Normalize-Images.ps1`** - Optimizes and normalizes images
@@ -154,13 +155,22 @@ See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patte
 
 ### Infrastructure (`infra/`)
 
-Azure infrastructure as code (Bicep templates):
+Azure infrastructure as code (Bicep templates) for Azure Container Apps deployment:
 
-- **`main.bicep`** - Main infrastructure template
-- **`parameters.prod.json`** - Production environment parameters
-- **`parameters.template.json`** - Template for creating environment parameters
-- **`Deploy-Infrastructure.ps1`** - Deployment script
-- **`modules/`** - Reusable Bicep modules
+- **`main.bicep`** - Main infrastructure orchestration template
+- **`parameters/`** - Environment-specific parameter files:
+  - `staging.bicepparam` - Staging environment
+  - `prod.bicepparam` - Production environment
+- **`modules/`** - Reusable Bicep modules:
+  - `containerApps.bicep` - Container Apps Environment
+  - `api.bicep` - TechHub API Container App
+  - `web.bicep` - TechHub Web Container App
+  - `monitoring.bicep` - Application Insights + Log Analytics
+  - `registry.bicep` - Azure Container Registry
+
+Deployment is managed via GitHub Actions workflow (`.github/workflows/deploy-infrastructure.yml`) using `.bicepparam` files.
+
+See [specs/008-azure-infrastructure/spec.md](../specs/008-azure-infrastructure/spec.md) for architecture details.
 
 ### Feature Specifications (`specs/`)
 
@@ -211,8 +221,13 @@ Temporary working directory for AI assistants and development tasks (gitignored)
 
 ### Other Hidden Directories
 
-- **`.github/`** - GitHub Actions workflows and configuration
+- **`.github/`** - GitHub Actions workflows and CI/CD automation
+  - `workflows/ci.yml` - Continuous Integration (build, test, lint, security) - runs on all PRs and pushes to main
+  - `workflows/deploy.yml` - Deployment to staging (automatic) and production (manual approval)
+  - `workflows/deploy-infrastructure.yml` - Infrastructure deployment (Bicep templates)
+  - See [ci-cd-pipeline.md](ci-cd-pipeline.md) for complete CI/CD documentation
 - **`.vscode/`** - VS Code workspace settings and launch configurations
 - **`.git/`** - Git repository metadata
 - **`.specify/`** - SpecKit configuration and templates
 - **`.playwright-mcp/`** - Playwright MCP (Model Context Protocol) configuration
+- **`.dockerignore`** - Files to exclude from Docker builds

@@ -139,8 +139,7 @@ jobs:
           # Run the roundup generation script with default parameters
           & scripts/content-processing/iterative-roundup-generation.ps1 `
             -Token "${{ secrets.AZURE_AI_KEY }}" `
-            -Model "gpt-4.1" `
-            -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `
+            -Environment "prod" `
             -StartDate "${{ steps.dates.outputs.start-date }}" `
             -EndDate "${{ steps.dates.outputs.end-date }}" `
             -WorkspaceDirectory "${{ github.workspace }}"

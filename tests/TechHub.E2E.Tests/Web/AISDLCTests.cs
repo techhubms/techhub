@@ -40,7 +40,7 @@ public class AISDLCTests : PlaywrightTestBase
 
         // Content should render - use main element specifically to avoid strict mode violation
         var mainContent = Page.Locator("main");
-        await Assertions.Expect(mainContent).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(mainContent).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -94,8 +94,7 @@ public class AISDLCTests : PlaywrightTestBase
 
         // Assert - Content should get the 'expanded' class after click
         await Assertions.Expect(phaseContent).ToHaveClassAsync(
-            new System.Text.RegularExpressions.Regex("expanded"),
-            new() { Timeout = 3000 });
+            new System.Text.RegularExpressions.Regex("expanded"));
     }
 
     [Fact]
@@ -129,8 +128,7 @@ public class AISDLCTests : PlaywrightTestBase
         var firstPhaseContent = Page.Locator(".sdlc-phase-content").First;
         await firstPhaseHeader.ClickBlazorElementAsync(waitForUrlChange: false);
         await Assertions.Expect(firstPhaseContent).ToHaveClassAsync(
-            new System.Text.RegularExpressions.Regex("expanded"),
-            new() { Timeout = 3000 });
+            new System.Text.RegularExpressions.Regex("expanded"));
 
         // Assert - Expanded phase should show AI enhancements
         var aiSection = firstPhaseContent.Locator(".sdlc-phase-ai");

@@ -20,8 +20,7 @@ public class InfiniteScrollTests : PlaywrightTestBase
 
         // Wait for content to load - using .card selector (actual CSS class)
         await Page.WaitForConditionAsync(
-            "() => document.querySelectorAll('.card').length > 0",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 100 });
+            "() => document.querySelectorAll('.card').length > 0");
 
         // Assert - Initial batch should load 20 items
         var itemCount = await Page.Locator(".card").CountAsync();
@@ -36,8 +35,7 @@ public class InfiniteScrollTests : PlaywrightTestBase
 
         // Wait for initial content
         await Page.WaitForConditionAsync(
-            "() => document.querySelectorAll('.card').length >= 20",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 100 });
+            "() => document.querySelectorAll('.card').length >= 20");
 
         var initialCount = await Page.Locator(".card").CountAsync();
         initialCount.Should().Be(20);
@@ -59,16 +57,14 @@ public class InfiniteScrollTests : PlaywrightTestBase
 
         // Wait for initial content
         await Page.WaitForConditionAsync(
-            "() => document.querySelectorAll('.card').length > 0",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 100 });
+            "() => document.querySelectorAll('.card').length > 0");
 
         // Act - Keep scrolling until we see the end message or all content is loaded
         await Page.ScrollToEndOfContentAsync();
 
         // Assert - End message should be visible
         var endMessage = Page.Locator(".end-of-content");
-        await Assertions.Expect(endMessage).ToBeVisibleAsync(
-            new LocatorAssertionsToBeVisibleOptions { Timeout = 5000 });
+        await Assertions.Expect(endMessage).ToBeVisibleAsync();
 
         var endText = await endMessage.TextContentAsync();
         endText.Should().Contain("End of content");
@@ -86,8 +82,7 @@ public class InfiniteScrollTests : PlaywrightTestBase
 
         // Wait for initial content
         await Page.WaitForConditionAsync(
-            "() => document.querySelectorAll('.card').length >= 20",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 100 });
+            "() => document.querySelectorAll('.card').length >= 20");
 
         // Get first item's title to verify it stays
         var firstItemTitle = await Page.Locator(".card").First.Locator("h3").TextContentAsync();

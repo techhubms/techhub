@@ -218,6 +218,10 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
         )
 
         Mock Get-SourceRoot { return $global:TempPath }
+        
+        # Mock the centralized config functions
+        Mock Get-AzureOpenAIEndpoint { return "https://oai-techhub-staging.services.ai.azure.com/models/gpt-4.1/chat/completions" }
+        Mock Get-AzureOpenAIModelName { return "gpt-4.1" }
     }
     
     AfterAll {
@@ -272,7 +276,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
             # Run the conversion (NOTE: -WhatIf is intentionally NOT used here because this test must 
             # verify that entries are actually written to the skipped entries file. The mocked API 
             # call prevents markdown file creation, so only tracking files are modified.)
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 0 new files (since content was filtered)
             $result | Should -Be 0
@@ -407,7 +411,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
             
             # Run the conversion (NOTE: -WhatIf is intentionally NOT used here because this test must 
             # verify that one file is actually created and one entry is written to skipped entries)
-            $result = Convert-RssToMarkdown -Items $script:testItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:testItems -Token "test-token" -Environment "staging"
             
             # Should return 1 new file (second item succeeded)
             $result | Should -Be 1
@@ -441,7 +445,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
             }
             
             # Should throw because APIError is not a recognized error type  
-            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } |
+            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging" } |
             Should -Throw "*Unknown error type: Type: APIError, Message: Network error occurred*"
         }
         
@@ -473,7 +477,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
             }
             
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 0 new files
             $result | Should -Be 0
@@ -512,7 +516,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
             
             # Run the conversion (NOTE: -WhatIf is intentionally NOT used here because this test must 
             # verify that entries are actually written to the skipped entries file.)
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 0 new files (since JSON parsing failed)
             $result | Should -Be 0
@@ -582,7 +586,7 @@ This is old content that should be replaced.
             }
             
             # Run the conversion - should remove old file early and create new one
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 1 new file
             $result | Should -Be 1
@@ -640,7 +644,7 @@ This file should be removed even if AI processing fails.
             }
             
             # Run the conversion - file should be removed even though AI processing fails
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 0 new files (AI processing failed)
             $result | Should -Be 0
@@ -709,7 +713,7 @@ This is old content that should be replaced.
             }
             
             # Run the conversion - should remove old file and create new one
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 1 new file
             $result | Should -Be 1
@@ -795,7 +799,7 @@ This is the target article that should be removed.
             }
             
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 1 new file
             $result | Should -Be 1
@@ -857,7 +861,7 @@ This file has malformed YAML but contains a different URL so should not be remov
             }
             
             # Should not throw an exception even with malformed file
-            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } | Should -Not -Throw
+            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging" } | Should -Not -Throw
             
             # Malformed file should still exist (not removed due to different URL)
             Test-Path $malformedFile | Should -Be $true
@@ -914,7 +918,7 @@ This has a quoted external URL.
             }
             
             # Run conversion
-            Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Quoted file should be removed
             Test-Path $quotedFile | Should -Be $false
@@ -961,7 +965,7 @@ This has an unquoted external URL.
             # Feed object creation removed - using direct items array
             
             # Run conversion again with unquoted feed
-            Convert-RssToMarkdown -Items $unquotedTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            Convert-RssToMarkdown -Items $unquotedTestItems -Token "test-token" -Environment "staging"
             
             # Unquoted file should be removed
             Test-Path $unquotedFile | Should -Be $false
@@ -1004,7 +1008,7 @@ This has an unquoted external URL.
             }
             
             # Should not throw an exception and should process normally
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 1 (new file created)
             ($result | Measure-Object).Count | Should -Be 1
@@ -1044,7 +1048,7 @@ This has an unquoted external URL.
             }
             
             # The function should continue processing even when it encounters files it can't read
-            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } | Should -Not -Throw
+            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging" } | Should -Not -Throw
             
             # Clean up
             if (Test-Path $testFile) { Remove-Item $testFile -Force }
@@ -1092,7 +1096,7 @@ Content
             }
             
             # Should not throw an exception even with invalid file content
-            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } | Should -Not -Throw
+            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging" } | Should -Not -Throw
             
             # Clean up
             if (Test-Path $invalidFile) { Remove-Item $invalidFile -Force }
@@ -1139,7 +1143,7 @@ Content
             }
             
             # Run with -WhatIf to test ShouldProcess behavior
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -WhatIf
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging" -WhatIf
             
             # Should return 1 (simulated file creation)
             ($result | Measure-Object).Count | Should -Be 1
@@ -1188,7 +1192,7 @@ Content
             }
 
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $shortTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $shortTestItems -Token "test-token" -Environment "staging"
 
             # Should return 1 new file
             $result | Should -Be 1
@@ -1238,7 +1242,7 @@ Content
             }
 
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $youTubeTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $youTubeTestItems -Token "test-token" -Environment "staging"
 
             # Should return 1 new file
             ($result | Measure-Object).Count | Should -Be 1
@@ -1277,7 +1281,7 @@ Content
             }
 
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $redditTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $redditTestItems -Token "test-token" -Environment "staging"
 
             # Should return 1 new file
             $result | Should -Be 1
@@ -1318,7 +1322,7 @@ Content
             }
 
             # Run the conversion - should throw when AI processing fails
-            { Convert-RssToMarkdown -Items $errorTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } | Should -Throw "*AI service error: Unable to process content*"
+            { Convert-RssToMarkdown -Items $errorTestItems -Token "test-token" -Environment "staging" } | Should -Throw "*AI service error: Unable to process content*"
 
             # Verify AI processing was attempted
             Should -Invoke Invoke-ProcessWithAiModel -Exactly 1
@@ -1367,7 +1371,7 @@ Content
             }
             
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
             
             # Should return 1 new file
             ($result | Measure-Object).Count | Should -Be 1
@@ -1378,3 +1382,4 @@ Content
         }
     }
 }
+

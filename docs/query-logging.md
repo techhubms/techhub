@@ -56,7 +56,7 @@ These extensions:
 
 Logged queries appear in the application logs:
 
-```
+```text
 [Information] Query executed: 45ms, Rows=12
 SQL: SELECT slug, title, date_epoch...
 Params: collection="blogs", take=20, skip=0

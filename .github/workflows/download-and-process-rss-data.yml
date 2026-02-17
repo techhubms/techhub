@@ -216,8 +216,7 @@ jobs:
               "${{ github.repository }}" `
               "$env:TOKEN" `
               -WorkspaceDirectory "${{ github.workspace }}" `
-              -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `
-              -Model "gpt-4.1" `
+              -Environment "prod" `
               -RateLimitPreventionDelay 10
             Write-Host "✅ RSS data processing completed"
           } catch {

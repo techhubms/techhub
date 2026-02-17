@@ -3,6 +3,26 @@
 
 Describe "Invoke-ProcessWithAiModel" {
     BeforeAll {
+        # Initialize-BeforeAll.ps1 (inline for standalone test execution)
+        if (-not $global:TempPath) {
+            $tempBase = if ($env:TEMP) { $env:TEMP } elseif ($env:TMP) { $env:TMP } elseif ($env:TMPDIR) { $env:TMPDIR } else { "/tmp" }
+            $tempPath = Join-Path $tempBase "pwshtests"
+            if (Test-Path $tempPath) {
+                Remove-Item $tempPath -Recurse -Force
+            }
+            New-Item -ItemType Directory -Path $tempPath -Force | Out-Null
+            $global:TempPath = $tempPath
+        }
+        
+        # Load PowerShell functions
+        $functionsPath = Join-Path $PSScriptRoot "../../scripts/content-processing/functions"
+        if (Test-Path $functionsPath) {
+            . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
+            Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
+            Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
+            ForEach-Object { . $_.FullName }
+        }
+        
         $script:TestScriptsPath = Join-Path $global:TempPath "scripts"
         $script:TestDataPath = Join-Path $global:TempPath "_data"
         $script:TestSystemMessagePath = Join-Path $script:TestScriptsPath "system-message.md"
@@ -27,6 +47,10 @@ Describe "Invoke-ProcessWithAiModel" {
         New-Item -Path $script:TestDataPath -ItemType Directory -Force | Out-Null
         Set-Content -Path $script:TestSystemMessagePath -Value "Test system message for AI API"
         Set-Content -Path $script:TestSkippedEntriesPath -Value "[]"
+        
+        # Mock the centralized config functions
+        Mock Get-AzureOpenAIEndpoint { return "https://oai-techhub-staging.services.ai.azure.com/models/gpt-4.1/chat/completions" }
+        Mock Get-AzureOpenAIModelName { return "gpt-4.1" }
     }
     
     Context "Content Filter Error Detection" {
@@ -42,7 +66,7 @@ Describe "Invoke-ProcessWithAiModel" {
             }
             
             # Should receive and parse the content filter error
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData @{"test" = "content" }
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData @{"test" = "content" }
             $result.Error | Should -Be $true
             $result.Type | Should -Be "ContentFilter"
         }
@@ -69,7 +93,7 @@ Describe "Invoke-ProcessWithAiModel" {
                 }
                 
                 # Should receive and parse the content filter error
-                $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData @{"test" = "content" }
+                $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData @{"test" = "content" }
                 $result.Error | Should -Be $true
                 $result.Type | Should -Be "ContentFilter"
             }
@@ -87,7 +111,7 @@ Describe "Invoke-ProcessWithAiModel" {
             }
             
             # Should parse the error response and return parsed object
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData @{"test" = "content" }
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData @{"test" = "content" }
             $result.Error | Should -Be $true
             $result.Type | Should -Be "BadRequest"
         }
@@ -104,7 +128,7 @@ Describe "Invoke-ProcessWithAiModel" {
                 } | ConvertTo-Json -Compress
             }
             
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData @{"test" = "content" }
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData @{"test" = "content" }
             
             # Should receive and parse the rate limit error from the API caller
             $result.Error | Should -Be $true
@@ -115,7 +139,7 @@ Describe "Invoke-ProcessWithAiModel" {
     
     Context "WhatIf Mode" {
         It "Should return dummy response in WhatIf mode" {
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData @{"test" = "content" } -WhatIf
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData @{"test" = "content" } -WhatIf
             
             $result | Should -Not -BeNullOrEmpty
             $result.title | Should -Be "Sample RSS Article Title"
@@ -124,15 +148,14 @@ Describe "Invoke-ProcessWithAiModel" {
     }
     
     Context "Endpoint Integration" {
-        It "Should pass endpoint parameters to Invoke-AiApiCall correctly" -Tag "Endpoint" {
-            # Test that custom endpoints are properly passed through to the API caller
+        It "Should pass environment parameters to Invoke-AiApiCall correctly" -Tag "Endpoint" {
+            # Test that environment is properly passed through to the API caller
             Mock Invoke-AiApiCall {
-                param($Token, $Model, $SystemMessage, $UserMessage, $MaxRetries, $Endpoint, $RateLimitPreventionDelay)
+                param($Token, $Environment, $SystemMessage, $UserMessage, $MaxRetries, $RateLimitPreventionDelay)
                 
                 # Verify parameters are passed correctly
                 $Token | Should -Be "test-token"
-                $Model | Should -Be "test-model"
-                $Endpoint | Should -Be "https://myresource.services.ai.azure.com/models/chat/completions"
+                $Environment | Should -Be "staging"
                 $SystemMessage | Should -Not -BeNullOrEmpty
                 $UserMessage | Should -Not -BeNullOrEmpty
                 $MaxRetries | Should -Be 5
@@ -145,7 +168,7 @@ Describe "Invoke-ProcessWithAiModel" {
                 return ($responseObject | ConvertTo-Json -Compress)
             }
             
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -InputData @{"test" = "content" } -MaxRetries 5 -RateLimitPreventionDelay 20
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData @{"test" = "content" } -MaxRetries 5 -RateLimitPreventionDelay 20
             $result | Should -Not -BeNullOrEmpty
         }
         
@@ -159,7 +182,7 @@ Describe "Invoke-ProcessWithAiModel" {
                 } | ConvertTo-Json -Compress
             }
             
-            $result = Invoke-ProcessWithAiModel -Token "invalid-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData @{"test" = "content" }
+            $result = Invoke-ProcessWithAiModel -Token "invalid-token" -Environment "staging" -InputData @{"test" = "content" }
             
             # Should receive and parse the authentication error
             $result.Error | Should -Be $true
@@ -187,7 +210,7 @@ Describe "Invoke-ProcessWithAiModel" {
             }
             
             # Call the function with retry parameters
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData @{"test" = "data"} -MaxRetries 2
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData @{"test" = "data"} -MaxRetries 2
             
             # Verify the call was made and result returned
             Should -Invoke Invoke-AiApiCall -Exactly 1
@@ -213,7 +236,7 @@ Describe "Invoke-ProcessWithAiModel" {
             }
             
             # Call the function
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData $inputData
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData $inputData
             
             # Should return JsonParseError when response cannot be parsed
             $parsedResult = $result | ConvertFrom-Json
@@ -242,7 +265,7 @@ Describe "Invoke-ProcessWithAiModel" {
             }
             
             # Call the function - this should succeed in parsing JSON but the structure is wrong
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData $inputData
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData $inputData
             
             # Should return the parsed invalid structure (not an error in this case)
             $result.invalid | Should -Be "structure"
@@ -374,7 +397,7 @@ Describe "Invoke-ProcessWithAiModel" {
             }
 
             # This should trigger the same error path as the original crash
-            $result = Invoke-ProcessWithAiModel -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -InputData $inputData
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData $inputData
             
             # Verify it returns an error object with JsonParseError type
             $parsedResult = $result | ConvertFrom-Json

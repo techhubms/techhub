@@ -6,9 +6,8 @@ function Convert-RssToMarkdown {
         [Parameter(Mandatory = $true)]
         [string]$Token,
         [Parameter(Mandatory = $true)]
-        [string]$Model,
-        [Parameter(Mandatory = $true)]
-        [string]$Endpoint,
+        [ValidateSet('staging', 'prod')]
+        [string]$Environment,
         [Parameter(Mandatory = $false)]
         [int]$RateLimitPreventionDelay = 15,
         [Parameter(Mandatory = $false)]
@@ -130,9 +129,8 @@ function Convert-RssToMarkdown {
 
             $response = Invoke-ProcessWithAiModel `
                 -Token $Token `
-                -Model $Model `
+                -Environment $Environment `
                 -InputData $inputData `
-                -Endpoint $Endpoint `
                 -RateLimitPreventionDelay $RateLimitPreventionDelay
         
             # Check for errors that we can return (rate limit or content filter)
@@ -161,7 +159,7 @@ function Convert-RssToMarkdown {
                     Write-Host "AI model response could not be parsed as JSON" -ForegroundColor Yellow
                 
                     # Save the AI result for debugging purposes
-                    Save-AiApiResult -InputData $inputData -Response $response -Url $item.Link -Model $Model -PubDate $item.PubDate -AiResultsPath (Join-Path $scriptsPath "airesults")
+                    Save-AiApiResult -InputData $inputData -Response $response -Url $item.Link -Model (Get-AzureOpenAIModelName) -PubDate $item.PubDate -AiResultsPath (Join-Path $scriptsPath "airesults")
                 
                     # Add to skipped entries and continue to next item
                     Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "AI model response could not be parsed as JSON" -Collection $collection_value

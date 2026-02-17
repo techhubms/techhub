@@ -307,8 +307,7 @@ public class NavigationTests : PlaywrightTestBase
                     await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
                     // Wait for the link to become visible
-                    await Assertions.Expect(handbookLink).ToBeVisibleAsync(
-                        new LocatorAssertionsToBeVisibleOptions { Timeout = 2000 });
+                    await Assertions.Expect(handbookLink).ToBeVisibleAsync();
                 }
             }
         }
@@ -333,7 +332,7 @@ public class NavigationTests : PlaywrightTestBase
         await aboutBookLink.ClickBlazorElementAsync(waitForUrlChange: false);
 
         // Wait for the clicked link to become active using Playwright's expect with retry
-        await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"), new() { Timeout = 2000 });
+        await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"));
 
         // Assert - The clicked TOC link should become active (highlighted)
         var activeClass = await aboutBookLink.GetAttributeAsync("class");

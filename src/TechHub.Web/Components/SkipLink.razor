@@ -50,11 +50,13 @@
                     const targetPosition = heading.getBoundingClientRect().top + window.scrollY - stickyHeight;
                     window.scrollTo({ top: targetPosition, behavior: 'instant' });
                     
-                    // Remove tabindex and restore outline after focus
-                    requestAnimationFrame(() => {
+                    // Remove tabindex when focus moves away naturally
+                    // This ensures proper tab order continuation
+                    heading.addEventListener('blur', function removeTabIndex() {
                         heading.removeAttribute('tabindex');
                         heading.style.outline = originalOutline;
-                    });
+                        heading.removeEventListener('blur', removeTabIndex);
+                    }, { once: true });
                 }
             });
         }

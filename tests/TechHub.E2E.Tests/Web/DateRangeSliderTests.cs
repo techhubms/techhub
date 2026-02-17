@@ -115,8 +115,7 @@ public class DateRangeSliderTests : PlaywrightTestBase
         // Use WaitForFunctionAsync instead of WaitForURLAsync because Blazor Server
         // updates URLs via history.replaceState (pushState), not HTTP navigation.
         await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('from=') && window.location.href.includes('to=')",
-            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 100 });
+            "() => window.location.href.includes('from=') && window.location.href.includes('to=')");
 
         var currentUrl = Page.Url;
         currentUrl.Should().Contain("from=");

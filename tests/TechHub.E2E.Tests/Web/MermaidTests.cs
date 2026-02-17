@@ -46,9 +46,6 @@ public class MermaidTests : PlaywrightTestBase
             return; // Mermaid CDN unreachable - test passes vacuously
         }
 
-        // Wait for mermaid diagrams to render
-        await Page.WaitForMermaidDiagramsAsync();
-
         // Assert - Check for mermaid diagrams (rendered as SVG by mermaid.js)
         var mermaidDiagrams = Page.Locator("svg[id^='mermaid-']");
         var diagramCount = await mermaidDiagrams.CountAsync();
@@ -72,9 +69,6 @@ public class MermaidTests : PlaywrightTestBase
         {
             return; // Mermaid CDN unreachable - test passes vacuously
         }
-
-        // Wait for page to fully load and mermaid to render
-        await Page.WaitForMermaidDiagramsAsync();
 
         // Assert - No console errors (filter out ad-blocker errors and mermaid CDN errors)
         var errors = consoleMessages
@@ -102,7 +96,7 @@ public class MermaidTests : PlaywrightTestBase
 
         // Wait for Mermaid diagrams to render
         var mermaidDiagrams = Page.Locator(".mermaid svg");
-        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync();
 
         // Assert - Verify Mermaid diagrams rendered as SVG elements
         var diagramCount = await mermaidDiagrams.CountAsync();
@@ -127,7 +121,7 @@ public class MermaidTests : PlaywrightTestBase
 
         // Wait for Mermaid diagrams to be visible
         var mermaidDiagrams = Page.Locator(".mermaid svg");
-        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync();
 
         var firstLoadDiagrams = await mermaidDiagrams.CountAsync();
 
@@ -138,7 +132,7 @@ public class MermaidTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/ai/genai-basics");
 
         // Wait for Mermaid diagrams to be visible again
-        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync();
 
         var secondLoadDiagrams = await mermaidDiagrams.CountAsync();
 
@@ -161,7 +155,7 @@ public class MermaidTests : PlaywrightTestBase
 
         // Wait for Mermaid diagrams to be visible
         var mermaidDiagrams = Page.Locator(".mermaid svg");
-        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync();
 
         var directLoadDiagrams = await mermaidDiagrams.CountAsync();
 
@@ -170,7 +164,7 @@ public class MermaidTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/ai/genai-basics");
 
         // Wait for Mermaid diagrams to be visible again
-        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync();
 
         var navigationLoadDiagrams = await mermaidDiagrams.CountAsync();
 

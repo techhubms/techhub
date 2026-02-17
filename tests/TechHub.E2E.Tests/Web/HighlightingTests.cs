@@ -32,8 +32,7 @@ public class HighlightingTests : PlaywrightTestBase
 
         // Wait for highlight.js to initialize and apply syntax highlighting classes
         await Page.WaitForConditionAsync(
-            "() => document.querySelector('pre code.hljs') !== null || document.querySelector('pre code[class*=\"language-\"]') !== null",
-            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+            "() => document.querySelector('pre code.hljs') !== null || document.querySelector('pre code[class*=\"language-\"]') !== null");
 
         // Assert - Check for code blocks with highlighting
         var codeBlocks = Page.Locator("pre code");

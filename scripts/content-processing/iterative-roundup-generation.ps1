@@ -26,12 +26,9 @@
 .PARAMETER Token
     Azure API Key for AI model access
 
-.PARAMETER Model
-    Required. The deployment name configured in your Azure AI Foundry resource.
-
-.PARAMETER Endpoint
-    Required. Azure AI Foundry endpoint URL.
-    Example: "https://<resource>.services.ai.azure.com/models/chat/completions"
+.PARAMETER Environment
+    Optional. The Azure environment to use ('staging' or 'prod'). Defaults to 'prod'.
+    Uses Get-AzureOpenAIEndpoint and Get-AzureOpenAIModelName functions for configuration.
 
 .PARAMETER ResumeFromBackup
     Path to a backup file to resume from instead of starting from scratch
@@ -43,13 +40,17 @@
     Section name to resume from in Step 3 or 4 (e.g., "AI", "Azure"). Useful if Step 3 or 4 fails partway through processing sections.
 
 .EXAMPLE
-    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -Model "gpt-4.1" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions"
+    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..."
 
 .EXAMPLE
-    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -Model "gpt-4.1" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -ResumeFromBackup ".tmp/roundup-debug/2025-07-21-to-2025-07-27-Step4-OngoingNarrative-20250812-1430.txt" -StartFromStep 5
+    # Use staging environment for testing
+    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -Environment "staging"
 
 .EXAMPLE
-    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -Model "gpt-4.1" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -StartFromStep 3 -ResumeFromSection "Azure"
+    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -ResumeFromBackup ".tmp/roundup-debug/2025-07-21-to-2025-07-27-Step4-OngoingNarrative-20250812-1430.txt" -StartFromStep 5
+
+.EXAMPLE
+    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -StartFromStep 3 -ResumeFromSection "Azure"
 #>
 
 param(
@@ -62,11 +63,9 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$Token,
     
-    [Parameter(Mandatory = $true)]
-    [string]$Model,
-    
-    [Parameter(Mandatory = $true)]
-    [string]$Endpoint,
+    [Parameter(Mandatory = $false)]
+    [ValidateSet('staging', 'prod')]
+    [string]$Environment = 'prod',
 
     [Parameter(Mandatory = $false)]
     [int]$RateLimitPreventionDelay = 15,
@@ -225,6 +224,8 @@ try {
     Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
     Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
     ForEach-Object { . $_.FullName }
+
+    Write-Host "📍 Using $Environment environment" -ForegroundColor Cyan
 
     # Validate date format and convert to DateTime objects
     try {
@@ -601,10 +602,9 @@ $articleContent
             Write-Host "🤖 Calling AI model for filtering and analysis..."
             $response = Invoke-AiApiCall `
                 -Token $Token `
-                -Model $Model `
+                -Environment $Environment `
                 -SystemMessage $step2SystemMessage `
                 -UserMessage $step2UserMessage `
-                -Endpoint $Endpoint `
                 -RateLimitPreventionDelay $RateLimitPreventionDelay
 
             # Check for errors
@@ -1069,10 +1069,9 @@ $sectionInput
                 Write-Host "🤖 Calling AI model to create news-style stories for $($sectionName)..."
                 $sectionResponse = Invoke-AiApiCall `
                     -Token $Token `
-                    -Model $Model `
+                    -Environment $Environment `
                     -SystemMessage $step3SystemMessage `
                     -UserMessage $step3UserMessage `
-                    -Endpoint $Endpoint `
                     -RateLimitPreventionDelay $RateLimitPreventionDelay
 
                 # Check for errors with robust error handling
@@ -1310,10 +1309,9 @@ $sectionContent
                     Write-Host "🤖 Calling AI model to create ongoing narrative connections for $sectionName..."
                     $sectionResponse = Invoke-AiApiCall `
                         -Token $Token `
-                        -Model $Model `
+                        -Environment $Environment `
                         -SystemMessage $step4SystemMessage `
                         -UserMessage $step4UserMessage `
-                        -Endpoint $Endpoint `
                         -RateLimitPreventionDelay $RateLimitPreventionDelay
 
                     # Check for errors with robust error handling  
@@ -1487,10 +1485,9 @@ $step5Input
         Write-Host "🤖 Calling AI model to condense the organized content..."
         $step6Response = Invoke-AiApiCall `
             -Token $Token `
-            -Model $Model `
+            -Environment $Environment `
             -SystemMessage $step6SystemMessage `
             -UserMessage $step6UserMessage `
-            -Endpoint $Endpoint `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         # Check for errors with robust error handling
@@ -1565,10 +1562,9 @@ Return only JSON with fields: title, tags, description, introduction
         Write-Host "🤖 Calling AI model to generate metadata..."
         $step7Response = Invoke-AiApiCall `
             -Token $Token `
-            -Model $Model `
+            -Environment $Environment `
             -SystemMessage $step7SystemMessage `
             -UserMessage $step7UserMessage `
-            -Endpoint $Endpoint `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         Save-StepBackup -StepName "Step7-Metadata" -Content $step7Response -StartDate $StartDate -EndDate $EndDate
@@ -1836,10 +1832,9 @@ $finalContent
         Write-Host "🤖 Calling AI model to rewrite content for writing style compliance..."
         $finalContent = Invoke-AiApiCall `
             -Token $Token `
-            -Model $Model `
+            -Environment $Environment `
             -SystemMessage $rewriteSystemMessage `
             -UserMessage $rewriteUserMessage `
-            -Endpoint $Endpoint `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         # Check for errors with robust error handling

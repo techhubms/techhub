@@ -248,7 +248,6 @@ public class DynamicTagCountsTests : PlaywrightTestBase
 
             // Use the shared helper but disable URL wait since we expect NO change
             await disabledTag.ClickBlazorElementAsync(
-                timeoutMs: BlazorHelpers.DefaultAssertionTimeout,
                 waitForUrlChange: false);
 
             // Assert - URL should not change (tag should not be selected)

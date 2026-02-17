@@ -18,15 +18,14 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // This test validates that when navigating directly with a tag filter,
         // the correct content (external news links) is displayed.
 
-        const string tag = "copilot chat";
+        const string Tag = "copilot chat";
 
         // Navigate directly to the page with tag filter applied
-        await Page.GotoRelativeAsync($"/github-copilot/news?tags={tag}");
+        await Page.GotoRelativeAsync($"/github-copilot/news?tags={Tag}");
 
         // Wait for content to load
         await Page.WaitForConditionAsync(
-            "() => document.querySelectorAll('.card').length > 0",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 100 });
+            "() => document.querySelectorAll('.card').length > 0");
 
         // Verify we have content
         var cardCount = await Page.Locator(".card").CountAsync();
@@ -39,8 +38,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // The card itself is an <a> tag (the entire card is a link)
         // Verify first card links to an external URL (news items are external)
         var firstCard = Page.Locator("a.card").First;
-        await Assertions.Expect(firstCard).ToBeVisibleAsync(
-            new LocatorAssertionsToBeVisibleOptions { Timeout = 5000 });
+        await Assertions.Expect(firstCard).ToBeVisibleAsync();
 
         var href = await firstCard.GetAttributeAsync("href");
         href.Should().NotBeNullOrEmpty("card should have an href attribute");
@@ -51,28 +49,26 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
     public async Task InfiniteScroll_WithTagFilter_MaintainsFilterThroughPagination()
     {
         // Arrange - tag filter uses lowercase in URL, spaces are URL-encoded as %20
-        const string tagDisplay = "Copilot Chat"; // Display text on button
-        const string tagUrl = "copilot%20chat"; // URL-encoded version
+        const string TagDisplay = "Copilot Chat"; // Display text on button
+        const string TagUrl = "copilot%20chat"; // URL-encoded version
 
         // Act - Navigate and apply tag filter
         await Page.GotoRelativeAsync("/github-copilot/news");
 
         // Wait for initial load
         await Page.WaitForConditionAsync(
-            "() => document.querySelectorAll('.card').length > 0",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+            "() => document.querySelectorAll('.card').length > 0");
 
         // Apply tag filter
-        var tagButton = Page.Locator($"button.tag-cloud-item:has-text('{tagDisplay}')").First;
+        var tagButton = Page.Locator($"button.tag-cloud-item:has-text('{TagDisplay}')").First;
         await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
         // Wait for filter to apply and content to load
-        await Page.WaitForBlazorUrlContainsAsync($"tags={tagUrl}");
+        await Page.WaitForBlazorUrlContainsAsync($"tags={TagUrl}");
 
         // Wait for filtered content to render (cards should appear)
         await Page.WaitForConditionAsync(
-            "() => document.querySelectorAll('.card').length > 0",
-            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+            "() => document.querySelectorAll('.card').length > 0");
 
         // Capture first batch count
         var firstBatchCount = await Page.Locator(".card").CountAsync();
@@ -101,7 +97,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
 
         // Verify URL still contains tag filter (URL normalizes to lowercase)
         var currentUrl = Page.Url;
-        currentUrl.Should().Contain($"tags={tagUrl}",
+        currentUrl.Should().Contain($"tags={TagUrl}",
             "tag filter should be preserved in URL during infinite scroll");
 
         // Verify tag button still has 'selected' class (component uses CSS class, not aria-pressed)

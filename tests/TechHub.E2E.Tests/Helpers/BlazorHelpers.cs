@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 
 namespace TechHub.E2E.Tests.Helpers;
@@ -13,6 +14,10 @@ namespace TechHub.E2E.Tests.Helpers;
 /// KEY INSIGHT: Playwright's auto-waiting handles 90% of timing issues automatically.
 /// The main Blazor-specific challenge is detecting when enhanced navigation completes,
 /// since it doesn't trigger traditional navigation events.
+///
+/// TIMEOUT MANAGEMENT: All timeouts and polling intervals are centralized in constants
+/// (DefaultTimeout, DefaultNavigationTimeout, DefaultPollingInterval) to avoid relying on
+/// Playwright's defaults which could change. Adjust these constants to tune test responsiveness.
 ///
 /// USAGE EXAMPLES - Common Test Patterns:
 ///
@@ -42,14 +47,30 @@ public static class BlazorHelpers
     // CONFIGURATION - Centralized timeout management
     // ============================================================================
 
-    /// <summary>Default timeout for element operations (locator waits, clicks, text content)</summary>
-    public const int DefaultElementTimeout = 5000;
+    /// <summary>Default timeout for all non-navigation operations (element waits, clicks, assertions)</summary>
+    internal const int DefaultTimeout = 1000;
 
-    /// <summary>Default timeout for navigation operations (page load, URL changes)</summary>
-    public const int DefaultNavigationTimeout = 10000;
+    /// <summary>
+    /// Default timeout for navigation operations (page load, URL changes).
+    /// Higher than default timeout because navigation includes network latency,
+    /// HTML parsing (especially for pages with large Markdown content, Mermaid diagrams),
+    /// and JavaScript initialization. Most pages load in <1s, but custom content pages
+    /// (GenAI, Features, Handbook, etc.) require 1.5-2s for DOMContentLoaded.
+    /// </summary>
+    internal const int DefaultNavigationTimeout = 2000;
 
-    /// <summary>Default timeout for Expect assertions (auto-retrying)</summary>
-    public const int DefaultAssertionTimeout = 5000;
+    /// <summary>
+    /// Default polling interval for WaitForFunctionAsync operations.
+    /// Controls how frequently Playwright re-evaluates JavaScript conditions.
+    /// 100ms provides a good balance between responsiveness and CPU usage.
+    /// </summary>
+    internal const int DefaultPollingInterval = 100;
+
+    /// <summary>
+    /// Timeout for browser launch operations.
+    /// Separate from test timeouts as this is infrastructure initialization.
+    /// </summary>
+    internal const int BrowserLaunchTimeout = 5000;
 
     /// <summary>Base URL for the Web frontend</summary>
     public const string BaseUrl = "https://localhost:5003";
@@ -60,7 +81,7 @@ public static class BlazorHelpers
     // Playwright .NET has a SINGLE overload:
     //   WaitForFunctionAsync(string expression, object? arg = null, PageWaitForFunctionOptions? options = null)
     //
-    // BUG TRAP: If you call WaitForFunctionAsync("...", new PageWaitForFunctionOptions { Timeout = 10000 }),
+    // BUG TRAP: If you call WaitForFunctionAsync("...", new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultTimeout }),
     // the options object silently binds to the `arg` parameter (type object?), NOT `options`.
     // This causes all explicit timeouts to be ignored, falling back to the default timeout.
     //
@@ -83,28 +104,28 @@ public static class BlazorHelpers
         page.WaitForFunctionAsync(expression, null, options);
 
     /// <summary>
-    /// Waits for a JavaScript condition to become truthy with a specific timeout.
-    /// Convenience overload for the most common case.
+    /// Waits for a JavaScript condition to become truthy with default timeout.
+    /// Convenience overload that uses DefaultTimeout.
     /// Use this for expressions that take NO JavaScript arguments.
     /// </summary>
     /// <param name="page">The page to evaluate on</param>
-    /// <param name="expression">JavaScript expression that returns a truthy/falsy value</param>
-    /// <param name="timeoutMs">Maximum time to wait in milliseconds</param>
-    /// <param name="pollingIntervalMs">Polling interval in milliseconds (default: Playwright default)</param>
+    /// <param name="expression">JavaScript expression that returns a truthy/falsy value, e.g. "() => document.querySelector('.card') !== null"</param>
     public static Task<IJSHandle> WaitForConditionAsync(
         this IPage page,
-        string expression,
-        int timeoutMs,
-        int? pollingIntervalMs = null)
-    {
-        var options = new PageWaitForFunctionOptions { Timeout = timeoutMs };
-        if (pollingIntervalMs.HasValue)
-        {
-            options.PollingInterval = pollingIntervalMs.Value;
-        }
+        string expression) =>
+        page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
 
-        return page.WaitForFunctionAsync(expression, null, options);
-    }
+    /// <summary>
+    /// Waits for a URL-based condition (navigation, routing, query params) to become truthy.
+    /// Uses DefaultNavigationTimeout (2000ms) which accounts for Blazor routing updates,
+    /// query parameter changes via history.pushState, and debounced input handlers.
+    /// </summary>
+    /// <param name="page">The page to evaluate on</param>
+    /// <param name="expression">JavaScript expression checking URL/location, e.g. "() => window.location.href.includes('search=')"</param>
+    public static Task<IJSHandle> WaitForUrlConditionAsync(
+        this IPage page,
+        string expression) =>
+        page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = DefaultNavigationTimeout, PollingInterval = DefaultPollingInterval });
 
     /// <summary>
     /// Waits for a parameterized JavaScript condition to become truthy.
@@ -145,7 +166,7 @@ public static class BlazorHelpers
     public static async Task ScrollToLoadMoreAsync(
         this IPage page,
         int expectedItemCount,
-        int timeoutMs = DefaultAssertionTimeout,
+        int timeoutMs = DefaultTimeout,
         string itemSelector = ".card",
         string triggerId = "scroll-trigger")
     {
@@ -153,7 +174,7 @@ public static class BlazorHelpers
         // Readiness is scoped by triggerId so multiple concurrent listeners don't interfere.
         await page.WaitForConditionAsync(
             $"() => window.__scrollListenerReady?.['{triggerId}'] === true",
-            timeoutMs);
+            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
         // Headless Chrome does not fire scroll events from programmatic scrollTo,
@@ -166,7 +187,7 @@ public static class BlazorHelpers
                 return document.querySelectorAll('" + itemSelector + @"').length >= expectedCount;
             }",
             expectedItemCount,
-            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 200 });
+            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
     }
 
     /// <summary>
@@ -181,14 +202,14 @@ public static class BlazorHelpers
     public static async Task ScrollToEndOfContentAsync(
         this IPage page,
         string endSelector = ".end-of-content",
-        int timeoutMs = DefaultAssertionTimeout,
+        int timeoutMs = DefaultTimeout,
         string triggerId = "scroll-trigger")
     {
         // Wait for the scroll listener to be attached before scrolling.
         // Readiness is scoped by triggerId so multiple concurrent listeners don't interfere.
         await page.WaitForConditionAsync(
             $"() => window.__scrollListenerReady?.['{triggerId}'] === true",
-            timeoutMs);
+            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
         // See ScrollToLoadMoreAsync for why the explicit dispatchEvent is required.
@@ -200,7 +221,7 @@ public static class BlazorHelpers
                 return false;
             }",
             null, // no JS arg — must be explicit so options parameter is bound correctly
-            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 200 });
+            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
     }
 
     // ============================================================================
@@ -214,7 +235,7 @@ public static class BlazorHelpers
     public static async Task<IPage> NewPageWithDefaultsAsync(this IBrowserContext context)
     {
         var page = await context.NewPageAsync();
-        page.SetDefaultTimeout(DefaultElementTimeout);
+        page.SetDefaultTimeout(DefaultTimeout);
         page.SetDefaultNavigationTimeout(DefaultNavigationTimeout);
         return page;
     }
@@ -299,68 +320,13 @@ public static class BlazorHelpers
         // Step 4: Wait for state sync (if specified)
         if (!string.IsNullOrEmpty(waitForActiveState))
         {
-            await page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", waitForActiveState, DefaultAssertionTimeout);
+            await page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", waitForActiveState);
         }
 
         // Step 5: Custom wait (if specified)
         if (customWait != null)
         {
             await customWait(page);
-        }
-    }
-
-    // ============================================================================
-    // MERMAID DIAGRAM RENDERING
-    // ============================================================================
-
-    /// <summary>
-    /// Waits for Mermaid diagrams to fully render on the page.
-    /// 
-    /// Mermaid.js transforms `<pre class="mermaid">` elements into SVG diagrams.
-    /// This method:
-    /// 1. Checks if there are any `<pre class="mermaid">` elements on the page
-    /// 2. Checks if mermaid.js actually loaded (CDN may be unreachable)
-    /// 3. If both conditions met, waits for each one to be converted to an SVG element
-    /// 4. Adds a requestAnimationFrame wait for browser layout to settle
-    /// 
-    /// If mermaid.js failed to load (CDN blocked), this method returns immediately
-    /// instead of timing out. Tests that specifically verify mermaid rendering should
-    /// check for the library separately.
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="timeoutMs">Maximum time to wait for rendering</param>
-    public static async Task WaitForMermaidDiagramsAsync(
-        this IPage page,
-        int timeoutMs = DefaultNavigationTimeout)
-    {
-        try
-        {
-            // Check if there are any Mermaid diagrams on the page
-            var mermaidPre = page.Locator("pre.mermaid");
-            var mermaidCount = await mermaidPre.CountAsync();
-
-            if (mermaidCount == 0)
-            {
-                return;
-            }
-
-            // Wait for each <pre class="mermaid"> to be converted to SVG.
-            // No CDN-loaded check — if mermaid.js fails to load, this correctly times out
-            // and the test fails with a clear error, which is the desired behavior.
-            await page.WaitForConditionAsync(
-                @"(expectedCount) => {
-                    const svgs = document.querySelectorAll('svg[id^=""mermaid-""]');
-                    return svgs.length >= expectedCount;
-                }",
-                mermaidCount,
-                new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 100 }
-            );
-        }
-        catch (TimeoutException)
-        {
-            throw new TimeoutException(
-                $"Mermaid diagrams failed to render within {timeoutMs}ms. " +
-                "Check that mermaid.js is loaded and diagrams have valid syntax.");
         }
     }
 
@@ -376,11 +342,106 @@ public static class BlazorHelpers
     /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertElementVisibleAsync(
         this ILocator locator,
-        int timeoutMs = DefaultAssertionTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         await Assertions.Expect(locator)
             .ToBeVisibleAsync(new() { Timeout = timeoutMs });
     }
+
+    /// <summary>
+    /// Asserts that an element has a specific CSS class.
+    /// Supports both exact string matching and regex patterns.
+    /// </summary>
+    /// <param name="locator">The element to check</param>
+    /// <param name="className">The exact class name to check for</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertHasClassAsync(
+        this ILocator locator,
+        string className,
+        int timeoutMs = DefaultTimeout)
+    {
+        await Assertions.Expect(locator)
+            .ToHaveClassAsync(className, new() { Timeout = timeoutMs });
+    }
+
+    /// <summary>
+    /// Asserts that an element has a CSS class matching a regex pattern.
+    /// Useful for checking dynamic or partial class names.
+    /// </summary>
+    /// <param name="locator">The element to check</param>
+    /// <param name="pattern">The regex pattern to match against the class attribute</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertHasClassAsync(
+        this ILocator locator,
+        System.Text.RegularExpressions.Regex pattern,
+        int timeoutMs = DefaultTimeout)
+    {
+        await Assertions.Expect(locator)
+            .ToHaveClassAsync(pattern, new() { Timeout = timeoutMs });
+    }
+
+    /// <summary>
+    /// Asserts that a locator matches a specific number of elements.
+    /// Uses Playwright's auto-retrying assertion mechanism.
+    /// </summary>
+    /// <param name="locator">The locator to count</param>
+    /// <param name="expectedCount">The expected number of matching elements</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertCountAsync(
+        this ILocator locator,
+        int expectedCount,
+        int timeoutMs = DefaultTimeout)
+    {
+        await Assertions.Expect(locator)
+            .ToHaveCountAsync(expectedCount, new() { Timeout = timeoutMs });
+    }
+
+    // ============================================================================
+    // NAVIGATION-SPECIFIC HELPERS - For scenarios requiring longer timeouts
+    // ============================================================================
+
+    /// <summary>
+    /// Waits for a URL-based condition with a JavaScript argument (e.g., tag name, search term).
+    /// Uses DefaultNavigationTimeout (2000ms) to account for Blazor routing and re-rendering.
+    /// </summary>
+    /// <param name="page">The page instance.</param>
+    /// <param name="expression">JavaScript expression that accepts an argument.</param>
+    /// <param name="arg">Argument to pass to the JavaScript expression.</param>
+    /// <example>
+    /// await Page.WaitForUrlConditionAsync(
+    ///     "(tag) => window.location.href.includes('tags=' + tag)",
+    ///     normalizedTagText);
+    /// </example>
+    public static Task WaitForUrlConditionAsync(this IPage page, string expression, object arg)
+        => page.WaitForConditionAsync(expression, arg, new PageWaitForFunctionOptions { Timeout = DefaultNavigationTimeout, PollingInterval = DefaultPollingInterval });
+
+    /// <summary>
+    /// Asserts that an element is visible, using DefaultNavigationTimeout (2000ms).
+    /// Use this variant for assertions after client-side navigation or Blazor re-rendering.
+    /// </summary>
+    public static Task AssertElementVisibleForNavigationAsync(this ILocator locator)
+        => AssertElementVisibleAsync(locator, DefaultNavigationTimeout);
+
+    /// <summary>
+    /// Asserts that an element has a specific CSS class, using DefaultNavigationTimeout (2000ms).
+    /// Use this variant for assertions that depend on client-side navigation or Blazor updates.
+    /// </summary>
+    public static Task AssertHasClassForNavigationAsync(this ILocator locator, string className)
+        => AssertHasClassAsync(locator, className, DefaultNavigationTimeout);
+
+    /// <summary>
+    /// Asserts that an element has a CSS class matching a regex pattern, using DefaultNavigationTimeout (2000ms).
+    /// Use this variant for assertions that depend on client-side navigation or Blazor updates.
+    /// </summary>
+    public static Task AssertHasClassForNavigationAsync(this ILocator locator, Regex classPattern)
+        => AssertHasClassAsync(locator, classPattern, DefaultNavigationTimeout);
+
+    /// <summary>
+    /// Asserts the number of elements matching a locator, using DefaultNavigationTimeout (2000ms).
+    /// Use this variant for count assertions after Blazor re-rendering or filtering operations.
+    /// </summary>
+    public static Task AssertCountForNavigationAsync(this ILocator locator, int expectedCount)
+        => AssertCountAsync(locator, expectedCount, DefaultNavigationTimeout);
 
     // ============================================================================
     // NAVIGATION - The core challenge with Blazor SPAs
@@ -408,12 +469,9 @@ public static class BlazorHelpers
 
         await page.GotoAsync(url, gotoOptions);
 
-        // Wait for Blazor runtime - this is the only Blazor-specific wait we need
+        // Wait for Blazor runtime - includes Mermaid diagram check if present
         // Playwright's auto-waiting handles element visibility/stability automatically
         await page.WaitForBlazorReadyAsync();
-
-        // Wait for Mermaid diagrams to render if present
-        await page.WaitForMermaidDiagramsAsync();
     }
 
     /// <summary>
@@ -435,7 +493,7 @@ public static class BlazorHelpers
     }
 
     /// <summary>
-    /// Waits for Blazor runtime to be loaded and interactive.
+    /// Waits for Blazor runtime to be loaded and interactive, including Mermaid diagrams if present.
     /// 
     /// Uses the official Blazor JavaScript initializer pattern:
     /// - TechHub.Web.lib.module.js exports afterServerStarted() which sets window.__blazorServerReady
@@ -451,14 +509,18 @@ public static class BlazorHelpers
     {
         try
         {
-            // Single combined check for all readiness conditions:
+            // Single combined check for all readiness conditions INCLUDING Mermaid diagrams:
             // 1. Blazor runtime exists
             // 2. Interactive runtime is ready (Server/WASM circuit established, or SSR-only page)
             // 3. Page scripts finished loading (mermaid, highlight.js, custom-pages, etc.)
+            // 4. Mermaid diagrams rendered (if present on page)
             //
             // Previously these were 3 separate WaitForConditionAsync calls, each requiring
             // its own browser round-trip and polling cycle. Combining them into one eliminates
             // ~100-200ms overhead per navigation across 200+ navigations in the E2E suite.
+            //
+            // Adding Mermaid check here (instead of separate call after) saves another ~50-150ms
+            // on pages with diagrams by eliminating another browser round trip.
             await page.WaitForConditionAsync(@"
                 () => {
                     // Step 1: Blazor runtime must exist
@@ -477,12 +539,19 @@ public static class BlazorHelpers
                     // and set false by markScriptsReady() when they complete.
                     // Only block if scripts are ACTIVELY loading. If both flags are undefined,
                     // the page has no page scripts (e.g., SectionCollection.razor) — proceed immediately.
-                    // WaitForMermaidDiagramsAsync() handles mermaid-specific waits separately.
                     if (window.__scriptsLoading === true) return false;
+
+                    // Step 4: Mermaid diagrams rendered (if present)
+                    // Only wait if page has <pre class='mermaid'> elements that haven't been converted to SVG yet
+                    const mermaidPres = document.querySelectorAll('pre.mermaid');
+                    if (mermaidPres.length > 0) {
+                        const renderedSvgs = document.querySelectorAll('svg[id^=""mermaid-""]');
+                        if (renderedSvgs.length < mermaidPres.length) return false;
+                    }
 
                     return true;
                 }
-            ", new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 50 });
+            ", new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
         }
         catch (TimeoutException)
         {
@@ -553,11 +622,10 @@ public static class BlazorHelpers
             await page.WaitForConditionAsync(
                 "expectedUrl => window.location.href !== expectedUrl",
                 urlBeforeClick,
-                new() { Timeout = timeoutMs, PollingInterval = 100 });
+                new() { Timeout = timeoutMs });
         }
 
-        // Step 5: Wait for Mermaid diagrams to render if present (after navigation)
-        await page.WaitForMermaidDiagramsAsync();
+        // Mermaid diagram check is now integrated into WaitForBlazorReadyAsync above (Step 2)
     }
 
     /// <summary>
@@ -566,13 +634,13 @@ public static class BlazorHelpers
     /// </summary>
     public static async Task WaitForBlazorInteractivityAsync(
         this ILocator locator,
-        int timeoutMs = DefaultElementTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         // Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync(timeoutMs);
 
-        // Ensure Blazor is ready
-        await locator.Page.WaitForBlazorReadyAsync(timeoutMs);
+        // Ensure Blazor is ready - uses its own default navigation timeout (2000ms)
+        await locator.Page.WaitForBlazorReadyAsync();
     }
 
     // ============================================================================
@@ -614,7 +682,7 @@ public static class BlazorHelpers
     public static async Task WaitForBlazorRenderAsync(
         this IPage page,
         string selector,
-        int timeoutMs = DefaultElementTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         await page.Locator(selector).AssertElementVisibleAsync(timeoutMs);
     }
@@ -625,7 +693,7 @@ public static class BlazorHelpers
 
     /// <summary>
     /// Waits for a selector with standard timeout.
-    /// Centralized timeout management - change DefaultElementTimeout to affect all tests.
+    /// Centralized timeout management - change DefaultTimeout to affect all tests.
     /// </summary>
     public static async Task<ILocator> WaitForSelectorWithTimeoutAsync(
         this IPage page,
@@ -633,7 +701,7 @@ public static class BlazorHelpers
         PageWaitForSelectorOptions? options = null)
     {
         var opts = options ?? new PageWaitForSelectorOptions();
-        opts.Timeout ??= DefaultElementTimeout;
+        opts.Timeout ??= DefaultTimeout;
         opts.State ??= WaitForSelectorState.Visible;
 
         await page.WaitForSelectorAsync(selector, opts);
@@ -642,14 +710,14 @@ public static class BlazorHelpers
 
     /// <summary>
     /// Gets text content with standard timeout.
-    /// Centralized timeout management - change DefaultElementTimeout to affect all tests.
+    /// Centralized timeout management - change DefaultTimeout to affect all tests.
     /// </summary>
     public static Task<string?> TextContentWithTimeoutAsync(
         this ILocator locator,
         LocatorTextContentOptions? options = null)
     {
         var opts = options ?? new LocatorTextContentOptions();
-        opts.Timeout ??= DefaultElementTimeout;
+        opts.Timeout ??= DefaultTimeout;
         return locator.TextContentAsync(opts);
     }
 
@@ -676,7 +744,7 @@ public static class BlazorHelpers
     /// <returns>The href attribute value, or null if not found</returns>
     public static async Task<string?> GetHrefAsync(
         this ILocator locator,
-        int timeoutMs = DefaultElementTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         return await locator.GetAttributeAsync("href", new() { Timeout = timeoutMs });
     }
@@ -706,7 +774,7 @@ public static class BlazorHelpers
         AriaRole role,
         string name,
         int? level = null,
-        int timeoutMs = DefaultAssertionTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         var options = new PageGetByRoleOptions
         {
@@ -743,7 +811,7 @@ public static class BlazorHelpers
         AriaRole role,
         string name,
         int? level = null,
-        int timeoutMs = DefaultAssertionTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         var options = new LocatorGetByRoleOptions
         {
@@ -774,7 +842,7 @@ public static class BlazorHelpers
     public static async Task AssertElementVisibleByAltTextAsync(
         this IPage page,
         string altText,
-        int timeoutMs = DefaultAssertionTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         var element = page.GetByAltText(altText, new PageGetByAltTextOptions { Exact = true });
         await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = timeoutMs });
@@ -795,7 +863,7 @@ public static class BlazorHelpers
     public static async Task AssertElementVisibleBySelectorAsync(
         this IPage page,
         string selector,
-        int timeoutMs = DefaultAssertionTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         await Assertions.Expect(page.Locator(selector))
             .ToBeVisibleAsync(new() { Timeout = timeoutMs });
@@ -816,7 +884,7 @@ public static class BlazorHelpers
         this IPage page,
         string selector,
         string expectedText,
-        int timeoutMs = DefaultAssertionTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         await Assertions.Expect(page.Locator(selector))
             .ToContainTextAsync(expectedText, new() { Timeout = timeoutMs });
@@ -837,7 +905,7 @@ public static class BlazorHelpers
         this IPage page,
         string selector,
         int expectedCount,
-        int timeoutMs = DefaultAssertionTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         await Assertions.Expect(page.Locator(selector))
             .ToHaveCountAsync(expectedCount, new() { Timeout = timeoutMs });
@@ -858,7 +926,7 @@ public static class BlazorHelpers
         this IPage page,
         string selector,
         string attributeName,
-        int timeoutMs = DefaultElementTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         return await page.Locator(selector).GetAttributeAsync(attributeName, new() { Timeout = timeoutMs });
     }
@@ -876,7 +944,7 @@ public static class BlazorHelpers
     public static async Task<string?> GetElementTextBySelectorAsync(
         this IPage page,
         string selector,
-        int timeoutMs = DefaultElementTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         return await page.Locator(selector).TextContentAsync(new() { Timeout = timeoutMs });
     }
@@ -951,7 +1019,7 @@ public static class BlazorHelpers
     public static async Task ClickElementBySelectorAsync(
         this IPage page,
         string selector,
-        int timeoutMs = DefaultElementTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         await page.Locator(selector).ClickBlazorElementAsync(timeoutMs);
     }
@@ -970,7 +1038,7 @@ public static class BlazorHelpers
         this IPage page,
         AriaRole role,
         string name,
-        int timeoutMs = DefaultElementTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         var options = new PageGetByRoleOptions
         {
@@ -993,7 +1061,7 @@ public static class BlazorHelpers
     public static async Task AssertHrefEqualsAsync(
         this ILocator locator,
         string expectedHref,
-        int timeoutMs = DefaultAssertionTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         await Assertions.Expect(locator)
             .ToHaveAttributeAsync("href", expectedHref, new() { Timeout = timeoutMs });
@@ -1023,11 +1091,11 @@ public static class BlazorHelpers
     ///   await anchorLink.ClickAndWaitForScrollAsync(maxTimeoutMs: 500);
     /// </summary>
     /// <param name="locator">The element to click</param>
-    /// <param name="maxTimeoutMs">Maximum time in ms to wait for scroll to complete (default: 1000ms)</param>
+    /// <param name="maxTimeoutMs">Maximum time in ms to wait for scroll to complete (default: DefaultTimeout)</param>
     /// <returns>Task that completes when scrolling finishes and TOC updates, or timeout is reached</returns>
     public static async Task ClickAndWaitForScrollAsync(
         this ILocator locator,
-        int maxTimeoutMs = 1000)
+        int maxTimeoutMs = DefaultTimeout)
     {
         // Use scrollend event (same as TOC scroll-spy) + RAF for TOC update
         // NOTE: When using EvaluateAsync on a locator, the element is passed as the first parameter,

@@ -169,8 +169,7 @@ public class TabOrderingTests : PlaywrightTestBase
         // Wait for focus to move to the target element
         // The skip link navigates to #skiptohere - browser moves focus to that anchor target
         await Page.WaitForConditionAsync(
-            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }",
-            new PageWaitForFunctionOptions { Timeout = 2000, PollingInterval = 50 });
+            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }");
 
         // Assert - Get what's currently focused
         var elementInfo = await Page.EvaluateAsync<string>(
@@ -184,6 +183,22 @@ public class TabOrderingTests : PlaywrightTestBase
 
         // Next tab should focus first interactive element within primary content
         await Page.Keyboard.PressAsync("Tab");
+        
+        // Wait for focus to stabilize after tab press
+        // Use longer timeout (2s) because this involves multiple async operations:
+        // 1. Tab keypress processed
+        // 2. H1 blur event fires
+        // 3. Blur handler removes tabindex
+        // 4. Focus moves to next element
+        await Page.WaitForFunctionAsync(
+            @"() => {
+                const el = document.activeElement;
+                return el && el !== document.body && 
+                       (el.closest('main') !== null || 
+                        el.closest('article') !== null || 
+                        el.closest('section') !== null);
+            }");
+        
         var isInPrimaryContent = await Page.EvaluateAsync<bool>(
             "() => { const el = document.activeElement; return el && (el.closest('main') !== null || el.closest('article') !== null || el.closest('section') !== null); }"
         );
@@ -212,19 +227,28 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.WaitForBlazorReadyAsync();
 
         // Explicitly reset focus to body (what nav-helpers.js does via rAF)
-        // This ensures Tab starts from the top of the tab order
+        // Keep tabindex until after we press Tab to ensure proper tab order
         await Page.EvaluateAsync(@"() => {
             document.body.tabIndex = -1;
             document.body.focus();
-            document.body.removeAttribute('tabindex');
         }");
 
         // Assert - After navigation, first tab should focus skip link on new page
         await Page.Keyboard.PressAsync("Tab");
 
-        var firstFocusedElement = Page.Locator(":focus");
-        var tagName = await firstFocusedElement.EvaluateAsync<string>("el => el.tagName.toLowerCase()");
-        var className = await firstFocusedElement.EvaluateAsync<string>("el => el.className || ''");
+        // Remove tabindex from body after Tab press
+        await Page.EvaluateAsync("() => document.body.removeAttribute('tabindex')");
+
+        var focusedElementInfo = await Page.EvaluateAsync<string>(
+            @"() => {
+                const el = document.activeElement;
+                if (!el) return 'none';
+                return el.tagName.toLowerCase() + '|' + (el.className || '');
+            }");
+
+        var parts = focusedElementInfo.Split('|');
+        var tagName = parts[0];
+        var className = parts.Length > 1 ? parts[1] : "";
 
         // First focusable element should be the skip link
         (tagName == "a" && className.Contains("skip-link")).Should().BeTrue(
@@ -258,8 +282,7 @@ public class TabOrderingTests : PlaywrightTestBase
 
         // Wait for focus to move to #skiptohere target (browser navigation to hash)
         await Page.WaitForConditionAsync(
-            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }",
-            new PageWaitForFunctionOptions { Timeout = 2000, PollingInterval = 50 });
+            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }");
 
         // Verify focus moved (could be on H1 or body depending on timing)
         var focusInfo = await Page.EvaluateAsync<string>(
@@ -302,8 +325,7 @@ public class TabOrderingTests : PlaywrightTestBase
 
         // Wait for focus to land on a real element (not body) after Tab
         await Page.WaitForConditionAsync(
-            "() => document.activeElement && document.activeElement !== document.body",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultAssertionTimeout, PollingInterval = 50 });
+            "() => document.activeElement && document.activeElement !== document.body");
 
         var tagName = await Page.EvaluateAsync<string>("() => document.activeElement.tagName.toLowerCase()");
         var className = await Page.EvaluateAsync<string>("() => document.activeElement.className || ''");

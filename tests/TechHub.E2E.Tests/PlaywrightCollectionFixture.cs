@@ -1,4 +1,5 @@
 using Microsoft.Playwright;
+using TechHub.E2E.Tests.Helpers;
 
 [assembly: AssemblyFixture(typeof(TechHub.E2E.Tests.PlaywrightCollectionFixture))]
 
@@ -22,7 +23,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
         {
             Headless = true,
             ExecutablePath = "/usr/bin/google-chrome",
-            Timeout = 5000,
+            Timeout = BlazorHelpers.BrowserLaunchTimeout,
             Args =
             [
                 "--no-sandbox",

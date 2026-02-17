@@ -79,7 +79,7 @@ public class ContentDetailTests : PlaywrightTestBase
 
         // Check for collection links in sub-nav (All + regular collections)
         await Assertions.Expect(Page.Locator(".sub-nav a"))
-            .Not.ToHaveCountAsync(0, new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+            .Not.ToHaveCountAsync(0);
     }
 
     [Fact]
@@ -93,7 +93,7 @@ public class ContentDetailTests : PlaywrightTestBase
 
         // Assert - Main content visible (article or main.page-main-content)
         await Assertions.Expect(Page.Locator("main article, main.page-main-content article"))
-            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+            .ToBeVisibleAsync();
     }
 
     [Fact]
@@ -104,7 +104,7 @@ public class ContentDetailTests : PlaywrightTestBase
 
         // Assert - Tags heading visible in sidebar (use auto-retrying Expect)
         await Assertions.Expect(Page.Locator(".sidebar h2:has-text('Tags')"))
-            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+            .ToBeVisibleAsync();
     }
 
     [Fact]

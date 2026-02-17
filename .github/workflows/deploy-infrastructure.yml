@@ -3,6 +3,14 @@ name: Deploy Infrastructure
 on:
   workflow_dispatch:
     inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: true
+        type: choice
+        options:
+        - shared
+        - staging
+        - production
       mode:
         description: 'Deployment mode'
         required: true
@@ -29,19 +37,45 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Deploy Infrastructure
-      shell: pwsh
+    - name: Set template path
+      id: template
       run: |
-        pwsh ./infra/Deploy-Infrastructure.ps1 `
-          -Mode "${{ github.event.inputs.mode }}" `
-          -SkipLogin `
-          -SkipConfirmation
-      env:
-        AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if [ "${{ github.event.inputs.environment }}" == "shared" ]; then
+          echo "path=./infra/shared.bicep" >> $GITHUB_OUTPUT
+          echo "params=./infra/parameters/shared.bicepparam" >> $GITHUB_OUTPUT
+        else
+          echo "path=./infra/main.bicep" >> $GITHUB_OUTPUT
+          echo "params=./infra/parameters/${{ github.event.inputs.environment }}.bicepparam" >> $GITHUB_OUTPUT
+        fi
 
+    - name: Validate Bicep template
+      if: github.event.inputs.mode == 'validate' || github.event.inputs.mode == 'whatif' || github.event.inputs.mode == 'deploy'
+      run: |
+        az deployment sub validate \
+          --location westeurope \
+          --template-file ${{ steps.template.outputs.path }} \
+          --parameters ${{ steps.template.outputs.params }}
+
+    - name: What-If deployment
+      if: github.event.inputs.mode == 'whatif' || github.event.inputs.mode == 'deploy'
+      run: |
+        az deployment sub what-if \
+          --location westeurope \
+          --template-file ${{ steps.template.outputs.path }} \
+          --parameters ${{ steps.template.outputs.params }}
+
+    - name: Deploy Infrastructure
+      if: github.event.inputs.mode == 'deploy'
+      run: |
+        DEPLOYMENT_NAME="techhub-${{ github.event.inputs.environment }}-$(date +%Y%m%d-%H%M%S)"
+        az deployment sub create \
+          --name "$DEPLOYMENT_NAME" \
+          --location westeurope \
+          --template-file ${{ steps.template.outputs.path }} \
+          --parameters ${{ steps.template.outputs.params }}
     - name: Output deployment results
       run: |
         echo "Infrastructure deployment workflow completed!"
+        echo "Environment: ${{ github.event.inputs.environment }}"
         echo "Mode: ${{ github.event.inputs.mode }}"
-        echo "Check the step above for detailed results."
+        echo "Check the steps above for detailed results."

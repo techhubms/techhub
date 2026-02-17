@@ -37,13 +37,19 @@ public class TabHighlightingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            var focused = Page.Locator(":focus");
-            var tagName = await focused.EvaluateAsync<string>("el => el.tagName");
-            var isInMain = await focused.EvaluateAsync<bool>("el => el.closest('main') !== null");
+            // Check what element is now focused (Tab processing is synchronous)
+            var tagName = await Page.EvaluateAsync<string>("() => document.activeElement?.tagName || ''");
+            // Skip if nothing focused
+            if (tagName == "")
+            {
+                continue;
+            }
+
+            var isInMain = await Page.EvaluateAsync<bool>("() => document.activeElement?.closest('main') !== null");
 
             if (tagName == "A" && isInMain)
             {
-                focusedElement = focused;
+                focusedElement = Page.Locator(":focus");
                 break;
             }
         }
@@ -70,12 +76,17 @@ public class TabHighlightingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            var focused = Page.Locator(":focus");
-            var tagName = await focused.EvaluateAsync<string>("el => el.tagName");
+            // Check what element is now focused (Tab processing is synchronous)
+            var tagName = await Page.EvaluateAsync<string>("() => document.activeElement?.tagName || ''");
+            // Skip if nothing focused
+            if (tagName == "")
+            {
+                continue;
+            }
 
             if (tagName == "BUTTON")
             {
-                focusedElement = focused;
+                focusedElement = Page.Locator(":focus");
                 break;
             }
         }
@@ -94,7 +105,7 @@ public class TabHighlightingTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/ai");
 
         var tagButton = Page.Locator(".tag-cloud-item").First;
-        await Assertions.Expect(tagButton).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(tagButton).ToBeVisibleAsync();
 
         // Act - Use pure keyboard navigation to trigger :focus-visible
         // Tab through the page until we find a tag cloud item
@@ -105,12 +116,12 @@ public class TabHighlightingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            var focused = Page.Locator(":focus");
-            var hasClass = await focused.EvaluateAsync<bool>("el => el.classList.contains('tag-cloud-item')");
+            // Check what element is now focused (Tab processing is synchronous)
+            var hasClass = await Page.EvaluateAsync<bool>("() => document.activeElement?.classList.contains('tag-cloud-item') || false");
 
             if (hasClass)
             {
-                focusedElement = focused;
+                focusedElement = Page.Locator(":focus");
                 break;
             }
         }
@@ -133,12 +144,11 @@ public class TabHighlightingTests : PlaywrightTestBase
 
         // Wait for skip link to appear (it animates from off-screen to visible on focus)
         var skipLink = Page.Locator(".skip-link");
-        await Assertions.Expect(skipLink).ToBeVisibleAsync(new() { Timeout = 2000 });
+        await Assertions.Expect(skipLink).ToBeVisibleAsync();
 
         // Wait for focus to settle on the skip link using Playwright polling
         await Page.WaitForConditionAsync(
-            "() => document.activeElement && document.activeElement.classList.contains('skip-link')",
-            new PageWaitForFunctionOptions { Timeout = 2000, PollingInterval = 50 });
+            "() => document.activeElement && document.activeElement.classList.contains('skip-link')");
 
         // Verify it's actually focused
         var focusedElement = Page.Locator(":focus");

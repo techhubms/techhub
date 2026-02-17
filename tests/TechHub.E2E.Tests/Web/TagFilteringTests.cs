@@ -30,8 +30,7 @@ public class TagFilteringTests : PlaywrightTestBase
         await tagButton.ClickBlazorElementAsync();
 
         // Wait for URL to change (navigation should happen)
-        await Page.WaitForURLAsync(url => url.Contains("tags=") || url != urlBeforeClick,
-            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+        await Page.WaitForURLAsync(url => url.Contains("tags=") || url != urlBeforeClick);
 
         // Assert - URL should contain the tag parameter
         var currentUrl = Page.Url;
@@ -64,15 +63,14 @@ public class TagFilteringTests : PlaywrightTestBase
         await tagButton.ClickBlazorElementAsync();
 
         // Wait for URL to contain the tag and for the tag cloud to re-render
-        await Page.WaitForConditionAsync(
+        await Page.WaitForUrlConditionAsync(
             "(tag) => window.location.href.toLowerCase().includes('tags=' + encodeURIComponent(tag).toLowerCase())",
-            normalizedTagText,
-            new() { Timeout = BlazorHelpers.DefaultNavigationTimeout, PollingInterval = 100 });
+            normalizedTagText);
         await WaitForTagCloudReadyAsync();
 
         // Verify the tag button shows selected state before proceeding
         var selectedTag = Page.Locator(".tag-cloud-item.selected").First;
-        await Assertions.Expect(selectedTag).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+        await Assertions.Expect(selectedTag).ToBeVisibleAsync();
 
         // Act 2 - Click the same tag button again to deselect it
         // Re-acquire locator after Blazor re-render to avoid stale reference
@@ -83,8 +81,7 @@ public class TagFilteringTests : PlaywrightTestBase
         await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
         // Wait for Blazor to process the toggle: the selected class should be removed
-        await Assertions.Expect(Page.Locator(".tag-cloud-item.selected")).ToHaveCountAsync(0,
-            new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
+        await Page.Locator(".tag-cloud-item.selected").AssertCountForNavigationAsync(0);
         await WaitForTagCloudReadyAsync();
 
         // Assert - URL should no longer contain the tag parameter or be empty
@@ -117,10 +114,7 @@ public class TagFilteringTests : PlaywrightTestBase
         var selectedTagButton = Page.Locator(".tag-cloud-item.selected")
             .Filter(new() { HasTextRegex = new Regex("vs code", RegexOptions.IgnoreCase) });
 
-        await Assertions.Expect(selectedTagButton).ToBeVisibleAsync(new()
-        {
-            Timeout = 5000
-        });
+        await Assertions.Expect(selectedTagButton).ToBeVisibleAsync();
 
         // Verify visual styling (should have different background/border color)
         var backgroundColor = await selectedTagButton.EvaluateAsync<string>("el => window.getComputedStyle(el).backgroundColor");
@@ -142,8 +136,8 @@ public class TagFilteringTests : PlaywrightTestBase
         var devToolsTag = Page.Locator(".tag-cloud-item.selected")
             .Filter(new() { HasTextRegex = new Regex("developer tools", RegexOptions.IgnoreCase) });
 
-        await Assertions.Expect(vsCodeTag).ToBeVisibleAsync(new() { Timeout = 5000 });
-        await Assertions.Expect(devToolsTag).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(vsCodeTag).ToBeVisibleAsync();
+        await Assertions.Expect(devToolsTag).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -168,8 +162,8 @@ public class TagFilteringTests : PlaywrightTestBase
         var devToolsSelected = Page.Locator(".tag-cloud-item.selected")
             .Filter(new() { HasTextRegex = new Regex("developer tools", RegexOptions.IgnoreCase) });
 
-        await Assertions.Expect(vsCodeSelected).ToBeVisibleAsync(new() { Timeout = 5000 });
-        await Assertions.Expect(devToolsSelected).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(vsCodeSelected).ToBeVisibleAsync();
+        await Assertions.Expect(devToolsSelected).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -268,16 +262,14 @@ public class TagFilteringTests : PlaywrightTestBase
 
         // Wait for URL to update with tag parameter (confirms navigation happened)
         await Page.WaitForConditionAsync(
-            "() => window.location.search.includes('tags=')",
-            new PageWaitForFunctionOptions { Timeout = 5000 });
+            "() => window.location.search.includes('tags=')");
 
         // Wait for cards to stabilize after Blazor re-render
         await Page.WaitForConditionAsync(
             @"() => {
                 const cards = document.querySelectorAll('.card');
                 return cards.length > 0;
-            }",
-            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+            }");
 
         var itemsAfterFirstTag = await Page.Locator(".card").CountAsync();
         itemsAfterFirstTag.Should().BeLessThanOrEqualTo(allItems, "Filtering by one tag should reduce or maintain item count");
@@ -300,8 +292,7 @@ public class TagFilteringTests : PlaywrightTestBase
                 @"() => {
                     const cards = document.querySelectorAll('.card');
                     return cards.length >= 0;
-                }",
-                new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+                }");
 
             var itemsAfterSecondTag = await Page.Locator(".card").CountAsync();
 
@@ -359,7 +350,7 @@ public class TagFilteringTests : PlaywrightTestBase
 
         // Get all tag texts from /all
         var tagCloudOnAll = Page.Locator(".tag-cloud");
-        await Assertions.Expect(tagCloudOnAll).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(tagCloudOnAll).ToBeVisibleAsync();
 
         var tagsOnAll = await Page.Locator(".tag-cloud-item").AllTextContentsAsync();
         tagsOnAll.Should().NotBeEmpty("Tag cloud should be visible on /all");
@@ -370,7 +361,7 @@ public class TagFilteringTests : PlaywrightTestBase
 
         // Get tag cloud contents on /all/all
         var tagCloudOnAllAll = Page.Locator(".tag-cloud");
-        await Assertions.Expect(tagCloudOnAllAll).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(tagCloudOnAllAll).ToBeVisibleAsync();
 
         var tagsOnAllAll = await Page.Locator(".tag-cloud-item").AllTextContentsAsync();
         tagsOnAllAll.Should().NotBeEmpty("Tag cloud should be visible on /all/all");

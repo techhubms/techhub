@@ -114,8 +114,7 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Wait for scroll to complete (position stabilizes)
         await Page.WaitForConditionAsync(
-            @$"() => Math.abs(window.scrollY - {secondHeadingY}) < 100",
-            new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+            @$"() => Math.abs(window.scrollY - {secondHeadingY}) < 100");
 
         // Assert - Active TOC link should update
         var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
@@ -152,10 +151,10 @@ public class SidebarTocTests : PlaywrightTestBase
         // window.scrollTo fires scroll events that scroll spy listens for
         await Page.EvaluateAsync($"window.scrollTo({{ top: {scrollHeight}, behavior: 'instant' }})");
 
-        // Wait for scroll to reach bottom
+        // Wait for scroll to reach bottom (use navigation timeout for scroll operations)
         await Page.WaitForConditionAsync(
             @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultElementTimeout, PollingInterval = 50 });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultNavigationTimeout });
 
         // Force scroll spy to re-evaluate now that scroll is complete.
         // The rAF-based handler may fire before layout settles in headless Chrome,
@@ -169,8 +168,8 @@ public class SidebarTocTests : PlaywrightTestBase
         var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
         // Use Playwright's auto-retrying assertion - wait for TOC link to become active.
-        await Assertions.Expect(lastTocLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
-            new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
+        await lastTocLink.AssertHasClassForNavigationAsync(
+            new System.Text.RegularExpressions.Regex(".*active.*"));
     }
 
     #endregion
@@ -218,8 +217,7 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Wait for browser to scroll to anchor position
         await Page.WaitForConditionAsync(
-            "() => window.scrollY > 0",
-            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 50 });
+            "() => window.scrollY > 0");
 
         // Get initial scroll position (should already be at anchor)
         var initialScrollY = await Page.EvaluateAsync<double>("window.scrollY");
@@ -235,8 +233,7 @@ public class SidebarTocTests : PlaywrightTestBase
                 const stable = Math.abs(window.scrollY - window.__lastScrollY) < 2;
                 window.__lastScrollY = window.scrollY;
                 return stable;
-            }",
-            new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 100 });
+            }");
 
         // Get final scroll position
         var finalScrollY = await Page.EvaluateAsync<double>("window.scrollY");
@@ -306,7 +303,7 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Wait for TOC scroll spy to initialize and activate at least one link
         var activeTocLinks = Page.Locator(".sidebar-toc a.active");
-        await Assertions.Expect(activeTocLinks.First).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
+        await activeTocLinks.First.AssertElementVisibleForNavigationAsync();
 
         // Verify at least one TOC link has active class (overview section should be active)
         var activeCount = await activeTocLinks.CountAsync();

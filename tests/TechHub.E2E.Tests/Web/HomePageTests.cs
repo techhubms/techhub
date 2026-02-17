@@ -109,7 +109,7 @@ public class HomePageTests : PlaywrightTestBase
 
         // Assert - Wait for tag cloud to render, then count tag buttons
         var tagButtons = Page.Locator(".tag-cloud-item");
-        await Assertions.Expect(tagButtons.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+        await Assertions.Expect(tagButtons.First).ToBeVisibleAsync();
         var count = await tagButtons.CountAsync();
         count.Should().BeGreaterThan(0, $"Expected at least one tag button, but found {count}");
     }
