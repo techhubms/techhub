@@ -26314,5 +26314,23 @@
     "timestamp": "2026-02-18 17:26:56 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-migrate-now-supporting-premium-ssd-v2-ultra-and-zrs-disks/ba-p/4495332",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the article centers around Imagine Cup semifinalist projects which heavily leverage AI technologies, specifically mentioning Azure AI, AI-powered platforms, and Microsoft AI involvement (AI Inclusion Rules 1, 4, 5, 6). Assigned 'Azure' because many projects are built with or highlight Azure AI platforms (Azure Inclusion Rules 1, 3). Did not assign Coding, ML, Security, DevOps, or GitHub Copilot because the article focuses on solution overviews, not code, ML engineering, security practices, or DevOps methodology. All generic exclusion rules were checked and do not apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/studentdeveloperblog/ai-in-action-meet-the-2026-imagine-cup-semifinalists/4495567",
+    "timestamp": "2026-02-18 19:21:21 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because content focuses on workflow and package management improvements for developers (DevOps rule 6, 7, and 8). Assigned Security category because the main features address supply chain security and prevent arbitrary code execution risks (Security rules 1 and 5). Not Azure-specific (no mention of Microsoft cloud), not Coding (no direct programming guidance), not ML or AI. Content is technical, targeting maintainers and developers, and meets inclusion criteria.",
+    "canonical_url": "https://github.blog/changelog/2026-02-18-npm-bulk-trusted-publishing-config-and-script-security-now-generally-available",
+    "timestamp": "2026-02-18 19:21:44 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article analyzes the impact of AI and AI-driven contributions on open source communities, including how AI shapes contributors’ behaviors and the challenges of 'AI slop.' Added DevOps because it discusses community management, scaling, tooling adoption, governance, documentation, and maintainer workflows—all core aspects of DevOps in open source settings. Security, Coding, Azure, GitHub Copilot, and ML categories do not apply, as the article does not focus on their respective topics per the explicit inclusion rules.",
+    "canonical_url": "https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/",
+    "timestamp": "2026-02-18 19:22:07 +00:00",
+    "collection": "news"
   }
 ]
