@@ -26230,5 +26230,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-agentic-workflows-with-sap-part-1-infrastructure/ba-p/4491906",
     "collection": "community",
     "timestamp": "2026-02-18 01:34:29 +00:00"
+  },
+  {
+    "timestamp": "2026-02-18 04:38:36 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/azure-reliability-resiliency-and-recoverability-build-continuity-by-design/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because the entire content is centrally focused on Azure reliability architecture and uses a wide range of Azure services and operational patterns (Azure inclusion rule 1, 4, and 5). DevOps is included since content covers operational measurement, observability (Azure Monitor, Application Insights), deployment patterns, governance (Azure Policy), and real-world reliability workflows (DevOps rules 3, 5, 6, 7). Security is assigned due to notable inclusion of Microsoft Defender for Cloud, Sentinel, risk and threat mitigation, plus governance (Security rules 1, 4, 5, and 7). No AI, ML, GitHub Copilot, or Coding categories are assigned as the post is architectural/operational, not focused on implementing AI, code, or ML-specific techniques within workloads."
   }
 ]
