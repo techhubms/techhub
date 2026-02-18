@@ -26248,5 +26248,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-webinar-maximize-the-cost-efficiency-of-ai-agents-on/ba-p/4493923",
     "timestamp": "2026-02-18 08:12:35 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on building and optimizing AI agents using Microsoft Azure, with a focus on technical practices, model selection, and AI deployment guidance (AI inclusion rules 1, 4, 5). Assigned 'Azure' category since the webinar specifically addresses AI development on Azure and covers cost efficiency, architecture, and governance related to Azure services (Azure rules 1, 4, 5). 'Coding', 'DevOps', 'ML', and 'Security' categories were not included as the content does not focus on language/framework specifics, development workflows, machine learning, or security practices. The content is eligible: it is technical, not just business/marketing, and offers hands-on, implementation-focused advice for practitioners."
+  },
+  {
+    "canonical_url": "https://dellenny.com/migrating-to-sharepoint-online-lessons-learned-from-large-enterprises/",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content focuses on SharePoint Online migration within a Microsoft 365 context, with substantial technical implementation advice regarding customization, governance, security, and platform modernization (Coding rules 2, 4). Although migration covers organizational and change management aspects, the core focus is technical (site architecture, permissions, compliance mapping, legacy system assessment). Did not assign 'Azure,' 'DevOps,' 'Security,' or 'ML' since there is no detailed coverage of those Microsoft cloud or development services beyond standard SharePoint Online/365 migration. No AI topics are discussed. All generic exclusion criteria were checked and do not apply: the article is in English, not primarily biographical, and provides substantial technical value.",
+    "timestamp": "2026-02-18 10:15:41 +00:00"
   }
 ]
