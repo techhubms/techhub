@@ -26242,5 +26242,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-sonnet-4-6-in-microsoft-foundry-frontier-performance-for-scale/4494873",
     "timestamp": "2026-02-18 07:22:42 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because the entire content focuses on Claude Sonnet 4.6, an advanced AI model integrated into Microsoft Foundry, and discusses both AI-powered features (reasoning, automation, conversational agents) and their use in coding and workflow scenarios (AI Rule 1, Rule 4, Rule 5, and Rule 6). The 'Azure' category is assigned because Microsoft Foundry is an Azure service/product and all usage, features, and deployment guidance are scoped within the Azure platform (Azure Rule 1 and Rule 4). The content does not qualify for 'ML', 'Security', 'DevOps', or 'Coding' categories specifically, as it focuses on high-level AI capabilities and platform integration, not on code-centric how-tos, security implementations, or DevOps processes. The post is not a sales pitch, biographical, or business strategy/executive-level; it is technical, practical, and integration-focused."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-webinar-maximize-the-cost-efficiency-of-ai-agents-on/ba-p/4493923",
+    "timestamp": "2026-02-18 08:12:35 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on building and optimizing AI agents using Microsoft Azure, with a focus on technical practices, model selection, and AI deployment guidance (AI inclusion rules 1, 4, 5). Assigned 'Azure' category since the webinar specifically addresses AI development on Azure and covers cost efficiency, architecture, and governance related to Azure services (Azure rules 1, 4, 5). 'Coding', 'DevOps', 'ML', and 'Security' categories were not included as the content does not focus on language/framework specifics, development workflows, machine learning, or security practices. The content is eligible: it is technical, not just business/marketing, and offers hands-on, implementation-focused advice for practitioners."
   }
 ]
