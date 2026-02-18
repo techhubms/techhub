@@ -26284,5 +26284,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=S1ch_6fjp5M",
     "collection": "videos",
     "timestamp": "2026-02-18 15:17:28 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/ai-powered-ran-and-the-intelligent-edge-microsoft-s-vision-for/ba-p/4495554",
+    "reason": "Succesfully added: Assigned AI category because the content centers on applying Microsoft AI technologies—including Azure AI, Copilot, Semantic Kernel, and Microsoft Foundry—to telecom (AI category rule 1, 3, 4). Assigned Azure because Azure is repeatedly referenced as the deployment and management platform for AI and network workloads (Azure rule 1, 4, 5). Assigned ML due to substantial treatment of machine learning for network optimization, network anomaly detection, robotics workloads, and advanced analytics (ML rule 1, 2, 3, 5, 6, 9). Did not assign DevOps, Coding, Security, or GitHub Copilot, as there is no focus on CI/CD pipelines, code development, security architecture/operations, or developer-oriented Copilot usage. The content is highly technical, focused on telecom infrastructure, network automation, and AI/ML architectures using Microsoft services, qualifying for these categories.",
+    "timestamp": "2026-02-18 16:19:16 +00:00"
   }
 ]
