@@ -26254,5 +26254,23 @@
     "collection": "blogs",
     "reason": "Succesfully added: Assigned the 'Coding' category because the content focuses on SharePoint Online migration within a Microsoft 365 context, with substantial technical implementation advice regarding customization, governance, security, and platform modernization (Coding rules 2, 4). Although migration covers organizational and change management aspects, the core focus is technical (site architecture, permissions, compliance mapping, legacy system assessment). Did not assign 'Azure,' 'DevOps,' 'Security,' or 'ML' since there is no detailed coverage of those Microsoft cloud or development services beyond standard SharePoint Online/365 migration. No AI topics are discussed. All generic exclusion criteria were checked and do not apply: the article is in English, not primarily biographical, and provides substantial technical value.",
     "timestamp": "2026-02-18 10:15:41 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because Visuals MCP is an AI agent integration tool enabling LLM-powered assistants to render interactive UI components (AI inclusion rules 1, 4, 5). Assigned GitHub Copilot category because the primary use case is enhancing GitHub Copilot Chat via MCP servers and the article details VS Code/GitHub Copilot integration (GitHub Copilot rule 1, 3). Assigned Coding category because the article thoroughly covers implementation with TypeScript, Node.js, React, and extension development (Coding rules 1, 2, 5). Content is valid as it's technical, focused on developer tools and does not meet any generic exclusion rules.",
+    "collection": "blogs",
+    "timestamp": "2026-02-18 11:15:55 +00:00",
+    "canonical_url": "https://harrybin.de/posts/visuals-mcp-server/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security because the fund directly targets open source supply chain security and vulnerability management (Security rules 1, 5, 7, 8). Assigned DevOps since the initiative concerns secure practices for development workflows, incident readiness, and scaling processes in open source environments (DevOps rules 3, 4, 5, 9). Assigned AI and GitHub Copilot because the episode specifically discusses the use of Copilot and other AI-driven tools for open source security (AI rule 2, 5; GitHub Copilot rules 1, 2, 4). Content is technical, focused on implementation and best practices, and fits all inclusion thresholds with no generic exclusion rule triggered.",
+    "collection": "videos",
+    "timestamp": "2026-02-18 11:16:24 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=l8gSLQIBdjE"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the entire content focuses on Azure NAT Gateway v2, including deployment, architecture, new features such as zone-redundancy and IPv6, performance, monitoring, and pricing. No Coding, DevOps, Security, ML, or AI categories were assigned because the focus is Azure networking infrastructure, not development, automation, security, or data/AI workloads. All generic exclusion rules were checked: the content is in English, not biographical, not a sales pitch, not business or management content, and provides technical depth relevant to Azure professionals.",
+    "collection": "videos",
+    "timestamp": "2026-02-18 11:16:45 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=I9HPGJUjq2Q"
   }
 ]
