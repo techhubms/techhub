@@ -26272,5 +26272,17 @@
     "collection": "videos",
     "timestamp": "2026-02-18 11:16:45 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=I9HPGJUjq2Q"
+  },
+  {
+    "reason": "Succesfully added: Applied only the 'AI' category. The article focuses on Microsoft's global strategy to accelerate AI adoption, investments, AI infrastructure, multilingual models, expansion of AI skills, policy, and measurement; all these fit Inclusion Rules for 'AI' (Chapter 4, AI points 1, 4, 5, and 6). No technical detail or tutorial components are present to justify Coding, Azure, DevOps, ML, or Security categories per their respective rules. The content is not about GitHub Copilot or specific Microsoft developer tools, nor does it meet exclusion criteria; it is English, technical and strategic in scope, with substantial discussion of Microsoft's AI initiatives.",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/02/17/acting-with-urgency-to-address-the-growing-ai-divide/",
+    "collection": "news",
+    "timestamp": "2026-02-18 15:16:45 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the content discusses Copilot Coding Agents, which use AI to automate development tasks in the cloud (AI rules 1, 2, and 5). 'GitHub Copilot' is assigned as the main focus is Copilot Coding Agents (GitHub Copilot rule 1). 'Coding' is assigned based on the technical demonstration and the use cases for code generation, testing, security scanning, and performance optimization (Coding rules 1-4). Exclusion rules do not apply, as this is a technical developer workflow presentation about Microsoft's Copilot developer tool and its integrations.",
+    "canonical_url": "https://www.youtube.com/watch?v=S1ch_6fjp5M",
+    "collection": "videos",
+    "timestamp": "2026-02-18 15:17:28 +00:00"
   }
 ]
