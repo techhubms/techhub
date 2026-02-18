@@ -12057,5 +12057,17 @@
     "reason": "Insufficient content length",
     "timestamp": "2026-02-17 19:27:00 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content focuses on high-level sustainability goals, investments, procurement strategies, partnerships, and community impacts within Microsoft, but does not cover technical implementation details relevant to Microsoft's development platforms, cloud technologies, coding, AI, ML, security, or DevOps. The article is newsworthy and informative but aligns with business strategy and sustainability reporting, which is excluded by the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules. No qualifying development, architecture, or technical focus was found.",
+    "timestamp": "2026-02-18 17:25:11 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/02/18/a-milestone-achievement-in-our-journey-to-carbon-negative/",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: The content does not qualify for any categories because it is a press release focused on a business partnership and product availability announcement. It lacks technical implementation details, developer guidance, or substantive technical depth. According to generic exclusion rules for 'Business Strategy and Executive Content', 'Sales Pitches', and 'Corporate announcements and strategic initiatives without technical depth', this business news item is excluded. The post centers on marketplace availability, purchasing, business benefits, and product positioning, but does not provide technical architecture, integration instructions, security implementation details, or engineering-focused information required for category inclusion.",
+    "timestamp": "2026-02-18 17:25:24 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2026/02/18/microsoft-and-crowdstrike-announce-the-falcon-platform-now-available-on-microsoft-marketplace/",
+    "collection": "news"
   }
 ]
