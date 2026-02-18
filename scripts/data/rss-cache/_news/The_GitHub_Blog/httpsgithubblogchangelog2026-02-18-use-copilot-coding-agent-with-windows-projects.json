@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "[Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) is our asynchronous, autonomous background agent. Delegate a task to Copilot, and Copilot works in the background in its own development environment, powered by GitHub Actions.\n\nBy default, the agent use a Linux development environment. If your project targets Windows, you can now configure Copilot coding agent to use a Windows environment, still powered by GitHub Actions.\n\nWith a working development environment, Copilot can ensure your project builds and your automated tests and linter pass, so you get a green pull request on the first try.\n\nYou can configure Copilot coding agent to use Windows by creating a `copilot-setup-steps.yml` file in your repository with a custom `runs-on` setting.\n\nCopilot coding agent’s [integrated firewall](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall) is not compatible with Windows, so we recommended that you only use Windows with self-hosted runners or larger runners with Azure private networking where you can implement your own network controls.\n\nTo learn more about switching Copilot coding agent to a Windows development environment, see [“Customizing the development environment for Copilot coding agent”](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment#switching-copilot-to-a-windows-development-environment) in the GitHub Docs.",
+  "OutputDir": "_news",
+  "Title": "Use Copilot coding agent with Windows projects",
+  "ProcessedDate": "2026-02-18 23:06:33",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-02-18-use-copilot-coding-agent-with-windows-projects",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "Author": "Allison",
+  "PubDate": "2026-02-18T22:04:40+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "Copilot coding agent is our asynchronous, autonomous background agent. Delegate a task to Copilot, and Copilot works in the background in its own development environment, powered by GitHub Actions. By…\n\nThe post [Use Copilot coding agent with Windows projects](https://github.blog/changelog/2026-02-18-use-copilot-coding-agent-with-windows-projects) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

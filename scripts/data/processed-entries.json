@@ -26344,5 +26344,23 @@
     "reason": "Succesfully added: Assigned the Security category because the content is centered on improving secret scanning features, which is directly related to application and organizational security (Security rule 1), including DevSecOps workflows (Security rule 6). Assigned DevOps because secret scanning and security configuration are integral parts of modern DevOps practices (DevOps rules 2, 6, and 7), and the content discusses security operations at scale with configuration management. Coding, AI, Azure, ML, and GitHub Copilot were not assigned because the feature is focused on repository security management, not on development, AI/ML, or Copilot tooling.",
     "timestamp": "2026-02-18 22:08:39 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-18 23:08:08 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned because the content centers on new capabilities for the GitHub Copilot coding agent (an autonomous, developer-focused AI tool). It details technical enhancements (code referencing, licensing awareness) that directly serve software development practitioners. The content does not mention non-development productivity features, so Microsoft 365 Copilot exclusion does not apply. Coding category was not assigned because the focus is tool behavior, not programming techniques or code implementation. Azure, DevOps, ML, and Security were not referenced. All rules align with AI and GitHub Copilot inclusion criteria.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-18-copilot-coding-agent-supports-code-referencing"
+  },
+  {
+    "timestamp": "2026-02-18 23:08:25 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the entire content addresses GitHub Copilot's coding agent and automation capabilities (GitHub Copilot rules 1-4 and AI rule 2). 'DevOps' is included because usage and configuration revolve around GitHub Actions and CI/CD workflow automation (DevOps rule 2 and 5), with process automation and environment management central to the announcement. 'Coding' is included because it discusses configuring environments that ensure builds/tests pass, which is part of the software development workflow (Coding rule 4). No generic exclusion rules apply. All content is technical, focused on development, automation, and Microsoft technology integration.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-18-use-copilot-coding-agent-with-windows-projects"
+  },
+  {
+    "timestamp": "2026-02-18 23:09:25 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the entire article focuses on large-scale AI workloads, industry-standard benchmarking for real LLM training, and AI infrastructure (AI category rule 1 and 4). Assigned Azure because the main context is Azure cloud services, especially Azure ND GPU clusters powering these models (Azure category rule 1). Did not assign ML or Coding because the focus is on infrastructure, benchmarking, and performance at the platform level, not on hands-on data science, model building, or programming. Security and DevOps do not apply as there's no focus on security practices or DevOps methodologies in the content. Content is primarily technical, not a sales pitch, not biographical, not non-English, not business/executive strategy, nor productivity/office-focused, and the word count is sufficient for a community post. All generic exclusion rules were checked and do not apply.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-recognized-as-an-nvidia-cloud-exemplar-setting-the-bar-for/ba-p/4495747"
   }
 ]

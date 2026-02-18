@@ -12081,5 +12081,11 @@
     "timestamp": "2026-02-18 20:11:49 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The main body consists largely of an image, a date, and a short header referencing another research blog. There is no substantive technical content, tutorial, or explanation about Project Silica; nor are there details about implementation, development, or how glass storage technology works. This is classified as a minimal news mention or link post without enough technical depth, which falls under the sales pitch/content announcement without educational value exclusion. Additionally, the format is not sufficient to extract meaningful categories.",
     "canonical_url": "https://www.microsoft.com/en-us/research/blog/project-silicas-advances-in-glass-storage-technology/"
+  },
+  {
+    "timestamp": "2026-02-18 23:08:57 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: biographical focus and lack of substantive technical depth. The provided description highlights an interview with Justin Samuels about organizing tech conferences and community building but does not contain technical implementation details or discussion of Microsoft technologies. There is no information about coding, DevOps, AI, ML, Azure, GitHub Copilot, or Security. The focus is primarily organizational, centering around community engagement, event management, and open source awards in a business/cultural context rather than hands-on technical topics.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=tZ-ohammZN8"
   }
 ]
