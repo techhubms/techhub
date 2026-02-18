@@ -26338,5 +26338,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-02-18-claude-opus-4-6-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
     "timestamp": "2026-02-18 21:12:27 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-18-secret-scanning-improvements-to-extended-metadata-checks",
+    "reason": "Succesfully added: Assigned the Security category because the content is centered on improving secret scanning features, which is directly related to application and organizational security (Security rule 1), including DevSecOps workflows (Security rule 6). Assigned DevOps because secret scanning and security configuration are integral parts of modern DevOps practices (DevOps rules 2, 6, and 7), and the content discusses security operations at scale with configuration management. Coding, AI, Azure, ML, and GitHub Copilot were not assigned because the feature is focused on repository security management, not on development, AI/ML, or Copilot tooling.",
+    "timestamp": "2026-02-18 22:08:39 +00:00",
+    "collection": "news"
   }
 ]
