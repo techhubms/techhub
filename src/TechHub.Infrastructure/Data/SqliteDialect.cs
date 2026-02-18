@@ -69,6 +69,13 @@ public class SqliteDialect : ISqlDialect
         return "content_fts.rank";
     }
 
+    public string TransformFullTextQuery(string query)
+    {
+        // Append wildcard for FTS5 prefix matching
+        // Example: "reinie" → "reinie*" matches "Reinier"
+        return string.IsNullOrWhiteSpace(query) ? query : $"{query.Trim()}*";
+    }
+
     public string GetCollectionFilterClause(string paramName, int count)
     {
         // SQLite uses IN for list matching

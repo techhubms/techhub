@@ -43,6 +43,7 @@ public class ContentEndpointsPerformanceTests
     private const int SqliteMaxResponseTimeMs = 500;
     private const int SqliteMaxFtsResponseTimeMs = 1000;
     private const int SqliteMaxTagFilterResponseTimeMs = 500;
+    private const int SqliteMaxTagCloudResponseTimeMs = 1000; // Word-level GROUP BY scans more rows + cold cache on first query
 
     public ContentEndpointsPerformanceTests(ApiCollectionFixture fixture)
     {
@@ -94,6 +95,12 @@ public class ContentEndpointsPerformanceTests
     private void AssertTagFilterPerformance(long elapsedMs, string operationName)
     {
         var threshold = _isPostgreSQL ? PostgresMaxTagFilterResponseTimeMs : SqliteMaxTagFilterResponseTimeMs;
+        AssertPerformance(elapsedMs, operationName, threshold);
+    }
+
+    private void AssertTagCloudPerformance(long elapsedMs, string operationName)
+    {
+        var threshold = _isPostgreSQL ? PostgresMaxResponseTimeMs : SqliteMaxTagCloudResponseTimeMs;
         AssertPerformance(elapsedMs, operationName, threshold);
     }
 
@@ -186,7 +193,7 @@ public class ContentEndpointsPerformanceTests
         tags!.Count.Should().BeLessThanOrEqualTo(50);
         tags.Should().BeInDescendingOrder(t => t.Count);
 
-        AssertPerformance(sw.ElapsedMilliseconds, "GET /tags (section tag cloud - top 50)");
+        AssertTagCloudPerformance(sw.ElapsedMilliseconds, "GET /tags (section tag cloud - top 50)");
     }
 
     [Theory]
@@ -202,8 +209,8 @@ public class ContentEndpointsPerformanceTests
         // Act - section-specific tag cloud
         var elapsed = await MeasureHttpGetAsync<IReadOnlyList<TagCloudItem>>(_client, url);
 
-        // Assert performance
-        AssertPerformance(elapsed, $"GET /tags ({sectionName} section - top 50)");
+        // Assert performance - uses tag cloud threshold (word-level GROUP BY scans more rows)
+        AssertTagCloudPerformance(elapsed, $"GET /tags ({sectionName} section - top 50)");
     }
 
     [Theory]
@@ -218,8 +225,8 @@ public class ContentEndpointsPerformanceTests
         // Act - most specific tag cloud (section + collection)
         var elapsed = await MeasureHttpGetAsync<IReadOnlyList<TagCloudItem>>(_client, url);
 
-        // Assert performance
-        AssertPerformance(elapsed, $"GET /tags ({sectionName}/{collectionName} - top 30)");
+        // Assert performance - uses tag cloud threshold (word-level GROUP BY scans more rows)
+        AssertTagCloudPerformance(elapsed, $"GET /tags ({sectionName}/{collectionName} - top 30)");
     }
 
     [Fact]

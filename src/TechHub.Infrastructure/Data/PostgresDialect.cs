@@ -56,14 +56,28 @@ public class PostgresDialect : ISqlDialect
 
     public string GetFullTextWhereClause(string paramName)
     {
-        // PostgreSQL tsvector @@ operator with plainto_tsquery
-        return $"c.search_vector @@ plainto_tsquery('english', @{paramName})";
+        // PostgreSQL tsvector @@ operator with to_tsquery for prefix support
+        // Using to_tsquery instead of plainto_tsquery to support :* prefix syntax
+        return $"c.search_vector @@ to_tsquery('english', @{paramName})";
     }
 
     public string GetFullTextOrderByClause(string paramName)
     {
         // PostgreSQL ts_rank function (higher is better)
-        return $"ts_rank(c.search_vector, plainto_tsquery('english', @{paramName})) DESC";
+        // Using to_tsquery to match WHERE clause
+        return $"ts_rank(c.search_vector, to_tsquery('english', @{paramName})) DESC";
+    }
+
+    public string TransformFullTextQuery(string query)
+    {
+        // PostgreSQL prefix search: replace spaces with & and append :* for prefix matching
+        // Example: "reinie" → "reinie:*" matches "Reinier"
+        // Example: "github copilot" → "github:* & copilot:*" for multi-word prefix
+        if (string.IsNullOrWhiteSpace(query))
+            return query;
+
+        var terms = query.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        return string.Join(" & ", terms.Select(term => $"{term}:*"));
     }
 
     public string GetCollectionFilterClause(string paramName, int count)

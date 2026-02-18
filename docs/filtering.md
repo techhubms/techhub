@@ -18,6 +18,14 @@ The search box allows users to filter content by typing text queries. Search is 
 - **Content**: Full article body text (when using full-text search providers)
 - **Tags**: All tags associated with the content
 
+**Prefix Matching**: Search supports prefix matching, allowing users to find content by typing partial words:
+
+- Search `rein` → Matches "**Rein**ier", "**rein**deer", "**rein**force"
+- Search `cop` → Matches "**Cop**ilot", "**cop**y", "**cop**per"
+- Search `tech` → Matches "**Tech**Hub", "**tech**nology", "**tech**nical"
+
+This enables auto-complete-style search behavior where users don't need to type complete words.
+
 ### Search Implementation
 
 **Frontend**: The `SidebarSearch` component provides a search input with:
@@ -29,9 +37,10 @@ The search box allows users to filter content by typing text queries. Search is 
 
 **Backend**: Full-text search is implemented at the database level:
 
-- **SQLite**: Uses FTS5 (Full-Text Search 5) with BM25 ranking
-- **PostgreSQL**: Uses `tsvector` with `ts_rank` relevance scoring
+- **SQLite**: Uses FTS5 (Full-Text Search 5) with BM25 ranking and prefix indexes (`prefix='2,3,4'`)
+- **PostgreSQL**: Uses `tsvector` with `ts_rank` relevance scoring and `to_tsquery` for prefix support
 - Both providers support weighted search (title > excerpt > content)
+- Both providers automatically append wildcards for prefix matching (`copilot` → `copilot*` for SQLite, `copilot:*` for PostgreSQL)
 
 ### Search + Filter Combination
 

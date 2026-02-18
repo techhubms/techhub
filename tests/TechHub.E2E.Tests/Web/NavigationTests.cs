@@ -200,15 +200,17 @@ public class NavigationTests : PlaywrightTestBase
         // Arrange & Act
         await Page.GotoRelativeAsync("/ai/news");
 
-        // Assert
-        await Page.WaitForSelectorWithTimeoutAsync(".sub-nav");
-        await Page.WaitForSelectorWithTimeoutAsync(".card");
+        // Assert - use navigation-aware timeouts since we just navigated and data may still be loading
+        await Page.WaitForSelectorWithTimeoutAsync(".sub-nav", new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
+        await Page.WaitForSelectorWithTimeoutAsync(".card", new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
 
         // Should show AI section and News collection
-        await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "Browse Artificial Intelligence News");
+        await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "Browse Artificial Intelligence News",
+            BlazorHelpers.DefaultNavigationTimeout);
 
         // News collection should be active
-        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News",
+            BlazorHelpers.DefaultNavigationTimeout);
     }
 
     [Fact]

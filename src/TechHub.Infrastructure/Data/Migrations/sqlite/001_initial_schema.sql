@@ -102,10 +102,13 @@ CREATE TABLE IF NOT EXISTS sync_metadata (
 -- ========================================
 -- Full-Text Search (FTS5)
 -- ========================================
+-- FTS5 with prefix indexes (2,3,4 chars) for fast prefix matching
+-- Enables queries like "reinie*" to match "Reinier" efficiently
 CREATE VIRTUAL TABLE IF NOT EXISTS content_fts USING fts5(
     slug, title, excerpt, content,
     content='content_items',
-    content_rowid='rowid'
+    content_rowid='rowid',
+    prefix='2,3,4'
 );
 
 -- ========================================
@@ -188,20 +191,10 @@ CREATE INDEX IF NOT EXISTS idx_tags_word_date ON content_tags_expanded(
     slug
 );
 
--- 4. For display tag queries (getting actual tags with original case for dropdowns/UI)
--- Partial index on is_full_tag=1 makes this small and efficient
-CREATE INDEX IF NOT EXISTS idx_tags_display ON content_tags_expanded(
-    collection_name,
-    sections_bitmask,
-    date_epoch DESC,
-    tag_display
-) WHERE is_full_tag = 1;
-
--- 5. For tag count/aggregation queries (tag cloud, tag counts)
--- Covers GROUP BY tag_word with section filtering and tag_display output
--- Partial index on is_full_tag=1 reduces index size significantly
-CREATE INDEX IF NOT EXISTS idx_tags_fulltag_word ON content_tags_expanded(
-    tag_word,
-    sections_bitmask,
-    tag_display
+-- 4. Covering partial index for tag cloud subquery: quickly find valid tag_words (actual tags)
+-- The tag cloud query uses a subquery to find tag_words where is_full_tag=1 within the
+-- filtered scope, then counts all items (including word expansions) for those tag_words.
+-- Partial index keeps only is_full_tag=1 rows (~45% of table), covering avoids table lookups.
+CREATE INDEX IF NOT EXISTS idx_tags_valid_tagwords ON content_tags_expanded(
+    tag_word, sections_bitmask, collection_name, tag_display
 ) WHERE is_full_tag = 1;

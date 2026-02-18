@@ -78,6 +78,15 @@ public interface ISqlDialect
     string GetFullTextOrderByClause(string paramName);
 
     /// <summary>
+    /// Transform user search query to enable prefix matching.
+    /// SQLite: Appends * for FTS5 prefix search (e.g., "reinie" → "reinie*")
+    /// PostgreSQL: Appends :* and escapes for tsquery prefix search (e.g., "reinie" → "reinie:*")
+    /// </summary>
+    /// <param name="query">User's search query</param>
+    /// <returns>Transformed query for database-specific full-text search</returns>
+    string TransformFullTextQuery(string query);
+
+    /// <summary>
     /// Get SQL IN clause for list filtering (collections, tags, etc.)
     /// (IN @param for SQLite, = ANY(@param) for PostgreSQL arrays)
     /// </summary>

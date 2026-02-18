@@ -171,20 +171,10 @@ CREATE INDEX IF NOT EXISTS idx_tags_word_date ON content_tags_expanded(
     slug
 );
 
--- 4. For display tag queries (getting actual tags with original case for dropdowns/UI)
--- Partial index on is_full_tag=TRUE makes this small and efficient
-CREATE INDEX IF NOT EXISTS idx_tags_display ON content_tags_expanded(
-    collection_name,
-    sections_bitmask,
-    date_epoch DESC,
-    tag_display
-) WHERE is_full_tag = TRUE;
-
--- 5. For tag count/aggregation queries (tag cloud, tag counts)
--- Covers GROUP BY tag_word with section filtering and tag_display output
--- Partial index on is_full_tag=TRUE reduces index size significantly
-CREATE INDEX IF NOT EXISTS idx_tags_fulltag_word ON content_tags_expanded(
-    tag_word,
-    sections_bitmask,
-    tag_display
+-- 4. Covering partial index for tag cloud subquery: quickly find valid tag_words (actual tags)
+-- The tag cloud query uses a subquery to find tag_words where is_full_tag=true within the
+-- filtered scope, then counts all items (including word expansions) for those tag_words.
+-- Partial index keeps only is_full_tag=true rows (~45% of table), covering avoids table lookups.
+CREATE INDEX IF NOT EXISTS idx_tags_valid_tagwords ON content_tags_expanded(
+    tag_word, sections_bitmask, collection_name, tag_display
 ) WHERE is_full_tag = TRUE;

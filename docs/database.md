@@ -102,7 +102,7 @@ Control database sync behavior via `appsettings.json`:
 | `content_items` | All content with denormalized section flags and bitmask |
 | `content_tags_expanded` | Word-level tag matching (denormalized for fast filtering) |
 | `sync_metadata` | Tracks last sync time and content hashes |
-| `content_fts` | FTS5 virtual table for full-text search |
+| `content_fts` | FTS5 virtual table for full-text search with prefix indexes |
 
 ### Design Decisions
 
@@ -110,6 +110,7 @@ Control database sync behavior via `appsettings.json`:
 2. **Section bitmask**: Single integer column for multi-section filtering with bitwise operations
 3. **Expanded tags table**: Multi-word tags split into separate rows for word-level matching
 4. **FTS5 external content**: Full-text index synced via triggers
+5. **FTS5 prefix indexes**: `prefix='2,3,4'` configuration enables fast prefix matching for 2-4 character searches (e.g., "cop" matches "copilot")
 
 ### Query Patterns
 

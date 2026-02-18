@@ -33,9 +33,11 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.Keyboard.PressAsync("Tab");
 
         // Assert - First focused element should be skip link
-        var focusedElement = Page.Locator(":focus");
-        var tagName = await focusedElement.EvaluateAsync<string>("el => el.tagName.toLowerCase()");
-        var href = await focusedElement.EvaluateAsync<string>("el => el.getAttribute('href') || ''");
+        // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+        await Page.WaitForConditionAsync(
+            "() => document.activeElement && document.activeElement !== document.body");
+        var tagName = await Page.EvaluateAsync<string>("() => document.activeElement.tagName.toLowerCase()");
+        var href = await Page.EvaluateAsync<string>("() => document.activeElement.getAttribute('href') || ''");
 
         tagName.Should().Be("a", "first focusable element should be a link");
         href.Should().Contain("skiptohere", "first link should be skip-to-main-content link");
@@ -52,11 +54,12 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.Keyboard.PressAsync("Tab"); // Next element
 
         // Assert - Should be in navigation area
-        var focusedElement = Page.Locator(":focus");
+        // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+        await Page.WaitForConditionAsync(
+            "() => document.activeElement && document.activeElement !== document.body");
 
-        // Check if element is within nav or header
-        var isInNav = await focusedElement.EvaluateAsync<bool>(
-            "el => el.closest('nav') !== null || el.closest('header') !== null"
+        var isInNav = await Page.EvaluateAsync<bool>(
+            "() => { const el = document.activeElement; return el.closest('nav') !== null || el.closest('header') !== null; }"
         );
 
         isInNav.Should().BeTrue("after skip link, focus should move to navigation area");
@@ -75,9 +78,12 @@ public class TabOrderingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            var focusedElement = Page.Locator(":focus");
-            var elementInfo = await focusedElement.EvaluateAsync<string>(
-                @"el => {
+            // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+            await Page.WaitForConditionAsync(
+                "() => document.activeElement && document.activeElement !== document.body");
+            var elementInfo = await Page.EvaluateAsync<string>(
+                @"() => {
+                    const el = document.activeElement;
                     const rect = el.getBoundingClientRect();
                     const tagName = el.tagName.toLowerCase();
                     const className = el.className;
@@ -111,10 +117,11 @@ public class TabOrderingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            var focusedElement = Page.Locator(":focus");
-            // Check if element is within main content area (main tag, article, or section with content)
-            var isInMain = await focusedElement.EvaluateAsync<bool>(
-                "el => el.closest('main') !== null || el.closest('.main-content') !== null || el.closest('article') !== null"
+            // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+            await Page.WaitForConditionAsync(
+                "() => document.activeElement && document.activeElement !== document.body");
+            var isInMain = await Page.EvaluateAsync<bool>(
+                "() => { const el = document.activeElement; return el.closest('main') !== null || el.closest('.main-content') !== null || el.closest('article') !== null; }"
             );
 
             if (isInMain)
@@ -141,9 +148,11 @@ public class TabOrderingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            var focusedElement = Page.Locator(":focus");
-            var isInSidebar = await focusedElement.EvaluateAsync<bool>(
-                "el => el.closest('.sidebar') !== null || el.closest('aside') !== null"
+            // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+            await Page.WaitForConditionAsync(
+                "() => document.activeElement && document.activeElement !== document.body");
+            var isInSidebar = await Page.EvaluateAsync<bool>(
+                "() => { const el = document.activeElement; return el.closest('.sidebar') !== null || el.closest('aside') !== null; }"
             );
 
             if (isInSidebar)
@@ -273,8 +282,10 @@ public class TabOrderingTests : PlaywrightTestBase
 
         // Step 1: Tab to skip link
         await Page.Keyboard.PressAsync("Tab");
-        var focusedElement = Page.Locator(":focus");
-        var href = await focusedElement.EvaluateAsync<string>("el => el.getAttribute('href') || ''");
+        // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+        await Page.WaitForConditionAsync(
+            "() => document.activeElement && document.activeElement !== document.body");
+        var href = await Page.EvaluateAsync<string>("() => document.activeElement.getAttribute('href') || ''");
         href.Should().Contain("skiptohere", "first tab should focus skip link");
 
         // Step 2: Enter to activate skip link
@@ -293,11 +304,14 @@ public class TabOrderingTests : PlaywrightTestBase
 
         // Step 3: Tab to first focusable element in primary content (should be first section card)
         await Page.Keyboard.PressAsync("Tab");
-        focusedElement = Page.Locator(":focus");
+
+        // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+        await Page.WaitForConditionAsync(
+            "() => document.activeElement && document.activeElement !== document.body");
 
         // Verify we're on a section card link
-        var isSectionCard = await focusedElement.EvaluateAsync<bool>(
-            "el => el.classList.contains('section-card') && el.tagName.toLowerCase() === 'a'"
+        var isSectionCard = await Page.EvaluateAsync<bool>(
+            "() => { const el = document.activeElement; return el.classList.contains('section-card') && el.tagName.toLowerCase() === 'a'; }"
         );
         isSectionCard.Should().BeTrue("after skip link activation + tab, should focus first section card");
 

@@ -713,6 +713,51 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
             $"Both represent the intersection of all 4 tags, so counts must be equal.");
     }
 
+    [Fact]
+    public async Task GetCollectionTags_TagCloudCount_ShouldMatchItemsFilteredByTag()
+    {
+        // This test verifies the critical invariant: the count shown in the tag cloud
+        // for a tag must equal the number of items returned when filtering by that tag.
+        //
+        // Bug scenario (word-level matching):
+        // - Tag cloud shows "Automation: 152" (counting only exact full tags)
+        // - Clicking "Automation" filters with tag_word='automation' (word-level match)
+        // - This returns 322 items (includes "Workflow Automation", "Code Automation", etc.)
+        // - User sees count jump from 152 to 322 — a confusing mismatch
+        //
+        // The tag cloud count MUST use word-level matching to match the items query.
+
+        // Arrange - Get the tag cloud for a section
+        var tagCloudResponse = await _client.GetAsync(
+            "/api/sections/github-copilot/collections/all/tags?maxTags=50&minUses=1",
+            TestContext.Current.CancellationToken);
+        tagCloudResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await tagCloudResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(
+            TestContext.Current.CancellationToken);
+        tagCloud.Should().NotBeNull();
+        tagCloud!.Should().HaveCountGreaterThan(0, "Should have tags in the test data");
+
+        // Act & Assert - For each tag in the tag cloud, verify its count matches the items endpoint
+        foreach (var tag in tagCloud)
+        {
+            // Get items filtered by this tag
+            var itemsResponse = await _client.GetAsync(
+                $"/api/sections/github-copilot/collections/all/items?tags={Uri.EscapeDataString(tag.Tag.ToLowerInvariant())}",
+                TestContext.Current.CancellationToken);
+            itemsResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+            var items = await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(
+                TestContext.Current.CancellationToken);
+
+            // The tag cloud count MUST match the items count
+            tag.Count.Should().Be((int)items!.TotalCount,
+                $"Tag cloud count for '{tag.Tag}' ({tag.Count}) should match " +
+                $"the actual items returned when filtering by that tag ({items.TotalCount}). " +
+                $"Both should use word-level matching on tag_word.");
+        }
+    }
+
     #endregion
 
     #region TagsToCount Parameter Tests
@@ -997,6 +1042,65 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         hasReducedCount.Should().BeTrue(
             "Search should reduce at least one tag count compared to unfiltered results");
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithPrefixSearch_MatchesPartialWords()
+    {
+        // Arrange - Search for "thom" should match content containing "Thomas"
+        // This tests FTS5 prefix matching capability
+
+        // Act - Search for partial word "thom"
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?q=thom", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().NotBeNullOrEmpty("prefix search 'thom' should match content with 'Thomas'");
+
+        // Verify at least one item contains "Thomas" in title, excerpt, or author
+        var hasMatch = result.Items.Any(item =>
+            (item.Title != null && item.Title.Contains("Thomas", StringComparison.OrdinalIgnoreCase)) ||
+            (item.Excerpt != null && item.Excerpt.Contains("Thomas", StringComparison.OrdinalIgnoreCase)) ||
+            (item.Author != null && item.Author.Contains("Thomas", StringComparison.OrdinalIgnoreCase)));
+
+        hasMatch.Should().BeTrue("at least one item should contain 'Thomas'");
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithPrefixSearch_MatchesDifferentPrefixLengths()
+    {
+        // Arrange - Test various prefix lengths for "copilot"
+
+        // Act - Search with 3-character prefix
+        var response3 = await _client.GetAsync("/api/sections/all/collections/all/items?q=cop", TestContext.Current.CancellationToken);
+        
+        // Act - Search with 4-character prefix
+        var response4 = await _client.GetAsync("/api/sections/all/collections/all/items?q=copi", TestContext.Current.CancellationToken);
+
+        // Act - Search with full word
+        var responseFull = await _client.GetAsync("/api/sections/all/collections/all/items?q=copilot", TestContext.Current.CancellationToken);
+
+        // Assert - All searches should succeed
+        response3.StatusCode.Should().Be(HttpStatusCode.OK);
+        response4.StatusCode.Should().Be(HttpStatusCode.OK);
+        responseFull.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var result3 = await response3.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        var result4 = await response4.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        var resultFull = await responseFull.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+
+        // All prefix searches should return results
+        result3!.Items.Should().NotBeEmpty("'cop' prefix should match 'copilot' content");
+        result4!.Items.Should().NotBeEmpty("'copi' prefix should match 'copilot' content");
+        resultFull!.Items.Should().NotBeEmpty("'copilot' full word should match content");
+
+        // Verify results are ordering properly (all should have similar results since they match "copilot")
+        result3.TotalCount.Should().BeGreaterThan(0);
+        result4.TotalCount.Should().BeGreaterThan(0);
+        resultFull.TotalCount.Should().BeGreaterThan(0);
     }
 
     #endregion

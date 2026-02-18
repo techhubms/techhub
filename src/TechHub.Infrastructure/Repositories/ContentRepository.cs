@@ -650,7 +650,7 @@ public class ContentRepository : IContentRepository
             filters.Add($@"(collection_name, slug) IN (
                 SELECT c.collection_name, c.slug FROM content_items c{ftsJoinClause}
                 WHERE {ftsWhere})");
-            parameters.Add("searchQuery", request.SearchQuery);
+            parameters.Add("searchQuery", dialect.TransformFullTextQuery(request.SearchQuery!));
         }
 
         var filterClause = filters.Count > 0 ? string.Join(" AND ", filters) : "";
@@ -746,16 +746,35 @@ public class ContentRepository : IContentRepository
             i++;
         }
 
-        // Query template - top tags with counts, excluding all noise tags in SQL
+        // Query optimization: two-step approach
+        // Query structure (matching the original fast query, but with word-level counting):
+        // Step 1 (subquery): Find valid tag_words + display names from is_full_tag=1 rows
+        //   within the same filtered scope (section/collection/date). Uses the covering
+        //   partial index idx_tags_valid_tagwords for a fast scan with no table lookups.
+        //   Returns a small set (~50-200 tag_words per section).
+        // Step 2 (outer): INNER JOIN the small set, then count ALL items (including word
+        //   expansions) for those tag_words in the same filtered scope.
+        //   E.g., "automation" counts items tagged "Automation", "Workflow Automation", etc.
+        // The display name comes from the subquery (not MAX in outer) so it's never NULL.
+        // PK constraint (collection_name, slug, tag_word) guarantees each item is counted once.
+        var minUsesClause = request.MinUses > 1 ? $"HAVING COUNT(*) >= {request.MinUses}" : "";
+
         var sql = $@"
-            SELECT tag_display AS Tag, COUNT(*) AS Count
-            FROM content_tags_expanded
-            WHERE is_full_tag = {Dialect.GetBooleanLiteral(true)}
-              AND tag_word NOT IN ({excludeParams})
+            SELECT vt.display_name AS Tag, COUNT(*) AS Count
+            FROM content_tags_expanded cte
+            INNER JOIN (
+                SELECT tag_word, MAX(tag_display) AS display_name
+                FROM content_tags_expanded
+                WHERE is_full_tag = {Dialect.GetBooleanLiteral(true)}
+                  AND tag_word NOT IN ({excludeParams})
+                  {(string.IsNullOrEmpty(filterClause) ? "" : $"AND {filterClause}")}
+                GROUP BY tag_word
+            ) vt ON cte.tag_word = vt.tag_word
+            WHERE cte.tag_word NOT IN ({excludeParams})
               {(string.IsNullOrEmpty(filterClause) ? "" : $"AND {filterClause}")}
-            GROUP BY tag_word, tag_display
-            {(request.MinUses > 1 ? $"HAVING COUNT(*) >= {request.MinUses}" : "")}
-            ORDER BY Count DESC, tag_display
+            GROUP BY cte.tag_word, vt.display_name
+            {minUsesClause}
+            ORDER BY Count DESC, Tag
             LIMIT {request.MaxTags}";
 
         var results = await Connection.QueryWithLoggingAsync<TagWithCount>(
@@ -988,7 +1007,7 @@ public class ContentRepository : IContentRepository
             {
                 sql.Append($@"
             AND {Dialect.GetFullTextWhereClause("query")}");
-                parameters.Add("query", request.Query);
+                parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
                 sql.Append($" ORDER BY {Dialect.GetFullTextOrderByClause("query")}");
                 // LIMIT is applied here because the tag subquery skips it when search is present
                 // (to avoid pruning items before FTS filter runs)
@@ -1029,7 +1048,7 @@ public class ContentRepository : IContentRepository
             if (hasQuery)
             {
                 whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
-                parameters.Add("query", request.Query);
+                parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
             }
 
             if (hasSections)
