@@ -26332,5 +26332,11 @@
     "canonical_url": "https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/",
     "timestamp": "2026-02-18 19:22:07 +00:00",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content is about a new AI model (Claude Opus 4.6) being enabled within the GitHub Copilot ecosystem, which is an AI-driven developer assistant (AI category rule 1, 2, and 5). Assigned 'GitHub Copilot' because it focuses on GitHub Copilot's new model support and integration (GitHub Copilot rules 1, 2, and 3). Did not assign other categories as there is no coding instruction, DevOps process, direct Azure or ML engineering content, or security theme.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-18-claude-opus-4-6-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
+    "timestamp": "2026-02-18 21:12:27 +00:00"
   }
 ]

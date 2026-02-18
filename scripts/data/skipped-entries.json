@@ -12069,5 +12069,17 @@
     "timestamp": "2026-02-18 17:25:24 +00:00",
     "canonical_url": "https://news.microsoft.com/source/2026/02/18/microsoft-and-crowdstrike-announce-the-falcon-platform-now-available-on-microsoft-marketplace/",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-02-18 20:11:37 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a brief news post announcing new research results from Project Silica (Microsoft's work on glass-based data storage), but there is no technical or implementation detail, code, or guidance provided. It does not fit any inclusion rules for the existing categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). While Project Silica is a technical topic related to storage, the post is a high-level update for a general or business audience and lacks substantive technical content for practitioners or developers as required by the workflow. Most of the content is navigation or social/commentary. Exclusion is based on insufficient technical depth and the absence of relevant implementation, coding, or architecture details.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_project-silicas-advances-in-glass-storage-activity-7429928433381548032-lEHW"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-02-18 20:11:49 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The main body consists largely of an image, a date, and a short header referencing another research blog. There is no substantive technical content, tutorial, or explanation about Project Silica; nor are there details about implementation, development, or how glass storage technology works. This is classified as a minimal news mention or link post without enough technical depth, which falls under the sales pitch/content announcement without educational value exclusion. Additionally, the format is not sufficient to extract meaningful categories.",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/project-silicas-advances-in-glass-storage-technology/"
   }
 ]
