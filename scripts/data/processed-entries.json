@@ -26398,5 +26398,149 @@
     "timestamp": "2026-02-19 11:15:57 +00:00",
     "canonical_url": "https://dellenny.com/can-the-solution-architect-role-be-replaced-by-ai/",
     "reason": "Succesfully added: AI category is included because the entire article focuses on the impact of artificial intelligence tools in technical architecture roles (AI inclusion rule 1 and 4). No Microsoft technology category (Azure, Coding, etc.) was assigned, because while Microsoft Azure and Microsoft 365 are mentioned as typical enterprise platforms, there is no in-depth technical focus or tutorial about their usage—Microsoft examples are illustrative, not central to the solution or technical implementation (Multi-Platform Threshold, Azure/ML/Coding inclusion rules). There is no actionable detail about DevOps, Security, or ML. The primary subject is the interplay of AI and technical roles, so only the AI category is warranted."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-18-github-desktop-3-5-5-adds-git-hooks-support",
+    "reason": "Succesfully added: Assigned 'DevOps' category because this update enhances GitHub Desktop by adding Git hooks integration, addressing developer workflow automation and environment compatibility—core DevOps themes (DevOps rules 2, 6, and 9). Not assigned 'Coding' since the content is about tooling, not coding practices or language use. Not assigned 'AI' or 'GitHub Copilot', since Copilot is only mentioned as a commit attribution feature and not as the main subject; the new feature is unrelated to AI-assisted code. No other categories apply as per inclusion rules.",
+    "timestamp": "2026-02-19 13:41:10 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/07/02/microsoft-sql-server-mcp-tool-leap-in-data-interaction-or-limited-and-frustrating/101150",
+    "reason": "Succesfully added: Assigned the AI category because the MCP tool specifically enables AI agents (such as GitHub Copilot and Claude Code) to interact with SQL Server via natural language, satisfying AI category rules 1 and 4. Assigned Coding because the implementation targets developers (Node.js and .NET SDKs) and involves automating or simplifying database interactions for coding tasks (Coding rules 2 and 4). Did NOT assign Azure/ML because, although Azure SQL is mentioned and supported, the main focus is cross-platform SQL Server and the AI-powered interface, not Azure-specific deployment or data science/ML development. The article's tone is critical but constructive, focusing on limitations and developer significance, not negative-only complaints, so none of the generic exclusion rules apply.",
+    "timestamp": "2026-02-19 13:41:59 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/07/14/microsoft-shovels-extra-copilot-features-into-vs-code-amid-dev-complaints-of-more-ai-bloat/101147",
+    "reason": "Succesfully added: Assigned 'AI' because the article centers on the addition and usage of AI-driven features in VS Code, such as Model Context Protocol (MCP), custom instructions, and experimental command approval (AI Inclusion Rule 1, 4, and 5). Assigned 'GitHub Copilot' because more than half of the features relate directly to Copilot integration, Copilot Chat, and automation (GitHub Copilot Inclusion Rules 1-4). Did NOT assign 'Coding' or 'DevOps' as the main focus is on tool capabilities, not on code patterns or DevOps processes. No generic exclusions apply: the article is technical, in English, not biographical, and not a sales pitch.",
+    "timestamp": "2026-02-19 13:42:33 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/11/25/microsoft-visual-studio-shifts-to-annual-releases-raising-cost-concerns/1726881",
+    "reason": "Succesfully added: Categories 'Coding' and 'DevOps' were assigned. 'Coding' is appropriate because the article is focused on Visual Studio and MSVC, which are core Microsoft development tools used for software engineering (Coding rules 1, 2, 5). 'DevOps' is included due to discussion of release management, update cadence, software lifecycle, and integration with GitHub Copilot—a developer workflow and automation concern (DevOps rules 1, 5, 10). The piece references Copilot as a rationale for release speed, but does not describe Copilot features or usage in depth, so 'AI' and 'GitHub Copilot' were not added. There is no Azure, Security, or ML focus. All generic exclusion rules were checked—none apply (the content is technical, not biographical, not a sales pitch, not business/strategy, and is in English).",
+    "timestamp": "2026-02-19 13:44:48 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/1728632",
+    "reason": "Succesfully added: Assigned the 'AI' category because the article is centered on the impact of generative AI and AI-assisted coding tools in the software development life cycle (AI inclusion rule 5). No Microsoft-specific technologies or developer tools are discussed in enough detail to qualify for additional categories such as 'Coding', 'DevOps', or 'Azure'. The article draws from research involving Atlassian, Google, and LaunchDarkly, with broad industry applicability. No generic exclusion rules apply—the content is technical, in English, and educational.",
+    "timestamp": "2026-02-19 13:48:26 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/12/11/vs-code-update-brings-agent-overload-typescript-7-preview-and-the-end-of-intellicode/1730665",
+    "reason": "Succesfully added: Assigned 'AI' because the article focuses heavily on AI-assisted coding enhancements in VS Code, including the introduction of Agent HQ for managing coding agents and detailed discussion of AI security. 'GitHub Copilot' was added as IntelliCode is being deprecated in favor of Copilot, and developers must now use Copilot for AI code completion (AI and GitHub Copilot rules). 'Coding' was included because the update affects core programming workflows (VS Code, TypeScript 7, language features, and build scripts) as per Coding category rules. I did not assign 'DevOps', 'Azure', 'ML', or 'Security' since DevOps practices, Azure-specific features, or advanced ML/data engineering are not a focus—security is discussed only as risk/setting awareness within the coding environment, not as technical security implementation.",
+    "timestamp": "2026-02-19 13:48:53 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/01/05/dramatic-drop-in-stack-overflow-questions-as-devs-look-elsewhere-for-help/4079575",
+    "reason": "Succesfully added: I assigned the 'AI' category because the core analysis is about how AI coding assistants and integrated tools are displacing traditional community Q&A, with direct discussion of AI's role in changing developer help-seeking behavior (AI inclusion rule 5). Although Microsoft, GitHub, and Google are mentioned as industry examples, the focus remains broadly on AI trends in developer workflow rather than on any specific Microsoft technology, so other categories (e.g., 'DevOps', 'Azure', 'Coding') do not qualify. There is no technical depth on platform configuration or programming in the content, so 'Coding', 'DevOps', 'ML', 'Azure', or 'Security' do not apply.",
+    "timestamp": "2026-02-19 13:49:31 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/01/15/vibe-coded-applications-full-of-security-blunders/4079588",
+    "reason": "Succesfully added: Assigned AI category because the article focuses on AI-powered coding agents (Claude, Codex, Replit, Devin, Cursor) generating application code, in line with AI inclusion rule 1 and 4. Assigned Security category because the core topic is the prevalence of security vulnerabilities in AI-generated ('vibe coded') applications, directly aligning with Security rule 2, 4, and 9. The article contains no significant content about Microsoft technologies or direct hands-on technical implementation, so other categories do not apply. Did not assign ML category because there is no discussion of custom ML or data science, only LLM application. Excluded Coding because the focus is not on the code itself, but on the process and its security implications.",
+    "timestamp": "2026-02-19 13:50:19 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/01/28/typescript-inventor-anders-hejlsberg-ai-is-a-big-regurgitator-of-stuff-someone-has-done/4079582",
+    "reason": "Succesfully added: The article centers on Anders Hejlsberg's views about AI in programming, the migration of the TypeScript compiler, and development tooling—all highly technical and developer-focused topics. 'AI' category applies as the discussion covers practical and strategic uses of AI in programming, AI-driven IDEs, and language services (AI Rule 4 and 5). 'Coding' is applicable due to its detail on programming languages (TypeScript, C#, Go), compiler design, code migration, and code semantics (Coding Rule 1 and 4). Other categories such as Azure, DevOps, ML, Security, or GitHub Copilot are not salient in the presented content. Decision is based strictly on inclusion rules and primary content details.",
+    "timestamp": "2026-02-19 13:50:57 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ci-cd/2026/02/17/github-previews-agentic-workflows-as-part-of-continuous-ai-concept/4091356",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on the integration of AI agents (like GitHub Copilot, OpenAI Codex) into automation processes (AI inclusion rule 1 and 4). Assigned 'DevOps' because the feature is directly embedded into GitHub Actions, involves repository automation, and is framed as an evolution of continuous integration (DevOps inclusion rules 2, 3, 5, and 6). The article details technical aspects, security, configuration, and use cases relevant to engineering practitioners. No other categories apply as there is no code-level development (Coding), no focus on Azure, no ML/data science platform content, and no detailed Microsoft security implementation beyond guarding the workflows themselves.",
+    "timestamp": "2026-02-19 13:53:25 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/databases/2026/02/14/microsoft-deprecates-polyglot-notebooks-developers-react/4091167",
+    "reason": "Succesfully added: Assigned the Coding category because the article centers on Microsoft's developer tooling—specifically Polyglot Notebooks, .NET Interactive, and related notebook workflows in Visual Studio Code and Azure Data Studio. Content is about coding workflows, developer experience, and the impact on technical practitioners. No content qualifies for AI, ML, Azure, DevOps, Security, or GitHub Copilot categories because the core subject is the deprecation of development tools and not about AI or ML services, cloud deployment, security, or DevOps practices.",
+    "timestamp": "2026-02-19 13:55:48 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/06/26/avalonia-ui-sponsorship-completely-removes-open-source-vs-commercial-conflict-claims-ceo/101146",
+    "reason": "Succesfully added: Included the 'Coding' category as the article centers on a cross-platform .NET UI framework used by developers (Coding rule 1 and 2), its licensing, and its ecosystem. The subject (Avalonia UI) is a .NET-centric technology with clear relevance to Microsoft developer tools, even though it's not from Microsoft itself. No other categories fit: there's no strong Azure, AI, ML, DevOps, Security, or GitHub focus. The content is technical in nature, about open-source development process and resource allocation, not business strategy or non-technical management. No generic exclusion rules apply, as the piece is not a sales pitch, biographical, or purely business content.",
+    "timestamp": "2026-02-19 13:56:21 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/06/30/microsoft-to-finally-expunge-the-azure-ad-graph-api/101141",
+    "reason": "Succesfully added: Assigned 'Azure' category because the article centers on Azure AD/Entra ID platform services and API lifecycle (Azure inclusion rule 1). 'Security' is included because the migration affects authentication, authorization, and overall identity management in Microsoft cloud environments (Security rules 1 and 3). Not assigned 'Coding' because the article does not give code-level implementation or development patterns, but guides on migration and infrastructure. Not assigned 'DevOps' as DevOps processes or tooling are not a focus. The article does not cover AI or ML topics, so those categories do not apply. The decision is based on the main content sections explaining migration, security, and cloud identity service lifecycle management, in accordance with categorization guidelines.",
+    "timestamp": "2026-02-19 13:56:44 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/07/08/things-go-better-with-telemetry-microsoft-adds-phone-home-to-its-go-build/101140",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft's custom Go build is primarily described in the context of Azure Linux, and the Docker images are published for use in Microsoft Azure environments, fitting Azure rule 1 and 4. Assigned 'Security' because the main driver for this build and for telemetry is FIPS 140-3 cryptographic compliance—a key security standard used in finance/government (Security rule 1 and 9). Did not assign 'Coding' because the content does not primarily focus on coding practices, libraries, or frameworks, but on toolchain engineering, compliance, and operational deployment. No other categories fit, and no generic exclusions apply as the article is technical, not biographical, promotional, or business-strategy focused.",
+    "timestamp": "2026-02-19 13:57:16 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/12/17/github-to-charge-for-self-hosted-runners-from-march-2026/1734518",
+    "reason": "Succesfully added: Assigned the DevOps category because the article details significant changes to GitHub Actions self-hosted runners—a core CI/CD and DevOps automation feature. The post discusses workflow automation, runner infrastructure, impacts on build/deployment, team practices, and related ecosystem reactions, all central to DevOps but not directly to AI, Coding, Azure, Security, or ML as per the category rules. No generic exclusion rules apply since the article offers technical and process-impact analysis relevant to technical practitioners.",
+    "timestamp": "2026-02-19 14:00:18 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/01/07/microsoft-open-sources-xaml-studio-amid-developer-discontent-with-visual-studio-designers/4079573",
+    "reason": "Succesfully added: Assigned the Coding category because the content is focused on XAML Studio, a developer utility for building user interfaces with XAML, as well as Visual Studio and related frameworks (WinUI, UWP, WPF, .NET MAUI). This fits Coding Inclusion Rules (1, 2, and 4), as it involves Microsoft programming frameworks, UI coding practices, and developer tooling. No other categories (AI, Azure, ML, DevOps, Security) are relevant here since the article is strictly about UI framework tooling and development workflows. No exclusion rules apply; the content is technical, not biographical or business/strategy-focused, and is in English.",
+    "timestamp": "2026-02-19 14:00:52 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/01/20/microsoft-updates-react-native-for-windows-developers-ask-why-not-use-maui/4079595",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content discusses technical details of Microsoft's React Native for Windows, including framework updates, debugger support, component enhancements, and architectural migrations. It compares React Native with MAUI from a development and adoption perspective, referencing programming languages (.NET, JavaScript, C++, C#) and code sharing. No other categories (AI, Azure, DevOps, ML, Security) are applicable as the content does not focus on those areas per the inclusion rules.",
+    "timestamp": "2026-02-19 14:01:26 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/01/22/vs-code-tasks-config-file-abused-to-run-malicious-code/4079547",
+    "reason": "Succesfully added: Assigned the Security category because the article focuses on how attackers exploit Visual Studio Code's configuration system to execute malicious code (Security inclusion rules 1, 2, 4). It details the risks, protections, and security design aspects developers should consider. The DevOps category is also assigned since the content discusses developer workflow automation, repository security on GitHub, supply chain risks, and strategies such as containerization (DevOps inclusion rule 6, 7, and 9). No other category applied as there is no focus on Microsoft-specific cloud services, AI, ML, or programming language constructs.",
+    "timestamp": "2026-02-19 14:01:59 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/01/26/microsoft-previews-command-line-tool-created-because-calling-modern-windows-apis-is-too-difficult/4079589",
+    "reason": "Succesfully added: Applied the Coding category because the content is focused on a Microsoft command-line tool (Winapp CLI) that facilitates application development by making it easier to work with modern Windows APIs, SDKs, and packaging in code-centric and cross-platform workflows (Coding rules 2, 4, 5). The article discusses technical procedures, CLI usage, SDKs, and developer tooling, rather than end-user, business productivity, or AI/ML-specific content. AI was not assigned because the tool itself is not an AI service, though it enables use of some AI-related APIs; the main thrust is about code tooling. Azure and DevOps do not apply because there is no Azure or CI/CD/devops focus. ML, AI, and Security are not central to the described content.",
+    "timestamp": "2026-02-19 14:02:19 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/01/28/webassembly-gaining-adoption-behind-the-scenes-as-technology-advances/4079564",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the main focus is on WebAssembly technology and its integration within developer tools and platforms, including specific technical advances with Microsoft's .NET 10 and Uno Platform (Coding rule 1, 2, and 4). Azure, AI, ML, DevOps, Security, and GitHub Copilot categories do not qualify, as there is no substantive content on Azure services, AI features, data science, DevOps tooling, security implementation, or GitHub Copilot. Microsoft is mentioned in a development context (improvements to .NET/WebAssembly), which is central enough to meet the Microsoft threshold for inclusion. The content is not promotional, biographical, question-only, or negative, and is presented in English, fulfilling generic inclusion criteria.",
+    "timestamp": "2026-02-19 14:02:41 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/02/13/net-train-keeps-rolling-with-first-showing-of-2026-release/4090277",
+    "reason": "Succesfully added: Assigned 'Coding' category because the content centers on the release of .NET 11 and C# 15, which are Microsoft programming frameworks and languages (Coding rules 1 and 2). The article discusses runtime changes (Mono to CoreCLR), new features in C#, and language design decisions, which are all highly relevant to .NET/C# developers. No AI, ML, Azure, DevOps, Security, or GitHub Copilot features are mentioned, so those categories do not apply. No generic exclusion rules were triggered.",
+    "timestamp": "2026-02-19 14:05:24 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/security/2025/07/03/security-researcher-exploits-github-gotcha-gets-admin-access-to-all-istio-repositories-and-more/101129",
+    "reason": "Succesfully added: The article qualifies for the Security category because it centers on credential leaks and securing commit histories in GitHub, aligning with Security rule 2 and 5. It qualifies for DevOps because it covers GitHub, source control workflows, best practices around secret management within CI/CD pipelines, and incident response (DevOps rules 2, 5, and 8). There is no substantial Microsoft technology involved (GitHub is owned by Microsoft but the exploit and guidance are not focused on Microsoft-specific features or platforms), so Azure, Coding, AI, ML, and GitHub Copilot are not assigned. The article is not a sales pitch, is technical and educational, and doesn't break any generic exclusion rules.",
+    "timestamp": "2026-02-19 14:07:18 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/security/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/4079554",
+    "reason": "Succesfully added: Assigned the Azure category because the article details the Azure Artifact Signing service, a Microsoft Azure offering (Azure rule 1). Security is included as the core subject is code signing security and certificate management for Windows applications (Security rules 1 and 2). DevOps is included because AAS is designed for integration with DevOps tools and CI/CD pipelines (DevOps rules 2, 5, 6), including direct references to Azure DevOps and GitHub Actions. The article does not focus on coding, AI, ML, or GitHub Copilot, so those categories were not assigned.",
+    "timestamp": "2026-02-19 14:07:44 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/vms/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/1731935",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the article contains substantial coverage of Microsoft Azure's adoption of Arm (specifically Cobalt 100 and 200 processors) and related performance benchmarks, fulfilling Azure category rule 1 and rule 4. Azure is a core focus among other hyperscalers, and its implementation details are central to the discussion. Did not add AI or ML categories because, while AI workloads are referenced as benchmarks, the content is not about building or integrating AI, nor about custom ML development—AI is part of performance use-case examples, not the central topic. No Coding or DevOps categories were added since there are no significant discussions of application code, frameworks, DevOps practices, or developer tooling implementation, outside some minor mentions (e.g., GitHub integration) that do not meet the threshold for those categories. The primary value is Azure’s infrastructure strategy and its impact. Generic exclusion rules do not apply, as this is not business strategy, biographical, or non-technical content.",
+    "timestamp": "2026-02-19 14:09:32 +00:00",
+    "collection": "blogs"
   }
 ]

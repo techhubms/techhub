@@ -12099,5 +12099,251 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-sre-agent/does-azure-sre-agent-support-working-with-private-aks-cluster/m-p/4495585#M4"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content consists entirely of social media links, general platform promotion, and generic GitHub information, with no substantive technical content, tutorial, or educational value. It does not describe any Microsoft technologies, developer tools, technical practices, or implementation details. This triggers the generic exclusion rules for promotional content without technical depth and lack of meaningful technical information.",
+    "timestamp": "2026-02-19 12:09:18 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=6LEyMDS8pjM",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/06/25/google-positions-itself-for-next-decade-of-ai-as-gemini-cli-arrives-with-generous-free-tier/1627809",
+    "reason": "No categories found: Content is excluded under the multi-platform content threshold rule and category inclusion rules: the content focuses entirely on Google Gemini CLI, Google's AI assistant, and its ecosystem (Gemini LLMs, Code Assist plugins, Google Cloud, etc.), with comparison only referencing Anthropic's Claude Code and OpenAI's Codex. There is no substantive content about Microsoft technologies or platforms, nor is Microsoft development, Azure, GitHub Copilot, or any Microsoft-specific AI/ML tooling discussed in detail or presented as a central technical component. Per the requirement that Microsoft technologies comprise at least 40% or be central to the solution, and that only Microsoft technologies should be categorized, no categories can be assigned. This is reinforced by explicit instructions in the workflow specifying non-Microsoft technology coverage (including deep dives into Google's ecosystem) does not qualify for categorization.",
+    "timestamp": "2026-02-19 13:41:35 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/07/10/docker-adds-ai-agents-to-compose-along-with-gpu-powered-cloud-offload-service/101137",
+    "reason": "No categories found: No categories assigned. While the article discusses Docker's addition of AI agent support, orchestration frameworks (such as CrewAI, LangGraph, and Spring AI), and GPU-powered cloud offload for AI workloads, it does not focus on Microsoft technologies as central or substantive content (per the Multi-Platform Content Threshold rule). The only mention related to Microsoft is a brief note that support for Azure Container Apps is 'coming soon,' but the current features, examples, and walkthroughs center on Google Cloud Run and Docker's own technologies. There is no technical implementation, tutorial, or architecture discussed for Azure or other Microsoft services. As per the critical workflow: apply generic exclusion rules and platform threshold before category rules, so Microsoft tech is not central, resulting in no categories.",
+    "timestamp": "2026-02-19 13:42:12 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/07/15/hands-on-with-kiro-the-aws-preview-of-an-agentic-ai-ide-driven-by-specifications/1620621",
+    "reason": "No categories found: All generic exclusion rules were applied first, per workflow requirements. The content focuses exclusively on AWS Kiro, an AI-powered IDE based on Code OSS, which is the open-source base of Visual Studio Code. Despite the base being related to Microsoft's VS Code, Kiro is an AWS-branded, AWS-operated product and the feature set, API integrations, workflows, authentication, and cloud-based elements are all AWS-native or cloud-agnostic. The article states Kiro is intentionally separated from core AWS to appeal to multi-cloud developers and not dependent on Microsoft platforms. There is only a tangential connection to Microsoft (VS Code), but this is not a Microsoft-branded or operated technology, nor is any Microsoft-first cloud service, API, or developer tool substantively discussed. No substantial Microsoft technology is central to the solution (well below the 40% tech threshold), and there is no Azure, .NET, Microsoft AI, Copilot, or Power Platform content. Therefore, by the Multi-Platform Content Threshold and Category Inclusion Rules, no categories are assigned.",
+    "timestamp": "2026-02-19 13:42:48 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/07/17/aws-s3-gets-vector-buckets-with-new-algorithms-for-reasonable-performance-at-lower-cost-vp-tells-us/101173",
+    "reason": "No categories found: No categories can be assigned because the primary focus of the article is on Amazon Web Services (AWS) S3's new vector storage bucket for AI/ML workloads. The article discusses AWS-specific services, algorithms, pricing, and architectural trade-offs – not Microsoft technologies. While the text briefly notes that vector capabilities are being added to other database managers including SQL Server, it does not provide substantive technical details on Microsoft services nor does it make Microsoft central to the solution. According to the multi-platform threshold rule, Microsoft technology must constitute at least 40% of the substantive content or be central, which is not the case here. Therefore, per the strict inclusion/exclusion criteria, no categories are assigned.",
+    "timestamp": "2026-02-19 13:44:11 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/11/19/we-take-a-look-at-googles-antigravity-agentic-ai-development-but-some-frustrations-for-early-adopters/1727764",
+    "reason": "No categories found: No categories were assigned because the content is an in-depth review of Google's Antigravity agentic AI platform—centered entirely on Google technology, AI development trends, and comparisons with Microsoft's pace and approach to agentic AI tooling, but does not contain any technical depth, practical guides, or substantive implementation details about a Microsoft technology or offering. Microsoft is mentioned only in passing (discussion about innovation pace and VS Code being forked) but is not central to the solution or technical architecture. According to the Multi-Platform Content Threshold and Category Inclusion Rules, coverage must be at least 40% Microsoft-focused or central to solution architecture to qualify, which this content does not meet. Therefore, no Microsoft-relevant categories apply.",
+    "timestamp": "2026-02-19 13:44:24 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/11/27/ocaml-maintainers-reject-massive-ai-generated-pull-request/1728083",
+    "reason": "No categories found: No categories were assigned. After fully processing the content according to the step-by-step workflow, the article is an analysis/report on the OCaml open-source project’s rejection of a large AI-generated pull request—specifically, one created using Anthropic's Claude Code for adding DWARF debugging support. The content revolves around issues open source maintainers face with AI-generated PRs, copyright, code review burden, and project workflow. However, there is no discussion of Microsoft technologies, services, or tooling, which is a requirement for any content to qualify for Tech Hub categories. Microsoft is only referenced generally as an 'industry giant pushing AI,' but there is no substantive or architectural coverage of any Microsoft service, API, framework, or product. The technical content is OCaml/LLM/Anthropic-focused, not Microsoft. Thus, per 'Multi-Platform Content Threshold' and category inclusion rules, no categories apply.",
+    "timestamp": "2026-02-19 13:46:12 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/12/02/aws-transform-revamp-uses-ai-to-shift-applications-from-microsofts-sql-server/1728589",
+    "reason": "No categories found: No categories were assigned because, per the multi-platform content threshold and comparison content rules (Chapter 2 and Clarifications), Microsoft technologies are **not central** to the article's technical solution. The content primarily reports on AWS's new AI-driven migration tooling (AWS Transform), which is focused on enabling migrations *away from* Microsoft SQL Server and .NET/Windows to AWS-managed services and PostgreSQL. The coverage of Microsoft SQL Server is limited to describing what is being migrated away from, not on technical implementation or use of Microsoft technologies themselves. Further, the technical depth focuses on AWS Transform's capabilities, limitations, and migration process, not on hands-on usage or deep technical detail of Microsoft SQL Server or .NET. Therefore, Azure, ML, AI, Coding, DevOps, or Security categories do not apply. This is reinforced by the explicit rule: 'Migration content: Include if content shows moving TO Microsoft technologies'—here the shift is *from* Microsoft tech toward AWS. No generic exclusion rules were triggered; the exclusion is based on the platform centrality and inclusion rules.",
+    "timestamp": "2026-02-19 13:46:27 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/12/03/bun-javascript-runtime-acquired-by-anthropic-tying-its-future-to-ai-coding/1727637",
+    "reason": "No categories found: No categories assigned. The content is focused on the acquisition of the Bun JavaScript runtime by Anthropic and its implications for AI-driven coding and software engineering. However, there is no substantive coverage of Microsoft technologies, developer tools, or platforms. The only mentions of Microsoft are in linked or related articles, not in the main article's body. Per the multi-platform content threshold rule, Microsoft technologies must be central or comprise at least 40% of substantive content for category assignment, which is not the case here. Additionally, none of the Microsoft-specific category inclusion conditions are met. Therefore, the content does not qualify for any of the predefined categories.",
+    "timestamp": "2026-02-19 13:46:40 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/12/09/jetbrains-abandons-fleet-ide-pins-hopes-on-forthcoming-air-agentic-development-tool/1728894",
+    "reason": "No categories found: Excluded all categories because the content does not substantially focus on Microsoft technologies or services. The main article discusses the discontinuation of JetBrains Fleet IDE and the introduction of JetBrains Air, an agentic AI development tool by JetBrains. While Microsoft Visual Studio Code (VS Code) is briefly mentioned in a competitive context, it is not central to the technical discussion, and the bulk of the article is about JetBrains products and industry trends. According to Multi-Platform Content Threshold and Inclusion Rule guidance, Microsoft technologies are not central (do not comprise ≥40% of the substantive content or the solution's architecture), so no categories apply.",
+    "timestamp": "2026-02-19 13:46:53 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2025/12/16/cursor-ai-editor-gets-visual-designer-but-bugs-and-ever-changing-ui-irk-developers/1731163",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article is focused on Anysphere's Cursor AI editor, which is a fork of Visual Studio Code, but it is not a Microsoft technology, product, or service. While VS Code is originally a Microsoft project, Cursor is a third-party fork with significant customizations and the article centers on Cursor's AI enhancements rather than Microsoft’s original products or officially supported extensions. There is no substantial content about Microsoft services, platforms, or developer offerings that meets the minimum threshold (≥40% substantive Microsoft content or centrality). Therefore, no Microsoft categories are applicable.",
+    "timestamp": "2026-02-19 13:49:09 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/01/08/tailwind-labs-lays-off-75-percent-of-its-engineers-thanks-to-brutal-impact-of-ai/4079571",
+    "reason": "No categories found: No categories have been assigned because the content does not meet any Microsoft technology inclusion thresholds. The article exclusively discusses layoffs at Tailwind Labs due to the impact of AI on their business model and monetization strategy, focusing on open source sustainability and the effect of AI tools on product revenue. There are no technical details about Microsoft platforms, services, or developer tools, nor is there Microsoft-specific AI, ML, Azure, Security, DevOps, or Coding content. As per the multi-platform content threshold and inclusion rules, at least 40% of content must center on Microsoft technologies, which is not the case here. Therefore, this post is out of scope according to the generic exclusion and inclusion rules.",
+    "timestamp": "2026-02-19 13:49:43 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/01/13/flyio-introduces-sprites-lightweight-persistent-vms-to-isolate-agentic-ai/4079557",
+    "reason": "No categories found: No Microsoft technologies are central or even discussed in the main content. The article is about Fly.io's new Sprite VMs for isolating agentic AI, which are based on Firecracker (an AWS-sponsored project) and reference Anthropic Claude and other AI agents, but do not involve Azure, Microsoft AI services, or any other Microsoft platform. According to the Multi-Platform Content Threshold and inclusion rules, Microsoft technology must comprise at least 40% of substantive content or be central to the technical solution, which is not met here. Therefore, no categories apply.",
+    "timestamp": "2026-02-19 13:49:56 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/01/21/llvm-project-adopts-human-in-the-loop-policy-following-ai-driven-nuisance-contributions/4079585",
+    "reason": "No categories found: No categories assigned because this content does not centrally feature any Microsoft technology, platform, or tool. The article primarily discusses the LLVM compiler project's AI contribution policy, referencing AI-generated code submissions and related moderation. While Visual Studio's IntelliCode is briefly mentioned in a community quote, this is incidental and does not meet the threshold for Microsoft technology being ≥40% of the core solution or technical focus. No other Microsoft technologies, frameworks, or development platforms are described in a way that triggers inclusion under any category (AI, Coding, Azure, ML, Security, DevOps, GitHub Copilot). Thus, per the multi-platform threshold rules and category inclusion criteria, this content does not qualify.",
+    "timestamp": "2026-02-19 13:50:33 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/02/02/anthropic-research-skilled-devs-make-better-use-of-ai-but-using-ai-is-bad-for-learning-skills/4079561",
+    "reason": "No categories found: No categories assigned because the content does not focus on Microsoft products, services, or development technologies. The article is about Anthropic-sponsored research regarding the use of AI tools in coding and the effect on developer skill growth, but it references neither Microsoft AI platforms (such as Azure OpenAI, Azure Machine Learning, etc.) nor Microsoft developer tools or cloud services. The study involved Python developers using the Trio library and general AI coding assistance, with no mention of Microsoft technologies being central to the solution. Per the workflow, only content where Microsoft technologies are ≥40% of the substance or central to the technical discussion should be categorized, which is not the case here.",
+    "timestamp": "2026-02-19 13:51:10 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/02/04/apple-embraces-agentic-ai-development-with-xcode-263/4090111",
+    "reason": "No categories found: No categories are assigned because the content is entirely focused on Apple's Xcode development environment and its integration of Anthropic's Claude and OpenAI's Codex agents through the Model Context Protocol (MCP), with no discussion of Microsoft technologies or platforms. The article notes that Visual Studio Code previously had better AI tooling, but provides no substantive technical detail about Microsoft products or services. While there are some links in the broader page to Microsoft-related content, the main body of this article does not meet the 'Microsoft technology central or 40%' threshold outlined in the multi-platform content threshold. Therefore, none of the Microsoft categories (AI, Azure, Coding, Security, DevOps, GitHub Copilot, ML) are applicable, per the generic exclusion rule for non-Microsoft-focused content.",
+    "timestamp": "2026-02-19 13:51:25 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/02/19/github-itself-to-blame-for-ai-slop-prs-say-devs/4091420",
+    "reason": "No categories found: No categories assigned. While the article discusses the negative impact of AI-generated pull requests on open source maintainers and references GitHub, Copilot, and general AI slop, it does not provide technical implementation details, best practices, or actionable guidance related to Microsoft technologies. The content is primarily commentary and analysis of open source community challenges (Generic Exclusion: Business Strategy/Executive Content and Negative/Unconstructive Content). Although GitHub Copilot is mentioned, the article is not a technical guide, tutorial, or hands-on exploration of developer workflows or Copilot functionality. It instead focuses on broader community/policy concerns and contains a significant amount of negative sentiment regarding AI-generated contributions. There are no technical details or development insights about Microsoft or GitHub services that would meet the thresholds for 'AI', 'GitHub Copilot', or other categories.",
+    "timestamp": "2026-02-19 13:51:38 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/ci-cd/2025/11/27/zig-project-ditches-github-for-codeberg-but-move-could-be-costly/1727053",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: This article discusses the Zig programming language project migrating its repository from GitHub to Codeberg. While GitHub (owned by Microsoft) is mentioned, the primary subject focuses on Zig's dissatisfaction with GitHub (performance issues, UI changes, AI features), their migration rationale, and the implications for sponsorship and community. There is no technical content involving Microsoft technologies, development, DevOps, or programming guidance related to Microsoft services or tools. Thus, the Microsoft technology threshold is not met (GitHub is only referenced as an affected platform, not as part of a technical solution or workflow), and no inclusion categories are triggered.",
+    "timestamp": "2026-02-19 13:51:51 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/containers/2025/07/01/cloudflare-container-platform-in-public-preview-with-scale-to-zero-pricing-some-initial-limitations/1628323",
+    "reason": "No categories found: No categories assigned because the content is focused entirely on Cloudflare's container platform and its features, with in-depth details about Cloudflare Workers, Durable Objects, pricing, scaling, and limitations. Microsoft technologies are only present in sidebar links and headlines for unrelated news. Per Multi-Platform Content Threshold, Microsoft technology must comprise ≥40% of substantive content or be central to the solution. Here, Microsoft is not discussed in the main article. No inclusion rules for Microsoft AI, Azure, GitHub, DevOps, Coding, ML, or Security topics qualify. Thus, exclusion applies: there are no categories.",
+    "timestamp": "2026-02-19 13:53:38 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/containers/2025/12/04/akamai-buys-fermyon-for-wasm-based-serverless-functions-a-possible-answer-to-cloudflare-workers/1732513",
+    "reason": "No categories found: No Microsoft technology is substantively discussed or central to the Akamai–Fermyon acquisition news. The content focuses on Akamai, Fermyon, and Wasm-based serverless functions, referencing Cloudflare Workers and industry trends primarily around non-Microsoft platforms (Akamai, Wasmtime, Cloudflare). Microsoft technologies are only mentioned in passing (e.g., in a list of languages supported by Wasmtime), which does not reach the ≥40% substantive content threshold, nor are they central to any described solution per the Microsoft Content Must Be Central rule. No categories were assigned.",
+    "timestamp": "2026-02-19 13:53:50 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/containers/2025/12/18/docker-hardened-images-now-free-devs-give-cautious-welcome/1733653",
+    "reason": "No categories found: No categories have been assigned because the content is focused entirely on Docker's Hardened Images, which are not Microsoft technologies, products, or cloud platforms. Although there are references to security and DevOps concepts (such as supply chain security and CI/CD), the central technology discussed is Docker and its hardened container images, with no substantive integration or mention of Azure, GitHub, Microsoft security tools, or other Microsoft services. According to the multi-platform content threshold, Microsoft technologies must comprise at least 40% of the substantive content or be central to the solution, which is not the case here. No category inclusion rules are triggered; therefore, the output contains only this explanation.",
+    "timestamp": "2026-02-19 13:54:03 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/databases/2026/01/13/open-source-mysql-repository-has-no-commits-in-more-than-three-months/4079594",
+    "reason": "No categories found: No categories assigned. After applying the generic exclusion rules and content assessment, this article does not qualify for any Microsoft technology category. The central focus is on the MySQL open source project's inactivity, industry responses, and related database trends. While Microsoft Azure is briefly mentioned in reference to the retirement of Azure Database for MariaDB in favor of MySQL, there are no substantive technical details, code, architecture, or Microsoft implementation guidance. The Azure mention constitutes far less than 40% of the substantive content and is purely about a product lifecycle business decision, not a technical or developmental topic. Therefore, per the multi-platform threshold and Azure inclusion rules, this content does not meet the requirements for categorization.",
+    "timestamp": "2026-02-19 13:54:16 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/06/24/serious-mysql-bug-celebrates-20-years-unfixed-another-reason-to-switch-to-postgresql/101178",
+    "reason": "No categories found: No categories assigned because the content is entirely focused on a longstanding bug in MySQL and its implications for MySQL, MariaDB, and PostgreSQL users. There is substantial discussion of relational database integrity, triggers, and best practices in open source databases, but at no point is a Microsoft technology, tool, or platform (such as Azure SQL Database, SQL Server, Microsoft data/ML/AI/DevOps/security tools, etc.) a central or even significant feature. Microsoft SQL Server is only mentioned in passing as a ranking competitor, not in a technical or architectural context. Therefore, this content does not meet the inclusion threshold for any Microsoft-related categories and is outside the scope of this workflow.",
+    "timestamp": "2026-02-19 13:56:01 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/07/07/zig-lead-makes-extremely-breaking-change-to-stdio-ahead-of-async-and-awaits-return/1628802",
+    "reason": "No categories found: No categories were assigned because this content focuses on the Zig programming language and its standard library changes (std.io.Reader/Writer, Async/Await) and does not involve any Microsoft technology or platform. There is no coverage of Microsoft Azure, .NET, Visual Studio, GitHub, or other Microsoft-centric services. As per the multi-platform and inclusion rules, content must centrally feature Microsoft technologies to be categorized. Thus, no categories apply.",
+    "timestamp": "2026-02-19 13:56:56 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/07/09/despite-30-months-work-core-developer-says-pythons-jit-compiler-is-often-slower-than-the-interpreter/1629293",
+    "reason": "No categories found: Excluded all categories per the Generic Exclusion Rules. The content is focused entirely on CPython, the Python JIT, interpreter performance, and Python core development. There is no central Microsoft technology discussed, nor is the Microsoft reference (cancellation of support for Faster CPython) more than a brief contextual mention. The article does not describe any Microsoft product, platform, tool, nor a migratory/architectural pattern centered on Microsoft technologies. Thus, per 'Multi-Platform Content Threshold' and 'When in doubt, exclude', no categories can be assigned.",
+    "timestamp": "2026-02-19 13:57:29 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/07/18/google-vp-of-development-explains-how-citizen-developers-must-be-tempered-by-the-pros/101182",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The entire article is about Google's developer tooling (Firebase Studio, Gemini, Google Cloud), 'citizen development,' and AI advances at the Google Summit. No Microsoft technologies are discussed, mentioned, or form any part of the solution or comparison. According to the Multi-Platform Content Threshold and Category Inclusion Rules, Microsoft technologies must be central or at least comprise 40% of substantive content for categorization. This article is Google-centric with no actionable Microsoft relevance, so all category arrays are left empty.",
+    "timestamp": "2026-02-19 13:57:42 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/11/20/copilot-net-modernization-tool-a-huge-downgrade-devs-say-and-no-longer-free/1725515",
+    "reason": "No categories found",
+    "timestamp": "2026-02-19 13:59:16 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/11/24/googles-chromium-team-decides-it-will-add-jpeg-xl-support-reverses-obsolete-declaration/1730949",
+    "reason": "No categories found: No categories were assigned because the main content exclusively discusses Google's Chromium team's decision to add JPEG XL support to Chromium. The article describes image format support changes, open source implementations (libjxl, Rust/jxl-rs), browser engine strategy, and ecosystem reactions but does not mention or focus on any Microsoft technologies, development frameworks, or services. While Microsoft Edge is briefly mentioned as a Chromium-based browser, the article does not cover any Microsoft-specific technical implementation or APIs, nor does it centrally feature Microsoft tools, platforms, or development approaches as required for inclusion. Therefore, by the core rules (Multi-Platform Content Threshold: Microsoft content must be central and comprise ≥40% of main content), all categories are excluded. No generic exclusion is necessary; this is solely based on category inclusion rules.",
+    "timestamp": "2026-02-19 13:59:30 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/12/08/aws-shows-rust-love-at-reinvent-10-times-faster-than-kotlin-one-tenth-the-latency-of-go/1728671",
+    "reason": "No categories found: Content excluded per generic exclusion rules. The article is entirely focused on AWS and open source technologies (Rust, Go, Kotlin) and their application within AWS's infrastructure and Datadog's observability agents. There is no mention of Microsoft technologies, platforms, services, or products, nor are there any comparisons or migration guides involving Microsoft. According to the Multi-Platform Content Threshold rule, Microsoft technologies must be central or comprise at least 40% of substantive content for inclusion. Since this article is about AWS, it does not qualify for any Tech Hub categories.",
+    "timestamp": "2026-02-19 13:59:43 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2025/12/15/rust-boosted-by-permanent-adoption-for-linux-kernel-code/1725322",
+    "reason": "No categories found: No qualifying categories assigned because the content is focused on the adoption of the Rust programming language for Linux kernel development and does not cover any Microsoft technology, development tools, frameworks, or platforms as required by the category inclusion rules. The only mentions of Microsoft in the surrounding content index are for unrelated news items, not part of the actual article content. There is no substantive discussion of Azure, .NET, Visual Studio, GitHub, or any Microsoft-coded ecosystem. Per the multi-platform threshold and category inclusion rules, content must be substantively Microsoft-focused (≥40%) or feature Microsoft as a central solution; this article does not meet those requirements.",
+    "timestamp": "2026-02-19 13:59:56 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/01/06/ruby-40-released-but-its-best-new-features-are-not-production-ready/4079592",
+    "reason": "No categories found: No categories assigned because the content is an overview and analysis of the Ruby 4.0 programming language release, which is not a Microsoft technology and does not centrally involve any Microsoft product, service, or developer platform. The article focuses on Ruby-specific language features such as Ruby Box, Ractor, and ZJIT, and compares them to features in other non-Microsoft environments (JRuby, TruffleRuby, V8). No Microsoft-specific development, AI, cloud, or security technologies are present in a way that meets the inclusion thresholds. According to the Microsoft Content Must Be Central rule and the processing workflow, this content is out of scope.",
+    "timestamp": "2026-02-19 14:00:31 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/01/19/jquery-40-released-first-major-version-since-2016/4079581",
+    "reason": "No categories found: No categories were assigned because the content focuses on the release of jQuery 4.0, which is a general open source JavaScript library unrelated to Microsoft-specific technologies. The article does not mention or discuss Microsoft frameworks, platforms, developer tooling, Azure, AI/ML, or security offerings. As per the inclusion rules, only content directly involving Microsoft's technologies, platforms, or development ecosystem receives categories. None of the category inclusion conditions are met. There are also no generic exclusion rule violations, but since the content is not Microsoft-focused and does not meet the 'Microsoft technology must be central' requirement, all categories are left empty.",
+    "timestamp": "2026-02-19 14:01:05 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/01/29/kubernetes-leadership-warns-of-ingress-nginx-risks-but-has-also-hastened-its-deprecation/4079569",
+    "reason": "No categories found: No categories are assigned because the content does not meet the criteria for any Microsoft technology categories. The article focuses exclusively on Kubernetes, Ingress NGINX, and the broader cloud-native ecosystem without mentioning Azure Kubernetes Service (AKS) or any other Microsoft technology. There are no references to Microsoft-specific DevOps tooling, Azure security practices, or integration with Microsoft platforms. Per the workflow, Microsoft technologies must be central (≥40% substantive content) to qualify for categorization, which is not the case here.",
+    "timestamp": "2026-02-19 14:02:53 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/02/04/adobe-backtracks-reanimates-animate-following-user-backlash/4090108",
+    "reason": "No categories found: No categories assigned. This article is focused entirely on Adobe Animate, its planned discontinuation, and the backlash from its user community. There is no mention, discussion, or technical detail related to Microsoft technologies or platforms, nor does the content intersect with AI, GitHub Copilot, Coding, DevOps, Azure, ML, or Security in the context of Microsoft. According to the generic inclusion/exclusion rules, content must centrally or substantially concern Microsoft technologies to qualify. Therefore, this article does not qualify for any category.",
+    "timestamp": "2026-02-19 14:03:06 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/02/05/traditional-ides-not-the-right-tool-for-development-with-agentic-ai-openai-claims/4090132",
+    "reason": "No categories found: No categories were assigned. Although the content discusses developer tooling, agentic AI, integration with IDEs (including Visual Studio Code), and automation, the focus is on OpenAI's Codex app—a non-Microsoft platform. Coverage of Microsoft-relevant tools (such as VS Code) is purely incidental, not central, and there are no substantive details about Microsoft services, platforms, or technologies. Per the multi-platform threshold, Microsoft technology is not ≥40% of the main subject nor is it central to the solution. The content’s technical depth aligns with developer workflows but falls outside the explicit category inclusion rules for AI, DevOps, Azure, Coding, ML, Security, or GitHub Copilot. Tags were extracted for developer context without implying Microsoft relevance.",
+    "timestamp": "2026-02-19 14:03:26 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/02/09/heroku-future-in-doubt-as-salesforce-freezes-features-to-focus-on-ai/4090238",
+    "reason": "No categories found: No categories are assigned because the content does not meet the inclusion requirements for any Microsoft-related categories. The article focuses on Salesforce's decision to stop new enterprise contracts for Heroku and its shift toward enterprise AI investment. Heroku, while a major cloud app platform, is not a Microsoft technology or service. Microsoft Azure and related products are only briefly mentioned at the end as alternative platforms without any technical details, implementation, or substantive discussion. Per Multi-Platform Content Threshold, Microsoft must be central or comprise ≥40% of content, which is not the case here. Generic exclusion rules do not apply, but no category inclusion rule is triggered.",
+    "timestamp": "2026-02-19 14:03:39 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/02/10/javascript-survey-reveals-gripes-against-date-handling-webpack-and-nextjs-and-that-typescript-has-won/4090262",
+    "reason": "No categories found: No categories were assigned because although the survey discusses TypeScript, JavaScript, and a range of front-end and back-end frameworks as well as development practices, there is no substantial technical content about Microsoft technologies. Microsoft is only mentioned in surrounding unrelated article links (e.g., .NET 11 and C# 15 preview, React Native for Windows, Azure Artifact service), not in the main surveyed content. The core article is about industry-wide JavaScript and TypeScript tool adoption and developer sentiment, not Microsoft ecosystem-specific languages, tools, or platforms. According to the Multi-Platform Content Threshold and the Category Inclusion Rules, simply discussing TypeScript or VS Code (if at all) generically or referencing a language that originated with Microsoft does not qualify the content for 'Coding' or any other category unless the Microsoft ecosystem is central or constitutes at least 40% of substantive content. Therefore, no categories are assigned.",
+    "timestamp": "2026-02-19 14:05:03 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/02/16/claude-code-gets-more-opaque-devs-want-more-transparency/4091233",
+    "reason": "No categories found: No categories apply because the content is focused entirely on Anthropic's Claude Code, which is not a Microsoft technology and does not involve Microsoft platforms, tools, products, or comparison/migration to Microsoft services. There is no substantial coverage (≥40%) or central mention of any Microsoft technology, and no Microsoft category inclusion criteria are met as per Chapter 4. The content is about Anthropic's product decisions and developer reactions outside of the Microsoft ecosystem.",
+    "timestamp": "2026-02-19 14:05:36 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/development/2026/02/18/as-the-default-ui-for-ai-generated-apps-react-is-here-to-stay/4091379",
+    "reason": "No categories found: No Microsoft technology is central or discussed in technical depth in the content. Despite secondary mentions to AI-related trends and a sidebar reference to articles mentioning Microsoft (such as React Native for Windows or Azure Artifact service), the primary content focuses exclusively on trends in the React ecosystem, TanStack, Next.js, and developer sentiment. Per multi-platform content rules, Microsoft technologies must be central (≥40%) or core to the solution, which is not the case here. There are no qualifying AI, Coding, Azure, or other relevant Microsoft technology topics. Therefore, no categories are assigned.",
+    "timestamp": "2026-02-19 14:05:49 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/serverless/2025/12/01/aws-debuts-lambda-managed-instances-on-ec2-more-control-lower-cost-for-high-volume-users/1726760",
+    "reason": "No categories found: No categories assigned because the content is solely focused on AWS technologies (Lambda, EC2, EKS, Argo CD, etc.) and does not discuss or sufficiently center any Microsoft technology. According to Multi-Platform Content Threshold rules, Microsoft technology must comprise at least 40% of the substantive content or be central to the solution. This article solely discusses AWS developments and therefore does not qualify for any Microsoft-centered categories.",
+    "timestamp": "2026-02-19 14:07:56 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/qPfY8SRtoWs",
+    "reason": "No categories found: Content excluded because the 'content' field is null, which means there is no substantive text to evaluate. As per the workflow, when content is missing or essentially empty, no categories should be assigned since there is no basis for meaningful categorization or metadata extraction.",
+    "timestamp": "2026-02-19 14:09:57 +00:00",
+    "collection": "videos"
   }
 ]
