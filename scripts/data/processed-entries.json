@@ -26362,5 +26362,11 @@
     "reason": "Succesfully added: Assigned the AI category because the entire article focuses on large-scale AI workloads, industry-standard benchmarking for real LLM training, and AI infrastructure (AI category rule 1 and 4). Assigned Azure because the main context is Azure cloud services, especially Azure ND GPU clusters powering these models (Azure category rule 1). Did not assign ML or Coding because the focus is on infrastructure, benchmarking, and performance at the platform level, not on hands-on data science, model building, or programming. Security and DevOps do not apply as there's no focus on security practices or DevOps methodologies in the content. Content is primarily technical, not a sales pitch, not biographical, not non-English, not business/executive strategy, nor productivity/office-focused, and the word count is sufficient for a community post. All generic exclusion rules were checked and do not apply.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-recognized-as-an-nvidia-cloud-exemplar-setting-the-bar-for/ba-p/4495747"
+  },
+  {
+    "timestamp": "2026-02-19 00:10:23 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned GitHub Copilot and AI because the main focus is the GitHub Copilot app modernization agent automating complex code, infra, and migration tasks (AI rule 2, GitHub Copilot rules 1-4). Assigned Coding for the .NET/ASP.NET Core/EF Core code upgrades and rewrites (Coding rule 1, 2, 4). Assigned Azure for Azure Container Apps, Azure SQL, Azure Key Vault, managed identity, and full Azure IaaC/delivery (Azure rules 1, 2, 4, 5). Assigned DevOps due to discussion of CICD, infrastructure as code, azd up, Bicep, and deployment automation (DevOps rules 1, 5-7). Assigned Security for elimination of plaintext credentials, managed identities, Key Vault integration, and secure deployment patterns (Security rules 1, 3, 4, 7, 9). No exclusion rules apply — content is highly technical, in English, and is not negative, biographical, sales-focused, or business-only.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-quot-maybe-next-quarter-quot-to-quot-running-before-lunch/ba-p/4495736"
   }
 ]
