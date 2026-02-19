@@ -1,0 +1,25 @@
+{
+  "FeedLevelAuthor": "Visual Studio Code",
+  "ProcessedDate": "2026-02-09 22:09:50",
+  "Description": "Join James and Pierce as they explore the latest features in VS Code Insiders for working with agents including steering, queueing, and so much more.\n\n🔗 Links: https://x.com/pierceboggan/status/2019575107681993014\n\n🎙️ Featuring: James Montemagno (@jamesmontemagno) & Pierce Boggan (@pierceboggan)\n\n#vscode #agents",
+  "PubDate": "2026-02-09T21:12:17+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=FjvtWeG6EEo",
+  "Tags": [
+    "agentsteering",
+    "code",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "microsoft",
+    "queueing",
+    "visualstudiocode",
+    "vscode"
+  ],
+  "OutputDir": "_videos",
+  "Author": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "Title": "Let it Cook: Agent Steering & Queueing"
+}

@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Link": "https://www.youtube.com/watch?v=33rGM-cpUAI",
+  "EnhancedContent": null,
+  "Description": "This opening Battle focuses on building creative AI-powered applications using GitHub Copilot. Competitors use Copilot starter kits to rapidly prototype ideas that blend creativity, productivity, and intelligent assistance. The session highlights how agentic patterns can accelerate app development and unlock new creative workflows.",
+  "ProcessedDate": "2026-02-06 00:05:06",
+  "Author": "Visual Studio Code",
+  "Title": "Agents League Battle 1 - Creative Apps (GitHub Copilot)",
+  "PubDate": "2026-02-05T23:32:54+00:00",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Tags": [],
+  "FeedName": "Visual Studio Code YouTube"
+}

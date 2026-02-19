@@ -50,7 +50,7 @@ Allison presents a comprehensive overview of recent GitHub Actions improvements 
   - Snippets for rapid action scaffolding
 
 - **Better `if:` Condition Handling**:
-  - Detection of common pitfalls in expressions, such as stringifying `${{ }}` markers or invalid format strings
+  - Detection of common pitfalls in expressions, such as stringifying `{% raw %}${{ }}{% endraw %}` markers or invalid format strings
   - Editor validation for early error feedback and workflow run annotations
   - Trimming of extraneous trailing newlines
 

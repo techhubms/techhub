@@ -1,0 +1,18 @@
+{
+  "Title": "Deploy to Azure App Service deployment slots with azd",
+  "FeedUrl": "https://devblogs.microsoft.com/azure-sdk/feed/",
+  "FeedLevelAuthor": "Azure SDK Blog",
+  "ProcessedDate": "2026-02-11 15:18:45",
+  "Author": "PuiChee (PC) Chan",
+  "OutputDir": "_news",
+  "Link": "https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/",
+  "Description": "azd now supports direct deployments to Azure App Service slots—quick, clear, and slot-aware for the first time.\n\nThe post [Deploy to Azure App Service deployment slots with azd](https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/) appeared first on [Azure SDK Blog](https://devblogs.microsoft.com/azure-sdk).",
+  "Tags": [
+    "azd",
+    "Azure SDK",
+    "azure-developer-cli"
+  ],
+  "EnhancedContent": "# Deploy to Azure App Service slots with azd deploy\n\n*Missed deploying to an App Service slot? Now you can—without workarounds or manual scripts.*\n\n## What’s new?\n\nBefore, `azd deploy` could only deploy to the default production slot. Now, `azd` understands the slots you define in Bicep and deploys to the slot you designate. On first deploy, `azd` deploys to both production and any defined slots. After that, if you have more than one slot, it prompts you to choose—or you can set the slot with an environment variable.\n\n## Why it matters\n\nSlot deployment is essential for blue/green, staging, and testing flows, but it wasn’t possible from `azd` before. Now, you can go from Bicep definition to deploying code to a slot—no extra scripts, extensions, or guessing where your code lands. It’s a smoother, more predictable experience using just `azd` .\n\n## How to use it\n\n1. Define a slot in your Bicep:\n\n```bicep resource webApp 'Microsoft.Web/sites@2021-03-01' = { name: 'my-appservice' location: resourceGroup().location kind: 'app' properties: { serverFarmId: myPlan.id } } resource stagingSlot 'Microsoft.Web/sites/slots@2021-03-01' = { name: '${webApp.name}/staging' location: webApp.location properties: {} } ```\n\nOr with Azure Verified Modules (AVM):\n\n```bicep module appservice 'br/public:app-service:1.3.2' = { name: 'my-appservice' params: { // ...params } } module stagingSlot 'br/public:web-app-deployment-slot:1.0.2' = { name: 'staging' params: { appServiceName: appservice.outputs.name } } ```\n\n>\n> **Note:** Deployment slots require an App Service plan at **Standard (S1)** tier or higher. The Free, Shared, and Basic tiers do not support slots.\n>\n2. Provision and deploy with `azd`\n:\n\n```sh azd up ```\n\n- Get prompted if you have multiple slots\n- Or skip the prompt by setting: `azd env set AZD_DEPLOY_MYAPI_SLOT_NAME staging`\n- Works in CI/CD too—just set the env var in your pipeline.\n\n## Feedback\n\nQuestions or ideas? [File an issue](https://github.com/Azure/azure-dev/issues) or [chat on GitHub](https://github.com/Azure/azure-dev/discussions). Want to help shape `azd` ‘s future? [Sign up for user research](https://aka.ms/azd-user-research-signup).\n\n*Introduced in [PR #6627](https://github.com/Azure/azure-dev/pull/6627).*",
+  "FeedName": "Microsoft Azure SDK Blog",
+  "PubDate": "2026-02-11T14:59:15+00:00"
+}

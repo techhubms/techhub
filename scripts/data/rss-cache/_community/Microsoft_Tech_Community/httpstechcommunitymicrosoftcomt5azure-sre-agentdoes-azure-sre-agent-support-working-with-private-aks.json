@@ -1,0 +1,14 @@
+{
+  "Link": "https://techcommunity.microsoft.com/t5/azure-sre-agent/does-azure-sre-agent-support-working-with-private-aks-cluster/m-p/4495585#M4",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Author": "Sreekumar",
+  "PubDate": "2026-02-18T07:51:30+00:00",
+  "Description": "While I have my AKS cluster in private and wanted to connect with SRE agent but I don't find a related information on the docs about it",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2026-02-19 00:08:58",
+  "EnhancedContent": "While I have my AKS cluster in private and wanted to connect with SRE agent but I don't find a related information on the docs about it",
+  "Title": "Does Azure SRE Agent support working with Private AKS cluster ?",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "OutputDir": "_community"
+}

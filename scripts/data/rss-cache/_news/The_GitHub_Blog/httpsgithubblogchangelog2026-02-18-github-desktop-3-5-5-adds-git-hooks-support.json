@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-02-19 13:28:21",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "client apps",
+    "Improvement"
+  ],
+  "OutputDir": "_news",
+  "Description": "GitHub Desktop now supports Git hooks, solving compatibility issues with version managers and environment-dependent scripts. The problem Historically, Git hooks have been problematic in GitHub Desktop. Because Desktop ships with…\n\nThe post [GitHub Desktop 3.5.5 adds Git hooks support](https://github.blog/changelog/2026-02-18-github-desktop-3-5-5-adds-git-hooks-support) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2026-02-18T19:32:27+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Author": "Allison",
+  "EnhancedContent": "GitHub Desktop now supports Git hooks, solving compatibility issues with version managers and environment-dependent scripts.\n\n### The problem\n\nHistorically, Git hooks have been problematic in GitHub Desktop. Because Desktop ships with its own embedded Git installation (especially on Windows), your hooks often failed when they relied on your shell environment, version managers like nvm, or tools not present in Desktop’s stripped-down Git. Additionally, you couldn’t distinguish between a hook rejection and other Git failures, and terminal escape codes in hook output rendered as garbled text.\n\nThese issues have affected users for years, making hooks one of the most requested features for Desktop.\n\n### What’s new\n\nYour hooks now have access to all the environment variables available in your shell, picking them up from configuration files like `.bash_profile` or `.zshrc` .\n\nYou can enable hooks support in **Settings/Options** &gt; **Git** &gt; **Hooks**:\n\n![Screenshot of GitHub Desktop preferences showing the hooks support toggle](https://github.com/user-attachments/assets/ff4e7e50-7cb2-4013-ae6c-56a7164e97c6)\n\nWhen hooks run, you’ll see real-time output with proper terminal colors and formatting, making it easy to understand what’s happening:\n\nYou can also preemptively skip commit hooks by clicking the gear icon in the commit message box, or bypass a failed hook after the fact without aborting your commit:\n\n![Screenshot showing the option to bypass commit hooks in the GitHub Desktop commit interface](https://github.com/user-attachments/assets/071b63c4-2ea9-421a-9f15-d928f18d0f83)\n\n### Other improvements in 3.5.5\n\nThis release also includes:\n\n- Warp terminal support for Windows (thanks @Cocodrulo!)\n- Open a repository in a different editor without changing your default preference (thanks @jackfreem!)\n- Right-click on any branch to quickly view it on GitHub (thanks @DylanDevelops!)\n- Fixed crashes when Git output contains emoji or multibyte characters\n- Fixed repository state issues when switching between branches with submodules\n- Copilot-authored commits now display the Copilot avatar\n\n### Getting started\n\nAutomatic updates will roll out progressively, or you can download the release from [GitHub Desktop v3.5.5](https://github.com/desktop/desktop/releases/tag/release-3.5.5). Have feedback or run into issues? [Open an issue](https://github.com/desktop/desktop/issues/new/choose) in the open source GitHub Desktop repository.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2026-02-18-github-desktop-3-5-5-adds-git-hooks-support",
+  "Title": "GitHub Desktop 3.5.5 adds Git hooks support"
+}

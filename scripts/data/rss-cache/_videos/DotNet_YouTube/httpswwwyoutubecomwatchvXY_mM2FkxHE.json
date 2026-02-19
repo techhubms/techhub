@@ -1,0 +1,26 @@
+{
+  "FeedLevelAuthor": "dotnet",
+  "Tags": [
+    "aspnetcore",
+    "blazor",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnet11",
+    "dotnetdeveloper",
+    "dotnetroadmap",
+    "microsoft"
+  ],
+  "ProcessedDate": "2026-02-06 21:07:13",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "PubDate": "2026-02-06T20:08:35+00:00",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Description": "Join us for a walkthrough of the ASP.NET Core & Blazor roadmap for .NET 11. We’ll discuss the expected improvements for this release and share progress on current work.\n\n🔗 Links: https://www.theurlist.com/aspnet-standup-20260210\n\n🎙️ Featuring: Daniel Roth, Javier Calvarro Nelson\n\n#dotnet #aspnetcore #blazor",
+  "Title": "Blazor Community Standup: ASP.NET Core & Blazor Roadmap for .NET 11",
+  "FeedName": "DotNet YouTube",
+  "Link": "https://www.youtube.com/watch?v=XY_mM2FkxHE"
+}

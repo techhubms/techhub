@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2026-02-16 16:11:37",
+  "Description": "Modern software systems are more complex than ever. Microservices talk to APIs. Background workers process queues. Frontend apps interact with authentication layers, caching services, and databases. In the middle of all this complexity, one thing becomes absolutely critical: **clear visualization**.\n\nWith Visual Studio 2026, developers no longer need third-party plugins to visualize workflows and architecture. Visual Studio 2026 renders **Mermaid charts directly in the editor — no extensions required**.\n\nYou can write Mermaid syntax yourself or let GitHub Copilot generate it for you. Flowcharts, sequence diagrams, and other visualizations render inline, keeping documentation inside your development workflow.\n\nThis is more than just a convenience feature. It’s a shift in how developers document, collaborate, and communicate system design.\n\n[https://dellenny.com/visualize-workflows-and-architecture-with-mermaid-charts-in-visual-studio-2026/](https://dellenny.com/visualize-workflows-and-architecture-with-mermaid-charts-in-visual-studio-2026/)",
+  "EnhancedContent": "Modern software systems are more complex than ever. Microservices talk to APIs. Background workers process queues. Frontend apps interact with authentication layers, caching services, and databases. In the middle of all this complexity, one thing becomes absolutely critical: **clear visualization**.\n\nWith Visual Studio 2026, developers no longer need third-party plugins to visualize workflows and architecture. Visual Studio 2026 renders **Mermaid charts directly in the editor — no extensions required**.\n\nYou can write Mermaid syntax yourself or let GitHub Copilot generate it for you. Flowcharts, sequence diagrams, and other visualizations render inline, keeping documentation inside your development workflow.\n\nThis is more than just a convenience feature. It’s a shift in how developers document, collaborate, and communicate system design.\n\n[https://dellenny.com/visualize-workflows-and-architecture-with-mermaid-charts-in-visual-studio-2026/](https://dellenny.com/visualize-workflows-and-architecture-with-mermaid-charts-in-visual-studio-2026/)",
+  "PubDate": "2026-02-16T16:02:52+00:00",
+  "Tags": [],
+  "Author": "JohnNaguib",
+  "Title": "Visualize Workflows and Architecture with Mermaid Charts in Visual Studio 2026",
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/tools/visualize-workflows-and-architecture-with-mermaid-charts-in/m-p/4495253#M190"
+}

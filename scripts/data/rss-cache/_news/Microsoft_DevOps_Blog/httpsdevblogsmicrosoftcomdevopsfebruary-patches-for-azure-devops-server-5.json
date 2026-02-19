@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-02-10 21:13:36",
+  "Description": "We are releasing patches for our self‑hosted product, Azure DevOps Server. We strongly recommend that all customers stay on the latest, most secure version of Azure DevOps Server. The latest release, Azure DevOps Server, is available from the download page. To make it easier to find and apply the latest patches, we are sharing patch […]\n\nThe post [February Patches for Azure DevOps Server](https://devblogs.microsoft.com/devops/february-patches-for-azure-devops-server-5/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "EnhancedContent": "We are releasing patches for our self‑hosted product, [Azure DevOps Server](https://azure.microsoft.com/services/devops/server/). We strongly recommend that all customers stay on the latest, most secure version of Azure DevOps Server. The latest release, Azure DevOps Server, is available from the [download page](https://learn.microsoft.com/azure/devops/server/download/azuredevopsserver?view=azure-devops).\n\nTo make it easier to find and apply the latest patches, we are sharing patch details in the table below. Each entry includes the Azure DevOps Server version, a direct download link for the patch, and a link to the corresponding release notes with additional details.\n\n⬇️**Azure DevOps Server Patch Download**\n\n| Version | Patch Download | Release Notes | | --- | --- | --- | | Azure DevOps Server | [Download Patch 1](https://aka.ms/devopsserverpatch1) | [Release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevopsserver?view=azure-devops#azure-devops-server-patch-1-release-date-february-10-2026) | | Azure DevOps Server 2022.2 | [Download Patch 8](https://aka.ms/devops2022.2patch8) | [Release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevops2022u2?view=azure-devops#azure-devops-server-2022-update-2-patch-8-release-date-february-10-2026) | | Azure DevOps Server 2020.1.2 | [Download Patch 18](https://aka.ms/devops2020.1.2patch18) | [Release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevops2020u1?view=azure-devops#azure-devops-server-2020-update-12-patch-18-release-date-february-10-2026) | | Azure DevOps Server 2019.1.2 | [Download Patch 12](https://aka.ms/devops2019.1.2patch12) | [Release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevops2019u1?view=azure-devops#azure-devops-server-2019-update-12-patch-12-release-date-february-10-2026) |\n\n✅**Verifying Installation**\n\nTo verify that the patch is installed, run the following command on the Azure DevOps Server machine using the patch installer you downloaded:\n\n``` <patch-installer>.exe CheckInstall\n\n```\n\nReplace `<patch-installer>` with the name of the patch file you downloaded. The command output will indicate whether the patch is installed.",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "Link": "https://devblogs.microsoft.com/devops/february-patches-for-azure-devops-server-5/",
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "Tags": [
+    "Azure DevOps Server",
+    "Patches"
+  ],
+  "PubDate": "2026-02-10T20:21:41+00:00",
+  "Author": "Gloridel Morales",
+  "Title": "February Patches for Azure DevOps Server",
+  "FeedName": "Microsoft DevOps Blog",
+  "OutputDir": "_news"
+}

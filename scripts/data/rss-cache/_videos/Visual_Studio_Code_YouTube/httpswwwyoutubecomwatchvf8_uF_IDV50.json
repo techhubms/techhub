@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2026-02-03 22:07:04",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "PubDate": "2026-02-03T21:18:02+00:00",
+  "Description": "Get started in Visual Studio Code in just 15 minutes in this easy-to-follow tutorial!\n\n🔎 Chapters: 00:00 Intro 00:28 Demo - Explore the UI 03:38 Create a new file 07:58 Using Chat 10:23 Source control 11:45 Install MCP server 13:12 Create issues 14:18 View current and previous sessions 14:56 In summary 15:25 Wrap\n\n🔗 Links: IntelliSense: https://aka.ms/intellisense Inline suggestions: https://aka.ms/ai-ps\n\n🎙️ Featuring: Reynald Adolphe (@ReynaldAdolphe)\n\n📲 Follow VS Code: X: https://x.com/code Bluesky: https://bsky.app/profile/vscode.dev YouTube: / code LinkedIn: / 104107263 GitHub: https://github.com/microsoft/vscode\n\n#vscode #beginnertutorial #code",
+  "Link": "https://www.youtube.com/watch?v=f8_uF_IDV50",
+  "Author": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "Title": "Learn Visual Studio Code in 15 minutes: 2026 Official Beginner Tutorial",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "EnhancedContent": null
+}

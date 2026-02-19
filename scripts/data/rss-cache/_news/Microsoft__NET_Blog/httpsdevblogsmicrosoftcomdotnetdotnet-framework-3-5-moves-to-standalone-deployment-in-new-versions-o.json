@@ -1,0 +1,17 @@
+{
+  "Description": "An announcement of .NET Framework 3.5 servicing updates on new versions of Windows.\n\nThe post [.NET Framework 3.5 Moves to Standalone Deployment in new versions of Windows](https://devblogs.microsoft.com/dotnet/dotnet-framework-3-5-moves-to-standalone-deployment-in-new-versions-of-windows/) appeared first on [.NET Blog](https://devblogs.microsoft.com/dotnet).",
+  "FeedUrl": "https://devblogs.microsoft.com/dotnet/feed/",
+  "FeedLevelAuthor": ".NET Blog",
+  "FeedName": "Microsoft .NET Blog",
+  "Tags": [
+    ".NET",
+    ".NET Framework"
+  ],
+  "PubDate": "2026-02-05T18:00:00+00:00",
+  "Title": ".NET Framework 3.5 Moves to Standalone Deployment in new versions of Windows",
+  "EnhancedContent": "The deployment model of .NET Framework 3.5 for future versions of Windows is changing. Starting with Windows 11 Insider Preview Build 27965, .NET Framework 3.5 must be obtained as a standalone installer and is no longer included as an optional Windows component.\n\n.NET Framework 3.5 is now available as a standalone installer for legacy applications that require it on newer major versions of Windows.\n\nThis change applies to Insider Preview Build 27965 and future platform releases of Windows. It does not affect Windows 10 or earlier Windows 11 releases through 25H2.\n\nThis change aligns with the product’s lifecycle as .NET Framework 3.5 approaches end of support on January 9, 2029, and encourages customers to begin planning migrations to newer supported versions of .NET.\n\nIf your application depends on .NET Framework 3.5, we’ve published detailed guidance—including installers, compatibility notes, and recommended migration paths—on [Microsoft Learn](https://go.microsoft.com/fwlink/?linkid=2348700).",
+  "Author": "Tara Overfield, Brett Lopez",
+  "ProcessedDate": "2026-02-05 18:13:25",
+  "OutputDir": "_news",
+  "Link": "https://devblogs.microsoft.com/dotnet/dotnet-framework-3-5-moves-to-standalone-deployment-in-new-versions-of-windows/"
+}

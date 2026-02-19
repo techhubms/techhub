@@ -1,0 +1,24 @@
+{
+  "Description": "The MAUI Day crew and supporters join us live from the Microsoft Paddington office in London to chat about all things current and future for .NET MAUI.\n\n🎙️ Featuring: David Ortinau (@davidortinau) and Gerald Versluis (@jfversluis)\n\n#dotnetmaui #blazor",
+  "Title": "NET MAUI Community Standup: Live from MAUI Day London",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=8X03ksPKX6A",
+  "FeedLevelAuthor": "dotnet",
+  "Author": "dotnet",
+  "OutputDir": "_videos",
+  "Tags": [
+    "blazor",
+    "demo",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "dotnetmaui",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "ProcessedDate": "2026-02-05 18:14:17",
+  "EnhancedContent": null,
+  "PubDate": "2026-02-05T18:05:44+00:00",
+  "FeedName": "DotNet YouTube"
+}

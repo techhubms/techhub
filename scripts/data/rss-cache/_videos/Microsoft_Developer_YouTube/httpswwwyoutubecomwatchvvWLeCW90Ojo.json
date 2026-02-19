@@ -1,0 +1,22 @@
+{
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "PubDate": "2026-02-10T18:40:51+00:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Title": "Building an App in VS Code with AI Agents with Elijah King | Cozy AI Kitchen",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2026-02-10 19:25:27",
+  "Author": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=vWLeCW90Ojo",
+  "Description": "Welcome back to the Cozy AI Kitchen, where we cook up delightful creations with AI, design, and developer tools. Today, John Maeda welcomes Elijah King, Product Designer on the VS Code team, to show how anyone — yes, even non‑developers — can build fully functional apps using natural language, AI agents, and VS Code. In this episode, Elijah transforms from designer to design engineer, guiding us through the creation of a no‑code iOS chatbot app powered by VS Code’s new multi‑agent background workflow and model switching — all with just prompts. You’ll see how fast and intuitive app development becomes when AI handles the heavy lifting and you focus on ideas. Whether you're a designer curious about coding, a developer exploring agent‑powered workflows, or a creator dreaming up your next app — this episode shows how tools are making software creation more accessible than ever. 🍳 Let’s get cooking.\n\n⭐ What You’ll Learn\n\n- How VS Code’s Background Agents translate natural language into working code\n- Using AI model switching (Haiku 4.5, Codex, Gemini Pro 3) for speed, accuracy, and creativity\n- How to bootstrap an entire iOS app with a single prompt\n- How to add modern UI, settings menus, theme toggles, and API keys using parallel agents\n- How designers can leverage AI to become design engineers\n🕒 Chapters 00:00 – Are Designers Becoming Design Engineers? 00:15 – The History of “Designers Who Can Code” 00:28 – Welcoming Elijah King to the Cozy Kitchen 00:49 – How VS Code Empowered Non‑Developers to Build Apps 01:13 – Creating a New Repo & Intro to VS Code Agents 02:06 – Triggering the First AI Agent to Build an iOS App 03:23 – Running Terminal Commands with Agent Oversight 04:57 – Launching the iOS Simulator: Hello World! 07:14 – Turning the App into a Chatbot Using Codex 08:01 – Multi‑Agent Magic: Parallel Design & Feature Work 09:04 – Adding Settings, Themes, API Keys & Modern UI 10:07 – Final Demo: A Fully Working iOS Chatbot App 10:26 – Encouragement to Designers: You Can Do This! 11:12 – Closing Thoughts on the Future of Design Engineering 👥 Speakers Elijah King Product Designer, VS Code — Microsoft https://www.linkedin.com/in/elijahwilliamking/ John Maeda Host, Cozy AI Kitchen VP of Design and Artificial Intelligence, Microsoft https://www.linkedin.com/in/johnmaeda/\n\n🔗 Links & Resources 🚀 Try Azure for free: https://aka.ms/AzureFreeTrialYT ⚡Demo repo: https://aka.ms/CAIK-MultiAgentCoding 🚀 VS Code: https://code.visualstudio.com/ ⚡ Learn VS Code AI features: https://code.visualstudio.com/docs/intelligentapps/overview 🧪 Try GitHub Copilot: https://github.com/features/copilot 📚 Microsoft Learn: https://learn.microsoft.com/ 🍽️ All Cozy AI Kitchen episodes: https://aka.ms/CAIK-YTPlaylist\n\n🏷️ Hashtags #CozyAIKitchen #VSCode #VisualStudioCode #AIAgents #OpenRouter #iOSDevelopment #NoCode #DesignEngineering #MicrosoftDeveloper #AI #AppDevelopment #Chatbot #NaturalLanguageProgramming #DeveloperTools"
+}

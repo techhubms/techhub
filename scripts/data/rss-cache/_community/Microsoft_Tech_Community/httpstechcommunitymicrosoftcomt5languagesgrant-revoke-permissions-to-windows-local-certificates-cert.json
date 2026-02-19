@@ -1,0 +1,14 @@
+{
+  "PubDate": "2026-02-05T04:39:30+00:00",
+  "Description": "I am working on granting/revoking permissions to windows local certificates (certlm) using Visual C++ 2022. The challenge is that this needs to be performed in non-admin privileges. We would need to remove \"Everyone\" permissions and grant read permissions for our NT Service account to windows local certificates (certlm). Is it possible to perform under non-admin privilege? It would be great help if can get solution for this.",
+  "Link": "https://techcommunity.microsoft.com/t5/languages/grant-revoke-permissions-to-windows-local-certificates-certlm-in/m-p/4492388#M304",
+  "EnhancedContent": "I am working on granting/revoking permissions to windows local certificates (certlm) using Visual C++ 2022. The challenge is that this needs to be performed in non-admin privileges. We would need to remove \"Everyone\" permissions and grant read permissions for our NT Service account to windows local certificates (certlm). Is it possible to perform under non-admin privilege? It would be great help if can get solution for this.",
+  "ProcessedDate": "2026-02-05 19:15:48",
+  "Author": "siva72",
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "Title": "Grant/Revoke permissions to Windows local certificates (certlm) in non-admin mode",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
+}

@@ -1,0 +1,29 @@
+{
+  "Author": "Microsoft Developer",
+  "PubDate": "2026-02-05T17:00:32+00:00",
+  "Description": "Kadesha from GitHub Developer Relations provides a technical overview of the GitHub Copilot CLI. Learn how to integrate AI directly into your shell to scaffold features, resolve build errors, and automate background tasks without leaving the command line.\n\nTry it now: https://github.com/features/copilot/cli",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "EnhancedContent": null,
+  "Tags": [
+    "AI",
+    "Azure",
+    "CLI",
+    "Cloud Computing",
+    "Copilot",
+    "Dev",
+    "Developer Tools",
+    "Development",
+    "GitHub",
+    "Microsoft",
+    "Software Engineering",
+    "Tech",
+    "Technology",
+    "Terminal"
+  ],
+  "Title": "Getting started with the GitHub Copilot CLI, custom agents, MCP servers, and more",
+  "FeedName": "Microsoft Developer YouTube",
+  "Link": "https://www.youtube.com/watch?v=GeH0PWdl_Hc",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2026-02-05 17:17:15"
+}

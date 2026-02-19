@@ -1,0 +1,29 @@
+{
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-02-04 22:03:54",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=pQivzi4n6jM",
+  "Title": ".NET Data Community Standup: Adam tells us about Microsoft.Extensions.DataIngestion",
+  "Description": "Microsoft.Extensions.DataIngestion is new addition into Microsoft.Extensions collection and this one touches databases and AI. Exciting. Adam Sitnik, who worked on implementation, tells us what's what and maybe some behind the scenes.\n\n🎙️ Featuring: Jiri Cincura, Shay Rojansky, Adam Sitnik\n\n#data #ingestion #documents #parsing #vectors #embeddings",
+  "Tags": [
+    "data",
+    "demo",
+    "developer",
+    "documents",
+    "dotnet",
+    "dotnet10",
+    "dotnetdata",
+    "dotnetdeveloper",
+    "embeddings",
+    "ingestion",
+    "microsoft",
+    "parsing",
+    "softwaredeveloper",
+    "vectors"
+  ],
+  "Author": "dotnet",
+  "PubDate": "2026-02-04T21:38:49+00:00"
+}
