@@ -26386,5 +26386,11 @@
     "collection": "community",
     "timestamp": "2026-02-19 07:23:48 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' category because the content deeply focuses on migrating workloads from AWS to Microsoft Azure, detailing Azure-specific tools (such as Azure Functions, Azure Monitor, Application Insights, ARM templates, Bicep) and architecture patterns (Azure rule 1, 4, 5, 6). Assigned 'DevOps' category because the guide covers CI/CD pipeline adjustments, Infrastructure as Code practices, monitoring/observability, deployment strategies (DevOps rules 1, 2, 5, 6, 7), and migration lifecycle management. Did not assign Coding as there is extensive architectural, operational, and tooling guidance but little focus on direct programming. Did not assign 'ML', 'AI', 'Security', or 'GitHub Copilot' as these topics are not substantively discussed in this context."
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Included the \"AI\" category because the solution centers on building AI-powered transcription services using Microsoft Foundry Local and OpenAI Whisper models, which are covered by AI category rules 1 and 3. Included the \"Coding\" category because development is performed using C#, ASP.NET Core, and best practices such as service layers and dependency injection (Coding rules 1-4). Did not apply \"Azure\" or \"ML\" because the solution is fully on-premises/local and focuses on AI inference and application architecture rather than custom ML/analytics engineering or Azure deployment. No \"DevOps\" or \"Security\" categories were included, as the primary concern is privacy/architecture, not security platform/tooling, and there is no significant CI/CD, infrastructure, or DevOps content. The article is highly technical and addresses Microsoft developer practices using qualified platforms and SDKs.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-hipaa-compliant-medical-transcription-with-local-ai/ba-p/4490777",
+    "timestamp": "2026-02-19 08:11:23 +00:00"
   }
 ]
