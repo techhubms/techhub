@@ -1,0 +1,28 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2026-02-19 15:15:25",
+  "PubDate": "2026-02-19T15:01:14+00:00",
+  "Description": "In this video, we chat with the creator of MCP, David Soria Parra. He tells us why MCP was created, why it was donated to the Linux Foundation, his honest opinion on MCP vs Skills, his vibe coding workflow and so much more!\n\n🔎 Chapters: 00:00 Welcome and Intro 01:21 MCP origin story 05:19 Biggest takeaway from MCP so far 08:39 What David is excited about 10:45 What are MCP apps 12:25 How the Skills hype impacts MCP 17:02 To vibe code or not to vibe code 20:22 Balancing what people want now vs what's needed longer term 24:00 Code quality - how important is it 26:45 Languages - a quick review by David 28:53 David's stack 30:15 David's workflow 33:10 Is there such a thing as the ideal UX 36:10 The donation of MCP to the Linux Foundation 41:12 Closing 41:48 Wrap\n\n🔗 Link: https://github.com/microsoft/mcp-for-beginners\n\n🎙️ Featuring: Gwyneth Peña-Siguenza: https://x.com/madebygps Marlene Mahngami: https://x.com/marlene\\_zw David Soria Parra: https://x.com/dsp\\_\n\n📲 Follow us on social: Blog - https://aka.ms/azuredevelopers/blog Twitter - https://aka.ms/azuredevelopers/twitter LinkedIn - https://aka.ms/azuredevelopers/linkedin Twitch - https://aka.ms/azuredevelopers/twitch\n\n#azuredeveloper #azure",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Author": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=f0AUo7orNAM",
+  "Tags": [
+    "anthropic",
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "developer",
+    "Development",
+    "mcp",
+    "Microsoft",
+    "modelcontextprotocol",
+    "python",
+    "softwaredeveloper",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "MCP is so back! (feat. David Soria Parra)"
+}

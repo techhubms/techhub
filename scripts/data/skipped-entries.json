@@ -12345,5 +12345,11 @@
     "reason": "No categories found: Content excluded because the 'content' field is null, which means there is no substantive text to evaluate. As per the workflow, when content is missing or essentially empty, no categories should be assigned since there is no basis for meaningful categorization or metadata extraction.",
     "timestamp": "2026-02-19 14:09:57 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded because it is not primarily in English, violating the generic exclusion rule for non-English content (Language and Scope Exclusions). The description is almost entirely in Spanish, which means the main text is less than 80% English as required by the workflow.",
+    "timestamp": "2026-02-19 15:16:27 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=dnjGeWuqtGg",
+    "collection": "videos"
   }
 ]

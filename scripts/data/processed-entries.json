@@ -26542,5 +26542,17 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the article contains substantial coverage of Microsoft Azure's adoption of Arm (specifically Cobalt 100 and 200 processors) and related performance benchmarks, fulfilling Azure category rule 1 and rule 4. Azure is a core focus among other hyperscalers, and its implementation details are central to the discussion. Did not add AI or ML categories because, while AI workloads are referenced as benchmarks, the content is not about building or integrating AI, nor about custom ML development—AI is part of performance use-case examples, not the central topic. No Coding or DevOps categories were added since there are no significant discussions of application code, frameworks, DevOps practices, or developer tooling implementation, outside some minor mentions (e.g., GitHub integration) that do not meet the threshold for those categories. The primary value is Azure’s infrastructure strategy and its impact. Generic exclusion rules do not apply, as this is not business strategy, biographical, or non-technical content.",
     "timestamp": "2026-02-19 14:09:32 +00:00",
     "collection": "blogs"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Coding' because the interview focuses on the Model Context Protocol (MCP), covering coding workflow, stack, languages, and code quality—all within a software development context (Coding rules 1, 4 and 5). 'Azure' was included because the tags, speaker background, and MCP's context suggest strong Azure developer relevance (Azure rules 1 and 4). Did not assign 'AI', 'ML', 'DevOps', 'GitHub Copilot', or 'Security' as MCP pertains primarily to coding and development workflows, not directly covering AI, ML, DevOps tools, Copilot, or security. The open source/Linux Foundation discussion reinforces the technical/software engineering focus, not high-level business, biographical, or non-English content.",
+    "timestamp": "2026-02-19 15:16:49 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=f0AUo7orNAM",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Included the AI category because the central theme is the introduction, orchestration, and deployment of intelligent AI agents—particularly built with Microsoft Copilot Studio and MCP—to automate telecom BSS operations. The content focuses on hands-on development/application of AI technology and business process automation, satisfying AI inclusion rule 1 (Microsoft AI products), rule 4 (AI development with Microsoft), and rule 5 (high-level AI usage). Developer tools such as Copilot Studio are specifically called out, but there are no code-level implementation details for Coding, nor is there a focus on GitHub Copilot, DevOps pipelines, Azure infrastructure, or custom ML/analytics workflows (ML), so those categories were not added.",
+    "timestamp": "2026-02-19 15:17:20 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/the-rise-of-agentic-bss-in-the-iq-era-from-systems-of-record-to/ba-p/4495499",
+    "collection": "community"
   }
 ]
