@@ -177,8 +177,11 @@ public class TabOrderingTests : PlaywrightTestBase
 
         // Wait for focus to move to the target element
         // The skip link navigates to #skiptohere - browser moves focus to that anchor target
-        await Page.WaitForConditionAsync(
-            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }");
+        // Use navigation timeout: focus change depends on Blazor interactivity + skip link JS handler
+        await Page.WaitForFunctionAsync(
+            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }",
+            null,
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultNavigationTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Assert - Get what's currently focused
         var elementInfo = await Page.EvaluateAsync<string>(
@@ -194,11 +197,12 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.Keyboard.PressAsync("Tab");
         
         // Wait for focus to stabilize after tab press
-        // Use longer timeout (2s) because this involves multiple async operations:
-        // 1. Tab keypress processed
-        // 2. H1 blur event fires
-        // 3. Blur handler removes tabindex
-        // 4. Focus moves to next element
+        // Uses DefaultPageLoadTimeout (10s) because this involves multiple async operations
+        // whose timing is unpredictable under full Run system load:
+        // 1. Tab keypress processed by Chromium
+        // 2. H1 blur event fires (removes tabindex=-1)
+        // 3. Browser recalculates next focusable element
+        // 4. Focus moves to next element in DOM order
         await Page.WaitForFunctionAsync(
             @"() => {
                 const el = document.activeElement;
@@ -206,7 +210,9 @@ public class TabOrderingTests : PlaywrightTestBase
                        (el.closest('main') !== null || 
                         el.closest('article') !== null || 
                         el.closest('section') !== null);
-            }");
+            }",
+            null,
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
         
         var isInPrimaryContent = await Page.EvaluateAsync<bool>(
             "() => { const el = document.activeElement; return el && (el.closest('main') !== null || el.closest('article') !== null || el.closest('section') !== null); }"

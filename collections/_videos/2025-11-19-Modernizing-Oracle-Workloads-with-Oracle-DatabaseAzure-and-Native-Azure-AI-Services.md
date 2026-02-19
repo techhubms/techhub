@@ -14,7 +14,6 @@ tags:
 - Enterprise Architecture
 - High Availability
 - Ignite
-- InnovatewithAzureAIappsandagents
 - Microsoft Azure
 - MSIgnite
 - OCI

@@ -15,7 +15,7 @@ You are a testing specialist for the Tech Hub .NET project. This directory conta
 
 📖 **Full documentation**: See [docs/testing-strategy.md](../docs/testing-strategy.md#database-strategy) for database backends by test type.
 
-**Summary**: Integration tests use SQLite in-memory for speed. E2E tests use SQLite on disk by default or PostgreSQL via docker-compose. Production uses Azure PostgreSQL.
+**Summary**: Integration tests and infrastructure tests use PostgreSQL via Testcontainers (`postgres:17-alpine`), providing production-like database behavior with automatic container lifecycle. E2E performance tests use PostgreSQL via docker-compose (started automatically by the runner). Production uses Azure PostgreSQL.
 
 ## Core Testing Rules
 
@@ -492,14 +492,14 @@ var service = new TagCloudService(repository, options);
 // ✅ CORRECT: Use ContentRepository with in-memory database
 var fixture = new DatabaseFixture<MyTest>();
 var repository = new DatabaseContentRepository(
-    fixture.Connection,        // ✅ CORRECT: In-memory SQLite connection
-    new SqliteDialect(),       // ✅ CORRECT: Real SQL dialect
+    fixture.Connection,        // ✅ CORRECT: PostgreSQL Testcontainers connection
+    new PostgresDialect(),     // ✅ CORRECT: Real SQL dialect
     cache,                     // ✅ CORRECT: Real MemoryCache
     mockMarkdownService.Object // ✅ CORRECT: Mock markdown service if needed
 );
 ```
 
-**Why**: We use `DatabaseContentRepository` with in-memory SQLite because it provides consistent test data via database seeding. We use real services for simple classes without external dependencies.
+**Why**: We use `DatabaseContentRepository` with PostgreSQL Testcontainers because it provides consistent test data via database seeding. We use real services for simple classes without external dependencies.
 
 **Wrong Example** - Over-mocking:
 

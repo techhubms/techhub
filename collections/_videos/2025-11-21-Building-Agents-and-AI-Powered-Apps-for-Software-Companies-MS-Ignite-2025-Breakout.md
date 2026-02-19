@@ -14,7 +14,6 @@ tags:
 - GitHub
 - Graph Analytics
 - Industrial AI Stack
-- InnovatewithAzureAIappsandagents
 - Local Development
 - Microsoft Defender
 - Microsoft Marketplace

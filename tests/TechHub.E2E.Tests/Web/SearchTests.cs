@@ -142,9 +142,7 @@ public class SearchTests : PlaywrightTestBase
     public async Task Search_WhenCleared_KeepsOtherFilters()
     {
         // Arrange - Navigate with both search and tags parameters
-        // Use longer timeout as page needs to load + apply search + apply tag filter
-        await Page.GotoRelativeAsync("/github-copilot?search=test&tags=vs%20code",
-            options: new PageGotoOptions { Timeout = BlazorHelpers.BrowserLaunchTimeout });
+        await Page.GotoRelativeAsync("/github-copilot?search=test&tags=vs%20code");
 
         // Wait for search input to be populated (ensures Blazor has processed URL params)
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");

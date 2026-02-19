@@ -2,10 +2,14 @@ using System.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
-using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Npgsql;
+using Testcontainers.PostgreSql;
+using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
+using TechHub.Infrastructure.Data;
+using Xunit;
 
 namespace TechHub.TestUtilities;
 
@@ -37,41 +41,66 @@ public abstract class TechHubApiFactoryBase : WebApplicationFactory<Program>
 }
 
 /// <summary>
-/// Factory for integration tests.
+/// Factory for integration tests using PostgreSQL via Testcontainers.
 /// - Uses IntegrationTest environment
-/// - Uses in-memory SQLite database seeded with TestCollections data
-/// - Provides isolated test database for each test run
-/// 
-/// SQLite Thread Safety:
-/// - One master connection is kept open to preserve in-memory database
-/// - IDbConnectionFactory creates new connections pointing to same in-memory DB
-/// - Repository is transient to ensure thread safety
+/// - Spins up an isolated PostgreSQL container per test class
+/// - Uses real PostgreSQL — matching production database engine
+/// - Container starts eagerly in constructor (sync) since WebApplicationFactory
+///   doesn't support async initialization before ConfigureWebHost
 /// </summary>
-public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IDisposable
+public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IAsyncLifetime
 {
-    private SqliteConnection? _masterConnection;
-    private string? _connectionString;
-    private bool _disposed;
+    private readonly PostgreSqlContainer _container;
+
+    public TechHubIntegrationTestApiFactory()
+    {
+        _container = new PostgreSqlBuilder("postgres:17-alpine")
+            .WithDatabase("techhub_test")
+            .WithUsername("test")
+            .WithPassword("test")
+            .Build();
+    }
+
+    public async ValueTask InitializeAsync()
+    {
+        // Start the container before any test runs.
+        // xUnit calls this before the first test that uses this factory.
+        await _container.StartAsync();
+
+        // Force the server to start and wait for background startup (migrations + content sync)
+        // to complete before tests run. Without this, tests could fire requests before data is ready.
+        using var _ = CreateClient();
+        var startupState = Services.GetRequiredService<StartupStateService>();
+        await startupState.StartupTask.WaitAsync(TimeSpan.FromSeconds(60));
+    }
+
+    public override async ValueTask DisposeAsync()
+    {
+        // Dispose the base WebApplicationFactory first (stops the test server)
+        await base.DisposeAsync();
+        // Then dispose the container
+        await _container.DisposeAsync();
+        GC.SuppressFinalize(this);
+    }
 
     protected override void ConfigureTestSpecificServices(IWebHostBuilder builder)
     {
         // Use IntegrationTest environment for integration tests
         builder.UseEnvironment("IntegrationTest");
 
-        // Create shared in-memory database with a name so multiple connections can access it
-        // Using Mode=Memory and Cache=Shared allows multiple connections to the same in-memory DB
-        _connectionString = $"Data Source=IntegrationTest_{Guid.NewGuid():N};Mode=Memory;Cache=Shared";
-
-        // Master connection keeps the in-memory database alive
-        _masterConnection = new SqliteConnection(_connectionString);
-        _masterConnection.Open();
+        // Override database configuration to use the Testcontainers PostgreSQL instance
+        builder.UseSetting("Database:Provider", "PostgreSQL");
+        builder.UseSetting("Database:ConnectionString", _container.GetConnectionString());
 
         builder.ConfigureTestServices(services =>
         {
-            // Only replace the connection factory - all other registrations come from Program.cs
-            // This ensures test and production use identical service lifetimes
+            // Replace connection factory and dialect with PostgreSQL implementations
             RemoveAllServices<IDbConnectionFactory>(services);
-            services.AddSingleton<IDbConnectionFactory>(new SharedMemoryConnectionFactory(_connectionString!));
+            RemoveAllServices<ISqlDialect>(services);
+
+            services.AddSingleton<ISqlDialect, PostgresDialect>();
+            services.AddSingleton<IDbConnectionFactory>(
+                new PostgresConnectionFactory(_container.GetConnectionString()));
         });
     }
 
@@ -82,37 +111,6 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IDisposab
         {
             services.Remove(descriptor);
         }
-    }
-
-    protected override void Dispose(bool disposing)
-    {
-        if (!_disposed)
-        {
-            if (disposing)
-            {
-                _masterConnection?.Dispose();
-            }
-
-            _disposed = true;
-        }
-
-        base.Dispose(disposing);
-    }
-}
-
-/// <summary>
-/// Connection factory that creates new connections to a shared in-memory SQLite database.
-/// Each connection is opened and ready to use.
-/// Note: Created connections are registered as Scoped in DI, so the container disposes them
-/// when the request scope ends. No tracking needed here.
-/// </summary>
-internal sealed class SharedMemoryConnectionFactory(string connectionString) : IDbConnectionFactory
-{
-    public IDbConnection CreateConnection()
-    {
-        var connection = new SqliteConnection(connectionString);
-        connection.Open();
-        return connection;
     }
 }
 

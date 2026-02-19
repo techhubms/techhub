@@ -11,7 +11,6 @@ tags:
 - Digital Operations
 - Incident Management
 - Infrastructure Management
-- InnovatewithAzureAIappsandagents
 - ITSM
 - Microsoft Azure
 - Microsoft Foundry

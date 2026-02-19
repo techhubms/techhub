@@ -156,6 +156,8 @@ function Get-FilteredTags {
         'maui'                   = 'MAUI'
         '.netmaui'               = 'MAUI'
         'modelcontextprotocol'   = 'MCP'
+        'mcp'                    = 'MCP'
+        'mcpserver'              = 'MCP Server'
         'mediatr'                = 'MediatR'
         'mscopilot'              = 'Microsoft Copilot'
         'machinelearning'        = 'ML'

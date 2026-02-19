@@ -15,10 +15,10 @@ tags:
 - Developer Workflow
 - Extension
 - Integration
-- Mcp
+- MCP
 - MCP Servers
 - MCP Setup
-- Mcpserver
+- MCP Server
 - Remote Servers
 - Software Developer
 - VS Code

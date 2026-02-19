@@ -274,6 +274,7 @@ public class SidebarTocTests : PlaywrightTestBase
             .Where(e => !e.Contains("integrity") || !e.Contains("highlight.js"))
             .Where(e => !e.Contains("ERR_CONNECTION_REFUSED"))
             .Where(e => !e.Contains("ERR_ADDRESS_INVALID"))
+            .Where(e => !e.Contains("ERR_NAME_NOT_RESOLVED"))
             .ToList();
 
         significantErrors.Should().BeEmpty($"Expected no console errors on {url}, but found: {string.Join(", ", significantErrors)}");

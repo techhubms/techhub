@@ -12,7 +12,6 @@ tags:
 - Continuous Evaluation
 - Governance
 - Human Oversight
-- InnovatewithAzureAIappsandagents
 - Microsoft Defender
 - Microsoft Foundry
 - MSIgnite

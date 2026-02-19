@@ -5,7 +5,7 @@
 
 ## Overview
 
-This project implements data access using SQLite database with FTS5 full-text search, markdown processing, content synchronization from files to database, and other infrastructure concerns.
+This project implements data access using PostgreSQL database with tsvector full-text search, markdown processing, content synchronization from files to database, and other infrastructure concerns.
 
 **When to read this file**: When implementing repositories, working with database queries, content sync, or understanding data access patterns.
 
@@ -16,17 +16,14 @@ This project implements data access using SQLite database with FTS5 full-text se
 ```text
 TechHub.Infrastructure/
 ├── Data/                                      # Database infrastructure
-│   ├── DbConnectionFactory.cs                 # SQLite/PostgreSQL connection factories
+│   ├── DbConnectionFactory.cs                 # PostgreSQL connection factory
 │   ├── MigrationRunner.cs                     # Database schema migrations
-│   ├── SqliteDialect.cs                       # SQLite-specific SQL syntax
 │   ├── PostgresDialect.cs                     # PostgreSQL-specific SQL syntax
 │   └── Migrations/                            # SQL migration scripts
-│       ├── sqlite/                            # SQLite migrations
-│       │   └── 001_initial_schema.sql         # Main schema with FTS5
 │       └── postgres/                          # PostgreSQL migrations
 ├── Repositories/                              # Repository implementations
 │   ├── ContentRepositoryBase.cs               # Abstract base for content repos
-│   └── ContentRepository.cs                   # Database repository (SQLite + PostgreSQL)
+│   └── ContentRepository.cs                   # Database repository (PostgreSQL)
 ├── Services/                                  # Infrastructure services
 │   ├── ContentSyncService.cs                  # Sync markdown files to database
 │   ├── FrontMatterParser.cs                   # YAML frontmatter parsing
@@ -44,13 +41,13 @@ Database provider is configured in `appsettings.json`:
 ```json
 {
   "Database": {
-    "Provider": "SQLite",
-    "ConnectionString": "Data Source=techhub.db"
+    "Provider": "PostgreSQL",
+    "ConnectionString": "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
   }
 }
 ```
 
-**Supported Providers**: SQLite (default), PostgreSQL
+**Supported Provider**: PostgreSQL
 
 ### Schema Overview
 
@@ -59,37 +56,35 @@ Database provider is configured in `appsettings.json`:
 - `content_items` - All content with denormalized section flags and bitmask
 - `content_tags_expanded` - Word-level tag matching (denormalized for fast filtering)
 - `sync_metadata` - Tracks last sync time and content hashes
-- `content_fts` - FTS5 virtual table for full-text search
+- `content_fts` - Full-text search using tsvector/tsquery
 
 **Key Design Decisions**:
 
 1. **Denormalized section flags**: Each content item has `is_ai`, `is_azure`, `is_github_copilot`, etc. boolean columns for fast filtering without JOINs
 2. **Section bitmask**: Single integer column for multi-section filtering with bitwise operations
 3. **Expanded tags table**: Multi-word tags split into separate rows for word-level matching
-4. **FTS5 external content**: Full-text index synced via triggers
+4. **tsvector full-text index**: Full-text index synced via triggers
 
-**See**: [Data/Migrations/sqlite/001_initial_schema.sql](Data/Migrations/sqlite/001_initial_schema.sql) for complete schema
+**See**: [Data/Migrations/postgres/](Data/Migrations/postgres/) for complete schema
 
 ## Repository Patterns
 
 ### Database Content Repository
 
-**Key Pattern**: Single unified repository using `ISqlDialect` for database-specific SQL → Query with Dapper → Map to domain models → Use FTS (FTS5 for SQLite, tsvector for PostgreSQL).
+**Key Pattern**: Repository using `ISqlDialect` for PostgreSQL-specific SQL → Query with Dapper → Map to domain models → Use tsvector full-text search.
 
-**Implementation**: `ContentRepository` uses `ISqlDialect` abstraction to support both SQLite and PostgreSQL from a single codebase.
+**Implementation**: `ContentRepository` uses `ISqlDialect` abstraction for database-specific SQL.
 
 **Important Details**:
 
-- **Unified Codebase**: One repository class handles both SQLite and PostgreSQL
 - **Dialect Abstraction**: `ISqlDialect` interface provides database-specific SQL fragments:
-  - `GetFullTextJoinClause()` - FTS table join (SQLite only)
   - `GetFullTextWhereClause()` - FTS matching syntax
   - `GetFullTextOrderByClause()` - Relevance ranking
-  - `GetListFilterClause()` - List filtering (`IN @param` for SQLite, `= ANY(@param)` for PostgreSQL)
-  - `ConvertListParameter<T>()` - Convert lists to proper parameter type (List for SQLite, Array for PostgreSQL)
-  - `GetBooleanLiteral()` - Boolean literals (0/1 for SQLite, true/false for PostgreSQL)
+  - `GetListFilterClause()` - List filtering (`= ANY(@param)` for PostgreSQL)
+  - `ConvertListParameter<T>()` - Convert lists to proper parameter type (Array for PostgreSQL)
+  - `GetBooleanLiteral()` - Boolean literals (true/false for PostgreSQL)
 - Uses Dapper for lightweight ORM
-- FTS5 for SQLite, tsvector for PostgreSQL
+- tsvector for PostgreSQL full-text search
 - Section filtering via bitmask: `WHERE sections_bitmask & @mask > 0`
 - Tag filtering via subquery on `content_tags_expanded` table
 - Pagination via keyset (cursor-based) for performance
@@ -169,9 +164,9 @@ WHERE (collection_name, slug) IN (
 **Registration in Program.cs**:
 
 ```csharp
-// Database infrastructure (based on Provider config)
-builder.Services.AddSingleton<ISqlDialect, SqliteDialect>();
-builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFactory(connectionString));
+// Database infrastructure
+builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
+builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionFactory(connectionString));
 builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
 
 // Repositories
@@ -208,6 +203,8 @@ builder.Services.AddTransient<MigrationRunner>();
 - **Middle 50%**: `TagSize.Medium`
 - **Bottom 25%**: `TagSize.Small`
 
+**Size Group Normalization**: After quantile assignment, the number of distinct size groups is normalized: 1 group → all Medium, 2 groups → Medium + Small, 3 groups → unchanged. This prevents misleading emphasis when all tags have similar counts.
+
 ### Tag Filtering
 
 **Database**: Tag filtering is done directly in SQL queries via the `content_tags_expanded` table:
@@ -237,7 +234,7 @@ item.Tags.Any(t => t.Contains(normalizedTag, StringComparison.OrdinalIgnoreCase)
 
 **See [tests/TechHub.Infrastructure.Tests/AGENTS.md](../../tests/TechHub.Infrastructure.Tests/AGENTS.md)** for comprehensive testing patterns including:
 
-- Repository testing with in-memory SQLite
+- Repository testing with PostgreSQL Testcontainers
 - ContentSyncService integration tests
 - Markdown parsing test cases
 - Error handling scenarios

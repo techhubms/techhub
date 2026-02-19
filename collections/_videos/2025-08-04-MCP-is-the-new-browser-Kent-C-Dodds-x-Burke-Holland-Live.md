@@ -15,7 +15,7 @@ tags:
 - Developer Tools
 - Kent C. Dodds
 - Kentcdodds
-- Mcp
+- MCP
 - Microsoft
 - Pro Tips
 - Protips

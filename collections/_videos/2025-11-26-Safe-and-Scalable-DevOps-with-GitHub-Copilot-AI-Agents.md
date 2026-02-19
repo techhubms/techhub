@@ -17,7 +17,6 @@ tags:
 - Enterprise Adoption
 - GitHub
 - Governance
-- InnovatewithAzureAIappsandagents
 - Luke Hoban
 - Microsoft Ignite
 - MSIgnite

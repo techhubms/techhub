@@ -18,7 +18,7 @@ tags:
 - Developer Tools
 - GitHub
 - Issue Tracking
-- Mcp
+- MCP
 - Microsoft
 - Model Management
 - Multi Agent Collaboration

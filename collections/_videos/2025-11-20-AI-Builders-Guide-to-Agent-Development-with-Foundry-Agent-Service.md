@@ -13,7 +13,6 @@ tags:
 - Enterprise AI
 - Foundry Agent Service
 - Governance
-- InnovatewithAzureAIappsandagents
 - LangGraph
 - MCP
 - Microsoft Ignite

@@ -98,15 +98,10 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
     public int MinUses { get; set; } = 1;
 
     /// <summary>
-    /// Only include tags from content published within this many days (default: 0 = no limit)
-    /// </summary>
-    [Parameter]
-    public int LastDays { get; set; } = 0;
-
-    /// <summary>
-    /// Optional: Provide tags directly instead of loading from API.
-    /// When set, these tags are displayed without fetching from the tag cloud API.
-    /// Useful for showing tags specific to a single content item.
+    /// Optional: Provide tags for a content item.
+    /// When SectionName is also set, fetches real counts from the API using the default
+    /// date range filter (90 days), so counts match what users see when clicking through.
+    /// When SectionName is not set, displays tags with count=1 as fallback.
     /// </summary>
     [Parameter]
     public IReadOnlyList<string>? Tags { get; set; }
@@ -136,7 +131,6 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
     private bool _hasError;
     private bool _hasInitialized; // Track if we've loaded tags to prevent double-load flicker
     private HashSet<string> _previousSelectedTags = []; // Track previous state to detect changes
-    private IReadOnlyList<TagCloudItem>? _initialTags; // Store baseline tag list (loaded WITHOUT any filters)
     private string? _previousFromDate;
     private string? _previousToDate;
     private string? _previousSearchQuery;
@@ -178,7 +172,6 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
         if (ApplicationState.TryTakeFromJson<PersistedTagCloudData>(stateKey, out var restored) && restored != null)
         {
             _tags = restored.Tags;
-            _initialTags = restored.InitialTags;
             _isLoading = false;
             Logger.LogDebug("Restored tag cloud from persisted state for key {Key}", stateKey);
             return;
@@ -202,7 +195,6 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
                 _previousSectionName, _previousCollectionName, SectionName, CollectionName);
             _previousSectionName = SectionName;
             _previousCollectionName = CollectionName;
-            _initialTags = null; // Reset baseline for new scope
             _previousSelectedTags = new HashSet<string>(StringComparer.OrdinalIgnoreCase); // Reset change tracking
         }
 
@@ -210,25 +202,23 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
         var datesChanged = _previousFromDate != FromDate || _previousToDate != ToDate;
         if (datesChanged)
         {
-            Logger.LogDebug("Date range changed, resetting baseline. From: {From}, To: {To}", FromDate, ToDate);
+            Logger.LogDebug("Date range changed. From: {From}, To: {To}", FromDate, ToDate);
             _previousFromDate = FromDate;
             _previousToDate = ToDate;
-            _initialTags = null; // Reset baseline so it reloads with new date range
         }
 
         // Check if search query changed
         var searchChanged = _previousSearchQuery != SearchQuery;
         if (searchChanged)
         {
-            Logger.LogDebug("Search query changed, resetting baseline. Query: {Query}", SearchQuery);
+            Logger.LogDebug("Search query changed. Query: {Query}", SearchQuery);
             _previousSearchQuery = SearchQuery;
-            _initialTags = null; // Reset baseline so it reloads with new search scope
         }
 
-        // Reload tag cloud if selected tags, dates, search, or scope have changed (for dynamic counts)
+        // Reload tag cloud if selected tags, dates, search, or scope have changed
         if (scopeChanged || datesChanged || searchChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
         {
-            Logger.LogDebug("Tags or dates changed, reloading tag cloud. Previous tags: [{Previous}], Current: [{Current}]",
+            Logger.LogDebug("Filters changed, reloading tag cloud. Previous tags: [{Previous}], Current: [{Current}]",
                 string.Join(", ", _previousSelectedTags),
                 string.Join(", ", _selectedTagsInternal));
 
@@ -273,17 +263,51 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
             _isLoading = true;
             _hasError = false;
 
-            // If Tags parameter is provided, use those directly instead of API
+            // If Tags parameter is provided, handle content item tag display
             if (Tags != null && Tags.Count > 0)
             {
-                // Convert provided tags to TagCloudItems with equal sizing
-                // (since we don't have usage counts for individual item tags)
-                _tags = [.. Tags
+                var distinctTags = Tags
                     .Distinct(StringComparer.OrdinalIgnoreCase)
                     .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
+                    .ToList();
+
+                // If SectionName is available, fetch real counts from API
+                // so users see accurate counts matching what they'd get when clicking through.
+                // The API returns these tags with real counts PLUS fills remaining slots
+                // (up to MaxTags) with popular tags from the section.
+                if (!string.IsNullOrWhiteSpace(SectionName))
+                {
+                    var sectionForTags = SectionName;
+                    var collectionForTags = string.IsNullOrWhiteSpace(CollectionName) ? "all" : CollectionName;
+
+                    Logger.LogDebug("Fetching real counts for {Count} content item tags in section {SectionName}",
+                        distinctTags.Count, sectionForTags);
+
+                    var tagCounts = await ApiClient.GetTagCloudAsync(
+                        sectionForTags,
+                        collectionForTags,
+                        maxTags: MaxTags,
+                        minUses: null,
+                        lastDays: null, // Use default date range (90 days via API defaults)
+                        selectedTags: null,
+                        tagsToCount: distinctTags,
+                        fromDate: null,
+                        toDate: null,
+                        searchQuery: null);
+
+                    if (tagCounts != null && tagCounts.Count > 0)
+                    {
+                        _tags = tagCounts;
+                        Logger.LogDebug("Loaded {Count} tags for content item (specific + popular fill)", _tags.Count);
+                        return;
+                    }
+                }
+
+                // Fallback: no SectionName or API returned empty — show tags with count=1
+                _tags = [.. distinctTags
                     .Select(t => new TagCloudItem { Tag = t, Count = 1, Size = TagSize.Medium })];
 
-                Logger.LogDebug("Using {Count} provided tags for content item", _tags.Count);
+                Logger.LogDebug("Using {Count} provided tags for content item (static count=1)", _tags.Count);
                 return;
             }
 
@@ -294,83 +318,52 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
             Logger.LogDebug("Loading tag cloud for section: {SectionName}, collection: {CollectionName}, with {FilterCount} filter tags",
                 effectiveSectionName, effectiveCollectionName, _selectedTagsInternal.Count);
 
-            // Create filter list from selected tags (for dynamic counts)
+            // Create filter list from selected tags (for content filtering)
             List<string>? filterTags = _selectedTagsInternal.Count > 0
                 ? [.. _selectedTagsInternal]
                 : null;
 
-            // CRITICAL: Establish baseline on first load WITHOUT any filters.
-            // This ensures the tag cloud shows all globally relevant tags.
-            // When users add/remove filters, we only update counts, never add/remove tags.
-            if (_initialTags == null)
+            // Pass selected tags as tagsToCount to ensure they always appear in results
+            // (even if they're not in the top N popular tags for current filters).
+            // The API returns their counts + fills remaining slots with popular tags.
+            // lastDays is always null — the API applies its configured default (90 days).
+            // Callers that need date filtering pass explicit FromDate/ToDate instead.
+            var tags = await ApiClient.GetTagCloudAsync(
+                effectiveSectionName,
+                effectiveCollectionName,
+                MaxTags,
+                MinUses,
+                lastDays: null,
+                selectedTags: filterTags,
+                tagsToCount: filterTags, // Include selected tags in results
+                fromDate: FromDate,
+                toDate: ToDate,
+                searchQuery: SearchQuery);
+
+            // Reorder: selected tags first, then remaining popular tags
+            if (_selectedTagsInternal.Count > 0 && tags != null && tags.Count > 0)
             {
-                // First load - establish baseline with NO filters to get complete tag list
-                Logger.LogDebug("Loading baseline tags WITHOUT filters to establish complete tag list");
-
-                var baselineApiTags = await ApiClient.GetTagCloudAsync(
-                    effectiveSectionName,
-                    effectiveCollectionName,
-                    MaxTags,
-                    MinUses,
-                    LastDays,
-                    selectedTags: null, // NO filters for baseline - get global tags
-                    fromDate: FromDate,
-                    toDate: ToDate,
-                    searchQuery: SearchQuery);
-
-                if (baselineApiTags != null)
+                var selected = new List<TagCloudItem>();
+                var rest = new List<TagCloudItem>();
+                foreach (var tag in tags)
                 {
-                    _initialTags = baselineApiTags;
+                    if (_selectedTagsInternal.Contains(tag.Tag.Trim().ToLowerInvariant()))
+                    {
+                        selected.Add(tag);
+                    }
+                    else
+                    {
+                        rest.Add(tag);
+                    }
                 }
-            }
 
-            // Now load tags with filters (if any)
-            // When baseline tags exist and filters are active, request counts for exactly the baseline tags.
-            // This ensures consistent tag coverage regardless of how positions change in sorted results.
-            var tagsToCount = _initialTags != null && filterTags != null && filterTags.Count > 0
-                ? _initialTags.Select(t => t.Tag).ToList()
-                : null;
-
-            // OPTIMIZATION: Skip the filtered API call if no filters are active
-            // In that case, baseline IS the current state (same parameters, same results)
-            IReadOnlyList<TagCloudItem>? apiTags;
-            if (filterTags == null || filterTags.Count == 0)
-            {
-                // No filters - use baseline directly (avoid redundant API call)
-                apiTags = _initialTags;
-                Logger.LogDebug("No filters active - using baseline tags directly (skipping redundant API call)");
+                _tags = [.. selected, .. rest];
+                Logger.LogDebug("Loaded {SelectedCount} selected + {PopularCount} popular tags",
+                    selected.Count, rest.Count);
             }
             else
             {
-                // Filters active - load filtered counts
-                apiTags = await ApiClient.GetTagCloudAsync(
-                    effectiveSectionName,
-                    effectiveCollectionName,
-                    MaxTags,
-                    MinUses,
-                    LastDays,
-                    selectedTags: filterTags,
-                    tagsToCount: tagsToCount,
-                    fromDate: FromDate,
-                    toDate: ToDate,
-                    searchQuery: SearchQuery);
-
-                Logger.LogDebug("Successfully loaded {Count} tags with dynamic counts for {FilterCount} filter tags",
-                    apiTags?.Count ?? 0, filterTags.Count);
-            }
-
-            if (_initialTags != null && apiTags != null)
-            {
-                // Merge with baseline:
-                // - Preserve baseline tag order and list
-                // - Update counts from current filtered results
-                // - Show tags with count=0 as disabled (not in current filter but in baseline)
-                _tags = MergeWithInitialOrder(_initialTags, apiTags);
-            }
-            else
-            {
-                // Fallback: use API results directly
-                _tags = apiTags;
+                _tags = tags;
             }
         }
         // Suppress CA1031: Catching all exceptions is appropriate for component error handling
@@ -388,66 +381,6 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
         {
             _isLoading = false;
         }
-    }
-
-    /// <summary>
-    /// Merges filtered tag results with initial tag order to maintain consistent ordering and sizing.
-    /// Tags from initial order are preserved, with counts updated from filtered results.
-    /// Tag sizes remain constant (based on initial unfiltered counts) regardless of filtering.
-    /// Tags not in filtered results get count=0 (shown as disabled).
-    /// </summary>
-    private static List<TagCloudItem> MergeWithInitialOrder(
-        IReadOnlyList<TagCloudItem> initialTags,
-        IReadOnlyList<TagCloudItem> filteredTags)
-    {
-        // Build lookup of filtered tag counts, handling duplicates by summing their counts
-        // Duplicates can occur when API returns same tag with different casings (e.g., "Mcp" and "mcp")
-        var filteredCountsLookup = new Dictionary<string, TagCloudItem>(StringComparer.OrdinalIgnoreCase);
-        foreach (var filteredTag in filteredTags)
-        {
-            if (filteredCountsLookup.TryGetValue(filteredTag.Tag, out var existing))
-            {
-                // Duplicate found - sum the counts
-                filteredCountsLookup[filteredTag.Tag] = new TagCloudItem
-                {
-                    Tag = existing.Tag, // Keep first casing
-                    Count = existing.Count + filteredTag.Count,
-                    Size = existing.Size
-                };
-            }
-            else
-            {
-                filteredCountsLookup[filteredTag.Tag] = filteredTag;
-            }
-        }
-
-        // Merge: preserve initial order AND size, update counts from filtered results
-        var merged = new List<TagCloudItem>();
-        foreach (var initialTag in initialTags)
-        {
-            if (filteredCountsLookup.TryGetValue(initialTag.Tag, out var filteredTag))
-            {
-                // Tag exists in filtered results - update count but preserve initial size
-                merged.Add(new TagCloudItem
-                {
-                    Tag = initialTag.Tag,
-                    Count = filteredTag.Count,
-                    Size = initialTag.Size  // Keep original size based on unfiltered counts
-                });
-            }
-            else
-            {
-                // Tag not in filtered results - show as disabled with count=0
-                merged.Add(new TagCloudItem
-                {
-                    Tag = initialTag.Tag,
-                    Count = 0,
-                    Size = initialTag.Size
-                });
-            }
-        }
-
-        return merged;
     }
 
     private async Task HandleTagClick(string tag)
@@ -512,8 +445,7 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
         {
             ApplicationState.PersistAsJson(GetPersistedStateKey(), new PersistedTagCloudData
             {
-                Tags = _tags?.ToList(),
-                InitialTags = _initialTags?.ToList()
+                Tags = _tags?.ToList()
             });
         }
         return Task.CompletedTask;
@@ -522,7 +454,6 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
     private sealed class PersistedTagCloudData
     {
         public List<TagCloudItem>? Tags { get; set; }
-        public List<TagCloudItem>? InitialTags { get; set; }
     }
 
     public void Dispose()

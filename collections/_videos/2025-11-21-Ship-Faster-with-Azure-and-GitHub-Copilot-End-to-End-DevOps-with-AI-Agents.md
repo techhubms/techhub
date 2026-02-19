@@ -14,7 +14,6 @@ tags:
 - Datadog
 - GitHub Copilot For Azure
 - Incident Response
-- InnovatewithAzureAIappsandagents
 - MSIgnite
 - PagerDuty
 - Production Diagnostics

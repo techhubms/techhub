@@ -17,7 +17,7 @@ tags:
 - Development
 - Entra ID
 - Gemini CLI
-- Mcp
+- MCP
 - Microsoft
 - Mysql
 - Natural Language Database

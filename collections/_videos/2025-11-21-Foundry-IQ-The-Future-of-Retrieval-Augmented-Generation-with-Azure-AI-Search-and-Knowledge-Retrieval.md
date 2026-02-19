@@ -15,7 +15,6 @@ tags:
 - Enterprise Data
 - Foundry IQ
 - GitHub Documentation
-- InnovatewithAzureAIappsandagents
 - Knowledge Retrieval
 - Microsoft Foundry
 - MSIgnite

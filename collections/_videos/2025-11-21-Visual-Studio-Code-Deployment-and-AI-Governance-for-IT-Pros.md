@@ -11,7 +11,6 @@ tags:
 - Enterprise Deployment
 - Entra ID
 - Extension Marketplace
-- InnovatewithAzureAIappsandagents
 - IT Governance
 - MCP
 - Microsoft Ignite

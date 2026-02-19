@@ -19,7 +19,7 @@ tags:
 - FileSystem MCP
 - JavaScript
 - Live Coding
-- Mcp
+- MCP
 - Microsoft
 - Microsoft Docs MCP
 - Playwright

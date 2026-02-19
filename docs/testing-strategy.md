@@ -40,14 +40,17 @@ Tech Hub uses a **testing diamond** approach that prioritizes integration tests 
 
 ## Database Strategy
 
-Tech Hub uses different database backends for different testing scenarios:
+Tech Hub uses PostgreSQL as the database for all environments, including tests:
 
 | Test Type | Database | Rationale |
 |-----------|----------|-----------|
-| **Integration Tests** | SQLite in-memory | Fast, isolated, no cleanup needed |
-| **E2E Tests** | PostgreSQL (docker-compose) | Tests production architecture |
-| **Local Development** | PostgreSQL OR SQLite | User choice (persistent data) |
+| **Integration Tests** | PostgreSQL (Testcontainers) | Production-like, isolated per fixture, auto-cleanup |
+| **Infrastructure Tests** | PostgreSQL (Testcontainers) | Validates queries against real PostgreSQL |
+| **E2E Tests** | PostgreSQL (docker-compose) | Tests production architecture with real data |
+| **Local Development** | PostgreSQL | Persistent data via docker-compose |
 | **Production** | Azure PostgreSQL | Managed, scalable, production-grade |
+
+Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixture. The container starts for free on any machine with Docker and requires no manual setup.
 
 ## Test Layer Definitions
 
@@ -85,7 +88,6 @@ Tech Hub uses different database backends for different testing scenarios:
 
 **What's Stubbed/Mocked** (external to our control):
 
-- Cloud services (Azure Storage, databases)
 - Third-party APIs (external HTTP calls)
 - Email services (SMTP, SendGrid)
 
@@ -139,7 +141,7 @@ Tech Hub uses different database backends for different testing scenarios:
 
 | Layer | Framework | Projects | External Dependencies | Local Dependencies (Filesystem) |
 |-------|-----------|----------|----------------------|--------------------------------|
-| **Integration** | xUnit v3 + WebApplicationFactory | Api | Stub/Mock | Real (we control it) |
+| **Integration** | xUnit v3 + WebApplicationFactory | Api | PostgreSQL (Testcontainers) | Real (we control it) |
 | **Unit** | xUnit v3 + Stubs | Core, Infrastructure | NEVER | NEVER |
 | **E2E** | Playwright .NET + HttpClient | E2E | Real | Real |
 | **Component** | bUnit | Web | Stub/Mock | Stub/Mock |

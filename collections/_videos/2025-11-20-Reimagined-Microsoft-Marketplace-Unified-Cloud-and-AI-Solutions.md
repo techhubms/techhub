@@ -13,7 +13,6 @@ tags:
 - Cloud Applications
 - Cloud Portfolio Management
 - Fine Tuned Models
-- InnovatewithAzureAIappsandagents
 - Microsoft AppSource
 - Microsoft Ignite
 - Microsoft Marketplace

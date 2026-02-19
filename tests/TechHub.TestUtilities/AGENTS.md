@@ -13,8 +13,9 @@ Different test types use different data sources:
 | Test Type | Repository | Data Source | Database |
 |-----------|------------|-------------|----------|
 | **Unit Tests** | Mock/Stub or In-Memory | Test data in code or builders | None |
-| **Integration Tests** | `ContentRepository` | TestCollections folder | SQLite in-memory |
-| **E2E Tests** | `ContentRepository` | Production `collections/` | SQLite file (`techhub.db`) |
+| **Integration Tests** | `ContentRepository` | TestCollections folder | PostgreSQL (Testcontainers) |
+| **Infrastructure Tests** | `ContentRepository` | TestCollections folder | PostgreSQL (Testcontainers) |
+| **E2E Tests** | `ContentRepository` | Production `collections/` | PostgreSQL (docker-compose) |
 
 ### Unit Tests (Core/Infrastructure)
 
@@ -32,7 +33,7 @@ var item = A.ContentItem
 
 ### Integration Tests (API)
 
-Use `TechHubIntegrationTestApiFactory` with SQLite in-memory database:
+Use `TechHubIntegrationTestApiFactory` with PostgreSQL Testcontainer:
 
 ```csharp
 public class MyTests : IClassFixture<TechHubIntegrationTestApiFactory>
@@ -42,7 +43,7 @@ public class MyTests : IClassFixture<TechHubIntegrationTestApiFactory>
 }
 ```
 
-**Why**: Tests full API pipeline with real database operations, isolated per test run.
+**Why**: Tests full API pipeline with production-like PostgreSQL database, isolated per test run via Testcontainers.
 
 ### E2E Tests
 
@@ -67,9 +68,10 @@ public class MyE2ETests
 ### TechHubIntegrationTestApiFactory
 
 - Uses **IntegrationTest** environment
-- Creates **in-memory SQLite database** for each factory instance
-- Seeds database from `TestCollections/` folder
-- Thread-safe: Master connection keeps DB alive, repository is transient
+- Implements `IAsyncLifetime` for container lifecycle
+- Spins up a **PostgreSQL Testcontainer** (`postgres:17-alpine`) per factory instance
+- Overrides `Database:Provider` and `Database:ConnectionString` via `UseSetting`
+- Seeds database from `TestCollections/` folder using production sync logic
 - Logs seeding progress and record counts
 
 ### TechHubE2ETestApiFactory
@@ -105,17 +107,19 @@ public class MyRepoTests : IClassFixture<DatabaseFixture<MyRepoTests>>
 {
     public MyRepoTests(DatabaseFixture<MyRepoTests> fixture)
     {
-        var repository = new ContentRepository(fixture.Connection, dialect, cache, markdownService, appSettings);
+        var repository = new ContentRepository(fixture.Connection, new PostgresDialect(), cache, markdownService, appSettings);
     }
 }
 ```
 
 **Features**:
 
-- Creates in-memory SQLite database
-- Runs migrations automatically
-- Seeds from TestCollections
+- Implements `IAsyncLifetime` for container lifecycle
+- Spins up a PostgreSQL Testcontainer (`postgres:17-alpine`) per fixture
+- Runs PostgreSQL migrations automatically
+- Seeds from TestCollections using production sync logic
 - Logs database setup and record counts
+- Exposes `ConnectionString` for additional connections
 
 ## Configuration
 

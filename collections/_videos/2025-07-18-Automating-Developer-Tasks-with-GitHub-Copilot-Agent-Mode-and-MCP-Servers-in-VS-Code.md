@@ -13,9 +13,9 @@ tags:
 - Developer Tools
 - Issue Assignment
 - LeetCode Integration
-- Mcp
+- MCP
+- MCP Apps
 - MCP Server
-- Mcpserver
 - Productivity
 - Pull Requests
 - VS Code

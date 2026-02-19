@@ -258,8 +258,8 @@ Tests pass with minimal implementation code.
 
 #### 6.2 Actions
 
-1. Read [docs/running-and-testing.md](docs/running-and-testing.md) to understand how you can run tests
-2. Run full test suite
+1. Run full test suite: `Run` (includes unit, integration, AND E2E tests - there is NO `-SkipE2ETests` flag)
+2. If tests fail and you need to rerun specific tests, read [docs/running-and-testing.md](docs/running-and-testing.md)
 3. Check quality:
    - Use `get_errors` for linting/compilation
    - Verify code follows conventions

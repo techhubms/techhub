@@ -1,5 +1,6 @@
 using System.Data;
 using System.Diagnostics;
+using System.Text;
 using Dapper;
 using Microsoft.Extensions.Logging;
 
@@ -34,7 +35,7 @@ public static class DapperExtensions
             var result = await connection.QueryAsync<T>(command);
             stopwatch.Stop();
 
-            LogQuery(logger, sql, parameters, stopwatch.ElapsedMilliseconds, result.Count());
+            LogQuery(logger, sql, parameters, stopwatch.ElapsedMilliseconds, result.Count(), connection);
 
             return result;
         }
@@ -69,7 +70,7 @@ public static class DapperExtensions
             var result = await connection.QueryMultipleAsync(command);
             stopwatch.Stop();
 
-            LogQuery(logger, sql, parameters, stopwatch.ElapsedMilliseconds, null);
+            LogQuery(logger, sql, parameters, stopwatch.ElapsedMilliseconds, null, connection);
 
             return result;
         }
@@ -82,19 +83,78 @@ public static class DapperExtensions
     }
 
     /// <summary>
-    /// Log query with SQL, sanitized parameters, execution time, and row count.
+    /// Threshold in milliseconds for automatic EXPLAIN logging.
+    /// Queries exceeding this duration will have their EXPLAIN plan logged.
     /// </summary>
-    private static void LogQuery(ILogger logger, string sql, object? parameters, long elapsedMs, int? rowCount)
+    internal const int SlowQueryThresholdMs = 1000;
+
+    /// <summary>
+    /// Log query with SQL, sanitized parameters, execution time, and row count.
+    /// If the query exceeds <see cref="SlowQueryThresholdMs"/>, automatically runs
+    /// EXPLAIN on the query and logs the execution plan at Warning level.
+    /// </summary>
+    private static void LogQuery(ILogger logger, string sql, object? parameters, long elapsedMs, int? rowCount, IDbConnection? connection = null)
     {
         var sanitizedParams = SanitizeParameters(parameters);
         var rowInfo = rowCount.HasValue ? $", Rows={rowCount}" : "";
 
-        logger.LogInformation(
-            "Query executed: {ElapsedMs}ms{RowInfo}\nSQL: {Sql}\nParams: {Params}",
-            elapsedMs,
-            rowInfo,
-            sql.Trim(),
-            sanitizedParams);
+        if (elapsedMs > SlowQueryThresholdMs)
+        {
+            logger.LogWarning(
+                "SLOW QUERY: {ElapsedMs}ms{RowInfo}\nSQL: {Sql}\nParams: {Params}",
+                elapsedMs,
+                rowInfo,
+                sql.Trim(),
+                sanitizedParams);
+
+            // Automatically run EXPLAIN for slow queries to aid debugging
+            if (connection != null)
+            {
+                LogExplainPlan(connection, sql, parameters, logger);
+            }
+        }
+        else
+        {
+            logger.LogInformation(
+                "Query executed: {ElapsedMs}ms{RowInfo}\nSQL: {Sql}\nParams: {Params}",
+                elapsedMs,
+                rowInfo,
+                sql.Trim(),
+                sanitizedParams);
+        }
+    }
+
+    /// <summary>
+    /// Run EXPLAIN on the given SQL and log the execution plan.
+    /// Uses EXPLAIN (ANALYZE, BUFFERS) for PostgreSQL.
+    /// </summary>
+    private static void LogExplainPlan(IDbConnection connection, string sql, object? parameters, ILogger logger)
+    {
+        try
+        {
+            var explainSql = $"EXPLAIN (ANALYZE, BUFFERS) {sql}";
+
+            var command = new CommandDefinition(explainSql, parameters);
+            var explainRows = connection.Query<dynamic>(command);
+
+            var sb = new StringBuilder();
+            sb.AppendLine("EXPLAIN plan for slow query:");
+            foreach (var row in explainRows)
+            {
+                // PostgreSQL EXPLAIN returns a single "QUERY PLAN" text column
+                var dict = (IDictionary<string, object>)row;
+                foreach (var val in dict.Values)
+                {
+                    sb.Append("  ").AppendLine(val?.ToString());
+                }
+            }
+
+            logger.LogWarning("{ExplainPlan}", sb.ToString().TrimEnd());
+        }
+        catch (Exception ex) when (ex is not OutOfMemoryException)
+        {
+            logger.LogWarning(ex, "Failed to retrieve EXPLAIN plan for slow query");
+        }
     }
 
     /// <summary>

@@ -34,7 +34,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
 
         _repository = new ContentRepository(
             fixture.Connection,
-            new Infrastructure.Data.SqliteDialect(),
+            new Infrastructure.Data.PostgresDialect(),
             cache,
             mockMarkdownService.Object,
             Options.Create(appSettings));
@@ -137,5 +137,141 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
                                        t.Tag.Equals("Code Review", StringComparison.OrdinalIgnoreCase) ||
                                        t.Tag.Equals("Copilot", StringComparison.OrdinalIgnoreCase),
             "Tag cloud should include actual content tags");
+    }
+
+    /// <summary>
+    /// Test: TagsToCount query returns display names from MAX(tag_display).
+    /// Why: The unified query uses MAX(tag_display) for proper casing from the database,
+    ///      so display names are always correct regardless of the caller's input casing.
+    ///      Results also include popular tags filling up to maxTags.
+    /// </summary>
+    [Fact]
+    public async Task GetTagCountsAsync_WithTagsToCount_ReturnsProperDisplayNames()
+    {
+        // Arrange - request counts for specific tags (casing doesn't matter, DB provides display names)
+        var request = new TagCountsRequest(
+            sectionName: "all",
+            collectionName: "all",
+            minUses: 1,
+            maxTags: 50,
+            dateFrom: null,
+            dateTo: null,
+            tags: null,
+            tagsToCount: ["code review", "collaboration"]  // lowercase input
+        );
+
+        // Act
+        var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - display names come from MAX(tag_display), always proper-cased
+        tagCounts.Should().NotBeEmpty("Should return counts for requested tags plus popular tags");
+
+        var codeReview = tagCounts.FirstOrDefault(t => t.Tag.Equals("Code Review", StringComparison.OrdinalIgnoreCase));
+        codeReview.Should().NotBeNull("Should return a result for 'Code Review'");
+        codeReview!.Tag.Should().Be("Code Review", "Tag display name should come from MAX(tag_display) with proper casing");
+
+        var collaboration = tagCounts.FirstOrDefault(t => t.Tag.Equals("Collaboration", StringComparison.OrdinalIgnoreCase));
+        collaboration.Should().NotBeNull("Should return a result for 'Collaboration'");
+        collaboration!.Tag.Should().Be("Collaboration", "Tag display name should come from MAX(tag_display) with proper casing");
+    }
+
+    /// <summary>
+    /// Test: TagsToCount filters out excluded tags (section/collection titles, high-frequency terms).
+    /// Why: Content items may have tags like "GitHub Copilot" or "AI" which are section titles.
+    ///      These structural tags should be excluded from the tag cloud even when passed via tagsToCount.
+    /// </summary>
+    [Fact]
+    public async Task GetTagCountsAsync_WithTagsToCount_ExcludesStructuralTags()
+    {
+        // Arrange - include structural tags that should be excluded
+        var request = new TagCountsRequest(
+            sectionName: "all",
+            collectionName: "all",
+            minUses: 1,
+            maxTags: 50,
+            dateFrom: null,
+            dateTo: null,
+            tags: null,
+            tagsToCount: ["AI", "Code Review", "GitHub Copilot", "Microsoft"]
+        );
+
+        // Act
+        var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - structural/excluded tags should not be in results
+        tagCounts.Should().NotContain(t => t.Tag.Equals("AI", StringComparison.OrdinalIgnoreCase),
+            "Section title 'AI' should be excluded");
+        tagCounts.Should().NotContain(t => t.Tag.Equals("GitHub Copilot", StringComparison.OrdinalIgnoreCase),
+            "Section title 'GitHub Copilot' should be excluded");
+        tagCounts.Should().NotContain(t => t.Tag.Equals("Microsoft", StringComparison.OrdinalIgnoreCase),
+            "High-frequency tag 'Microsoft' should be excluded");
+
+        // Non-excluded tag should still be present
+        tagCounts.Should().Contain(t => t.Tag.Equals("Code Review", StringComparison.OrdinalIgnoreCase),
+            "Content tag 'Code Review' should be included");
+    }
+
+    /// <summary>
+    /// Test: TagsToCount returns specific tags PLUS popular tags to fill up to maxTags.
+    /// Why: The unified query returns all requested tags with real counts and fills
+    ///      remaining slots with popular tags, so the tag cloud is always full.
+    /// </summary>
+    [Fact]
+    public async Task GetTagCountsAsync_WithTagsToCount_IncludesPopularTagsFill()
+    {
+        // Arrange - request 2 specific tags with maxTags=10
+        var request = new TagCountsRequest(
+            sectionName: "all",
+            collectionName: "all",
+            minUses: 1,
+            maxTags: 10,
+            dateFrom: null,
+            dateTo: null,
+            tags: null,
+            tagsToCount: ["Code Review", "Collaboration"]
+        );
+
+        // Act
+        var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - should have the 2 specific tags plus popular tags filling up to maxTags
+        tagCounts.Should().Contain(t => t.Tag.Equals("Code Review", StringComparison.OrdinalIgnoreCase),
+            "Requested tag should be in results");
+        tagCounts.Should().Contain(t => t.Tag.Equals("Collaboration", StringComparison.OrdinalIgnoreCase),
+            "Requested tag should be in results");
+
+        // Should have more than just the 2 requested tags (popular fill)
+        tagCounts.Should().HaveCountGreaterThan(2,
+            "Should include popular tags filling up to maxTags beyond the 2 requested tags");
+    }
+
+    /// <summary>
+    /// Test: Top tags query path also returns proper display names.
+    /// Why: Validates the existing MAX(tag_display) approach works correctly.
+    /// </summary>
+    [Fact]
+    public async Task GetTagCountsAsync_TopTags_ReturnsProperDisplayNames()
+    {
+        // Arrange - standard top tags request (no TagsToCount)
+        var request = new TagCountsRequest(
+            sectionName: "all",
+            collectionName: "all",
+            minUses: 1,
+            maxTags: 50,
+            dateFrom: null,
+            dateTo: null
+        );
+
+        // Act
+        var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - no tag should be all lowercase (display names always have proper casing)
+        tagCounts.Should().NotBeEmpty();
+        foreach (var tag in tagCounts)
+        {
+            // Every tag should have at least one uppercase letter (proper display name)
+            tag.Tag.Should().MatchRegex("[A-Z]",
+                $"Tag '{tag.Tag}' should have proper casing (not all lowercase)");
+        }
     }
 }

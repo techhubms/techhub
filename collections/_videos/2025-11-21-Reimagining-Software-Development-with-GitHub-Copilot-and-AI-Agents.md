@@ -13,7 +13,6 @@ tags:
 - Developer Productivity
 - Enterprise Deployment
 - GitHub
-- InnovatewithAzureAIappsandagents
 - Mission Control
 - MSIgnite
 - PagerDuty

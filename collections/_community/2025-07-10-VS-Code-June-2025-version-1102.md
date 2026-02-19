@@ -13,7 +13,7 @@ tags:
 - Editor Features
 - Generate
 - GitHub Copilot Chat
-- Mcp
+- MCP
 - MCP Support
 - Open Source
 - Scroll

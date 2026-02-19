@@ -10,9 +10,9 @@ namespace TechHub.Infrastructure.Data;
 /// Executes SQL migration scripts automatically on application startup.
 /// Runs all migration scripts in sequential order based on filename (001_, 002_, etc.).
 /// Tracks executed migrations in a _migrations table to ensure each script runs only once.
-/// Uses file-based locking to prevent concurrent migration execution (critical for SQLite in parallel tests).
+/// Uses a semaphore to prevent concurrent migration execution.
 /// </summary>
-public class MigrationRunner
+public class MigrationRunner : IMigrationRunner
 {
     private readonly IDbConnection _connection;
     private readonly ISqlDialect _dialect;
@@ -35,12 +35,11 @@ public class MigrationRunner
 
     /// <summary>
     /// Run all pending migrations for the configured database provider.
-    /// Acquires a global lock to prevent concurrent migrations (critical for SQLite parallel tests).
+    /// Acquires a global lock to prevent concurrent migrations.
     /// </summary>
     public async Task RunMigrationsAsync(CancellationToken cancellationToken = default)
     {
         // Acquire lock to prevent concurrent migration execution
-        // This is critical when running parallel E2E tests with SQLite
         await _migrationLock.WaitAsync(cancellationToken);
         try
         {
@@ -59,12 +58,7 @@ public class MigrationRunner
         // Ensure migration tracking table exists
         await EnsureMigrationTableExistsAsync();
 
-        var migrationFolder = _dialect.ProviderName.ToLowerInvariant() switch
-        {
-            "sqlite" => "sqlite",
-            "postgresql" => "postgres",
-            _ => throw new NotSupportedException($"Unknown database provider: {_dialect.ProviderName}")
-        };
+        var migrationFolder = "postgres";
 
         var assembly = Assembly.GetExecutingAssembly();
         var migrationPrefix = $"TechHub.Infrastructure.Data.Migrations.{migrationFolder}.";

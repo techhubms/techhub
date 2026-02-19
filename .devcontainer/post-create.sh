@@ -185,7 +185,7 @@ Write-Host "✅ PowerShell profile loaded" -ForegroundColor Green
 Write-Host ""
 Write-Host "Quick start:" -ForegroundColor Yellow
 Write-Host "- Type 'Run' to build, test, and start servers" -ForegroundColor Yellow
-Write-Host "- Type 'Run -Docker' to use Docker containers/Postgres" -ForegroundColor Yellow
+Write-Host "- Type 'Run -Docker' to run full stack in Docker containers" -ForegroundColor Yellow
 Write-Host "- Type 'Run -Help' for detailed options" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "Servers run in background - terminal is always free to use" -ForegroundColor Yellow

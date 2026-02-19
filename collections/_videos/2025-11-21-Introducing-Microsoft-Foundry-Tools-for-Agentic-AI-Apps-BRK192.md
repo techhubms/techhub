@@ -14,7 +14,6 @@ tags:
 - Data Privacy
 - Document Parsing
 - GPT 4
-- InnovatewithAzureAIappsandagents
 - Insurance Claims
 - LLM Integration
 - MCP Server

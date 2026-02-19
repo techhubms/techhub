@@ -12,7 +12,6 @@ tags:
 - Data Architecture
 - EV Charging Finder
 - Generative Design
-- InnovatewithAzureAIappsandagents
 - Integration Patterns
 - Intelligent Agents
 - Kantar

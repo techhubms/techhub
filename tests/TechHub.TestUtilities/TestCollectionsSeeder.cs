@@ -55,10 +55,7 @@ public static class TestCollectionsSeeder
             CollectionsPath = testCollectionsPath
         });
 
-        // Create appropriate SQL dialect based on connection type
-        var dialect = connection.GetType().Name.Contains("Npgsql")
-            ? (ISqlDialect)new PostgresDialect()
-            : new SqliteDialect();
+        var dialect = new PostgresDialect();
 
         var markdownService = new MarkdownService();
         var syncLogger = loggerFactory.CreateLogger<ContentSyncService>();

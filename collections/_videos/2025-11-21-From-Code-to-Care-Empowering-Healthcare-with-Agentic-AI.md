@@ -14,7 +14,6 @@ tags:
 - Ethical AI
 - Healthcare AI
 - Healthcare Interoperability
-- InnovatewithAzureAIappsandagents
 - Low Code
 - Microsoft Ignite
 - MSIgnite

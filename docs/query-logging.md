@@ -8,6 +8,7 @@ The Tech Hub application includes optional database query logging functionality 
 - Parameter values (sanitized)
 - Execution time in milliseconds
 - Row counts returned
+- **Automatic EXPLAIN plans** for queries exceeding 1 second
 
 ## Configuration
 
@@ -16,8 +17,8 @@ Query logging is controlled through [DatabaseOptions](../src/TechHub.Core/Config
 ```json
 {
   "Database": {
-    "Provider": "SQLite",
-    "ConnectionString": "Data Source=.databases/sqlite/techhub.db",
+    "Provider": "PostgreSQL",
+    "ConnectionString": "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev",
     "EnableQueryLogging": true
   }
 }
@@ -51,10 +52,41 @@ These extensions:
 2. Execute the query
 3. Log the SQL, parameters, execution time, and row count
 4. Handle exceptions and log failures
+5. **If query exceeds 1 second**: automatically run EXPLAIN and log the execution plan
+
+## Slow Query Detection
+
+Queries taking longer than 1 second (configurable via `DapperExtensions.SlowQueryThresholdMs`) are automatically flagged:
+
+- Logged at **Warning** level instead of Information
+- Prefixed with `SLOW QUERY:` for easy identification
+- **EXPLAIN plan** is automatically executed and logged alongside the slow query
+
+### EXPLAIN Output
+
+The EXPLAIN feature detects the database provider automatically:
+
+- **PostgreSQL**: Runs `EXPLAIN (ANALYZE, BUFFERS)` for detailed execution statistics
+
+Example slow query log output:
+
+```text
+[Warning] SLOW QUERY: 1523ms, Rows=20
+SQL: SELECT MAX(tag_display) AS Tag, COUNT(*) AS Count FROM content_tags_expanded...
+Params: DynamicParameters(5 params)
+
+[Warning] EXPLAIN plan for slow query:
+  GroupAggregate  (cost=0.42..1234.56 rows=200 width=40) (actual time=1.2..1520.0 rows=20 loops=1)
+    ->  Index Only Scan using idx_tags_collection_tagword on content_tags_expanded  (cost=0.42..1100.00 rows=5000 width=32)
+         Heap Fetches: 0
+         Buffers: shared hit=150
+  Planning Time: 0.5 ms
+  Execution Time: 1521.3 ms
+```
 
 ## Output Format
 
-Logged queries appear in the application logs:
+Normal queries appear at Information level:
 
 ```text
 [Information] Query executed: 45ms, Rows=12
@@ -64,7 +96,7 @@ Params: collection="blogs", take=20, skip=0
 
 ## Usage
 
-Query logging is automatically used by [DatabaseContentRepository](../src/TechHub.Infrastructure/Repositories/DatabaseContentRepository.cs) when `EnableQueryLogging` is `true`. No code changes are required.
+Query logging is automatically used by [ContentRepository](../src/TechHub.Infrastructure/Repositories/ContentRepository.cs) when `EnableQueryLogging` is `true`. No code changes are required.
 
 To enable logging temporarily:
 
@@ -72,6 +104,7 @@ To enable logging temporarily:
 2. Set `Database:EnableQueryLogging` to `true`
 3. Restart the application
 4. Observe logs for query details
+5. Watch for `SLOW QUERY` warnings and their EXPLAIN plans
 
 ## Related
 

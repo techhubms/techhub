@@ -14,8 +14,8 @@ using TechHub.Infrastructure.Data;
 namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
-/// Database-backed content repository supporting both SQLite and PostgreSQL.
-/// Uses ISqlDialect abstraction to handle database-specific syntax differences.
+/// Database-backed content repository using PostgreSQL.
+/// Uses ISqlDialect abstraction for database-specific syntax.
 /// Provides caching logic and markdown rendering for all content operations.
 /// Supports optional query logging when DatabaseOptions.EnableQueryLogging is enabled.
 /// </summary>
@@ -91,13 +91,13 @@ public class ContentRepository : IContentRepository
 
     static ContentRepository()
     {
-        // Register custom type handler to convert SQLite's Int64 booleans to C# bool
+        // Register custom type handler for safe boolean conversion
         SqlMapper.AddTypeHandler(new BooleanTypeHandler());
     }
 
     /// <summary>
-    /// Type handler to convert SQLite's Int64 (0/1) to C# bool.
-    /// SQLite doesn't have a native boolean type, so it stores booleans as integers.
+    /// Type handler for safe boolean conversion from database values.
+    /// Handles both native bool and int representations.
     /// </summary>
     private sealed class BooleanTypeHandler : SqlMapper.TypeHandler<bool>
     {
@@ -463,7 +463,7 @@ public class ContentRepository : IContentRepository
 
     /// <summary>
     /// Get facet counts for tags, collections, and sections within the filtered scope.
-    /// Uses standard SQL - works with both SQLite and PostgreSQL.
+    /// Uses standard SQL.
     /// </summary>
     protected async Task<FacetResults> GetFacetsInternalAsync(FacetRequest request, CancellationToken ct = default)
     {
@@ -558,9 +558,9 @@ public class ContentRepository : IContentRepository
 
     /// <summary>
     /// Get tag counts with aggregation from content_tags_expanded table.
-    /// Two query paths:
-    /// 1. TagsToCount: Get counts for specific requested tags (fast, bounded)
-    /// 2. TopN: Get top N most popular tags with exclusions (tag cloud)
+    /// When TagsToCount is provided: returns counts for those specific tags (excluding structural tags)
+    /// PLUS fills remaining slots (up to MaxTags) with popular tags.
+    /// When TagsToCount is empty: returns top MaxTags popular tags (standard tag cloud).
     /// </summary>
     protected async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
         TagCountsRequest request,
@@ -568,18 +568,25 @@ public class ContentRepository : IContentRepository
     {
         ArgumentNullException.ThrowIfNull(request);
 
-        // Build filter parameters (shared between both query paths)
         var (filterClause, parameters) = BuildTagCountFilters(request, Dialect);
+        var excludeSet = await GetExcludeTagsSetAsync();
 
-        // Route to appropriate query path
-        if (request.TagsToCount != null && request.TagsToCount.Count > 0)
+        // Filter tagsToCount against exclusion set (section/collection titles, high-frequency terms)
+        List<string>? filteredTagsToCount = null;
+        if (request.TagsToCount is { Count: > 0 })
         {
-            return await ExecuteTagsToCountQueryAsync(request.TagsToCount, filterClause, parameters, ct);
+            filteredTagsToCount = request.TagsToCount
+                .Where(t => !excludeSet.Contains(t))
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            if (filteredTagsToCount.Count == 0)
+            {
+                filteredTagsToCount = null;
+            }
         }
-        else
-        {
-            return await ExecuteTopTagsQueryAsync(request, filterClause, parameters, ct);
-        }
+
+        return await ExecuteTagCountQueryAsync(request, filteredTagsToCount, excludeSet, filterClause, parameters, ct);
     }
 
     /// <summary>
@@ -658,131 +665,161 @@ public class ContentRepository : IContentRepository
     }
 
     /// <summary>
-    /// Execute query to get counts for specific requested tags.
-    /// Used when UI needs updated counts for a baseline tag set after filter changes.
-    /// 
-    /// CRITICAL: Counts must match content retrieval behavior. Both use word-level matching
-    /// (tag_word column), not exact full-tag matching. For example, searching for "automation"
-    /// matches items with tags like "Automation", "Workflow Automation", "Task Automation" etc.
-    /// because each multi-word tag expands to individual words.
-    /// 
-    /// The count for each tag represents how many items would be returned if that tag
-    /// were added to the current filter (intersection with existing filters).
-    /// 
-    /// NOTE: We only return tag_word + count. The frontend already has display names from
-    /// the initial tag cloud load and uses MergeWithInitialOrder() to preserve them.
+    /// Unified tag count query. Returns proper display names via MAX(tag_display).
+    /// Filters ALL excluded tags (sections, collections, high-frequency) in SQL.
+    ///
+    /// When tagsToCount is provided: UNION of specific tag counts + popular tags filling to MaxTags.
+    /// When tagsToCount is null: standard top-N popular tags.
+    ///
+    /// Query optimization: single-pass GROUP BY with filtering on is_full_tag.
+    /// - tag_display is stored for ALL rows (full tags and word expansions) with original casing.
+    /// - MAX(tag_display) picks the best display name (full-tag display wins over word expansion).
+    /// - For popular tags: WHERE is_full_tag = true ensures only real tags appear.
+    /// - For tagsToCount: all rows are counted (word-level matching), display name always available.
+    /// - PK constraint (collection_name, slug, tag_word) guarantees each item is counted once.
     /// </summary>
-    private async Task<IReadOnlyList<TagWithCount>> ExecuteTagsToCountQueryAsync(
-        IReadOnlyList<string> tagsToCount,
-        string filterClause,
-        DynamicParameters parameters,
-        CancellationToken ct)
-    {
-        // Build parameters for all tags at once
-        var tagParams = string.Join(", ", tagsToCount.Select((_, i) => $"@tcTag{i}"));
-        for (int i = 0; i < tagsToCount.Count; i++)
-        {
-            parameters.Add($"tcTag{i}", tagsToCount[i].ToLowerInvariant());
-        }
-
-        // Single query to count distinct (collection_name, slug) pairs per tag_word
-        // Uses subquery + GROUP BY which is more efficient than COUNT(DISTINCT concat(...))
-        // Frontend has display names already - we just return tag_word as the key
-        var sql = $@"
-            SELECT tag_word AS Tag, COUNT(*) AS Count
-            FROM (
-                SELECT DISTINCT tag_word, collection_name, slug
-                FROM content_tags_expanded
-                WHERE tag_word IN ({tagParams})
-                  {(string.IsNullOrEmpty(filterClause) ? "" : $"AND {filterClause}")}
-            ) AS distinct_items
-            GROUP BY tag_word";
-
-        var results = await Connection.QueryWithLoggingAsync<TagWithCount>(
-            new CommandDefinition(sql, parameters, cancellationToken: ct),
-            _logger,
-            _enableQueryLogging);
-
-        // Build result with zero-counts for missing tags
-        var resultDict = new Dictionary<string, TagWithCount>(StringComparer.OrdinalIgnoreCase);
-        foreach (var r in results)
-        {
-            resultDict.TryAdd(r.Tag.ToLowerInvariant(), r);
-        }
-
-        foreach (var tag in tagsToCount)
-        {
-            var key = tag.ToLowerInvariant();
-            if (!resultDict.ContainsKey(key))
-            {
-                resultDict[key] = new TagWithCount { Tag = tag, Count = 0 };
-            }
-        }
-
-        return [.. resultDict.Values.OrderByDescending(t => t.Count).ThenBy(t => t.Tag)];
-    }
-
-    /// <summary>
-    /// Execute query to get top N most popular tags.
-    /// Used for initial tag cloud display.
-    /// Filters ALL excluded tags (sections, collections, high-frequency) in SQL for best performance.
-    /// </summary>
-    private async Task<IReadOnlyList<TagWithCount>> ExecuteTopTagsQueryAsync(
+    private async Task<IReadOnlyList<TagWithCount>> ExecuteTagCountQueryAsync(
         TagCountsRequest request,
+        List<string>? tagsToCount,
+        HashSet<string> excludeSet,
         string filterClause,
         DynamicParameters parameters,
         CancellationToken ct)
     {
-        // Get cached exclude set (sections, collections, high-frequency terms)
-        var excludeSet = await GetExcludeTagsSetAsync();
+        var filterSql = string.IsNullOrEmpty(filterClause) ? "" : $"AND {filterClause}";
 
-        // Add ALL excluded tags to SQL filter
-        // These are the most frequent tags so filtering in SQL significantly reduces rows processed
-        var excludeParams = string.Join(", ", excludeSet.Select((_, i) => $"@excl{i}"));
-        int i = 0;
-        foreach (var tag in excludeSet)
+        if (tagsToCount != null && tagsToCount.Count > 0)
         {
-            parameters.Add($"excl{i}", tag.ToLowerInvariant());
-            i++;
+            // --- UNION: specific tags + popular fill ---
+
+            // Build params for specific tags
+            var tcParams = string.Join(", ", tagsToCount.Select((_, i) => $"@tcTag{i}"));
+            for (int i = 0; i < tagsToCount.Count; i++)
+            {
+                parameters.Add($"tcTag{i}", tagsToCount[i].ToLowerInvariant());
+            }
+
+            // Build NOT IN params: excludeSet + tagsToCount (to prevent duplicates in UNION)
+            var allExcluded = new HashSet<string>(excludeSet, StringComparer.OrdinalIgnoreCase);
+            foreach (var tag in tagsToCount)
+            {
+                allExcluded.Add(tag);
+            }
+
+            var excludeParams = string.Join(", ", allExcluded.Select((_, i) => $"@excl{i}"));
+            int idx = 0;
+            foreach (var tag in allExcluded)
+            {
+                parameters.Add($"excl{idx}", tag.ToLowerInvariant());
+                idx++;
+            }
+
+            // Calculate how many popular tags to add
+            var fillLimit = Math.Max(0, request.MaxTags - tagsToCount.Count);
+
+            // Build HAVING for popular tags part:
+            // - Only show tags that exist as full tags (not just word expansions)
+            // - COUNT(*) still counts ALL matching rows (full + expansion) for accurate click-through counts
+            var popularHavingParts = new List<string>
+            {
+                "MAX(CASE WHEN is_full_tag THEN 1 ELSE 0 END) = 1"
+            };
+            if (request.MinUses > 1)
+            {
+                popularHavingParts.Add($"COUNT(*) >= {request.MinUses}");
+            }
+
+            var popularHaving = $"HAVING {string.Join(" AND ", popularHavingParts)}";
+
+            string sql;
+            if (fillLimit > 0)
+            {
+                sql = $@"
+                    (SELECT MAX(tag_display) AS Tag, COUNT(*) AS Count
+                     FROM content_tags_expanded
+                     WHERE tag_word IN ({tcParams})
+                       {filterSql}
+                     GROUP BY tag_word)
+                    UNION ALL
+                    (SELECT MAX(tag_display) AS Tag, COUNT(*) AS Count
+                     FROM content_tags_expanded
+                     WHERE tag_word NOT IN ({excludeParams})
+                       {filterSql}
+                     GROUP BY tag_word
+                     {popularHaving}
+                     ORDER BY Count DESC, Tag
+                     LIMIT {fillLimit})";
+            }
+            else
+            {
+                // All slots used by tagsToCount — no room for popular tags
+                sql = $@"
+                    SELECT MAX(tag_display) AS Tag, COUNT(*) AS Count
+                    FROM content_tags_expanded
+                    WHERE tag_word IN ({tcParams})
+                      {filterSql}
+                    GROUP BY tag_word";
+            }
+
+            var results = (await Connection.QueryWithLoggingAsync<TagWithCount>(
+                new CommandDefinition(sql, parameters, cancellationToken: ct),
+                _logger,
+                _enableQueryLogging)).ToList();
+
+            // Add zero-count for tagsToCount tags not found in results (zero matches in current filters)
+            var resultTagNames = new HashSet<string>(results.Select(r => r.Tag), StringComparer.OrdinalIgnoreCase);
+            foreach (var tag in tagsToCount)
+            {
+                if (!resultTagNames.Contains(tag))
+                {
+                    results.Add(new TagWithCount { Tag = tag, Count = 0 });
+                }
+            }
+
+            return [.. results.OrderByDescending(t => t.Count).ThenBy(t => t.Tag)];
         }
+        else
+        {
+            // --- Standard top-N popular tags ---
 
-        // Query optimization: two-step approach
-        // Query structure (matching the original fast query, but with word-level counting):
-        // Step 1 (subquery): Find valid tag_words + display names from is_full_tag=1 rows
-        //   within the same filtered scope (section/collection/date). Uses the covering
-        //   partial index idx_tags_valid_tagwords for a fast scan with no table lookups.
-        //   Returns a small set (~50-200 tag_words per section).
-        // Step 2 (outer): INNER JOIN the small set, then count ALL items (including word
-        //   expansions) for those tag_words in the same filtered scope.
-        //   E.g., "automation" counts items tagged "Automation", "Workflow Automation", etc.
-        // The display name comes from the subquery (not MAX in outer) so it's never NULL.
-        // PK constraint (collection_name, slug, tag_word) guarantees each item is counted once.
-        var minUsesClause = request.MinUses > 1 ? $"HAVING COUNT(*) >= {request.MinUses}" : "";
+            var excludeParams = string.Join(", ", excludeSet.Select((_, i) => $"@excl{i}"));
+            int idx = 0;
+            foreach (var tag in excludeSet)
+            {
+                parameters.Add($"excl{idx}", tag.ToLowerInvariant());
+                idx++;
+            }
 
-        var sql = $@"
-            SELECT vt.display_name AS Tag, COUNT(*) AS Count
-            FROM content_tags_expanded cte
-            INNER JOIN (
-                SELECT tag_word, MAX(tag_display) AS display_name
+            // Only show tags that exist as full tags (not just word expansions),
+            // but COUNT(*) counts ALL matching rows for accurate click-through counts
+            var havingConditions = new List<string>
+            {
+                "MAX(CASE WHEN is_full_tag THEN 1 ELSE 0 END) = 1"
+            };
+            if (request.MinUses > 1)
+            {
+                havingConditions.Add($"COUNT(*) >= {request.MinUses}");
+            }
+
+            var havingClause = $"HAVING {string.Join(" AND ", havingConditions)}";
+
+            var sql = $@"
+                SELECT MAX(tag_display) AS Tag, COUNT(*) AS Count
                 FROM content_tags_expanded
-                WHERE is_full_tag = {Dialect.GetBooleanLiteral(true)}
-                  AND tag_word NOT IN ({excludeParams})
-                  {(string.IsNullOrEmpty(filterClause) ? "" : $"AND {filterClause}")}
+                WHERE tag_word NOT IN ({excludeParams})
+                  {filterSql}
                 GROUP BY tag_word
-            ) vt ON cte.tag_word = vt.tag_word
-            WHERE cte.tag_word NOT IN ({excludeParams})
-              {(string.IsNullOrEmpty(filterClause) ? "" : $"AND {filterClause}")}
-            GROUP BY cte.tag_word, vt.display_name
-            {minUsesClause}
-            ORDER BY Count DESC, Tag
-            LIMIT {request.MaxTags}";
+                {havingClause}
+                ORDER BY Count DESC, Tag
+                LIMIT {request.MaxTags}";
 
-        var results = await Connection.QueryWithLoggingAsync<TagWithCount>(
-            new CommandDefinition(sql, parameters, cancellationToken: ct),
-            _logger,
-            _enableQueryLogging);
+            var results = await Connection.QueryWithLoggingAsync<TagWithCount>(
+                new CommandDefinition(sql, parameters, cancellationToken: ct),
+                _logger,
+                _enableQueryLogging);
 
-        return [.. results];
+            return [.. results];
+        }
     }
 
     /// <summary>
@@ -949,7 +986,7 @@ public class ContentRepository : IContentRepository
 
     /// <summary>
     /// Full-text search implementation using database-specific FTS via ISqlDialect.
-    /// Supports both SQLite FTS5 and PostgreSQL tsvector through dialect abstraction.
+    /// Full-text search implementation using PostgreSQL tsvector through dialect abstraction.
     /// </summary>
     protected async Task<SearchResults<ContentItem>> SearchInternalAsync(SearchRequest request, CancellationToken ct = default)
     {
@@ -1138,7 +1175,7 @@ public class ContentRepository : IContentRepository
 
     /// <summary>
     /// Build SQL for counting total results using database-specific FTS via ISqlDialect.
-    /// Supports both SQLite FTS5 and PostgreSQL tsvector.
+    /// Build SQL for counting total results using PostgreSQL tsvector for FTS.
     /// </summary>
     private string BuildCountSql(SearchRequest request, DynamicParameters parameters)
     {
@@ -1150,142 +1187,43 @@ public class ContentRepository : IContentRepository
         {
             var sql = new StringBuilder();
 
-            if (hasQuery)
-            {
-                // Count with FTS: pre-filter by tags, then apply FTS match
-                var ftsJoin = Dialect.GetFullTextJoinClause();
-                if (!string.IsNullOrEmpty(ftsJoin))
-                {
-                    sql.Append($@"
-                SELECT COUNT(*) FROM content_items c
-                {ftsJoin}
-                WHERE (c.collection_name, c.slug) IN (
-                    SELECT collection_name, slug FROM content_tags_expanded
-                    WHERE tag_word {Dialect.GetListFilterClause("tags", request.Tags!.Count)}");
-                }
-                else
-                {
-                    // PostgreSQL doesn't need FTS join
-                    sql.Append(@"
+            // PostgreSQL INTERSECT approach for tag filtering
+            sql.Append(@"
                 SELECT COUNT(DISTINCT c.slug)
                 FROM content_items c
                 WHERE (c.collection_name, c.slug) IN (
                     SELECT DISTINCT collection_name, slug
                     FROM (");
 
-                    for (int i = 0; i < request.Tags!.Count; i++)
-                    {
-                        if (i > 0)
-                        {
-                            sql.Append(" INTERSECT ");
-                        }
+            for (int i = 0; i < request.Tags!.Count; i++)
+            {
+                if (i > 0)
+                {
+                    sql.Append(" INTERSECT ");
+                }
 
-                        var paramName = $"tag{i}";
-                        parameters.Add(paramName, request.Tags[i].ToLowerInvariant().Trim());
+                var paramName = $"tag{i}";
+                parameters.Add(paramName, request.Tags[i].ToLowerInvariant().Trim());
 
-                        sql.Append(@"
+                sql.Append(@"
                         SELECT collection_name, slug 
                         FROM content_tags_expanded 
                         WHERE tag_word = @").Append(paramName);
-                    }
-
-                    sql.Append(@"
-                    ) AS tag_results
-                )
-                AND c.draft = ").Append(Dialect.GetBooleanLiteral(false)).Append(@"
-                AND ").Append(Dialect.GetFullTextWhereClause("query"));
-
-                    return sql.ToString();
-                }
             }
-            else
-            {
-                // Count without FTS: use tags table directly
-                if (Dialect.ProviderName == "SQLite")
-                {
-                    sql.Append($@"
-                SELECT COUNT(*) FROM (
-                    SELECT collection_name, slug FROM content_tags_expanded
-                    WHERE tag_word {Dialect.GetListFilterClause("tags", request.Tags!.Count)}");
-                }
-                else
-                {
-                    // PostgreSQL INTERSECT approach
-                    sql.Append(@"
-                SELECT COUNT(DISTINCT c.slug)
-                FROM content_items c
-                WHERE (c.collection_name, c.slug) IN (
-                    SELECT DISTINCT collection_name, slug
-                    FROM (");
 
-                    for (int i = 0; i < request.Tags!.Count; i++)
-                    {
-                        if (i > 0)
-                        {
-                            sql.Append(" INTERSECT ");
-                        }
-
-                        var paramName = $"tag{i}";
-                        parameters.Add(paramName, request.Tags[i].ToLowerInvariant().Trim());
-
-                        sql.Append(@"
-                        SELECT collection_name, slug 
-                        FROM content_tags_expanded 
-                        WHERE tag_word = @").Append(paramName);
-                    }
-
-                    sql.Append(@"
+            sql.Append(@"
                     ) AS tag_results
                 )
                 AND c.draft = ").Append(Dialect.GetBooleanLiteral(false));
 
-                    return sql.ToString();
-                }
+            if (hasQuery)
+            {
+                sql.Append(@"
+                AND ").Append(Dialect.GetFullTextWhereClause("query"));
             }
 
-            if (hasSections)
-            {
-                var sectionBitmask = CalculateSectionBitmask(request.Sections!);
-                if (sectionBitmask > 0)
-                {
-                    sql.Append(CultureInfo.InvariantCulture, $" AND (sections_bitmask & {sectionBitmask}) > 0");
-                }
-            }
-
-            if (request.Collections != null && request.Collections.Count > 0 &&
-                !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
-            {
-                // Match parameter naming from BuildTagsTableQuery
-                if (request.Collections.Count == 1)
-                {
-                    sql.Append(" AND collection_name = @collection");
-                }
-                else
-                {
-                    sql.Append($" AND collection_name {Dialect.GetListFilterClause("collections", request.Collections.Count)}");
-                }
-            }
-
-            if (request.DateFrom.HasValue)
-            {
-                sql.Append(" AND date_epoch >= @fromDate");
-            }
-
-            if (request.DateTo.HasValue)
-            {
-                sql.Append(" AND date_epoch <= @toDate");
-            }
-
-            sql.Append(" GROUP BY collection_name, slug HAVING COUNT(*) = @tagCount");
-
-            if (hasQuery && Dialect.ProviderName == "SQLite")
-            {
-                sql.Append($") AND c.draft = {Dialect.GetBooleanLiteral(false)} AND {Dialect.GetFullTextWhereClause("query")}");
-            }
-            else if (!hasQuery)
-            {
-                sql.Append(')');
-            }
+            // Apply section/collection/date filters
+            AppendContentItemFilters(sql, request, hasSections);
 
             return sql.ToString();
         }
@@ -1345,5 +1283,46 @@ public class ContentRepository : IContentRepository
         countSql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
 
         return countSql.ToString();
+    }
+
+    /// <summary>
+    /// Append section, collection, and date filters to a count query operating on content_items c.
+    /// Used by PostgreSQL INTERSECT count paths that query content_items directly
+    /// (parameters are already populated by BuildTagsTableQuery in the main query).
+    /// </summary>
+    private static void AppendContentItemFilters(StringBuilder sql, SearchRequest request, bool hasSections)
+    {
+        if (hasSections)
+        {
+            var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+            if (sectionBitmask > 0)
+            {
+                sql.Append(CultureInfo.InvariantCulture, $" AND (c.sections_bitmask & {sectionBitmask}) > 0");
+            }
+        }
+
+        if (request.Collections != null && request.Collections.Count > 0 &&
+            !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase)))
+        {
+            if (request.Collections.Count == 1)
+            {
+                sql.Append(" AND c.collection_name = @collection");
+            }
+            else
+            {
+                // Note: Uses same parameter names as BuildTagsTableQuery
+                sql.Append(" AND c.collection_name = ANY(@collections)");
+            }
+        }
+
+        if (request.DateFrom.HasValue)
+        {
+            sql.Append(" AND c.date_epoch >= @fromDate");
+        }
+
+        if (request.DateTo.HasValue)
+        {
+            sql.Append(" AND c.date_epoch <= @toDate");
+        }
     }
 }

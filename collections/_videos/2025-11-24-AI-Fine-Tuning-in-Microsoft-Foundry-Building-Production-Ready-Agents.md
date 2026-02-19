@@ -12,7 +12,6 @@ tags:
 - Data Extraction
 - Fine Tuning
 - GPT 5
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Model Customization
 - MS Ignite

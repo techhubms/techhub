@@ -34,10 +34,31 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Run -TestProject Web.Tests` | Run only the **Web** component tests. |
 | `Run -TestProject Api` | Run tests with "Api" in the project name. |
 | `Run -TestName Filter` | Run only individual test methods containing "Filter". |
-| `Run -Docker` | Run E2E tests using the production Docker stack (PostgreSQL). |
+| `Run -Docker` | Run ALL services (API + Web + PostgreSQL) via docker compose containers (production-like). |
 | `Run -Rebuild` | Perform a clean rebuild only, then exit (no tests/run). |
 | `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). |
 | `Stop-Servers` (without Run in front!) | Stops the servers directly. |
+
+## Validating All Tests
+
+**CRITICAL**: To validate that all functionality works correctly after making changes:
+
+```powershell
+# Run ALL tests (Unit + Integration + E2E)
+Run
+```
+
+- **No shortcuts**: There is **NO** `-SkipE2ETests` or `-SkipUnitTests` flag. The `Run` command is designed to run all test types.
+- **E2E tests matter**: E2E tests validate the full stack (API + Web + Database) working together. Skipping them means missing critical integration issues.
+- **Targeted testing during development**: Use `-TestProject` or `-TestName` for fast iteration during development, but always run `Run` (all tests) before considering work complete.
+
+**Test execution order**:
+
+1. PowerShell/Pester tests (if any)
+2. Unit and integration tests (fast, no servers needed)
+3. E2E tests (starts servers automatically)
+
+**Performance note**: The `Run` command is optimized to only start/restart servers when actually needed (E2E tests or `-WithoutTests` mode). Running unit/integration tests alone will NOT touch running servers.
 
 ## URLs and Access Points
 
@@ -91,17 +112,17 @@ If you encounter database-related errors after pulling code changes (especially 
 Delete the local database directories to force a clean rebuild:
 
 ```powershell
-# First, remove Docker volumes if you've been using -Docker flag
+# Remove Docker volumes and containers
 docker compose down -v
 
-# Then, remove SQLite databases (used in Development mode)
+# Then, remove PostgreSQL data directory
 Remove-Item -Recurse -Force .databases/
 ```
 
 After removing the databases:
 
-1. **SQLite (Development mode)**: Run `Run` to recreate the database with the latest schema
-2. **PostgreSQL (Docker mode)**: Run `Run -Docker` to rebuild containers with a fresh database
+1. Run `Run` to recreate the database with the latest schema (PostgreSQL starts automatically via docker-compose)
+2. Or run `Run -Docker` to run the full stack in Docker containers
 
 The ContentSync process will automatically populate the new database with content from the `collections/` directory during startup.
 

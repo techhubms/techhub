@@ -49,11 +49,12 @@ public class GenAIAdvancedTests : PlaywrightTestBase
         // Act 
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - No console errors (filter WebSocket connection errors from Blazor)
+        // Assert - No console errors (filter infrastructure noise from Blazor/container environment)
         var errors = consoleMessages
             .Where(m => m.Type == "error")
             .Where(m => !m.Text.Contains("WebSocket"))
             .Where(m => !m.Text.Contains("ERR_CONNECTION_REFUSED"))
+            .Where(m => !m.Text.Contains("ERR_NAME_NOT_RESOLVED"))
             .ToList();
 
         errors.Should().BeEmpty($"Expected no console errors, but found: {string.Join(", ", errors.Select(e => e.Text))}");

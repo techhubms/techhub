@@ -18,7 +18,7 @@ tags:
 - Developer Tools
 - GitHub
 - HTTP Requests
-- Mcp
+- MCP
 - Microsoft
 - Mike Kistler
 - Open Specification

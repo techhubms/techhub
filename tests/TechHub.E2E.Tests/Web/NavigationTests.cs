@@ -153,17 +153,21 @@ public class NavigationTests : PlaywrightTestBase
 
         // Act - Measure banner height on homepage
         await Page.GotoRelativeAsync("/");
-        var homeHeaderHeight = await Page.Locator(".section-banner.home-banner").BoundingBoxAsync();
+        var homeBanner = Page.Locator(".section-banner.home-banner");
+        await Assertions.Expect(homeBanner).ToBeVisibleAsync();
+        var homeHeaderHeight = await homeBanner.BoundingBoxAsync();
 
-        // Navigate to section page
+        // Navigate to section page - use specific selector to avoid matching stale DOM during Blazor navigation
         await Page.GotoRelativeAsync("/github-copilot");
-        var sectionHeaderHeight = await Page.Locator(".section-banner").BoundingBoxAsync();
+        var sectionBanner = Page.Locator(".section-banner.section-banner-bg-github-copilot");
+        await Assertions.Expect(sectionBanner).ToBeVisibleAsync();
+        var sectionHeaderHeight = await sectionBanner.BoundingBoxAsync();
 
         // Assert - Both should have defined heights (not auto)
         homeHeaderHeight.Should().NotBeNull();
         sectionHeaderHeight.Should().NotBeNull();
-        (homeHeaderHeight.Height > 0).Should().BeTrue();
-        (sectionHeaderHeight.Height > 0).Should().BeTrue();
+        homeHeaderHeight!.Height.Should().BeGreaterThan(0);
+        sectionHeaderHeight!.Height.Should().BeGreaterThan(0);
     }
 
     [Fact]

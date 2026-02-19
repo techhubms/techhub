@@ -15,7 +15,6 @@ tags:
 - Business Impact
 - Case 360 Architecture
 - Copilot Studio
-- InnovatewithAzureAIappsandagents
 - Microsoft Ignite
 - Microsoft Power Platform
 - MSIgnite

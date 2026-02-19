@@ -12,7 +12,6 @@ tags:
 - Cost Optimization
 - Cross Functional Teams
 - Digital Transformation
-- InnovatewithAzureAIappsandagents
 - Innovation
 - Microsoft Ignite
 - Microsoft Marketplace

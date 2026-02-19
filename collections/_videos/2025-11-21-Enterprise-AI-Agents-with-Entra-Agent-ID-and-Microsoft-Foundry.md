@@ -13,7 +13,6 @@ tags:
 - Entra Agent ID
 - Governance
 - Identity Management
-- InnovatewithAzureAIappsandagents
 - Microsoft Entra ID
 - Microsoft Foundry
 - Microsoft Ignite

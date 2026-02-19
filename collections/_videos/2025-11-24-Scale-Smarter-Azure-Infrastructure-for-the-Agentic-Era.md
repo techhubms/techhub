@@ -17,7 +17,6 @@ tags:
 - Compliance
 - Distributed AI
 - Governance
-- InnovatewithAzureAIappsandagents
 - MSIgnite
 - Red Hat Partnership
 - Reliability Engineering

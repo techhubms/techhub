@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS content_tags_expanded (
     collection_name TEXT NOT NULL,
     slug TEXT NOT NULL,
     tag_word TEXT NOT NULL,              -- Lowercase for efficient querying (e.g., "github copilot")
-    tag_display TEXT,                    -- Original case for full tags only (e.g., "GitHub Copilot")
+    tag_display TEXT NOT NULL,           -- Original cased version of the word (e.g., "GitHub Copilot" for full tag, "GitHub" and "Copilot" for word expansions)
     is_full_tag BOOLEAN NOT NULL DEFAULT FALSE, -- true = actual tag, false = word expansion
     
     -- Denormalized from content_items (eliminates joins)
@@ -139,7 +139,7 @@ CREATE INDEX IF NOT EXISTS idx_items_date ON content_items(
     slug
 ) WHERE draft = FALSE;
 
--- PostgreSQL-specific: GIN index for full-text search (much faster than SQLite FTS5 for large datasets)
+-- GIN index for full-text search using tsvector
 CREATE INDEX IF NOT EXISTS idx_content_search ON content_items USING GIN(search_vector);
 
 -- content_tags_expanded indexes - Support various tag query patterns
@@ -163,18 +163,36 @@ CREATE INDEX IF NOT EXISTS idx_tags_word_sections_date ON content_tags_expanded(
     slug
 );
 
--- 3. For queries with tag + date only (e.g., tag search without section or collection filter)
+-- 3. For queries with tag + date (e.g., tag search without collection filter)
+-- Includes sections_bitmask so bitmask filters don't require table lookups
 CREATE INDEX IF NOT EXISTS idx_tags_word_date ON content_tags_expanded(
     tag_word,
     date_epoch DESC,
+    sections_bitmask,
     collection_name,
     slug
 );
 
--- 4. Covering partial index for tag cloud subquery: quickly find valid tag_words (actual tags)
--- The tag cloud query uses a subquery to find tag_words where is_full_tag=true within the
--- filtered scope, then counts all items (including word expansions) for those tag_words.
--- Partial index keeps only is_full_tag=true rows (~45% of table), covering avoids table lookups.
+-- 4. Covering index for tag cloud queries filtered by collection.
+-- The single-pass tag cloud query groups by tag_word with collection_name equality filter.
+-- Leading collection_name enables index seek; tag_word second enables GroupAggregate.
+-- Including sections_bitmask and tag_display makes it a covering index (Index Only Scan,
+-- 0 heap fetches) — all data comes from the index without touching the table.
+CREATE INDEX IF NOT EXISTS idx_tags_collection_tagword ON content_tags_expanded(
+    collection_name, tag_word, sections_bitmask, tag_display
+);
+
+-- 5. Covering index for tag cloud queries WITHOUT collection filter (section-only, homepage).
+-- Leading tag_word enables GroupAggregate/sorted access for GROUP BY tag_word.
+-- Including sections_bitmask and tag_display makes it a covering index (Index Only Scan).
+CREATE INDEX IF NOT EXISTS idx_tags_tagword_display ON content_tags_expanded(
+    tag_word, sections_bitmask, tag_display
+);
+
+-- 6. Covering partial index for valid tag_words (actual tags, not word expansions).
+-- Used by queries that need to find which tag_words are real tags.
+-- Partial index keeps only is_full_tag=true rows (~45% of table).
+-- Includes date_epoch for date range filters and tag_display for covering scans.
 CREATE INDEX IF NOT EXISTS idx_tags_valid_tagwords ON content_tags_expanded(
-    tag_word, sections_bitmask, collection_name, tag_display
+    tag_word, sections_bitmask, collection_name, date_epoch, tag_display
 ) WHERE is_full_tag = TRUE;

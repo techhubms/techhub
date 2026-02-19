@@ -13,7 +13,6 @@ tags:
 - Cross Cloud Support
 - GitHub
 - Governance
-- InnovatewithAzureAIappsandagents
 - MCP
 - Microsoft Foundry
 - MSIgnite

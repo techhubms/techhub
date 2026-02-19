@@ -10,7 +10,7 @@ tags:
 - Database Integration
 - Development Workflow
 - GitHub
-- Mcp
+- MCP
 - MCP Server
 - Microsoft Docs
 - Microsoft Learn

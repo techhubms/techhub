@@ -215,7 +215,7 @@ Pages define layout structure with `<aside class="sidebar">`, sidebar components
 |-----------|---------|------------|
 | `SidebarCollectionNav` | Section collections and custom pages navigation | `Section`, `SelectedCollection` |
 | `SidebarRssLinks` | RSS feed and subscription links | `Links` (array of RssLink) |
-| `SidebarTagCloud` | Interactive tag cloud for filtering | `SectionName` (fetches from API) |
+| `SidebarTagCloud` | Interactive tag cloud for filtering | `SectionName` (fetches from API), `Tags` (optional, shows real counts for specific tags) |
 | `SidebarToc` | Table of contents from HTML headings | `HtmlContent` |
 
 ### Sidebar Component Semantic HTML

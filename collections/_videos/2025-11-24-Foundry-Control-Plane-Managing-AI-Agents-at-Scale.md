@@ -12,7 +12,6 @@ tags:
 - Azure AI
 - Control Plane
 - Guardrails
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Microsoft Ignite
 - MSIgnite

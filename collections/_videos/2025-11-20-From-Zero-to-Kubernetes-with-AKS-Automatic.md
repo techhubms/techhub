@@ -11,7 +11,6 @@ tags:
 - Cloud Native
 - Cloud Operations
 - Infrastructure Automation
-- InnovatewithAzureAIappsandagents
 - Karpenter
 - Kubernetes
 - Log Analytics

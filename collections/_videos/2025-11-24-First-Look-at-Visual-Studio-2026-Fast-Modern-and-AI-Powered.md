@@ -11,7 +11,6 @@ tags:
 - Diagnostics
 - Enterprise Development
 - IDE
-- InnovatewithAzureAIappsandagents
 - Microsoft Learn
 - Modernization
 - Monthly Update Cycle

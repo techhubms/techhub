@@ -11,7 +11,7 @@ tags:
 - Developer
 - Developer Tools
 - Dotnetdeveloper
-- Mcp
+- MCP
 - Microsoft
 - Software Developer
 - AI

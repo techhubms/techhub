@@ -16,7 +16,6 @@ tags:
 - DevOps Strategy
 - GitHub
 - Hybrid Adoption
-- InnovatewithAzureAIappsandagents
 - MCP Servers
 - Microsoft Ignite
 - MSIgnite

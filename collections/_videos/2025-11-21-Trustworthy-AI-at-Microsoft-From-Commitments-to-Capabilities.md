@@ -13,7 +13,6 @@ tags:
 - Change Management
 - Compliance
 - Copilot Studio
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Microsoft Ignite
 - MSIgnite

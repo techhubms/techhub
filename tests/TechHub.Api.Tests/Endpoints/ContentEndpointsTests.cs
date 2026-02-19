@@ -758,12 +758,65 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         }
     }
 
+    [Fact]
+    public async Task GetCollectionTags_WithSimilarCounts_AppliesAppropriateSize()
+    {
+        // This test uses data from the real database, so it acts as an integration test
+        // to verify that tag sizing works reasonably when tags have similar counts.
+        //
+        // The current repository contains many tags with similar low counts (1-3 items each).
+        // When filtering to recent content or specific collections, this becomes evident.
+        //
+        // Expected behavior: Tags with very similar counts should not have drastically
+        // different sizes (e.g., count 3 should not be "Large" while count 2 is "Small").
+
+        // Arrange - Use the exact filter combination from the user's bug report
+        // URL: /github-copilot?from=2025-11-21&to=2026-02-19&tags=agent%20deployment%2Cdev%2Ccode%2Cmcp%2Cai%20agents%2Cmicrosoft%20foundry
+        var selectedTags = new[] { "agent deployment", "dev", "code", "mcp", "ai agents", "microsoft foundry" };
+        var tagsParam = string.Join(",", selectedTags.Select(Uri.EscapeDataString));
+        
+        var response = await _client.GetAsync(
+            $"/api/sections/github-copilot/collections/all/tags?from=2025-11-21&to=2026-02-19&selectedTags={tagsParam}&maxTags=20",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
+        tagCloud.Should().NotBeNull();
+
+        // Diagnostic: Show what we got (will help understand the data)
+        if (tagCloud!.Count > 0)
+        {
+            var minCount = tagCloud.Min(t => t.Count);
+            var maxCount = tagCloud.Max(t => t.Count);
+            var ratio = maxCount / (double)minCount;            
+            // Only check if we have tags with very similar counts
+            if (tagCloud.Count >= 5 && ratio <= 2.0)
+            {
+                // Counts are very similar (max is at most 2x min)
+                // All tags should be same size, or at most span 2 adjacent sizes
+                var sizesUsed = tagCloud.Select(t => t.Size).Distinct().ToList();
+                sizesUsed.Should().HaveCountLessThanOrEqualTo(2,
+                    $"When tag counts are very similar (max {maxCount} <= 2x min {minCount}), " +
+                    "sizes should not span all three categories. " +
+                    $"Tags: {string.Join(", ", tagCloud.Select(t => $"{t.Tag}:{t.Count}({t.Size})"))}");
+
+                // Should not use all three sizes for very uniform data
+                if (tagCloud.Count >= 8)
+                {
+                    sizesUsed.Should().HaveCountLessThan(3,
+                        "Very similar counts should not span all size categories");
+                }
+            }
+        }
+    }
+
     #endregion
 
     #region TagsToCount Parameter Tests
 
     [Fact]
-    public async Task GetCollectionTags_WithTagsToCount_ReturnsOnlyRequestedTags()
+    public async Task GetCollectionTags_WithTagsToCount_ReturnsRequestedTagsPlusPopular()
     {
         // Arrange - Get baseline tags first (use 'all' section for more tags)
         var baselineResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?maxTags=10", TestContext.Current.CancellationToken);
@@ -777,7 +830,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var requestedTags = baselineTags!.Take(3).Select(t => t.Tag).ToList();
         var tagsToCountParam = string.Join(",", requestedTags.Select(Uri.EscapeDataString));
 
-        // Act - Request counts for only those specific tags
+        // Act - Request counts for those specific tags (API also fills with popular tags)
         var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
 
         // Assert
@@ -786,10 +839,17 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         filteredTags.Should().NotBeNull();
 
-        // Should return only the requested tags (or fewer if some have 0 count)
-        filteredTags!.Should().OnlyContain(
-            t => requestedTags.Contains(t.Tag, StringComparer.OrdinalIgnoreCase),
-            "Should only return tags that were explicitly requested in tagsToCount");
+        // All requested tags should be in the results
+        foreach (var requestedTag in requestedTags)
+        {
+            filteredTags!.Should().Contain(
+                t => t.Tag.Equals(requestedTag, StringComparison.OrdinalIgnoreCase),
+                $"Requested tag '{requestedTag}' should always be in results");
+        }
+
+        // Results should include more tags than just the requested ones (popular fill)
+        filteredTags!.Count.Should().BeGreaterThan(requestedTags.Count,
+            "Should include popular tags beyond the requested tags");
     }
 
     [Fact]
@@ -850,10 +910,13 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var filteredTags = await response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
         filteredTags.Should().NotBeNull();
 
-        // All returned tags should be from our requested list
-        filteredTags!.Should().OnlyContain(
-            t => tagsToCount.Contains(t.Tag, StringComparer.OrdinalIgnoreCase),
-            "Should only return tags from tagsToCount list");
+        // All returned tags should include our requested list (plus popular fill)
+        foreach (var tag in tagsToCount)
+        {
+            filteredTags!.Should().Contain(
+                t => t.Tag.Equals(tag, StringComparison.OrdinalIgnoreCase),
+                $"Requested tag '{tag}' should be in results");
+        }
 
         // Counts should reflect intersection with the filter tag
         // (some may have count 0 if no items match both tags)
@@ -1245,11 +1308,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionItems_WithTagFilter_PaginatesCorrectly()
     {
         // Arrange - Use "AI" tag which exists in test data (25 items per TestDataConstants)
+        // lastDays=0 bypasses the default 90-day date filter to include all test data
         const string tag = "AI";
         const int pageSize = 10;  // Smaller page size to test pagination with test data
 
         // First, get total count by requesting all items with this tag
-        var allItemsResponse = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&take=100", TestContext.Current.CancellationToken);
+        var allItemsResponse = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&take=100&lastDays=0", TestContext.Current.CancellationToken);
         allItemsResponse.StatusCode.Should().Be(HttpStatusCode.OK);
         var allItems = (await allItemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var totalCount = allItems!.Count;
@@ -1259,17 +1323,17 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         totalCount.Should().BeGreaterThan(pageSize, "should have enough items to require pagination");
 
         // Act - Fetch first batch (skip=0, take=10)
-        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip=0&take={pageSize}", TestContext.Current.CancellationToken);
+        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip=0&take={pageSize}&lastDays=0", TestContext.Current.CancellationToken);
         batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
         var batch1 = (await batch1Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Act - Fetch second batch (skip=10, take=10)
-        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize}&take={pageSize}", TestContext.Current.CancellationToken);
+        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize}&take={pageSize}&lastDays=0", TestContext.Current.CancellationToken);
         batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
         var batch2 = (await batch2Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Act - Fetch third batch (skip=20, take=10) to get remaining items
-        var batch3Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize * 2}&take={pageSize}", TestContext.Current.CancellationToken);
+        var batch3Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize * 2}&take={pageSize}&lastDays=0", TestContext.Current.CancellationToken);
         batch3Response.StatusCode.Should().Be(HttpStatusCode.OK);
         var batch3 = (await batch3Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
@@ -1482,6 +1546,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Arrange - The fts-test blog post has AI tag and contains "TechHubSpecialKeyword"
         // Multiple newer posts also have the AI tag but do NOT contain "TechHubSpecialKeyword"
         // Bug scenario: tag subquery LIMIT may exclude the older fts-test post before FTS filter runs
+        // lastDays=0 bypasses the default 90-day date filter to include older test data
         const string tag = "ai";
         const string searchQuery = "TechHubSpecialKeyword";
 
@@ -1491,7 +1556,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // First verify: search without tags finds the item
         var searchOnlyResponse = await _client.GetAsync(
-            $"/api/sections/all/collections/all/items?q={searchQuery}",
+            $"/api/sections/all/collections/all/items?q={searchQuery}&lastDays=0",
             TestContext.Current.CancellationToken);
         searchOnlyResponse.StatusCode.Should().Be(HttpStatusCode.OK);
         var searchOnlyItems = (await searchOnlyResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
@@ -1502,7 +1567,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Verify: tag filter without search finds AI-tagged items including fts-test
         var tagOnlyResponse = await _client.GetAsync(
-            $"/api/sections/all/collections/all/items?tags={tag}&take=50",
+            $"/api/sections/all/collections/all/items?tags={tag}&take=50&lastDays=0",
             TestContext.Current.CancellationToken);
         tagOnlyResponse.StatusCode.Should().Be(HttpStatusCode.OK);
         var tagOnlyItems = (await tagOnlyResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
@@ -1515,7 +1580,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // The tag subquery returns the top N newest AI-tagged items — fts-test is older
         // and falls outside this window, so FTS finds nothing among the returned items
         var combinedResponse = await _client.GetAsync(
-            $"/api/sections/all/collections/all/items?tags={tag}&q={searchQuery}&take={smallTake}",
+            $"/api/sections/all/collections/all/items?tags={tag}&q={searchQuery}&take={smallTake}&lastDays=0",
             TestContext.Current.CancellationToken);
 
         // Assert - Combined query should find items matching BOTH tag AND search

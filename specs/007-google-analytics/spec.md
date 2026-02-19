@@ -353,7 +353,7 @@ onTTFB(sendToGA4);
 **GA4 Configuration**:
 
 ```javascript
-gtag('config', 'G-XXXXXXXXXX', {
+gtag('config', 'G-95LLB67KJV', {
   'anonymize_ip': true,
   'allow_google_signals': false, // Disable remarketing
   'allow_ad_personalization_signals': false
@@ -551,12 +551,12 @@ public class ServerSideAnalytics
 
 ```html
 <!-- Load GA4 asynchronously -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95LLB67KJV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX', {
+  gtag('config', 'G-95LLB67KJV', {
     'anonymize_ip': true,
     'cookie_flags': 'SameSite=None;Secure'
   });

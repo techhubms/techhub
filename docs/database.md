@@ -1,6 +1,6 @@
 # Database Configuration
 
-Tech Hub supports three content storage backends configured via `appsettings.json`.
+Tech Hub supports two content storage backends configured via `appsettings.json`.
 
 **Related Documentation**:
 
@@ -11,7 +11,7 @@ Tech Hub supports three content storage backends configured via `appsettings.jso
 
 ## Supported Providers
 
-> **Default provider**: If `Database:Provider` is not specified, Tech Hub.Api defaults to **SQLite** with connection string `Data Source=.databases/sqlite/techhub.db`.
+> **Default provider**: If `Database:Provider` is not specified, Tech Hub.Api defaults to **PostgreSQL** with connection string `Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev`.
 
 ### Option 1: FileSystem (No Database)
 
@@ -28,31 +28,7 @@ Reads markdown files directly from `collections/` folder.
 **Pros**: Fastest startup, no database needed, simplest setup  
 **Cons**: No full-text search, slower filtering on large datasets
 
-### Option 2: SQLite (Recommended for Local Development)
-
-Uses local SQLite database with FTS5 full-text search.
-
-```json
-{
-  "Database": {
-    "Provider": "SQLite",
-    "ConnectionString": "Data Source=techhub.db"
-  },
-  "ContentSync": {
-    "Enabled": true
-  }
-}
-```
-
-**Pros**: Fast, no Docker required, full-text search with FTS5  
-**Cons**: Limited concurrency compared to PostgreSQL
-
-**Sync Behavior**:
-
-- **First Run**: Syncs from markdown files (~30-60s for 4000+ files)
-- **Subsequent Runs**: Hash-based diff (<1s if no changes)
-
-### Option 3: PostgreSQL (Production + E2E Tests)
+### Option 2: PostgreSQL (Recommended)
 
 Uses PostgreSQL with tsvector full-text search and GIN indexes.
 
@@ -62,7 +38,7 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 {
   "Database": {
     "Provider": "PostgreSQL",
-    "ConnectionString": "Host=localhost;Database=techhub;Username=techhub;Password=localdev"
+    "ConnectionString": "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
   },
   "ContentSync": {
     "Enabled": true
@@ -70,8 +46,13 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 }
 ```
 
-**Pros**: Production-ready, best performance at scale, semantic search ready  
-**Cons**: Requires Docker or cloud PostgreSQL instance
+**Pros**: Production-ready, best performance at scale, full-text search with tsvector, semantic search ready  
+**Cons**: Requires Docker (`docker compose up -d postgres`) or cloud PostgreSQL instance
+
+**Sync Behavior**:
+
+- **First Run**: Syncs from markdown files (~30-60s for 4000+ files)
+- **Subsequent Runs**: Hash-based diff (<1s if no changes)
 
 **Usage**:
 
@@ -102,15 +83,15 @@ Control database sync behavior via `appsettings.json`:
 | `content_items` | All content with denormalized section flags and bitmask |
 | `content_tags_expanded` | Word-level tag matching (denormalized for fast filtering) |
 | `sync_metadata` | Tracks last sync time and content hashes |
-| `content_fts` | FTS5 virtual table for full-text search with prefix indexes |
+| `content_fts` | Full-text search using tsvector/tsquery |
 
 ### Design Decisions
 
 1. **Denormalized section flags**: Each content item has `is_ai`, `is_azure`, `is_github_copilot`, etc. boolean columns for fast filtering without JOINs
 2. **Section bitmask**: Single integer column for multi-section filtering with bitwise operations
 3. **Expanded tags table**: Multi-word tags split into separate rows for word-level matching
-4. **FTS5 external content**: Full-text index synced via triggers
-5. **FTS5 prefix indexes**: `prefix='2,3,4'` configuration enables fast prefix matching for 2-4 character searches (e.g., "cop" matches "copilot")
+4. **tsvector full-text index**: Full-text index synced via triggers
+5. **tsvector prefix indexes**: Prefix matching support enables fast prefix matching for partial word searches (e.g., "cop" matches "copilot")
 
 ### Query Patterns
 
@@ -131,4 +112,4 @@ WHERE (collection_name, slug) IN (
 
 ### Schema Location
 
-See [src/TechHub.Infrastructure/Data/Migrations/sqlite/001_initial_schema.sql](../src/TechHub.Infrastructure/Data/Migrations/sqlite/001_initial_schema.sql) for complete schema.
+See [src/TechHub.Infrastructure/Data/Migrations/postgres/](../src/TechHub.Infrastructure/Data/Migrations/postgres/) for complete schema.

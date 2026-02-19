@@ -15,8 +15,8 @@ namespace TechHub.Infrastructure.Tests.Repositories;
 /// <summary>
 /// Integration tests for content repository.
 /// Contains the superset of assertions that the repository must support.
-/// Tests SQLite-specific functionality like FTS5 full-text search.
-/// Uses in-memory SQLite database with migrations applied and TestCollections seeding.
+/// Tests PostgreSQL-specific functionality like full-text search.
+/// Uses PostgreSQL Testcontainers database with migrations applied and TestCollections seeding.
 /// </summary>
 /// <remarks>
 /// Expected counts are defined in TestDataConstants.cs in TestUtilities project.
@@ -57,7 +57,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
 
         _repository = new ContentRepository(
             _fixture.Connection,
-            new Infrastructure.Data.SqliteDialect(),
+            new Infrastructure.Data.PostgresDialect(),
             _cache,
             mockMarkdownService.Object,
             Options.Create(appSettings));
@@ -983,11 +983,11 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
 
     #endregion
 
-    #region SQLite-Specific Tests (FTS5 Full-Text Search)
+    #region Full-Text Search Tests
 
     /// <summary>
     /// Test: Full-text search finds items by unique content keyword
-    /// Why: SQLite FTS5 provides fast full-text search that other repositories don't have
+    /// Why: PostgreSQL tsvector/tsquery provides fast full-text search
     /// </summary>
     [Fact]
     public async Task SearchAsync_FullTextSearch_FindsMatchingItems()
@@ -1007,7 +1007,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
 
     #endregion
 
-    #region SQLite-Specific Tests (Denormalized Tags)
+    #region Denormalized Tags Tests
 
     /// <summary>
     /// Test: tags_csv column is populated during sync
@@ -1044,7 +1044,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
 
         // Act - query expanded tags (case-insensitive comparison via LOWER)
         var expandedWords = await _fixture.Connection.QueryAsync<string>(
-            "SELECT DISTINCT tag_word FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection ORDER BY LOWER(tag_word)",
+            "SELECT DISTINCT tag_word FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection ORDER BY tag_word",
             new { Slug = "github-copilot", Collection = "blogs" });
 
         // Assert - tags preserve original case, use case-insensitive comparison
@@ -1094,9 +1094,9 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
             new { Slug = "github-copilot", Collection = "blogs" });
 
         // Assert
-        ((int)result.is_github_copilot).Should().Be(1, "article should be in 'github-copilot' section");
-        ((int)result.is_ai).Should().Be(0, "article should NOT be in 'ai' section");
-        ((int)result.is_devops).Should().Be(0, "article should NOT be in 'devops' section");
+        ((bool)result.is_github_copilot).Should().BeTrue("article should be in 'github-copilot' section");
+        ((bool)result.is_ai).Should().BeFalse("article should NOT be in 'ai' section");
+        ((bool)result.is_devops).Should().BeFalse("article should NOT be in 'devops' section");
     }
 
     /// <summary>
@@ -1117,9 +1117,9 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
             new { Slug = "github-copilot", Collection = "blogs" });
 
         // Assert
-        ((int)result.is_github_copilot).Should().Be(1, "article should be in 'github-copilot' section");
-        ((int)result.is_ai).Should().Be(0, "article should NOT be in 'ai' section");
-        ((int)result.is_devops).Should().Be(0, "article should NOT be in 'devops' section");
+        ((bool)result.is_github_copilot).Should().BeTrue("article should be in 'github-copilot' section");
+        ((bool)result.is_ai).Should().BeFalse("article should NOT be in 'ai' section");
+        ((bool)result.is_devops).Should().BeFalse("article should NOT be in 'devops' section");
     }
 
     #endregion

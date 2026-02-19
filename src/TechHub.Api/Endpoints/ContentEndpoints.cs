@@ -187,6 +187,7 @@ public static class ContentEndpoints
         string sectionName,
         string collectionName,
         IOptions<ApiOptions> apiOptions,
+        IOptions<TagCloudOptions> tagCloudOptions,
         IContentRepository contentRepository,
         [FromQuery] int? take = null,
         [FromQuery] int skip = 0,
@@ -248,10 +249,10 @@ public static class ContentEndpoints
             dateTo = parsedTo;
         }
 
-        // Fall back to lastDays if from/to not specified
-        if (dateFrom == null && dateTo == null && lastDays.HasValue)
+        // Fall back to lastDays if from/to not specified, then to configured default
+        if (dateFrom == null && dateTo == null && (lastDays ?? tagCloudOptions.Value.DefaultDateRangeDays) > 0)
         {
-            dateFrom = DateTimeOffset.UtcNow.AddDays(-lastDays.Value);
+            dateFrom = DateTimeOffset.UtcNow.AddDays(-(lastDays ?? tagCloudOptions.Value.DefaultDateRangeDays));
         }
 
         // Defensive: swap dates if from > to (can happen due to client race conditions)
@@ -399,42 +400,60 @@ public static class ContentEndpoints
     }
 
     /// <summary>
-    /// Apply quantile-based sizing to tag cloud items.
-    /// Top 25% = Large, Middle 50% = Medium, Bottom 25% = Small.
+    /// Apply quantile-based sizing to tag cloud items using count value thresholds.
+    /// Tags with high counts get Large size, low counts get Small, middle counts get Medium.
+    /// When counts are very similar, most tags will have the same size.
+    /// When the quantile algorithm produces fewer than 3 distinct size groups, sizes are
+    /// normalized: 1 group → all Medium, 2 groups → Medium + Small, 3 groups → Large + Medium + Small.
     /// </summary>
-#pragma warning disable CA1859 // Used as return type for endpoint method - cannot change to concrete type
-    private static IReadOnlyList<TagCloudItem> ApplyQuantileSizing(
-#pragma warning restore CA1859
+    public static IReadOnlyList<TagCloudItem> ApplyQuantileSizing(
         List<TagWithCount> sortedTags,
         QuantilePercentilesOptions quantileOptions)
     {
+        ArgumentNullException.ThrowIfNull(sortedTags);
+        ArgumentNullException.ThrowIfNull(quantileOptions);
+
         if (sortedTags.Count == 0)
         {
             return [];
         }
 
-        var smallToMedium = quantileOptions.SmallToMedium;
-        var mediumToLarge = quantileOptions.MediumToLarge;
+        // For 1-2 tags, use consistent sizing
+        if (sortedTags.Count <= 2)
+        {
+            return sortedTags.Select(tag => new TagCloudItem
+            {
+                Tag = tag.Tag,
+                Count = tag.Count,
+                Size = TagSize.Medium
+            }).ToList();
+        }
 
-        var totalTags = sortedTags.Count;
-        var smallThreshold = (int)Math.Ceiling(totalTags * smallToMedium);
-        var largeThreshold = (int)Math.Ceiling(totalTags * mediumToLarge);
+        // Calculate quantile thresholds based on COUNT VALUES, not positions
+        // This ensures tags with similar counts get similar sizes
+        var counts = sortedTags.Select(t => t.Count).ToList();
+
+        // Calculate thresholds at quantile positions
+        // Position 25% in descending list = boundary between Large and Medium (HIGH count)
+        var highThresholdIndex = (int)Math.Ceiling(counts.Count * quantileOptions.SmallToMedium);
+        var highThresholdCount = counts[Math.Min(highThresholdIndex, counts.Count - 1)];
+
+        // Position 75% in descending list = boundary between Medium and Small (LOW count)
+        var lowThresholdIndex = (int)Math.Ceiling(counts.Count * quantileOptions.MediumToLarge);
+        var lowThresholdCount = counts[Math.Min(lowThresholdIndex, counts.Count - 1)];
 
         var result = new List<TagCloudItem>();
 
-        for (int i = 0; i < sortedTags.Count; i++)
+        foreach (var tag in sortedTags)
         {
-            var tag = sortedTags[i];
             TagSize size;
 
-            // Top 25% (0-25% index) = Large
-            // Middle 50% (25%-75% index) = Medium
-            // Bottom 25% (75%-100% index) = Small
-            if (i < smallThreshold)
+            // Assign size based on count VALUE thresholds (not position)
+            if (tag.Count >= highThresholdCount)
             {
                 size = TagSize.Large;
             }
-            else if (i < largeThreshold)
+            else if (tag.Count >= lowThresholdCount)
             {
                 size = TagSize.Medium;
             }
@@ -449,6 +468,35 @@ public static class ContentEndpoints
                 Count = tag.Count,
                 Size = size
             });
+        }
+
+        // Normalize sizes based on how many distinct size groups the quantile algorithm produced.
+        // When data has limited variation, the algorithm may collapse into fewer groups.
+        // The percentile thresholds shift based on the number of groups:
+        // 1 group:  all tags get Medium (regular size - avoids misleading emphasis)
+        // 2 groups: recalculate with single 50th percentile threshold → Medium + Small
+        // 3 groups: keep Large + Medium + Small as-is (original 25th/75th thresholds)
+        var distinctSizes = result.Select(t => t.Size).Distinct().ToList();
+
+        if (distinctSizes.Count == 1)
+        {
+            // All tags ended up in the same group → normalize to Medium
+            return result.Select(t => t with { Size = TagSize.Medium }).ToList();
+        }
+
+        if (distinctSizes.Count == 2)
+        {
+            // Recalculate with a single threshold at the 50th percentile (median)
+            // for a balanced split between Medium and Small
+            var medianIndex = (int)Math.Ceiling(counts.Count * 0.5);
+            var medianThreshold = counts[Math.Min(medianIndex, counts.Count - 1)];
+
+            return sortedTags.Select(tag => new TagCloudItem
+            {
+                Tag = tag.Tag,
+                Count = tag.Count,
+                Size = tag.Count >= medianThreshold ? TagSize.Medium : TagSize.Small
+            }).ToList();
         }
 
         return result;

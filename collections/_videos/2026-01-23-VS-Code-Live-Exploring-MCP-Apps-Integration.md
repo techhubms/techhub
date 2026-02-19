@@ -10,7 +10,7 @@ tags:
 - Demo
 - Developer
 - Developer Tools
-- Mcp
+- MCP
 - MCP Apps
 - MCP Integration
 - Microsoft

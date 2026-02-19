@@ -16,7 +16,6 @@ tags:
 - Environmental Impact
 - GitHub Next
 - Green Software
-- InnovatewithAzureAIappsandagents
 - MSIgnite
 - Software Engineering
 - Sustainable Software

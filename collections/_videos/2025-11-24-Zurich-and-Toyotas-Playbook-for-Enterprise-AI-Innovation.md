@@ -16,7 +16,6 @@ tags:
 - Data Retrieval
 - Enterprise AI
 - Ingestion Pipeline
-- InnovatewithAzureAIappsandagents
 - Metadata
 - Microsoft Ignite
 - MSIgnite

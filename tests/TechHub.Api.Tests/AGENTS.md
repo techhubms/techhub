@@ -5,7 +5,7 @@
 
 ## Overview
 
-This directory contains **integration tests** for the Tech Hub REST API using **xUnit** and **WebApplicationFactory**. These tests validate API endpoints, HTTP contracts, and request/response behavior against a real (in-memory) ASP.NET Core application.
+This directory contains **integration tests** for the Tech Hub REST API using **xUnit** and **WebApplicationFactory**. These tests validate API endpoints, HTTP contracts, and request/response behavior against a real ASP.NET Core application backed by PostgreSQL via Testcontainers.
 
 **Implementation being tested**: See [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) for endpoint patterns.
 
@@ -20,7 +20,7 @@ This directory contains **integration tests** for the Tech Hub REST API using **
 **Test Infrastructure**:
 
 - `TechHubApiFactory.cs` (via TechHub.TestUtilities) - Custom `WebApplicationFactory<Program>` for test setup
-- Configures in-memory test server
+- Configures test server with PostgreSQL Testcontainer
 - Sets up test-specific configuration (file paths, etc.)
 
 ## Testing Strategy
@@ -46,7 +46,7 @@ This directory contains **integration tests** for the Tech Hub REST API using **
 
 The `TechHubApiFactory` class configures `WebApplicationFactory<Program>` for integration testing:
 
-- Creates an in-memory test server
+- Creates a test server backed by PostgreSQL Testcontainer
 - Allows dependency injection overrides for mocking
 - Produces `HttpClient` instances for making requests
 

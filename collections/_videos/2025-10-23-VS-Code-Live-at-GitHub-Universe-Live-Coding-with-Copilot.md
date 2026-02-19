@@ -16,8 +16,8 @@ tags:
 - Figma
 - GitHub Universe
 - Live Coding
-- Mcp
-- Mcpserver
+- MCP
+- MCP Server
 - Microsoft
 - Software Developer
 - VS Code

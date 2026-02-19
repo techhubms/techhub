@@ -11,7 +11,6 @@ tags:
 - Cloud Architecture
 - Failure Simulation
 - Infrastructure Resilience
-- InnovatewithAzureAIappsandagents
 - Microsoft Ignite
 - MSIgnite
 - Recovery Orchestration

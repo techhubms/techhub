@@ -12,7 +12,6 @@ tags:
 - Customer Service Automation
 - Governance
 - Hybrid Models
-- InnovatewithAzureAIappsandagents
 - ML
 - Metrics
 - Microsoft Foundry

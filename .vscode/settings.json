@@ -92,10 +92,6 @@
             "approve": false,
             "matchCommandLine": true
         },
-        "/^npx\\b.*/": {
-            "approve": false,
-            "matchCommandLine": true
-        },
         "/^pwsh\\b.*/": {
             "approve": true,
             "matchCommandLine": true
@@ -184,7 +180,8 @@
         "wc": true,
         "which": true,
         "whoami": true,
-        "&": true
+        "&": true,
+        "npx markdownlint-cli2": true
     },
     "github.copilot.chat.virtualTools.threshold": 0,
     "dotnet.enableWorkspaceBasedDevelopment": false,

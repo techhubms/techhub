@@ -41,7 +41,7 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
 
         _repository = new ContentRepository(
             fixture.Connection,
-            new SqliteDialect(),
+            new PostgresDialect(),
             cache,
             mockMarkdownService.Object,
             Options.Create(appSettings));

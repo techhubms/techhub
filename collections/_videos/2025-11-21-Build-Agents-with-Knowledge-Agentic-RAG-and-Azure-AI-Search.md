@@ -12,7 +12,6 @@ tags:
 - Code Tutorial
 - Expert Session
 - Hybrid Search
-- InnovatewithAzureAIappsandagents
 - Knowledge Sources
 - Microsoft Foundry
 - Microsoft Ignite

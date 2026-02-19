@@ -13,8 +13,8 @@ tags:
 - Figma
 - GitHub Universe
 - Live Coding
-- Mcp
-- Mcpserver
+- MCP
+- MCP Server
 - Microsoft
 - Open Source
 - Programming

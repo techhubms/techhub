@@ -8,7 +8,7 @@ tags:
 - AI Models
 - Client Applications
 - Demo
-- Mcp
+- MCP
 - MCP Server
 - Python
 - Standardization

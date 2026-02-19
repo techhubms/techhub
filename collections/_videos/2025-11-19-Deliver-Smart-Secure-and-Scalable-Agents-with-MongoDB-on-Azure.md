@@ -11,7 +11,6 @@ tags:
 - Azure Marketplace
 - Data Connector
 - Hybrid Search
-- InnovatewithAzureAIappsandagents
 - Log Ingestion
 - Microsoft Sentinel
 - Model Evaluation

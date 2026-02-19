@@ -16,7 +16,7 @@ tags:
 - Developerworkflow
 - Extension Development
 - GitHub MCP
-- Mcp
+- MCP
 - MCP Registry
 - Playwright
 - Software Developer

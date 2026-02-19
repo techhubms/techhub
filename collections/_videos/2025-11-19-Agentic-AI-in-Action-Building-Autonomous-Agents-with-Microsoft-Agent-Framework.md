@@ -12,7 +12,6 @@ tags:
 - Business Impact
 - Compliance
 - Copilot Studio
-- InnovatewithAzureAIappsandagents
 - Know Your Customer
 - Microsoft Agent Framework
 - Microsoft Ignite

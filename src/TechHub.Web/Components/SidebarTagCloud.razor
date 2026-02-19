@@ -33,12 +33,12 @@
                 };
 
                 var isSelected = _selectedTagsInternal.Contains(tagItem.Tag.Trim().ToLowerInvariant());
-                var isDisabled = tagItem.Count == 0;
+                // Only disable if count is 0 AND tag is not selected (selected tags should be clickable for deselection)
+                var isDisabled = tagItem.Count == 0 && !isSelected;
                 var cssClass = $"tag-cloud-item {sizeClass} {(isSelected ? "selected" : "")} {(isDisabled ? "disabled" : "")}".Trim();
                 
-                // Get initial count from _initialTags to determine width class (prevents layout shift)
-                var initialCount = _initialTags?.FirstOrDefault(t => t.Tag.Equals(tagItem.Tag, StringComparison.OrdinalIgnoreCase))?.Count ?? tagItem.Count;
-                var digitCount = initialCount.ToString("N0").Replace(",", "").Length;
+                // Determine width class based on count to prevent layout shift
+                var digitCount = tagItem.Count.ToString("N0").Replace(",", "").Length;
                 var countWidthClass = $"tag-count-{digitCount}d";
 
                 @if (isDisabled)

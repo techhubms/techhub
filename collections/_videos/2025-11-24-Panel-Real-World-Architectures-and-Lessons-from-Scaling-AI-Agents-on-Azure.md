@@ -13,7 +13,6 @@ tags:
 - Enterprise AI
 - Fault Tolerance
 - Human in The Loop
-- InnovatewithAzureAIappsandagents
 - Interactive Prototyping
 - Microsoft Foundry
 - Model Selection

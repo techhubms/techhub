@@ -15,7 +15,6 @@ tags:
 - Contact Center Solutions
 - Customer Experience
 - Employee Experience
-- InnovatewithAzureAIappsandagents
 - Microsoft Ignite
 - Microsoft Teams
 - MSIgnite

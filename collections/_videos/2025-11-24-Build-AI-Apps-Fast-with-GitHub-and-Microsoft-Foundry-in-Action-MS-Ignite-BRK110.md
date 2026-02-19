@@ -13,7 +13,6 @@ tags:
 - Developer Tools
 - GitHub
 - GitHub Actions
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Modular Architecture
 - MSIgnite

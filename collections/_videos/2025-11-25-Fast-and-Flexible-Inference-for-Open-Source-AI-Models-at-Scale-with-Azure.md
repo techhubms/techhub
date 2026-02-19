@@ -18,7 +18,6 @@ tags:
 - Gateway API
 - GPU Workloads
 - Hybrid Architecture
-- InnovatewithAzureAIappsandagents
 - LLM
 - Model Deployment
 - MSIgnite

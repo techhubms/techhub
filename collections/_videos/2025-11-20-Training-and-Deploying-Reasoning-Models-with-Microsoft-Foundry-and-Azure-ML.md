@@ -12,7 +12,6 @@ tags:
 - Benchmarking
 - Business Insights
 - Financial Analyst Agent
-- InnovatewithAzureAIappsandagents
 - LLMs
 - Microsoft Foundry
 - Microsoft Ignite

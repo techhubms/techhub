@@ -13,7 +13,6 @@ tags:
 - Enterprise Security
 - GitHub
 - Governance
-- InnovatewithAzureAIappsandagents
 - MSIgnite
 - Onboarding
 - Pull Requests

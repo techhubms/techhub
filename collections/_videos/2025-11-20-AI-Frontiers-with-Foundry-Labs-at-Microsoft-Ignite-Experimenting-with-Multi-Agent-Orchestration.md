@@ -14,7 +14,6 @@ tags:
 - Azure AI Search
 - Enterprise AI
 - Fine Tuning
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry Labs
 - Microsoft Research
 - MMCT Agent

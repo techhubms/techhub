@@ -21,12 +21,12 @@
 function Stop-Servers {
     <#
     .SYNOPSIS
-        Stops all servers (both dotnet processes and Docker containers).
+        Stops all servers (both dotnet processes and Docker containers) but preserves PostgreSQL.
     
     .DESCRIPTION
-        Comprehensive cleanup function that stops everything:
+        Comprehensive cleanup function that stops everything except PostgreSQL:
         - Kills any processes using server ports (5001, 5003)
-        - Stops Docker containers via docker compose down
+        - Stops Docker containers for api/web (preserves postgres)
         Always safe to call.
     
     .PARAMETER Silent
@@ -34,7 +34,7 @@ function Stop-Servers {
     
     .EXAMPLE
         Stop-Servers
-        Stop all running servers and containers
+        Stop all running servers and containers (postgres stays running)
     
     .EXAMPLE
         Stop-Servers -Silent
@@ -57,8 +57,9 @@ function Stop-Servers {
 
     Stop-OrphanedTestProcesses -Silent:$Silent
     
-    # Also stop Docker containers (safe to call even if not running)
-    docker compose down --remove-orphans 2>&1 | Out-Null
+    # Stop Docker app containers but preserve postgres (safe to call even if not running)
+    docker compose stop api web 2>&1 | Out-Null
+    docker compose rm -f api web 2>&1 | Out-Null
 
     # Kill any processes on our ports
     $ports = @(5001, 5003)
@@ -314,7 +315,7 @@ function Run {
         Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor White
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor White
-        Write-Host "  -Docker        Start servers using docker compose instead of dotnet run`n" -ForegroundColor White
+        Write-Host "  -Docker        Run ALL services via docker compose (production-like containers)`n" -ForegroundColor White
         
         Write-Host "EXAMPLES:" -ForegroundColor Yellow
         Write-Host "  Run                                  Build + all tests + servers (default)" -ForegroundColor Gray
@@ -324,7 +325,7 @@ function Run {
         Write-Host "  Run -TestProject Web.Tests           Run only Web tests" -ForegroundColor Gray
         Write-Host "  Run -TestName SectionCard            Run tests matching 'SectionCard'" -ForegroundColor Gray
         Write-Host "  Run -TestProject E2E -TestName Nav   Run E2E navigation tests matching 'Nav'" -ForegroundColor Gray
-        Write-Host "  Run -Docker                          Build + tests + servers via Docker containers`n" -ForegroundColor Gray
+        Write-Host "  Run -Docker                          Build + tests + servers via Docker containers (production-like)`n" -ForegroundColor Gray
         
         Write-Host "COMMON WORKFLOWS:" -ForegroundColor Yellow
         Write-Host "  Development mode:          Run" -ForegroundColor Gray
@@ -952,13 +953,9 @@ function Run {
             # Ensure .databases directory and subdirectories exist
             $databasesDir = Join-Path $workspaceRoot ".databases"
             $postgresDir = Join-Path $databasesDir "postgres"
-            $sqliteDir = Join-Path $databasesDir "sqlite"
             
             if (-not (Test-Path $postgresDir)) {
                 New-Item -Path $postgresDir -ItemType Directory -Force | Out-Null
-            }
-            if (-not (Test-Path $sqliteDir)) {
-                New-Item -Path $sqliteDir -ItemType Directory -Force | Out-Null
             }
             
             # Log docker compose output to file
@@ -987,11 +984,11 @@ function Run {
         }
         # Production/Staging mode: Run from published DLLs (real deployment simulation)
         elseif ($Environment -eq "Production" -or $Environment -eq "Staging") {
-            # Ensure .databases directory exists with proper permissions (for SQLite)
+            # Ensure .databases directory exists for PostgreSQL data
             $databasesDir = Join-Path $workspaceRoot ".databases"
-            $sqliteDir = Join-Path $databasesDir "sqlite"
-            if (-not (Test-Path $sqliteDir)) {
-                New-Item -Path $sqliteDir -ItemType Directory -Force | Out-Null
+            $postgresDir = Join-Path $databasesDir "postgres"
+            if (-not (Test-Path $postgresDir)) {
+                New-Item -Path $postgresDir -ItemType Directory -Force | Out-Null
             }
             
             # Verify publish artifacts exist
@@ -1036,12 +1033,35 @@ function Run {
             # Development: Use Aspire AppHost orchestration in background
             $appHostDir = Split-Path $appHostProjectPath -Parent
             
-            # Ensure .databases directory exists with proper permissions (for SQLite)
+            # Ensure PostgreSQL container is running (required for Development mode)
             $databasesDir = Join-Path $workspaceRoot ".databases"
-            $sqliteDir = Join-Path $databasesDir "sqlite"
-            if (-not (Test-Path $sqliteDir)) {
-                New-Item -Path $sqliteDir -ItemType Directory -Force | Out-Null
+            $postgresDir = Join-Path $databasesDir "postgres"
+            if (-not (Test-Path $postgresDir)) {
+                New-Item -Path $postgresDir -ItemType Directory -Force | Out-Null
             }
+            
+            Write-Info "Ensuring PostgreSQL container is running..."
+            docker compose up -d postgres 2>&1 | Out-Null
+            
+            # Wait for PostgreSQL to be healthy
+            $pgMaxAttempts = 30
+            $pgAttempt = 0
+            $pgReady = $false
+            while ($pgAttempt -lt $pgMaxAttempts) {
+                $pgAttempt++
+                $pgHealthy = docker inspect --format='{{.State.Health.Status}}' techhub-postgres 2>$null
+                if ($pgHealthy -eq "healthy") {
+                    $pgReady = $true
+                    break
+                }
+                Start-Sleep -Seconds 1
+            }
+            
+            if (-not $pgReady) {
+                Write-Error "PostgreSQL container failed to become healthy within ${pgMaxAttempts}s"
+                return $false
+            }
+            Write-Info "PostgreSQL is ready"
             
             # Start dotnet watch in background using PowerShell job
             Start-Job -ScriptBlock {
@@ -1124,7 +1144,8 @@ function Run {
     # Run E2E tests (assumes servers are already running)
     function Invoke-E2ETests {
         param(
-            [string]$TestName
+            [string]$TestName,
+            [switch]$UseDocker
         )
         
         Write-Step "Running E2E tests"
@@ -1134,6 +1155,9 @@ function Run {
         # xUnit v3 uses testconfig.json, not environment variables
         
         # Phase 1: Run API Performance tests first (warmup + performance validation)
+        # PostgreSQL is always available (started before AppHost)
+        $e2eBinaryPath = Get-TestBinaryPath $e2eTestProjectPath
+        
         Write-Host ""
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
         Write-Host "  Phase 1: API Performance Tests (warmup + validation)" -ForegroundColor Cyan
@@ -1142,7 +1166,6 @@ function Run {
         
         # Run ALL performance tests - validates API endpoints are responsive and within thresholds
         # This also serves as warmup before the full E2E suite runs
-        $e2eBinaryPath = Get-TestBinaryPath $e2eTestProjectPath
         $apiPerfTestArgs = @(
             "--output", "Detailed",
             "--show-live-output", "on",
@@ -1220,6 +1243,65 @@ function Run {
     # These functions have been moved to module level (after Stop-Servers)
     # so they can be called from both Stop-Servers and Run
 
+    # Start servers with intelligent restart decision
+    # Checks if restart is needed (source rebuilt, unhealthy, mode mismatch) and starts servers
+    function Invoke-ServerStartup {
+        param(
+            [string]$Environment,
+            [switch]$Docker,
+            [bool]$SrcRebuilt
+        )
+        
+        # Check if we need to restart servers:
+        # 1. Source projects were rebuilt (binaries changed)
+        # 2. Servers are unhealthy (not responding to health checks)
+        # 3. Mode mismatch (Docker vs dotnet)
+        $healthStatus = Test-ServersHealthy
+        $runningViaDocker = Test-ServersRunningViaDocker
+        $modeMismatch = ($Docker -and -not $runningViaDocker) -or (-not $Docker -and $runningViaDocker)
+        $needsRestart = $SrcRebuilt -or (-not $healthStatus.AllHealthy) -or $modeMismatch
+        
+        if ($needsRestart) {
+            Write-Step "Restart decision"
+            if ($SrcRebuilt) {
+                Write-Info "Source changes detected - binaries were rebuilt"
+                Write-Info "Restarting servers to load new code..."
+            }
+            elseif (-not $healthStatus.AllHealthy) {
+                Write-Info "Servers are unhealthy or not running (API: $($healthStatus.ApiStatus), Web: $($healthStatus.WebStatus))"
+                Write-Info "Restarting servers..."
+            }
+            elseif ($modeMismatch) {
+                if ($Docker) {
+                    Write-Info "Servers running via dotnet, but Docker mode requested"
+                }
+                else {
+                    Write-Info "Servers running via Docker, but dotnet mode requested"
+                }
+                Write-Info "Switching modes and restarting servers..."
+            }
+            
+            # Stop existing servers and clean up ports
+            Stop-Servers
+        }
+        else {
+            Write-Step "Restart decision"
+            Write-Info "No source changes detected - binaries unchanged"
+            Write-Info "Servers are healthy - no restart needed"
+            Write-Success "Reusing existing servers"
+        }
+        
+        # Start servers
+        $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker -SrcRebuilt $SrcRebuilt
+        if ($serversStarted -ne $true) {
+            # Server startup failed - ALWAYS clean up (can't leave non-running servers)
+            Stop-Servers
+            return $false
+        }
+        
+        return $true
+    }
+
     # Main execution
     try {
         # Ensure we're in the workspace root
@@ -1281,45 +1363,6 @@ function Run {
             }
         }
         
-        # Check if we need to restart servers:
-        # 1. Source projects were rebuilt (binaries changed)
-        # 2. Servers are unhealthy (not responding to health checks)
-        # 3. Mode mismatch (Docker vs dotnet)
-        $healthStatus = Test-ServersHealthy
-        $runningViaDocker = Test-ServersRunningViaDocker
-        $modeMismatch = ($Docker -and -not $runningViaDocker) -or (-not $Docker -and $runningViaDocker)
-        $needsRestart = $buildResult.SrcRebuilt -or (-not $healthStatus.AllHealthy) -or $modeMismatch
-        
-        if ($needsRestart) {
-            Write-Step "Restart decision"
-            if ($buildResult.SrcRebuilt) {
-                Write-Info "Source changes detected - binaries were rebuilt"
-                Write-Info "Restarting servers to load new code..."
-            }
-            elseif (-not $healthStatus.AllHealthy) {
-                Write-Info "Servers are unhealthy or not running (API: $($healthStatus.ApiStatus), Web: $($healthStatus.WebStatus))"
-                Write-Info "Restarting servers..."
-            }
-            elseif ($modeMismatch) {
-                if ($Docker) {
-                    Write-Info "Servers running via dotnet, but Docker mode requested"
-                }
-                else {
-                    Write-Info "Servers running via Docker, but dotnet mode requested"
-                }
-                Write-Info "Switching modes and restarting servers..."
-            }
-            
-            # Stop existing servers and clean up ports
-            Stop-Servers
-        }
-        else {
-            Write-Step "Restart decision"
-            Write-Info "No source changes detected - binaries unchanged"
-            Write-Info "Servers are healthy - no restart needed"
-            Write-Success "Reusing existing servers"
-        }
-        
         # Rebuild mode: Clean rebuild only, then EXIT
         if ($Rebuild) {
             Write-Success "`nBuild completed successfully!"
@@ -1368,17 +1411,15 @@ function Run {
             
             # PHASE 3: Start servers if needed for E2E tests
             if ($runE2E) {
-                $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker -SrcRebuilt $buildResult.SrcRebuilt
+                $serversStarted = Invoke-ServerStartup -Environment $Environment -Docker:$Docker -SrcRebuilt $buildResult.SrcRebuilt
                 if ($serversStarted -ne $true) {
-                    # Server startup failed - ALWAYS clean up (can't leave non-running servers)
-                    Stop-Servers
                     return $false
                 }
             }
         
             # PHASE 4: E2E tests (servers already running)
             if ($runE2E) {
-                $e2eSuccess = Invoke-E2ETests -TestName $TestName
+                $e2eSuccess = Invoke-E2ETests -TestName $TestName -UseDocker:$Docker
             }
             
             # Show appropriate success message - servers run in background now
@@ -1401,10 +1442,8 @@ function Run {
         }
         else {
             # -WithoutTests: Start servers directly
-            $serversStarted = Start-AppHost -Environment $Environment -UseDocker:$Docker -SrcRebuilt $buildResult.SrcRebuilt
+            $serversStarted = Invoke-ServerStartup -Environment $Environment -Docker:$Docker -SrcRebuilt $buildResult.SrcRebuilt
             if ($serversStarted -ne $true) {
-                # Server startup failed - ALWAYS clean up (can't leave non-running servers)
-                Stop-Servers
                 return $false
             }
         }

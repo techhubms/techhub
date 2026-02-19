@@ -24,8 +24,9 @@
     <aside class="sidebar">
         @if (item != null)
         {
-            @* Tag cloud showing this content item's tags - click navigates to section with tag filter *@
+            @* Tag cloud showing this content item's tags with real section counts *@
             <SidebarTagCloud Tags="@item.Tags"
+                SectionName="@SectionName"
                 Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
                 NavigationBaseUrl="@($"/{SectionName.ToLowerInvariant()}")" />
             <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />

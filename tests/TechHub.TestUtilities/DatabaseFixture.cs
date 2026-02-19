@@ -1,25 +1,33 @@
 using System.Data;
-using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+using Npgsql;
+using Testcontainers.PostgreSql;
 using TechHub.Core.Logging;
 using TechHub.Infrastructure.Data;
+using Xunit;
 
 namespace TechHub.TestUtilities;
 
 /// <summary>
 /// Base fixture for integration tests that need a database.
-/// Always uses in-memory SQLite for fast, isolated integration tests.
-/// For E2E tests with real PostgreSQL, use docker-compose instead.
-/// Implements IDisposable to ensure cleanup after tests.
+/// Uses PostgreSQL via Testcontainers — matching production database engine.
+/// Implements IAsyncLifetime for async container startup/teardown with xUnit.
+/// Each test class gets its own isolated PostgreSQL container instance.
 /// </summary>
 /// <typeparam name="T">The test class using this fixture</typeparam>
-public class DatabaseFixture<T> : IDisposable
+public class DatabaseFixture<T> : IAsyncLifetime
 {
     private readonly ILoggerFactory _loggerFactory;
-    private bool _disposed;
+    private readonly PostgreSqlContainer _container;
 
-    public IDbConnection Connection { get; }
+    public IDbConnection Connection { get; private set; } = null!;
+
+    /// <summary>
+    /// The connection string for creating additional connections to the same database.
+    /// Useful for WebApplicationFactory or multi-connection scenarios.
+    /// </summary>
+    public string ConnectionString => _container.GetConnectionString();
 
     public DatabaseFixture()
     {
@@ -32,26 +40,37 @@ public class DatabaseFixture<T> : IDisposable
             builder.SetMinimumLevel(LogLevel.Information);
         });
 
+        _container = new PostgreSqlBuilder("postgres:17-alpine")
+            .WithDatabase("techhub_test")
+            .WithUsername("test")
+            .WithPassword("test")
+            .Build();
+    }
+
+    public async ValueTask InitializeAsync()
+    {
         var logger = _loggerFactory.CreateLogger<DatabaseFixture<T>>();
 
-        // SQLite: Create in-memory database (data lives only for the connection lifetime)
-        var sqliteConnection = new SqliteConnection("Data Source=:memory:");
-        sqliteConnection.Open();
-        Connection = sqliteConnection;
+        // Start the PostgreSQL container
+        await _container.StartAsync();
+        logger.LogInformation("🐘 Started PostgreSQL container for {TestClass}", typeof(T).Name);
 
-        logger.LogInformation("🗄️ Created in-memory SQLite database for {TestClass}", typeof(T).Name);
+        // Open a persistent connection for this fixture
+        var npgsqlConnection = new NpgsqlConnection(_container.GetConnectionString());
+        await npgsqlConnection.OpenAsync();
+        Connection = npgsqlConnection;
 
         // Run migrations to create schema
         var migrationRunner = new MigrationRunner(
             Connection,
-            new SqliteDialect(),
+            new PostgresDialect(),
             NullLogger<MigrationRunner>.Instance);
 
-        migrationRunner.RunMigrationsAsync().GetAwaiter().GetResult();
-        logger.LogInformation("✅ Database migrations completed (SQLite)");
+        await migrationRunner.RunMigrationsAsync();
+        logger.LogInformation("✅ Database migrations completed (PostgreSQL)");
 
         // Seed database with test markdown files using production sync logic
-        TestCollectionsSeeder.SeedFromFilesAsync(Connection, loggerFactory: _loggerFactory).GetAwaiter().GetResult();
+        await TestCollectionsSeeder.SeedFromFilesAsync(Connection, loggerFactory: _loggerFactory);
     }
 
     /// <summary>
@@ -60,7 +79,6 @@ public class DatabaseFixture<T> : IDisposable
     /// </summary>
     public void ClearData()
     {
-        // Delete in reverse dependency order (SQLite)
         using var command = Connection.CreateCommand();
         command.CommandText = @"
             DELETE FROM content_tags_expanded;
@@ -70,23 +88,10 @@ public class DatabaseFixture<T> : IDisposable
         command.ExecuteNonQuery();
     }
 
-    public void Dispose()
+    public async ValueTask DisposeAsync()
     {
-        Dispose(true);
-        GC.SuppressFinalize(this);
-    }
-
-    protected virtual void Dispose(bool disposing)
-    {
-        if (!_disposed)
-        {
-            if (disposing)
-            {
-                Connection?.Dispose();
-                _loggerFactory?.Dispose();
-            }
-
-            _disposed = true;
-        }
+        Connection?.Dispose();
+        _loggerFactory?.Dispose();
+        await _container.DisposeAsync();
     }
 }

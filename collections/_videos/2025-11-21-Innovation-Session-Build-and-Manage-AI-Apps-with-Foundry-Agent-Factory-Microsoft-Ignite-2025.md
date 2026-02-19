@@ -13,7 +13,6 @@ tags:
 - Developer Tools
 - Enterprise Security
 - Human in The Loop
-- InnovatewithAzureAIappsandagents
 - Intelligent Agents
 - LangGraph
 - Microsoft Foundry

@@ -9,7 +9,7 @@ tags:
 - Client Applications
 - Demo
 - Java
-- Mcp
+- MCP
 - Server Creation
 - Standardization
 - VS Code

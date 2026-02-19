@@ -14,7 +14,6 @@ tags:
 - Customer Experience
 - Document Processing
 - Enterprise AI
-- InnovatewithAzureAIappsandagents
 - Innovation
 - Microsoft Foundry
 - Microsoft Ignite

@@ -14,7 +14,6 @@ tags:
 - Diagnostics
 - GitHub Integration
 - Human in The Loop
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - MS Ignite
 - MSIgnite

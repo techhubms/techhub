@@ -13,7 +13,7 @@ tags:
 - Developer Productivity
 - External Tool Integration
 - GitHub
-- Mcp
+- MCP
 - Shorts
 - VS Code
 - AI

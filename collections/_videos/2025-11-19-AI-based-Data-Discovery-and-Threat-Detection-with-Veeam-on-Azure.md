@@ -10,7 +10,6 @@ tags:
 - Blast Radius Analysis
 - Data Discovery
 - Incident Response
-- InnovatewithAzureAIappsandagents
 - Malware Detection
 - MCP
 - MCP Server

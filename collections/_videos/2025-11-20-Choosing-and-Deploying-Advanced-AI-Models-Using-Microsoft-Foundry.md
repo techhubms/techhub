@@ -15,7 +15,6 @@ tags:
 - Enterprise Security
 - Governance
 - Ignite
-- InnovatewithAzureAIappsandagents
 - Meta AI
 - Microsoft Foundry
 - Mistral AI

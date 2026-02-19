@@ -12,7 +12,6 @@ tags:
 - Database Architecture
 - Elastic Scaling
 - High Availability
-- InnovatewithAzureAIappsandagents
 - KNN Vector Indexing
 - Microsoft Azure
 - Microsoft Ignite

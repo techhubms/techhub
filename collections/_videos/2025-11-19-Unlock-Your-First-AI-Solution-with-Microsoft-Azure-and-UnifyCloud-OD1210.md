@@ -14,7 +14,6 @@ tags:
 - Deployment Automation
 - Foundry Templates
 - GitHub Repository
-- InnovatewithAzureAIappsandagents
 - Microsoft Ignite
 - Microsoft Marketplace
 - MSIgnite

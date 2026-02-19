@@ -104,6 +104,11 @@ jobs:
             --no-restore \
             --logger "trx;LogFileName=integration-test-results.trx" \
             --collect:"XPlat Code Coverage"
+          dotnet test tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj \
+            --configuration Release \
+            --no-restore \
+            --logger "trx;LogFileName=infrastructure-test-results.trx" \
+            --collect:"XPlat Code Coverage"
 
       - name: Upload test results
         uses: actions/upload-artifact@v4

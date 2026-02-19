@@ -10,7 +10,6 @@ tags:
 - API Integration
 - Azure Functions
 - Cloud Scalability
-- InnovatewithAzureAIappsandagents
 - Live Data
 - Microsoft Foundry Agent Service
 - Microsoft Ignite

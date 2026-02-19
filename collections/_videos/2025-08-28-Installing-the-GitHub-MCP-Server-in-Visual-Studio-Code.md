@@ -12,9 +12,9 @@ tags:
 - Developer Workflow
 - GitHub
 - Local Development
-- Mcp
+- MCP
 - MCP Server
-- Mcpserver
+- MCP Server
 - Remote Server Setup
 - VS Code
 - VSC

@@ -13,7 +13,6 @@ tags:
 - Branded Voices
 - Custom Avatars
 - Custom Speech Models
-- InnovatewithAzureAIappsandagents
 - Large Language Models
 - LLM Speech API
 - Microsoft Ignite

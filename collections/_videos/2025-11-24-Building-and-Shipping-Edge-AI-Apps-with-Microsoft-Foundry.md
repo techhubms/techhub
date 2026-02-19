@@ -17,7 +17,6 @@ tags:
 - Edge AI
 - Foundry Local
 - GitOps
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Microsoft Ignite
 - Model Deployment

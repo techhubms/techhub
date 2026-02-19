@@ -14,7 +14,6 @@ tags:
 - Azure Foundry
 - Content Safety
 - Copilot Governance
-- InnovatewithAzureAIappsandagents
 - IT Security
 - MCP Support
 - Microsoft Ignite

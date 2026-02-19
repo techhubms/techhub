@@ -15,7 +15,6 @@ tags:
 - Content Moderation
 - Easy Auth
 - Governance
-- InnovatewithAzureAIappsandagents
 - MCP
 - MSIgnite
 - Observability

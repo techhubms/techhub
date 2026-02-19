@@ -14,7 +14,6 @@ tags:
 - Copilot Studio
 - Deterministic AI
 - Fine Tuning Models
-- InnovatewithAzureAIappsandagents
 - Intelligent Applications
 - Low Code Agent Builder
 - Microsoft Ignite

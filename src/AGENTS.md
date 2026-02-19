@@ -250,7 +250,7 @@ These patterns apply across all .NET projects. **See project-specific AGENTS.md 
 **Singleton** - Service has no state or state is shared across all requests:
 
 - `ISectionRepository` (ConfigurationBasedSectionRepository - loads from appsettings.json)
-- `ISqlDialect` (SqliteDialect or PostgresDialect)
+- `ISqlDialect` (PostgresDialect)
 - `IDbConnectionFactory` (creates database connections)
 - `IMemoryCache`, `TimeProvider` (built-in)
 

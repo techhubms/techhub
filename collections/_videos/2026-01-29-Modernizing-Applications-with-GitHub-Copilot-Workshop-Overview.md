@@ -20,7 +20,7 @@ tags:
 - GitHub Copilot
 - Hands On Demo
 - Liam Hampton
-- Mcp
+- MCP
 - Programming Tools
 - Prompt Engineering
 - Software Development

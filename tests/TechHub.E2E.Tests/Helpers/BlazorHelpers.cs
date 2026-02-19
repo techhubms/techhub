@@ -47,17 +47,31 @@ public static class BlazorHelpers
     // CONFIGURATION - Centralized timeout management
     // ============================================================================
 
-    /// <summary>Default timeout for all non-navigation operations (element waits, clicks, assertions)</summary>
-    internal const int DefaultTimeout = 1000;
+    /// <summary>
+    /// Default timeout for all non-navigation operations (element waits, clicks, assertions).
+    /// Set to 5s to handle concurrent test load during full Run (unit + integration tests
+    /// run before E2E, creating sustained CPU/IO pressure that slows Playwright-Chromium IPC).
+    /// Most operations complete in &lt;500ms; the timeout only matters under peak load.
+    /// </summary>
+    internal const int DefaultTimeout = 5_000;
 
     /// <summary>
-    /// Default timeout for navigation operations (page load, URL changes).
-    /// Higher than default timeout because navigation includes network latency,
-    /// HTML parsing (especially for pages with large Markdown content, Mermaid diagrams),
-    /// and JavaScript initialization. Most pages load in <1s, but custom content pages
-    /// (GenAI, Features, Handbook, etc.) require 1.5-2s for DOMContentLoaded.
+    /// Default timeout for navigation operations (URL changes, Blazor interactivity waits).
+    /// Matches DefaultTimeout because Blazor Server round-trips (click → SignalR → server
+    /// → diff → SignalR → DOM update → URL pushState) can take 2-4s under full Run load.
     /// </summary>
-    internal const int DefaultNavigationTimeout = 2000;
+    internal const int DefaultNavigationTimeout = 5_000;
+
+    /// <summary>
+    /// Default timeout for the initial page.GotoAsync HTTP request (DOMContentLoaded).
+    /// Higher than DefaultNavigationTimeout because the server SSR (server-side rendering)
+    /// must execute database queries before returning HTML. Under full E2E suite load
+    /// (~200 parallel tests), PostgreSQL can respond slowly for complex URLs
+    /// with search/tag/date filters. Typical response: &lt;2s idle, 3-7s under load.
+    /// This timeout ONLY affects page.GotoAsync in GotoAndWaitForBlazorAsync — it does NOT
+    /// affect post-navigation Blazor waiting, element assertions, or other timeouts.
+    /// </summary>
+    internal const int DefaultPageLoadTimeout = 10_000;
 
     /// <summary>
     /// Default polling interval for WaitForFunctionAsync operations.
@@ -195,21 +209,43 @@ public static class BlazorHelpers
     /// Used for testing that infinite scroll reaches the end of a finite collection.
     /// Uses the same <c>window.scrollTo</c> + synthetic event strategy as
     /// <see cref="ScrollToLoadMoreAsync"/>.
+    /// <para>
+    /// Handles two scenarios:
+    /// <list type="bullet">
+    /// <item><b>Small collection</b> (all items fit in one batch): The end-of-content marker
+    /// is rendered immediately after the first load — no scroll trigger or scroll listener
+    /// exists. The method detects this and returns without scrolling.</item>
+    /// <item><b>Large collection</b> (multiple batches): The scroll listener is attached and
+    /// the method scrolls repeatedly, dispatching synthetic scroll events, until all batches
+    /// are loaded and the end-of-content marker appears.</item>
+    /// </list>
+    /// </para>
     /// </summary>
     /// <param name="page">The page to scroll</param>
     /// <param name="endSelector">CSS selector for the end-of-content marker (default: ".end-of-content")</param>
     /// <param name="timeoutMs">Total timeout for the operation</param>
+    /// <param name="triggerId">The id of the scroll-trigger element used by infinite-scroll.js</param>
     public static async Task ScrollToEndOfContentAsync(
         this IPage page,
         string endSelector = ".end-of-content",
         int timeoutMs = DefaultTimeout,
         string triggerId = "scroll-trigger")
     {
-        // Wait for the scroll listener to be attached before scrolling.
-        // Readiness is scoped by triggerId so multiple concurrent listeners don't interfere.
+        // Wait for EITHER:
+        // 1. The end-of-content marker already present (small collection, all items in first batch,
+        //    no scroll trigger was ever rendered, so no scroll listener exists), OR
+        // 2. The scroll listener to be attached (large collection, multiple batches needed).
         await page.WaitForConditionAsync(
-            $"() => window.__scrollListenerReady?.['{triggerId}'] === true",
+            $"() => document.querySelector('{endSelector}') !== null || window.__scrollListenerReady?.['{triggerId}'] === true",
             new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
+
+        // If end-of-content is already present, no scrolling needed — return immediately.
+        var alreadyAtEnd = await page.EvaluateAsync<bool>(
+            $"() => document.querySelector('{endSelector}') !== null");
+        if (alreadyAtEnd)
+        {
+            return;
+        }
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
         // See ScrollToLoadMoreAsync for why the explicit dispatchEvent is required.
@@ -465,7 +501,7 @@ public static class BlazorHelpers
     {
         var gotoOptions = options ?? new PageGotoOptions();
         gotoOptions.WaitUntil ??= WaitUntilState.DOMContentLoaded;
-        gotoOptions.Timeout ??= DefaultNavigationTimeout;
+        gotoOptions.Timeout ??= DefaultPageLoadTimeout;
 
         await page.GotoAsync(url, gotoOptions);
 

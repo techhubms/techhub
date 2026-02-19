@@ -12,7 +12,6 @@ tags:
 - Catalog Enrichment
 - Data Integration
 - Frontline Workers
-- InnovatewithAzureAIappsandagents
 - Marketplace Deployment
 - Microsoft Ignite
 - MSIgnite

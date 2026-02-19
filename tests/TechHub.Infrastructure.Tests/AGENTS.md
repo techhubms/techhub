@@ -16,7 +16,7 @@ This directory contains **unit and integration tests** for the Tech Hub Infrastr
 - `FrontMatterParserTests.cs` - Tests for YAML front matter parsing
 - `MarkdownServiceTests.cs` - Tests for markdown rendering
 - `Repositories/SectionRepositoryTests.cs` - Tests for section repository
-- `Repositories/ContentRepositoryTests.cs` - Tests for database content repository (SQLite + PostgreSQL)
+- `Repositories/ContentRepositoryTests.cs` - Tests for database content repository (PostgreSQL via Testcontainers)
 
 ## Testing Strategy
 
@@ -27,7 +27,7 @@ This directory contains **unit and integration tests** for the Tech Hub Infrastr
 - ✅ **Data transformations** (model mapping, normalization)
 - ✅ **Caching behavior** (when applicable)
 - ✅ **Error handling** (invalid files, missing data)
-- ✅ **Real DB interactions** (ContentRepositoryTests uses in-memory DB)
+- ✅ **Real DB interactions** (ContentRepositoryTests uses PostgreSQL via Testcontainers)
 
 **What NOT to Test**:
 

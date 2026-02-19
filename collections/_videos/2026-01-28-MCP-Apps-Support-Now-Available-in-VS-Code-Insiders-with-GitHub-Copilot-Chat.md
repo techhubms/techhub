@@ -17,9 +17,9 @@ tags:
 - Developer Tools
 - GitHub Copilot
 - GUI Output
-- Mcp
+- MCP
 - MCP Apps
-- Mcpapps
+- MCP Server
 - Software Developer
 - Software Development
 - Videos

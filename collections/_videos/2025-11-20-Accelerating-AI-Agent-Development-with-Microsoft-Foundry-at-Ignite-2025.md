@@ -17,7 +17,6 @@ tags:
 - Developer Tools
 - Enterprise Security
 - Industry Collaboration
-- InnovatewithAzureAIappsandagents
 - Microsoft 365 Integration
 - Microsoft Foundry
 - Microsoft Ignite

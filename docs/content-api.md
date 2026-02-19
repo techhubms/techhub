@@ -14,7 +14,7 @@ This document describes the core Content API endpoints for retrieving sections, 
 
 The Tech Hub Content API provides RESTful access to content organized by sections and collections. It uses a nested route structure that mirrors the site's hierarchical organization.
 
-**Content Storage**: The API serves content from a database backend (SQLite, PostgreSQL, or FileSystem) configured via appsettings.json. The database syncs from markdown files in the `collections/` folder on startup.
+**Content Storage**: The API serves content from a database backend (PostgreSQL or FileSystem) configured via appsettings.json. The database syncs from markdown files in the `collections/` folder on startup.
 
 **Key Design Principles**:
 
@@ -257,6 +257,7 @@ Get tag cloud with quantile-based sizing for visual representation.
 - `minUses` (optional): Minimum tag usage count (default: 5)
 - `lastDays` (optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`)
 - `tags` (optional): Comma-separated list of currently selected tags for dynamic count calculation
+- `tagsToCount` (optional): Comma-separated list of specific tags to get counts for. When provided, returns counts only for these tags (used by content item pages to show real section counts for the item's tags). Display names in the response match the casing provided in this parameter.
 - `from` (optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`). Takes precedence over `lastDays`
 - `to` (optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`). Takes precedence over `lastDays`
 

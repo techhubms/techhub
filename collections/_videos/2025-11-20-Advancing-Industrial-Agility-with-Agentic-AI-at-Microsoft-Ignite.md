@@ -15,7 +15,6 @@ tags:
 - Industrial AI
 - Industrial Autonomy
 - Industrial Transformation
-- InnovatewithAzureAIappsandagents
 - Manufacturing
 - Microsoft Ignite
 - Mobility

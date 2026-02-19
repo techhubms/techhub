@@ -13,9 +13,9 @@ tags:
 - Developer Community
 - Developer Tools
 - Live Coding
-- Mcp
+- MCP
 - MCP Server
-- Mcpserver
+- MCP Server
 - Microsoft
 - Server Development
 - Vibe Coding

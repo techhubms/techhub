@@ -15,7 +15,7 @@ tags:
 - Developer
 - Developer Productivity
 - GitHub
-- Mcp
+- MCP
 - MCP Server
 - Microsoft Learn MCP
 - Postgres

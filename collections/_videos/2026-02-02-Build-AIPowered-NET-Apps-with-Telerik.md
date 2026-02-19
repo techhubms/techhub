@@ -20,7 +20,7 @@ tags:
 - Developer Tools
 - Dotnetdeveloper
 - Ed Charbeneau
-- Mcp
+- MCP
 - Microsoft
 - Progress Telerik
 - Progresstelerik

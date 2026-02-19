@@ -14,7 +14,6 @@ tags:
 - Cost Management
 - Elastic Pools
 - Embeddings
-- InnovatewithAzureAIappsandagents
 - Knowledge Graphs
 - Microservices
 - Microsoft Foundry

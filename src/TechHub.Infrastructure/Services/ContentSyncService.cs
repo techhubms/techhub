@@ -1,5 +1,4 @@
 using System.Data;
-using System.Data.Common;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
@@ -26,10 +25,6 @@ public class ContentSyncService : IContentSyncService
     private static readonly char[] _tagSplitSeparators = [' ', '-', '_'];
     private static readonly char[] _excerptSplitSeparators = [' ', '\n', '\r'];
 
-    // Runtime-captured database schema objects (populated during DisableIndexesAndTriggersAsync)
-    private List<string>? _capturedIndexDefinitions;
-    private List<string>? _capturedTriggerDefinitions;
-
     private sealed record ParsedContent(
         string CompositeId,
         string CollectionName,
@@ -46,15 +41,15 @@ public class ContentSyncService : IContentSyncService
 
     /// <summary>
     /// Strongly-typed record for tag words to avoid reflection overhead during bulk insert.
-    /// Uses int (0/1) for boolean flags to match SQLite storage format.
+    /// Uses int (0/1) for boolean flags for database storage.
     /// SectionsBitmask: Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security
-    /// TagDisplay: Original case tag name for full tags (null for word expansions)
+    /// TagDisplay: Original case tag name for full tags, or original-cased word for word expansions
     /// </summary>
     private sealed record TagWord(
         string CollectionName,
         string Slug,
         string Word,           // Always lowercase for efficient querying
-        string? TagDisplay,    // Original case, only for full tags (is_full_tag=1)
+        string? TagDisplay,    // Original case from the full tag (e.g., "GitHub" from "GitHub Copilot")
         int IsFullTag,         // 1 = actual tag, 0 = word expansion
         long DateEpoch,
         int IsAi,
@@ -375,11 +370,11 @@ public class ContentSyncService : IContentSyncService
                     writeCount++;
                 }
 
-                // Bulk insert all tags for this batch in chunks (SQLite has a limit of ~999 parameters)
+                // Bulk insert all tags for this batch in chunks (PostgreSQL has parameter limits)
                 var insertTagsStopwatch = Stopwatch.StartNew();
                 if (allBatchTags.Count > 0)
                 {
-                    const int TagsPerChunk = 70; // 70 tags × 14 params = 980 parameters (SQLite/PostgreSQL both support this)
+                    const int TagsPerChunk = 70; // 70 tags × 14 params = 980 parameters per chunk
                     for (int chunkStart = 0; chunkStart < allBatchTags.Count; chunkStart += TagsPerChunk)
                     {
                         var chunkSize = Math.Min(TagsPerChunk, allBatchTags.Count - chunkStart);
@@ -656,7 +651,7 @@ public class ContentSyncService : IContentSyncService
                 IsSecurity = parsed.Sections.Contains("security")
             };
 
-            // Convert to integers for TagWord records (SQLite compatibility)
+            // Convert to integers for TagWord records
             var sectionInts = new
             {
                 IsAi = sectionBools.IsAi ? 1 : 0,
@@ -812,7 +807,7 @@ public class ContentSyncService : IContentSyncService
                             parsed.CollectionName,
                             parsed.Slug,
                             wordTrimmed.ToLowerInvariant(), // Lowercase for efficient querying
-                            null,                          // No display text for word expansions
+                            wordTrimmed,                   // Original casing from full tag (e.g., "GitHub" from "GitHub Copilot")
                             0, // is_full_tag = false (word expansion)
                             parsed.DateEpoch,
                             sectionInts.IsAi,
@@ -1024,131 +1019,16 @@ public class ContentSyncService : IContentSyncService
         };
     }
 
-    private async Task DisableIndexesAndTriggersAsync()
+    private static Task DisableIndexesAndTriggersAsync()
     {
-        _logger.LogInformation("Capturing and disabling indexes and FTS triggers for bulk insert performance...");
-
-        // Skip index optimization for PostgreSQL (requires different system catalog queries)
-        // This optimization is primarily beneficial for SQLite FTS5 triggers
-        if (_connection is Npgsql.NpgsqlConnection)
-        {
-            _logger.LogInformation("Skipping index/trigger optimization (PostgreSQL - not supported yet)");
-            _capturedIndexDefinitions = [];
-            _capturedTriggerDefinitions = [];
-            return;
-        }
-
-        // STEP 1: Capture index definitions from sqlite_master BEFORE dropping them
-        var indexDefinitions = await _connection.QueryAsync<string>(
-            @"SELECT sql FROM sqlite_master 
-              WHERE type = 'index' 
-              AND tbl_name IN ('content_items', 'content_tags_expanded')
-              AND name NOT LIKE 'sqlite_autoindex_%'
-              AND sql IS NOT NULL");
-        _capturedIndexDefinitions = [.. indexDefinitions];
-        _logger.LogInformation("Captured {Count} index definitions", _capturedIndexDefinitions.Count);
-
-        // STEP 2: Capture trigger definitions BEFORE dropping them
-        var triggerDefinitions = await _connection.QueryAsync<string>(
-            @"SELECT sql FROM sqlite_master 
-              WHERE type = 'trigger' 
-              AND tbl_name = 'content_items'
-              AND sql IS NOT NULL");
-        _capturedTriggerDefinitions = [.. triggerDefinitions];
-        _logger.LogInformation("Captured {Count} trigger definitions", _capturedTriggerDefinitions.Count);
-
-        // STEP 3: Drop all indexes
-        var indexNames = await _connection.QueryAsync<string>(
-            @"SELECT name FROM sqlite_master 
-              WHERE type = 'index' 
-              AND tbl_name IN ('content_items', 'content_tags_expanded')
-              AND name NOT LIKE 'sqlite_autoindex_%'");
-
-        foreach (var indexName in indexNames)
-        {
-            await _connection.ExecuteAsync($"DROP INDEX IF EXISTS {indexName}");
-        }
-
-        _logger.LogInformation("Dropped {Count} indexes", indexNames.Count());
-
-        // STEP 4: Drop all triggers
-        var triggerNames = await _connection.QueryAsync<string>(
-            @"SELECT name FROM sqlite_master 
-              WHERE type = 'trigger' 
-              AND tbl_name = 'content_items'");
-
-        foreach (var triggerName in triggerNames)
-        {
-            await _connection.ExecuteAsync($"DROP TRIGGER IF EXISTS {triggerName}");
-        }
-
-        _logger.LogInformation("Dropped {Count} triggers", triggerNames.Count());
-
-        _logger.LogInformation("Indexes and triggers disabled");
+        // Index/trigger optimization is not needed for PostgreSQL bulk inserts
+        return Task.CompletedTask;
     }
 
-    private async Task EnableIndexesAndTriggersAsync()
+    private static Task EnableIndexesAndTriggersAsync()
     {
-        _logger.LogInformation("Re-creating indexes and FTS triggers from captured definitions...");
-
-        // Skip if PostgreSQL (index optimization was skipped)
-        if (_connection is Npgsql.NpgsqlConnection)
-        {
-            _logger.LogInformation("Skipping index/trigger recreation (PostgreSQL - not captured)");
-            return;
-        }
-
-        if (_capturedIndexDefinitions == null || _capturedTriggerDefinitions == null)
-        {
-            _logger.LogError("No captured definitions found - indexes/triggers were not properly captured during disable phase");
-            throw new InvalidOperationException("Cannot recreate indexes/triggers: definitions were not captured");
-        }
-
-        // STEP 1: Recreate all indexes from captured definitions
-        var dbCmd = (DbCommand)_connection.CreateCommand();
-        var indexStopwatch = Stopwatch.StartNew();
-
-        foreach (var indexSql in _capturedIndexDefinitions)
-        {
-#pragma warning disable CA2100 // SQL is from captured index definitions, not user input
-            dbCmd.CommandText = indexSql;
-#pragma warning restore CA2100
-            await dbCmd.ExecuteNonQueryAsync();
-        }
-
-        _logger.LogInformation("⏱️ Recreated {Count} indexes in {ElapsedMs}ms", _capturedIndexDefinitions.Count, indexStopwatch.ElapsedMilliseconds);
-
-        // STEP 2: Recreate all triggers from captured definitions
-        var triggerStopwatch = Stopwatch.StartNew();
-        foreach (var triggerSql in _capturedTriggerDefinitions)
-        {
-#pragma warning disable CA2100 // SQL is from captured trigger definitions, not user input
-            dbCmd.CommandText = triggerSql;
-#pragma warning restore CA2100
-            await dbCmd.ExecuteNonQueryAsync();
-        }
-
-        _logger.LogInformation("⏱️ Recreated {Count} triggers in {ElapsedMs}ms", _capturedTriggerDefinitions.Count, triggerStopwatch.ElapsedMilliseconds);
-
-        // Rebuild FTS index from scratch (more efficient than incremental updates)
-        _logger.LogInformation("Rebuilding FTS index...");
-        var ftsRebuildStopwatch = Stopwatch.StartNew();
-        var rebuildCmd = (DbCommand)_connection.CreateCommand();
-        rebuildCmd.CommandText = "INSERT INTO content_fts(content_fts) VALUES('rebuild')";
-        await rebuildCmd.ExecuteNonQueryAsync();
-        rebuildCmd.Dispose();
-        _logger.LogInformation("⏱️ FTS rebuild: {ElapsedMs}ms", ftsRebuildStopwatch.ElapsedMilliseconds);
-
-        // Update statistics for query planner
-        _logger.LogInformation("Updating query planner statistics...");
-        var analyzeStopwatch = Stopwatch.StartNew();
-        var analyzeCmd = (DbCommand)_connection.CreateCommand();
-        analyzeCmd.CommandText = "ANALYZE";
-        await analyzeCmd.ExecuteNonQueryAsync();
-        analyzeCmd.Dispose();
-        _logger.LogInformation("⏱️ ANALYZE: {ElapsedMs}ms", analyzeStopwatch.ElapsedMilliseconds);
-
-        _logger.LogInformation("Indexes and triggers re-created");
+        // No index/trigger restoration needed for PostgreSQL
+        return Task.CompletedTask;
     }
 }
 

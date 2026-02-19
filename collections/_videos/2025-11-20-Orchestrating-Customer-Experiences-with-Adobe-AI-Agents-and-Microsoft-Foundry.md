@@ -14,7 +14,6 @@ tags:
 - Data Pipeline
 - Enterprise AI
 - Governance Framework
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Microsoft Ignite
 - MSIgnite

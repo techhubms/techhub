@@ -52,15 +52,21 @@ public class InfiniteScrollTests : PlaywrightTestBase
     public async Task ContentGrid_ScrollToEnd_ShowsEndMessage()
     {
         // Arrange - Use a smaller collection that will reach end faster
-        // Roundups collection exists only in the 'all' section
+        // Roundups collection exists only in the 'all' section.
+        // With the API's 90-day default date filter, only a few roundups are returned,
+        // fitting in a single batch (< 20 items). The end-of-content marker appears
+        // immediately without scrolling. ScrollToEndOfContentAsync handles both cases:
+        // small collections (no scroll trigger) and large collections (multiple batches).
         await Page.GotoRelativeAsync("/all/roundups");
 
         // Wait for initial content
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
 
-        // Act - Keep scrolling until we see the end message or all content is loaded
-        await Page.ScrollToEndOfContentAsync();
+        // Act - Keep scrolling until we see the end message or all content is loaded.
+        // Use a generous timeout: the page must complete Blazor hydration + potentially
+        // load multiple batches via SignalR round-trips under concurrent test load.
+        await Page.ScrollToEndOfContentAsync(timeoutMs: 15_000);
 
         // Assert - End message should be visible
         var endMessage = Page.Locator(".end-of-content");

@@ -8,7 +8,7 @@ The Tech Hub supports both manual and automated content creation. Content is org
 
 ### Database Synchronization
 
-**Important**: Tech Hub uses a **database-backed** content system. Markdown files in the `collections/` folder are the **source of truth**, but the application serves content from a database (SQLite or PostgreSQL) for performance.
+**Important**: Tech Hub uses a **database-backed** content system. Markdown files in the `collections/` folder are the **source of truth**, but the application serves content from a database (PostgreSQL) for performance.
 
 **How it works**:
 

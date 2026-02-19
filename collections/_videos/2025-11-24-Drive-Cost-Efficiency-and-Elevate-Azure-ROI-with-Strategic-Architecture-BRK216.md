@@ -14,7 +14,6 @@ tags:
 - Cloud Optimization
 - Copilot
 - Cost Efficiency
-- InnovatewithAzureAIappsandagents
 - Landing Zone
 - Microsoft Ignite
 - MSIgnite

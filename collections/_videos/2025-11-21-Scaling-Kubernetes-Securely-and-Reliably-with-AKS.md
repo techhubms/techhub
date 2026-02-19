@@ -14,7 +14,6 @@ tags:
 - Enterprise Security
 - Hybrid Cloud
 - Infrastructure
-- InnovatewithAzureAIappsandagents
 - Kubernetes
 - Microsoft Ignite
 - MSIgnite

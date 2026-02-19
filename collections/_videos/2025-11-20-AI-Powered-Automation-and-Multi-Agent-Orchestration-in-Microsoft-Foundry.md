@@ -16,7 +16,6 @@ tags:
 - GitHub Copilot
 - GitHub Copilot Extensions
 - Human in The Loop
-- InnovatewithAzureAIappsandagents
 - LangGraph
 - MCP Toolchains
 - Microsoft Foundry

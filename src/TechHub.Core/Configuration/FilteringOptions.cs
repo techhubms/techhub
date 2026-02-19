@@ -6,7 +6,7 @@ namespace TechHub.Core.Configuration;
 public class TagCloudOptions
 {
     public int DefaultMaxTags { get; set; } = 20;
-    public int MinimumTagUses { get; set; } = 5;
+    public int MinimumTagUses { get; set; } = 1;
     public int DefaultDateRangeDays { get; set; } = 90;
     public QuantilePercentilesOptions QuantilePercentiles { get; set; } = new();
 }

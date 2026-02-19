@@ -82,28 +82,14 @@ builder.Services.Configure<DatabaseOptions>(builder.Configuration.GetSection("Da
 builder.Services.Configure<ContentSyncOptions>(builder.Configuration.GetSection("ContentSync"));
 builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("AppSettings:Content"));
 
-// Register database connection and repository based on configured provider
-var databaseProvider = builder.Configuration["Database:Provider"] ?? "SQLite";
-var connectionString = builder.Configuration["Database:ConnectionString"] ?? "Data Source=.databases/sqlite/techhub.db";
+// Register database connection and repository (PostgreSQL only)
+var connectionString = builder.Configuration["Database:ConnectionString"]
+    ?? throw new InvalidOperationException("Database:ConnectionString is required. Configure it in appsettings.json.");
 
-if (databaseProvider.Equals("SQLite", StringComparison.OrdinalIgnoreCase))
-{
-    builder.Services.AddSingleton<ISqlDialect, SqliteDialect>();
-    builder.Services.AddSingleton<IDbConnectionFactory>(_ => new SqliteConnectionFactory(connectionString));
-    builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-    builder.Services.AddTransient<IContentRepository, ContentRepository>();
-}
-else if (databaseProvider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCase))
-{
-    builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
-    builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionFactory(connectionString));
-    builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
-    builder.Services.AddTransient<IContentRepository, ContentRepository>();
-}
-else
-{
-    throw new InvalidOperationException($"Unsupported database provider: {databaseProvider}. Use 'SQLite' or 'PostgreSQL'.");
-}
+builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
+builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionFactory(connectionString));
+builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
+builder.Services.AddTransient<IContentRepository, ContentRepository>();
 
 // Register singleton services - none currently
 
@@ -111,7 +97,11 @@ else
 builder.Services.AddTransient<IMarkdownService, MarkdownService>();
 builder.Services.AddTransient<IRssService, RssService>();
 builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
-builder.Services.AddTransient<MigrationRunner>();
+builder.Services.AddTransient<IMigrationRunner, MigrationRunner>();
+
+// Register startup background service that runs migrations and content sync
+// after Kestrel starts, so health endpoints are reachable during startup
+builder.Services.AddHostedService<StartupBackgroundService>();
 
 // Add CORS
 builder.Services.AddCors(options =>
@@ -157,51 +147,4 @@ app.MapRssEndpoints();
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
 
-// Run startup operations in a scope (scoped services require a scope)
-using (var startupScope = app.Services.CreateScope())
-{
-    var services = startupScope.ServiceProvider;
-    var startupState = app.Services.GetRequiredService<StartupStateService>();
-
-    // Run database migrations
-    var migrationRunner = services.GetRequiredService<MigrationRunner>();
-    await migrationRunner.RunMigrationsAsync();
-    app.Logger.LogInformation("✅ Database migrations completed");
-    startupState.MarkMigrationsCompleted();
-
-    // Synchronize content from markdown files to database
-    var contentSyncService = services.GetRequiredService<IContentSyncService>();
-    var syncResult = await contentSyncService.SyncAsync();
-    app.Logger.LogInformation("✅ Content sync: {Added} added, {Updated} updated, {Deleted} deleted, {Unchanged} unchanged ({Duration}ms)",
-        syncResult.Added, syncResult.Updated, syncResult.Deleted, syncResult.Unchanged, syncResult.Duration.TotalMilliseconds);
-    startupState.MarkContentSyncCompleted();
-
-    // Log database record counts for verification
-    await LogDatabaseRecordCountsAsync(app, services);
-
-}
-
 await app.RunAsync();
-
-// Logs record counts for all database tables for verification and debugging.
-static async Task LogDatabaseRecordCountsAsync(WebApplication app, IServiceProvider services)
-{
-    using var connection = services.GetRequiredService<IDbConnectionFactory>().CreateConnection();
-
-    var tables = new (string TableName, string Description)[]
-    {
-        ("content_items", "content items"),
-        ("content_tags_expanded", "expanded tags"),
-        ("sync_metadata", "sync metadata entries")
-    };
-
-    app.Logger.LogInformation("📊 Database record counts:");
-
-    foreach (var (tableName, description) in tables)
-    {
-        using var command = connection.CreateCommand();
-        command.CommandText = $"SELECT COUNT(*) FROM {tableName}";
-        var count = Convert.ToInt32(command.ExecuteScalar(), System.Globalization.CultureInfo.InvariantCulture);
-        app.Logger.LogInformation("   - {TableName}: {Count} {Description}", tableName, count, description);
-    }
-}

@@ -14,7 +14,6 @@ tags:
 - Developer Tools
 - DevSecOps
 - GitHub Advanced Security
-- InnovatewithAzureAIappsandagents
 - Microsoft Defender For Cloud
 - MSIgnite
 - Security Automation

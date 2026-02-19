@@ -18,8 +18,8 @@ tags:
 - Figma
 - Figma Integration
 - Figma MCP Server
-- Mcp
-- Mcpserver
+- MCP
+- MCP Server
 - Microsoft
 - Software Developer
 - VS Code

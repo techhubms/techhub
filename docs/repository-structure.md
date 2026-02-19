@@ -22,7 +22,7 @@
 ### Infrastructure & Services
 
 - **`TechHub.Infrastructure/`** - Data access and service implementations
-  - Dapper-based repository implementations for PostgreSQL and SQLite
+  - Dapper-based repository implementations for PostgreSQL
   - Content processing services (markdown parsing, frontmatter extraction)
   - Caching, logging, and cross-cutting concerns
   - See [src/TechHub.Infrastructure/AGENTS.md](../src/TechHub.Infrastructure/AGENTS.md) for infrastructure patterns
@@ -68,7 +68,7 @@ See [collections/AGENTS.md](../collections/AGENTS.md) for content creation and m
   - See [tests/TechHub.Core.Tests/AGENTS.md](../tests/TechHub.Core.Tests/AGENTS.md)
 - **`TechHub.Api.Tests/`** - Integration tests for API endpoints (**PRIMARY TEST LAYER**)
   - Tests all API functionality via HTTP requests
-  - Uses in-memory SQLite database
+  - Uses PostgreSQL Testcontainers database
   - Mandatory for all API changes - follows Testing Diamond pattern
   - See [tests/TechHub.Api.Tests/AGENTS.md](../tests/TechHub.Api.Tests/AGENTS.md)
 - **`TechHub.Web.Tests/`** - bUnit component tests for Blazor UI
@@ -197,15 +197,9 @@ Dev container configuration for VS Code and GitHub Codespaces:
 - **`devcontainer.json`** - Container configuration, extensions, settings
 - **`post-create.sh`** - Post-creation setup script. Add ALL dependencies needed for the devcontainer here
 
-### `.databases/sqlite/techhub.db`
-
-Local database storage (gitignored) when running without Docker / Postgres.
-
-Delete the entire sqlite directory if you need a fresh database. It will automatically get recreated based on our source collection files.
-
 ### `.databases/postgres/**`
 
-Local database storage (gitignored) when running in Docker with Postgres support.
+Local database storage (gitignored) when running with PostgreSQL.
 
 Delete the entire postgres directory if you need a fresh database. It will automatically get recreated based on our source collection files.
 

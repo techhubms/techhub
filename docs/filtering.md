@@ -37,10 +37,9 @@ This enables auto-complete-style search behavior where users don't need to type 
 
 **Backend**: Full-text search is implemented at the database level:
 
-- **SQLite**: Uses FTS5 (Full-Text Search 5) with BM25 ranking and prefix indexes (`prefix='2,3,4'`)
 - **PostgreSQL**: Uses `tsvector` with `ts_rank` relevance scoring and `to_tsquery` for prefix support
-- Both providers support weighted search (title > excerpt > content)
-- Both providers automatically append wildcards for prefix matching (`copilot` → `copilot*` for SQLite, `copilot:*` for PostgreSQL)
+- Supports weighted search (title > excerpt > content)
+- Automatically appends wildcards for prefix matching (`copilot` → `copilot:*` for PostgreSQL)
 
 ### Search + Filter Combination
 
@@ -261,6 +260,7 @@ Get a tag cloud with quantile-based sizing for visual representation. Using `all
 - `minUses` (query, optional): Minimum tag usage count (default: 5)
 - `lastDays` (query, optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`)
 - `tags` (query, optional): Comma-separated list of currently selected tags for dynamic count calculation
+- `tagsToCount` (query, optional): Comma-separated list of specific tags to get counts for. Returns counts only for these tags instead of the top N popular tags. Display names in the response preserve the casing from this parameter.
 - `from` (query, optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`)
 - `to` (query, optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`)
 
@@ -339,19 +339,52 @@ curl -k "https://localhost:5001/api/sections/ai/collections/all/tags?from=invali
 
 ### Tag Size Algorithm (Quantile-Based)
 
-Tag sizes are calculated using quantile distribution to ensure consistent visual representation across varying tag counts:
+Tag sizes are calculated using quantile distribution based on actual count values to ensure appropriate visual representation:
 
-| Quantile | Size Value | CSS Class | Description |
-|----------|------------|-----------|-------------|
-| Top 25% | 2 | `tag-size-large` | Most frequently used tags |
-| Middle 50% | 1 | `tag-size-medium` | Moderately used tags |
-| Bottom 25% | 0 | `tag-size-small` | Less frequently used tags |
+| Size | Criteria | CSS Class | Visual Weight |
+|------|----------|-----------|---------------|
+| Large | Count >= 75th percentile value | `tag-size-large` | Bold, larger font |
+| Medium | Count >= 25th percentile value | `tag-size-medium` | Normal weight |
+| Small | Count < 25th percentile value | `tag-size-small` | Lighter weight |
 
-**Why Quantile Sizing?**
+**How It Works:**
 
-- Ensures even distribution of sizes regardless of actual count values
-- Prevents a few high-count tags from dominating the visual
-- Adapts automatically to different sections/collections with varying tag frequencies
+1. Tags are sorted by count (descending: highest first)
+2. The count VALUE at the 25th percentile position becomes the "high threshold"
+3. The count VALUE at the 75th percentile position becomes the "low threshold"  
+4. Each tag is assigned a size based on these threshold values:
+   - Count >= high threshold → Large
+   - Count >= low threshold → Medium
+   - Count < low threshold → Small
+
+**Example:** Tags with counts [100, 95, 90, 50, 48, 45, 10, 8, 5, 3]
+
+- High threshold (at 25% position) = 90
+- Low threshold (at 75% position) = 8
+- Result: 100, 95, 90 are Large | 50, 48, 45, 10, 8 are Medium | 5, 3 are Small
+
+**Why Value-Based Quantiles?**
+
+- **Similar counts = similar sizes**: Tags with nearly identical counts (e.g., 3, 3, 2, 2, 2) will have uniform sizing instead of artificially spanning all three size categories
+- **Adapts to data distribution**: When all tags have similar counts, most will have the same size (appropriate). When counts vary widely, sizes distribute across all three categories (also appropriate)
+- **Prevents misleading emphasis**: A tag with count 3 won't appear much larger than a tag with count 2 just because of its position in the sorted list
+
+**Edge Cases:**
+
+- 1-2 tags: All get Medium size
+- Very uniform counts (all within 2x range): Most/all tags will have same size
+
+**Size Group Normalization:**
+
+After the quantile algorithm assigns sizes, the number of distinct size groups is checked and normalized to prevent misleading visual emphasis. The percentile thresholds shift based on the number of groups:
+
+| Distinct Groups | Threshold | Normalization | Rationale |
+|-----------------|-----------|--------------|-----------|
+| 1 group | None | All → Medium | All tags have equal weight; no emphasis needed |
+| 2 groups | 50th percentile (median) | Above median → Medium, Below → Small | Balanced split; avoid exaggerated Large sizing |
+| 3 groups | 25th / 75th percentile | Large, Medium, Small (unchanged) | Full range of counts; all sizes appropriate |
+
+**Example:** A collection where every tag appears once (count=1) produces 1 size group → all tags display as Medium (regular size) instead of all Large.
 
 ### Section/Collection Title Exclusion
 
@@ -385,6 +418,7 @@ Selected tags are highlighted with the `.selected` CSS class:
 - Tags are stored in URL query parameter `?tags=tag1,tag2,tag3`
 - Tags are automatically deduplicated and normalized (lowercased) when parsing from URL
 - Tag comparison uses `StringComparer.OrdinalIgnoreCase`
+- **Selected tags with 0 count remain clickable**: Even when a selected tag has no matching content (count = 0) for the current filters, it remains clickable so users can deselect it. Only non-selected tags with 0 count are disabled.
 
 ### URL State Management
 
@@ -399,6 +433,41 @@ Selected tags are highlighted with the `.selected` CSS class:
 - Parse comma-separated tags with `Uri.UnescapeDataString()`
 - Normalize and deduplicate on parse
 - Use `Distinct(StringComparer.OrdinalIgnoreCase)`
+
+### Content Item Tag Cloud
+
+When viewing a content item detail page, the tag cloud shows the item's tags with real section-level counts from the default 90-day date range. This way, clicking a tag navigates to filtered results that match the count displayed.
+
+- `SidebarTagCloud` receives both `Tags` (the content item's tags) and `SectionName`
+- When both are provided, it calls the tag cloud API with `tagsToCount` to fetch real counts
+- If `SectionName` is not available, falls back to displaying each tag with a count of 1
+
+### Filter Interaction Behavior
+
+When search queries or date ranges change, the tag cloud dynamically updates to show relevant tags while preserving user selections:
+
+**Popular Tags Adapt to Filters**: The tag cloud displays the most popular tags based on current filters (search query, date range). This provides better UX by showing contextually relevant tags.
+
+**Selected Tags Always Visible**: Even if a selected tag is not among the popular tags for the current filters, it remains visible in the tag cloud. This ensures users never lose sight of their active selections.
+
+**Selected Tags Appear First**: Selected tags are always displayed at the top of the tag cloud, followed by other popular tags. This improves visibility and makes it easier for users to see their active filters.
+
+**Implementation Pattern**:
+
+1. Fetch popular tags with all active filters applied (search, date range, etc.)
+2. Check if any selected tags are missing from the popular tags results
+3. If missing selected tags are found, make a second API call to fetch counts for those specific tags
+4. Merge and reorder: selected tags first, then remaining popular tags
+
+**Example Scenario**:
+
+- User selects tag "Security" from the initial tag cloud
+- User adds date filter (January 2024)
+- Tag cloud updates to show popular tags for January 2024
+- "Security" is not in the top 20 popular tags for January 2024
+- Tag cloud displays: **"Security" (selected, shown first)**, then "AI", "Azure", and other popular tags for January 2024
+
+This ensures the tag cloud balances contextual relevance with selection visibility while keeping active filters prominently displayed.
 
 ## Date Range Filtering
 

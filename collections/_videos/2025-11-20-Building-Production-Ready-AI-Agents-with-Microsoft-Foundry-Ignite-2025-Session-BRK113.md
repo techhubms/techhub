@@ -14,7 +14,6 @@ tags:
 - Developer Tools
 - Enterprise Integration
 - Governance
-- InnovatewithAzureAIappsandagents
 - KPMG
 - Microsoft Foundry
 - MSIgnite

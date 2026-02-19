@@ -16,7 +16,6 @@ tags:
 - Customer Story
 - Data Integration
 - Enterprise Integration
-- InnovatewithAzureAIappsandagents
 - MCP
 - Microsoft Teams
 - MSIgnite

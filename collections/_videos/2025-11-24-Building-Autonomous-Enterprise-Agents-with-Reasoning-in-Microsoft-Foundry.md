@@ -15,7 +15,6 @@ tags:
 - Demo
 - Enterprise Automation
 - GPT 5.1
-- InnovatewithAzureAIappsandagents
 - Lead Scoring
 - Microsoft Foundry
 - Microsoft Ignite

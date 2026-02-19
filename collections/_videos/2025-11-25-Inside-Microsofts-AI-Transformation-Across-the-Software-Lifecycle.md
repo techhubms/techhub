@@ -13,7 +13,6 @@ tags:
 - Code Alignment
 - DevOps Transformation
 - Engineering Standards
-- InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Microsoft Ignite
 - Migration Systems

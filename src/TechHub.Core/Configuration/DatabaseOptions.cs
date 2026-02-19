@@ -6,7 +6,7 @@ namespace TechHub.Core.Configuration;
 public class DatabaseOptions
 {
     /// <summary>
-    /// Database provider: "SQLite" or "PostgreSQL"
+    /// Database provider (PostgreSQL)
     /// </summary>
     public required string Provider { get; set; }
 
