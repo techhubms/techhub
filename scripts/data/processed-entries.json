@@ -26368,5 +26368,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned GitHub Copilot and AI because the main focus is the GitHub Copilot app modernization agent automating complex code, infra, and migration tasks (AI rule 2, GitHub Copilot rules 1-4). Assigned Coding for the .NET/ASP.NET Core/EF Core code upgrades and rewrites (Coding rule 1, 2, 4). Assigned Azure for Azure Container Apps, Azure SQL, Azure Key Vault, managed identity, and full Azure IaaC/delivery (Azure rules 1, 2, 4, 5). Assigned DevOps due to discussion of CICD, infrastructure as code, azd up, Bicep, and deployment automation (DevOps rules 1, 5-7). Assigned Security for elimination of plaintext credentials, managed identities, Key Vault integration, and secure deployment patterns (Security rules 1, 3, 4, 7, 9). No exclusion rules apply — content is highly technical, in English, and is not negative, biographical, sales-focused, or business-only.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-quot-maybe-next-quarter-quot-to-quot-running-before-lunch/ba-p/4495736"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-02-19 01:33:11 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/",
+    "reason": "Succesfully added: Assigned AI category since the post is centered on Microsoft's AI products, models (GPT-5.2, Codex Max, multi-agent coding), and platform enhancements (AI rule 1). Assigned Azure because Microsoft Foundry is an Azure-hosted platform and many services/models are Azure-integrated (Azure rule 1). Assigned ML because of its deep coverage of model deployments, fine-tuning, evaluation, and data engineering for advanced analytics workflows (ML rules 1, 2, 6, 7, 10, 11). Assigned Coding as many features as well as models (Codex Max, agent workflows, SDKs, coding pipeline integration) support or target software engineering tasks (Coding rules 1, 2, 4). Did not assign 'Security' or 'DevOps'—while there are CI/CD and compliance mentions, security is not a central focus, and DevOps is not explored in depth compared to the developer, model, and agentic features. No generic exclusion rules were triggered."
   }
 ]
