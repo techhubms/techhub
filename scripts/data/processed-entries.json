@@ -26584,5 +26584,23 @@
     "timestamp": "2026-02-19 17:22:20 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=u1dJHCkp-mA"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/19/new-e-book-establishing-a-proactive-defense-with-microsoft-security-exposure-management/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Security category because the entire content centers on risk management, exposure management, and strengthening security posture, specifically featuring Microsoft Security Exposure Management (Security rules 1, 4, 5, 9). No other inclusion categories were relevant since the article does not detail coding practices, DevOps, cloud operational specifics, or custom AI/ML implementation. Generic exclusion rules do not apply: the content is technical, mature, and relevant for security professionals focused on implementation and improvement, not executives or business-only outcomes.",
+    "timestamp": "2026-02-19 18:15:28 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-19-gemini-3-1-pro-is-now-in-public-preview-in-github-copilot",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content focuses on the integration of the Gemini 3.1 Pro agentic AI coding model within GitHub Copilot (AI inclusion rule 2 and 4). 'GitHub Copilot' is also assigned because the primary subject is its availability and integration in Copilot (GitHub Copilot inclusion rules 1, 2, and 3). Coding, Azure, DevOps, ML, and Security categories were not assigned since the content does not directly address coding frameworks, Azure, DevOps tools or practices, machine learning engineering, or security implementation. No generic exclusion rules apply.",
+    "timestamp": "2026-02-19 18:15:49 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-19-pull-request-throughput-and-time-to-merge-available-in-copilot-usage-metrics-api",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories as the content centers on GitHub Copilot product APIs and analytics (rules: GitHub Copilot 1–6, AI 2). DevOps is included because the content deals with metrics for collaborative development workflows and pull request processes within organizations (DevOps rules 2, 3, 5, 9). Coding is not assigned, as the focus is on workflow metrics and monitoring, not subject-level programming or frameworks. Azure, ML, and Security categories do not apply.",
+    "timestamp": "2026-02-19 18:16:06 +00:00"
   }
 ]
