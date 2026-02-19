@@ -1,0 +1,18 @@
+{
+  "Author": "GitHub",
+  "Tags": [
+    "AndersHejlsberg",
+    "OpenSource",
+    "TypeScript"
+  ],
+  "FeedName": "GitHub YouTube",
+  "PubDate": "2026-02-19T19:45:43+00:00",
+  "FeedLevelAuthor": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Link": "https://www.youtube.com/shorts/wPzM_y39lV0",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Description": "\"It was abundantly clear that you had to be open source.\" Anders Hejlsberg reveals the internal struggle at Microsoft to make TypeScript an open-source project. He explains why a commercial, closed-source approach would have failed and how moving to GitHub in 2014 finally helped the project take off.\n\n#AndersHejlsberg #TypeScript #OpenSource\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Title": "Why TypeScript had to be open source",
+  "ProcessedDate": "2026-02-19 20:06:36"
+}

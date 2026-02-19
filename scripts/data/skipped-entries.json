@@ -12363,5 +12363,11 @@
     "timestamp": "2026-02-19 17:22:32 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=uZEEZsweQs8"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Dw2S-VQDvhs",
+    "reason": "No categories found: Content excluded due to insufficient substantive content for categorization. The provided 'description' consists mainly of social media links, promotional text, and does not contain any actual technical content or detail about the topic (GitHub Agentic Workflows). The 'content' field is null, and there are no substantive details to analyze for category inclusion. Per the workflow, if the main content is missing or only consists of meta-information and promotional material, no categories can be assigned.",
+    "timestamp": "2026-02-19 20:08:36 +00:00",
+    "collection": "videos"
   }
 ]

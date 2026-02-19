@@ -26614,5 +26614,23 @@
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/onelake-sharepoint-and-onedrive-shortcuts-now-support-workspace-and-service-principal-identities-generally-available/",
     "reason": "Succesfully added: Assigned the Azure category because the content describes using OneLake, a data service in Microsoft Fabric, and integration with Microsoft 365 services for data analytics (Azure rule 1 and 4). Assigned the AI category because it details AI workloads, including indexing documents for AI and enabling AI-driven scenarios (AI rule 1 and 5). Assigned the ML category because it references BI and analytics (ML rule 1 and 4), and describes scenarios like transforming files into analytics-ready tables in a Lakehouse, which is central to data science and analytics workflows using Microsoft platforms. The content is technical, implementation-focused, and meets the requirement that Microsoft technologies are central to the solution."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-19-access-all-pull-request-comments-without-leaving-the-new-files-changed-page",
+    "reason": "Succesfully added: Assigned the DevOps category because the content describes improvements to GitHub pull request workflows, code review processes, and developer collaboration—all central to DevOps practices (DevOps rule 11). There are no references to other Microsoft-specific technologies. Generic exclusion rules do not apply, as the content is technical, focused on platform enhancements for developers, and is in English. Other category inclusion criteria (AI, Coding, Azure, ML, Security, GitHub Copilot) were not met based on the provided text.",
+    "timestamp": "2026-02-19 20:07:27 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-19-github-projects-import-items-based-on-a-query-and-hierarchy-view-improvements",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is focused on improvements to GitHub Projects—a key tool for developer workflow, project management, and collaboration, which are core DevOps activities (DevOps rules 2 and 3). There's no focus on AI, Coding, Azure, ML, or Security. GitHub Copilot is not referenced, and no generic exclusion rules applied. The news content is technical and practitioner-focused.",
+    "timestamp": "2026-02-19 20:07:43 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/wPzM_y39lV0",
+    "reason": "Succesfully added: Assigned 'Coding' category because the content focuses on the history, design, and community development of TypeScript—a programming language created by Microsoft (Coding rules 1 and 4). Although the main subject is open source strategy, technical and architectural aspects related to developer tools and language design are central. The content does not qualify for other categories such as AI, Azure, DevOps, ML, Security, or GitHub Copilot, as it doesn't cover those technologies or domains. No generic exclusion rules were triggered.",
+    "timestamp": "2026-02-19 20:08:23 +00:00",
+    "collection": "videos"
   }
 ]
