@@ -16,11 +16,11 @@ function Get-AzureOpenAIEndpoint {
 
     .EXAMPLE
     $endpoint = Get-AzureOpenAIEndpoint -Environment 'prod'
-    # Returns: https://oai-techhub-prod.services.ai.azure.com/models/gpt-4.1/chat/completions
+    # Returns: https://oai-techhub-prod.services.ai.azure.com/models/gpt-5.2/chat/completions
 
     .EXAMPLE
     $endpoint = Get-AzureOpenAIEndpoint
-    # Returns: https://oai-techhub-staging.services.ai.azure.com/models/gpt-4.1/chat/completions
+    # Returns: https://oai-techhub-staging.services.ai.azure.com/models/gpt-5.2/chat/completions
     #>
     [CmdletBinding()]
     param(

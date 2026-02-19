@@ -5,6 +5,10 @@ param containerRegistryName string
 param imageTag string
 param appInsightsConnectionString string
 
+@secure()
+@description('PostgreSQL connection string')
+param databaseConnectionString string
+
 // Use public placeholder on first deploy if custom image doesn't exist
 var imageReference = imageTag == 'initial' 
   ? 'mcr.microsoft.com/dotnet/samples:aspnetapp' 
@@ -38,6 +42,12 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
           identity: 'system'
         }
       ]
+      secrets: [
+        {
+          name: 'db-connection-string'
+          value: databaseConnectionString
+        }
+      ]
     }
     template: {
       containers: [
@@ -56,6 +66,14 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
             {
               name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
               value: appInsightsConnectionString
+            }
+            {
+              name: 'Database__Provider'
+              value: 'PostgreSQL'
+            }
+            {
+              name: 'Database__ConnectionString'
+              secretRef: 'db-connection-string'
             }
             {
               name: 'OTEL_EXPORTER_OTLP_ENDPOINT'

@@ -8,11 +8,11 @@ function Get-AzureOpenAIModelName {
     This is used consistently across all content processing scripts.
 
     .OUTPUTS
-    String representing the model name (e.g., "gpt-4.1")
+    String representing the model name (e.g., "gpt-5.2")
 
     .EXAMPLE
     $model = Get-AzureOpenAIModelName
     #>
 
-    return "gpt-4.1"
+    return "gpt-5.2"
 }

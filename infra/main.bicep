@@ -17,7 +17,7 @@ param resourceGroupName string = 'rg-techhub-${environmentName}'
 param appInsightsName string = 'appi-techhub-${environmentName}'
 
 @description('Shared Container Registry name (must already exist)')
-param containerRegistryName string = 'crtechhub'
+param containerRegistryName string = 'crtechhubms'
 
 @description('Container Apps Environment name')
 param containerAppsEnvName string = 'cae-techhub-${environmentName}'
@@ -38,21 +38,47 @@ param webImageTag string = 'latest'
 param openAiName string = 'oai-techhub-${environmentName}'
 
 @description('GPT model deployment name')
-param gptDeploymentName string = 'gpt-4.1'
+param gptDeploymentName string = 'gpt-5.2'
 
 @description('GPT model name')
-param gptModelName string = 'gpt-4.1'
+param gptModelName string = 'gpt-5.2'
 
 @description('GPT model version')
-param gptModelVersion string = '2026-01-15'
+param gptModelVersion string = '2025-12-11'
 
 @description('GPT model capacity (TPM in thousands)')
 param gptModelCapacity int = 100
+
+@description('VNet name')
+param vnetName string = 'vnet-techhub-${environmentName}'
+
+@description('PostgreSQL server name')
+param postgresServerName string = 'psql-techhub-${environmentName}'
+
+@description('PostgreSQL administrator login')
+param postgresAdminLogin string = 'techhubadmin'
+
+@secure()
+@description('PostgreSQL administrator password')
+param postgresAdminPassword string
+
+@description('Allowed client IP for PostgreSQL access (local development)')
+param allowedClientIp string = ''
 
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupName
   location: location
+}
+
+// Networking (VNet + Subnets + Private DNS)
+module network './modules/network.bicep' = {
+  scope: resourceGroup
+  name: 'network-deployment'
+  params: {
+    location: location
+    vnetName: vnetName
+  }
 }
 
 // Monitoring (Application Insights + Log Analytics)
@@ -66,7 +92,7 @@ module monitoring './modules/monitoring.bicep' = {
   }
 }
 
-// Azure OpenAI (per-environment for independent testing and quotas)
+// Azure AI Foundry (per-environment for independent testing and quotas)
 module openAi './modules/openai.bicep' = {
   scope: resourceGroup
   name: 'openai-deployment'
@@ -80,7 +106,7 @@ module openAi './modules/openai.bicep' = {
   }
 }
 
-// Container Apps Environment
+// Container Apps Environment (VNet-integrated)
 module containerAppsEnv './modules/containerApps.bicep' = {
   scope: resourceGroup
   name: 'containerAppsEnv-deployment'
@@ -88,6 +114,22 @@ module containerAppsEnv './modules/containerApps.bicep' = {
     location: location
     environmentName: containerAppsEnvName
     logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
+    infrastructureSubnetId: network.outputs.containerAppsSubnetId
+  }
+}
+
+// PostgreSQL Flexible Server (private access via VNet)
+module postgres './modules/postgres.bicep' = {
+  scope: resourceGroup
+  name: 'postgres-deployment'
+  params: {
+    location: location
+    serverName: postgresServerName
+    administratorLogin: postgresAdminLogin
+    administratorLoginPassword: postgresAdminPassword
+    delegatedSubnetId: network.outputs.postgresSubnetId
+    privateDnsZoneId: network.outputs.privateDnsZoneId
+    allowedClientIp: allowedClientIp
   }
 }
 
@@ -102,6 +144,7 @@ module apiApp './modules/api.bicep' = {
     containerRegistryName: containerRegistryName
     imageTag: apiImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
+    databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require;Trust Server Certificate=true'
   }
 }
 
@@ -129,3 +172,6 @@ output containerRegistryName string = containerRegistryName
 output openAiName string = openAi.outputs.openAiName
 output openAiEndpoint string = openAi.outputs.openAiEndpoint
 output openAiDeploymentName string = openAi.outputs.deploymentName
+output vnetName string = vnetName
+output postgresServerFqdn string = postgres.outputs.serverFqdn
+output postgresDatabaseName string = postgres.outputs.databaseName

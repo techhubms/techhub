@@ -7,7 +7,7 @@ param location string = 'westeurope'
 param resourceGroupName string = 'rg-techhub-shared'
 
 @description('Container Registry name (alphanumeric only)')
-param containerRegistryName string = 'crtechhub'
+param containerRegistryName string = 'crtechhubms'
 
 // Shared Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
