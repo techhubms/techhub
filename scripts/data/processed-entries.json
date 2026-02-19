@@ -26602,5 +26602,17 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories as the content centers on GitHub Copilot product APIs and analytics (rules: GitHub Copilot 1–6, AI 2). DevOps is included because the content deals with metrics for collaborative development workflows and pull request processes within organizations (DevOps rules 2, 3, 5, 9). Coding is not assigned, as the focus is on workflow metrics and monitoring, not subject-level programming or frameworks. Azure, ML, and Security categories do not apply.",
     "timestamp": "2026-02-19 18:16:06 +00:00"
+  },
+  {
+    "timestamp": "2026-02-19 19:17:41 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-official-support-for-microsoft-fabric-cicd-tool/",
+    "reason": "Succesfully added: Assigned DevOps category because the article centers on CI/CD automation, deployment pipelines, and DevOps practices in Microsoft Fabric (DevOps rule 1, 5). Azure category is included as Microsoft Fabric is an Azure-based platform, and the content discusses Azure-integrated deployment workflows (Azure rule 1). ML category is assigned because Microsoft Fabric is a data/analytics platform and the article addresses deployment of analytics artifacts across environments (ML rule 1, 4). Coding is included because the tool described is a Python library and code-centric automation is showcased (Coding rule 2). No AI-specific details are present, so AI/GitHub Copilot are not assigned."
+  },
+  {
+    "timestamp": "2026-02-19 19:17:59 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/onelake-sharepoint-and-onedrive-shortcuts-now-support-workspace-and-service-principal-identities-generally-available/",
+    "reason": "Succesfully added: Assigned the Azure category because the content describes using OneLake, a data service in Microsoft Fabric, and integration with Microsoft 365 services for data analytics (Azure rule 1 and 4). Assigned the AI category because it details AI workloads, including indexing documents for AI and enabling AI-driven scenarios (AI rule 1 and 5). Assigned the ML category because it references BI and analytics (ML rule 1 and 4), and describes scenarios like transforming files into analytics-ready tables in a Lakehouse, which is central to data science and analytics workflows using Microsoft platforms. The content is technical, implementation-focused, and meets the requirement that Microsoft technologies are central to the solution."
   }
 ]
