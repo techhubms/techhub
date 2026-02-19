@@ -12351,5 +12351,17 @@
     "timestamp": "2026-02-19 15:16:27 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=dnjGeWuqtGg",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content field is null. Without substantive content to analyze, I cannot determine if it meets any category inclusion rules. According to the workflow, I must base decisions only on the actual provided content. Additionally, the description is purely a teaser for a video and points to external sources without technical depth or detail. Absent full content, exclusion is required.",
+    "timestamp": "2026-02-19 17:21:44 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/G03juh3Gupk"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the provided input lacks substantive content. Only a brief description and title are present, with no detailed body text, technical information, or substantial discussion. The video description refers to an external blog for details and gives only a high-level overview without technical depth. Without the actual content, it is not possible to accurately categorize or extract technical tags as required by the workflow.",
+    "timestamp": "2026-02-19 17:22:32 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=uZEEZsweQs8"
   }
 ]

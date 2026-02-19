@@ -26554,5 +26554,35 @@
     "timestamp": "2026-02-19 15:17:20 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/the-rise-of-agentic-bss-in-the-iq-era-from-systems-of-record-to/ba-p/4495499",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the article is centered on the effects of AI (specifically, deepfakes and generative AI) on media trust and digital content authenticity (AI inclusion rules 1 and 4). Assigned 'Security' category because it discusses methods for authenticating and securing digital media and provenance, and addresses threats like media manipulation and sociotechnical attacks (Security rules 1, 4, 5, and 9). Did not assign 'Azure', 'ML', 'Coding', or 'DevOps' as there is no focus on coding, DevOps processes, Microsoft cloud services, or machine learning development workflow; the content is higher-level, technical, and policy/research rather than implementation guidance.",
+    "timestamp": "2026-02-19 17:20:12 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/signal/articles/a-new-study-explores-how-ai-shapes-what-you-can-trust-online/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the entire content focuses on the risks, mitigations, and best practices for securing OpenClaw agent runtimes, referencing Microsoft Defender, Entra ID, Defender for Cloud Apps, and Purview (Security rules 1, 2, 3, 4, 5). The article details threats such as prompt injection and skill malware and prescribes governance using Microsoft security controls and hunting queries. 'AI', 'Coding', 'DevOps', 'Azure', and 'ML' were not assigned since the content does not provide details on implementing AI, coding, Azure-based infrastructure, ML/data science techniques, or DevOps workflows. Although AI agents are tangential, the focus remains strictly on security posture and operational controls per inclusion guidelines.",
+    "timestamp": "2026-02-19 17:20:39 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/19/running-openclaw-safely-identity-isolation-runtime-risk/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the article's central focus is on AI's influence on developer tooling and language adoption, specifically referencing AI compatibility, generative AI model SDKs, and productivity loops (AI rule 1, 4, 5). Assigned GitHub Copilot because Copilot is frequently cited as a central tool shaping new developer experiences and metrics (GitHub Copilot inclusion rule 1, 2, 4). Assigned Coding category due to in-depth discussion of programming language trends, use of type systems, software architecture, and code testing (Coding rules 1, 2, 4). Assigned DevOps category because of the emphasis on metrics-driven development, workflow patterns, collaboration, productivity, and organizational adoption of new development practices (DevOps rules 3, 5, 7, and 9). No ML, Azure, or Security categories were assigned because the article does not discuss machine learning architecture, Azure services, or specific security practices or services. Generic exclusion rules were considered, but not triggered.",
+    "timestamp": "2026-02-19 17:21:07 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the episode focuses on the use of Microsoft Fabric SQL Databases—a Microsoft cloud data service that is part of the Azure ecosystem (Azure rule 1, 4, and 5). Assigned the 'ML' category because the content is centered on data analytics platform architecture, metadata management, reference data management (MDM), and architectural patterns relevant for data engineering and analytics workloads, all qualifying per multiple ML rules (rules 1, 3, 4, and 5, as the focus is on data analytics development, data architecture, and MDM for analytics workloads). Did NOT assign the 'AI' category as there is no mention of AI/ML model building or AI service integration—focus remains on data infrastructure/engineering. Coding is not assigned since it is about platform integration/architecture, not code-level development. Security and DevOps are not specifically discussed.",
+    "timestamp": "2026-02-19 17:22:02 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=b2YSpr4_x44"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content is entirely focused on migrating SQL Server databases to Azure SQL Managed Instance using Azure Arc (Azure rule 1). Although Copilot guidance is mentioned, the Copilot in question is for migration workflow assistance and not a developer tool (exclusion under Copilot Product Distinction). The content does not qualify for AI, GitHub Copilot, Coding, DevOps, ML, or Security categories, as it does not discuss coding, DevOps practices, ML, or security processes. The tags were chosen to reflect Azure migration technology, hybrid cloud positioning, and operational workflows discussed in the episode.",
+    "timestamp": "2026-02-19 17:22:20 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=u1dJHCkp-mA"
   }
 ]
