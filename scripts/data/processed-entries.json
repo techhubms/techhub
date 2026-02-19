@@ -26632,5 +26632,17 @@
     "reason": "Succesfully added: Assigned 'Coding' category because the content focuses on the history, design, and community development of TypeScript—a programming language created by Microsoft (Coding rules 1 and 4). Although the main subject is open source strategy, technical and architectural aspects related to developer tools and language design are central. The content does not qualify for other categories such as AI, Azure, DevOps, ML, Security, or GitHub Copilot, as it doesn't cover those technologies or domains. No generic exclusion rules were triggered.",
     "timestamp": "2026-02-19 20:08:23 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/custom-agents-in-visual-studio-built-in-and-build-your-own-agents/",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the article centers on agents powered by GitHub Copilot, directly referencing its features, integrations, and workspace awareness (AI rules 1, 2; GitHub Copilot rules 1–4). Assigned 'Coding' because the content is technical, addresses code review, debugging, profiling, and test generation within Visual Studio (Coding rules 1–4). 'Azure', 'DevOps', 'ML', and 'Security' do not directly apply as there is no Azure/cloud, DevOps pipeline/process, machine learning/data, or security-specific technical focus. No generic exclusion rules apply.",
+    "collection": "news",
+    "timestamp": "2026-02-19 21:08:11 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-19-selected-anthropic-and-openai-models-are-now-deprecated",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is an official update regarding AI model deprecations within GitHub Copilot (AI rule 1, GitHub Copilot rule 1). The deprecation impacts all Copilot experiences, and administrators are directed to manage model selections—directly aligning with the inclusion rules for both AI and GitHub Copilot categories. No other categories are relevant, as the article is focused on model lifecycle in Copilot rather than coding or platform implementation.",
+    "collection": "news",
+    "timestamp": "2026-02-19 21:08:30 +00:00"
   }
 ]
