@@ -26644,5 +26644,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is an official update regarding AI model deprecations within GitHub Copilot (AI rule 1, GitHub Copilot rule 1). The deprecation impacts all Copilot experiences, and administrators are directed to manage model selections—directly aligning with the inclusion rules for both AI and GitHub Copilot categories. No other categories are relevant, as the article is focused on model lifecycle in Copilot rather than coding or platform implementation.",
     "collection": "news",
     "timestamp": "2026-02-19 21:08:30 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content centers on GitHub Copilot's AI-powered coding agent and discusses AI model selection features (AI rule 2, 5). Assigned GitHub Copilot because the entire news item is about features and capabilities of the Copilot product (GitHub Copilot rules 1–4). Did not assign Coding, DevOps, or Azure—while automating DevOps-related tasks is mentioned, the focus remains on agent use and AI model selection, not direct coding or CI/CD process implementation.",
+    "canonical_url": "https://github.blog/changelog/2026-02-19-model-picker-for-copilot-coding-agent-for-copilot-business-and-enterprise-users",
+    "timestamp": "2026-02-19 22:06:46 +00:00",
+    "collection": "news"
   }
 ]
