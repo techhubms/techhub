@@ -26650,5 +26650,17 @@
     "canonical_url": "https://github.blog/changelog/2026-02-19-model-picker-for-copilot-coding-agent-for-copilot-business-and-enterprise-users",
     "timestamp": "2026-02-19 22:06:46 +00:00",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content discusses updates to GitHub's pull request workflow—specifically, test merge commit generation, which is central to continuous integration and modern DevOps practices (DevOps rule 2: GitHub DevOps Tools, rule 5: CI/CD and Deployment). There is no direct mention of AI, Coding, Azure, Security, or ML technologies. No generic exclusion rules apply: the content is technical, English, substantive, and not biographical or sales-oriented.",
+    "timestamp": "2026-02-19 23:08:44 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-19-changes-to-test-merge-commit-generation-for-pull-requests"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Included the GitHub Copilot category because the primary focus is on GitHub Copilot's integration (GitHub Copilot inclusion rule 1: GitHub Copilot Specific Content; and rule 3: Integrations). Included AI because Copilot is Microsoft's AI developer tool (AI rule 2—GitHub Copilot content always includes AI). Included Coding because it directly relates to using an advanced code editor (Zed) for software development, and Copilot is positioned as a code assistant (Coding rule 5: Microsoft Development Tools). Did not include DevOps, Azure, ML, or Security as there is no content related to those domains.",
+    "timestamp": "2026-02-19 23:09:02 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-19-github-copilot-support-in-zed-generally-available"
   }
 ]
