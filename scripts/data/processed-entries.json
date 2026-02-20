@@ -26686,5 +26686,17 @@
     "collection": "community",
     "reason": "Succesfully added: Applied the Generic Exclusion Rules first—none of the criteria for exclusion (biographical, promotional, question-only, negative, short length, job/career/business focus, non-English, or non-dev Microsoft products) are met. The content is a technical walkthrough by AnthonyChu focusing on hosting markdown-based AI agents using Azure Functions and the GitHub Copilot SDK. The 'AI' category is assigned because the agents use Copilot, the Copilot SDK, and MCP for agent logic (AI rule 1, AI rule 2). The 'GitHub Copilot' category applies, as the content revolves around Copilot SDK agent creation, especially with direct Copilot integration (GitHub Copilot rule 1 and 2). 'Azure' is included, as the entire solution is about Azure Functions deployment and cloud workflows (Azure rule 1 and 4). 'Coding' applies, as there are structural code/project examples, tool authoring in Python, and code-level configuration (Coding rules 2 and 4). No additional categories such as DevOps, Security, or ML are directly relevant—the focus remains on agent creation, cloud deployment, SDK usage, and developer workflows. Tags are created from key technologies, products, and architecture terms addressed in both the tutorial/explanation and project configuration.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-declarative-markdown-based-agents-on-azure-functions/ba-p/4496038"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/foundry/microsoft-agent-framework-reaches-release-candidate/",
+    "timestamp": "2026-02-20 06:16:58 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the Agent Framework explicitly targets building, orchestrating, and deploying AI agents and references multiple Microsoft AI technologies (AI rules 1 and 4). Assigned Azure because the framework integrates with Azure OpenAI Service and related Azure identity/auth flows (Azure rules 1, 3, and 4). Assigned Coding because the examples and documentation center around .NET and Python programmatic usage, code samples, and agent programming (Coding rule 1 and 2). Did not assign ML because the focus is primarily on agent orchestration, not data science, analytics, or ML-specific engineering. Did not assign DevOps or Security as the content has no focus on pipelines, operations, or security features. All content is technical, aimed at developers, and does not trigger any generic exclusion rules.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/semantic-kernel/migrate-your-semantic-kernel-and-autogen-projects-to-microsoft-agent-framework-release-candidate/",
+    "timestamp": "2026-02-20 06:17:37 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the main focus is building, orchestrating, and deploying AI agents, with explicit references to AI-enabled features and cross-provider capabilities (AI rule 1 and 4). Assigned Azure because of direct integration with Azure OpenAI and Azure credential handling in all sample code (Azure rule 1, 3, and 4). Assigned Coding since the article provides hands-on code samples in both .NET and Python for creating and orchestrating agents using Microsoft’s frameworks (Coding rule 1, 4, and 5). Did not assign ML as the core focus is orchestration of AI agents, not ML/data engineering. Security and DevOps do not apply as the content does not cover those areas.",
+    "collection": "news"
   }
 ]
