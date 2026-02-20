@@ -26770,5 +26770,11 @@
     "collection": "videos",
     "timestamp": "2026-02-20 14:16:32 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=VBSVSxs16_I"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on new AI models (GPT-5.3-Codex, Claude Opus 4.6, and their integration with GitHub Copilot) and new agentic AI workflows on GitHub (AI inclusion rule 1, 2, and 4). 'GitHub Copilot' is assigned because several updates relate directly to Copilot and agentic workflows powered by Copilot (GitHub Copilot inclusion rules 1 and 2); according to rules, 'AI' must also be included. 'DevOps' is assigned because new CI/CD automation features (agentic workflows, PR controls) directly affect code lifecycle, team workflow, and develop–deploy process (DevOps inclusion rule 2 and 5). Did not assign Coding, Azure, ML, or Security categories as there is no deep focus on any specific coding framework, Azure service, machine learning infrastructure engineering, or explicit security/identity coverage. The content is broadly technical and focused on developer tools improvement rather than deep dives into code or security.",
+    "timestamp": "2026-02-20 15:14:32 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=f6F7yQUd8rs",
+    "collection": "videos"
   }
 ]
