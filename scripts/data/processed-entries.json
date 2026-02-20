@@ -26704,5 +26704,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/using-azure-api-management-with-azure-front-door-for-global/ba-p/4492384",
     "reason": "Succesfully added: Assigned the Azure category because the article's main topic is a detailed technical guide to configuring multi-region Azure API Management with Azure Front Door, covering architecture, deployment, and operational details (Azure rules 1, 4, and 5). Coding, AI, ML, Security, DevOps, and GitHub Copilot categories were NOT assigned: the guide does not discuss code implementation, AI/ML, developer code, DevOps pipelines/practices, security architecture as a primary focus, or GitHub Copilot-related workflows. Content meets quality standards, is primarily technical and architectural, and is not excluded by any generic exclusion rules or non-development Microsoft product rules.",
     "timestamp": "2026-02-20 08:11:13 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=2-Q_sdJ5H2c",
+    "timestamp": "2026-02-20 10:11:06 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the session centers on AI agent orchestration, collaboration, and integration within the developer tooling (AI rule 1 and 4). Assigned Coding because it covers developer workflows and how VS Code operates as a unified coding environment with multi-agent capabilities (Coding rules 2 and 5). Did not assign Azure, DevOps, ML, Security, or GitHub Copilot as the content focuses on Visual Studio Code enhancements specific to agents, without explicit Azure or DevOps topics, ML engineering, or GitHub Copilot mention."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ee-obY-4rqk",
+    "timestamp": "2026-02-20 10:11:22 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category because the video focuses on integrating AI agents into the Visual Studio Code development workflow (AI rule 1). Assigned the Coding category because the content directly relates to software development in VS Code (Coding rule 5 and rule 4). Did not assign Azure, ML, Security, DevOps, or GitHub Copilot because the description and tags emphasize general AI and software engineering features, not specific to these other domains."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/seamless-migrations-from-self-hosted-nginx-ingress-to-the-aks/ba-p/4495630",
+    "timestamp": "2026-02-20 10:11:51 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content centrally focuses on Azure Kubernetes Service (AKS), its managed routing add-on, and integrations with Azure-native features like DNS and Key Vault (Azure rules 1, 2, 4). Assigned the DevOps category due to the strong focus on Kubernetes workload migration, deployment practices, DNS management, CI/CD impact, configuration, and automation (DevOps rules 1, 3, 5, 6). Assigned Security because the motivation for migration is to maintain patch/security update support, and there are explicit warnings about security risk, as well as coverage of TLS, Key Vault integration, and best practices for secure ingress (Security rules 1, 2, 7). Did not assign Coding (not code- or programming-pattern focused), AI, ML, or GitHub Copilot categories, as the topic is about infrastructure/platform migration and networking, not AI/ML or software development directly."
   }
 ]
