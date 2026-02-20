@@ -26776,5 +26776,11 @@
     "timestamp": "2026-02-20 15:14:32 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=f6F7yQUd8rs",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=4EVWtkjKTkI",
+    "collection": "videos",
+    "timestamp": "2026-02-20 17:13:45 +00:00",
+    "reason": "Succesfully added: I assigned the Azure category because the update is focused almost entirely on Azure services and features (Azure rule 1). DevOps is included due to updates on node autoprovision, AKS enhancements, CLI tools, and infrastructure automation (DevOps rules 1, 6, 7). Coding is included because of Azure Functions updates (Flex Consumption tools, .NET 10 support), which are relevant to developers (Coding rule 1 and 2). I did not assign AI, ML, Security, or GitHub Copilot because the Claude Sonnet reference is brief (model availability, no technical details or Microsoft AI platforms usage), and there is no substantial machine learning, security, or GitHub Copilot content. Generic exclusion rules do not apply as content is in English, is technical, and not business/productivity focused."
   }
 ]
