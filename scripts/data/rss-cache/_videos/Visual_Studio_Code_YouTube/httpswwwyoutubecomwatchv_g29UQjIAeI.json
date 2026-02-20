@@ -1,0 +1,18 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Link": "https://www.youtube.com/watch?v=_g29UQjIAeI",
+  "Author": "Visual Studio Code",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedName": "Visual Studio Code YouTube",
+  "PubDate": "2026-02-20T12:00:57+00:00",
+  "ProcessedDate": "2026-02-20 12:06:15",
+  "Description": "MCP Apps let tool calls return interactive UI components that render directly in chat—dashboards, forms, visualizations, and multi-step workflows. Discover how this first official MCP extension creates richer human-agent collaboration. We'll also cover the latest MCP updates in VS Code.\n\nhttps://aka.ms/vscode/109 https://aka.ms/vscode/insiders https://aka.ms/vscode/live https://aka.ms/vscode/109blog https://aka.ms/awesome-copilot",
+  "OutputDir": "_videos",
+  "Title": "VSCLive004",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "EnhancedContent": null
+}

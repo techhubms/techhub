@@ -26728,5 +26728,17 @@
     "timestamp": "2026-02-20 11:11:26 +00:00",
     "reason": "Succesfully added: Included 'GitHub Copilot' and 'AI' categories because the content specifically discusses utilizing GitHub Copilot partner agents (GitHub Copilot rules 1, 6; AI rules 1, 2) and cloud AI agent platforms (Claude and Codex). Included 'Coding' because the content centers around developer workflows and agent management within Visual Studio Code (Coding rules 3, 5). The content is not a business productivity or Office Copilot topic, so exclusion rules do not apply. Content meets technical and quality requirements, and links show further developer-focused resources.",
     "canonical_url": "https://www.youtube.com/watch?v=YmpjvZ3xkx8"
+  },
+  {
+    "reason": "Succesfully added: The main focus is a technical, developer-oriented discussion on Async/Await improvements in .NET 11. Content is about C#/.NET programming (Coding rule 1), does not address Azure, DevOps, AI, ML, or Security specifically. No generic exclusion rules apply, as this is not sales, biographical, or non-technical content. Only the 'Coding' category is assigned, matching the technical improvements in the .NET runtime.",
+    "collection": "videos",
+    "timestamp": "2026-02-20 12:07:53 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=8Gl2RmUV0hg"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content covers Visual Studio Code Copilot Chat, MCP Apps, and human-agent collaboration, all of which relate to integrating Microsoft's AI-powered tools for developers (AI rule 1 and rule 4). Did not add 'GitHub Copilot' or 'Coding' categories as there is no explicit mention of GitHub Copilot product or code-level guidance. No exclusion rules apply, as the content is technical, developer-focused, and in English.",
+    "collection": "videos",
+    "timestamp": "2026-02-20 12:08:12 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=_g29UQjIAeI"
   }
 ]
