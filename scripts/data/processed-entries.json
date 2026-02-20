@@ -26662,5 +26662,17 @@
     "reason": "Succesfully added: Included the GitHub Copilot category because the primary focus is on GitHub Copilot's integration (GitHub Copilot inclusion rule 1: GitHub Copilot Specific Content; and rule 3: Integrations). Included AI because Copilot is Microsoft's AI developer tool (AI rule 2—GitHub Copilot content always includes AI). Included Coding because it directly relates to using an advanced code editor (Zed) for software development, and Copilot is positioned as a code assistant (Coding rule 5: Microsoft Development Tools). Did not include DevOps, Azure, ML, or Security as there is no content related to those domains.",
     "timestamp": "2026-02-19 23:09:02 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-02-19-github-copilot-support-in-zed-generally-available"
+  },
+  {
+    "timestamp": "2026-02-20 00:08:03 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-odbc-driver-for-microsoft-fabric-data-engineering-preview/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Azure category because Microsoft Fabric is a core Azure-based service and the integration is central to the use of this ODBC driver (Azure rule 1). Assigned the ML category because the content is focused on Spark data engineering, data integration, analytics, and lakehouse architectures, which are central to machine learning, data engineering, and analytics workflows (ML rules 1, 2, and 3). AI is not assigned because the content does not discuss AI/LLM or Microsoft-specific AI services; Coding is not assigned as there is no direct discussion of code implementation or programming techniques; Security is not included because security is not the primary focus, and the content emphasizes connectivity, not security features. Generic exclusion rules do not trigger, as this is official Microsoft technical news written in English and targeted toward practitioners."
+  },
+  {
+    "timestamp": "2026-02-20 00:08:24 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-19-workflow-dispatch-api-now-returns-run-ids",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the update is specific to GitHub Actions workflows and API, which are core continuous integration/continuous deployment (CI/CD) and DevOps tools (DevOps rules 2 and 5). The feature improves developer workflow automation and tooling, which are DevOps concerns. The content does not involve Azure, AI, Coding, ML, or Security topics, so those categories were not assigned."
   }
 ]
