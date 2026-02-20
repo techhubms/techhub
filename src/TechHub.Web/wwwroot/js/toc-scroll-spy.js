@@ -230,10 +230,14 @@ export class TocScrollSpy {
             }
         }
 
-        // Fallback: If no heading is above the detection line (e.g., page just loaded),
-        // activate the first heading in the TOC to provide visual feedback
-        if (!targetId && this.tocLinks.size > 0) {
-            targetId = this.tocLinks.keys().next().value;
+        // If no heading is above the detection line (e.g., page just loaded at top),
+        // don't highlight anything — wait until user scrolls
+        if (!targetId) {
+            // Clear any existing active state
+            if (this.currentActiveId !== null) {
+                this.setActive(null);
+            }
+            return;
         }
 
         if (targetId) {
@@ -250,12 +254,6 @@ export class TocScrollSpy {
             return;
         }
 
-        // Use cached heading element
-        const newHeading = this.headingElements.get(headingId);
-        if (!newHeading) {
-            return;
-        }
-
         // Remove active from current TOC link and heading
         if (this.currentActiveId !== null) {
             const currentLink = this.tocLinks.get(this.currentActiveId);
@@ -263,11 +261,22 @@ export class TocScrollSpy {
                 currentLink.classList.remove('active');
             }
 
-            // Remove active class from previous heading (use cached element)
             const currentHeading = this.headingElements.get(this.currentActiveId);
             if (currentHeading) {
                 currentHeading.classList.remove('toc-active-heading');
             }
+        }
+
+        // If clearing active state (null), just reset and return
+        if (headingId === null) {
+            this.currentActiveId = null;
+            return;
+        }
+
+        // Use cached heading element
+        const newHeading = this.headingElements.get(headingId);
+        if (!newHeading) {
+            return;
         }
 
         // Add active to new TOC link and heading
@@ -389,6 +398,8 @@ export class TocScrollSpy {
  * Initialize all TOC scroll spies on the page
  */
 export function initTocScrollSpy() {
+    const TABLET_BREAKPOINT = 1288;
+    const isMobile = window.innerWidth <= TABLET_BREAKPOINT;
     const tocElements = document.querySelectorAll('[data-toc-scroll-spy]');
 
     tocElements.forEach(tocElement => {
@@ -410,12 +421,43 @@ export function initTocScrollSpy() {
             tocElement._tocScrollSpy = null;
         }
 
-        // Create and initialize the scroll spy
-        const scrollSpy = new TocScrollSpy(tocElement, contentElement);
-        scrollSpy.init();
+        // Clean up existing mobile click handlers
+        if (tocElement._mobileClickHandler) {
+            tocElement.removeEventListener('click', tocElement._mobileClickHandler);
+            tocElement._mobileClickHandler = null;
+        }
 
-        // Store instance for cleanup if needed
-        tocElement._tocScrollSpy = scrollSpy;
+        if (isMobile) {
+            // Mobile: no scroll spy, just tap-to-toggle on H2 items
+            tocElement.classList.add('toc-mobile-mode');
+
+            const clickHandler = (e) => {
+                const tocLink = e.target.closest('.toc-depth-0 > .toc-link');
+                if (!tocLink) return;
+
+                const tocItem = tocLink.closest('.toc-depth-0');
+                if (!tocItem) return;
+
+                // Only toggle if this H2 has sub-items
+                const sublist = tocItem.querySelector('.toc-sublist');
+                if (!sublist) return;
+
+                e.preventDefault();
+                tocItem.classList.toggle('expanded');
+            };
+
+            tocElement.addEventListener('click', clickHandler);
+            tocElement._mobileClickHandler = clickHandler;
+        } else {
+            // Desktop: full scroll spy
+            tocElement.classList.remove('toc-mobile-mode');
+
+            const scrollSpy = new TocScrollSpy(tocElement, contentElement);
+            scrollSpy.init();
+
+            // Store instance for cleanup if needed
+            tocElement._tocScrollSpy = scrollSpy;
+        }
     });
 }
 
@@ -430,5 +472,10 @@ export function cleanupAllTocScrollSpies() {
             tocElement._tocScrollSpy.destroy();
             tocElement._tocScrollSpy = null;
         }
+        if (tocElement._mobileClickHandler) {
+            tocElement.removeEventListener('click', tocElement._mobileClickHandler);
+            tocElement._mobileClickHandler = null;
+        }
+        tocElement.classList.remove('toc-mobile-mode');
     });
 }

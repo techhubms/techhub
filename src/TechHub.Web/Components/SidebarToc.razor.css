@@ -98,3 +98,29 @@
 ::deep .toc-link {
     opacity: 1;
 }
+
+/* Mobile TOC mode: H2 items are tappable to expand/collapse */
+.toc-mobile-mode ::deep .toc-depth-0 > .toc-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Chevron indicator for expandable H2 items in mobile mode */
+.toc-mobile-mode ::deep .toc-depth-0:has(.toc-sublist) > .toc-link::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform 0.2s var(--easing-ease);
+    flex-shrink: 0;
+    margin-left: var(--spacing-2);
+}
+
+.toc-mobile-mode ::deep .toc-depth-0.expanded:has(.toc-sublist) > .toc-link::after {
+    transform: rotate(45deg);
+}

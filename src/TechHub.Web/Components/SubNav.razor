@@ -15,6 +15,7 @@
 @if (Section != null)
 {
     <nav class="sub-nav" aria-label="@Section.Title navigation">
+        @* Desktop: horizontal button bar *@
         <div class="sub-nav-wrapper">
             <a href="/@Section.Name/all" class="btn-subnav @(IsActive($"/{Section.Name}/all") ? "active" : "")">
                 All
@@ -35,6 +36,35 @@
                 </a>
             }
         </div>
+
+        @* Mobile: dropdown showing active page *@
+        <div class="sub-nav-mobile">
+            <button class="sub-nav-dropdown-toggle" @onclick="ToggleDropdown" aria-expanded="@(dropdownOpen ? "true" : "false")">
+                <span>@ActiveLabel</span>
+                <span class="sub-nav-chevron @(dropdownOpen ? "expanded" : "")"></span>
+            </button>
+            @if (dropdownOpen)
+            {
+                <div class="sub-nav-dropdown-menu">
+                    <a href="/@Section.Name/all" class="sub-nav-dropdown-item @(IsActive($"/{Section.Name}/all") ? "active" : "")" @onclick="CloseDropdown">
+                        All
+                    </a>
+                    @foreach (var collection in RegularCollections)
+                    {
+                        var url = $"/{Section.Name}/{collection.Name}";
+                        <a href="@url" class="sub-nav-dropdown-item @(IsActive(url) ? "active" : "")" @onclick="CloseDropdown">
+                            @collection.Title
+                        </a>
+                    }
+                    @foreach (var customPage in CustomPages)
+                    {
+                        <a href="@customPage.Url" class="sub-nav-dropdown-item @(IsActive(customPage.Url) ? "active" : "")" @onclick="CloseDropdown">
+                            @customPage.Title
+                        </a>
+                    }
+                </div>
+            }
+        </div>
     </nav>
 }
 else
@@ -47,6 +77,8 @@ else
     [Parameter]
     public Section? Section { get; set; }
 
+    private bool dropdownOpen;
+
     private IEnumerable<Collection> RegularCollections =>
     Section?.Collections?.Where(c => !c.IsCustom) ?? Enumerable.Empty<Collection>();
 
@@ -56,6 +88,31 @@ else
         .OrderBy(c => c.Order)
         .ThenBy(c => c.Title) ?? Enumerable.Empty<Collection>();
 
+    private string ActiveLabel
+    {
+        get
+        {
+            if (Section == null) return "";
+
+            foreach (var collection in RegularCollections)
+            {
+                var url = $"/{Section.Name}/{collection.Name}";
+                if (IsActive(url)) return collection.Title;
+            }
+
+            foreach (var customPage in CustomPages)
+            {
+                if (IsActive(customPage.Url)) return customPage.Title;
+            }
+
+            return "All";
+        }
+    }
+
+    private void ToggleDropdown() => dropdownOpen = !dropdownOpen;
+
+    private void CloseDropdown() => dropdownOpen = false;
+
     protected override void OnInitialized()
     {
         Navigation.LocationChanged += OnLocationChanged;
@@ -63,6 +120,7 @@ else
 
     private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
     {
+        dropdownOpen = false;
         // Re-render to update active state when the URL changes
         InvokeAsync(StateHasChanged);
     }

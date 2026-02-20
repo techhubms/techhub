@@ -24,7 +24,6 @@
   justify-content: center;
   gap: var(--spacing-4);
   min-height: 76px;
-  flex-wrap: wrap;
 }
 
 /* Navigation links container (desktop) */
@@ -97,13 +96,10 @@
 
 .hamburger-btn {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  position: relative;
   width: var(--touch-target-min-size);
   height: var(--touch-target-min-size);
-  padding: var(--spacing-2);
+  padding: 0;
   background: transparent;
   border: 1px solid transparent;
   border-radius: var(--radius-md);
@@ -122,26 +118,39 @@
 }
 
 .hamburger-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   width: 22px;
   height: 2px;
   background: var(--color-text-primary);
   border-radius: var(--radius-sm);
   transition: all 0.3s var(--easing-ease);
-  transform-origin: center;
+}
+
+/* Spread lines vertically when closed */
+.hamburger-line:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 6px));
+}
+
+.hamburger-line:nth-child(3) {
+  transform: translate(-50%, calc(-50% + 6px));
 }
 
 /* Hamburger → X animation */
 .hamburger-btn.open .hamburger-line:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .hamburger-btn.open .hamburger-line:nth-child(2) {
   opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .hamburger-btn.open .hamburger-line:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* ============================================================================
@@ -297,7 +306,7 @@
 
   .main-nav-content {
     min-height: 50px;
-    padding: var(--spacing-1) var(--spacing-3);
+    padding: var(--spacing-1) var(--spacing-1) var(--spacing-1) var(--spacing-3);
     flex-wrap: nowrap;
     justify-content: space-between;
   }

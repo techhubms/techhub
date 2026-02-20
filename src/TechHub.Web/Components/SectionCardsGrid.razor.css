@@ -17,7 +17,7 @@
 }
 
 /* Desktop - 3 columns */
-@media (min-width: 1288px) {
+@media (min-width: 1289px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }

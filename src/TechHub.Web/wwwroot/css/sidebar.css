@@ -169,6 +169,11 @@
     overflow: hidden;
   }
 
+  .sidebar-h2,
+  .sidebar-section h2 {
+    margin: 0 0 var(--spacing-2) 0;
+  }
+
   /* Toolbar button bar */
   .sidebar-toolbar-buttons {
     display: flex;
