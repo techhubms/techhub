@@ -26740,5 +26740,11 @@
     "collection": "videos",
     "timestamp": "2026-02-20 12:08:12 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=_g29UQjIAeI"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Coding category because the primary focus is on development tooling in Visual Studio Code. The video describes features that enhance the workflow of web developers working in VS Code, including integration with DevTools, page inspection, and AI chat context—all within the code editor (Coding rules 2 and 5). The content does not qualify for AI because it does not cover Microsoft AI services, frameworks, or GitHub Copilot specifically, but merely enables using AI chat context. No other category criteria were met.",
+    "timestamp": "2026-02-20 13:25:56 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=xjprgyqp9Z0"
   }
 ]
