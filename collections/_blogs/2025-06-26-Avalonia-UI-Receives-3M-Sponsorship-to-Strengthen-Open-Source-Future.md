@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Avalonia UI Receives $3M Sponsorship to Strengthen Open Source Future"
-description: "This article discusses the impact of a $3 million sponsorship for Avalonia UI, a cross-platform .NET UI framework, provided by Devolutions. The funding secures Avalonia's open-source core under the MIT license and supports community-benefiting development, while balancing commercial offerings like Avalonia Accelerate and XPF. The piece explores how sponsorship aims to eliminate tensions between open-source and commercial interests and the roadmap for Avalonia developers."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2025/06/26/avalonia-ui-sponsorship-completely-removes-open-source-vs-commercial-conflict-claims-ceo/101146"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2025/06/26/avalonia-ui-sponsorship-completely-removes-open-source-vs-commercial-conflict-claims-ceo/101146
+title: Avalonia UI Receives $3M Sponsorship to Strengthen Open Source Future
+author: DevClass.com
+primary_section: dotnet
+feed_name: DevClass
 date: 2025-06-26 11:23:33 +00:00
-permalink: "/2025-06-26-Avalonia-UI-Receives-3M-Sponsorship-to-Strengthen-Open-Source-Future.html"
-categories: ["Coding"]
-tags: [".NET", "Avalonia Accelerate", "Avalonia UI", "Blazor Hybrid", "Blogs", "Coding", "Commercial Licensing", "Community Sponsorship", "Cross Platform Development", "Devolutions", "MAUI", "MIT License", "Open Source", "UI Frameworks", "Windows Desktop", "WPF", "XPF"]
-tags_normalized: ["dotnet", "avalonia accelerate", "avalonia ui", "blazor hybrid", "blogs", "coding", "commercial licensing", "community sponsorship", "cross platform development", "devolutions", "maui", "mit license", "open source", "ui frameworks", "windows desktop", "wpf", "xpf"]
+tags:
+- .NET
+- Avalonia Accelerate
+- Avalonia UI
+- Blazor Hybrid
+- Blogs
+- Commercial Licensing
+- Community Sponsorship
+- Cross Platform Development
+- Devolutions
+- MAUI
+- MIT License
+- Open Source
+- UI Frameworks
+- Windows Desktop
+- WPF
+- XPF
+section_names:
+- dotnet
 ---
-
 DevClass.com provides an in-depth look at the $3 million sponsorship deal for Avalonia UI, highlighting what it means for open-source .NET developers and the project's future balance between free and commercial features.<!--excerpt_end-->
 
 # Avalonia UI Receives $3M Sponsorship to Strengthen Open Source Future

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Open Sources XAML Studio Amid Developer Discontent with Visual Studio Designers"
-description: "This article covers Microsoft's open sourcing of XAML Studio and the ongoing challenges developers face with Visual Studio's lack of robust visual design tools for modern Windows UI frameworks. It explores XAML Studio's features, its development history, and community challenges, while highlighting the complexity of Windows UI development across different Microsoft frameworks."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2026/01/07/microsoft-open-sources-xaml-studio-amid-developer-discontent-with-visual-studio-designers/4079573"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2026/01/07/microsoft-open-sources-xaml-studio-amid-developer-discontent-with-visual-studio-designers/4079573
+title: Microsoft Open Sources XAML Studio Amid Developer Discontent with Visual Studio Designers
+author: DevClass.com
+primary_section: dotnet
+feed_name: DevClass
 date: 2026-01-07 14:58:24 +00:00
-permalink: "/2026-01-07-Microsoft-Open-Sources-XAML-Studio-Amid-Developer-Discontent-with-Visual-Studio-Designers.html"
-categories: ["Coding"]
-tags: [".NET Foundation", "Arm64", "Blogs", "Coding", "Designer Tools", "Fluent UI", "MAUI", "Microsoft Garage", "Open Source", "SDK Style Projects", "UI Frameworks", "UWP", "VS", "Windows Development", "Windows Forms", "WinUI 3", "WPF", "XAML Designer", "XAML Studio"]
-tags_normalized: ["dotnet foundation", "arm64", "blogs", "coding", "designer tools", "fluent ui", "maui", "microsoft garage", "open source", "sdk style projects", "ui frameworks", "uwp", "vs", "windows development", "windows forms", "winui 3", "wpf", "xaml designer", "xaml studio"]
+tags:
+- .NET Foundation
+- Arm64
+- Blogs
+- Designer Tools
+- Fluent UI
+- MAUI
+- Microsoft Garage
+- Open Source
+- SDK Style Projects
+- UI Frameworks
+- UWP
+- VS
+- Windows Development
+- Windows Forms
+- WinUI 3
+- WPF
+- XAML Designer
+- XAML Studio
+- .NET
+section_names:
+- dotnet
 ---
-
 DevClass.com reports on Microsoft's decision to open source XAML Studio, as detailed by Michael Hawker, highlighting ongoing frustrations in the Visual Studio developer community regarding UI designer support.<!--excerpt_end-->
 
 # Microsoft Open Sources XAML Studio Amid Developer Discontent with Visual Studio Designers

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How We Built the Microsoft Learn MCP Server: Empowering AI Agents with Trusted Documentation"
-description: "This article provides an in-depth look at the design, architecture, and operational lessons learned from building the Microsoft Learn Model Context Protocol (MCP) Server. The server supports AI agents such as GitHub Copilot and VS Code extensions by exposing trusted Microsoft Learn content via an agent-friendly protocol, offering streamlined access to documentation and code samples for coding and troubleshooting tasks."
-author: "Tianqi Zhang, Eric Imasogie, Pieter de Bruin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/engineering-at-microsoft/how-we-built-the-microsoft-learn-mcp-server/"
-viewing_mode: "external"
-feed_name: "Microsoft Engineering Blog"
-feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/engineering-at-microsoft/how-we-built-the-microsoft-learn-mcp-server/
+title: 'How We Built the Microsoft Learn MCP Server: Empowering AI Agents with Trusted Documentation'
+author: Tianqi Zhang, Eric Imasogie, Pieter de Bruin
+primary_section: ai
+feed_name: Microsoft Engineering Blog
 date: 2026-02-11 19:23:31 +00:00
-permalink: "/2026-02-11-How-We-Built-the-Microsoft-Learn-MCP-Server-Empowering-AI-Agents-with-Trusted-Documentation.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Tooling", "AI", "AI Agents", "Azure", "Azure App Service", "C#", "Code Sample Retrieval", "Coding", "Distributed Systems", "Engineering@Microsoft", "Knowledge Service", "MCP", "MCP Server", "Microsoft Learn", "News", "OpenAI", "SDK", "Semantic Search", "Streamable HTTP Transport", "Tool Design", "Vector Store"]
-tags_normalized: ["agent tooling", "ai", "ai agents", "azure", "azure app service", "csharp", "code sample retrieval", "coding", "distributed systems", "engineeringatmicrosoft", "knowledge service", "mcp", "mcp server", "microsoft learn", "news", "openai", "sdk", "semantic search", "streamable http transport", "tool design", "vector store"]
+tags:
+- Agent Tooling
+- AI
+- AI Agents
+- Azure
+- Azure App Service
+- C#
+- Code Sample Retrieval
+- Distributed Systems
+- Engineering@Microsoft
+- Knowledge Service
+- MCP
+- MCP Server
+- Microsoft Learn
+- News
+- OpenAI
+- SDK
+- Semantic Search
+- Streamable HTTP Transport
+- Tool Design
+- Vector Store
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Tianqi Zhang, Eric Imasogie, and Pieter de Bruin share insights on building the Microsoft Learn MCP Server, a solution empowering AI agents like GitHub Copilot to access and integrate up-to-date Microsoft documentation for enhanced coding assistance.<!--excerpt_end-->
 
 # How We Built the Microsoft Learn MCP Server

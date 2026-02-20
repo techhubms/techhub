@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Actions February 2026 Updates: Scale Sets, Security, and New Runner Images"
-description: "This update details GitHub Actions’ latest features as of February 2026, including a new standalone runner scale set client for custom autoscaling, expanded security controls through action allowlisting for all users, and early access to Windows Server 2025 with Visual Studio 2026 and macOS 26 Intel runner images. The content explains how to leverage these capabilities for more flexible infrastructure, stronger security, and seamless migration testing."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-05-github-actions-early-february-2026-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-05-github-actions-early-february-2026-updates
+title: 'GitHub Actions February 2026 Updates: Scale Sets, Security, and New Runner Images'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-05 12:51:46 +00:00
-permalink: "/2026-02-05-GitHub-Actions-February-2026-Updates-Scale-Sets-Security-and-New-Runner-Images.html"
-categories: ["DevOps"]
-tags: ["Action Allowlisting", "Actions", "Agentic Workflows", "Autoscaling", "CI/CD", "Custom Runners", "DevOps", "GitHub Actions", "Infrastructure Automation", "Macos 26", "News", "Release Management", "Runner Scale Set Client", "Security Controls", "Telemetry", "VS", "Windows Server", "Xcode", "YAML Workflow"]
-tags_normalized: ["action allowlisting", "actions", "agentic workflows", "autoscaling", "cislashcd", "custom runners", "devops", "github actions", "infrastructure automation", "macos 26", "news", "release management", "runner scale set client", "security controls", "telemetry", "vs", "windows server", "xcode", "yaml workflow"]
+tags:
+- Action Allowlisting
+- Actions
+- Agentic Workflows
+- Autoscaling
+- CI/CD
+- Custom Runners
+- DevOps
+- GitHub Actions
+- Infrastructure Automation
+- Macos 26
+- News
+- Release Management
+- Runner Scale Set Client
+- Security Controls
+- Telemetry
+- VS
+- Windows Server
+- Xcode
+- YAML Workflow
+section_names:
+- devops
 ---
-
 Allison details February 2026 GitHub Actions updates, including public preview of the autoscaling runner scale set client, new cross-platform runner images, and expanded security controls—all geared to enhance DevOps flexibility, security, and migration planning.<!--excerpt_end-->
 
 # GitHub Actions: Early February 2026 Updates

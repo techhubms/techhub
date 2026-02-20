@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Network Configuration Updates for Copilot Coding Agent with GitHub Actions and Azure"
-description: "This news update outlines upcoming network configuration changes affecting the GitHub Copilot coding agent, particularly when used with self-hosted or Azure private network runners. It details the new routing based on Copilot subscription plans and provides guidance for repository administrators on required action steps by the February 27, 2026 deadline."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-13-network-configuration-changes-for-copilot-coding-agent"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-13-network-configuration-changes-for-copilot-coding-agent
+title: Network Configuration Updates for Copilot Coding Agent with GitHub Actions and Azure
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-13 15:37:05 +00:00
-permalink: "/2026-02-13-Network-Configuration-Updates-for-Copilot-Coding-Agent-with-GitHub-Actions-and-Azure.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Azure", "Azure Private Networking", "Continuous Integration", "Copilot", "Copilot Business", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Pro", "DevOps", "GitHub Actions", "GitHub Copilot", "Improvement", "Network Configuration", "News", "Self Hosted Runners", "Subscription Based Routing"]
-tags_normalized: ["ai", "azure", "azure private networking", "continuous integration", "copilot", "copilot business", "copilot coding agent", "copilot enterprise", "copilot pro", "devops", "github actions", "github copilot", "improvement", "network configuration", "news", "self hosted runners", "subscription based routing"]
+tags:
+- AI
+- Azure
+- Azure Private Networking
+- Continuous Integration
+- Copilot
+- Copilot Business
+- Copilot Coding Agent
+- Copilot Enterprise
+- Copilot Pro
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- Improvement
+- Network Configuration
+- News
+- Self Hosted Runners
+- Subscription Based Routing
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Allison explains the forthcoming network configuration changes impacting the GitHub Copilot coding agent, with a focus on workflows using self-hosted or Azure-based runners. Key dates and practical migration steps are covered in this important update.<!--excerpt_end-->
 
 # Network Configuration Changes for Copilot Coding Agent

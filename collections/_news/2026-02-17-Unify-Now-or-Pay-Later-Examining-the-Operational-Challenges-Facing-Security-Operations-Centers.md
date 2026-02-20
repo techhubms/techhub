@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Unify Now or Pay Later: Examining the Operational Challenges Facing Security Operations Centers"
-description: "This article summarizes new research by Microsoft and Omdia on the escalating operational costs and risks associated with fragmented security operations centers (SOCs). It details five critical challenges faced by SOCs, including tool fragmentation, manual processes, and alert overload, and explores how unification, automation, and AI-driven solutions can address these issues."
-author: "Rob Lefferts"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/17/unify-now-or-pay-later-new-research-exposes-the-operational-cost-of-a-fragmented-soc/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/17/unify-now-or-pay-later-new-research-exposes-the-operational-cost-of-a-fragmented-soc/
+title: 'Unify Now or Pay Later: Examining the Operational Challenges Facing Security Operations Centers'
+author: Rob Lefferts
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-17 17:00:00 +00:00
-permalink: "/2026-02-17-Unify-Now-or-Pay-Later-Examining-the-Operational-Challenges-Facing-Security-Operations-Centers.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Powered Security", "Cybersecurity", "Defender Workflows", "Identity Protection", "Incident Response", "Microsoft Sentinel", "News", "Omdia Research", "Operational Resilience", "Security", "Security Automation", "Security Fragmentation", "Security Leadership", "Security Operations Center", "SIEM", "SOC", "SOC Automation", "SOC Management", "Threat Detection", "Unified SecOps"]
-tags_normalized: ["ai", "ai powered security", "cybersecurity", "defender workflows", "identity protection", "incident response", "microsoft sentinel", "news", "omdia research", "operational resilience", "security", "security automation", "security fragmentation", "security leadership", "security operations center", "siem", "soc", "soc automation", "soc management", "threat detection", "unified secops"]
+tags:
+- AI
+- AI Powered Security
+- Cybersecurity
+- Defender Workflows
+- Identity Protection
+- Incident Response
+- Microsoft Sentinel
+- News
+- Omdia Research
+- Operational Resilience
+- Security
+- Security Automation
+- Security Fragmentation
+- Security Leadership
+- Security Operations Center
+- SIEM
+- SOC
+- SOC Automation
+- SOC Management
+- Threat Detection
+- Unified SecOps
+section_names:
+- ai
+- security
 ---
-
 Rob Lefferts presents research from Microsoft and Omdia, revealing how fragmented tools and manual processes are undermining SOC efficiency and security outcomes, and highlights the role of unified platforms and AI-driven automation in modernizing security operations.<!--excerpt_end-->
 
 # Unify Now or Pay Later: Examining the Operational Challenges Facing Security Operations Centers (SOCs)

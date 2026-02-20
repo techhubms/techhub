@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Azure Reliability, Resiliency, and Recoverability: Building Cloud Continuity by Design"
-description: "This in-depth post explores the principles and practical methodologies of ensuring reliability, resiliency, and recoverability in Azure architectures. It details how these core concepts differentiate, relate, and guide design decisions, referencing the Microsoft Cloud Adoption Framework and Azure Well-Architected Framework. Learn how to architect for operational continuity, measure reliability, implement resilient patterns, and set up effective recoverability strategies with real Azure services, tools, and governance mechanisms."
-author: "Mark Russinovich and Molina Sharma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/azure-reliability-resiliency-and-recoverability-build-continuity-by-design/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/azure-reliability-resiliency-and-recoverability-build-continuity-by-design/
+title: 'Azure Reliability, Resiliency, and Recoverability: Building Cloud Continuity by Design'
+author: Mark Russinovich and Molina Sharma
+primary_section: azure
+feed_name: The Azure Blog
 date: 2026-02-17 16:00:00 +00:00
-permalink: "/2026-02-17-Azure-Reliability-Resiliency-and-Recoverability-Building-Cloud-Continuity-by-Design.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Insights", "Availability Zones", "Azure", "Azure Backup", "Azure Chaos Studio", "Azure Essentials", "Azure Monitor", "Azure Policy", "Azure Recoverability", "Azure Reliability", "Azure Resiliency", "Azure Site Recovery", "Azure Well Architected Framework", "Cloud Governance", "Copilot", "DevOps", "Disaster Recovery", "Hybrid + Multicloud", "Management And Governance", "Microsoft Cloud Adoption Framework", "Microsoft Defender For Cloud", "Microsoft Sentinel", "Migration", "Networking", "News", "Operational Excellence", "Resiliency Agent", "Security", "Traffic Management"]
-tags_normalized: ["application insights", "availability zones", "azure", "azure backup", "azure chaos studio", "azure essentials", "azure monitor", "azure policy", "azure recoverability", "azure reliability", "azure resiliency", "azure site recovery", "azure well architected framework", "cloud governance", "copilot", "devops", "disaster recovery", "hybrid plus multicloud", "management and governance", "microsoft cloud adoption framework", "microsoft defender for cloud", "microsoft sentinel", "migration", "networking", "news", "operational excellence", "resiliency agent", "security", "traffic management"]
+tags:
+- Application Insights
+- Availability Zones
+- Azure
+- Azure Backup
+- Azure Chaos Studio
+- Azure Essentials
+- Azure Monitor
+- Azure Policy
+- Azure Recoverability
+- Azure Reliability
+- Azure Resiliency
+- Azure Site Recovery
+- Azure Well Architected Framework
+- Cloud Governance
+- Copilot
+- DevOps
+- Disaster Recovery
+- Hybrid + Multicloud
+- Management And Governance
+- Microsoft Cloud Adoption Framework
+- Microsoft Defender For Cloud
+- Microsoft Sentinel
+- Migration
+- Networking
+- News
+- Operational Excellence
+- Resiliency Agent
+- Security
+- Traffic Management
+section_names:
+- azure
+- devops
+- security
 ---
-
 Mark Russinovich and Molina Sharma walk through how to design, measure, and operationalize reliability, resiliency, and recoverability on Azure, drawing from Microsoft’s proven frameworks and practical service examples.<!--excerpt_end-->
 
 # Azure Reliability, Resiliency, and Recoverability: Building Cloud Continuity by Design

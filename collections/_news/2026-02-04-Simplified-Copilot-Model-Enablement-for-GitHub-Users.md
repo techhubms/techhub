@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Simplified Copilot Model Enablement for GitHub Users"
-description: "This announcement details improvements for GitHub Copilot users, making it easier to access and enable the latest AI-powered models across Copilot features. Whether using Copilot Pro+, Pro, or the Free tier, users no longer need to adjust settings or policies to utilize new models—they are now immediately available within Copilot. This change streamlines the workflow and preserves user control over model selection."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-03-simplified-copilot-model-enablement-experience-for-individual-users"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-03-simplified-copilot-model-enablement-experience-for-individual-users
+title: Simplified Copilot Model Enablement for GitHub Users
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-04 02:46:48 +00:00
-permalink: "/2026-02-04-Simplified-Copilot-Model-Enablement-for-GitHub-Users.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Copilot", "Copilot Features", "Copilot Free", "Copilot Pro", "Copilot Pro+", "Developer Tools", "GitHub", "GitHub Copilot", "Improvement", "Model Enablement", "Model Selection", "News", "User Experience"]
-tags_normalized: ["ai", "ai models", "copilot", "copilot features", "copilot free", "copilot pro", "copilot proplus", "developer tools", "github", "github copilot", "improvement", "model enablement", "model selection", "news", "user experience"]
+tags:
+- AI
+- AI Models
+- Copilot
+- Copilot Features
+- Copilot Free
+- Copilot Pro
+- Copilot Pro+
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Improvement
+- Model Enablement
+- Model Selection
+- News
+- User Experience
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces a simplified experience for GitHub Copilot users, enabling immediate access to new AI models without additional setup, enhancing productivity for developers.<!--excerpt_end-->
 
 # Simplified Copilot Model Enablement for GitHub Users

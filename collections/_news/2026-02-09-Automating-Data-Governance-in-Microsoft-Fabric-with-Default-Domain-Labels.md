@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Automating Data Governance in Microsoft Fabric with Default Domain Labels"
-description: "This article discusses how Microsoft Fabric now supports default domain-level sensitivity labels, streamlining data governance and compliance. It explains why default labels improve security and scalability, outlines prerequisites, and provides step-by-step instructions for domain admins on automating label assignment through the Fabric and Purview portals."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/governance-on-autopilot-the-power-of-default-domain-labels-in-fabric-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/governance-on-autopilot-the-power-of-default-domain-labels-in-fabric-generally-available/
+title: Automating Data Governance in Microsoft Fabric with Default Domain Labels
+author: Microsoft Fabric Blog
+primary_section: azure
+feed_name: Microsoft Fabric Blog
 date: 2026-02-09 09:00:00 +00:00
-permalink: "/2026-02-09-Automating-Data-Governance-in-Microsoft-Fabric-with-Default-Domain-Labels.html"
-categories: ["Azure", "Security"]
-tags: ["Admin Portal", "Azure", "Compliance", "Data Classification", "Data Governance", "Data Security", "Default Domain Labels", "Delegated Authority", "Enterprise Data Management", "Information Protection", "Microsoft Fabric", "Microsoft Purview", "News", "Security", "Security Automation", "Sensitivity Labels"]
-tags_normalized: ["admin portal", "azure", "compliance", "data classification", "data governance", "data security", "default domain labels", "delegated authority", "enterprise data management", "information protection", "microsoft fabric", "microsoft purview", "news", "security", "security automation", "sensitivity labels"]
+tags:
+- Admin Portal
+- Azure
+- Compliance
+- Data Classification
+- Data Governance
+- Data Security
+- Default Domain Labels
+- Delegated Authority
+- Enterprise Data Management
+- Information Protection
+- Microsoft Fabric
+- Microsoft Purview
+- News
+- Security
+- Security Automation
+- Sensitivity Labels
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog explains how to automate data security governance using default domain sensitivity labels, with actionable steps for Fabric admins to enhance compliance and protection across large data estates.<!--excerpt_end-->
 
 # Automating Data Governance in Microsoft Fabric with Default Domain Labels

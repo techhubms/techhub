@@ -263,47 +263,99 @@ Use CSS Grid with three independently-loading components that maintain stable po
 
 ## Mobile Navigation
 
-On mobile devices (< 768px), the layout adapts:
+On mobile devices (≤ 1024px), the layout adapts with a hamburger menu and collapsible sidebars.
 
 ### Responsive Behavior
 
-- **Sidebar**: Moves below main content or collapses into hamburger menu
-- **Grid**: Changes from two-column to single-column layout
+- **Navigation**: Desktop nav links hidden; hamburger button shown instead
+- **Sidebar**: Wraps in `MobileSidebarCollapse` — collapsed by default, expandable via toggle button
+- **Grid**: Changes from two-column to single-column layout at 640px
+- **SubNav**: Changes from `position: sticky` to `position: static` (no longer sticky on mobile)
 - **Touch targets**: Minimum 44px for accessibility
-- **Navigation**: Remains sticky at top of viewport
 
-### Hamburger Menu Pattern
+### Breakpoints
 
-```razor
-<nav class="site-nav">
-    <button class="hamburger" @onclick="ToggleMenu" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    
-    <div class="nav-menu @(menuOpen ? "open" : "")">
-        <a href="/">Home</a>
-        <a href="/ai">AI</a>
-        <!-- More links -->
+| Breakpoint | Behavior |
+|---|---|
+| ≤ 1024px | Hamburger menu, sidebar collapse, SubNav non-sticky |
+| ≤ 768px | Reduced padding |
+| ≤ 640px | Single-column grid |
+
+### Hamburger Menu
+
+The `NavHeader` component includes a hamburger button (three-line icon) that opens a slide-out menu panel with hierarchical navigation. Each section expands to show its collections and custom pages.
+
+**DOM structure**:
+
+```html
+<nav class="main-nav">              <!-- Sticky nav bar, z-index 1002 on mobile -->
+    <div class="main-nav-content">
+        <a class="site-logo">...</a>
+        <div class="nav-links">...</div>    <!-- Hidden on mobile -->
+        <button class="hamburger-btn">...</button>  <!-- Visible on mobile -->
     </div>
 </nav>
+<div id="mobile-menu" class="mobile-menu">  <!-- Fixed panel, z-index 1001, slides from right -->
+    <!-- Expandable section headers with sub-items -->
+</div>
+<div class="mobile-menu-overlay">...</div>  <!-- z-index 1000 -->
 ```
 
-### Mobile CSS
+**Key behaviors**:
 
-```css
-/* Desktop - normal nav */
-.hamburger { display: none; }
-.nav-menu { display: flex; gap: 1rem; }
+- Hamburger animates to X when open (CSS transition)
+- Menu panel slides in from right (320px / 85vw max)
+- Background overlay blocks interaction with page content
+- Body scroll locked via JS interop (`mobile-nav.js`)
+- Escape key closes menu (registered via JS interop)
+- Clicking a link closes the menu and navigates
+- Menu closes on `NavigationManager.LocationChanged`
 
-/* Mobile - hamburger menu */
-@media (max-width: 768px) {
-    .hamburger { display: block; }
-    .nav-menu { display: none; flex-direction: column; }
-    .nav-menu.open { display: flex; }
-}
+### Z-Index Stacking (Mobile)
+
+| Layer | z-index | Element |
+|---|---|---|
+| Nav header | 1002 | `.main-nav` (contains hamburger button) |
+| Menu panel | 1001 | `.mobile-menu.open` (slide-out panel) |
+| Overlay | 1000 | `.mobile-menu-overlay` (click-to-close backdrop) |
+
+The `.main-nav` z-index is raised to 1002 on mobile so the hamburger button remains clickable above the open menu panel. The menu panel starts at `top: 52px` to sit below the nav header.
+
+### Sidebar Collapse (`MobileSidebarCollapse`)
+
+All pages with sidebars wrap their sidebar content in `<MobileSidebarCollapse>`:
+
+```razor
+<aside class="sidebar">
+    <MobileSidebarCollapse Label="Table of Contents">
+        <SidebarToc ... />
+    </MobileSidebarCollapse>
+</aside>
 ```
+
+**How it works**:
+
+- **Desktop (> 1024px)**: CSS sets `display: contents` on the wrapper and `display: none` on the toggle button, making the component invisible to layout
+- **Mobile (≤ 1024px)**: Shows a toggle button with chevron icon. Content is hidden (`display: none`) by default and shown (`display: grid`) when the `.sidebar-collapse-open` class is added via Blazor `@onclick`
+- Uses `aria-expanded` for accessibility
+
+**Labels by page type**:
+
+| Page | Label |
+|---|---|
+| Home, ContentItem, VSCode Updates | "Sidebar" |
+| SectionCollection | "Filters & Search" |
+| GitHubCopilotLevels, Handbook, GenAI, DXSpace, AISDLC | "Table of Contents" |
+| GitHubCopilotFeatures | "Filters & Table of Contents" |
+
+### Mobile CSS Architecture
+
+Mobile navigation styles are in component-scoped CSS:
+
+- **Hamburger + menu panel**: `NavHeader.razor.css` — all mobile styles in `@media (max-width: 1024px)` block
+- **SubNav non-sticky**: `SubNav.razor.css` — `position: static` at ≤ 1024px
+- **Sidebar collapse**: `wwwroot/css/sidebar.css` — desktop `display: contents`, mobile toggle/content visibility
+- **JS scroll lock**: `wwwroot/js/mobile-nav.js` — `lockScroll()`, `unlockScroll()`, Escape key handler
 
 ## Infinite Scroll Pagination
 

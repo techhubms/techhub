@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Microsoft Adds More Copilot Features to VS Code Despite Developer Concerns"
-description: "This article examines the latest Visual Studio Code (VS Code) update (v1.102), highlighting Microsoft's significant addition of Copilot and AI-driven features, the technical details of Model Context Protocol (MCP) support, newly introduced custom instruction capabilities, developments in AI command automation, and the broader impact of these changes on developer workflows and community sentiment."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/ai-ml/2025/07/14/microsoft-shovels-extra-copilot-features-into-vs-code-amid-dev-complaints-of-more-ai-bloat/101147"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/ai-ml/2025/07/14/microsoft-shovels-extra-copilot-features-into-vs-code-amid-dev-complaints-of-more-ai-bloat/101147
+title: Microsoft Adds More Copilot Features to VS Code Despite Developer Concerns
+author: DevClass.com
+primary_section: github-copilot
+feed_name: DevClass
 date: 2025-07-14 16:58:30 +00:00
-permalink: "/2025-07-14-Microsoft-Adds-More-Copilot-Features-to-VS-Code-Despite-Developer-Concerns.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development", "AI Productivity", "Auto Approval Terminal Commands", "Blogs", "Copilot Chat", "Custom Instructions", "Developer Tools", "GitHub Copilot", "Large Language Models", "MCP", "Microsoft", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai development", "ai productivity", "auto approval terminal commands", "blogs", "copilot chat", "custom instructions", "developer tools", "github copilot", "large language models", "mcp", "microsoft", "vs code", "vs code extensions"]
+tags:
+- AI
+- AI Development
+- AI Productivity
+- Auto Approval Terminal Commands
+- Blogs
+- Copilot Chat
+- Custom Instructions
+- Developer Tools
+- GitHub Copilot
+- Large Language Models
+- MCP
+- Microsoft
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- github-copilot
 ---
-
 DevClass.com reports on Microsoft's VS Code v1.102 release, where Tim Anderson details the bundling of new Copilot and AI features, technical innovations like MCP support, custom instructions, and reactions from the developer community.<!--excerpt_end-->
 
 # Microsoft Adds More Copilot Features to VS Code Despite Developer Concerns

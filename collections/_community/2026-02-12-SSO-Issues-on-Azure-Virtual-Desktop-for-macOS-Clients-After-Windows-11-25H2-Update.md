@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "SSO Issues on Azure Virtual Desktop for macOS Clients After Windows 11 25H2 Update"
-description: "A community-reported issue describing single sign-on (SSO) problems affecting macOS clients connecting to Azure Virtual Desktop (AVD) session hosts after upgrading from Windows 11 23H2 to 25H2. The post details technical symptoms, logs, observations, and a practical workaround, seeking insights from others with similar experiences."
-author: "FT_1"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/macos-sso-no-longer-fully-functional-on-avd-win11-25h2/m-p/4494544#M14001"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/macos-sso-no-longer-fully-functional-on-avd-win11-25h2/m-p/4494544#M14001
+title: SSO Issues on Azure Virtual Desktop for macOS Clients After Windows 11 25H2 Update
+author: FT_1
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-12 10:57:27 +00:00
-permalink: "/2026-02-12-SSO-Issues-on-Azure-Virtual-Desktop-for-macOS-Clients-After-Windows-11-25H2-Update.html"
-categories: ["Azure", "Security"]
-tags: ["AADSTS9002341", "Authentication", "AVD", "Azure", "Azure Virtual Desktop", "Community", "Cross Platform", "IntegratedServicesRegionPolicySet.json", "Macos", "Microsoft Entra ID", "PRT", "Security", "Session Host", "Single Sign On", "SSO", "Teams", "Token Renewal", "Windows 11 25H2"]
-tags_normalized: ["aadsts9002341", "authentication", "avd", "azure", "azure virtual desktop", "community", "cross platform", "integratedservicesregionpolicysetdotjson", "macos", "microsoft entra id", "prt", "security", "session host", "single sign on", "sso", "teams", "token renewal", "windows 11 25h2"]
+tags:
+- AADSTS9002341
+- Authentication
+- AVD
+- Azure
+- Azure Virtual Desktop
+- Community
+- Cross Platform
+- IntegratedServicesRegionPolicySet.json
+- Macos
+- Microsoft Entra ID
+- PRT
+- Security
+- Session Host
+- Single Sign On
+- SSO
+- Teams
+- Token Renewal
+- Windows 11 25H2
+section_names:
+- azure
+- security
 ---
-
 FT_1 shares a detailed account of SSO authentication issues for macOS users on Azure Virtual Desktop after updating Windows 11 AVD session hosts to 25H2. Includes logs, symptoms, and a tested workaround.<!--excerpt_end-->
 
 # SSO Issues on Azure Virtual Desktop for macOS Clients After Windows 11 25H2 Update

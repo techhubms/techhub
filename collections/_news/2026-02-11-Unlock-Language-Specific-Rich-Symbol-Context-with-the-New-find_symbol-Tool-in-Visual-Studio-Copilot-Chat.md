@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Unlock Language-Specific Rich Symbol Context with the New find_symbol Tool in Visual Studio Copilot Chat"
-description: "This news update introduces the find_symbol tool for Agent Mode in Visual Studio Copilot Chat. It enables symbol-level code navigation and reasoning using enterprise-grade language services in supported languages, helping developers refactor, enhance, and explore large codebases more efficiently."
-author: "Sinem Akinci, Hannah Hong (SHE/HER)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/unlock-language-specific-rich-symbol-context-using-new-find_symbol-tool/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/unlock-language-specific-rich-symbol-context-using-new-find_symbol-tool/
+title: Unlock Language-Specific Rich Symbol Context with the New find_symbol Tool in Visual Studio Copilot Chat
+author: Sinem Akinci, Hannah Hong (SHE/HER)
+primary_section: github-copilot
+feed_name: Microsoft VisualStudio Blog
 date: 2026-02-11 15:29:15 +00:00
-permalink: "/2026-02-11-Unlock-Language-Specific-Rich-Symbol-Context-with-the-New-find_symbol-Tool-in-Visual-Studio-Copilot-Chat.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "API Refactoring", "C#", "C++", "Code Navigation", "Codebase Management", "Coding", "Copilot Chat", "Developer Productivity", "Find Symbol", "GitHub Copilot", "IDE Tools", "Language Server Protocol", "News", "Refactoring", "TypeScript", "VS"]
-tags_normalized: ["agent mode", "ai", "api refactoring", "csharp", "cplusplus", "code navigation", "codebase management", "coding", "copilot chat", "developer productivity", "find symbol", "github copilot", "ide tools", "language server protocol", "news", "refactoring", "typescript", "vs"]
+tags:
+- Agent Mode
+- AI
+- API Refactoring
+- C#
+- C++
+- Code Navigation
+- Codebase Management
+- Copilot Chat
+- Developer Productivity
+- Find Symbol
+- GitHub Copilot
+- IDE Tools
+- Language Server Protocol
+- News
+- Refactoring
+- TypeScript
+- VS
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Sinem Akinci and Hannah Hong present the new find_symbol tool for Agent Mode in Visual Studio Copilot Chat, helping developers improve code navigation and refactoring with language-aware symbol analysis.<!--excerpt_end-->
 
 # Unlock Language-Specific Rich Symbol Context with the New find_symbol Tool in Visual Studio Copilot Chat

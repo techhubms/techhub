@@ -1,17 +1,40 @@
----
-layout: "post"
-title: "New Developments in Agent Workflows, Unified AI Tools, and Secure Automation"
-description: "This week's roundup covers updates in agent-driven workflows in GitHub Copilot, improved automation tools, and expanded multimodal AI integration across platforms. Microsoft continues to offer integrated AI/ML and operational analytics in Fabric, introduces productivity tools for developers, and extends secure, scalable DevOps and cloud management. Security topics include risks of multi-agent AI setups, large language model alignment methods, and adaptive governance for safer technology workflows."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup
+title: New Developments in Agent Workflows, Unified AI Tools, and Secure Automation
+author: TechHub
+primary_section: github-copilot
 date: 2026-02-16 09:00:00 +00:00
-permalink: "/2026-02-16-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Agents", "Azure", "Cloud Computing", "Coding", "Copilot Studio", "DevOps", "GitHub Copilot", "Governance", "JetBrains", "LLM Fine Tuning", "Machine Learning", "Microsoft Fabric", "ML", "Observability", "OpenAI", "Roundups", "Security", "TypeScript", "VS", "VS Code"]
-tags_normalized: ["ai", "ai agents", "azure", "cloud computing", "coding", "copilot studio", "devops", "github copilot", "governance", "jetbrains", "llm fine tuning", "machine learning", "microsoft fabric", "ml", "observability", "openai", "roundups", "security", "typescript", "vs", "vs code"]
+feed_name: TechHub
+tags:
+- AI
+- AI Agents
+- Azure
+- Cloud Computing
+- Copilot Studio
+- DevOps
+- GitHub Copilot
+- Governance
+- JetBrains
+- LLM Fine Tuning
+- Microsoft Fabric
+- ML
+- Observability
+- OpenAI
+- Roundups
+- Security
+- TypeScript
+- VS
+- VS Code
+- .NET
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- dotnet
+- devops
+- security
 ---
-
 Welcome to the latest weekly technology update. This edition covers recent AI advances in agent-enabled workflows for development and operations. Look for new automation features in GitHub Copilot, deeper IDE integrations, and practical ways Microsoft Fabric is simplifying analytics, machine learning, and data management. The news also includes current best practices for secure cloud deployments in Azure, a range of productivity updates, and fresh strategies for dealing with emerging security challenges in multi-agent AI and cloud environments.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -69,7 +92,7 @@ This draws from last week’s work on agent collaboration and VS Code automation
 
 Another new capability is the open-source `gh aw` CLI extension, which lets you create Markdown-based workflows—without learning YAML. Debugging tools are available in VS Code, on the web, and in the CLI. Security is a core part of the design: all actions are sandboxed, read-only by default, and explicit writes are audited. Over 50 workflow templates help teams get started fast. Community cooperation among GitHub Next, Microsoft Research, and Azure specialists is driving the open-source roadmap. Early users are invited to provide input.
 
-- [Introducing GitHub Agentic Workflows: Intent-Driven Repository Automation]({{ "/2026-02-13-Introducing-GitHub-Agentic-Workflows-Intent-Driven-Repository-Automation.html" | relative_url }})
+- [Introducing GitHub Agentic Workflows: Intent-Driven Repository Automation](/introducing-github-agentic-workflows-intent-driven-repository-automation)
 - [GitHub Agentic Workflows: Automate Repository Tasks with AI Agents](https://github.blog/changelog/2026-02-13-github-agentic-workflows-are-now-in-technical-preview)
 - [Automate Repository Tasks with GitHub Agentic Workflows](https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/)
 
@@ -103,7 +126,7 @@ OpenAI GPT-5.3-Codex is now generally available in Copilot Pro, Pro+, Business, 
 Following last week’s Fast Mode rollout for Claude Opus 4.6, GPT-5.3-Codex continues to expand model and automation choices. There’s ongoing work in VS Code around “subagents,” which can now run in parallel and keep context separate, building on last week’s updates around multi-agent reviews and more sophisticated automation.
 
 - [GPT-5.3-Codex Now Available in GitHub Copilot](https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot)
-- [Subagents in VS Code: Parallel Execution and Context Isolation Explained]({{ "/2026-02-09-Subagents-in-VS-Code-Parallel-Execution-and-Context-Isolation-Explained.html" | relative_url }})
+- [Subagents in VS Code: Parallel Execution and Context Isolation Explained](/subagents-in-vs-code-parallel-execution-and-context-isolation-explained)
 
 ### AI-Powered Workflows in Practice: Modernization, Case Studies, and Community Upskilling
 
@@ -114,9 +137,9 @@ A featured case study explores building a university clinic web app for less tha
 Agents League has launched a two-week AI agent development challenge using Copilot SDK, Foundry, and Copilot Studio. Events include coding battles, templates, and badges, following the recently expanded community event schedule. This effort is designed to grow best practices and enable more developers to contribute agent workflows. GitHub’s partnership with Andela highlights Copilot certification and structured training as a way for global tech talent to learn and compete.
 
 - [Modernizing for the AI Era: Accelerating Application Transformation with Agentic Tools](https://techcommunity.microsoft.com/t5/azure-migration-and/modernizing-for-the-ai-era-accelerating-application/ba-p/4490596)
-- [Building a Professional Clinic Web App with GitHub Copilot and Azure SQL for Under $10]({{ "/2026-02-12-Building-a-Professional-Clinic-Web-App-with-GitHub-Copilot-and-Azure-SQL-for-Under-10.html" | relative_url }})
+- [Building a Professional Clinic Web App with GitHub Copilot and Azure SQL for Under $10](/building-a-professional-clinic-web-app-with-github-copilot-and-azure-sql-for-under-10)
 - [Agents League: Build AI Agents with Microsoft Tools in a Two-Week Challenge](https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-two-weeks-three-tracks-one-challenge/ba-p/4492102)
-- [How Global Tech Talent Is Advancing with GitHub Copilot]({{ "/2026-02-11-How-Global-Tech-Talent-Is-Advancing-with-GitHub-Copilot.html" | relative_url }})
+- [How Global Tech Talent Is Advancing with GitHub Copilot](/how-global-tech-talent-is-advancing-with-github-copilot)
 
 ### Other GitHub Copilot News
 
@@ -169,7 +192,7 @@ The Fabric IQ Agents platform includes both a semantic ontology and a Fabric Gra
 
 This information builds on last week’s coverage of workflow automation and strict AI governance, showing how agent platforms now connect to knowledge and policy across larger organizations.
 
-- [Microsoft IQ Overview: Exploring Work IQ, Foundry IQ, and Fabric IQ]({{ "/2026-02-09-Microsoft-IQ-Overview-Exploring-Work-IQ-Foundry-IQ-and-Fabric-IQ.html" | relative_url }})
+- [Microsoft IQ Overview: Exploring Work IQ, Foundry IQ, and Fabric IQ](/microsoft-iq-overview-exploring-work-iq-foundry-iq-and-fabric-iq)
 - [Fabric IQ Agents: Bridging Enterprise Data and AI](https://zure.com/blog/fabric-iq-agents-operate-hand-to-hand-with-enterprise-data)
 
 ### Observability, Governance, and Security in Agent Deployments
@@ -190,10 +213,10 @@ The GPT-5 pro Evaluation Challenge demonstrates how to build hands-on AI evaluat
 
 Low-code and no-code tools for AI are gaining ground—recent programming sessions show designers and developers building apps directly in VS Code with AI agents, using agent steering, multi-agent management, and mobile integration for practical development.
 
-- [How TypeScript's Creator Uses AI for Team Productivity]({{ "/2026-02-14-How-TypeScripts-Creator-Uses-AI-for-Team-Productivity.html" | relative_url }})
-- [GitHub Issues Semantic Search Public Preview]({{ "/2026-02-09-GitHub-Issues-Semantic-Search-Public-Preview.html" | relative_url }})
-- [GPT-5 pro Evaluation Challenge – Evaluating AI Tools with Microsoft Foundry and Azure AI]({{ "/2026-02-11-GPT-5-pro-Evaluation-Challenge-Evaluating-AI-Tools-with-Microsoft-Foundry-and-Azure-AI.html" | relative_url }})
-- [Building an App in VS Code with AI Agents with Elijah King | Cozy AI Kitchen]({{ "/2026-02-10-Building-an-App-in-VS-Code-with-AI-Agents-with-Elijah-King-Cozy-AI-Kitchen.html" | relative_url }})
+- [How TypeScript's Creator Uses AI for Team Productivity](/how-typescripts-creator-uses-ai-for-team-productivity)
+- [GitHub Issues Semantic Search Public Preview](/github-issues-semantic-search-public-preview)
+- [GPT-5 pro Evaluation Challenge – Evaluating AI Tools with Microsoft Foundry and Azure AI](/gpt-5-pro-evaluation-challenge-evaluating-ai-tools-with-microsoft-foundry-and-azure-ai)
+- [Building an App in VS Code with AI Agents with Elijah King | Cozy AI Kitchen](/building-an-app-in-vs-code-with-ai-agents-with-elijah-king-cozy-ai-kitchen)
 
 ## ML
 
@@ -212,7 +235,7 @@ ML workflows in Fabric and Power BI are progressing, letting teams run predictio
 - [Supercharge AI, BI, and Data Engineering with Semantic Link in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/supercharge-ai-bi-and-data-engineering-with-semantic-link-generally-available/)
 - [Adaptive Time Series Visualization at Scale with Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/adaptive-time-series-visualization-at-scale-with-microsoft-fabric/)
 - [Integrating Machine Learning with Power BI Reports in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/enrich-power-bi-reports-with-machine-learning-in-microsoft-fabric/)
-- [Fabric IQ Overview]({{ "/2026-02-11-Fabric-IQ-Overview.html" | relative_url }})
+- [Fabric IQ Overview](/fabric-iq-overview)
 
 ### Fine-tuning and Preference Optimization for Large Language Models on Azure
 
@@ -279,7 +302,7 @@ Azure Monitor introduces new pipeline transformation features and AI-based workf
 
 Azure Data Studio will reach end of life on February 28. Guidance now explains SQL developer migration to the VS Code MSSQL Extension, helping teams retain backup and workflow tools.
 
-- [Azure Data Studio Retirement: Transitioning SQL Development to VS Code]({{ "/2026-02-12-Azure-Data-Studio-Retirement-Transitioning-SQL-Development-to-VS-Code.html" | relative_url }})
+- [Azure Data Studio Retirement: Transitioning SQL Development to VS Code](/azure-data-studio-retirement-transitioning-sql-development-to-vs-code)
 
 ### Azure Virtual Desktop and Networking Policy Changes
 
@@ -293,7 +316,7 @@ The “Default Outbound Access” feature in Azure networking will be retired fo
 
 This week’s Azure Update details further modernization improvements: AKS now supports Kubernetes 1.34, additional disk backup, SQL secondary replicas, wider AI/Databricks support, the Thailand South region, and Entra identity updates—contributing to platform reliability and regional extension.
 
-- [Azure Update - Friday the 13th February 2026]({{ "/2026-02-13-Azure-Update-Friday-the-13th-February-2026.html" | relative_url }})
+- [Azure Update - Friday the 13th February 2026](/azure-update-friday-the-13th-february-2026)
 
 ### Other Azure News
 
@@ -352,14 +375,14 @@ VS Code 1.109 adds usability and workflow improvements. You can now "Ask Questio
 
 A video demo shows agent steering in VS Code Insiders, letting you queue and control agent tasks directly for repeatable, controlled workflow automation. These additions build on the theme of expanded automation, agent control, and integration for both new and advanced users.
 
-- [VS Code 1.109 Release Highlights: Editor Improvements & New Features]({{ "/2026-02-11-VS-Code-1109-Release-Highlights-Editor-Improvements-and-New-Features.html" | relative_url }})
-- [Let it Cook: Agent Steering & Queueing in VS Code Insiders]({{ "/2026-02-09-Let-it-Cook-Agent-Steering-and-Queueing-in-VS-Code-Insiders.html" | relative_url }})
+- [VS Code 1.109 Release Highlights: Editor Improvements & New Features](/vs-code-1109-release-highlights-editor-improvements-and-new-features)
+- [Let it Cook: Agent Steering & Queueing in VS Code Insiders](/let-it-cook-agent-steering-and-queueing-in-vs-code-insiders)
 
 ### Other Coding News
 
 A recent Rx.NET v7 live session covers new asynchronous APIs and event stream features, adoption recommendations, and future plans, all presented by Rx.NET team engineers.
 
-- [On .NET Live: Rx.NET v7 and Futures]({{ "/2026-02-11-On-NET-Live-RxNET-v7-and-Futures.html" | relative_url }})
+- [On .NET Live: Rx.NET v7 and Futures](/on-net-live-rxnet-v7-and-futures)
 
 ## DevOps
 
@@ -382,7 +405,7 @@ This is a continuation of last week’s trend toward enhanced workflow controls,
 - [GitHub Apps Gain Fine-Grained Permissions for Enterprise Teams APIs](https://github.blog/changelog/2026-02-09-github-apps-can-now-utilize-public-preview-enterprise-teams-apis-via-fine-grained-permissions)
 - [New GitHub Settings to Configure Pull Request Access](https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access)
 - [Open Source’s Eternal September: Supporting Maintainers Amid the Scaling Contributor Wave](https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/)
-- [Open Source Friday: Trust Management with Vouch and GitHub]({{ "/2026-02-12-Open-Source-Friday-Trust-Management-with-Vouch-and-GitHub.html" | relative_url }})
+- [Open Source Friday: Trust Management with Vouch and GitHub](/open-source-friday-trust-management-with-vouch-and-github)
 
 ## Security
 

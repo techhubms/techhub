@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "The Download: OpenClaw AI Agents, Babel 7 Farewell, and GitHub Actions Updates"
-description: "This episode of The Download, hosted by Cassidy, covers the introduction of semantic search in GitHub Issues, significant new features in GitHub Actions (including a case function), the open-sourcing of Dependabot Proxy, the launch of the self-hosted AI assistant platform OpenClaw, and the final release of Babel 7. The content highlights technical updates that impact developer workflow and the growing role of AI in developer tooling."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0FH_v8iQM5Q"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=0FH_v8iQM5Q
+title: 'The Download: OpenClaw AI Agents, Babel 7 Farewell, and GitHub Actions Updates'
+author: GitHub
+primary_section: ai
+feed_name: GitHub YouTube
 date: 2026-02-06 18:38:05 +00:00
-permalink: "/2026-02-06-The-Download-OpenClaw-AI-Agents-Babel-7-Farewell-and-GitHub-Actions-Updates.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Assistants", "Babel 7", "Build Systems", "Case Function", "CI/CD", "Coding", "Dependabot Proxy", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Issues", "GitHubIssues", "Infrastructure", "Open Source", "OpenClaw", "Semantic Search", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai assistants", "babel 7", "build systems", "case function", "cislashcd", "coding", "dependabot proxy", "developer tools", "devops", "github actions", "github issues", "githubissues", "infrastructure", "open source", "openclaw", "semantic search", "videos", "workflow automation"]
+tags:
+- AI
+- AI Assistants
+- Babel 7
+- Build Systems
+- Case Function
+- CI/CD
+- Dependabot Proxy
+- Developer Tools
+- DevOps
+- GitHub Actions
+- GitHub Issues
+- GitHubIssues
+- Infrastructure
+- Open Source
+- OpenClaw
+- Semantic Search
+- Videos
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
 ---
-
 GitHub’s Cassidy reviews the latest updates for developers, including semantic search for GitHub Issues, enhancements to GitHub Actions, the open-sourcing of Dependabot Proxy, the AI-powered OpenClaw platform, and the end of Babel 7.<!--excerpt_end-->
 
 {% youtube 0FH_v8iQM5Q %}

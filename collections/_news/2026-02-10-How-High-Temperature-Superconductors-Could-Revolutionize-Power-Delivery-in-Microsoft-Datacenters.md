@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How High-Temperature Superconductors Could Revolutionize Power Delivery in Microsoft Datacenters"
-description: "This article examines Microsoft's exploration of high-temperature superconductors (HTS) to improve the efficiency, capacity, and sustainability of power infrastructure in its datacenters. It discusses technical advantages of HTS cables, such as lossless power transmission, physical footprint reduction, and adaptability for supporting AI-driven workloads at scale."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/can-high-temperature-superconductors-transform-the-power-infrastructure-of-datacenters/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/can-high-temperature-superconductors-transform-the-power-infrastructure-of-datacenters/
+title: How High-Temperature Superconductors Could Revolutionize Power Delivery in Microsoft Datacenters
+author: stclarke
+primary_section: azure
+feed_name: Microsoft News
 date: 2026-02-10 18:00:02 +00:00
-permalink: "/2026-02-10-How-High-Temperature-Superconductors-Could-Revolutionize-Power-Delivery-in-Microsoft-Datacenters.html"
-categories: ["Azure"]
-tags: ["AI", "AI Workloads", "Azure", "Cloud", "Cloud Operations", "Company News", "Cryogenic Cooling", "Datacenter Infrastructure", "Electrical Grid", "Energy Efficiency", "Fault Current Limiting", "Grid Stability", "High Temperature Superconductors", "HTS Cables", "Microsoft Azure", "News", "Power Delivery", "Power Transmission", "Superconducting Cables", "Sustainable Technology"]
-tags_normalized: ["ai", "ai workloads", "azure", "cloud", "cloud operations", "company news", "cryogenic cooling", "datacenter infrastructure", "electrical grid", "energy efficiency", "fault current limiting", "grid stability", "high temperature superconductors", "hts cables", "microsoft azure", "news", "power delivery", "power transmission", "superconducting cables", "sustainable technology"]
+tags:
+- AI
+- AI Workloads
+- Azure
+- Cloud Operations
+- Company News
+- Cryogenic Cooling
+- Datacenter Infrastructure
+- Electrical Grid
+- Energy Efficiency
+- Fault Current Limiting
+- Grid Stability
+- High Temperature Superconductors
+- HTS Cables
+- Microsoft Azure
+- News
+- Power Delivery
+- Power Transmission
+- Superconducting Cables
+- Sustainable Technology
+section_names:
+- azure
 ---
-
 stclarke explores how Microsoft is piloting high-temperature superconductors to enhance power efficiency and sustainability in Azure datacenters, focusing on advanced transmission and AI-powered workloads.<!--excerpt_end-->
 
 # How High-Temperature Superconductors Could Revolutionize Power Delivery in Microsoft Datacenters

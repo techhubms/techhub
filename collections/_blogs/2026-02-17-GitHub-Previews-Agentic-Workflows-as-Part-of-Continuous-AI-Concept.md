@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Previews Agentic Workflows as Part of Continuous AI Concept"
-description: "This article introduces GitHub's agentic workflows, a new automation feature now in technical preview. Developed by GitHub Next and Microsoft Research, agentic workflows integrate AI agents like GitHub Copilot and OpenAI Codex into repository automation, supporting tasks such as triaging issues, updating documentation, and reporting. The article outlines architecture, security considerations, and the paradigm shift called 'continuous AI'. Developers are advised to use these tools alongside traditional CI/CD, not as replacements, and to be mindful of their non-deterministic nature and potential risks."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/ci-cd/2026/02/17/github-previews-agentic-workflows-as-part-of-continuous-ai-concept/4091356"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/ci-cd/2026/02/17/github-previews-agentic-workflows-as-part-of-continuous-ai-concept/4091356
+title: GitHub Previews Agentic Workflows as Part of Continuous AI Concept
+author: DevClass.com
+primary_section: ai
+feed_name: DevClass
 date: 2026-02-17 16:40:00 +00:00
-permalink: "/2026-02-17-GitHub-Previews-Agentic-Workflows-as-Part-of-Continuous-AI-Concept.html"
-categories: ["AI", "DevOps"]
-tags: ["Agentic Workflows", "AI", "AI Security", "Automation", "Blogs", "CI/CD", "Continuous AI", "DevOps", "GitHub", "GitHub Actions", "Microsoft Research", "OpenAI Codex", "Prompt Engineering", "Repository Automation", "Sandboxing", "Secure Output", "Software Engineering"]
-tags_normalized: ["agentic workflows", "ai", "ai security", "automation", "blogs", "cislashcd", "continuous ai", "devops", "github", "github actions", "microsoft research", "openai codex", "prompt engineering", "repository automation", "sandboxing", "secure output", "software engineering"]
+tags:
+- Agentic Workflows
+- AI
+- AI Security
+- Automation
+- Blogs
+- CI/CD
+- Continuous AI
+- DevOps
+- GitHub
+- GitHub Actions
+- Microsoft Research
+- OpenAI Codex
+- Prompt Engineering
+- Repository Automation
+- Sandboxing
+- Secure Output
+- Software Engineering
+section_names:
+- ai
+- devops
 ---
-
 DevClass.com explores GitHub’s preview release of agentic workflows, detailing how AI agents automate repository tasks. The article, authored by DevClass.com, breaks down security, configuration, and use case scenarios for this new automation concept.<!--excerpt_end-->
 
 # GitHub Previews Agentic Workflows as Part of Continuous AI Concept

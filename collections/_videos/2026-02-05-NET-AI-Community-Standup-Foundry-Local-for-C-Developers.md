@@ -1,20 +1,40 @@
----
-layout: "post"
-title: ".NET AI Community Standup: Foundry Local for C# Developers"
-description: "This session introduces Foundry Local, a solution for running AI models directly on developer machines using .NET and C#. The video covers architectural insights, local-first AI development workflows, and how modern .NET developers can leverage Foundry Local for speed, privacy, and control, bypassing cloud dependencies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=N8FCCwb0YhQ"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=N8FCCwb0YhQ
+title: '.NET AI Community Standup: Foundry Local for C# Developers'
+author: dotnet
+primary_section: ai
+feed_name: DotNet YouTube
 date: 2026-02-05 18:35:12 +00:00
-permalink: "/2026-02-05-NET-AI-Community-Standup-Foundry-Local-for-C-Developers.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET 10", "AI", "AI Models", "Architecture", "C#", "Coding", "Community Standup", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnet10", "Dotnetdeveloper", "Foundry", "Foundry Local", "Local AI", "Localai", "Microsoft", "Modern Workflows", "On Prem AI", "Privacy", "Software Developer", "Software Development", "Speed", "Videos"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "ai models", "architecture", "csharp", "coding", "community standup", "demo", "developer", "developer community", "developer tools", "dotnet10", "dotnetdeveloper", "foundry", "foundry local", "local ai", "localai", "microsoft", "modern workflows", "on prem ai", "privacy", "software developer", "software development", "speed", "videos"]
+tags:
+- .NET
+- .NET 10
+- AI
+- AI Models
+- Architecture
+- C#
+- Community Standup
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnet10
+- Dotnetdeveloper
+- Foundry
+- Foundry Local
+- Local AI
+- Localai
+- Microsoft
+- Modern Workflows
+- On Prem AI
+- Privacy
+- Software Developer
+- Software Development
+- Speed
+- Videos
+section_names:
+- ai
+- dotnet
 ---
-
 In this AI Community Standup, Bruno Capuano and Maanav Dalal show .NET developers how to run AI models locally using Foundry Local. Presented by dotnet.<!--excerpt_end-->
 
 {% youtube N8FCCwb0YhQ %}

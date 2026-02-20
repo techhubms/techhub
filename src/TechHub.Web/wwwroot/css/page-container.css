@@ -44,10 +44,10 @@
 }
 
 /* Responsive - Single column on smaller screens */
-@media (max-width: 1024px) {
+@media (max-width: 1288px) {
   .page-with-sidebar {
     grid-template-columns: 1fr;
-    gap: var(--spacing-4);
+    gap: var(--spacing-2);
   }
 }
 

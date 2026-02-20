@@ -1,20 +1,29 @@
----
-layout: "post"
-title: ".NET Framework 3.5 Now Requires Standalone Deployment on New Windows Versions"
-description: "This announcement details Microsoft's shift in the deployment model for .NET Framework 3.5 on upcoming Windows releases. From Windows 11 Insider Preview Build 27965 onward, .NET Framework 3.5 will no longer be included as an optional Windows component and must be installed separately for legacy application compatibility. The announcement also emphasizes preparing for migration as the framework nears end-of-support in January 2029."
-author: "Tara Overfield, Brett Lopez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-framework-3-5-moves-to-standalone-deployment-in-new-versions-of-windows/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-framework-3-5-moves-to-standalone-deployment-in-new-versions-of-windows/
+title: .NET Framework 3.5 Now Requires Standalone Deployment on New Windows Versions
+author: Tara Overfield, Brett Lopez
+primary_section: dotnet
+feed_name: Microsoft .NET Blog
 date: 2026-02-05 18:00:00 +00:00
-permalink: "/2026-02-05-NET-Framework-35-Now-Requires-Standalone-Deployment-on-New-Windows-Versions.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Framework", ".NET Framework 3.5", "Coding", "Compatibility", "End Of Support", "Installer", "Legacy Applications", "Microsoft Learn", "Migration Planning", "News", "Standalone Deployment", "Support Lifecycle", "Windows 11", "Windows Deployment", "Windows Insider Preview"]
-tags_normalized: ["dotnet", "dotnet framework", "dotnet framework 3dot5", "coding", "compatibility", "end of support", "installer", "legacy applications", "microsoft learn", "migration planning", "news", "standalone deployment", "support lifecycle", "windows 11", "windows deployment", "windows insider preview"]
+tags:
+- .NET
+- .NET Framework
+- .NET Framework 3.5
+- Compatibility
+- End Of Support
+- Installer
+- Legacy Applications
+- Microsoft Learn
+- Migration Planning
+- News
+- Standalone Deployment
+- Support Lifecycle
+- Windows 11
+- Windows Deployment
+- Windows Insider Preview
+section_names:
+- dotnet
 ---
-
 Tara Overfield and Brett Lopez announce that .NET Framework 3.5 will be distributed as a standalone installer in new versions of Windows, sharing implications for developers and migration recommendations.<!--excerpt_end-->
 
 # .NET Framework 3.5 Moves to Standalone Deployment in New Versions of Windows

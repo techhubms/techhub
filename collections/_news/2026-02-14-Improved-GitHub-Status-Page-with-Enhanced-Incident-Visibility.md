@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Improved GitHub Status Page with Enhanced Incident Visibility"
-description: "This update describes enhancements to the GitHub status page, including a 90-day historical availability view, clearer connections between incidents and service trends, and better incident detail for GitHub Actions and GitHub Copilot services. The changes aim to help users quickly assess incident impact across all regions where GitHub operates."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-13-updated-status-experience"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-13-updated-status-experience
+title: Improved GitHub Status Page with Enhanced Incident Visibility
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-14 00:16:35 +00:00
-permalink: "/2026-02-14-Improved-GitHub-Status-Page-with-Enhanced-Incident-Visibility.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Actions", "AI", "Availability", "Collaboration Tools", "Copilot", "Developer Tools", "DevOps", "GitHub", "GitHub Actions", "GitHub Copilot", "Improvement", "Incident History", "Incident Impact", "Incident Management", "News", "Platform Governance", "Platform Reliability", "Projects & Issues", "Service Monitoring", "Status Page"]
-tags_normalized: ["actions", "ai", "availability", "collaboration tools", "copilot", "developer tools", "devops", "github", "github actions", "github copilot", "improvement", "incident history", "incident impact", "incident management", "news", "platform governance", "platform reliability", "projects and issues", "service monitoring", "status page"]
+tags:
+- Actions
+- AI
+- Availability
+- Collaboration Tools
+- Copilot
+- Developer Tools
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Copilot
+- Improvement
+- Incident History
+- Incident Impact
+- Incident Management
+- News
+- Platform Governance
+- Platform Reliability
+- Projects & Issues
+- Service Monitoring
+- Status Page
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison details updates to the GitHub status page, highlighting enhanced incident tracking and service insights, with specific improvements for GitHub Actions and GitHub Copilot users.<!--excerpt_end-->
 
 # Updated GitHub Status Page Experience

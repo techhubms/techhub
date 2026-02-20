@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Integrating Azure Logic Apps with SAP: Infrastructure and Workflow Contracts (Part 1)"
-description: "This extensive guide demonstrates how to implement an end-to-end integration between Azure Logic Apps and SAP systems, emphasizing robust data quality enforcement, structured RFC and IDoc handling, and practical exception propagation. Readers gain actionable insights on patterns for SAP interoperability, “strong contract” workflow design, error handling, and agent-driven validation using Microsoft cloud tools and AI-assisted workflow authoring. The post features repeatable architecture concepts and hands-on steps for scalable integration, with a clear baseline for extending to AI-driven validation in subsequent parts."
-author: "Emmanuel_Abram_Profeta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agentic-logic-apps-integration-with-sap-part-1-infrastructure/ba-p/4491906"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agentic-logic-apps-integration-with-sap-part-1-infrastructure/ba-p/4491906
+title: 'Integrating Azure Logic Apps with SAP: Infrastructure and Workflow Contracts (Part 1)'
+author: Emmanuel_Abram_Profeta
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-17 19:10:38 +00:00
-permalink: "/2026-02-17-Integrating-Azure-Logic-Apps-with-SAP-Infrastructure-and-Workflow-Contracts-Part-1.html"
-categories: ["AI", "Azure"]
-tags: ["ABAP", "AI", "Azure", "Azure Blob Storage", "Azure Logic Apps", "BizTalk Migration", "Business Rules", "Community", "CSV Transformation", "Data Validation", "Error Handling", "IDoc Processing", "Microsoft Learn", "OpenAI", "SAP Integration", "SAP RFC", "Schema Validation", "Workflow Automation"]
-tags_normalized: ["abap", "ai", "azure", "azure blob storage", "azure logic apps", "biztalk migration", "business rules", "community", "csv transformation", "data validation", "error handling", "idoc processing", "microsoft learn", "openai", "sap integration", "sap rfc", "schema validation", "workflow automation"]
+tags:
+- ABAP
+- AI
+- Azure
+- Azure Blob Storage
+- Azure Logic Apps
+- BizTalk Migration
+- Business Rules
+- Community
+- CSV Transformation
+- Data Validation
+- Error Handling
+- IDoc Processing
+- Microsoft Learn
+- OpenAI
+- SAP Integration
+- SAP RFC
+- Schema Validation
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Emmanuel Abram Profeta provides a deep dive into integrating Azure Logic Apps with SAP, sharing production-grade patterns for reliable data exchange, validation, exception handling, and workflow automation using AI-assisted and schema-driven approaches.<!--excerpt_end-->
 
 # Integrating Azure Logic Apps with SAP: Infrastructure and Workflow Contracts (Part 1)

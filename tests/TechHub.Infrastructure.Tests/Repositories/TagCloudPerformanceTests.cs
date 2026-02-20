@@ -81,7 +81,7 @@ public class TagCloudPerformanceTests : IDisposable
         {
             Provider = "PostgreSQL",
             ConnectionString = PostgresConnectionString,
-            EnableQueryLogging = true
+            EnableQueryLogging = false, // Set to true to log all queries with EXPLAIN for any that exceed the MaxAcceptableMs threshold
         });
 
         _repository = new ContentRepository(

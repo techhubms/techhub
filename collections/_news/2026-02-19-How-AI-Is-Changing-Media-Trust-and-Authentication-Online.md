@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "How AI Is Changing Media Trust and Authentication Online"
-description: "This article discusses a recent Microsoft study on the challenges and complexities of authenticating digital media in the era of AI-generated content. It highlights deepfakes' impact on trust, current media integrity solutions including provenance, watermarking, and digital fingerprinting, and the limitations each presents. The piece explores Microsoft's leadership in developing standards and technologies such as C2PA, and details ongoing research directions aimed at improving public confidence in online content through more robust provenance, high-confidence authentication, and practical safeguards against media manipulation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/signal/articles/a-new-study-explores-how-ai-shapes-what-you-can-trust-online/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/signal/articles/a-new-study-explores-how-ai-shapes-what-you-can-trust-online/
+title: How AI Is Changing Media Trust and Authentication Online
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-19 16:19:18 +00:00
-permalink: "/2026-02-19-How-AI-Is-Changing-Media-Trust-and-Authentication-Online.html"
-categories: ["AI", "Security"]
-tags: ["AI", "Authentication Methods", "C2PA", "Content Integrity", "Cybersecurity", "Deepfakes", "Digital Fingerprinting", "Digital Provenance", "Media Authentication", "Media Manipulation", "Microsoft Research", "News", "Online Trust", "Policy", "Security", "Sociotechnical Attacks", "Watermarking"]
-tags_normalized: ["ai", "authentication methods", "c2pa", "content integrity", "cybersecurity", "deepfakes", "digital fingerprinting", "digital provenance", "media authentication", "media manipulation", "microsoft research", "news", "online trust", "policy", "security", "sociotechnical attacks", "watermarking"]
+tags:
+- AI
+- Authentication Methods
+- C2PA
+- Content Integrity
+- Cybersecurity
+- Deepfakes
+- Digital Fingerprinting
+- Digital Provenance
+- Media Authentication
+- Media Manipulation
+- Microsoft Research
+- News
+- Online Trust
+- Policy
+- Security
+- Sociotechnical Attacks
+- Watermarking
+section_names:
+- ai
+- security
 ---
-
 Samantha Kubota presents Microsoft's new research on how AI impacts public trust in digital media, examining authentication methods and strategies for combating deepfakes and manipulated content.<!--excerpt_end-->
 
 # How AI Is Changing Media Trust and Authentication Online

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing GitHub Agentic Workflows: Intent-Driven Repository Automation"
-description: "This video introduces GitHub Agentic Workflows, a new approach to repository automation that leverages AI-powered coding agents within GitHub Actions. The presentation discusses how agentic workflows enable intent-driven automation, integrating tools like GitHub Copilot, Claude by Anthropic, and OpenAI Codex, while emphasizing safety and security with guardrails."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3_i03fGXs9U"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=3_i03fGXs9U
+title: 'Introducing GitHub Agentic Workflows: Intent-Driven Repository Automation'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-13 14:03:23 +00:00
-permalink: "/2026-02-13-Introducing-GitHub-Agentic-Workflows-Intent-Driven-Repository-Automation.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AgenticWorkflows", "AI", "AI Coding Agents", "AI Integration", "Anthropic", "Automation", "Claude", "DevOps", "GitHub", "GitHub Actions", "GitHub Agentic Workflows", "GitHub Copilot", "Guardrails", "Intent Driven Automation", "OpenAI Codex", "Repository Automation", "Videos", "Workflow Automation"]
-tags_normalized: ["agenticworkflows", "ai", "ai coding agents", "ai integration", "anthropic", "automation", "claude", "devops", "github", "github actions", "github agentic workflows", "github copilot", "guardrails", "intent driven automation", "openai codex", "repository automation", "videos", "workflow automation"]
+tags:
+- AgenticWorkflows
+- AI
+- AI Coding Agents
+- AI Integration
+- Anthropic
+- Automation
+- Claude
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Agentic Workflows
+- GitHub Copilot
+- Guardrails
+- Intent Driven Automation
+- OpenAI Codex
+- Repository Automation
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub presents Agentic Workflows, an innovative solution for automating repositories using multiple AI coding agents, including GitHub Copilot. The session, led by GitHub, highlights the intent-driven and secure nature of this new automation approach.<!--excerpt_end-->
 
 {% youtube 3_i03fGXs9U %}

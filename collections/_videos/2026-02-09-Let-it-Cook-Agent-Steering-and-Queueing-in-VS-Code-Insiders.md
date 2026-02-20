@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Let it Cook: Agent Steering & Queueing in VS Code Insiders"
-description: "This video features James Montemagno and Pierce Boggan discussing new agent-related features in Visual Studio Code Insiders. They demonstrate agent steering and queueing capabilities, providing insights into how these tools enhance developer workflows in VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FjvtWeG6EEo"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=FjvtWeG6EEo
+title: 'Let it Cook: Agent Steering & Queueing in VS Code Insiders'
+author: Visual Studio Code
+primary_section: dotnet
+feed_name: Visual Studio Code YouTube
 date: 2026-02-09 21:12:17 +00:00
-permalink: "/2026-02-09-Let-it-Cook-Agent-Steering-and-Queueing-in-VS-Code-Insiders.html"
-categories: ["Coding"]
-tags: ["Agent Queueing", "Agent Steering", "Agentsteering", "Automation", "Code", "Code Demo", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Development Workflow", "Extension Development", "Microsoft", "Queueing", "Videos", "VS Code", "VS Code Insiders"]
-tags_normalized: ["agent queueing", "agent steering", "agentsteering", "automation", "code", "code demo", "coding", "demo", "developer", "developer community", "developer tools", "development workflow", "extension development", "microsoft", "queueing", "videos", "vs code", "vs code insiders"]
+tags:
+- Agent Queueing
+- Agent Steering
+- Agentsteering
+- Automation
+- Code
+- Code Demo
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Development Workflow
+- Extension Development
+- Microsoft
+- Queueing
+- Videos
+- VS Code
+- VS Code Insiders
+- .NET
+section_names:
+- dotnet
 ---
-
 Visual Studio Code presents James Montemagno and Pierce Boggan as they showcase new agent steering and queueing features in VS Code Insiders, offering practical insights for developers.<!--excerpt_end-->
 
 {% youtube FjvtWeG6EEo %}

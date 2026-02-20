@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "What the Fastest-Growing Tools Reveal About Modern Software Development"
-description: "This article, authored by Dylan Birtolo, analyzes GitHub's Octoverse data to explore the rapid growth of programming languages, tools, and open source projects. It discusses the ascendance of TypeScript as the top language, Python's centrality in AI, and how AI-assisted workflows are transforming developer habits and priorities. The piece highlights broader trends in contributor engagement, the rise of performance-driven tooling, and the importance of clear project documentation for open source growth."
-author: "Dylan Birtolo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/
+title: What the Fastest-Growing Tools Reveal About Modern Software Development
+author: Dylan Birtolo
+primary_section: ai
+feed_name: The GitHub Blog
 date: 2026-02-03 17:00:00 +00:00
-permalink: "/2026-02-03-What-the-Fastest-Growing-Tools-Reveal-About-Modern-Software-Development.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Development", "AI Infrastructure", "CI/CD", "Coding", "Developer Experience", "Documentation", "First Time Contributors", "GitHub", "News", "News & Insights", "Octoverse", "Open Source", "Programming Languages", "Project Management", "Python", "Software Trends", "TypeScript", "VS Code"]
-tags_normalized: ["ai", "ai development", "ai infrastructure", "cislashcd", "coding", "developer experience", "documentation", "first time contributors", "github", "news", "news and insights", "octoverse", "open source", "programming languages", "project management", "python", "software trends", "typescript", "vs code"]
+tags:
+- AI
+- AI Development
+- AI Infrastructure
+- CI/CD
+- Developer Experience
+- Documentation
+- First Time Contributors
+- GitHub
+- News
+- News & Insights
+- Octoverse
+- Open Source
+- Programming Languages
+- Project Management
+- Python
+- Software Trends
+- TypeScript
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Dylan Birtolo examines Octoverse trends for 2025, showing how TypeScript, Python, and AI are shaping developer workflows and open source tools. The article highlights what developers and teams can learn from these shifts.<!--excerpt_end-->
 
 # What the Fastest-Growing Tools Reveal About Modern Software Development

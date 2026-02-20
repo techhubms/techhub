@@ -24,8 +24,12 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
+            <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
             <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
+            </MobileSidebarPanel>
 
+            <MobileSidebarPanel Label="Filters" Icon="filter">
             <div class="sidebar-section">
                 <h3 class="sidebar-heading">Filters</h3>
                 <div class="filter-controls" data-feature-filters>
@@ -39,6 +43,8 @@
                     </label>
                 </div>
             </div>
+            </MobileSidebarPanel>
+            </MobileSidebarToolbar>
         </aside>
 
         <article class="article-body">

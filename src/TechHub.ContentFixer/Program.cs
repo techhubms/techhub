@@ -33,6 +33,8 @@ namespace TechHub.ContentFixer;
 /// - Add section/collection display names as tags for sections/collections this item belongs to
 ///   (e.g., if section_names contains "ai", add "AI" tag; if collection is "blogs", add "Blogs" tag)
 ///   This ensures filtering by tag includes items in those sections/collections.
+/// - Detect and rename files with duplicate slugs (same slug after stripping date prefix)
+///   by appending the date from the filename to make slugs unique
 /// </summary>
 public sealed class Program
 {
@@ -114,6 +116,9 @@ public sealed class Program
         var files = GetMarkdownFiles(path);
         Console.WriteLine($"Found {files.Count} markdown files");
         Console.WriteLine();
+
+        // Detect and rename files with duplicate slugs before processing
+        files = DetectAndRenameDuplicateSlugs(files, dryRun);
 
         // Build slug-to-article mapping for link rewriting
         var slugMap = await BuildSlugMapAsync(files);
@@ -604,6 +609,88 @@ public sealed class Program
 
         Console.WriteLine();
         return changed;
+    }
+
+    /// <summary>
+    /// Detects files that produce duplicate slugs within the same collection and renames them
+    /// by appending the date from the filename prefix to make the slug unique.
+    /// E.g., "2026-02-09-Weekly-AI-and-Tech-News-Roundup.md" → "2026-02-09-Weekly-AI-and-Tech-News-Roundup-2026-02-09.md"
+    /// Returns the updated file list with new paths.
+    /// </summary>
+    private static List<string> DetectAndRenameDuplicateSlugs(List<string> files, bool dryRun)
+    {
+        // Group files by their composite key (collection:slug)
+        var slugGroups = files
+            .Select(f =>
+            {
+                var collection = ExtractCollectionFromPath(f);
+                var slug = ExtractSlugFromPath(f);
+                return new { File = f, Key = $"{collection}:{slug}", Collection = collection, Slug = slug };
+            })
+            .GroupBy(x => x.Key, StringComparer.OrdinalIgnoreCase)
+            .Where(g => g.Count() > 1)
+            .ToList();
+
+        if (slugGroups.Count == 0)
+        {
+            return files;
+        }
+
+        var updatedFiles = new List<string>(files);
+
+        foreach (var group in slugGroups)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"⚠ Duplicate slug detected: {group.Key} ({group.Count()} files)");
+            Console.ResetColor();
+
+            foreach (var item in group)
+            {
+                var filename = Path.GetFileNameWithoutExtension(item.File);
+                var dateMatch = Regex.Match(filename, @"^(\d{4}-\d{2}-\d{2})-(.+)$");
+
+                if (!dateMatch.Success)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"  ✗ Cannot fix {item.File} - no date prefix found");
+                    Console.ResetColor();
+                    continue;
+                }
+
+                var datePrefix = dateMatch.Groups[1].Value;
+                var slugPart = dateMatch.Groups[2].Value;
+
+                // Check if slug already ends with the date (already fixed)
+                if (slugPart.EndsWith(datePrefix, StringComparison.OrdinalIgnoreCase))
+                {
+                    continue;
+                }
+
+                // Rename: append date to slug
+                var newFilename = $"{datePrefix}-{slugPart}-{datePrefix}.md";
+                var directory = Path.GetDirectoryName(item.File) ?? ".";
+                var newPath = Path.Combine(directory, newFilename);
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"  ✓ Renaming: {Path.GetFileName(item.File)} → {newFilename}");
+                Console.ResetColor();
+
+                if (!dryRun)
+                {
+                    File.Move(item.File, newPath);
+                    // Update the file list with the new path
+                    var index = updatedFiles.IndexOf(item.File);
+                    if (index >= 0)
+                    {
+                        updatedFiles[index] = newPath;
+                    }
+                }
+            }
+
+            Console.WriteLine();
+        }
+
+        return updatedFiles;
     }
 
     private static string ExtractCollectionFromPath(string filePath)

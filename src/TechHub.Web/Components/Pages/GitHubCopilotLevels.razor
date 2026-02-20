@@ -24,8 +24,11 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            @* No need to pass Items - let SidebarToc extract from rendered HTML *@
+            <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
             <SidebarToc HtmlContent="@GetRenderedContent()" Title="Levels" />
+            </MobileSidebarPanel>
+            </MobileSidebarToolbar>
         </aside>
 
         <article class="article-body">

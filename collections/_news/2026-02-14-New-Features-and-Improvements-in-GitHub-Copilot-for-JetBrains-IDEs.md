@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "New Features and Improvements in GitHub Copilot for JetBrains IDEs"
-description: "This release introduces public preview support for Agent Skills in GitHub Copilot within JetBrains IDEs, offering customizable workflows, improved inline chat, refined settings management, and various quality enhancements. Users can now tailor Copilot through community and custom skills while benefiting from a smoother development experience."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-13-new-features-and-improvements-in-github-copilot-in-jetbrains-ides-2"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-13-new-features-and-improvements-in-github-copilot-in-jetbrains-ides-2
+title: New Features and Improvements in GitHub Copilot for JetBrains IDEs
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-14 02:11:06 +00:00
-permalink: "/2026-02-14-New-Features-and-Improvements-in-GitHub-Copilot-for-JetBrains-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "Agent Skills", "AI", "AI Pair Programmer", "Code Completion", "Copilot", "Copilot Plugin", "Development Workflow", "Editor Preview Features", "GitHub Copilot", "Improvement", "Inline Chat", "IntelliJ", "JetBrains IDEs", "News", "Settings Management", "Software Development", "User Experience"]
-tags_normalized: ["agent mode", "agent skills", "ai", "ai pair programmer", "code completion", "copilot", "copilot plugin", "development workflow", "editor preview features", "github copilot", "improvement", "inline chat", "intellij", "jetbrains ides", "news", "settings management", "software development", "user experience"]
+tags:
+- Agent Mode
+- Agent Skills
+- AI
+- AI Pair Programmer
+- Code Completion
+- Copilot
+- Copilot Plugin
+- Development Workflow
+- Editor Preview Features
+- GitHub Copilot
+- Improvement
+- Inline Chat
+- IntelliJ
+- JetBrains IDEs
+- News
+- Settings Management
+- Software Development
+- User Experience
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details new updates to GitHub Copilot for JetBrains IDEs, including Agent Skills in preview, improved inline chat, refined settings, and ongoing quality enhancements for a better developer experience.<!--excerpt_end-->
 
 # New Features and Improvements in GitHub Copilot for JetBrains IDEs

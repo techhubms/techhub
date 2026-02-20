@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Fast Mode for Claude Opus 4.6 Rolls Out in GitHub Copilot Preview"
-description: "An overview of the research preview rollout of Fast mode for Claude Opus 4.6 in GitHub Copilot. This update introduces significantly increased output token speeds—up to 2.5x faster—while maintaining intelligence and feature parity with previous versions. Coverage extends to Copilot Enterprise users and outlines steps for access and enablement."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-06-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-06-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot
+title: Fast Mode for Claude Opus 4.6 Rolls Out in GitHub Copilot Preview
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-07 02:02:23 +00:00
-permalink: "/2026-02-07-Fast-Mode-for-Claude-Opus-46-Rolls-Out-in-GitHub-Copilot-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Inference", "AI Models", "Claude Opus 4.6", "Copilot", "Copilot CLI", "Copilot Configuration", "Copilot Enterprise", "Fast Mode", "GitHub Copilot", "News", "Performance Update", "Release Preview", "VS Code"]
-tags_normalized: ["ai", "ai inference", "ai models", "claude opus 4dot6", "copilot", "copilot cli", "copilot configuration", "copilot enterprise", "fast mode", "github copilot", "news", "performance update", "release preview", "vs code"]
+tags:
+- AI
+- AI Inference
+- AI Models
+- Claude Opus 4.6
+- Copilot
+- Copilot CLI
+- Copilot Configuration
+- Copilot Enterprise
+- Fast Mode
+- GitHub Copilot
+- News
+- Performance Update
+- Release Preview
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison summarizes GitHub Copilot's research preview of Fast mode for Claude Opus 4.6, highlighting improved output speeds and guidance for Copilot Enterprise users.<!--excerpt_end-->
 
 # Fast Mode for Claude Opus 4.6 Rolls Out in GitHub Copilot Preview

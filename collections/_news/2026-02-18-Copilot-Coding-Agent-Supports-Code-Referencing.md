@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Copilot Coding Agent Supports Code Referencing"
-description: "This update introduces code referencing for the GitHub Copilot coding agent, allowing users to see if generated code matches code from public GitHub repositories. The agent highlights matching code in session logs with links and licensing information. It also clarifies how blocking of public code suggestions is handled within agent sessions."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-18-copilot-coding-agent-supports-code-referencing"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-18-copilot-coding-agent-supports-code-referencing
+title: Copilot Coding Agent Supports Code Referencing
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-18 22:02:22 +00:00
-permalink: "/2026-02-18-Copilot-Coding-Agent-Supports-Code-Referencing.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Code Referencing", "Code Suggestions", "Code Traceability", "Copilot", "Copilot Coding Agent", "GitHub", "GitHub Copilot", "Improvement", "News", "Open Source Licensing", "Public Code Detection", "Session Logs", "Software Development"]
-tags_normalized: ["ai", "ai coding assistant", "code referencing", "code suggestions", "code traceability", "copilot", "copilot coding agent", "github", "github copilot", "improvement", "news", "open source licensing", "public code detection", "session logs", "software development"]
+tags:
+- AI
+- AI Coding Assistant
+- Code Referencing
+- Code Suggestions
+- Code Traceability
+- Copilot
+- Copilot Coding Agent
+- GitHub
+- GitHub Copilot
+- Improvement
+- News
+- Open Source Licensing
+- Public Code Detection
+- Session Logs
+- Software Development
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains how the Copilot coding agent now supports code referencing, highlighting when generated code matches public GitHub repositories and providing traceability via session logs.<!--excerpt_end-->
 
 # Copilot Coding Agent Supports Code Referencing

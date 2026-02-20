@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Copilot Studio Agent Security: Top 10 Risks and How to Mitigate Them"
-description: "This article by the Microsoft Defender Security Research Team highlights the top 10 security risks associated with Copilot Studio agents—AI-powered workflow automations—and provides actionable guidance for detecting and mitigating these risks. Covering misconfigurations like unauthenticated access, hard-coded credentials, and overbroad sharing, it maps real-world exposures to detections using Microsoft Defender’s advanced security features and includes best practices for governance."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/12/copilot-studio-agent-security-top-10-risks-detect-prevent/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/12/copilot-studio-agent-security-top-10-risks-detect-prevent/
+title: 'Copilot Studio Agent Security: Top 10 Risks and How to Mitigate Them'
+author: Microsoft Defender Security Research Team
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-12 20:38:49 +00:00
-permalink: "/2026-02-12-Copilot-Studio-Agent-Security-Top-10-Risks-and-How-to-Mitigate-Them.html"
-categories: ["AI", "Security"]
-tags: ["Advanced Hunting", "Agent Misconfiguration", "AI", "AI Security", "Authentication", "Azure Key Vault", "Copilot Studio", "Data Exfiltration", "Governance", "Least Privilege", "Lifecycle Management", "MCP Tools", "Microsoft Defender", "News", "Power Platform", "Privileged Access", "Security", "Security Playbook"]
-tags_normalized: ["advanced hunting", "agent misconfiguration", "ai", "ai security", "authentication", "azure key vault", "copilot studio", "data exfiltration", "governance", "least privilege", "lifecycle management", "mcp tools", "microsoft defender", "news", "power platform", "privileged access", "security", "security playbook"]
+tags:
+- Advanced Hunting
+- Agent Misconfiguration
+- AI
+- AI Security
+- Authentication
+- Azure Key Vault
+- Copilot Studio
+- Data Exfiltration
+- Governance
+- Least Privilege
+- Lifecycle Management
+- MCP Tools
+- Microsoft Defender
+- News
+- Power Platform
+- Privileged Access
+- Security
+- Security Playbook
+section_names:
+- ai
+- security
 ---
-
 Microsoft Defender Security Research Team provides a detailed overview of the top 10 security risks in Copilot Studio agent deployments, offering practical detection and mitigation strategies for secure use of AI-powered business workflows.<!--excerpt_end-->
 
 # Copilot Studio Agent Security: Top 10 Risks and How to Mitigate Them

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Agents League Battle 1: Building Creative AI Apps with GitHub Copilot"
-description: "This session introduces the Agents League Battle series by showcasing how developers can build innovative, AI-powered applications with GitHub Copilot. Learn how competitors leverage Copilot starter kits to accelerate creative prototyping, implement agentic patterns, and explore new workflows enabled by intelligent code assistance."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=33rGM-cpUAI"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=33rGM-cpUAI
+title: 'Agents League Battle 1: Building Creative AI Apps with GitHub Copilot'
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-05 23:32:54 +00:00
-permalink: "/2026-02-05-Agents-League-Battle-1-Building-Creative-AI-Apps-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Patterns", "AI", "AI Powered Apps", "App Development", "Coding", "Creativity", "GitHub Copilot", "Intelligent Assistance", "Rapid Prototyping", "Starter Kits", "Videos", "VS Code", "Workflow Automation"]
-tags_normalized: ["agentic patterns", "ai", "ai powered apps", "app development", "coding", "creativity", "github copilot", "intelligent assistance", "rapid prototyping", "starter kits", "videos", "vs code", "workflow automation"]
+tags:
+- Agentic Patterns
+- AI
+- AI Powered Apps
+- App Development
+- Creativity
+- GitHub Copilot
+- Intelligent Assistance
+- Rapid Prototyping
+- Starter Kits
+- Videos
+- VS Code
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code presents an opening Agents League Battle focused on building creative AI-powered applications using GitHub Copilot. Learn how participants blend creativity and intelligent assistance to prototype innovative apps.<!--excerpt_end-->
 
 {% youtube 33rGM-cpUAI %}

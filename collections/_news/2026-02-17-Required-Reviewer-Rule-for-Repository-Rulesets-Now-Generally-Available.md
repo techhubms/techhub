@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Required Reviewer Rule for Repository Rulesets Now Generally Available"
-description: "This announcement details the general availability of the required reviewer rule for GitHub repository rulesets. It explains new features since the public preview, such as negation patterns in file matching, and contrasts the policy enforcement role of rulesets with CODEOWNERS functionality. Detailed scenarios and policy improvements for teams and organizations are included."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-17-required-reviewer-rule-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-17-required-reviewer-rule-is-now-generally-available
+title: Required Reviewer Rule for Repository Rulesets Now Generally Available
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-17 15:35:39 +00:00
-permalink: "/2026-02-17-Required-Reviewer-Rule-for-Repository-Rulesets-Now-Generally-Available.html"
-categories: ["DevOps"]
-tags: ["Automated Workflows", "Branch Protection", "CODEOWNERS", "Collaboration Tools", "DevOps", "File Pattern Matching", "GitHub", "GitHub Enterprise", "Merge Approvals", "Negation Patterns", "News", "Platform Governance", "Policy Enforcement", "Repository Rulesets", "Required Reviewer", "Review Policies", "Team Collaboration"]
-tags_normalized: ["automated workflows", "branch protection", "codeowners", "collaboration tools", "devops", "file pattern matching", "github", "github enterprise", "merge approvals", "negation patterns", "news", "platform governance", "policy enforcement", "repository rulesets", "required reviewer", "review policies", "team collaboration"]
+tags:
+- Automated Workflows
+- Branch Protection
+- CODEOWNERS
+- Collaboration Tools
+- DevOps
+- File Pattern Matching
+- GitHub
+- GitHub Enterprise
+- Merge Approvals
+- Negation Patterns
+- News
+- Platform Governance
+- Policy Enforcement
+- Repository Rulesets
+- Required Reviewer
+- Review Policies
+- Team Collaboration
+section_names:
+- devops
 ---
-
 Allison announces the general availability of GitHub's required reviewer rule for repository rulesets, highlighting improvements in review policy management for teams and organizations.<!--excerpt_end-->
 
 # Required Reviewer Rule for Repository Rulesets Now Generally Available

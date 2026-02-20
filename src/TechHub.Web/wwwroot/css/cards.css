@@ -110,9 +110,10 @@
 /* Card metadata (dates, authors, source, etc.) */
 .card-meta {
   display: flex;
-  gap: var(--spacing-3);
+  gap: 0.25em;
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
+  font-style: italic;
   flex-wrap: wrap;
 }
 

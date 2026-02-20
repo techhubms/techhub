@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Reliably Refreshing the WebView2 Control in WPF Applications"
-description: "This article by Rick Strahl explores how to perform reliable refresh operations on the Microsoft WebView2 control in WPF desktop applications. It covers the challenges of reloading web content, especially images and cached resources, and presents practical coding solutions for performing soft and hard reloads using different techniques and APIs within the .NET/Microsoft ecosystem."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2026/Feb/04/Reliably-Refreshing-the-WebView2-Control"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+external_url: https://weblog.west-wind.com/posts/2026/Feb/04/Reliably-Refreshing-the-WebView2-Control
+title: Reliably Refreshing the WebView2 Control in WPF Applications
+author: Rick Strahl
+primary_section: dotnet
+feed_name: Rick Strahl's Blog
 date: 2026-02-05 07:53:22 +00:00
-permalink: "/2026-02-05-Reliably-Refreshing-the-WebView2-Control-in-WPF-Applications.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Cache Management", "Chromium", "ClearBrowsingDataAsync", "Coding", "CoreWebView2", "Desktop Development", "DevTools Protocol", "Microsoft Edge", "Reload", "UI Refresh", "WebView", "WebView2", "Windows", "Windows Applications", "WinUI", "WPF"]
-tags_normalized: ["dotnet", "blogs", "csharp", "cache management", "chromium", "clearbrowsingdataasync", "coding", "corewebview2", "desktop development", "devtools protocol", "microsoft edge", "reload", "ui refresh", "webview", "webview2", "windows", "windows applications", "winui", "wpf"]
+tags:
+- .NET
+- Blogs
+- C#
+- Cache Management
+- Chromium
+- ClearBrowsingDataAsync
+- CoreWebView2
+- Desktop Development
+- DevTools Protocol
+- Microsoft Edge
+- Reload
+- UI Refresh
+- WebView
+- WebView2
+- Windows
+- Windows Applications
+- WinUI
+- WPF
+section_names:
+- dotnet
 ---
-
 Rick Strahl explains several approaches to reliably refresh the Microsoft WebView2 control for WPF, focusing on solutions to reload web content and resources, and providing sample code for soft and hard cache clearing.<!--excerpt_end-->
 
 # Reliably Refreshing the WebView2 Control in WPF Applications

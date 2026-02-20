@@ -14,7 +14,6 @@ tags:
 - Local Development
 - MCP
 - MCP Server
-- MCP Server
 - Remote Server Setup
 - VS Code
 - VSC

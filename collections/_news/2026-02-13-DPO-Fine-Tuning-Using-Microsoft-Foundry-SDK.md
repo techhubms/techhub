@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "DPO Fine-Tuning Using Microsoft Foundry SDK"
-description: "This guide by Jayesh Tanna explores Direct Preference Optimization (DPO), a cutting-edge technique for fine-tuning large language models. Readers learn how to implement DPO with the Microsoft Foundry SDK, including setup, code examples, dataset formats, best use cases, and a comparison with traditional fine-tuning methods. It’s ideal for developers aiming to build safer, more helpful AI applications."
-author: "Jayesh Tanna"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/dpo-fine-tuning-using-microsoft-foundry-sdk/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/dpo-fine-tuning-using-microsoft-foundry-sdk/
+title: DPO Fine-Tuning Using Microsoft Foundry SDK
+author: Jayesh Tanna
+primary_section: ai
+feed_name: Microsoft AI Foundry Blog
 date: 2026-02-13 23:13:44 +00:00
-permalink: "/2026-02-13-DPO-Fine-Tuning-Using-Microsoft-Foundry-SDK.html"
-categories: ["AI", "ML"]
-tags: ["AI", "AI Development", "AI Evaluation", "AI Safety", "Azure AI Projects", "Content Moderation", "Direct Preference Optimization", "Fine Tuning", "Foundry SDK", "GPT 4", "Hyperparameters", "LLMs", "Microsoft Foundry", "ML", "Model Alignment", "News", "Preference Pairs", "Python", "RLHF Alternatives"]
-tags_normalized: ["ai", "ai development", "ai evaluation", "ai safety", "azure ai projects", "content moderation", "direct preference optimization", "fine tuning", "foundry sdk", "gpt 4", "hyperparameters", "llms", "microsoft foundry", "ml", "model alignment", "news", "preference pairs", "python", "rlhf alternatives"]
+tags:
+- AI
+- AI Development
+- AI Evaluation
+- AI Safety
+- Azure AI Projects
+- Content Moderation
+- Direct Preference Optimization
+- Fine Tuning
+- Foundry SDK
+- GPT 4
+- Hyperparameters
+- LLMs
+- Microsoft Foundry
+- ML
+- Model Alignment
+- News
+- Preference Pairs
+- Python
+- RLHF Alternatives
+section_names:
+- ai
+- ml
 ---
-
 Jayesh Tanna presents a comprehensive walkthrough of how to apply Direct Preference Optimization (DPO) for large language models using the Microsoft Foundry SDK. The article covers practical Python examples, data formats, and ideal scenarios for developers.<!--excerpt_end-->
 
 # DPO Fine-Tuning Using Microsoft Foundry SDK

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Logic Apps Agentic Workflows with SAP - End-to-End Integration Patterns"
-description: "This article by Emmanuel Abram Profeta presents a comprehensive guide to integrating Azure Logic Apps with SAP, focusing on structured data workflows, error handling, and AI-assisted validation. The post details practical mechanics for connecting Logic Apps to SAP using RFCs and IDoc contracts, emphasizes how to operationalize validation and remediation, and highlights real-world implementation tips for maintainable, production-grade integrations. The guide also covers email-based notification, contract-based schema validation, exception propagation, and modular remediation (IDoc creation), serving as a reference pattern for hybrid SAP/Azure projects and BizTalk migrations."
-author: "Emmanuel_Abram_Profeta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-agentic-workflows-with-sap-part-1-infrastructure/ba-p/4491906"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-agentic-workflows-with-sap-part-1-infrastructure/ba-p/4491906
+title: Logic Apps Agentic Workflows with SAP - End-to-End Integration Patterns
+author: Emmanuel_Abram_Profeta
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-18 01:24:37 +00:00
-permalink: "/2026-02-18-Logic-Apps-Agentic-Workflows-with-SAP-End-to-End-Integration-Patterns.html"
-categories: ["AI", "Azure"]
-tags: ["ABAP", "AI", "AI Assisted Development", "Azure", "Azure Logic Apps", "BAPI", "BizTalk Migration", "Cloud Integration", "Community", "CSV Workflow", "Data Validation", "Email Notification", "Enterprise Integration", "Error Propagation", "Exception Handling", "IDoc", "Microsoft Azure", "OpenAI", "Power Platform", "RFC", "SAP Integration", "Schema Validation", "Workflow Automation"]
-tags_normalized: ["abap", "ai", "ai assisted development", "azure", "azure logic apps", "bapi", "biztalk migration", "cloud integration", "community", "csv workflow", "data validation", "email notification", "enterprise integration", "error propagation", "exception handling", "idoc", "microsoft azure", "openai", "power platform", "rfc", "sap integration", "schema validation", "workflow automation"]
+tags:
+- ABAP
+- AI
+- AI Assisted Development
+- Azure
+- Azure Logic Apps
+- BAPI
+- BizTalk Migration
+- Cloud Integration
+- Community
+- CSV Workflow
+- Data Validation
+- Email Notification
+- Enterprise Integration
+- Error Propagation
+- Exception Handling
+- IDoc
+- Microsoft Azure
+- OpenAI
+- Power Platform
+- RFC
+- SAP Integration
+- Schema Validation
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Emmanuel Abram Profeta explains how to integrate Azure Logic Apps with SAP systems, including structured data movement, robust error handling, and AI-assisted validation. The article serves as a comprehensive technical reference for real-world Azure-SAP integration.<!--excerpt_end-->
 
 # Logic Apps Agentic Workflows with SAP - Part 1: Infrastructure

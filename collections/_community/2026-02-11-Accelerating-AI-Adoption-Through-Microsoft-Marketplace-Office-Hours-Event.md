@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Accelerating AI Adoption Through Microsoft Marketplace: Office Hours Event"
-description: "This event overview highlights how organizations can leverage Microsoft Marketplace to discover, evaluate, and deploy AI-powered apps and solutions that integrate with Microsoft platforms. The session aims to accelerate practical AI adoption for business impact, detailing common business scenarios, best practices, and the cloud benefits of the marketplace ecosystem. Attendees can participate in recurring office hours, ask questions, and learn strategies to maximize their Microsoft investments in AI."
-author: "Pearl-Angeles"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/accelerating-ai-adoption-through-microsoft-marketplace/ec-p/4493907#M680"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-events/accelerating-ai-adoption-through-microsoft-marketplace/ec-p/4493907#M680
+title: 'Accelerating AI Adoption Through Microsoft Marketplace: Office Hours Event'
+author: Pearl-Angeles
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-11 21:48:49 +00:00
-permalink: "/2026-02-11-Accelerating-AI-Adoption-Through-Microsoft-Marketplace-Office-Hours-Event.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "AI Deployment", "Azure Marketplace", "Best Practices", "Business Scenarios", "Cloud Performance", "Community", "Enterprise AI", "Microsoft Integrations", "Microsoft Marketplace", "Office Hours", "Prebuilt AI Solutions", "Tech Community"]
-tags_normalized: ["ai", "ai adoption", "ai deployment", "azure marketplace", "best practices", "business scenarios", "cloud performance", "community", "enterprise ai", "microsoft integrations", "microsoft marketplace", "office hours", "prebuilt ai solutions", "tech community"]
+tags:
+- AI
+- AI Adoption
+- AI Deployment
+- Azure Marketplace
+- Best Practices
+- Business Scenarios
+- Cloud Performance
+- Community
+- Enterprise AI
+- Microsoft Integrations
+- Microsoft Marketplace
+- Office Hours
+- Prebuilt AI Solutions
+- Tech Community
+section_names:
+- ai
 ---
-
 Pearl-Angeles outlines an office hours session focused on leveraging Microsoft Marketplace to accelerate AI adoption, covering use cases, deployment strategies, and integration with Microsoft services.<!--excerpt_end-->
 
 # Accelerating AI Adoption Through Microsoft Marketplace: Office Hours Event

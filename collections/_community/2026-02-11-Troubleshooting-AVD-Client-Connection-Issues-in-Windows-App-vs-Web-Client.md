@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Troubleshooting AVD Client Connection Issues in Windows App vs Web Client"
-description: "This detailed post walks through troubleshooting an Azure Virtual Desktop (AVD) environment where the web client successfully establishes a session but the Windows App (Remote Desktop client) fails to connect, both on-premises and off-premises. The discussion covers attempted fixes related to RDP properties, network settings, identity, firewall traffic, and Entra ID authentication logs."
-author: "cadminimum"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/your-computer-was-unable-to-connect-to-the-remote-computer/m-p/4494411#M13999"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/your-computer-was-unable-to-connect-to-the-remote-computer/m-p/4494411#M13999
+title: Troubleshooting AVD Client Connection Issues in Windows App vs Web Client
+author: cadminimum
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-11 18:03:11 +00:00
-permalink: "/2026-02-11-Troubleshooting-AVD-Client-Connection-Issues-in-Windows-App-vs-Web-Client.html"
-categories: ["Azure", "Security"]
-tags: ["AVD", "Azure", "Azure Virtual Desktop", "Community", "Conditional Access", "Entra ID", "Firewall", "Gateway", "Host Pool", "Private Endpoint", "RDP", "Remote Desktop", "Security", "SessionHost", "Troubleshooting", "Windows App"]
-tags_normalized: ["avd", "azure", "azure virtual desktop", "community", "conditional access", "entra id", "firewall", "gateway", "host pool", "private endpoint", "rdp", "remote desktop", "security", "sessionhost", "troubleshooting", "windows app"]
+tags:
+- AVD
+- Azure
+- Azure Virtual Desktop
+- Community
+- Conditional Access
+- Entra ID
+- Firewall
+- Gateway
+- Host Pool
+- Private Endpoint
+- RDP
+- Remote Desktop
+- Security
+- SessionHost
+- Troubleshooting
+- Windows App
+section_names:
+- azure
+- security
 ---
-
 cadminimum documents a problem connecting to Azure Virtual Desktop sessions via the Windows App while the web client works, sharing troubleshooting steps involving RDP, Entra ID, and firewall traffic analysis.<!--excerpt_end-->
 
 # Troubleshooting AVD Client Connection Issues in Windows App vs Web Client

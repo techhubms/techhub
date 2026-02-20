@@ -1,20 +1,38 @@
----
-layout: "post"
-title: ".NET Data Community Standup: Introduction to Microsoft.Extensions.DataIngestion"
-description: "This session from the .NET Data Community Standup introduces Microsoft.Extensions.DataIngestion, a new library in the Microsoft.Extensions family. Adam Sitnik, one of the primary implementers, discusses its purpose, functionality, and relevance to developers dealing with data ingestion, databases, and AI features like embeddings and vectors."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=pQivzi4n6jM"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=pQivzi4n6jM
+title: '.NET Data Community Standup: Introduction to Microsoft.Extensions.DataIngestion'
+author: dotnet
+primary_section: ai
+feed_name: DotNet YouTube
 date: 2026-02-04 21:38:49 +00:00
-permalink: "/2026-02-04-NET-Data-Community-Standup-Introduction-to-MicrosoftExtensionsDataIngestion.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET Developer", "Adam Sitnik", "AI", "Coding", "Data", "Data Ingestion", "Databases", "Demo", "Developer", "Developer Tools", "Documents", "Dotnet10", "Dotnetdata", "Dotnetdeveloper", "Embeddings", "Ingestion", "Microsoft", "Microsoft.Extensions.DataIngestion", "Parsing", "Software Developer", "Software Development", "Vectors", "Videos"]
-tags_normalized: ["dotnet", "dotnet developer", "adam sitnik", "ai", "coding", "data", "data ingestion", "databases", "demo", "developer", "developer tools", "documents", "dotnet10", "dotnetdata", "dotnetdeveloper", "embeddings", "ingestion", "microsoft", "microsoftdotextensionsdotdataingestion", "parsing", "software developer", "software development", "vectors", "videos"]
+tags:
+- .NET
+- .NET Developer
+- Adam Sitnik
+- AI
+- Data
+- Data Ingestion
+- Databases
+- Demo
+- Developer
+- Developer Tools
+- Documents
+- Dotnet10
+- Dotnetdata
+- Dotnetdeveloper
+- Embeddings
+- Ingestion
+- Microsoft
+- Microsoft.Extensions.DataIngestion
+- Parsing
+- Software Developer
+- Software Development
+- Vectors
+- Videos
+section_names:
+- ai
+- dotnet
 ---
-
 In this .NET Data Community Standup episode, Adam Sitnik joins Jiri Cincura and Shay Rojansky to discuss Microsoft.Extensions.DataIngestion, providing developers with insights into its database and AI integration capabilities.<!--excerpt_end-->
 
 {% youtube pQivzi4n6jM %}

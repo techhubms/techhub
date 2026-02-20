@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Deploy VMs on Azure Local with Portal, CLI & Bicep (IaC)"
-description: "This guide by Thomas Maurer provides a practical walkthrough for deploying and managing virtual machines (VMs) on Azure Local. It covers three approaches: Azure Portal, Azure CLI, and Infrastructure-as-Code (IaC) with Bicep, highlighting how to enable consistent management and automation in hybrid and sovereign cloud scenarios using Azure Arc integration."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2026/02/deploy-vms-on-azure-local-with-portal-cli-bicep-iac/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+external_url: https://www.thomasmaurer.ch/2026/02/deploy-vms-on-azure-local-with-portal-cli-bicep-iac/
+title: Deploy VMs on Azure Local with Portal, CLI & Bicep (IaC)
+author: Thomas Maurer
+primary_section: dotnet
+feed_name: Thomas Maurer's Blog
 date: 2026-02-10 16:12:10 +00:00
-permalink: "/2026-02-10-Deploy-VMs-on-Azure-Local-with-Portal-CLI-and-Bicep-IaC.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["ARM Templates", "Automation", "Azure", "Azure Arc", "Azure CLI", "Azure Local", "Azure Portal", "Bicep", "Blogs", "Cloud", "Cloud Native", "Coding", "DevOps", "Hybrid Cloud", "Hyper V", "IaC", "Microsoft", "Microsoft Azure", "RBAC", "Sovereign Clod", "Sovereign Cloud", "Virtual Machines", "Virtualization", "VM Deployment", "VM Management", "Windows Server"]
-tags_normalized: ["arm templates", "automation", "azure", "azure arc", "azure cli", "azure local", "azure portal", "bicep", "blogs", "cloud", "cloud native", "coding", "devops", "hybrid cloud", "hyper v", "iac", "microsoft", "microsoft azure", "rbac", "sovereign clod", "sovereign cloud", "virtual machines", "virtualization", "vm deployment", "vm management", "windows server"]
+tags:
+- ARM Templates
+- Automation
+- Azure
+- Azure Arc
+- Azure CLI
+- Azure Local
+- Azure Portal
+- Bicep
+- Blogs
+- Cloud Native
+- DevOps
+- Hybrid Cloud
+- Hyper V
+- IaC
+- Microsoft
+- Microsoft Azure
+- RBAC
+- Sovereign Clod
+- Sovereign Cloud
+- Virtual Machines
+- Virtualization
+- VM Deployment
+- VM Management
+- Windows Server
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 Thomas Maurer guides readers through deploying VMs on Azure Local using the Azure Portal, CLI, and Bicep, showing practical workflows for hybrid and sovereign cloud environments.<!--excerpt_end-->
 
 # Deploy VMs on Azure Local with Portal, CLI & Bicep (IaC)

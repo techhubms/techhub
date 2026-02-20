@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Supercharge AI, BI, and Data Engineering with Semantic Link in Microsoft Fabric"
-description: "This article introduces Semantic Link, now generally available in Microsoft Fabric. Semantic Link unifies AI, BI, and data engineering through a shared semantic layer, improving collaboration and automation for data scientists, BI engineers, and data engineers. Learn how Semantic Link optimizes workflows with notebooks, Power BI, SQL, Spark, and more."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/supercharge-ai-bi-and-data-engineering-with-semantic-link-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/supercharge-ai-bi-and-data-engineering-with-semantic-link-generally-available/
+title: Supercharge AI, BI, and Data Engineering with Semantic Link in Microsoft Fabric
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-10 14:00:00 +00:00
-permalink: "/2026-02-10-Supercharge-AI-BI-and-Data-Engineering-with-Semantic-Link-in-Microsoft-Fabric.html"
-categories: ["AI", "ML"]
-tags: ["AI", "Analytics", "Automation", "BI", "Community Contributions", "Data Engineering", "Data Science", "Lakehouse", "Microsoft Fabric", "ML", "News", "Notebook Integration", "OneLake", "Power BI", "Semantic Link", "Semantic Models", "Spark", "SQL"]
-tags_normalized: ["ai", "analytics", "automation", "bi", "community contributions", "data engineering", "data science", "lakehouse", "microsoft fabric", "ml", "news", "notebook integration", "onelake", "power bi", "semantic link", "semantic models", "spark", "sql"]
+tags:
+- AI
+- Analytics
+- Automation
+- BI
+- Community Contributions
+- Data Engineering
+- Data Science
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Notebook Integration
+- OneLake
+- Power BI
+- Semantic Link
+- Semantic Models
+- Spark
+- SQL
+section_names:
+- ai
+- ml
 ---
-
 Microsoft Fabric Blog explores how Semantic Link, now generally available in Microsoft Fabric, empowers data teams by unifying AI, BI, and data engineering with a collaborative semantic layer.<!--excerpt_end-->
 
 # Supercharge AI, BI, and Data Engineering with Semantic Link in Microsoft Fabric

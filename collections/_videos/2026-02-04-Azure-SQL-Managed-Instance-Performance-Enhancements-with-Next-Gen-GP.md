@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure SQL Managed Instance Performance Enhancements with Next-Gen GP"
-description: "This video features Anna Hoffman and Uros Milanovic discussing the significant performance improvements introduced in Azure SQL Managed Instance with the Next-gen General Purpose (GP) tier. They cover benefits like reduced latency, increased throughput and IOPS, expanded storage and database limits, and the addition of customizable IOPS and memory sliders for greater control. The episode provides comparisons between Classic and Next-gen GP, shares HammerDB-TPROC-C test results, demonstrates the updated portal user experience, and outlines practical value to users."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=y2zSs6sGCr0"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=y2zSs6sGCr0
+title: Azure SQL Managed Instance Performance Enhancements with Next-Gen GP
+author: Microsoft Developer
+primary_section: azure
+feed_name: Microsoft Developer YouTube
 date: 2026-02-04 17:01:39 +00:00
-permalink: "/2026-02-04-Azure-SQL-Managed-Instance-Performance-Enhancements-with-Next-Gen-GP.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure SQL Managed Instance", "Cloud Computing", "Cloud Database", "Database Storage", "Dev", "Development", "IOPS", "Latency Reduction", "Microsoft", "Microsoft Azure", "Next Gen GP", "Performance Optimization", "Portal Experience", "Resource Scaling", "SQL Server", "Tech", "Technology", "Throughput", "Videos"]
-tags_normalized: ["azure", "azure sql managed instance", "cloud computing", "cloud database", "database storage", "dev", "development", "iops", "latency reduction", "microsoft", "microsoft azure", "next gen gp", "performance optimization", "portal experience", "resource scaling", "sql server", "tech", "technology", "throughput", "videos"]
+tags:
+- Azure
+- Azure SQL Managed Instance
+- Cloud Computing
+- Cloud Database
+- Database Storage
+- Dev
+- Development
+- IOPS
+- Latency Reduction
+- Microsoft
+- Microsoft Azure
+- Next Gen GP
+- Performance Optimization
+- Portal Experience
+- Resource Scaling
+- SQL Server
+- Tech
+- Technology
+- Throughput
+- Videos
+section_names:
+- azure
 ---
-
 Anna Hoffman and Uros Milanovic from Microsoft Developer discuss the new Next-gen GP tier for Azure SQL Managed Instance, highlighting performance enhancements and new features for database users.<!--excerpt_end-->
 
 {% youtube y2zSs6sGCr0 %}

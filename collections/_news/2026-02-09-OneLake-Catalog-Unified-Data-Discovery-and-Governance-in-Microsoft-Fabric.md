@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "OneLake Catalog: Unified Data Discovery and Governance in Microsoft Fabric"
-description: "This article introduces the OneLake catalog, a core component of Microsoft Fabric designed for data discovery, governance, and security. It explains how OneLake unifies organizational data, streamlines access and management, and enables both technical and business users to confidently work with trusted, governable data, supporting secure and collaborative AI and analytics workloads."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-the-trusted-catalog-for-organizations-worldwide/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-the-trusted-catalog-for-organizations-worldwide/
+title: 'OneLake Catalog: Unified Data Discovery and Governance in Microsoft Fabric'
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-09 14:00:00 +00:00
-permalink: "/2026-02-09-OneLake-Catalog-Unified-Data-Discovery-and-Governance-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "APIs", "Azure", "Column Level Security", "Copilot Studio", "Data Catalog", "Data Discovery", "Data Governance", "Data Lake", "Data Mesh", "Data Security", "Microsoft 365 Integration", "Microsoft Fabric", "Microsoft Purview", "ML", "News", "OneLake", "Power BI", "Row Level Security", "Security", "Semantic Models"]
-tags_normalized: ["ai", "apis", "azure", "column level security", "copilot studio", "data catalog", "data discovery", "data governance", "data lake", "data mesh", "data security", "microsoft 365 integration", "microsoft fabric", "microsoft purview", "ml", "news", "onelake", "power bi", "row level security", "security", "semantic models"]
+tags:
+- AI
+- APIs
+- Azure
+- Column Level Security
+- Copilot Studio
+- Data Catalog
+- Data Discovery
+- Data Governance
+- Data Lake
+- Data Mesh
+- Data Security
+- Microsoft 365 Integration
+- Microsoft Fabric
+- Microsoft Purview
+- ML
+- News
+- OneLake
+- Power BI
+- Row Level Security
+- Security
+- Semantic Models
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog explores how the OneLake catalog brings unified data governance, discovery, and security to organizations, empowering data professionals, admins, and developers to build, protect, and manage a trusted data foundation across enterprise workloads.<!--excerpt_end-->
 
 # OneLake Catalog: Unified Data Discovery and Governance in Microsoft Fabric

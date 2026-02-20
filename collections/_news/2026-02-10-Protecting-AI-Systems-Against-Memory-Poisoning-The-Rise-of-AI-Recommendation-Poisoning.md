@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Protecting AI Systems Against Memory Poisoning: The Rise of AI Recommendation Poisoning"
-description: "This article from Microsoft Defender Security Research Team discusses the emerging threat of AI memory poisoning—specifically, how malicious actors exploit AI assistant memory through prompt injection via URLs and embedded instructions. It covers techniques, real-world cases, mitigation strategies, sample detection queries, and the implications for security teams and organizations using Microsoft 365 Copilot and similar services."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/
+title: 'Protecting AI Systems Against Memory Poisoning: The Rise of AI Recommendation Poisoning'
+author: Microsoft Defender Security Research Team
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-10 14:56:21 +00:00
-permalink: "/2026-02-10-Protecting-AI-Systems-Against-Memory-Poisoning-The-Rise-of-AI-Recommendation-Poisoning.html"
-categories: ["AI", "Security"]
-tags: ["Advanced Hunting", "AI", "AI Recommendation Poisoning", "AI Security", "Attack Surface", "Copilot", "Cross Prompt Injection", "Incident Response", "LLM Security", "Malicious Links", "Memory Poisoning", "Microsoft 365 Copilot", "Microsoft Defender", "MITRE ATLAS", "News", "Prompt Injection", "Security", "Security Research", "Threat Detection"]
-tags_normalized: ["advanced hunting", "ai", "ai recommendation poisoning", "ai security", "attack surface", "copilot", "cross prompt injection", "incident response", "llm security", "malicious links", "memory poisoning", "microsoft 365 copilot", "microsoft defender", "mitre atlas", "news", "prompt injection", "security", "security research", "threat detection"]
+tags:
+- Advanced Hunting
+- AI
+- AI Recommendation Poisoning
+- AI Security
+- Attack Surface
+- Copilot
+- Cross Prompt Injection
+- Incident Response
+- LLM Security
+- Malicious Links
+- Memory Poisoning
+- Microsoft 365 Copilot
+- Microsoft Defender
+- MITRE ATLAS
+- News
+- Prompt Injection
+- Security
+- Security Research
+- Threat Detection
+section_names:
+- ai
+- security
 ---
-
 Microsoft Defender Security Research Team explores how AI systems, including Microsoft 365 Copilot, are vulnerable to AI memory poisoning attacks—where malicious prompts manipulate AI recommendations. The article details attack vectors, detection methods, and defenses against this growing threat.<!--excerpt_end-->
 
 # Protecting AI Systems Against Memory Poisoning: The Rise of AI Recommendation Poisoning

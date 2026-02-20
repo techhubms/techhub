@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "AI Toolkit for VS Code: February 2026 Major Update (v0.30.0)"
-description: "This community release by junjieli details the major February 2026 update for the AI Toolkit extension in Visual Studio Code (v0.30.0). It introduces several new features for agent development, including a centralized Tool Catalog, enhanced debugging via Agent Inspector, treating agent evaluations as first-class tests, and deeper integration with Microsoft Foundry. Improvements span agent building, model management (with OpenAI Response API support), Copilot workflow orchestration, and conversion/profiling. The update aims to streamline creation, debugging, and deployment of AI agents directly in the developer environment."
-author: "junjieli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-february-2026-update/ba-p/4493673"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-february-2026-update/ba-p/4493673
+title: 'AI Toolkit for VS Code: February 2026 Major Update (v0.30.0)'
+author: junjieli
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-13 08:00:00 +00:00
-permalink: "/2026-02-13-AI-Toolkit-for-VS-Code-February-2026-Major-Update-v0300.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Builder", "Agent Development", "Agent Inspector", "AI", "AI Toolkit", "Azure", "Coding", "Community", "Copilot", "Data Wrangler", "Debugging", "Eval Runner SDK", "Integration", "Microsoft Foundry", "Model Playground", "OpenAI Response API", "Phi Silica", "Prompt Agents", "Pytest", "Python", "Qualcomm GPU", "Tool Catalog", "VS Code", "Workflow Orchestration"]
-tags_normalized: ["agent builder", "agent development", "agent inspector", "ai", "ai toolkit", "azure", "coding", "community", "copilot", "data wrangler", "debugging", "eval runner sdk", "integration", "microsoft foundry", "model playground", "openai response api", "phi silica", "prompt agents", "pytest", "python", "qualcomm gpu", "tool catalog", "vs code", "workflow orchestration"]
+tags:
+- Agent Builder
+- Agent Development
+- Agent Inspector
+- AI
+- AI Toolkit
+- Azure
+- Community
+- Copilot
+- Data Wrangler
+- Debugging
+- Eval Runner SDK
+- Integration
+- Microsoft Foundry
+- Model Playground
+- OpenAI Response API
+- Phi Silica
+- Prompt Agents
+- Pytest
+- Python
+- Qualcomm GPU
+- Tool Catalog
+- VS Code
+- Workflow Orchestration
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 junjieli announces the AI Toolkit v0.30.0 February 2026 update for VS Code, highlighting new features such as a centralized Tool Catalog, improved debugging with Agent Inspector, advanced agent evaluation workflows, and Microsoft Foundry integration.<!--excerpt_end-->
 
 # AI Toolkit for VS Code — February 2026 Update

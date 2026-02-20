@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Claude Opus 4.6 Integration with GitHub Copilot Available in Popular IDEs"
-description: "This news update announces that Claude Opus 4.6, a new AI model, is now available for users of GitHub Copilot Chat across several major IDEs including Visual Studio, Visual Studio Code, and JetBrains IDEs. It details access requirements, administrative opt-in steps, and provides references for further model and deployment documentation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-18-claude-opus-4-6-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-18-claude-opus-4-6-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
+title: Claude Opus 4.6 Integration with GitHub Copilot Available in Popular IDEs
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-18 20:05:54 +00:00
-permalink: "/2026-02-18-Claude-Opus-46-Integration-with-GitHub-Copilot-Available-in-Popular-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "AI Update", "Claude Opus 4.6", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Enterprise Administration", "GitHub Copilot", "IDE Integration", "JetBrains IDEs", "Model Picker", "News", "Software Development", "VS"]
-tags_normalized: ["ai", "ai models", "ai update", "claude opus 4dot6", "copilot", "copilot business", "copilot chat", "copilot enterprise", "enterprise administration", "github copilot", "ide integration", "jetbrains ides", "model picker", "news", "software development", "vs"]
+tags:
+- AI
+- AI Models
+- AI Update
+- Claude Opus 4.6
+- Copilot
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- Enterprise Administration
+- GitHub Copilot
+- IDE Integration
+- JetBrains IDEs
+- Model Picker
+- News
+- Software Development
+- VS
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces the availability of Claude Opus 4.6 within GitHub Copilot Chat, highlighting new integration support for Visual Studio, JetBrains IDEs, Xcode, and Eclipse. Learn how administrators can enable access for their organizations.<!--excerpt_end-->
 
 # Claude Opus 4.6 Integration with GitHub Copilot Now Available in Popular IDEs

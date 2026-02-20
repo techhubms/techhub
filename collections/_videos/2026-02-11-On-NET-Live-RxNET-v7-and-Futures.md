@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "On .NET Live: Rx.NET v7 and Futures"
-description: "This video features a walkthrough of Rx.NET (Reactive Extensions for .NET) version 7, including new features, enhancements, and a discussion of future development plans. Experts from the .NET team explore how Rx.NET fits into modern .NET application development, providing developers with insights into reactive programming and the direction of the library."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8OAvFiczZ2k"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=8OAvFiczZ2k
+title: 'On .NET Live: Rx.NET v7 and Futures'
+author: dotnet
+primary_section: dotnet
+feed_name: DotNet YouTube
 date: 2026-02-11 20:34:57 +00:00
-permalink: "/2026-02-11-On-NET-Live-RxNET-v7-and-Futures.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Event Streams", "Frameworks", "Future Plans", "Library Updates", "Microsoft", "Reactive Extensions", "Reactive Programming", "Rx", "Rx.NET", "Rxdotnet", "Software Developer", "Version 7", "Videos"]
-tags_normalized: ["dotnet", "csharp", "coding", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "event streams", "frameworks", "future plans", "library updates", "microsoft", "reactive extensions", "reactive programming", "rx", "rxdotnet", "rxdotnet", "software developer", "version 7", "videos"]
+tags:
+- .NET
+- C#
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnetdeveloper
+- Event Streams
+- Frameworks
+- Future Plans
+- Library Updates
+- Microsoft
+- Reactive Extensions
+- Reactive Programming
+- Rx
+- Rx.NET
+- Rxdotnet
+- Software Developer
+- Version 7
+- Videos
+section_names:
+- dotnet
 ---
-
 dotnet hosts a live session on Rx.NET v7, led by Ian Griffiths, Katie Savage, Frank Boucher, and Cam Soper, exploring new features and future directions in reactive programming for .NET developers.<!--excerpt_end-->
 
 {% youtube 8OAvFiczZ2k %}

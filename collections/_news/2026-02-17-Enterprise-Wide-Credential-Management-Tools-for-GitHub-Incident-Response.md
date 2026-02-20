@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Enterprise-Wide Credential Management Tools for GitHub Incident Response"
-description: "This update introduces new credential management actions for GitHub Enterprise Cloud enterprise owners. These actions enhance security incident response by enabling owners to review SSO credentials, block access, revoke authorizations, and delete compromised tokens across the enterprise. A new fine-grained permission streamlines delegation of these sensitive operations."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-17-enterprise-wide-credential-management-tools-for-incident-response"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-17-enterprise-wide-credential-management-tools-for-incident-response
+title: Enterprise-Wide Credential Management Tools for GitHub Incident Response
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-17 18:55:38 +00:00
-permalink: "/2026-02-17-Enterprise-Wide-Credential-Management-Tools-for-GitHub-Incident-Response.html"
-categories: ["DevOps", "Security"]
-tags: ["API Security", "Application Security", "Audit Logs", "Credential Management", "DevOps", "Enterprise Management", "Enterprise Management Tools", "Enterprise Security", "Fine Grained Permissions", "GitHub Enterprise Cloud", "Improvement", "Incident Response", "News", "OAuth Tokens", "Personal Access Tokens", "Security", "Security Incident", "Single Sign On", "SSH Keys", "SSO", "Token Revocation"]
-tags_normalized: ["api security", "application security", "audit logs", "credential management", "devops", "enterprise management", "enterprise management tools", "enterprise security", "fine grained permissions", "github enterprise cloud", "improvement", "incident response", "news", "oauth tokens", "personal access tokens", "security", "security incident", "single sign on", "ssh keys", "sso", "token revocation"]
+tags:
+- API Security
+- Application Security
+- Audit Logs
+- Credential Management
+- DevOps
+- Enterprise Management
+- Enterprise Management Tools
+- Enterprise Security
+- Fine Grained Permissions
+- GitHub Enterprise Cloud
+- Improvement
+- Incident Response
+- News
+- OAuth Tokens
+- Personal Access Tokens
+- Security
+- Security Incident
+- Single Sign On
+- SSH Keys
+- SSO
+- Token Revocation
+section_names:
+- devops
+- security
 ---
-
 Allison reports on new enterprise-wide credential management features in GitHub Enterprise Cloud, allowing owners to respond swiftly to major security incidents by revoking or blocking credentials and delegating these tasks to trusted admins.<!--excerpt_end-->
 
 # Enterprise-Wide Credential Management Tools for GitHub Incident Response

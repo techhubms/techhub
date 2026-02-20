@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Landing Zone for Indian Banks: Regulatory-Ready Architecture and Compliance"
-description: "This document provides a practical guide to building an Azure Landing Zone geared for Indian banks. It details architectural blueprints, security controls, and compliance mappings aligned with ISO 27001, PCI-DSS, FFIEC, and RBI guidelines. Covered topics include identity management, network security, data protection, monitoring, business continuity, data residency, governance automation, and exit management, all with an emphasis on regulated workloads within Azure."
-author: "srhulsus"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-landing-zone-and-compliance-for-banks-indian-banks/ba-p/4491951"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-landing-zone-and-compliance-for-banks-indian-banks/ba-p/4491951
+title: 'Azure Landing Zone for Indian Banks: Regulatory-Ready Architecture and Compliance'
+author: srhulsus
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-12 23:41:04 +00:00
-permalink: "/2026-02-12-Azure-Landing-Zone-for-Indian-Banks-Regulatory-Ready-Architecture-and-Compliance.html"
-categories: ["Azure", "Security"]
-tags: ["Audit Logging", "Azure", "Azure Firewall", "Azure Key Vault", "Azure Landing Zone", "Azure Policy", "Azure Site Recovery", "Banking Compliance", "Community", "Data Residency", "Defender For Cloud", "Disaster Recovery", "FFIEC", "Hub Spoke Architecture", "ISO 27001", "Microsoft Azure", "Microsoft Entra ID", "Microsoft Sentinel", "Network Security", "PCI DSS", "Policy as Code", "Privileged Identity Management", "RBI", "Security"]
-tags_normalized: ["audit logging", "azure", "azure firewall", "azure key vault", "azure landing zone", "azure policy", "azure site recovery", "banking compliance", "community", "data residency", "defender for cloud", "disaster recovery", "ffiec", "hub spoke architecture", "iso 27001", "microsoft azure", "microsoft entra id", "microsoft sentinel", "network security", "pci dss", "policy as code", "privileged identity management", "rbi", "security"]
+tags:
+- Audit Logging
+- Azure
+- Azure Firewall
+- Azure Key Vault
+- Azure Landing Zone
+- Azure Policy
+- Azure Site Recovery
+- Banking Compliance
+- Community
+- Data Residency
+- Defender For Cloud
+- Disaster Recovery
+- FFIEC
+- Hub Spoke Architecture
+- ISO 27001
+- Microsoft Azure
+- Microsoft Entra ID
+- Microsoft Sentinel
+- Network Security
+- PCI DSS
+- Policy as Code
+- Privileged Identity Management
+- RBI
+- Security
+section_names:
+- azure
+- security
 ---
-
 srhulsus presents a comprehensive, regulator-ready reference for Indian banks seeking to architect Azure Landing Zones that meet strict governance, security, and compliance demands.<!--excerpt_end-->
 
 # Azure Landing Zone for Indian Banks: Regulatory-Ready Architecture and Compliance

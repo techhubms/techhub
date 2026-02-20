@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "A One-Prompt Attack That Breaks LLM Safety Alignment"
-description: "This article explores how language and diffusion models, such as LLMs and Stable Diffusion, can be unaligned from their safety guardrails through a minimal adversarial fine-tuning process. The authors detail how techniques such as Group Relative Policy Optimization (GRPO), when manipulated, can quickly erode safety behaviors—even with just a single, non-explicit prompt—broadening the vulnerability of models across content categories. They discuss the broader implications for AI system defenders and recommend enhanced model safety evaluations during post-deployment adaptation."
-author: "Mark Russinovich, Giorgio Severi, Blake Bullwinkel, Yanan Cai, Keegan Hines and Ahmed Salem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/09/prompt-attack-breaks-llm-safety/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/09/prompt-attack-breaks-llm-safety/
+title: A One-Prompt Attack That Breaks LLM Safety Alignment
+author: Mark Russinovich, Giorgio Severi, Blake Bullwinkel, Yanan Cai, Keegan Hines and Ahmed Salem
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-09 17:12:11 +00:00
-permalink: "/2026-02-09-A-One-Prompt-Attack-That-Breaks-LLM-Safety-Alignment.html"
-categories: ["AI", "Security"]
-tags: ["Adversarial Attacks", "AI", "Alignment Dynamics", "Diffusion Models", "Foundation Models", "GPT OSS", "Group Relative Policy Optimization", "GRPO", "Large Language Models", "LLM", "Machine Learning Security", "Model Fine Tuning", "Model Robustness", "News", "Post Deployment Adaptation", "Safe AI Development", "Safety Alignment", "Security", "Stable Diffusion"]
-tags_normalized: ["adversarial attacks", "ai", "alignment dynamics", "diffusion models", "foundation models", "gpt oss", "group relative policy optimization", "grpo", "large language models", "llm", "machine learning security", "model fine tuning", "model robustness", "news", "post deployment adaptation", "safe ai development", "safety alignment", "security", "stable diffusion"]
+tags:
+- Adversarial Attacks
+- AI
+- Alignment Dynamics
+- Diffusion Models
+- Foundation Models
+- GPT OSS
+- Group Relative Policy Optimization
+- GRPO
+- Large Language Models
+- LLM
+- Machine Learning Security
+- Model Fine Tuning
+- Model Robustness
+- News
+- Post Deployment Adaptation
+- Safe AI Development
+- Safety Alignment
+- Security
+- Stable Diffusion
+section_names:
+- ai
+- security
 ---
-
 Mark Russinovich, Giorgio Severi, Blake Bullwinkel, Yanan Cai, Keegan Hines, and Ahmed Salem investigate how quickly the safety alignment of modern language and diffusion models can be compromised, revealing the fragility of current defense approaches.<!--excerpt_end-->
 
 # A One-Prompt Attack That Breaks LLM Safety Alignment

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Secret Scanning Improvements: Extended Metadata Checks on GitHub"
-description: "This announcement describes enhancements to GitHub secret scanning through the addition of extended metadata checks. It explains what extended metadata checks provide, their impact on security workflows, and how they help development and security teams quickly triage and respond to credential leaks at scale. Available for Enterprise Cloud customers with secret scanning and validity checks enabled, these features deliver more detailed insights about affected secrets like ownership, creation, and expiry information."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-18-secret-scanning-improvements-to-extended-metadata-checks"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-18-secret-scanning-improvements-to-extended-metadata-checks
+title: 'Secret Scanning Improvements: Extended Metadata Checks on GitHub'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-18 21:31:29 +00:00
-permalink: "/2026-02-18-Secret-Scanning-Improvements-Extended-Metadata-Checks-on-GitHub.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Control", "Application Security", "Audit Log", "Code Security", "Credential Leak Detection", "DevOps", "DevSecOps", "Enterprise Cloud", "Extended Metadata", "GitHub Secret Scanning", "Improvement", "News", "Remediation", "Secret Management", "Security", "Security Configuration", "Software Supply Chain", "Token Validity Checks"]
-tags_normalized: ["access control", "application security", "audit log", "code security", "credential leak detection", "devops", "devsecops", "enterprise cloud", "extended metadata", "github secret scanning", "improvement", "news", "remediation", "secret management", "security", "security configuration", "software supply chain", "token validity checks"]
+tags:
+- Access Control
+- Application Security
+- Audit Log
+- Code Security
+- Credential Leak Detection
+- DevOps
+- DevSecOps
+- Enterprise Cloud
+- Extended Metadata
+- GitHub Secret Scanning
+- Improvement
+- News
+- Remediation
+- Secret Management
+- Security
+- Security Configuration
+- Software Supply Chain
+- Token Validity Checks
+section_names:
+- devops
+- security
 ---
-
 Allison details improvements to GitHub secret scanning that add extended metadata checks, providing richer context on exposed secrets and supporting more effective remediation for development and security teams.<!--excerpt_end-->
 
 # Secret Scanning Improvements: Extended Metadata Checks on GitHub

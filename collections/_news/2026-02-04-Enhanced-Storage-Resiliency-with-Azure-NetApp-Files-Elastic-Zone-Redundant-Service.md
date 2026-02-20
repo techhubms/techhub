@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Enhanced Storage Resiliency with Azure NetApp Files Elastic Zone-Redundant Service"
-description: "This news article introduces Azure NetApp Files Elastic Zone-Redundant Storage (ANF Elastic ZRS), a new enterprise-grade Azure file storage offering designed for mission-critical workloads. It details synchronous replication, service-managed failover, and enterprise-ready data management, highlighting how organizations benefit from enhanced data availability and operational continuity."
-author: "Raji Easwaran"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/enhanced-storage-resiliency-with-azure-netapp-files-elastic-zone-redundant-service/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/enhanced-storage-resiliency-with-azure-netapp-files-elastic-zone-redundant-service/
+title: Enhanced Storage Resiliency with Azure NetApp Files Elastic Zone-Redundant Service
+author: Raji Easwaran
+primary_section: azure
+feed_name: The Azure Blog
 date: 2026-02-04 16:00:00 +00:00
-permalink: "/2026-02-04-Enhanced-Storage-Resiliency-with-Azure-NetApp-Files-Elastic-Zone-Redundant-Service.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure NetApp Files", "Cloud Storage", "Data Resiliency", "Disaster Recovery", "Elastic ZRS", "Enterprise Storage", "High Availability", "NetApp ONTAP", "News", "NFS", "Service Managed Failover", "SMB", "Snapshots", "Storage", "Synchronous Replication", "Zone Redundant Storage"]
-tags_normalized: ["azure", "azure netapp files", "cloud storage", "data resiliency", "disaster recovery", "elastic zrs", "enterprise storage", "high availability", "netapp ontap", "news", "nfs", "service managed failover", "smb", "snapshots", "storage", "synchronous replication", "zone redundant storage"]
+tags:
+- Azure
+- Azure NetApp Files
+- Cloud Storage
+- Data Resiliency
+- Disaster Recovery
+- Elastic ZRS
+- Enterprise Storage
+- High Availability
+- NetApp ONTAP
+- News
+- NFS
+- Service Managed Failover
+- SMB
+- Snapshots
+- Storage
+- Synchronous Replication
+- Zone Redundant Storage
+section_names:
+- azure
 ---
-
 Raji Easwaran explains how the Azure NetApp Files Elastic Zone-Redundant Service raises the bar for resilient, high-availability cloud file storage on Azure, focusing on capabilities for mission-critical enterprise data management.<!--excerpt_end-->
 
 # Enhanced Storage Resiliency with Azure NetApp Files Elastic Zone-Redundant Service

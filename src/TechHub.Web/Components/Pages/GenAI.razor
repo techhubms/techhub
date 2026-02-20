@@ -26,7 +26,11 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
+            <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
             <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
+            </MobileSidebarPanel>
+            </MobileSidebarToolbar>
         </aside>
 
         <article class="article-body">

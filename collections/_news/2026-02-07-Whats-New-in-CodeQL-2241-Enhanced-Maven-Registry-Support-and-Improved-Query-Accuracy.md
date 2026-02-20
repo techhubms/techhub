@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "What’s New in CodeQL 2.24.1: Enhanced Maven Registry Support and Improved Query Accuracy"
-description: "This release highlights the latest enhancements in CodeQL 2.24.1, including better support for Maven private registries, expanded language and framework capabilities, and accuracy improvements for security queries. The update benefits GitHub code scanning users by reducing false positives, supporting new language versions, and addressing code security across multiple ecosystems."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-06-codeql-2-24-1-improves-maven-private-registry-support-and-improves-query-accuracy"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-06-codeql-2-24-1-improves-maven-private-registry-support-and-improves-query-accuracy
+title: 'What’s New in CodeQL 2.24.1: Enhanced Maven Registry Support and Improved Query Accuracy'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-07 00:05:05 +00:00
-permalink: "/2026-02-07-Whats-New-in-CodeQL-2241-Enhanced-Maven-Registry-Support-and-Improved-Query-Accuracy.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Buffer Overflow", "C#", "C++", "CI/CD", "CodeQL", "DevOps", "GitHub Code Scanning", "GitHub Enterprise Server", "Improvement", "Java", "Kotlin", "Maven", "News", "OpenAI Module", "Prompt Injection", "Python", "Security", "Security Queries", "Static Analysis", "Struts", "Taint Flow"]
-tags_normalized: ["application security", "buffer overflow", "csharp", "cplusplus", "cislashcd", "codeql", "devops", "github code scanning", "github enterprise server", "improvement", "java", "kotlin", "maven", "news", "openai module", "prompt injection", "python", "security", "security queries", "static analysis", "struts", "taint flow"]
+tags:
+- Application Security
+- Buffer Overflow
+- C#
+- C++
+- CI/CD
+- CodeQL
+- DevOps
+- GitHub Code Scanning
+- GitHub Enterprise Server
+- Improvement
+- Java
+- Kotlin
+- Maven
+- News
+- OpenAI Module
+- Prompt Injection
+- Python
+- Security
+- Security Queries
+- Static Analysis
+- Struts
+- Taint Flow
+section_names:
+- devops
+- security
 ---
-
 Allison details the improvements in CodeQL 2.24.1, focusing on enhanced Maven registry support, expanded language coverage, and key query accuracy upgrades that help developers secure their codebase.<!--excerpt_end-->
 
 # What’s New in CodeQL 2.24.1: Enhanced Maven Registry Support and Improved Query Accuracy

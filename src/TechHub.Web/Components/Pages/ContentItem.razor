@@ -22,15 +22,21 @@
 
 <main class="page-with-sidebar">
     <aside class="sidebar">
+        <MobileSidebarToolbar>
         @if (item != null)
         {
             @* Tag cloud showing this content item's tags with real section counts *@
+            <MobileSidebarPanel Label="Tags" Icon="tags">
             <SidebarTagCloud Tags="@item.Tags"
                 SectionName="@SectionName"
                 Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
                 NavigationBaseUrl="@($"/{SectionName.ToLowerInvariant()}")" />
+            </MobileSidebarPanel>
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
             <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
+            </MobileSidebarPanel>
         }
+        </MobileSidebarToolbar>
     </aside>
 
     @* Main content area *@

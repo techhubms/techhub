@@ -26,7 +26,7 @@
         var sectionData = SectionCache.GetSectionByName(SectionName);
         if (sectionData != null)
         {
-            <SectionBanner Section="@sectionData" />
+            <SectionBanner Section="@sectionData" RssFeedUrl="@RssFeedUrl" />
             <SubNav Section="@sectionData" />
         }
         else
@@ -48,6 +48,12 @@
 @code {
     [Parameter]
     public string? SectionName { get; set; }
+
+    /// <summary>
+    /// Optional RSS feed URL. Passed through to SectionBanner for mobile RSS icon.
+    /// </summary>
+    [Parameter]
+    public string? RssFeedUrl { get; set; }
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }

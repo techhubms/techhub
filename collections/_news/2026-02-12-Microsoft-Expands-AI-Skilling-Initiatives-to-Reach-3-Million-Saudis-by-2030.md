@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Expands AI Skilling Initiatives to Reach 3 Million Saudis by 2030"
-description: "Microsoft has announced a major scale-up of its AI education programs in Saudi Arabia, targeting three million people for AI skills acquisition by 2030. Partnerships with national authorities, tailored initiatives for educators and women, and deep integration into the education system highlight Microsoft's commitment to supporting Vision 2030 through talent development and digital capability building."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/emea/2026/02/microsoft-accelerates-ai-skilling-in-saudi-arabia-helping-3-million-people-acquire-ai-skills-by-2030/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/emea/2026/02/microsoft-accelerates-ai-skilling-in-saudi-arabia-helping-3-million-people-acquire-ai-skills-by-2030/
+title: Microsoft Expands AI Skilling Initiatives to Reach 3 Million Saudis by 2030
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-12 16:46:35 +00:00
-permalink: "/2026-02-12-Microsoft-Expands-AI-Skilling-Initiatives-to-Reach-3-Million-Saudis-by-2030.html"
-categories: ["AI"]
-tags: ["AI", "AI Academy", "AI Curriculum", "AI Education", "AI Skilling", "Company News", "Digital Skills", "Microsoft", "Microsoft 365", "Microsoft Datacenter Academy", "Microsoft Elevate For Educators", "Ministry Of Communications And Information Technology", "News", "Samai Initiative", "Saudi Arabia", "SDAIA", "Teacher Training", "Vision", "Workforce Development"]
-tags_normalized: ["ai", "ai academy", "ai curriculum", "ai education", "ai skilling", "company news", "digital skills", "microsoft", "microsoft 365", "microsoft datacenter academy", "microsoft elevate for educators", "ministry of communications and information technology", "news", "samai initiative", "saudi arabia", "sdaia", "teacher training", "vision", "workforce development"]
+tags:
+- AI
+- AI Academy
+- AI Curriculum
+- AI Education
+- AI Skilling
+- Company News
+- Digital Skills
+- Microsoft
+- Microsoft 365
+- Microsoft Datacenter Academy
+- Microsoft Elevate For Educators
+- Ministry Of Communications And Information Technology
+- News
+- Samai Initiative
+- Saudi Arabia
+- SDAIA
+- Teacher Training
+- Vision
+- Workforce Development
+section_names:
+- ai
 ---
-
 stclarke reports on Microsoft's expanded AI training programs in Saudi Arabia, aiming to help three million people develop AI skills by 2030 through national partnerships, education sector programs, and broad skilling initiatives.<!--excerpt_end-->
 
 # Microsoft Expands AI Skilling Initiatives to Reach 3 Million Saudis by 2030

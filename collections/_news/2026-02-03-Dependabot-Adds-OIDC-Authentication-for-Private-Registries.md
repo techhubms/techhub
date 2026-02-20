@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Dependabot Adds OIDC Authentication for Private Registries"
-description: "This update covers the introduction of OpenID Connect (OIDC) authentication support in Dependabot, allowing update jobs to securely access private registries (including Azure DevOps Artifacts) without storing long-lived credentials. It discusses setup steps, supported registries, and benefits to supply chain security and operational overhead."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-03-dependabot-now-supports-oidc-authentication"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-03-dependabot-now-supports-oidc-authentication
+title: Dependabot Adds OIDC Authentication for Private Registries
+author: Allison
+primary_section: azure
+feed_name: The GitHub Blog
 date: 2026-02-03 17:09:59 +00:00
-permalink: "/2026-02-03-Dependabot-Adds-OIDC-Authentication-for-Private-Registries.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure DevOps Artifacts", "Continuous Integration", "Credential Management", "Dependabot", "DevOps", "GitHub Actions", "Improvement", "News", "OIDC Authentication", "OpenID Connect", "Private Registries", "Security", "Supply Chain Security"]
-tags_normalized: ["azure", "azure devops artifacts", "continuous integration", "credential management", "dependabot", "devops", "github actions", "improvement", "news", "oidc authentication", "openid connect", "private registries", "security", "supply chain security"]
+tags:
+- Azure
+- Azure DevOps Artifacts
+- Continuous Integration
+- Credential Management
+- Dependabot
+- DevOps
+- GitHub Actions
+- Improvement
+- News
+- OIDC Authentication
+- OpenID Connect
+- Private Registries
+- Security
+- Supply Chain Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 Allison outlines how Dependabot now supports OIDC authentication for private registries, including Azure DevOps Artifacts. This enhancement improves repository security and simplifies credential management for developers and DevOps teams.<!--excerpt_end-->
 
 # Dependabot Now Supports OIDC Authentication

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: ".NET and .NET Framework February 2026 Servicing Releases Update"
-description: "A detailed summary of the February 2026 servicing updates for .NET and .NET Framework, including security improvements, CVE patches, release notes for major components like ASP.NET Core and Entity Framework Core, download links, and feedback channels. Covers key security fixes and release resources for .NET 10.0, 9.0, and 8.0."
-author: "Rahul Bhandari (MSFT), Tara Overfield"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-february-2026-servicing-updates/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-february-2026-servicing-updates/
+title: .NET and .NET Framework February 2026 Servicing Releases Update
+author: Rahul Bhandari (MSFT), Tara Overfield
+primary_section: dotnet
+feed_name: Microsoft .NET Blog
 date: 2026-02-10 19:00:00 +00:00
-permalink: "/2026-02-10-NET-and-NET-Framework-February-2026-Servicing-Releases-Update.html"
-categories: ["Coding", "Security"]
-tags: [".NET", ".NET 10.0", ".NET 8.0", ".NET 9.0", ".NET Framework", "ASP.NET Core", "Coding", "CVE 21218", "EF Core", "Maintenance", "Maintenance & Updates", "Microsoft", "News", "Release Notes", "Runtime", "SDK", "Security", "Service Release", "Templating", "Vulnerability", "WPF"]
-tags_normalized: ["dotnet", "dotnet 10dot0", "dotnet 8dot0", "dotnet 9dot0", "dotnet framework", "aspdotnet core", "coding", "cve 21218", "ef core", "maintenance", "maintenance and updates", "microsoft", "news", "release notes", "runtime", "sdk", "security", "service release", "templating", "vulnerability", "wpf"]
+tags:
+- .NET
+- .NET 10.0
+- .NET 8.0
+- .NET 9.0
+- .NET Framework
+- ASP.NET Core
+- CVE 21218
+- EF Core
+- Maintenance
+- Maintenance & Updates
+- Microsoft
+- News
+- Release Notes
+- Runtime
+- SDK
+- Security
+- Service Release
+- Templating
+- Vulnerability
+- WPF
+section_names:
+- dotnet
+- security
 ---
-
 Rahul Bhandari (MSFT) and Tara Overfield summarize the February 2026 servicing releases for .NET and .NET Framework, detailing security improvements, resolved vulnerabilities, and links to all relevant update resources.<!--excerpt_end-->
 
 # .NET and .NET Framework February 2026 Servicing Releases Update

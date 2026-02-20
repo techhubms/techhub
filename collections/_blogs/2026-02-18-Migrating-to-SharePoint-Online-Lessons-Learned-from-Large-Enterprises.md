@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Migrating to SharePoint Online: Lessons Learned from Large Enterprises"
-description: "This article by John Edward delves into the organizational and technical complexities enterprises face when migrating from legacy SharePoint Server environments to SharePoint Online. It outlines key lessons learned, from pre-migration cleanup and governance to security validation and the importance of user adoption for successful digital transformation within Microsoft 365."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/migrating-to-sharepoint-online-lessons-learned-from-large-enterprises/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/migrating-to-sharepoint-online-lessons-learned-from-large-enterprises/
+title: 'Migrating to SharePoint Online: Lessons Learned from Large Enterprises'
+author: John Edward
+primary_section: dotnet
+feed_name: Dellenny's Blog
 date: 2026-02-18 09:27:57 +00:00
-permalink: "/2026-02-18-Migrating-to-SharePoint-Online-Lessons-Learned-from-Large-Enterprises.html"
-categories: ["Coding"]
-tags: ["Blogs", "Change Management", "Cloud Migration", "Coding", "Compliance", "Customization", "Digital Workplace", "Enterprise Collaboration", "Governance", "Legacy Systems", "Microsoft 365", "Performance Planning", "SharePoint", "SharePoint Online", "SharePoint Server", "Site Architecture", "User Adoption"]
-tags_normalized: ["blogs", "change management", "cloud migration", "coding", "compliance", "customization", "digital workplace", "enterprise collaboration", "governance", "legacy systems", "microsoft 365", "performance planning", "sharepoint", "sharepoint online", "sharepoint server", "site architecture", "user adoption"]
+tags:
+- Blogs
+- Change Management
+- Cloud Migration
+- Compliance
+- Customization
+- Digital Workplace
+- Enterprise Collaboration
+- Governance
+- Legacy Systems
+- Microsoft 365
+- Performance Planning
+- SharePoint
+- SharePoint Online
+- SharePoint Server
+- Site Architecture
+- User Adoption
+- .NET
+section_names:
+- dotnet
 ---
-
 John Edward summarizes hard-won lessons for large enterprises migrating to SharePoint Online, focusing on organizational change, governance, customization hurdles, and strategies for long-term success.<!--excerpt_end-->
 
 # Migrating to SharePoint Online: Lessons Learned from Large Enterprises

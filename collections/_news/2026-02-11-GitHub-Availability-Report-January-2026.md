@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Availability Report: January 2026"
-description: "A technical review of two major service degradation incidents affecting GitHub and GitHub Copilot in January 2026, analyzing timeline, root causes, mitigation steps, and improvements to operational resilience. Focuses on outage events that impacted Copilot chat features and platform-wide reliability."
-author: "Jakub Oleksy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/github-availability-report-january-2026/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/company-news/github-availability-report-january-2026/
+title: 'GitHub Availability Report: January 2026'
+author: Jakub Oleksy
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-11 23:12:34 +00:00
-permalink: "/2026-02-11-GitHub-Availability-Report-January-2026.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Company News", "DevOps", "GitHub Availability Report", "GitHub Copilot", "Incident Response", "Infrastructure Upgrade", "JetBrains", "Live Updates", "Monitoring", "News", "News & Insights", "OpenAI", "Operational Resilience", "Platform Reliability", "Root Cause Analysis", "Service Outage", "Status Page", "VS Code"]
-tags_normalized: ["ai", "company news", "devops", "github availability report", "github copilot", "incident response", "infrastructure upgrade", "jetbrains", "live updates", "monitoring", "news", "news and insights", "openai", "operational resilience", "platform reliability", "root cause analysis", "service outage", "status page", "vs code"]
+tags:
+- AI
+- Company News
+- DevOps
+- GitHub Availability Report
+- GitHub Copilot
+- Incident Response
+- Infrastructure Upgrade
+- JetBrains
+- Live Updates
+- Monitoring
+- News
+- News & Insights
+- OpenAI
+- Operational Resilience
+- Platform Reliability
+- Root Cause Analysis
+- Service Outage
+- Status Page
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Jakub Oleksy summarizes the January 2026 GitHub availability incidents, detailing the causes and impact of major outages affecting GitHub Copilot and core GitHub services.<!--excerpt_end-->
 
 # GitHub Availability Report: January 2026

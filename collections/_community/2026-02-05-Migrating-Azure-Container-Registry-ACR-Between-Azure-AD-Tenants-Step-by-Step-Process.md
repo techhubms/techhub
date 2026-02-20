@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Migrating Azure Container Registry (ACR) Between Azure AD Tenants: Step-by-Step Process"
-description: "This guide by SoumyaShet05 details the process and considerations when migrating an Azure Container Registry (ACR) across Azure Active Directory tenants. It covers prerequisites, step-by-step actions in both source and target tenants, use of managed identities, PowerShell automation, and critical configuration and testing guidance to ensure seamless transition."
-author: "SoumyaShet05"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/aks-tenant-migration-considerations-and-approach/ba-p/4415198"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/aks-tenant-migration-considerations-and-approach/ba-p/4415198
+title: 'Migrating Azure Container Registry (ACR) Between Azure AD Tenants: Step-by-Step Process'
+author: SoumyaShet05
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-05 11:11:56 +00:00
-permalink: "/2026-02-05-Migrating-Azure-Container-Registry-ACR-Between-Azure-AD-Tenants-Step-by-Step-Process.html"
-categories: ["Azure", "DevOps"]
-tags: ["ACR", "AKS", "ARM Template", "Automation", "Azure", "Azure AD Tenant", "Azure Container Registry", "Azure Subscription", "Cloud Shell", "Community", "DevOps", "Managed Identity", "PowerShell", "RBAC", "Repository Migration", "Tenant Migration", "VNET Peering"]
-tags_normalized: ["acr", "aks", "arm template", "automation", "azure", "azure ad tenant", "azure container registry", "azure subscription", "cloud shell", "community", "devops", "managed identity", "powershell", "rbac", "repository migration", "tenant migration", "vnet peering"]
+tags:
+- ACR
+- AKS
+- ARM Template
+- Automation
+- Azure
+- Azure AD Tenant
+- Azure Container Registry
+- Azure Subscription
+- Cloud Shell
+- Community
+- DevOps
+- Managed Identity
+- PowerShell
+- RBAC
+- Repository Migration
+- Tenant Migration
+- VNET Peering
+section_names:
+- azure
+- devops
 ---
-
 SoumyaShet05 describes in detail how to migrate an Azure Container Registry (ACR) between Azure AD tenants, outlining all critical steps, considerations, and tools involved in the process.<!--excerpt_end-->
 
 # Migrating Azure Container Registry (ACR) Between Azure AD Tenants: Step-by-Step Process

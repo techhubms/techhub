@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building HIPAA-Compliant Medical Transcription with Microsoft Foundry Local AI"
-description: "This article offers a practical guide for developers building HIPAA-compliant, privacy-focused medical transcription systems using Microsoft Foundry Local with OpenAI Whisper models. It explains how to design, implement, and deploy a local voice-to-text pipeline with ASP.NET Core and C# that ensures protected health information (PHI) never leaves organizational boundaries. The walkthrough covers architecture, model management, privacy best practices, API implementation, and production deployment tips for healthcare scenarios."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-hipaa-compliant-medical-transcription-with-local-ai/ba-p/4490777"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-hipaa-compliant-medical-transcription-with-local-ai/ba-p/4490777
+title: Building HIPAA-Compliant Medical Transcription with Microsoft Foundry Local AI
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-19 08:00:00 +00:00
-permalink: "/2026-02-19-Building-HIPAA-Compliant-Medical-Transcription-with-Microsoft-Foundry-Local-AI.html"
-categories: ["AI", "Coding"]
-tags: [".NET 10", "AI", "AI Inference", "API Design", "ASP.NET Core", "Audio Processing", "C#", "Coding", "Community", "Health IT", "Healthcare Development", "HIPAA Compliance", "Medical Transcription", "Microsoft Foundry Local", "Minimal API", "Model Lifecycle", "On Premises AI", "OpenAI Whisper", "PHI Protection", "Privacy", "REST API", "WinML"]
-tags_normalized: ["dotnet 10", "ai", "ai inference", "api design", "aspdotnet core", "audio processing", "csharp", "coding", "community", "health it", "healthcare development", "hipaa compliance", "medical transcription", "microsoft foundry local", "minimal api", "model lifecycle", "on premises ai", "openai whisper", "phi protection", "privacy", "rest api", "winml"]
+tags:
+- .NET 10
+- AI
+- AI Inference
+- API Design
+- ASP.NET Core
+- Audio Processing
+- C#
+- Community
+- Health IT
+- Healthcare Development
+- HIPAA Compliance
+- Medical Transcription
+- Microsoft Foundry Local
+- Minimal API
+- Model Lifecycle
+- On Premises AI
+- OpenAI Whisper
+- PHI Protection
+- Privacy
+- REST API
+- WinML
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Lee Stott demonstrates how to build a HIPAA-compliant medical transcription app using Microsoft Foundry Local, OpenAI Whisper, and ASP.NET Core. His guide emphasizes privacy-first design and practical AI development for real healthcare environments.<!--excerpt_end-->
 
 # Building HIPAA-Compliant Medical Transcription with Microsoft Foundry Local AI

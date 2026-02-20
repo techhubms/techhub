@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Centralizing Cluster Performance Metrics with ReFrame HPC and Azure Log Analytics"
-description: "This article by jimpaine provides a detailed guide on integrating ReFrame HPC, a robust testing framework, with Azure Log Analytics for unified monitoring of performance metrics across distributed HPC clusters. It covers Azure resource deployment using Bicep, test configuration, result export, and benefits for cross-cluster visibility."
-author: "jimpaine"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/centralized-cluster-performance-metrics-with-reframe-hpc-and/ba-p/4488077"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/centralized-cluster-performance-metrics-with-reframe-hpc-and/ba-p/4488077
+title: Centralizing Cluster Performance Metrics with ReFrame HPC and Azure Log Analytics
+author: jimpaine
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-02-06 09:37:24 +00:00
-permalink: "/2026-02-06-Centralizing-Cluster-Performance-Metrics-with-ReFrame-HPC-and-Azure-Log-Analytics.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automated Testing", "Azure", "Azure Log Analytics", "Azure Monitor", "Bicep", "Cluster Monitoring", "Coding", "Community", "Continuous Monitoring", "Data Collection Rule", "DevOps", "HPC", "IaC", "Log Analytics Workspace", "PBS", "Performance Metrics", "Performance Testing", "Python", "ReFrame HPC", "Slurm", "Testing Framework"]
-tags_normalized: ["automated testing", "azure", "azure log analytics", "azure monitor", "bicep", "cluster monitoring", "coding", "community", "continuous monitoring", "data collection rule", "devops", "hpc", "iac", "log analytics workspace", "pbs", "performance metrics", "performance testing", "python", "reframe hpc", "slurm", "testing framework"]
+tags:
+- Automated Testing
+- Azure
+- Azure Log Analytics
+- Azure Monitor
+- Bicep
+- Cluster Monitoring
+- Community
+- Continuous Monitoring
+- Data Collection Rule
+- DevOps
+- HPC
+- IaC
+- Log Analytics Workspace
+- PBS
+- Performance Metrics
+- Performance Testing
+- Python
+- ReFrame HPC
+- Slurm
+- Testing Framework
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 jimpaine demonstrates how to use ReFrame HPC in conjunction with Azure Log Analytics to centralize and analyze performance metrics from multiple HPC clusters, providing actionable insight for system administrators and developers.<!--excerpt_end-->
 
 # Centralized Cluster Performance Metrics with ReFrame HPC and Azure Log Analytics

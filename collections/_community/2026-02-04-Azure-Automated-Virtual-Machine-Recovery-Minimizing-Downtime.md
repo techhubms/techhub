@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Azure Automated Virtual Machine Recovery: Minimizing Downtime"
-description: "This article introduces Azure Automated VM Recovery, a platform feature that automatically detects, diagnoses, and mitigates virtual machine failures to minimize downtime. It explains the system's detection mechanisms, diagnostic processes, and event annotations for tracking recovery speed and reliability, all requiring no customer setup. The result is faster, more reliable VM recovery across all Azure subscriptions, supporting business continuity and smoother cloud operations."
-author: "Jon_Andoni_Baranda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/azure-automated-virtual-machine-recovery-minimizing-downtime/ba-p/4483166"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/azure-automated-virtual-machine-recovery-minimizing-downtime/ba-p/4483166
+title: 'Azure Automated Virtual Machine Recovery: Minimizing Downtime'
+author: Jon_Andoni_Baranda
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-04 19:23:11 +00:00
-permalink: "/2026-02-04-Azure-Automated-Virtual-Machine-Recovery-Minimizing-Downtime.html"
-categories: ["Azure"]
-tags: ["Auto Recovery", "Azure", "Business Continuity", "Cloud Infrastructure", "Cloud Monitoring", "Cloud Operations", "Community", "Detection", "Diagnosis", "High Availability", "Mitigation", "Recovery Event Annotations", "Service Reliability", "Virtual Machines", "VM Recovery"]
-tags_normalized: ["auto recovery", "azure", "business continuity", "cloud infrastructure", "cloud monitoring", "cloud operations", "community", "detection", "diagnosis", "high availability", "mitigation", "recovery event annotations", "service reliability", "virtual machines", "vm recovery"]
+tags:
+- Auto Recovery
+- Azure
+- Business Continuity
+- Cloud Infrastructure
+- Cloud Monitoring
+- Cloud Operations
+- Community
+- Detection
+- Diagnosis
+- High Availability
+- Mitigation
+- Recovery Event Annotations
+- Service Reliability
+- Virtual Machines
+- VM Recovery
+section_names:
+- azure
 ---
-
 Jon Andoni Baranda and co-authors detail how Azure Automated VM Recovery minimizes virtual machine downtime with an integrated, automated three-stage approach for detection, diagnosis, and mitigation.<!--excerpt_end-->
 
 # Azure Automated Virtual Machine Recovery: Minimizing Downtime

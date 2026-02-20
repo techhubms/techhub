@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Agentic Cloud Operations with Azure Copilot: Transforming Cloud Management with AI-Driven Agents"
-description: "This news article explores how Azure Copilot introduces agentic cloud operations for modern workloads. It highlights the evolution from traditional operational models to AI-driven agents that provide contextual intelligence, governance, and automation across the full cloud lifecycle. Key capabilities and practical use cases for teams migrating, deploying, and operating on Azure are explained."
-author: "Pang Ngernsupaluck"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/agentic-cloud-operations-a-new-way-to-run-the-cloud/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/agentic-cloud-operations-a-new-way-to-run-the-cloud/
+title: 'Agentic Cloud Operations with Azure Copilot: Transforming Cloud Management with AI-Driven Agents'
+author: Pang Ngernsupaluck
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-02-11 22:00:00 +00:00
-permalink: "/2026-02-11-Agentic-Cloud-Operations-with-Azure-Copilot-Transforming-Cloud-Management-with-AI-Driven-Agents.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic Operations", "AI", "AI Agents", "Automation", "Azure", "Azure Copilot", "Azure Management", "Cloud Migration", "Cloud Operations", "Copilot", "Deployment", "DevOps", "Governance", "Management And Governance", "Microsoft Azure", "News", "Observability", "Operational Intelligence", "Policy Compliance", "Resiliency", "Responsible AI"]
-tags_normalized: ["agentic operations", "ai", "ai agents", "automation", "azure", "azure copilot", "azure management", "cloud migration", "cloud operations", "copilot", "deployment", "devops", "governance", "management and governance", "microsoft azure", "news", "observability", "operational intelligence", "policy compliance", "resiliency", "responsible ai"]
+tags:
+- Agentic Operations
+- AI
+- AI Agents
+- Automation
+- Azure
+- Azure Copilot
+- Azure Management
+- Cloud Migration
+- Cloud Operations
+- Copilot
+- Deployment
+- DevOps
+- Governance
+- Management And Governance
+- Microsoft Azure
+- News
+- Observability
+- Operational Intelligence
+- Policy Compliance
+- Resiliency
+- Responsible AI
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Pang Ngernsupaluck presents an overview of agentic cloud operations using Azure Copilot, emphasizing AI-powered agents that streamline and optimize management, deployment, and operations in dynamic Azure environments.<!--excerpt_end-->
 
 # Agentic Cloud Operations: A New Way to Run the Cloud

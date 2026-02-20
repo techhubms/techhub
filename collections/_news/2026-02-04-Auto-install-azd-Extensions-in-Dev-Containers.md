@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Auto-install `azd` Extensions in Dev Containers"
-description: "This mini-blog post introduces a new feature for the Azure Developer CLI (`azd`) enabling automatic installation of `azd` extensions in development containers. It explains configuration changes, benefits for team onboarding, and includes a step-by-step guide for using the new `extensions` option in `devcontainer.json`."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azd-devcontainer-extensions/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azd-devcontainer-extensions/
+title: Auto-install `azd` Extensions in Dev Containers
+author: PuiChee (PC) Chan
+primary_section: dotnet
+feed_name: Microsoft Azure SDK Blog
 date: 2026-02-04 19:08:28 +00:00
-permalink: "/2026-02-04-Auto-install-azd-Extensions-in-Dev-Containers.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation", "Azd", "Azure", "Azure Developer CLI", "Azure SDK", "CLI Tools", "Coding", "Container Development", "Devcontainer.json", "Devcontainers", "Development Environments", "DevOps", "Extensions", "News", "Onboarding", "VS Code"]
-tags_normalized: ["automation", "azd", "azure", "azure developer cli", "azure sdk", "cli tools", "coding", "container development", "devcontainerdotjson", "devcontainers", "development environments", "devops", "extensions", "news", "onboarding", "vs code"]
+tags:
+- Automation
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure SDK
+- CLI Tools
+- Container Development
+- Devcontainer.json
+- Devcontainers
+- Development Environments
+- DevOps
+- Extensions
+- News
+- Onboarding
+- VS Code
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 PuiChee (PC) Chan presents a quick guide to the new Azure Developer CLI feature that lets you auto-install `azd` extensions in dev containers, improving developer onboarding and setup.<!--excerpt_end-->
 
 # Auto-install `azd` Extensions in Dev Containers

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Writing Effective Prompts for Testing Scenarios: AI-Assisted Quality Engineering"
-description: "This blog post by Nidhi Malhotra explores the shift from manual testing toward AI-first quality engineering. It provides actionable strategies for designing effective prompts in AI-powered testing with GitHub Copilot, outlines common pitfalls, and presents an AI-assisted QA maturity model for enterprise adoption. Practical patterns and anti-patterns for prompt design are detailed."
-author: "NidhiMalhotra"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/writing-effective-prompts-for-testing-scenarios-ai-assisted/ba-p/4488001"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/writing-effective-prompts-for-testing-scenarios-ai-assisted/ba-p/4488001
+title: 'Writing Effective Prompts for Testing Scenarios: AI-Assisted Quality Engineering'
+author: NidhiMalhotra
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-05 08:00:00 +00:00
-permalink: "/2026-02-05-Writing-Effective-Prompts-for-Testing-Scenarios-AI-Assisted-Quality-Engineering.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agent Based Testing", "AI", "AI Assisted Testing", "Community", "DevOps", "GitHub Copilot", "JetBrains", "MCP", "Prompt Design", "Prompt Engineering", "QA Automation", "QA Maturity Model", "Quality Engineering", "Regression Analysis", "SDLC", "Test Automation", "Test Case Generation", "Testing Best Practices", "VS Code"]
-tags_normalized: ["agent based testing", "ai", "ai assisted testing", "community", "devops", "github copilot", "jetbrains", "mcp", "prompt design", "prompt engineering", "qa automation", "qa maturity model", "quality engineering", "regression analysis", "sdlc", "test automation", "test case generation", "testing best practices", "vs code"]
+tags:
+- Agent Based Testing
+- AI
+- AI Assisted Testing
+- Community
+- DevOps
+- GitHub Copilot
+- JetBrains
+- MCP
+- Prompt Design
+- Prompt Engineering
+- QA Automation
+- QA Maturity Model
+- Quality Engineering
+- Regression Analysis
+- SDLC
+- Test Automation
+- Test Case Generation
+- Testing Best Practices
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Nidhi Malhotra presents key practices for designing effective AI prompts in the context of quality engineering, focusing on how GitHub Copilot can transform enterprise testing when integrated thoughtfully.<!--excerpt_end-->
 
 # Writing Effective Prompts for Testing Scenarios: AI-Assisted Quality Engineering

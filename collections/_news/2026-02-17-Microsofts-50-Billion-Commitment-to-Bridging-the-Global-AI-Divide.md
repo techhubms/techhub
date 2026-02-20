@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Microsoft's $50 Billion Commitment to Bridging the Global AI Divide"
-description: "This article reports on Microsoft's announcement at the India AI Impact Summit to invest $50 billion by 2030 to address the global disparity in AI adoption. The post details a five-part plan: building AI infrastructure, empowering communities with technology and skills, strengthening multilingual capabilities, encouraging local AI innovation, and refining measurement of AI diffusion."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2026/02/17/acting-with-urgency-to-address-the-growing-ai-divide/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/on-the-issues/2026/02/17/acting-with-urgency-to-address-the-growing-ai-divide/
+title: Microsoft's $50 Billion Commitment to Bridging the Global AI Divide
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-17 15:07:00 +00:00
-permalink: "/2026-02-17-Microsofts-50-Billion-Commitment-to-Bridging-the-Global-AI-Divide.html"
-categories: ["AI"]
-tags: ["AI", "AI Diffusion", "AI For Good Lab", "AI Policy", "AI Skilling", "Company News", "Content Provenance", "Data Center Investment", "Developer Community", "Digital Sovereignty", "Education", "GitHub", "Global South", "India AI Impact Summit", "Infrastructure", "LinkedIn Post", "Local Innovation", "Microsoft", "Multilingual AI", "News", "Open Source", "Paza", "Project Gecko", "Samiksha", "Trusted Tech Alliance"]
-tags_normalized: ["ai", "ai diffusion", "ai for good lab", "ai policy", "ai skilling", "company news", "content provenance", "data center investment", "developer community", "digital sovereignty", "education", "github", "global south", "india ai impact summit", "infrastructure", "linkedin post", "local innovation", "microsoft", "multilingual ai", "news", "open source", "paza", "project gecko", "samiksha", "trusted tech alliance"]
+tags:
+- AI
+- AI Diffusion
+- AI For Good Lab
+- AI Policy
+- AI Skilling
+- Company News
+- Content Provenance
+- Data Center Investment
+- Developer Community
+- Digital Sovereignty
+- Education
+- GitHub
+- Global South
+- India AI Impact Summit
+- Infrastructure
+- LinkedIn Post
+- Local Innovation
+- Microsoft
+- Multilingual AI
+- News
+- Open Source
+- Paza
+- Project Gecko
+- Samiksha
+- Trusted Tech Alliance
+section_names:
+- ai
 ---
-
 stclarke outlines Microsoft's multi-faceted strategy to reduce the global AI divide, highlighting a $50 billion investment to improve infrastructure, education, and innovation in the Global South.<!--excerpt_end-->
 
 # Microsoft's $50 Billion Commitment to Bridging the Global AI Divide

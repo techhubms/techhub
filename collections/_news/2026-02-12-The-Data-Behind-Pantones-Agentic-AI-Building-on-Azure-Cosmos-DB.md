@@ -1,20 +1,36 @@
----
-layout: "post"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/the-data-behind-the-design-how-pantone-built-agentic-ai-with-an-ai-ready-database/
 title: "The Data Behind Pantone's Agentic AI: Building on Azure Cosmos DB"
-description: "This article explores how Pantone created an AI-powered Palette Generator using agentic AI principles and Azure Cosmos DB. The story highlights architectural decisions, the importance of a real-time AI-ready database, and practical lessons learned from deploying and iterating on an intelligent creative tool at scale with Microsoft Azure services."
-author: "Jesse Sullivan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/the-data-behind-the-design-how-pantone-built-agentic-ai-with-an-ai-ready-database/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+author: Jesse Sullivan
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-02-12 16:00:00 +00:00
-permalink: "/2026-02-12-The-Data-Behind-Pantones-Agentic-AI-Building-on-Azure-Cosmos-DB.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI + Machine Learning", "AI Application", "Azure", "Azure AI", "Azure Cosmos DB", "Cloud Scalability", "Conversational AI", "Databases", "Feedback Loops", "Generative AI", "Internet Of Things", "Microsoft Foundry", "Multiagent Architecture", "News", "Palette Generator", "Pantone", "Real Time Data", "Semantic Search", "Vector Search"]
-tags_normalized: ["agentic ai", "ai", "ai plus machine learning", "ai application", "azure", "azure ai", "azure cosmos db", "cloud scalability", "conversational ai", "databases", "feedback loops", "generative ai", "internet of things", "microsoft foundry", "multiagent architecture", "news", "palette generator", "pantone", "real time data", "semantic search", "vector search"]
+tags:
+- Agentic AI
+- AI
+- AI + Machine Learning
+- AI Application
+- Azure
+- Azure AI
+- Azure Cosmos DB
+- Cloud Scalability
+- Conversational AI
+- Databases
+- Feedback Loops
+- Generative AI
+- Internet Of Things
+- Microsoft Foundry
+- Multiagent Architecture
+- News
+- Palette Generator
+- Pantone
+- Real Time Data
+- Semantic Search
+- Vector Search
+section_names:
+- ai
+- azure
 ---
-
 Jesse Sullivan details how Pantone leveraged agentic AI, Azure Cosmos DB, and Azure AI services for an MVP Palette Generator, sharing technical insights and practical lessons for building scalable, AI-powered applications.<!--excerpt_end-->
 
 # The Data Behind Pantone's Agentic AI: Building on Azure Cosmos DB

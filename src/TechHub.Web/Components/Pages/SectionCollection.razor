@@ -15,19 +15,29 @@
 
 <SkipLink />
 
-<Header SectionName="@SectionName" />
+<Header SectionName="@SectionName" RssFeedUrl="@($"/{SectionName}/feed.xml")" />
 
 <main class="page-with-sidebar">
     <aside class="sidebar">
+        <MobileSidebarToolbar>
+        <MobileSidebarPanel Label="Search" Icon="search">
         <SidebarSearch SearchQuery="@searchQuery" OnSearchQueryChanged="HandleSearchQueryChanged" />
+        </MobileSidebarPanel>
+        <MobileSidebarPanel Label="Date" Icon="calendar">
         <DateRangeSlider FromDate="@fromDate" ToDate="@toDate"
             OnDateRangeChanged="HandleDateRangeChanged" />
+        </MobileSidebarPanel>
+        <MobileSidebarPanel Label="Tags" Icon="tags">
         <SidebarTagCloud SectionName="@SectionName" CollectionName="@CollectionName"
             Title="Popular Tags" NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
             FromDate="@fromDateString" ToDate="@toDateString"
             SearchQuery="@searchQuery"
             OnSelectionChanged="HandleTagSelectionChanged" />
+        </MobileSidebarPanel>
+        </MobileSidebarToolbar>
+        <div class="sidebar-desktop-only">
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
+        </div>
     </aside>
 
     <section>

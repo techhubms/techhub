@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Inside MCP: Origin, Workflow, and Future with David Soria Parra"
-description: "This interview explores the origins and future of MCP (Model Context Protocol) with creator David Soria Parra. It delves into why MCP was created, its donation to the Linux Foundation, coding workflows, comparisons to Skills, and the technology stack behind MCP. Hosted by Gwyneth Peña-Siguenza and Marlene Mahngami, viewers gain insight into MCP’s impact on software development, open-source collaboration, and practical coding approaches with Python, Azure, and developer tooling."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=f0AUo7orNAM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=f0AUo7orNAM
+title: 'Inside MCP: Origin, Workflow, and Future with David Soria Parra'
+author: Microsoft Developer
+primary_section: dotnet
+feed_name: Microsoft Developer YouTube
 date: 2026-02-19 15:01:14 +00:00
-permalink: "/2026-02-19-Inside-MCP-Origin-Workflow-and-Future-with-David-Soria-Parra.html"
-categories: ["Azure", "Coding"]
-tags: ["Anthropic", "Azure", "Cloud Computing", "Code Quality", "Coding", "Coding Workflow", "David Soria Parra", "Dev", "Developer", "Developer Interview", "Developer Productivity", "Development", "Linux Foundation", "Mcp", "Microsoft", "Open Source", "Python", "Skills", "Software Developer", "Software Development", "Tech", "Tech Stack", "Technology", "UX", "Videos"]
-tags_normalized: ["anthropic", "azure", "cloud computing", "code quality", "coding", "coding workflow", "david soria parra", "dev", "developer", "developer interview", "developer productivity", "development", "linux foundation", "mcp", "microsoft", "open source", "python", "skills", "software developer", "software development", "tech", "tech stack", "technology", "ux", "videos"]
+tags:
+- Anthropic
+- Azure
+- Cloud Computing
+- Code Quality
+- Coding Workflow
+- David Soria Parra
+- Dev
+- Developer
+- Developer Interview
+- Developer Productivity
+- Development
+- Linux Foundation
+- Mcp
+- Microsoft
+- Open Source
+- Python
+- Skills
+- Software Developer
+- Software Development
+- Tech
+- Tech Stack
+- Technology
+- UX
+- Videos
+- .NET
+section_names:
+- azure
+- dotnet
 ---
-
 Microsoft Developer presents an in-depth interview with David Soria Parra, creator of MCP, exploring its origin, coding workflow, and open-source journey—hosted by Gwyneth Peña-Siguenza and Marlene Mahngami.<!--excerpt_end-->
 
 {% youtube f0AUo7orNAM %}

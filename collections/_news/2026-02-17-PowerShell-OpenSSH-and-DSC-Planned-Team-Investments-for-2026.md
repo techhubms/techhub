@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "PowerShell, OpenSSH, and DSC: Planned Team Investments for 2026"
-description: "This announcement from Steve Lee outlines the PowerShell, OpenSSH, and DSC teams' planned investments for 2026. It highlights work on security improvements, upcoming PowerShell 7.7 features, enhancements to PSReadLine, OpenSSH with Entra ID, DSC v3 releases, and PowerShell Gallery/PSResourceGet developments. Key improvements target security, performance, module development, and new AI-driven automation capabilities."
-author: "Steve Lee"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/powershell-openssh-and-dsc-team-investments-for-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/powershell/powershell-openssh-and-dsc-team-investments-for-2026/
+title: 'PowerShell, OpenSSH, and DSC: Planned Team Investments for 2026'
+author: Steve Lee
+primary_section: dotnet
+feed_name: Microsoft PowerShell Blog
 date: 2026-02-17 19:21:34 +00:00
-permalink: "/2026-02-17-PowerShell-OpenSSH-and-DSC-Planned-Team-Investments-for-2026.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["AI", "AI Automation", "Auth Integration", "Azure", "Azure Container Registry", "Coding", "Desired State Configuration", "DSC", "Microsoft Artifact Registry", "Microsoft Entra ID", "News", "OpenSSH", "PowerShell", "PowerShell 7.7", "PowerShellGallery", "PSReadLine", "PSResourceGet", "Python Adapter", "Security"]
-tags_normalized: ["ai", "ai automation", "auth integration", "azure", "azure container registry", "coding", "desired state configuration", "dsc", "microsoft artifact registry", "microsoft entra id", "news", "openssh", "powershell", "powershell 7dot7", "powershellgallery", "psreadline", "psresourceget", "python adapter", "security"]
+tags:
+- AI
+- AI Automation
+- Auth Integration
+- Azure
+- Azure Container Registry
+- Desired State Configuration
+- DSC
+- Microsoft Artifact Registry
+- Microsoft Entra ID
+- News
+- OpenSSH
+- PowerShell
+- PowerShell 7.7
+- PowerShellGallery
+- PSReadLine
+- PSResourceGet
+- Python Adapter
+- Security
+- .NET
+section_names:
+- azure
+- dotnet
+- security
 ---
-
 Steve Lee shares the 2026 investment plans for the PowerShell, OpenSSH, and DSC teams, highlighting upcoming improvements in security, coding productivity, Entra ID integration, and automation.<!--excerpt_end-->
 
 # PowerShell, OpenSSH, and DSC Team Investments for 2026

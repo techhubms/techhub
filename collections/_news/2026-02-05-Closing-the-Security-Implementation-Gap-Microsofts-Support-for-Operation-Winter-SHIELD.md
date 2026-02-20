@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Closing the Security Implementation Gap: Microsoft’s Support for Operation Winter SHIELD"
-description: "This article explores Microsoft’s collaboration with the FBI Cyber Division on Operation Winter SHIELD, a targeted initiative addressing the persistent gap between security knowledge and consistent implementation. It highlights real-world threat patterns, the challenges organizations face in enforcing controls, and Microsoft's practical resources and guidance to help teams operationalize effective security outcomes."
-author: "Sherrod DeGrippo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/05/the-security-implementation-gap-why-microsoft-is-supporting-operation-winter-shield/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/05/the-security-implementation-gap-why-microsoft-is-supporting-operation-winter-shield/
+title: 'Closing the Security Implementation Gap: Microsoft’s Support for Operation Winter SHIELD'
+author: Sherrod DeGrippo
+primary_section: security
+feed_name: Microsoft Security Blog
 date: 2026-02-05 17:00:00 +00:00
-permalink: "/2026-02-05-Closing-the-Security-Implementation-Gap-Microsofts-Support-for-Operation-Winter-SHIELD.html"
-categories: ["Security"]
-tags: ["Access Control", "Baseline Security Mode", "Cybersecurity Initiative", "FBI Cyber Division", "Governance", "Identity Security", "Incident Response", "Least Privilege Access", "Microsoft Security", "Microsoft Threat Intelligence", "Multifactor Authentication", "News", "Operation Winter SHIELD", "Secure By Design", "Security", "Security Controls", "Software Supply Chain"]
-tags_normalized: ["access control", "baseline security mode", "cybersecurity initiative", "fbi cyber division", "governance", "identity security", "incident response", "least privilege access", "microsoft security", "microsoft threat intelligence", "multifactor authentication", "news", "operation winter shield", "secure by design", "security", "security controls", "software supply chain"]
+tags:
+- Access Control
+- Baseline Security Mode
+- Cybersecurity Initiative
+- FBI Cyber Division
+- Governance
+- Identity Security
+- Incident Response
+- Least Privilege Access
+- Microsoft Security
+- Microsoft Threat Intelligence
+- Multifactor Authentication
+- News
+- Operation Winter SHIELD
+- Secure By Design
+- Security
+- Security Controls
+- Software Supply Chain
+section_names:
+- security
 ---
-
 Sherrod DeGrippo discusses how Microsoft is supporting Operation Winter SHIELD by providing actionable guidance and resources to help organizations close the security implementation gap and defend against real-world cyber threats.<!--excerpt_end-->
 
 # Closing the Security Implementation Gap: Microsoft’s Support for Operation Winter SHIELD

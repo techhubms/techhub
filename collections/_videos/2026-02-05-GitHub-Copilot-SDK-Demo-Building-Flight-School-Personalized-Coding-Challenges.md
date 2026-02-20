@@ -1,20 +1,33 @@
----
-layout: "post"
+﻿---
+external_url: https://www.youtube.com/watch?v=ct_Ymw9RexM
 title: "GitHub Copilot SDK Demo: Building 'Flight School' Personalized Coding Challenges"
-description: "This video features Chris Reddington demonstrating 'Flight School,' a custom Next.js application built using the GitHub Copilot SDK. The project utilizes agentic workflows to generate daily coding challenges tailored to users' GitHub profiles, evaluates solutions with automated test cases, and streamlines project export to new repositories. Viewers gain insight into leveraging GitHub Copilot's developer APIs in practical applications."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ct_Ymw9RexM"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-05 15:01:11 +00:00
-permalink: "/2026-02-05-GitHub-Copilot-SDK-Demo-Building-Flight-School-Personalized-Coding-Challenges.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "API Integration", "Automated Testing", "Coding", "Coding Challenges", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Copilot SDK", "GitHubCopilotSDK", "Next.js", "Personalized Learning", "Project Generation", "Repository Automation", "Solution Evaluation", "Videos"]
-tags_normalized: ["agentic workflows", "ai", "api integration", "automated testing", "coding", "coding challenges", "developer tools", "github", "github copilot", "github copilot sdk", "githubcopilotsdk", "nextdotjs", "personalized learning", "project generation", "repository automation", "solution evaluation", "videos"]
+tags:
+- Agentic Workflows
+- AI
+- API Integration
+- Automated Testing
+- Coding Challenges
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- GitHub Copilot SDK
+- GitHubCopilotSDK
+- Next.js
+- Personalized Learning
+- Project Generation
+- Repository Automation
+- Solution Evaluation
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Chris Reddington showcases how to build 'Flight School'—a personalized learning application powered by the GitHub Copilot SDK—demonstrating daily coding challenge generation, automated test evaluation, and repo management.<!--excerpt_end-->
 
 {% youtube ct_Ymw9RexM %}

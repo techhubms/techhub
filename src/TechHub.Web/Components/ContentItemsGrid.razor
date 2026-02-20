@@ -251,7 +251,7 @@
             // Only load module once
             scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
                 "import", "/js/infinite-scroll.js");
-            
+
             // Only create dotNetRef once (avoid memory leak)
             dotNetRef ??= DotNetObjectReference.Create(this);
 
@@ -296,22 +296,22 @@
     private async Task LoadBatch(int batch)
     {
         var skip = (batch - 1) * BatchSize;
-        
+
         // Build tags parameter for API (comma-separated list)
         var tagsParam = FilterTags != null && FilterTags.Count > 0
             ? string.Join(",", FilterTags)
             : null;
-        
+
         var result = await ApiClient.GetCollectionItemsAsync(
-            SectionName, 
-            CollectionName, 
-            take: BatchSize, 
+            SectionName,
+            CollectionName,
+            take: BatchSize,
             skip: skip,
             query: SearchQuery,
             tags: tagsParam,
             fromDate: FromDate,
             toDate: ToDate);
-            
+
         var newItems = result?.Items.ToList() ?? [];
 
         // Update total count from API response (always reflects current filters)
@@ -386,7 +386,7 @@
         var collectionDisplay = GetCollectionTitle();
         var isAllSection = SectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
         var isAllCollection = CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
-        
+
         var section = SectionCache.GetSectionByName(SectionName);
         var sectionDisplayName = section?.Title ?? SectionName;
 

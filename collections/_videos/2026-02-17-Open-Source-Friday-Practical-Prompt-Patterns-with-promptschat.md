@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Open Source Friday: Practical Prompt Patterns with prompts.chat"
-description: "This Open Source Friday episode features Fatih Kadir Akın, maintainer of the prompts.chat project, which provides reusable prompt patterns for LLM workflows. The discussion emphasizes community-driven prompt iteration and practical solutions, with a focus on aiding developers using GitHub Copilot or other AI tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=T1Ay91zvkok"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=T1Ay91zvkok
+title: 'Open Source Friday: Practical Prompt Patterns with prompts.chat'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-17 13:57:24 +00:00
-permalink: "/2026-02-17-Open-Source-Friday-Practical-Prompt-Patterns-with-promptschat.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development", "AI Prompts", "Community Contributions", "Developer Tools", "GitHub", "GitHub Copilot", "LLM Workflows", "Open Source", "Prompt Engineering", "Prompt Patterns", "Prompts.chat", "Videos"]
-tags_normalized: ["ai", "ai development", "ai prompts", "community contributions", "developer tools", "github", "github copilot", "llm workflows", "open source", "prompt engineering", "prompt patterns", "promptsdotchat", "videos"]
+tags:
+- AI
+- AI Development
+- AI Prompts
+- Community Contributions
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- LLM Workflows
+- Open Source
+- Prompt Engineering
+- Prompt Patterns
+- Prompts.chat
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this episode hosted by GitHub, guest Fatih Kadir Akın discusses the prompts.chat open source project, offering practical prompt engineering patterns valuable for GitHub Copilot and LLM workflows.<!--excerpt_end-->
 
 {% youtube T1Ay91zvkok %}

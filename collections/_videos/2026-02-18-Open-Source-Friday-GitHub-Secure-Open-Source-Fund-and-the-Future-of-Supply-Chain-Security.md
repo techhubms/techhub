@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Open Source Friday: GitHub Secure Open Source Fund and the Future of Supply Chain Security"
-description: "This episode, recorded live at GitHub Universe 2025, features Kevin Crosby from GitHub discussing the GitHub Secure Open Source Fund. Key topics include how the fund supports open source maintainers to improve supply chain security, its $10,000 per project model, incident readiness training, and the use of AI-driven tools such as GitHub Copilot and automated security scanning. The conversation also highlights future plans for the fund and how partners and maintainers can participate in upcoming sessions."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=l8gSLQIBdjE"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=l8gSLQIBdjE
+title: 'Open Source Friday: GitHub Secure Open Source Fund and the Future of Supply Chain Security'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-18 11:00:08 +00:00
-permalink: "/2026-02-18-Open-Source-Friday-GitHub-Secure-Open-Source-Fund-and-the-Future-of-Supply-Chain-Security.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Security Tools", "Application Security", "Copilot", "DevOps", "Funding Model", "Fuzzing", "GitHub Copilot", "GitHub Secure Open Source Fund", "GitHub Universe", "Incident Readiness", "Kevin Crosby", "Open Source", "Open Source Maintainers", "Security", "Security Automation", "Security Scanning", "Supply Chain Security", "Videos", "Vulnerability Management"]
-tags_normalized: ["ai", "ai security tools", "application security", "copilot", "devops", "funding model", "fuzzing", "github copilot", "github secure open source fund", "github universe", "incident readiness", "kevin crosby", "open source", "open source maintainers", "security", "security automation", "security scanning", "supply chain security", "videos", "vulnerability management"]
+tags:
+- AI
+- AI Security Tools
+- Application Security
+- Copilot
+- DevOps
+- Funding Model
+- Fuzzing
+- GitHub Copilot
+- GitHub Secure Open Source Fund
+- GitHub Universe
+- Incident Readiness
+- Kevin Crosby
+- Open Source
+- Open Source Maintainers
+- Security
+- Security Automation
+- Security Scanning
+- Supply Chain Security
+- Videos
+- Vulnerability Management
+section_names:
+- ai
+- devops
+- github-copilot
+- security
 ---
-
 GitHub presents an in-depth discussion with Kevin Crosby about the Secure Open Source Fund and its efforts to advance supply chain security, covering funding, AI-driven security tools, and how maintainers and partners can get involved.<!--excerpt_end-->
 
 {% youtube l8gSLQIBdjE %}

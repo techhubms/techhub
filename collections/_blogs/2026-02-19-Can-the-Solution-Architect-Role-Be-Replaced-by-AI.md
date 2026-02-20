@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Can the Solution Architect Role Be Replaced by AI?"
-description: "This article explores whether advancements in artificial intelligence and automation tools could fully replace the Solution Architect role, particularly within enterprise environments utilizing platforms like Microsoft Azure and Microsoft 365. It examines the tasks AI can accelerate, where human judgment is still crucial, and how the Solution Architect’s responsibilities are expected to evolve as AI capabilities grow."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/can-the-solution-architect-role-be-replaced-by-ai/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/can-the-solution-architect-role-be-replaced-by-ai/
+title: Can the Solution Architect Role Be Replaced by AI?
+author: John Edward
+primary_section: ai
+feed_name: Dellenny's Blog
 date: 2026-02-19 10:34:00 +00:00
-permalink: "/2026-02-19-Can-the-Solution-Architect-Role-Be-Replaced-by-AI.html"
-categories: ["AI"]
-tags: ["AI", "Architect Role", "Architecture", "Automation Tools", "Blogs", "Business Strategy", "Cloud Architecture", "Compliance", "Enterprise IT", "Generative AI", "Microsoft 365", "Microsoft Azure", "Risk Management", "Solution Architecture", "System Design", "Technical Decision Making", "Technical Leadership"]
-tags_normalized: ["ai", "architect role", "architecture", "automation tools", "blogs", "business strategy", "cloud architecture", "compliance", "enterprise it", "generative ai", "microsoft 365", "microsoft azure", "risk management", "solution architecture", "system design", "technical decision making", "technical leadership"]
+tags:
+- AI
+- Architect Role
+- Architecture
+- Automation Tools
+- Blogs
+- Business Strategy
+- Cloud Architecture
+- Compliance
+- Enterprise IT
+- Generative AI
+- Microsoft 365
+- Microsoft Azure
+- Risk Management
+- Solution Architecture
+- System Design
+- Technical Decision Making
+- Technical Leadership
+section_names:
+- ai
 ---
-
 John Edward analyzes if AI can fully replace the Solution Architect role, focusing on automation’s impact, the enduring necessity for human judgment, and specific challenges in complex enterprise environments.<!--excerpt_end-->
 
 # Can the Solution Architect Role Be Replaced by AI?

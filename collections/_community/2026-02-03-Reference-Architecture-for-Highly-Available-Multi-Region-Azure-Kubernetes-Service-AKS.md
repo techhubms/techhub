@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Reference Architecture for Highly Available Multi-Region Azure Kubernetes Service (AKS)"
-description: "This article by rgarofalo presents a detailed reference architecture for deploying Azure Kubernetes Service (AKS) across multiple regions to achieve high availability and resilience. It covers design patterns, traffic management, data replication, security, and operational best practices tailored for architects and engineers running mission-critical workloads on Azure."
-author: "rgarofalo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/reference-architecture-for-highly-available-multi-region-azure/ba-p/4490479"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/reference-architecture-for-highly-available-multi-region-azure/ba-p/4490479
+title: Reference Architecture for Highly Available Multi-Region Azure Kubernetes Service (AKS)
+author: rgarofalo
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-03 19:53:40 +00:00
-permalink: "/2026-02-03-Reference-Architecture-for-Highly-Available-Multi-Region-Azure-Kubernetes-Service-AKS.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Application Gateway For Containers", "Azure", "Azure Cache For Redis", "Azure DNS", "Azure Front Door", "Azure Policy", "Azure SQL Database", "Azure Traffic Manager", "Blob Storage", "Chaos Engineering", "Community", "Cosmos DB", "DevOps", "Disaster Recovery", "Entra ID", "Geo Replication", "High Availability", "Kubernetes", "Log Analytics", "Microsoft Defender For Containers", "Multi Region Architecture", "Observability", "OpenTelemetry", "RBAC", "Resilience", "Security"]
-tags_normalized: ["aks", "application gateway for containers", "azure", "azure cache for redis", "azure dns", "azure front door", "azure policy", "azure sql database", "azure traffic manager", "blob storage", "chaos engineering", "community", "cosmos db", "devops", "disaster recovery", "entra id", "geo replication", "high availability", "kubernetes", "log analytics", "microsoft defender for containers", "multi region architecture", "observability", "opentelemetry", "rbac", "resilience", "security"]
+tags:
+- AKS
+- Application Gateway For Containers
+- Azure
+- Azure Cache For Redis
+- Azure DNS
+- Azure Front Door
+- Azure Policy
+- Azure SQL Database
+- Azure Traffic Manager
+- Blob Storage
+- Chaos Engineering
+- Community
+- Cosmos DB
+- DevOps
+- Disaster Recovery
+- Entra ID
+- Geo Replication
+- High Availability
+- Kubernetes
+- Log Analytics
+- Microsoft Defender For Containers
+- Multi Region Architecture
+- Observability
+- OpenTelemetry
+- RBAC
+- Resilience
+- Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 rgarofalo provides an in-depth architecture guide for deploying AKS across multiple Azure regions, focusing on high availability and resilience strategies for critical enterprise workloads.<!--excerpt_end-->
 
 # Reference Architecture for Highly Available Multi-Region Azure Kubernetes Service (AKS)

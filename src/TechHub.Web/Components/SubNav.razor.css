@@ -57,3 +57,20 @@
 .sub-nav::-webkit-scrollbar-thumb:hover {
     background: var(--color-border-emphasis);
 }
+
+/* Mobile: SubNav collapses like homepage — no content, keeps border/margin for layout consistency */
+@media (max-width: 1288px) {
+    .sub-nav {
+        position: static;
+        top: auto;
+    }
+
+    .sub-nav-wrapper {
+        display: none;
+    }
+
+    .sub-nav {
+        padding: 0;
+        margin-bottom: var(--spacing-2);
+    }
+}

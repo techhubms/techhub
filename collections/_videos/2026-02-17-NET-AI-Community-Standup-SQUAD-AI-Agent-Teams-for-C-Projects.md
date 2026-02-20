@@ -1,20 +1,35 @@
----
-layout: "post"
-title: ".NET AI Community Standup: SQUAD – AI Agent Teams for C# Projects"
-description: "This session introduces SQUAD, an open-source orchestration framework enabling AI-powered solutions in .NET environments. It covers practical use cases, integration strategies, and how SQUAD empowers C# developers to add multi-agent intelligence to their applications using familiar tools and modern development practices."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nHZC-tl_ado"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=nHZC-tl_ado
+title: '.NET AI Community Standup: SQUAD – AI Agent Teams for C# Projects'
+author: dotnet
+primary_section: ai
+feed_name: DotNet YouTube
 date: 2026-02-17 21:26:14 +00:00
-permalink: "/2026-02-17-NET-AI-Community-Standup-SQUAD-AI-Agent-Teams-for-C-Projects.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET Ecosystem", "AI", "AI Agents", "AI Integration", "AI Orchestration", "C#", "Cloud Native Applications", "Coding", "Demo", "Developer Community", "Developer Tools", "Dotnet10", "Dotnetdeveloper", "Dotnetten", "Microsoft", "Open Source", "Orchestration Patterns", "Software Developer", "SQUAD", "Videos"]
-tags_normalized: ["dotnet", "dotnet ecosystem", "ai", "ai agents", "ai integration", "ai orchestration", "csharp", "cloud native applications", "coding", "demo", "developer community", "developer tools", "dotnet10", "dotnetdeveloper", "dotnetten", "microsoft", "open source", "orchestration patterns", "software developer", "squad", "videos"]
+tags:
+- .NET
+- .NET Ecosystem
+- AI
+- AI Agents
+- AI Integration
+- AI Orchestration
+- C#
+- Cloud Native Applications
+- Demo
+- Developer Community
+- Developer Tools
+- Dotnet10
+- Dotnetdeveloper
+- Dotnetten
+- Microsoft
+- Open Source
+- Orchestration Patterns
+- Software Developer
+- SQUAD
+- Videos
+section_names:
+- ai
+- dotnet
 ---
-
 dotnet presents an in-depth community session featuring Bruno Capuano and Brady Gaster, demonstrating SQUAD, an open-source orchestration toolkit for creating AI agent teams in C#/.NET apps.<!--excerpt_end-->
 
 {% youtube nHZC-tl_ado %}

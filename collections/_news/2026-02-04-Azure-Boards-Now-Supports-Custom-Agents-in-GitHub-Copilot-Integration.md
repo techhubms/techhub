@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Boards Now Supports Custom Agents in GitHub Copilot Integration"
-description: "This news update introduces support for custom agents in the GitHub Copilot Coding Agent for Azure Boards. It details what custom agents are, how to create them, and how they enhance team workflows by enabling standardized, repeatable coding instructions. The guide covers profile setup, repository-level and organization-wide agent management, and usage within Azure DevOps, including pull request generation from work items. Links to further documentation and setup wizards are provided for developers looking to leverage or roll out this functionality for their teams."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-boards-integration-with-github-copilot-includes-custom-agent-support/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/azure-boards-integration-with-github-copilot-includes-custom-agent-support/
+title: Azure Boards Now Supports Custom Agents in GitHub Copilot Integration
+author: Dan Hellem
+primary_section: github-copilot
+feed_name: Microsoft DevOps Blog
 date: 2026-02-04 18:33:03 +00:00
-permalink: "/2026-02-04-Azure-Boards-Now-Supports-Custom-Agents-in-GitHub-Copilot-Integration.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: [".agent.md", "Agent Profiles", "AI", "Azure", "Azure & Cloud", "Azure Boards", "Azure DevOps", "Copilot Coding Agent", "Custom Agents", "DevOps", "DevOps Workflow", "Documentation Automation", "GitHub", "GitHub Copilot", "News", "Pull Request Automation", "Repository Management", "VS Code"]
-tags_normalized: ["dotagentdotmd", "agent profiles", "ai", "azure", "azure and cloud", "azure boards", "azure devops", "copilot coding agent", "custom agents", "devops", "devops workflow", "documentation automation", "github", "github copilot", "news", "pull request automation", "repository management", "vs code"]
+tags:
+- .agent.md
+- Agent Profiles
+- AI
+- Azure
+- Azure & Cloud
+- Azure Boards
+- Azure DevOps
+- Copilot Coding Agent
+- Custom Agents
+- DevOps
+- DevOps Workflow
+- Documentation Automation
+- GitHub
+- GitHub Copilot
+- News
+- Pull Request Automation
+- Repository Management
+- VS Code
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Dan Hellem announces the launch of custom agent support in the GitHub Copilot Coding Agent for Azure Boards, detailing how developers can standardize workflows and automate coding tasks within DevOps processes.<!--excerpt_end-->
 
 # Azure Boards Now Supports Custom Agents in GitHub Copilot Integration

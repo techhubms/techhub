@@ -1387,72 +1387,45 @@ Progressive learning path visualization:
 
 ### Mobile Navigation (Hamburger Menu)
 
-**Pattern**: Responsive navigation that shows hamburger menu on mobile (`<768px`)
+**Pattern**: Responsive navigation at ≤ 1024px breakpoint with hierarchical hamburger menu and collapsible sidebars.
+
+**Hamburger menu** (`NavHeader.razor`):
+
+- Three-line hamburger button animates to X via CSS transition
+- Menu panel slides from right (`position: fixed`, 320px / 85vw max-width)
+- Each section is expandable — shows collections and custom pages as sub-items
+- Overlay behind menu for click-to-close
+- Body scroll locked via JS interop (`mobile-nav.js`)
+- Escape key closes menu
+- Menu closes on navigation (`NavigationManager.LocationChanged`)
+- `aria-expanded` on hamburger button and section headers
+
+**Z-index stacking (mobile)**:
+
+| Layer | z-index | Element |
+|---|---|---|
+| Nav header | 1002 | `.main-nav` |
+| Menu panel | 1001 | `.mobile-menu.open` |
+| Overlay | 1000 | `.mobile-menu-overlay` |
+
+**Sidebar collapse** (`MobileSidebarCollapse.razor`):
+
+All pages with sidebars wrap content in `<MobileSidebarCollapse Label="...">`. On desktop (`> 1024px`), the wrapper uses `display: contents` and is invisible. On mobile (`≤ 1024px`), it shows a toggle button that expands/collapses the sidebar content. Uses `div` + Blazor `@onclick` (not `<details>/<summary>`, which has browser `content-visibility: hidden` issues with CSS `display: contents`).
 
 ```razor
-<nav class="site-nav">
-    <button class="hamburger" @onclick="ToggleMenu" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    
-    <div class="nav-menu @(menuOpen ? "open" : "")">
-        <a href="/">Home</a>
-        <a href="/ai">AI</a>
-        <a href="/github-copilot">GitHub Copilot</a>
-        <a href="/azure">Azure</a>
-        <a href="/about">About</a>
-    </div>
-</nav>
-
-@code {
-    private bool menuOpen = false;
-    
-    private void ToggleMenu()
-    {
-        menuOpen = !menuOpen;
-    }
-}
+<aside class="sidebar">
+    <MobileSidebarCollapse Label="Table of Contents">
+        <SidebarToc ... />
+    </MobileSidebarCollapse>
+</aside>
 ```
 
-**CSS**:
+**CSS files**:
 
-```css
-/* Desktop - normal nav */
-.hamburger {
-    display: none;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 1rem;
-}
-
-/* Mobile - hamburger menu */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-    
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: var(--dark-navy);
-    }
-    
-    .nav-menu.open {
-        display: flex;
-    }
-}
-```
+- Hamburger + menu: `NavHeader.razor.css` (component-scoped)
+- SubNav non-sticky: `SubNav.razor.css` (`position: static` at ≤ 1024px)
+- Sidebar collapse: `wwwroot/css/sidebar.css`
+- JS scroll lock: `wwwroot/js/mobile-nav.js`
 
 ### Tag Filtering Behavior
 

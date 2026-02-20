@@ -15,7 +15,6 @@ tags:
 - Live Coding
 - MCP
 - MCP Server
-- MCP Server
 - Microsoft
 - Server Development
 - Vibe Coding

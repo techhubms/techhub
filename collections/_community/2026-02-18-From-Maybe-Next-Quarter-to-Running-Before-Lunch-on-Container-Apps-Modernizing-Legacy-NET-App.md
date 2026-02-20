@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "From \"Maybe Next Quarter\" to \"Running Before Lunch\" on Container Apps - Modernizing Legacy .NET App"
-description: "Jan-Kalis details the process of modernizing the MVC Music Store, a legacy ASP.NET MVC 5 application, to .NET 10 using GitHub Copilot app modernization tools. The guide covers technical challenges encountered, codebase upgrades, security improvements with managed identity and Key Vault, and deployment to Azure Container Apps. Comprehensive steps for infrastructure-as-code (IaaC), project restructuring, and improved security are described, demonstrating how developer tooling automation accelerates .NET modernization projects."
-author: "Jan-Kalis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-quot-maybe-next-quarter-quot-to-quot-running-before-lunch/ba-p/4495736"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-quot-maybe-next-quarter-quot-to-quot-running-before-lunch/ba-p/4495736
+title: From "Maybe Next Quarter" to "Running Before Lunch" on Container Apps - Modernizing Legacy .NET App
+author: Jan-Kalis
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-18 23:19:26 +00:00
-permalink: "/2026-02-18-From-Maybe-Next-Quarter-to-Running-Before-Lunch-on-Container-Apps-Modernizing-Legacy-NET-App.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: [".NET 10", "Active Directory Authentication", "AI", "App Modernization", "ASP.NET Core", "AZD", "Azure", "Azure Container Apps", "Azure SQL", "Bicep", "CI/CD", "Cloud Deployment", "Coding", "Community", "Development Automation", "DevOps", "Dockerfile", "EF Core", "GitHub Copilot", "GitHub Copilot App Modernization", "IaC", "Key Vault", "Managed Identity", "OpenTelemetry", "Program.cs", "Security", "VS"]
-tags_normalized: ["dotnet 10", "active directory authentication", "ai", "app modernization", "aspdotnet core", "azd", "azure", "azure container apps", "azure sql", "bicep", "cislashcd", "cloud deployment", "coding", "community", "development automation", "devops", "dockerfile", "ef core", "github copilot", "github copilot app modernization", "iac", "key vault", "managed identity", "opentelemetry", "programdotcs", "security", "vs"]
+tags:
+- .NET 10
+- Active Directory Authentication
+- AI
+- App Modernization
+- ASP.NET Core
+- AZD
+- Azure
+- Azure Container Apps
+- Azure SQL
+- Bicep
+- CI/CD
+- Cloud Deployment
+- Community
+- Development Automation
+- DevOps
+- Dockerfile
+- EF Core
+- GitHub Copilot
+- GitHub Copilot App Modernization
+- IaC
+- Key Vault
+- Managed Identity
+- OpenTelemetry
+- Program.cs
+- Security
+- VS
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+- security
 ---
-
 Jan-Kalis explains how GitHub Copilot's app modernization agent enabled rapid migration of a classic ASP.NET MVC app to Azure Container Apps with improved security and process automation.<!--excerpt_end-->
 
 # From "Maybe Next Quarter" to "Running Before Lunch" on Container Apps - Modernizing Legacy .NET App

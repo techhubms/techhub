@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Update - Friday the 13th February 2026"
-description: "This video provides a roundup of the latest updates and new features in Microsoft Azure, including developments in AKS, Azure Monitor, Databricks, Azure SQL Database, and Azure regions. Hosted by John Savill, it is part of a series of regular Azure news and technical briefings for cloud professionals."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=gFh0kpFrND8"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=gFh0kpFrND8
+title: Azure Update - Friday the 13th February 2026
+author: John Savill's Technical Training
+primary_section: azure
+feed_name: John Savill's Technical Training
 date: 2026-02-13 16:05:45 +00:00
-permalink: "/2026-02-13-Azure-Update-Friday-the-13th-February-2026.html"
-categories: ["Azure"]
-tags: ["AFD Premium", "AKS", "App Gateway For Containers", "Azure", "Azure Cloud", "Azure Databricks", "Azure Disk Backups", "Azure Monitor", "Azure Pipelines", "Azure Regions", "Azure SQL Database", "Azure Updates", "Cloud", "Cloud Computing", "Cloud Infrastructure", "Cloud News", "Enterprise IT", "Entra ID", "John Savill", "Microsoft", "Microsoft Azure", "Videos"]
-tags_normalized: ["afd premium", "aks", "app gateway for containers", "azure", "azure cloud", "azure databricks", "azure disk backups", "azure monitor", "azure pipelines", "azure regions", "azure sql database", "azure updates", "cloud", "cloud computing", "cloud infrastructure", "cloud news", "enterprise it", "entra id", "john savill", "microsoft", "microsoft azure", "videos"]
+tags:
+- AFD Premium
+- AKS
+- App Gateway For Containers
+- Azure
+- Azure Cloud
+- Azure Databricks
+- Azure Disk Backups
+- Azure Monitor
+- Azure Pipelines
+- Azure Regions
+- Azure SQL Database
+- Azure Updates
+- Cloud Computing
+- Cloud Infrastructure
+- Cloud News
+- Enterprise IT
+- Entra ID
+- John Savill
+- Microsoft
+- Microsoft Azure
+- Videos
+section_names:
+- azure
 ---
-
 John Savill's Technical Training shares the latest Azure updates for February 2026, including new AKS features, disk backups, Databricks enhancements, Azure regions, and Azure SQL Database capabilities.<!--excerpt_end-->
 
 {% youtube gFh0kpFrND8 %}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Code Signing Windows Apps Made Easier and More Secure with Azure Artifact Signing"
-description: "This article explores Microsoft's new Azure Artifact Signing (AAS) service, which simplifies and strengthens the process of code signing for Windows applications. It covers how AAS works, supported tools and workflows, pricing, security implications, and its advantages over traditional certificate-based methods, with a focus on practical details for developers and DevOps teams."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/security/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/4079554"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/security/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/4079554
+title: Code Signing Windows Apps Made Easier and More Secure with Azure Artifact Signing
+author: DevClass.com
+primary_section: azure
+feed_name: DevClass
 date: 2026-01-14 15:32:25 +00:00
-permalink: "/2026-01-14-Code-Signing-Windows-Apps-Made-Easier-and-More-Secure-with-Azure-Artifact-Signing.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Security", "Artifact Signing SDK", "Azure", "Azure Artifact Signing", "Azure DevOps", "Blogs", "CAB Forum", "Certificate Authority", "Certificate Management", "Certificates", "Code Signing", "DevOps", "DevOps Workflows", "GitHub Actions", "PowerShell", "Security", "Signtool", "Software Deployment", "Trusted Signing", "Windows Applications", "Windows SDK"]
-tags_normalized: ["application security", "artifact signing sdk", "azure", "azure artifact signing", "azure devops", "blogs", "cab forum", "certificate authority", "certificate management", "certificates", "code signing", "devops", "devops workflows", "github actions", "powershell", "security", "signtool", "software deployment", "trusted signing", "windows applications", "windows sdk"]
+tags:
+- Application Security
+- Artifact Signing SDK
+- Azure
+- Azure Artifact Signing
+- Azure DevOps
+- Blogs
+- CAB Forum
+- Certificate Authority
+- Certificate Management
+- Certificates
+- Code Signing
+- DevOps
+- DevOps Workflows
+- GitHub Actions
+- PowerShell
+- Security
+- Signtool
+- Software Deployment
+- Trusted Signing
+- Windows Applications
+- Windows SDK
+section_names:
+- azure
+- devops
+- security
 ---
-
 DevClass.com provides a technical overview of Microsoft's Azure Artifact Signing, detailing how it improves code signing for Windows apps. The article highlights new workflows, security enhancements, and developer-centric deployment options.<!--excerpt_end-->
 
 # Code Signing Windows Apps Made Easier and More Secure with Azure Artifact Signing

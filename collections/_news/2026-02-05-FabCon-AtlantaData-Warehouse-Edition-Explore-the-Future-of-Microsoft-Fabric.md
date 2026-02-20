@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "FabCon Atlanta—Data Warehouse Edition: Explore the Future of Microsoft Fabric"
-description: "This article highlights FabCon Atlanta, the premier event for professionals working with Microsoft Fabric Data Warehouse. It offers hands-on insights from product managers, engineers, and practitioners, covering architecture evolution, scalability, cost management, and integrated security for large-scale data warehousing on Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/33276/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/33276/
+title: 'FabCon Atlanta—Data Warehouse Edition: Explore the Future of Microsoft Fabric'
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-05 14:00:00 +00:00
-permalink: "/2026-02-05-FabCon-AtlantaData-Warehouse-Edition-Explore-the-Future-of-Microsoft-Fabric.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Cloud Analytics", "Conference", "Cost Optimization", "Custom SQL Pools", "Customer Success", "Data Architecture", "Data Warehouse", "Event", "FabCon Atlanta", "Fabric DW", "Microsoft Fabric", "ML", "Modern Data Warehousing", "News", "Platform Integration", "Scalability", "Security", "Session Highlights"]
-tags_normalized: ["azure", "cloud analytics", "conference", "cost optimization", "custom sql pools", "customer success", "data architecture", "data warehouse", "event", "fabcon atlanta", "fabric dw", "microsoft fabric", "ml", "modern data warehousing", "news", "platform integration", "scalability", "security", "session highlights"]
+tags:
+- Azure
+- Cloud Analytics
+- Conference
+- Cost Optimization
+- Custom SQL Pools
+- Customer Success
+- Data Architecture
+- Data Warehouse
+- Event
+- FabCon Atlanta
+- Fabric DW
+- Microsoft Fabric
+- ML
+- Modern Data Warehousing
+- News
+- Platform Integration
+- Scalability
+- Security
+- Session Highlights
+section_names:
+- azure
+- ml
+- security
 ---
-
 The Microsoft Fabric Blog outlines the key reasons practitioners should attend FabCon Atlanta 2026, focusing on the evolution, real-world architecture, cost and scale, and embedded security in Microsoft Fabric Data Warehouse.<!--excerpt_end-->
 
 # FabCon Atlanta—Data Warehouse Edition: Explore the Future of Microsoft Fabric

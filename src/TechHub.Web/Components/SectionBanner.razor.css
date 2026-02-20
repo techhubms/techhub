@@ -122,17 +122,19 @@
 }
 
 .header-text-overlay {
+    position: relative;
     background: var(--color-black-backdrop);
     backdrop-filter: blur(3px);
     border-radius: var(--radius-md);
-    padding: var(--spacing-1) var(--spacing-4) var(--spacing-4) var(--spacing-4);
+    padding: var(--spacing-4);
     border: 1px solid var(--color-purple-border-very-subtle);
     width: 850px;
     max-width: 90%;
-    height: 160px;
+    min-height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .section-banner-content .banner-title {
@@ -143,25 +145,86 @@
     line-height: var(--line-height-heading);
 }
 
+/* RSS icon link next to banner title - mobile only.
+   Positioned absolutely so the title stays visually centered. */
+.banner-rss-link {
+    display: none;
+    position: absolute;
+    right: var(--spacing-1);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-on-emphasis);
+    opacity: 0.85;
+    transition: opacity var(--duration-fast) var(--easing-ease);
+    line-height: 1;
+    border-radius: var(--radius-md);
+    min-width: var(--touch-target-min-size);
+    min-height: var(--touch-target-min-size);
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-rss-link:hover {
+    opacity: 1;
+}
+
+.banner-rss-link svg {
+    display: block;
+}
+
 .section-banner-content .banner-description {
     font-size: var(--font-size-lg);
-    margin: 0;
+    margin: var(--spacing-2) 0 0 0;
     opacity: 0.95;
     text-shadow: var(--text-shadow-sm);
     color: var(--color-text-on-emphasis);
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1288px) {
     .section-banner {
-        height: 160px;
+        height: 170px;
+    }
+
+    .header-text-overlay {
+        padding: var(--spacing-2);
+    }
+
+    .section-banner-content .banner-title {
+        margin-bottom: 0;
+    }
+
+    .section-banner-content .banner-description {
+        font-size: var(--font-size-sm);
+        max-width: 70%;
+    }
+
+    .banner-rss-link {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-banner {
+        height: 120px;
+    }
+
+    .header-text-overlay {
+        padding: var(--spacing-1);
     }
 
     .section-banner-content .header-title {
         font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .section-banner:not(.home-banner) .banner-title {
+        word-spacing: 100vw;
+    }
+
+    .section-banner-content .banner-description {
+        display: none;
     }
 }

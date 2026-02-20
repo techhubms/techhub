@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Integrating Machine Learning with Power BI Reports in Microsoft Fabric"
-description: "This article provides a hands-on walkthrough for enriching Power BI reports in Microsoft Fabric with machine learning. It covers the end-to-end workflow, including data exploration with Semantic Link, feature engineering, model training using LightGBM, batch and real-time scoring, and integrating predictions into Power BI for actionable analytics."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/enrich-power-bi-reports-with-machine-learning-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/enrich-power-bi-reports-with-machine-learning-in-microsoft-fabric/
+title: Integrating Machine Learning with Power BI Reports in Microsoft Fabric
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-12 12:00:00 +00:00
-permalink: "/2026-02-12-Integrating-Machine-Learning-with-Power-BI-Reports-in-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Banking Analytics", "Churn Prediction", "Classification", "Dataflow Gen2", "Delta Lake", "Feature Engineering", "LightGBM", "Machine Learning", "Microsoft Fabric", "ML", "ML Model Deployment", "MLflow", "News", "OneLake", "Pandas", "Power BI", "Prediction API", "PySpark", "Python", "Real Time Scoring", "Semantic Link", "SMOTE", "Spark SQL"]
-tags_normalized: ["ai", "azure", "banking analytics", "churn prediction", "classification", "dataflow gen2", "delta lake", "feature engineering", "lightgbm", "machine learning", "microsoft fabric", "ml", "ml model deployment", "mlflow", "news", "onelake", "pandas", "power bi", "prediction api", "pyspark", "python", "real time scoring", "semantic link", "smote", "spark sql"]
+tags:
+- AI
+- Azure
+- Banking Analytics
+- Churn Prediction
+- Classification
+- Dataflow Gen2
+- Delta Lake
+- Feature Engineering
+- LightGBM
+- Microsoft Fabric
+- ML
+- ML Model Deployment
+- MLflow
+- News
+- OneLake
+- Pandas
+- Power BI
+- Prediction API
+- PySpark
+- Python
+- Real Time Scoring
+- Semantic Link
+- SMOTE
+- Spark SQL
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog demonstrates how to infuse Power BI reports with predictive insights by building and operationalizing machine learning models within Microsoft Fabric’s unified analytics stack.<!--excerpt_end-->
 
 # Integrating Machine Learning with Power BI Reports in Microsoft Fabric

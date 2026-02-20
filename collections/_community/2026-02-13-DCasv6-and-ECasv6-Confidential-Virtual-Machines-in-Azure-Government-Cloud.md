@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "DCasv6 and ECasv6 Confidential Virtual Machines in Azure Government Cloud"
-description: "This post introduces the DCasv6 and ECasv6 series confidential virtual machines (CVMs) in Azure Government, highlighting their unique security features such as AMD SEV-SNP, hardware-enforced memory isolation, programmatic attestation, and flexible OS disk encryption. It explains how these VMs enhance operational security and compliance for federal agencies, enabling modern infrastructure deployment in a sovereign cloud environment with high assurance for government workloads."
-author: "Rakeshginjupalli"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-confidential-computing/dcasv6-and-ecasv6-confidential-vms-in-azure-government-cloud/ba-p/4494604"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/dcasv6-and-ecasv6-confidential-vms-in-azure-government-cloud/ba-p/4494604
+title: DCasv6 and ECasv6 Confidential Virtual Machines in Azure Government Cloud
+author: Rakeshginjupalli
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-13 18:16:00 +00:00
-permalink: "/2026-02-13-DCasv6-and-ECasv6-Confidential-Virtual-Machines-in-Azure-Government-Cloud.html"
-categories: ["Azure", "Security"]
-tags: ["AMD SEV SNP", "Attestation", "Azure", "Azure Government", "Cloud Compliance", "Community", "Confidential Computing", "Confidential Virtual Machines", "Cryptographic Isolation", "DCasv6", "ECasv6", "Hardware Security", "Key Management", "Operational Security", "Security", "Sovereign Cloud", "Virtual Machines", "Vtpm"]
-tags_normalized: ["amd sev snp", "attestation", "azure", "azure government", "cloud compliance", "community", "confidential computing", "confidential virtual machines", "cryptographic isolation", "dcasv6", "ecasv6", "hardware security", "key management", "operational security", "security", "sovereign cloud", "virtual machines", "vtpm"]
+tags:
+- AMD SEV SNP
+- Attestation
+- Azure
+- Azure Government
+- Cloud Compliance
+- Community
+- Confidential Computing
+- Confidential Virtual Machines
+- Cryptographic Isolation
+- DCasv6
+- ECasv6
+- Hardware Security
+- Key Management
+- Operational Security
+- Security
+- Sovereign Cloud
+- Virtual Machines
+- Vtpm
+section_names:
+- azure
+- security
 ---
-
 Rakeshginjupalli delivers an in-depth overview of the launch of DCasv6 and ECasv6 confidential VMs in Azure Government, outlining key security advancements and compliance benefits for organizations deploying sensitive federal workloads.<!--excerpt_end-->
 
 # DCasv6 and ECasv6 Confidential Virtual Machines in Azure Government Cloud

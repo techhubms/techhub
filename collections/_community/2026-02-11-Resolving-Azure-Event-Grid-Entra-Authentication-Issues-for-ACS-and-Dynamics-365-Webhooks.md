@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Resolving Azure Event Grid Entra Authentication Issues for ACS and Dynamics 365 Webhooks"
-description: "This detailed guide walks through diagnosing and resolving Azure Event Grid authentication failures when integrating Azure Communication Services and Dynamics 365 Contact Center using Microsoft Entra ID. It provides step-by-step instructions to correctly configure the AzureEventGridSecureWebhookSubscriber role, complete with PowerShell scripts, portal methods, and troubleshooting steps."
-author: "ani_ms_emea"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/how-to-fix-azure-event-grid-entra-authentication-issue-for-acs/m-p/4494308#M22430"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure/how-to-fix-azure-event-grid-entra-authentication-issue-for-acs/m-p/4494308#M22430
+title: Resolving Azure Event Grid Entra Authentication Issues for ACS and Dynamics 365 Webhooks
+author: ani_ms_emea
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-11 11:41:04 +00:00
-permalink: "/2026-02-11-Resolving-Azure-Event-Grid-Entra-Authentication-Issues-for-ACS-and-Dynamics-365-Webhooks.html"
-categories: ["Azure", "Security"]
-tags: ["App Role Assignment", "Azure", "Azure Active Directory", "Azure Communication Services", "Azure Event Grid", "Azure Portal", "Community", "Dynamics 365", "Event Driven Architecture", "Event Subscription", "Identity Management", "Microsoft Entra ID", "Microsoft Graph", "PowerShell", "Role Based Access Control", "Security", "Service Principal", "Webhook Security"]
-tags_normalized: ["app role assignment", "azure", "azure active directory", "azure communication services", "azure event grid", "azure portal", "community", "dynamics 365", "event driven architecture", "event subscription", "identity management", "microsoft entra id", "microsoft graph", "powershell", "role based access control", "security", "service principal", "webhook security"]
+tags:
+- App Role Assignment
+- Azure
+- Azure Active Directory
+- Azure Communication Services
+- Azure Event Grid
+- Azure Portal
+- Community
+- Dynamics 365
+- Event Driven Architecture
+- Event Subscription
+- Identity Management
+- Microsoft Entra ID
+- Microsoft Graph
+- PowerShell
+- Role Based Access Control
+- Security
+- Service Principal
+- Webhook Security
+section_names:
+- azure
+- security
 ---
-
 ani_ms_emea provides a comprehensive guide to fixing Azure Event Grid webhook authentication issues for Azure Communication Services and Dynamics 365 through proper Microsoft Entra ID configuration.<!--excerpt_end-->
 
 # How to Fix Azure Event Grid Entra Authentication issue for ACS and Dynamics 365 integrated Webhooks

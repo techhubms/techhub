@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Handling Special Characters in User Input: A Developer’s Guide"
-description: "This blog post by Tim D'haeyer highlights a common but often overlooked software validation issue: handling special characters like single quotes in user input, especially names. Through humor and technical examples, Tim explains why such validation errors occur, how they relate to SQL injection threats, and offers practical, secure coding solutions for developers in .NET, Python, and Bicep deployments. The post also touches on DevOps tooling and cultural inclusivity in software development."
-author: "tim.dhaeyer@zure.com (Tim D'haeyer)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/dear-developers-stop-rejecting-me"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+external_url: https://zure.com/blog/dear-developers-stop-rejecting-me
+title: 'Handling Special Characters in User Input: A Developer’s Guide'
+author: tim.dhaeyer@zure.com (Tim D'haeyer)
+primary_section: dotnet
+feed_name: Zure Data & AI Blog
 date: 2026-02-05 07:16:40 +00:00
-permalink: "/2026-02-05-Handling-Special-Characters-in-User-Input-A-Developers-Guide.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["ADO.NET", "Azure", "Azure Bicep", "Backend Development", "Blogs", "C#", "Coding", "Developer Best Practices", "DevOps", "DevOps Pipeline", "Form Validation", "Input Validation", "Parameterized Queries", "Python", "Security", "Special Characters", "SQL Injection", "Sqlite3"]
-tags_normalized: ["adodotnet", "azure", "azure bicep", "backend development", "blogs", "csharp", "coding", "developer best practices", "devops", "devops pipeline", "form validation", "input validation", "parameterized queries", "python", "security", "special characters", "sql injection", "sqlite3"]
+tags:
+- ADO.NET
+- Azure
+- Azure Bicep
+- Backend Development
+- Blogs
+- C#
+- Developer Best Practices
+- DevOps
+- DevOps Pipeline
+- Form Validation
+- Input Validation
+- Parameterized Queries
+- Python
+- Security
+- Special Characters
+- SQL Injection
+- Sqlite3
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- security
 ---
-
 Tim D'haeyer draws on both personal experience and technical depth to guide developers through safely handling special characters in user input, emphasizing SQL injection prevention and robust DevOps practices.<!--excerpt_end-->
 
 # Handling Special Characters in User Input: A Developer’s Guide

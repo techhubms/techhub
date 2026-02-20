@@ -1,20 +1,37 @@
----
-layout: "post"
+﻿---
+external_url: https://blogs.microsoft.com/on-the-issues/2026/02/09/building-a-safer-digital-future-together/
 title: "Safer Internet Day 2026: Microsoft's Commitment to Responsible AI and Online Safety"
-description: "This in-depth article explores Microsoft's efforts in building safer digital environments, highlighting over a decade of safety research, new initiatives for digital youth, global survey results on online risks, and AI's growing role in security. Educational resources, collaborative partnerships, and practical tools are discussed, demonstrating a holistic, ongoing commitment to responsible AI and online protection."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2026/02/09/building-a-safer-digital-future-together/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-10 16:35:17 +00:00
-permalink: "/2026-02-10-Safer-Internet-Day-2026-Microsofts-Commitment-to-Responsible-AI-and-Online-Safety.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Companions", "AI Literacy", "Company News", "Cyberbullying", "CyberSafe", "Digital Citizenship", "Digital Parenting", "Digital Resilience", "Educational Resources", "Family Safety", "Hate Speech", "Microsoft Global Online Safety Survey", "Minecraft Education", "News", "Online Safety", "Parental Controls", "Responsible AI", "Security", "Transparency Report", "Xbox", "Youth Council"]
-tags_normalized: ["ai", "ai companions", "ai literacy", "company news", "cyberbullying", "cybersafe", "digital citizenship", "digital parenting", "digital resilience", "educational resources", "family safety", "hate speech", "microsoft global online safety survey", "minecraft education", "news", "online safety", "parental controls", "responsible ai", "security", "transparency report", "xbox", "youth council"]
+tags:
+- AI
+- AI Companions
+- AI Literacy
+- Company News
+- Cyberbullying
+- CyberSafe
+- Digital Citizenship
+- Digital Parenting
+- Digital Resilience
+- Educational Resources
+- Family Safety
+- Hate Speech
+- Microsoft Global Online Safety Survey
+- Minecraft Education
+- News
+- Online Safety
+- Parental Controls
+- Responsible AI
+- Security
+- Transparency Report
+- Xbox
+- Youth Council
+section_names:
+- ai
+- security
 ---
-
 stclarke presents a comprehensive overview of Microsoft's leadership in online safety for Safer Internet Day 2026, highlighting research, resources, and responsible AI initiatives to protect digital communities.<!--excerpt_end-->
 
 # Safer Internet Day 2026: Microsoft's Commitment to Responsible AI and Online Safety

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Visualizing Workflows and Architecture with Mermaid Charts in Visual Studio 2026"
-description: "This post explains how Visual Studio 2026 now natively supports Mermaid charts for workflow and architecture visualization. Developers can write Mermaid syntax or leverage GitHub Copilot to generate diagrams, all without third-party extensions. The article highlights benefits for documentation, system design, and team collaboration within a modern, complex development environment."
-author: "JohnNaguib"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/tools/visualize-workflows-and-architecture-with-mermaid-charts-in/m-p/4495253#M190"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/tools/visualize-workflows-and-architecture-with-mermaid-charts-in/m-p/4495253#M190
+title: Visualizing Workflows and Architecture with Mermaid Charts in Visual Studio 2026
+author: JohnNaguib
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-16 16:02:52 +00:00
-permalink: "/2026-02-16-Visualizing-Workflows-and-Architecture-with-Mermaid-Charts-in-Visual-Studio-2026.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Architecture Diagrams", "Coding", "Community", "Developer Experience", "Development Tools", "Documentation", "Flowcharts", "GitHub Copilot", "Mermaid Charts", "Sequence Diagrams", "Software Architecture", "System Design", "VS", "Workflow Visualization"]
-tags_normalized: ["ai", "architecture diagrams", "coding", "community", "developer experience", "development tools", "documentation", "flowcharts", "github copilot", "mermaid charts", "sequence diagrams", "software architecture", "system design", "vs", "workflow visualization"]
+tags:
+- AI
+- Architecture Diagrams
+- Community
+- Developer Experience
+- Development Tools
+- Documentation
+- Flowcharts
+- GitHub Copilot
+- Mermaid Charts
+- Sequence Diagrams
+- Software Architecture
+- System Design
+- VS
+- Workflow Visualization
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 JohnNaguib introduces how Visual Studio 2026 brings native Mermaid chart rendering to help developers visualize workflows and architecture, integrated with GitHub Copilot for seamless documentation.<!--excerpt_end-->
 
 # Visualizing Workflows and Architecture with Mermaid Charts in Visual Studio 2026

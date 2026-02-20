@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Actions: Enforcement of Minimum Self-hosted Runner Version Extended to March 16, 2026"
-description: "This news update from GitHub announces the extension of the enforcement deadline for the minimum required version of self-hosted GitHub Actions runners. Organizations now have until March 16, 2026, to upgrade all self-hosted runners to at least v2.329.0. The update also details a brownout period, during which configuration blocks will occur, brownout schedules across major timezones, and specific steps for upgrading runners to remain compliant after enforcement begins."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-05-github-actions-self-hosted-runner-minimum-version-enforcement-extended"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-05-github-actions-self-hosted-runner-minimum-version-enforcement-extended
+title: 'GitHub Actions: Enforcement of Minimum Self-hosted Runner Version Extended to March 16, 2026'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-05 12:53:50 +00:00
-permalink: "/2026-02-05-GitHub-Actions-Enforcement-of-Minimum-Self-hosted-Runner-Version-Extended-to-March-16-2026.html"
-categories: ["DevOps"]
-tags: ["Actions", "Automation", "Brownout Schedule", "CI/CD", "Configuration Management", "Continuous Deployment", "Continuous Integration", "DevOps", "GitHub Actions", "IaC", "News", "Pipeline", "Release Management", "Retired", "Runner Upgrade", "Self Hosted Runner", "Upgrade", "Version Enforcement"]
-tags_normalized: ["actions", "automation", "brownout schedule", "cislashcd", "configuration management", "continuous deployment", "continuous integration", "devops", "github actions", "iac", "news", "pipeline", "release management", "retired", "runner upgrade", "self hosted runner", "upgrade", "version enforcement"]
+tags:
+- Actions
+- Automation
+- Brownout Schedule
+- CI/CD
+- Configuration Management
+- Continuous Deployment
+- Continuous Integration
+- DevOps
+- GitHub Actions
+- IaC
+- News
+- Pipeline
+- Release Management
+- Retired
+- Runner Upgrade
+- Self Hosted Runner
+- Upgrade
+- Version Enforcement
+section_names:
+- devops
 ---
-
 Allison details GitHub's extension of the deadline for minimum self-hosted runner version enforcement in GitHub Actions until March 16, 2026, with clear guidance and brownout schedules for DevOps teams.<!--excerpt_end-->
 
 # GitHub Actions: Self-hosted Runner Minimum Version Enforcement Extended

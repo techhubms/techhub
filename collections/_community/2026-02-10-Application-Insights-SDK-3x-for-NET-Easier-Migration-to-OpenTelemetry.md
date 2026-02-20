@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Application Insights SDK 3.x for .NET: Easier Migration to OpenTelemetry"
-description: "This announcement from MattMc details the major release of the Application Insights SDK 3.x for .NET, focusing on seamless migration to OpenTelemetry for Azure developers. Developers can now upgrade their observability stack with less effort, leveraging vendor-neutral APIs, multi-exporter support, and improved ecosystem compatibility. The update maintains the intuitive 'just works' experience of Azure Monitor Application Insights while embracing modern observability standards."
-author: "MattMc"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-application-insights-sdk-3-x-for-net/ba-p/4493988"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-application-insights-sdk-3-x-for-net/ba-p/4493988
+title: 'Application Insights SDK 3.x for .NET: Easier Migration to OpenTelemetry'
+author: MattMc
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-02-10 00:25:02 +00:00
-permalink: "/2026-02-10-Application-Insights-SDK-3x-for-NET-Easier-Migration-to-OpenTelemetry.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Application Insights", "Azure", "Azure Monitor", "Azure Monitor OpenTelemetry Distro", "Cloud Monitoring", "Coding", "Community", "DevOps", "Instrumentation", "Migration", "NuGet", "Observability", "OpenTelemetry", "SDK 3.x", "Span Processor", "Telemetry", "Tracing", "Vendor Neutral APIs"]
-tags_normalized: ["dotnet", "application insights", "azure", "azure monitor", "azure monitor opentelemetry distro", "cloud monitoring", "coding", "community", "devops", "instrumentation", "migration", "nuget", "observability", "opentelemetry", "sdk 3dotx", "span processor", "telemetry", "tracing", "vendor neutral apis"]
+tags:
+- .NET
+- Application Insights
+- Azure
+- Azure Monitor
+- Azure Monitor OpenTelemetry Distro
+- Cloud Monitoring
+- Community
+- DevOps
+- Instrumentation
+- Migration
+- NuGet
+- Observability
+- OpenTelemetry
+- SDK 3.x
+- Span Processor
+- Telemetry
+- Tracing
+- Vendor Neutral APIs
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 MattMc announces the release of Application Insights SDK 3.x for .NET, enabling Azure developers to migrate seamlessly to OpenTelemetry and modernize their observability practices with less friction.<!--excerpt_end-->
 
 # Application Insights SDK 3.x for .NET: Easier Migration to OpenTelemetry

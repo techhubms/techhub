@@ -2,6 +2,7 @@
 @using TechHub.Web.Services
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
 @implements IDisposable
 
 <nav class="main-nav" aria-label="Primary navigation">
@@ -10,6 +11,7 @@
             <span class="logo-text">Tech Hub</span>
         </a>
 
+        @* Desktop navigation links (hidden on mobile via CSS) *@
         <div class="nav-links">
             @foreach (var item in SectionCache.Sections)
             {
@@ -21,10 +23,60 @@
                 About
             </a>
         </div>
+
+        @* Hamburger button (visible on mobile via CSS) *@
+        <button class="hamburger-btn @(menuOpen ? "open" : "")"
+                @onclick="ToggleMenu"
+                aria-label="@(menuOpen ? "Close navigation menu" : "Open navigation menu")"
+                aria-expanded="@(menuOpen ? "true" : "false")"
+                aria-controls="mobile-menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </div>
 </nav>
 
+@* Mobile menu panel (hidden on desktop via CSS) *@
+<div id="mobile-menu" class="mobile-menu @(menuOpen ? "open" : "")" role="navigation" aria-label="Mobile navigation">
+    @foreach (var sectionItem in SectionCache.Sections)
+    {
+        <div class="mobile-menu-section">
+            <button class="mobile-menu-section-header @(IsActiveSection(sectionItem.Name) ? "active" : "")"
+                    @onclick="() => ToggleSection(sectionItem.Name)"
+                    aria-expanded="@(expandedSections.Contains(sectionItem.Name) ? "true" : "false")">
+                <span>@sectionItem.Title</span>
+                <span class="chevron @(expandedSections.Contains(sectionItem.Name) ? "expanded" : "")"></span>
+            </button>
+
+            @if (expandedSections.Contains(sectionItem.Name))
+            {
+                <div class="mobile-menu-sub-items">
+                    <a href="/@sectionItem.Name/all" class="@(IsActivePage($"/{sectionItem.Name}/all") || IsActivePage($"/{sectionItem.Name}") ? "active" : "")" @onclick="CloseMenu">All</a>
+                    @foreach (var collection in sectionItem.Collections.Where(c => !c.IsCustom))
+                    {
+                        <a href="/@sectionItem.Name/@collection.Name" class="@(IsActivePage($"/{sectionItem.Name}/{collection.Name}") ? "active" : "")" @onclick="CloseMenu">@collection.Title</a>
+                    }
+                    @foreach (var customPage in sectionItem.Collections.Where(c => c.IsCustom).OrderBy(c => c.Order).ThenBy(c => c.Title))
+                    {
+                        <a href="@customPage.Url" class="@(IsActivePage(customPage.Url) ? "active" : "")" @onclick="CloseMenu">@customPage.Title</a>
+                    }
+                </div>
+            }
+        </div>
+    }
+    <a href="/about" class="mobile-menu-section-header @(IsActivePage("/about") ? "active" : "")" @onclick="CloseMenu">About</a>
+</div>
+
+@if (menuOpen)
+{
+    <div class="mobile-menu-overlay" @onclick="CloseMenu"></div>
+}
+
 @code {
+    private bool menuOpen;
+    private readonly HashSet<string> expandedSections = new(StringComparer.OrdinalIgnoreCase);
+
     protected override void OnInitialized()
     {
         Navigation.LocationChanged += OnLocationChanged;
@@ -32,7 +84,64 @@
 
     private async void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
     {
+        // Close menu on navigation
+        if (menuOpen)
+        {
+            menuOpen = false;
+            await UnlockBodyScroll();
+        }
         await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task ToggleMenu()
+    {
+        menuOpen = !menuOpen;
+        if (menuOpen)
+        {
+            await LockBodyScroll();
+        }
+        else
+        {
+            expandedSections.Clear();
+            await UnlockBodyScroll();
+        }
+    }
+
+    [JSInvokable]
+    public async Task CloseMenuFromJs()
+    {
+        if (menuOpen)
+        {
+            menuOpen = false;
+            expandedSections.Clear();
+            await UnlockBodyScroll();
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    private async Task CloseMenu()
+    {
+        menuOpen = false;
+        expandedSections.Clear();
+        await UnlockBodyScroll();
+    }
+
+    private void ToggleSection(string sectionName)
+    {
+        if (!expandedSections.Remove(sectionName))
+        {
+            expandedSections.Add(sectionName);
+        }
+    }
+
+    private async Task LockBodyScroll()
+    {
+        await JSRuntime.InvokeVoidAsync("mobileNav.lockScroll");
+    }
+
+    private async Task UnlockBodyScroll()
+    {
+        await JSRuntime.InvokeVoidAsync("mobileNav.unlockScroll");
     }
 
     private string GetCurrentSection()

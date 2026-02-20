@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building an AI Skills Executor in .NET with Azure OpenAI and MCP"
-description: "This article by Matt Kruczek presents a complete guide for enterprise developers to build a modular AI Skills Executor in .NET. By integrating Azure OpenAI with the Model Context Protocol (MCP) C# SDK, developers can standardize agentic behaviors and orchestrate intelligent agent loops. The guide details reusable skills, tool orchestration using MCP servers, and how to separate business logic from platform orchestration. The implementation aims to create composable, maintainable, and testable AI-powered workflows within the Microsoft ecosystem."
-author: "Matt Kruczek"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/dotnet-ai-skills-executor-azure-openai-mcp/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/dotnet-ai-skills-executor-azure-openai-mcp/
+title: Building an AI Skills Executor in .NET with Azure OpenAI and MCP
+author: Matt Kruczek
+primary_section: ai
+feed_name: Microsoft AI Foundry Blog
 date: 2026-02-06 19:11:04 +00:00
-permalink: "/2026-02-06-Building-an-AI-Skills-Executor-in-NET-with-Azure-OpenAI-and-MCP.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agentic Architecture", "AI", "AI Agent", "AI Agents", "AI Development", "Azure", "Azure AI", "Azure OpenAI", "C#", "Coding", "Enterprise AI", "LLM Orchestration", "MCP", "MCP Server", "Microsoft Foundry", "News", "NuGet", "Prompt Engineering", "SDK", "Skill Chaining", "Skill Versioning", "Skills Executor", "Tool Integration", "YAML"]
-tags_normalized: ["dotnet", "agentic architecture", "ai", "ai agent", "ai agents", "ai development", "azure", "azure ai", "azure openai", "csharp", "coding", "enterprise ai", "llm orchestration", "mcp", "mcp server", "microsoft foundry", "news", "nuget", "prompt engineering", "sdk", "skill chaining", "skill versioning", "skills executor", "tool integration", "yaml"]
+tags:
+- .NET
+- Agentic Architecture
+- AI
+- AI Agent
+- AI Agents
+- AI Development
+- Azure
+- Azure AI
+- Azure OpenAI
+- C#
+- Enterprise AI
+- LLM Orchestration
+- MCP
+- MCP Server
+- Microsoft Foundry
+- News
+- NuGet
+- Prompt Engineering
+- SDK
+- Skill Chaining
+- Skill Versioning
+- Skills Executor
+- Tool Integration
+- YAML
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Matt Kruczek demonstrates how to architect a .NET-based AI Skills Executor, leveraging Azure OpenAI Service and the Model Context Protocol C# SDK to create agentic workflows for the Microsoft ecosystem.<!--excerpt_end-->
 
 # Building an AI Skills Executor in .NET: Azure OpenAI and MCP Integration

@@ -30,6 +30,19 @@
   margin-top: var(--spacing-4);
 }
 
+/* Spacing within a panel (between consecutive sidebar sections).
+   Works for both desktop (display:contents passes through to children)
+   and mobile (display:block when active). */
+.sidebar-panel > * + * {
+  margin-top: var(--spacing-4);
+}
+
+/* Spacing between consecutive panels on desktop.
+   Since panels use display:contents, margin goes on the first child of non-first panels. */
+.sidebar-panel + .sidebar-panel > :first-child {
+  margin-top: var(--spacing-4);
+}
+
 /* ============================================================================
    Sidebar Sections - Headings and content structure
    ============================================================================ */
@@ -128,21 +141,112 @@
 }
 
 /* ============================================================================
-   Responsive - Sidebar transforms to horizontal grid on mobile
+   Responsive - Sidebar toolbar for mobile panel toggles
    ============================================================================ */
 
-@media (max-width: 1024px) {
-  .sidebar {
-    position: static;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-4);
+/* Desktop: Make toolbar and panel wrappers invisible to layout, hide buttons.
+   display:contents removes the element from the box tree so children (e.g. SidebarToc
+   with position:sticky) participate directly in the sidebar's layout context. */
+@media (min-width: 1289px) {
+  .sidebar-toolbar {
+    display: contents;
+  }
+
+  .sidebar-toolbar-buttons {
+    display: none;
+  }
+
+  .sidebar-panel {
+    display: contents;
   }
 }
 
-@media (max-width: 640px) {
+/* Mobile: Show toolbar buttons, panels hidden by default */
+@media (max-width: 1288px) {
   .sidebar {
-    grid-template-columns: 1fr;
+    position: static;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  /* Toolbar button bar */
+  .sidebar-toolbar-buttons {
+    display: flex;
+    gap: var(--spacing-1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .sidebar-toolbar-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-toolbar-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: var(--spacing-1) var(--spacing-2);
+    background: var(--color-bg-emphasis);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--easing-ease);
+    min-height: var(--touch-target-min-size);
+  }
+
+  .sidebar-toolbar-btn svg {
+    flex-shrink: 0;
+  }
+
+  .sidebar-toolbar-btn:hover {
+    background: var(--color-bg-default);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-primary);
+  }
+
+  .sidebar-toolbar-btn:focus-visible {
+    outline: 2px solid var(--color-purple-bright);
+    outline-offset: 2px;
+  }
+
+  .sidebar-toolbar-btn.active {
+    background: var(--color-purple-dark);
+    color: var(--color-text-on-emphasis);
+    border-color: var(--color-purple-bright);
+  }
+
+  /* Panels hidden by default on mobile */
+  .sidebar-panel {
+    display: none;
+  }
+
+  .sidebar-panel-active {
+    display: block;
+    margin-top: var(--spacing-2);
+  }
+
+  /* Reset inter-panel spacing on mobile (only one visible at a time) */
+  .sidebar-panel + .sidebar-panel > :first-child {
+    margin-top: 0;
+  }
+
+  /* Hide desktop-only sidebar content on mobile */
+  .sidebar-desktop-only {
+    display: none;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-toolbar-btn {
+    transition: none;
   }
 }
 

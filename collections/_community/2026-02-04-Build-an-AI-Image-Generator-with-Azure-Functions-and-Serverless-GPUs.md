@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Build an AI Image Generator with Azure Functions and Serverless GPUs"
-description: "This tutorial guides you through creating an AI-powered image generator using Azure Functions deployed on Azure Container Apps with serverless GPU support. Learn how to deploy Stable Diffusion as a scalable API, integrate it with serverless infrastructure, and optimize performance and costs—all without managing any infrastructure yourself."
-author: "Nitesh_Jain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/serverless-gpu-tutorial-build-an-ai-image-generator-with-azure/ba-p/4492228"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/serverless-gpu-tutorial-build-an-ai-image-generator-with-azure/ba-p/4492228
+title: Build an AI Image Generator with Azure Functions and Serverless GPUs
+author: Nitesh_Jain
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-04 17:43:54 +00:00
-permalink: "/2026-02-04-Build-an-AI-Image-Generator-with-Azure-Functions-and-Serverless-GPUs.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Image Generation", "API Development", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure Functions", "Cloud Deployment", "Coding", "Community", "Containerization", "Cost Optimization", "Diffusers", "Docker", "GPU Workload", "Monitoring", "Python", "Serverless GPUs", "Stable Diffusion"]
-tags_normalized: ["ai", "ai image generation", "api development", "azure", "azure container apps", "azure developer cli", "azure functions", "cloud deployment", "coding", "community", "containerization", "cost optimization", "diffusers", "docker", "gpu workload", "monitoring", "python", "serverless gpus", "stable diffusion"]
+tags:
+- AI
+- AI Image Generation
+- API Development
+- Azure
+- Azure Container Apps
+- Azure Developer CLI
+- Azure Functions
+- Cloud Deployment
+- Community
+- Containerization
+- Cost Optimization
+- Diffusers
+- Docker
+- GPU Workload
+- Monitoring
+- Python
+- Serverless GPUs
+- Stable Diffusion
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Nitesh_Jain demonstrates how to build an AI image generator powered by Stable Diffusion, leveraging Azure Functions and serverless GPUs on Azure Container Apps. The guide covers development, deployment, optimization, and cost-saving tips.<!--excerpt_end-->
 
 # Build an AI Image Generator with Azure Functions and Serverless GPUs

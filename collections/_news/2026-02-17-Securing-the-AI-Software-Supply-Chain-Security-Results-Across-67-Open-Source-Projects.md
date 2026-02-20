@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Securing the AI Software Supply Chain: Security Results Across 67 Open Source Projects"
-description: "This article from the GitHub Blog details how the GitHub Secure Open Source Fund provided support for 67 key open source projects foundational to the modern AI stack. It highlights the specific security improvements made across programming languages, data science libraries, CI/CD tooling, and security frameworks, showing how targeted funding and training improved resilience against supply chain threats."
-author: "Gregg Cochran"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/securing-the-ai-software-supply-chain-security-results-across-67-open-source-projects/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/open-source/maintainers/securing-the-ai-software-supply-chain-security-results-across-67-open-source-projects/
+title: 'Securing the AI Software Supply Chain: Security Results Across 67 Open Source Projects'
+author: Gregg Cochran
+primary_section: ai
+feed_name: The GitHub Blog
 date: 2026-02-17 19:00:00 +00:00
-permalink: "/2026-02-17-Securing-the-AI-Software-Supply-Chain-Security-Results-Across-67-Open-Source-Projects.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Security", "AI Stack", "Authentication", "Authorization", "CI/CD", "CodeQL", "CVEs", "DevOps", "GitHub Secure Open Source Fund", "Jenkins", "Keycloak", "LLVM", "Maintainers", "News", "Node.js", "Open Source", "Open Source Security", "Pandas", "Programming Languages", "PyPI", "Python", "SciPy", "Secrets Management", "Security", "Software Supply Chain", "Supply Chain Security"]
-tags_normalized: ["ai", "ai security", "ai stack", "authentication", "authorization", "cislashcd", "codeql", "cves", "devops", "github secure open source fund", "jenkins", "keycloak", "llvm", "maintainers", "news", "nodedotjs", "open source", "open source security", "pandas", "programming languages", "pypi", "python", "scipy", "secrets management", "security", "software supply chain", "supply chain security"]
+tags:
+- AI
+- AI Security
+- AI Stack
+- Authentication
+- Authorization
+- CI/CD
+- CodeQL
+- CVEs
+- DevOps
+- GitHub Secure Open Source Fund
+- Jenkins
+- Keycloak
+- LLVM
+- Maintainers
+- News
+- Node.js
+- Open Source
+- Open Source Security
+- Pandas
+- Programming Languages
+- PyPI
+- Python
+- SciPy
+- Secrets Management
+- Security
+- Software Supply Chain
+- Supply Chain Security
+section_names:
+- ai
+- devops
+- security
 ---
-
 Gregg Cochran explores how the GitHub Secure Open Source Fund empowered maintainers of 67 crucial AI stack projects to boost software supply chain security—a pivotal effort for global open source safety.<!--excerpt_end-->
 
 # Securing the AI Software Supply Chain: Security Results Across 67 Open Source Projects

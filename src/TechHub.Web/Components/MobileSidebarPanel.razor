@@ -1,0 +1,63 @@
+@*
+    MobileSidebarPanel - Individual sidebar panel that registers with MobileSidebarToolbar.
+
+    On mobile: Hidden by default, shown only when its toolbar button is active.
+    On desktop: Renders normally (display: block) within the sidebar layout.
+
+    Must be used as a child of MobileSidebarToolbar.
+
+    Usage:
+        <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Search">
+                <SidebarSearch ... />
+            </MobileSidebarPanel>
+        </MobileSidebarToolbar>
+*@
+@implements IDisposable
+
+<div class="sidebar-panel @(IsActive ? "sidebar-panel-active" : "")">
+    @ChildContent
+</div>
+
+@code {
+    [CascadingParameter]
+    public MobileSidebarToolbar? Toolbar { get; set; }
+
+    /// <summary>
+    /// Label displayed on the corresponding toolbar toggle button (visible only on mobile).
+    /// </summary>
+    [Parameter]
+    public string Label { get; set; } = "Panel";
+
+    /// <summary>
+    /// Icon name for the toolbar button (e.g. "search", "tags", "toc", "rss", "calendar", "filter", "latest", "updates").
+    /// </summary>
+    [Parameter]
+    public string? Icon { get; set; }
+
+    /// <summary>
+    /// The sidebar content for this panel.
+    /// </summary>
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private string? _panelId;
+
+    private bool IsActive => Toolbar != null && _panelId != null && Toolbar.IsPanelActive(_panelId);
+
+    protected override void OnInitialized()
+    {
+        if (Toolbar != null)
+        {
+            _panelId = Toolbar.RegisterPanel(Label, Icon);
+        }
+    }
+
+    public void Dispose()
+    {
+        if (Toolbar != null && _panelId != null)
+        {
+            Toolbar.UnregisterPanel(_panelId);
+        }
+    }
+}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Securing OpenClaw Self-hosted Agents: Identity, Isolation, and Runtime Risk"
-description: "This article by the Microsoft Defender Security Research Team explores the security risks of running self-hosted agent runtimes like OpenClaw in enterprise settings. It analyzes supply chain vulnerabilities, indirect prompt injection, and skill malware, and offers actionable guidance on how to minimize risk with Microsoft Defender XDR, Entra ID, Purview, and Sentinel. Readers will learn best practices for isolating agent environments, managing credentials, monitoring for compromise, and leveraging advanced hunting queries to detect and respond to threats in real-world scenarios."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/19/running-openclaw-safely-identity-isolation-runtime-risk/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/19/running-openclaw-safely-identity-isolation-runtime-risk/
+title: 'Securing OpenClaw Self-hosted Agents: Identity, Isolation, and Runtime Risk'
+author: Microsoft Defender Security Research Team
+primary_section: security
+feed_name: Microsoft Security Blog
 date: 2026-02-19 16:27:00 +00:00
-permalink: "/2026-02-19-Securing-OpenClaw-Self-hosted-Agents-Identity-Isolation-and-Runtime-Risk.html"
-categories: ["Security"]
-tags: ["Advanced Hunting", "Agent Runtime", "ClawHub", "Credential Management", "Defender For Cloud Apps", "Enterprise Security", "Malicious Skills", "Microsoft Defender For Endpoint", "Microsoft Defender XDR", "Microsoft Entra ID", "Microsoft Purview", "Microsoft Sentinel", "Moltbook", "News", "OAuth Security", "OpenClaw", "Prompt Injection", "Runtime Isolation", "Security", "Self Hosted Agent", "Supply Chain Security"]
-tags_normalized: ["advanced hunting", "agent runtime", "clawhub", "credential management", "defender for cloud apps", "enterprise security", "malicious skills", "microsoft defender for endpoint", "microsoft defender xdr", "microsoft entra id", "microsoft purview", "microsoft sentinel", "moltbook", "news", "oauth security", "openclaw", "prompt injection", "runtime isolation", "security", "self hosted agent", "supply chain security"]
+tags:
+- Advanced Hunting
+- Agent Runtime
+- ClawHub
+- Credential Management
+- Defender For Cloud Apps
+- Enterprise Security
+- Malicious Skills
+- Microsoft Defender For Endpoint
+- Microsoft Defender XDR
+- Microsoft Entra ID
+- Microsoft Purview
+- Microsoft Sentinel
+- Moltbook
+- News
+- OAuth Security
+- OpenClaw
+- Prompt Injection
+- Runtime Isolation
+- Security
+- Self Hosted Agent
+- Supply Chain Security
+section_names:
+- security
 ---
-
 The Microsoft Defender Security Research Team examines the unique security risks of self-hosted agents like OpenClaw, detailing how identity, isolation, and runtime controls are critical for safe deployment.<!--excerpt_end-->
 
 # Securing OpenClaw Self-hosted Agents: Identity, Isolation, and Runtime Risk

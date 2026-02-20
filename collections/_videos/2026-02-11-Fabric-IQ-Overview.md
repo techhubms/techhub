@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Fabric IQ Overview"
-description: "This video offers a walkthrough of Fabric IQ, a capability within Microsoft Fabric, focusing on its core features such as OneLake integration, data-to-business knowledge conversion, entities and relationships, ontology, digital twins, and the use of AI. John Savill demonstrates Fabric IQ's operations for modern data analytics with Azure cloud services."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=37LHUPvT1gU"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=37LHUPvT1gU
+title: Fabric IQ Overview
+author: John Savill's Technical Training
+primary_section: ai
+feed_name: John Savill's Technical Training
 date: 2026-02-11 13:21:25 +00:00
-permalink: "/2026-02-11-Fabric-IQ-Overview.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure Cloud", "Cloud", "Data Agents", "Data Analytics", "Data Modeling", "Digital Twin", "Fabric", "Fabric IQ", "John Savill", "LLM", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "Microsoft Iq", "ML", "OneLake", "Ontology", "Operations Agent", "Videos"]
-tags_normalized: ["ai", "azure", "azure cloud", "cloud", "data agents", "data analytics", "data modeling", "digital twin", "fabric", "fabric iq", "john savill", "llm", "microsoft", "microsoft azure", "microsoft fabric", "microsoft iq", "ml", "onelake", "ontology", "operations agent", "videos"]
+tags:
+- AI
+- Azure
+- Azure Cloud
+- Data Agents
+- Data Analytics
+- Data Modeling
+- Digital Twin
+- Fabric
+- Fabric IQ
+- John Savill
+- LLM
+- Microsoft
+- Microsoft Azure
+- Microsoft Fabric
+- Microsoft Iq
+- ML
+- OneLake
+- Ontology
+- Operations Agent
+- Videos
+section_names:
+- ai
+- azure
+- ml
 ---
-
 John Savill’s Technical Training presents a detailed overview of Fabric IQ within Microsoft Fabric, highlighting its AI-driven features and integration with Azure services.<!--excerpt_end-->
 
 {% youtube 37LHUPvT1gU %}

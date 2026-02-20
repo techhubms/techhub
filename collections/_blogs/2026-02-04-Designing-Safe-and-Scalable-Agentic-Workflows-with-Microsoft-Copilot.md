@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Designing Safe and Scalable Agentic Workflows with Microsoft Copilot"
-description: "This in-depth guide by John Edward explores how teams can design secure, reliable, and auditable agentic workflows using Microsoft Copilot. The article details architectural principles and hands-on technical steps for safe implementation of Copilot-powered agents, covering privilege management, human-in-the-loop patterns, structured workflow design, and security guardrails. Readers learn how to leverage Copilot Studio, Power Automate, Microsoft Graph, Azure OpenAI, and more to build trustworthy automations while minimizing risk and ensuring compliance."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/designing-safe-agentic-workflows-with-microsoft-copilot/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/designing-safe-agentic-workflows-with-microsoft-copilot/
+title: Designing Safe and Scalable Agentic Workflows with Microsoft Copilot
+author: John Edward
+primary_section: ai
+feed_name: Dellenny's Blog
 date: 2026-02-04 11:36:10 +00:00
-permalink: "/2026-02-04-Designing-Safe-and-Scalable-Agentic-Workflows-with-Microsoft-Copilot.html"
-categories: ["AI"]
-tags: ["Agentic AI", "Agentic Workflows", "AI", "Approval Flows", "Auditability", "Azure OpenAI", "Blogs", "Compliance", "Copilot", "Copilot Studio", "Human in The Loop", "Least Privilege", "Microsoft Copilot", "Microsoft Entra ID", "Microsoft Graph", "Power Automate", "Prompt Injection", "Workflow Security"]
-tags_normalized: ["agentic ai", "agentic workflows", "ai", "approval flows", "auditability", "azure openai", "blogs", "compliance", "copilot", "copilot studio", "human in the loop", "least privilege", "microsoft copilot", "microsoft entra id", "microsoft graph", "power automate", "prompt injection", "workflow security"]
+tags:
+- Agentic AI
+- Agentic Workflows
+- AI
+- Approval Flows
+- Auditability
+- Azure OpenAI
+- Blogs
+- Compliance
+- Copilot
+- Copilot Studio
+- Human in The Loop
+- Least Privilege
+- Microsoft Copilot
+- Microsoft Entra ID
+- Microsoft Graph
+- Power Automate
+- Prompt Injection
+- Workflow Security
+section_names:
+- ai
 ---
-
 John Edward provides a practical, detailed guide on designing safe agentic workflows with Microsoft Copilot, focusing on security, privilege management, auditability, and best practices for Microsoft-centric AI agents.<!--excerpt_end-->
 
 # Designing Safe Agentic Workflows with Microsoft Copilot

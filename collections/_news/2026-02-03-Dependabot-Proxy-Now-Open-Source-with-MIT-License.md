@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Dependabot Proxy Now Open Source with MIT License"
-description: "Dependabot Proxy, the authentication service behind GitHub's dependency management automation, is now open source under the MIT license. This enables developers to inspect, contribute to, and extend dependency authentication workflows, including integration with private registries and multiple package ecosystems such as npm, Maven, Docker, NuGet, and more."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-03-the-dependabot-proxy-is-now-open-source-with-an-mit-license"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-03-the-dependabot-proxy-is-now-open-source-with-an-mit-license
+title: Dependabot Proxy Now Open Source with MIT License
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-03 16:48:51 +00:00
-permalink: "/2026-02-03-Dependabot-Proxy-Now-Open-Source-with-MIT-License.html"
-categories: ["DevOps", "Security"]
-tags: ["Authentication", "Azure DevOps", "Dependabot", "Dependency Management", "DevOps", "DevOps Tools", "Docker", "Ecosystem & Accessibility", "GitHub", "Maven", "MIT License", "News", "npm", "NuGet", "Open Source", "Security", "Software Compliance", "Supply Chain Security", "Terraform"]
-tags_normalized: ["authentication", "azure devops", "dependabot", "dependency management", "devops", "devops tools", "docker", "ecosystem and accessibility", "github", "maven", "mit license", "news", "npm", "nuget", "open source", "security", "software compliance", "supply chain security", "terraform"]
+tags:
+- Authentication
+- Azure DevOps
+- Dependabot
+- Dependency Management
+- DevOps
+- DevOps Tools
+- Docker
+- Ecosystem & Accessibility
+- GitHub
+- Maven
+- MIT License
+- News
+- npm
+- NuGet
+- Open Source
+- Security
+- Software Compliance
+- Supply Chain Security
+- Terraform
+section_names:
+- devops
+- security
 ---
-
 Allison announces that the Dependabot Proxy, which manages authentication for dependency updates, is now open source under the MIT license, providing greater transparency and collaboration opportunities for developers and security teams.<!--excerpt_end-->
 
 # Dependabot Proxy Now Open Source with MIT License

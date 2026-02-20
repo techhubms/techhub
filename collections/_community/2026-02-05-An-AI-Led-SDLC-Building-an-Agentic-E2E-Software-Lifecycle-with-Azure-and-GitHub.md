@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "An AI-Led SDLC: Building an Agentic E2E Software Lifecycle with Azure and GitHub"
-description: "This article by owaino explores the shift toward an agent-powered, AI-augmented software development lifecycle (SDLC) using Azure, GitHub, GitHub Copilot, and emerging AI/ML operations agents. It covers spec-driven development, autonomous coding agents, automated code reviews, deterministic CI/CD with GitHub Actions, and Azure SRE agents for operations, illustrating the impact of these tools with a weather app demo and critical analysis of the changes for software engineering teams."
-author: "owaino"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/an-ai-led-sdlc-building-an-end-to-end-agentic-software/ba-p/4491896"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/an-ai-led-sdlc-building-an-end-to-end-agentic-software/ba-p/4491896
+title: 'An AI-Led SDLC: Building an Agentic E2E Software Lifecycle with Azure and GitHub'
+author: owaino
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-05 10:10:00 +00:00
-permalink: "/2026-02-05-An-AI-Led-SDLC-Building-an-Agentic-E2E-Software-Lifecycle-with-Azure-and-GitHub.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic SDLC", "AI", "AI Agents", "Automation", "Azure", "CI/CD", "Code Quality", "Coding", "Community", "Container Apps", "Continuous Deployment", "DevOps", "GitHub Actions", "GitHub Codespaces", "GitHub Copilot", "OpenWeather API", "Pull Requests", "Quality Automation", "Software Engineering", "Spec Driven Development", "Spec Kit", "SRE Agent", "Test Driven Development"]
-tags_normalized: ["agentic sdlc", "ai", "ai agents", "automation", "azure", "cislashcd", "code quality", "coding", "community", "container apps", "continuous deployment", "devops", "github actions", "github codespaces", "github copilot", "openweather api", "pull requests", "quality automation", "software engineering", "spec driven development", "spec kit", "sre agent", "test driven development"]
+tags:
+- Agentic SDLC
+- AI
+- AI Agents
+- Automation
+- Azure
+- CI/CD
+- Code Quality
+- Community
+- Container Apps
+- Continuous Deployment
+- DevOps
+- GitHub Actions
+- GitHub Codespaces
+- GitHub Copilot
+- OpenWeather API
+- Pull Requests
+- Quality Automation
+- Software Engineering
+- Spec Driven Development
+- Spec Kit
+- SRE Agent
+- Test Driven Development
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
 ---
-
 owaino presents a deep dive into the application of AI-driven software development, demonstrating how GitHub Copilot, Azure, and agent-based automation are transforming the SDLC. Learn how new tools enable autonomous development, testing, deployment, and operations.<!--excerpt_end-->
 
 # An AI-Led SDLC: Building an End-to-End Agentic Software Development Lifecycle with Azure and GitHub

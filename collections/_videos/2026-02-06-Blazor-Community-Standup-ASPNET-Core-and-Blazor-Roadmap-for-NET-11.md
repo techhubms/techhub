@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Blazor Community Standup: ASP.NET Core & Blazor Roadmap for .NET 11"
-description: "This session provides a detailed overview of the ASP.NET Core and Blazor roadmap for the upcoming .NET 11 release. Daniel Roth and Javier Calvarro Nelson share updates on anticipated features, improvements, and the progress of ongoing development work, highlighting key changes for developers building modern web applications."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=XY_mM2FkxHE"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=XY_mM2FkxHE
+title: 'Blazor Community Standup: ASP.NET Core & Blazor Roadmap for .NET 11'
+author: dotnet
+primary_section: dotnet
+feed_name: DotNet YouTube
 date: 2026-02-06 20:08:35 +00:00
-permalink: "/2026-02-06-Blazor-Community-Standup-ASPNET-Core-and-Blazor-Roadmap-for-NET-11.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 11", "ASP.NET Core", "Blazor", "C#", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnet11", "Dotnetdeveloper", "Dotnetroadmap", "Framework Updates", "Microsoft", "Modern Web Apps", "Release Features", "Roadmap", "Videos", "Web Development"]
-tags_normalized: ["dotnet", "dotnet 11", "aspdotnet core", "blazor", "csharp", "coding", "demo", "developer", "developer community", "developer tools", "dotnet11", "dotnetdeveloper", "dotnetroadmap", "framework updates", "microsoft", "modern web apps", "release features", "roadmap", "videos", "web development"]
+tags:
+- .NET
+- .NET 11
+- ASP.NET Core
+- Blazor
+- C#
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnet11
+- Dotnetdeveloper
+- Dotnetroadmap
+- Framework Updates
+- Microsoft
+- Modern Web Apps
+- Release Features
+- Roadmap
+- Videos
+- Web Development
+section_names:
+- dotnet
 ---
-
 Daniel Roth and Javier Calvarro Nelson present the ASP.NET Core and Blazor roadmap for .NET 11, offering insights beneficial for developers in the Microsoft ecosystem.<!--excerpt_end-->
 
 {% youtube XY_mM2FkxHE %}

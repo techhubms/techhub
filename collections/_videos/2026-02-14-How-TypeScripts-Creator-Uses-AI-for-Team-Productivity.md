@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "How TypeScript's Creator Uses AI for Team Productivity"
-description: "This video features Anders Hejlsberg, the creator of TypeScript, discussing how the TypeScript team leverages AI to automate repetitive development tasks such as porting pull requests. The focus is on using AI to improve developer efficiency by eliminating uninteresting, time-consuming work, offering a practical perspective on AI's role in modern software workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/2djTIalOr1M"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/2djTIalOr1M
+title: How TypeScript's Creator Uses AI for Team Productivity
+author: GitHub
+primary_section: ai
+feed_name: GitHub YouTube
 date: 2026-02-14 17:00:03 +00:00
-permalink: "/2026-02-14-How-TypeScripts-Creator-Uses-AI-for-Team-Productivity.html"
-categories: ["AI"]
-tags: ["AI", "AI Automation", "AI in Software Development", "Anders Hejlsberg", "AndersHejlsberg", "Developer Productivity", "Developer Tools", "GitHub", "Pull Request Automation", "Software Engineering", "TypeScript", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai automation", "ai in software development", "anders hejlsberg", "andershejlsberg", "developer productivity", "developer tools", "github", "pull request automation", "software engineering", "typescript", "videos", "workflow automation"]
+tags:
+- AI
+- AI Automation
+- AI in Software Development
+- Anders Hejlsberg
+- AndersHejlsberg
+- Developer Productivity
+- Developer Tools
+- GitHub
+- Pull Request Automation
+- Software Engineering
+- TypeScript
+- Videos
+- Workflow Automation
+section_names:
+- ai
 ---
-
 GitHub showcases Anders Hejlsberg as he explains how the TypeScript team implements AI to streamline repetitive coding tasks, emphasizing automation's impact on developer productivity.<!--excerpt_end-->
 
 {% youtube 2djTIalOr1M %}

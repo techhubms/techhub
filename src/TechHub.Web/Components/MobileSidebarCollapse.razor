@@ -1,0 +1,46 @@
+@*
+    MobileSidebarCollapse - Collapsible sidebar wrapper for mobile viewports.
+
+    Uses a div with Blazor click handler for accessible collapse/expand behavior:
+    - On mobile (≤1024px): Shows toggle button, content collapsed by default
+    - On desktop (>1024px): CSS hides toggle and uses display:contents on wrapper,
+      making this wrapper invisible to the layout engine
+
+    Usage:
+        <aside class="sidebar">
+            <MobileSidebarCollapse Label="Table of Contents">
+                <SidebarToc ... />
+            </MobileSidebarCollapse>
+        </aside>
+*@
+
+<div class="sidebar-collapse @(isOpen ? "sidebar-collapse-open" : "")">
+    <button type="button" class="sidebar-collapse-toggle"
+            aria-expanded="@(isOpen ? "true" : "false")"
+            @onclick="Toggle">
+        <span>@Label</span>
+        <span class="sidebar-collapse-chevron"></span>
+    </button>
+    <div class="sidebar-collapse-content">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// Label displayed on the collapse toggle button (visible only on mobile).
+    /// Examples: "Table of Contents", "Filters &amp; Search", "Sidebar"
+    /// </summary>
+    [Parameter]
+    public string Label { get; set; } = "Sidebar";
+
+    /// <summary>
+    /// The sidebar content to wrap in the collapsible container.
+    /// </summary>
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private bool isOpen;
+
+    private void Toggle() => isOpen = !isOpen;
+}

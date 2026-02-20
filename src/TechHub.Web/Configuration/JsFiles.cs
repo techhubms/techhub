@@ -50,7 +50,8 @@ public static class JsFiles
     /// </summary>
     public static readonly string[] AlwaysLoad =
     [
-        "js/nav-helpers.js"   // Back to top, back to previous navigation
+        "js/nav-helpers.js",  // Back to top, back to previous navigation
+        "js/mobile-nav.js"    // Mobile navigation scroll lock and keyboard handling
     ];
 
     /// <summary>

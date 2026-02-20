@@ -23,6 +23,8 @@
 
 <main class="page-with-sidebar">
     <aside class="sidebar">
+        <MobileSidebarToolbar>
+        <MobileSidebarPanel Label="All Updates" Icon="updates">
         @if (videoItems.Any())
         {
             <div class="sidebar-section">
@@ -44,11 +46,15 @@
                 </ul>
             </div>
         }
+        </MobileSidebarPanel>
 
         @if (selectedVideoDetail != null && !string.IsNullOrWhiteSpace(selectedVideoDetail.RenderedHtml))
         {
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
             <SidebarToc HtmlContent="@selectedVideoDetail.RenderedHtml" Title="Table of Contents" />
+            </MobileSidebarPanel>
         }
+        </MobileSidebarToolbar>
     </aside>
 
     @if (selectedVideoDetail != null)

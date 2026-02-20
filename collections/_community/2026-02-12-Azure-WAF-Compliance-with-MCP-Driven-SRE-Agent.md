@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure WAF Compliance with MCP-Driven SRE Agent"
-description: "This guide details how the Azure SRE Agent, powered by Model Context Protocol (MCP), enables continuous enforcement of Azure Well-Architected Framework (WAF) compliance. It automates resource discovery, cross-checks findings against both WAF pillars and organizational standards, and generates actionable remediation steps, all integrated into Azure governance and DevOps workflows."
-author: "varghesejoji"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-waf-compliance-with-mcp-driven-sre-agent/ba-p/4494687"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-waf-compliance-with-mcp-driven-sre-agent/ba-p/4494687
+title: Azure WAF Compliance with MCP-Driven SRE Agent
+author: varghesejoji
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-12 23:51:58 +00:00
-permalink: "/2026-02-12-Azure-WAF-Compliance-with-MCP-Driven-SRE-Agent.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Automated Remediation", "Azure", "Azure ARM API", "Azure CLI", "Azure Compliance", "Azure DevOps", "Azure Governance", "Azure Policy", "Azure Security", "Azure SRE Agent", "Community", "Cost Optimization", "DevOps", "IaC", "Managed Identity", "MCP", "Operational Excellence", "Resource Discovery", "Security", "Terraform", "WAF Pillars", "Well Architected Framework"]
-tags_normalized: ["automated remediation", "azure", "azure arm api", "azure cli", "azure compliance", "azure devops", "azure governance", "azure policy", "azure security", "azure sre agent", "community", "cost optimization", "devops", "iac", "managed identity", "mcp", "operational excellence", "resource discovery", "security", "terraform", "waf pillars", "well architected framework"]
+tags:
+- Automated Remediation
+- Azure
+- Azure ARM API
+- Azure CLI
+- Azure Compliance
+- Azure DevOps
+- Azure Governance
+- Azure Policy
+- Azure Security
+- Azure SRE Agent
+- Community
+- Cost Optimization
+- DevOps
+- IaC
+- Managed Identity
+- MCP
+- Operational Excellence
+- Resource Discovery
+- Security
+- Terraform
+- WAF Pillars
+- Well Architected Framework
+section_names:
+- azure
+- devops
+- security
 ---
-
 varghesejoji explores how the Azure SRE Agent uses the Model Context Protocol to enforce Azure Well-Architected Framework compliance at scale, enabling security, finance, and platform teams to identify and remediate risks efficiently.<!--excerpt_end-->
 
 # Azure WAF Compliance with MCP-Driven SRE Agent

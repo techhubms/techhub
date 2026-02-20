@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Assigning Issues to GitHub Copilot Coding Agent from Raycast"
-description: "This update details new functionality that allows developers to assign GitHub issues directly to the Copilot coding agent using the Raycast launcher. The guide covers how Copilot autonomously works on delegated tasks, how to use Raycast's GitHub Copilot extension to assign and track issues, and outlines version and access requirements for Copilot users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-17-assign-issues-to-copilot-coding-agent-from-raycast"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-17-assign-issues-to-copilot-coding-agent-from-raycast
+title: Assigning Issues to GitHub Copilot Coding Agent from Raycast
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-17 16:59:55 +00:00
-permalink: "/2026-02-17-Assigning-Issues-to-GitHub-Copilot-Coding-Agent-from-Raycast.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Autonomous Agent", "Background Coding", "Copilot", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Extension", "Copilot Pro", "Developer Productivity", "GitHub", "GitHub Copilot", "Improvement", "Issue Assignment", "Macos", "News", "Raycast", "Software Development", "Task Automation", "Windows"]
-tags_normalized: ["ai", "autonomous agent", "background coding", "copilot", "copilot coding agent", "copilot enterprise", "copilot extension", "copilot pro", "developer productivity", "github", "github copilot", "improvement", "issue assignment", "macos", "news", "raycast", "software development", "task automation", "windows"]
+tags:
+- AI
+- Autonomous Agent
+- Background Coding
+- Copilot
+- Copilot Coding Agent
+- Copilot Enterprise
+- Copilot Extension
+- Copilot Pro
+- Developer Productivity
+- GitHub
+- GitHub Copilot
+- Improvement
+- Issue Assignment
+- Macos
+- News
+- Raycast
+- Software Development
+- Task Automation
+- Windows
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains how developers can now assign issues to the GitHub Copilot coding agent directly from Raycast, enabling automated background task handling and workflow optimization.<!--excerpt_end-->
 
 # Assigning Issues to GitHub Copilot Coding Agent from Raycast

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Building an App in VS Code with AI Agents with Elijah King | Cozy AI Kitchen"
-description: "In this episode of Cozy AI Kitchen, Elijah King, Product Designer on the Visual Studio Code team, demonstrates how designers and non-developers can create fully functional iOS chatbot apps using AI agents and natural language prompts inside VS Code. The session highlights multi-agent AI workflows, model switching, and makes app development accessible to everyone. Learn how the integration of AI with VS Code streamlines coding, enabling creative professionals to build and enhance modern applications quickly."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vWLeCW90Ojo"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=vWLeCW90Ojo
+title: Building an App in VS Code with AI Agents with Elijah King | Cozy AI Kitchen
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-10 18:40:51 +00:00
-permalink: "/2026-02-10-Building-an-App-in-VS-Code-with-AI-Agents-with-Elijah-King-Cozy-AI-Kitchen.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "App Development", "Background Agents", "Chatbot", "Cloud Computing", "Codex", "Coding", "Design Engineering", "Designer To Developer", "Dev", "Development", "Gemini Pro 3", "Haiku 4.5", "Ios Development", "Microsoft", "Microsoft Developer", "Model Switching", "Natural Language Programming", "No Code", "Parallel Agents", "Prompt Engineering", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agents", "app development", "background agents", "chatbot", "cloud computing", "codex", "coding", "design engineering", "designer to developer", "dev", "development", "gemini pro 3", "haiku 4dot5", "ios development", "microsoft", "microsoft developer", "model switching", "natural language programming", "no code", "parallel agents", "prompt engineering", "tech", "technology", "videos", "vs code"]
+tags:
+- AI
+- AI Agents
+- App Development
+- Background Agents
+- Chatbot
+- Cloud Computing
+- Codex
+- Design Engineering
+- Designer To Developer
+- Dev
+- Development
+- Gemini Pro 3
+- Haiku 4.5
+- Ios Development
+- Microsoft
+- Microsoft Developer
+- Model Switching
+- Natural Language Programming
+- No Code
+- Parallel Agents
+- Prompt Engineering
+- Tech
+- Technology
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 In this episode, Microsoft Developer hosts Elijah King as he showcases how designers can leverage VS Code’s AI-powered agents to rapidly build a fully working iOS chatbot app with natural language prompts.<!--excerpt_end-->
 
 {% youtube vWLeCW90Ojo %}

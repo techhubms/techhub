@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Meeting Sovereignty Requirements with Azure and Azure Local"
-description: "This video guides viewers through key sovereignty considerations in cloud environments, focusing on how Microsoft Azure and Azure Local address legal, jurisdictional, and technical requirements. Topics include data residency, encryption, compliance, identity management with Entra, control planes with Arc, and Azure Local's disconnected operation. The walkthrough is structured with detailed chapter breakdowns and links to whiteboards and official Microsoft resources."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Q6Anv-8a-I0"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=Q6Anv-8a-I0
+title: Meeting Sovereignty Requirements with Azure and Azure Local
+author: John Savill's Technical Training
+primary_section: azure
+feed_name: John Savill's Technical Training
 date: 2026-02-16 10:44:03 +00:00
-permalink: "/2026-02-16-Meeting-Sovereignty-Requirements-with-Azure-and-Azure-Local.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Arc", "Azure Cloud", "Azure Control Plane", "Azure Local", "Azure Local Disconnected", "Azure Regions", "Cloud", "Cloud Governance", "Cloud Security", "Compliance", "Data Encryption", "Data Sovereignty", "Entra", "External Key Management", "Identity Management", "Jurisdictional Requirements", "Microsoft", "Microsoft Azure", "Regulatory", "Regulatory Compliance", "Security", "Sovereignty", "Videos"]
-tags_normalized: ["azure", "azure arc", "azure cloud", "azure control plane", "azure local", "azure local disconnected", "azure regions", "cloud", "cloud governance", "cloud security", "compliance", "data encryption", "data sovereignty", "entra", "external key management", "identity management", "jurisdictional requirements", "microsoft", "microsoft azure", "regulatory", "regulatory compliance", "security", "sovereignty", "videos"]
+tags:
+- Azure
+- Azure Arc
+- Azure Cloud
+- Azure Control Plane
+- Azure Local
+- Azure Local Disconnected
+- Azure Regions
+- Cloud Governance
+- Cloud Security
+- Compliance
+- Data Encryption
+- Data Sovereignty
+- Entra
+- External Key Management
+- Identity Management
+- Jurisdictional Requirements
+- Microsoft
+- Microsoft Azure
+- Regulatory
+- Regulatory Compliance
+- Security
+- Sovereignty
+- Videos
+section_names:
+- azure
+- security
 ---
-
 In this comprehensive guide, John Savill explains how Microsoft Azure and Azure Local address sovereignty and compliance rules, highlighting technical and legal requirements for secure cloud adoption.<!--excerpt_end-->
 
 {% youtube Q6Anv-8a-I0 %}

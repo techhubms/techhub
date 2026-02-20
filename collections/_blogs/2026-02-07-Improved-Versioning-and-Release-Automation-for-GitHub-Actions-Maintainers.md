@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Improved Versioning and Release Automation for GitHub Actions Maintainers"
-description: "This blog post by Jesse Houwing details how he developed and refactored the 'actions-semver-checker' GitHub Action to simplify and automate semantic versioning, release management, and consistency for GitHub Actions maintainers. The content covers the challenges, implementation process using GitHub Copilot, and the new features—including validation, auto-fixing, and configuration improvements—introduced in v2."
-author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://jessehouwing.net/github-actions-automatic-versioning-for-actions/"
-viewing_mode: "external"
-feed_name: "Jesse Houwing's Blog"
-feed_url: "https://jessehouwing.net/rss/"
+﻿---
+external_url: https://jessehouwing.net/github-actions-automatic-versioning-for-actions/
+title: Improved Versioning and Release Automation for GitHub Actions Maintainers
+author: Jesse Houwing
+primary_section: github-copilot
+feed_name: Jesse Houwing's Blog
 date: 2026-02-07 10:34:01 +00:00
-permalink: "/2026-02-07-Improved-Versioning-and-Release-Automation-for-GitHub-Actions-Maintainers.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Actions Semver Checker", "AI", "Autofix", "Automation", "Blogs", "CI/CD", "Configuration", "Copilot Agent", "DevOps", "DevOps Tools", "GitHub", "GitHub Actions", "GitHub CLI", "GitHub Copilot", "GraphQL API", "Release Immutability", "Release Management", "REST API", "Semantic Versioning", "Technical Practices", "Testing"]
-tags_normalized: ["actions semver checker", "ai", "autofix", "automation", "blogs", "cislashcd", "configuration", "copilot agent", "devops", "devops tools", "github", "github actions", "github cli", "github copilot", "graphql api", "release immutability", "release management", "rest api", "semantic versioning", "technical practices", "testing"]
+tags:
+- Actions Semver Checker
+- AI
+- Autofix
+- Automation
+- Blogs
+- CI/CD
+- Configuration
+- Copilot Agent
+- DevOps
+- DevOps Tools
+- GitHub
+- GitHub Actions
+- GitHub CLI
+- GitHub Copilot
+- GraphQL API
+- Release Immutability
+- Release Management
+- REST API
+- Semantic Versioning
+- Technical Practices
+- Testing
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Jesse Houwing shares his journey improving GitHub Actions versioning with the release of 'actions-semver-checker' v2, leveraging Copilot Agent and automated testing to streamline and automate release management.<!--excerpt_end-->
 
 # Automatic Versioning for GitHub Actions Authors

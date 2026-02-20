@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Building Resilient Multi-Region Citrix VDI Workloads on Azure: A Six-Layer Framework"
-description: "This post by ravisha delivers a technical deep dive into architecting highly available Citrix VDI workloads on Microsoft Azure. The article introduces a practical six-layer resilience framework, covering strategic decisions about network, storage, user profile replication, traffic management, image consistency, and operational cost control. The guidance emphasizes technical design decisions and Azure-native tools for establishing reliability at scale."
-author: "ravisha"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/proactive-resiliency-in-azure-for-specialized-workload-i-e/ba-p/4492260"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/proactive-resiliency-in-azure-for-specialized-workload-i-e/ba-p/4492260
+title: 'Building Resilient Multi-Region Citrix VDI Workloads on Azure: A Six-Layer Framework'
+author: ravisha
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-06 09:56:31 +00:00
-permalink: "/2026-02-06-Building-Resilient-Multi-Region-Citrix-VDI-Workloads-on-Azure-A-Six-Layer-Framework.html"
-categories: ["Azure", "Security"]
-tags: ["Availability Zones", "Azure", "Azure Compute Gallery", "Azure Front Door", "Azure NetApp Files", "Azure Traffic Manager", "Azure Virtual Network", "Azure Virtual WAN", "BCDR", "Citrix VDI", "Cloud Security", "Community", "Data Replication", "Disaster Recovery", "FSLogix Cloud Cache", "Global VNet Peering", "Infrastructure Design", "Microsoft Cloud Solution Architect", "Multi Region Design", "Network Architecture", "Resiliency", "Security", "Warm Standby"]
-tags_normalized: ["availability zones", "azure", "azure compute gallery", "azure front door", "azure netapp files", "azure traffic manager", "azure virtual network", "azure virtual wan", "bcdr", "citrix vdi", "cloud security", "community", "data replication", "disaster recovery", "fslogix cloud cache", "global vnet peering", "infrastructure design", "microsoft cloud solution architect", "multi region design", "network architecture", "resiliency", "security", "warm standby"]
+tags:
+- Availability Zones
+- Azure
+- Azure Compute Gallery
+- Azure Front Door
+- Azure NetApp Files
+- Azure Traffic Manager
+- Azure Virtual Network
+- Azure Virtual WAN
+- BCDR
+- Citrix VDI
+- Cloud Security
+- Community
+- Data Replication
+- Disaster Recovery
+- FSLogix Cloud Cache
+- Global VNet Peering
+- Infrastructure Design
+- Microsoft Cloud Solution Architect
+- Multi Region Design
+- Network Architecture
+- Resiliency
+- Security
+- Warm Standby
+section_names:
+- azure
+- security
 ---
-
 ravisha shares a comprehensive, technical guide to architecting resilient Citrix VDI deployments on Azure using a six-layer framework for network, storage, replication, traffic management, and disaster recovery.<!--excerpt_end-->
 
 # Building Resilient Multi-Region Citrix VDI Workloads on Azure

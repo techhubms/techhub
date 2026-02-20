@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Migrating Workloads from AWS to Azure: A Structured Approach for Cloud Architects"
-description: "This in-depth guide by rhack offers cloud architects and technical teams a detailed, structured methodology for migrating workloads from AWS to Azure. It covers each step of the migration lifecycle—from initial planning and architecture mapping to execution, validation, and decommissioning—while emphasizing best practices, risk management, and leveraging Microsoft tools. The content highlights principles like like-for-like architecture, blue/green deployment, and the crucial role of Infrastructure as Code and CI/CD updates. It also advises on team collaboration, stakeholder communication, and post-migration optimization using Azure-native monitoring and frameworks."
-author: "rhack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-workloads-from-aws-to-azure-a-structured-approach-for/ba-p/4495227"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-workloads-from-aws-to-azure-a-structured-approach-for/ba-p/4495227
+title: 'Migrating Workloads from AWS to Azure: A Structured Approach for Cloud Architects'
+author: rhack
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-19 06:52:01 +00:00
-permalink: "/2026-02-19-Migrating-Workloads-from-AWS-to-Azure-A-Structured-Approach-for-Cloud-Architects.html"
-categories: ["Azure", "DevOps"]
-tags: ["Application Insights", "ARM Templates", "AWS To Azure", "Azure", "Azure Functions", "Azure Migration", "Azure Monitor", "Azure SQL Database", "Azure Well Architected Framework", "Bicep", "Blue/Green Deployment", "CI/CD", "Cloud Architecture", "Cloud Migration", "Cloud Strategy", "Community", "DevOps", "Enterprise Architecture", "IaC", "Terraform", "Workload Migration"]
-tags_normalized: ["application insights", "arm templates", "aws to azure", "azure", "azure functions", "azure migration", "azure monitor", "azure sql database", "azure well architected framework", "bicep", "blueslashgreen deployment", "cislashcd", "cloud architecture", "cloud migration", "cloud strategy", "community", "devops", "enterprise architecture", "iac", "terraform", "workload migration"]
+tags:
+- Application Insights
+- ARM Templates
+- AWS To Azure
+- Azure
+- Azure Functions
+- Azure Migration
+- Azure Monitor
+- Azure SQL Database
+- Azure Well Architected Framework
+- Bicep
+- Blue/Green Deployment
+- CI/CD
+- Cloud Architecture
+- Cloud Migration
+- Cloud Strategy
+- Community
+- DevOps
+- Enterprise Architecture
+- IaC
+- Terraform
+- Workload Migration
+section_names:
+- azure
+- devops
 ---
-
 rhack presents a structured guide for migrating AWS workloads to Azure, focusing on architecture mapping, risk management, tooling best practices, and operational readiness throughout the migration lifecycle.<!--excerpt_end-->
 
 # Migrating Workloads from AWS to Azure: A Structured Approach for Cloud Architects

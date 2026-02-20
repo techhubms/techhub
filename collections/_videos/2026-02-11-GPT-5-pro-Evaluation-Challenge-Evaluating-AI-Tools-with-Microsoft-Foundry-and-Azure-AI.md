@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GPT-5 pro Evaluation Challenge – Evaluating AI Tools with Microsoft Foundry and Azure AI"
-description: "This video, presented by Microsoft Developer, explores evaluation tools and practices used in the context of the GPT-5 pro Evaluation Challenge. It delves into how Microsoft Foundry and Azure AI services are leveraged to assess advanced AI models, providing insight into evaluation workflows, metrics, and tooling within Microsoft's AI platforms."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/XZ9ZAwVpHxc"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/shorts/XZ9ZAwVpHxc
+title: GPT-5 pro Evaluation Challenge – Evaluating AI Tools with Microsoft Foundry and Azure AI
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-11 21:15:22 +00:00
-permalink: "/2026-02-11-GPT-5-pro-Evaluation-Challenge-Evaluating-AI-Tools-with-Microsoft-Foundry-and-Azure-AI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Assessment", "AI Evaluation", "AI Metrics", "AI Platforms", "AI Tools", "Azure", "Azure AI", "Cloud Computing", "Dev", "Development", "GPT 5", "Machine Learning Evaluation", "Microsoft", "Microsoft Developer", "Microsoft Foundry", "Model Evaluation", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai assessment", "ai evaluation", "ai metrics", "ai platforms", "ai tools", "azure", "azure ai", "cloud computing", "dev", "development", "gpt 5", "machine learning evaluation", "microsoft", "microsoft developer", "microsoft foundry", "model evaluation", "tech", "technology", "videos"]
+tags:
+- AI
+- AI Assessment
+- AI Evaluation
+- AI Metrics
+- AI Platforms
+- AI Tools
+- Azure
+- Azure AI
+- Cloud Computing
+- Dev
+- Development
+- GPT 5
+- Machine Learning Evaluation
+- Microsoft
+- Microsoft Developer
+- Microsoft Foundry
+- Model Evaluation
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer discusses evaluation tools and best practices for assessing advanced AI models in the GPT-5 pro Evaluation Challenge, highlighting the use of Azure AI and Microsoft Foundry.<!--excerpt_end-->
 
 {% youtube XZ9ZAwVpHxc %}

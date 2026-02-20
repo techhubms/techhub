@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Using Claude and Codex AI Agents in GitHub Agent HQ"
-description: "This news update announces that Claude by Anthropic and OpenAI Codex are now available in public preview to Copilot Pro+ and Copilot Enterprise users via Agent HQ. Developers can run and compare multiple AI coding agents (including GitHub Copilot) natively within GitHub, Visual Studio Code, and GitHub Mobile without context switching. The update covers workflow benefits, review enhancements, security controls, and upcoming agent integrations."
-author: "Mario Rodriguez"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/
+title: Using Claude and Codex AI Agents in GitHub Agent HQ
+author: Mario Rodriguez
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-04 17:00:19 +00:00
-permalink: "/2026-02-04-Using-Claude-and-Codex-AI-Agents-in-GitHub-Agent-HQ.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent HQ", "AI", "AI Agent", "AI Agents", "AI Assisted Coding", "AI Integration", "Audit Logging", "Claude", "Code Quality", "Code Review", "Coding", "Company News", "Copilot CLI", "DevOps", "DevOps Workflow", "Enterprise Security", "GitHub Copilot", "News", "News & Insights", "OpenAI Codex", "Pull Requests", "VS Code"]
-tags_normalized: ["agent hq", "ai", "ai agent", "ai agents", "ai assisted coding", "ai integration", "audit logging", "claude", "code quality", "code review", "coding", "company news", "copilot cli", "devops", "devops workflow", "enterprise security", "github copilot", "news", "news and insights", "openai codex", "pull requests", "vs code"]
+tags:
+- Agent HQ
+- AI
+- AI Agent
+- AI Agents
+- AI Assisted Coding
+- AI Integration
+- Audit Logging
+- Claude
+- Code Quality
+- Code Review
+- Company News
+- Copilot CLI
+- DevOps
+- DevOps Workflow
+- Enterprise Security
+- GitHub Copilot
+- News
+- News & Insights
+- OpenAI Codex
+- Pull Requests
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 Mario Rodriguez reports on the public preview of Claude by Anthropic and OpenAI Codex as coding agents in GitHub's Agent HQ, enabling developers to use multiple AI tools (including Copilot) directly within their workflows.<!--excerpt_end-->
 
 # Using Claude and Codex AI Agents in GitHub Agent HQ

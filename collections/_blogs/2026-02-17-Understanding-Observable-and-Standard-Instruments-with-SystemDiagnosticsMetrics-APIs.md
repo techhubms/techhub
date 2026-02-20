@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Understanding Observable and Standard Instruments with System.Diagnostics.Metrics APIs"
-description: "This post offers a detailed overview of the different instrument types provided by the System.Diagnostics.Metrics API, focusing on their usage within .NET libraries and ASP.NET Core. You'll learn how to create, configure, and use standard and observable metric instruments, including counters, gauges, up/down counters, and histograms, with practical examples and real-world scenarios."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/creating-standard-and-observable-instruments/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/creating-standard-and-observable-instruments/
+title: Understanding Observable and Standard Instruments with System.Diagnostics.Metrics APIs
+author: Andrew Lock
+primary_section: dotnet
+feed_name: Andrew Lock's Blog
 date: 2026-02-17 10:00:00 +00:00
-permalink: "/2026-02-17-Understanding-Observable-and-Standard-Instruments-with-SystemDiagnosticsMetrics-APIs.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 6", ".NET Core", ".NET Monitor", "ASP.NET Core", "Blogs", "Coding", "Counter", "DiagnosticSource", "Gauge", "Histogram", "Instrumentation", "Metrics", "Monitoring", "Observability", "ObservableCounter", "ObservableGauge", "OpenTelemetry", "System.Diagnostics.Metrics", "UpDownCounter"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 6", "dotnet core", "dotnet monitor", "aspdotnet core", "blogs", "coding", "counter", "diagnosticsource", "gauge", "histogram", "instrumentation", "metrics", "monitoring", "observability", "observablecounter", "observablegauge", "opentelemetry", "systemdotdiagnosticsdotmetrics", "updowncounter"]
+tags:
+- .NET
+- .NET 10
+- .NET 6
+- .NET Core
+- .NET Monitor
+- ASP.NET Core
+- Blogs
+- Counter
+- DiagnosticSource
+- Gauge
+- Histogram
+- Instrumentation
+- Metrics
+- Monitoring
+- Observability
+- ObservableCounter
+- ObservableGauge
+- OpenTelemetry
+- System.Diagnostics.Metrics
+- UpDownCounter
+section_names:
+- dotnet
 ---
-
 Andrew Lock provides a deep dive into the various instrument types featured in the System.Diagnostics.Metrics API. The article explores practical examples from .NET libraries and ASP.NET Core to illustrate how developers can record and observe metrics in their applications.<!--excerpt_end-->
 
 # Understanding Observable and Standard Instruments with System.Diagnostics.Metrics APIs

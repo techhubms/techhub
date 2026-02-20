@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Azure API Management Unified AI Gateway Design Pattern for Enterprise AI Governance"
-description: "This article presents the Unified AI Gateway design pattern developed by Uniper, leveraging Azure API Management to centralize generative AI access, simplify governance, and optimize operational efficiency for enterprises using multiple AI providers and models. The pattern focuses on modular policies, dynamic routing, unified authentication, and centralized observability to address the complexity at scale."
-author: "nicolehaugen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-api-management-unified-ai-gateway-design-pattern/ba-p/4495436"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-api-management-unified-ai-gateway-design-pattern/ba-p/4495436
+title: Azure API Management Unified AI Gateway Design Pattern for Enterprise AI Governance
+author: nicolehaugen
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-17 16:21:27 +00:00
-permalink: "/2026-02-17-Azure-API-Management-Unified-AI-Gateway-Design-Pattern-for-Enterprise-AI-Governance.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Cost Management", "AI Governance", "API Mediation", "API Security", "Application Insights", "Authentication", "Azure", "Azure API Management", "Cloud Integration", "Community", "Dynamic Routing", "Enterprise Architecture", "GenAI", "GPT 4.1", "JWT", "LLM Token Limit", "Load Balancing", "Microsoft Foundry", "Multi Provider AI", "Observability", "Policy Extensibility", "Unified AI Gateway"]
-tags_normalized: ["ai", "ai cost management", "ai governance", "api mediation", "api security", "application insights", "authentication", "azure", "azure api management", "cloud integration", "community", "dynamic routing", "enterprise architecture", "genai", "gpt 4dot1", "jwt", "llm token limit", "load balancing", "microsoft foundry", "multi provider ai", "observability", "policy extensibility", "unified ai gateway"]
+tags:
+- AI
+- AI Cost Management
+- AI Governance
+- API Mediation
+- API Security
+- Application Insights
+- Authentication
+- Azure
+- Azure API Management
+- Cloud Integration
+- Community
+- Dynamic Routing
+- Enterprise Architecture
+- GenAI
+- GPT 4.1
+- JWT
+- LLM Token Limit
+- Load Balancing
+- Microsoft Foundry
+- Multi Provider AI
+- Observability
+- Policy Extensibility
+- Unified AI Gateway
+section_names:
+- ai
+- azure
 ---
-
 Nicole Haugen shares Uniper's production-proven Unified AI Gateway pattern, illustrating how Azure API Management can streamline the control and governance of AI services, enabling secure, scalable access to multiple models and providers.<!--excerpt_end-->
 
 # Azure API Management - Unified AI Gateway Design Pattern

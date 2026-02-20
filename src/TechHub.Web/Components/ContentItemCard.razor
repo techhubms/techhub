@@ -8,11 +8,8 @@
         <div class="card-header">
             <h3 class="card-title">@Item.Title</h3>
             <div class="card-meta">
-                <time datetime="@FormatDateIso(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>
-                @if (!string.IsNullOrWhiteSpace(Item.Author))
-                {
-                    <span class="content-author">by @Item.Author</span>
-                }
+                <time datetime="@FormatDateIso(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>@if (!string.IsNullOrWhiteSpace(Item.Author))
+                {<span class="content-author"> by @Item.Author</span>}
             </div>
         </div>
 

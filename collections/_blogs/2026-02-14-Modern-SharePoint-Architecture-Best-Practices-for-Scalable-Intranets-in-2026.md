@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Modern SharePoint Architecture: Best Practices for Scalable Intranets in 2026"
-description: "This comprehensive guide by John Edward explores the architectural principles and technical best practices for building scalable, secure, and integrated SharePoint intranets within Microsoft 365 in 2026. Covering site structuring, information architecture, governance, security, integration with Microsoft ecosystem tools, and future trends, it equips architects and IT professionals to design effective and sustainable digital workplaces."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/modern-sharepoint-architecture-best-practices-for-scalable-intranets-in-2026/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/modern-sharepoint-architecture-best-practices-for-scalable-intranets-in-2026/
+title: 'Modern SharePoint Architecture: Best Practices for Scalable Intranets in 2026'
+author: John Edward
+primary_section: dotnet
+feed_name: Dellenny's Blog
 date: 2026-02-14 10:31:57 +00:00
-permalink: "/2026-02-14-Modern-SharePoint-Architecture-Best-Practices-for-Scalable-Intranets-in-2026.html"
-categories: ["Coding", "Security"]
-tags: ["Admin Center", "Architecture", "Blogs", "Coding", "Compliance", "DLP", "Document Collaboration", "Employee Experience", "Governance", "Hub Sites", "Information Architecture", "Intranet", "Lifecycle Management", "Microsoft 365", "Power Automate", "Power Platform", "Retention Policies", "Search Optimization", "Security", "SharePoint", "Solution Architecture", "SPFx", "Viva"]
-tags_normalized: ["admin center", "architecture", "blogs", "coding", "compliance", "dlp", "document collaboration", "employee experience", "governance", "hub sites", "information architecture", "intranet", "lifecycle management", "microsoft 365", "power automate", "power platform", "retention policies", "search optimization", "security", "sharepoint", "solution architecture", "spfx", "viva"]
+tags:
+- Admin Center
+- Architecture
+- Blogs
+- Compliance
+- DLP
+- Document Collaboration
+- Employee Experience
+- Governance
+- Hub Sites
+- Information Architecture
+- Intranet
+- Lifecycle Management
+- Microsoft 365
+- Power Automate
+- Power Platform
+- Retention Policies
+- Search Optimization
+- Security
+- SharePoint
+- Solution Architecture
+- SPFx
+- Viva
+- .NET
+section_names:
+- dotnet
+- security
 ---
-
 John Edward details modern SharePoint architecture for scalable intranets in 2026, focusing on technical practices, security, integration, and governance for Microsoft 365 professionals.<!--excerpt_end-->
 
 # Modern SharePoint Architecture: Best Practices for Scalable Intranets in 2026

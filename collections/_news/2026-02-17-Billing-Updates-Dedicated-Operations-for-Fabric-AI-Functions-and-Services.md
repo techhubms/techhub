@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Billing Updates: Dedicated Operations for Fabric AI Functions and Services"
-description: "This news highlights Microsoft Fabric's latest billing reporting changes, introducing clear, dedicated operations for tracking AI Functions and AI Services usage. The update separates Fabric AI functions and Azure AI Services billing from other workloads, offering improved transparency and easier tracking of AI-related consumption within Fabric, especially for operations using Azure OpenAI Service and Azure Cognitive Services."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/billing-updates-new-operations-for-fabric-ai-functions-and-ai-services/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/billing-updates-new-operations-for-fabric-ai-functions-and-ai-services/
+title: 'Billing Updates: Dedicated Operations for Fabric AI Functions and Services'
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-17 12:00:00 +00:00
-permalink: "/2026-02-17-Billing-Updates-Dedicated-Operations-for-Fabric-AI-Functions-and-Services.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Functions", "AI Services", "Azure", "Azure AI Translator", "Azure Cognitive Services", "Azure OpenAI Service", "Billing", "Capacity Metrics", "Copilot Capacity", "Dataflows Gen2", "Microsoft Fabric", "ML", "News", "Notebook", "REST API", "Synapse ML", "Text Analytics"]
-tags_normalized: ["ai", "ai functions", "ai services", "azure", "azure ai translator", "azure cognitive services", "azure openai service", "billing", "capacity metrics", "copilot capacity", "dataflows gen2", "microsoft fabric", "ml", "news", "notebook", "rest api", "synapse ml", "text analytics"]
+tags:
+- AI
+- AI Functions
+- AI Services
+- Azure
+- Azure AI Translator
+- Azure Cognitive Services
+- Azure OpenAI Service
+- Billing
+- Capacity Metrics
+- Copilot Capacity
+- Dataflows Gen2
+- Microsoft Fabric
+- ML
+- News
+- Notebook
+- REST API
+- Synapse ML
+- Text Analytics
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details upcoming billing reporting updates by introducing new dedicated operations for Fabric AI Functions and AI Services. This aims to clarify and separate AI-related consumption for users and organizations.<!--excerpt_end-->
 
 # Billing Updates: Dedicated Operations for Fabric AI Functions and Services

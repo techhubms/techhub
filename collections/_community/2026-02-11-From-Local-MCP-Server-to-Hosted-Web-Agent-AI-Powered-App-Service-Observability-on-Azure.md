@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "From Local MCP Server to Hosted Web Agent: AI-Powered App Service Observability on Azure"
-description: "This post, authored by jordanselig, details the evolution of the App Service Observability MCP Server from a local development tool to a fully hosted AI-powered web application on Azure App Service. The article walks through architectural decisions, deployment using Azure Developer CLI, integration with Azure OpenAI, user security setups, and how this observability solution empowers engineering teams with shared, chat-based debugging. The focus is on providing a robust, extensible foundation for AI-enabled cloud diagnostics, while demonstrating future integration possibilities across platforms like Teams, CLI, and Azure Portal. All technical implementation details and open-source resources are included for practitioners."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-local-mcp-server-to-hosted-web-agent-app-service/ba-p/4493241"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-local-mcp-server-to-hosted-web-agent-app-service/ba-p/4493241
+title: 'From Local MCP Server to Hosted Web Agent: AI-Powered App Service Observability on Azure'
+author: jordanselig
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-11 15:47:24 +00:00
-permalink: "/2026-02-11-From-Local-MCP-Server-to-Hosted-Web-Agent-AI-Powered-App-Service-Observability-on-Azure.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Agent", "App Service Plan", "Authentication", "Azure", "Azure App Service", "Azure OpenAI", "Chat UI", "Community", "Deployment", "DevOps", "Express.js", "KQL", "Log Analytics", "Managed Identity", "MCP", "Microsoft Entra ID", "Node.js", "Observability", "VNet Integration"]
-tags_normalized: ["ai", "ai agent", "app service plan", "authentication", "azure", "azure app service", "azure openai", "chat ui", "community", "deployment", "devops", "expressdotjs", "kql", "log analytics", "managed identity", "mcp", "microsoft entra id", "nodedotjs", "observability", "vnet integration"]
+tags:
+- AI
+- AI Agent
+- App Service Plan
+- Authentication
+- Azure
+- Azure App Service
+- Azure OpenAI
+- Chat UI
+- Community
+- Deployment
+- DevOps
+- Express.js
+- KQL
+- Log Analytics
+- Managed Identity
+- MCP
+- Microsoft Entra ID
+- Node.js
+- Observability
+- VNet Integration
+section_names:
+- ai
+- azure
+- devops
 ---
-
 jordanselig demonstrates how the App Service Observability MCP Server has expanded from a local IDE tool to a scalable, AI-powered web solution on Azure App Service, leveraging Azure OpenAI and robust DevOps integration.<!--excerpt_end-->
 
 # From Local MCP Server to Hosted Web Agent: App Service Observability, Part 2

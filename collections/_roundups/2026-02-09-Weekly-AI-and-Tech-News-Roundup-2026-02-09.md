@@ -1,17 +1,39 @@
----
-layout: "post"
-title: "Agent Workflows, AI Platform Updates, and Security: GitHub Copilot, Azure, and More"
-description: "This week's summary highlights updates in agent-based software development, AI features across platforms, and automation in the cloud. GitHub Copilot introduces workflow orchestration, tools for organizations, and an SDK for extending capabilities, as well as enhanced Visual Studio Code integration. Azure releases new AI models, infrastructure, and tools for observability and security. Security teams address new malware, supply chain improvements, and guidance on secure AI and data use. Updates for machine learning, code tools, and DevOps also cover automation, migration strategies, and workflow efficiency."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup
+title: 'Agent Workflows, AI Platform Updates, and Security: GitHub Copilot, Azure, and More'
+author: TechHub
+primary_section: github-copilot
 date: 2026-02-09 09:00:00 +00:00
-permalink: "/2026-02-09-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", "AI", "AI Orchestration", "Azure", "Azure Infrastructure", "CI/CD", "Cloud Native Development", "Coding", "Copilot SDK", "Data Engineering", "DevOps", "GitHub Copilot", "Kubernetes", "Machine Learning", "Microsoft Fabric", "ML", "Model Management", "Multi Agent Systems", "Roundups", "Security", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai orchestration", "azure", "azure infrastructure", "cislashcd", "cloud native development", "coding", "copilot sdk", "data engineering", "devops", "github copilot", "kubernetes", "machine learning", "microsoft fabric", "ml", "model management", "multi agent systems", "roundups", "security", "vs code"]
+feed_name: TechHub
+tags:
+- .NET
+- AI
+- AI Orchestration
+- Azure
+- Azure Infrastructure
+- CI/CD
+- Cloud Native Development
+- Copilot SDK
+- Data Engineering
+- DevOps
+- GitHub Copilot
+- Kubernetes
+- Microsoft Fabric
+- ML
+- Model Management
+- Multi Agent Systems
+- Roundups
+- Security
+- VS Code
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- dotnet
+- devops
+- security
 ---
-
 Welcome to this week’s technology roundup, focusing on agent frameworks and AI-powered development platforms. GitHub Copilot adds multi-agent workflows and unified governance, supporting both individual developers and organizations with tools for building, managing, and securing AI-centric pipelines. Azure introduces new hardware, observability features, and detailed security controls to advance enterprise AI use. Updates in Visual Studio Code, .NET, and open source practices continue to strengthen development environments, machine learning orchestration, and threat response. Each section gives you up-to-date technical insights to support growing automation and productivity.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -91,8 +113,8 @@ GitHub improves AI tool coordination using Agent HQ, improvements to the Copilot
 New step-by-step guides and demos show developers how to use the Copilot SDK for smart agent applications. These practical resources, expanding on last week’s hybrid app patterns, show how to blend the Copilot SDK, Agent-to-Agent Protocol, and Azure Container Apps to develop and securely deploy agent systems in the cloud. Tutorials explain skill files, agent lookup, security, and scaling. Projects include educational apps like “Flight School” and showcase top community work in automation or browser agents. The SDK enables quick app creation, GitHub API use, and workflow automation, with sample code and deployment steps encouraging developers to try cloud agent system design.
 
 - [The Perfect Fusion of GitHub Copilot SDK, Agent Protocol, and Cloud Native Deployment](https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-perfect-fusion-of-github-copilot-sdk-and-cloud-native/ba-p/4491199)
-- [GitHub Copilot SDK Demo: Building 'Flight School' Personalized Coding Challenges]({{ "/2026-02-05-GitHub-Copilot-SDK-Demo-Building-Flight-School-Personalized-Coding-Challenges.html" | relative_url }})
-- [Top 10 Community Projects Built with GitHub Copilot SDK]({{ "/2026-02-06-Top-10-Community-Projects-Built-with-GitHub-Copilot-SDK.html" | relative_url }})
+- [GitHub Copilot SDK Demo: Building 'Flight School' Personalized Coding Challenges](/github-copilot-sdk-demo-building-flight-school-personalized-coding-challenges)
+- [Top 10 Community Projects Built with GitHub Copilot SDK](/top-10-community-projects-built-with-github-copilot-sdk)
 
 ### Multi-Agent Strategies: Claude, Codex, and GitHub Copilot in Practice
 
@@ -100,7 +122,7 @@ Copilot Pro+ and Enterprise subscriptions now provide access to Claude and Codex
 
 - [Using Claude and Codex AI Agents in GitHub Agent HQ](https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/)
 - [Claude and Codex Agents Now Available for GitHub Copilot Pro+ and Enterprise](https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github)
-- [How to Use Claude, Codex, and GitHub Copilot Together in GitHub and VS Code]({{ "/2026-02-04-How-to-Use-Claude-Codex-and-GitHub-Copilot-Together-in-GitHub-and-VS-Code.html" | relative_url }})
+- [How to Use Claude, Codex, and GitHub Copilot Together in GitHub and VS Code](/how-to-use-claude-codex-and-github-copilot-together-in-github-and-vs-code)
 
 ### Advances in Copilot Model Management and AI Model Options
 
@@ -131,9 +153,9 @@ Teams using Copilot with Azure DevOps can now design custom Azure Boards agents 
 
 Recent tutorials emphasize hands-on Copilot use, including updated CLI automation and model management. A video walkthrough describes how Copilot CLI’s '/share' command sends logs and diagrams to gists, making collaboration easier—especially with agents like Claude Opus and Next.js diagrams. Another guide covers custom agent creation through the CLI with details on setup, using the MCP server, and automating tasks. Scott Hanselman’s workflow shows how MCP feeds live documentation into Copilot for richer, up-to-date suggestions and visualizations. These examples help developers fine-tune Copilot for their specific needs.
 
-- [How to Use the /share Command in GitHub Copilot CLI]({{ "/2026-02-02-How-to-Use-the-share-Command-in-GitHub-Copilot-CLI.html" | relative_url }})
-- [Getting Started with GitHub Copilot CLI and Custom Agents]({{ "/2026-02-05-Getting-Started-with-GitHub-Copilot-CLI-and-Custom-Agents.html" | relative_url }})
-- [Configuring Model Context Protocol in the GitHub Copilot CLI]({{ "/2026-02-03-Configuring-Model-Context-Protocol-in-the-GitHub-Copilot-CLI.html" | relative_url }})
+- [How to Use the /share Command in GitHub Copilot CLI](/how-to-use-the-share-command-in-github-copilot-cli)
+- [Getting Started with GitHub Copilot CLI and Custom Agents](/getting-started-with-github-copilot-cli-and-custom-agents)
+- [Configuring Model Context Protocol in the GitHub Copilot CLI](/configuring-model-context-protocol-in-the-github-copilot-cli)
 
 ### Deep Agentic Workflows: Skills, Integration, and Observability
 
@@ -147,16 +169,16 @@ Agent Skills (SKILL.md files) let Copilot repeat standardized actions across env
 
 Modernizing older .NET applications is more straightforward, thanks to a Copilot Visual Studio agent that walks through code evaluation, migration planning, and execution with analysis and dependency tracking. This connects with earlier coverage on code migration and SQL changes. Developing with Kafka is now easier in VS Code with the Confluent extension, Copilot, and MCP, giving smart code hints and project bootstrapping. Community competitions like Agents League and Battle encourage creative agent development and group interaction, positioning Copilot as a tool for both productivity and collaborative coding.
 
-- [Modernizing Legacy .NET Apps with GitHub Copilot: Step-by-Step Upgrade]({{ "/2026-02-03-Modernizing-Legacy-NET-Apps-with-GitHub-Copilot-Step-by-Step-Upgrade.html" | relative_url }})
-- [AI-Powered Kafka Development with Confluent VS Code Extension, GitHub Copilot, and MCP]({{ "/2026-02-04-AI-Powered-Kafka-Development-with-Confluent-VS-Code-Extension-GitHub-Copilot-and-MCP.html" | relative_url }})
-- [Agents League: 2-Week AI Developer Challenge Featuring GitHub Copilot and Microsoft Foundry]({{ "/2026-02-03-Agents-League-2-Week-AI-Developer-Challenge-Featuring-GitHub-Copilot-and-Microsoft-Foundry.html" | relative_url }})
-- [Agents League Battle 1: Building Creative AI Apps with GitHub Copilot]({{ "/2026-02-05-Agents-League-Battle-1-Building-Creative-AI-Apps-with-GitHub-Copilot.html" | relative_url }})
+- [Modernizing Legacy .NET Apps with GitHub Copilot: Step-by-Step Upgrade](/modernizing-legacy-net-apps-with-github-copilot-step-by-step-upgrade)
+- [AI-Powered Kafka Development with Confluent VS Code Extension, GitHub Copilot, and MCP](/ai-powered-kafka-development-with-confluent-vs-code-extension-github-copilot-and-mcp)
+- [Agents League: 2-Week AI Developer Challenge Featuring GitHub Copilot and Microsoft Foundry](/agents-league-2-week-ai-developer-challenge-featuring-github-copilot-and-microsoft-foundry)
+- [Agents League Battle 1: Building Creative AI Apps with GitHub Copilot](/agents-league-battle-1-building-creative-ai-apps-with-github-copilot)
 
 ### Other GitHub Copilot News
 
 GitHub Copilot supports open source growth and ongoing integration. In a live session, Martin Woodward discussed creative Copilot uses—like orchestrating a Furby music hack—and GitHub's open Agent HQ plans. New tools such as 'actions-semver-checker' use Copilot Agents and Claude for improved workflow validation, helping maintainers automate version checks and release tasks. Copilot's use is broadening from simple suggestions to more automated and community-aware processes.
 
-- [Open Source Friday: Martin Woodward on GitHub Copilot, Furby Hack, and Agent HQ]({{ "/2026-02-04-Open-Source-Friday-Martin-Woodward-on-GitHub-Copilot-Furby-Hack-and-Agent-HQ.html" | relative_url }})
+- [Open Source Friday: Martin Woodward on GitHub Copilot, Furby Hack, and Agent HQ](/open-source-friday-martin-woodward-on-github-copilot-furby-hack-and-agent-hq)
 - [Improved Versioning and Release Automation for GitHub Actions Maintainers](https://jessehouwing.net/github-actions-automatic-versioning-for-actions/)
 
 ## AI
@@ -188,8 +210,8 @@ Expanding on last week's new .NET AI features, advice is shifting from best prac
 
 A comprehensive lesson describes how to build modular, reusable AI Skills Executors in .NET, using Azure OpenAI and MCP. This helps teams split skills (YAML-based prompts, toolsets) from orchestration code, improving flexibility, testability, and implementation for cases like code analysis or project tracking. The skills-first architecture also enables smooth rollout and ongoing monitoring.
 
-- [Build AI‑Powered .NET Apps with Telerik]({{ "/2026-02-02-Build-AIPowered-NET-Apps-with-Telerik.html" | relative_url }})
-- [.NET AI Community Standup: Foundry Local for C# Developers]({{ "/2026-02-05-NET-AI-Community-Standup-Foundry-Local-for-C-Developers.html" | relative_url }})
+- [Build AI‑Powered .NET Apps with Telerik](/build-aipowered-net-apps-with-telerik)
+- [.NET AI Community Standup: Foundry Local for C# Developers](/net-ai-community-standup-foundry-local-for-c-developers)
 - [Building an AI Skills Executor in .NET with Azure OpenAI and MCP](https://devblogs.microsoft.com/foundry/dotnet-ai-skills-executor-azure-openai-mcp/)
 
 ### Local AI Model Benchmarking and Scientific Evaluation
@@ -245,7 +267,7 @@ New Azure releases strengthen infrastructure, automation, security, and develope
 
 John Savill’s "Azure State of the Union 2026" covers practical guidance for cloud design: managing capacity, right-sizing VMs, scaling, configuring zones, governance, automation, and basic security. Infrastructure as Code, policy enforcement, and multi-region deployment are included. For specialized workloads, a six-layer Citrix VDI reference highlights Global VNet Peering, Azure NetApp Files, FSLogix Cloud Cache, and Azure Front Door for backup and disaster recovery.
 
-- [Azure State of the Union 2026]({{ "/2026-02-02-Azure-State-of-the-Union-2026.html" | relative_url }})
+- [Azure State of the Union 2026](/azure-state-of-the-union-2026)
 - [Building Resilient Multi-Region Citrix VDI Workloads on Azure: A Six-Layer Framework](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/proactive-resiliency-in-azure-for-specialized-workload-i-e/ba-p/4492260)
 
 ### Kubernetes and Container Solutions
@@ -292,7 +314,7 @@ The Azure CLI Windows MSI installer now upgrades faster and is more reliable, fi
 
 - [Azure CLI Windows MSI Upgrade Failures and Performance Fixes: Root Causes and Solutions](https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-windows-msi-upgrade-issue-root-cause-mitigation-and/ba-p/4491691)
 - [Auto-install `azd` Extensions in Dev Containers](https://devblogs.microsoft.com/azure-sdk/azd-devcontainer-extensions/)
-- [Azure Update - 6th February 2026]({{ "/2026-02-06-Azure-Update-6th-February-2026.html" | relative_url }})
+- [Azure Update - 6th February 2026](/azure-update-6th-february-2026)
 
 ### AI Platform Foundations and Hub-and-Spoke Architectures
 
@@ -333,7 +355,7 @@ Developer tool updates include improved CLI installers, extension support in con
 
 - [Azure CLI Windows MSI Upgrade Failures and Performance Fixes: Root Causes and Solutions](https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-windows-msi-upgrade-issue-root-cause-mitigation-and/ba-p/4491691)
 - [Auto-install `azd` Extensions in Dev Containers](https://devblogs.microsoft.com/azure-sdk/azd-devcontainer-extensions/)
-- [Azure Update - 6th February 2026]({{ "/2026-02-06-Azure-Update-6th-February-2026.html" | relative_url }})
+- [Azure Update - 6th February 2026](/azure-update-6th-february-2026)
 
 Security updates include storage redundancy, new NAT flow logs, and automated VM recoveries to enhance resilience and meet compliance.
 
@@ -356,10 +378,10 @@ VS Code is now more agent-focused, continuing last week’s MCP Apps progress wi
 
 The January 2026 Insiders Update (v1.109) includes notable changes to the terminal (such as kitty protocol support and better input handling), improved formatting, bug fixes, updated command handling, and enhanced API access. Chat features retain context even after archiving, and custom UI support for MCP Apps gets a boost. Official tutorials walk new users through core features—including IntelliSense, issue management, and setup—connecting with the multi-agent and MCP functionality covered last week.
 
-- [Multi-agent Development in VS Code]({{ "/2026-02-04-Multi-agent-Development-in-VS-Code.html" | relative_url }})
+- [Multi-agent Development in VS Code](/multi-agent-development-in-vs-code)
 - [Visual Studio Code January 2026 Insiders Update (v1.109): Terminal and Chat Improvements](https://code.visualstudio.com/updates/v1_109)
-- [Learn Visual Studio Code in 15 Minutes: Official Beginner Tutorial]({{ "/2026-02-03-Learn-Visual-Studio-Code-in-15-Minutes-Official-Beginner-Tutorial.html" | relative_url }})
-- [Learn Visual Studio Code in 15 Minutes: 2026 Official Beginner Tutorial]({{ "/2026-02-03-Learn-Visual-Studio-Code-in-15-Minutes-2026-Official-Beginner-Tutorial.html" | relative_url }})
+- [Learn Visual Studio Code in 15 Minutes: Official Beginner Tutorial](/learn-visual-studio-code-in-15-minutes-official-beginner-tutorial)
+- [Learn Visual Studio Code in 15 Minutes: 2026 Official Beginner Tutorial](/learn-visual-studio-code-in-15-minutes-2026-official-beginner-tutorial)
 
 ### .NET Platform: Community-Driven Libraries, Roadmaps, and Deployment Changes
 
@@ -367,10 +389,10 @@ The .NET Data Community Standup introduces Microsoft.Extensions.DataIngestion fo
 
 Blazor Community Standup walks through the .NET 11 ASP.NET Core and Blazor roadmap, continuing last week’s modernization efforts. .NET Framework 3.5 now requires a separate installer in new Windows releases (as of Insider Build 27965), with full support ending in 2029, so teams should start updating. The .NET MAUI Standup discusses hybrid development and ongoing plans, keeping focus on flexible deployment options.
 
-- [.NET Data Community Standup: Introduction to Microsoft.Extensions.DataIngestion]({{ "/2026-02-04-NET-Data-Community-Standup-Introduction-to-MicrosoftExtensionsDataIngestion.html" | relative_url }})
-- [Blazor Community Standup: ASP.NET Core & Blazor Roadmap for .NET 11]({{ "/2026-02-06-Blazor-Community-Standup-ASPNET-Core-and-Blazor-Roadmap-for-NET-11.html" | relative_url }})
+- [.NET Data Community Standup: Introduction to Microsoft.Extensions.DataIngestion](/net-data-community-standup-introduction-to-microsoftextensionsdataingestion)
+- [Blazor Community Standup: ASP.NET Core & Blazor Roadmap for .NET 11](/blazor-community-standup-aspnet-core-and-blazor-roadmap-for-net-11)
 - [.NET Framework 3.5 Now Requires Standalone Deployment on New Windows Versions](https://devblogs.microsoft.com/dotnet/dotnet-framework-3-5-moves-to-standalone-deployment-in-new-versions-of-windows/)
-- [.NET MAUI Community Standup: Live from MAUI Day London]({{ "/2026-02-05-NET-MAUI-Community-Standup-Live-from-MAUI-Day-London.html" | relative_url }})
+- [.NET MAUI Community Standup: Live from MAUI Day London](/net-maui-community-standup-live-from-maui-day-london)
 
 ### Visual Studio and Editor Extensibility
 
@@ -408,7 +430,7 @@ The deadline for upgrading self-hosted runners is extended to March 16, 2026, al
 
 - [GitHub Actions: Enforcement of Minimum Self-hosted Runner Version Extended to March 16, 2026](https://github.blog/changelog/2026-02-05-github-actions-self-hosted-runner-minimum-version-enforcement-extended)
 - [GitHub Actions February 2026 Updates: Scale Sets, Security, and New Runner Images](https://github.blog/changelog/2026-02-05-github-actions-early-february-2026-updates)
-- [The Download: OpenClaw AI Agents, Babel 7 Farewell, and GitHub Actions Updates]({{ "/2026-02-06-The-Download-OpenClaw-AI-Agents-Babel-7-Farewell-and-GitHub-Actions-Updates.html" | relative_url }})
+- [The Download: OpenClaw AI Agents, Babel 7 Farewell, and GitHub Actions Updates](/the-download-openclaw-ai-agents-babel-7-farewell-and-github-actions-updates)
 
 ### WinGet Configuration: One-command Developer Environments
 

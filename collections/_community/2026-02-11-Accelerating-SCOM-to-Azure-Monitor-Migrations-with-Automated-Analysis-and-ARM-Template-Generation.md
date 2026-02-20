@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Accelerating SCOM to Azure Monitor Migrations with Automated Analysis and ARM Template Generation"
-description: "This post provides technical guidance on migrating from System Center Operations Manager (SCOM) to Azure Monitor, highlighting a community tool that automates analysis of SCOM Management Packs and generates Azure Resource Manager (ARM) templates. It offers insights into mapping traditional monitoring logic to Azure-native observability, streamlining enterprise migrations."
-author: "OREN_SALZBERG"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/accelerating-scom-to-azure-monitor-migrations-with-automated/ba-p/4493593"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/accelerating-scom-to-azure-monitor-migrations-with-automated/ba-p/4493593
+title: Accelerating SCOM to Azure Monitor Migrations with Automated Analysis and ARM Template Generation
+author: OREN_SALZBERG
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-11 08:59:53 +00:00
-permalink: "/2026-02-11-Accelerating-SCOM-to-Azure-Monitor-Migrations-with-Automated-Analysis-and-ARM-Template-Generation.html"
-categories: ["Azure", "DevOps"]
-tags: ["Alert Rules", "ARM Templates", "Azure", "Azure Monitor", "Community", "Data Collection Rules", "DevOps", "IaC", "Kusto Query Language", "Log Analytics", "Migration", "Monitoring", "Operational Dashboards", "Performance Monitoring", "PowerShell", "Resource Manager", "SCOM", "System Center Operations Manager"]
-tags_normalized: ["alert rules", "arm templates", "azure", "azure monitor", "community", "data collection rules", "devops", "iac", "kusto query language", "log analytics", "migration", "monitoring", "operational dashboards", "performance monitoring", "powershell", "resource manager", "scom", "system center operations manager"]
+tags:
+- Alert Rules
+- ARM Templates
+- Azure
+- Azure Monitor
+- Community
+- Data Collection Rules
+- DevOps
+- IaC
+- Kusto Query Language
+- Log Analytics
+- Migration
+- Monitoring
+- Operational Dashboards
+- Performance Monitoring
+- PowerShell
+- Resource Manager
+- SCOM
+- System Center Operations Manager
+section_names:
+- azure
+- devops
 ---
-
 OREN_SALZBERG explores how to streamline migrations from SCOM to Azure Monitor using a community automation tool, covering ARM template generation, monitoring logic translation, and practical deployment guidance.<!--excerpt_end-->
 
 # Accelerating SCOM to Azure Monitor Migrations with Automated Analysis and ARM Template Generation

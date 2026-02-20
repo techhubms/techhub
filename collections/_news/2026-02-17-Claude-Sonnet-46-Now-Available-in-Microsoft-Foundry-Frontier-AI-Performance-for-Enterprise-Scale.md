@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Claude Sonnet 4.6 Now Available in Microsoft Foundry: Frontier AI Performance for Enterprise Scale"
-description: "This article introduces Claude Sonnet 4.6, now available in Microsoft Foundry. It highlights the model's frontier intelligence, advanced reasoning for coding and enterprise workflows, support for large context windows, and robust automation capabilities. Developers and enterprise teams will learn about enhanced efficiency, agentic workflows, and practical features for modern AI-driven applications within Microsoft’s platform."
-author: "Amar Badal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-sonnet-4-6-in-microsoft-foundry-frontier-performance-for-scale/4494873"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-sonnet-4-6-in-microsoft-foundry-frontier-performance-for-scale/4494873
+title: 'Claude Sonnet 4.6 Now Available in Microsoft Foundry: Frontier AI Performance for Enterprise Scale'
+author: Amar Badal
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-02-17 20:11:10 +00:00
-permalink: "/2026-02-17-Claude-Sonnet-46-Now-Available-in-Microsoft-Foundry-Frontier-AI-Performance-for-Enterprise-Scale.html"
-categories: ["AI", "Azure"]
-tags: ["Adaptive Reasoning", "AI", "AI + Machine Learning", "AI Agents", "AI Integration", "AI Orchestration", "Anthropic", "Azure", "Browser Automation", "Claude Sonnet 4.6", "Context Window", "Developer Workflows", "Enterprise AI", "Enterprise Automation", "Frontier AI", "Large Language Models", "Microsoft Azure", "Microsoft Foundry", "News"]
-tags_normalized: ["adaptive reasoning", "ai", "ai plus machine learning", "ai agents", "ai integration", "ai orchestration", "anthropic", "azure", "browser automation", "claude sonnet 4dot6", "context window", "developer workflows", "enterprise ai", "enterprise automation", "frontier ai", "large language models", "microsoft azure", "microsoft foundry", "news"]
+tags:
+- Adaptive Reasoning
+- AI
+- AI + Machine Learning
+- AI Agents
+- AI Integration
+- AI Orchestration
+- Anthropic
+- Azure
+- Browser Automation
+- Claude Sonnet 4.6
+- Context Window
+- Developer Workflows
+- Enterprise AI
+- Enterprise Automation
+- Frontier AI
+- Large Language Models
+- Microsoft Azure
+- Microsoft Foundry
+- News
+section_names:
+- ai
+- azure
 ---
-
 Amar Badal presents Claude Sonnet 4.6’s launch in Microsoft Foundry, focusing on its advanced AI capabilities for coding, automation, and enterprise workflows within Microsoft’s cloud ecosystem.<!--excerpt_end-->
 
 # Claude Sonnet 4.6 in Microsoft Foundry: Frontier Performance for Scale

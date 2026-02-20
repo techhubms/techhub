@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Learn Visual Studio Code in 15 Minutes: Official Beginner Tutorial"
-description: "This official beginner tutorial provides a concise walk-through for Visual Studio Code, covering the user interface, creating files, using chat features, integrating with source control, installing the MCP server, issue creation, and reviewing sessions. Ideal for newcomers who want a hands-on introduction to VS Code's core features and productivity tips."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=f8_uF_IDV50"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=f8_uF_IDV50
+title: 'Learn Visual Studio Code in 15 Minutes: Official Beginner Tutorial'
+author: Visual Studio Code
+primary_section: dotnet
+feed_name: Visual Studio Code YouTube
 date: 2026-02-03 21:18:02 +00:00
-permalink: "/2026-02-03-Learn-Visual-Studio-Code-in-15-Minutes-Official-Beginner-Tutorial.html"
-categories: ["Coding", "DevOps"]
-tags: ["Beginner Tutorial", "Code Editor", "Coding", "Coding Tools", "Developer Productivity", "DevOps", "Integrated Development Environment", "Issues Management", "MCP Server", "Source Control", "UI Exploration", "Videos", "VS Code"]
-tags_normalized: ["beginner tutorial", "code editor", "coding", "coding tools", "developer productivity", "devops", "integrated development environment", "issues management", "mcp server", "source control", "ui exploration", "videos", "vs code"]
+tags:
+- Beginner Tutorial
+- Code Editor
+- Coding Tools
+- Developer Productivity
+- DevOps
+- Integrated Development Environment
+- Issues Management
+- MCP Server
+- Source Control
+- UI Exploration
+- Videos
+- VS Code
+- .NET
+section_names:
+- dotnet
+- devops
 ---
-
 Reynald Adolphe presents a fast-paced introduction to Visual Studio Code, designed for beginners seeking to master essential features like UI navigation, file creation, chat integration, source control, and more.<!--excerpt_end-->
 
 {% youtube f8_uF_IDV50 %}

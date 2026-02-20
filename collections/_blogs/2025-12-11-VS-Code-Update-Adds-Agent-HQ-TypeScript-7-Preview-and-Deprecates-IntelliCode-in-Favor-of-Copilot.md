@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "VS Code Update Adds Agent HQ, TypeScript 7 Preview, and Deprecates IntelliCode in Favor of Copilot"
-description: "An in-depth look at the latest Visual Studio Code update, highlighting the introduction of Agent HQ for managing concurrent coding agents, a preview of TypeScript 7 with native performance, and the deprecation of IntelliCode in favor of GitHub Copilot for AI-assisted code completion. Details include agentic development trends, new security settings, and the technical evolution behind these changes."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/ai-ml/2025/12/11/vs-code-update-brings-agent-overload-typescript-7-preview-and-the-end-of-intellicode/1730665"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/ai-ml/2025/12/11/vs-code-update-brings-agent-overload-typescript-7-preview-and-the-end-of-intellicode/1730665
+title: VS Code Update Adds Agent HQ, TypeScript 7 Preview, and Deprecates IntelliCode in Favor of Copilot
+author: DevClass.com
+primary_section: github-copilot
+feed_name: DevClass
 date: 2025-12-11 15:20:03 +00:00
-permalink: "/2025-12-11-VS-Code-Update-Adds-Agent-HQ-TypeScript-7-Preview-and-Deprecates-IntelliCode-in-Favor-of-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent HQ", "Agentic Coding", "AI", "AI Assisted Development", "AI Security", "Blogs", "Code Completion", "Coding", "GitHub Copilot", "IDE", "IntelliCode", "JavaScript", "Microsoft", "Node.js", "TypeScript", "TypeScript 7", "VS Code"]
-tags_normalized: ["agent hq", "agentic coding", "ai", "ai assisted development", "ai security", "blogs", "code completion", "coding", "github copilot", "ide", "intellicode", "javascript", "microsoft", "nodedotjs", "typescript", "typescript 7", "vs code"]
+tags:
+- Agent HQ
+- Agentic Coding
+- AI
+- AI Assisted Development
+- AI Security
+- Blogs
+- Code Completion
+- GitHub Copilot
+- IDE
+- IntelliCode
+- JavaScript
+- Microsoft
+- Node.js
+- TypeScript
+- TypeScript 7
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 DevClass.com examines the latest Visual Studio Code release, reported by Tim Anderson, featuring Agent HQ for AI agents, a TypeScript 7 preview, and the deprecation of IntelliCode in favor of GitHub Copilot for code completions.<!--excerpt_end-->
 
 # VS Code Update: Agent HQ, TypeScript 7 Preview, and IntelliCode Deprecation

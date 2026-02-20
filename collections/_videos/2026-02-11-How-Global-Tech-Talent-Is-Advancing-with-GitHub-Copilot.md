@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "How Global Tech Talent Is Advancing with GitHub Copilot"
-description: "This video explores how the Andela global network empowers developers and other technology professionals through GitHub Copilot certifications. It highlights Andela's approach to upskilling talent at multiple levels, from junior engineers to project managers, and discusses the growing importance of AI tools for career development in the evolving technology industry."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=iuGAfugNahs"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=iuGAfugNahs
+title: How Global Tech Talent Is Advancing with GitHub Copilot
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-11 19:15:41 +00:00
-permalink: "/2026-02-11-How-Global-Tech-Talent-Is-Advancing-with-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Certifications", "AI in Software Development", "Andela", "Developer Tools", "GitHub", "GitHub Copilot", "Professional Learning", "Tech Career Development", "Technology Training", "Upskilling", "Videos"]
-tags_normalized: ["ai", "ai certifications", "ai in software development", "andela", "developer tools", "github", "github copilot", "professional learning", "tech career development", "technology training", "upskilling", "videos"]
+tags:
+- AI
+- AI Certifications
+- AI in Software Development
+- Andela
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- Professional Learning
+- Tech Career Development
+- Technology Training
+- Upskilling
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents, with commentary from the Andela network, how technologists worldwide are staying ahead by earning GitHub Copilot certifications. The video emphasizes the impact of learning AI tools for career growth, as discussed by GitHub and Andela.<!--excerpt_end-->
 
 {% youtube iuGAfugNahs %}

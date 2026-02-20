@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "SQL Database in Microsoft Fabric: SaaS-Native, AI-Ready Platform"
-description: "This article introduces the SQL database feature in Microsoft Fabric, describing how it simplifies data management and analytics with a fully managed, SaaS-native transactional database. It highlights the seamless integration with existing SQL tools, native support for OneLake, automatic data replication, and capabilities that make operational data instantly accessible for analytics, machine learning, and AI. Key enterprise features, developer tooling, and Copilot integrations are discussed, offering insights into deployment, automation, and real-time intelligence."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/sql-database-in-fabric-built-for-saas-ready-for-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/sql-database-in-fabric-built-for-saas-ready-for-ai/
+title: 'SQL Database in Microsoft Fabric: SaaS-Native, AI-Ready Platform'
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-12 11:00:00 +00:00
-permalink: "/2026-02-12-SQL-Database-in-Microsoft-Fabric-SaaS-Native-AI-Ready-Platform.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Integration", "Autoscaling", "Azure", "Azure SQL", "Coding", "Copilot", "Data Engineering", "Delta Tables", "Developer Tools", "Machine Learning", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "RAG", "Real Time Intelligence", "Semantic Search", "Spark", "SQL Database", "T SQL", "Transactional Database", "Vector Data Type", "VS Code"]
-tags_normalized: ["ai", "ai integration", "autoscaling", "azure", "azure sql", "coding", "copilot", "data engineering", "delta tables", "developer tools", "machine learning", "microsoft fabric", "ml", "news", "onelake", "power bi", "rag", "real time intelligence", "semantic search", "spark", "sql database", "t sql", "transactional database", "vector data type", "vs code"]
+tags:
+- AI
+- AI Integration
+- Autoscaling
+- Azure
+- Azure SQL
+- Copilot
+- Data Engineering
+- Delta Tables
+- Developer Tools
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Power BI
+- RAG
+- Real Time Intelligence
+- Semantic Search
+- Spark
+- SQL Database
+- T SQL
+- Transactional Database
+- Vector Data Type
+- VS Code
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- ml
 ---
-
 Microsoft Fabric Blog demonstrates how organizations can leverage SQL database in Fabric to unify transactional data for analytics and AI. Copilot integrations, automation, developer tooling, and open data formats are core highlights of this in-depth overview.<!--excerpt_end-->
 
 # SQL Database in Microsoft Fabric: SaaS-Native, AI-Ready Platform

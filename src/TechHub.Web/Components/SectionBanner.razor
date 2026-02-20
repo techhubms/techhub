@@ -15,10 +15,22 @@
         {
             <p class="banner-description">@DisplayDescription</p>
         }
+        @if (!string.IsNullOrEmpty(RssFeedUrl))
+        {
+            <a href="@RssFeedUrl" target="_blank" rel="noopener noreferrer" class="banner-rss-link" aria-label="RSS Feed">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg>
+            </a>
+        }
     </div>
 </div>
 
 @code {
+    /// <summary>
+    /// Optional RSS feed URL. When provided, renders a mobile-only RSS icon link next to the title.
+    /// </summary>
+    [Parameter]
+    public string? RssFeedUrl { get; set; }
+
     // For static pages - provide Title, Description, BackgroundCssClass
     [Parameter]
     public string? Title { get; set; }

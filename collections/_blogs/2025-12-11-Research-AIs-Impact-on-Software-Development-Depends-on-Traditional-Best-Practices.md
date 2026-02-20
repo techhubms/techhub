@@ -1,20 +1,34 @@
----
-layout: "post"
+﻿---
+external_url: https://www.devclass.com/ai-ml/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/1728632
 title: "Research: AI's Impact on Software Development Depends on Traditional Best Practices"
-description: "This article from DevClass.com reports on research from Atlassian, Google, LaunchDarkly, and others, revealing that AI’s influence on developer productivity and code quality is highly variable. The findings suggest that age-old software engineering practices remain crucial, even with the advent of generative AI code tools."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/ai-ml/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/1728632"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+author: DevClass.com
+primary_section: ai
+feed_name: DevClass
 date: 2025-12-11 11:32:34 +00:00
-permalink: "/2025-12-11-Research-AIs-Impact-on-Software-Development-Depends-on-Traditional-Best-Practices.html"
-categories: ["AI"]
-tags: ["AI", "AI Assisted Development", "Atlassian", "Blogs", "COBOL", "Code Maintainability", "Developer Best Practices", "Developer Learning", "DevOps Research", "DX Metrics", "Generative AI", "Go", "Google DORA", "LaunchDarkly", "Programming Languages", "Psychological Safety", "Pull Requests", "SDLC", "Software Productivity", "Stack Trace Analysis"]
-tags_normalized: ["ai", "ai assisted development", "atlassian", "blogs", "cobol", "code maintainability", "developer best practices", "developer learning", "devops research", "dx metrics", "generative ai", "go", "google dora", "launchdarkly", "programming languages", "psychological safety", "pull requests", "sdlc", "software productivity", "stack trace analysis"]
+tags:
+- AI
+- AI Assisted Development
+- Atlassian
+- Blogs
+- COBOL
+- Code Maintainability
+- Developer Best Practices
+- Developer Learning
+- DevOps Research
+- DX Metrics
+- Generative AI
+- Go
+- Google DORA
+- LaunchDarkly
+- Programming Languages
+- Psychological Safety
+- Pull Requests
+- SDLC
+- Software Productivity
+- Stack Trace Analysis
+section_names:
+- ai
 ---
-
 DevClass.com highlights research showing AI’s varied effects on software development, with commentary by Tim Anderson. The article emphasizes that core software development practices are still key to successful AI adoption.<!--excerpt_end-->
 
 # Research: AI's Impact on Software Development Depends on Traditional Best Practices

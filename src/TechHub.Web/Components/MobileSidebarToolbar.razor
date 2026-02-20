@@ -1,0 +1,116 @@
+@*
+    MobileSidebarToolbar - Horizontal toolbar for individual sidebar panel toggles on mobile.
+
+    On mobile (≤1024px): Shows a horizontal row of toggle buttons. Clicking a button
+    opens/closes that specific sidebar panel below. Only one panel open at a time.
+    Content starts directly below the banner when no panel is open.
+
+    On desktop (>1024px): CSS hides the toolbar buttons and uses display:contents
+    on all wrappers, making this component invisible to the layout engine.
+
+    Usage:
+        <aside class="sidebar">
+            <MobileSidebarToolbar>
+                <MobileSidebarPanel Label="Search">
+                    <SidebarSearch ... />
+                </MobileSidebarPanel>
+                <MobileSidebarPanel Label="Tags">
+                    <SidebarTagCloud ... />
+                </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+*@
+
+<CascadingValue Value="this" IsFixed="true">
+    <div class="sidebar-toolbar">
+        @if (_panels.Count > 0)
+        {
+            <div class="sidebar-toolbar-buttons">
+                @foreach (var panel in _panels)
+                {
+                    var panelId = panel.Id;
+                    <button type="button"
+                            class="sidebar-toolbar-btn @(ActivePanelId == panelId ? "active" : "")"
+                            aria-expanded="@(ActivePanelId == panelId ? "true" : "false")"
+                            @onclick="() => TogglePanel(panelId)">
+                        @((MarkupString)GetIconSvg(panel.Icon))
+                        @panel.Label
+                    </button>
+                }
+            </div>
+        }
+        @ChildContent
+    </div>
+</CascadingValue>
+
+@code {
+    private readonly List<PanelRegistration> _panels = new();
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    /// <summary>
+    /// The ID of the currently active (open) panel, or null if all closed.
+    /// </summary>
+    public string? ActivePanelId { get; private set; }
+
+    /// <summary>
+    /// Called by MobileSidebarPanel during initialization to register itself.
+    /// Returns a unique panel ID.
+    /// </summary>
+    public string RegisterPanel(string label, string? icon = null)
+    {
+        var id = $"sidebar-panel-{_panels.Count}";
+        _panels.Add(new PanelRegistration(id, label, icon));
+        return id;
+    }
+
+    /// <summary>
+    /// Called by MobileSidebarPanel during disposal to unregister itself.
+    /// </summary>
+    public void UnregisterPanel(string id)
+    {
+        _panels.RemoveAll(p => p.Id == id);
+        if (ActivePanelId == id)
+        {
+            ActivePanelId = null;
+        }
+    }
+
+    /// <summary>
+    /// Checks whether a specific panel is currently active.
+    /// </summary>
+    public bool IsPanelActive(string id) => ActivePanelId == id;
+
+    private void TogglePanel(string id)
+    {
+        ActivePanelId = ActivePanelId == id ? null : id;
+    }
+
+    /// <summary>
+    /// Re-render after first render so toolbar buttons appear
+    /// (panels register during the initial render pass).
+    /// </summary>
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender && _panels.Count > 0)
+        {
+            StateHasChanged();
+        }
+    }
+
+    private static string GetIconSvg(string? icon) => icon switch
+    {
+        "search" => """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>""",
+        "calendar" => """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>""",
+        "tags" => """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2-7.5 7.5a2.12 2.12 0 0 0 0 3l7 7a2.12 2.12 0 0 0 3 0L22 12V2Z"/><circle cx="7.5" cy="7.5" r="1" fill="currentColor" stroke="none"/></svg>""",
+        "rss" => """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg>""",
+        "toc" => """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>""",
+        "latest" => """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>""",
+        "updates" => """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v4l3 3"/><path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5"/></svg>""",
+        "filter" => """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>""",
+        _ => ""
+    };
+
+    private sealed record PanelRegistration(string Id, string Label, string? Icon);
+}

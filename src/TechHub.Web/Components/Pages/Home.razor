@@ -14,12 +14,15 @@
 
 <Header>
     <SectionBanner Title="Tech Hub"
-        Description="Your source for Microsoft technology news, tutorials, and community content" />
+        Description="Your source for Microsoft technology news, tutorials, and community content"
+        RssFeedUrl="/all/feed.xml" />
 </Header>
 
 <main class="page-with-sidebar">
     @* Sidebar (Left Column) *@
     <aside class="sidebar">
+        <MobileSidebarToolbar>
+        <MobileSidebarPanel Label="Latest" Icon="latest">
         @* Latest Roundup *@
         @if (latestRoundup != null)
         {
@@ -65,13 +68,17 @@
                 </ul>
             </div>
         }
-
-        @* Subscribe Section *@
-        <SidebarRssLinks Links="@rssLinks" />
+        </MobileSidebarPanel>
 
         @* Popular Tags - Navigate to /all with tag filter *@
+        <MobileSidebarPanel Label="Tags" Icon="tags">
         <SidebarTagCloud Title="Popular Tags"
             NavigationMode="TagCloudNavigationMode.Navigate" NavigationBaseUrl="/all" />
+        </MobileSidebarPanel>
+        </MobileSidebarToolbar>
+        <div class="sidebar-desktop-only">
+        <SidebarRssLinks Links="@rssLinks" />
+        </div>
     </aside>
 
     <section class="home-main-content">

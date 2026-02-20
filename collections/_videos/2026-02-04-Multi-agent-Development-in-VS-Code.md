@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Multi-agent Development in VS Code"
-description: "This video explores how developers can use multiple agents in Visual Studio Code, including local, background, cloud, and AI-powered agents like Claude and Codex. It demonstrates the updated user interface for agent management, shows practical scenarios for parallel subagents, and provides insights into optimizing coding workflows using agent sessions."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BsAHunfVwNs"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=BsAHunfVwNs
+title: Multi-agent Development in VS Code
+author: Visual Studio Code
+primary_section: ai
+feed_name: Visual Studio Code YouTube
 date: 2026-02-04 19:15:24 +00:00
-permalink: "/2026-02-04-Multi-agent-Development-in-VS-Code.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Sessions", "AI", "AI Agents", "Automation", "Claude", "Cloud Development", "Code Collaboration", "Codex", "Coding", "Dev Environment", "Developer Workflow", "Parallel Subagents", "Productivity Tools", "Session Management", "Task Automation", "Videos", "VS Code"]
-tags_normalized: ["agent sessions", "ai", "ai agents", "automation", "claude", "cloud development", "code collaboration", "codex", "coding", "dev environment", "developer workflow", "parallel subagents", "productivity tools", "session management", "task automation", "videos", "vs code"]
+tags:
+- Agent Sessions
+- AI
+- AI Agents
+- Automation
+- Claude
+- Cloud Development
+- Code Collaboration
+- Codex
+- Dev Environment
+- Developer Workflow
+- Parallel Subagents
+- Productivity Tools
+- Session Management
+- Task Automation
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Olivia Guzzardo McVicker showcases the new multi-agent experience in Visual Studio Code, highlighting usage of local, cloud, and AI agents to streamline coding workflows.<!--excerpt_end-->
 
 {% youtube BsAHunfVwNs %}
