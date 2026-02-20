@@ -26746,5 +26746,29 @@
     "reason": "Succesfully added: Assigned Coding category because the primary focus is on development tooling in Visual Studio Code. The video describes features that enhance the workflow of web developers working in VS Code, including integration with DevTools, page inspection, and AI chat context—all within the code editor (Coding rules 2 and 5). The content does not qualify for AI because it does not cover Microsoft AI services, frameworks, or GitHub Copilot specifically, but merely enables using AI chat context. No other category criteria were met.",
     "timestamp": "2026-02-20 13:25:56 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=xjprgyqp9Z0"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because content centers on Copilot CLI, a Microsoft AI-powered coding tool (AI rule 2). Assigned 'GitHub Copilot' because Copilot CLI is part of the GitHub Copilot developer tool family (GitHub Copilot inclusion rule 1), and the integration is aimed at developer workflows. Did not assign 'Coding' as there is no detail about specific programming language or code framework use; the focus is on tool integration and AI assistance.",
+    "collection": "videos",
+    "timestamp": "2026-02-20 14:15:23 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=_l3UO1oUoec"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the video focuses on customizing AI-powered Copilot agents within VS Code (AI inclusion rule 2, 4). 'GitHub Copilot' because the topic is specifically Copilot customization (GitHub Copilot rules 1-4). 'Coding' because it targets how developers use Copilot in development environments (Coding rules 1, 4, 5). Exclusion rules do not apply—this is technical content created by and for developers.",
+    "collection": "videos",
+    "timestamp": "2026-02-20 14:15:41 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=flpKLkZla2Q"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Coding' category because the content centers on live programming in Visual Studio Code, focusing on workflows, strategies, and technical discussion relevant to development practice (Coding rules 1, 4, and 5). Did NOT assign 'AI' or 'GitHub Copilot' categories because, although related links are present, the summary does not make AI or Copilot functionality central to the session. No mention is made of Azure, DevOps, ML, or Security within the main description. Exclusion rules do not apply as the session is technical, practice-focused, and aligns with development tooling. The content is in English and not a sales pitch, biographical piece, or business/strategy overview.",
+    "collection": "videos",
+    "timestamp": "2026-02-20 14:15:59 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=MVwkFbYa1Xg"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the content discusses configuring and integrating AI model providers in VS Code (AI rules 1 and 3). 'GitHub Copilot' category is included because the content refers to Copilot specifically and discusses interoperability (GitHub Copilot rule 1). 'Coding' is included as the content targets developer tools (VS Code) and AI-powered coding workflows (Coding rule 5). The content is primarily technical, covering configuration and integration processes for developers, and avoids any generic exclusion criteria.",
+    "collection": "videos",
+    "timestamp": "2026-02-20 14:16:32 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=VBSVSxs16_I"
   }
 ]

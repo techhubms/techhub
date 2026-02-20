@@ -12369,5 +12369,11 @@
     "reason": "No categories found: Content excluded due to insufficient substantive content for categorization. The provided 'description' consists mainly of social media links, promotional text, and does not contain any actual technical content or detail about the topic (GitHub Agentic Workflows). The 'content' field is null, and there are no substantive details to analyze for category inclusion. Per the workflow, if the main content is missing or only consists of meta-information and promotional material, no categories can be assigned.",
     "timestamp": "2026-02-19 20:08:36 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All category inclusion and exclusion rules were evaluated, but the 'content' field is null (no main text body was provided), and only a brief description is available. Without substantive content to analyze, it is impossible to assess what portion is about Microsoft technologies, AI, Copilot, or whether the material even contains technical implementation details. Per the instruction to focus on actual content, and the guidance to 'never fabricate information' or make assumptions beyond what is present in the input fields, no categories can be assigned.",
+    "collection": "videos",
+    "timestamp": "2026-02-20 14:16:11 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=nD1U_wggrQM"
   }
 ]
