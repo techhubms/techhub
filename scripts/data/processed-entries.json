@@ -26788,5 +26788,11 @@
     "canonical_url": "https://github.blog/changelog/2026-02-20-organization-level-copilot-usage-metrics-dashboard-available-in-public-preview",
     "timestamp": "2026-02-20 20:05:04 +00:00",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories as the article centers on GitHub Copilot usage metrics and provides administrative insights specifically for Copilot, a developer-oriented AI tool (AI rules 1–2, GitHub Copilot rules 1–5). No Coding, Azure, DevOps, ML, or Security categories assigned, as the content is focused on monitoring usage metrics rather than software development, infrastructure, or security implementation. Content fits quality standards and does not trigger any exclusion rules."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-21 00:08:51 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' because the content is focused on container registry operations, Kubernetes deployment practices, failover strategies, and CI/CD workflow considerations (DevOps rules 2, 5, and 11). Assigned 'Azure' because Azure Container Registry is the direct subject (Azure rule 1) and all technical solutions are within the Azure platform. Excluded 'Coding' as there are no code patterns or language/framework-specific development; the focus is on infrastructure and deployment, not code implementation. Excluded 'Security' as while related features (e.g., private endpoints, firewall rules) are discussed, the core content is not about securing applications, identity, or security design. No AI or ML aspects are covered.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/regional-endpoints-for-geo-replicated-azure-container-registries/ba-p/4496186"
   }
 ]

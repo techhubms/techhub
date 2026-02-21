@@ -12381,5 +12381,11 @@
     "timestamp": "2026-02-20 16:10:13 +00:00",
     "reason": "No categories found: No categories were assigned because the content is focused on optimizing network and connectivity for Microsoft Copilot, specifically Microsoft 365 Copilot. According to the CRITICAL Copilot Product Distinction rule in Chapter 2, all Microsoft 365 Copilot, Copilot for Microsoft 365, and general 'Microsoft Copilot' productivity tool content is explicitly excluded, as these are considered business productivity tools and not developer tools. While the article mentions code generation among Copilot's features, the overall context is centered on Copilot usage in office productivity scenarios (documents, spreadsheets, meetings), not developer tooling or code-centric workflows. No technical development, coding, or relevant Microsoft developer technology focus is present. Therefore, per Generic Exclusion Rule for Non-Development Microsoft Products, and Copilot categorization distinction, the article is excluded from all categories.",
     "canonical_url": "https://dellenny.com/optimizing-network-and-connectivity-for-copilot-performance/"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/02/20/asha-sharma-named-evp-and-ceo-microsoft-gaming/",
+    "timestamp": "2026-02-20 22:04:14 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule — this news article is a corporate leadership announcement focusing on executive appointments, succession planning, and company organizational changes at Microsoft Gaming and Xbox. There are no substantial technical details, implementation guidance, or in-depth discussion of Microsoft development, platform architecture, or developer-focused products. The focus is on business strategy, executive team transitions, and company milestones rather than practitioner-relevant technical content. This aligns with 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions in the rules.",
+    "collection": "news"
   }
 ]
