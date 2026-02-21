@@ -26800,5 +26800,11 @@
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/azure-sql/introducing-budget-bytes/",
     "timestamp": "2026-02-21 03:44:39 +00:00"
+  },
+  {
+    "timestamp": "2026-02-21 13:18:11 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article centrally discusses AI's influence on software engineering and coding practices (AI rule 4 and 5). Assigned DevOps category due to exploration of team organization, development methodologies, and cross-team dependencies (DevOps rules 3, 4, and 9). Assigned Coding category because TDD and code quality in AI-assisted code are central themes (Coding rules 4 and 5). Assigned Security category for highlighting AI-induced security risks and the observation that security is lagging behind other disciplines (Security rules 2 and 5). No Azure, ML, or GitHub Copilot categories were added, as the article does not specifically address Microsoft cloud, machine learning platform engineering, or GitHub Copilot products.",
+    "collection": "blogs",
+    "canonical_url": "https://www.devclass.com/development/2026/02/21/should-there-be-a-new-manifesto-for-ai-development/4091612"
   }
 ]
