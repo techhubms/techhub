@@ -12387,5 +12387,23 @@
     "timestamp": "2026-02-20 22:04:14 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule — this news article is a corporate leadership announcement focusing on executive appointments, succession planning, and company organizational changes at Microsoft Gaming and Xbox. There are no substantial technical details, implementation guidance, or in-depth discussion of Microsoft development, platform architecture, or developer-focused products. The focus is on business strategy, executive team transitions, and company milestones rather than practitioner-relevant technical content. This aligns with 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions in the rules.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-21 02:52:49 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=BmKCFt01ja4",
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules. The content is a video featuring the creators of 'Learn to Cloud,' which is described as a beginner-friendly, community-driven roadmap for breaking into cloud and DevOps. The description lacks substantive technical details about Microsoft-specific technologies or developer tools; it broadly discusses learning paths and resources for cloud and DevOps without specifying Microsoft focus. Additionally, there is no 'content' field to analyze for deeper technical context. Per inclusion rules, content must feature Microsoft technologies as a central element; here, the topic appears generic and platform-agnostic, so no categories are assigned."
+  },
+  {
+    "timestamp": "2026-02-21 02:53:01 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=lihrin9a3pE",
+    "reason": "No categories found: No categories assigned because there is insufficient information about the technical content or relevance to Microsoft technologies. The description only mentions that the event will discuss 'Honcho,' an open source project about agent memory and social context, without any indication that it uses or is built with Microsoft technologies such as Azure, AI, ML, .NET, GitHub Copilot, or others defined in the category inclusion rules. There is no substantive content text provided to analyze for Microsoft technology usage; therefore, according to the processing rules (when in doubt, exclude), all categories are left empty."
+  },
+  {
+    "timestamp": "2026-02-21 02:53:14 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=vL-hq1KYopc",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided description focuses on a community-driven learning roadmap ('Learn to Cloud'), highlights the creators, and describes the initiative as aggregating resources for beginners. There is no substantive technical content, discussion of Microsoft-specific technologies (Azure, GitHub Actions, etc.), or sufficient technical depth present in the description. No main content is provided, so category inclusion rules cannot be applied. (Reference: Generic Exclusion Rules – focus is on a community project announcement, not technical implementation or deep-dive content.)"
   }
 ]

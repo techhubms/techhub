@@ -26794,5 +26794,11 @@
     "timestamp": "2026-02-21 00:08:51 +00:00",
     "reason": "Succesfully added: Assigned 'DevOps' because the content is focused on container registry operations, Kubernetes deployment practices, failover strategies, and CI/CD workflow considerations (DevOps rules 2, 5, and 11). Assigned 'Azure' because Azure Container Registry is the direct subject (Azure rule 1) and all technical solutions are within the Azure platform. Excluded 'Coding' as there are no code patterns or language/framework-specific development; the focus is on infrastructure and deployment, not code implementation. Excluded 'Security' as while related features (e.g., private endpoints, firewall rules) are discussed, the core content is not about securing applications, identity, or security design. No AI or ML aspects are covered.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/regional-endpoints-for-geo-replicated-azure-container-registries/ba-p/4496186"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the series is centered on building AI applications using Azure services, including Microsoft Foundry and Copilot Studio (AI inclusion rule 1 and 4). Assigned Azure because Azure services like Azure SQL Database are fundamental to each project (Azure inclusion rule 1). Assigned Coding because the series features end-to-end development scenarios involving creating and deploying real applications, including code samples and architectural patterns (Coding inclusion rule 4 and 5). GitHub Copilot was not assigned because, while Copilot Studio is mentioned, it refers to the developer/maker tool (classified under AI), not GitHub Copilot. ML, DevOps, and Security categories were not included, as the primary focus is not on custom ML engineering, CI/CD processes, or security implementation. No generic exclusion rules applied as the content is substantial, technical, in English, and targets hands-on development.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sql/introducing-budget-bytes/",
+    "timestamp": "2026-02-21 03:44:39 +00:00"
   }
 ]
