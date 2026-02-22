@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+
+  - package-ecosystem: bundler
+    directory: /
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /spec/e2e
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /spec/javascript
+    schedule:
+      interval: daily
