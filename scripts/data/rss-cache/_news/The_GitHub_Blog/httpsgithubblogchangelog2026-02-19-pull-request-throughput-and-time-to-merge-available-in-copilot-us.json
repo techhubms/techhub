@@ -1,0 +1,19 @@
+{
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "account management",
+    "copilot",
+    "enterprise management tools",
+    "Release"
+  ],
+  "EnhancedContent": "You can now use GitHub’s [Copilot usage metrics APIs](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-280) to better understand how Copilot influences pull request outcomes across your organization, from review suggestions to merged pull requests.\n\n### How it works\n\nNew enterprise-level API metrics cover pull request review suggestions and acceptance, pull requests created with Copilot coding agent that got merged, and pull request cycle time.\n\n### Who can use this feature\n\nCustomers who have enabled Copilot usage metrics and are either the enterprise admin or have the `View Enterprise Copilot Metrics` role.\n\n### Key benefits\n\n- Gain visibility into how Copilot is helping author pull requests\n- Track whether Copilot helps teams shorten the time between idea to a merged pull request\n- Measure how Copilot’s review suggestions turn into real changes\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-02-19T16:08:02+00:00",
+  "ProcessedDate": "2026-02-19 18:14:09",
+  "Title": "Pull request throughput and time to merge available in Copilot usage metrics API",
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-02-19-pull-request-throughput-and-time-to-merge-available-in-copilot-usage-metrics-api",
+  "Description": "You can now use GitHub’s Copilot usage metrics APIs to better understand how Copilot influences pull request outcomes across your organization, from review suggestions to merged pull requests. How it…\n\nThe post [Pull request throughput and time to merge available in Copilot usage metrics API](https://github.blog/changelog/2026-02-19-pull-request-throughput-and-time-to-merge-available-in-copilot-usage-metrics-api) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog"
+}

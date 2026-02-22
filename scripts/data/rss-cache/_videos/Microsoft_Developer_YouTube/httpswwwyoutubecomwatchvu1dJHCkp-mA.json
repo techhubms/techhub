@@ -1,0 +1,22 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=u1dJHCkp-mA",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Description": "Migrating SQL Server to Azure no longer needs to be complex or fragmented.\n\nIn this episode of Data Exposed, we walk through the new Azure Arc–enabled SQL Server migration experience that provides a single, end‑to‑end workflow to move databases to Azure SQL Managed Instance.\n\nYou will see how Azure Arc brings assessments, provisioning, migration, and cutover together in one place, with built‑in Copilot guidance and tutorials to help you choose the right migration path and move with confidence.\n\nWhether you are modernizing on‑premises SQL Server or managing hybrid environments, this new experience makes SQL migration faster, simpler, and easier to operate at scale.\n\n✅ Chapters: 0:00 Introduction 1:30 Discovery & Assessment 2:37 Demo 4:39 Demo - Start Migration with Copilot 5:30 Demo - Getting Started\n\n✅ Resources: Learn more: https://aka.ms/arc-migrations-docs\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "Title": "SQL Server Migration Made Easy with Azure Arc | Data Exposed",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "PubDate": "2026-02-19T17:01:21+00:00",
+  "ProcessedDate": "2026-02-19 17:19:26",
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedName": "Microsoft Developer YouTube"
+}

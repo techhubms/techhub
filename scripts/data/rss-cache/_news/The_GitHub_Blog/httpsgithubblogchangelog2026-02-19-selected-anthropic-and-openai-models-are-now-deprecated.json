@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-02-19 21:06:44",
+  "EnhancedContent": "We have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on February 17, 2026:\n\n| Model | Deprecation Date | Suggested Alternative | | --- | --- | --- | | Claude Opus 4.1 | 2026-02-17 | Claude Opus 4.6 | | GPT-5 | 2026-02-17 | GPT-5.2 | | GPT-5-Codex | 2026-02-17 | GPT-5.2-Codex |\n\nPlease update your workflows and integrations to use supported models. Copilot Enterprise administrators may need to enable access to alternative models through their model policies in Copilot settings. As an administrator, you can verify availability by checking your individual Copilot settings and confirming that the policy is enabled for the specific model. Once enabled, you’ll see the model in the Copilot Chat model selector in VS Code and on github.com. No action is required to remove the deprecated models.\n\nGitHub Enterprise customers with questions or concerns are encouraged to reach out to their account manager for further assistance.\n\n### Share your feedback\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot today.\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your feedback.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Author": "Allison",
+  "Tags": [
+    "copilot",
+    "Retired"
+  ],
+  "Title": "Selected Anthropic and OpenAI models are now deprecated",
+  "Description": "We have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on February 17, 2026: Model Deprecation Date…\n\nThe post [Selected Anthropic and OpenAI models are now deprecated](https://github.blog/changelog/2026-02-19-selected-anthropic-and-openai-models-are-now-deprecated) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-02-19-selected-anthropic-and-openai-models-are-now-deprecated",
+  "PubDate": "2026-02-19T19:47:37+00:00"
+}

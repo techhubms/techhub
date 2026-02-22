@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "Gemini 3.1 Pro, Google’s latest agentic coding model, is now rolling out in GitHub Copilot. In early testing, this model excels on effective and efficient edit-then-test loops with high tool precision, achieving strong resolution success with fewer tool calls per benchmark.\n\n[https://github.blog/wp-content/uploads/2026/02/gemini31-pro-demo-1.mp4#t=0.001](https://github.blog/wp-content/uploads/2026/02/gemini31-pro-demo-1.mp4#t=0.001)\n\n### Availability in GitHub Copilot\n\nGemini 3.1 Pro will be available to [Copilot Pro, Pro+, Business, and Enterprise](https://github.com/features/copilot/plans?utm_source=changelog-codex53-cta&amp;utm_medium=changelog&amp;utm_campaign=newmodels) users.\n\nYou’ll be able to select the model in the model picker in:\n\n- Visual Studio Code in all modes: chat, ask, edit, agent\n- Visual Studio in all modes: agent, ask\n- github.com\n- GitHub Mobile iOS and Android\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\n### Enabling access\n\nCopilot Enterprise and Copilot Business plan administrators must enable the Gemini 3.1 Pro policy in Copilot settings.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see [our documentation on available models](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) and get started with Copilot.\n\n### Share your feedback\n\nJoin the [GitHub Community](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) to share your feedback.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-02-19T17:30:18+00:00",
+  "ProcessedDate": "2026-02-19 18:14:09",
+  "Title": "Gemini 3.1 Pro is now in public preview in GitHub Copilot",
+  "Author": "Kate Catlin",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-02-19-gemini-3-1-pro-is-now-in-public-preview-in-github-copilot",
+  "Description": "Gemini 3.1 Pro, Google’s latest agentic coding model, is now rolling out in GitHub Copilot. In early testing, this model excels on effective and efficient edit-then-test loops with high tool…\n\nThe post [Gemini 3.1 Pro is now in public preview in GitHub Copilot](https://github.blog/changelog/2026-02-19-gemini-3-1-pro-is-now-in-public-preview-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog"
+}

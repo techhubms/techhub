@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg",
+  "Link": "https://www.youtube.com/watch?v=8Gl2RmUV0hg",
+  "Author": "Nick Chapsas",
+  "Tags": [
+    "csharp",
+    "dotnet"
+  ],
+  "FeedName": "Nick Chapsas YouTube",
+  "PubDate": "2026-02-20T11:30:00+00:00",
+  "ProcessedDate": "2026-02-20 12:06:36",
+  "Description": "Learn Hands-On for Free at Dometrain: https://dometrain.com/courses/?ref=nick-chapsas&promo=youtube\n\nHello, everybody. I'm Nick, and in this video, I will talk about the new .NET 11 Runtime Async feature. It completely changes the game in performance for Async Await code and I want to talk about its benefits.\n\nDon't forget to comment, like and subscribe :)\n\nSocial Media: Follow me on GitHub: https://github.com/Elfocrash Follow me on Twitter: https://twitter.com/nickchapsas Connect on LinkedIn: https://www.linkedin.com/in/nick-chapsas\n\n#csharp #dotnet",
+  "OutputDir": "_videos",
+  "Title": "Async Await Just Got A Massive Improvement in .NET",
+  "FeedLevelAuthor": "Nick Chapsas",
+  "EnhancedContent": null
+}

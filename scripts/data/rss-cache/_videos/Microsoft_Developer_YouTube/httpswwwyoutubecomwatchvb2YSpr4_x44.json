@@ -1,0 +1,22 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=b2YSpr4_x44",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Description": "Join us for a focused episode exploring practical use cases for integrating Microsoft Fabric SQL Databases into your analytics platform. We'll showcase how Fabric SQL Databases can serve as a supplementary component in the delivery of wider data analytics outputs, part of the unified product capabilities. We’ll cover:\n\nMetadata Management Logging and Alerting Reference Data Management (MDM) Power App Backends for OLTP\n\nWhether you're building a new analytics platform or migrating an existing one into Microsoft Fabric, this session will provide actionable insights and architectural patterns to help you get the most out of Microsoft Fabric SQL Database.\n\n✅ Chapters: 0:00 Introduction 1:30 Demo 13:00 Getting started\n\n✅ Resources: About MVPs: Microsoft Most Valuable Professionals, or MVPs, are technology experts who passionately share their knowledge with the community. They are always on the \"bleeding edge\" and have an unstoppable urge to get their hands on new, exciting technologies. They have very deep knowledge of Microsoft products and services, while also being able to bring together diverse platforms, products and solutions, to solve real world problems. MVPs make up a global community of over 4,000 technical experts and community leaders across 90 countries/regions and are driven by their passion, community spirit, and quest for knowledge. Above all and in addition to their amazing technical abilities, MVPs are always willing to help others - that's what sets them apart. Learn more: https://aka.ms/mvpprogram\n\n📌 Let's connect: Twitter: Anna Hoffman, https://twitter.com/AnalyticAnna Twitter: AzureSQL, https://aka.ms/azuresqltw\n\n🔴 To watch other MVP Edition episodes, see our playlist: https://aka.ms/dataexposedmvps To check out even more Data Exposed episodes, see our playlist: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQLServer #MVPBuzz #MVPEdition",
+  "Title": "Fabric SQL Database Use Cases Within Analytics Solutions | Data Exposed: MVP Edition",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "PubDate": "2026-02-19T17:00:59+00:00",
+  "ProcessedDate": "2026-02-19 17:19:26",
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedName": "Microsoft Developer YouTube"
+}
