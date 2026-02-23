@@ -12441,5 +12441,11 @@
     "timestamp": "2026-02-23 18:18:51 +00:00",
     "collection": "news",
     "canonical_url": "https://news.xbox.com/en-us/2026/02/23/xbox-developer-acceleration-program-black-history-month-games/"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is an announcement/introduction of new GitHub repository controls to manage pull requests, but it does NOT prominently feature any Microsoft technologies, Azure, DevOps (beyond general GitHub repo management), AI, ML, Coding (in the sense of Microsoft programming technologies), or Security as defined by the categorization rules. While GitHub Actions or developer tooling could qualify for DevOps or Coding, in this case, the content is about GitHub's core platform moderation features for pull requests, not about Microsoft-aligned developer workflows or tools (Coding rules 1-5, DevOps rules 1-11) nor is there a Microsoft technology central to the solution (multi-platform threshold). It does not describe implementation, code, or integration approaches but centers on toggleable controls for repository maintainers generally. Thus, per inclusion/exclusion rules and category definitions, no categories qualify.",
+    "canonical_url": "https://www.youtube.com/shorts/Jr3CwgsKO1U",
+    "timestamp": "2026-02-23 19:26:02 +00:00"
   }
 ]
