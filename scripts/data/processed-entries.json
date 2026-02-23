@@ -26812,5 +26812,11 @@
     "reason": "Succesfully added: The content centrally addresses Azure Functions not appearing in the Azure Portal, focusing throughout on Azure services, Function Apps, deployment tooling, host/runtime behaviors, and related configurations. The technical depth fits the 'Azure' category based on category inclusion rules (Chapter 4, Azure Rule 1, 4, 5). None of the generic exclusion rules apply. There is no specific focus on AI/ML, security, coding language frameworks, or DevOps practices (though DevOps/CI is referenced as a deployment method, the main thrust is operational troubleshooting for Azure service visibility, not automation/pipeline implementation). Thus, only the Azure category is assigned based on the rule hierarchy.",
     "timestamp": "2026-02-23 04:40:49 +00:00",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/rethinking-ingress-on-azure-application-gateway-for-containers/ba-p/4492277",
+    "reason": "Succesfully added: Assigned the Azure category because the entire article is focused on Azure Application Gateway for Containers (Azure rule 1, 4, 5), which is an Azure-native managed ingress/load balancing service. The Security category was also applied because the article covers Azure WAF integration, threat protection, TLS management, and exposure control (Security rules 1, 2, 4, 5). No ML, AI, GitHub Copilot, Coding, or DevOps categories are appropriate, as the article focuses on managed networking infrastructure, not development, automation pipelines, coding, or AI/ML features. Content meets quality standards, is technical, and is not excluded by any generic rule.",
+    "collection": "community",
+    "timestamp": "2026-02-23 11:16:07 +00:00"
   }
 ]

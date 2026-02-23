@@ -12417,5 +12417,11 @@
     "reason": "No categories found: All generic exclusion rules were evaluated first, as required. The content is a consumer-focused blog post about transferring personal files on work-managed Windows 11 PCs when USB ports are blocked by IT policy. It is aimed at everyday end-users, not developers or technical practitioners. It discusses methods like cloud storage, email, collaboration tools, and checking with IT — all from a non-technical, end-user perspective. There is no substantial coverage of development, coding, DevOps, scripting, enterprise architecture, or Microsoft developer/consultant tooling. No inclusion rules for 'AI,' 'GitHub Copilot,' 'Coding,' 'DevOps,' 'Azure,' 'ML,' or 'Security' apply. The Windows 11 focus is on end-user file transfer, not system administration or technical implementation. Per 'Non-Development Microsoft Products' exclusion, content about general Windows/Office features (except development or IT engineering use) is excluded. Therefore, no categories apply.",
     "canonical_url": "https://dellenny.com/usb-blocked-on-windows-11-at-work-heres-how-to-move-your-personal-files-without-risking-your-job/",
     "timestamp": "2026-02-22 09:07:14 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/traffic-processing-bgp-azure-vpn-gateway-a-a/m-p/4496361#M769",
+    "collection": "community",
+    "timestamp": "2026-02-23 05:30:40 +00:00"
   }
 ]
