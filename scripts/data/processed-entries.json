@@ -26884,5 +26884,17 @@
     "reason": "Succesfully added: Assigned the 'AI' category because the content focuses extensively on agentic AI, specifically referencing Copilot Studio, Microsoft's autonomous agent platform, and its integration into telecommunications sales and business systems (AI Rule 1 and 2). Did not assign the 'Azure' category because while cloud/edge are mentioned, the technical focus and implementation details center on AI technology and Copilot Studio, not Azure platform specifics. No coding, DevOps, ML, or Security categories are appropriate, as the content targets business process transformation via AI agents rather than software engineering, deployment, or security practices. Content exceeds the 200-word threshold for community content and is in English, so none of the generic exclusion rules apply.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/accelerating-revenue-in-telecommunications-through-agentic-sales/ba-p/4496523",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content centers around Microsoft Fabric, a core Azure-based analytics platform, and discusses hands-on integration details relating to Spark workloads on Azure. Assigned the 'ML' category because the entire focus is on accelerating analytics, queries, and transformations typical of data engineering and ML workloads (rule ML 1, 2, 3). The post does not directly qualify for 'AI' (not about pre-built AI services or custom AI model development), 'Security' (no security or compliance focus), 'DevOps' (no coverage of CI/CD, infrastructure as code, or team practices), or 'Coding' (does not include development frameworks, code, or best practices for application coding). The article is technical, implementation-focused, and thoroughly documents how to leverage a new analytical feature on Microsoft's stack.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/under-the-hood-an-introduction-to-the-native-execution-engine-for-microsoft-fabric/",
+    "timestamp": "2026-02-23 21:16:13 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' is included because the content focuses on tools and resources built for AI agents, leveraging Azure Functions (AI category rule 1, 4). 'Azure' is included because the solution is built around Azure Functions and highlights Azure-specific architectures and scaling (Azure category rules 1, 4, 5). 'Coding' is included due to explicit code examples in C#, discussion of building and integrating tools, and developer-focused practices (Coding rules 1, 2, 4). No other categories apply, as there is no direct coverage of DevOps practices, ML pipelines, or security implementations beyond brief mentions of authentication.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-mcp-apps-with-azure-functions-mcp-extension/ba-p/4496536",
+    "timestamp": "2026-02-23 21:17:10 +00:00"
   }
 ]
