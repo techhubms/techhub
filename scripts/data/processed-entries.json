@@ -26818,5 +26818,17 @@
     "reason": "Succesfully added: Assigned the Azure category because the entire article is focused on Azure Application Gateway for Containers (Azure rule 1, 4, 5), which is an Azure-native managed ingress/load balancing service. The Security category was also applied because the article covers Azure WAF integration, threat protection, TLS management, and exposure control (Security rules 1, 2, 4, 5). No ML, AI, GitHub Copilot, Coding, or DevOps categories are appropriate, as the article focuses on managed networking infrastructure, not development, automation pipelines, coding, or AI/ML features. Content meets quality standards, is technical, and is not excluded by any generic rule.",
     "collection": "community",
     "timestamp": "2026-02-23 11:16:07 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/recent-data-get-back-to-your-data-faster-in-fabric-preview/",
+    "timestamp": "2026-02-23 16:16:43 +00:00",
+    "reason": "Succesfully added: Assigned the ML category because the content is centered around Dataflow Gen2 within Microsoft Fabric, a platform for data engineering and analytics workflows (ML rule 1). The primary focus is on improvements for data flow development and data preparation—key activities in analytics engineering—rather than simple operational data management (distinction per ML rule 2 and 4). Azure, Coding, DevOps, AI, Security, and GitHub Copilot categories were not assigned, as the content does not involve code development, DevOps practices, AI services, or specific security/identity topics."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=hEBf8D8xn-s",
+    "timestamp": "2026-02-23 16:17:30 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because Agent 365 and Agent ID are centered around modern agent concepts that integrate with AI/LLM capabilities, as referenced by #AI tags, the mention of 'LLM', and productivity improvements via Microsoft technologies. Assigned 'Azure' because core services discussed include Azure-based platforms—Microsoft Entra (identity, formerly Azure AD), Microsoft Purview (data governance), Microsoft Defender (security), which are Azure services (Azure inclusion rules 1, 4, 5). Assigned 'Security' because the content explicitly details security components such as identity management, authentication, threat protection, and Defender, all within the Microsoft security ecosystem (Security rules 1-4, 5, 9). Did not include 'ML' since there is no focus on custom ML/data science development, and did not include 'Coding' or 'DevOps' as the focus is not on hands-on software development or deployment practices. Generic exclusion rules do NOT apply as this is technical, implementation-focused, and in English."
   }
 ]

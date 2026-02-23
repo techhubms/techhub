@@ -12423,5 +12423,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/traffic-processing-bgp-azure-vpn-gateway-a-a/m-p/4496361#M769",
     "collection": "community",
     "timestamp": "2026-02-23 05:30:40 +00:00"
+  },
+  {
+    "timestamp": "2026-02-23 13:28:52 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-do-i-send-azure-apim-product-subscription-approval-to/m-p/4496443#M22439"
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules must be applied first. The main content, as well as the title, description, and author tags, strongly indicate that the post is about 'Agentic AI' adoption in enterprise/organizational contexts. Despite tags like 'Copilot' and 'M365 Copilot,' the actual content does not discuss developer tools, Copilot Studio, GitHub Copilot, or any development, coding, ML, Azure, or Security implementation details. Microsoft 365 Copilot is referenced in tags and related posts, but per the workflow, 'Microsoft 365 Copilot' and related business productivity Copilot products are not assigned any categories. The post is focused on general enterprise/organizational adoption mistakes, strategy, change management, compliance, and operational/cultural factors, not technical development, integration, or Microsoft developer tooling. No substantial technical Microsoft content is present, and the discussion is about high-level business and operational strategy, which is a generic exclusion (Business Strategy and Executive Content, Non-Development Microsoft Products). As a result, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/common-mistakes-orgs-make-when-adopting-agentic-ai/",
+    "timestamp": "2026-02-23 15:16:41 +00:00",
+    "collection": "blogs"
   }
 ]
