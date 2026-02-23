@@ -12435,5 +12435,11 @@
     "canonical_url": "https://dellenny.com/common-mistakes-orgs-make-when-adopting-agentic-ai/",
     "timestamp": "2026-02-23 15:16:41 +00:00",
     "collection": "blogs"
+  },
+  {
+    "reason": "No categories found: No categories assigned. Although the news post relates to the Xbox Developer Acceleration Program and spotlights indie games from developers across the African diaspora, it does not provide any technical implementation details, development strategies, tooling discussions, or in-depth information about Microsoft coding platforms, DevOps, Azure, AI, ML, or Security topics. The content is celebratory, promotional, and focused on game culture, diversity, and the journeys of game creators, but lacks technological depth or hands-on developer information relevant to consultants and developers. This falls under the 'Sales Pitches' and 'Business Strategy and Executive Content' generic exclusion rules, as the main focus is program impact, cultural celebration, and developer support initiatives, not technical how-to or architectural guidance.",
+    "timestamp": "2026-02-23 18:18:51 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2026/02/23/xbox-developer-acceleration-program-black-history-month-games/"
   }
 ]

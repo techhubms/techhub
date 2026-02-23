@@ -26836,5 +26836,23 @@
     "timestamp": "2026-02-23 17:23:44 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=WTcyL68qTo8"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content describes enhancements to GitHub Enterprise's team management APIs, which are crucial for large-scale collaboration, access control, and team organization—core aspects of DevOps practices (DevOps rule 3, 8). No AI, Coding, Azure, ML, or Security categories were added as the article does not discuss these aspects. The content is not excluded under any generic exclusion rules, as it is technical, in English, not biographical, sales-focused, or negative.",
+    "timestamp": "2026-02-23 18:19:14 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-23-enterprise-team-support-in-organization-apis"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the session is about integrating AI agents and models into real development processes within the VS Code engineering team (AI rule 1 and 4). Assigned DevOps category as the discussion centers on evolving from traditional pipelines to actor-based workflows, which directly relates to DevOps, automation, and development methodologies (DevOps rules 1, 4, and 5). Assigned Coding category because it offers technical insights relevant to software engineers interested in workflow architectures and rapid prototyping in code-driven environments (Coding rule 4 and 5). Content is in English, not a sales pitch, and is not biographical or negative—none of the generic exclusion rules apply.",
+    "timestamp": "2026-02-23 18:20:01 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=0JPODfK8t5o"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the content revolves around AI coding agents (Claude, Codex, GitHub Copilot) being integrated for developer use, satisfying AI inclusion rule 2 and 4. Included 'GitHub Copilot' because it is explicitly featured (GitHub Copilot inclusion rule 1), requiring 'AI' as well. 'Coding' applies because the agents are presented as tools to assist coding tasks within developer workflows (Coding rule 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as there is no information on deployment, cloud platforms, machine learning engineering, or security topics.",
+    "timestamp": "2026-02-23 18:20:17 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=njbObo0fyhM"
   }
 ]
