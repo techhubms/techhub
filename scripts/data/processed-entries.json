@@ -26830,5 +26830,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=hEBf8D8xn-s",
     "timestamp": "2026-02-23 16:17:30 +00:00",
     "reason": "Succesfully added: Assigned 'AI' because Agent 365 and Agent ID are centered around modern agent concepts that integrate with AI/LLM capabilities, as referenced by #AI tags, the mention of 'LLM', and productivity improvements via Microsoft technologies. Assigned 'Azure' because core services discussed include Azure-based platforms—Microsoft Entra (identity, formerly Azure AD), Microsoft Purview (data governance), Microsoft Defender (security), which are Azure services (Azure inclusion rules 1, 4, 5). Assigned 'Security' because the content explicitly details security components such as identity management, authentication, threat protection, and Defender, all within the Microsoft security ecosystem (Security rules 1-4, 5, 9). Did not include 'ML' since there is no focus on custom ML/data science development, and did not include 'Coding' or 'DevOps' as the focus is not on hands-on software development or deployment practices. Generic exclusion rules do NOT apply as this is technical, implementation-focused, and in English."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the video focuses on agent frameworks, automation, and intelligent identities, aligning with Microsoft AI implementation (AI rule 4, 5, and 6). Assigned 'Azure' category because it discusses Microsoft Azure services, cloud environment deployment, and leverages Azure identity and data services (Azure rule 1 and 4). Assigned 'Security' because of detailed coverage of Microsoft Entra (Azure AD/Entra ID), Purview, and Defender, and their roles in identity, compliance, and threat protection (Security rules 1, 3, and 5). Did not assign 'ML', 'DevOps', 'Coding', or 'GitHub Copilot' as the content did not focus on those areas.",
+    "timestamp": "2026-02-23 17:23:44 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=WTcyL68qTo8"
   }
 ]
