@@ -12405,5 +12405,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=vL-hq1KYopc",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The provided description focuses on a community-driven learning roadmap ('Learn to Cloud'), highlights the creators, and describes the initiative as aggregating resources for beginners. There is no substantive technical content, discussion of Microsoft-specific technologies (Azure, GitHub Actions, etc.), or sufficient technical depth present in the description. No main content is provided, so category inclusion rules cannot be applied. (Reference: Generic Exclusion Rules – focus is on a community project announcement, not technical implementation or deep-dive content.)"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is focused on the built-in Nearby Sharing feature in Windows 11 for end-user productivity (file transfers between Windows PCs), not on development, coding, DevOps practices, security architecture, or any Microsoft developer or cloud technologies. Generic exclusion rules specify that non-development end-user Windows features, general productivity tips, and how-to guides for standard OS usage do not qualify for any categories. There is no programming, scripting, architecture, or technical implementation related to Microsoft developer tools, coding, DevOps, Azure, Security, ML, AI, or GitHub Copilot. The article is suitable for general users, not for developers or consultants working with Microsoft technologies.",
+    "timestamp": "2026-02-21 16:04:34 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/zap-files-in-seconds-using-nearby-sharing-for-quick-file-transfers-in-windows-11/"
+  },
+  {
+    "collection": "blogs",
+    "reason": "No categories found: All generic exclusion rules were evaluated first, as required. The content is a consumer-focused blog post about transferring personal files on work-managed Windows 11 PCs when USB ports are blocked by IT policy. It is aimed at everyday end-users, not developers or technical practitioners. It discusses methods like cloud storage, email, collaboration tools, and checking with IT — all from a non-technical, end-user perspective. There is no substantial coverage of development, coding, DevOps, scripting, enterprise architecture, or Microsoft developer/consultant tooling. No inclusion rules for 'AI,' 'GitHub Copilot,' 'Coding,' 'DevOps,' 'Azure,' 'ML,' or 'Security' apply. The Windows 11 focus is on end-user file transfer, not system administration or technical implementation. Per 'Non-Development Microsoft Products' exclusion, content about general Windows/Office features (except development or IT engineering use) is excluded. Therefore, no categories apply.",
+    "canonical_url": "https://dellenny.com/usb-blocked-on-windows-11-at-work-heres-how-to-move-your-personal-files-without-risking-your-job/",
+    "timestamp": "2026-02-22 09:07:14 +00:00"
   }
 ]
