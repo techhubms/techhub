@@ -12465,5 +12465,23 @@
     "collection": "news",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_microsoft-dragon-copilot-can-help-clinicians-activity-7432070419723227136-qcm9",
     "reason": "No categories found: Content excluded due to generic exclusion rules: The main subject is Dragon Copilot, a Nuance/Microsoft AI-enabled tool aimed at reducing clinicians' administrative burden. However, this is not a developer, coding, or technical implementation topic – it is a business productivity/healthcare workflow application (see Non-Development Microsoft Products exclusion, Microsoft 365 Copilot/Copilot for Microsoft 365 category). The entire focus is on how clinicians and physicians use Dragon Copilot to save time, improve patient care, and handle documentation more easily. There is no substantive technical information for Microsoft consultants and developers (no development, integration, configuration, or programming content). The presence of product links, company news, and user comments does not add any hands-on technical or developer value in the context of this platform."
+  },
+  {
+    "reason": "No categories found: Content is excluded based on the 'Non-Development Microsoft Products' generic exclusion rule. The session focuses on adoption strategies for Microsoft Copilot within Microsoft 365, emphasizing productivity, business impact, and organizational adoption rather than technical or developer implementation. It is about turning enthusiasm into business results for office users, which classifies it as business productivity content (specifically 'Copilot for Microsoft 365'), explicitly listed in the exclusion rules (Chapter 3 and Copilot Product Distinction). There is no substantive focus on development, coding, or technical configuration of Microsoft technologies, so no categories apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=s315Ms2nWr4",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:25:48 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. According to generic exclusion rules, content focused on business productivity tools such as Microsoft 365 Copilot, Word, Outlook, and Teams—especially when demonstrating usage for document creation and productivity scenarios—is excluded. The description makes it clear the demo and advice are about using Copilot in Word, Outlook, and Teams (business productivity tools), not developer-focused tools like GitHub Copilot or Copilot Studio. There is no substantive content related to Azure development, Coding, AI development, or other qualifying Microsoft developer technologies.",
+    "canonical_url": "https://www.youtube.com/watch?v=WeIpWdgN_nY",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:26:01 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content centers on launching and managing Copilot Agents within Microsoft 365, including governance for Teams, SharePoint Online, and Purview. According to the generic exclusion rules, Microsoft 365 Copilot, Copilot for Microsoft 365, and end-user/business productivity Copilot tools are specifically excluded, as they are not developer or coding tools. The session appears focused on business productivity, security, and administration within Microsoft 365 rather than on developer/technical implementation, AI/ML model building, or custom development work. Therefore, none of the inclusion rules for AI, Coding, Azure, DevOps, ML, Security, or GitHub Copilot are met.",
+    "canonical_url": "https://www.youtube.com/watch?v=Yb0-x49n7Nk",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:26:49 +00:00"
   }
 ]

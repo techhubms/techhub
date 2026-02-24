@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-02-24 17:22:49",
+  "Link": "https://www.youtube.com/watch?v=iu1Cp84lGCw",
+  "PubDate": "2026-02-24T17:01:13+00:00",
+  "Description": "SQL Server 2025 and Azure SQL DB now support vector search and embeddings, enabling semantic queries that go beyond keywords. This session shows how to store, index, and query embeddings using familiar T-SQL. You’ll learn how to power smarter search, recommendations, and natural language interfaces—all within your database. Real-world examples will highlight practical use cases. If you're ready to level up your queries, this is where it starts.",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "Title": "Smarter Queries Start Here: Vector Search in SQL Server & Azure SQL DB",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

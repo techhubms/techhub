@@ -26962,5 +26962,53 @@
     "collection": "news",
     "canonical_url": "https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/",
     "reason": "Succesfully added: Assigned AI category because the article focuses on engineering patterns for multi-agent AI systems (AI rule 1, 4). Assigned GitHub Copilot because the post is from The GitHub Blog, discusses Copilot and its automation patterns (GitHub Copilot rule 1, 2), and references Copilot agentic tooling. Assigned Coding for its focus on code-level patterns such as schema definitions, validation, and actionable TypeScript/JSON examples (Coding rules 1, 2, 4). Did not add DevOps, Azure, ML, or Security as the article does not describe deployment pipelines, Azure services, code-level ML, or Microsoft security technologies. No generic exclusion rules apply: the content is technical, non-biographical, non-sales, non-business strategy, and is in English."
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the article focuses on integrating and processing CDC data from Azure SQL and describes using Microsoft Fabric, which is tightly integrated with Azure services (Azure rule 1). Assigned the ML category because it covers building analytics-ready streams and data pipelines, suitable for real-time analytics and model training in Lakehouse scenarios (ML rules 1 and 4). Did not assign AI – content is about data engineering, not AI platforms or features. Did not assign Coding – primary focus is on SQL-based transformation, not general software development paradigms. Did not assign Security or DevOps – no direct coverage of those topics.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/processing-cdc-streams-using-fabric-eventstreams-sql/",
+    "collection": "news",
+    "timestamp": "2026-02-24 17:23:34 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content is focused on autonomous AI agents built with Azure AI Foundry (AI rules 1 and 4). Assigned Azure category due to heavy focus on Azure-native technologies and controls (Azure rules 1 and 4). Assigned Security due to emphasis on zero trust, access control, secret protection, and content filtering (Security rules 1, 4, 7, and 9). Not assigned Coding, ML, DevOps, or GitHub Copilot since the demo does not focus on software development practices, machine learning engineering, CI/CD, or Copilot usage.",
+    "canonical_url": "https://www.youtube.com/watch?v=bEP3upJcurQ",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:24:26 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the content focuses on Microsoft Entra ID (formerly Azure AD) Access Packages, addressing access governance, Zero Trust, and compliance, which matches Security inclusion rules 1, 3, 4, and 9. Did not assign Azure because the focus is on identity and security features, not broader Azure platform or operational topics. No other categories apply, as there's no direct developer coding content, AI/ML, or DevOps focus. Tags extracted include identity governance and Zero Trust due to the security and compliance use cases highlighted in the description.",
+    "canonical_url": "https://www.youtube.com/watch?v=ck0RF8Gz_aQ",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:24:44 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the video centers on Microsoft Security Copilot, an AI-powered assistant for security operations (AI inclusion rule 1). Assigned the Security category because the content is directly focused on responding to security incidents, threat remediation, alert triage, and investigation using Microsoft security tools (Security inclusion rules 1 and 5). Did not assign Azure, ML, DevOps, GitHub Copilot, or Coding because the primary focus is on security incident response with Security Copilot and not on coding, DevOps, custom machine learning, or Azure-specific platform engineering.",
+    "canonical_url": "https://www.youtube.com/watch?v=Cn7p5i_4vjk",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:25:01 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the session is centered on the Model Context Protocol (MCP), a Microsoft protocol for integrating and contextualizing large language models (AI Inclusion Rule 1 and 4). The description and title both reference LLMs (large language models), model tuning, and safe delegation—core AI development areas within the Microsoft stack. No other categories are assigned as there is no substantive information about Azure, Coding, ML engineering, DevOps, or Security beyond the AI context.",
+    "canonical_url": "https://www.youtube.com/watch?v=f2Si9ykUiZ4",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:25:18 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because content discusses semantic queries, embeddings, and vector search capabilities in SQL Server 2025 and Azure SQL Database, tied to enabling smarter, AI-driven search (AI rule 1 and 5). Assigned Azure category as the main focus includes Azure SQL Database (Azure rule 1). Coding and ML categories were considered but not included as the description emphasizes database operations/features and semantic/AI-powered searches, not direct programming or machine learning engineering.",
+    "canonical_url": "https://www.youtube.com/watch?v=iu1Cp84lGCw",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:25:36 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the content is specifically about managing the adoption and safe use of AI (AI rule 1 and 5). 'Security' is included because the focus is on data protection, security policy enforcement, and regulatory compliance (Security rules 1, 2, 4, and 10). No Azure category because, while Microsoft DSPM is referenced, the description does not mention Azure services directly or technical implementation on Azure. No Coding, DevOps, ML, or GitHub Copilot categories, as the content is about governance and security rather than application development or code. Tag selection reflects key technologies (DSPM, AI tools, Copilot, ChatGPT, Gemini), security focus, and compliance context.",
+    "canonical_url": "https://www.youtube.com/watch?v=WFkU9psbRb0",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:26:19 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the session centers on performing migrations to Azure Local using Azure Migrate, which is a core Azure service (Azure inclusion rule 1). DevOps category is included because the session covers practical migration processes, appliance deployment, and synchronization – all common in infrastructure operations and DevOps practices (DevOps inclusion rules 5 and 6). AI, GitHub Copilot, Coding, ML, and Security categories do not qualify since the focus is on infrastructure migration, not on AI, coding, machine learning, or security implementation.",
+    "canonical_url": "https://www.youtube.com/watch?v=y-cD11Rj__g",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:26:37 +00:00"
   }
 ]

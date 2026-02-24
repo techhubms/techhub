@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-02-24 17:22:49",
+  "Link": "https://www.youtube.com/watch?v=bEP3upJcurQ",
+  "PubDate": "2026-02-24T17:01:05+00:00",
+  "Description": "As autonomous AI agents built with Azure AI Foundry take on critical tasks, security is non-negotiable. In this fast demo, we apply zero trust to agent chains: secure tool access with Entra ID, protect secrets and context with Key Vault, enforce real-time content filters, and capture auditable traces. Learn to stop prompt injection, data leaks, and agent hijacking using Azure’s native security controls. Walk away with a battle-tested checklist for hardening Foundry agents!",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "Title": "Zero-Trust AI Agents: Secure Microsoft Foundry Workflows",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}
