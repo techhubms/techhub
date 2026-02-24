@@ -27040,5 +27040,23 @@
     "reason": "Succesfully added: Assigned the DevOps category because the content focuses on development workflow optimizations, automation, and dependency management with GitHub tools, directly aligning with DevOps rule 2, 5, and 6. Did not assign AI, Azure, Coding, ML, or Security because the article does not discuss those topics directly. The tag selection draws from technologies, configuration, and workflow practice terms mentioned in the content.",
     "canonical_url": "https://github.blog/changelog/2026-02-24-dependabot-can-group-updates-by-dependency-name-across-multiple-directories",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/the-dongle-died-at-midnight/",
+    "timestamp": "2026-02-24 23:08:57 +00:00",
+    "reason": "Succesfully added: The content qualifies for the 'AI' category because it centers on AI-driven development—specifically, the use of GitHub Copilot, Agents, and general prompt engineering with LLMs—per AI Category Rules 1, 2, 3, and 6. 'GitHub Copilot' is assigned because the entire narrative discusses using Copilot (and Agent mode) for real-world app generation, directly matching GitHub Copilot category rules 1–4. 'Coding' is appropriate due to deep technical exploration of requirement gathering, WinForms development, prompt engineering, and hands-on C#/.NET tooling in Visual Studio (Coding rules 1, 2, and 4). Azure, ML, DevOps, and Security are not assigned because the solution is local WinForms (not Azure-based or ML-focused) and does not discuss DevOps pipelines or security implementation. The content aligns with the technical, down-to-earth style and meets Microsoft-focused, developer-centric criteria."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-february-update/",
+    "timestamp": "2026-02-24 23:09:35 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the update features multiple AI-driven tools (e.g., Copilot Chat command enhancements, call stack analysis, smarter diagnostics—see AI rules 1, 4, and 5). 'GitHub Copilot' is assigned because the release adds Copilot-powered test generation and call stack analysis (GitHub Copilot rules 1, 2, 4). 'Coding' is included due to substantial coverage of C#, C++, debugging tools, unit test automation, and code modernization (Coding rules 1, 2, and 4). Did not assign DevOps (no reference to CI/CD or DevOps tools/processes), Azure (improvements are local to Visual Studio IDE), ML (no mention of data science/ML workflows), or Security (no discussion of security, compliance, or identity in this update). No generic exclusion rules apply; content is technical, focused, and relevant for developer audiences."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-24-codeql-adds-go-1-26-and-kotlin-2-3-10-support-and-improves-query-accuracy",
+    "timestamp": "2026-02-24 23:09:55 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the content is about GitHub code scanning (DevOps rule 2) and workflow improvements relevant to software teams (DevOps rule 1, 5, 7). Assigned Security category because CodeQL's primary purpose is static analysis for security vulnerabilities and enhancements here directly affect secure development practices (Security rules 2, 5, 6). Did not assign AI, GitHub Copilot, Azure, or ML categories, as the news does not focus on AI capabilities, Copilot, Azure platform services (only mentions Azure SDK in passing within Python context), or machine learning/data science workflows. Categories assigned are justified by content focus per rules in Chapter 4."
   }
 ]
