@@ -26908,5 +26908,11 @@
     "timestamp": "2026-02-24 03:50:15 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-02-23-enterprise-defined-custom-organization-roles-are-generally-available",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-premises-manufacturing-intelligence/ba-p/4490771",
+    "reason": "Succesfully added: AI category included because the content is focused on building AI-powered monitoring and analysis systems, specifically using Microsoft Foundry Local (AI inclusion rules 1 and 4). Azure category included because Microsoft Foundry Local is part of the Azure AI ecosystem and all documentation/integration connects to Microsoft Azure AI platform (Azure inclusion rule 1 and 3). Coding category included because the implementation relies heavily on JavaScript, Node.js, and development of Express backend services, including code samples and architectural best practices (Coding rule 2). GitHub Copilot is not discussed, so 'GitHub Copilot' category is not applicable. ML and DevOps are not assigned, as the focus is on operational asset intelligence and AI inference rather than broader ML pipeline engineering or DevOps practices. Security is not primary, although compliance and data protection are addressed, so the Security category is not added per rules. Rule hierarchy applied consistent with multi-category qualification and generic exclusions were not triggered.",
+    "timestamp": "2026-02-24 08:12:46 +00:00",
+    "collection": "community"
   }
 ]
