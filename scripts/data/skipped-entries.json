@@ -12483,5 +12483,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=Yb0-x49n7Nk",
     "collection": "videos",
     "timestamp": "2026-02-24 17:26:49 +00:00"
+  },
+  {
+    "timestamp": "2026-02-24 18:18:50 +00:00",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided content is a news announcement headline about Microsoft introducing AI tools at MWC 2026, but the description is a link and the actual article body is about Microsoft Azure achieving a GxP milestone in regulated healthcare workloads—not about AI tools for telecom. There is no substantive technical detail or explanation of the new AI tools, their features, or how they relate to Microsoft technology categories. As per the core rules, content must focus on technical depth or implementation; this submission does not meet those requirements.",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/telecommunications/2026/02/24/microsoft-accelerates-telecom-return-on-intelligence-with-a-unified-trusted-ai-platform/"
   }
 ]

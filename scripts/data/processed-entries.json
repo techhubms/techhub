@@ -27010,5 +27010,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=y-cD11Rj__g",
     "collection": "videos",
     "timestamp": "2026-02-24 17:26:37 +00:00"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/02/24/empowering-communities-to-enable-the-global-ai-economy/",
+    "reason": "Succesfully added: Assigned the 'AI' category because the central theme is fostering digital access as a foundational requirement for building AI-ready communities and inclusive participation in the AI economy (AI category rule 5 and 6). The content covers digital infrastructure expansion, access gaps related to AI adoption, and the need for reliable connectivity for meaningful AI participation. Other categories such as Azure, Coding, DevOps, ML, and Security were not included since there's no substantive technical implementation detail on those topics. The piece focuses on strategy and high-level enablement for AI participation using Microsoft's ecosystem rather than developer, engineering, or product-specific content.",
+    "timestamp": "2026-02-24 19:23:10 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/24/c2-developer-targeting-campaign/",
+    "reason": "Succesfully added: Assigned Security category because the content is centered on a targeted attack deploying malware via developer workflows (see multiple references to C2, RCE, credential exfiltration, and Defender detections). Assigned Azure because the guidance and mitigations include Microsoft Defender for Cloud Apps, Microsoft Sentinel, Microsoft Entra ID Protection, all core Azure security services (Azure rule 1), and Defender for Endpoint (which is Azure-integrated). Assigned DevOps because the campaign intertwines with CI/CD, build processes, and developer tooling—specifically targeting VS Code, Node.js, Next.js, and associated DevOps workflows (DevOps rules 3, 5, 6). Did NOT assign AI, ML, Coding, or GitHub Copilot, as the main focus is security operations, threat detection, and securing developer environments—not AI-driven tooling or software development itself.",
+    "timestamp": "2026-02-24 19:23:37 +00:00",
+    "collection": "news"
   }
 ]
