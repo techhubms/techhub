@@ -12447,5 +12447,11 @@
     "reason": "No categories found: No categories assigned. The content is an announcement/introduction of new GitHub repository controls to manage pull requests, but it does NOT prominently feature any Microsoft technologies, Azure, DevOps (beyond general GitHub repo management), AI, ML, Coding (in the sense of Microsoft programming technologies), or Security as defined by the categorization rules. While GitHub Actions or developer tooling could qualify for DevOps or Coding, in this case, the content is about GitHub's core platform moderation features for pull requests, not about Microsoft-aligned developer workflows or tools (Coding rules 1-5, DevOps rules 1-11) nor is there a Microsoft technology central to the solution (multi-platform threshold). It does not describe implementation, code, or integration approaches but centers on toggleable controls for repository maintainers generally. Thus, per inclusion/exclusion rules and category definitions, no categories qualify.",
     "canonical_url": "https://www.youtube.com/shorts/Jr3CwgsKO1U",
     "timestamp": "2026-02-23 19:26:02 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to insufficient substantive content. The provided description and title only state, 'Quick overview of Agent 365 and Agent ID,' without any extended content, details, or technical explanation. The content field is null, and there is no actual text to analyze for technical substance or rule-based inclusion. According to the workflow, content must be based on actual substantive content, not just tags or titles. This submission fails the minimum information threshold for categorization.",
+    "timestamp": "2026-02-24 13:30:14 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/mHlo2wlDIVQ"
   }
 ]

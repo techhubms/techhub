@@ -26920,5 +26920,11 @@
     "timestamp": "2026-02-24 11:16:01 +00:00",
     "reason": "Succesfully added: I assigned the 'Coding' category because the content focuses on .NET coding practices, including building custom classes, callbacks, and in-process metric collection (Coding rules 1, 2, and 4). The 'DevOps' category is assigned because the post deals with monitoring, observability, and metrics collection within a DevOps context—key topics for team operations, monitoring, and performance (DevOps rules 3, 6, and 7). Azure is not assigned because the focus is on local/in-process .NET instrumentation, not Azure services. 'AI', 'ML', and 'Security' are not relevant since the topic is metrics/observability, not artificial intelligence, data science, or security. Generic exclusion rules do not apply; the post is technical, development-focused, and has sufficient length and quality.",
     "canonical_url": "https://andrewlock.net/recording-metrics-in-process-using-meterlistener/"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: \n- 'AI' because the content centers on multi-agent AI, Microsoft Agent Framework, Foundry IQ, and the role of AI in network operations (AI category rule 1, 3, 4, 5).\n- 'Azure' since Azure is fundamental as the underlying cloud for NOA, data, AI workloads, and real case studies (Azure rule 1, 3, 4, 5, 7).\n- 'Security' based on extensive coverage of governance, RBAC, compliance, responsible AI, operational safety, and auditability (Security rule 1, 2, 3, 4, 5, 7, 9, 10).\n- 'DevOps' because the framework emphasizes operational workflows, incident management automation, integration with OSS/BSS and service desks, lifecycle governance, and continuous improvement for network operations (DevOps rules 1, 4, 5, 6, 9, 11).\n'Coding', 'ML', and 'GitHub Copilot' are not included: the post does not focus on software development, custom code, ML engineering, or Copilot usage for code. The content is also well above community minimum word count, is not sales, biographical, or business-only, and is written in clear, technical English.",
+    "timestamp": "2026-02-24 13:30:47 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/evolving-the-network-operations-agent-framework-driving-the-next/ba-p/4496607"
   }
 ]
