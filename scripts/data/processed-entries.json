@@ -26932,5 +26932,11 @@
     "reason": "Succesfully added: Assigned the 'Security' category because the content focuses on Microsoft Defender products, SOC operations, and security operations tools (Security rule 1, 2, 4, 5). The article discusses implementation and transformation strategies for securing modern organizations using Microsoft technology, which fits Security inclusion rules. 'AI' was also added because the article describes the role of autonomous (AI-driven) defense and AI-powered threat detection as central to the modern SOC (AI inclusion rule 1 and 4). Other technical categories (like DevOps, Coding, Azure) do not apply since the article does not provide code-level, development, or infrastructure automation guidance, nor does it focus on Azure-only operations. There are no generic exclusion triggers; this is professional technical guidance specifically addressing implementation with Microsoft security technologies.",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/24/scaling-security-operations-with-microsoft-defender-autonomous-defense-and-expert-led-services/",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content centers on running and managing Oracle databases on Azure using the Microsoft and Oracle jointly engineered Oracle Database@Azure service (Azure inclusion rule 1 and 4). The content details practical migration scenarios, operational best practices, and direct involvement of Microsoft and Oracle product managers, all with Azure as the core platform. No other categories apply because there is no focus on coding, DevOps, AI, ML, Security implementation, or other listed domains. The community post is long and technically focused, so it passes format and length checks. No generic exclusion rules are triggered.",
+    "timestamp": "2026-02-24 15:20:40 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/introducing-run-oracle-your-way-on-oracle-database-azure-a-new/ba-p/4496593"
   }
 ]

@@ -12453,5 +12453,11 @@
     "timestamp": "2026-02-24 13:30:14 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/mHlo2wlDIVQ"
+  },
+  {
+    "reason": "No categories found: Excluded all categories because the content provides only a title, a brief description, an image, and generic keywords without any substantive technical details, implementation insights, or discussion of specific Microsoft technologies or AI tools. According to the generic exclusion rules, if there is insufficient content (i.e., lacking technical depth or actionable information), no categories should be assigned. The post is essentially a headline with a link and does not provide enough information to apply any inclusion rules.",
+    "timestamp": "2026-02-24 15:19:44 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/ai-tool-for-clinicians/"
   }
 ]
