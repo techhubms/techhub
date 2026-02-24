@@ -12489,5 +12489,11 @@
     "collection": "news",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The provided content is a news announcement headline about Microsoft introducing AI tools at MWC 2026, but the description is a link and the actual article body is about Microsoft Azure achieving a GxP milestone in regulated healthcare workloads—not about AI tools for telecom. There is no substantive technical detail or explanation of the new AI tools, their features, or how they relate to Microsoft technology categories. As per the core rules, content must focus on technical depth or implementation; this submission does not meet those requirements.",
     "canonical_url": "https://www.microsoft.com/en-us/industry/blog/telecommunications/2026/02/24/microsoft-accelerates-telecom-return-on-intelligence-with-a-unified-trusted-ai-platform/"
+  },
+  {
+    "timestamp": "2026-02-24 20:09:46 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/sharepoint-list-view-threshold-error-while-fetching-5000-records/m-p/4496599#M686",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]

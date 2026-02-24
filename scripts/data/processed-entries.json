@@ -27022,5 +27022,17 @@
     "reason": "Succesfully added: Assigned Security category because the content is centered on a targeted attack deploying malware via developer workflows (see multiple references to C2, RCE, credential exfiltration, and Defender detections). Assigned Azure because the guidance and mitigations include Microsoft Defender for Cloud Apps, Microsoft Sentinel, Microsoft Entra ID Protection, all core Azure security services (Azure rule 1), and Defender for Endpoint (which is Azure-integrated). Assigned DevOps because the campaign intertwines with CI/CD, build processes, and developer tooling—specifically targeting VS Code, Node.js, Next.js, and associated DevOps workflows (DevOps rules 3, 5, 6). Did NOT assign AI, ML, Coding, or GitHub Copilot, as the main focus is security operations, threat detection, and securing developer environments—not AI-driven tooling or software development itself.",
     "timestamp": "2026-02-24 19:23:37 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-24 20:09:00 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-24-github-code-quality-organization-level-dashboard-in-public-preview",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on GitHub's organizational code quality management—a core DevOps concern (DevOps rule 2: GitHub DevOps tools, and rule 5: monitoring/metrics). It describes workflow- and repository-level metrics and dashboards for organizational developer operations, which are fundamental DevOps practices. No other category applies, as there are no explicit AI, Coding, Azure, ML, Security, or GitHub Copilot features described. The tags focus on key DevOps, code quality, and GitHub aspects.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-24 20:09:17 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-24-repository-dashboard-is-now-generally-available",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on GitHub repository management, workflow optimization, and collaboration tools, which fits DevOps inclusion rules (DevOps rules 2, 3, 9, 11). No Azure, Coding, AI, GitHub Copilot, ML, or Security topics are present. The content is technical, focuses on optimizing developer workflows, and describes new features relevant to team collaboration and codebase organization. None of the generic exclusion rules apply: the announcement is technical, professional, and directly related to practitioner workflows.",
+    "collection": "news"
   }
 ]
