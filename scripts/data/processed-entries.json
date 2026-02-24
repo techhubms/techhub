@@ -26926,5 +26926,11 @@
     "timestamp": "2026-02-24 13:30:47 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/evolving-the-network-operations-agent-framework-driving-the-next/ba-p/4496607"
+  },
+  {
+    "timestamp": "2026-02-24 14:21:16 +00:00",
+    "reason": "Succesfully added: Assigned the 'Security' category because the content focuses on Microsoft Defender products, SOC operations, and security operations tools (Security rule 1, 2, 4, 5). The article discusses implementation and transformation strategies for securing modern organizations using Microsoft technology, which fits Security inclusion rules. 'AI' was also added because the article describes the role of autonomous (AI-driven) defense and AI-powered threat detection as central to the modern SOC (AI inclusion rule 1 and 4). Other technical categories (like DevOps, Coding, Azure) do not apply since the article does not provide code-level, development, or infrastructure automation guidance, nor does it focus on Azure-only operations. There are no generic exclusion triggers; this is professional technical guidance specifically addressing implementation with Microsoft security technologies.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/24/scaling-security-operations-with-microsoft-defender-autonomous-defense-and-expert-led-services/",
+    "collection": "news"
   }
 ]
