@@ -12459,5 +12459,11 @@
     "timestamp": "2026-02-24 15:19:44 +00:00",
     "collection": "news",
     "canonical_url": "https://news.microsoft.com/source/emea/features/ai-tool-for-clinicians/"
+  },
+  {
+    "timestamp": "2026-02-24 16:22:19 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_microsoft-dragon-copilot-can-help-clinicians-activity-7432070419723227136-qcm9",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The main subject is Dragon Copilot, a Nuance/Microsoft AI-enabled tool aimed at reducing clinicians' administrative burden. However, this is not a developer, coding, or technical implementation topic – it is a business productivity/healthcare workflow application (see Non-Development Microsoft Products exclusion, Microsoft 365 Copilot/Copilot for Microsoft 365 category). The entire focus is on how clinicians and physicians use Dragon Copilot to save time, improve patient care, and handle documentation more easily. There is no substantive technical information for Microsoft consultants and developers (no development, integration, configuration, or programming content). The presence of product links, company news, and user comments does not add any hands-on technical or developer value in the context of this platform."
   }
 ]
