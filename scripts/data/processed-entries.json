@@ -26914,5 +26914,11 @@
     "reason": "Succesfully added: AI category included because the content is focused on building AI-powered monitoring and analysis systems, specifically using Microsoft Foundry Local (AI inclusion rules 1 and 4). Azure category included because Microsoft Foundry Local is part of the Azure AI ecosystem and all documentation/integration connects to Microsoft Azure AI platform (Azure inclusion rule 1 and 3). Coding category included because the implementation relies heavily on JavaScript, Node.js, and development of Express backend services, including code samples and architectural best practices (Coding rule 2). GitHub Copilot is not discussed, so 'GitHub Copilot' category is not applicable. ML and DevOps are not assigned, as the focus is on operational asset intelligence and AI inference rather than broader ML pipeline engineering or DevOps practices. Security is not primary, although compliance and data protection are addressed, so the Security category is not added per rules. Rule hierarchy applied consistent with multi-category qualification and generic exclusions were not triggered.",
     "timestamp": "2026-02-24 08:12:46 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-02-24 11:16:01 +00:00",
+    "reason": "Succesfully added: I assigned the 'Coding' category because the content focuses on .NET coding practices, including building custom classes, callbacks, and in-process metric collection (Coding rules 1, 2, and 4). The 'DevOps' category is assigned because the post deals with monitoring, observability, and metrics collection within a DevOps context—key topics for team operations, monitoring, and performance (DevOps rules 3, 6, and 7). Azure is not assigned because the focus is on local/in-process .NET instrumentation, not Azure services. 'AI', 'ML', and 'Security' are not relevant since the topic is metrics/observability, not artificial intelligence, data science, or security. Generic exclusion rules do not apply; the post is technical, development-focused, and has sufficient length and quality.",
+    "canonical_url": "https://andrewlock.net/recording-metrics-in-process-using-meterlistener/"
   }
 ]
