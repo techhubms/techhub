@@ -13,11 +13,20 @@ While most content in Tech Hub is standard markdown served via generic item endp
 
 **Characteristics**:
 
-- **Hardcoded Endpoints**: Each custom page has a dedicated API endpoint.
+- **Hardcoded Endpoints**: Each custom page has a dedicated API endpoint returning structured JSON.
 - **Structured Data**: Returns a JSON object specifically shaped for that page's UI requirements (e.g., `LevelsPageData`, `FeaturesPageData`).
 - **Composite Content**: Often aggregates data from multiple sources or specific content items.
+- **Hybrid Pages**: Some custom pages (like VS Code Updates) use the standard content collection pipeline instead of a dedicated custom pages endpoint, but are still configured as `Custom: true` in section settings.
 
 **Common Use Case**: Landing pages, interactive guides (like "Levels of Enlightenment"), or feature matrices that need specific data structures for frontend rendering.
+
+**Sections with custom pages**:
+
+| Section | Custom Pages |
+|---|---|
+| `github-copilot` | Features, Levels of Enlightenment, The GitHub Copilot Handbook, Visual Studio Code Updates |
+| `ai` | GenAI Basics, GenAI Advanced, GenAI Applied, AI SDLC |
+| `devops` | DX, SPACE & DORA |
 
 ## Endpoints
 
@@ -85,6 +94,12 @@ Custom pages content is hydrated from:
 
 1. **JSON data files** in `collections/_custom/` directory (e.g., `dx-space.json`, `levels.json`)
 2. **Aggregation of items** from standard collections (e.g., Features page pulls from `collections/_videos/ghc-features/`)
+
+The three GenAI endpoints use a special handler that processes markdown content within the JSON and replaces `{{mermaid:id}}` placeholders with actual mermaid diagram code blocks. Other endpoints deserialize JSON directly.
+
+All three GenAI pages (`genai-basics`, `genai-advanced`, `genai-applied`) share a single Razor component (`GenAI.razor`) with three `@page` routes.
+
+The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content through the standard content collection API from markdown files in `collections/_videos/vscode-updates/`.
 
 See [src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs](../src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs) for endpoint implementation.
 
@@ -166,6 +181,8 @@ Add the `Order` property to custom page collections in `appsettings.json`:
   }
 }
 ```
+
+All 9 custom page collections across 3 sections (`github-copilot`, `ai`, `devops`) use this pattern.
 
 ### Ordering Rules
 

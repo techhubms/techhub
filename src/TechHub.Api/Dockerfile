@@ -30,6 +30,9 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 # Copy published application
 COPY --from=build /app/publish .
 
+# Copy collections data for content sync
+COPY collections/ /app/collections/
+
 # Set environment variables
 ENV ASPNETCORE_URLS=http://+:8080
 

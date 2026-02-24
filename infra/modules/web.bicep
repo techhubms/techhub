@@ -24,6 +24,9 @@ resource web 'Microsoft.App/containerApps@2024-03-01' = {
         external: true
         targetPort: 8080
         transport: 'http'
+        stickySessions: {
+          affinity: 'sticky'
+        }
       }
       registries: imageTag == 'initial' ? [] : [
         {
@@ -45,6 +48,10 @@ resource web 'Microsoft.App/containerApps@2024-03-01' = {
             {
               name: 'ASPNETCORE_ENVIRONMENT'
               value: 'Production'
+            }
+            {
+              name: 'TECHHUB_TMP'
+              value: '/tmp/techhub'
             }
             {
               name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'

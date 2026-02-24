@@ -34,9 +34,6 @@ param delegatedSubnetId string
 @description('Private DNS zone resource ID')
 param privateDnsZoneId string
 
-@description('Allowed client IP address (for local development access)')
-param allowedClientIp string = ''
-
 // PostgreSQL Flexible Server
 resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
   name: serverName
@@ -62,7 +59,9 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
     network: {
       delegatedSubnetResourceId: delegatedSubnetId
       privateDnsZoneArmResourceId: privateDnsZoneId
-      publicNetworkAccess: allowedClientIp != '' ? 'Enabled' : 'Disabled'
+      // VNet integration requires public network access to be disabled
+      // Firewall rules are not supported with delegated subnets
+      publicNetworkAccess: 'Disabled'
     }
   }
 }
@@ -74,16 +73,6 @@ resource database 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-08-0
   properties: {
     charset: 'UTF8'
     collation: 'en_US.utf8'
-  }
-}
-
-// Firewall rule for local development (only if IP is provided)
-resource firewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (allowedClientIp != '') {
-  parent: postgresServer
-  name: 'AllowLocalDev'
-  properties: {
-    startIpAddress: allowedClientIp
-    endIpAddress: allowedClientIp
   }
 }
 

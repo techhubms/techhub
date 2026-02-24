@@ -9,9 +9,9 @@ param containerRegistryName = 'crtechhubms'
 param containerAppsEnvName = 'cae-techhub-staging'
 param apiAppName = 'ca-techhub-api-staging'
 param webAppName = 'ca-techhub-web-staging'
-// Use placeholder image for initial deployment - workflow will immediately update with real images
-param apiImageTag = 'initial'
-param webImageTag = 'initial'
+// Use staging-latest images built and pushed to ACR
+param apiImageTag = 'staging-latest'
+param webImageTag = 'staging-latest'
 // Azure AI Foundry configuration
 param openAiName = 'oai-techhub-staging'
 param gptDeploymentName = 'gpt-5.2'
@@ -24,4 +24,3 @@ param vnetName = 'vnet-techhub-staging'
 param postgresServerName = 'psql-techhub-staging'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
-param allowedClientIp = '86.89.119.3'

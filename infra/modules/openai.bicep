@@ -29,6 +29,8 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   kind: 'AIServices'
   properties: {
     customSubDomainName: openAiName
+    // Must remain public: content processing scripts run from GitHub Actions runners
+    // which have dynamic IPs. Authentication is via API key.
     publicNetworkAccess: 'Enabled'
     networkAcls: {
       defaultAction: 'Allow'

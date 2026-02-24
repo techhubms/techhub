@@ -5,6 +5,9 @@ param containerRegistryName string
 param imageTag string
 param appInsightsConnectionString string
 
+@description('Base URL for the web frontend (used for CORS and BaseUrl configuration)')
+param webFqdn string = ''
+
 @secure()
 @description('PostgreSQL connection string')
 param databaseConnectionString string
@@ -24,9 +27,9 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
     managedEnvironmentId: containerAppsEnvironmentId
     configuration: {
       ingress: {
-        external: true
+        external: false
         targetPort: 8080
-        transport: 'http2'
+        transport: 'http'
         corsPolicy: {
           allowedOrigins: [
             'https://*.azurecontainerapps.io'
@@ -64,6 +67,10 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
               value: 'Production'
             }
             {
+              name: 'TECHHUB_TMP'
+              value: '/tmp/techhub'
+            }
+            {
               name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
               value: appInsightsConnectionString
             }
@@ -84,24 +91,16 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
               value: 'Authorization=Bearer ${appInsightsConnectionString}'
             }
             {
-              name: 'Content__SectionsJsonPath'
-              value: '/app/data/sections.json'
+              name: 'AppSettings__Content__CollectionsPath'
+              value: '/app/collections'
             }
             {
-              name: 'Content__CollectionsRootPath'
-              value: '/app/data/collections'
+              name: 'AppSettings__BaseUrl'
+              value: webFqdn != '' ? 'https://${webFqdn}' : 'https://${containerAppName}.azurecontainerapps.io'
             }
             {
-              name: 'Content__Timezone'
-              value: 'Europe/Brussels'
-            }
-            {
-              name: 'Content__EnableCaching'
-              value: 'true'
-            }
-            {
-              name: 'Content__CacheExpirationMinutes'
-              value: '60'
+              name: 'Cors__AllowedOrigins__0'
+              value: webFqdn != '' ? 'https://${webFqdn}' : 'https://*.azurecontainerapps.io'
             }
           ]
         }

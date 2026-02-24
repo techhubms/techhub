@@ -1,5 +1,6 @@
 ﻿@using TechHub.Web.Services
 @inject FaviconService FaviconService
+@inject IConfiguration Configuration
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +36,23 @@
     @{
         var appInsightsConnectionString = Environment.GetEnvironmentVariable("APPLICATIONINSIGHTS_CONNECTION_STRING");
         var isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Development";
+        var gaMeasurementId = Configuration["GoogleAnalytics:MeasurementId"];
+    }
+
+    @if (isProduction && !string.IsNullOrEmpty(gaMeasurementId))
+    {
+        <!-- Google Analytics 4 - async loading, no render blocking -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=@gaMeasurementId"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '@gaMeasurementId', {
+                'anonymize_ip': true,
+                'allow_google_signals': false,
+                'allow_ad_personalization_signals': false
+            });
+        </script>
     }
 
     @if (isProduction && !string.IsNullOrEmpty(appInsightsConnectionString))
@@ -57,6 +75,36 @@
     <Routes @rendermode="InteractiveServer" />
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
+
+    @if (isProduction && !string.IsNullOrEmpty(gaMeasurementId))
+    {
+        <!-- Google Analytics - Track Blazor enhanced navigation -->
+        <script>
+        (function() {
+            function trackGAPageView() {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'page_view', {
+                        page_path: window.location.pathname,
+                        page_location: window.location.href,
+                        page_title: document.title
+                    });
+                }
+            }
+
+            if (window.Blazor) {
+                Blazor.addEventListener('enhancedload', trackGAPageView);
+            } else {
+                const checkBlazor = setInterval(() => {
+                    if (window.Blazor) {
+                        clearInterval(checkBlazor);
+                        Blazor.addEventListener('enhancedload', trackGAPageView);
+                    }
+                }, 100);
+                setTimeout(() => clearInterval(checkBlazor), 5000);
+            }
+        })();
+        </script>
+    }
 
     @if (isProduction && !string.IsNullOrEmpty(appInsightsConnectionString))
     {

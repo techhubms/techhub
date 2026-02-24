@@ -14,7 +14,7 @@ All pages use proper semantic HTML5 elements for accessibility, SEO, and maintai
 <html>
   <header>                           <!-- Site navigation (NavHeader + SectionBanner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
-    <aside class="sidebar">          <!-- Latest roundup, latest content, RSS links, tag cloud -->
+    <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Latest, Tags -->
     <section class="home-main-content">  <!-- Section cards grid -->
   </main>
   <footer>                           <!-- Site footer -->
@@ -27,7 +27,7 @@ All pages use proper semantic HTML5 elements for accessibility, SEO, and maintai
 <html>
   <header>                           <!-- Site navigation + section banner -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
-    <aside class="sidebar">          <!-- Tag cloud, RSS links -->
+    <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Search, Date, Tags -->
     <section>                        <!-- Content items grid -->
   </main>
   <footer>                           <!-- Site footer -->
@@ -40,7 +40,7 @@ All pages use proper semantic HTML5 elements for accessibility, SEO, and maintai
 <html>
   <header>                           <!-- Site navigation + section banner -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
-    <aside class="sidebar">          <!-- Tag cloud, table of contents -->
+    <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Tags, Table of Contents -->
     <article>                        <!-- Individual content item -->
   </main>
   <footer>                           <!-- Site footer -->
@@ -53,7 +53,7 @@ All pages use proper semantic HTML5 elements for accessibility, SEO, and maintai
 <html>
   <header>                           <!-- Site navigation + section banner -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
-    <aside class="sidebar">          <!-- Video list, table of contents -->
+    <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Table of Contents (+ others per page) -->
     <article class="article-body">   <!-- Selected video/content -->
   </main>
   <footer>                           <!-- Site footer -->
@@ -140,14 +140,15 @@ header {
 .main-nav {
     position: sticky;
     top: 0;              /* Sticks to very top of viewport */
-    z-index: 1000;       /* Above scrolling content */
+    z-index: 1000;       /* Above scrolling content (raised to 1002 on mobile) */
 }
 
 /* SubNav.razor.css */
 .sub-nav {
     position: sticky;
-    top: 76px;          /* Sticks below main-nav (76px = main-nav height) */
+    top: 76px;          /* Desktop: sticks below main-nav (76px = main-nav height) */
     z-index: 999;       /* Slightly lower than main-nav */
+    /* Mobile (≤ 1288px): top: 59px to sit below compact header */
 }
 ```
 
@@ -189,6 +190,8 @@ Pages define layout structure with `<aside class="sidebar">`, sidebar components
 
 ### Example Page with Sidebar
 
+All pages with sidebars wrap their sidebar components in `MobileSidebarToolbar` and `MobileSidebarPanel`. On desktop, the toolbar is invisible (`display: contents`); on mobile, it renders a button bar for toggling individual panels.
+
 ```razor
 <Header SectionName="..." />
 
@@ -197,9 +200,14 @@ Pages define layout structure with `<aside class="sidebar">`, sidebar components
     
     <!-- Page defines sidebar container -->
     <aside class="sidebar">
-        <!-- Page composes sidebar components -->
-        <SidebarCollectionNav Section="@sectionData" SelectedCollection="all" />
-        <SidebarRssLinks Links="@(new[] { ... })" />
+        <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Search" Icon="search">
+                <SidebarSearch ... />
+            </MobileSidebarPanel>
+            <MobileSidebarPanel Label="Tags" Icon="tags">
+                <SidebarTagCloud ... />
+            </MobileSidebarPanel>
+        </MobileSidebarToolbar>
     </aside>
     
     <!-- Use section for listing/grid content -->
@@ -263,23 +271,22 @@ Use CSS Grid with three independently-loading components that maintain stable po
 
 ## Mobile Navigation
 
-On mobile devices (≤ 1024px), the layout adapts with a hamburger menu and collapsible sidebars.
+On mobile devices (≤ 1288px), the layout adapts with a hamburger menu, dropdown SubNav, and a sidebar toolbar with expandable panels.
 
 ### Responsive Behavior
 
 - **Navigation**: Desktop nav links hidden; hamburger button shown instead
-- **Sidebar**: Wraps in `MobileSidebarCollapse` — collapsed by default, expandable via toggle button
-- **Grid**: Changes from two-column to single-column layout at 640px
-- **SubNav**: Changes from `position: sticky` to `position: static` (no longer sticky on mobile)
-- **Touch targets**: Minimum 44px for accessibility
+- **SubNav**: Switches from horizontal button bar to a dropdown menu (remains sticky below the compact header)
+- **Sidebar**: Replaced by a `MobileSidebarToolbar` with per-panel toggle buttons; all panels hidden by default
+- **Grid**: Changes from two-column (300px sidebar + content) to single-column layout
+- **Touch targets**: Minimum 44px (`--touch-target-min-size`) for accessibility
 
 ### Breakpoints
 
 | Breakpoint | Behavior |
 |---|---|
-| ≤ 1024px | Hamburger menu, sidebar collapse, SubNav non-sticky |
-| ≤ 768px | Reduced padding |
-| ≤ 640px | Single-column grid |
+| ≤ 1288px | Hamburger menu, compact header (~50px), SubNav dropdown, sidebar toolbar, single-column grid |
+| ≤ 768px | Reduced padding, secondary layout adjustments |
 
 ### Hamburger Menu
 
@@ -303,13 +310,13 @@ The `NavHeader` component includes a hamburger button (three-line icon) that ope
 
 **Key behaviors**:
 
-- Hamburger animates to X when open (CSS transition)
-- Menu panel slides in from right (320px / 85vw max)
+- Hamburger animates to X when open (CSS `rotate` transition on three `<span>` lines)
+- Menu panel slides in from right (`min(320px, 85vw)` width, starts at `top: 52px`)
 - Background overlay blocks interaction with page content
 - Body scroll locked via JS interop (`mobile-nav.js`)
-- Escape key closes menu (registered via JS interop)
 - Clicking a link closes the menu and navigates
 - Menu closes on `NavigationManager.LocationChanged`
+- Active section and sub-item highlighted with `var(--color-purple-bright)`
 
 ### Z-Index Stacking (Mobile)
 
@@ -319,43 +326,53 @@ The `NavHeader` component includes a hamburger button (three-line icon) that ope
 | Menu panel | 1001 | `.mobile-menu.open` (slide-out panel) |
 | Overlay | 1000 | `.mobile-menu-overlay` (click-to-close backdrop) |
 
-The `.main-nav` z-index is raised to 1002 on mobile so the hamburger button remains clickable above the open menu panel. The menu panel starts at `top: 52px` to sit below the nav header.
+The `.main-nav` z-index is raised to 1002 on mobile so the hamburger button remains clickable above the open menu panel. The menu panel starts at `top: 52px` to sit below the compact nav header.
 
-### Sidebar Collapse (`MobileSidebarCollapse`)
+### Compact Header
 
-All pages with sidebars wrap their sidebar content in `<MobileSidebarCollapse>`:
+On mobile (≤ 1288px) the NavHeader shrinks to ~50px (`min-height`) showing only the logo and hamburger button. On desktop (> 1288px) the full 76px header with horizontal nav links is displayed.
 
-```razor
-<aside class="sidebar">
-    <MobileSidebarCollapse Label="Table of Contents">
-        <SidebarToc ... />
-    </MobileSidebarCollapse>
-</aside>
-```
+### SubNav on Mobile
+
+The SubNav remains sticky on mobile but switches from a horizontal button bar to a dropdown menu:
+
+- **Desktop**: Horizontal button bar at `position: sticky; top: 76px`
+- **Mobile**: Dropdown toggle at `position: sticky; top: 59px` (below compact header)
+- The dropdown shows the currently active collection label with a chevron
+- Clicking opens an absolute-positioned menu with all collection and custom page links
+- Each dropdown item has `min-height: 44px` touch target
+
+### Sidebar Toolbar (`MobileSidebarToolbar` + `MobileSidebarPanel`)
+
+On mobile, sidebar content is organized into individually toggleable panels accessed via a button toolbar (see [Sidebar Component Architecture](#sidebar-component-architecture) for the Razor composition pattern).
 
 **How it works**:
 
-- **Desktop (> 1024px)**: CSS sets `display: contents` on the wrapper and `display: none` on the toggle button, making the component invisible to layout
-- **Mobile (≤ 1024px)**: Shows a toggle button with chevron icon. Content is hidden (`display: none`) by default and shown (`display: grid`) when the `.sidebar-collapse-open` class is added via Blazor `@onclick`
-- Uses `aria-expanded` for accessibility
+- **Desktop (> 1288px)**: Toolbar uses `display: contents`, buttons are `display: none` — all panels are always visible as a standard 300px sidebar column
+- **Mobile (≤ 1288px)**: A horizontal scrollable button bar appears with icon + label for each panel. All panels are hidden by default. Clicking a button toggles that panel; only one panel can be open at a time
 
-**Labels by page type**:
+**Available icons**: `search`, `calendar`, `tags`, `rss`, `toc`, `latest`, `updates`, `filter`
 
-| Page | Label |
+**Panel configuration by page**:
+
+| Page | Panels (Label / Icon) |
 |---|---|
-| Home, ContentItem, VSCode Updates | "Sidebar" |
-| SectionCollection | "Filters & Search" |
-| GitHubCopilotLevels, Handbook, GenAI, DXSpace, AISDLC | "Table of Contents" |
-| GitHubCopilotFeatures | "Filters & Table of Contents" |
+| Home | "Latest" / `latest`, "Tags" / `tags` |
+| SectionCollection | "Search" / `search`, "Date" / `calendar`, "Tags" / `tags` |
+| ContentItem | "Tags" / `tags`, "Table of Contents" / `toc` |
+| GitHubCopilotFeatures | "Table of Contents" / `toc`, "Filters" / `filter` |
+| GitHubCopilotVSCodeUpdates | "All Updates" / `updates`, "Table of Contents" / `toc` |
+| Custom Pages (Levels, Handbook, GenAI, DXSpace, AISDLC) | "Table of Contents" / `toc` |
 
 ### Mobile CSS Architecture
 
 Mobile navigation styles are in component-scoped CSS:
 
-- **Hamburger + menu panel**: `NavHeader.razor.css` — all mobile styles in `@media (max-width: 1024px)` block
-- **SubNav non-sticky**: `SubNav.razor.css` — `position: static` at ≤ 1024px
-- **Sidebar collapse**: `wwwroot/css/sidebar.css` — desktop `display: contents`, mobile toggle/content visibility
-- **JS scroll lock**: `wwwroot/js/mobile-nav.js` — `lockScroll()`, `unlockScroll()`, Escape key handler
+- **Hamburger + menu panel**: `NavHeader.razor.css` — all mobile styles in `@media (max-width: 1288px)` block
+- **SubNav dropdown**: `SubNav.razor.css` — dropdown toggle and menu at `@media (max-width: 1288px)`
+- **Sidebar toolbar + panels**: `wwwroot/css/sidebar.css` — toolbar button bar visibility, panel show/hide
+- **JS scroll lock**: `wwwroot/js/mobile-nav.js` — `lockScroll()` / `unlockScroll()` for body positioning during menu open
+- **Reduced motion**: All animations respect `prefers-reduced-motion: reduce`
 
 ## Infinite Scroll Pagination
 

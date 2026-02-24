@@ -62,9 +62,6 @@ param postgresAdminLogin string = 'techhubadmin'
 @description('PostgreSQL administrator password')
 param postgresAdminPassword string
 
-@description('Allowed client IP for PostgreSQL access (local development)')
-param allowedClientIp string = ''
-
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupName
@@ -129,7 +126,6 @@ module postgres './modules/postgres.bicep' = {
     administratorLoginPassword: postgresAdminPassword
     delegatedSubnetId: network.outputs.postgresSubnetId
     privateDnsZoneId: network.outputs.privateDnsZoneId
-    allowedClientIp: allowedClientIp
   }
 }
 

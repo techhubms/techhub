@@ -18,10 +18,10 @@ Specs are organized by feature, numbered in priority order:
 | 001c | [Tag Dropdown Filter](001c-tag-dropdown-filter/) | ⏳ Planned | HIGH |
 | 002 | [Search](002-search/) | ✅ Spec Complete | HIGH |
 | 003 | Infinite Scroll | ✅ Complete & Archived | MEDIUM |
-| 004 | [Custom Pages](004-custom-pages/) | ✅ Spec Complete | HIGH |
+| 004 | Custom Pages | ✅ Complete & Archived | HIGH |
 | 005 | [Mobile Navigation](005-mobile-navigation/) | ✅ Spec Complete | HIGH |
 | 006 | [SEO Optimization](006-seo/) | ✅ Spec Complete | MEDIUM |
-| 007 | [Google Analytics](007-google-analytics/) | ✅ Spec Complete | MEDIUM |
+| 007 | Google Analytics | ✅ Complete & Archived | MEDIUM |
 | 008 | [Azure Infrastructure](008-azure-infrastructure/) | ✅ Spec Complete | LOW |
 | 009 | [CI/CD Pipeline](009-ci-cd-pipeline/) | ✅ Spec Complete | LOW |
 | 010 | [Content Publish Flag](010-content-publish-flag/) | ✅ Spec Complete | LOW |

@@ -19,6 +19,15 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: auto;
+  background-color: var(--color-bg-gradient-end);
+  overscroll-behavior-y: none;
+}
+
+/* Mobile/tablet: jump to just below sticky nav bars instead of 30% down the viewport */
+@media (max-width: 1288px) {
+  :root {
+    --scroll-margin-top: var(--sticky-header-height);
+  }
 }
 
 body {

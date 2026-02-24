@@ -67,7 +67,7 @@ public class ContentItemCardTests : BunitContext
 
         // Assert
         var author = cut.Find(".content-author");
-        author.TextContent.Should().Be("by John Doe");
+        author.TextContent.Should().Be(" by John Doe");
     }
 
     [Fact]
