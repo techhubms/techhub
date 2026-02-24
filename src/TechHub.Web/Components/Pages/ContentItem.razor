@@ -7,7 +7,7 @@
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
-<PageTitle>@(item?.Title ?? "Not Found") - Tech Hub</PageTitle>
+<PageTitle>@(item?.Title ?? (isLoading ? "" : "Not Found")) - Tech Hub</PageTitle>
 
 <HeadContent>
     <link rel="canonical"
@@ -44,7 +44,7 @@
     {
         <ContentItemDetail Item="@item" />
     }
-    else
+    else if (!isLoading)
     {
         <section>
             <h1>Not Found</h1>
@@ -73,6 +73,7 @@
 
     private TechHub.Core.Models.ContentItemDetail? item;
     private TechHub.Core.Models.Section? section;
+    private bool isLoading = true;
     private string? _previousSectionName;
     private string? _previousCollectionName;
     private string? _previousSlug;
@@ -136,6 +137,8 @@
     {
         try
         {
+            isLoading = true;
+
             var stateKey = $"content-item-{SectionName}-{CollectionName}-{Slug}";
             if (ApplicationState.TryTakeFromJson<TechHub.Core.Models.ContentItemDetail>(stateKey, out var restored) && restored != null)
             {
@@ -155,6 +158,10 @@
         catch (Exception ex)
         {
             ErrorService.HandleError(ex, Navigation, Logger);
+        }
+        finally
+        {
+            isLoading = false;
         }
     }
 

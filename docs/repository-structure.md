@@ -147,6 +147,15 @@ PowerShell automation scripts for development and maintenance tasks:
 - **`Generate-DocumentationIndex.ps1`** - Generates `docs/documentation-index.md` from doc headings
 - **`Generate-DevCertificate.ps1`** - Creates HTTPS dev certificates
 - **`Normalize-Images.ps1`** - Optimizes and normalizes images
+- **`Deploy-Infrastructure.ps1`** - Azure infrastructure deployment (Bicep)
+  - Supports shared, staging, and production environments
+  - Modes: validate, whatif, deploy
+  - Pre-flight checks (soft-deleted AI purge, ACR pull roles)
+- **`Deploy-Application.ps1`** - Container image build, push, and deployment
+  - Builds and pushes Docker images to ACR
+  - Deploys to Azure Container Apps
+  - Default 'dev' tag for local builds, git SHA in CI
+  - Smoke tests and automatic production rollback
 - **`analyze-markdown-errors.ps1`** - Linting and markdown analysis
 - **`content-processing/`** - Content import and transformation scripts
 - **`data/`** - Data files for scripts
@@ -168,7 +177,7 @@ Azure infrastructure as code (Bicep templates) for Azure Container Apps deployme
   - `monitoring.bicep` - Application Insights + Log Analytics
   - `registry.bicep` - Azure Container Registry
 
-Deployment is managed via GitHub Actions workflow (`.github/workflows/deploy-infrastructure.yml`) using `.bicepparam` files.
+Deployment is managed via PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) which are called by GitHub Actions workflows. Scripts can also be run locally for testing.
 
 See [specs/008-azure-infrastructure/spec.md](../specs/008-azure-infrastructure/spec.md) for architecture details.
 
@@ -217,8 +226,7 @@ Temporary working directory for AI assistants and development tasks (gitignored)
 
 - **`.github/`** - GitHub Actions workflows and CI/CD automation
   - `workflows/ci.yml` - Continuous Integration (build, test, lint, security) - runs on all PRs and pushes to main
-  - `workflows/deploy.yml` - Deployment to staging (automatic) and production (manual approval)
-  - `workflows/deploy-infrastructure.yml` - Infrastructure deployment (Bicep templates)
+  - `workflows/deploy.yml` - Unified deployment pipeline: infrastructure (when changed) + application to staging (automatic) and production (manual approval)
   - See [ci-cd-pipeline.md](ci-cd-pipeline.md) for complete CI/CD documentation
 - **`.vscode/`** - VS Code workspace settings and launch configurations
 - **`.git/`** - Git repository metadata

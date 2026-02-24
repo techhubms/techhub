@@ -23,10 +23,12 @@ html {
   overscroll-behavior-y: none;
 }
 
-/* Mobile/tablet: jump to just below sticky nav bars instead of 30% down the viewport */
+/* Mobile/tablet: jump to just below sticky nav bars */
+/* Mobile nav = 59px (50px content + 8px padding + 1px border) */
+/* Mobile sub-nav toggle = 44px (touch-target-min-size) */
 @media (max-width: 1288px) {
   :root {
-    --scroll-margin-top: var(--sticky-header-height);
+    --scroll-margin-top: calc(59px + 44px + var(--spacing-2));
   }
 }
 

@@ -32,12 +32,6 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
     // Must remain public: content processing scripts run from GitHub Actions runners
     // which have dynamic IPs. Authentication is via API key.
     publicNetworkAccess: 'Enabled'
-    networkAcls: {
-      defaultAction: 'Allow'
-      virtualNetworkRules: []
-      ipRules: []
-    }
-    allowProjectManagement: false
   }
 }
 
@@ -63,14 +57,8 @@ resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-
   }
 }
 
-// Defender for AI (disabled by default)
-resource defenderForAI 'Microsoft.CognitiveServices/accounts/defenderForAISettings@2025-06-01' = {
-  parent: openAiAccount
-  name: 'Default'
-  properties: {
-    state: 'Disabled'
-  }
-}
+// Note: Defender for AI settings are managed by Azure Policy / portal.
+// Explicitly deploying defenderForAISettings via ARM causes validation errors (715-123420).
 
 // Outputs
 output openAiName string = openAiAccount.name

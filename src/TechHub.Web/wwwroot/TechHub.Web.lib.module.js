@@ -96,7 +96,7 @@ window.__isBlazorInteractiveReady = function () {
 function setupFocusScrollCompensation() {
     // Combined height of sticky elements (main-nav + sub-nav + padding)
     // This should match --sticky-header-height in design-tokens.css
-    const STICKY_HEADER_HEIGHT = 146; // 76px + 54px + 16px padding
+    const STICKY_HEADER_HEIGHT = 142; // 76px + 50px + 16px padding
 
     document.addEventListener('focusin', (event) => {
         const element = event.target;

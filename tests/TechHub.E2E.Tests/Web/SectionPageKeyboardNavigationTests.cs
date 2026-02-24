@@ -22,7 +22,7 @@ public class SectionPageKeyboardNavigationTests : PlaywrightTestBase
         await Page.GotoRelativeAsync(sectionUrl);
 
         // Wait for Blazor to fully hydrate before starting keyboard navigation
-        var logo = Page.Locator("a[href='/']");
+        var logo = Page.Locator("a.site-logo[href='/']");
         await logo.WaitForBlazorInteractivityAsync();
 
         // CRITICAL: Focus body first so Tab starts from the beginning of the tab order

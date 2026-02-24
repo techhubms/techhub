@@ -226,12 +226,44 @@ For complete frontmatter schema, see [collections/AGENTS.md - Frontmatter Schema
 
 ### Infrastructure
 
+#### Deploy-Infrastructure.ps1
 
-
-- Azure infrastructure deployment via Bicep
+- Deploys Azure infrastructure via Bicep templates
+- Supports three environments: shared, staging, production
 - Three modes: validate, whatif, deploy
-- Environment-specific parameters
-- GitHub Actions compatible
+- Pre-flight checks: purges soft-deleted AI Services resources
+- Post-deployment: assigns ACR pull roles to container app identities
+- Runs locally or from GitHub Actions
+
+```powershell
+# Preview staging changes
+./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode whatif
+
+# Deploy shared resources (ACR)
+./scripts/Deploy-Infrastructure.ps1 -Environment shared -Mode deploy
+
+# Deploy staging
+$env:POSTGRES_ADMIN_PASSWORD = "<password>"
+./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode deploy
+```
+
+#### Deploy-Application.ps1
+
+- Builds Docker images, pushes to ACR, deploys to Container Apps
+- Default tag: `dev` locally, git commit SHA in CI
+- Supports `-SkipBuild`, `-SkipPush`, `-SkipDeploy`, `-SkipSmokeTests`
+- Production deployments validate staging health first and auto-rollback on failure
+
+```powershell
+# Full local deployment to staging (build + push + deploy, tagged 'dev')
+./scripts/Deploy-Application.ps1 -Environment staging
+
+# Build and push only
+./scripts/Deploy-Application.ps1 -Environment staging -SkipDeploy
+
+# Deploy existing images without rebuilding
+./scripts/Deploy-Application.ps1 -Environment staging -SkipBuild -SkipPush
+```
 
 ### Testing
 

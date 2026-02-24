@@ -10,7 +10,10 @@
 
 <div class="section-banner @CssClass @BackgroundClass">
     <div class="section-banner-content header-text-overlay">
-        <div class="banner-title">@DisplayTitle</div>
+    <div class="banner-title">
+            <span class="banner-title-desktop">@DisplayTitle</span>
+            <span class="banner-title-mobile">@MobileTitle</span>
+        </div>
         @if (!string.IsNullOrEmpty(DisplayDescription))
         {
             <p class="banner-description">@DisplayDescription</p>
@@ -53,4 +56,9 @@
     : BackgroundCssClass ?? "section-banner-bg-none";
 
     private string CssClass => Section == null && string.IsNullOrEmpty(BackgroundCssClass) ? "home-banner" : "";
+
+    /// <summary>
+    /// Mobile title: shows "Home" for homepage, otherwise same as DisplayTitle.
+    /// </summary>
+    private string MobileTitle => Section == null && string.IsNullOrEmpty(BackgroundCssClass) ? "Home" : DisplayTitle;
 }

@@ -79,8 +79,8 @@
 else if (Sections != null && Sections.Any())
 {
     @* Homepage SubNav: show sections as navigation items *@
-    <nav class="sub-nav" aria-label="Sections navigation">
-        @* Desktop: horizontal button bar *@
+    <nav class="sub-nav sub-nav-homepage" aria-label="Sections navigation">
+        @* Desktop: horizontal button bar (hidden on homepage via CSS) *@
         <div class="sub-nav-wrapper">
             @foreach (var sectionItem in Sections)
             {
@@ -94,7 +94,7 @@ else if (Sections != null && Sections.Any())
         @* Mobile: dropdown showing sections *@
         <div class="sub-nav-mobile">
             <button class="sub-nav-dropdown-toggle" @onclick="ToggleDropdown" aria-expanded="@(dropdownOpen ? "true" : "false")">
-                <span>Sections</span>
+                <span>Home</span>
                 <span class="sub-nav-chevron @(dropdownOpen ? "expanded" : "")"></span>
             </button>
             @if (dropdownOpen)

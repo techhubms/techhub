@@ -46,8 +46,17 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
     version: postgresVersion
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
+    authConfig: {
+      activeDirectoryAuth: 'Disabled'
+      passwordAuth: 'Enabled'
+    }
+    dataEncryption: {
+      type: 'SystemManaged'
+    }
     storage: {
       storageSizeGB: storageSizeGB
+      autoGrow: 'Disabled'
+      tier: 'P4'
     }
     backup: {
       backupRetentionDays: 7
@@ -56,6 +65,16 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
     highAvailability: {
       mode: 'Disabled'
     }
+    maintenanceWindow: {
+      customWindow: 'Disabled'
+      dayOfWeek: 0
+      startHour: 0
+      startMinute: 0
+    }
+    replica: {
+      role: 'Primary'
+    }
+    replicationRole: 'Primary'
     network: {
       delegatedSubnetResourceId: delegatedSubnetId
       privateDnsZoneArmResourceId: privateDnsZoneId

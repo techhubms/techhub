@@ -7,7 +7,7 @@
 
 <nav class="main-nav" aria-label="Primary navigation">
     <div class="main-nav-content">
-        <a href="/" class="site-logo" aria-label="Tech Hub Home">
+        <a href="/" class="site-logo @(IsActivePage("/") ? "home-active" : "")" aria-label="Tech Hub Home">
             <span class="logo-text">Tech Hub</span>
         </a>
 
@@ -39,6 +39,7 @@
 
 @* Mobile menu panel (hidden on desktop via CSS) *@
 <div id="mobile-menu" class="mobile-menu @(menuOpen ? "open" : "")" role="navigation" aria-label="Mobile navigation">
+    <a href="/" class="mobile-menu-section-header mobile-menu-home @(IsActivePage("/") ? "active" : "")" @onclick="CloseMenu">Home</a>
     @foreach (var sectionItem in SectionCache.Sections)
     {
         <div class="mobile-menu-section">
@@ -128,8 +129,13 @@
 
     private void ToggleSection(string sectionName)
     {
-        if (!expandedSections.Remove(sectionName))
+        if (expandedSections.Contains(sectionName))
         {
+            expandedSections.Remove(sectionName);
+        }
+        else
+        {
+            expandedSections.Clear();
             expandedSections.Add(sectionName);
         }
     }

@@ -92,12 +92,13 @@ public class NavHeaderTests : BunitContext
         // Act
         cut.Find(".hamburger-btn").Click();
 
-        // Assert - Should have section headers for each section (+ About link)
+        // Assert - Should have section headers for each section (+ Home + About link)
         var sectionHeaders = cut.FindAll(".mobile-menu-section-header");
-        sectionHeaders.Count.Should().Be(3);
-        sectionHeaders[0].TextContent.Should().Contain("GitHub Copilot");
-        sectionHeaders[1].TextContent.Should().Contain("Artificial Intelligence");
-        sectionHeaders[2].TextContent.Should().Contain("About");
+        sectionHeaders.Count.Should().Be(4);
+        sectionHeaders[0].TextContent.Should().Contain("Home");
+        sectionHeaders[1].TextContent.Should().Contain("GitHub Copilot");
+        sectionHeaders[2].TextContent.Should().Contain("Artificial Intelligence");
+        sectionHeaders[3].TextContent.Should().Contain("About");
     }
 
     [Fact]
@@ -123,8 +124,8 @@ public class NavHeaderTests : BunitContext
         var cut = Render<NavHeader>();
         cut.Find(".hamburger-btn").Click();
 
-        // Act - Click on GitHub Copilot section header to expand
-        var sectionHeader = cut.FindAll(".mobile-menu-section-header")[0];
+        // Act - Click on GitHub Copilot section header to expand (index 1, after Home)
+        var sectionHeader = cut.FindAll(".mobile-menu-section-header")[1];
         sectionHeader.Click();
 
         // Assert - Should show sub-items
@@ -147,12 +148,12 @@ public class NavHeaderTests : BunitContext
         var cut = Render<NavHeader>();
         cut.Find(".hamburger-btn").Click();
 
-        // Act - Click to expand
-        cut.FindAll(".mobile-menu-section-header")[0].Click();
+        // Act - Click to expand (index 1 = first section, after Home)
+        cut.FindAll(".mobile-menu-section-header")[1].Click();
         cut.FindAll(".mobile-menu-sub-items").Count.Should().Be(1);
 
         // Re-query after re-render to get fresh element references (bUnit requirement)
-        cut.FindAll(".mobile-menu-section-header")[0].Click();
+        cut.FindAll(".mobile-menu-section-header")[1].Click();
 
         // Assert - Sub-items should no longer be visible
         var subItemsCollapsed = cut.FindAll(".mobile-menu-sub-items");
@@ -166,13 +167,14 @@ public class NavHeaderTests : BunitContext
         var cut = Render<NavHeader>();
         cut.Find(".hamburger-btn").Click();
 
-        cut.FindAll(".mobile-menu-section-header")[0].GetAttribute("aria-expanded").Should().Be("false");
+        // Index 1 = first section (after Home link at index 0)
+        cut.FindAll(".mobile-menu-section-header")[1].GetAttribute("aria-expanded").Should().Be("false");
 
         // Act
-        cut.FindAll(".mobile-menu-section-header")[0].Click();
+        cut.FindAll(".mobile-menu-section-header")[1].Click();
 
         // Assert - Re-query to get fresh element reference after re-render
-        cut.FindAll(".mobile-menu-section-header")[0].GetAttribute("aria-expanded").Should().Be("true");
+        cut.FindAll(".mobile-menu-section-header")[1].GetAttribute("aria-expanded").Should().Be("true");
     }
 
     [Fact]

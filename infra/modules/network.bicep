@@ -11,7 +11,7 @@ param containerAppsSubnetName string = 'snet-container-apps'
 param postgresSubnetName string = 'snet-postgres'
 
 // Virtual Network
-resource vnet 'Microsoft.Network/virtualNetworks@2024-05-01' = {
+resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
   name: vnetName
   location: location
   properties: {
@@ -20,6 +20,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2024-05-01' = {
         '10.0.0.0/16'
       ]
     }
+    enableDdosProtection: false
     subnets: [
       {
         name: containerAppsSubnetName

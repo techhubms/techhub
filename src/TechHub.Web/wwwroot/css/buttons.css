@@ -64,7 +64,7 @@
 .btn-subnav {
   display: inline-flex;
   align-items: center;
-  padding: calc(var(--spacing-1) + var(--spacing-1) / 2) var(--spacing-3);
+  padding: var(--spacing-1) var(--spacing-3);
   background: transparent;
   color: var(--color-text-primary);
   text-decoration: none;

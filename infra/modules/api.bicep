@@ -2,6 +2,7 @@ param location string
 param containerAppName string
 param containerAppsEnvironmentId string
 param containerRegistryName string
+param acrPullIdentityId string
 param imageTag string
 param appInsightsConnectionString string
 
@@ -17,17 +18,22 @@ var imageReference = imageTag == 'initial'
   ? 'mcr.microsoft.com/dotnet/samples:aspnetapp' 
   : '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
 
-resource api 'Microsoft.App/containerApps@2024-03-01' = {
+resource api 'Microsoft.App/containerApps@2025-01-01' = {
   name: containerAppName
   location: location
   identity: {
-    type: 'SystemAssigned'
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '${acrPullIdentityId}': {}
+    }
   }
   properties: {
     managedEnvironmentId: containerAppsEnvironmentId
     configuration: {
+      activeRevisionsMode: 'Single'
       ingress: {
         external: false
+        allowInsecure: false
         targetPort: 8080
         transport: 'http'
         corsPolicy: {
@@ -39,10 +45,10 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
           allowCredentials: false
         }
       }
-      registries: imageTag == 'initial' ? [] : [
+      registries: [
         {
           server: '${containerRegistryName}.azurecr.io'
-          identity: 'system'
+          identity: acrPullIdentityId
         }
       ]
       secrets: [
@@ -65,10 +71,6 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
             {
               name: 'ASPNETCORE_ENVIRONMENT'
               value: 'Production'
-            }
-            {
-              name: 'TECHHUB_TMP'
-              value: '/tmp/techhub'
             }
             {
               name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
@@ -101,6 +103,10 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
             {
               name: 'Cors__AllowedOrigins__0'
               value: webFqdn != '' ? 'https://${webFqdn}' : 'https://*.azurecontainerapps.io'
+            }
+            {
+              name: 'TECHHUB_TMP'
+              value: '/tmp/techhub'
             }
           ]
         }

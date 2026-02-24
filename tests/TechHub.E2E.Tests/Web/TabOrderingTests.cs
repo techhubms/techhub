@@ -175,23 +175,26 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.Keyboard.PressAsync("Tab"); // Focus skip link
         await Page.Keyboard.PressAsync("Enter"); // Activate skip link
 
-        // Wait for focus to move to the target element
-        // The skip link navigates to #skiptohere - browser moves focus to that anchor target
-        // Use navigation timeout: focus change depends on Blazor interactivity + skip link JS handler
+        // Wait for focus to move to the target element (#skiptohere heading).
+        // The skip link's inline JS handler calls heading.focus({ preventScroll: true }).
+        // Uses DefaultPageLoadTimeout (10s) because the IIFE script must have registered
+        // the click handler, and under full Run load the keyboard event → click → focus
+        // chain can be delayed.
+        // IMPORTANT: Do NOT accept document.body — if focus lands on body, the subsequent
+        // Tab press goes to the skip link (outside main), causing a cascading timeout.
         await Page.WaitForFunctionAsync(
-            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1' || el === document.body); }",
+            "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1'); }",
             null,
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultNavigationTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
-        // Assert - Get what's currently focused
+        // Assert - confirm focus is on the heading, not body
         var elementInfo = await Page.EvaluateAsync<string>(
             "() => document.activeElement ? (document.activeElement.id || document.activeElement.tagName.toLowerCase()) : 'none'"
         );
 
-        // Focus should be on skiptohere (H1) or body (if tabindex was removed quickly)
-        var validFocusTargets = new[] { "skiptohere", "h1", "body" };
+        var validFocusTargets = new[] { "skiptohere", "h1" };
         validFocusTargets.Should().Contain(elementInfo,
-            $"after activating skip link, focus should be on primary content element or body, got {elementInfo}");
+            $"after activating skip link, focus should be on the #skiptohere heading, got {elementInfo}");
 
         // Next tab should focus first interactive element within primary content
         await Page.Keyboard.PressAsync("Tab");

@@ -4,6 +4,8 @@
 
 Tech Hub uses GitHub Actions for continuous integration (CI) and continuous deployment (CD) to Azure Container Apps.
 
+All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) that can be run both locally and from GitHub Actions workflows.
+
 ## Workflows
 
 ### Continuous Integration (CI)
@@ -52,28 +54,43 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 **Triggers**:
 
 - Automatic on push to `main` branch (staging only)
-- Manual dispatch (with optional production deployment)
+- Manual dispatch (with optional production deployment and force-infra flag)
+
+This is a unified pipeline that handles both infrastructure and application deployment in the correct order.
 
 **Jobs**:
 
-1. **Build & Push** - Builds Docker images once and pushes to Azure Container Registry
+1. **Detect Changes** - Uses `dorny/paths-filter` to check if `infra/**` files changed
+   - Manual dispatch also supports `force-infra-deploy` to override detection
+
+2. **Deploy Shared Infrastructure** - Deploys shared resources (ACR) via `Deploy-Infrastructure.ps1`
+   - Only runs when infrastructure files changed (or force flag set)
+   - Runs in parallel with staging infrastructure
+
+3. **Deploy Staging Infrastructure** - Deploys staging resources via `Deploy-Infrastructure.ps1`
+   - Only runs when infrastructure files changed (or force flag set)
+   - Runs in parallel with shared infrastructure
+
+4. **Build & Push** - Calls `Deploy-Application.ps1 -SkipDeploy` to build Docker images and push to ACR
+   - Waits for shared infrastructure (ACR) to be ready first
    - Tags images with commit SHA and `latest`
-   - Pushes both API and Web images
    - Images are built once and reused for both staging and production
 
-2. **Deploy to Staging** - Deploys to staging environment (automatic)
+5. **Deploy to Staging** - Calls `Deploy-Application.ps1 -SkipBuild -SkipPush` to deploy (automatic)
+   - Waits for both image build and staging infrastructure to complete
    - Updates Azure Container Apps with new images
-   - Waits for deployment to stabilize (30 seconds)
-   - Runs smoke tests (API health, Web homepage)
-   - Validates health endpoints
+   - Runs smoke tests (health, homepage)
 
-3. **Deploy to Production** - Deploys to production environment (manual approval required)
-   - **Only runs when manually triggered with `deploy-to-production: true`**
-   - Validates staging health before proceeding
-   - Creates pre-deployment backup of current production images
-   - Updates Container Apps with same images used in staging
-   - Runs comprehensive smoke tests (health, API endpoints, Web)
-   - Monitors deployment for 5 minutes
+6. **Approve Production** - Manual approval gate via GitHub Environment protection rules
+   - Only runs when manually triggered with `deploy-to-production: true`
+   - Single approval covers both production infrastructure and application
+
+7. **Deploy Production Infrastructure** - Deploys production resources via `Deploy-Infrastructure.ps1`
+   - Only runs when infrastructure files changed AND production is approved
+
+8. **Deploy to Production** - Calls `Deploy-Application.ps1 -SkipBuild -SkipPush` for production
+   - Deploys same images used in staging (no rebuild)
+   - Runs smoke tests (health, homepage)
    - **Auto-rollback** on health check failures
 
 **Environments**:
@@ -161,36 +178,62 @@ Create these environments in GitHub:
 
 ## Deployment Process
 
+### Local Deployment (PowerShell)
+
+Both deployment scripts can be run locally, making it easy to test without triggering GitHub Actions workflows.
+
+**Infrastructure deployment**:
+
+```powershell
+# Preview staging changes (safe — no modifications)
+./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode whatif
+
+# Deploy shared resources (ACR)
+./scripts/Deploy-Infrastructure.ps1 -Environment shared -Mode deploy
+
+# Deploy staging infrastructure
+$env:POSTGRES_ADMIN_PASSWORD = "<password>"
+./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode deploy
+
+# Deploy production infrastructure
+./scripts/Deploy-Infrastructure.ps1 -Environment production -Mode deploy
+```
+
+**Application deployment**:
+
+```powershell
+# Build, push, and deploy to staging (images tagged 'dev' by default)
+./scripts/Deploy-Application.ps1 -Environment staging
+
+# Build and push only (no container app update)
+./scripts/Deploy-Application.ps1 -Environment staging -SkipDeploy
+
+# Deploy a specific tag
+./scripts/Deploy-Application.ps1 -Environment staging -Tag "v1.0.0"
+
+# Deploy previously pushed images (skip build and push)
+./scripts/Deploy-Application.ps1 -Environment staging -Tag "dev" -SkipBuild -SkipPush
+```
+
+When run locally, images default to the `dev` tag to distinguish them from CI-produced images.
+
 ### First-Time Deployment (Brand New Environment)
 
 When deploying to a completely new Azure subscription for the first time:
 
-1. **Deploy Shared Infrastructure** (one-time setup)
-   - Go to GitHub Actions → "Deploy Infrastructure"
-   - Select `deploy` mode
-   - Select `shared` environment
-   - Creates resource group `rg-techhub-shared`
-   - Creates shared container registry `crtechhub`
-   - This registry will be used by both staging and production
+1. **Deploy Infrastructure + Application** (initial setup)
+   - Go to GitHub Actions → "Deploy to Azure"
+   - Click "Run workflow"
+   - Check **"Force infrastructure deployment"** (since there's no previous commit to detect changes from)
+   - This deploys shared infrastructure (ACR), staging infrastructure, builds images, and deploys to staging — all in one run
+   - Shared resources: `rg-techhub-shared` with container registry `crtechhub`
+   - Staging resources: `rg-techhub-staging` with Container Apps, PostgreSQL, OpenAI, etc.
 
-2. **Deploy Staging Infrastructure** (creates placeholder Container Apps)
-   - Go to GitHub Actions → "Deploy Infrastructure"
-   - Select `deploy` mode
-   - Select `staging` environment
-   - Container Apps will be created with placeholder images (`mcr.microsoft.com/dotnet/samples:aspnetapp`)
-   - Azure OpenAI `oai-techhub-staging` will be created in Sweden Central with GPT-5.2 model
-
-3. **Deploy Application** (builds and pushes real images)
-   - Merge to `main` or manually trigger "Deploy to Azure" workflow
-   - Builds Docker images and pushes to shared Azure Container Registry (`crtechhub`)
-   - Updates Container Apps with real Tech Hub application images
-   - Staging is now fully functional
-
-4. **Deploy Production Infrastructure** (when ready)
-   - Repeat infrastructure deployment for `production` environment
-   - Reuses the same shared registry (`crtechhub`)
+2. **Deploy Production** (when ready)
+   - Go to GitHub Actions → "Deploy to Azure"
+   - Check both **"Deploy to production"** and **"Force infrastructure deployment"**
+   - Staging deploys first, then after approval, production infrastructure and application deploy
    - Creates separate Azure OpenAI `oai-techhub-prod` (independent from staging)
-   - Then manually trigger production deployment via workflow
 
 **Note**: The Bicep templates use `imageTag = 'initial'` which deploys a Microsoft-provided placeholder ASP.NET app. The deployment workflow immediately replaces this with your actual application. This solves the chicken-and-egg problem of needing Container Apps to exist before images are built, but needing images to exist before Container Apps can be created.
 
@@ -223,9 +266,9 @@ When deploying to a completely new Azure subscription for the first time:
 1. **Validate staging** - Test staging environment thoroughly
 2. Go to GitHub Actions → "Deploy to Azure"
 3. Click "Run workflow"
-4. Check "deploy-to-production" checkbox
+4. Check "Deploy to production" checkbox (and optionally "Force infrastructure deployment")
 5. Click "Run workflow"
-6. **Approval required** - Workflow will pause at production job
+6. **Approval required** - Workflow will pause at the "Approve Production" job
    - Designated approvers receive notification
    - Review staging health, commit details, changes
    - Approve or reject deployment

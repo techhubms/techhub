@@ -4,7 +4,7 @@ param registryName string
 @allowed(['Basic', 'Standard', 'Premium'])
 param sku string = 'Basic'
 
-resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-11-01-preview' = {
+resource containerRegistry 'Microsoft.ContainerRegistry/registries@2025-04-01' = {
   name: registryName
   location: location
   sku: {
@@ -13,6 +13,10 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-11-01-pr
   properties: {
     adminUserEnabled: false
     publicNetworkAccess: 'Enabled'
+    dataEndpointEnabled: false
+    encryption: {
+      status: 'disabled'
+    }
   }
 }
 

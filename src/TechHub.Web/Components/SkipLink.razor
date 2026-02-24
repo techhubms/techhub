@@ -26,39 +26,45 @@
 <a href="#skiptohere" class="skip-link" id="skip-link">Skip to main content</a>
 
 <script>
-    // Handle skip link activation to focus main heading
+    // Handle skip link activation to focus main heading.
+    // Uses event delegation on document instead of direct element binding because
+    // Blazor's interactive re-rendering replaces DOM elements, which would lose
+    // handlers attached directly to the skip-link element during SSR.
     (function () {
-        const skipLink = document.getElementById('skip-link');
-        if (skipLink) {
-            skipLink.addEventListener('click', function (e) {
-                e.preventDefault();
+        if (window.__skipLinkInitialized) return;
+        window.__skipLinkInitialized = true;
 
-                const heading = document.getElementById('skiptohere');
-                if (heading) {
-                    // Temporarily add tabindex to enable focus
-                    heading.setAttribute('tabindex', '-1');
-                    
-                    // Suppress outline during programmatic focus
-                    const originalOutline = heading.style.outline;
-                    heading.style.outline = 'none';
-                    
-                    // Focus without scrolling first
-                    heading.focus({ preventScroll: true });
-                    
-                    // Scroll with offset for sticky header
-                    const stickyHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 106;
-                    const targetPosition = heading.getBoundingClientRect().top + window.scrollY - stickyHeight;
-                    window.scrollTo({ top: targetPosition, behavior: 'instant' });
-                    
-                    // Remove tabindex when focus moves away naturally
-                    // This ensures proper tab order continuation
-                    heading.addEventListener('blur', function removeTabIndex() {
-                        heading.removeAttribute('tabindex');
-                        heading.style.outline = originalOutline;
-                        heading.removeEventListener('blur', removeTabIndex);
-                    }, { once: true });
-                }
-            });
-        }
+        document.addEventListener('click', function (e) {
+            const skipLink = e.target.closest('#skip-link, .skip-link');
+            if (!skipLink) return;
+
+            e.preventDefault();
+
+            const heading = document.getElementById('skiptohere');
+            if (heading) {
+                // Temporarily add tabindex to enable focus
+                heading.setAttribute('tabindex', '-1');
+
+                // Suppress outline during programmatic focus
+                const originalOutline = heading.style.outline;
+                heading.style.outline = 'none';
+
+                // Focus without scrolling first
+                heading.focus({ preventScroll: true });
+
+                // Scroll with offset for sticky header
+                const stickyHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 106;
+                const targetPosition = heading.getBoundingClientRect().top + window.scrollY - stickyHeight;
+                window.scrollTo({ top: targetPosition, behavior: 'instant' });
+
+                // Remove tabindex when focus moves away naturally
+                // This ensures proper tab order continuation
+                heading.addEventListener('blur', function removeTabIndex() {
+                    heading.removeAttribute('tabindex');
+                    heading.style.outline = originalOutline;
+                    heading.removeEventListener('blur', removeTabIndex);
+                }, { once: true });
+            }
+        });
     })();
 </script>

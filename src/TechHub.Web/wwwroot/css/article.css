@@ -419,8 +419,8 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    background: var(--color-overlay-strong);
-    border: 1px solid var(--color-purple-dark);
+    background: var(--color-bg-emphasis);
+    border: 1px solid var(--color-text-secondary);
     border-radius: 6px;
     padding: 0.5rem 0.75rem;
     cursor: pointer;
@@ -441,13 +441,14 @@
 }
 
 .mermaid-expand-btn:hover {
-    background: var(--color-bg-emphasis);
-    border-color: var(--color-text-secondary);
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
     box-shadow: var(--shadow-md);
 }
 
 .mermaid-expand-btn:active {
-    background: var(--color-bg-emphasis);
+    background: var(--color-purple-medium);
 }
 
 /* Mermaid fullscreen modal */

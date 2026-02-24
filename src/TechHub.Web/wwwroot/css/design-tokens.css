@@ -11,7 +11,7 @@
 :root {
   /* Sticky header heights for scroll margin calculations */
   --main-nav-height: 76px;      /* Main navigation bar height */
-  --sub-nav-height: 54px;       /* Sub-navigation bar height */
+  --sub-nav-height: 50px;       /* Sub-navigation bar height */
   --sticky-header-height: calc(var(--main-nav-height) + var(--sub-nav-height) + 16px); /* Total sticky height + padding */
 
   --scroll-margin-top: calc(106px + (100vh - 106px) * 0.30); /* Scroll spy: 30% from top of content area (desktop) */

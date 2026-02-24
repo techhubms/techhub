@@ -302,9 +302,28 @@ public class SidebarTocTests : PlaywrightTestBase
         var linkCount = await tocLinks.CountAsync();
         linkCount.Should().BeGreaterThan(0, "TOC should have navigation links");
 
-        // Wait for TOC scroll spy to initialize and activate at least one link
+        // Wait for TOC scroll spy JS to finish initialization after client-side navigation.
+        // Under full Run load (unit + integration tests running), the scroll spy
+        // setup and initial heading scan can take longer than DefaultNavigationTimeout (5s).
+        await Page.WaitForConditionAsync(
+            "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
+            null,
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+
+        // Scroll down so a heading passes above the detection line (30% from top).
+        // The scroll spy intentionally leaves no heading active when at scroll-top=0,
+        // so we must scroll to trigger activation.
+        await Page.Mouse.WheelAsync(0, 400);
+        await Page.WaitForFunctionAsync(
+            "() => window.scrollY > 100",
+            null,
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultNavigationTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+
+        // Wait for at least one TOC link to become active after scrolling.
+        // Uses DefaultPageLoadTimeout (10s) because the scroll spy uses rAF throttling
+        // and scrollend events, which under load can be delayed.
         var activeTocLinks = Page.Locator(".sidebar-toc a.active");
-        await activeTocLinks.First.AssertElementVisibleForNavigationAsync();
+        await BlazorHelpers.AssertElementVisibleAsync(activeTocLinks.First, BlazorHelpers.DefaultPageLoadTimeout);
 
         // Verify at least one TOC link has active class (overview section should be active)
         var activeCount = await activeTocLinks.CountAsync();

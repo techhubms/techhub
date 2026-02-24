@@ -78,13 +78,18 @@ builder.Services.AddScoped<ErrorService>();
 builder.Services.AddSignalR(options =>
 {
     // Increase timeouts to prevent premature disconnections during initialization
-    options.ClientTimeoutInterval = TimeSpan.FromSeconds(60);
+    // and when switching between apps on mobile/tablet
+    options.ClientTimeoutInterval = TimeSpan.FromSeconds(120);
     options.HandshakeTimeout = TimeSpan.FromSeconds(30);
-    options.KeepAliveInterval = TimeSpan.FromSeconds(15);
+    options.KeepAliveInterval = TimeSpan.FromSeconds(30);
     // Increase max message size to handle large prerendered content during hydration
     // Default is 32KB, but with many content items the state can exceed this
     options.MaximumReceiveMessageSize = 256 * 1024; // 256KB
 });
+
+// Increase disconnected circuit retention so mobile users switching apps can reconnect
+builder.Services.AddOptions<Microsoft.AspNetCore.Components.Server.CircuitOptions>()
+    .Configure(options => options.DisconnectedCircuitRetentionPeriod = TimeSpan.FromMinutes(5));
 
 // Configure HTTP client for API with service discovery
 // When running via Aspire, "https+http://api" resolves via service discovery

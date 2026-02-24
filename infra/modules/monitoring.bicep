@@ -2,7 +2,7 @@ param location string
 param appInsightsName string
 param logAnalyticsWorkspaceName string
 
-resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
+resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
   name: logAnalyticsWorkspaceName
   location: location
   properties: {
@@ -10,6 +10,11 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2023-09
       name: 'PerGB2018'
     }
     retentionInDays: 30
+    publicNetworkAccessForIngestion: 'Enabled'
+    publicNetworkAccessForQuery: 'Enabled'
+    workspaceCapping: {
+      dailyQuotaGb: -1
+    }
   }
 }
 
@@ -21,6 +26,9 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     Application_Type: 'web'
     WorkspaceResourceId: logAnalyticsWorkspace.id
     IngestionMode: 'LogAnalytics'
+    RetentionInDays: 90
+    publicNetworkAccessForIngestion: 'Enabled'
+    publicNetworkAccessForQuery: 'Enabled'
   }
 }
 

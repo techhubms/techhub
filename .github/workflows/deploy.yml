@@ -9,349 +9,264 @@ on:
         description: 'Deploy to production (will still deploy to staging first)'
         type: boolean
         default: false
+      force-infra-deploy:
+        description: 'Force infrastructure deployment even if no infra files changed'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
   id-token: write
 
 jobs:
-  build-and-push:
-    name: Build & Push Docker Images
+  # ──────────────────────────────────────────────
+  # Detect whether infra files changed
+  # ──────────────────────────────────────────────
+  detect-changes:
+    name: Detect Changes
     runs-on: ubuntu-latest
     outputs:
-      image-tag: ${{ github.sha }}
-    
+      infra-changed: ${{ steps.result.outputs.infra-changed }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - name: Check for infrastructure changes
+        uses: dorny/paths-filter@v3
+        id: changes
         with:
-          dotnet-version: '9.0.x'
+          filters: |
+            infra:
+              - 'infra/**'
+
+      - name: Determine infra deployment
+        id: result
+        run: |
+          if [[ "${{ steps.changes.outputs.infra }}" == "true" || "${{ inputs.force-infra-deploy }}" == "true" ]]; then
+            echo "infra-changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "infra-changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  # ──────────────────────────────────────────────
+  # Shared infrastructure (ACR) — runs first, only when infra changed
+  # ──────────────────────────────────────────────
+  deploy-shared-infra:
+    name: Deploy Shared Infrastructure
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.infra-changed == 'true'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Login to Azure Container Registry
+      - name: Deploy shared infrastructure
+        shell: pwsh
+        env:
+          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
         run: |
-          az acr login --name ${{ secrets.AZURE_CONTAINER_REGISTRY }}
+          ./scripts/Deploy-Infrastructure.ps1 `
+            -Environment shared `
+            -Mode deploy
 
-      - name: Build and push API image
+  # ──────────────────────────────────────────────
+  # Staging infrastructure — only when infra changed
+  # Runs after shared infra, in parallel with build
+  # ──────────────────────────────────────────────
+  deploy-staging-infra:
+    name: Deploy Staging Infrastructure
+    runs-on: ubuntu-latest
+    needs: [detect-changes, deploy-shared-infra]
+    if: |
+      always() &&
+      needs.detect-changes.outputs.infra-changed == 'true' &&
+      (needs.deploy-shared-infra.result == 'success' || needs.deploy-shared-infra.result == 'skipped')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy staging infrastructure
+        shell: pwsh
+        env:
+          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
         run: |
-          docker build -f src/TechHub.Api/Dockerfile \
-            -t ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-api:${{ github.sha }} \
-            -t ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-api:latest \
-            .
-          docker push ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-api:${{ github.sha }}
-          docker push ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-api:latest
+          ./scripts/Deploy-Infrastructure.ps1 `
+            -Environment staging `
+            -Mode deploy
 
-      - name: Build and push Web image
+  # ──────────────────────────────────────────────
+  # Build & push Docker images
+  # Runs after shared infra (ACR must exist), in parallel with staging infra
+  # ──────────────────────────────────────────────
+  build-and-push:
+    name: Build & Push Docker Images
+    runs-on: ubuntu-latest
+    needs: deploy-shared-infra
+    if: |
+      always() &&
+      (needs.deploy-shared-infra.result == 'success' || needs.deploy-shared-infra.result == 'skipped')
+    outputs:
+      image-tag: ${{ github.sha }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Build and push images
+        shell: pwsh
         run: |
-          docker build -f src/TechHub.Web/Dockerfile \
-            -t ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-web:${{ github.sha }} \
-            -t ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-web:latest \
-            .
-          docker push ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-web:${{ github.sha }}
-          docker push ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-web:latest
+          ./scripts/Deploy-Application.ps1 `
+            -Environment staging `
+            -Tag "${{ github.sha }}" `
+            -RegistryName "${{ secrets.AZURE_CONTAINER_REGISTRY }}" `
+            -SkipDeploy
 
+  # ──────────────────────────────────────────────
+  # Deploy application to staging
+  # Waits for both images and staging infra
+  # ──────────────────────────────────────────────
   deploy-staging:
     name: Deploy to Staging
     runs-on: ubuntu-latest
-    needs: build-and-push
+    needs: [build-and-push, deploy-staging-infra]
+    if: |
+      always() &&
+      needs.build-and-push.result == 'success' &&
+      (needs.deploy-staging-infra.result == 'success' || needs.deploy-staging-infra.result == 'skipped')
     environment:
       name: staging
       url: https://${{ steps.deploy.outputs.web-url }}
-    
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy to Azure Container Apps
+      - name: Deploy to Staging
         id: deploy
+        shell: pwsh
         run: |
-          IMAGE_TAG="${{ needs.build-and-push.outputs.image-tag }}"
-          
-          echo "🚀 Deploying to staging with image tag: $IMAGE_TAG"
-          
-          # Update API container app
-          az containerapp update \
-            --name ca-techhub-api-staging \
-            --resource-group rg-techhub-staging \
-            --image ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-api:$IMAGE_TAG
-          
-          # Update Web container app
-          az containerapp update \
-            --name ca-techhub-web-staging \
-            --resource-group rg-techhub-staging \
-            --image ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-web:$IMAGE_TAG
-          
-          # Get Web app URL
-          WEB_URL=$(az containerapp show \
-            --name ca-techhub-web-staging \
-            --resource-group rg-techhub-staging \
-            --query properties.configuration.ingress.fqdn \
-            -o tsv)
-          
-          echo "web-url=$WEB_URL" >> $GITHUB_OUTPUT
+          ./scripts/Deploy-Application.ps1 `
+            -Environment staging `
+            -Tag "${{ needs.build-and-push.outputs.image-tag }}" `
+            -RegistryName "${{ secrets.AZURE_CONTAINER_REGISTRY }}" `
+            -SkipBuild -SkipPush
 
-      - name: Wait for deployment to stabilize
-        run: |
-          echo "Waiting 30 seconds for deployment to stabilize..."
-          sleep 30
-
-      - name: Run smoke tests
-        run: |
-          API_URL="https://$(az containerapp show \
-            --name ca-techhub-api-staging \
-            --resource-group rg-techhub-staging \
-            --query properties.configuration.ingress.fqdn \
-            -o tsv)"
-          
-          WEB_URL="https://$(az containerapp show \
-            --name ca-techhub-web-staging \
-            --resource-group rg-techhub-staging \
-            --query properties.configuration.ingress.fqdn \
-            -o tsv)"
-          
-          # Test API health endpoint
-          echo "Testing API health endpoint..."
-          curl -f -s "$API_URL/health" || exit 1
-          
-          # Test Web homepage
-          echo "Testing Web homepage..."
-          curl -f -s "$WEB_URL" || exit 1
-          
-          echo "✅ Smoke tests passed!"
+          $webUrl = az containerapp show `
+            --name ca-techhub-web-staging `
+            --resource-group rg-techhub-staging `
+            --query properties.configuration.ingress.fqdn `
+            -o tsv
+          "web-url=$webUrl" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
 
       - name: Deployment summary
         run: |
-          echo "## 🚀 Staging Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "## Staging Deployment Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Environment**: Staging" >> $GITHUB_STEP_SUMMARY
           echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "**Image Tag**: ${{ needs.build-and-push.outputs.image-tag }}" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**URLs**:" >> $GITHUB_STEP_SUMMARY
-          echo "- API: https://$(az containerapp show --name ca-techhub-api-staging --resource-group rg-techhub-staging --query properties.configuration.ingress.fqdn -o tsv)" >> $GITHUB_STEP_SUMMARY
-          echo "- Web: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "✅ All smoke tests passed" >> $GITHUB_STEP_SUMMARY
+          echo "**Infrastructure**: ${{ needs.deploy-staging-infra.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
 
+  # ──────────────────────────────────────────────
+  # Production approval gate
+  # ──────────────────────────────────────────────
+  approve-production:
+    name: Approve Production
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy-to-production == true
+    environment: production
+    steps:
+      - run: echo "Production deployment approved by ${{ github.actor }}"
+
+  # ──────────────────────────────────────────────
+  # Production infrastructure — only when infra changed + approved
+  # ──────────────────────────────────────────────
+  deploy-production-infra:
+    name: Deploy Production Infrastructure
+    runs-on: ubuntu-latest
+    needs: [detect-changes, approve-production]
+    if: needs.detect-changes.outputs.infra-changed == 'true'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy production infrastructure
+        shell: pwsh
+        env:
+          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+        run: |
+          ./scripts/Deploy-Infrastructure.ps1 `
+            -Environment production `
+            -Mode deploy
+
+  # ──────────────────────────────────────────────
+  # Deploy application to production
+  # ──────────────────────────────────────────────
   deploy-production:
     name: Deploy to Production
     runs-on: ubuntu-latest
-    needs: [build-and-push, deploy-staging]
-    # Only run if manually triggered with deploy-to-production=true
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy-to-production == true
-    environment:
-      name: production
-      url: https://${{ steps.deploy.outputs.web-url }}
-    
+    needs: [build-and-push, approve-production, deploy-production-infra]
+    if: |
+      always() &&
+      needs.approve-production.result == 'success' &&
+      needs.build-and-push.result == 'success' &&
+      (needs.deploy-production-infra.result == 'success' || needs.deploy-production-infra.result == 'skipped')
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Validate staging health
-        run: |
-          API_URL="https://$(az containerapp show \
-            --name ca-techhub-api-staging \
-            --resource-group rg-techhub-staging \
-            --query properties.configuration.ingress.fqdn \
-            -o tsv)"
-          
-          WEB_URL="https://$(az containerapp show \
-            --name ca-techhub-web-staging \
-            --resource-group rg-techhub-staging \
-            --query properties.configuration.ingress.fqdn \
-            -o tsv)"
-          
-          echo "🔍 Validating staging environment health before production deployment..."
-          
-          # Test API health
-          if curl -f -s "$API_URL/health" > /dev/null; then
-            echo "✅ API health check passed"
-          else
-            echo "❌ API health check failed"
-            exit 1
-          fi
-          
-          # Test Web
-          if curl -f -s "$WEB_URL" > /dev/null; then
-            echo "✅ Web health check passed"
-          else
-            echo "❌ Web health check failed"
-            exit 1
-          fi
-          
-          echo "✅ Staging environment is healthy"
-
-      - name: Pre-deployment backup
-        run: |
-          echo "📸 Creating snapshot of current production configuration..."
-          
-          # Get current API image
-          API_IMAGE=$(az containerapp show \
-            --name ca-techhub-api-prod \
-            --resource-group rg-techhub-prod \
-            --query properties.template.containers[0].image \
-            -o tsv)
-          
-          # Get current Web image
-          WEB_IMAGE=$(az containerapp show \
-            --name ca-techhub-web-prod \
-            --resource-group rg-techhub-prod \
-            --query properties.template.containers[0].image \
-            -o tsv)
-          
-          echo "Previous images:"
-          echo "  API: $API_IMAGE"
-          echo "  Web: $WEB_IMAGE"
-          
-          # Save for potential rollback
-          echo "api_image=$API_IMAGE" >> $GITHUB_ENV
-          echo "web_image=$WEB_IMAGE" >> $GITHUB_ENV
-
-      - name: Deploy to Azure Container Apps
+      - name: Deploy to Production
         id: deploy
+        shell: pwsh
         run: |
-          IMAGE_TAG="${{ needs.build-and-push.outputs.image-tag }}"
-          
-          echo "🚀 Deploying to production with image tag: $IMAGE_TAG"
-          
-          # Update API container app
-          az containerapp update \
-            --name ca-techhub-api-prod \
-            --resource-group rg-techhub-prod \
-            --image ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-api:$IMAGE_TAG
-          
-          # Update Web container app
-          az containerapp update \
-            --name ca-techhub-web-prod \
-            --resource-group rg-techhub-prod \
-            --image ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/techhub-web:$IMAGE_TAG
-          
-          # Get Web app URL
-          WEB_URL=$(az containerapp show \
-            --name ca-techhub-web-prod \
-            --resource-group rg-techhub-prod \
-            --query properties.configuration.ingress.fqdn \
-            -o tsv)
-          
-          echo "web-url=$WEB_URL" >> $GITHUB_OUTPUT
+          ./scripts/Deploy-Application.ps1 `
+            -Environment production `
+            -Tag "${{ needs.build-and-push.outputs.image-tag }}" `
+            -RegistryName "${{ secrets.AZURE_CONTAINER_REGISTRY }}" `
+            -SkipBuild -SkipPush
 
-      - name: Wait for deployment to stabilize
-        run: |
-          echo "Waiting 60 seconds for production deployment to stabilize..."
-          sleep 60
-
-      - name: Run smoke tests
-        id: smoke-tests
-        run: |
-          API_URL="https://$(az containerapp show \
-            --name ca-techhub-api-prod \
-            --resource-group rg-techhub-prod \
-            --query properties.configuration.ingress.fqdn \
-            -o tsv)"
-          
-          WEB_URL="https://$(az containerapp show \
-            --name ca-techhub-web-prod \
-            --resource-group rg-techhub-prod \
-            --query properties.configuration.ingress.fqdn \
-            -o tsv)"
-          
-          echo "🧪 Running production smoke tests..."
-          
-          # Test API health endpoint
-          echo "Testing API health endpoint..."
-          if ! curl -f -s "$API_URL/health"; then
-            echo "❌ API health check failed"
-            exit 1
-          fi
-          
-          # Test API sections endpoint
-          echo "Testing API sections endpoint..."
-          if ! curl -f -s "$API_URL/api/sections"; then
-            echo "❌ API sections endpoint failed"
-            exit 1
-          fi
-          
-          # Test Web homepage
-          echo "Testing Web homepage..."
-          if ! curl -f -s "$WEB_URL"; then
-            echo "❌ Web homepage failed"
-            exit 1
-          fi
-          
-          echo "✅ All smoke tests passed!"
-
-      - name: Rollback on failure
-        if: failure() && steps.smoke-tests.outcome == 'failure'
-        run: |
-          echo "❌ Smoke tests failed! Rolling back to previous version..."
-          
-          # Rollback API
-          az containerapp update \
-            --name ca-techhub-api-prod \
-            --resource-group rg-techhub-prod \
-            --image ${{ env.api_image }}
-          
-          # Rollback Web
-          az containerapp update \
-            --name ca-techhub-web-prod \
-            --resource-group rg-techhub-prod \
-            --image ${{ env.web_image }}
-          
-          echo "🔄 Rollback complete"
-          exit 1
-
-      - name: Monitor deployment
-        run: |
-          echo "📊 Monitoring deployment for 5 minutes..."
-          
-          for i in {1..10}; do
-            echo "Check $i/10..."
-            
-            API_URL="https://$(az containerapp show \
-              --name ca-techhub-api-prod \
-              --resource-group rg-techhub-prod \
-              --query properties.configuration.ingress.fqdn \
-              -o tsv)"
-            
-            if ! curl -f -s "$API_URL/health" > /dev/null; then
-              echo "❌ Health check failed on attempt $i"
-              exit 1
-            fi
-            
-            sleep 30
-          done
-          
-          echo "✅ Deployment monitoring complete - all checks passed"
+          $webUrl = az containerapp show `
+            --name ca-techhub-web-prod `
+            --resource-group rg-techhub-prod `
+            --query properties.configuration.ingress.fqdn `
+            -o tsv
+          "web-url=$webUrl" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
 
       - name: Deployment summary
         run: |
-          echo "## 🎉 Production Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "## Production Deployment Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Environment**: Production" >> $GITHUB_STEP_SUMMARY
           echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "**Image Tag**: ${{ needs.build-and-push.outputs.image-tag }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Infrastructure**: ${{ needs.deploy-production-infra.result }}" >> $GITHUB_STEP_SUMMARY
           echo "**Deployed By**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Deployment Time**: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**URLs**:" >> $GITHUB_STEP_SUMMARY
-          echo "- API: https://$(az containerapp show --name ca-techhub-api-prod --resource-group rg-techhub-prod --query properties.configuration.ingress.fqdn -o tsv)" >> $GITHUB_STEP_SUMMARY
-          echo "- Web: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Health Checks**: ✅ All passed" >> $GITHUB_STEP_SUMMARY
-          echo "**Monitoring**: ✅ 5-minute stability check passed" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "🎯 **Next Steps**:" >> $GITHUB_STEP_SUMMARY
-          echo "- Monitor Application Insights for errors" >> $GITHUB_STEP_SUMMARY
-          echo "- Check analytics for user traffic" >> $GITHUB_STEP_SUMMARY
-          echo "- Continue monitoring for the next 24 hours" >> $GITHUB_STEP_SUMMARY
+          echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY

@@ -9,18 +9,19 @@
     z-index: 999;
     background: var(--color-bg-default);
     border-bottom: 1px solid var(--color-border-default);
-    margin-bottom: var(--spacing-5);
-    /* Reduced vertical padding since wrapper has 4px for focus outline */
-    padding: calc(var(--spacing-2) - 4px) 0;
-    /* Prevent double borders in mobile: parent provides the border */
-    overflow: hidden;
+    margin-bottom: var(--spacing-4);
+    /* Vertical padding: spacing-1; wrapper adds 4px more for focus outline */
+    padding: var(--spacing-1);
+    /* Allow dropdown menu to overflow on desktop;
+       mobile override below handles the dropdown case */
+    overflow: visible;
 }
 
 /* Empty SubNav for homepage - collapsed, only border visible */
 .sub-nav-empty {
     padding: 0;
     background: transparent;
-    margin-bottom: var(--spacing-5);
+    margin-bottom: var(--spacing-4);
 }
 
 .sub-nav-wrapper {
@@ -32,12 +33,6 @@
     justify-content: center;
     gap: var(--spacing-1);
     flex-wrap: wrap;
-}
-
-.sub-nav-empty {
-    padding: 0;
-    background: transparent;
-    margin-bottom: var(--spacing-5);
 }
 
 /* Mobile dropdown - hidden on desktop */
@@ -118,6 +113,10 @@
         transition: all var(--duration-fast) var(--easing-ease);
     }
 
+    .sub-nav-dropdown-item:last-child {
+        border-bottom: none;
+    }
+
     .sub-nav-dropdown-item:hover {
         background: var(--color-bg-hover-subtle);
         color: var(--color-text-primary);
@@ -127,5 +126,30 @@
     .sub-nav-dropdown-item.active {
         color: var(--color-purple-bright);
         font-weight: var(--font-weight-semibold);
+    }
+}
+
+/* Homepage SubNav: collapse on desktop (like sub-nav-empty),
+   only show the mobile dropdown on mobile */
+.sub-nav-homepage {
+    padding: 0;
+    background: transparent;
+}
+
+.sub-nav-homepage .sub-nav-wrapper {
+    display: none;
+}
+
+.sub-nav-homepage .sub-nav-mobile {
+    display: none;
+}
+
+@media (max-width: 1288px) {
+    .sub-nav-homepage {
+        padding: 0;
+    }
+
+    .sub-nav-homepage .sub-nav-mobile {
+        display: block;
     }
 }

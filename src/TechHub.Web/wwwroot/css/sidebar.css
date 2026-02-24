@@ -27,20 +27,25 @@
 
 /* Spacing between sidebar sections */
 .sidebar > * + * {
-  margin-top: var(--spacing-4);
+  margin-top: var(--spacing-2);
 }
 
 /* Spacing within a panel (between consecutive sidebar sections).
    Works for both desktop (display:contents passes through to children)
    and mobile (display:block when active). */
 .sidebar-panel > * + * {
-  margin-top: var(--spacing-4);
+  margin-top: var(--spacing-2);
 }
 
 /* Spacing between consecutive panels on desktop.
    Since panels use display:contents, margin goes on the first child of non-first panels. */
 .sidebar-panel + .sidebar-panel > :first-child {
-  margin-top: var(--spacing-4);
+  margin-top: var(--spacing-2);
+}
+
+/* Spacing between latest roundup and the first panel on desktop */
+.latest-roundup + .sidebar-panel > :first-child {
+  margin-top: var(--spacing-2);
 }
 
 /* ============================================================================
@@ -174,6 +179,21 @@
     margin: 0 0 var(--spacing-2) 0;
   }
 
+  /* Toolbar uses flex + order so buttons appear before always-visible content */
+  .sidebar-toolbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-toolbar-buttons {
+    order: -1;
+  }
+
+  /* Spacing between toolbar buttons and always-visible content below */
+  .latest-roundup {
+    margin-top: var(--spacing-2);
+  }
+
   /* Toolbar button bar */
   .sidebar-toolbar-buttons {
     display: flex;
@@ -235,6 +255,11 @@
   .sidebar-panel-active {
     display: block;
     margin-top: var(--spacing-2);
+  }
+
+  /* Extra spacing for non-first active panels (e.g. Tags after Latest Roundup) */
+  .sidebar-panel + .sidebar-panel.sidebar-panel-active {
+    margin-top: var(--spacing-4);
   }
 
   /* Reset inter-panel spacing on mobile (only one visible at a time) */

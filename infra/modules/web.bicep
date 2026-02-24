@@ -2,6 +2,7 @@ param location string
 param containerAppName string
 param containerAppsEnvironmentId string
 param containerRegistryName string
+param acrPullIdentityId string
 param imageTag string
 param apiBaseUrl string
 param appInsightsConnectionString string
@@ -11,27 +12,32 @@ var imageReference = imageTag == 'initial'
   ? 'mcr.microsoft.com/dotnet/samples:aspnetapp' 
   : '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 
-resource web 'Microsoft.App/containerApps@2024-03-01' = {
+resource web 'Microsoft.App/containerApps@2025-01-01' = {
   name: containerAppName
   location: location
   identity: {
-    type: 'SystemAssigned'
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '${acrPullIdentityId}': {}
+    }
   }
   properties: {
     managedEnvironmentId: containerAppsEnvironmentId
     configuration: {
+      activeRevisionsMode: 'Single'
       ingress: {
         external: true
+        allowInsecure: false
         targetPort: 8080
         transport: 'http'
         stickySessions: {
           affinity: 'sticky'
         }
       }
-      registries: imageTag == 'initial' ? [] : [
+      registries: [
         {
           server: '${containerRegistryName}.azurecr.io'
-          identity: 'system'
+          identity: acrPullIdentityId
         }
       ]
     }
@@ -50,10 +56,6 @@ resource web 'Microsoft.App/containerApps@2024-03-01' = {
               value: 'Production'
             }
             {
-              name: 'TECHHUB_TMP'
-              value: '/tmp/techhub'
-            }
-            {
               name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
               value: appInsightsConnectionString
             }
@@ -68,6 +70,10 @@ resource web 'Microsoft.App/containerApps@2024-03-01' = {
             {
               name: 'ApiBaseUrl'
               value: 'https://${apiBaseUrl}'
+            }
+            {
+              name: 'TECHHUB_TMP'
+              value: '/tmp/techhub'
             }
           ]
         }

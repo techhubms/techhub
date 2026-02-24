@@ -184,7 +184,20 @@
 }
 
 /* Responsive */
+/* Mobile/desktop title toggle - shows "Home" on mobile for homepage */
+.banner-title-mobile {
+    display: none;
+}
+
 @media (max-width: 1288px) {
+    .banner-title-desktop {
+        display: none;
+    }
+
+    .banner-title-mobile {
+        display: inline;
+    }
+
     .section-banner {
         height: 170px;
     }
