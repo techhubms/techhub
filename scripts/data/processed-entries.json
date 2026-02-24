@@ -27034,5 +27034,11 @@
     "canonical_url": "https://github.blog/changelog/2026-02-24-repository-dashboard-is-now-generally-available",
     "reason": "Succesfully added: Assigned the DevOps category because the content focuses on GitHub repository management, workflow optimization, and collaboration tools, which fits DevOps inclusion rules (DevOps rules 2, 3, 9, 11). No Azure, Coding, AI, GitHub Copilot, ML, or Security topics are present. The content is technical, focuses on optimizing developer workflows, and describes new features relevant to team collaboration and codebase organization. None of the generic exclusion rules apply: the announcement is technical, professional, and directly related to practitioner workflows.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-02-24 22:08:39 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on development workflow optimizations, automation, and dependency management with GitHub tools, directly aligning with DevOps rule 2, 5, and 6. Did not assign AI, Azure, Coding, ML, or Security because the article does not discuss those topics directly. The tag selection draws from technologies, configuration, and workflow practice terms mentioned in the content.",
+    "canonical_url": "https://github.blog/changelog/2026-02-24-dependabot-can-group-updates-by-dependency-name-across-multiple-directories",
+    "collection": "news"
   }
 ]
