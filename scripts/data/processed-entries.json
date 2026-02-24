@@ -26902,5 +26902,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/you-can-host-openclaw-on-azure-app-service-here-s-how/ba-p/4496563",
     "reason": "Succesfully added: Included the AI category because the content focuses on deploying OpenClaw (an AI assistant) and integrates Azure OpenAI—which provides LLM capabilities—matching AI inclusion rule 1. Included the Azure category because the core of the guide is deploying an always-on app to Azure App Service, using Azure-specific storage, identity, security, and monitoring (Azure inclusion rules 1–6). Did not assign ML or Coding because while the solution uses AI, it focuses on integration, deployment, and architecture rather than building models or significant custom code. Did not include DevOps as the guide references deployment and best practices, but the focus is not CI/CD, infrastructure as code, or release management. Did not include Security as a main category; while security practices are discussed, they are part of Azure's built-in features and not the primary subject. The content is technical, solution-focused, well over all minimum length thresholds, and squarely targets practitioners deploying Microsoft AI and cloud services.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content centers on GitHub Enterprise tools and configuration for managing access, roles, and compliance, which are core dimensions of DevOps (DevOps inclusion rule 11: GitHub content; rule 1: DevOps services/tools; rule 3: team collaboration/organization; rule 4: best practices). Did not assign other categories as there is no focus on coding, AI, ML, Azure, or security-specific implementation details.",
+    "timestamp": "2026-02-24 03:50:15 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-23-enterprise-defined-custom-organization-roles-are-generally-available",
+    "collection": "news"
   }
 ]

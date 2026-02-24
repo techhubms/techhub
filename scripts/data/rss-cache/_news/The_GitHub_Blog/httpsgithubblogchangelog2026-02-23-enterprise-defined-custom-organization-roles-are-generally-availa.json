@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-02-24 03:48:28",
+  "PubDate": "2026-02-24T02:33:02+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "Title": "Enterprise-defined custom organization roles are generally available",
+  "EnhancedContent": "Managing role-based access standards across many organizations can be challenging, whether administration is centralized or decentralized in your enterprise. Enterprise administrators can now create a set of custom organization roles available across all organizations in the enterprise. The core set of roles you use in your day-to-day work can be standardized, supporting compliance requirements and making movement across organizations more consistent. Up to 20 of these enterprise-defined organization custom roles can be made available at once.\n\nThese roles can be edited only by an authorized enterprise administrator and can be assigned by an organization administrator in the organization settings or through the [organization role assignment API](https://docs.github.com/enterprise-cloud@latest/rest/orgs/organization-roles#assign-an-organization-role-to-a-team). Enterprise and organization owners use the same set of organization and repository permissions to create a role, and there are no functional differences between roles created at the enterprise level versus the organization level.\n\nLearn more about [creating enterprise-defined custom organization roles](https://docs.github.com/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-roles-in-your-enterprise/create-custom-roles#creating-organization-custom-roles) and share your feedback and thoughts in the [GitHub Community Enterprise forum](https://github.com/orgs/community/discussions/categories/enterprise).",
+  "Description": "Managing role-based access standards across many organizations can be challenging, whether administration is centralized or decentralized in your enterprise. Enterprise administrators can now create a set of custom organization roles…\n\nThe post [Enterprise-defined custom organization roles are generally available](https://github.blog/changelog/2026-02-23-enterprise-defined-custom-organization-roles-are-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "enterprise management tools",
+    "Release"
+  ],
+  "Link": "https://github.blog/changelog/2026-02-23-enterprise-defined-custom-organization-roles-are-generally-available",
+  "Author": "Allison"
+}
