@@ -12507,5 +12507,17 @@
     "timestamp": "2026-02-25 06:21:51 +00:00",
     "reason": "No categories found: No categories assigned because the content is a submission announcement and call to action for a community event (Agents League Week 2), with no substantive technical details, tutorial, or architecture. There is no content field provided, and the description only contains logistical instructions about project submission, not technical information, guidance, or implementation details. According to the generic exclusion rules, announcements or event logistics without technical depth are excluded.",
     "canonical_url": "https://www.youtube.com/shorts/NR65tweIeGk"
+  },
+  {
+    "timestamp": "2026-02-25 14:20:44 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/ai-dispatch-system-munich/",
+    "reason": "No categories found: All available content is either titles, high-level topic mentions, or links with no substantive technical details about Microsoft technologies or specific AI implementation. The body consists only of placeholder text, a header, and metadata. There is no technical description, tutorial, or hands-on insight. This fails the requirement for substantive, practitioner-focused technical content as required by the workflow. Consequently, no categories are assigned."
+  },
+  {
+    "timestamp": "2026-02-25 14:21:45 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/pPJuPBStHpo",
+    "reason": "No categories found: Content excluded due to insufficient technical substance—this is an announcement/highlight video for a creative application competition (Agents League) with only event promotion and registration information, but no substantive discussion of Microsoft technology, technical implementation, or development guidance. No details on Azure, coding, DevOps, or other relevant technical areas are provided. This matches the 'Sales Pitches/Promotional content without educational value' generic exclusion rule. No categories assigned."
   }
 ]

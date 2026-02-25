@@ -1,0 +1,14 @@
+{
+  "Link": "https://www.youtube.com/watch?v=vkMLCIaoADI",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "FeedLevelAuthor": "GitHub",
+  "Description": "GitHub Copilot ya no vive solo en el editor. También está en la terminal.\n\nEn este stream vamos a empezar desde cero con el GitHub Copilot CLI: qué es, cómo funciona, y cómo puedes usarlo para convertir instrucciones en comandos reales, entender repositorios más rápido y automatizar tareas sin salir de tu flujo.\n\nVamos a cubrir:\n\n\\* Qué es el GitHub Copilot CLI y cómo se diferencia del Copilot del editor \\* Cómo instalarlo y configurarlo \\* Generar comandos desde lenguaje natural \\* Explicar comandos existentes y entender scripts desconocidos \\* Usarlo para explorar repositorios y acelerar tareas comunes \\* Casos reales de cómo lo uso en mi día a día\n\nSi trabajas en la terminal, esto cambia completamente la velocidad a la que puedes construir y entender sistemas.\n\nJueves de Quack es un espacio para aprender construyendo. Sin slides. Solo herramientas reales y workflows reales.\n\nNos vemos en vivo. 🦆",
+  "Tags": [],
+  "ProcessedDate": "2026-02-25 14:19:45",
+  "Author": "GitHub",
+  "EnhancedContent": null,
+  "PubDate": "2026-02-25T13:55:14+00:00",
+  "FeedName": "GitHub YouTube",
+  "Title": "🐤 Jueves de Quack - Intro al Copilot CLI 🐤"
+}

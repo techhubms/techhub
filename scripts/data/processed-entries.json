@@ -27094,5 +27094,17 @@
     "reason": "Succesfully added: Assigned the Azure category because the content centers on Microsoft Azure's ExpressRoute Gateway, specifically covering the new scalable SKU, scaling mechanisms, pricing, and migration—all governed by Azure-specific services and features (Azure inclusion rule 1, 4, 5). No other category was applied as the primary focus is networking infrastructure within Azure, with no AI, ML, DevOps, Security, or Coding-related topics detailed in the description or tags. No generic exclusion rules were triggered, as the content is technical, instructional, in English, and platform development-focused.",
     "timestamp": "2026-02-25 12:09:42 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-02-25 14:21:28 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=vkMLCIaoADI",
+    "reason": "Succesfully added: The content is a video introduction to the GitHub Copilot CLI. The description discusses using Copilot’s AI capabilities in the terminal, installing it, using natural language to generate commands, and understanding code/scripts—all core use cases for Copilot CLI. According to the inclusion rules, GitHub Copilot-specific content always receives both 'GitHub Copilot' and 'AI' categories. No other categories qualify, as the focus is not on coding in a programming language or broader DevOps practices but specifically on Copilot CLI’s applied AI functionality at the command-line. The language is primarily Spanish, but the content is explained in English terms for categorization, as the title/type suggest an international tech audience."
+  },
+  {
+    "timestamp": "2026-02-25 14:22:09 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/stop-writing-plumbing-use-the-new-logic-apps-mcp-server-wizard/ba-p/4496702",
+    "reason": "Succesfully added: Assigned 'Azure' because the entire article is about Azure Logic Apps Standard (Azure rule 1, 4, 5). Included 'AI' because the new configuration is positioned as a bridge for AI agents integrating with Logic Apps using MCP servers, enabling discoverable tools for agentic connectivity (AI rule 1, 4, 5). Included 'DevOps' as the content covers automating exposure and management of workflows, API management, and authentication practices essential for DevOps pipelines (DevOps rules 1, 5, 9). Did not apply Coding or ML because the primary focus is workflow configuration and automation, not code-level logic or machine learning engineering."
   }
 ]
