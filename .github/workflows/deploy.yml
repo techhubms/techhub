@@ -67,8 +67,6 @@ jobs:
 
       - name: Deploy shared infrastructure
         shell: pwsh
-        env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
         run: |
           ./scripts/Deploy-Infrastructure.ps1 `
             -Environment shared `
@@ -98,7 +96,7 @@ jobs:
       - name: Deploy staging infrastructure
         shell: pwsh
         env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ACC_PW }}
         run: |
           ./scripts/Deploy-Infrastructure.ps1 `
             -Environment staging `
@@ -217,7 +215,7 @@ jobs:
       - name: Deploy production infrastructure
         shell: pwsh
         env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_PROD_PW }}
         run: |
           ./scripts/Deploy-Infrastructure.ps1 `
             -Environment production `
