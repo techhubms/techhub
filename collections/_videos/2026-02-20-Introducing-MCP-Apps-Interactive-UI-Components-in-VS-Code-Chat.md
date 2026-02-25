@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Introducing MCP Apps: Interactive UI Components in VS Code Chat"
-description: "This video showcases new features in Visual Studio Code's Copilot Chat, focusing on MCP Apps that enable tool calls to return interactive UI components such as dashboards, forms, and visualizations directly in the chat interface. It covers the official MCP extension's capabilities for richer human-agent collaboration, alongside the latest updates in VS Code related to Copilot and MCP."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_g29UQjIAeI"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=_g29UQjIAeI
+title: 'Introducing MCP Apps: Interactive UI Components in VS Code Chat'
+author: Visual Studio Code
+primary_section: ai
+feed_name: Visual Studio Code YouTube
 date: 2026-02-20 12:00:57 +00:00
-permalink: "/2026-02-20-Introducing-MCP-Apps-Interactive-UI-Components-in-VS-Code-Chat.html"
-categories: ["AI"]
-tags: ["AI", "AI Integration", "Copilot Chat", "Dashboards", "Developer Tools", "Human Agent Collaboration", "Interactive UI", "MCP Apps", "MCP Extension", "Videos", "Visualizations", "VS Code", "VS Code Updates", "Workflows"]
-tags_normalized: ["ai", "ai integration", "copilot chat", "dashboards", "developer tools", "human agent collaboration", "interactive ui", "mcp apps", "mcp extension", "videos", "visualizations", "vs code", "vs code updates", "workflows"]
+tags:
+- AI
+- AI Integration
+- Copilot Chat
+- Dashboards
+- Developer Tools
+- Human Agent Collaboration
+- Interactive UI
+- MCP Apps
+- MCP Extension
+- Videos
+- Visualizations
+- VS Code
+- VS Code Updates
+- Workflows
+section_names:
+- ai
 ---
-
 Visual Studio Code demonstrates how MCP Apps bring interactive UI components to Copilot Chat, improving collaboration. This update, presented by the VS Code team, explores the new MCP extension and the broader advancements in the VS Code environment.<!--excerpt_end-->
 
 {% youtube _g29UQjIAeI %}

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Transforming Telecom Sales with Agentic AI and Copilot Studio"
-description: "This overview explores how agentic AI—intelligent, autonomous agents enabled by Microsoft Copilot Studio—can modernize revenue generation for telecommunications providers. The content explains integration approaches, benefits such as faster deal closure, and architectures aligning agentic AI with existing business systems, all within the broader cloud and edge ecosystem."
-author: "rodekirk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/accelerating-revenue-in-telecommunications-through-agentic-sales/ba-p/4496523"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/accelerating-revenue-in-telecommunications-through-agentic-sales/ba-p/4496523
+title: Transforming Telecom Sales with Agentic AI and Copilot Studio
+author: rodekirk
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-23 19:48:39 +00:00
-permalink: "/2026-02-23-Transforming-Telecom-Sales-with-Agentic-AI-and-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["5G Monetization", "Adaptive Agents", "Agentic AI", "AI", "AI Transformation", "Azure Industry Solutions", "Cloud Innovation", "Community", "Copilot Studio", "CRM Integration", "Customer Engagement", "Digital Transformation", "Etom", "Microsoft AI", "Sales Automation", "Telecommunications", "TM Forum ODA", "Workflow Orchestration"]
-tags_normalized: ["5g monetization", "adaptive agents", "agentic ai", "ai", "ai transformation", "azure industry solutions", "cloud innovation", "community", "copilot studio", "crm integration", "customer engagement", "digital transformation", "etom", "microsoft ai", "sales automation", "telecommunications", "tm forum oda", "workflow orchestration"]
+tags:
+- 5G Monetization
+- Adaptive Agents
+- Agentic AI
+- AI
+- AI Transformation
+- Azure Industry Solutions
+- Cloud Innovation
+- Community
+- Copilot Studio
+- CRM Integration
+- Customer Engagement
+- Digital Transformation
+- Etom
+- Microsoft AI
+- Sales Automation
+- Telecommunications
+- TM Forum ODA
+- Workflow Orchestration
+section_names:
+- ai
 ---
-
 rodekirk outlines how agentic AI—powered by Copilot Studio—can help telecom providers overhaul sales processes, enabling smarter automation, adaptive customer engagement, and cloud-driven innovation.<!--excerpt_end-->
 
 # Transforming Telecom Sales with Agentic AI and Copilot Studio

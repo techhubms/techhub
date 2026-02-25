@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building a Custom SSL Certificate Monitor with Azure SRE Agent and Python"
-description: "This tutorial guides you through creating a custom Python tool in Azure SRE Agent for monitoring SSL certificate expirations. You'll build the CheckSSLCertificateExpiry tool, wrap it into a reusable skill for comprehensive certificate auditing across multiple domains, and deploy it as a production-ready solution. By the end, you’ll have a proactive monitoring workflow that can prevent costly outages caused by expired SSL certificates."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-a-custom-ssl-certificate-monitor-with-azure-sre-agent-from/ba-p/4495832"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-a-custom-ssl-certificate-monitor-with-azure-sre-agent-from/ba-p/4495832
+title: Building a Custom SSL Certificate Monitor with Azure SRE Agent and Python
+author: dbandaru
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-02-20 00:47:40 +00:00
-permalink: "/2026-02-20-Building-a-Custom-SSL-Certificate-Monitor-with-Azure-SRE-Agent-and-Python.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Azure", "Azure Automation", "Azure SRE Agent", "Certificate Expiry", "Cloud Monitoring", "Coding", "Community", "Custom Agent", "DevOps", "DevOps Automation", "Incident Response", "ITOps", "Python", "Python Tool", "Risk Classification", "Security", "Security Operations", "SSL Certificate", "SSL Monitoring", "TLS"]
-tags_normalized: ["azure", "azure automation", "azure sre agent", "certificate expiry", "cloud monitoring", "coding", "community", "custom agent", "devops", "devops automation", "incident response", "itops", "python", "python tool", "risk classification", "security", "security operations", "ssl certificate", "ssl monitoring", "tls"]
+tags:
+- Azure
+- Azure Automation
+- Azure SRE Agent
+- Certificate Expiry
+- Cloud Monitoring
+- Community
+- Custom Agent
+- DevOps
+- DevOps Automation
+- Incident Response
+- ITOps
+- Python
+- Python Tool
+- Risk Classification
+- Security
+- Security Operations
+- SSL Certificate
+- SSL Monitoring
+- TLS
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- security
 ---
-
 dbandaru demonstrates how to develop and deploy a Python-based SSL certificate monitoring tool within Azure SRE Agent, empowering teams to automate certificate health audits and avert service disruptions due to expired certificates.<!--excerpt_end-->
 
 # Building a Custom SSL Certificate Monitor with Azure SRE Agent and Python

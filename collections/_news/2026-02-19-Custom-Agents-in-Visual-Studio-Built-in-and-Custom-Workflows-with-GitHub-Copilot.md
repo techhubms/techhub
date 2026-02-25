@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Custom Agents in Visual Studio: Built-in and Custom Workflows with GitHub Copilot"
-description: "This article explores how Visual Studio now supports both built-in and custom agents, extending GitHub Copilot’s capabilities. It details preset agents for critical developer tasks—like debugging, profiling, and testing—and introduces a preview framework for teams to craft their own workflow-specific agents. Learn how to connect agents to external knowledge sources, configure them in your project, and leverage community-built configurations for rapid adoption."
-author: "Rhea Patel, Kelly Fam"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/custom-agents-in-visual-studio-built-in-and-build-your-own-agents/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/custom-agents-in-visual-studio-built-in-and-build-your-own-agents/
+title: 'Custom Agents in Visual Studio: Built-in and Custom Workflows with GitHub Copilot'
+author: Rhea Patel, Kelly Fam
+primary_section: github-copilot
+feed_name: Microsoft VisualStudio Blog
 date: 2026-02-19 21:02:13 +00:00
-permalink: "/2026-02-19-Custom-Agents-in-Visual-Studio-Built-in-and-Custom-Workflows-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agents", "AI", "C++", "Code Review", "Coding", "Community Configurations", "Copilot", "Custom Agents", "Custom Workflows", "Debugger", "Design Systems", "Feature Planning", "GitHub Copilot", "IDE Tooling", "MCP", "News", "Profiler", "Testing", "VS", "Workspace Awareness"]
-tags_normalized: ["dotnet", "agents", "ai", "cplusplus", "code review", "coding", "community configurations", "copilot", "custom agents", "custom workflows", "debugger", "design systems", "feature planning", "github copilot", "ide tooling", "mcp", "news", "profiler", "testing", "vs", "workspace awareness"]
+tags:
+- .NET
+- Agents
+- AI
+- C++
+- Code Review
+- Community Configurations
+- Copilot
+- Custom Agents
+- Custom Workflows
+- Debugger
+- Design Systems
+- Feature Planning
+- GitHub Copilot
+- IDE Tooling
+- MCP
+- News
+- Profiler
+- Testing
+- VS
+- Workspace Awareness
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Rhea Patel and Kelly Fam introduce new Visual Studio agent features, showing how developers can harness built-in and custom agents powered by GitHub Copilot for tailored coding workflows.<!--excerpt_end-->
 
 # Custom Agents in Visual Studio: Built-in and Custom Workflows with GitHub Copilot

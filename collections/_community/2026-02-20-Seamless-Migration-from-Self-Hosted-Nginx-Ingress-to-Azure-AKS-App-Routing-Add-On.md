@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Seamless Migration from Self-Hosted Nginx Ingress to Azure AKS App Routing Add-On"
-description: "This detailed guide by samcogan walks through migrating Kubernetes workloads from a Bring-Your-Own (BYO) Nginx Ingress controller to the Microsoft Azure Kubernetes Service (AKS) App Routing add-on. It explains the reasons for migration due to upcoming end-of-support, how to run controllers in parallel for zero downtime, practical migration steps including DNS and resource management, and advice for long-term planning with AKS as Microsoft evolves toward Istio and Gateway API solutions."
-author: "samcogan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/seamless-migrations-from-self-hosted-nginx-ingress-to-the-aks/ba-p/4495630"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/seamless-migrations-from-self-hosted-nginx-ingress-to-the-aks/ba-p/4495630
+title: Seamless Migration from Self-Hosted Nginx Ingress to Azure AKS App Routing Add-On
+author: samcogan
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-20 09:37:43 +00:00
-permalink: "/2026-02-20-Seamless-Migration-from-Self-Hosted-Nginx-Ingress-to-Azure-AKS-App-Routing-Add-On.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "App Gateway For Containers", "App Routing Add On", "Azure", "Azure Key Vault", "Cert Manager", "Community", "Container Security", "DevOps", "DNS Management", "Gateway API", "Helm", "Ingress Migration", "Istio", "Kubernetes", "Kubernetes Networking", "Nginx Ingress", "Security", "Zero Downtime Deployment"]
-tags_normalized: ["aks", "app gateway for containers", "app routing add on", "azure", "azure key vault", "cert manager", "community", "container security", "devops", "dns management", "gateway api", "helm", "ingress migration", "istio", "kubernetes", "kubernetes networking", "nginx ingress", "security", "zero downtime deployment"]
+tags:
+- AKS
+- App Gateway For Containers
+- App Routing Add On
+- Azure
+- Azure Key Vault
+- Cert Manager
+- Community
+- Container Security
+- DevOps
+- DNS Management
+- Gateway API
+- Helm
+- Ingress Migration
+- Istio
+- Kubernetes
+- Kubernetes Networking
+- Nginx Ingress
+- Security
+- Zero Downtime Deployment
+section_names:
+- azure
+- devops
+- security
 ---
-
 samcogan provides a practical migration guide for moving from a standalone Nginx Ingress controller to the Azure AKS App Routing add-on, outlining zero-downtime techniques and actionable advice for long-term Kubernetes ingress strategy.<!--excerpt_end-->
 
 # Seamless Migration from Self-Hosted Nginx Ingress to Azure AKS App Routing Add-On

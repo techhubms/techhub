@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Understanding Model Context Protocol (MCP)"
-description: "This session, led by Microsoft Developer, introduces the Model Context Protocol (MCP), focusing on its role in connecting external data and tools to large language models. Attendees will learn about MCP's architecture, its impact on precise model tuning, contextual reuse, and secure, effective delegation in LLM projects. Aimed at developers and technical leads, the talk helps assess MCP’s fit for various large language model initiatives."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=f2Si9ykUiZ4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=f2Si9ykUiZ4
+title: Understanding Model Context Protocol (MCP)
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-24 17:01:07 +00:00
-permalink: "/2026-02-24-Understanding-Model-Context-Protocol-MCP.html"
-categories: ["AI"]
-tags: ["AI", "AI Integration", "Cloud Computing", "Contextual Reuse", "Dev", "Development", "External Data Integration", "Large Language Models", "LLM", "MCP", "Microsoft", "Model Delegation", "Model Tuning", "Protocol Architecture", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai integration", "cloud computing", "contextual reuse", "dev", "development", "external data integration", "large language models", "llm", "mcp", "microsoft", "model delegation", "model tuning", "protocol architecture", "tech", "technology", "videos"]
+tags:
+- AI
+- AI Integration
+- Cloud Computing
+- Contextual Reuse
+- Dev
+- Development
+- External Data Integration
+- Large Language Models
+- LLM
+- MCP
+- Microsoft
+- Model Delegation
+- Model Tuning
+- Protocol Architecture
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
 ---
-
 Microsoft Developer delivers a focused overview of the Model Context Protocol (MCP), exploring its architecture and use cases for developers working with large language models.<!--excerpt_end-->
 
 {% youtube f2Si9ykUiZ4 %}

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "VS Code Live: Agent Sessions Day - Keynote"
-description: "This keynote session demonstrates the latest advancements in Visual Studio Code for multi-agent development. Attendees will learn how the platform now enables developers to delegate, orchestrate, and collaborate with AI agents across various local and cloud environments. The session covers key features for managing multiple AI agents, as well as integration and security improvements."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2-Q_sdJ5H2c"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=2-Q_sdJ5H2c
+title: 'VS Code Live: Agent Sessions Day - Keynote'
+author: Visual Studio Code
+primary_section: ai
+feed_name: Visual Studio Code YouTube
 date: 2026-02-20 09:00:03 +00:00
-permalink: "/2026-02-20-VS-Code-Live-Agent-Sessions-Day-Keynote.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "AI Integration", "Background Tasks", "Cloud Development", "Code Collaboration", "Coding", "Developer Tools", "IDE", "Multi Agent Development", "Orchestration", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agents", "ai integration", "background tasks", "cloud development", "code collaboration", "coding", "developer tools", "ide", "multi agent development", "orchestration", "videos", "vs code"]
+tags:
+- AI
+- AI Agents
+- AI Integration
+- Background Tasks
+- Cloud Development
+- Code Collaboration
+- Developer Tools
+- IDE
+- Multi Agent Development
+- Orchestration
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Visual Studio Code's keynote, presented by the VS Code team, explores new features for AI agent collaboration in development environments, demonstrating orchestration and security updates for multi-agent workflows.<!--excerpt_end-->
 
 {% youtube 2-Q_sdJ5H2c %}

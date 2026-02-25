@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Evolving the Network Operations Agent Framework: Microsoft’s Blueprint for Autonomous Telco Operations"
-description: "This in-depth community article by rickliev explores the evolution of Microsoft's Network Operations Agent (NOA) Framework, highlighting major advances in agentic AI for telecom, integration with Azure, Microsoft Foundry, Teams, and robust governance. The post details NOA’s architecture, components (such as Agent Framework, Foundry IQ, and Fabric IQ), real-world industry impact, and best practices for partners building autonomous network solutions. Emphasis is placed on agentic workflows, orchestrated AI governance, secure data access, and future-proof extensibility—all tailored to telecom operators striving for scalable, self-healing networks."
-author: "rickliev"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/evolving-the-network-operations-agent-framework-driving-the-next/ba-p/4496607"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/evolving-the-network-operations-agent-framework-driving-the-next/ba-p/4496607
+title: 'Evolving the Network Operations Agent Framework: Microsoft’s Blueprint for Autonomous Telco Operations'
+author: rickliev
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-24 12:28:38 +00:00
-permalink: "/2026-02-24-Evolving-the-Network-Operations-Agent-Framework-Microsofts-Blueprint-for-Autonomous-Telco-Operations.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "Azure", "Community", "DevOps", "Eventhouse", "Fabric IQ", "Foundry IQ", "Hybrid Cloud", "Incident Management", "Microsoft Agent Framework", "Microsoft Foundry", "Multi Agent Systems", "Network Operations Agent", "NOA Framework", "NOC Automation", "Operational Governance", "Responsible AI", "Security", "Telco Compliance", "Telecommunications", "TM Forum Open APIs"]
-tags_normalized: ["agentic ai", "ai", "azure", "community", "devops", "eventhouse", "fabric iq", "foundry iq", "hybrid cloud", "incident management", "microsoft agent framework", "microsoft foundry", "multi agent systems", "network operations agent", "noa framework", "noc automation", "operational governance", "responsible ai", "security", "telco compliance", "telecommunications", "tm forum open apis"]
+tags:
+- Agentic AI
+- AI
+- Azure
+- Community
+- DevOps
+- Eventhouse
+- Fabric IQ
+- Foundry IQ
+- Hybrid Cloud
+- Incident Management
+- Microsoft Agent Framework
+- Microsoft Foundry
+- Multi Agent Systems
+- Network Operations Agent
+- NOA Framework
+- NOC Automation
+- Operational Governance
+- Responsible AI
+- Security
+- Telco Compliance
+- Telecommunications
+- TM Forum Open APIs
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 rickliev presents a detailed breakdown of the latest evolution in Microsoft’s Network Operations Agent Framework, showcasing how agentic AI, Azure, and robust governance drive real-world autonomous network operations for the telecommunications industry.<!--excerpt_end-->
 
 # Evolving the Network Operations Agent Framework: Driving the Next Wave of Autonomous Networks

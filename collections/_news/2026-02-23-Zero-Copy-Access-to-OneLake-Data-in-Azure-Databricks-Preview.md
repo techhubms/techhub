@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Zero-Copy Access to OneLake Data in Azure Databricks (Preview)"
-description: "This article explains the introduction of OneLake catalog federation (Beta) in Azure Databricks Lakehouse Federation, enabling Unity Catalog in Azure Databricks to query Microsoft Fabric tables stored in OneLake directly and without data duplication. The integration streamlines multi-engine analytics, centralizes truth, reduces complexity, and allows for frictionless data sharing and querying between Microsoft Fabric and Azure Databricks."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/zero-copy-access-to-onelake-data-in-azure-databricks-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/zero-copy-access-to-onelake-data-in-azure-databricks-preview/
+title: Zero-Copy Access to OneLake Data in Azure Databricks (Preview)
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-23 12:00:00 +00:00
-permalink: "/2026-02-23-Zero-Copy-Access-to-OneLake-Data-in-Azure-Databricks-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Databricks", "Beta Features", "Catalog Federation", "Data Governance", "Data Integration", "Data Lakehouse", "Fabric Tables", "Lakehouse Federation", "Metadata Sync", "Microsoft Fabric", "ML", "News", "OneLake", "SQL Analytics", "Unity Catalog", "Zero Copy Query"]
-tags_normalized: ["azure", "azure databricks", "beta features", "catalog federation", "data governance", "data integration", "data lakehouse", "fabric tables", "lakehouse federation", "metadata sync", "microsoft fabric", "ml", "news", "onelake", "sql analytics", "unity catalog", "zero copy query"]
+tags:
+- Azure
+- Azure Databricks
+- Beta Features
+- Catalog Federation
+- Data Governance
+- Data Integration
+- Data Lakehouse
+- Fabric Tables
+- Lakehouse Federation
+- Metadata Sync
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- SQL Analytics
+- Unity Catalog
+- Zero Copy Query
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog presents an overview of OneLake catalog federation (Beta) for Azure Databricks, showing how teams can query Fabric tables in OneLake without making extra data copies.<!--excerpt_end-->
 
 # Zero-Copy Access to OneLake Data in Azure Databricks (Preview)

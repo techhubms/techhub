@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Under the Hood: An Introduction to the Native Execution Engine for Microsoft Fabric"
-description: "This post from the Microsoft Fabric Blog explores how the Native Execution Engine brings high-performance, vectorized C++ execution to Spark workloads in Microsoft Fabric. It covers why a new execution model is needed, technical details of the integration with Spark, and how users can leverage this feature for faster, more efficient analytical pipelines—all without changing their existing Spark code."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/under-the-hood-an-introduction-to-the-native-execution-engine-for-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/under-the-hood-an-introduction-to-the-native-execution-engine-for-microsoft-fabric/
+title: 'Under the Hood: An Introduction to the Native Execution Engine for Microsoft Fabric'
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-23 14:00:00 +00:00
-permalink: "/2026-02-23-Under-the-Hood-An-Introduction-to-the-Native-Execution-Engine-for-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics Performance", "Apache Gluten", "Apache Spark", "Azure", "C++", "Columnar Processing", "Data Engineering", "Delta Lake", "Microsoft Fabric", "ML", "Native Execution Engine", "News", "Parquet", "SIMD", "Spark Optimization", "Spark Workloads", "Vectorized Execution", "Velox"]
-tags_normalized: ["analytics performance", "apache gluten", "apache spark", "azure", "cplusplus", "columnar processing", "data engineering", "delta lake", "microsoft fabric", "ml", "native execution engine", "news", "parquet", "simd", "spark optimization", "spark workloads", "vectorized execution", "velox"]
+tags:
+- Analytics Performance
+- Apache Gluten
+- Apache Spark
+- Azure
+- C++
+- Columnar Processing
+- Data Engineering
+- Delta Lake
+- Microsoft Fabric
+- ML
+- Native Execution Engine
+- News
+- Parquet
+- SIMD
+- Spark Optimization
+- Spark Workloads
+- Vectorized Execution
+- Velox
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog explains the Native Execution Engine, a performance-boosting vectorized execution layer for Spark on Fabric. This technical write-up guides readers through its architecture, real-world advantages, and how existing Spark workflows can benefit. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Under the Hood: An Introduction to the Native Execution Engine for Microsoft Fabric

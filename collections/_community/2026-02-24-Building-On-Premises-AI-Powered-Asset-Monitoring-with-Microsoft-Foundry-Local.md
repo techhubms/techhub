@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building On-Premises AI-Powered Asset Monitoring with Microsoft Foundry Local"
-description: "This article provides an in-depth guide to implementing AI-powered manufacturing asset intelligence fully on-premises using Microsoft Foundry Local, Node.js, and JavaScript. It details the architectural, operational, and compliance advantages of local AI in industrial environments—covering data sovereignty, latency, resilience, cost, and more. Practical implementation steps, prompt engineering strategies, code samples, and deployment advice ensure developers and engineers can create reliable, scalable AI monitoring solutions for manufacturing facilities that cannot use cloud-based services."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-premises-manufacturing-intelligence/ba-p/4490771"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-premises-manufacturing-intelligence/ba-p/4490771
+title: Building On-Premises AI-Powered Asset Monitoring with Microsoft Foundry Local
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-24 08:00:00 +00:00
-permalink: "/2026-02-24-Building-On-Premises-AI-Powered-Asset-Monitoring-with-Microsoft-Foundry-Local.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Air Gapped Networks", "Asset Monitoring", "Azure", "Coding", "Community", "Edge AI", "Express", "Industrial IoT", "JavaScript", "Maintenance Automation", "Microsoft Foundry Local", "Model Selection", "Node.js", "On Premises AI", "OPC UA", "Phi 3.5", "Predictive Maintenance", "Prompt Engineering", "Qwen2.5", "Regulatory Compliance", "SCADA Integration", "Telemetry Analysis"]
-tags_normalized: ["ai", "air gapped networks", "asset monitoring", "azure", "coding", "community", "edge ai", "express", "industrial iot", "javascript", "maintenance automation", "microsoft foundry local", "model selection", "nodedotjs", "on premises ai", "opc ua", "phi 3dot5", "predictive maintenance", "prompt engineering", "qwen2dot5", "regulatory compliance", "scada integration", "telemetry analysis"]
+tags:
+- AI
+- Air Gapped Networks
+- Asset Monitoring
+- Azure
+- Community
+- Edge AI
+- Express
+- Industrial IoT
+- JavaScript
+- Maintenance Automation
+- Microsoft Foundry Local
+- Model Selection
+- Node.js
+- On Premises AI
+- OPC UA
+- Phi 3.5
+- Predictive Maintenance
+- Prompt Engineering
+- Qwen2.5
+- Regulatory Compliance
+- SCADA Integration
+- Telemetry Analysis
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Lee_Stott explains how to build a fully on-premises AI-powered asset monitoring system for manufacturing using Microsoft Foundry Local, Node.js, and JavaScript. This guide emphasizes technical strategy and practical deployment.<!--excerpt_end-->
 
 # Building On-Premises AI-Powered Asset Monitoring with Microsoft Foundry Local

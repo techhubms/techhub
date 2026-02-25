@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Dependabot Update Grouping Across Multiple Directories"
-description: "This news update highlights a new Dependabot feature allowing users to group dependency updates by name across multiple directories. This enhancement streamlines dependency management for repositories—especially monorepos—with several packages or services, consolidating update pull requests to reduce clutter and improve workflow efficiency. Instructions for configuration and supporting documentation links are provided."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-24-dependabot-can-group-updates-by-dependency-name-across-multiple-directories"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-24-dependabot-can-group-updates-by-dependency-name-across-multiple-directories
+title: Dependabot Update Grouping Across Multiple Directories
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-24 21:28:17 +00:00
-permalink: "/2026-02-24-Dependabot-Update-Grouping-Across-Multiple-Directories.html"
-categories: ["DevOps"]
-tags: ["Automation", "Code Security", "Configuration", "Dependabot", "Dependabot.yml", "Dependency Management", "DevOps", "GHES 3.21", "GitHub", "Improvement", "Monorepo", "News", "Pull Requests", "Supply Chain Security", "Version Updates"]
-tags_normalized: ["automation", "code security", "configuration", "dependabot", "dependabotdotyml", "dependency management", "devops", "ghes 3dot21", "github", "improvement", "monorepo", "news", "pull requests", "supply chain security", "version updates"]
+tags:
+- Automation
+- Code Security
+- Configuration
+- Dependabot
+- Dependabot.yml
+- Dependency Management
+- DevOps
+- GHES 3.21
+- GitHub
+- Improvement
+- Monorepo
+- News
+- Pull Requests
+- Supply Chain Security
+- Version Updates
+section_names:
+- devops
 ---
-
 Allison introduces a Dependabot feature that allows grouping dependency updates by name across directories, simplifying dependency upgrades and reducing pull request volume for developers.<!--excerpt_end-->
 
 # Dependabot Update Grouping Across Multiple Directories

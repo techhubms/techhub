@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Using Azure API Management with Azure Front Door for Multi-Region, Active-Active Architectures"
-description: "This guide explains how to architect and configure a globally available, multi-region Azure API Management (APIM) instance behind Azure Front Door. It walks through the technical steps to leverage custom origins, details the traffic routing logic, discusses APIM deployment modes (internal vs. external), and explores why combining AFD and APIM adds value for global API delivery, performance, and security."
-author: "juneesingh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/using-azure-api-management-with-azure-front-door-for-global/ba-p/4492384"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/using-azure-api-management-with-azure-front-door-for-global/ba-p/4492384
+title: Using Azure API Management with Azure Front Door for Multi-Region, Active-Active Architectures
+author: juneesingh
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-20 08:00:00 +00:00
-permalink: "/2026-02-20-Using-Azure-API-Management-with-Azure-Front-Door-for-Multi-Region-Active-Active-Architectures.html"
-categories: ["Azure"]
-tags: ["Active Active", "API Gateway", "Application Gateway", "Azure", "Azure API Management", "Azure Front Door", "Cloud Architecture", "Community", "Custom Origin", "Developer Portal", "Global Endpoint", "High Availability", "Load Balancing", "Multi Region", "Network Security", "Traffic Routing"]
-tags_normalized: ["active active", "api gateway", "application gateway", "azure", "azure api management", "azure front door", "cloud architecture", "community", "custom origin", "developer portal", "global endpoint", "high availability", "load balancing", "multi region", "network security", "traffic routing"]
+tags:
+- Active Active
+- API Gateway
+- Application Gateway
+- Azure
+- Azure API Management
+- Azure Front Door
+- Cloud Architecture
+- Community
+- Custom Origin
+- Developer Portal
+- Global Endpoint
+- High Availability
+- Load Balancing
+- Multi Region
+- Network Security
+- Traffic Routing
+section_names:
+- azure
 ---
-
 Junee Singh provides a detailed walkthrough of how to deploy and configure Azure API Management in a multi-region, active-active setup backed by Azure Front Door. This article covers architecture, traffic management, deployment modes, and security considerations for building globally available, high-performance APIs.<!--excerpt_end-->
 
 # Using Azure API Management with Azure Front Door for Multi-Region, Active-Active Architectures

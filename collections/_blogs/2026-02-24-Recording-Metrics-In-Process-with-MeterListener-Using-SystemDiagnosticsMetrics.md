@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Recording Metrics In-Process with MeterListener Using System.Diagnostics.Metrics"
-description: "This article by Andrew Lock demonstrates how to use MeterListener from the System.Diagnostics.Metrics API to collect, aggregate, and display metrics in a .NET ASP.NET Core application. It walks through implementing a custom MetricManager, setting up metrics collection and aggregation, handling both standard and observable instruments, and visualizing metrics with Spectre.Console. Readers will learn key practices for in-process metrics and performance considerations when building observability features directly in .NET applications."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/recording-metrics-in-process-using-meterlistener/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/recording-metrics-in-process-using-meterlistener/
+title: Recording Metrics In-Process with MeterListener Using System.Diagnostics.Metrics
+author: Andrew Lock
+primary_section: dotnet
+feed_name: Andrew Lock's Blog
 date: 2026-02-24 10:00:00 +00:00
-permalink: "/2026-02-24-Recording-Metrics-In-Process-with-MeterListener-Using-SystemDiagnosticsMetrics.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET 6", ".NET Core", "Aggregation", "ASP.NET Core", "BackgroundService", "Blogs", "Coding", "DevOps", "HttpClient", "Instrument", "Interlocked", "Measurement", "MeterListener", "Metrics", "Monitoring", "Observability", "ObservableInstrument", "OpenTelemetry", "Performance", "Resource Monitoring", "Spectre.Console", "System.Diagnostics.Metrics"]
-tags_normalized: ["dotnet", "dotnet 6", "dotnet core", "aggregation", "aspdotnet core", "backgroundservice", "blogs", "coding", "devops", "httpclient", "instrument", "interlocked", "measurement", "meterlistener", "metrics", "monitoring", "observability", "observableinstrument", "opentelemetry", "performance", "resource monitoring", "spectredotconsole", "systemdotdiagnosticsdotmetrics"]
+tags:
+- .NET
+- .NET 6
+- .NET Core
+- Aggregation
+- ASP.NET Core
+- BackgroundService
+- Blogs
+- DevOps
+- HttpClient
+- Instrument
+- Interlocked
+- Measurement
+- MeterListener
+- Metrics
+- Monitoring
+- Observability
+- ObservableInstrument
+- OpenTelemetry
+- Performance
+- Resource Monitoring
+- Spectre.Console
+- System.Diagnostics.Metrics
+section_names:
+- dotnet
+- devops
 ---
-
 Andrew Lock explores how to collect and process application metrics in .NET using MeterListener from System.Diagnostics.Metrics. He explains the MetricManager pattern, in-process aggregation, and visualizing metrics with Spectre.Console.<!--excerpt_end-->
 
 # Recording Metrics In-Process with MeterListener Using System.Diagnostics.Metrics

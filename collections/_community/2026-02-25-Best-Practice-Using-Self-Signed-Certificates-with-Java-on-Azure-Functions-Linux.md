@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Best Practice: Using Self-Signed Certificates with Java on Azure Functions (Linux)"
-description: "This comprehensive guide by wanjing addresses how to configure Java applications running on Azure Functions (Linux dedicated plan) to trust self-signed certificates. It explains key challenges with JVM truststores in ephemeral environments, describes step-by-step best practices for managing a persistent custom keystore, and covers alternative strategies including programmatic truststore management and local keystore packaging. Key considerations around Azure deployment, certificate maintenance, and integration with Azure Key Vault are included to help developers ensure secure and reliable connections."
-author: "wanjing"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/best-practice-using-self-signed-certificates-with-java-on-azure/ba-p/4496900"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/best-practice-using-self-signed-certificates-with-java-on-azure/ba-p/4496900
+title: 'Best Practice: Using Self-Signed Certificates with Java on Azure Functions (Linux)'
+author: wanjing
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-02-25 08:08:28 +00:00
-permalink: "/2026-02-25-Best-Practice-Using-Self-Signed-Certificates-with-Java-on-Azure-Functions-Linux.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Application Configuration", "Azure", "Azure App Service", "Azure Functions", "Azure Key Vault", "Coding", "Community", "Deployment Considerations", "DevOps", "Java", "JVM Truststore", "Keytool", "Kudu", "Linux", "Persistent Storage", "Security", "Security Best Practices", "Self Signed Certificate", "SSL Handshake", "TLS/SSL"]
-tags_normalized: ["application configuration", "azure", "azure app service", "azure functions", "azure key vault", "coding", "community", "deployment considerations", "devops", "java", "jvm truststore", "keytool", "kudu", "linux", "persistent storage", "security", "security best practices", "self signed certificate", "ssl handshake", "tlsslashssl"]
+tags:
+- Application Configuration
+- Azure
+- Azure App Service
+- Azure Functions
+- Azure Key Vault
+- Community
+- Deployment Considerations
+- DevOps
+- Java
+- JVM Truststore
+- Keytool
+- Kudu
+- Linux
+- Persistent Storage
+- Security
+- Security Best Practices
+- Self Signed Certificate
+- SSL Handshake
+- TLS/SSL
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- security
 ---
-
 wanjing presents a hands-on walkthrough for Java developers deploying on Azure Functions (Linux), showing how to configure JVM truststores for self-signed certificates and discussing practical deployment and security considerations.<!--excerpt_end-->
 
 # Best Practice: Using Self-Signed Certificates with Java on Azure Functions (Linux)

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Gemini 3.1 Pro Public Preview in GitHub Copilot"
-description: "This news update covers the rollout of Google's Gemini 3.1 Pro agentic coding model within GitHub Copilot. It details availability across subscription plans, integration with development environments like Visual Studio Code and GitHub Mobile, as well as administrative steps for enabling access within organizations."
-author: "Kate Catlin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-19-gemini-3-1-pro-is-now-in-public-preview-in-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-19-gemini-3-1-pro-is-now-in-public-preview-in-github-copilot
+title: Gemini 3.1 Pro Public Preview in GitHub Copilot
+author: Kate Catlin
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-19 17:30:18 +00:00
-permalink: "/2026-02-19-Gemini-31-Pro-Public-Preview-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Models", "AI", "AI Coding Models", "Copilot", "Copilot Enterprise", "Copilot Pro", "Development Tools", "Enterprise Deployment", "Gemini 3.1 Pro", "GitHub Copilot", "Model Selection", "News", "VS", "VS Code"]
-tags_normalized: ["agentic models", "ai", "ai coding models", "copilot", "copilot enterprise", "copilot pro", "development tools", "enterprise deployment", "gemini 3dot1 pro", "github copilot", "model selection", "news", "vs", "vs code"]
+tags:
+- Agentic Models
+- AI
+- AI Coding Models
+- Copilot
+- Copilot Enterprise
+- Copilot Pro
+- Development Tools
+- Enterprise Deployment
+- Gemini 3.1 Pro
+- GitHub Copilot
+- Model Selection
+- News
+- VS
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Kate Catlin reports on the rollout of the Gemini 3.1 Pro model in GitHub Copilot, highlighting its performance and administrative requirements for adoption by Copilot users and organizations.<!--excerpt_end-->
 
 # Gemini 3.1 Pro Public Preview in GitHub Copilot

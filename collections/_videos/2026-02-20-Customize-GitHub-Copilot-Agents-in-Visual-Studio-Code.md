@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Customize GitHub Copilot Agents in Visual Studio Code"
-description: "This video from the Visual Studio Code team demonstrates how to customize GitHub Copilot in VS Code by creating specialized AI agents, utilizing Agent Skills, and leveraging MCP integrations. It details the process of building agents for different roles, setting up workflow handoffs, and implementing practical patterns for team-based AI coding experiences."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=flpKLkZla2Q"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=flpKLkZla2Q
+title: Customize GitHub Copilot Agents in Visual Studio Code
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-20 14:01:08 +00:00
-permalink: "/2026-02-20-Customize-GitHub-Copilot-Agents-in-Visual-Studio-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Skills", "AI", "AI Agents", "AI Teammate", "Coding", "Custom AI Workflows", "Developer Tools", "GitHub Copilot", "MCP Integration", "Team Coding", "Videos", "VS Code", "Workflow Automation"]
-tags_normalized: ["agent skills", "ai", "ai agents", "ai teammate", "coding", "custom ai workflows", "developer tools", "github copilot", "mcp integration", "team coding", "videos", "vs code", "workflow automation"]
+tags:
+- Agent Skills
+- AI
+- AI Agents
+- AI Teammate
+- Custom AI Workflows
+- Developer Tools
+- GitHub Copilot
+- MCP Integration
+- Team Coding
+- Videos
+- VS Code
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code offers a practical walkthrough on customizing GitHub Copilot using custom agents and Agent Skills, with insights from the Visual Studio Code team.<!--excerpt_end-->
 
 {% youtube flpKLkZla2Q %}

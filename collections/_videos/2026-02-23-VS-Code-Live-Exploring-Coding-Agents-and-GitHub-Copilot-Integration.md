@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "VS Code Live: Exploring Coding Agents and GitHub Copilot Integration"
-description: "This session, led by GitHub COO Kyle Daigle, introduces new capabilities in Agent HQ, highlighting the integration of Claude, Codex, and GitHub Copilot as coding agents. The talk demonstrates how developers can run these agents in parallel, evaluate their solutions, and maintain seamless workflows within GitHub and Visual Studio Code environments."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=njbObo0fyhM"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=njbObo0fyhM
+title: 'VS Code Live: Exploring Coding Agents and GitHub Copilot Integration'
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-23 18:02:19 +00:00
-permalink: "/2026-02-23-VS-Code-Live-Exploring-Coding-Agents-and-GitHub-Copilot-Integration.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent HQ", "AI", "AI Integration", "Claude", "Code Comparison", "Codex", "Coding", "Coding Agents", "Developer Tools", "Developer Workflow", "GitHub", "GitHub Copilot", "Microsoft", "Parallel Agents", "Videos", "VS Code"]
-tags_normalized: ["agent hq", "ai", "ai integration", "claude", "code comparison", "codex", "coding", "coding agents", "developer tools", "developer workflow", "github", "github copilot", "microsoft", "parallel agents", "videos", "vs code"]
+tags:
+- Agent HQ
+- AI
+- AI Integration
+- Claude
+- Code Comparison
+- Codex
+- Coding Agents
+- Developer Tools
+- Developer Workflow
+- GitHub
+- GitHub Copilot
+- Microsoft
+- Parallel Agents
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code presents an Agent Sessions Day keynote where Kyle Daigle discusses integrating GitHub Copilot, Claude, and Codex as coding agents, enhancing developer workflows in GitHub and VS Code.<!--excerpt_end-->
 
 {% youtube njbObo0fyhM %}

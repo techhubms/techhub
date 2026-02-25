@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Improved Pull Request Commenting Experience on GitHub's Files Changed Page"
-description: "This update to GitHub enables users to access all pull request comments directly from the new Files changed page. Developers can now review and respond to comments without navigating between tabs, streamline their review workflow, make quote replies for clarity, and benefit from improved filters and streamlined review submission features."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-19-access-all-pull-request-comments-without-leaving-the-new-files-changed-page"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-19-access-all-pull-request-comments-without-leaving-the-new-files-changed-page
+title: Improved Pull Request Commenting Experience on GitHub's Files Changed Page
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-19 19:03:09 +00:00
-permalink: "/2026-02-19-Improved-Pull-Request-Commenting-Experience-on-GitHubs-Files-Changed-Page.html"
-categories: ["DevOps"]
-tags: ["Code Review", "Collaboration", "Collaboration Tools", "Comments Panel", "Developer Experience", "DevOps", "Files Changed Page", "GitHub", "Improvement", "News", "Pull Requests", "Quote Reply", "Request Changes", "Review Workflow"]
-tags_normalized: ["code review", "collaboration", "collaboration tools", "comments panel", "developer experience", "devops", "files changed page", "github", "improvement", "news", "pull requests", "quote reply", "request changes", "review workflow"]
+tags:
+- Code Review
+- Collaboration
+- Collaboration Tools
+- Comments Panel
+- Developer Experience
+- DevOps
+- Files Changed Page
+- GitHub
+- Improvement
+- News
+- Pull Requests
+- Quote Reply
+- Request Changes
+- Review Workflow
+section_names:
+- devops
 ---
-
 Allison details recent improvements to GitHub's pull request review process, showing developers how to access and manage all comments directly from the Files changed page without leaving their code review context.<!--excerpt_end-->
 
 # Access All Pull Request Comments Without Leaving the Files Changed Page

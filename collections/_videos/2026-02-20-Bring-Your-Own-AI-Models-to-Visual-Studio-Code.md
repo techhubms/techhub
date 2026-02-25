@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Bring Your Own AI Models to Visual Studio Code"
-description: "This overview explores how Visual Studio Code enables developers to configure and use their own API keys and custom AI model providers, in addition to GitHub Copilot. The session details how to set up BYOK (Bring Your Own Key) models, integrate alternative AI providers, and leverage local agents for AI-powered development within VS Code, empowering flexible and customized coding experiences."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VBSVSxs16_I"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=VBSVSxs16_I
+title: Bring Your Own AI Models to Visual Studio Code
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-20 14:00:49 +00:00
-permalink: "/2026-02-20-Bring-Your-Own-AI-Models-to-Visual-Studio-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "AI Powered Development", "API Keys", "BYOK", "Code Completion", "Coding", "Custom Model Providers", "Developer Tools", "GitHub Copilot", "IDE Extensions", "Local Agents", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai integration", "ai powered development", "api keys", "byok", "code completion", "coding", "custom model providers", "developer tools", "github copilot", "ide extensions", "local agents", "videos", "vs code"]
+tags:
+- AI
+- AI Integration
+- AI Powered Development
+- API Keys
+- BYOK
+- Code Completion
+- Custom Model Providers
+- Developer Tools
+- GitHub Copilot
+- IDE Extensions
+- Local Agents
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code demonstrates how developers, including those using GitHub Copilot, can configure their own AI models through BYOK approaches and custom providers. Presented by Visual Studio Code.<!--excerpt_end-->
 
 {% youtube VBSVSxs16_I %}

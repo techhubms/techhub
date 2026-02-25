@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Processing CDC Streams Using Microsoft Fabric Eventstreams SQL"
-description: "A detailed walkthrough on shaping and processing change data capture (CDC) streams in real-time using Microsoft Fabric Eventstreams SQL. This article demonstrates how to transform raw database change events from sources like Azure SQL into normalized, analytics-ready data streams, reducing complexity for downstream consumers and enabling immediate business insights."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/processing-cdc-streams-using-fabric-eventstreams-sql/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/processing-cdc-streams-using-fabric-eventstreams-sql/
+title: Processing CDC Streams Using Microsoft Fabric Eventstreams SQL
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-24 10:00:00 +00:00
-permalink: "/2026-02-24-Processing-CDC-Streams-Using-Microsoft-Fabric-Eventstreams-SQL.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Data Engineering", "Azure SQL", "Change Data Capture", "Data Transformation", "Debezium", "Eventhouse", "Eventstreams", "Inventory Monitoring", "Lakehouse", "Microsoft Fabric", "ML", "News", "Real Time Data Processing", "SQL", "SQL Query", "Streaming Analytics"]
-tags_normalized: ["azure", "azure data engineering", "azure sql", "change data capture", "data transformation", "debezium", "eventhouse", "eventstreams", "inventory monitoring", "lakehouse", "microsoft fabric", "ml", "news", "real time data processing", "sql", "sql query", "streaming analytics"]
+tags:
+- Azure
+- Azure Data Engineering
+- Azure SQL
+- Change Data Capture
+- Data Transformation
+- Debezium
+- Eventhouse
+- Eventstreams
+- Inventory Monitoring
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Real Time Data Processing
+- SQL
+- SQL Query
+- Streaming Analytics
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog showcases how to process real-time CDC streams from databases like Azure SQL using Fabric Eventstreams SQL, making event data analytics-ready with efficient SQL transformations.<!--excerpt_end-->
 
 # Processing CDC Streams Using Microsoft Fabric Eventstreams SQL

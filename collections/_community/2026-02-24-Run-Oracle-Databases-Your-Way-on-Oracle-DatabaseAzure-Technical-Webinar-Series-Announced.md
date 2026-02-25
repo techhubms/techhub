@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Run Oracle Databases Your Way on Oracle Database@Azure – Technical Webinar Series Announced"
-description: "A new technical webinar series led by Microsoft and Oracle product managers focuses on practical guidance for running, migrating, and optimizing Oracle databases on Azure. Each session covers architecture, networking, performance, security, and day-one operations, offering in-depth insights for database and cloud practitioners interested in Oracle Database@Azure."
-author: "RamKakani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/introducing-run-oracle-your-way-on-oracle-database-azure-a-new/ba-p/4496593"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/introducing-run-oracle-your-way-on-oracle-database-azure-a-new/ba-p/4496593
+title: Run Oracle Databases Your Way on Oracle Database@Azure – Technical Webinar Series Announced
+author: RamKakani
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-24 14:42:59 +00:00
-permalink: "/2026-02-24-Run-Oracle-Databases-Your-Way-on-Oracle-DatabaseAzure-Technical-Webinar-Series-Announced.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Networking", "BYOL", "Cloud Databases", "Community", "Database Architecture", "Database Migration", "Database Security", "Hybrid Cloud", "Microsoft", "Operational Best Practices", "Oracle", "Oracle Database@Azure", "Performance Tuning", "Webinar"]
-tags_normalized: ["azure", "azure networking", "byol", "cloud databases", "community", "database architecture", "database migration", "database security", "hybrid cloud", "microsoft", "operational best practices", "oracle", "oracle databaseatazure", "performance tuning", "webinar"]
+tags:
+- Azure
+- Azure Networking
+- BYOL
+- Cloud Databases
+- Community
+- Database Architecture
+- Database Migration
+- Database Security
+- Hybrid Cloud
+- Microsoft
+- Operational Best Practices
+- Oracle
+- Oracle Database@Azure
+- Performance Tuning
+- Webinar
+section_names:
+- azure
 ---
-
 Ram Kakani shares details of a technical webinar series dedicated to running Oracle databases efficiently on Azure, highlighting architectural, migration, and operational best practices for practitioners.<!--excerpt_end-->
 
 # Run Oracle Databases Your Way on Oracle Database@Azure – Technical Webinar Series

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How AI-Driven WinForms Development Saved a Business in Crisis"
-description: "This detailed case study illustrates how modern AI tools—specifically GitHub Copilot, Visual Studio, and Copilot Agents—enabled rapid, effective WinForms application development under pressure. When the author's mother, an experienced REFA engineer, faced mission-critical software failure while traveling for work, prompt-driven AI development rebuilt crucial time-study functionality in record time. The article explores requirements gathering (in German), transformation using LLMs, cascaded prompting, and hands-on lessons in prompt-driven development, code review, and iterative user feedback."
-author: "Klaus Loeffelmann"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/the-dongle-died-at-midnight/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/the-dongle-died-at-midnight/
+title: How AI-Driven WinForms Development Saved a Business in Crisis
+author: Klaus Loeffelmann
+primary_section: github-copilot
+feed_name: Microsoft .NET Blog
 date: 2026-02-24 23:00:00 +00:00
-permalink: "/2026-02-24-How-AI-Driven-WinForms-Development-Saved-a-Business-in-Crisis.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agent", "Agent Mode", "AI", "AI Powered Development", "Anthropic Claude", "Cascaded Prompting", "Coding", "Copilot", "Copilot Agent", "CSV Export", "Designer Serialization", "Domain Driven Design", "German Industry", "GitHub Copilot", "Human in The Loop", "LLM", "News", "Prompt Engineering", "Rapid Application Development", "REFA", "Teams", "Time Study", "User Requirements", "VS", "WinForms"]
-tags_normalized: ["dotnet", "agent", "agent mode", "ai", "ai powered development", "anthropic claude", "cascaded prompting", "coding", "copilot", "copilot agent", "csv export", "designer serialization", "domain driven design", "german industry", "github copilot", "human in the loop", "llm", "news", "prompt engineering", "rapid application development", "refa", "teams", "time study", "user requirements", "vs", "winforms"]
+tags:
+- .NET
+- Agent
+- Agent Mode
+- AI
+- AI Powered Development
+- Anthropic Claude
+- Cascaded Prompting
+- Copilot
+- Copilot Agent
+- CSV Export
+- Designer Serialization
+- Domain Driven Design
+- German Industry
+- GitHub Copilot
+- Human in The Loop
+- LLM
+- News
+- Prompt Engineering
+- Rapid Application Development
+- REFA
+- Teams
+- Time Study
+- User Requirements
+- VS
+- WinForms
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Klaus Loeffelmann shares how prompt-driven AI development—including GitHub Copilot and Agent mode in Visual Studio—enabled him to rapidly build a mission-critical WinForms app to rescue his mother’s business trip after catastrophic hardware failure.<!--excerpt_end-->
 
 # How AI-Driven WinForms Development Saved a Business in Crisis

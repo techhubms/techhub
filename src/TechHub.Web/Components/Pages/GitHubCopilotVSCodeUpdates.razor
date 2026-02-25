@@ -24,11 +24,11 @@
 <main class="page-with-sidebar">
     <aside class="sidebar">
         <MobileSidebarToolbar>
-        <MobileSidebarPanel Label="All Updates" Icon="updates">
+        <MobileSidebarPanel Label="Recent Updates" Icon="updates">
         @if (videoItems.Any())
         {
             <div class="sidebar-section">
-                <h2 class="sidebar-h2">All Updates</h2>
+                <h2 class="sidebar-h2">Recent Updates</h2>
                 <ul class="sidebar-list">
                     @foreach (var video in videoItems)
                     {
@@ -130,7 +130,7 @@
 
         try
         {
-            var result = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName, lastDays: 0);
+            var result = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName, take: 5, lastDays: 0);
             videoItems = (result?.Items ?? [])
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();

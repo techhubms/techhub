@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Hosting OpenClaw on Azure App Service: Full Guide"
-description: "This in-depth tutorial walks through deploying the open-source personal AI assistant OpenClaw to Microsoft Azure App Service, leveraging Azure OpenAI, managed identity, persistent storage, and enterprise security features. Readers learn how to replace local hosting with a scalable, always-on, secure, and maintainable cloud architecture using Azure-native tools and best practices."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/you-can-host-openclaw-on-azure-app-service-here-s-how/ba-p/4496563"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/you-can-host-openclaw-on-azure-app-service-here-s-how/ba-p/4496563
+title: 'Hosting OpenClaw on Azure App Service: Full Guide'
+author: jordanselig
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-23 21:40:44 +00:00
-permalink: "/2026-02-23-Hosting-OpenClaw-on-Azure-App-Service-Full-Guide.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "App Service Deployment", "App Service Plans", "Azure", "Azure App Service", "Azure CLI", "Azure Developer CLI", "Azure Files", "Azure OpenAI", "Bicep Templates", "CI/CD", "Cloud Hosting", "Community", "Container Registry", "Discord Bot", "GPT 4o", "Log Analytics", "Managed Identity", "OpenClaw", "Persistent Storage", "Security Best Practices", "Telegram Bot", "WebSockets"]
-tags_normalized: ["ai", "app service deployment", "app service plans", "azure", "azure app service", "azure cli", "azure developer cli", "azure files", "azure openai", "bicep templates", "cislashcd", "cloud hosting", "community", "container registry", "discord bot", "gpt 4o", "log analytics", "managed identity", "openclaw", "persistent storage", "security best practices", "telegram bot", "websockets"]
+tags:
+- AI
+- App Service Deployment
+- App Service Plans
+- Azure
+- Azure App Service
+- Azure CLI
+- Azure Developer CLI
+- Azure Files
+- Azure OpenAI
+- Bicep Templates
+- CI/CD
+- Cloud Hosting
+- Community
+- Container Registry
+- Discord Bot
+- GPT 4o
+- Log Analytics
+- Managed Identity
+- OpenClaw
+- Persistent Storage
+- Security Best Practices
+- Telegram Bot
+- WebSockets
+section_names:
+- ai
+- azure
 ---
-
 jordanselig details a practical approach to running the open-source OpenClaw AI assistant 24/7 on Azure App Service. The guide covers architecture, deployment steps, security, persistent storage, cost factors, and how Azure OpenAI and managed identity streamline and secure the setup.<!--excerpt_end-->
 
 # Hosting OpenClaw on Azure App Service: A Comprehensive Guide

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "OneLake SharePoint and OneDrive Shortcuts Now Support Workspace and Service Principal Identities"
-description: "This news post details the general availability of workspace and service principal identity support for SharePoint and OneDrive shortcuts in OneLake. This advancement enables organizations to securely use Microsoft 365 files directly in OneLake for analytics, BI, and AI, using centralized authentication methods (Workspace Identity and Service Principal). The update improves governance, API performance, and cross-tenant access while reducing reliance on user credentials—streamlining large-scale analytics and AI scenarios involving structured and unstructured data."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-sharepoint-and-onedrive-shortcuts-now-support-workspace-and-service-principal-identities-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-sharepoint-and-onedrive-shortcuts-now-support-workspace-and-service-principal-identities-generally-available/
+title: OneLake SharePoint and OneDrive Shortcuts Now Support Workspace and Service Principal Identities
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-19 12:00:00 +00:00
-permalink: "/2026-02-19-OneLake-SharePoint-and-OneDrive-Shortcuts-Now-Support-Workspace-and-Service-Principal-Identities.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Analytics", "Authentication", "Azure", "BI", "Cross Tenant Access", "Data Engineering", "Governance", "Lakehouse", "Microsoft 365", "Microsoft Entra ID", "ML", "News", "OneDrive", "OneLake", "Service Principal", "SharePoint", "Shortcuts", "Structured Data", "Unstructured Data", "Workspace Identity"]
-tags_normalized: ["ai", "analytics", "authentication", "azure", "bi", "cross tenant access", "data engineering", "governance", "lakehouse", "microsoft 365", "microsoft entra id", "ml", "news", "onedrive", "onelake", "service principal", "sharepoint", "shortcuts", "structured data", "unstructured data", "workspace identity"]
+tags:
+- AI
+- Analytics
+- Authentication
+- Azure
+- BI
+- Cross Tenant Access
+- Data Engineering
+- Governance
+- Lakehouse
+- Microsoft 365
+- Microsoft Entra ID
+- ML
+- News
+- OneDrive
+- OneLake
+- Service Principal
+- SharePoint
+- Shortcuts
+- Structured Data
+- Unstructured Data
+- Workspace Identity
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog introduces support for workspace and service principal identities when creating OneLake SharePoint and OneDrive shortcuts, streamlining analytics, BI, and AI workloads with improved security and governance.<!--excerpt_end-->
 
 # OneLake SharePoint and OneDrive Shortcuts Now Support Workspace and Service Principal Identities

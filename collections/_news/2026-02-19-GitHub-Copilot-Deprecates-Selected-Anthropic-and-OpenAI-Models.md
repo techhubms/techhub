@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Copilot Deprecates Selected Anthropic and OpenAI Models"
-description: "This news update announces the deprecation of specific Anthropic and OpenAI models (Claude Opus 4.1, GPT-5, and GPT-5-Codex) across all GitHub Copilot experiences, including Copilot Chat, inline edits, and agent modes, effective February 17, 2026. The update provides recommendations for alternative models, guidance for Copilot administrators, and links to further documentation and community forums."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-19-selected-anthropic-and-openai-models-are-now-deprecated"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-19-selected-anthropic-and-openai-models-are-now-deprecated
+title: GitHub Copilot Deprecates Selected Anthropic and OpenAI Models
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-19 19:47:37 +00:00
-permalink: "/2026-02-19-GitHub-Copilot-Deprecates-Selected-Anthropic-and-OpenAI-Models.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "AI Models", "Anthropic", "Claude Opus", "Copilot", "Copilot Chat", "Copilot Enterprise", "Enterprise Administration", "GitHub Copilot", "GPT 5", "GPT 5 Codex", "Model Deprecation", "Model Policies", "News", "OpenAI", "Retired", "VS Code"]
-tags_normalized: ["ai", "ai integration", "ai models", "anthropic", "claude opus", "copilot", "copilot chat", "copilot enterprise", "enterprise administration", "github copilot", "gpt 5", "gpt 5 codex", "model deprecation", "model policies", "news", "openai", "retired", "vs code"]
+tags:
+- AI
+- AI Integration
+- AI Models
+- Anthropic
+- Claude Opus
+- Copilot
+- Copilot Chat
+- Copilot Enterprise
+- Enterprise Administration
+- GitHub Copilot
+- GPT 5
+- GPT 5 Codex
+- Model Deprecation
+- Model Policies
+- News
+- OpenAI
+- Retired
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison provides a news update on the deprecation of selected Anthropic and OpenAI models in GitHub Copilot, detailing important steps for Copilot Enterprise users and administrators.<!--excerpt_end-->
 
 # GitHub Copilot Deprecates Selected Anthropic and OpenAI Models

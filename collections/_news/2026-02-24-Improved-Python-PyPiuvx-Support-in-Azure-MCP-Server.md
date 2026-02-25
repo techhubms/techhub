@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Improved Python (PyPi/uvx) Support in Azure MCP Server"
-description: "This news post details the enhanced Python support for Azure Model Context Protocol (MCP) Server, enabling Python developers to integrate Azure into agentic workflows with convenient installation via PyPI and uvx. It covers installation methods, integration with GitHub Copilot SDK, configuration steps, and practical use cases involving more than 40 Azure services."
-author: "Sandeep Sen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-better-python-support/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-better-python-support/
+title: Improved Python (PyPi/uvx) Support in Azure MCP Server
+author: Sandeep Sen
+primary_section: github-copilot
+feed_name: Microsoft Azure SDK Blog
 date: 2026-02-24 16:00:21 +00:00
-permalink: "/2026-02-24-Improved-Python-PyPiuvx-Support-in-Azure-MCP-Server.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agentic Workflows", "Agents", "AI", "AI Development", "Automation", "Azure", "Azure AI Search", "Azure Integration", "Azure MCP Server", "Azure SDK", "CI/CD", "CLI", "Cloud Development", "Coding", "Cosmos DB", "GitHub Copilot", "GitHub Copilot SDK", "IDE Integration", "Key Vault", "MCP", "Microsoft Azure", "News", "PyPI", "Python", "Uvx", "VS Code"]
-tags_normalized: ["agentic workflows", "agents", "ai", "ai development", "automation", "azure", "azure ai search", "azure integration", "azure mcp server", "azure sdk", "cislashcd", "cli", "cloud development", "coding", "cosmos db", "github copilot", "github copilot sdk", "ide integration", "key vault", "mcp", "microsoft azure", "news", "pypi", "python", "uvx", "vs code"]
+tags:
+- Agentic Workflows
+- Agents
+- AI
+- AI Development
+- Automation
+- Azure
+- Azure AI Search
+- Azure Integration
+- Azure MCP Server
+- Azure SDK
+- CI/CD
+- CLI
+- Cloud Development
+- Cosmos DB
+- GitHub Copilot
+- GitHub Copilot SDK
+- IDE Integration
+- Key Vault
+- MCP
+- Microsoft Azure
+- News
+- PyPI
+- Python
+- Uvx
+- VS Code
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
 ---
-
 Sandeep Sen explains how Python developers can now install and run Azure MCP Server with PyPI and uvx, unlocking seamless Azure integration and support for agentic workflows and GitHub Copilot SDK.<!--excerpt_end-->
 
 # Improved Python (PyPi/uvx) Support in Azure MCP Server

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Copilot Now Supported in Zed Editor"
-description: "This post announces the general availability of GitHub Copilot integration within the Zed code editor. It covers authentication flows, availability for various Copilot subscription tiers, and how developers can leverage Copilot's AI-powered code completion and chat features directly in Zed for an enhanced development workflow."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-19-github-copilot-support-in-zed-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-19-github-copilot-support-in-zed-generally-available
+title: GitHub Copilot Now Supported in Zed Editor
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-19 22:24:53 +00:00
-permalink: "/2026-02-19-GitHub-Copilot-Now-Supported-in-Zed-Editor.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Authentication", "Code Editor", "Coding", "Copilot", "Copilot Integration", "Developer Tools", "Enterprise Software", "GitHub Copilot", "Improvement", "News", "Pro Subscription", "Programming Workflow", "Zed"]
-tags_normalized: ["ai", "ai powered development", "authentication", "code editor", "coding", "copilot", "copilot integration", "developer tools", "enterprise software", "github copilot", "improvement", "news", "pro subscription", "programming workflow", "zed"]
+tags:
+- AI
+- AI Powered Development
+- Authentication
+- Code Editor
+- Copilot
+- Copilot Integration
+- Developer Tools
+- Enterprise Software
+- GitHub Copilot
+- Improvement
+- News
+- Pro Subscription
+- Programming Workflow
+- Zed
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Allison details how GitHub Copilot is now fully supported in the Zed code editor, enabling developers with Copilot Pro or Enterprise subscriptions to use AI-powered coding features seamlessly within Zed.<!--excerpt_end-->
 
 # GitHub Copilot Now Supported in Zed Editor

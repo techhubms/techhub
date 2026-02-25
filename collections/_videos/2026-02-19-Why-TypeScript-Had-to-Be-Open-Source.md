@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Why TypeScript Had to Be Open Source"
-description: "This video features Anders Hejlsberg, a key figure behind TypeScript, discussing the challenges and internal debates at Microsoft regarding the decision to open source TypeScript. He explains why an open-source model was necessary for TypeScript’s success and how moving development to GitHub expanded its reach and community adoption."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/wPzM_y39lV0"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/wPzM_y39lV0
+title: Why TypeScript Had to Be Open Source
+author: GitHub
+primary_section: dotnet
+feed_name: GitHub YouTube
 date: 2026-02-19 19:45:43 +00:00
-permalink: "/2026-02-19-Why-TypeScript-Had-to-Be-Open-Source.html"
-categories: ["Coding"]
-tags: ["Anders Hejlsberg", "AndersHejlsberg", "Coding", "Developer Community", "GitHub", "JavaScript", "Language Design", "Microsoft", "Open Source", "Open Source Development", "OpenSource", "Programming Languages", "Project Management", "Software Engineering", "TypeScript", "Videos"]
-tags_normalized: ["anders hejlsberg", "andershejlsberg", "coding", "developer community", "github", "javascript", "language design", "microsoft", "open source", "open source development", "opensource", "programming languages", "project management", "software engineering", "typescript", "videos"]
+tags:
+- Anders Hejlsberg
+- AndersHejlsberg
+- Developer Community
+- GitHub
+- JavaScript
+- Language Design
+- Microsoft
+- Open Source
+- Open Source Development
+- OpenSource
+- Programming Languages
+- Project Management
+- Software Engineering
+- TypeScript
+- Videos
+- .NET
+section_names:
+- dotnet
 ---
-
 Anders Hejlsberg discusses with GitHub the pivotal decision at Microsoft to open source TypeScript, explaining why community-driven development mattered for the language's success.<!--excerpt_end-->
 
 {% youtube wPzM_y39lV0 %}

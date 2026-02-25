@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Establishing a Proactive Defense with Microsoft Security Exposure Management: New Maturity Model Guide"
-description: "This article introduces a new maturity-based guide from Microsoft designed to help organizations assess and advance their exposure management capabilities. It focuses on moving from fragmented, reactive security practices to a unified, risk-driven approach using Microsoft Security Exposure Management solutions. The guide outlines a progression through five maturity levels, emphasizing proactive defense, continuous improvement, and the integration of assets, identities, and cloud posture. Supported by practical steps and real-world insights, the resource offers security leaders a roadmap to strategic, measurable risk reduction."
-author: "Adi Shua Zucker"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/19/new-e-book-establishing-a-proactive-defense-with-microsoft-security-exposure-management/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/19/new-e-book-establishing-a-proactive-defense-with-microsoft-security-exposure-management/
+title: 'Establishing a Proactive Defense with Microsoft Security Exposure Management: New Maturity Model Guide'
+author: Adi Shua Zucker
+primary_section: security
+feed_name: Microsoft Security Blog
 date: 2026-02-19 17:00:00 +00:00
-permalink: "/2026-02-19-Establishing-a-Proactive-Defense-with-Microsoft-Security-Exposure-Management-New-Maturity-Model-Guide.html"
-categories: ["Security"]
-tags: ["Attack Surface", "Cloud Security", "Cybersecurity", "Exposure Management", "Incident Response", "Maturity Model", "Microsoft Security Exposure Management", "News", "Proactive Defense", "Risk Assessment", "Risk Management", "RSAC", "Security", "Security Leadership", "Security Operations", "Security Posture", "SIEM"]
-tags_normalized: ["attack surface", "cloud security", "cybersecurity", "exposure management", "incident response", "maturity model", "microsoft security exposure management", "news", "proactive defense", "risk assessment", "risk management", "rsac", "security", "security leadership", "security operations", "security posture", "siem"]
+tags:
+- Attack Surface
+- Cloud Security
+- Cybersecurity
+- Exposure Management
+- Incident Response
+- Maturity Model
+- Microsoft Security Exposure Management
+- News
+- Proactive Defense
+- Risk Assessment
+- Risk Management
+- RSAC
+- Security
+- Security Leadership
+- Security Operations
+- Security Posture
+- SIEM
+section_names:
+- security
 ---
-
 Adi Shua Zucker presents a maturity-based guide from Microsoft for developing proactive defense strategies using Microsoft Security Exposure Management, offering practical steps and insights for security professionals.<!--excerpt_end-->
 
 # Establishing a Proactive Defense with Microsoft Security Exposure Management

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Enhancements to GitHub Projects: Search Import and Hierarchy View Updates"
-description: "This news update details key improvements to GitHub Projects, including the ability to import project items using advanced search queries and several usability enhancements to the hierarchy view. Developers and teams can now leverage flexible search capabilities while organizing and managing project issues more efficiently inside GitHub."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-19-github-projects-import-items-based-on-a-query-and-hierarchy-view-improvements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-19-github-projects-import-items-based-on-a-query-and-hierarchy-view-improvements
+title: 'Enhancements to GitHub Projects: Search Import and Hierarchy View Updates'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-19 19:33:33 +00:00
-permalink: "/2026-02-19-Enhancements-to-GitHub-Projects-Search-Import-and-Hierarchy-View-Updates.html"
-categories: ["DevOps"]
-tags: ["DevOps", "GitHub Issues", "GitHub Projects", "Hierarchy View", "Issue Tracking", "News", "Project Management", "Projects & Issues", "Query Import", "Release Update", "Search Filtering", "Sub Issues", "Team Collaboration", "Workflow Improvements"]
-tags_normalized: ["devops", "github issues", "github projects", "hierarchy view", "issue tracking", "news", "project management", "projects and issues", "query import", "release update", "search filtering", "sub issues", "team collaboration", "workflow improvements"]
+tags:
+- DevOps
+- GitHub Issues
+- GitHub Projects
+- Hierarchy View
+- Issue Tracking
+- News
+- Project Management
+- Projects & Issues
+- Query Import
+- Release Update
+- Search Filtering
+- Sub Issues
+- Team Collaboration
+- Workflow Improvements
+section_names:
+- devops
 ---
-
 Allison provides an overview of the latest GitHub Projects features, focusing on importing project items via search queries and improved hierarchy management for streamlined workflow organization.<!--excerpt_end-->
 
 # Enhancements to GitHub Projects: Search Import and Hierarchy View Updates

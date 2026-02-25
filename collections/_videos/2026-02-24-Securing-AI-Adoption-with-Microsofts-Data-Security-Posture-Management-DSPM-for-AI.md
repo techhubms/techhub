@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Securing AI Adoption with Microsoft's Data Security Posture Management (DSPM) for AI"
-description: "This content introduces Microsoft's Data Security Posture Management (DSPM) for AI, focusing on how organizations can monitor, secure, and govern usage of generative AI tools like Copilot, ChatGPT, and Gemini. It highlights strategies for protecting sensitive data and ensuring compliance as organizations integrate AI technologies into daily operations."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WFkU9psbRb0"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=WFkU9psbRb0
+title: Securing AI Adoption with Microsoft's Data Security Posture Management (DSPM) for AI
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-24 17:00:51 +00:00
-permalink: "/2026-02-24-Securing-AI-Adoption-with-Microsofts-Data-Security-Posture-Management-DSPM-for-AI.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Governance", "AI Monitoring", "AI Security", "ChatGPT", "Cloud Computing", "Copilot", "Data Leak Prevention", "Data Protection", "Data Security", "Dev", "Development", "DSPM For AI", "Gemini", "Generative AI", "Information Governance", "Microsoft", "Organizational Security", "Regulatory Compliance", "Risk Management", "Security", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai governance", "ai monitoring", "ai security", "chatgpt", "cloud computing", "copilot", "data leak prevention", "data protection", "data security", "dev", "development", "dspm for ai", "gemini", "generative ai", "information governance", "microsoft", "organizational security", "regulatory compliance", "risk management", "security", "tech", "technology", "videos"]
+tags:
+- AI
+- AI Governance
+- AI Monitoring
+- AI Security
+- ChatGPT
+- Cloud Computing
+- Copilot
+- Data Leak Prevention
+- Data Protection
+- Data Security
+- Dev
+- Development
+- DSPM For AI
+- Gemini
+- Generative AI
+- Information Governance
+- Microsoft
+- Organizational Security
+- Regulatory Compliance
+- Risk Management
+- Security
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Developer discusses how organizations can secure AI adoption using Data Security Posture Management (DSPM) for AI, focusing on protection and compliance in enterprise environments.<!--excerpt_end-->
 
 {% youtube WFkU9psbRb0 %}

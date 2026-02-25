@@ -1,17 +1,39 @@
----
-layout: "post"
-title: "Agentic Workflows, AI Integration, and Security-Focused Cloud Developments"
-description: "This week’s roundup covers new automation workflows with agents, updated AI model integration, and cloud platform enhancements. GitHub Copilot extends autonomous coding agents, Microsoft Foundry delivers new SDKs and model registry features, and Azure introduces improvements in reliability, migration, and AI infrastructure. Updates also include expanded security tools, supply chain management, developer resources, and open source trends—helping teams automate, evolve workflow flexibility, and increase compliance."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup
+title: Agentic Workflows, AI Integration, and Security-Focused Cloud Developments
+author: TechHub
+primary_section: github-copilot
 date: 2026-02-23 09:00:00 +00:00
-permalink: "/2026-02-23-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Agents", "AI Models", "Azure", "CI/CD", "Cloud Reliability", "Coding", "Data Engineering", "DevOps", "Enterprise Migration", "GitHub Copilot", "Kubernetes", "Microsoft Foundry", "ML", "Open Source", "Roundups", "Security", "VS Code", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "ai models", "azure", "cislashcd", "cloud reliability", "coding", "data engineering", "devops", "enterprise migration", "github copilot", "kubernetes", "microsoft foundry", "ml", "open source", "roundups", "security", "vs code", "workflow automation"]
+feed_name: TechHub
+tags:
+- AI
+- AI Agents
+- AI Models
+- Azure
+- CI/CD
+- Cloud Reliability
+- Data Engineering
+- DevOps
+- Enterprise Migration
+- GitHub Copilot
+- Kubernetes
+- Microsoft Foundry
+- ML
+- Open Source
+- Roundups
+- Security
+- VS Code
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- dotnet
+- devops
+- security
 ---
-
 Welcome to this week’s tech summary, where automation and agent technology continue to influence development practices. GitHub Copilot now provides greater support for autonomous workflows and AI model integrations, making it easier for teams to boost productivity across development environments. Microsoft Foundry and Azure add new features for multi-language agent orchestration, platform reliability, and secure migration—delivering the foundation for scalable agent-driven cloud projects. Updated tools and security practices help teams streamline workflow, improve compliance, and collaborate more effectively on open source and enterprise solutions.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -92,7 +114,7 @@ Copilot Coding Agents now support more environments, allowing developers to dele
 Model Context Protocol (MCP) enhancements offer better agent coordination and extensibility for VS Code and open agent frameworks. Visuals MCP brings interactive UI components into open source, allowing agents to display dashboards, tables, and previews during development tasks. The MCP Registry for Eclipse unifies agent toolchains, while updated preference and task management options let users personalize agent interactions. By supporting markdown-based agents on Azure Functions with Copilot SDK and AGENTS.md integration, cloud distribution and event-driven agent automation become easier.
 
 - [Building Interactive UI Components for AI Agents with Visuals MCP](https://harrybin.de/posts/visuals-mcp-server/)
-- [Introducing MCP Apps: Interactive UI Components in VS Code Chat]({{ "/2026-02-20-Introducing-MCP-Apps-Interactive-UI-Components-in-VS-Code-Chat.html" | relative_url }})
+- [Introducing MCP Apps: Interactive UI Components in VS Code Chat](/2026-02-20-Introducing-MCP-Apps-Interactive-UI-Components-in-VS-Code-Chat.html)
 - [MCP Registry and New GitHub Copilot Features in Eclipse](https://github.blog/changelog/2026-02-17-mcp-registry-and-more-improvements-in-copilot-in-eclipse)
 - [Hosting Declarative Markdown-Based Agents on Azure Functions with GitHub Copilot SDK](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-declarative-markdown-based-agents-on-azure-functions/ba-p/4496038)
 
@@ -103,7 +125,7 @@ GitHub Copilot now supports more models. Claude Opus 4.6 and Claude Sonnet 4.6 a
 - [Claude Sonnet 4.6 Now Available in GitHub Copilot](https://github.blog/changelog/2026-02-17-claude-sonnet-4-6-is-now-generally-available-in-github-copilot)
 - [Claude Opus 4.6 Integration with GitHub Copilot Available in Popular IDEs](https://github.blog/changelog/2026-02-18-claude-opus-4-6-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse)
 - [Gemini 3.1 Pro Public Preview in GitHub Copilot](https://github.blog/changelog/2026-02-19-gemini-3-1-pro-is-now-in-public-preview-in-github-copilot)
-- [Bring Your Own AI Models to Visual Studio Code]({{ "/2026-02-20-Bring-Your-Own-AI-Models-to-Visual-Studio-Code.html" | relative_url }})
+- [Bring Your Own AI Models to Visual Studio Code](/2026-02-20-Bring-Your-Own-AI-Models-to-Visual-Studio-Code.html)
 - [GitHub Copilot Deprecates Selected Anthropic and OpenAI Models](https://github.blog/changelog/2026-02-19-selected-anthropic-and-openai-models-are-now-deprecated)
 
 ### Custom Agents and Unified Agent Management
@@ -111,23 +133,23 @@ GitHub Copilot now supports more models. Claude Opus 4.6 and Claude Sonnet 4.6 a
 With Visual Studio support for both built-in and custom agents, developers now have access to new debugging and modernization workflows, matching recent rollouts of agent skills and .agent.md standards for JetBrains and VS Code. Custom agent roles and project context tools encourage modular and team-based automation. VS Code brings together management for local, cloud, and partner agents, building toward the vision of unified agent handoff and coordination—sometimes called “Agent HQ.”
 
 - [Custom Agents in Visual Studio: Built-in and Custom Workflows with GitHub Copilot](https://devblogs.microsoft.com/visualstudio/custom-agents-in-visual-studio-built-in-and-build-your-own-agents/)
-- [A Unified Agent Experience in Visual Studio Code]({{ "/2026-02-20-A-Unified-Agent-Experience-in-Visual-Studio-Code.html" | relative_url }})
-- [Customize GitHub Copilot Agents in Visual Studio Code]({{ "/2026-02-20-Customize-GitHub-Copilot-Agents-in-Visual-Studio-Code.html" | relative_url }})
+- [A Unified Agent Experience in Visual Studio Code](/2026-02-20-A-Unified-Agent-Experience-in-Visual-Studio-Code.html)
+- [Customize GitHub Copilot Agents in Visual Studio Code](/2026-02-20-Customize-GitHub-Copilot-Agents-in-Visual-Studio-Code.html)
 
 ### Agentic Workflows, Continuous AI, and Automation Enhancements
 
 GitHub’s preview of agent-driven repository automation builds on recent markdown/YAML-based automation and Actions improvements. Copilot, OpenAI agents, and secure container features offer new options for fine-grained controls, making complex bot orchestration possible. Agent HQ is moving toward improved security, fleet management, and workflow reproducibility, supporting safer automation for non-critical pull requests while reproducibility practices develop further.
 
 - [GitHub Previews Agentic Workflows as Part of Continuous AI Concept](https://www.devclass.com/ci-cd/2026/02/17/github-previews-agentic-workflows-as-part-of-continuous-ai-concept/4091356)
-- [The Download: Agentic Workflows, New AI Models, and GitHub Updates]({{ "/2026-02-20-The-Download-Agentic-Workflows-New-AI-Models-and-GitHub-Updates.html" | relative_url }})
+- [The Download: Agentic Workflows, New AI Models, and GitHub Updates](/2026-02-20-The-Download-Agentic-Workflows-New-AI-Models-and-GitHub-Updates.html)
 
 ### Copilot Integration: VS Code, Zed, and SQL Tools
 
 Copilot now works in the Zed Editor—offering chat, completions, and code suggestions in more places. VS Code adds CLI integration and session tracking to strengthen its feature set. SQL toolkit improvements provide Copilot-powered support inside SSMS, VS Code MSSQL, and Microsoft Fabric Query Editor, simplifying query generation and automation for teams moving from Azure Data Studio.
 
 - [GitHub Copilot Now Supported in Zed Editor](https://github.blog/changelog/2026-02-19-github-copilot-support-in-zed-generally-available)
-- [Integrating Copilot CLI with Visual Studio Code]({{ "/2026-02-20-Integrating-Copilot-CLI-with-Visual-Studio-Code.html" | relative_url }})
-- [Let it Cook: Latest Updates in VS Code and GitHub Copilot]({{ "/2026-02-18-Let-it-Cook-Latest-Updates-in-VS-Code-and-GitHub-Copilot.html" | relative_url }})
+- [Integrating Copilot CLI with Visual Studio Code](/2026-02-20-Integrating-Copilot-CLI-with-Visual-Studio-Code.html)
+- [Let it Cook: Latest Updates in VS Code and GitHub Copilot](/2026-02-18-Let-it-Cook-Latest-Updates-in-VS-Code-and-GitHub-Copilot.html)
 - [AI-Powered Assistants in SSMS, VS Code, and Fabric: GitHub Copilot for SQL Developers](https://blog.fabric.microsoft.com/en-US/blog/no-more-excuses-ai-powered-assistants-are-in-ssms-vs-code-and-fabric/)
 
 ### Developer Workflow Optimization: App Modernization and Prompts
@@ -135,7 +157,7 @@ Copilot now works in the Zed Editor—offering chat, completions, and code sugge
 New Copilot migration guides provide support for legacy .NET upgrades—covering containerization, managed identities, and app restructuring. These guides are based on feedback about common .NET and Azure migration scenarios and highlight the practical impact of Copilot automation. The prompts.chat resource offers growing collections of reusable prompt templates to help teams accelerate processes by sharing best practices.
 
 - [From "Maybe Next Quarter" to "Running Before Lunch" on Container Apps - Modernizing Legacy .NET App](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-quot-maybe-next-quarter-quot-to-quot-running-before-lunch/ba-p/4495736)
-- [Open Source Friday: Practical Prompt Patterns with prompts.chat]({{ "/2026-02-17-Open-Source-Friday-Practical-Prompt-Patterns-with-promptschat.html" | relative_url }})
+- [Open Source Friday: Practical Prompt Patterns with prompts.chat](/2026-02-17-Open-Source-Friday-Practical-Prompt-Patterns-with-promptschat.html)
 
 ### Copilot Usage Metrics and Analytics
 
@@ -149,7 +171,7 @@ Copilot provides organization-wide dashboards and APIs for real-time monitoring 
 Octoverse data highlights how Copilot affects the technologies and languages developers prefer, including growth in TypeScript and more adoption of strongly-typed AI integrations. The GitHub Secure Open Source Fund continues to drive improved security, including autofix, scanning, and Copilot-based workflows for open source projects—maintaining last week’s emphasis on audit logs and automated governance.
 
 - [How AI is Reshaping Developer Choice: Insights from Octoverse 2025](https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/)
-- [Open Source Friday: GitHub Secure Open Source Fund and the Future of Supply Chain Security]({{ "/2026-02-18-Open-Source-Friday-GitHub-Secure-Open-Source-Fund-and-the-Future-of-Supply-Chain-Security.html" | relative_url }})
+- [Open Source Friday: GitHub Secure Open Source Fund and the Future of Supply Chain Security](/2026-02-18-Open-Source-Friday-GitHub-Secure-Open-Source-Fund-and-the-Future-of-Supply-Chain-Security.html)
 
 ### Other GitHub Copilot News
 
@@ -204,10 +226,10 @@ VS Code introduces more agent-oriented features, supporting orchestration, team 
 
 These improvements follow recent enhancements to SDK support and workflow monitoring, providing secure and versatile agent-driven development tools for all experience levels.
 
-- [VS Code Live: Agent Sessions Day - Keynote]({{ "/2026-02-20-VS-Code-Live-Agent-Sessions-Day-Keynote.html" | relative_url }})
-- [How VS Code Builds with AI]({{ "/2026-02-20-How-VS-Code-Builds-with-AI.html" | relative_url }})
-- [VS Code Live: Agent Sessions Day – AI and Agentic Development in Visual Studio Code]({{ "/2026-02-17-VS-Code-Live-Agent-Sessions-Day-AI-and-Agentic-Development-in-Visual-Studio-Code.html" | relative_url }})
-- [Getting Started with Agents in VS Code]({{ "/2026-02-17-Getting-Started-with-Agents-in-VS-Code.html" | relative_url }})
+- [VS Code Live: Agent Sessions Day - Keynote](/2026-02-20-VS-Code-Live-Agent-Sessions-Day-Keynote.html)
+- [How VS Code Builds with AI](/2026-02-20-How-VS-Code-Builds-with-AI.html)
+- [VS Code Live: Agent Sessions Day – AI and Agentic Development in Visual Studio Code](/2026-02-17-VS-Code-Live-Agent-Sessions-Day-AI-and-Agentic-Development-in-Visual-Studio-Code.html)
+- [Getting Started with Agents in VS Code](/2026-02-17-Getting-Started-with-Agents-in-VS-Code.html)
 
 ### Affordable AI Development and Practical Tutorials
 
@@ -240,7 +262,7 @@ SQUAD, an open-source orchestration framework for .NET, provides design patterns
 
 The trend toward agent frameworks for .NET continues, making orchestration and team-based build patterns more approachable.
 
-- [.NET AI Community Standup: SQUAD – AI Agent Teams for C# Projects]({{ "/2026-02-17-NET-AI-Community-Standup-SQUAD-AI-Agent-Teams-for-C-Projects.html" | relative_url }})
+- [.NET AI Community Standup: SQUAD – AI Agent Teams for C# Projects](/2026-02-17-NET-AI-Community-Standup-SQUAD-AI-Agent-Teams-for-C-Projects.html)
 
 The Imagine Cup semifinalists showcase AI-based solutions for accessibility, healthcare, education, and inventory, built by students on Azure using cognitive services, generative models, and cloud integration.
 
@@ -329,7 +351,7 @@ These guides reinforce last week’s migration and modernization topics, focusin
 
 - [Migrating Workloads from AWS to Azure: A Structured Approach for Cloud Architects](https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-workloads-from-aws-to-azure-a-structured-approach-for/ba-p/4495227)
 - [Migrating to SharePoint Online: Lessons Learned from Large Enterprises](https://dellenny.com/migrating-to-sharepoint-online-lessons-learned-from-large-enterprises/)
-- [SQL Server Migration Made Easy with Azure Arc]({{ "/2026-02-19-SQL-Server-Migration-Made-Easy-with-Azure-Arc.html" | relative_url }})
+- [SQL Server Migration Made Easy with Azure Arc](/2026-02-19-SQL-Server-Migration-Made-Easy-with-Azure-Arc.html)
 
 ### Azure Managed Disk and Storage Enhancements
 
@@ -356,7 +378,7 @@ Automatic zone balancing for VMSS (public preview) distributes VMs evenly across
 Recent VM and networking advances are continued here, supporting reliable and cloud-native networking tools.
 
 - [Public Preview: Automatic Zone Balance for Azure Virtual Machine Scale Sets](https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-automatic-zone-balance-for-virtual-machine-scale/ba-p/4494476)
-- [NAT Gateway v2 Overview]({{ "/2026-02-18-NAT-Gateway-v2-Overview.html" | relative_url }})
+- [NAT Gateway v2 Overview](/2026-02-18-NAT-Gateway-v2-Overview.html)
 
 ### Azure API Management for Enterprise AI and Multi-Region Deployments
 
@@ -373,7 +395,7 @@ Fabric SQL Database use cases are highlighted for analytics, metadata, logging, 
 
 These features strengthen integration, security, and governance released in recent Microsoft Fabric reports.
 
-- [Fabric SQL Database Use Cases Within Analytics Solutions]({{ "/2026-02-19-Fabric-SQL-Database-Use-Cases-Within-Analytics-Solutions.html" | relative_url }})
+- [Fabric SQL Database Use Cases Within Analytics Solutions](/2026-02-19-Fabric-SQL-Database-Use-Cases-Within-Analytics-Solutions.html)
 - [General Availability: Snowflake Key-Pair Authentication in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/snowflake-key-pair-authentication-generally-available/)
 - [Billing Updates: Dedicated Operations for Fabric AI Functions and Services](https://blog.fabric.microsoft.com/en-US/blog/billing-updates-new-operations-for-fabric-ai-functions-and-ai-services/)
 - [OneLake SharePoint and OneDrive Shortcuts Now Support Workspace and Service Principal Identities](https://blog.fabric.microsoft.com/en-US/blog/onelake-sharepoint-and-onedrive-shortcuts-now-support-workspace-and-service-principal-identities-generally-available/)
@@ -385,7 +407,7 @@ A new case study investigates virtual network routing flows, clarifying how unex
 These materials extend previous practical troubleshooting and compliance strategy coverage for Azure networks.
 
 - [Azure VNet-to-vWAN Routing Mystery: How Does On-Premises Traffic Flow Without Direct Connection?](https://techcommunity.microsoft.com/t5/azure-networking/help-how-is-vnet-traffic-reaching-vwan-on-prem-when-the-vnet-isn/m/p/4495408#M767)
-- [Meeting Sovereignty Requirements with Azure and Azure Local]({{ "/2026-02-16-Meeting-Sovereignty-Requirements-with-Azure-and-Azure-Local.html" | relative_url }})
+- [Meeting Sovereignty Requirements with Azure and Azure Local](/2026-02-16-Meeting-Sovereignty-Requirements-with-Azure-and-Azure-Local.html)
 
 ### Other Azure News
 
@@ -394,7 +416,7 @@ Developer tooling gains JMESPath query abilities in Azure CLI (azd v1.23.4 and a
 As always, these updates reinforce commitment to developer experience and platform resilience.
 
 - [JMESPath Query Support in Azure Developer CLI JSON Output](https://devblogs.microsoft.com/azure-sdk/azd-jmespath-query-support/)
-- [Azure Update 20th February 2026]({{ "/2026-02-20-Azure-Update-20th-February-2026.html" | relative_url }})
+- [Azure Update 20th February 2026](/2026-02-20-Azure-Update-20th-February-2026.html)
 - [Azure Migrate Adds Support for Premium SSD v2, Ultra, and ZRS Disks](https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-migrate-now-supporting-premium-ssd-v2-ultra-and-zrs-disks/ba-p/4495332)
 - [General Availability: Snowflake Key-Pair Authentication in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/snowflake-key-pair-authentication-generally-available/)
 - [Azure VNet-to-vWAN Routing Mystery: How Does On-Premises Traffic Flow Without Direct Connection?](https://techcommunity.microsoft.com/t5/azure-networking/help-how-is-vnet-traffic-reaching-vwan-on-prem-when-the-vnet-isn/m/p/4495408#M767)
@@ -411,7 +433,7 @@ Coding updates this week highlight new .NET runtime features, expanded agent wor
 
 These instrumentation improvements continue .NET’s movement toward greater observability and diagnostics, following last week’s release highlights.
 
-- [Async Await Just Got A Massive Improvement in .NET]({{ "/2026-02-20-Async-Await-Just-Got-A-Massive-Improvement-in-NET.html" | relative_url }})
+- [Async Await Just Got A Massive Improvement in .NET](/2026-02-20-Async-Await-Just-Got-A-Massive-Improvement-in-NET.html)
 - [Understanding Observable and Standard Instruments with System.Diagnostics.Metrics APIs](https://andrewlock.net/creating-standard-and-observable-instruments/)
 
 ### Visual Studio Code Workflow and Browser Integration
@@ -420,15 +442,15 @@ VS Code’s integrated browser brings live preview, real-time debugging, Chrome 
 
 Live coding challenges experiment with agent workflows and share actionable discoveries for continuous improvement.
 
-- [The Browser in Your Editor: Integrated Web Preview in VS Code]({{ "/2026-02-20-The-Browser-in-Your-Editor-Integrated-Web-Preview-in-VS-Code.html" | relative_url }})
-- [Live Coding Challenge: Exploring Agent Workflows in Visual Studio Code]({{ "/2026-02-20-Live-Coding-Challenge-Exploring-Agent-Workflows-in-Visual-Studio-Code.html" | relative_url }})
+- [The Browser in Your Editor: Integrated Web Preview in VS Code](/2026-02-20-The-Browser-in-Your-Editor-Integrated-Web-Preview-in-VS-Code.html)
+- [Live Coding Challenge: Exploring Agent Workflows in Visual Studio Code](/2026-02-20-Live-Coding-Challenge-Exploring-Agent-Workflows-in-Visual-Studio-Code.html)
 
 ### Open Source Ecosystems and Language Histories
 
 A pair of interviews with Anders Hejlsberg discuss why making TypeScript open source drove growth, trust, and quality—along with the impact of migrating to GitHub for increased openness and transparent, sustainable development. These discussions provide perspective on why open-source processes benefit technical communities, as covered in earlier roundups.
 
-- [Why TypeScript Had to Be Open Source]({{ "/2026-02-19-Why-TypeScript-Had-to-Be-Open-Source.html" | relative_url }})
-- [Why TypeScript Moved to GitHub in 2014]({{ "/2026-02-16-Why-TypeScript-Moved-to-GitHub-in-2014.html" | relative_url }})
+- [Why TypeScript Had to Be Open Source](/2026-02-19-Why-TypeScript-Had-to-Be-Open-Source.html)
+- [Why TypeScript Moved to GitHub in 2014](/2026-02-16-Why-TypeScript-Moved-to-GitHub-in-2014.html)
 
 ### Windows MIDI Services: Next-Gen Music Tech on Windows 11
 
@@ -450,7 +472,7 @@ An interview with David Soria Parra explores the evolution of Model Context Prot
 
 The discussion sheds light on the journey from internal protocol to open source, reflecting the process lessons from earlier MCP updates.
 
-- [Inside MCP: Origin, Workflow, and Future with David Soria Parra]({{ "/2026-02-19-Inside-MCP-Origin-Workflow-and-Future-with-David-Soria-Parra.html" | relative_url }})
+- [Inside MCP: Origin, Workflow, and Future with David Soria Parra](/2026-02-19-Inside-MCP-Origin-Workflow-and-Future-with-David-Soria-Parra.html)
 
 ## DevOps
 

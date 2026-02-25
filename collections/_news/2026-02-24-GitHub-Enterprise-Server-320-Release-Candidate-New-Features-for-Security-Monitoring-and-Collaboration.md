@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Enterprise Server 3.20 Release Candidate: New Features for Security, Monitoring, and Collaboration"
-description: "This release highlights GitHub Enterprise Server 3.20’s enhancements in deployment efficiency, code security, policy management, and collaboration. Key updates include an improved pull request merge experience, immutable GitHub releases, expanded secret scanning, new enterprise governance features, and general availability of managed backup services. It also introduces updates for GitHub Advanced Security and addresses advanced team management and backup solutions."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-24-github-enterprise-server-3-20-release-candidate-is-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-24-github-enterprise-server-3-20-release-candidate-is-available
+title: 'GitHub Enterprise Server 3.20 Release Candidate: New Features for Security, Monitoring, and Collaboration'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-24 23:37:14 +00:00
-permalink: "/2026-02-24-GitHub-Enterprise-Server-320-Release-Candidate-New-Features-for-Security-Monitoring-and-Collaboration.html"
-categories: ["DevOps", "Security"]
-tags: ["Advanced Security", "API", "Backup Service", "Code Security", "Collaboration", "Collaboration Tools", "Deployment", "DevOps", "Enterprise Teams", "GHES 3.20", "GitHub Enterprise Server", "Governance", "Immutable Releases", "News", "Pull Requests", "Release Management", "Secret Scanning", "Security"]
-tags_normalized: ["advanced security", "api", "backup service", "code security", "collaboration", "collaboration tools", "deployment", "devops", "enterprise teams", "ghes 3dot20", "github enterprise server", "governance", "immutable releases", "news", "pull requests", "release management", "secret scanning", "security"]
+tags:
+- Advanced Security
+- API
+- Backup Service
+- Code Security
+- Collaboration
+- Collaboration Tools
+- Deployment
+- DevOps
+- Enterprise Teams
+- GHES 3.20
+- GitHub Enterprise Server
+- Governance
+- Immutable Releases
+- News
+- Pull Requests
+- Release Management
+- Secret Scanning
+- Security
+section_names:
+- devops
+- security
 ---
-
 Allison provides an in-depth overview of the GitHub Enterprise Server 3.20 release candidate, breaking down new security, DevOps, and collaboration features for enterprise development teams.<!--excerpt_end-->
 
 # GitHub Enterprise Server 3.20 Release Candidate: What’s New?

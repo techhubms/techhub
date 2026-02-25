@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Visual Studio February 2026 Update: AI Assistance, GitHub Copilot, and Developer Productivity"
-description: "The February 2026 Visual Studio update introduces notable enhancements for developers, including tighter GitHub Copilot integration for test generation, Copilot-powered call stack analysis, C++ app modernization guidance, improved Razor Hot Reload, and diagnostic/debugging improvements. Updates focus on boosting productivity, modernizing legacy apps, and streamlining workflows for .NET, C++, and WinForms developers."
-author: "Mark Downie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-february-update/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-february-update/
+title: 'Visual Studio February 2026 Update: AI Assistance, GitHub Copilot, and Developer Productivity'
+author: Mark Downie
+primary_section: github-copilot
+feed_name: Microsoft VisualStudio Blog
 date: 2026-02-24 22:16:30 +00:00
-permalink: "/2026-02-24-Visual-Studio-February-2026-Update-AI-Assistance-GitHub-Copilot-and-Developer-Productivity.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Assistance", "BenchmarkDotNet", "Blazor", "C#", "C++", "Coding", "Debugger", "Debugging And Diagnostics", "Diagnostics", "GitHub Copilot", "Hot Reload", "IEnumerable Visualizer", "Modernization", "MSTest", "News", "NUnit", "Productivity", "Profiler Agent", "Razor", "Roslyn", "Unit Testing", "VS", "WinForms", "xUnit"]
-tags_normalized: ["dotnet", "ai", "ai assistance", "benchmarkdotnet", "blazor", "csharp", "cplusplus", "coding", "debugger", "debugging and diagnostics", "diagnostics", "github copilot", "hot reload", "ienumerable visualizer", "modernization", "mstest", "news", "nunit", "productivity", "profiler agent", "razor", "roslyn", "unit testing", "vs", "winforms", "xunit"]
+tags:
+- .NET
+- AI
+- AI Assistance
+- BenchmarkDotNet
+- Blazor
+- C#
+- C++
+- Debugger
+- Debugging And Diagnostics
+- Diagnostics
+- GitHub Copilot
+- Hot Reload
+- IEnumerable Visualizer
+- Modernization
+- MSTest
+- News
+- NUnit
+- Productivity
+- Profiler Agent
+- Razor
+- Roslyn
+- Unit Testing
+- VS
+- WinForms
+- xUnit
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Mark Downie details the February 2026 Visual Studio update, highlighting GitHub Copilot-powered AI features, smarter test workflows, and productivity improvements for .NET and C++ development.<!--excerpt_end-->
 
 # Visual Studio February 2026 Update: New AI, GitHub Copilot, and Productivity Features

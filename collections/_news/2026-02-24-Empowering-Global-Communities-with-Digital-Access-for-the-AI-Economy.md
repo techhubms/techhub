@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Empowering Global Communities with Digital Access for the AI Economy"
-description: "This post highlights Microsoft's achievement of connecting over 299 million people to the internet, surpassing their original goal of 250 million. Emphasizing multi-sector partnerships and local engagement, the article explores how digital connectivity builds the foundation for inclusive participation in the evolving AI-driven economy. Microsoft’s holistic strategy includes collaborations with Starlink and local providers to ensure reliable internet, energy, and digital skills, fostering 'AI-ready' communities worldwide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2026/02/24/empowering-communities-to-enable-the-global-ai-economy/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/on-the-issues/2026/02/24/empowering-communities-to-enable-the-global-ai-economy/
+title: Empowering Global Communities with Digital Access for the AI Economy
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-24 18:21:28 +00:00
-permalink: "/2026-02-24-Empowering-Global-Communities-with-Digital-Access-for-the-AI-Economy.html"
-categories: ["AI"]
-tags: ["AI", "AI Access Principles", "AI Diffusion", "AI Economy", "AirJaldi", "Anditel", "Cassava Technologies", "Community Hubs", "Community Partnerships", "Company News", "Connectivity", "Digital Adoption", "Digital Inclusion", "Digital Skills", "Global Infrastructure", "Mawingu Networks", "Microsoft", "Mobile World Congress", "News", "On The Issues", "Rural Connectivity", "Satellite Internet", "Starlink", "Tizeti"]
-tags_normalized: ["ai", "ai access principles", "ai diffusion", "ai economy", "airjaldi", "anditel", "cassava technologies", "community hubs", "community partnerships", "company news", "connectivity", "digital adoption", "digital inclusion", "digital skills", "global infrastructure", "mawingu networks", "microsoft", "mobile world congress", "news", "on the issues", "rural connectivity", "satellite internet", "starlink", "tizeti"]
+tags:
+- AI
+- AI Access Principles
+- AI Diffusion
+- AI Economy
+- AirJaldi
+- Anditel
+- Cassava Technologies
+- Community Hubs
+- Community Partnerships
+- Company News
+- Connectivity
+- Digital Adoption
+- Digital Inclusion
+- Digital Skills
+- Global Infrastructure
+- Mawingu Networks
+- Microsoft
+- Mobile World Congress
+- News
+- On The Issues
+- Rural Connectivity
+- Satellite Internet
+- Starlink
+- Tizeti
+section_names:
+- ai
 ---
-
 stclarke outlines Microsoft’s efforts in connecting more than 299 million people worldwide, focusing on digital access, partnerships, and community enablement to foster inclusive participation in the AI economy.<!--excerpt_end-->
 
 # Empowering Global Communities with Digital Access for the AI Economy

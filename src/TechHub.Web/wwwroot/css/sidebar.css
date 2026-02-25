@@ -413,8 +413,9 @@
   font-weight: var(--font-weight-semibold);
 }
 
-.sidebar-content-button.active .sidebar-content-button-meta {
-  color: var(--color-purple-bright);
+.sidebar-content-button.active .sidebar-content-button-meta,
+.sidebar-content-button.active .sidebar-content-button-meta time {
+  color: var(--color-text-emphasis);
 }
 
 .sidebar-content-button-title {

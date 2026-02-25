@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Building Interactive MCP Apps with the Azure Functions MCP Extension"
-description: "This comprehensive community post by lily-ma introduces the new MCP Apps support in the Azure Functions Model Context Protocol (MCP) extension. It explains how developers can use Python, TypeScript, or .NET to create richer, interactive AI agent experiences by connecting MCP tools to resources that provide HTML interfaces. The guide includes example scenarios, code snippets, and secure deployment advice, enabling developers to build MCP Apps for data exploration, configuration wizards, and real-time monitoring with Azure Functions’ serverless capabilities."
-author: "lily-ma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-mcp-apps-with-azure-functions-mcp-extension/ba-p/4496536"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-mcp-apps-with-azure-functions-mcp-extension/ba-p/4496536
+title: Building Interactive MCP Apps with the Azure Functions MCP Extension
+author: lily-ma
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-23 20:13:39 +00:00
-permalink: "/2026-02-23-Building-Interactive-MCP-Apps-with-the-Azure-Functions-MCP-Extension.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agent Tools", "AI", "Authentication", "Azure", "Azure Functions", "C#", "Coding", "Community", "Entra ID", "Interactive UI", "LLM Integration", "MCP", "MCP Apps", "MCP Extension", "Metadata", "Python", "Resource Trigger", "Serverless", "TypeScript"]
-tags_normalized: ["dotnet", "agent tools", "ai", "authentication", "azure", "azure functions", "csharp", "coding", "community", "entra id", "interactive ui", "llm integration", "mcp", "mcp apps", "mcp extension", "metadata", "python", "resource trigger", "serverless", "typescript"]
+tags:
+- .NET
+- Agent Tools
+- AI
+- Authentication
+- Azure
+- Azure Functions
+- C#
+- Community
+- Entra ID
+- Interactive UI
+- LLM Integration
+- MCP
+- MCP Apps
+- MCP Extension
+- Metadata
+- Python
+- Resource Trigger
+- Serverless
+- TypeScript
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 lily-ma explains how to leverage the new MCP Apps support in Azure Functions MCP Extension to build interactive AI agent tools. The post covers fundamentals, example code, scenarios, and security practices.<!--excerpt_end-->
 
 # Building Interactive MCP Apps with Azure Functions MCP Extension

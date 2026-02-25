@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Pull Request Throughput and Time to Merge in GitHub Copilot Usage Metrics API"
-description: "This update introduces new enterprise-level APIs that provide GitHub Copilot usage metrics, empowering organizations to analyze Copilot's impact on pull request workflows. Enterprise admins can track review suggestions, pull request merges, and overall cycle time, gaining actionable insight into Copilot-assisted development."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-19-pull-request-throughput-and-time-to-merge-available-in-copilot-usage-metrics-api"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-19-pull-request-throughput-and-time-to-merge-available-in-copilot-usage-metrics-api
+title: Pull Request Throughput and Time to Merge in GitHub Copilot Usage Metrics API
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-19 16:08:02 +00:00
-permalink: "/2026-02-19-Pull-Request-Throughput-and-Time-to-Merge-in-GitHub-Copilot-Usage-Metrics-API.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Account Management", "AI", "API Integration", "Copilot", "Copilot Metrics API", "Development Metrics", "DevOps", "DevOps Insights", "Enterprise Admin", "Enterprise Management Tools", "GitHub Copilot", "GitHub Enterprise", "Merge Cycle Time", "News", "Pull Request Analytics", "Review Suggestions"]
-tags_normalized: ["account management", "ai", "api integration", "copilot", "copilot metrics api", "development metrics", "devops", "devops insights", "enterprise admin", "enterprise management tools", "github copilot", "github enterprise", "merge cycle time", "news", "pull request analytics", "review suggestions"]
+tags:
+- Account Management
+- AI
+- API Integration
+- Copilot
+- Copilot Metrics API
+- Development Metrics
+- DevOps
+- DevOps Insights
+- Enterprise Admin
+- Enterprise Management Tools
+- GitHub Copilot
+- GitHub Enterprise
+- Merge Cycle Time
+- News
+- Pull Request Analytics
+- Review Suggestions
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison details how the Copilot usage metrics API helps enterprise admins gain visibility into the impact of GitHub Copilot on pull request workflows and team productivity.<!--excerpt_end-->
 
 # Pull Request Throughput and Time to Merge in GitHub Copilot Usage Metrics API

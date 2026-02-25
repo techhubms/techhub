@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "Async Await Just Got A Massive Improvement in .NET"
-description: "Nick Chapsas discusses the new Async feature in the .NET 11 Runtime, exploring how it significantly enhances the performance of Async/Await code. The video covers key improvements, practical benefits, and what developers can expect when using the latest update. Viewers will gain insights into leveraging these advancements in real-world projects."
-author: "Nick Chapsas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8Gl2RmUV0hg"
-viewing_mode: "internal"
-feed_name: "Nick Chapsas YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+﻿---
+external_url: https://www.youtube.com/watch?v=8Gl2RmUV0hg
+title: Async Await Just Got A Massive Improvement in .NET
+author: Nick Chapsas
+primary_section: dotnet
+feed_name: Nick Chapsas YouTube
 date: 2026-02-20 11:30:00 +00:00
-permalink: "/2026-02-20-Async-Await-Just-Got-A-Massive-Improvement-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 11", "Async Await", "Asynchronous Programming", "C#", "Coding", "Developer Tools", "Microsoft", "Performance", "Programming", "Runtime Improvements", "Videos"]
-tags_normalized: ["dotnet", "dotnet 11", "async await", "asynchronous programming", "csharp", "coding", "developer tools", "microsoft", "performance", "programming", "runtime improvements", "videos"]
+tags:
+- .NET
+- .NET 11
+- Async Await
+- Asynchronous Programming
+- C#
+- Developer Tools
+- Microsoft
+- Performance
+- Programming
+- Runtime Improvements
+- Videos
+section_names:
+- dotnet
 ---
-
 Nick Chapsas explains the new Async improvement in .NET 11 Runtime, offering developers practical insights into enhanced Async/Await performance.<!--excerpt_end-->
 
 {% youtube 8Gl2RmUV0hg %}

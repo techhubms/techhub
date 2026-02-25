@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "How VS Code Builds with AI"
-description: "This session provides insights into how the Visual Studio Code team incorporates AI agents into their daily development workflow. The team discusses integrating AI technologies within the editor's internal processes, lessons learned from direct collaboration with AI agents, and the role of team feedback in shaping product features and continuous improvement."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ee-obY-4rqk"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=ee-obY-4rqk
+title: How VS Code Builds with AI
+author: Visual Studio Code
+primary_section: ai
+feed_name: Visual Studio Code YouTube
 date: 2026-02-20 10:01:06 +00:00
-permalink: "/2026-02-20-How-VS-Code-Builds-with-AI.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "AI Integration", "Coding", "Continuous Improvement", "Dev Tools", "Developer Workflow", "Editor Development", "Product Feedback", "Software Engineering", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agents", "ai integration", "coding", "continuous improvement", "dev tools", "developer workflow", "editor development", "product feedback", "software engineering", "videos", "vs code"]
+tags:
+- AI
+- AI Agents
+- AI Integration
+- Continuous Improvement
+- Dev Tools
+- Developer Workflow
+- Editor Development
+- Product Feedback
+- Software Engineering
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Visual Studio Code’s own team details how they use AI agents within their internal development workflow, sharing lessons learned and how direct feedback helps evolve VS Code's features.<!--excerpt_end-->
 
 {% youtube ee-obY-4rqk %}

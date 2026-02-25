@@ -207,6 +207,14 @@ try {
 
             Write-Host "    📊 Found $newItemsCount new items to process and $skippedItemsCount already processed"
 
+            # Phase 1.5: Enrich YouTube items that need processing with API-fetched tags
+            if ($feed.IsYouTubeFeed() -and $itemsToProcess.Count -gt 0) {
+                Write-Host "    📺 Fetching YouTube tags for $($itemsToProcess.Count) new items..."
+                foreach ($processingItem in $itemsToProcess) {
+                    $feed.EnrichItemWithYouTubeTags($processingItem.Item)
+                }
+            }
+
             # Phase 2: Download content for all new items
             $contentMap = @{}
             

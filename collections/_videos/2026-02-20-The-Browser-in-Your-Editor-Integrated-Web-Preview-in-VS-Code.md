@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "The Browser in Your Editor: Integrated Web Preview in VS Code"
-description: "This video from the Visual Studio Code team introduces the new integrated browser in VS Code, allowing developers to preview and inspect websites directly within the editor. Features include embedded DevTools, authentication workflows, and the ability to select page elements as context for AI chat. The tool is designed to streamline development workflows, enhance productivity, and enable seamless interaction between code and web applications."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xjprgyqp9Z0"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=xjprgyqp9Z0
+title: 'The Browser in Your Editor: Integrated Web Preview in VS Code'
+author: Visual Studio Code
+primary_section: dotnet
+feed_name: Visual Studio Code YouTube
 date: 2026-02-20 13:01:45 +00:00
-permalink: "/2026-02-20-The-Browser-in-Your-Editor-Integrated-Web-Preview-in-VS-Code.html"
-categories: ["Coding"]
-tags: ["AI", "AI Chat", "Authentication", "Coding", "Developer Tools", "DevTools", "Editor Enhancement", "Integrated Browser", "Preview Panel", "Productivity", "Videos", "VS Code", "Web Application", "Web Development"]
-tags_normalized: ["ai", "ai chat", "authentication", "coding", "developer tools", "devtools", "editor enhancement", "integrated browser", "preview panel", "productivity", "videos", "vs code", "web application", "web development"]
+tags:
+- AI
+- AI Chat
+- Authentication
+- Developer Tools
+- DevTools
+- Editor Enhancement
+- Integrated Browser
+- Preview Panel
+- Productivity
+- Videos
+- VS Code
+- Web Application
+- Web Development
+- .NET
+section_names:
+- dotnet
 ---
-
 Visual Studio Code demonstrates their new integrated browser, which allows developers to inspect, preview web sites, and leverage DevTools and AI chat context directly inside the VS Code editor.<!--excerpt_end-->
 
 {% youtube xjprgyqp9Z0 %}

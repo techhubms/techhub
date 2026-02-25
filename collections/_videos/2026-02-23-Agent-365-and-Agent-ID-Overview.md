@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Agent 365 and Agent ID Overview"
-description: "John Savill’s walkthrough explores the concepts of Agent 365 (A365) and Agent ID, focusing on how Microsoft Entra, Purview, and Defender are leveraged to enable agent-based productivity and secure identity management in Azure cloud environments. The session highlights modern challenges with agents, identity solutions, and practical steps for utilizing these Microsoft services."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WTcyL68qTo8"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=WTcyL68qTo8
+title: Agent 365 and Agent ID Overview
+author: John Savill's Technical Training
+primary_section: ai
+feed_name: John Savill's Technical Training
 date: 2026-02-23 16:40:40 +00:00
-permalink: "/2026-02-23-Agent-365-and-Agent-ID-Overview.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["A365", "Agent 365", "Agent Blueprint", "Agent ID", "Agent User", "AI", "Authentication", "Azure", "Azure Cloud", "Blueprint Service Principals", "Cloud", "Cloud Security", "Identity Management", "LLM", "M365", "Microsoft", "Microsoft Azure", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "Security", "Videos", "Work IQ"]
-tags_normalized: ["a365", "agent 365", "agent blueprint", "agent id", "agent user", "ai", "authentication", "azure", "azure cloud", "blueprint service principals", "cloud", "cloud security", "identity management", "llm", "m365", "microsoft", "microsoft azure", "microsoft defender", "microsoft entra", "microsoft purview", "security", "videos", "work iq"]
+tags:
+- A365
+- Agent 365
+- Agent Blueprint
+- Agent ID
+- Agent User
+- AI
+- Authentication
+- Azure
+- Azure Cloud
+- Blueprint Service Principals
+- Cloud Security
+- Identity Management
+- LLM
+- M365
+- Microsoft
+- Microsoft Azure
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Purview
+- Security
+- Videos
+- Work IQ
+section_names:
+- ai
+- azure
+- security
 ---
-
 John Savill provides an in-depth overview of Agent 365 and Agent ID, demonstrating how Microsoft Entra, Purview, and Defender facilitate secure, productive agent-based environments in the Azure cloud.<!--excerpt_end-->
 
 {% youtube WTcyL68qTo8 %}
