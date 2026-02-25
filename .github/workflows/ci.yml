@@ -198,6 +198,7 @@ jobs:
           echo "API server started (PID: $(cat /tmp/api-server.pid))"
         env:
           AppSettings__Content__CollectionsPath: ${{ github.workspace }}/collections
+          Database__ConnectionString: "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
 
       - name: Start Web server
         run: |

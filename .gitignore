@@ -1,6 +1,9 @@
 # Content processing (keep execute-with-token.ps1 private)
 scripts/content-processing/execute-with-token.ps1
 
+# Allow content-processing DLL dependencies (needed by PowerShell scripts)
+!scripts/content-processing/lib/*.dll
+
 # Infrastructure compiled templates (Bicep to ARM)
 infra/**/*.json
 

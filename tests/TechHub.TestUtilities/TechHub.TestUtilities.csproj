@@ -29,6 +29,7 @@
   <ItemGroup>
     <!-- Include test collection files as content to be copied to output directory -->
     <Content Include="TestCollections\**\*.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="TestCollections\**\*.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>
