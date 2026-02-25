@@ -68,15 +68,11 @@ jobs:
           dotnet test --project tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj \
             --configuration Release --no-restore \
             --results-directory TestResults \
-            --report-xunit-trx --report-xunit-trx-filename core-test-results.trx \
-            -- --coverage --coverage-output-format cobertura \
-            --coverage-output ${{ github.workspace }}/TestResults/core-coverage.cobertura.xml
+            --report-xunit-trx --report-xunit-trx-filename core-test-results.trx
           dotnet test --project tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj \
             --configuration Release --no-restore \
             --results-directory TestResults \
-            --report-xunit-trx --report-xunit-trx-filename web-test-results.trx \
-            -- --coverage --coverage-output-format cobertura \
-            --coverage-output ${{ github.workspace }}/TestResults/web-coverage.cobertura.xml
+            --report-xunit-trx --report-xunit-trx-filename web-test-results.trx
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -85,14 +81,6 @@ jobs:
           name: unit-test-results
           path: '**/TestResults/**'
           retention-days: 7
-
-      - name: Upload coverage data
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: coverage-unit
-          path: '${{ github.workspace }}/TestResults/*-coverage.cobertura.xml'
-          retention-days: 1
 
   test-integration:
     name: Integration Tests
@@ -118,17 +106,13 @@ jobs:
             --no-restore \
             --results-directory TestResults \
             --report-xunit-trx \
-            --report-xunit-trx-filename integration-test-results.trx \
-            -- --coverage --coverage-output-format cobertura \
-            --coverage-output ${{ github.workspace }}/TestResults/api-coverage.cobertura.xml
+            --report-xunit-trx-filename integration-test-results.trx
           dotnet test --project tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj \
             --configuration Release \
             --no-restore \
             --results-directory TestResults \
             --report-xunit-trx \
-            --report-xunit-trx-filename infrastructure-test-results.trx \
-            -- --coverage --coverage-output-format cobertura \
-            --coverage-output ${{ github.workspace }}/TestResults/infra-coverage.cobertura.xml
+            --report-xunit-trx-filename infrastructure-test-results.trx
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -137,14 +121,6 @@ jobs:
           name: integration-test-results
           path: '**/TestResults/**'
           retention-days: 7
-
-      - name: Upload coverage data
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: coverage-integration
-          path: '${{ github.workspace }}/TestResults/*-coverage.cobertura.xml'
-          retention-days: 1
 
   test-e2e:
     name: E2E Tests
@@ -191,39 +167,67 @@ jobs:
 
       - name: Start API server
         run: |
-          dotnet run --project src/TechHub.Api/TechHub.Api.csproj \
-            --launch-profile Development --no-build --configuration Release &
+          nohup dotnet run --project src/TechHub.Api/TechHub.Api.csproj \
+            --launch-profile Development --no-build --configuration Release \
+            > /tmp/api-server.log 2>&1 &
+          echo $! > /tmp/api-server.pid
+          echo "API server started (PID: $(cat /tmp/api-server.pid))"
         env:
           AppSettings__Content__CollectionsPath: ${{ github.workspace }}/collections
 
       - name: Start Web server
         run: |
-          dotnet run --project src/TechHub.Web/TechHub.Web.csproj \
-            --launch-profile Development --no-build --configuration Release &
+          nohup dotnet run --project src/TechHub.Web/TechHub.Web.csproj \
+            --launch-profile Development --no-build --configuration Release \
+            > /tmp/web-server.log 2>&1 &
+          echo $! > /tmp/web-server.pid
+          echo "Web server started (PID: $(cat /tmp/web-server.pid))"
 
       - name: Wait for servers to be ready
         run: |
+          API_READY=false
           echo "Waiting for API to be ready..."
           for i in $(seq 1 60); do
             if curl -sk https://localhost:5001/health 2>/dev/null; then
               echo ""
               echo "API is ready!"
+              API_READY=true
               break
             fi
             echo "Attempt $i - API not ready yet..."
             sleep 5
           done
 
+          if [ "$API_READY" = "false" ]; then
+            echo "::error::API server failed to start within timeout"
+            echo "--- API Server Log (last 80 lines) ---"
+            tail -80 /tmp/api-server.log || true
+            echo "--- API PID check ---"
+            ps -p $(cat /tmp/api-server.pid 2>/dev/null) 2>/dev/null || echo "Process not running"
+            exit 1
+          fi
+
+          WEB_READY=false
           echo "Waiting for Web to be ready..."
           for i in $(seq 1 60); do
             if curl -sk -o /dev/null -w '%{http_code}' https://localhost:5003 2>/dev/null | grep -q '200'; then
               echo ""
               echo "Web is ready!"
+              WEB_READY=true
               break
             fi
             echo "Attempt $i - Web not ready yet..."
             sleep 5
           done
+
+          if [ "$WEB_READY" = "false" ]; then
+            echo "::error::Web server failed to start within timeout"
+            echo "--- Web Server Log (last 80 lines) ---"
+            tail -80 /tmp/web-server.log || true
+            echo "--- Web PID check ---"
+            ps -p $(cat /tmp/web-server.pid 2>/dev/null) 2>/dev/null || echo "Process not running"
+            exit 1
+          fi
 
       - name: Run E2E tests
         run: |
@@ -248,6 +252,14 @@ jobs:
         with:
           name: playwright-traces
           path: tests/TechHub.E2E.Tests/bin/Release/net10.0/playwright-traces/
+          retention-days: 7
+
+      - name: Upload server logs
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: e2e-server-logs
+          path: /tmp/*-server.log
           retention-days: 7
 
   lint:
@@ -327,54 +339,17 @@ jobs:
     if: always()
     
     steps:
-      - name: Download unit test coverage
-        uses: actions/download-artifact@v4
-        with:
-          name: coverage-unit
-          path: coverage/unit
-        continue-on-error: true
-
-      - name: Download integration test coverage
-        uses: actions/download-artifact@v4
-        with:
-          name: coverage-integration
-          path: coverage/integration
-        continue-on-error: true
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '10.0.x'
-
-      - name: Install ReportGenerator
-        run: dotnet tool install -g dotnet-reportgenerator-globaltool
-
-      - name: Merge coverage reports and generate summary
+      - name: Generate coverage report summary
         run: |
-          REPORTS=$(find coverage -name '*.cobertura.xml' 2>/dev/null | tr '\n' ';')
-          if [ -z "$REPORTS" ]; then
-            echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "⚠️ No coverage data available — test jobs may have failed." >> $GITHUB_STEP_SUMMARY
-            exit 0
-          fi
-          
-          reportgenerator \
-            "-reports:${REPORTS}" \
-            "-targetdir:coverage/report" \
-            "-reporttypes:Cobertura;MarkdownSummaryGithub"
-          
           echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          cat coverage/report/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
-
-      - name: Upload merged coverage report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: code-coverage-report
-          path: coverage/report/
-          retention-days: 7
+          echo "⚠️ Code coverage collection is pending tooling support." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "xUnit v3 bundles Microsoft.Testing.Platform v2.0.2 which is not yet compatible" >> $GITHUB_STEP_SUMMARY
+          echo "with Microsoft.Testing.Extensions.CodeCoverage. Coverage will be enabled once" >> $GITHUB_STEP_SUMMARY
+          echo "a compatible version is available." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Test result artifacts (TRX) are available from the unit and integration test jobs." >> $GITHUB_STEP_SUMMARY
 
   test-powershell:
     name: PowerShell Tests
@@ -392,6 +367,9 @@ jobs:
       - name: Run Pester tests
         shell: pwsh
         run: |
+          # Pre-load all content-processing functions (required by tests)
+          . "$PWD/tests/powershell/Initialize-BeforeAll.ps1"
+
           $config = New-PesterConfiguration
           $config.Run.Path = "tests/powershell"
           $config.Output.Verbosity = "Detailed"
