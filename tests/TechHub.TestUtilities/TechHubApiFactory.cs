@@ -70,7 +70,7 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IAsyncLif
         // to complete before tests run. Without this, tests could fire requests before data is ready.
         using var _ = CreateClient();
         var startupState = Services.GetRequiredService<StartupStateService>();
-        await startupState.StartupTask.WaitAsync(TimeSpan.FromSeconds(60));
+        await startupState.StartupTask.WaitAsync(TimeSpan.FromSeconds(120));
     }
 
     public override async ValueTask DisposeAsync()

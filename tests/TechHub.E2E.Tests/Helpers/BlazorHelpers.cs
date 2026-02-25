@@ -84,7 +84,7 @@ public static class BlazorHelpers
     /// Timeout for browser launch operations.
     /// Separate from test timeouts as this is infrastructure initialization.
     /// </summary>
-    internal const int BrowserLaunchTimeout = 5000;
+    internal const int BrowserLaunchTimeout = 30_000;
 
     /// <summary>Base URL for the Web frontend</summary>
     public const string BaseUrl = "https://localhost:5003";

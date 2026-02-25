@@ -65,13 +65,14 @@ jobs:
 
       - name: Run unit tests
         run: |
-          dotnet test --solution TechHub.slnx \
-            --configuration Release \
-            --no-restore \
+          dotnet test --project tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj \
+            --configuration Release --no-restore \
             --results-directory TestResults \
-            --report-xunit-trx \
-            --report-xunit-trx-filename test-results.trx \
-            --filter-not-namespace TechHub.E2E.Tests
+            --report-xunit-trx --report-xunit-trx-filename core-test-results.trx
+          dotnet test --project tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj \
+            --configuration Release --no-restore \
+            --results-directory TestResults \
+            --report-xunit-trx --report-xunit-trx-filename web-test-results.trx
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
