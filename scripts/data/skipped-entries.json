@@ -12519,5 +12519,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/pPJuPBStHpo",
     "reason": "No categories found: Content excluded due to insufficient technical substance—this is an announcement/highlight video for a creative application competition (Agents League) with only event promotion and registration information, but no substantive discussion of Microsoft technology, technical implementation, or development guidance. No details on Azure, coding, DevOps, or other relevant technical areas are provided. This matches the 'Sales Pitches/Promotional content without educational value' generic exclusion rule. No categories assigned."
+  },
+  {
+    "timestamp": "2026-02-25 19:22:47 +00:00",
+    "reason": "No categories found: All content focuses on Microsoft's sustainability initiatives and renewable energy procurement. It documents the company's progress in meeting its renewable energy goal, describes specific solar and hydroelectric projects, and highlights community investment strategies. However, per generic exclusion rules in Chapter 3, content about business strategy, organizational planning, or high-level corporate initiatives without specific technical implementation details does not qualify. The content does not discuss Microsoft technology products, developer tools, coding, DevOps, AI, Azure services, ML, or security implementation. It highlights energy procurement, community benefits, partnerships, and environmental impact, but provides no actionable insight or technical content relevant to Microsoft consultants or developers. Therefore, no categories apply.",
+    "canonical_url": "https://news.microsoft.com/source/features/sustainability/6-projects-that-helped-microsoft-meet-its-renewable-energy-goal/",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: Content excluded due to lack of substantive information. The provided input does not include the 'content' field and gives only a brief description of a live coding event without technical or implementation details. According to processing rules, categorization decisions must be based on the full original content. Without access to the main content text, it's not possible to determine if any Microsoft technology category applies or if generic exclusion rules are triggered. Therefore, no categories can be assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/WWoAjdmhLUg",
+    "timestamp": "2026-02-25 22:07:21 +00:00"
   }
 ]
