@@ -12405,5 +12405,107 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=vL-hq1KYopc",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The provided description focuses on a community-driven learning roadmap ('Learn to Cloud'), highlights the creators, and describes the initiative as aggregating resources for beginners. There is no substantive technical content, discussion of Microsoft-specific technologies (Azure, GitHub Actions, etc.), or sufficient technical depth present in the description. No main content is provided, so category inclusion rules cannot be applied. (Reference: Generic Exclusion Rules – focus is on a community project announcement, not technical implementation or deep-dive content.)"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is focused on the built-in Nearby Sharing feature in Windows 11 for end-user productivity (file transfers between Windows PCs), not on development, coding, DevOps practices, security architecture, or any Microsoft developer or cloud technologies. Generic exclusion rules specify that non-development end-user Windows features, general productivity tips, and how-to guides for standard OS usage do not qualify for any categories. There is no programming, scripting, architecture, or technical implementation related to Microsoft developer tools, coding, DevOps, Azure, Security, ML, AI, or GitHub Copilot. The article is suitable for general users, not for developers or consultants working with Microsoft technologies.",
+    "timestamp": "2026-02-21 16:04:34 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/zap-files-in-seconds-using-nearby-sharing-for-quick-file-transfers-in-windows-11/"
+  },
+  {
+    "collection": "blogs",
+    "reason": "No categories found: All generic exclusion rules were evaluated first, as required. The content is a consumer-focused blog post about transferring personal files on work-managed Windows 11 PCs when USB ports are blocked by IT policy. It is aimed at everyday end-users, not developers or technical practitioners. It discusses methods like cloud storage, email, collaboration tools, and checking with IT — all from a non-technical, end-user perspective. There is no substantial coverage of development, coding, DevOps, scripting, enterprise architecture, or Microsoft developer/consultant tooling. No inclusion rules for 'AI,' 'GitHub Copilot,' 'Coding,' 'DevOps,' 'Azure,' 'ML,' or 'Security' apply. The Windows 11 focus is on end-user file transfer, not system administration or technical implementation. Per 'Non-Development Microsoft Products' exclusion, content about general Windows/Office features (except development or IT engineering use) is excluded. Therefore, no categories apply.",
+    "canonical_url": "https://dellenny.com/usb-blocked-on-windows-11-at-work-heres-how-to-move-your-personal-files-without-risking-your-job/",
+    "timestamp": "2026-02-22 09:07:14 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/traffic-processing-bgp-azure-vpn-gateway-a-a/m-p/4496361#M769",
+    "collection": "community",
+    "timestamp": "2026-02-23 05:30:40 +00:00"
+  },
+  {
+    "timestamp": "2026-02-23 13:28:52 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-do-i-send-azure-apim-product-subscription-approval-to/m-p/4496443#M22439"
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules must be applied first. The main content, as well as the title, description, and author tags, strongly indicate that the post is about 'Agentic AI' adoption in enterprise/organizational contexts. Despite tags like 'Copilot' and 'M365 Copilot,' the actual content does not discuss developer tools, Copilot Studio, GitHub Copilot, or any development, coding, ML, Azure, or Security implementation details. Microsoft 365 Copilot is referenced in tags and related posts, but per the workflow, 'Microsoft 365 Copilot' and related business productivity Copilot products are not assigned any categories. The post is focused on general enterprise/organizational adoption mistakes, strategy, change management, compliance, and operational/cultural factors, not technical development, integration, or Microsoft developer tooling. No substantial technical Microsoft content is present, and the discussion is about high-level business and operational strategy, which is a generic exclusion (Business Strategy and Executive Content, Non-Development Microsoft Products). As a result, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/common-mistakes-orgs-make-when-adopting-agentic-ai/",
+    "timestamp": "2026-02-23 15:16:41 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "reason": "No categories found: No categories assigned. Although the news post relates to the Xbox Developer Acceleration Program and spotlights indie games from developers across the African diaspora, it does not provide any technical implementation details, development strategies, tooling discussions, or in-depth information about Microsoft coding platforms, DevOps, Azure, AI, ML, or Security topics. The content is celebratory, promotional, and focused on game culture, diversity, and the journeys of game creators, but lacks technological depth or hands-on developer information relevant to consultants and developers. This falls under the 'Sales Pitches' and 'Business Strategy and Executive Content' generic exclusion rules, as the main focus is program impact, cultural celebration, and developer support initiatives, not technical how-to or architectural guidance.",
+    "timestamp": "2026-02-23 18:18:51 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2026/02/23/xbox-developer-acceleration-program-black-history-month-games/"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is an announcement/introduction of new GitHub repository controls to manage pull requests, but it does NOT prominently feature any Microsoft technologies, Azure, DevOps (beyond general GitHub repo management), AI, ML, Coding (in the sense of Microsoft programming technologies), or Security as defined by the categorization rules. While GitHub Actions or developer tooling could qualify for DevOps or Coding, in this case, the content is about GitHub's core platform moderation features for pull requests, not about Microsoft-aligned developer workflows or tools (Coding rules 1-5, DevOps rules 1-11) nor is there a Microsoft technology central to the solution (multi-platform threshold). It does not describe implementation, code, or integration approaches but centers on toggleable controls for repository maintainers generally. Thus, per inclusion/exclusion rules and category definitions, no categories qualify.",
+    "canonical_url": "https://www.youtube.com/shorts/Jr3CwgsKO1U",
+    "timestamp": "2026-02-23 19:26:02 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to insufficient substantive content. The provided description and title only state, 'Quick overview of Agent 365 and Agent ID,' without any extended content, details, or technical explanation. The content field is null, and there is no actual text to analyze for technical substance or rule-based inclusion. According to the workflow, content must be based on actual substantive content, not just tags or titles. This submission fails the minimum information threshold for categorization.",
+    "timestamp": "2026-02-24 13:30:14 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/mHlo2wlDIVQ"
+  },
+  {
+    "reason": "No categories found: Excluded all categories because the content provides only a title, a brief description, an image, and generic keywords without any substantive technical details, implementation insights, or discussion of specific Microsoft technologies or AI tools. According to the generic exclusion rules, if there is insufficient content (i.e., lacking technical depth or actionable information), no categories should be assigned. The post is essentially a headline with a link and does not provide enough information to apply any inclusion rules.",
+    "timestamp": "2026-02-24 15:19:44 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/ai-tool-for-clinicians/"
+  },
+  {
+    "timestamp": "2026-02-24 16:22:19 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_microsoft-dragon-copilot-can-help-clinicians-activity-7432070419723227136-qcm9",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The main subject is Dragon Copilot, a Nuance/Microsoft AI-enabled tool aimed at reducing clinicians' administrative burden. However, this is not a developer, coding, or technical implementation topic – it is a business productivity/healthcare workflow application (see Non-Development Microsoft Products exclusion, Microsoft 365 Copilot/Copilot for Microsoft 365 category). The entire focus is on how clinicians and physicians use Dragon Copilot to save time, improve patient care, and handle documentation more easily. There is no substantive technical information for Microsoft consultants and developers (no development, integration, configuration, or programming content). The presence of product links, company news, and user comments does not add any hands-on technical or developer value in the context of this platform."
+  },
+  {
+    "reason": "No categories found: Content is excluded based on the 'Non-Development Microsoft Products' generic exclusion rule. The session focuses on adoption strategies for Microsoft Copilot within Microsoft 365, emphasizing productivity, business impact, and organizational adoption rather than technical or developer implementation. It is about turning enthusiasm into business results for office users, which classifies it as business productivity content (specifically 'Copilot for Microsoft 365'), explicitly listed in the exclusion rules (Chapter 3 and Copilot Product Distinction). There is no substantive focus on development, coding, or technical configuration of Microsoft technologies, so no categories apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=s315Ms2nWr4",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:25:48 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. According to generic exclusion rules, content focused on business productivity tools such as Microsoft 365 Copilot, Word, Outlook, and Teams—especially when demonstrating usage for document creation and productivity scenarios—is excluded. The description makes it clear the demo and advice are about using Copilot in Word, Outlook, and Teams (business productivity tools), not developer-focused tools like GitHub Copilot or Copilot Studio. There is no substantive content related to Azure development, Coding, AI development, or other qualifying Microsoft developer technologies.",
+    "canonical_url": "https://www.youtube.com/watch?v=WeIpWdgN_nY",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:26:01 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content centers on launching and managing Copilot Agents within Microsoft 365, including governance for Teams, SharePoint Online, and Purview. According to the generic exclusion rules, Microsoft 365 Copilot, Copilot for Microsoft 365, and end-user/business productivity Copilot tools are specifically excluded, as they are not developer or coding tools. The session appears focused on business productivity, security, and administration within Microsoft 365 rather than on developer/technical implementation, AI/ML model building, or custom development work. Therefore, none of the inclusion rules for AI, Coding, Azure, DevOps, ML, Security, or GitHub Copilot are met.",
+    "canonical_url": "https://www.youtube.com/watch?v=Yb0-x49n7Nk",
+    "collection": "videos",
+    "timestamp": "2026-02-24 17:26:49 +00:00"
+  },
+  {
+    "timestamp": "2026-02-24 18:18:50 +00:00",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided content is a news announcement headline about Microsoft introducing AI tools at MWC 2026, but the description is a link and the actual article body is about Microsoft Azure achieving a GxP milestone in regulated healthcare workloads—not about AI tools for telecom. There is no substantive technical detail or explanation of the new AI tools, their features, or how they relate to Microsoft technology categories. As per the core rules, content must focus on technical depth or implementation; this submission does not meet those requirements.",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/telecommunications/2026/02/24/microsoft-accelerates-telecom-return-on-intelligence-with-a-unified-trusted-ai-platform/"
+  },
+  {
+    "timestamp": "2026-02-24 20:09:46 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/sharepoint-list-view-threshold-error-while-fetching-5000-records/m-p/4496599#M686",
+    "reason": "Insufficient content length",
+    "collection": "community"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The input content is a keynote video about Visual Studio Code's new capabilities for multi-agent development. However, the provided data lacks substantive details about the technical content or specific Microsoft technologies/services used. The title, description, and tags do not explicitly mention any Microsoft AI products (like Azure OpenAI Service), GitHub Copilot, Azure, ML platforms, specific coding content, or DevOps practices. While Visual Studio Code is a Microsoft-supported tool, the description focuses on product capabilities in a general sense (delegating, orchestrating, collaborating with agents) without enough detail to clearly assign any predefined category. Because of the absence of concrete technical substance or developer-implementation focus, and without the full content text, the inclusion rules cannot be applied. If more concrete technical detail or code-oriented content were available, a category might apply.",
+    "canonical_url": "https://www.youtube.com/shorts/zgmrPhxZ_pw",
+    "collection": "videos",
+    "timestamp": "2026-02-25 04:37:08 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-02-25 06:21:51 +00:00",
+    "reason": "No categories found: No categories assigned because the content is a submission announcement and call to action for a community event (Agents League Week 2), with no substantive technical details, tutorial, or architecture. There is no content field provided, and the description only contains logistical instructions about project submission, not technical information, guidance, or implementation details. According to the generic exclusion rules, announcements or event logistics without technical depth are excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/NR65tweIeGk"
   }
 ]

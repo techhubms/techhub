@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-02-24 20:07:06",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "The [repository dashboard](https://github.com/repos) is now generally available. Originally introduced in [public preview](https://github.blog/changelog/2025-12-11-repository-dashboard-find-search-and-save-queries-in-preview/), the dashboard makes it easy to find, filter, and save custom views of repositories you have access to.\n\n## What’s new in general availability\n\nThis release introduces two additions:\n\n- **Admin Access view:** A new built-in view surfaces all repositories where you have admin permissions, making it easier to manage settings and configurations across your projects.\n- **Command palette integration:** You can now open the repository dashboard directly from the [GitHub command palette](https://docs.github.com/get-started/accessibility/github-command-palette) for faster navigation without leaving your current workflow.\n\n## How to access the dashboard\n\nYou can reach the repository dashboard in several ways:\n\n- Visit [github.com/repos](https://github.com/repos) directly.\n- Click the repositories icon in the top global navigation bar.\n- Navigate the left-hand navigation menu and select **Repositories**.\n- Open the command palette and search for “Repositories.”\n\n## Key features\n\n- **Discover repositories in one place:** Find any repository you’ve contributed to or have access to, from personal projects to enterprise codebases.\n- **Start with curated views:** Access the repositories you care about most with default views including `My contributions`\n, `My repositories` , `My forks` , and `Admin access` .\n- **Zero in with filtering:** Refine your search using filters like `visibility`\n, `language` , `organization` , and more. Sort by relevance to surface the repositories where you’re most active.\n- **Save custom queries:** Bookmark custom filters and instantly return to the repository views that matter most to your workflow.\n\n[Visit the repository dashboard](https://github.com/repos) to get started, and join the discussion in [GitHub Community](https://gh.io/repos-finder-discussion) to share your feedback.",
+  "PubDate": "2026-02-24T18:49:44+00:00",
+  "Title": "Repository dashboard is now generally available",
+  "Link": "https://github.blog/changelog/2026-02-24-repository-dashboard-is-now-generally-available",
+  "Description": "The repository dashboard is now generally available. Originally introduced in public preview, the dashboard makes it easy to find, filter, and save custom views of repositories you have access to.…\n\nThe post [Repository dashboard is now generally available](https://github.blog/changelog/2026-02-24-repository-dashboard-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "collaboration tools",
+    "Release"
+  ],
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog"
+}

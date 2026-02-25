@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-02-24 17:22:49",
+  "Link": "https://www.youtube.com/watch?v=WFkU9psbRb0",
+  "PubDate": "2026-02-24T17:00:51+00:00",
+  "Description": "As organizations adopt AI to boost productivity and creativity, concerns grow about data security and possible leaks through generative AI tools like Copilot, ChatGPT, and Gemini. Microsoft’s Data Security Posture Management (DSPM) for AI helps organizations monitor AI activities, enforce data protection policies, and meet regulatory standards, allowing safe, productive AI use without compromising sensitive information.",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "Title": "Secure and Protect AI Usage in your Organization with DSPM for AI",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

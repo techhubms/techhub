@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "CodeQL is the static analysis engine behind [GitHub code scanning](https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql), which finds and remediates security issues in your code. We’ve released [CodeQL 2.24.2](https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.24.2/), which adds support for Go 1.26 and Kotlin 2.3.10 and includes improvements that enhance the accuracy of your code scanning results.\n\n## Language and framework support\n\n**Go**\n\n- Go 1.26 is now supported for analysis.\n\n**Kotlin**\n\n- Kotlin versions up to 2.3.10 are now supported for analysis.\n\n**Python**\n\n- We’ve added request forgery sink models for the Azure SDK.\n\n## Query changes\n\n**C#**\n\n- The `cs/web/missing-token-validation`\n(“Missing cross-site request forgery token validation”) query now recognizes antiforgery attributes on base controller classes, fixing false positives when `[ValidateAntiForgeryToken]` or `[AutoValidateAntiforgeryToken]` is applied to a parent class.\n\n**Java/Kotlin**\n\n- We now consider more ways of checking that a string matches a regular expression as sanitizers for various queries, including `java/ssrf`\n, `java/path-injection` , and `java/log-injection` . In particular, being annotated with `@javax.validation.constraints.Pattern` is now recognized as a sanitizer for those queries.\n\nCheck out the complete [changelog for version 2.24.2](https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.24.2/) for a full list of changes. Every new version of CodeQL is automatically deployed to users of GitHub code scanning on github.com. The new functionality in CodeQL 2.24.2 will also be included in a future GitHub Enterprise Server (GHES) release. If you use an older version of GHES, you can [manually upgrade your CodeQL version](https://docs.github.com/enterprise-server@3.19/admin/managing-code-security/managing-github-advanced-security-for-your-enterprise/configuring-code-scanning-for-your-appliance#configuring-codeql-analysis-on-a-server-without-internet-access).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "CodeQL adds Go 1.26 and Kotlin 2.3.10 support and improves query accuracy",
+  "ProcessedDate": "2026-02-24 23:07:00",
+  "Link": "https://github.blog/changelog/2026-02-24-codeql-adds-go-1-26-and-kotlin-2-3-10-support-and-improves-query-accuracy",
+  "Tags": [
+    "application security",
+    "Improvement"
+  ],
+  "PubDate": "2026-02-24T22:20:46+00:00",
+  "Description": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve released CodeQL 2.24.2, which adds support for Go 1.26 and…\n\nThe post [CodeQL adds Go 1.26 and Kotlin 2.3.10 support and improves query accuracy](https://github.blog/changelog/2026-02-24-codeql-adds-go-1-26-and-kotlin-2-3-10-support-and-improves-query-accuracy) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison"
+}

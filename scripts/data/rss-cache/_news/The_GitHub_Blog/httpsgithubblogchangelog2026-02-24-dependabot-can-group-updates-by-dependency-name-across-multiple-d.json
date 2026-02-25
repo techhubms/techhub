@@ -1,0 +1,17 @@
+{
+  "Title": "Dependabot can group updates by dependency name across multiple directories",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "ProcessedDate": "2026-02-24 22:07:03",
+  "PubDate": "2026-02-24T21:28:17+00:00",
+  "Link": "https://github.blog/changelog/2026-02-24-dependabot-can-group-updates-by-dependency-name-across-multiple-directories",
+  "Tags": [
+    "Improvement",
+    "supply chain security"
+  ],
+  "Description": "Dependabot now supports grouping updates by dependency name across multiple directories, making it easier to manage dependency upgrades in repositories with more than one package or service. What’s changed Previously,…\n\nThe post [Dependabot can group updates by dependency name across multiple directories](https://github.blog/changelog/2026-02-24-dependabot-can-group-updates-by-dependency-name-across-multiple-directories) appeared first on [The GitHub Blog](https://github.blog).",
+  "EnhancedContent": "Dependabot now supports grouping updates by dependency name across multiple directories, making it easier to manage dependency upgrades in repositories with more than one package or service.\n\n### What’s changed\n\nPreviously, Dependabot generated a separate pull request for each directory where a dependency needed updating. If your repository contained multiple directories, this meant several pull requests for a single dependency bump. For example, upgrading `requests` across three directories would produce three individual pull requests:\n\n- `chore(deps): bump requests in /service-a`\n- `chore(deps): bump requests in /service-b`\n- `chore(deps): bump requests in /service-c`\n\nWith this release, you can configure Dependabot to consolidate updates for the same dependency into a single pull request, regardless of how many directories are affected. This’ll help reduce the number of pull requests and simplify your upgrade workflow. **This configuration is especially valuable for monorepos where a single dependency bump can touch dozens of directories**.\n\n### Who can use this feature\n\nThis feature is available for all github.com users and will ship in GHES 3.21.\n\n### Get started\n\nConfigure your directory groups in the `dependabot.yml` file in your repository. The [Dependabot configuration docs](https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#groups) can help you get started.\n\nJoin the discussion within the [Dependabot Community](https://github.com/dependabot/dependabot-core/issues/13284).",
+  "Author": "Allison"
+}
