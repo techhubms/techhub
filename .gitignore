@@ -82,7 +82,6 @@ playwright-report/
 project.lock.json
 project.fragment.lock.json
 artifacts/
-**/Properties/launchSettings.json
 ScaffoldingReadMe.txt
 
 # Entity Framework

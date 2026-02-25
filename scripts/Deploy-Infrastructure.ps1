@@ -72,6 +72,7 @@ $envConfig = @{
         DefaultLocation = "westeurope"
         ResourceGroup   = "rg-techhub-shared"
         EnvSuffix       = "shared"
+        OpenAi          = $null
     }
     staging    = @{
         TemplatePath    = "infra/main.bicep"

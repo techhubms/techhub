@@ -187,37 +187,26 @@ jobs:
           pwsh bin/Release/net10.0/playwright.ps1 install --with-deps
 
       - name: Generate dev certificate
-        run: |
-          dotnet dev-certs https -ep /tmp/devcert.pfx -p "localdev"
-          echo "Dev certificate exported to /tmp/devcert.pfx"
+        run: dotnet dev-certs https
 
       - name: Start API server
         run: |
           nohup dotnet run --project src/TechHub.Api/TechHub.Api.csproj \
-            --no-build --configuration Release \
+            --launch-profile Development --no-build --configuration Release \
             > /tmp/api-server.log 2>&1 &
           echo $! > /tmp/api-server.pid
           echo "API server started (PID: $(cat /tmp/api-server.pid))"
         env:
-          ASPNETCORE_ENVIRONMENT: Development
-          ASPNETCORE_URLS: "https://localhost:5001"
-          Kestrel__Certificates__Default__Path: /tmp/devcert.pfx
-          Kestrel__Certificates__Default__Password: localdev
           AppSettings__Content__CollectionsPath: ${{ github.workspace }}/collections
           Database__ConnectionString: "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
 
       - name: Start Web server
         run: |
           nohup dotnet run --project src/TechHub.Web/TechHub.Web.csproj \
-            --no-build --configuration Release \
+            --launch-profile Development --no-build --configuration Release \
             > /tmp/web-server.log 2>&1 &
           echo $! > /tmp/web-server.pid
           echo "Web server started (PID: $(cat /tmp/web-server.pid))"
-        env:
-          ASPNETCORE_ENVIRONMENT: Development
-          ASPNETCORE_URLS: "https://localhost:5003"
-          Kestrel__Certificates__Default__Path: /tmp/devcert.pfx
-          Kestrel__Certificates__Default__Password: localdev
 
       - name: Wait for servers to be ready
         run: |
@@ -281,6 +270,9 @@ jobs:
             --results-directory TestResults \
             --report-xunit-trx \
             --report-xunit-trx-filename e2e-test-results.trx
+        env:
+          AppSettings__Content__CollectionsPath: ${{ github.workspace }}/collections
+          Database__ConnectionString: "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -443,10 +435,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Pester
+      - name: Install Pester and dependencies
         shell: pwsh
         run: |
           Install-Module -Name Pester -MinimumVersion 5.0.0 -Force -Scope CurrentUser
+          Install-Module -Name HtmlToMarkdown -Force -Scope CurrentUser
 
       - name: Run Pester tests
         shell: pwsh
