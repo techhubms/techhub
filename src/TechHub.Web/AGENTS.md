@@ -1012,9 +1012,13 @@ export function dispose() {
 }
 ```
 
+<!-- markdownlint-disable MD029 -->
+
 3. **CDN config** is bridged from C# to JS via a small inline script in `App.razor` that sets `window.TechHubCDN`
 
 4. **One-Time Loading**: `page-scripts.js` tracks loaded state internally to avoid duplicate CDN fetches
+
+<!-- markdownlint-enable MD029 -->
 
 **Which Components Call What**:
 

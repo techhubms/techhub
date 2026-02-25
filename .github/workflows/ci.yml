@@ -68,9 +68,10 @@ jobs:
           dotnet test --solution TechHub.slnx \
             --configuration Release \
             --no-restore \
-            --logger "trx;LogFileName=test-results.trx" \
-            --collect:"XPlat Code Coverage" \
-            -- --filter-not-namespace TechHub.E2E.Tests
+            --results-directory TestResults \
+            --report-xunit-trx \
+            --report-xunit-trx-filename test-results.trx \
+            --filter-not-namespace TechHub.E2E.Tests
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -102,13 +103,15 @@ jobs:
           dotnet test --project tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj \
             --configuration Release \
             --no-restore \
-            --logger "trx;LogFileName=integration-test-results.trx" \
-            --collect:"XPlat Code Coverage"
+            --results-directory TestResults \
+            --report-xunit-trx \
+            --report-xunit-trx-filename integration-test-results.trx
           dotnet test --project tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj \
             --configuration Release \
             --no-restore \
-            --logger "trx;LogFileName=infrastructure-test-results.trx" \
-            --collect:"XPlat Code Coverage"
+            --results-directory TestResults \
+            --report-xunit-trx \
+            --report-xunit-trx-filename infrastructure-test-results.trx
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -148,7 +151,9 @@ jobs:
           dotnet test --project tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
             --configuration Release \
             --no-build \
-            --logger "trx;LogFileName=e2e-test-results.trx"
+            --results-directory TestResults \
+            --report-xunit-trx \
+            --report-xunit-trx-filename e2e-test-results.trx
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -243,30 +248,13 @@ jobs:
     if: always()
     
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Download unit test results
-        uses: actions/download-artifact@v4
-        with:
-          name: unit-test-results
-          path: unit-coverage
-
-      - name: Download integration test results
-        uses: actions/download-artifact@v4
-        with:
-          name: integration-test-results
-          path: integration-coverage
-
       - name: Generate coverage report summary
         run: |
           echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Coverage reports generated from:" >> $GITHUB_STEP_SUMMARY
-          echo "- Unit tests" >> $GITHUB_STEP_SUMMARY
-          echo "- Integration tests" >> $GITHUB_STEP_SUMMARY
+          echo "⚠️ Code coverage collection is not yet configured for Microsoft.Testing.Platform." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "📁 Coverage artifacts available for download" >> $GITHUB_STEP_SUMMARY
+          echo "Test result artifacts (TRX) are available from the unit and integration test jobs." >> $GITHUB_STEP_SUMMARY
 
   quality-gate:
     name: Quality Gate

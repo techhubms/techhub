@@ -59,6 +59,7 @@ Applies `dotnet format` per `.editorconfig` rules.
 - Wait for user input
 
 **Color Token Categories**:
+
 - **Multi-use (2+)**: Core design tokens, keep these
 - **Single-use (1)**: Review if they should be consolidated with existing tokens
 - **Unused (0)**: Safe to remove unless reserved for future use
@@ -128,6 +129,7 @@ The project uses **built-in .NET analyzers** for build-time dead code detection 
 - **File-Specific Suppressions**: `src/TechHub.Api/Endpoints/*.cs` suppresses unused parameter warnings (intentional injected dependencies)
 
 **Analysis Settings**: Configured in `Directory.Build.props`:
+
 - `AnalysisLevel`: latest-all
 - `AnalysisMode`: All  
 - Documentation generation enabled for comprehensive IntelliSense
@@ -155,6 +157,7 @@ The project uses **built-in .NET analyzers** for build-time dead code detection 
 **Run**: `../../../scripts/Generate-DocumentationIndex.ps1`
 
 This creates [docs/documentation-index.md](../../../docs/documentation-index.md) containing:
+
 - All documentation files (AGENTS.md, README.md, docs/*.md)
 - All H1/H2/H3 headers from each file
 - Relative links to each file
@@ -164,6 +167,7 @@ This creates [docs/documentation-index.md](../../../docs/documentation-index.md)
 **Run**: [verify-documentation.ps1](scripts/verify-documentation.ps1)
 
 This performs quality checks:
+
 - **Expected Files**: Verifies presence of key documentation files
 - **Broken Links**: Detects broken internal markdown links
 - **Missing AGENTS.md**: Checks if code directories lack AGENTS.md files
@@ -174,6 +178,7 @@ This performs quality checks:
 **Read**: [docs/documentation-index.md](../../../docs/documentation-index.md)
 
 Use the index + verification results to:
+
 - Verify all features are documented (compare with Step 5a)
 - Check documentation is in the right location
 - Identify duplicate or overlapping documentation
