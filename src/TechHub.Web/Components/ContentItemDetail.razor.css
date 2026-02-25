@@ -10,5 +10,5 @@
     color: var(--color-text-muted);
     font-style: italic;
     margin-top: calc(var(--spacing-4) * -0.8);
-    margin-bottom: var(--spacing-4);
+    margin-bottom: var(--spacing-3);
 }

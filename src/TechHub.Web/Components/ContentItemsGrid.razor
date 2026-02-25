@@ -131,7 +131,6 @@
     private PersistingComponentStateSubscription _persistSubscription;
 
     private bool ShowCollectionBadge =>
-        SectionName.Equals("all", StringComparison.OrdinalIgnoreCase) ||
         CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
 
     // No longer needed - API now handles tag filtering

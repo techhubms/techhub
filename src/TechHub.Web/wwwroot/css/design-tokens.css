@@ -65,6 +65,7 @@
 
   --color-border-default: #30363d;              /* Default borders */
   --color-border-emphasis: #6e7681;             /* Emphasized borders */
+  --color-border-hover: #3b424a;                /* Scrollbar/border hover - subtle */
 
   /* =======================================================================
       PURPLE ACCENTS - Tech Hub Brand Color (PRIMARY)
@@ -78,10 +79,10 @@
   --color-purple-bg-subtle: rgba(189, 147, 249, 0.1);  /* Subtle purple tint, hover states */
   --color-purple-border-subtle: rgba(189, 147, 249, 0.2); /* Subtle purple border */
   --color-purple-border-very-subtle: rgba(189, 147, 249, 0.12); /* Very subtle purple border */
-  --color-purple-bg-badge: rgba(139, 92, 246, 0.3); /* Purple badge background */
-  --color-purple-bg-badge-hover: rgba(139, 92, 246, 0.5); /* Purple badge hover */
-  --color-purple-bg-dark: rgba(127, 86, 217, 0.15); /* Subtle dark purple */
-  --color-purple-bg-dark-hover: rgba(127, 86, 217, 0.25); /* Dark purple hover */
+  --color-purple-bg-badge: rgba(139, 92, 246, 0.4); /* Purple badge background */
+  --color-purple-bg-badge-hover: rgba(139, 92, 246, 0.55); /* Purple badge hover */
+  --color-purple-bg-dark: rgba(127, 86, 217, 0.22); /* Subtle dark purple */
+  --color-purple-bg-dark-hover: rgba(127, 86, 217, 0.35); /* Dark purple hover */
   --color-purple-border: rgba(139, 92, 246, 0.3); /* Purple border */
 
   /* =======================================================================

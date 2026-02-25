@@ -15,7 +15,15 @@ function handleReconnectStateChanged(event) {
     if (event.detail.state === "show") {
         reconnectModal.showModal();
     } else if (event.detail.state === "hide") {
-        reconnectModal.close();
+        // Fade out the dialog before closing so the content resize
+        // (caused by Blazor removing state classes) is not visible.
+        reconnectModal.style.opacity = "0";
+        reconnectModal.style.transition = "opacity 0.25s ease-out";
+        setTimeout(() => {
+            reconnectModal.close();
+            reconnectModal.style.opacity = "";
+            reconnectModal.style.transition = "";
+        }, 250);
     } else if (event.detail.state === "failed") {
         document.addEventListener("visibilitychange", retryWhenDocumentBecomesVisible);
     } else if (event.detail.state === "rejected") {

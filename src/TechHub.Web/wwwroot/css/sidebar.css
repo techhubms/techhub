@@ -174,12 +174,6 @@
   .latest-roundup + .sidebar-panel > :first-child {
     margin-top: var(--spacing-4);
   }
-
-  /* Match page-h1 bottom margin so sidebar content aligns with main content */
-  .sidebar-h2,
-  .sidebar-section h2 {
-    margin-bottom: var(--spacing-4);
-  }
 }
 
 /* Mobile: Show toolbar buttons, panels hidden by default */
@@ -193,26 +187,27 @@
   .sidebar-h2,
   .sidebar-section h2 {
     font-size: var(--font-size-3xl);
-    margin: 0 0 var(--spacing-2) 0;
+    margin: 0 0 var(--spacing-3) 0;
   }
 
-  /* Toolbar uses flex + order so buttons appear before always-visible content */
+  /* Toolbar uses flex + order so buttons appear before always-visible content.
+     Gap provides consistent spacing between toolbar buttons, always-visible content
+     (like latest-roundup), and any active panel. Hidden panels (display:none) don't
+     participate in flex layout, so gap only applies between visible elements. */
   .sidebar-toolbar {
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-3);
   }
 
   .sidebar-toolbar-buttons {
     order: -1;
   }
 
-  /* Spacing between toolbar buttons and always-visible content below */
-  .sidebar-toolbar-buttons {
-    margin-bottom: var(--spacing-2);
-  }
-
-  .latest-roundup {
-    margin-bottom: var(--spacing-2);
+  /* Push latest-roundup below toolbar panels on mobile/tablet so opened panels
+     appear directly under their toggle buttons, not after the roundup */
+  .sidebar-toolbar > .latest-roundup {
+    order: 1;
   }
 
   /* Toolbar button bar */
@@ -315,8 +310,6 @@
 
   .sidebar-panel-active {
     display: block;
-    margin-top: var(--spacing-2);
-    margin-bottom: var(--spacing-2);
   }
 
   /* Reset inter-panel and roundup spacing on mobile (only one visible at a time,

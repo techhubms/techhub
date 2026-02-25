@@ -120,8 +120,8 @@ public class NavigationTests : PlaywrightTestBase
         var firstCard = Page.Locator(".card").First;
 
         // Assert - Collection badge should exist and be before tags
-        // Collection badge is the last .badge-grey in .card-tags
-        var collectionBadge = firstCard.Locator(".card-tags .badge-grey").Last;
+        // Collection badge is the first .badge-purple-static in .card-tags
+        var collectionBadge = firstCard.Locator(".card-tags .badge-purple-static").First;
         await collectionBadge.AssertElementVisibleAsync();
 
         // Collection badge should have proper capitalization (e.g., "News" not "news")
@@ -230,12 +230,12 @@ public class NavigationTests : PlaywrightTestBase
         initialCardCount.Should().BeGreaterThan(0, "All collection should have content");
 
         // Get hrefs of first 5 cards (or less if fewer exist)
-        // Note: .card IS the anchor element (a.card), so we get href directly from it
+        // Note: .card is a container div, the link is .card-link inside it
         var countToCheck = Math.Min(5, initialCardCount);
         var initialHrefs = new List<string>();
         for (int i = 0; i < countToCheck; i++)
         {
-            var href = await initialCards.Nth(i).GetAttributeAsync("href");
+            var href = await initialCards.Nth(i).Locator(".card-link").GetAttributeAsync("href");
             if (!string.IsNullOrEmpty(href))
             {
                 initialHrefs.Add(href);
@@ -251,7 +251,7 @@ public class NavigationTests : PlaywrightTestBase
         await Page.WaitForSelectorWithTimeoutAsync(".card");
 
         // Get the hrefs of cards in the "News" collection
-        // Note: .card IS the anchor element (a.card), so we get href directly from it
+        // Note: .card is a container div, the link is .card-link inside it
         var newsCards = Page.Locator(".card");
         var newsCardCount = await newsCards.CountAsync();
         newsCardCount.Should().BeGreaterThan(0, "News collection should have content");
@@ -260,7 +260,7 @@ public class NavigationTests : PlaywrightTestBase
         var newsHrefs = new List<string>();
         for (int i = 0; i < newsCountToCheck; i++)
         {
-            var href = await newsCards.Nth(i).GetAttributeAsync("href");
+            var href = await newsCards.Nth(i).Locator(".card-link").GetAttributeAsync("href");
             if (!string.IsNullOrEmpty(href))
             {
                 newsHrefs.Add(href);
@@ -362,7 +362,7 @@ public class NavigationTests : PlaywrightTestBase
 
         // Get the href of the first card
         var firstCard = cards.First;
-        var href = await firstCard.GetHrefAsync();
+        var href = await firstCard.Locator(".card-link").GetHrefAsync();
         href.Should().NotBeNull("Card should have an href");
 
         // Skip external links - find first internal card
@@ -372,7 +372,7 @@ public class NavigationTests : PlaywrightTestBase
         for (int i = 0; i < cardCount; i++)
         {
             var card = cards.Nth(i);
-            var cardHref = await card.GetHrefAsync();
+            var cardHref = await card.Locator(".card-link").GetHrefAsync();
             if (cardHref != null && cardHref.StartsWith("/"))
             {
                 internalCard = card;

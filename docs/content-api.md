@@ -176,7 +176,7 @@ Get items in a specific collection within a section. Use `all` as collectionName
 - `q` (optional): Search query (searches title, description, tags)
 - `tags` (optional): Comma-separated tags (AND logic - items must have all tags)
 - `subcollection` (optional): Filter by subcollection
-- `lastDays` (optional): Filter to content from last N days
+- `lastDays` (optional): Filter to content from last N days. **Default behavior**: When no `lastDays`, `from`, or `to` parameters are provided, a default 90-day filter is automatically applied (configured via `DefaultDateRangeDays`). Pass `lastDays=0` to explicitly disable date filtering and return all content regardless of date.
 - `from` (optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`). Takes precedence over `lastDays`
 - `to` (optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`). Takes precedence over `lastDays`
 - `includeDraft` (optional): Include draft content (default: false)

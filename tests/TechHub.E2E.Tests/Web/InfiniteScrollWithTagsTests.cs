@@ -35,13 +35,13 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // Tags with spaces are URL-encoded as %20
         Page.Url.Should().Contain("tags=copilot", "URL should preserve tag filter");
 
-        // The card itself is an <a> tag (the entire card is a link)
+        // The card is a div container with a .card-link inside it
         // Verify first card links to an external URL (news items are external)
-        var firstCard = Page.Locator("a.card").First;
+        var firstCard = Page.Locator(".card").First;
         await Assertions.Expect(firstCard).ToBeVisibleAsync();
 
-        var href = await firstCard.GetAttributeAsync("href");
-        href.Should().NotBeNullOrEmpty("card should have an href attribute");
+        var href = await firstCard.Locator(".card-link").GetAttributeAsync("href");
+        href.Should().NotBeNullOrEmpty("card should have a link with href attribute");
         href.Should().StartWith("https://", "news items should link to external URLs");
     }
 

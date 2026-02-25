@@ -200,18 +200,17 @@ public class UrlRoutingTests : PlaywrightTestBase
         displayedItems.Should().Be(totalNewsCount,
             "/all/news should show all news items from all sections");
 
-        // Collection badges SHOULD be shown (sectionName='all' shows collection badges to distinguish content types)
+        // Collection badges should NOT be shown (only shown when CollectionName='all', not on specific collections like 'news')
         var firstCard = Page.Locator(".card").First;
         var cardTags = firstCard.Locator(".card-tags");
 
         // Verify card-tags exists
         await cardTags.AssertElementVisibleAsync();
 
-        // Collection badge should be present and say "News" (last .badge-grey in .card-tags)
-        var collectionBadge = cardTags.Locator(".badge-grey").Last;
-        var badgeText = await collectionBadge.TextContentAsync();
-        badgeText.Should().Contain("News",
-            "collection badges are shown on /all/* routes to distinguish different collection types");
+        // Cards should have tag badges but no collection badge
+        // On /all/news, CollectionName is 'news' so collection badges are hidden
+        var tagBadges = await cardTags.Locator(".badge-tag").CountAsync();
+        tagBadges.Should().BeGreaterThan(0, "cards should have tag badges");
     }
 
     [Fact]
@@ -246,8 +245,8 @@ public class UrlRoutingTests : PlaywrightTestBase
 
         // Assert - Collection badges should be visible on items
         var firstCard = Page.Locator(".card").First;
-        // Collection badge is the last .badge-grey within .card-tags (after tag badges)
-        var collectionBadge = firstCard.Locator(".card-tags .badge-grey").Last;
+        // Collection badge is the first .badge-purple-static within .card-tags (before tag badges)
+        var collectionBadge = firstCard.Locator(".card-tags .badge-purple-static").First;
 
         await collectionBadge.AssertElementVisibleAsync();
 

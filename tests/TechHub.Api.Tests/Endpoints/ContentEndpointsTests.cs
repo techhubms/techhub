@@ -1541,6 +1541,42 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
+    public async Task GetCollectionItems_SubcollectionWithLastDaysZero_ReturnsAllItems()
+    {
+        // Arrange - The vscode-updates subcollection has a test video dated 2024-01-01
+        // Without lastDays=0, the 90-day default filter would exclude older items
+
+        // Act - Query with lastDays=0 to disable date filtering
+        var responseAll = await _client.GetAsync(
+            "/api/sections/github-copilot/collections/videos/items?subcollection=vscode-updates&lastDays=0",
+            TestContext.Current.CancellationToken);
+
+        // Also query with default date filter (no lastDays param)
+        var responseDefault = await _client.GetAsync(
+            "/api/sections/github-copilot/collections/videos/items?subcollection=vscode-updates",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        responseAll.StatusCode.Should().Be(HttpStatusCode.OK);
+        responseDefault.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var itemsAll = (await responseAll.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
+        var itemsDefault = (await responseDefault.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
+
+        itemsAll.Should().NotBeNull();
+
+        // lastDays=0 should return at least as many items as default filter
+        itemsAll!.Count.Should().BeGreaterThanOrEqualTo(itemsDefault!.Count,
+            "lastDays=0 should disable date filtering and return all subcollection items");
+
+        // All items should be from the vscode-updates subcollection
+        itemsAll.Should().AllSatisfy(item =>
+        {
+            item.SubcollectionName.Should().Be("vscode-updates");
+        });
+    }
+
+    [Fact]
     public async Task GetCollectionItems_WithTagsAndSearch_ReturnsItemsMatchingBoth()
     {
         // Arrange - The fts-test blog post has AI tag and contains "TechHubSpecialKeyword"

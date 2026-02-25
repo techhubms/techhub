@@ -12,6 +12,8 @@
   border: 1px solid var(--color-border-default);
   transition: all var(--duration-normal) var(--easing-ease-out);
   box-shadow: var(--shadow-md);
+  position: relative;
+  cursor: pointer;
   /* Note: No overflow:hidden - allows focus outlines to be visible */
 }
 
@@ -20,12 +22,25 @@
   border-color: var(--color-purple-medium);
 }
 
-/* Section Card - Clickable link area (header + description only) */
+/* Section Card - Clickable link area stretched over full container */
 .section-card {
   text-decoration: none;
   color: inherit;
   display: block;
   cursor: pointer;
+}
+
+.section-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: var(--radius-lg);
+}
+
+.section-card-container:focus-within {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-purple-medium);
 }
 
 .section-card-header {

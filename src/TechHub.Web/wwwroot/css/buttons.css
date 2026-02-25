@@ -119,6 +119,27 @@
   text-decoration: none;
 }
 
+/* Custom page sparkle indicator — subtle star after custom page links */
+.btn-subnav-custom::after {
+  content: '✦';
+  font-size: 0.85em;
+  color: var(--color-purple-bright);
+  opacity: 0.5;
+  margin-left: 0.15em;
+  vertical-align: super;
+  position: relative;
+  top: -0.35em;
+}
+
+.btn-subnav-custom:hover::after {
+  opacity: 0.8;
+}
+
+.btn-subnav-custom.active::after {
+  color: var(--color-text-on-emphasis);
+  opacity: 0.7;
+}
+
 /* Secondary Button - Default background with border */
 .btn-secondary {
   display: inline-flex;

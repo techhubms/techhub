@@ -202,7 +202,7 @@
 }
 
 .mobile-menu::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-tertiary);
+  background: var(--color-border-hover);
 }
 
 .mobile-menu.open {

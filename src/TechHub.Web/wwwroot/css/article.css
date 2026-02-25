@@ -567,6 +567,12 @@
     .article-body pre {
         padding: var(--spacing-2);
     }
+
+    /* Mermaid: render at natural size with horizontal scroll on mobile/tablet */
+    .article-body .mermaid svg {
+        max-width: none;
+        max-height: none;
+    }
 }
 
 /* =================================================================

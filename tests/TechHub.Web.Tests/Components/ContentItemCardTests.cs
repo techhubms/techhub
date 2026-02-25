@@ -88,7 +88,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var tags = cut.FindAll(".badge-purple-static");
+        var tags = cut.FindAll(".badge-tag");
         tags.Should().HaveCount(4);
         tags[0].TextContent.Should().Be("ai");
         tags[1].TextContent.Should().Be("copilot");
@@ -109,10 +109,11 @@ public class ContentItemCardTests : BunitContext
 
         // Act
         var cut = Render<ContentItemCard>(parameters => parameters
-            .Add(p => p.Item, item));
+            .Add(p => p.Item, item)
+            .Add(p => p.ShowCollectionBadge, false));
 
         // Assert
-        var tags = cut.FindAll(".badge-purple-static");
+        var tags = cut.FindAll(".badge-tag");
         tags.Should().HaveCount(5, "should only show first 5 tags");
 
         var moreIndicator = cut.Find(".badge-grey");
@@ -135,7 +136,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, true));
 
         // Assert
-        var badge = cut.Find(".badge-grey");
+        var badge = cut.Find(".badge-purple-static");
         badge.TextContent.Should().Be("News");
     }
 
@@ -155,7 +156,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, false));
 
         // Assert
-        var badges = cut.FindAll(".badge-grey");
+        var badges = cut.FindAll(".badge-purple-static");
         badges.Should().BeEmpty();
     }
 
@@ -174,7 +175,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var link = cut.Find(".card");
+        var link = cut.Find(".card-link");
         link.GetAttribute("href").Should().Be("https://techcommunity.microsoft.com/example");
         link.GetAttribute("target").Should().Be("_blank");
         link.GetAttribute("rel").Should().Be("noopener noreferrer");
@@ -196,7 +197,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var link = cut.Find(".card");
+        var link = cut.Find(".card-link");
         link.GetAttribute("href").Should().Be("/ai/videos/example-post");
         link.HasAttribute("target").Should().BeFalse("internal links should not have target attribute");
     }
@@ -259,7 +260,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, true));
 
         // Assert
-        var badge = cut.Find(".badge-grey");
+        var badge = cut.Find(".badge-purple-static");
         badge.TextContent.Should().Be("Community");
     }
 
@@ -294,8 +295,63 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var link = cut.Find(".card");
+        var link = cut.Find(".card-link");
         link.GetAttribute("aria-label").Should().Be("Example Post - opens in new tab");
+    }
+
+    [Fact]
+    public void ContentItemCard_CollectionBadge_AppearsBeforeTags()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithCollectionName("news")
+            .WithPrimarySectionName("ai")
+            .WithTags("ai", "copilot")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.ShowCollectionBadge, true));
+
+        // Assert - Collection badge should be the first child in card-tags
+        var cardTags = cut.Find(".card-tags");
+        var allBadges = cardTags.Children;
+        allBadges.Should().HaveCountGreaterThanOrEqualTo(3, "should have collection badge + 2 tag badges");
+        allBadges[0].ClassList.Should().Contain("badge-purple-static", "collection badge should be first");
+        allBadges[0].TextContent.Should().Be("News");
+        allBadges[1].ClassList.Should().Contain("badge-tag", "tag badges should follow collection badge");
+    }
+
+    [Fact]
+    public void ContentItemCard_TagBadges_UseBadgeTagClass()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithTags("ai", "copilot")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.ShowCollectionBadge, false));
+
+        // Assert - Tag badges should use the badge-tag class (not badge-purple-static)
+        var tagBadges = cut.FindAll(".badge-tag");
+        tagBadges.Should().HaveCount(2);
+        tagBadges[0].TextContent.Should().Be("ai");
+        tagBadges[1].TextContent.Should().Be("copilot");
+
+        // Should NOT have any badge-purple-static (collection badge is hidden)
+        var oldBadges = cut.FindAll(".badge-purple-static");
+        oldBadges.Should().BeEmpty("tag badges should use badge-tag class, not badge-purple-static");
     }
 
     [Fact]
@@ -314,7 +370,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var link = cut.Find(".card");
+        var link = cut.Find(".card-link");
         link.GetAttribute("aria-label").Should().Be("Example Post");
     }
 

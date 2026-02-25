@@ -36,7 +36,7 @@
 
             @foreach (var customPage in CustomPages)
             {
-                <a href="@customPage.Url" class="btn-subnav @(IsActive(customPage.Url) ? "active" : "")"
+                <a href="@customPage.Url" class="btn-subnav btn-subnav-custom @(IsActive(customPage.Url) ? "active" : "")"
                    @onclick="@(() => OnSubNavClick(customPage.Url))" @onclick:preventDefault="@IsActive(customPage.Url)">
                     @customPage.Title
                 </a>
@@ -66,7 +66,7 @@
                     }
                     @foreach (var customPage in CustomPages)
                     {
-                        <a href="@customPage.Url" class="sub-nav-dropdown-item @(IsActive(customPage.Url) ? "active" : "")"
+                        <a href="@customPage.Url" class="sub-nav-dropdown-item sub-nav-dropdown-custom @(IsActive(customPage.Url) ? "active" : "")"
                            @onclick="@(() => OnSubNavDropdownClick(customPage.Url))" @onclick:preventDefault="@IsActive(customPage.Url)">
                             @customPage.Title
                         </a>

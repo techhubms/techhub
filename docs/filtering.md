@@ -202,7 +202,7 @@ This is the primary endpoint for content retrieval and filtering. Using `all` fo
 - `q` (optional): Text search query (searches title, description, tags)
 - `tags` (optional): Comma-separated tags - content must have ALL tags (AND logic)
 - `subcollection` (optional): Filter by subcollection
-- `lastDays` (optional): Filter to content from last N days
+- `lastDays` (optional): Filter to content from last N days. **Default behavior**: When no `lastDays`, `from`, or `to` parameters are provided, a default 90-day filter is automatically applied (configured via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`). Pass `lastDays=0` to explicitly disable date filtering and return all content regardless of date.
 - `take` (optional): Number of items to return (default: 20, max: 50)
 - `skip` (optional): Number of items to skip (for pagination)
 

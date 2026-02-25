@@ -8,9 +8,9 @@
   - Exposes all content operations via OpenAPI-documented endpoints
   - Handles content retrieval, filtering, search, and RSS feed generation
   - See [src/TechHub.Api/AGENTS.md](../src/TechHub.Api/AGENTS.md) for API development guidelines
-- **`TechHub.Web/`** - Blazor Server and WebAssembly hybrid frontend
-  - Server-side rendering for optimal performance and SEO
-  - Progressive enhancement with WebAssembly for interactivity
+- **`TechHub.Web/`** - Blazor InteractiveServer frontend with prerendering
+  - Server-side rendering for optimal SEO, followed by SignalR-based interactivity
+  - Global InteractiveServer render mode (no per-component render mode decisions)
   - Implements the design system and all UI components
   - See [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md) for frontend development guidelines
 - **`TechHub.Core/`** - Domain models, interfaces, and business logic

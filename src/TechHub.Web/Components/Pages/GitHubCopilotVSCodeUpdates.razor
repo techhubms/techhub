@@ -130,7 +130,7 @@
 
         try
         {
-            var result = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName);
+            var result = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName, lastDays: 0);
             videoItems = (result?.Items ?? [])
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();
@@ -183,7 +183,7 @@
         }
 
         // Otherwise use the page title
-        return "Visual Studio Code Updates";
+        return "VS Code Updates";
     }
 
     private Task PersistState()

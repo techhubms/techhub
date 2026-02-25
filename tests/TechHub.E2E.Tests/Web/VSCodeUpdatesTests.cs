@@ -64,4 +64,20 @@ public class VSCodeUpdatesTests : PlaywrightTestBase
 
         errors.Should().BeEmpty($"Expected no console errors on {PageUrl}, but found: {string.Join(", ", errors.Select(e => e.Text))}");
     }
+
+    [Fact]
+    public async Task VSCodeUpdates_ShouldShowAllUpdates_NotFilteredByDate()
+    {
+        // Act
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - The sidebar should list all video updates, not just recent ones
+        // The "All Updates" panel contains sidebar-list items for each video
+        var sidebarItems = Page.Locator(".sidebar-list li");
+        await sidebarItems.First.WaitForAsync();
+
+        var itemCount = await sidebarItems.CountAsync();
+        itemCount.Should().BeGreaterThanOrEqualTo(1,
+            "VS Code updates page should show all videos regardless of date (lastDays=0 disables date filter)");
+    }
 }

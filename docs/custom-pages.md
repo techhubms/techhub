@@ -24,7 +24,7 @@ While most content in Tech Hub is standard markdown served via generic item endp
 
 | Section | Custom Pages |
 |---|---|
-| `github-copilot` | Features, Levels of Enlightenment, The GitHub Copilot Handbook, Visual Studio Code Updates |
+| `github-copilot` | Features, Levels of Enlightenment, The GitHub Copilot Handbook, VS Code Updates |
 | `ai` | GenAI Basics, GenAI Advanced, GenAI Applied, AI SDLC |
 | `devops` | DX, SPACE & DORA |
 
@@ -127,7 +127,7 @@ This subfolder is treated as a specialized collection for GitHub Copilot feature
 - Populates the features page at `/github-copilot/features` (via `/api/custom-pages/features`)
 - Supports filtering by subscription plan and GHES support
 
-### Visual Studio Code Updates
+### VS Code Updates
 
 **Location**: `collections/_videos/vscode-updates/`
 
@@ -145,6 +145,7 @@ This subfolder is treated as a specialized collection for VS Code update videos.
 - Automatically identified as "Updates" content based on directory location
 - Populates the updates page at `/github-copilot/vscode-updates`
 - Latest video is featured prominently
+- Fetches content with `lastDays=0` to bypass the default 90-day date filter, since this is a curated collection that should show all items regardless of publication date
 
 ## Custom Page Ordering
 

@@ -15,7 +15,7 @@
    BASE CARD STYLES - Foundation for all card types
    ======================================================================= */
 
-/* Standard card container - clickable link wrapper */
+/* Standard card container - block link pattern via stretched title link */
 .card {
   background: var(--color-bg-default);
   border-radius: var(--radius-lg);
@@ -28,20 +28,32 @@
   min-height: 265px;
   display: flex;
   flex-direction: column;
-  text-decoration: none !important;
-  color: inherit;
+  position: relative;
+  cursor: pointer;
 }
 
 .card:hover {
   box-shadow: var(--shadow-lg);
   border-color: var(--color-purple-medium);
-  text-decoration: none;
 }
 
-.card:focus,
-.card:active,
-.card:visited {
-  text-decoration: none;
+/* Stretched link - covers entire card, making it fully clickable */
+.card-link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: var(--radius-lg);
+}
+
+.card:focus-within {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-purple-medium);
 }
 
 /* Card without link (static display) */
@@ -159,7 +171,7 @@
 /* Purple badge (collections, primary tags) - clickable */
 .badge-purple {
   background: var(--color-purple-bg-badge);
-  color: var(--color-text-on-emphasis);
+  color: var(--color-text-primary);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
@@ -169,18 +181,31 @@
   text-decoration: none;
   transition: all var(--duration-fast) var(--easing-ease);
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .badge-purple:hover {
   background: var(--color-purple-bg-badge-hover);
   border-color: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
   text-decoration: none;
 }
 
 /* Purple badge - non-clickable variant (decorative tags on cards) */
 .badge-purple-static {
   background: var(--color-purple-bg-badge);
-  color: var(--color-text-on-emphasis);
+  color: var(--color-text-primary);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Tag badge on content item cards - subtle purple, non-clickable */
+.badge-tag {
+  background: var(--color-purple-bg-dark);
+  color: var(--color-text-primary);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
@@ -214,12 +239,14 @@
   user-select: none;
   pointer-events: auto;
   transition: all var(--duration-fast) var(--easing-ease);
+  position: relative;
+  z-index: 1;
 }
 
 .badge-expandable:hover {
   background: var(--color-bg-elevated);
   border-color: var(--color-border-emphasis);
-  color: var(--color-text-secondary);
+  color: var(--color-text-on-emphasis);
 }
 
 .badge-expandable:active {
@@ -239,7 +266,7 @@
 .badge-custom {
   background: var(--color-purple-bg-dark);
   border-color: var(--color-purple-dark);
-  color: var(--color-text-on-emphasis);
+  color: var(--color-text-primary);
   font-style: italic;
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
@@ -250,11 +277,14 @@
   text-decoration: none;
   transition: all var(--duration-fast) var(--easing-ease);
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .badge-custom:hover {
   background: var(--color-purple-bg-dark-hover);
   border-color: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
 }
 
 /* Status badges for feature flags, warnings, etc. */

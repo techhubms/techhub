@@ -40,7 +40,7 @@ public class ContentDetailTests : PlaywrightTestBase
 
         for (int i = 0; i < cardCount; i++)
         {
-            var href = await cards.Nth(i).GetHrefAsync();
+            var href = await cards.Nth(i).Locator(".card-link").GetHrefAsync();
             if (href?.StartsWith("/") == true)
             {
                 firstCardHref = href;

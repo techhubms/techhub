@@ -1,12 +1,15 @@
 @using TechHub.Core.Models
 
-<a href="@Item.GetHref(SectionName)"
-   class="card"
-   target="@Item.GetTarget()"
-   rel="@Item.GetRel()"
+<div class="card"
    aria-label="@Item.GetAriaLabel()">
         <div class="card-header">
-            <h3 class="card-title">@Item.Title</h3>
+            <h3 class="card-title">
+                <a href="@Item.GetHref(SectionName)"
+                   class="card-link"
+                   target="@Item.GetTarget()"
+                   rel="@Item.GetRel()"
+                   aria-label="@Item.GetAriaLabel()">@Item.Title</a>
+            </h3>
             <div class="card-meta">
                 <time datetime="@FormatDateIso(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>@if (!string.IsNullOrWhiteSpace(Item.Author))
                 {<span class="content-author"> by @Item.Author</span>}
@@ -22,22 +25,22 @@
 
         @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
         {
-            <div class="card-tags" @onclick:preventDefault @onclick:stopPropagation>
+            <div class="card-tags">
+                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
+                {
+                    <span class="badge-purple-static">@CapitalizeCollection(Item.CollectionName)</span>
+                }
                 @foreach (var tag in Item.Tags.Take(5))
                 {
-                    <span class="badge-purple-static">@tag</span>
+                    <span class="badge-tag">@tag</span>
                 }
                 @if (Item.Tags.Count > 5)
                 {
                     <span class="badge-grey">+@(Item.Tags.Count - 5) more</span>
                 }
-                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
-                {
-                    <span class="badge-grey">@CapitalizeCollection(Item.CollectionName)</span>
-                }
             </div>
         }
-</a>
+</div>
 
 @code {
     [Parameter, EditorRequired]
