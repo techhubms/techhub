@@ -27064,5 +27064,11 @@
     "timestamp": "2026-02-25 00:10:21 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-02-24-github-enterprise-server-3-20-release-candidate-is-available",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/rethinking-background-workloads-with-azure-functions-on-azure/ba-p/4496861",
+    "timestamp": "2026-02-25 07:23:07 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because the entire article focuses on Azure-specific services (Azure Functions and Azure Container Apps), per Azure inclusion rules 1 and 4. Assigned 'Coding' as it explains implementation patterns, event-driven programming, and includes real code excerpts showing how to use Azure Functions, per Coding inclusion rules 1, 2, and 4. 'DevOps' applies because the blog discusses deployment, scaling, observability, and workflow orchestration across modern cloud development platforms, per DevOps rules 3, 5, 6, and 7. No ML, AI, Security, or GitHub Copilot content appears per their inclusion/exclusion rules.",
+    "collection": "community"
   }
 ]

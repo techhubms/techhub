@@ -12495,5 +12495,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/sharepoint-list-view-threshold-error-while-fetching-5000-records/m-p/4496599#M686",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The input content is a keynote video about Visual Studio Code's new capabilities for multi-agent development. However, the provided data lacks substantive details about the technical content or specific Microsoft technologies/services used. The title, description, and tags do not explicitly mention any Microsoft AI products (like Azure OpenAI Service), GitHub Copilot, Azure, ML platforms, specific coding content, or DevOps practices. While Visual Studio Code is a Microsoft-supported tool, the description focuses on product capabilities in a general sense (delegating, orchestrating, collaborating with agents) without enough detail to clearly assign any predefined category. Because of the absence of concrete technical substance or developer-implementation focus, and without the full content text, the inclusion rules cannot be applied. If more concrete technical detail or code-oriented content were available, a category might apply.",
+    "canonical_url": "https://www.youtube.com/shorts/zgmrPhxZ_pw",
+    "collection": "videos",
+    "timestamp": "2026-02-25 04:37:08 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-02-25 06:21:51 +00:00",
+    "reason": "No categories found: No categories assigned because the content is a submission announcement and call to action for a community event (Agents League Week 2), with no substantive technical details, tutorial, or architecture. There is no content field provided, and the description only contains logistical instructions about project submission, not technical information, guidance, or implementation details. According to the generic exclusion rules, announcements or event logistics without technical depth are excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/NR65tweIeGk"
   }
 ]
