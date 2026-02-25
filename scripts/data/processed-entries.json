@@ -27088,5 +27088,11 @@
     "timestamp": "2026-02-25 11:17:13 +00:00",
     "canonical_url": "https://hiddedesmet.com/prompt-engineering-that-actually-works",
     "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=2OVNx2quVP0",
+    "reason": "Succesfully added: Assigned the Azure category because the content centers on Microsoft Azure's ExpressRoute Gateway, specifically covering the new scalable SKU, scaling mechanisms, pricing, and migration—all governed by Azure-specific services and features (Azure inclusion rule 1, 4, 5). No other category was applied as the primary focus is networking infrastructure within Azure, with no AI, ML, DevOps, Security, or Coding-related topics detailed in the description or tags. No generic exclusion rules were triggered, as the content is technical, instructional, in English, and platform development-focused.",
+    "timestamp": "2026-02-25 12:09:42 +00:00",
+    "collection": "videos"
   }
 ]
