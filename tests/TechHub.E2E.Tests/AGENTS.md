@@ -69,7 +69,7 @@ tests/TechHub.E2E.Tests/
 │   │   ├── SidebarTocTests.cs          ← TOC behavior (rendering, navigation, scroll spy, keyboard)
 │   │   ├── MermaidTests.cs             ← Diagram rendering (tested on genai-basics)
 │   │   ├── HighlightingTests.cs        ← Code syntax highlighting (tested on genai-advanced)
-│   │   ├── TabHighlightingTests.cs     ← Focus visibility (WCAG AA accessibility)
+│   │   ├── TabHighlightingTests.cs     ← Focus visibility (WCAG AA accessibility, keyboard-only outlines)
 │   │   └── TabOrderingTests.cs         ← Tab order verification (WCAG A accessibility)
 │   ├── Page-Specific Tests             ← Test unique page features
 │   │   ├── HandbookTests.cs            ← Handbook-specific (book info, hero, CTA)

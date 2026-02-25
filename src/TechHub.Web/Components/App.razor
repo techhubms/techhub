@@ -8,6 +8,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0A19" />
     <base href="/" />
 
     <ImportMap />
@@ -24,7 +25,8 @@
     else
     {
         <!-- Production: Bundled and minified CSS for optimal performance -->
-        <link rel="stylesheet" href="css/bundle.css" />
+        <!-- Cache busting: WebOptimizer sets max-age=10y so we append assembly MVID to force re-fetch on deploy -->
+        <link rel="stylesheet" href="css/bundle.css?v=@BundleVersion" />
     }
 
     <!-- Scoped Component Styles -->
@@ -172,5 +174,14 @@
     <!-- Individual Blazor components call initHighlighting/initMermaid/etc. from OnAfterRenderAsync -->
     <script type="module" src="@Assets["js/page-scripts.js"]"></script>
 </body>
+
+@code {
+    /// <summary>
+    /// Cache-busting version for the CSS bundle.
+    /// Uses the assembly's Module Version ID (MVID) which changes on every compilation,
+    /// ensuring browsers fetch the new bundle after each deployment.
+    /// </summary>
+    private static readonly string BundleVersion = typeof(App).Assembly.ManifestModule.ModuleVersionId.ToString("N")[..8];
+}
 
 </html>

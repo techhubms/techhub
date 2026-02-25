@@ -61,7 +61,7 @@
     background: var(--color-bg-emphasis);
 }
 
-.dx-card-header:focus {
+.dx-card-header:focus-visible {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: -2px;
 }

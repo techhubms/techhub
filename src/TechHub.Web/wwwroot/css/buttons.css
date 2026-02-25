@@ -84,6 +84,20 @@
   text-decoration: none;
 }
 
+/* Prevent sticky hover on touch devices */
+@media (hover: none) {
+  .btn-subnav:hover:not(.active) {
+    background: transparent;
+    box-shadow: none;
+    color: var(--color-text-primary);
+  }
+
+  .btn-subnav.active:hover {
+    background: var(--color-purple-dark);
+    color: var(--color-text-on-emphasis);
+  }
+}
+
 .btn-subnav.active {
   color: var(--color-text-on-emphasis);
   background: var(--color-purple-dark);

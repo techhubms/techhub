@@ -39,11 +39,12 @@
     border-color: var(--color-purple-medium);
 }
 
-/* Only show focus ring when navigating with keyboard */
+/* Focus-visible: no box-shadow ring — keyboard users get the global
+   html.keyboard-nav :focus-visible outline from base.css instead.
+   border-color change from :focus above provides adequate feedback for touch. */
 .search-input:focus-visible {
     outline: none;
     border-color: var(--color-purple-medium);
-    box-shadow: 0 0 0 3px var(--color-purple-border-subtle);
 }
 
 .search-input::placeholder {
@@ -73,9 +74,9 @@
     background-color: var(--color-purple-bg-subtle);
 }
 
-.search-clear-button:focus {
+/* Keyboard users get the global html.keyboard-nav :focus-visible outline */
+.search-clear-button:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px var(--color-purple-border-subtle);
 }
 
 .search-clear-button:active {

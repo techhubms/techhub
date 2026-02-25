@@ -300,7 +300,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount with selected tags");
+        AssertPerformance(elapsedMs, "TagsToCount with selected tags", MaxTagsToCountMs);
     }
 
     [Fact]
@@ -335,7 +335,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount with 3 selected tags");
+        AssertPerformance(elapsedMs, "TagsToCount with 3 selected tags", MaxTagsToCountMs);
     }
 
     [Fact]
@@ -356,7 +356,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount with 15 specific tags");
+        AssertPerformance(elapsedMs, "TagsToCount with 15 specific tags", MaxTagsToCountMs);
     }
 
     // ==================== Tag Cloud: With Date Range ====================
@@ -376,7 +376,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "Tag cloud with 90-day date range");
+        AssertPerformance(elapsedMs, "Tag cloud with 90-day date range", MaxTagsToCountMs);
     }
 
     [Fact]
@@ -395,7 +395,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount with date range and tag filter");
+        AssertPerformance(elapsedMs, "TagsToCount with date range and tag filter", MaxTagsToCountMs);
     }
 
     // ==================== Tag Cloud: With Search Query ====================

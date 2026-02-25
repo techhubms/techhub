@@ -45,7 +45,7 @@
             <div class="sidebar-section latest-items">
                 <h2 class="sidebar-h2">Latest Content</h2>
                 <ul class="sidebar-list">
-                    @foreach (var item in latestItems.Take(10))
+                    @foreach (var item in latestItems)
                     {
                         <li>
                             <a href="@item.GetHref()"
@@ -169,7 +169,7 @@ try
 // Fetch all content in parallel - using database-optimized endpoints
 var sectionsTask = ApiClient.GetAllSectionsAsync();
 var roundupTask = ApiClient.GetLatestRoundupAsync(); // Uses SearchAsync with Take=1
-var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 10); // Uses SearchAsync with Take=10
+var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5); // Uses SearchAsync with Take=5
 
 await Task.WhenAll(sectionsTask, roundupTask, latestItemsTask);
 

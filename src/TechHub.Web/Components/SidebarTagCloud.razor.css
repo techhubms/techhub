@@ -36,6 +36,21 @@
     color: var(--color-text-on-emphasis);
 }
 
+/* On touch devices, :hover "sticks" after tapping.
+   Reset hover to default so deselected buttons look normal immediately. */
+@media (hover: none) {
+    .tag-cloud-item:hover:not(.selected) {
+        background: var(--color-bg-default);
+        border-color: var(--color-border-default);
+        color: var(--color-text-primary);
+    }
+
+    .tag-cloud-item.selected:hover {
+        background: var(--color-purple-dark);
+        border-color: var(--color-purple-bright);
+    }
+}
+
 .tag-cloud-item:focus-visible {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
@@ -161,6 +176,21 @@
     border-color: var(--color-purple-bright);
     color: var(--color-text-on-emphasis);
     transform: translateY(-2px);
+}
+
+/* Prevent sticky hover on touch devices */
+@media (hover: none) {
+    .sidebar-tag-button:hover:not(.active) {
+        background: var(--color-bg-default);
+        border-color: var(--color-border-default);
+        color: var(--color-text-primary);
+        transform: none;
+    }
+
+    .sidebar-tag-button.active:hover {
+        background: var(--color-purple-dark);
+        border-color: var(--color-purple-bright);
+    }
 }
 
 .sidebar-tag-button.active {

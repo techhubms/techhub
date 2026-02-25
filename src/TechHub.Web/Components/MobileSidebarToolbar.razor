@@ -30,11 +30,15 @@
                 {
                     var panelId = panel.Id;
                     <button type="button"
-                            class="sidebar-toolbar-btn @(ActivePanelId == panelId ? "active" : "")"
+                            class="sidebar-toolbar-btn @(ActivePanelId == panelId ? "active" : "") @(panel.HasActiveFilter ? "has-active-filter" : "")"
                             aria-expanded="@(ActivePanelId == panelId ? "true" : "false")"
                             @onclick="() => TogglePanel(panelId)">
                         @((MarkupString)GetIconSvg(panel.Icon))
                         @panel.Label
+                        @if (panel.HasActiveFilter)
+                        {
+                            <span class="sidebar-toolbar-filter-dot" aria-hidden="true"></span>
+                        }
                     </button>
                 }
             </div>
@@ -58,11 +62,25 @@
     /// Called by MobileSidebarPanel during initialization to register itself.
     /// Returns a unique panel ID.
     /// </summary>
-    public string RegisterPanel(string label, string? icon = null)
+    public string RegisterPanel(string label, string? icon = null, bool hasActiveFilter = false)
     {
         var id = $"sidebar-panel-{_panels.Count}";
-        _panels.Add(new PanelRegistration(id, label, icon));
+        _panels.Add(new PanelRegistration(id, label, icon, hasActiveFilter));
         return id;
+    }
+
+    /// <summary>
+    /// Called by MobileSidebarPanel when HasActiveFilter changes.
+    /// Updates the panel's active filter state so the toolbar button reflects it.
+    /// </summary>
+    public void UpdatePanelActiveFilter(string id, bool hasActiveFilter)
+    {
+        var index = _panels.FindIndex(p => p.Id == id);
+        if (index >= 0 && _panels[index].HasActiveFilter != hasActiveFilter)
+        {
+            _panels[index] = _panels[index] with { HasActiveFilter = hasActiveFilter };
+            StateHasChanged();
+        }
     }
 
     /// <summary>
@@ -88,13 +106,18 @@
     }
 
     /// <summary>
-    /// Re-render after first render so toolbar buttons appear
-    /// (panels register during the initial render pass).
+    /// Re-render after panels register. Panels register during the render pass
+    /// (via OnInitialized), so a second render is needed for the toolbar buttons 
+    /// to appear. This also handles late-registering panels (e.g., when content 
+    /// loads asynchronously on ContentItem pages).
     /// </summary>
+    private int _lastRenderedPanelCount;
+
     protected override void OnAfterRender(bool firstRender)
     {
-        if (firstRender && _panels.Count > 0)
+        if (_panels.Count != _lastRenderedPanelCount)
         {
+            _lastRenderedPanelCount = _panels.Count;
             StateHasChanged();
         }
     }
@@ -112,5 +135,5 @@
         _ => ""
     };
 
-    private sealed record PanelRegistration(string Id, string Label, string? Icon);
+    private sealed record PanelRegistration(string Id, string Label, string? Icon, bool HasActiveFilter = false);
 }

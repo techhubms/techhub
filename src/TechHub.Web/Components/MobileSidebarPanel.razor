@@ -36,6 +36,13 @@
     public string? Icon { get; set; }
 
     /// <summary>
+    /// Indicates whether this panel's associated filter is currently active.
+    /// When true, the toolbar button shows a small indicator dot.
+    /// </summary>
+    [Parameter]
+    public bool HasActiveFilter { get; set; }
+
+    /// <summary>
     /// The sidebar content for this panel.
     /// </summary>
     [Parameter]
@@ -49,7 +56,15 @@
     {
         if (Toolbar != null)
         {
-            _panelId = Toolbar.RegisterPanel(Label, Icon);
+            _panelId = Toolbar.RegisterPanel(Label, Icon, HasActiveFilter);
+        }
+    }
+
+    protected override void OnParametersSet()
+    {
+        if (Toolbar != null && _panelId != null)
+        {
+            Toolbar.UpdatePanelActiveFilter(_panelId, HasActiveFilter);
         }
     }
 

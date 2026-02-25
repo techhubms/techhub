@@ -9,6 +9,10 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-2);
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2);
 }
 
 /* Date range display label */
@@ -148,6 +152,7 @@
     display: flex;
     gap: var(--spacing-1);
     flex-wrap: wrap;
+    margin-top: var(--spacing-1);
 }
 
 .date-preset-button {
@@ -156,7 +161,7 @@
     padding: 4px 8px;
     border: 1px solid var(--color-border-default);
     border-radius: var(--radius-sm);
-    background: transparent;
+    background: var(--color-bg-default);
     color: var(--color-text-secondary);
     font-size: var(--font-size-xs);
     cursor: pointer;
@@ -168,6 +173,15 @@
     background: var(--color-purple-bg-subtle);
     border-color: var(--color-purple-border-subtle);
     color: var(--color-text-primary);
+}
+
+/* Prevent sticky hover on touch devices */
+@media (hover: none) {
+    .date-preset-button:hover:not(.active) {
+        background: var(--color-bg-default);
+        border-color: var(--color-border-default);
+        color: var(--color-text-secondary);
+    }
 }
 
 .date-preset-button.active {

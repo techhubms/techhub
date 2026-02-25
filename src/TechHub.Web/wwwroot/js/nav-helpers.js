@@ -1,5 +1,6 @@
 /**
- * Navigation Helpers - Back to Top, Back to Previous Page, and Hash Link Fixes
+ * Navigation Helpers - Back to Top, Back to Previous Page, Hash Link Fixes,
+ * and Keyboard Navigation Detection
  * 
  * Provides sticky bottom buttons for:
  * - Back to top: Smooth scroll to top of page
@@ -9,6 +10,12 @@
  * When a hash-only link (#section) is clicked, the browser resolves it relative
  * to the base URL instead of the current page. This handler intercepts those
  * clicks and navigates correctly.
+ * 
+ * Keyboard Navigation Detection:
+ * Adds/removes 'keyboard-nav' class on <html> to distinguish keyboard (Tab)
+ * from pointer/touch input. Focus outlines are only shown in keyboard-nav mode
+ * via CSS scoping. This prevents lingering focus rings on mobile after tapping
+ * buttons, while preserving WCAG-compliant keyboard accessibility.
  * 
  * Buttons appear when user scrolls down (300px threshold) and are hidden at top.
  * 
@@ -21,6 +28,41 @@
 
 (function () {
     'use strict';
+
+    // ========================================================================
+    // Keyboard Navigation Detection
+    // Adds 'keyboard-nav' class to <html> when Tab key is pressed,
+    // removes it on pointer/touch interaction.
+    // All focus outline CSS is scoped to html.keyboard-nav so outlines
+    // only appear during keyboard navigation.
+    // ========================================================================
+    function setupKeyboardNavDetection() {
+        const html = document.documentElement;
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Tab') {
+                html.classList.add('keyboard-nav');
+            }
+        }, true);
+
+        document.addEventListener('pointerdown', function (e) {
+            html.classList.remove('keyboard-nav');
+
+            // Blur focused buttons/links after pointer interaction to prevent
+            // lingering focus state on mobile. Skip text inputs, textareas,
+            // and selects so they remain focusable for typing.
+            var active = document.activeElement;
+            if (active && active !== document.body) {
+                var tag = active.tagName;
+                if (tag !== 'INPUT' && tag !== 'TEXTAREA' && tag !== 'SELECT') {
+                    active.blur();
+                }
+            }
+        }, true);
+    }
+
+    // Set up keyboard detection immediately (before DOM ready)
+    setupKeyboardNavDetection();
 
     // Configuration
     const SCROLL_THRESHOLD = 300; // Show buttons after scrolling 300px

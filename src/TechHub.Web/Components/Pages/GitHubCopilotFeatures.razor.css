@@ -195,7 +195,7 @@
   color: var(--color-text-emphasis);
 }
 
-.filter-toggle input[type="checkbox"]:focus {
+.filter-toggle input[type="checkbox"]:focus-visible {
   outline: var(--focus-outline-width) solid var(--color-purple-bright);
   outline-offset: var(--focus-outline-offset);
 }

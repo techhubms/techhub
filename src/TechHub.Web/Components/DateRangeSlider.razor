@@ -39,28 +39,28 @@
             <span class="slider-label-min">@FormatDate(_absoluteMinDate)</span>
             <span class="slider-label-max">@FormatDate(_absoluteMaxDate)</span>
         </div>
+    </div>
 
-        <div class="date-presets">
-            <button type="button"
-                    class="date-preset-button @(IsPresetActive(7) ? "active" : "")"
-                    @onclick="() => ApplyPreset(7)"
-                    aria-label="Last 7 days">7d</button>
-            <button type="button"
-                    class="date-preset-button @(IsPresetActive(30) ? "active" : "")"
-                    @onclick="() => ApplyPreset(30)"
-                    aria-label="Last 30 days">30d</button>
-            <button type="button"
-                    class="date-preset-button @(IsPresetActive(90) ? "active" : "")"
-                    @onclick="() => ApplyPreset(90)"
-                    aria-label="Last 90 days">90d</button>
-            <button type="button"
-                    class="date-preset-button @(IsPresetActive(365) ? "active" : "")"
-                    @onclick="() => ApplyPreset(365)"
-                    aria-label="Last year">1y</button>
-            <button type="button"
-                    class="date-preset-button @(IsPresetActive(0) ? "active" : "")"
-                    @onclick="() => ApplyPreset(0)"
-                    aria-label="All time">All</button>
-        </div>
+    <div class="date-presets">
+        <button type="button"
+                class="date-preset-button @(IsPresetActive(7) ? "active" : "")"
+                @onclick="() => ApplyPreset(7)"
+                aria-label="Last 7 days">7d</button>
+        <button type="button"
+                class="date-preset-button @(IsPresetActive(30) ? "active" : "")"
+                @onclick="() => ApplyPreset(30)"
+                aria-label="Last 30 days">30d</button>
+        <button type="button"
+                class="date-preset-button @(IsPresetActive(90) ? "active" : "")"
+                @onclick="() => ApplyPreset(90)"
+                aria-label="Last 90 days">90d</button>
+        <button type="button"
+                class="date-preset-button @(IsPresetActive(365) ? "active" : "")"
+                @onclick="() => ApplyPreset(365)"
+                aria-label="Last year">1y</button>
+        <button type="button"
+                class="date-preset-button @(IsPresetActive(0) ? "active" : "")"
+                @onclick="() => ApplyPreset(0)"
+                aria-label="All time">All</button>
     </div>
 </nav>

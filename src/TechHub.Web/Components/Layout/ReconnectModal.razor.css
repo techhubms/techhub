@@ -123,9 +123,7 @@
     border: 3px solid var(--color-purple-dark);
     border-radius: 50%;
     box-sizing: border-box;
-    animation: components-rejoining-animation 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-    transform: scale(0);
-    opacity: 0;
+    animation: components-rejoining-animation 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite backwards;
 }
 
 .components-rejoining-animation div:nth-child(2) {

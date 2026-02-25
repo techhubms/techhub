@@ -52,18 +52,11 @@
    Sidebar Sections - Headings and content structure
    ============================================================================ */
 
-.sidebar-h2 {
-  color: var(--color-text-primary);
-  margin: 0 0 var(--spacing-4) 0;
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-semibold);
-}
-
+/* Font-size, font-weight, color, line-height for sidebar-h2 are defined in base.css.
+   Here we only set sidebar-specific margins. */
+.sidebar-h2,
 .sidebar-section h2 {
-  color: var(--color-text-primary);
-  margin: 0 0 var(--spacing-4) 0;
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--spacing-3) 0;
 }
 
 .sidebar-section h3 {
@@ -164,6 +157,29 @@
   .sidebar-panel {
     display: contents;
   }
+
+  /* Extra spacing between sidebar sections on desktop */
+  .sidebar > * + * {
+    margin-top: var(--spacing-4);
+  }
+
+  .sidebar-panel > * + * {
+    margin-top: var(--spacing-4);
+  }
+
+  .sidebar-panel + .sidebar-panel > :first-child {
+    margin-top: var(--spacing-4);
+  }
+
+  .latest-roundup + .sidebar-panel > :first-child {
+    margin-top: var(--spacing-4);
+  }
+
+  /* Match page-h1 bottom margin so sidebar content aligns with main content */
+  .sidebar-h2,
+  .sidebar-section h2 {
+    margin-bottom: var(--spacing-4);
+  }
 }
 
 /* Mobile: Show toolbar buttons, panels hidden by default */
@@ -176,6 +192,7 @@
 
   .sidebar-h2,
   .sidebar-section h2 {
+    font-size: var(--font-size-3xl);
     margin: 0 0 var(--spacing-2) 0;
   }
 
@@ -190,8 +207,12 @@
   }
 
   /* Spacing between toolbar buttons and always-visible content below */
+  .sidebar-toolbar-buttons {
+    margin-bottom: var(--spacing-2);
+  }
+
   .latest-roundup {
-    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
   }
 
   /* Toolbar button bar */
@@ -236,6 +257,22 @@
     color: var(--color-text-primary);
   }
 
+  /* Prevent sticky hover on touch devices */
+  @media (hover: none) {
+    .sidebar-toolbar-btn:hover:not(.active):not(.has-active-filter) {
+      background: var(--color-bg-emphasis);
+      border-color: var(--color-border-default);
+      color: var(--color-text-secondary);
+    }
+
+    /* Buttons with active filters keep their indicator styling when hover sticks */
+    .sidebar-toolbar-btn.has-active-filter:hover:not(.active) {
+      background: var(--color-bg-emphasis);
+      border-color: var(--color-purple-medium);
+      color: var(--color-text-secondary);
+    }
+  }
+
   .sidebar-toolbar-btn:focus-visible {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
@@ -247,6 +284,30 @@
     border-color: var(--color-purple-bright);
   }
 
+  /* Active filter indicator - subtle highlight when panel has active filters */
+  .sidebar-toolbar-btn.has-active-filter {
+    border-color: var(--color-purple-medium);
+  }
+
+  .sidebar-toolbar-btn.has-active-filter.active {
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+  }
+
+  /* Small dot indicator for active filters */
+  .sidebar-toolbar-filter-dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-purple-bright);
+    flex-shrink: 0;
+  }
+
+  .sidebar-toolbar-btn.active .sidebar-toolbar-filter-dot {
+    background: var(--color-text-on-emphasis);
+  }
+
   /* Panels hidden by default on mobile */
   .sidebar-panel {
     display: none;
@@ -255,15 +316,13 @@
   .sidebar-panel-active {
     display: block;
     margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
   }
 
-  /* Extra spacing for non-first active panels (e.g. Tags after Latest Roundup) */
-  .sidebar-panel + .sidebar-panel.sidebar-panel-active {
-    margin-top: var(--spacing-4);
-  }
-
-  /* Reset inter-panel spacing on mobile (only one visible at a time) */
-  .sidebar-panel + .sidebar-panel > :first-child {
+  /* Reset inter-panel and roundup spacing on mobile (only one visible at a time,
+     spacing is handled by margin-bottom on toolbar buttons and always-visible content) */
+  .sidebar-panel + .sidebar-panel > :first-child,
+  .latest-roundup + .sidebar-panel > :first-child {
     margin-top: 0;
   }
 

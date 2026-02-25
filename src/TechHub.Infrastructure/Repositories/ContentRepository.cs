@@ -175,7 +175,10 @@ public class ContentRepository : IContentRepository
     /// </summary>
     private static Section ConvertToSection(string sectionName, SectionConfig config)
     {
-        var collections = config.Collections
+        // Define collection display order (non-custom collections shown after "All" in SubNav/NavHeader)
+        var collectionOrder = new[] { "roundups", "news", "blogs", "videos", "community" };
+
+        var collectionsDict = config.Collections
             .Select(kvp =>
             {
                 // Use GetTagFromName for display name (e.g., "blogs" -> "Blogs", "vscode-updates" -> "Vscode Updates")
@@ -189,9 +192,22 @@ public class ContentRepository : IContentRepository
                     kvp.Value.Custom,
                     kvp.Value.Order);
             })
+            .ToDictionary(c => c.Name);
+
+        // Order: known collections first in defined order, then any remaining non-custom alphabetically, then custom pages by Order/Title
+        var ordered = collectionOrder
+            .Where(name => collectionsDict.ContainsKey(name))
+            .Select(name => collectionsDict[name])
+            .Concat(collectionsDict.Values
+                .Where(c => !c.IsCustom && !collectionOrder.Contains(c.Name))
+                .OrderBy(c => c.Title))
+            .Concat(collectionsDict.Values
+                .Where(c => c.IsCustom)
+                .OrderBy(c => c.Order)
+                .ThenBy(c => c.Title))
             .ToList();
 
-        return new Section(sectionName, config.Title, config.Description, config.Url, config.Tag, collections);
+        return new Section(sectionName, config.Title, config.Description, config.Url, config.Tag, ordered);
     }
 
     /// <summary>

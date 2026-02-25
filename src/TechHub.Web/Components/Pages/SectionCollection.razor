@@ -20,14 +20,14 @@
 <main class="page-with-sidebar">
     <aside class="sidebar">
         <MobileSidebarToolbar>
-        <MobileSidebarPanel Label="Search" Icon="search">
+        <MobileSidebarPanel Label="Search" Icon="search" HasActiveFilter="@(!string.IsNullOrWhiteSpace(searchQuery))">
         <SidebarSearch SearchQuery="@searchQuery" OnSearchQueryChanged="HandleSearchQueryChanged" />
         </MobileSidebarPanel>
-        <MobileSidebarPanel Label="Date" Icon="calendar">
+        <MobileSidebarPanel Label="Date" Icon="calendar" HasActiveFilter="@(fromDate != null || toDate != null)">
         <DateRangeSlider FromDate="@fromDate" ToDate="@toDate"
             OnDateRangeChanged="HandleDateRangeChanged" />
         </MobileSidebarPanel>
-        <MobileSidebarPanel Label="Tags" Icon="tags">
+        <MobileSidebarPanel Label="Tags" Icon="tags" HasActiveFilter="@(selectedTags.Count > 0)">
         <SidebarTagCloud SectionName="@SectionName" CollectionName="@CollectionName"
             Title="Popular Tags" NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
             FromDate="@fromDateString" ToDate="@toDateString"

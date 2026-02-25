@@ -86,7 +86,8 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 else
 {
     <!-- Production: Bundled and minified -->
-    <link rel="stylesheet" href="css/bundle.css" />
+    <!-- Cache busting: WebOptimizer sets max-age=10y so we append assembly MVID -->
+    <link rel="stylesheet" href="css/bundle.css?v=@BundleVersion" />
 }
 <!-- Component-scoped styles (all modes) -->
 <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
@@ -110,6 +111,7 @@ if (!builder.Environment.IsDevelopment())
 - `AddWebOptimizer()` in Program.cs references `CssFiles.All`
 - App.razor loops through `CssFiles.All` in Development
 - Bundle path MUST match App.razor `<link>` reference
+- **Cache busting**: Bundle URL includes `?v=@BundleVersion` (assembly MVID) — WebOptimizer sets aggressive `max-age=10y` cache headers, so the query parameter ensures browsers fetch the new bundle after deployment
 
 **See**: [Configuration/CssFiles.cs](Configuration/CssFiles.cs) for the single source of truth
 

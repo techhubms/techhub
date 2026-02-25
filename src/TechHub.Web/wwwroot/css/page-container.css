@@ -49,15 +49,6 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-2);
   }
-
-  /* Add spacing between sidebar content and main content on mobile,
-     when sidebar has always-visible content or an open panel */
-  .sidebar:has(.latest-roundup) + article,
-  .sidebar:has(.latest-roundup) + section,
-  .sidebar:has(.sidebar-panel-active) + article,
-  .sidebar:has(.sidebar-panel-active) + section {
-    margin-top: var(--spacing-2);
-  }
 }
 
 @media (max-width: 768px) {

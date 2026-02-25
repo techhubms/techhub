@@ -48,6 +48,14 @@
     border-color: var(--color-purple-bright);
 }
 
+/* Prevent sticky hover on touch devices */
+@media (hover: none) {
+    .date-slider__preset-btn:hover:not(.date-slider__preset-btn--active) {
+        background-color: var(--color-bg-emphasis);
+        border-color: var(--color-border-default);
+    }
+}
+
 .date-slider__preset-btn--active {
     background-color: var(--color-purple-bright);
     color: var(--color-text-on-emphasis);
@@ -155,7 +163,7 @@
     font-size: 0.875rem;
 }
 
-.date-slider__input:focus {
+.date-slider__input:focus-visible {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: -2px;
     border-color: var(--color-purple-bright);

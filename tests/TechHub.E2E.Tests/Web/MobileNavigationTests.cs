@@ -244,6 +244,74 @@ public class MobileNavigationTests : PlaywrightTestBase
     }
 
     // ============================================================================
+    // Filter Indicator Tests (dot + highlight on toolbar buttons)
+    // ============================================================================
+
+    [Fact]
+    public async Task MobileViewport_FilterIndicator_NoIndicatorByDefault()
+    {
+        // Arrange - Navigate to a section page without any filters
+        await Page.GotoRelativeAsync("/github-copilot");
+
+        // Assert - No toolbar button should have the has-active-filter class
+        var activeFilterButtons = Page.Locator(".sidebar-toolbar-btn.has-active-filter");
+        await Assertions.Expect(activeFilterButtons).ToHaveCountAsync(0);
+
+        // Assert - No filter dots should be visible
+        var filterDots = Page.Locator(".sidebar-toolbar-filter-dot");
+        await Assertions.Expect(filterDots).ToHaveCountAsync(0);
+    }
+
+    [Fact]
+    public async Task MobileViewport_FilterIndicator_TagFilterShowsDot()
+    {
+        // Arrange - Navigate to a section page with a tag filter active via URL
+        await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code");
+        await Page.WaitForBlazorReadyAsync();
+
+        // Assert - Tags toolbar button should have has-active-filter class
+        var tagsBtn = Page.Locator(".sidebar-toolbar-btn", new() { HasTextString = "Tags" });
+        await Assertions.Expect(tagsBtn).ToHaveClassAsync(new Regex("has-active-filter"));
+
+        // Assert - Filter dot should be visible inside the Tags button
+        var filterDot = tagsBtn.Locator(".sidebar-toolbar-filter-dot");
+        await Assertions.Expect(filterDot).ToBeVisibleAsync();
+        await Assertions.Expect(filterDot).ToHaveAttributeAsync("aria-hidden", "true");
+    }
+
+    [Fact]
+    public async Task MobileViewport_FilterIndicator_SearchFilterShowsDot()
+    {
+        // Arrange - Navigate to a section page with a search query active via URL
+        await Page.GotoRelativeAsync("/github-copilot?search=copilot");
+        await Page.WaitForBlazorReadyAsync();
+
+        // Assert - Search toolbar button should have has-active-filter class
+        var searchBtn = Page.Locator(".sidebar-toolbar-btn", new() { HasTextString = "Search" });
+        await Assertions.Expect(searchBtn).ToHaveClassAsync(new Regex("has-active-filter"));
+
+        // Assert - Filter dot should be visible inside the Search button
+        var filterDot = searchBtn.Locator(".sidebar-toolbar-filter-dot");
+        await Assertions.Expect(filterDot).ToBeVisibleAsync();
+    }
+
+    [Fact]
+    public async Task MobileViewport_FilterIndicator_OnlyAffectedButtonShowsDot()
+    {
+        // Arrange - Navigate with only a tag filter (no search filter)
+        await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code");
+        await Page.WaitForBlazorReadyAsync();
+
+        // Assert - Tags button has indicator
+        var tagsBtn = Page.Locator(".sidebar-toolbar-btn", new() { HasTextString = "Tags" });
+        await Assertions.Expect(tagsBtn).ToHaveClassAsync(new Regex("has-active-filter"));
+
+        // Assert - Search button does NOT have indicator
+        var searchBtn = Page.Locator(".sidebar-toolbar-btn", new() { HasTextString = "Search" });
+        await Assertions.Expect(searchBtn).Not.ToHaveClassAsync(new Regex("has-active-filter"));
+    }
+
+    // ============================================================================
     // Desktop Viewport (Regression) Tests
     // ============================================================================
 

@@ -10,9 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     transition: height 0.3s ease;
     overflow: hidden;
     /* Background images are set via CSS classes (e.g., .section-banner-bg-ai) */
@@ -126,11 +126,10 @@
     background: var(--color-black-backdrop);
     backdrop-filter: blur(3px);
     border-radius: var(--radius-md);
-    padding: var(--spacing-4);
     border: 1px solid var(--color-purple-border-very-subtle);
     width: 850px;
     max-width: 90%;
-    min-height: 80px;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,6 +203,7 @@
 
     .header-text-overlay {
         padding: var(--spacing-2);
+        min-height: 80px;
     }
 
     .section-banner-content .banner-title {

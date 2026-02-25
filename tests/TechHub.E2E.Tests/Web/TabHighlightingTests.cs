@@ -1,3 +1,4 @@
+using System.Text.Json;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -6,17 +7,25 @@ namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
 /// E2E tests for keyboard focus visibility (tab highlighting).
-/// Verifies that interactive elements show visible focus indicators when tabbed to.
+/// Verifies that interactive elements show visible focus indicators when tabbed to,
+/// and that click/tap interactions do NOT show focus outlines (keyboard-only outlines).
+/// Also verifies that pointer interactions blur focused elements and that text inputs
+/// do not show box-shadow focus rings in pointer mode.
 /// This is a WCAG 2.1 Level AA accessibility requirement.
 /// 
 /// Test Pages:
 /// - /ai/genai-basics - Representative page with links, buttons, and interactive elements
+/// - /ai - Section index page with tag cloud buttons and search input
 /// 
 /// Coverage:
-/// - Links show visible focus outline
-/// - Buttons show visible focus outline
-/// - Tag buttons show visible focus outline
-/// - Skip link shows visible focus outline
+/// - Links show visible focus outline when tabbed to
+/// - Buttons show visible focus outline when tabbed to
+/// - Tag buttons show visible focus outline when tabbed to
+/// - Skip link shows visible focus outline when tabbed to
+/// - Clicked elements do NOT show focus outline (pointer/touch suppression)
+/// - Search input does NOT show box-shadow ring in pointer mode
+/// - Pointer click blurs previously focused non-input elements
+/// - Pointer after keyboard removes keyboard-nav class
 /// </summary>
 public class TabHighlightingTests : PlaywrightTestBase
 {
@@ -30,7 +39,7 @@ public class TabHighlightingTests : PlaywrightTestBase
 
         // Act - Use pure keyboard navigation to trigger :focus-visible
         // Tab through the page until we find a link in main content
-        ILocator? focusedElement = null;
+        var foundLink = false;
         var maxTabs = 50; // Safety limit
 
         for (int i = 0; i < maxTabs; i++)
@@ -38,26 +47,24 @@ public class TabHighlightingTests : PlaywrightTestBase
             await Page.Keyboard.PressAsync("Tab");
 
             // Check what element is now focused (Tab processing is synchronous)
-            var tagName = await Page.EvaluateAsync<string>("() => document.activeElement?.tagName || ''");
-            // Skip if nothing focused
-            if (tagName == "")
-            {
-                continue;
-            }
-
-            var isInMain = await Page.EvaluateAsync<bool>("() => document.activeElement?.closest('main') !== null");
+            var info = await Page.EvaluateAsync<JsonElement>(
+                "() => ({ tag: document.activeElement?.tagName || '', inMain: document.activeElement?.closest('main') !== null })");
+            var tagName = info.GetProperty("tag").GetString();
+            var isInMain = info.GetProperty("inMain").GetBoolean();
 
             if (tagName == "A" && isInMain)
             {
-                focusedElement = Page.Locator(":focus");
+                foundLink = true;
                 break;
             }
         }
 
-        focusedElement.Should().NotBeNull("should find a link in main content via keyboard navigation");
+        foundLink.Should().BeTrue("should find a link in main content via keyboard navigation");
 
         // Assert - Link should have visible outline
-        var outlineWidth = await focusedElement!.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
+        // Evaluate directly on document.activeElement to avoid stale :focus locator race condition
+        var outlineWidth = await Page.EvaluateAsync<string>(
+            "() => window.getComputedStyle(document.activeElement).outlineWidth");
         outlineWidth.Should().NotBe("0px", "focused link should have visible outline width when accessed via keyboard");
     }
 
@@ -69,7 +76,7 @@ public class TabHighlightingTests : PlaywrightTestBase
 
         // Act - Use pure keyboard navigation to trigger :focus-visible
         // Tab through the page until we find a button
-        ILocator? focusedElement = null;
+        var foundButton = false;
         var maxTabs = 100; // Need more tabs to reach sidebar buttons
 
         for (int i = 0; i < maxTabs; i++)
@@ -78,23 +85,20 @@ public class TabHighlightingTests : PlaywrightTestBase
 
             // Check what element is now focused (Tab processing is synchronous)
             var tagName = await Page.EvaluateAsync<string>("() => document.activeElement?.tagName || ''");
-            // Skip if nothing focused
-            if (tagName == "")
-            {
-                continue;
-            }
 
             if (tagName == "BUTTON")
             {
-                focusedElement = Page.Locator(":focus");
+                foundButton = true;
                 break;
             }
         }
 
-        focusedElement.Should().NotBeNull("should find a button via keyboard navigation");
+        foundButton.Should().BeTrue("should find a button via keyboard navigation");
 
         // Assert - Button should have visible outline
-        var outlineWidth = await focusedElement!.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
+        // Evaluate directly on document.activeElement to avoid stale :focus locator race condition
+        var outlineWidth = await Page.EvaluateAsync<string>(
+            "() => window.getComputedStyle(document.activeElement).outlineWidth");
         outlineWidth.Should().NotBe("0px", "focused button should have visible outline width when accessed via keyboard");
     }
 
@@ -109,7 +113,7 @@ public class TabHighlightingTests : PlaywrightTestBase
 
         // Act - Use pure keyboard navigation to trigger :focus-visible
         // Tab through the page until we find a tag cloud item
-        ILocator? focusedElement = null;
+        var foundTagButton = false;
         var maxTabs = 100; // Safety limit - tag buttons are further down
 
         for (int i = 0; i < maxTabs; i++)
@@ -121,15 +125,17 @@ public class TabHighlightingTests : PlaywrightTestBase
 
             if (hasClass)
             {
-                focusedElement = Page.Locator(":focus");
+                foundTagButton = true;
                 break;
             }
         }
 
-        focusedElement.Should().NotBeNull("should find a tag-cloud-item via keyboard navigation");
+        foundTagButton.Should().BeTrue("should find a tag-cloud-item via keyboard navigation");
 
         // Assert - Tag button should have visible outline
-        var outlineWidth = await focusedElement!.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
+        // Evaluate directly on document.activeElement to avoid stale :focus locator race condition
+        var outlineWidth = await Page.EvaluateAsync<string>(
+            "() => window.getComputedStyle(document.activeElement).outlineWidth");
         outlineWidth.Should().NotBe("0px", "focused tag button should have visible outline width when accessed via keyboard");
     }
 
@@ -163,5 +169,111 @@ public class TabHighlightingTests : PlaywrightTestBase
         // Check outline width is at least 2px
         var outlineWidth = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
         outlineWidth.Should().NotBe("0px", "focused skip link should have visible outline width");
+    }
+
+    [Fact]
+    public async Task ClickedElements_ShouldNotShow_FocusOutline()
+    {
+        // Arrange - Use section index page which has clickable links and buttons
+        await Page.GotoRelativeAsync("/ai");
+
+        // Verify keyboard-nav is NOT set by default (fresh page load, no keyboard input)
+        var hasKeyboardNav = await Page.EvaluateAsync<bool>(
+            "() => document.documentElement.classList.contains('keyboard-nav')");
+        hasKeyboardNav.Should().BeFalse("keyboard-nav class should not be set on fresh page load");
+
+        // Act - Click a link/button using pointer to trigger focus
+        var link = Page.Locator("main a[href]").First;
+        await Assertions.Expect(link).ToBeVisibleAsync();
+
+        // Use FocusAsync to focus without navigating
+        await link.FocusAsync();
+
+        // Assert - Element should NOT have a visible outline (no keyboard-nav class active)
+        var outlineWidth = await link.EvaluateAsync<string>(
+            "el => window.getComputedStyle(el).outlineWidth");
+        outlineWidth.Should().Be("0px",
+            "focused element should not show outline when keyboard-nav class is not active (pointer mode)");
+    }
+
+    [Fact]
+    public async Task FocusedSearchInput_ShouldNotShow_BoxShadowRing()
+    {
+        // Arrange - Navigate to a page with a search input
+        await Page.GotoRelativeAsync("/ai");
+
+        // Verify keyboard-nav is NOT set by default
+        var hasKeyboardNav = await Page.EvaluateAsync<bool>(
+            "() => document.documentElement.classList.contains('keyboard-nav')");
+        hasKeyboardNav.Should().BeFalse("keyboard-nav class should not be set on fresh page load");
+
+        // Act - Focus the search input as a pointer user would (without keyboard-nav)
+        var searchInput = Page.Locator("input[type='search'], .search-input").First;
+        await Assertions.Expect(searchInput).ToBeVisibleAsync();
+        await searchInput.FocusAsync();
+
+        // Assert - Should NOT have a box-shadow focus ring (only border-color change)
+        var boxShadow = await searchInput.EvaluateAsync<string>(
+            "el => window.getComputedStyle(el).boxShadow");
+        boxShadow.Should().BeOneOf("none", "",
+            "search input should not show box-shadow ring when focused via pointer");
+
+        // Outline should also be suppressed
+        var outlineWidth = await searchInput.EvaluateAsync<string>(
+            "el => window.getComputedStyle(el).outlineWidth");
+        outlineWidth.Should().Be("0px",
+            "search input should not show outline when focused via pointer");
+    }
+
+    [Fact]
+    public async Task PointerBlur_ShouldRemove_FocusFromButtons()
+    {
+        // Arrange - Navigate to a page with interactive buttons
+        await Page.GotoRelativeAsync("/ai");
+
+        // First use keyboard to focus a button
+        await Page.Keyboard.PressAsync("Tab");
+
+        var hasKeyboardNav = await Page.EvaluateAsync<bool>(
+            "() => document.documentElement.classList.contains('keyboard-nav')");
+        hasKeyboardNav.Should().BeTrue("keyboard-nav should be set after Tab press");
+
+        // Verify something is focused
+        var hasFocusedElement = await Page.EvaluateAsync<bool>(
+            "() => document.activeElement !== null && document.activeElement !== document.body");
+        hasFocusedElement.Should().BeTrue("Tab should focus an element");
+
+        // Act - Use pointer click to simulate switching to pointer mode
+        await Page.Mouse.ClickAsync(100, 100);
+
+        // Assert - Active element should be blurred (back to body)
+        var activeTagAfterClick = await Page.EvaluateAsync<string>(
+            "() => document.activeElement?.tagName || ''");
+        activeTagAfterClick.Should().Be("BODY",
+            "pointer click should blur previously focused non-input elements");
+    }
+
+    [Fact]
+    public async Task PointerAfterKeyboard_ShouldRemove_FocusOutline()
+    {
+        // Arrange - Navigate to page
+        await Page.GotoRelativeAsync("/ai/genai-basics");
+
+        // Act - First use keyboard to set keyboard-nav mode
+        await Page.Keyboard.PressAsync("Tab");
+
+        // Verify keyboard-nav is active
+        var hasKeyboardNavBefore = await Page.EvaluateAsync<bool>(
+            "() => document.documentElement.classList.contains('keyboard-nav')");
+        hasKeyboardNavBefore.Should().BeTrue("keyboard-nav should be set after Tab press");
+
+        // Now use pointer (click) to switch back to pointer mode
+        await Page.Mouse.ClickAsync(100, 100);
+
+        // Assert - keyboard-nav class should be removed after pointer interaction
+        var hasKeyboardNavAfter = await Page.EvaluateAsync<bool>(
+            "() => document.documentElement.classList.contains('keyboard-nav')");
+        hasKeyboardNavAfter.Should().BeFalse(
+            "keyboard-nav class should be removed after pointer click, disabling focus outlines");
     }
 }

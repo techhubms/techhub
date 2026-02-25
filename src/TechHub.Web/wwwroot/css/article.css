@@ -58,12 +58,10 @@
 }
 
 .article-body h1 {
-    font-size: var(--font-size-3xl);
     padding-bottom: var(--spacing-2);
 }
 
 .article-body h2 {
-    font-size: var(--font-size-2xl);
     border-bottom: none;
     padding-bottom: var(--spacing-1);
     background: linear-gradient(to right, var(--color-purple-dark), transparent);
@@ -73,22 +71,18 @@
 }
 
 .article-body h3 {
-    font-size: var(--font-size-xl);
     padding-bottom: var(--spacing-1);
 }
 
 .article-body h4 {
-    font-size: var(--font-size-lg);
     padding-bottom: var(--spacing-1);
 }
 
 .article-body h5 {
-    font-size: var(--font-size-base);
     padding-bottom: var(--spacing-1);
 }
 
 .article-body h6 {
-    font-size: var(--font-size-sm);
     color: var(--color-text-muted);
     padding-bottom: var(--spacing-1);
 }
@@ -125,7 +119,7 @@
     text-underline-offset: 2px;
 }
 
-.article-body a:focus {
+.article-body a:focus-visible {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
     border-radius: var(--radius-sm);
@@ -572,14 +566,6 @@
 
     .article-body pre {
         padding: var(--spacing-2);
-    }
-
-    .article-body h1 {
-        font-size: var(--font-size-2xl);
-    }
-
-    .article-body h2 {
-        font-size: var(--font-size-xl);
     }
 }
 

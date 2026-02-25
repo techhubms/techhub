@@ -353,6 +353,8 @@ On mobile, sidebar content is organized into individually toggleable panels acce
 
 **Available icons**: `search`, `calendar`, `tags`, `rss`, `toc`, `latest`, `updates`, `filter`
 
+**Active filter indicator**: Panels accept a `HasActiveFilter` boolean parameter. When `true`, the toolbar button shows a small purple dot and a subtle border highlight, giving users a visual cue that filters are active in that panel — even when the panel is collapsed on mobile.
+
 **Panel configuration by page**:
 
 | Page | Panels (Label / Icon) |
