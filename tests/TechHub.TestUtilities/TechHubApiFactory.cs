@@ -87,6 +87,12 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IAsyncLif
         // Use IntegrationTest environment for integration tests
         builder.UseEnvironment("IntegrationTest");
 
+        // Resolve TestCollections path dynamically from assembly output directory
+        // (avoids hardcoded /workspaces/techhub path that fails in CI)
+        var assemblyDir = Path.GetDirectoryName(typeof(TechHubIntegrationTestApiFactory).Assembly.Location)!;
+        var testCollectionsPath = Path.Combine(assemblyDir, "TestCollections");
+        builder.UseSetting("AppSettings:Content:CollectionsPath", testCollectionsPath);
+
         // Override database configuration to use the Testcontainers PostgreSQL instance
         builder.UseSetting("Database:Provider", "PostgreSQL");
         builder.UseSetting("Database:ConnectionString", _container.GetConnectionString());

@@ -68,11 +68,15 @@ jobs:
           dotnet test --project tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj \
             --configuration Release --no-restore \
             --results-directory TestResults \
-            --report-xunit-trx --report-xunit-trx-filename core-test-results.trx
+            --report-xunit-trx --report-xunit-trx-filename core-test-results.trx \
+            -- --coverage --coverage-output-format cobertura \
+            --coverage-output ${{ github.workspace }}/TestResults/core-coverage.cobertura.xml
           dotnet test --project tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj \
             --configuration Release --no-restore \
             --results-directory TestResults \
-            --report-xunit-trx --report-xunit-trx-filename web-test-results.trx
+            --report-xunit-trx --report-xunit-trx-filename web-test-results.trx \
+            -- --coverage --coverage-output-format cobertura \
+            --coverage-output ${{ github.workspace }}/TestResults/web-coverage.cobertura.xml
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -81,6 +85,14 @@ jobs:
           name: unit-test-results
           path: '**/TestResults/**'
           retention-days: 7
+
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-unit
+          path: '${{ github.workspace }}/TestResults/*-coverage.cobertura.xml'
+          retention-days: 1
 
   test-integration:
     name: Integration Tests
@@ -106,13 +118,17 @@ jobs:
             --no-restore \
             --results-directory TestResults \
             --report-xunit-trx \
-            --report-xunit-trx-filename integration-test-results.trx
+            --report-xunit-trx-filename integration-test-results.trx \
+            -- --coverage --coverage-output-format cobertura \
+            --coverage-output ${{ github.workspace }}/TestResults/api-coverage.cobertura.xml
           dotnet test --project tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj \
             --configuration Release \
             --no-restore \
             --results-directory TestResults \
             --report-xunit-trx \
-            --report-xunit-trx-filename infrastructure-test-results.trx
+            --report-xunit-trx-filename infrastructure-test-results.trx \
+            -- --coverage --coverage-output-format cobertura \
+            --coverage-output ${{ github.workspace }}/TestResults/infra-coverage.cobertura.xml
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -122,11 +138,34 @@ jobs:
           path: '**/TestResults/**'
           retention-days: 7
 
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-integration
+          path: '${{ github.workspace }}/TestResults/*-coverage.cobertura.xml'
+          retention-days: 1
+
   test-e2e:
     name: E2E Tests
     runs-on: ubuntu-latest
     needs: build
     
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: techhub
+          POSTGRES_USER: techhub
+          POSTGRES_PASSWORD: localdev
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -146,6 +185,45 @@ jobs:
         run: |
           cd tests/TechHub.E2E.Tests
           pwsh bin/Release/net10.0/playwright.ps1 install --with-deps
+
+      - name: Generate dev certificate
+        run: dotnet dev-certs https
+
+      - name: Start API server
+        run: |
+          dotnet run --project src/TechHub.Api/TechHub.Api.csproj \
+            --launch-profile Development --no-build --configuration Release &
+        env:
+          AppSettings__Content__CollectionsPath: ${{ github.workspace }}/collections
+
+      - name: Start Web server
+        run: |
+          dotnet run --project src/TechHub.Web/TechHub.Web.csproj \
+            --launch-profile Development --no-build --configuration Release &
+
+      - name: Wait for servers to be ready
+        run: |
+          echo "Waiting for API to be ready..."
+          for i in $(seq 1 60); do
+            if curl -sk https://localhost:5001/health 2>/dev/null; then
+              echo ""
+              echo "API is ready!"
+              break
+            fi
+            echo "Attempt $i - API not ready yet..."
+            sleep 5
+          done
+
+          echo "Waiting for Web to be ready..."
+          for i in $(seq 1 60); do
+            if curl -sk -o /dev/null -w '%{http_code}' https://localhost:5003 2>/dev/null | grep -q '200'; then
+              echo ""
+              echo "Web is ready!"
+              break
+            fi
+            echo "Attempt $i - Web not ready yet..."
+            sleep 5
+          done
 
       - name: Run E2E tests
         run: |
@@ -249,18 +327,91 @@ jobs:
     if: always()
     
     steps:
-      - name: Generate coverage report summary
+      - name: Download unit test coverage
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-unit
+          path: coverage/unit
+        continue-on-error: true
+
+      - name: Download integration test coverage
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-integration
+          path: coverage/integration
+        continue-on-error: true
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Install ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: Merge coverage reports and generate summary
         run: |
+          REPORTS=$(find coverage -name '*.cobertura.xml' 2>/dev/null | tr '\n' ';')
+          if [ -z "$REPORTS" ]; then
+            echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "⚠️ No coverage data available — test jobs may have failed." >> $GITHUB_STEP_SUMMARY
+            exit 0
+          fi
+          
+          reportgenerator \
+            "-reports:${REPORTS}" \
+            "-targetdir:coverage/report" \
+            "-reporttypes:Cobertura;MarkdownSummaryGithub"
+          
           echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "⚠️ Code coverage collection is not yet configured for Microsoft.Testing.Platform." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Test result artifacts (TRX) are available from the unit and integration test jobs." >> $GITHUB_STEP_SUMMARY
+          cat coverage/report/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload merged coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: code-coverage-report
+          path: coverage/report/
+          retention-days: 7
+
+  test-powershell:
+    name: PowerShell Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Pester
+        shell: pwsh
+        run: |
+          Install-Module -Name Pester -MinimumVersion 5.0.0 -Force -Scope CurrentUser
+
+      - name: Run Pester tests
+        shell: pwsh
+        run: |
+          $config = New-PesterConfiguration
+          $config.Run.Path = "tests/powershell"
+          $config.Output.Verbosity = "Detailed"
+          $config.TestResult.Enabled = $true
+          $config.TestResult.OutputPath = "TestResults/pester-results.xml"
+          $config.TestResult.OutputFormat = "JUnitXml"
+          Invoke-Pester -Configuration $config
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: powershell-test-results
+          path: TestResults/pester-results.xml
+          retention-days: 7
 
   quality-gate:
     name: Quality Gate
     runs-on: ubuntu-latest
-    needs: [build, test-unit, test-integration, test-e2e, lint, security]
+    needs: [build, test-unit, test-integration, test-e2e, test-powershell, lint, security]
     if: always()
     
     steps:
@@ -274,6 +425,7 @@ jobs:
           UNIT_STATUS="${{ needs.test-unit.result }}"
           INTEGRATION_STATUS="${{ needs.test-integration.result }}"
           E2E_STATUS="${{ needs.test-e2e.result }}"
+          POWERSHELL_STATUS="${{ needs.test-powershell.result }}"
           LINT_STATUS="${{ needs.lint.result }}"
           SECURITY_STATUS="${{ needs.security.result }}"
           
@@ -308,6 +460,13 @@ jobs:
             echo "| 🌐 E2E Tests | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
           fi
           
+          # PowerShell Tests
+          if [ "$POWERSHELL_STATUS" = "success" ]; then
+            echo "| 🔵 PowerShell Tests | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 🔵 PowerShell Tests | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+          fi
+          
           # Lint
           if [ "$LINT_STATUS" = "success" ]; then
             echo "| 📝 Linting & Formatting | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
@@ -329,6 +488,7 @@ jobs:
              [ "$UNIT_STATUS" = "success" ] && \
              [ "$INTEGRATION_STATUS" = "success" ] && \
              [ "$E2E_STATUS" = "success" ] && \
+             [ "$POWERSHELL_STATUS" = "success" ] && \
              [ "$LINT_STATUS" = "success" ]; then
             echo "### ✅ All quality gates passed! 🎉" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
@@ -352,7 +512,7 @@ jobs:
             if [ "$BUILD_STATUS" != "success" ]; then
               echo "- 🏗️ Build failed - check compilation errors" >> $GITHUB_STEP_SUMMARY
             fi
-            if [ "$UNIT_STATUS" != "success" ] || [ "$INTEGRATION_STATUS" != "success" ] || [ "$E2E_STATUS" != "success" ]; then
+            if [ "$UNIT_STATUS" != "success" ] || [ "$INTEGRATION_STATUS" != "success" ] || [ "$E2E_STATUS" != "success" ] || [ "$POWERSHELL_STATUS" != "success" ]; then
               echo "- 🧪 Tests failed - see test results in job logs" >> $GITHUB_STEP_SUMMARY
             fi
             if [ "$LINT_STATUS" != "success" ]; then

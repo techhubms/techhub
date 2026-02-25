@@ -30,8 +30,10 @@ public static class TestCollectionsSeeder
         loggerFactory ??= NullLoggerFactory.Instance;
         var logger = loggerFactory.CreateLogger(typeof(TestCollectionsSeeder));
 
-        // Hardcoded to source directory - no file copying needed
-        testCollectionsPath ??= "/workspaces/techhub/tests/TechHub.TestUtilities/TestCollections";
+        // Resolve from assembly output directory (TestCollections copied via CopyToOutputDirectory)
+        testCollectionsPath ??= Path.Combine(
+            Path.GetDirectoryName(typeof(TestCollectionsSeeder).Assembly.Location)!,
+            "TestCollections");
 
         if (!Directory.Exists(testCollectionsPath))
         {
