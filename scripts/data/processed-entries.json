@@ -27058,5 +27058,11 @@
     "canonical_url": "https://github.blog/changelog/2026-02-24-codeql-adds-go-1-26-and-kotlin-2-3-10-support-and-improves-query-accuracy",
     "timestamp": "2026-02-24 23:09:55 +00:00",
     "reason": "Succesfully added: Assigned DevOps category because the content is about GitHub code scanning (DevOps rule 2) and workflow improvements relevant to software teams (DevOps rule 1, 5, 7). Assigned Security category because CodeQL's primary purpose is static analysis for security vulnerabilities and enhancements here directly affect secure development practices (Security rules 2, 5, 6). Did not assign AI, GitHub Copilot, Azure, or ML categories, as the news does not focus on AI capabilities, Copilot, Azure platform services (only mentions Azure SDK in passing within Python context), or machine learning/data science workflows. Categories assigned are justified by content focus per rules in Chapter 4."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' because the release focuses heavily on deployment efficiency, backup management, release immutability, and enterprise governance (DevOps inclusion rules 1, 5, and 6). Assigned 'Security' because secret scanning enhancements, backup services, role-based access, and release immutability are all significant security features (Security inclusion rules 1, 2, 5, 7, and 8). Did NOT assign 'Coding,' as the content is about platform features, not code or frameworks. 'AI,' 'Azure,' 'ML,' and 'GitHub Copilot' categories are not present; no content relates to those technologies or tools. No generic exclusion rules apply, as this is an official technical release note with sufficient depth and technical value.",
+    "timestamp": "2026-02-25 00:10:21 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-24-github-enterprise-server-3-20-release-candidate-is-available",
+    "collection": "news"
   }
 ]
