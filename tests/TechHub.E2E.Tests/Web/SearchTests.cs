@@ -197,9 +197,12 @@ public class SearchTests : PlaywrightTestBase
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
         await searchInput.FillAsync("xyzabc123nonexistent");
 
-        // Wait for debounce + URL update before checking results
-        await Page.WaitForUrlConditionAsync(
-            "() => window.location.href.includes('search=')");
+        // Wait for debounce + URL update before checking results.
+        // Uses extended timeout (10s) because debounce (300ms) + SignalR round-trip + Blazor
+        // re-render can exceed the default 5s under CI load.
+        await Page.WaitForConditionAsync(
+            "() => window.location.href.includes('search=')",
+            new PageWaitForFunctionOptions { Timeout = 10_000, PollingInterval = 100 });
 
         // Assert - Should show "no results" message (auto-retries via Expect)
         var noResultsMessage = Page.Locator("text=/no.*results/i").Or(Page.Locator(".no-content"));
@@ -216,9 +219,12 @@ public class SearchTests : PlaywrightTestBase
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
         await searchInput.FillAsync("copilot");
 
-        // Wait for debounce + URL update
-        await Page.WaitForUrlConditionAsync(
-            "() => window.location.href.includes('search=')");
+        // Wait for debounce + URL update.
+        // Uses extended timeout (10s) because debounce + SignalR round-trip + Blazor
+        // re-render can exceed the default 5s under CI load.
+        await Page.WaitForConditionAsync(
+            "() => window.location.href.includes('search=')",
+            new PageWaitForFunctionOptions { Timeout = 10_000, PollingInterval = 100 });
 
         // Assert - URL should contain search parameter
         var currentUrl = Page.Url;

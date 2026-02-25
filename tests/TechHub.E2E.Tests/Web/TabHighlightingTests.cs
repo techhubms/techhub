@@ -238,10 +238,10 @@ public class TabHighlightingTests : PlaywrightTestBase
             "() => document.documentElement.classList.contains('keyboard-nav')");
         hasKeyboardNav.Should().BeTrue("keyboard-nav should be set after Tab press");
 
-        // Verify something is focused
-        var hasFocusedElement = await Page.EvaluateAsync<bool>(
+        // Verify something is focused (auto-retry because focus may take a frame to settle
+        // in headless Chrome, especially under CI load)
+        await Page.WaitForConditionAsync(
             "() => document.activeElement !== null && document.activeElement !== document.body");
-        hasFocusedElement.Should().BeTrue("Tab should focus an element");
 
         // Act - Use pointer click to simulate switching to pointer mode
         await Page.Mouse.ClickAsync(100, 100);

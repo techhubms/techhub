@@ -188,10 +188,9 @@ public class MobileNavigationTests : PlaywrightTestBase
         // Act - Navigate to a page with sidebar
         await Page.GotoRelativeAsync("/github-copilot");
 
-        // Assert - Sidebar toolbar buttons should be visible on mobile
+        // Assert - Sidebar toolbar buttons should be visible on mobile (auto-retries via Expect)
         var buttons = Page.Locator(".sidebar-toolbar-btn");
-        var count = await buttons.CountAsync();
-        count.Should().BeGreaterThanOrEqualTo(1, "should have at least one toolbar button");
+        await Assertions.Expect(buttons.First).ToBeVisibleAsync();
     }
 
     [Fact]

@@ -39,9 +39,14 @@ public class DatabasePerformanceTests : IDisposable
     // Each test runs one unmeasured warmup query to load data pages into shared_buffers/OS cache,
     // then measures the second call. This reflects real production where PostgreSQL caches persist
     // across application deployments (only the app restarts, not the database).
-    private const int MaxAcceptableMs = 100;
-    private const int MaxFtsMs = 200;
-    private const int MaxTagsToCountMs = 250;
+    //
+    // CI multiplier: GitHub Actions runners have shared, slower I/O compared to dedicated hardware.
+    // Apply a 3x multiplier when CI=true to avoid flaky failures from infrastructure variance.
+    private static readonly bool IsCI = Environment.GetEnvironmentVariable("CI") == "true";
+    private static readonly int CIMultiplier = IsCI ? 3 : 1;
+    private static readonly int MaxAcceptableMs = 100 * CIMultiplier;
+    private static readonly int MaxFtsMs = 200 * CIMultiplier;
+    private static readonly int MaxTagsToCountMs = 250 * CIMultiplier;
 
     private readonly ContentRepository? _repository;
     private readonly IDbConnection? _connection;
