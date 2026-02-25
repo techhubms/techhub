@@ -27070,5 +27070,11 @@
     "timestamp": "2026-02-25 07:23:07 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' because the entire article focuses on Azure-specific services (Azure Functions and Azure Container Apps), per Azure inclusion rules 1 and 4. Assigned 'Coding' as it explains implementation patterns, event-driven programming, and includes real code excerpts showing how to use Azure Functions, per Coding inclusion rules 1, 2, and 4. 'DevOps' applies because the blog discusses deployment, scaling, observability, and workflow orchestration across modern cloud development platforms, per DevOps rules 3, 5, 6, and 7. No ML, AI, Security, or GitHub Copilot content appears per their inclusion/exclusion rules.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-02-25 08:13:30 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/best-practice-using-self-signed-certificates-with-java-on-azure/ba-p/4496900",
+    "reason": "Succesfully added: Categories assigned as follows: Azure (the guide is about deployment/configuration on Azure Functions and Azure App Service, clearly satisfying Azure category rule 1 and 4), Coding (Java programming practices and JVM configuration, Coding rules 1 and 4), DevOps (covers operational practices, deployment, environment configuration, and resilience strategies for cloud workloads, DevOps rules 4, 5, and 6), and Security (focuses on SSL, trust management, and connecting to secured services, Security rules 1, 2, 4). ML and AI not assigned because content does not relate to those fields. GitHub Copilot is not mentioned. The guide is in English, technical, practical, and focused on implementation—none of the generic exclusion rules are triggered, and the community post content is well above the 200-word requirement."
   }
 ]
