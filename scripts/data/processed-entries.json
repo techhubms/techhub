@@ -27076,5 +27076,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/best-practice-using-self-signed-certificates-with-java-on-azure/ba-p/4496900",
     "reason": "Succesfully added: Categories assigned as follows: Azure (the guide is about deployment/configuration on Azure Functions and Azure App Service, clearly satisfying Azure category rule 1 and 4), Coding (Java programming practices and JVM configuration, Coding rules 1 and 4), DevOps (covers operational practices, deployment, environment configuration, and resilience strategies for cloud workloads, DevOps rules 4, 5, and 6), and Security (focuses on SSL, trust management, and connecting to secured services, Security rules 1, 2, 4). ML and AI not assigned because content does not relate to those fields. GitHub Copilot is not mentioned. The guide is in English, technical, practical, and focused on implementation—none of the generic exclusion rules are triggered, and the community post content is well above the 200-word requirement."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the content's core focus is on Azure Local and the deployment, governance, and management of Azure infrastructure in both connected and fully disconnected on-premises environments (Azure inclusion rule 1 and 4). Assigned 'AI' category because a primary feature of Foundry Local is to support the local deployment and inferencing of large multimodal AI models in disconnected sovereign environments (AI inclusion rules 1 and 4). Did not assign 'ML', 'Coding', 'DevOps', 'Security', or 'GitHub Copilot' because the article does not provide deep technical implementation, development, automation, or security practice details; it focuses at a strategic/architecture level and primarily on platform capabilities rather than code-level, DevOps, or explicit security practices. Did not exclude, as the content does not trigger any generic exclusion rules and is not business-productivity, sales, or biographical in nature.",
+    "collection": "news",
+    "timestamp": "2026-02-25 09:17:17 +00:00",
+    "canonical_url": "http://aka.ms/MicrosoftSovereignCloudDisconnectedBlog"
   }
 ]
