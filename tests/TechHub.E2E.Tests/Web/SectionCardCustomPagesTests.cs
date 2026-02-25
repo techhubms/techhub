@@ -287,7 +287,7 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             {
                 // Filter out infrastructure errors (WebSocket, Aspire dashboard, etc.)
                 var text = msg.Text;
-                if (!text.Contains("WebSocket connection") && 
+                if (!text.Contains("WebSocket connection") &&
                     !text.Contains("ERR_CONNECTION_REFUSED") &&
                     !text.Contains("wss://"))
                 {

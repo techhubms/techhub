@@ -74,7 +74,9 @@ public class PostgresDialect : ISqlDialect
         // Example: "reinie" → "reinie:*" matches "Reinier"
         // Example: "github copilot" → "github:* & copilot:*" for multi-word prefix
         if (string.IsNullOrWhiteSpace(query))
+        {
             return query;
+        }
 
         var terms = query.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
         return string.Join(" & ", terms.Select(term => $"{term}:*"));

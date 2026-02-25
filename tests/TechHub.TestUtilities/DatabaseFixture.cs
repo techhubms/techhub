@@ -2,9 +2,9 @@ using System.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Npgsql;
-using Testcontainers.PostgreSql;
 using TechHub.Core.Logging;
 using TechHub.Infrastructure.Data;
+using Testcontainers.PostgreSql;
 using Xunit;
 
 namespace TechHub.TestUtilities;

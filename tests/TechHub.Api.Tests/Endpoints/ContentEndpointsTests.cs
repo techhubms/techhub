@@ -774,7 +774,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // URL: /github-copilot?from=2025-11-21&to=2026-02-19&tags=agent%20deployment%2Cdev%2Ccode%2Cmcp%2Cai%20agents%2Cmicrosoft%20foundry
         var selectedTags = new[] { "agent deployment", "dev", "code", "mcp", "ai agents", "microsoft foundry" };
         var tagsParam = string.Join(",", selectedTags.Select(Uri.EscapeDataString));
-        
+
         var response = await _client.GetAsync(
             $"/api/sections/github-copilot/collections/all/tags?from=2025-11-21&to=2026-02-19&selectedTags={tagsParam}&maxTags=20",
             TestContext.Current.CancellationToken);
@@ -789,7 +789,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         {
             var minCount = tagCloud.Min(t => t.Count);
             var maxCount = tagCloud.Max(t => t.Count);
-            var ratio = maxCount / (double)minCount;            
+            var ratio = maxCount / (double)minCount;
             // Only check if we have tags with very similar counts
             if (tagCloud.Count >= 5 && ratio <= 2.0)
             {
@@ -1139,7 +1139,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Act - Search with 3-character prefix
         var response3 = await _client.GetAsync("/api/sections/all/collections/all/items?q=cop", TestContext.Current.CancellationToken);
-        
+
         // Act - Search with 4-character prefix
         var response4 = await _client.GetAsync("/api/sections/all/collections/all/items?q=copi", TestContext.Current.CancellationToken);
 

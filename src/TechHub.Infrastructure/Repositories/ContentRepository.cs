@@ -591,10 +591,9 @@ public class ContentRepository : IContentRepository
         List<string>? filteredTagsToCount = null;
         if (request.TagsToCount is { Count: > 0 })
         {
-            filteredTagsToCount = request.TagsToCount
+            filteredTagsToCount = [.. request.TagsToCount
                 .Where(t => !excludeSet.Contains(t))
-                .Distinct(StringComparer.OrdinalIgnoreCase)
-                .ToList();
+                .Distinct(StringComparer.OrdinalIgnoreCase)];
 
             if (filteredTagsToCount.Count == 0)
             {
@@ -873,7 +872,7 @@ public class ContentRepository : IContentRepository
             }
         }
 
-        if (request.Collections !=null && request.Collections.Count > 0)
+        if (request.Collections != null && request.Collections.Count > 0)
         {
             // Optimization: Use equality for single collection, dialect-specific clause for multiple
             if (request.Collections.Count == 1)

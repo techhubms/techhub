@@ -139,7 +139,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
                 const style = window.getComputedStyle(el);
                 return style && style.display === 'grid';
             }");
-        
+
         var gridDisplay = await tiersGrid.EvaluateAsync<string>("el => window.getComputedStyle(el).display");
         gridDisplay.Should().Be("grid", "Tier cards should use CSS Grid layout");
     }

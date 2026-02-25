@@ -28,7 +28,7 @@ public class SidebarSearchTests : BunitContext
         // Assert
         var searchInput = cut.Find("input[type='search']");
         searchInput.Should().NotBeNull("Search input should be rendered");
-        
+
         var placeholder = searchInput.GetAttribute("placeholder");
         placeholder.Should().NotBeNullOrEmpty("Search input should have placeholder text");
         placeholder.Should().Contain("Search", "Placeholder should indicate search functionality");
@@ -169,7 +169,7 @@ public class SidebarSearchTests : BunitContext
         // Assert
         var sidebarSection = cut.Find("nav.sidebar-section");
         sidebarSection.Should().NotBeNull("Component should render in a sidebar-section");
-        
+
         var heading = cut.Find("h2.sidebar-h2");
         heading.Should().NotBeNull("Sidebar section should have a heading");
         heading.TextContent.Should().Contain("Search", "Heading should indicate search functionality");

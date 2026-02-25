@@ -4,11 +4,10 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Npgsql;
-using Testcontainers.PostgreSql;
 using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Data;
+using Testcontainers.PostgreSql;
 using Xunit;
 
 namespace TechHub.TestUtilities;

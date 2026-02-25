@@ -54,11 +54,11 @@ public class StartupBackgroundService : BackgroundService
         catch (Exception ex)
         {
             _logger.LogCritical(ex, "💥 CRITICAL: Startup operations failed. Application cannot continue without content. Shutting down...");
-            
+
             // Fail fast: Stop the application immediately
             // Without content, the application is useless
             _hostLifetime.StopApplication();
-            
+
             throw;
         }
     }

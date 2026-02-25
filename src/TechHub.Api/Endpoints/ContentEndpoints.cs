@@ -421,12 +421,12 @@ public static class ContentEndpoints
         // For 1-2 tags, use consistent sizing
         if (sortedTags.Count <= 2)
         {
-            return sortedTags.Select(tag => new TagCloudItem
+            return [.. sortedTags.Select(tag => new TagCloudItem
             {
                 Tag = tag.Tag,
                 Count = tag.Count,
                 Size = TagSize.Medium
-            }).ToList();
+            })];
         }
 
         // Calculate quantile thresholds based on COUNT VALUES, not positions
@@ -481,7 +481,7 @@ public static class ContentEndpoints
         if (distinctSizes.Count == 1)
         {
             // All tags ended up in the same group → normalize to Medium
-            return result.Select(t => t with { Size = TagSize.Medium }).ToList();
+            return [.. result.Select(t => t with { Size = TagSize.Medium })];
         }
 
         if (distinctSizes.Count == 2)
@@ -491,12 +491,12 @@ public static class ContentEndpoints
             var medianIndex = (int)Math.Ceiling(counts.Count * 0.5);
             var medianThreshold = counts[Math.Min(medianIndex, counts.Count - 1)];
 
-            return sortedTags.Select(tag => new TagCloudItem
+            return [.. sortedTags.Select(tag => new TagCloudItem
             {
                 Tag = tag.Tag,
                 Count = tag.Count,
                 Size = tag.Count >= medianThreshold ? TagSize.Medium : TagSize.Small
-            }).ToList();
+            })];
         }
 
         return result;

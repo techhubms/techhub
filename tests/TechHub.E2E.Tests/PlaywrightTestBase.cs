@@ -49,7 +49,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
         try
         {
-            if(_page != null)
+            if (_page != null)
             {
                 await _page.CloseAsync().WaitAsync(cts.Token);
             }

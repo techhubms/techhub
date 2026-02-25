@@ -438,7 +438,7 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, new List<string> { "Security" })
+            .Add(p => p.SelectedTags, ["Security"])
             .Add(p => p.SearchQuery, "test query"));
 
         // Assert - Security tag MUST remain visible even though it's not in popular tags for this search
@@ -447,7 +447,7 @@ public class SidebarTagCloudTests : BunitContext
             var tagElements = cut.FindAll(".tag-cloud-item");
             tagElements.Should().Contain(t => t.TextContent.Contains("Security"),
                 "selected tag must remain visible even when not in popular tags");
-            
+
             // Should show popular tags for search + selected tag
             tagElements.Should().Contain(t => t.TextContent.Contains("AI"));
             tagElements.Should().Contain(t => t.TextContent.Contains("Developer"));
@@ -486,7 +486,7 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, new List<string> { ".NET" })
+            .Add(p => p.SelectedTags, [".NET"])
             .Add(p => p.FromDate, "2024-01-01")
             .Add(p => p.ToDate, "2024-12-31"));
 
@@ -496,7 +496,7 @@ public class SidebarTagCloudTests : BunitContext
             var tagElements = cut.FindAll(".tag-cloud-item");
             tagElements.Should().Contain(t => t.TextContent.Contains(".NET"),
                 "selected tag must remain visible even when not in popular tags for date range");
-            
+
             // Should show popular tags for date range + selected tag
             tagElements.Should().Contain(t => t.TextContent.Contains("AI"));
             tagElements.Should().Contain(t => t.TextContent.Contains("Cloud"));
@@ -536,7 +536,7 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, new List<string> { "Security", "Azure" })
+            .Add(p => p.SelectedTags, ["Security", "Azure"])
             .Add(p => p.FromDate, "2024-01-01")
             .Add(p => p.ToDate, "2024-12-31")
             .Add(p => p.SearchQuery, "test"));
@@ -545,17 +545,17 @@ public class SidebarTagCloudTests : BunitContext
         cut.WaitForAssertion(() =>
         {
             var tagElements = cut.FindAll(".tag-cloud-item");
-            
+
             // Both selected tags must be visible
             tagElements.Should().Contain(t => t.TextContent.Contains("Security"),
                 "first selected tag must remain visible");
             tagElements.Should().Contain(t => t.TextContent.Contains("Azure"),
                 "second selected tag must remain visible");
-            
+
             // Popular tags for context should also be visible
             tagElements.Should().Contain(t => t.TextContent.Contains("AI"));
             tagElements.Should().Contain(t => t.TextContent.Contains("Python"));
-            
+
             // Both selected tags should be marked as selected
             var selectedTags = cut.FindAll(".tag-cloud-item.selected");
             selectedTags.Should().HaveCount(2, "both tags should be marked as selected");
@@ -596,21 +596,21 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, new List<string> { "Security", ".NET" }));
+            .Add(p => p.SelectedTags, ["Security", ".NET"]));
 
         // Assert - Selected tags MUST appear first
         cut.WaitForAssertion(() =>
         {
             var tagElements = cut.FindAll(".tag-cloud-item");
-            
+
             // Should have all 5 tags: 2 selected + 3 popular
             tagElements.Should().HaveCount(5, "should show selected tags + popular tags");
-            
+
             // First two tags should be the selected ones (Security and .NET)
             var tagTexts = tagElements.Select(t => t.TextContent).ToList();
             tagTexts[0].Should().Contain("Security", "first selected tag should appear first");
             tagTexts[1].Should().Contain(".NET", "second selected tag should appear second");
-            
+
             // Popular tags should appear after selected tags
             tagTexts.Skip(2).Should().Contain(t => t.Contains("AI"));
             tagTexts.Skip(2).Should().Contain(t => t.Contains("Python"));
@@ -681,20 +681,20 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, new List<string> { "Security" }));
+            .Add(p => p.SelectedTags, ["Security"]));
 
         // Assert - Selected tag with 0 count should be visible and NOT disabled
         cut.WaitForAssertion(() =>
         {
             var tagElements = cut.FindAll(".tag-cloud-item");
-            
+
             // Security tag should be present
             var securityTag = tagElements.FirstOrDefault(t => t.TextContent.Contains("Security"));
             securityTag.Should().NotBeNull("selected tag with 0 count must be visible");
-            
+
             // Should be selected
             securityTag!.ClassList.Should().Contain("selected");
-            
+
             // Should NOT be disabled (so it can be clicked to deselect)
             securityTag.HasAttribute("disabled").Should().BeFalse(
                 "selected tags with 0 count should be clickable for deselection");

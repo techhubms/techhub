@@ -198,7 +198,7 @@ public class TabOrderingTests : PlaywrightTestBase
 
         // Next tab should focus first interactive element within primary content
         await Page.Keyboard.PressAsync("Tab");
-        
+
         // Wait for focus to stabilize after tab press
         // Uses DefaultPageLoadTimeout (10s) because this involves multiple async operations
         // whose timing is unpredictable under full Run system load:
@@ -216,7 +216,7 @@ public class TabOrderingTests : PlaywrightTestBase
             }",
             null,
             new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
-        
+
         var isInPrimaryContent = await Page.EvaluateAsync<bool>(
             "() => { const el = document.activeElement; return el && (el.closest('main') !== null || el.closest('article') !== null || el.closest('section') !== null); }"
         );

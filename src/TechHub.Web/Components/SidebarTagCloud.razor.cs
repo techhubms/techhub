@@ -448,6 +448,7 @@ public partial class SidebarTagCloud : ComponentBase, IDisposable
                 Tags = _tags?.ToList()
             });
         }
+
         return Task.CompletedTask;
     }
 

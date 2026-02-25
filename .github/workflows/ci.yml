@@ -29,7 +29,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore dependencies
         run: dotnet restore TechHub.slnx
@@ -58,14 +58,14 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore dependencies
         run: dotnet restore TechHub.slnx
 
       - name: Run unit tests
         run: |
-          dotnet test TechHub.slnx \
+          dotnet test --solution TechHub.slnx \
             --configuration Release \
             --no-restore \
             --logger "trx;LogFileName=test-results.trx" \
@@ -92,19 +92,19 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore dependencies
         run: dotnet restore TechHub.slnx
 
       - name: Run integration tests
         run: |
-          dotnet test tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj \
+          dotnet test --project tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj \
             --configuration Release \
             --no-restore \
             --logger "trx;LogFileName=integration-test-results.trx" \
             --collect:"XPlat Code Coverage"
-          dotnet test tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj \
+          dotnet test --project tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj \
             --configuration Release \
             --no-restore \
             --logger "trx;LogFileName=infrastructure-test-results.trx" \
@@ -130,7 +130,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore dependencies
         run: dotnet restore TechHub.slnx
@@ -141,11 +141,11 @@ jobs:
       - name: Install Playwright dependencies
         run: |
           cd tests/TechHub.E2E.Tests
-          pwsh bin/Release/net9.0/playwright.ps1 install --with-deps
+          pwsh bin/Release/net10.0/playwright.ps1 install --with-deps
 
       - name: Run E2E tests
         run: |
-          dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
+          dotnet test --project tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
             --configuration Release \
             --no-build \
             --logger "trx;LogFileName=e2e-test-results.trx"
@@ -163,7 +163,7 @@ jobs:
         if: failure()
         with:
           name: playwright-traces
-          path: tests/TechHub.E2E.Tests/bin/Release/net9.0/playwright-traces/
+          path: tests/TechHub.E2E.Tests/bin/Release/net10.0/playwright-traces/
           retention-days: 7
 
   lint:
@@ -177,7 +177,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -190,7 +190,7 @@ jobs:
 
       - name: Check dotnet format
         run: |
-          dotnet format TechHub.slnx --verify-no-changes --verbosity diagnostic
+          dotnet format TechHub.slnx --verify-no-changes --verbosity diagnostic --severity error
 
       - name: Install npm dependencies
         run: npm ci
@@ -210,7 +210,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore dependencies
         run: dotnet restore TechHub.slnx

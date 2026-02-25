@@ -64,14 +64,14 @@ public sealed partial class SidebarSearch : ComponentBase, IDisposable
     private async Task ClearSearch()
     {
         _searchQueryInternal = string.Empty;
-        
+
         // Cancel pending debounce timer
         if (_debounceTimer is not null)
         {
             await _debounceTimer.DisposeAsync();
             _debounceTimer = null;
         }
-        
+
         await OnSearchQueryChanged.InvokeAsync(string.Empty);
     }
 

@@ -1,4 +1,4 @@
-﻿using System.Data;
+using System.Data;
 using System.Diagnostics;
 using FluentAssertions;
 using Microsoft.Extensions.Caching.Memory;
