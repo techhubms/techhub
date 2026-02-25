@@ -68,11 +68,15 @@ jobs:
           dotnet test --project tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj \
             --configuration Release --no-restore \
             --results-directory TestResults \
-            --report-xunit-trx --report-xunit-trx-filename core-test-results.trx
+            --report-xunit-trx --report-xunit-trx-filename core-test-results.trx \
+            -- --coverage --coverage-output-format cobertura \
+            --coverage-output ${{ github.workspace }}/TestResults/core-coverage.cobertura.xml
           dotnet test --project tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj \
             --configuration Release --no-restore \
             --results-directory TestResults \
-            --report-xunit-trx --report-xunit-trx-filename web-test-results.trx
+            --report-xunit-trx --report-xunit-trx-filename web-test-results.trx \
+            -- --coverage --coverage-output-format cobertura \
+            --coverage-output ${{ github.workspace }}/TestResults/web-coverage.cobertura.xml
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -80,6 +84,14 @@ jobs:
         with:
           name: unit-test-results
           path: '**/TestResults/**'
+          retention-days: 7
+
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-unit
+          path: '**/TestResults/*-coverage.cobertura.xml'
           retention-days: 7
 
   test-integration:
@@ -106,13 +118,17 @@ jobs:
             --no-restore \
             --results-directory TestResults \
             --report-xunit-trx \
-            --report-xunit-trx-filename integration-test-results.trx
+            --report-xunit-trx-filename integration-test-results.trx \
+            -- --coverage --coverage-output-format cobertura \
+            --coverage-output ${{ github.workspace }}/TestResults/api-coverage.cobertura.xml
           dotnet test --project tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj \
             --configuration Release \
             --no-restore \
             --results-directory TestResults \
             --report-xunit-trx \
-            --report-xunit-trx-filename infrastructure-test-results.trx
+            --report-xunit-trx-filename infrastructure-test-results.trx \
+            -- --coverage --coverage-output-format cobertura \
+            --coverage-output ${{ github.workspace }}/TestResults/infrastructure-coverage.cobertura.xml
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -120,6 +136,14 @@ jobs:
         with:
           name: integration-test-results
           path: '**/TestResults/**'
+          retention-days: 7
+
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-integration
+          path: '**/TestResults/*-coverage.cobertura.xml'
           retention-days: 7
 
   test-e2e:
@@ -339,17 +363,57 @@ jobs:
     if: always()
     
     steps:
-      - name: Generate coverage report summary
+      - name: Download unit coverage
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-unit
+          path: coverage-data/unit
+        continue-on-error: true
+
+      - name: Download integration coverage
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-integration
+          path: coverage-data/integration
+        continue-on-error: true
+
+      - name: Install ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: Merge and generate coverage report
         run: |
-          echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "⚠️ Code coverage collection is pending tooling support." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "xUnit v3 bundles Microsoft.Testing.Platform v2.0.2 which is not yet compatible" >> $GITHUB_STEP_SUMMARY
-          echo "with Microsoft.Testing.Extensions.CodeCoverage. Coverage will be enabled once" >> $GITHUB_STEP_SUMMARY
-          echo "a compatible version is available." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Test result artifacts (TRX) are available from the unit and integration test jobs." >> $GITHUB_STEP_SUMMARY
+          # Find all Cobertura XML files
+          COVERAGE_FILES=$(find coverage-data -name '*.cobertura.xml' -type f 2>/dev/null | tr '\n' ';')
+
+          if [ -z "$COVERAGE_FILES" ]; then
+            echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "⚠️ No coverage data available. Test jobs may have failed." >> $GITHUB_STEP_SUMMARY
+            exit 0
+          fi
+
+          echo "Found coverage files: $COVERAGE_FILES"
+
+          reportgenerator \
+            -reports:"$COVERAGE_FILES" \
+            -targetdir:coverage-report \
+            -reporttypes:"Cobertura;MarkdownSummaryGithub" \
+            -verbosity:Warning
+
+          # Append Markdown summary to GitHub Step Summary
+          if [ -f coverage-report/SummaryGithub.md ]; then
+            echo "## 📊 Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            cat coverage-report/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-report
+          path: coverage-report/
+          retention-days: 7
 
   test-powershell:
     name: PowerShell Tests
