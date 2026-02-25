@@ -1,0 +1,17 @@
+{
+  "Title": "IP allow list coverage extended to EMU namespaces in public preview",
+  "Author": "Allison",
+  "PubDate": "2026-02-23T17:44:32+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "ProcessedDate": "2026-02-23 19:23:29",
+  "EnhancedContent": "GitHub Enterprise Cloud with Enterprise Managed Users (EMUs) can now enable the ability for GitHub’s native IP allow list configuration to cover user namespaces. EMUs allow the enterprise to own the user accounts within their enterprise. As an extension to that, enterprises often want all repositories to adhere to their enterprise’s network access policies, including those owned by the user namespace associated to their EMUs.\n\nThis public preview feature limits access to enterprise-managed user namespaces to the owning enterprise’s IP allow list. Access through the web UI, git protocol, and API are all filtered by the IP allow list. All credentials, including personal access tokens, app tokens, and SSH keys, are covered by this policy.\n\nTo learn more, read about [configuring IP allow lists on GitHub](https://docs.github.com/enterprise-cloud@latest/admin/configuring-settings/hardening-security-for-your-enterprise/restricting-network-traffic-to-your-enterprise-with-an-ip-allow-list).\n\n![social](https://github.com/user-attachments/assets/d3e7f212-8f59-4cee-acae-a6790463b459)",
+  "Description": "GitHub Enterprise Cloud with Enterprise Managed Users (EMUs) can now enable the ability for GitHub’s native IP allow list configuration to cover user namespaces. EMUs allow the enterprise to own…\n\nThe post [IP allow list coverage extended to EMU namespaces in public preview](https://github.blog/changelog/2026-02-23-ip-allow-list-coverage-extended-to-emu-namespaces-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-02-23-ip-allow-list-coverage-extended-to-emu-namespaces-in-public-preview",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "enterprise management tools",
+    "Improvement"
+  ]
+}

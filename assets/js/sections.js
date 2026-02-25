@@ -1,10 +1,12 @@
-function showSectionCollections() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlSection = urlParams.get('section');
+function showSectionCollections(section) {
+    if (!section) {
+        const urlParams = new URLSearchParams(window.location.search);
+        section = urlParams.get('section');
+    }
 
-    // If no querystring parameter, preserve server-side state
-    if (!urlSection) {
-        return;
+    // If no section parameter, preserve server-side state
+    if (!section) {
+        return 'default';
     }
 
     // Hide all section collections first
@@ -20,16 +22,18 @@ function showSectionCollections() {
     });
 
     // Highlight the selected section in main navigation
-    const sectionDiv = document.getElementById(`section-nav-${urlSection}`);
+    const sectionDiv = document.getElementById(`section-nav-${section}`);
     if (sectionDiv) {
         sectionDiv.classList.add('active');
     }
 
     // Show the selected section's subnavigation
-    const collectionsDiv = document.getElementById(`section-collections-${urlSection}`);
+    const collectionsDiv = document.getElementById(`section-collections-${section}`);
     if (collectionsDiv) {
         collectionsDiv.classList.remove('hidden');
     }
+
+    return section;
 }
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {

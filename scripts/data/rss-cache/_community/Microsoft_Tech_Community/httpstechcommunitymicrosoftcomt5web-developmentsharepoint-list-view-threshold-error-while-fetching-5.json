@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2026-02-24 20:08:21",
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "I am fetching data from a SharePoint list that contains more than 5000 records inside my function. While retrieving the data, I am getting the following error:\n\n“Flow Reminders→ The attempted operation is prohibited because it exceeds the list view threshold.”\n\nScenario:\n\n- The SharePoint list has 5000+ items.\n- Data is being fetched programmatically.\n- The error occurs during query execution.\n\n**What I need help with** What is the recommended and best-practice approach to retrieve large datasets from a SharePoint list without hitting the list view threshold? Questions:\n\n1. What is the recommended approach to fetch large data from a SharePoint list without hitting the list view threshold?\n\nAny suggestions, examples, or documentation references would be greatly appreciated.\n\nThanks.",
+  "PubDate": "2026-02-24T03:49:05+00:00",
+  "Title": "SharePoint List View Threshold Error while Fetching 5000+ Records in list.",
+  "Link": "https://techcommunity.microsoft.com/t5/web-development/sharepoint-list-view-threshold-error-while-fetching-5000-records/m-p/4496599#M686",
+  "Description": "I am fetching data from a SharePoint list that contains more than 5000 records inside my function. While retrieving the data, I am getting the following error:\n\n“Flow Reminders→ The attempted operation is prohibited because it exceeds the list view threshold.”\n\nScenario:\n\n- The SharePoint list has 5000+ items.\n- Data is being fetched programmatically.\n- The error occurs during query execution.\n\n**What I need help with** What is the recommended and best-practice approach to retrieve large datasets from a SharePoint list without hitting the list view threshold? Questions:\n\n1. What is the recommended approach to fetch large data from a SharePoint list without hitting the list view threshold?\n\nAny suggestions, examples, or documentation references would be greatly appreciated.\n\nThanks.",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Tags": [],
+  "Author": "AjayM",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node"
+}

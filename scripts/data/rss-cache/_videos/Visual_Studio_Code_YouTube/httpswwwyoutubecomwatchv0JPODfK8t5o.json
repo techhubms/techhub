@@ -1,0 +1,18 @@
+{
+  "PubDate": "2026-02-23T18:03:25+00:00",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Description": "James Montemagno wraps up Agent Sessions Day with VS Code engineering lead Kai Maetzel to talk about how the team actually builds with agents. They cover shifting from pipelines to actor‑based workflows, using different models for different jobs, and Kai’s hands‑on approach to fast prototyping. A practical, behind‑the‑scenes look at how VS Code’s own team is evolving with AI.\n\nhttps://aka.ms/vscode/109 https://aka.ms/vscode/insiders https://aka.ms/vscode/live https://aka.ms/vscode/109blog https://aka.ms/awesome-copilot",
+  "FeedName": "Visual Studio Code YouTube",
+  "Link": "https://www.youtube.com/watch?v=0JPODfK8t5o",
+  "Author": "Visual Studio Code",
+  "OutputDir": "_videos",
+  "Title": "Agent Sessions Day — Closing with Kai Maetzel",
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-02-23 18:18:03",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+}
