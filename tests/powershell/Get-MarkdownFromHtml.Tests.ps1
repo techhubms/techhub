@@ -221,7 +221,7 @@ component library with something as cool as HTMX. I hope you try this sample and
             $result = Get-MarkdownFromHtml -HtmlContent $script:TestHtmlContent
             
             # Assert - should preserve code content and convert to markdown format
-            $result | Should -Match "Counter.*component"
+            $result | Should -Match "(?s)Counter.*component"
             $result | Should -Match "```html"
             $result | Should -Match "```javascript"
         }

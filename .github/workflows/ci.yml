@@ -187,26 +187,37 @@ jobs:
           pwsh bin/Release/net10.0/playwright.ps1 install --with-deps
 
       - name: Generate dev certificate
-        run: dotnet dev-certs https
+        run: |
+          dotnet dev-certs https -ep /tmp/devcert.pfx -p "localdev"
+          echo "Dev certificate exported to /tmp/devcert.pfx"
 
       - name: Start API server
         run: |
           nohup dotnet run --project src/TechHub.Api/TechHub.Api.csproj \
-            --launch-profile Development --no-build --configuration Release \
+            --no-build --configuration Release \
             > /tmp/api-server.log 2>&1 &
           echo $! > /tmp/api-server.pid
           echo "API server started (PID: $(cat /tmp/api-server.pid))"
         env:
+          ASPNETCORE_ENVIRONMENT: Development
+          ASPNETCORE_URLS: "https://localhost:5001"
+          Kestrel__Certificates__Default__Path: /tmp/devcert.pfx
+          Kestrel__Certificates__Default__Password: localdev
           AppSettings__Content__CollectionsPath: ${{ github.workspace }}/collections
           Database__ConnectionString: "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
 
       - name: Start Web server
         run: |
           nohup dotnet run --project src/TechHub.Web/TechHub.Web.csproj \
-            --launch-profile Development --no-build --configuration Release \
+            --no-build --configuration Release \
             > /tmp/web-server.log 2>&1 &
           echo $! > /tmp/web-server.pid
           echo "Web server started (PID: $(cat /tmp/web-server.pid))"
+        env:
+          ASPNETCORE_ENVIRONMENT: Development
+          ASPNETCORE_URLS: "https://localhost:5003"
+          Kestrel__Certificates__Default__Path: /tmp/devcert.pfx
+          Kestrel__Certificates__Default__Password: localdev
 
       - name: Wait for servers to be ready
         run: |
@@ -225,6 +236,10 @@ jobs:
 
           if [ "$API_READY" = "false" ]; then
             echo "::error::API server failed to start within timeout"
+            echo "--- Listening ports ---"
+            ss -tlnp 2>/dev/null | grep -E '5001|5003' || echo "No relevant ports listening"
+            echo "--- API Server Log (first 30 lines, for Kestrel binding) ---"
+            head -30 /tmp/api-server.log || true
             echo "--- API Server Log (last 80 lines) ---"
             tail -80 /tmp/api-server.log || true
             echo "--- API PID check ---"
@@ -247,6 +262,10 @@ jobs:
 
           if [ "$WEB_READY" = "false" ]; then
             echo "::error::Web server failed to start within timeout"
+            echo "--- Listening ports ---"
+            ss -tlnp 2>/dev/null | grep -E '5001|5003' || echo "No relevant ports listening"
+            echo "--- Web Server Log (first 30 lines, for Kestrel binding) ---"
+            head -30 /tmp/web-server.log || true
             echo "--- Web Server Log (last 80 lines) ---"
             tail -80 /tmp/web-server.log || true
             echo "--- Web PID check ---"
