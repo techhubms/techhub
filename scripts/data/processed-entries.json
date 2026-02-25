@@ -27118,5 +27118,41 @@
     "timestamp": "2026-02-25 16:23:38 +00:00",
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2026/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the post consistently features platform-level enhancements across Microsoft Fabric, which is primarily an Azure analytics service (Azure rule 1, 4, 5). Assigned 'ML' since updates include new Data Science features (Semantic Link, real-time scoring endpoint monitoring), and multiple ML/data engineering improvements (ML rule 1, 2, 4, 5, 6, 7, 8). Assigned 'AI' because the update includes developments in data science, notebooks, connectors, and VS Code/GitHub Copilot integration (AI rules 1, 4, 5). Assigned 'Coding' due to Python notebook improvements, ODBC driver for .NET/Python, VS Code tooling, and references to code/reuse (Coding rules 1, 2, 4, 5). Assigned 'DevOps' because CI/CD, deployment pipeline, tenant admin, and automation updates are present (DevOps rules 1, 2, 4, 5). Content spans all these themes and is centrally about engineering and development, not end-user/office productivity.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-february-2026-feature-summary/",
+    "timestamp": "2026-02-25 17:23:21 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the content’s central focus is Microsoft's agent platform, powered by AI, used in the context of public service (AI inclusion rule 1 and 5). The original post and linked discussion emphasize the real-world application of AI in patient transfer and non-emergency dispatch. There is no direct evidence of Azure or ML (data science) technologies in the excerpt, nor is there substantive coding, DevOps, or Security technical content; thus, only 'AI' is assigned. Generic exclusion rules do not apply—the content is technical, English-language, not biographical, and is neither a sales pitch nor business/executive strategy. The analysis cites specific rules and considers edge-case clarifications from the AI category.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_how-the-munich-fire-departments-ai-operator-activity-7432465483335106560-x8Vj",
+    "timestamp": "2026-02-25 17:23:42 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the content focuses on features within Microsoft Fabric, which is part of Microsoft's Azure cloud platform (Azure rule 1). Added 'ML' category as OneLake Catalog Explorer is a central tool for managing and discovering data used in analytics, BI, and data science within Fabric (ML rules 1, 4, and 5: data governance, analytics and BI development, and data management for analytics/ML). Did NOT assign AI, Coding, DevOps, Security, or GitHub Copilot as there is no content focused on AI/ML modeling, code development, operational automation, security implementation, or developer tooling. Content is not excluded by any generic exclusion rules as it is technical, focuses on platform features, is in English, and is targeted at practitioners.",
+    "canonical_url": "https://www.youtube.com/watch?v=Hn-hKuFGpqs",
+    "timestamp": "2026-02-25 17:24:33 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the entire guide focuses on connecting and configuring Azure SRE Agent with external Atlassian systems (Azure rule 1). Assigned DevOps category since the content is about integrating monitoring, incident response, automation, and collaboration tools across platforms, and covers workflows, connectors, infrastructure integration, and best practices (DevOps rules 3, 5, 6, 9). Assigned Security due to extensive sections on permissions, authentication methods, audit logging, admin controls, and security best practices (Security rules 1, 2, 7). Did not assign AI, Coding, ML, or GitHub Copilot categories, as there is no engineering focus on those areas, nor direct AI tool/system implementation; the 'AI' phrasing of 'subagent' is a platform pattern, not AI platform-focused. All categorization decisions are strictly based on explicit workflows, configuration, and engineering details provided in the content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-atlassian-rovo-mcp-server-in-azure-sre-agent/ba-p/4497122",
+    "timestamp": "2026-02-25 17:25:03 +00:00",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because Azure SRE Agent configuration and integration within Azure services are central throughout the guide (Azure rule 1). 'DevOps' is included since the topic involves SRE workflows, real-time monitoring, and automation for operational reliability (DevOps rules 3, 5, 7, and 9). 'Security' is included due to discussion on RBAC permissions, credential management, traffic encryption, and securing integration (Security rules 1 and 2). 'Coding', 'AI', 'ML', and 'GitHub Copilot' are not assigned as there is no code development, AI/ML, or GitHub Copilot content present. The post meets all quality standards and is primarily technical, not biographical, promotional, or business-only focused.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-datadog-mcp-server-in-azure-sre-agent/ba-p/4497123",
+    "timestamp": "2026-02-25 17:26:36 +00:00",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because this guide centers on deploying and configuring the Azure SRE Agent (Azure rules 1, 4). 'DevOps' category is assigned due to the focus on automated operational tooling, incident management, on-call scheduling, and team practices (DevOps rules 1, 3, 4, 5, 6). 'Security' is included because the content addresses secure API integration, authentication, token permissions, encrypted transport, and best security practices (Security rules 2, 3, 4, 7). No other categories apply, as the content is not AI-, ML-, or Coding-specific, nor does it involve GitHub Copilot.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-in-azure-sre-agent/ba-p/4497124",
+    "timestamp": "2026-02-25 17:27:00 +00:00",
+    "collection": "community"
   }
 ]

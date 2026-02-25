@@ -1,0 +1,22 @@
+{
+  "PubDate": "2026-02-25T17:00:23+00:00",
+  "Link": "https://www.youtube.com/watch?v=Hn-hKuFGpqs",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Author": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Description": "Tired of jumping between workspaces to find your data? Discover how OneLake Catalog Explorer provides a unified view for all your Microsoft Fabric items. In this episode, we walk through how to navigate your entire data estate with ease. Learn how to leverage personalized filters to cut through the noise, evaluate trust signals to ensure data quality without losing your place, and take immediate action: from refreshing datasets to managing permissions, all within a single interface.\n\n✅ Chapters: 0:00 Introduction 1:17 Demo 6:52 Getting started\n\n✅ Resources: Discover and explore Fabric items using OneLake catalog's explore tab - Microsoft Fabric: https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-explore View item details page - Microsoft Fabric: https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-item-details\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2026-02-25 17:22:07",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "One View to Rule Them All: OneLake Catalog Explorer | Data Exposed",
+  "OutputDir": "_videos"
+}
