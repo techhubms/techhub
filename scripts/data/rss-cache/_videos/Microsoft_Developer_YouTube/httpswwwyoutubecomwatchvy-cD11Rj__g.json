@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-02-24 17:22:49",
+  "Link": "https://www.youtube.com/watch?v=y-cD11Rj__g",
+  "PubDate": "2026-02-24T17:01:27+00:00",
+  "Description": "In this session i will demo how you can migrate vm's from VMWare or Hyper-V to Azure Local using Azure Migrate. I will demo how you configure the Azure Migrate Project, how you deploy the Azure Migrate Appliance, how you enable synchronization and migrate and finalize the cutover.\n\nDuring this theater session you should have a good understanding on how you can migrate your vm's to Azure Local with a short down time for migration and for free without buying expensive third party tools.",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "Title": "Migrate vm's from VMWare or Hyper-V to Azure Local with Azure Migrate",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

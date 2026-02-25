@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-02-24 17:22:49",
+  "Link": "https://www.youtube.com/watch?v=Cn7p5i_4vjk",
+  "PubDate": "2026-02-24T17:00:22+00:00",
+  "Description": "Watch Microsoft Security Copilot tackle a live incident end-to-end. In this demo-driven session, we’ll triage alerts, investigate suspicious activity, generate KQL queries, and remediate threats, all with AI assistance. See how Copilot empowers SecOps teams to cut investigation time from hours to minutes and leave with real-world use cases to apply immediately.",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "Title": "Security Copilot in Action: From Alert to Remediation in 25 Minutes",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-02-24 17:22:49",
+  "Link": "https://www.youtube.com/watch?v=f2Si9ykUiZ4",
+  "PubDate": "2026-02-24T17:01:07+00:00",
+  "Description": "Over the past few years, we’ve explored using large language models with external data and tools, facing many challenges. The Model Context Protocol (MCP) addresses these by standardizing how data and tools connect. . In this session, we’ll demystify MCP, its purpose and architecture, and show how it enables precise tuning of models, contextual reuse, and safe delegation. While designed for developers and leads, it will help anyone assess if MCP fits their LLM projects.",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "Title": "Understanding Model Context Protocol (MCP)",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

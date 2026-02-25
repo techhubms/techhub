@@ -1,0 +1,18 @@
+{
+  "Title": "Organization-level Copilot usage metrics dashboard available in public preview",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2026-02-20-organization-level-copilot-usage-metrics-dashboard-available-in-public-preview",
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "EnhancedContent": "Until now, Copilot usage metrics dashboards were only available at the enterprise level. With this release, organization owners can view GitHub Copilot usage metrics for their organization directly in the GitHub UI. This dashboard brings the same organization-scoped insights as the recently released organization usage APIs into an easy-to-scan experience. This way, org admins don’t need to rely on enterprise reporting to understand adoption and usage trends.\n\n### How it works\n\nThe dashboard shows organization-scoped Copilot usage metrics for members of your organization.\n\n### Who can use it\n\n- All organization types can use the dashboard, including enterprise-owned organizations and standalone Free or Team organizations.\n- Organization owners and users with a custom role that includes `View Organization Copilot Metrics`\ncan access it, as long as **Copilot usage metrics** are enabled for the enterprise or organization.\n\n### Key benefits\n\n- Understand Copilot adoption and usage trends at the organization level.\n- Share access with least privilege using organization-scoped roles without granting enterprise-wide visibility.\n- Reduce reliance on enterprise reporting for day-to-day org-level insights.\n\n### Important note\n\nIf your organization belongs to an enterprise, organization-level totals **won’t match** enterprise totals. Users can belong to multiple organizations, so their usage can appear in more than one organization report, while enterprise reporting deduplicates users.\n\nCheck out [our documentation on Copilot metrics](https://docs.github.com/copilot/concepts/copilot-usage-metrics/copilot-metrics) to see which metrics are included. Join the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Tags": [
+    "account management",
+    "copilot",
+    "Release"
+  ],
+  "Description": "Until now, Copilot usage metrics dashboards were only available at the enterprise level. With this release, organization owners can view GitHub Copilot usage metrics for their organization directly in the…\n\nThe post [Organization-level Copilot usage metrics dashboard available in public preview](https://github.blog/changelog/2026-02-20-organization-level-copilot-usage-metrics-dashboard-available-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2026-02-20 20:03:43",
+  "PubDate": "2026-02-20T19:01:39+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

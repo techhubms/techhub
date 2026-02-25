@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-02-24 17:22:49",
+  "Link": "https://www.youtube.com/watch?v=ck0RF8Gz_aQ",
+  "PubDate": "2026-02-24T17:01:07+00:00",
+  "Description": "Managing access in modern organizations is complex, particularly with the rise of hybrid work, external partners, and increasing compliance requirements. Microsoft Entra ID’s Access Packages offer a powerful way to automate and govern access to apps, groups, and resources at scale.\n\nIn the Demo-packed session, you’ll understand how to leverage Access Packages to reduce risk, improve productivity, and enforce Zero Trust principles in your organization.",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "Title": "Simplifying Access Governance with Microsoft Entra ID Access Packages",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

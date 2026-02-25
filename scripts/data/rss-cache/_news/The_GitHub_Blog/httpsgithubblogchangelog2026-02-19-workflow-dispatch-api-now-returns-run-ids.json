@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": "When you trigger a workflow using the [GitHub Actions workflow dispatch API endpoint](https://docs.github.com/rest/actions/workflows#create-a-workflow-dispatch-event), you’ll now have the option to receive metadata in the response that helps you map your request to the corresponding workflow run. Previously, this endpoint returned only a `204 No Content` status code. Now, you can pass in a new optional boolean parameter, `return_run_details` , which will return a `200 OK` response containing the workflow ID, API URL, and workflow URL. If you do not pass in this parameter, it will continue to return the current `204 No Content` status code.\n\nThis capability is also supported within the GitHub CLI, as of [`v2.87.0`](https://github.com/cli/cli/releases/tag/v2.87.0). If you trigger a workflow dispatch via `gh workflow run` , GitHub CLI will now return the URL for the created run along with the `gh run view` command for viewing that run.\n\nWith this update, developers can easily identify which workflow runs originated from their API calls—no more extensive polling or building custom tracking solutions. This new parameter is currently available in the API, and the newest version of the GitHub CLI will also default `return_run_details` to `true` .\n\nLearn more about the workflow dispatch API in the [GitHub Actions documentation](https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch).",
+  "Title": "Workflow dispatch API now returns run IDs",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-02-20 00:06:35",
+  "Link": "https://github.blog/changelog/2026-02-19-workflow-dispatch-api-now-returns-run-ids",
+  "PubDate": "2026-02-19T22:39:37+00:00",
+  "Tags": [
+    "actions",
+    "client apps",
+    "Improvement"
+  ],
+  "Description": "When you trigger a workflow using the GitHub Actions workflow dispatch API endpoint, you’ll now have the option to receive metadata in the response that helps you map your request…\n\nThe post [Workflow dispatch API now returns run IDs](https://github.blog/changelog/2026-02-19-workflow-dispatch-api-now-returns-run-ids) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news"
+}

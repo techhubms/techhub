@@ -1,0 +1,17 @@
+{
+  "Description": "Organization owners within GitHub Enterprise can now discover and interact with both enterprise teams and organization teams through existing organization API endpoints. Previously, retrieving a complete view of all teams…\n\nThe post [Enterprise team support in organization APIs](https://github.blog/changelog/2026-02-23-enterprise-team-support-in-organization-apis) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-02-23 18:17:13",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "Enterprise team support in organization APIs",
+  "EnhancedContent": "Organization owners within GitHub Enterprise can now discover and interact with both enterprise teams and organization teams through existing organization API endpoints. Previously, retrieving a complete view of all teams required querying separate endpoints and obtaining varying admin permissions. This release reduces that complexity.\n\nThe following API endpoints now have support for presenting Enterprise Teams as output as well as accepting them as input:\n\n- [Repository rulesets](https://docs.github.com/enterprise-cloud@latest/rest/repos/rules?apiVersion=2022-11-28)\n- [Teams](https://docs.github.com/enterprise-cloud@latest/rest/teams/teams?apiVersion=2022-11-28)\n- [Team members](https://docs.github.com/enterprise-cloud@latest/rest/teams/members?apiVersion=2022-11-28)\n- [Organization repository rulesets](https://docs.github.com/enterprise-cloud@latest/rest/orgs/rules?apiVersion=2022-11-28)\n- [Repository rulesets](https://docs.github.com/enterprise-cloud@latest/rest/repos/rules?apiVersion=2022-11-28)\n\nWith the updated API endpoints, you can:\n\n- Query enterprise teams and organization teams in a single request.\n- Filter results by team type for the “List Teams” endpoint.\n- Clearly distinguish between enterprise-level and organization-level teams in a consistent format.\n\nOrganization owners will see teams scoped to their domain, while enterprise owners get full visibility across the enterprise. If an enterprise team input is not valid, an error response should be returned.\n\nEnterprise Teams is a public preview feature and subject to change. If you have feedback, join us in [this discussion](https://github.com/orgs/community/discussions/177040).",
+  "PubDate": "2026-02-23T16:25:07+00:00",
+  "Link": "https://github.blog/changelog/2026-02-23-enterprise-team-support-in-organization-apis",
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog"
+}

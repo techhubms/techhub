@@ -1,0 +1,18 @@
+{
+  "PubDate": "2026-02-20T14:01:08+00:00",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedLevelAuthor": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "ProcessedDate": "2026-02-20 14:13:51",
+  "Author": "Visual Studio Code",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "Title": "Customize your agents",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "Turn GitHub Copilot in VS Code into a specialized AI teammate with custom agents, Agent Skills, and MCP integrations. We'll show you how to build agents for specific roles and wire them together with handoffs to create guided workflows. Walk away with practical patterns for making Copilot work the way your team works.\n\nhttps://aka.ms/vscode/109 https://aka.ms/vscode/insiders https://aka.ms/vscode/live https://aka.ms/vscode/109blog https://aka.ms/awesome-copilot",
+  "Link": "https://www.youtube.com/watch?v=flpKLkZla2Q"
+}

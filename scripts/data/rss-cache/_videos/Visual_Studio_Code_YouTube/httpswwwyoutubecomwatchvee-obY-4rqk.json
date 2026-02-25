@@ -1,0 +1,18 @@
+{
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "Author": "Visual Studio Code",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "OutputDir": "_videos",
+  "FeedName": "Visual Studio Code YouTube",
+  "PubDate": "2026-02-20T10:01:06+00:00",
+  "ProcessedDate": "2026-02-20 10:09:38",
+  "Description": "The VS Code team uses agents every day to build and improve the editor. Hear firsthand how we integrate AI into our development workflow, what we've learned about working alongside agents, and how feedback from our own usage shapes the features you use today.\n\nhttps://aka.ms/vscode/109 https://aka.ms/vscode/insiders https://aka.ms/vscode/live https://aka.ms/vscode/109blog https://aka.ms/awesome-copilot",
+  "Title": "How VS Code Builds with AI",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Link": "https://www.youtube.com/watch?v=ee-obY-4rqk"
+}

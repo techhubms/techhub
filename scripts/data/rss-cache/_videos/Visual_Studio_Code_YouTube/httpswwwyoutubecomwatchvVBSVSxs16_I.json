@@ -1,0 +1,18 @@
+{
+  "PubDate": "2026-02-20T14:00:49+00:00",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedLevelAuthor": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "ProcessedDate": "2026-02-20 14:13:51",
+  "Author": "Visual Studio Code",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "Title": "Bring your own model in VS Code",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "VS Code supports using your own API keys and custom model providers alongside GitHub Copilot. Learn how to configure BYOK models and how local agents can leverage models from other providers to empower developer choice.\n\nhttps://aka.ms/vscode/109 https://aka.ms/vscode/insiders https://aka.ms/vscode/live https://aka.ms/vscode/109blog https://aka.ms/awesome-copilot",
+  "Link": "https://www.youtube.com/watch?v=VBSVSxs16_I"
+}

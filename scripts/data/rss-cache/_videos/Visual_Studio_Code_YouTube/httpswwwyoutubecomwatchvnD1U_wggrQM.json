@@ -1,0 +1,18 @@
+{
+  "PubDate": "2026-02-20T14:01:14+00:00",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedLevelAuthor": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "ProcessedDate": "2026-02-20 14:13:51",
+  "Author": "Visual Studio Code",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "Title": "How we ship models",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "Shipping the right AI model for each task requires a lot of testing and evaluation. Get an inside look at how the VS Code and Copilot teams assess model quality, decide when to roll out updates, and balance capability with reliability.\n\nhttps://aka.ms/vscode/109 https://aka.ms/vscode/insiders https://aka.ms/vscode/live https://aka.ms/vscode/109blog https://aka.ms/awesome-copilot",
+  "Link": "https://www.youtube.com/watch?v=nD1U_wggrQM"
+}
