@@ -405,7 +405,7 @@ await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 | Infinite scroll end | Manual wheel scrolling loop | `Page.ScrollToEndOfContentAsync()` |
 | Lazy-loaded element visible | `loading="eager"` attribute hack | Fix in source: remove `loading="lazy"` for above-fold/hero images (see Pattern 10) |
 | Focus after navigation reset | `Locator(":focus").EvaluateAsync()` | `WaitForConditionAsync` + `Page.EvaluateAsync()` |
-| Custom timeout value | `Timeout = 5000` (hardcoded) | `BlazorHelpers.DefaultAssertionTimeout` (5000ms) |
+| Custom timeout value | `Timeout = 5000` (hardcoded) | `BlazorHelpers.DefaultTimeout` (10s) |
 
 #### Pattern 1: Expand/Collapse Animations
 

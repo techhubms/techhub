@@ -153,8 +153,7 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Wait for scroll to reach bottom (use navigation timeout for scroll operations)
         await Page.WaitForConditionAsync(
-            @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultNavigationTimeout });
+            @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50");
 
         // Force scroll spy to re-evaluate now that scroll is complete.
         // The rAF-based handler may fire before layout settles in headless Chrome,
@@ -168,7 +167,7 @@ public class SidebarTocTests : PlaywrightTestBase
         var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
         // Use Playwright's auto-retrying assertion - wait for TOC link to become active.
-        await lastTocLink.AssertHasClassForNavigationAsync(
+        await lastTocLink.AssertHasClassAsync(
             new System.Text.RegularExpressions.Regex(".*active.*"));
     }
 
@@ -304,26 +303,23 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Wait for TOC scroll spy JS to finish initialization after client-side navigation.
         // Under full Run load (unit + integration tests running), the scroll spy
-        // setup and initial heading scan can take longer than DefaultNavigationTimeout (5s).
+        // setup and initial heading scan can take longer than DefaultTimeout (10s).
         await Page.WaitForConditionAsync(
             "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
-            null,
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Scroll down so a heading passes above the detection line (30% from top).
         // The scroll spy intentionally leaves no heading active when at scroll-top=0,
         // so we must scroll to trigger activation.
         await Page.Mouse.WheelAsync(0, 400);
-        await Page.WaitForFunctionAsync(
-            "() => window.scrollY > 100",
-            null,
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultNavigationTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+        await Page.WaitForConditionAsync(
+            "() => window.scrollY > 100");
 
         // Wait for at least one TOC link to become active after scrolling.
-        // Uses DefaultPageLoadTimeout (10s) because the scroll spy uses rAF throttling
+        // Uses IncreasedTimeout (15s) because the scroll spy uses rAF throttling
         // and scrollend events, which under load can be delayed.
         var activeTocLinks = Page.Locator(".sidebar-toc a.active");
-        await BlazorHelpers.AssertElementVisibleAsync(activeTocLinks.First, BlazorHelpers.DefaultPageLoadTimeout);
+        await BlazorHelpers.AssertElementVisibleAsync(activeTocLinks.First, BlazorHelpers.IncreasedTimeout);
 
         // Verify at least one TOC link has active class (overview section should be active)
         var activeCount = await activeTocLinks.CountAsync();

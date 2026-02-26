@@ -39,7 +39,7 @@ public class SearchTests : PlaywrightTestBase
         await searchInput.FillAsync("copilot");
 
         // Wait for debounce + URL update
-        await Page.WaitForUrlConditionAsync(
+        await Page.WaitForConditionAsync(
             "() => window.location.href.includes('search=')");
 
         // Assert - URL should contain search parameter
@@ -93,7 +93,7 @@ public class SearchTests : PlaywrightTestBase
         await clearButton.ClickAsync();
 
         // Wait for URL to update (search parameter removed via Blazor pushState)
-        await Page.WaitForUrlConditionAsync(
+        await Page.WaitForConditionAsync(
             "() => !window.location.href.includes('search=')");
 
         // Assert - Search should be cleared
@@ -115,7 +115,7 @@ public class SearchTests : PlaywrightTestBase
         await tagButton.ClickBlazorElementAsync();
 
         // Wait for tags parameter to appear in URL after tag click
-        await Page.WaitForUrlConditionAsync(
+        await Page.WaitForConditionAsync(
             "() => window.location.href.includes('tags=')");
 
         // Act 2 - Add search query
@@ -123,7 +123,7 @@ public class SearchTests : PlaywrightTestBase
         await searchInput.FillAsync("copilot");
 
         // Wait for debounce + URL update (replaces unreliable Task.Delay)
-        await Page.WaitForUrlConditionAsync(
+        await Page.WaitForConditionAsync(
             "() => window.location.href.includes('search=')");
 
         // Assert - URL should contain both search and tags parameters
@@ -153,7 +153,7 @@ public class SearchTests : PlaywrightTestBase
         await clearButton.ClickAsync();
 
         // Wait for URL to update (search parameter removed via Blazor)
-        await Page.WaitForUrlConditionAsync(
+        await Page.WaitForConditionAsync(
             "() => !window.location.href.includes('search=')");
 
         // Assert - Tags should remain, search should be removed
@@ -176,7 +176,7 @@ public class SearchTests : PlaywrightTestBase
         await searchInput.PressAsync("Escape");
 
         // Wait for URL to update (search parameter removed via Blazor)
-        await Page.WaitForUrlConditionAsync(
+        await Page.WaitForConditionAsync(
             "() => !window.location.href.includes('search=')");
 
         // Assert - Search should be cleared
@@ -193,16 +193,19 @@ public class SearchTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/github-copilot");
 
-        // Act - Search for something that won't exist
+        // Act - Search for something that won't exist.
+        // Wait for Blazor interactivity first — the search input renders as SSR HTML
+        // before the SignalR circuit connects and @oninput handlers are attached.
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
+        await searchInput.WaitForBlazorInteractivityAsync();
         await searchInput.FillAsync("xyzabc123nonexistent");
 
         // Wait for debounce + URL update before checking results.
-        // Uses extended timeout (10s) because debounce (300ms) + SignalR round-trip + Blazor
+        // Uses extended timeout (15s) because debounce (300ms) + SignalR round-trip + Blazor
         // re-render can exceed the default 5s under CI load.
         await Page.WaitForConditionAsync(
             "() => window.location.href.includes('search=')",
-            new PageWaitForFunctionOptions { Timeout = 10_000, PollingInterval = 100 });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Assert - Should show "no results" message (auto-retries via Expect)
         var noResultsMessage = Page.Locator("text=/no.*results/i").Or(Page.Locator(".no-content"));
@@ -224,11 +227,11 @@ public class SearchTests : PlaywrightTestBase
         await searchInput.FillAsync("copilot");
 
         // Wait for debounce + URL update.
-        // Uses extended timeout (10s) because debounce + SignalR round-trip + Blazor
+        // Uses extended timeout (15s) because debounce + SignalR round-trip + Blazor
         // re-render can exceed the default 5s under CI load.
         await Page.WaitForConditionAsync(
             "() => window.location.href.includes('search=')",
-            new PageWaitForFunctionOptions { Timeout = 10_000, PollingInterval = 100 });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Assert - URL should contain search parameter
         var currentUrl = Page.Url;

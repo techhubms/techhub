@@ -63,7 +63,7 @@ public class TagFilteringTests : PlaywrightTestBase
         await tagButton.ClickBlazorElementAsync();
 
         // Wait for URL to contain the tag and for the tag cloud to re-render
-        await Page.WaitForUrlConditionAsync(
+        await Page.WaitForConditionAsync(
             "(tag) => window.location.href.toLowerCase().includes('tags=' + encodeURIComponent(tag).toLowerCase())",
             normalizedTagText);
         await WaitForTagCloudReadyAsync();
@@ -81,7 +81,7 @@ public class TagFilteringTests : PlaywrightTestBase
         await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
         // Wait for Blazor to process the toggle: the selected class should be removed
-        await Page.Locator(".tag-cloud-item.selected").AssertCountForNavigationAsync(0);
+        await Page.Locator(".tag-cloud-item.selected").AssertCountAsync(0);
         await WaitForTagCloudReadyAsync();
 
         // Assert - URL should no longer contain the tag parameter or be empty

@@ -205,16 +205,14 @@ public class NavigationTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/ai/news");
 
         // Assert - use navigation-aware timeouts since we just navigated and data may still be loading
-        await Page.WaitForSelectorWithTimeoutAsync(".sub-nav", new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
-        await Page.WaitForSelectorWithTimeoutAsync(".card", new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
+        await Page.WaitForSelectorWithTimeoutAsync(".sub-nav");
+        await Page.WaitForSelectorWithTimeoutAsync(".card");
 
         // Should show AI section and News collection
-        await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "Browse Artificial Intelligence News",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "Browse Artificial Intelligence News");
 
         // News collection should be active
-        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News",
-            BlazorHelpers.DefaultNavigationTimeout);
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
     }
 
     [Fact]
@@ -344,8 +342,7 @@ public class NavigationTests : PlaywrightTestBase
             "() => !document.querySelector('[data-toc-scroll-spy]') || document.querySelector('[data-toc-scroll-spy] a.toc-link.active') !== null");
 
         // Wait for the clicked link specifically to become active
-        await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"),
-            new() { Timeout = BlazorHelpers.DefaultTimeout });
+        await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"));
 
         // Assert - The clicked TOC link should become active (highlighted)
         var activeClass = await aboutBookLink.GetAttributeAsync("class");

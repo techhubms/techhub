@@ -176,7 +176,7 @@ public class TabOrderingTests : PlaywrightTestBase
         // document-level click listener. Under CI load, script execution can be delayed.
         await Page.WaitForConditionAsync(
             "() => window.__skipLinkInitialized === true",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Act - Tab to skip link and press Enter
         await Page.Keyboard.PressAsync("Tab"); // Focus skip link
@@ -184,14 +184,14 @@ public class TabOrderingTests : PlaywrightTestBase
 
         // Wait for focus to move to the target element (#skiptohere heading).
         // The skip link's inline JS handler calls heading.focus({ preventScroll: true }).
-        // Uses DefaultPageLoadTimeout (10s) because under full Run load the keyboard
+        // Uses IncreasedTimeout (15s) because under full Run load the keyboard
         // event → click → focus chain can be delayed.
         // IMPORTANT: Do NOT accept document.body — if focus lands on body, the subsequent
         // Tab press goes to the skip link (outside main), causing a cascading timeout.
         await Page.WaitForFunctionAsync(
             "() => { const el = document.activeElement; return el && (el.id === 'skiptohere' || el.tagName === 'H1'); }",
             null,
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Assert - confirm focus is on the heading, not body
         var elementInfo = await Page.EvaluateAsync<string>(
@@ -206,7 +206,7 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.Keyboard.PressAsync("Tab");
 
         // Wait for focus to stabilize after tab press
-        // Uses DefaultPageLoadTimeout (10s) because this involves multiple async operations
+        // Uses IncreasedTimeout (15s) because this involves multiple async operations
         // whose timing is unpredictable under full Run system load:
         // 1. Tab keypress processed by Chromium
         // 2. H1 blur event fires (removes tabindex=-1)
@@ -221,7 +221,7 @@ public class TabOrderingTests : PlaywrightTestBase
                         el.closest('section') !== null);
             }",
             null,
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         var isInPrimaryContent = await Page.EvaluateAsync<bool>(
             "() => { const el = document.activeElement; return el && (el.closest('main') !== null || el.closest('article') !== null || el.closest('section') !== null); }"

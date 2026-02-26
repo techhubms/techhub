@@ -16,7 +16,7 @@ namespace TechHub.E2E.Tests.Helpers;
 /// since it doesn't trigger traditional navigation events.
 ///
 /// TIMEOUT MANAGEMENT: All timeouts and polling intervals are centralized in constants
-/// (DefaultTimeout, DefaultNavigationTimeout, DefaultPollingInterval) to avoid relying on
+/// (DefaultTimeout, IncreasedTimeout, DefaultPollingInterval) to avoid relying on
 /// Playwright's defaults which could change. Adjust these constants to tune test responsiveness.
 ///
 /// USAGE EXAMPLES - Common Test Patterns:
@@ -48,30 +48,23 @@ public static class BlazorHelpers
     // ============================================================================
 
     /// <summary>
-    /// Default timeout for all non-navigation operations (element waits, clicks, assertions).
-    /// Set to 5s to handle concurrent test load during full Run (unit + integration tests
-    /// run before E2E, creating sustained CPU/IO pressure that slows Playwright-Chromium IPC).
-    /// Most operations complete in &lt;500ms; the timeout only matters under peak load.
+    /// Default timeout for all operations (element waits, clicks, assertions, navigation).
+    /// Set to 10s to handle concurrent test load during full Run and CI runners
+    /// (unit + integration tests run before E2E, creating sustained CPU/IO pressure
+    /// that slows Playwright-Chromium IPC). Most operations complete in &lt;500ms;
+    /// the timeout only matters under peak load.
     /// </summary>
-    internal const int DefaultTimeout = 5_000;
+    internal const int DefaultTimeout = 10_000;
 
     /// <summary>
-    /// Default timeout for navigation operations (URL changes, Blazor interactivity waits).
-    /// Matches DefaultTimeout because Blazor Server round-trips (click → SignalR → server
-    /// → diff → SignalR → DOM update → URL pushState) can take 2-4s under full Run load.
+    /// Increased timeout for slow operations: initial page loads (SSR + database queries),
+    /// heavy collection pages, and operations that chain multiple async steps
+    /// (debounce + SignalR round-trip + Blazor re-render).
+    /// Under full E2E suite load (~200 parallel tests), PostgreSQL can respond slowly
+    /// for complex URLs with search/tag/date filters.
+    /// Typical response: &lt;2s idle, 3-10s under CI load.
     /// </summary>
-    internal const int DefaultNavigationTimeout = 5_000;
-
-    /// <summary>
-    /// Default timeout for the initial page.GotoAsync HTTP request (DOMContentLoaded).
-    /// Higher than DefaultNavigationTimeout because the server SSR (server-side rendering)
-    /// must execute database queries before returning HTML. Under full E2E suite load
-    /// (~200 parallel tests), PostgreSQL can respond slowly for complex URLs
-    /// with search/tag/date filters. Typical response: &lt;2s idle, 3-7s under load.
-    /// This timeout ONLY affects page.GotoAsync in GotoAndWaitForBlazorAsync — it does NOT
-    /// affect post-navigation Blazor waiting, element assertions, or other timeouts.
-    /// </summary>
-    internal const int DefaultPageLoadTimeout = 10_000;
+    internal const int IncreasedTimeout = 15_000;
 
     /// <summary>
     /// Default polling interval for WaitForFunctionAsync operations.
@@ -129,17 +122,6 @@ public static class BlazorHelpers
         string expression) =>
         page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
 
-    /// <summary>
-    /// Waits for a URL-based condition (navigation, routing, query params) to become truthy.
-    /// Uses DefaultNavigationTimeout (2000ms) which accounts for Blazor routing updates,
-    /// query parameter changes via history.pushState, and debounced input handlers.
-    /// </summary>
-    /// <param name="page">The page to evaluate on</param>
-    /// <param name="expression">JavaScript expression checking URL/location, e.g. "() => window.location.href.includes('search=')"</param>
-    public static Task<IJSHandle> WaitForUrlConditionAsync(
-        this IPage page,
-        string expression) =>
-        page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = DefaultNavigationTimeout, PollingInterval = DefaultPollingInterval });
 
     /// <summary>
     /// Waits for a parameterized JavaScript condition to become truthy.
@@ -157,6 +139,19 @@ public static class BlazorHelpers
         object arg,
         PageWaitForFunctionOptions options) =>
         page.WaitForFunctionAsync(expression, arg, options);
+
+    /// <summary>
+    /// Waits for a parameterized JavaScript condition to become truthy with default timeout.
+    /// Convenience overload that uses DefaultTimeout.
+    /// </summary>
+    /// <param name="page">The page to evaluate on</param>
+    /// <param name="expression">JavaScript expression accepting one arg</param>
+    /// <param name="arg">Value passed to the JavaScript function</param>
+    public static Task<IJSHandle> WaitForConditionAsync(
+        this IPage page,
+        string expression,
+        object arg) =>
+        page.WaitForFunctionAsync(expression, arg, new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
 
     // ============================================================================
     // INFINITE SCROLL - Reliable scroll-to-load pattern
@@ -272,7 +267,7 @@ public static class BlazorHelpers
     {
         var page = await context.NewPageAsync();
         page.SetDefaultTimeout(DefaultTimeout);
-        page.SetDefaultNavigationTimeout(DefaultNavigationTimeout);
+        page.SetDefaultTimeout(DefaultTimeout);
         return page;
     }
 
@@ -321,7 +316,7 @@ public static class BlazorHelpers
         string? expectedUrlSegment = null,
         string? waitForActiveState = null,
         Func<IPage, Task>? customWait = null,
-        int timeoutMs = DefaultNavigationTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         // Step 1: Find the element
         var locator = page.Locator(selector);
@@ -433,51 +428,7 @@ public static class BlazorHelpers
     }
 
     // ============================================================================
-    // NAVIGATION-SPECIFIC HELPERS - For scenarios requiring longer timeouts
-    // ============================================================================
 
-    /// <summary>
-    /// Waits for a URL-based condition with a JavaScript argument (e.g., tag name, search term).
-    /// Uses DefaultNavigationTimeout (2000ms) to account for Blazor routing and re-rendering.
-    /// </summary>
-    /// <param name="page">The page instance.</param>
-    /// <param name="expression">JavaScript expression that accepts an argument.</param>
-    /// <param name="arg">Argument to pass to the JavaScript expression.</param>
-    /// <example>
-    /// await Page.WaitForUrlConditionAsync(
-    ///     "(tag) => window.location.href.includes('tags=' + tag)",
-    ///     normalizedTagText);
-    /// </example>
-    public static Task WaitForUrlConditionAsync(this IPage page, string expression, object arg)
-        => page.WaitForConditionAsync(expression, arg, new PageWaitForFunctionOptions { Timeout = DefaultNavigationTimeout, PollingInterval = DefaultPollingInterval });
-
-    /// <summary>
-    /// Asserts that an element is visible, using DefaultNavigationTimeout (2000ms).
-    /// Use this variant for assertions after client-side navigation or Blazor re-rendering.
-    /// </summary>
-    public static Task AssertElementVisibleForNavigationAsync(this ILocator locator)
-        => AssertElementVisibleAsync(locator, DefaultNavigationTimeout);
-
-    /// <summary>
-    /// Asserts that an element has a specific CSS class, using DefaultNavigationTimeout (2000ms).
-    /// Use this variant for assertions that depend on client-side navigation or Blazor updates.
-    /// </summary>
-    public static Task AssertHasClassForNavigationAsync(this ILocator locator, string className)
-        => AssertHasClassAsync(locator, className, DefaultNavigationTimeout);
-
-    /// <summary>
-    /// Asserts that an element has a CSS class matching a regex pattern, using DefaultNavigationTimeout (2000ms).
-    /// Use this variant for assertions that depend on client-side navigation or Blazor updates.
-    /// </summary>
-    public static Task AssertHasClassForNavigationAsync(this ILocator locator, Regex classPattern)
-        => AssertHasClassAsync(locator, classPattern, DefaultNavigationTimeout);
-
-    /// <summary>
-    /// Asserts the number of elements matching a locator, using DefaultNavigationTimeout (2000ms).
-    /// Use this variant for count assertions after Blazor re-rendering or filtering operations.
-    /// </summary>
-    public static Task AssertCountForNavigationAsync(this ILocator locator, int expectedCount)
-        => AssertCountAsync(locator, expectedCount, DefaultNavigationTimeout);
 
     // ============================================================================
     // NAVIGATION - The core challenge with Blazor SPAs
@@ -501,7 +452,7 @@ public static class BlazorHelpers
     {
         var gotoOptions = options ?? new PageGotoOptions();
         gotoOptions.WaitUntil ??= WaitUntilState.DOMContentLoaded;
-        gotoOptions.Timeout ??= DefaultPageLoadTimeout;
+        gotoOptions.Timeout ??= IncreasedTimeout;
 
         await page.GotoAsync(url, gotoOptions);
 
@@ -541,7 +492,7 @@ public static class BlazorHelpers
     /// @see https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup
     /// INTERNAL USE: Called automatically by GotoAndWaitForBlazorAsync and ClickBlazorElementAsync.
     /// </summary>
-    public static async Task WaitForBlazorReadyAsync(this IPage page, int timeoutMs = DefaultNavigationTimeout)
+    public static async Task WaitForBlazorReadyAsync(this IPage page, int timeoutMs = DefaultTimeout)
     {
         try
         {
@@ -626,7 +577,7 @@ public static class BlazorHelpers
     /// <param name="waitForUrlChange">Whether to wait for URL to change after click (default: true)</param>
     public static async Task ClickBlazorElementAsync(
         this ILocator locator,
-        int timeoutMs = DefaultNavigationTimeout,
+        int timeoutMs = DefaultTimeout,
         bool waitForUrlChange = true)
     {
         var page = locator.Page;
@@ -675,7 +626,7 @@ public static class BlazorHelpers
         // Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync(timeoutMs);
 
-        // Ensure Blazor is ready - uses its own default navigation timeout (2000ms)
+        // Ensure Blazor is ready - uses its own default navigation timeout (10s)
         await locator.Page.WaitForBlazorReadyAsync();
     }
 
@@ -698,7 +649,7 @@ public static class BlazorHelpers
     public static async Task WaitForBlazorUrlContainsAsync(
         this IPage page,
         string urlSegment,
-        int timeoutMs = DefaultNavigationTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         // Use Playwright's auto-retrying Expect assertion with regex - much cleaner!
         await Assertions.Expect(page).ToHaveURLAsync(
@@ -767,7 +718,7 @@ public static class BlazorHelpers
         PageWaitForURLOptions? options = null)
     {
         var opts = options ?? new PageWaitForURLOptions();
-        opts.Timeout ??= DefaultNavigationTimeout;
+        opts.Timeout ??= DefaultTimeout;
         return page.WaitForURLAsync(urlPattern, opts);
     }
 
@@ -1035,7 +986,7 @@ public static class BlazorHelpers
     public static async Task AssertUrlEndsWithAsync(
         this IPage page,
         string urlSegment,
-        int timeoutMs = DefaultNavigationTimeout)
+        int timeoutMs = DefaultTimeout)
     {
         await Assertions.Expect(page).ToHaveURLAsync(
             new System.Text.RegularExpressions.Regex($".*{System.Text.RegularExpressions.Regex.Escape(urlSegment)}$"),

@@ -193,7 +193,7 @@ public class UrlRoutingTests : PlaywrightTestBase
 
         // Act - Navigate to /all/news
         await Page.GotoRelativeAsync("/all/news");
-        await Page.Locator(".card").First.AssertElementVisibleForNavigationAsync();
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
 
         // Assert - Should display all news items from all sections
         var displayedItems = await Page.GetElementCountBySelectorAsync(".card");

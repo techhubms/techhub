@@ -262,14 +262,14 @@ When deploying to a completely new Azure subscription for the first time:
    - Designated approvers receive notification
    - Review staging health, commit details, changes
    - Approve or reject deployment
-7. After approval, deployment proceeds:
+8. After approval, deployment proceeds:
    - Validates staging health one more time
    - Backs up current production configuration
    - Deploys same images used in staging (no rebuild)
    - Runs comprehensive smoke tests
    - Monitors for 5 minutes
    - Auto-rollback if any health check fails
-8. **Deployment complete** - Production is live with new version
+9. **Deployment complete** - Production is live with new version
 
 **Key Points**:
 
