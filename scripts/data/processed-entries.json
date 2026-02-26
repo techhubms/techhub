@@ -27220,5 +27220,11 @@
     "timestamp": "2026-02-26 09:16:17 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/uLsM-wl6xUA",
     "reason": "Succesfully added: The content is a technical overview of a new scalable ExpressRoute Gateway SKU, which is an Azure networking feature. Assigned the Azure category based on Azure Inclusion Rule 1 (Any Azure Service/Technology); content discusses enhancements to a core Azure networking service. No other categories apply, as there is no AI, coding, ML, DevOps, Security, or GitHub Copilot content present. Tags were chosen to reflect Azure networking, ExpressRoute, and gateway scalability focus."
+  },
+  {
+    "reason": "Succesfully added: Assigned AI because the focus is on measuring AI impact (Copilot, an AI-powered developer tool) on engineering delivery. Assigned GitHub Copilot because Copilot is the central technology discussed, triggering both 'AI' and 'GitHub Copilot' per rules. Assigned DevOps since the article deeply covers delivery/DevOps metrics, CI/CD data ingestion, DORA benchmarking, and integration of DevOps toolchains. Did not assign Azure or Coding because while there are Azure DevOps mentions, the main substance relates to DevOps tooling/analytics, not core Azure service use or code-level patterns. ML, Security do not apply, as there is no focus on ML engineering or security. No generic exclusions were triggered; the content is technical, constructive, and focused on engineering implementation.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/measuring-actual-ai-impact-for-engineering-with-apache-devlake/",
+    "timestamp": "2026-02-26 10:15:14 +00:00"
   }
 ]

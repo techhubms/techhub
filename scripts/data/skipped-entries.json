@@ -12531,5 +12531,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/WWoAjdmhLUg",
     "timestamp": "2026-02-25 22:07:21 +00:00"
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules were applied first as per workflow. Upon careful review, the content is entirely focused on communication strategies between technical practitioners and executives regarding solution architecture. There is no substantive coverage of Microsoft technologies, platforms, development tools, coding, AI/ML, security, DevOps, or Azure. The guidance is about high-level business communication, not technical implementation with Microsoft products. As such, it is excluded under the 'Business Strategy and Executive Content' exclusion, as well as 'Workplace and Business Focus' and 'Business vs Technical Content' rules (Chapter 3). No categories are assigned.",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/how-to-present-a-solution-architecture-to-executives/",
+    "timestamp": "2026-02-26 10:15:51 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/blazor-parameter-passed-by-reference/m-p/4497411#M687",
+    "timestamp": "2026-02-26 10:16:14 +00:00"
   }
 ]
