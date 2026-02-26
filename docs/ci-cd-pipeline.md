@@ -8,30 +8,33 @@ All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infra
 
 ## Workflows
 
-### Continuous Integration (CI)
+### Unified CI/CD Pipeline
 
-**File**: [.github/workflows/ci.yml](../.github/workflows/ci.yml)
+**File**: [.github/workflows/ci-cd.yml](../.github/workflows/ci-cd.yml)
 
 **Triggers**:
 
-- Push to `main` branch
-- Pull requests to `main` branch
-- Manual dispatch
+- Push to `dotnet-migration` branch (CI + deploy to staging)
+- Pull requests to `main` branch (CI only, no deployment)
+- Manual dispatch (CI + deploy to staging + optional production)
 
-**Jobs**:
+This is a single unified pipeline that runs all quality checks first, and only deploys after they pass. On pull requests, deployment jobs are skipped entirely.
+
+**CI Jobs** (run on every trigger):
 
 1. **Build** - Builds the entire .NET solution
 2. **Unit Tests** - Runs all unit tests (excludes E2E)
 3. **Integration Tests** - Runs API integration tests
 4. **E2E Tests** - Runs end-to-end Playwright tests
-5. **Lint** - Checks code formatting and markdown linting
-6. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
-7. **Code Coverage** - Generates coverage reports
-8. **Quality Gate** - Validates all checks passed and provides clear summary
+5. **PowerShell Tests** - Runs Pester tests for automation scripts
+6. **Lint** - Checks code formatting and markdown linting
+7. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
+8. **Code Coverage** - Generates coverage reports
+9. **Quality Gate** - Validates all checks passed and provides clear summary
 
 **Quality Gates**:
 
-- All tests must pass
+- All tests must pass (unit, integration, E2E, PowerShell)
 - No linting errors
 - Build succeeds
 - Security scan completes (warnings allowed)
@@ -41,54 +44,39 @@ All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infra
 When running on pull requests, the Quality Gate provides:
 
 - Clear summary of what passed/failed
-- Actionable guidance on how to fix failures  
+- Actionable guidance on how to fix failures
 - Ready-for-review confirmation when all checks pass
 - Links to documentation for help
+- **No deployment** — PR runs stop after the quality gate
 
 Jobs run in parallel for faster feedback (~5-10 minutes total).
 
-### Deployment Pipeline
-
-**File**: [.github/workflows/deploy.yml](../.github/workflows/deploy.yml)
-
-**Triggers**:
-
-- Automatic on push to `main` branch (staging only)
-- Manual dispatch (with optional production deployment and force-infra flag)
-
-This is a unified pipeline that handles both infrastructure and application deployment in the correct order.
-
-**Jobs**:
+**Deployment Jobs** (run only after quality gate passes, never on PRs):
 
 1. **Detect Changes** - Uses `dorny/paths-filter` to check if `infra/**` files changed
    - Manual dispatch also supports `force-infra-deploy` to override detection
 
 2. **Deploy Shared Infrastructure** - Deploys shared resources (ACR) via `Deploy-Infrastructure.ps1`
    - Only runs when infrastructure files changed (or force flag set)
-   - Runs in parallel with staging infrastructure
 
-3. **Deploy Staging Infrastructure** - Deploys staging resources via `Deploy-Infrastructure.ps1`
-   - Only runs when infrastructure files changed (or force flag set)
-   - Runs in parallel with shared infrastructure
-
-4. **Build & Push** - Calls `Deploy-Application.ps1 -SkipDeploy` to build Docker images and push to ACR
+3. **Build & Push** - Calls `Deploy-Application.ps1 -SkipDeploy` to build Docker images and push to ACR
    - Waits for shared infrastructure (ACR) to be ready first
    - Tags images with commit SHA and `latest`
    - Images are built once and reused for both staging and production
+
+4. **Deploy Staging Infrastructure** - Deploys staging resources via `Deploy-Infrastructure.ps1`
+   - Only runs when infrastructure files changed (or force flag set)
 
 5. **Deploy to Staging** - Calls `Deploy-Application.ps1 -SkipBuild -SkipPush` to deploy (automatic)
    - Waits for both image build and staging infrastructure to complete
    - Updates Azure Container Apps with new images
    - Runs smoke tests (health, homepage)
 
-6. **Approve Production** - Manual approval gate via GitHub Environment protection rules
-   - Only runs when manually triggered with `deploy-to-production: true`
-   - Single approval covers both production infrastructure and application
-
-7. **Deploy Production Infrastructure** - Deploys production resources via `Deploy-Infrastructure.ps1`
+6. **Deploy Production Infrastructure** - Deploys production resources via `Deploy-Infrastructure.ps1`
    - Only runs when infrastructure files changed AND production is approved
+   - Uses GitHub environment protection for approval
 
-8. **Deploy to Production** - Calls `Deploy-Application.ps1 -SkipBuild -SkipPush` for production
+7. **Deploy to Production** - Calls `Deploy-Application.ps1 -SkipBuild -SkipPush` for production
    - Deploys same images used in staging (no rebuild)
    - Runs smoke tests (health, homepage)
    - **Auto-rollback** on health check failures
@@ -222,7 +210,7 @@ When run locally, images default to the `dev` tag to distinguish them from CI-pr
 When deploying to a completely new Azure subscription for the first time:
 
 1. **Deploy Infrastructure + Application** (initial setup)
-   - Go to GitHub Actions → "Deploy to Azure"
+   - Go to GitHub Actions → "CI/CD Pipeline"
    - Click "Run workflow"
    - Check **"Force infrastructure deployment"** (since there's no previous commit to detect changes from)
    - This deploys shared infrastructure (ACR), staging infrastructure, builds images, and deploys to staging — all in one run
@@ -230,9 +218,9 @@ When deploying to a completely new Azure subscription for the first time:
    - Staging resources: `rg-techhub-staging` with Container Apps, PostgreSQL, OpenAI, etc.
 
 2. **Deploy Production** (when ready)
-   - Go to GitHub Actions → "Deploy to Azure"
+   - Go to GitHub Actions → "CI/CD Pipeline"
    - Check both **"Deploy to production"** and **"Force infrastructure deployment"**
-   - Staging deploys first, then after approval, production infrastructure and application deploy
+   - All CI checks run first, then staging deploys, then after approval, production infrastructure and application deploy
    - Creates separate Azure OpenAI `oai-techhub-prod` (independent from staging)
 
 **Note**: The Bicep templates use `imageTag = 'initial'` which deploys a Microsoft-provided placeholder ASP.NET app. The deployment workflow immediately replaces this with your actual application. This solves the chicken-and-egg problem of needing Container Apps to exist before images are built, but needing images to exist before Container Apps can be created.
@@ -252,23 +240,25 @@ When deploying to a completely new Azure subscription for the first time:
 
 ### Automatic Staging Deployment
 
-1. Merge PR to `main` branch
-2. CI workflow runs automatically
-3. Deployment workflow triggers automatically
-4. Docker images built once (tagged with commit SHA and `latest`)
-5. Images pushed to Azure Container Registry
-6. Staging Container Apps updated
-7. Smoke tests run
-8. **Deployment complete** - Staging is live with new version
+1. Push to `dotnet-migration` branch (or merge PR)
+2. Unified CI/CD workflow triggers automatically
+3. All CI checks run (build, tests, lint, security)
+4. Quality gate validates all checks passed
+5. Docker images built once (tagged with commit SHA and `latest`)
+6. Images pushed to Azure Container Registry
+7. Staging Container Apps updated
+8. Smoke tests run
+9. **Deployment complete** - Staging is live with new version
 
 ### Manual Production Deployment
 
 1. **Validate staging** - Test staging environment thoroughly
-2. Go to GitHub Actions → "Deploy to Azure"
+2. Go to GitHub Actions → "CI/CD Pipeline"
 3. Click "Run workflow"
 4. Check "Deploy to production" checkbox (and optionally "Force infrastructure deployment")
 5. Click "Run workflow"
-6. **Approval required** - Workflow will pause at the "Approve Production" job
+6. All CI checks run first, then staging deploys
+7. **Approval required** - Workflow will pause at the production deployment job
    - Designated approvers receive notification
    - Review staging health, commit details, changes
    - Approve or reject deployment

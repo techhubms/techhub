@@ -13,22 +13,12 @@ param customDomain string = ''
 
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 
-// Managed certificate for custom domain (issued by Azure, auto-renewed)
-resource containerAppsEnv 'Microsoft.App/managedEnvironments@2025-01-01' existing = {
+// Reference the managed environment (needed for managed certificate)
+resource containerAppsEnv 'Microsoft.App/managedEnvironments@2025-07-01' existing = {
   name: containerAppsEnvironmentName
 }
 
-resource managedCert 'Microsoft.App/managedEnvironments/managedCertificates@2025-01-01' = if (customDomain != '') {
-  parent: containerAppsEnv
-  name: 'cert-${replace(customDomain, '.', '-')}'
-  location: location
-  properties: {
-    subjectName: customDomain
-    domainControlValidation: 'CNAME'
-  }
-}
-
-resource web 'Microsoft.App/containerApps@2025-01-01' = {
+resource web 'Microsoft.App/containerApps@2025-07-01' = {
   name: containerAppName
   location: location
   identity: {
@@ -52,8 +42,7 @@ resource web 'Microsoft.App/containerApps@2025-01-01' = {
         customDomains: customDomain != '' ? [
           {
             name: customDomain
-            bindingType: 'SniEnabled'
-            certificateId: managedCert.id
+            bindingType: 'Auto'
           }
         ] : []
       }
@@ -121,3 +110,18 @@ resource web 'Microsoft.App/containerApps@2025-01-01' = {
 
 output fqdn string = web.properties.configuration.ingress.fqdn
 output id string = web.id
+
+// Managed certificate for custom domain (issued by Azure, auto-renewed).
+// Uses 2025-07-01 API with bindingType 'Auto' on the container app to solve
+// the chicken-and-egg problem (see github.com/microsoft/azure-container-apps/issues/796).
+// The cert must be created AFTER the container app has the hostname registered.
+resource managedCert 'Microsoft.App/managedEnvironments/managedCertificates@2025-07-01' = if (customDomain != '') {
+  parent: containerAppsEnv
+  name: 'cert-${replace(customDomain, '.', '-')}'
+  location: location
+  properties: {
+    subjectName: customDomain
+    domainControlValidation: 'CNAME'
+  }
+  dependsOn: [web]
+}

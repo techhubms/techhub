@@ -214,6 +214,10 @@ function showMermaidModal(diagramElement) {
     const modalDiagram = modal.querySelector('.mermaid-modal-diagram');
     modalDiagram.innerHTML = '';
 
+    // Remove any existing close button from modal
+    const existingClose = modal.querySelector('.mermaid-modal-close');
+    if (existingClose) existingClose.remove();
+
     const clonedDiagram = diagramElement.cloneNode(true);
     const clonedButton = clonedDiagram.querySelector('.mermaid-expand-btn');
     if (clonedButton) {
@@ -228,7 +232,7 @@ function showMermaidModal(diagramElement) {
         e.stopPropagation();
         closeMermaidModal();
     };
-    clonedDiagram.appendChild(closeBtn);
+    modal.appendChild(closeBtn);
 
     const svg = clonedDiagram.querySelector('svg');
     if (svg) {

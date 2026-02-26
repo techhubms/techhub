@@ -225,8 +225,7 @@ Temporary working directory for AI assistants and development tasks (gitignored)
 ### Other Hidden Directories
 
 - **`.github/`** - GitHub Actions workflows and CI/CD automation
-  - `workflows/ci.yml` - Continuous Integration (build, test, lint, security) - runs on all PRs and pushes to main
-  - `workflows/deploy.yml` - Unified deployment pipeline: infrastructure (when changed) + application to staging (automatic) and production (manual approval)
+  - `workflows/ci-cd.yml` - Unified CI/CD pipeline: CI (build, test, lint, security) runs on all PRs and pushes; deployment to staging (automatic) and production (manual approval) runs after quality gate passes (PRs skip deployment)
   - See [ci-cd-pipeline.md](ci-cd-pipeline.md) for complete CI/CD documentation
 - **`.vscode/`** - VS Code workspace settings and launch configurations
 - **`.git/`** - Git repository metadata

@@ -161,6 +161,7 @@
 @media (max-width: 1292px) {
     .sub-nav-homepage {
         padding: 0;
+        border-bottom: 1px solid var(--color-border-default);
     }
 
     .sub-nav-homepage .sub-nav-mobile {

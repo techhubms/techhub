@@ -345,7 +345,7 @@ public class NavigationTests : PlaywrightTestBase
 
         // Wait for the clicked link specifically to become active
         await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"),
-            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+            new() { Timeout = BlazorHelpers.DefaultTimeout });
 
         // Assert - The clicked TOC link should become active (highlighted)
         var activeClass = await aboutBookLink.GetAttributeAsync("class");
