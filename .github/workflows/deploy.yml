@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Check for infrastructure changes
         uses: dorny/paths-filter@v3
@@ -141,7 +143,7 @@ jobs:
     if: |
       always() &&
       needs.build-and-push.result == 'success' &&
-      (needs.deploy-staging-infra.result == 'success' || needs.deploy-staging-infra.result == 'skipped')
+      needs.deploy-staging-infra.result == 'skipped'
     environment:
       name: staging
       url: https://${{ steps.deploy.outputs.web-url }}
@@ -215,12 +217,12 @@ jobs:
   deploy-production:
     name: Deploy to Production
     runs-on: ubuntu-latest
-    needs: [build-and-push, deploy-staging, deploy-production-infra]
+    needs: [build-and-push, deploy-staging, deploy-staging-infra, deploy-production-infra]
     if: |
       always() &&
-      needs.deploy-staging.result == 'success' &&
       needs.build-and-push.result == 'success' &&
-      (needs.deploy-production-infra.result == 'success' || needs.deploy-production-infra.result == 'skipped')
+      (needs.deploy-staging.result == 'success' || needs.deploy-staging-infra.result == 'success') &&
+      needs.deploy-production-infra.result == 'skipped'
     environment: production
     steps:
       - name: Checkout code
