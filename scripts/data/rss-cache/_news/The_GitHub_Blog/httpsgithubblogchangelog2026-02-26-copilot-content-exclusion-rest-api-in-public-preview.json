@@ -1,0 +1,17 @@
+{
+  "PubDate": "2026-02-26T15:37:48+00:00",
+  "Link": "https://github.blog/changelog/2026-02-26-copilot-content-exclusion-rest-api-in-public-preview",
+  "ProcessedDate": "2026-02-26 17:21:08",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "EnhancedContent": "Organization and enterprise administrators can now programmatically manage Copilot content exclusion rules using the new Content Exclusion REST API. This JSON API is available in public preview and supports `GET` and `SET` operations at both the organization and enterprise levels, enabling easier automation and governance at scale.\n\n- [API Documentation](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-content-exclusion-management?apiVersion=2022-11-28)\n- [About excluding content from GitHub Copilot](https://docs.github.com/copilot/concepts/context/content-exclusion)\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Title": "Copilot Content Exclusion REST API in public preview",
+  "Description": "Organization and enterprise administrators can now programmatically manage Copilot content exclusion rules using the new Content Exclusion REST API. This JSON API is available in public preview and supports GET…\n\nThe post [Copilot Content Exclusion REST API in public preview](https://github.blog/changelog/2026-02-26-copilot-content-exclusion-rest-api-in-public-preview) appeared first on [The GitHub Blog](https://github.blog)."
+}

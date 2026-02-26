@@ -27244,5 +27244,41 @@
     "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2026/",
     "reason": "Succesfully added: The 'Azure' category is assigned because the entire post is focused on Azure SDK releases and updates, directly referencing Azure development tools (Azure rule 1, 4). 'Coding' is included as the content covers SDKs, client libraries, and APIs relevant for application development in languages like .NET and Python (Coding rule 2, 5). 'AI' is included because there is a highlighted release of the Azure AI Content Understanding client library, which leverages AI capabilities (AI rule 1, 4). Other categories like DevOps, ML, and Security do not apply as the post does not predominantly address CI/CD pipelines, data science workflows, or security implementations.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories. The content is focused on GitHub Copilot—a developer tool—specifically enabling new automation for managing Copilot's behavior via a public REST API, satisfying GitHub Copilot inclusion rule 1 and associated AI inclusion rules. The content is technical, targeted at organization admins and developers, and not about business productivity. No generic exclusion rules apply.",
+    "canonical_url": "https://github.blog/changelog/2026-02-26-copilot-content-exclusion-rest-api-in-public-preview",
+    "timestamp": "2026-02-26 17:23:19 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the article centrally discusses agentic coding assistants, the productivity impact of AI software tools, and the broader effect of AI on software engineering discipline (AI Inclusion Rule 1 and 4). The piece is not about a specific Microsoft development platform, code, or DevOps process, so 'Azure', 'Coding', 'DevOps', 'ML', and 'Security' do not apply. There is no reference to GitHub Copilot or any other specific Microsoft developer AI product—content is focused broadly on agentic AI as a category, so 'GitHub Copilot' is not included. All inclusion/exclusion choices were made strictly according to outlined category rules.",
+    "canonical_url": "https://www.devclass.com/development/2026/02/26/top-microsoft-execs-fret-about-impact-of-ai-on-software-engineering-profession/4091789",
+    "timestamp": "2026-02-26 17:23:51 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the article examines tooling (Dependabot) that is integral to software delivery pipelines (DevOps rule 2) and concerns CI/CD workflows (DevOps rule 5). Assigned Security category due to its focus on vulnerability management, false positives, CVSS scoring, and secure dependency practices (Security rules 2, 5, and 8). Did not assign AI, Azure, ML, Coding, or GitHub Copilot since the content focuses on open-source security, DevOps processes, and does not detail Microsoft-specific cloud or AI technologies, nor code-centric development.",
+    "canonical_url": "https://www.devclass.com/security/2026/02/26/github-dependabot-is-a-noise-machine-and-should-be-turned-off-says-go-library-maintainer/4091858",
+    "timestamp": "2026-02-26 17:24:11 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category due to the construction of a custom AI tutor and discussions about AI-powered assistance using the GitHub Copilot SDK (AI category rules 1, 2, 3, 4). Assigned 'GitHub Copilot' because the central technology used is the GitHub Copilot SDK (GitHub Copilot category rules 1, 2). 'Coding' is also included, as the project involves integrating and coding with Python for educational purposes (Coding rule 4). There are no generic exclusion rule triggers, and all inclusion rules are satisfied based on the video description content.",
+    "canonical_url": "https://www.youtube.com/watch?v=N3my6W_Rdwg",
+    "timestamp": "2026-02-26 17:24:42 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the announcement is about new Azure VM offerings (Azure rule 1, 4, 5); 'Security' because the focus is on confidential computing, hardware-enforced isolation, cryptographic attestation, and sensitive/regulatory use cases (Security rules 1, 2, 3, 9); 'AI' due to the explicit mention of confidential AI workloads, accelerated AI workload scenarios, and customer testimonials referencing AI pipelines (AI rule 5). Not assigned DevOps, Coding, ML, or GitHub Copilot as these are not primary focal points per inclusion criteria.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-general-availability-of-azure-intel-tdx-confidential/ba-p/4495693",
+    "timestamp": "2026-02-26 17:25:12 +00:00",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content is centered on Azure API Management, a specific Azure service, and details platform-level configuration and operational limits. No other category applies: there's no code, developer tool integration, or AI/ML/security engineering focus here. The rules for the Azure category include guidance and service management for core Azure technologies, which matches this announcement of platform resource limits and operational details.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/new-azure-api-management-service-limits/ba-p/4497574",
+    "timestamp": "2026-02-26 17:25:33 +00:00",
+    "collection": "community"
   }
 ]
