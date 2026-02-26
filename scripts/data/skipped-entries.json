@@ -12543,5 +12543,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/blazor-parameter-passed-by-reference/m-p/4497411#M687",
     "timestamp": "2026-02-26 10:16:14 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-02-26 13:29:53 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/3Cum7Qatiz4",
+    "reason": "No categories found: No content was provided in the 'content' field, and both 'description' and 'content' are empty. According to the generic exclusion rules in Chapter 3, the workflow should only process content with sufficient substantive text. Without any actual content to review, it's impossible to determine whether any Microsoft technology categories apply or to extract meaningful tags or descriptions. Therefore, all categories are excluded."
   }
 ]
