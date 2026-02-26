@@ -1,0 +1,19 @@
+{
+  "Tags": [
+    "account management",
+    "copilot",
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-02-26-copilot-metrics-report-urls-update",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Title": "Copilot metrics report URLs update",
+  "FeedName": "The GitHub Blog",
+  "Description": "The download URLs returned by the GitHub Copilot usage metrics API now come from a new endpoint. Your report data, the API contract, and the response schema haven’t changed. Action…\n\nThe post [Copilot metrics report URLs update](https://github.blog/changelog/2026-02-26-copilot-metrics-report-urls-update) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "PubDate": "2026-02-26T20:11:34+00:00",
+  "ProcessedDate": "2026-02-26 21:08:35",
+  "EnhancedContent": "The download URLs returned by the [GitHub Copilot usage metrics API](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-28) now come from a new endpoint. Your report data, the API contract, and the response schema haven’t changed.\n\n### Action required\n\n- If your firewall rules allowlist specific CDN domains, add `copilot-reports-production-*.b01.azurefd.net`\nalongside the existing `copilot-reports-*.b01.azurefd.net` pattern.\n- If you download reports using the download links in the dashboard UI, you don’t need to make any changes.\n\nTo view the current list of allowlist domains, see the [GitHub Copilot allowlist reference documentation](https://docs.github.com/copilot/reference/copilot-allowlist-reference). Join the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements)."
+}

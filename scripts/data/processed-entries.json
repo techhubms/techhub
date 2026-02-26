@@ -27340,5 +27340,29 @@
     "collection": "videos",
     "timestamp": "2026-02-26 20:10:15 +00:00",
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content is centrally about GitHub Copilot CLI (a developer tool), discussing its agentic AI capabilities for codebase exploration, task execution, planning, and code review, as described in the title and description. Applied the rule that any GitHub Copilot content should include both 'AI' and 'GitHub Copilot' categories. Exclusion rules do not apply because the video is focused on developer tooling and technical workflow, with no signs of sales, negativity, or ineligible product focus."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-02-26 21:10:30 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content is centrally about GitHub Copilot coding agent and its new AI-driven features, directly matching the 'AI' and 'GitHub Copilot' inclusion rules (AI rule 2, GitHub Copilot rules 1–4). 'Coding' is included as the article focuses on developer-facing automation, code generation, reviews, and CLI handoff, satisfying Coding rule 4 (Coding practices with Microsoft technologies) and Coding rule 5 (Developer tools). Did not assign 'DevOps' or 'Azure' as there is no substantial coverage of continuous integration, deployment, or Azure services. 'ML', and 'Security' are not applied: security is discussed as a feature (scanning), but the main topics are Copilot agent capabilities, not broader security implementation.",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-02-26 21:10:46 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the update applies to the GitHub Copilot usage metrics API (GitHub Copilot rule 1). 'AI' is also included because all GitHub Copilot coverage requires 'AI' according to the rules. 'DevOps' is added because this news concerns enterprise management, automation, API endpoints, and firewall/network settings integral to DevOps workflows (DevOps rules 2, 6). No other categories apply, as there is no direct code, Azure platform, machine learning, or security deep-dive beyond the network allowlisting context.",
+    "canonical_url": "https://github.blog/changelog/2026-02-26-copilot-metrics-report-urls-update"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-26 21:11:34 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is an announcement of a new Azure service capability, specifically regarding Azure Container Registry (Azure inclusion rule 1). No AI, ML, or DevOps categories are assigned because the focus is primarily on storage and container registry limits rather than on process automation, MLOps, or AI development. There is no significant coding, DevOps workflow, or model training material, only infrastructure capability details. All generic exclusion rules were reviewed and do not apply—content is technical, implementation-focused, substantial, and in English.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-premium-sku-now-supports-100-tib/ba-p/4497651"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-26 21:11:54 +00:00",
+    "reason": "Succesfully added: The content is a community announcement describing the general availability of Oracle Database@Azure in West Europe. It meets the threshold for the Azure category because Microsoft Azure is absolutely central to the solution (Azure inclusion rule 1: 'Any Azure Service/Technology'). While the article references AI and analytics as possible integrations, there are no technical details covered for AI or ML implementations (so the AI/ML categories are not added). The content is not coding-focused (no development patterns or language details), so Coding and DevOps categories do not apply. Security and compliance are discussed as outcomes, but there is no in-depth technical implementation or configuration, so Security category is not used. All generic exclusion rules were reviewed and do not apply, as the post is technical, in English, of sufficient length, avoids business-only or biographical focus, and is relevant to technical practitioners.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-is-now-generally-available-in-west-europe/ba-p/4497632"
   }
 ]
