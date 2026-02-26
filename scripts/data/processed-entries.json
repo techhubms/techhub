@@ -27238,5 +27238,11 @@
     "reason": "Succesfully added: Assigned 'Azure' because the content centers on Azure Storage, an Azure service (Azure rule 1), and covers related configuration, deployment, and access management. Assigned 'Security' because the core of the update is strengthening SAS token security through identity restrictions and RBAC, directly addressing secure access, access control, and data protection with Microsoft technologies (Security rules 1, 3, 7, and 9). Not assigned 'AI', 'Coding', 'DevOps', 'ML', or 'GitHub Copilot' as there's no coverage of those technologies or practices. No generic exclusion rules apply.",
     "timestamp": "2026-02-26 15:17:08 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-02-26 16:17:19 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2026/",
+    "reason": "Succesfully added: The 'Azure' category is assigned because the entire post is focused on Azure SDK releases and updates, directly referencing Azure development tools (Azure rule 1, 4). 'Coding' is included as the content covers SDKs, client libraries, and APIs relevant for application development in languages like .NET and Python (Coding rule 2, 5). 'AI' is included because there is a highlighted release of the Azure AI Content Understanding client library, which leverages AI capabilities (AI rule 1, 4). Other categories like DevOps, ML, and Security do not apply as the post does not predominantly address CI/CD pipelines, data science workflows, or security implementations.",
+    "collection": "news"
   }
 ]
