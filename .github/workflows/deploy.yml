@@ -73,38 +73,8 @@ jobs:
             -Mode deploy
 
   # ──────────────────────────────────────────────
-  # Staging infrastructure — only when infra changed
-  # Runs after shared infra, in parallel with build
-  # ──────────────────────────────────────────────
-  deploy-staging-infra:
-    name: Deploy Staging Infrastructure
-    runs-on: ubuntu-latest
-    needs: [detect-changes, deploy-shared-infra]
-    if: |
-      always() &&
-      needs.detect-changes.outputs.infra-changed == 'true' &&
-      (needs.deploy-shared-infra.result == 'success' || needs.deploy-shared-infra.result == 'skipped')
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Azure Login
-        uses: azure/login@v2
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Deploy staging infrastructure
-        shell: pwsh
-        env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ACC_PW }}
-        run: |
-          ./scripts/Deploy-Infrastructure.ps1 `
-            -Environment staging `
-            -Mode deploy
-
-  # ──────────────────────────────────────────────
   # Build & push Docker images
-  # Runs after shared infra (ACR must exist), in parallel with staging infra
+  # Runs after shared infra (ACR must exist), BEFORE env infra
   # ──────────────────────────────────────────────
   build-and-push:
     name: Build & Push Docker Images
@@ -131,6 +101,38 @@ jobs:
             -Environment staging `
             -Tag "${{ github.sha }}" `
             -SkipDeploy
+
+  # ──────────────────────────────────────────────
+  # Staging infrastructure — only when infra changed
+  # Runs after build so image tag can be passed to Bicep
+  # ──────────────────────────────────────────────
+  deploy-staging-infra:
+    name: Deploy Staging Infrastructure
+    runs-on: ubuntu-latest
+    needs: [detect-changes, deploy-shared-infra, build-and-push]
+    if: |
+      always() &&
+      needs.detect-changes.outputs.infra-changed == 'true' &&
+      needs.build-and-push.result == 'success' &&
+      (needs.deploy-shared-infra.result == 'success' || needs.deploy-shared-infra.result == 'skipped')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy staging infrastructure
+        shell: pwsh
+        env:
+          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ACC_PW }}
+        run: |
+          ./scripts/Deploy-Infrastructure.ps1 `
+            -Environment staging `
+            -Mode deploy `
+            -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
 
   # ──────────────────────────────────────────────
   # Deploy application to staging
@@ -182,25 +184,18 @@ jobs:
           echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
 
   # ──────────────────────────────────────────────
-  # Production approval gate
-  # ──────────────────────────────────────────────
-  approve-production:
-    name: Approve Production
-    runs-on: ubuntu-latest
-    needs: deploy-staging
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy-to-production == true
-    environment: production
-    steps:
-      - run: echo "Production deployment approved by ${{ github.actor }}"
-
-  # ──────────────────────────────────────────────
-  # Production infrastructure — only when infra changed + approved
+  # Production infrastructure — only when infra changed
+  # Uses GitHub environment protection for approval
   # ──────────────────────────────────────────────
   deploy-production-infra:
     name: Deploy Production Infrastructure
     runs-on: ubuntu-latest
-    needs: [detect-changes, approve-production]
-    if: needs.detect-changes.outputs.infra-changed == 'true'
+    needs: [detect-changes, deploy-staging, build-and-push]
+    if: |
+      github.event_name == 'workflow_dispatch' &&
+      inputs.deploy-to-production == true &&
+      needs.detect-changes.outputs.infra-changed == 'true'
+    environment: production
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -217,20 +212,25 @@ jobs:
         run: |
           ./scripts/Deploy-Infrastructure.ps1 `
             -Environment production `
-            -Mode deploy
+            -Mode deploy `
+            -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
 
   # ──────────────────────────────────────────────
   # Deploy application to production
+  # Uses GitHub environment protection for approval
   # ──────────────────────────────────────────────
   deploy-production:
     name: Deploy to Production
     runs-on: ubuntu-latest
-    needs: [build-and-push, approve-production, deploy-production-infra]
+    needs: [build-and-push, deploy-staging, deploy-production-infra]
     if: |
       always() &&
-      needs.approve-production.result == 'success' &&
+      github.event_name == 'workflow_dispatch' &&
+      inputs.deploy-to-production == true &&
+      needs.deploy-staging.result == 'success' &&
       needs.build-and-push.result == 'success' &&
       (needs.deploy-production-infra.result == 'success' || needs.deploy-production-infra.result == 'skipped')
+    environment: production
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

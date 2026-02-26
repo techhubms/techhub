@@ -8,9 +8,6 @@ param containerRegistryName = 'crtechhubms'
 param containerAppsEnvName = 'cae-techhub-staging'
 param apiAppName = 'ca-techhub-api-staging'
 param webAppName = 'ca-techhub-web-staging'
-// Use placeholder image for initial deployment - workflow will immediately update with real images
-param apiImageTag = 'initial'
-param webImageTag = 'initial'
 // Networking
 param vnetName = 'vnet-techhub-staging'
 // PostgreSQL configuration

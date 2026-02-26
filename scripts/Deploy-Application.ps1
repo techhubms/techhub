@@ -323,6 +323,42 @@ if (-not $SkipDeploy) {
     }
     Write-Ok "API deployed"
 
+    # Wait for API to become healthy before deploying Web
+    Write-Detail "Waiting for API to become healthy..."
+    $apiFqdn = az containerapp show `
+        --name $apiAppName `
+        --resource-group $resourceGroup `
+        --query properties.configuration.ingress.fqdn `
+        -o tsv 2>$null
+
+    if ($apiFqdn) {
+        $maxRetries = 30
+        $retryCount = 0
+        $apiHealthy = $false
+
+        while ($retryCount -lt $maxRetries -and -not $apiHealthy) {
+            $retryCount++
+            $healthResponse = try {
+                Invoke-WebRequest -Uri "https://$apiFqdn/health" -TimeoutSec 10 -UseBasicParsing
+            } catch { $null }
+
+            if ($healthResponse -and $healthResponse.StatusCode -eq 200) {
+                $apiHealthy = $true
+                Write-Ok "API health check passed (attempt $retryCount/$maxRetries)"
+            } else {
+                Write-Detail "API not healthy yet (attempt $retryCount/$maxRetries), waiting 5 seconds..."
+                Start-Sleep -Seconds 5
+            }
+        }
+
+        if (-not $apiHealthy) {
+            Write-Fail "API failed to become healthy after $maxRetries attempts"
+            exit 1
+        }
+    } else {
+        Write-Warning "Could not get API FQDN, skipping health check"
+    }
+
     # Update Web container app
     Write-Detail "Deploying Web..."
     az containerapp update `
@@ -338,7 +374,7 @@ if (-not $SkipDeploy) {
 
     # Wait for stabilization
     $waitSeconds = if ($Environment -eq 'production') { 60 } else { 30 }
-    Write-Detail "Waiting $waitSeconds seconds for deployment to stabilize..."
+    Write-Detail "Waiting $waitSeconds seconds for deployment to stabilize before running smoke tests..."
     Start-Sleep -Seconds $waitSeconds
 
     # ============================================================================

@@ -7,10 +7,7 @@ param imageTag string
 param apiBaseUrl string
 param appInsightsConnectionString string
 
-// Use public placeholder on first deploy if custom image doesn't exist
-var imageReference = imageTag == 'initial' 
-  ? 'mcr.microsoft.com/dotnet/samples:aspnetapp' 
-  : '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
+var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 
 resource web 'Microsoft.App/containerApps@2025-01-01' = {
   name: containerAppName

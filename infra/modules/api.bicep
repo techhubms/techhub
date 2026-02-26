@@ -13,10 +13,7 @@ param webFqdn string = ''
 @description('PostgreSQL connection string')
 param databaseConnectionString string
 
-// Use public placeholder on first deploy if custom image doesn't exist
-var imageReference = imageTag == 'initial' 
-  ? 'mcr.microsoft.com/dotnet/samples:aspnetapp' 
-  : '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
+var imageReference = '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
 
 resource api 'Microsoft.App/containerApps@2025-01-01' = {
   name: containerAppName

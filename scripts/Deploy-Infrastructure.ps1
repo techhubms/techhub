@@ -20,6 +20,10 @@
 .PARAMETER Location
     Azure region for deployment metadata. Defaults to the environment's primary region.
 
+.PARAMETER ImageTag
+    Docker image tag to deploy. When provided, overrides apiImageTag and webImageTag
+    parameters in Bicep. Required for staging/production environments in deploy mode.
+
 .EXAMPLE
     ./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode whatif
     Preview what changes would be made to staging infrastructure.
@@ -47,7 +51,10 @@ param(
     [string]$Mode = 'whatif',
 
     [Parameter(Mandatory = $false)]
-    [string]$Location
+    [string]$Location,
+
+    [Parameter(Mandatory = $false)]
+    [string]$ImageTag
 )
 
 $ErrorActionPreference = "Stop"
@@ -151,6 +158,9 @@ Write-Host "  Mode        : $Mode" -ForegroundColor Gray
 Write-Host "  Location    : $deployLocation" -ForegroundColor Gray
 Write-Host "  Template    : $($config.TemplatePath)" -ForegroundColor Gray
 Write-Host "  Parameters  : $($config.ParamsPath)" -ForegroundColor Gray
+if ($ImageTag) {
+    Write-Host "  Image Tag   : $ImageTag" -ForegroundColor Gray
+}
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
 # ============================================================================
@@ -229,6 +239,13 @@ if ($Environment -ne 'shared' -and $Mode -eq 'deploy' -and $config.OpenAi) {
 
 $deploymentName = "techhub-$($config.EnvSuffix)-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
 
+# Build image tag overrides (passed as additional --parameters to az deployment sub)
+$imageTagParams = @()
+if ($ImageTag -and $Environment -ne 'shared') {
+    $imageTagParams = @("apiImageTag=$ImageTag", "webImageTag=$ImageTag")
+    Write-Step "Image tag override: $ImageTag"
+}
+
 # Step 1: Validate
 if ($Mode -in @('validate', 'whatif', 'deploy')) {
     Write-Step "Validating Bicep template"
@@ -236,7 +253,7 @@ if ($Mode -in @('validate', 'whatif', 'deploy')) {
     az deployment sub validate `
         --location $deployLocation `
         --template-file $templateFile `
-        --parameters $paramsFile
+        --parameters $paramsFile @imageTagParams
 
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Template validation failed"
@@ -277,7 +294,7 @@ if ($Mode -in @('whatif', 'deploy')) {
     az deployment sub what-if `
         --location $deployLocation `
         --template-file $templateFile `
-        --parameters $paramsFile
+        --parameters $paramsFile @imageTagParams
 
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "What-If analysis failed"
@@ -319,7 +336,7 @@ if ($Mode -eq 'deploy') {
         --name $deploymentName `
         --location $deployLocation `
         --template-file $templateFile `
-        --parameters $paramsFile
+        --parameters $paramsFile @imageTagParams
 
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Deployment failed"
