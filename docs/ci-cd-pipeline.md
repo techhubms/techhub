@@ -51,6 +51,12 @@ When running on pull requests, the Quality Gate provides:
 
 Jobs run in parallel for faster feedback (~5-10 minutes total).
 
+**Concurrency Strategy**:
+
+- **No workflow-level concurrency group** — each push starts its own CI run immediately, so new commits are never blocked by older runs waiting for environment approval
+- **Deployment jobs use per-environment concurrency** (`deploy-staging`, `deploy-production`) to prevent conflicting deploys to the same environment
+- CI jobs are stateless and safe to run in parallel across commits
+
 **Deployment Jobs** (run only after quality gate passes, never on PRs):
 
 1. **Detect Changes** - Uses `dorny/paths-filter` to check if `infra/**` files changed
