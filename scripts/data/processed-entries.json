@@ -27328,5 +27328,17 @@
     "reason": "Succesfully added: Assigned 'DevOps' category because the video covers GitHub Actions (DevOps rule 2), collaboration, and workflow automation (DevOps rules 3 and 5). Assigned 'Coding' because building portfolios with Pages and general GitHub usage are core developer skills (Coding rule 4 and 5). Did not assign 'AI', 'GitHub Copilot', 'Azure', 'ML', or 'Security' because there is no mention of those technologies or specific content covered in those areas. All rules were followed; generic exclusions do not apply, as the content is technical, instructional, and focused on development practices.",
     "timestamp": "2026-02-26 19:18:10 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-26-claude-and-codex-now-available-for-copilot-business-pro-users",
+    "collection": "news",
+    "timestamp": "2026-02-26 20:09:35 +00:00",
+    "reason": "Succesfully added: The content specifically focuses on the availability and integration of Claude and OpenAI Codex as coding agents within the GitHub Copilot environment. According to the rules: (1) Assigned 'GitHub Copilot' and 'AI' because these agents are part of Copilot for development workflows (AI rule 2, GitHub Copilot rules 1-4); (2) Assigned 'DevOps' because the article describes workflow automation and deployment across repositories, issue triage, pull requests, and enables team-level integration (DevOps rules 3, 5, and 6). No 'Azure', 'Coding', 'ML', or 'Security' category was assigned, as the content does not focus on specific cloud deployment, language coding, machine learning development, or security engineering."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=bRtK041JFFE",
+    "collection": "videos",
+    "timestamp": "2026-02-26 20:10:15 +00:00",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content is centrally about GitHub Copilot CLI (a developer tool), discussing its agentic AI capabilities for codebase exploration, task execution, planning, and code review, as described in the title and description. Applied the rule that any GitHub Copilot content should include both 'AI' and 'GitHub Copilot' categories. Exclusion rules do not apply because the video is focused on developer tooling and technical workflow, with no signs of sales, negativity, or ineligible product focus."
   }
 ]
