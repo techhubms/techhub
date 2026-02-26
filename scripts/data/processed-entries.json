@@ -27226,5 +27226,11 @@
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/all-things-azure/measuring-actual-ai-impact-for-engineering-with-apache-devlake/",
     "timestamp": "2026-02-26 10:15:14 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content demonstrates implementation of Azure Face API—a Microsoft AI platform, per AI category rule 1. Assigned Azure category because the focus is on Azure's Face API service and resource setup (Azure rule 1 and 4). Assigned Coding category because the content is a code-focused, hands-on C#/.NET tutorial (Coding rules 1, 2, and 4). Did not include ML because the article uses pre-built AI/vision APIs, not custom ML, and focuses on integrating rather than developing machine learning models. There are no generic exclusion triggers: the content is in English, sufficiently detailed, technically focused, and not biographical or business-only. The tagging reflects core technologies, frameworks, and key techniques used throughout the guide.",
+    "collection": "community",
+    "timestamp": "2026-02-26 11:16:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-azure-face-api-facial-landmark-detection-and-real-time/ba-p/4495335"
   }
 ]
