@@ -27196,5 +27196,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category because the entire article is about new capabilities in Azure Monitor, a central Azure service (Azure inclusion rule 1). Assigned Security category due to the focus on secure ingestion (TLS/mTLS), certificate management, and enforcement of security requirements (Security rules 1 and 7). Assigned DevOps category because features like executionPlacement, pod scheduling, and data pipeline management are deeply tied to cluster orchestration and DevOps operational practices (DevOps rules 6 and 7). Did NOT assign ML, Coding, or AI categories since there is no ML/data science, software engineering, or AI-specific content present.",
     "timestamp": "2026-02-26 00:10:18 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content is centrally about Azure Logic Apps, a Microsoft cloud integration service (Azure inclusion rule 1 and 4). The main technical challenge, solutions, and detailed workflow all depend on Azure Logic Apps as the implementation platform. Did not assign other categories: while the content discusses connectors (OneDrive, Microsoft Graph) and mentions SharePoint and Azure Blob Storage, the focus is workflow orchestration and not custom coding (excludes Coding), no ML/data science aspect (excludes ML), no security focus, and not DevOps in the CI/CD sense. The guide is detailed and meets quality and length standards for community content.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-access-a-shared-onedrive-folder-in-azure-logic-apps/ba-p/4484962",
+    "timestamp": "2026-02-26 04:35:21 +00:00"
   }
 ]
