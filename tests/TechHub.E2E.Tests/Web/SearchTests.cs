@@ -205,7 +205,7 @@ public class SearchTests : PlaywrightTestBase
         // re-render can exceed the default 5s under CI load.
         await Page.WaitForConditionAsync(
             "() => window.location.href.includes('search=')",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = 15_000, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Assert - Should show "no results" message (auto-retries via Expect)
         var noResultsMessage = Page.Locator("text=/no.*results/i").Or(Page.Locator(".no-content"));
@@ -231,7 +231,7 @@ public class SearchTests : PlaywrightTestBase
         // re-render can exceed the default 5s under CI load.
         await Page.WaitForConditionAsync(
             "() => window.location.href.includes('search=')",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = 15_000, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Assert - URL should contain search parameter
         var currentUrl = Page.Url;

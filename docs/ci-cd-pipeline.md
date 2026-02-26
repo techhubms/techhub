@@ -60,6 +60,7 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
    - Only runs when infrastructure files changed (or force flag set)
 
 3. **Build & Push** - Calls `Deploy-Application.ps1 -SkipDeploy` to build Docker images and push to ACR
+   - Requires **Detect Changes** to have succeeded (ensures quality gate passed)
    - Waits for shared infrastructure (ACR) to be ready first
    - Tags images with commit SHA and `latest`
    - Images are built once and reused for both staging and production

@@ -245,17 +245,25 @@ public class TabHighlightingTests : PlaywrightTestBase
         // Arrange - Navigate to a page with interactive buttons
         await Page.GotoRelativeAsync("/ai");
 
-        // First use keyboard to focus a button
+        // Set keyboard-nav mode via Tab press (triggers keydown handler in nav-helpers.js)
         await Page.Keyboard.PressAsync("Tab");
 
         var hasKeyboardNav = await Page.EvaluateAsync<bool>(
             "() => document.documentElement.classList.contains('keyboard-nav')");
         hasKeyboardNav.Should().BeTrue("keyboard-nav should be set after Tab press");
 
-        // Verify something is focused (auto-retry because focus may take a frame to settle
-        // in headless Chrome, especially under CI load)
+        // Explicitly focus a visible button to guarantee a known focused state.
+        // Use a visible tag-cloud button (guaranteed on /ai section page) instead of
+        // generic "button" which may match hidden elements like the mobile hamburger.
+        var button = Page.Locator(".tag-cloud-item").First;
+        await Assertions.Expect(button).ToBeVisibleAsync();
+        await button.FocusAsync();
+
+        // Wait for focus to settle on the button — FocusAsync dispatches .focus() but
+        // the browser may not update document.activeElement synchronously when other
+        // JS handlers (Blazor, nav-helpers) are active.
         await Page.WaitForConditionAsync(
-            "() => document.activeElement !== null && document.activeElement !== document.body");
+            "() => document.activeElement?.tagName === 'BUTTON'");
 
         // Act - Use pointer click to simulate switching to pointer mode.
         // Click on the page background — the footer area is guaranteed to be non-interactive

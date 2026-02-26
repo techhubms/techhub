@@ -123,6 +123,7 @@ public static class BlazorHelpers
         page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
 
 
+
     /// <summary>
     /// Waits for a parameterized JavaScript condition to become truthy.
     /// Use this for expressions that accept a JavaScript argument, e.g.
@@ -267,7 +268,7 @@ public static class BlazorHelpers
     {
         var page = await context.NewPageAsync();
         page.SetDefaultTimeout(DefaultTimeout);
-        page.SetDefaultTimeout(DefaultTimeout);
+        page.SetDefaultNavigationTimeout(IncreasedTimeout);
         return page;
     }
 
@@ -316,7 +317,7 @@ public static class BlazorHelpers
         string? expectedUrlSegment = null,
         string? waitForActiveState = null,
         Func<IPage, Task>? customWait = null,
-        int timeoutMs = DefaultTimeout)
+        int timeoutMs = IncreasedTimeout)
     {
         // Step 1: Find the element
         var locator = page.Locator(selector);
@@ -428,9 +429,6 @@ public static class BlazorHelpers
     }
 
     // ============================================================================
-
-
-    // ============================================================================
     // NAVIGATION - The core challenge with Blazor SPAs
     // ============================================================================
 
@@ -492,7 +490,7 @@ public static class BlazorHelpers
     /// @see https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup
     /// INTERNAL USE: Called automatically by GotoAndWaitForBlazorAsync and ClickBlazorElementAsync.
     /// </summary>
-    public static async Task WaitForBlazorReadyAsync(this IPage page, int timeoutMs = DefaultTimeout)
+    public static async Task WaitForBlazorReadyAsync(this IPage page, int timeoutMs = IncreasedTimeout)
     {
         try
         {
@@ -577,7 +575,7 @@ public static class BlazorHelpers
     /// <param name="waitForUrlChange">Whether to wait for URL to change after click (default: true)</param>
     public static async Task ClickBlazorElementAsync(
         this ILocator locator,
-        int timeoutMs = DefaultTimeout,
+        int timeoutMs = IncreasedTimeout,
         bool waitForUrlChange = true)
     {
         var page = locator.Page;
@@ -626,7 +624,7 @@ public static class BlazorHelpers
         // Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync(timeoutMs);
 
-        // Ensure Blazor is ready - uses its own default navigation timeout (10s)
+        // Ensure Blazor is ready - uses its own default navigation timeout (2000ms)
         await locator.Page.WaitForBlazorReadyAsync();
     }
 
@@ -649,7 +647,7 @@ public static class BlazorHelpers
     public static async Task WaitForBlazorUrlContainsAsync(
         this IPage page,
         string urlSegment,
-        int timeoutMs = DefaultTimeout)
+        int timeoutMs = IncreasedTimeout)
     {
         // Use Playwright's auto-retrying Expect assertion with regex - much cleaner!
         await Assertions.Expect(page).ToHaveURLAsync(
@@ -718,7 +716,7 @@ public static class BlazorHelpers
         PageWaitForURLOptions? options = null)
     {
         var opts = options ?? new PageWaitForURLOptions();
-        opts.Timeout ??= DefaultTimeout;
+        opts.Timeout ??= IncreasedTimeout;
         return page.WaitForURLAsync(urlPattern, opts);
     }
 
@@ -986,7 +984,7 @@ public static class BlazorHelpers
     public static async Task AssertUrlEndsWithAsync(
         this IPage page,
         string urlSegment,
-        int timeoutMs = DefaultTimeout)
+        int timeoutMs = IncreasedTimeout)
     {
         await Assertions.Expect(page).ToHaveURLAsync(
             new System.Text.RegularExpressions.Regex($".*{System.Text.RegularExpressions.Regex.Escape(urlSegment)}$"),

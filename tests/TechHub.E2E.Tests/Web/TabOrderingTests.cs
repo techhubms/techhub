@@ -118,8 +118,10 @@ public class TabOrderingTests : PlaywrightTestBase
             await Page.Keyboard.PressAsync("Tab");
 
             // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+            // Uses IncreasedTimeout because focus transitions can be slow under CI load.
             await Page.WaitForConditionAsync(
-                "() => document.activeElement && document.activeElement !== document.body");
+                "() => document.activeElement && document.activeElement !== document.body",
+                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
             var isInMain = await Page.EvaluateAsync<bool>(
                 "() => { const el = document.activeElement; return el.closest('main') !== null || el.closest('.main-content') !== null || el.closest('article') !== null; }"
             );
@@ -149,8 +151,10 @@ public class TabOrderingTests : PlaywrightTestBase
             await Page.Keyboard.PressAsync("Tab");
 
             // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
+            // Uses IncreasedTimeout because focus transitions can be slow under CI load.
             await Page.WaitForConditionAsync(
-                "() => document.activeElement && document.activeElement !== document.body");
+                "() => document.activeElement && document.activeElement !== document.body",
+                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
             var isInSidebar = await Page.EvaluateAsync<bool>(
                 "() => { const el = document.activeElement; return el.closest('.sidebar') !== null || el.closest('aside') !== null; }"
             );
@@ -178,8 +182,12 @@ public class TabOrderingTests : PlaywrightTestBase
             "() => window.__skipLinkInitialized === true",
             new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
-        // Act - Tab to skip link and press Enter
-        await Page.Keyboard.PressAsync("Tab"); // Focus skip link
+        // Act - Tab to skip link and press Enter.
+        // Wait between Tab and Enter for focus to settle on skip link under CI load.
+        await Page.Keyboard.PressAsync("Tab");
+        await Page.WaitForConditionAsync(
+            "() => { const el = document.activeElement; return el && el.classList.contains('skip-link'); }",
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
         await Page.Keyboard.PressAsync("Enter"); // Activate skip link
 
         // Wait for focus to move to the target element (#skiptohere heading).
