@@ -112,11 +112,7 @@ else if (Sections != null && Sections.Any())
         </div>
     </nav>
 }
-else
-{
-    @* Empty SubNav - just shows border *@
-    <nav class="sub-nav sub-nav-empty" aria-hidden="true"></nav>
-}
+@* Empty SubNav: render nothing so it collapses *@
 
 @code {
     [Parameter]
