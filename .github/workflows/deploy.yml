@@ -130,7 +130,6 @@ jobs:
           ./scripts/Deploy-Application.ps1 `
             -Environment staging `
             -Tag "${{ github.sha }}" `
-            -RegistryName "${{ secrets.AZURE_CONTAINER_REGISTRY }}" `
             -SkipDeploy
 
   # ──────────────────────────────────────────────
@@ -164,7 +163,6 @@ jobs:
           ./scripts/Deploy-Application.ps1 `
             -Environment staging `
             -Tag "${{ needs.build-and-push.outputs.image-tag }}" `
-            -RegistryName "${{ secrets.AZURE_CONTAINER_REGISTRY }}" `
             -SkipBuild -SkipPush
 
           $webUrl = az containerapp show `
@@ -249,7 +247,6 @@ jobs:
           ./scripts/Deploy-Application.ps1 `
             -Environment production `
             -Tag "${{ needs.build-and-push.outputs.image-tag }}" `
-            -RegistryName "${{ secrets.AZURE_CONTAINER_REGISTRY }}" `
             -SkipBuild -SkipPush
 
           $webUrl = az containerapp show `
