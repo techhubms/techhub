@@ -27316,5 +27316,17 @@
     "reason": "Succesfully added: The Azure category is assigned because the content focuses on Azure Local and Azure Arc services for infrastructure provisioning (Azure inclusion rule 1 and 4). The DevOps category is included due to automation, ARM template use, provisioning workflow design, and centralized configuration for repeatable infrastructure management (DevOps rules 1, 5, and 6). The Security category is assigned due to the in-depth focus on secure identity, FIDO Device Onboarding standard, zero trust supply chain, and device management (Security rules 1, 3, and 9). No AI, ML, Coding, or GitHub Copilot content is present. None of the generic exclusion rules apply—the piece is technical, implementation-focused, and in English.",
     "timestamp": "2026-02-26 18:16:32 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-public-preview-simplified-machine-provisioning-for/ba-p/4496811"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/02/26/threat-modeling-ai-applications/",
+    "reason": "Succesfully added: Assigned AI category due to the entire article's technical focus on risk assessment and mitigation for generative and agentic AI systems, explicitly mentioning concepts like prompt injection, model bias, and emergent AI risks (AI rules 1, 4, 5). Assigned Security category because the article focuses on security practices, threat modeling, risk management, and architectural mitigations within the AI context, including references to Microsoft's security resources (Security rules 1, 9). Did not assign Azure, Coding, DevOps, ML, or GitHub Copilot categories since the content does not cover platform-specific implementations, coding practices, operations, ML pipeline design, or developer tool usage—its scope is security and risk modeling for AI at a high, but technically actionable, level.",
+    "timestamp": "2026-02-26 19:17:28 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/Dypm17qVYQk",
+    "reason": "Succesfully added: Assigned 'DevOps' category because the video covers GitHub Actions (DevOps rule 2), collaboration, and workflow automation (DevOps rules 3 and 5). Assigned 'Coding' because building portfolios with Pages and general GitHub usage are core developer skills (Coding rule 4 and 5). Did not assign 'AI', 'GitHub Copilot', 'Azure', 'ML', or 'Security' because there is no mention of those technologies or specific content covered in those areas. All rules were followed; generic exclusions do not apply, as the content is technical, instructional, and focused on development practices.",
+    "timestamp": "2026-02-26 19:18:10 +00:00",
+    "collection": "videos"
   }
 ]

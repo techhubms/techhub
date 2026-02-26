@@ -12567,5 +12567,11 @@
     "reason": "Insufficient content length",
     "timestamp": "2026-02-26 18:16:32 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-sre-agent/what-are-the-recommended-guardrails-for/m-p/4497599#M7"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=7QljM3-IzSQ",
+    "reason": "No categories found: All fields except for author, title, type, and promotional links are empty or contain only marketing/about statements. The 'content' field is null, so no substantive technical or educational content is provided. The 'description' contains only promotional material, social links, and a marketing blurb about GitHub. According to the generic exclusion rules (Format and Length Exclusions, Content Quality Exclusions), this content does not qualify for any categories because there is no technical detail, tutorial, implementation, or relevant Microsoft technology focus. The presence of marketing language further confirms exclusion.",
+    "timestamp": "2026-02-26 19:18:23 +00:00",
+    "collection": "videos"
   }
 ]
