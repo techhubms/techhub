@@ -27172,5 +27172,29 @@
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-using-agents-now-deliver-more-secure-ui-automation-at-scale/",
     "timestamp": "2026-02-25 22:06:35 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-25-generate-pull-request-titles-with-copilot-on-the-web",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the announcement focuses on a new feature directly related to GitHub Copilot's developer functionality (GitHub Copilot rule 1). Included the 'AI' category since Copilot is an AI-powered tool and the feature relies on AI-generated suggestions (AI rule 2). Added 'DevOps' as the change streamlines team workflows and pull request processes, a core part of DevOps practice (DevOps rules 2, 3, 9). The content is technical, directed at developers, and entirely about using a Microsoft technology (GitHub), so all categories are justified.",
+    "timestamp": "2026-02-26 00:08:54 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-25-gpt-5-3-codex-is-now-available-in-github-com-github-mobile-and-visual-studio",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content is about the release and enablement of the GPT-5.3-Codex AI model for GitHub Copilot, which is an AI development tool (AI rule 1). Assigned the GitHub Copilot category because the release is specifically for GitHub Copilot, including its various editions and integrations (GitHub Copilot rule 1 and 2). Did not assign Coding because the content focuses on the tool's availability, not on code implementation or programming patterns. Did not assign DevOps, Azure, ML, or Security as those aspects are not discussed. No generic exclusion rules apply: content is sufficiently technical, English, not business/productivity-focused, and is not a sales pitch or negative content.",
+    "timestamp": "2026-02-26 00:09:12 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-02-25-improved-web-search-in-copilot-on-github-com",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the announcement focuses on enhancements to GitHub Copilot, specifically model-native web search capability in Copilot Chat (AI rule 2 and GitHub Copilot rules 1-4). This is a developer tool update, not a business productivity Copilot. No Coding, DevOps, Azure, ML, or Security content is present. No exclusion rules are triggered; this is technical product news relevant to developers.",
+    "timestamp": "2026-02-26 00:09:30 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-new-public-preview-capabilities-in-azure-monitor/ba-p/4488904",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the entire article is about new capabilities in Azure Monitor, a central Azure service (Azure inclusion rule 1). Assigned Security category due to the focus on secure ingestion (TLS/mTLS), certificate management, and enforcement of security requirements (Security rules 1 and 7). Assigned DevOps category because features like executionPlacement, pod scheduling, and data pipeline management are deeply tied to cluster orchestration and DevOps operational practices (DevOps rules 6 and 7). Did NOT assign ML, Coding, or AI categories since there is no ML/data science, software engineering, or AI-specific content present.",
+    "timestamp": "2026-02-26 00:10:18 +00:00"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-02-26 00:07:04",
+  "Description": "Improved web search in Copilot on github.com We’ve enabled model native web search in certain models in Copilot chat on github.com. This enhancement lets Copilot use the model’s built‑in web…\n\nThe post [Improved web search in Copilot on github.com](https://github.blog/changelog/2026-02-25-improved-web-search-in-copilot-on-github-com) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "PubDate": "2026-02-25T22:52:05+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "Improved web search in Copilot on github.com",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "## Improved web search in Copilot on github.com\n\nWe’ve enabled model native web search in certain models in Copilot chat on github.com. This enhancement lets Copilot use the model’s built‑in web search to answer current events and other time-sensitive questions with more speed and accuracy.\n\n### What’s new\n\n- When enabled and where available, GitHub Copilot Chat on github.com will use model native web search.\n- Other models will continue to use [Bing search](https://github.blog/changelog/2024-10-29-web-search-in-github-copilot-chat-now-available-for-copilot-individual/).\n\n### How to try it\n\nThis capability is available to all public preview enabled paid Copilot subscribers.\n\nOrganizations and enterprises can enable this and other features in public preview by selecting **Opt in to preview features** in the Copilot in github.com setting.\n\nYou can try model native search today by asking about current events in GitHub Copilot Chat on github.com using any of the following models:\n\n- GPT-5.1\n- GPT-5.1-Codex\n- GPT-5.1-Codex-Mini (in public preview)\n- GPT-5.1-Codex-Max\n- GPT-5.2-Codex\n\nYou may also opt out of this functionality by toggling off the setting titled **Copilot can search the web using model native search** in [Copilot settings](https://github.com/settings/copilot/features).\n\n### What’s next\n\nWe’ll be rolling out this functionality across more models and contexts across GitHub Copilot. Join the discussion in the [GitHub community](https://github.com/orgs/community/discussions/187783).",
+  "Link": "https://github.blog/changelog/2026-02-25-improved-web-search-in-copilot-on-github-com"
+}
