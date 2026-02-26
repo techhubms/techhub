@@ -12555,5 +12555,17 @@
     "canonical_url": "https://news.microsoft.com/source/emea/features/microsoft-365-copilot-ilunion-legal-team/",
     "reason": "No categories found: No categories assigned because the content is primarily about a legal team’s experience using Microsoft 365 Copilot, which is a business productivity tool. According to the Copilot Product Distinction rule in the Generic Exclusion Rules, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or similar business productivity/office tools is excluded, even if mentioned positively. There is no technical/development aspect, and Copilot here is described as a productivity enhancer for legal professionals, not as a developer or AI builder tool. Additionally, the rest of the content is biographical and organizational, not technical.",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. The content is an official product announcement about new Cloud PC devices designed for Windows 365 and partnerships with OEMs such as ASUS and Dell. While it mentions device management with Microsoft Intune and discusses security and manageability features, it does not contain development-oriented technical content, implementation guides, coding practices, DevOps workflows, or in-depth technical architecture that aligns with any of the predefined inclusion categories. The article is focused on organizational value, product features, and business-oriented positioning, and fits the Generic Exclusion Rules for 'corporate announcements and strategic initiatives without technical depth' and 'business strategy/executive content.' Therefore, all categories are excluded.",
+    "timestamp": "2026-02-26 18:14:21 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2026/02/26/announcing-new-cloud-pc-devices-designed-for-windows-365/"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2026-02-26 18:16:32 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-sre-agent/what-are-the-recommended-guardrails-for/m-p/4497599#M7"
   }
 ]

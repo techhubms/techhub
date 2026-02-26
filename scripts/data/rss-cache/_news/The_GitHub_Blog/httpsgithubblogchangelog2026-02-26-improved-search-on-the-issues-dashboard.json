@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-02-26 18:12:26",
+  "Title": "Improved search on the issues dashboard",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "The new GitHub Issues semantic search will be rolling out to public preview on the issues dashboard over the coming week, meaning you can use natural language to find relevant…\n\nThe post [Improved search on the issues dashboard](https://github.blog/changelog/2026-02-26-improved-search-on-the-issues-dashboard) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "PubDate": "2026-02-26T09:29:08+00:00",
+  "EnhancedContent": "The new GitHub Issues semantic search will be rolling out to public preview on the issues dashboard over the coming week, meaning you can use natural language to find relevant issues across repositories.\n\nThis follows our release in January of the improved search for the [issues index](https://github.blog/changelog/2026-01-29-improved-search-for-github-issues-in-public-preview/). After receiving positive feedback from the community, we’re bringing the same improved experience to the dashboard search, too.\n\n### Notes:\n\n- For searches that aren’t scoped to a specific repository, semantic search is limited to your top 100 repositories.\n- Filter-only searches and exact-match queries (e.g. using quotation marks) use lexical search.\n- You’ll see a preview banner on the issues dashboard, with an option to switch back to classic search.\n\nYou can leave your feedback in the [GitHub Community](https://github.com/orgs/community/discussions/188029).\n\n## Other improvements to GitHub Issues and Projects\n\n- Label and milestone pickers no longer show “Create new label/milestone” options to users who can apply labels but don’t have permission to create them.\n- Clicking **Create sub-issue** now shows a loading state while the form finishes loading, giving you instant feedback.\n- In GitHub Projects, we fixed a bug where assigning a third-party agent to an issue did not immediately trigger the agent to begin work. Agents will now start as expected upon assignment.\n- To improve site-wide page load times, GitHub Projects will no longer show a count in the top navigation bar as you’re browsing a repository.",
+  "Link": "https://github.blog/changelog/2026-02-26-improved-search-on-the-issues-dashboard",
+  "Tags": [
+    "Improvement",
+    "projects & issues"
+  ],
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog"
+}
