@@ -27202,5 +27202,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-access-a-shared-onedrive-folder-in-azure-logic-apps/ba-p/4484962",
     "timestamp": "2026-02-26 04:35:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-26 08:12:23 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content centrally features architectural and implementation details for integrating the GitHub Copilot SDK as a containerized AI agent (AI rule 1, GitHub Copilot rule 1/2). Coding is included since the post discusses Python, Node.js, containerization, and skill management as hands-on development practices (Coding rule 1/2). DevOps is assigned due to substantial coverage of Kubernetes deployments, health probes, resource configuration, and production recommendations (DevOps rule 1/5/6). The post does not qualify for Azure, ML, or Security: while best practices and integrations are discussed, there is no core Azure service or ML/data science focus, and security is covered only as hardening advice, not as principal topic. All critical inclusion/exclusion rules and hierarchy were followed.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-dual-sidecar-pod-combining-github-copilot-sdk-with/ba-p/4497080"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-26 08:12:53 +00:00",
+    "reason": "Succesfully added: Applied the AI category because the article's focus is on building and orchestrating a hybrid privacy-first AI application using Microsoft Foundry Local for on-device inference and Azure OpenAI Service for optional cloud refinement (AI rules 1, 3, 4). Azure category is included because the solution relies centrally on Azure OpenAI Service and integrates with Azure-managed identity and deployment practices (Azure rule 1, 3, 4). Coding category is warranted due to the extensive TypeScript/Next.js code samples, API design, and best practices for validation, error handling, and integration (Coding rules 1, 2, 4, 5). The article does not meet inclusion thresholds for DevOps (no focus on build/deploy pipelines, team workflow) or ML (not focused on custom ML/data science engineering), nor Security (focus is privacy/architecture, not technical security implementation). All generic exclusion rules fail: the content is highly technical, not biographical, sales-focused, or job-related, and is in English. Thus categories 'AI', 'Azure', and 'Coding' have been assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-privacy-first-hybrid-ai-briefing-tool-with-foundry/ba-p/4490535"
   }
 ]
