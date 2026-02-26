@@ -1,0 +1,17 @@
+{
+  "PubDate": "2026-02-26T22:36:48+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2026-02-26-github-actions-now-supports-uploading-and-downloading-non-zipped-artifacts",
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-02-26 23:06:45",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Title": "GitHub Actions now supports uploading and downloading non-zipped artifacts",
+  "Author": "Allison",
+  "Description": "GitHub Actions now supports uploading and downloading non-zipped artifacts within workflows. Previously, when you uploaded an artifact using the actions/upload-artifact action it was automatically zipped. Downloading it using the actions/download-artifact…\n\nThe post [GitHub Actions now supports uploading and downloading non-zipped artifacts](https://github.blog/changelog/2026-02-26-github-actions-now-supports-uploading-and-downloading-non-zipped-artifacts) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "actions",
+    "Improvement"
+  ],
+  "EnhancedContent": "GitHub Actions now supports uploading and downloading non-zipped artifacts within workflows. Previously, when you uploaded an artifact using the `actions/upload-artifact` action it was automatically zipped. Downloading it using the `actions/download-artifact` action or directly from the browser would download this file zipped. Many users found this additional compression frustrating and told us it added significant friction to their workflows.\n\nWe have added support to these actions so that you can upload unzipped artifacts and also download them unzipped. This solves three major problems that you raised to us:\n\n- You no longer have to unzip when downloading a single file via the browser.\n- If your browser supports viewing the file type natively, you can view files directly in your browser. This is great for simple HTML files (without links to CSS or JS), images, or markdown. This includes mobile browsers as well.\n- If you upload a compressed file to maintain permissions or reduce size, you no longer have a compressed file within another compressed file (i.e., the double zip problem).\n\nThese changes only apply to artifacts uploaded with `actions/upload-artifact` [v7](https://github.com/actions/upload-artifact/releases/tag/v7.0.0) where you have set the `archive` parameter to `false` . This value is currently defaulted to `true` for backwards compatibility. Previously uploaded artifacts and any artifacts uploaded with older versions of the action will continue to be zipped. You will also need to update to [v8](https://github.com/actions/download-artifact/releases/tag/v8.0.0) of `actions/download-artifact` if you use that action."
+}
