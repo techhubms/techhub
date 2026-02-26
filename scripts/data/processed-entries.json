@@ -27214,5 +27214,11 @@
     "timestamp": "2026-02-26 08:12:53 +00:00",
     "reason": "Succesfully added: Applied the AI category because the article's focus is on building and orchestrating a hybrid privacy-first AI application using Microsoft Foundry Local for on-device inference and Azure OpenAI Service for optional cloud refinement (AI rules 1, 3, 4). Azure category is included because the solution relies centrally on Azure OpenAI Service and integrates with Azure-managed identity and deployment practices (Azure rule 1, 3, 4). Coding category is warranted due to the extensive TypeScript/Next.js code samples, API design, and best practices for validation, error handling, and integration (Coding rules 1, 2, 4, 5). The article does not meet inclusion thresholds for DevOps (no focus on build/deploy pipelines, team workflow) or ML (not focused on custom ML/data science engineering), nor Security (focus is privacy/architecture, not technical security implementation). All generic exclusion rules fail: the content is highly technical, not biographical, sales-focused, or job-related, and is in English. Thus categories 'AI', 'Azure', and 'Coding' have been assigned.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-privacy-first-hybrid-ai-briefing-tool-with-foundry/ba-p/4490535"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-02-26 09:16:17 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/uLsM-wl6xUA",
+    "reason": "Succesfully added: The content is a technical overview of a new scalable ExpressRoute Gateway SKU, which is an Azure networking feature. Assigned the Azure category based on Azure Inclusion Rule 1 (Any Azure Service/Technology); content discusses enhancements to a core Azure networking service. No other categories apply, as there is no AI, coding, ML, DevOps, Security, or GitHub Copilot content present. Tags were chosen to reflect Azure networking, ExpressRoute, and gateway scalability focus."
   }
 ]
