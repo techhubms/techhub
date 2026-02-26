@@ -37,6 +37,9 @@ param webImageTag string = 'latest'
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
 
+@description('Optional custom domain for the web app (e.g. staging-tech.hub.ms). Leave empty to skip.')
+param webCustomDomain string = ''
+
 @description('PostgreSQL server name')
 param postgresServerName string = 'psql-techhub-${environmentName}'
 
@@ -156,11 +159,13 @@ module webApp './modules/web.bicep' = {
     location: location
     containerAppName: webAppName
     containerAppsEnvironmentId: containerAppsEnv.outputs.environmentId
+    containerAppsEnvironmentName: containerAppsEnvName
     containerRegistryName: containerRegistryName
     acrPullIdentityId: identity.outputs.identityId
     imageTag: webImageTag
     apiBaseUrl: apiApp.outputs.fqdn
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
+    customDomain: webCustomDomain
   }
 }
 

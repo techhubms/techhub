@@ -1,13 +1,32 @@
 param location string
 param containerAppName string
 param containerAppsEnvironmentId string
+param containerAppsEnvironmentName string
 param containerRegistryName string
 param acrPullIdentityId string
 param imageTag string
 param apiBaseUrl string
 param appInsightsConnectionString string
 
+@description('Optional custom domain (e.g. staging-tech.hub.ms). Leave empty to skip.')
+param customDomain string = ''
+
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
+
+// Managed certificate for custom domain (issued by Azure, auto-renewed)
+resource containerAppsEnv 'Microsoft.App/managedEnvironments@2025-01-01' existing = {
+  name: containerAppsEnvironmentName
+}
+
+resource managedCert 'Microsoft.App/managedEnvironments/managedCertificates@2025-01-01' = if (customDomain != '') {
+  parent: containerAppsEnv
+  name: 'cert-${replace(customDomain, '.', '-')}'
+  location: location
+  properties: {
+    subjectName: customDomain
+    domainControlValidation: 'CNAME'
+  }
+}
 
 resource web 'Microsoft.App/containerApps@2025-01-01' = {
   name: containerAppName
@@ -30,6 +49,13 @@ resource web 'Microsoft.App/containerApps@2025-01-01' = {
         stickySessions: {
           affinity: 'sticky'
         }
+        customDomains: customDomain != '' ? [
+          {
+            name: customDomain
+            bindingType: 'SniEnabled'
+            certificateId: managedCert.id
+          }
+        ] : []
       }
       registries: [
         {

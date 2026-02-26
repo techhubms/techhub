@@ -14,3 +14,5 @@ param vnetName = 'vnet-techhub-staging'
 param postgresServerName = 'psql-techhub-staging'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
+// Custom domain (requires CNAME + TXT record in GoDaddy DNS first)
+param webCustomDomain = 'staging-tech.hub.ms'
