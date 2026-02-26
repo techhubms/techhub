@@ -98,7 +98,7 @@ $envConfig = @{
     production = @{
         TemplatePath    = "infra/main.bicep"
         ParamsPath      = "infra/parameters/prod.bicepparam"
-        DefaultLocation = "westeurope"
+        DefaultLocation = "swedencentral"
         ResourceGroup   = "rg-techhub-prod"
         EnvSuffix       = "prod"
         # OpenAI deployed separately at resource-group level (Azure bug 715-123420)

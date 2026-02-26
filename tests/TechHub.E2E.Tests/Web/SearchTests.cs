@@ -215,8 +215,12 @@ public class SearchTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/github-copilot/blogs");
 
-        // Act - Type in search box
+        // Act - Type in search box.
+        // Wait for Blazor interactivity first — the search input renders as SSR HTML
+        // before the SignalR circuit connects and @oninput handlers are attached.
+        // Without this, FillAsync dispatches input events that Blazor never receives.
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
+        await searchInput.WaitForBlazorInteractivityAsync();
         await searchInput.FillAsync("copilot");
 
         // Wait for debounce + URL update.

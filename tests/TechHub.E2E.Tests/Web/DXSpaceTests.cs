@@ -154,9 +154,17 @@ public class DXSpaceTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Expand DevEx section
-        var devExHeader = Page.Locator(".dx-card-header").Filter(new() { HasText = "Developer Experience" }).First;
+        // Use the heading ID for precise targeting — HasText("Developer Experience")
+        // is too broad because other sections' content also mentions "Developer Experience".
+        var devExHeader = Page.Locator("button.dx-card-header:has(#dx-card-devex)");
         var devExContent = devExHeader.Locator("xpath=following-sibling::div[contains(@class, 'dx-card-content')]").First;
+
+        // Wait for custom-pages.js to register the click handler on this header.
+        // The script sets data-initialized="true" after attaching the event listener.
+        // Without this wait, Force=true click dispatches before the handler exists.
+        await Assertions.Expect(devExHeader).ToHaveAttributeAsync("data-initialized", "true");
+
+        // Expand DevEx section
         await devExHeader.ClickBlazorElementAsync(waitForUrlChange: false);
         await Assertions.Expect(devExContent).ToHaveClassAsync(
             new System.Text.RegularExpressions.Regex("expanded"));

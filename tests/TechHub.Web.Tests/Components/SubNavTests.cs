@@ -73,6 +73,76 @@ public class SubNavTests : BunitContext
         // Assert - Should render homepage subnav
         var nav = cut.Find("nav.sub-nav.sub-nav-homepage");
         nav.Should().NotBeNull();
+        nav.GetAttribute("aria-label").Should().Be("Site navigation");
+    }
+
+    [Fact]
+    public void SubNav_WithSections_DropdownToggle_ShowsHomeAsActiveLabel()
+    {
+        // Arrange
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections));
+
+        // Assert - Default active label should be "Home" (since bUnit's default URL is "/")
+        var toggleButton = cut.Find(".sub-nav-dropdown-toggle");
+        toggleButton.TextContent.Should().Contain("Home");
+    }
+
+    [Fact]
+    public void SubNav_WithSections_DropdownMenu_ContainsHomeAndAboutUs()
+    {
+        // Arrange
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")]),
+            new("github-copilot", "GitHub Copilot", "Copilot", "/github-copilot", "GitHub Copilot",
+                [new Collection("news", "News", "/github-copilot/news", "Latest news", "News")])
+        };
+
+        // Act - Render and open the dropdown
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections));
+        cut.Find(".sub-nav-dropdown-toggle").Click();
+
+        // Assert - Should contain Home, sections, and About Us
+        var items = cut.FindAll(".sub-nav-dropdown-item");
+        items.Should().HaveCount(4, "Home + 2 sections + About Us");
+        items[0].TextContent.Trim().Should().Be("Home");
+        items[1].TextContent.Trim().Should().Be("Artificial Intelligence");
+        items[2].TextContent.Trim().Should().Be("GitHub Copilot");
+        items[3].TextContent.Trim().Should().Be("About Us");
+    }
+
+    [Fact]
+    public void SubNav_WithSections_OnHomepage_HomeIsActive()
+    {
+        // Arrange - bUnit default URL is "http://localhost/" which maps to Home
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act - Render and open dropdown
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections));
+        cut.Find(".sub-nav-dropdown-toggle").Click();
+
+        // Assert - Home link should have active class
+        var homeLink = cut.Find(".sub-nav-dropdown-item[href='/']");
+        homeLink.ClassList.Should().Contain("active");
+
+        // About Us should NOT be active
+        var aboutLink = cut.Find(".sub-nav-dropdown-item[href='/about']");
+        aboutLink.ClassList.Should().NotContain("active");
     }
 
     [Fact]

@@ -15,6 +15,7 @@
     margin-right: 0;
     transition: height 0.3s ease;
     overflow: hidden;
+    border-bottom: 1px solid var(--color-border-default);
     /* Background images are set via CSS classes (e.g., .section-banner-bg-ai) */
     /* Full-size images used for banners for quality */
     background-size: cover;

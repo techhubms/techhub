@@ -337,8 +337,15 @@ public class NavigationTests : PlaywrightTestBase
         var aboutBookLink = tocLinks.Filter(new() { HasText = "About the Book" }).First;
         await aboutBookLink.ClickBlazorElementAsync(waitForUrlChange: false);
 
-        // Wait for the clicked link to become active using Playwright's expect with retry
-        await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"));
+        // Wait for scroll to finish and scroll-spy to update the active heading.
+        // The scroll-spy uses scrollend + RAF throttling, so we need to wait for
+        // the heading to reach the detection line and the active class to be applied.
+        await Page.WaitForConditionAsync(
+            "() => !document.querySelector('[data-toc-scroll-spy]') || document.querySelector('[data-toc-scroll-spy] a.toc-link.active') !== null");
+
+        // Wait for the clicked link specifically to become active
+        await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"),
+            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
 
         // Assert - The clicked TOC link should become active (highlighted)
         var activeClass = await aboutBookLink.GetAttributeAsync("class");

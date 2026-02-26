@@ -15,6 +15,12 @@
   box-sizing: border-box;
 }
 
+/* Scrollbar styling:
+   - scrollbar-color: inherited, applies to all browsers
+   - scrollbar-width: NOT inherited, set per-element where needed
+   - Desktop: auto width so ::-webkit-scrollbar rules apply in Chrome/Edge/Safari
+   - Mobile: thin width (Chrome 121+ ignores ::-webkit-scrollbar when thin is set)
+   - Firefox: uses scrollbar-color + scrollbar-width natively */
 html {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -24,6 +30,7 @@ html {
   background-attachment: fixed;
   overscroll-behavior-y: none;
   scrollbar-width: auto;
+  scrollbar-color: var(--color-border-default) var(--color-bg-default);
 }
 
 /* Mobile/tablet: jump to just below sticky nav bars */
@@ -58,16 +65,6 @@ body {
   body {
     border-right: 1px solid var(--color-border-default);
   }
-}
-
-/* Scrollbar styling:
-   - Standard: scrollbar-color applies to all browsers (Firefox natively,
-     Chrome/Edge 121+ when scrollbar-width: thin overrides webkit rules)
-   - Chrome/Edge/Safari: ::-webkit-scrollbar provides enhanced control on desktop */
-
-/* Standard scrollbar colors - works in all browsers */
-html {
-  scrollbar-color: var(--color-border-default) var(--color-bg-default);
 }
 
 /* Chrome/Edge/Safari: full control with hover state */

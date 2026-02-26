@@ -1,6 +1,6 @@
 using '../main.bicep'
 
-param location = 'westeurope'
+param location = 'swedencentral'
 param environmentName = 'prod'
 param resourceGroupName = 'rg-techhub-prod'
 param appInsightsName = 'appi-techhub-prod'

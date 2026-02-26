@@ -141,10 +141,12 @@
     }
 }
 
-/* Homepage SubNav: collapse on desktop,
-   only show the mobile dropdown on mobile */
+/* Homepage SubNav: fully hidden on desktop,
+   only show the mobile dropdown on tablet/mobile */
 .sub-nav-homepage {
     padding: 0;
+    min-height: 0;
+    border-bottom: none;
     background: transparent;
 }
 

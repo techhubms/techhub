@@ -171,15 +171,21 @@ public class TabOrderingTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
+        // Ensure the skip link's IIFE click handler is registered before interacting.
+        // The handler sets window.__skipLinkInitialized = true after attaching the
+        // document-level click listener. Under CI load, script execution can be delayed.
+        await Page.WaitForConditionAsync(
+            "() => window.__skipLinkInitialized === true",
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultPageLoadTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+
         // Act - Tab to skip link and press Enter
         await Page.Keyboard.PressAsync("Tab"); // Focus skip link
         await Page.Keyboard.PressAsync("Enter"); // Activate skip link
 
         // Wait for focus to move to the target element (#skiptohere heading).
         // The skip link's inline JS handler calls heading.focus({ preventScroll: true }).
-        // Uses DefaultPageLoadTimeout (10s) because the IIFE script must have registered
-        // the click handler, and under full Run load the keyboard event → click → focus
-        // chain can be delayed.
+        // Uses DefaultPageLoadTimeout (10s) because under full Run load the keyboard
+        // event → click → focus chain can be delayed.
         // IMPORTANT: Do NOT accept document.body — if focus lands on body, the subsequent
         // Tab press goes to the skip link (outside main), causing a cascading timeout.
         await Page.WaitForFunctionAsync(

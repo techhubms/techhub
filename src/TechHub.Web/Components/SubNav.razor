@@ -78,9 +78,9 @@
 }
 else if (Sections != null && Sections.Any())
 {
-    @* Homepage SubNav: show sections as navigation items *@
-    <nav class="sub-nav sub-nav-homepage" aria-label="Sections navigation">
-        @* Desktop: horizontal button bar (hidden on homepage via CSS) *@
+    @* Homepage/About SubNav: collapsed on desktop, dropdown on tablet/mobile *@
+    <nav class="sub-nav sub-nav-homepage" aria-label="Site navigation">
+        @* Desktop: horizontal button bar (hidden on homepage/about via CSS) *@
         <div class="sub-nav-wrapper">
             @foreach (var sectionItem in Sections)
             {
@@ -91,15 +91,18 @@ else if (Sections != null && Sections.Any())
             }
         </div>
 
-        @* Mobile: dropdown showing sections *@
+        @* Tablet/Mobile: dropdown showing current page + all navigation *@
         <div class="sub-nav-mobile">
             <button class="sub-nav-dropdown-toggle" @onclick="ToggleDropdown" aria-expanded="@(dropdownOpen ? "true" : "false")">
-                <span>Home</span>
+                <span>@HomepageActiveLabel</span>
                 <span class="sub-nav-chevron @(dropdownOpen ? "expanded" : "")"></span>
             </button>
             @if (dropdownOpen)
             {
                 <div class="sub-nav-dropdown-menu">
+                    <a href="/" class="sub-nav-dropdown-item @(IsActivePage("/") ? "active" : "")" @onclick="CloseDropdown">
+                        Home
+                    </a>
                     @foreach (var sectionItem in Sections)
                     {
                         var url = $"/{sectionItem.Name}";
@@ -107,6 +110,9 @@ else if (Sections != null && Sections.Any())
                             @sectionItem.Title
                         </a>
                     }
+                    <a href="/about" class="sub-nav-dropdown-item @(IsActivePage("/about") ? "active" : "")" @onclick="CloseDropdown">
+                        About Us
+                    </a>
                 </div>
             }
         </div>
@@ -154,6 +160,33 @@ else if (Sections != null && Sections.Any())
 
             return "All";
         }
+    }
+
+    private string HomepageActiveLabel
+    {
+        get
+        {
+            var currentUri = new Uri(Navigation.Uri);
+            var currentPath = currentUri.AbsolutePath.TrimEnd('/');
+
+            if (string.Equals(currentPath, "/about", StringComparison.OrdinalIgnoreCase))
+                return "About Us";
+
+            return "Home";
+        }
+    }
+
+    private bool IsActivePage(string path)
+    {
+        var currentUri = new Uri(Navigation.Uri);
+        var currentPath = currentUri.AbsolutePath.TrimEnd('/');
+        var targetPath = path.TrimEnd('/');
+
+        // Home page: match empty path
+        if (string.IsNullOrEmpty(targetPath))
+            return string.IsNullOrEmpty(currentPath);
+
+        return string.Equals(currentPath, targetPath, StringComparison.OrdinalIgnoreCase);
     }
 
     private void ToggleDropdown() => dropdownOpen = !dropdownOpen;

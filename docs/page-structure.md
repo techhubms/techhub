@@ -353,6 +353,8 @@ The SubNav remains sticky on mobile but switches from a horizontal button bar to
 - Clicking opens an absolute-positioned menu with all collection and custom page links
 - Each dropdown item has `min-height: 44px` touch target
 
+**Homepage and About page**: On desktop the SubNav is completely hidden. On mobile/tablet (≤ 1292px) a dropdown appears showing "Home" or "About Us" as the active label. The dropdown menu includes Home, all sections, and About Us — matching the hamburger menu structure.
+
 ### Sidebar Toolbar (`MobileSidebarToolbar` + `MobileSidebarPanel`)
 
 On mobile, sidebar content is organized into individually toggleable panels accessed via a button toolbar (see [Sidebar Component Architecture](#sidebar-component-architecture) for the Razor composition pattern).
