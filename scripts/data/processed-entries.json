@@ -27364,5 +27364,17 @@
     "timestamp": "2026-02-26 21:11:54 +00:00",
     "reason": "Succesfully added: The content is a community announcement describing the general availability of Oracle Database@Azure in West Europe. It meets the threshold for the Azure category because Microsoft Azure is absolutely central to the solution (Azure inclusion rule 1: 'Any Azure Service/Technology'). While the article references AI and analytics as possible integrations, there are no technical details covered for AI or ML implementations (so the AI/ML categories are not added). The content is not coding-focused (no development patterns or language details), so Coding and DevOps categories do not apply. Security and compliance are discussed as outcomes, but there is no in-depth technical implementation or configuration, so Security category is not used. All generic exclusion rules were reviewed and do not apply, as the post is technical, in English, of sufficient length, avoids business-only or biographical focus, and is relevant to technical practitioners.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-is-now-generally-available-in-west-europe/ba-p/4497632"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Included 'AI' because the announcement centers on enterprise AI governance capabilities and oversight of AI-powered agents (AI inclusion rule 1 and 4). 'GitHub Copilot' is included because the controls specifically target Copilot usage, agent management, and administrative policies in the GitHub Copilot ecosystem (GitHub Copilot inclusion rule 1 and 2). No other categories apply as there is no direct coverage of coding, DevOps processes, Azure services, ML engineering, or security implementations. The content is news about technical enterprise administration tools—no generic exclusions apply, and Copilot is clearly developer-focused, not productivity-focused.",
+    "canonical_url": "https://github.blog/changelog/2026-02-26-enterprise-ai-controls-agent-control-plane-now-generally-available",
+    "timestamp": "2026-02-26 22:06:28 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Coding category because the content focuses on writing DevOps/build scripts in C# using Cake.Sdk (Coding rule 1 and 2). Assigned DevOps category due to emphasis on build automation, CI/CD, and scripting practices (DevOps rules 1, 5, 6). Did not assign Azure, AI, ML, Security, or GitHub Copilot categories as there is no mention or central focus on those topics. Content clearly addresses technical implementation (not business or general productivity), follows all inclusion rules, and does not trigger any generic exclusion criteria.",
+    "canonical_url": "https://www.youtube.com/watch?v=GGeLgFeKZps",
+    "timestamp": "2026-02-26 22:07:09 +00:00"
   }
 ]
