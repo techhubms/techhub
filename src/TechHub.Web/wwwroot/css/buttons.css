@@ -80,7 +80,7 @@
 .btn-subnav:hover {
   background: var(--color-bg-hover-subtle);
   box-shadow: 0 0 0 1px var(--color-purple-bright) inset;
-  color: var(--color-text-primary);
+  color: var(--color-text-emphasis);
   text-decoration: none;
 }
 
@@ -120,6 +120,10 @@
 }
 
 /* Custom page sparkle indicator — subtle star after custom page links */
+.btn-subnav-custom {
+  border-color: var(--color-purple-bright);
+}
+
 .btn-subnav-custom::after {
   content: '✦';
   font-size: 0.85em;

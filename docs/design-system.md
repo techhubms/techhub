@@ -110,10 +110,10 @@ The layout uses two main breakpoints that control navigation, sidebar, and grid 
 | Name | Width | Usage |
 |------|-------|-------|
 | Mobile | <= 768px | Single column, reduced padding, secondary layout reductions |
-| Tablet | 769px - 1288px | Single column, hamburger menu, sidebar toolbar, dropdown SubNav |
-| Desktop | > 1288px | Full sidebar + content grid, horizontal nav, border-right on body |
+| Tablet | 769px - 1292px | Single column, hamburger menu, sidebar toolbar, dropdown SubNav |
+| Desktop | > 1292px | Full sidebar + content grid, horizontal nav, border-right on body |
 
-The primary layout switch between collapsed (mobile/tablet) and expanded (desktop) happens at **1288px**. The 768px breakpoint provides additional padding and font-size reductions for smaller screens.
+The primary layout switch between collapsed (mobile/tablet) and expanded (desktop) happens at **1292px**. The 768px breakpoint provides additional padding and font-size reductions for smaller screens.
 
 **Note**: CSS custom properties cannot be used in media queries, so breakpoint values are hardcoded in `@media` rules. The design tokens (`--breakpoint-mobile`, `--breakpoint-tablet`) serve as reference documentation only.
 

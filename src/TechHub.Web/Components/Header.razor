@@ -4,17 +4,16 @@
 
 @* 
    Header Component - Complete site header structure
+   Rendered by MainLayout.razor (not by individual pages).
    
-   Usage:
-     With section name (section/collection pages):
-       <Header SectionName="ai" />
+   Usage (via MainLayout):
+     With section name (section/collection/content pages):
+       <Header SectionName="ai" RssFeedUrl="/ai/feed.xml" />
      
-     With custom banner content (home page):
-       <Header>
-           <SectionBanner Title="..." Description="..." />
-       </Header>
+     With custom banner (home, about, not-found, error pages):
+       <Header CustomBannerTitle="Tech Hub" CustomBannerDescription="..." RssFeedUrl="/all/feed.xml" />
      
-     Without section/banner (about, error pages):
+     Without section/banner (fallback):
        <Header />
 *@
 
@@ -33,6 +32,11 @@
         {
             <SubNav />
         }
+    }
+    else if (!string.IsNullOrEmpty(CustomBannerTitle))
+    {
+        <SectionBanner Title="@CustomBannerTitle" Description="@CustomBannerDescription" RssFeedUrl="@RssFeedUrl" />
+        <SubNav Sections="@SectionCache.Sections" />
     }
     else if (ChildContent != null)
     {
@@ -54,6 +58,19 @@
     /// </summary>
     [Parameter]
     public string? RssFeedUrl { get; set; }
+
+    /// <summary>
+    /// Optional custom banner title (used by MainLayout for special pages like Home, About, etc.).
+    /// When set without SectionName, renders a SectionBanner with this title.
+    /// </summary>
+    [Parameter]
+    public string? CustomBannerTitle { get; set; }
+
+    /// <summary>
+    /// Optional custom banner description (used with CustomBannerTitle).
+    /// </summary>
+    [Parameter]
+    public string? CustomBannerDescription { get; set; }
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }

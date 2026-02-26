@@ -16,7 +16,7 @@
 }
 
 html {
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: auto;
   background-color: var(--color-bg-gradient-end);
@@ -27,7 +27,7 @@ html {
 }
 
 /* Mobile/tablet: jump to just below sticky nav bars */
-@media (max-width: 1288px) {
+@media (max-width: 1292px) {
   :root {
     --scroll-margin-top: calc(var(--mobile-nav-height) + var(--spacing-1) + 44px + var(--spacing-2));
   }
@@ -54,7 +54,7 @@ body {
 }
 
 /* Body border-right - only on desktop viewports */
-@media (min-width: 1289px) {
+@media (min-width: 1293px) {
   body {
     border-right: 1px solid var(--color-border-default);
   }
@@ -91,7 +91,7 @@ html {
   }
 
   /* Tablet and below: thinner scrollbar to save screen space */
-  @media (max-width: 1288px) {
+  @media (max-width: 1292px) {
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -393,7 +393,7 @@ img {
   text-align: left;
 }
 
-@media (max-width: 1288px) {
+@media (max-width: 1292px) {
   .page-h1 {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--spacing-3);

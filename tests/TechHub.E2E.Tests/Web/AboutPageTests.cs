@@ -14,7 +14,7 @@ public class AboutPageTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/about");
 
         // Assert - Check page title attribute
-        await Assertions.Expect(Page).ToHaveTitleAsync("About - Tech Hub");
+        await Assertions.Expect(Page).ToHaveTitleAsync("About Us - Tech Hub");
     }
 
     [Fact]

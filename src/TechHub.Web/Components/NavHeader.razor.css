@@ -13,16 +13,16 @@
   background: var(--color-bg-default);
   border-bottom: 1px solid var(--color-border-default);
   width: 100%;
+  min-height: var(--main-nav-height);
 }
 
 .main-nav-content {
-  max-width: var(--max-width-content);
+  max-width: var(--breakpoint-tablet);
   margin: 0 auto;
-  padding: var(--spacing-2) var(--spacing-4);
+  padding: 0 var(--spacing-4);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--spacing-4);
+  justify-content: space-between;
   min-height: 76px;
 }
 
@@ -45,13 +45,13 @@
 }
 
 .site-logo .logo-text {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   margin: 0;
 }
 
 /* Subtle purple underline on homepage logo (desktop only) */
-@media (min-width: 1289px) {
+@media (min-width: 1293px) {
   .site-logo.home-active .logo-text {
     background-image: linear-gradient(var(--color-purple-dark), var(--color-purple-dark));
     background-size: 100% 2px;
@@ -99,6 +99,9 @@
 
 .about-link {
   margin-left: auto;
+  border: 1px solid var(--color-purple-bright);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-1) var(--spacing-3);
 }
 
 /* ============================================================================
@@ -331,13 +334,14 @@
 }
 
 /* ============================================================================
-   Responsive - Mobile (≤1288px)
+   Responsive - Mobile (≤1292px)
    ============================================================================ */
 
-@media (max-width: 1288px) {
+@media (max-width: 1292px) {
   /* Nav header sits above mobile menu so hamburger remains clickable when menu is open */
   .main-nav {
     z-index: 1002;
+    min-height: var(--mobile-nav-height);
   }
 
   .main-nav-content {

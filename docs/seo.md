@@ -110,13 +110,7 @@ Use the excerpt as the meta description:
 
 ## Canonical URLs
 
-Ensure each page has a canonical URL to prevent duplicate content issues:
-
-```razor
-<HeadContent>
-    <link rel="canonical" href="https://tech.hub.ms@Item.GetPrimarySectionUrl()" />
-</HeadContent>
-```
+Every page automatically receives a canonical URL via `MainLayout.razor`. The layout computes the canonical URL by normalizing the current path (lowercased, query parameters stripped) and combining it with the base URI. Individual pages do not need to add their own canonical tags.
 
 ## Open Graph Tags
 
@@ -147,20 +141,9 @@ For Twitter/X sharing:
 
 ## RSS Feeds
 
-RSS feeds enable content syndication and feed readers.
+RSS feeds enable content syndication and feed readers. RSS `<link>` tags are automatically rendered by `MainLayout.razor` for pages that have an associated feed (section pages and the homepage). The layout determines the correct feed URL from the current URL and SectionCache.
 
 See [rss-feeds.md](rss-feeds.md) for RSS endpoint documentation.
-
-RSS `<link>` tags in `<head>`:
-
-```html
-<link rel="alternate" type="application/rss+xml" 
-      title="Tech Hub - All Content" 
-      href="/all/feed.xml" />
-<link rel="alternate" type="application/rss+xml" 
-      title="Tech Hub - AI" 
-      href="/ai/feed.xml" />
-```
 
 ## Semantic HTML
 

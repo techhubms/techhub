@@ -8,15 +8,6 @@
 
 <PageTitle>@PageTitleText</PageTitle>
 
-<HeadContent>
-    <link rel="alternate" type="application/rss+xml" title="Tech Hub - @(section?.Title ?? SectionName) - RSS Feed"
-        href="@($"/{SectionName}/feed.xml")" />
-</HeadContent>
-
-<SkipLink />
-
-<Header SectionName="@SectionName" RssFeedUrl="@($"/{SectionName}/feed.xml")" />
-
 <main class="page-with-sidebar">
     <aside class="sidebar">
         <MobileSidebarToolbar>

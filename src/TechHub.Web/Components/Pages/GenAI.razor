@@ -16,14 +16,6 @@
 
 @if (pageData != null)
 {
-    <HeadContent>
-        <link rel="canonical" href="@GetCanonicalUrl()" />
-    </HeadContent>
-
-    <SkipLink />
-
-    <Header SectionName="ai" />
-
     <main class="page-with-sidebar">
         <aside class="sidebar">
             <MobileSidebarToolbar>
@@ -113,14 +105,6 @@
         if (path.Contains("genai-advanced")) return "advanced";
 
         return "basics"; // fallback
-    }
-
-    /// <summary>
-    /// Get canonical URL based on page type
-    /// </summary>
-    private string GetCanonicalUrl()
-    {
-        return $"{Navigation.BaseUri.TrimEnd('/')}/ai/genai-{PageType}";
     }
 
     /// <summary>

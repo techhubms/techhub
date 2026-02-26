@@ -13,11 +13,12 @@
    - JavaScript dynamically adds tabindex=-1 for focus, then removes it
    
    Usage:
-     Place BEFORE <Header> component on all pages:
+     Rendered automatically by MainLayout before <Header>:
      
+     <!-- MainLayout.razor -->
      <SkipLink />
-     <Header SectionName="..." />
-     <main>
+     <Header ... />
+     @Body
        <h1 id="skiptohere" class="page-h1">Page Title</h1>
        ...
      </main>

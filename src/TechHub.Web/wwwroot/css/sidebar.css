@@ -145,7 +145,7 @@
 /* Desktop: Make toolbar and panel wrappers invisible to layout, hide buttons.
    display:contents removes the element from the box tree so children (e.g. SidebarToc
    with position:sticky) participate directly in the sidebar's layout context. */
-@media (min-width: 1289px) {
+@media (min-width: 1293px) {
   .sidebar-toolbar {
     display: contents;
   }
@@ -177,7 +177,7 @@
 }
 
 /* Mobile: Show toolbar buttons, panels hidden by default */
-@media (max-width: 1288px) {
+@media (max-width: 1292px) {
   .sidebar {
     position: static;
     min-width: 0;

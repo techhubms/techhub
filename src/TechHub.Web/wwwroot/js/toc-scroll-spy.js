@@ -398,7 +398,7 @@ export class TocScrollSpy {
  * Initialize all TOC scroll spies on the page
  */
 export function initTocScrollSpy() {
-    const TABLET_BREAKPOINT = 1288;
+    const TABLET_BREAKPOINT = 1292;
     const isMobile = window.innerWidth <= TABLET_BREAKPOINT;
     const tocElements = document.querySelectorAll('[data-toc-scroll-spy]');
 

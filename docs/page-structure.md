@@ -6,31 +6,42 @@ This document describes the semantic HTML structure, page layouts, and component
 
 All pages use proper semantic HTML5 elements for accessibility, SEO, and maintainability.
 
+### Layout-Level Structure
+
+The `MainLayout.razor` component renders elements shared across all pages:
+
+- **SkipLink** - Accessibility bypass for keyboard users (WCAG 2.4.1)
+- **Header** - Site navigation (NavHeader + SectionBanner + SubNav), automatically configured from the current URL and SectionCache
+- **HeadContent** - Canonical URL and RSS feed `<link>` tags, derived from the current URL
+- **Footer** - Site footer
+
+Individual pages only render their `<main>` content area. They do not include `<SkipLink />`, `<Header>`, or `<HeadContent>` for canonical/RSS links.
+
 ### Required Structure by Page Type
 
 **Homepage** (`Home.razor`):
 
 ```html
 <html>
-  <header>                           <!-- Site navigation (NavHeader + SectionBanner) -->
+  <header>                           <!-- Rendered by MainLayout (NavHeader + SectionBanner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
     <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Latest, Tags -->
     <section class="home-main-content">  <!-- Section cards grid -->
   </main>
-  <footer>                           <!-- Site footer -->
+  <footer>                           <!-- Rendered by MainLayout -->
 </html>
 ```
 
-**Section Pages** (`Section.razor`, `SectionCollection.razor`):
+**Section Pages** (`SectionCollection.razor`):
 
 ```html
 <html>
-  <header>                           <!-- Site navigation + section banner -->
+  <header>                           <!-- Rendered by MainLayout (NavHeader + section banner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
     <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Search, Date, Tags -->
     <section>                        <!-- Content items grid -->
   </main>
-  <footer>                           <!-- Site footer -->
+  <footer>                           <!-- Rendered by MainLayout -->
 </html>
 ```
 
@@ -38,12 +49,12 @@ All pages use proper semantic HTML5 elements for accessibility, SEO, and maintai
 
 ```html
 <html>
-  <header>                           <!-- Site navigation + section banner -->
+  <header>                           <!-- Rendered by MainLayout (NavHeader + section banner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
     <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Tags, Table of Contents -->
     <article>                        <!-- Individual content item -->
   </main>
-  <footer>                           <!-- Site footer -->
+  <footer>                           <!-- Rendered by MainLayout -->
 </html>
 ```
 
@@ -51,12 +62,12 @@ All pages use proper semantic HTML5 elements for accessibility, SEO, and maintai
 
 ```html
 <html>
-  <header>                           <!-- Site navigation + section banner -->
+  <header>                           <!-- Rendered by MainLayout (NavHeader + section banner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
     <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Table of Contents (+ others per page) -->
     <article class="article-body">   <!-- Selected video/content -->
   </main>
-  <footer>                           <!-- Site footer -->
+  <footer>                           <!-- Rendered by MainLayout -->
 </html>
 ```
 
@@ -64,11 +75,11 @@ All pages use proper semantic HTML5 elements for accessibility, SEO, and maintai
 
 ```html
 <html>
-  <header>                           <!-- Site navigation + section banner -->
+  <header>                           <!-- Rendered by MainLayout (NavHeader + section banner) -->
   <main class="page-without-sidebar">  <!-- Main content wrapper (no sidebar) -->
     <section>                        <!-- Team member grid -->
   </main>
-  <footer>                           <!-- Site footer -->
+  <footer>                           <!-- Rendered by MainLayout -->
 </html>
 ```
 
@@ -148,7 +159,7 @@ header {
     position: sticky;
     top: 76px;          /* Desktop: sticks below main-nav (76px = main-nav height) */
     z-index: 999;       /* Slightly lower than main-nav */
-    /* Mobile (≤ 1288px): top: 59px to sit below compact header */
+    /* Mobile (≤ 1292px): top: 59px to sit below compact header */
 }
 ```
 
@@ -271,7 +282,7 @@ Use CSS Grid with three independently-loading components that maintain stable po
 
 ## Mobile Navigation
 
-On mobile devices (≤ 1288px), the layout adapts with a hamburger menu, dropdown SubNav, and a sidebar toolbar with expandable panels.
+On mobile devices (≤ 1292px), the layout adapts with a hamburger menu, dropdown SubNav, and a sidebar toolbar with expandable panels.
 
 ### Responsive Behavior
 
@@ -285,7 +296,7 @@ On mobile devices (≤ 1288px), the layout adapts with a hamburger menu, dropdow
 
 | Breakpoint | Behavior |
 |---|---|
-| ≤ 1288px | Hamburger menu, compact header (~50px), SubNav dropdown, sidebar toolbar, single-column grid |
+| ≤ 1292px | Hamburger menu, compact header (~50px), SubNav dropdown, sidebar toolbar, single-column grid |
 | ≤ 768px | Reduced padding, secondary layout adjustments |
 
 ### Hamburger Menu
@@ -330,7 +341,7 @@ The `.main-nav` z-index is raised to 1002 on mobile so the hamburger button rema
 
 ### Compact Header
 
-On mobile (≤ 1288px) the NavHeader shrinks to ~50px (`min-height`) showing only the logo and hamburger button. On desktop (> 1288px) the full 76px header with horizontal nav links is displayed.
+On mobile (≤ 1292px) the NavHeader shrinks to ~50px (`min-height`) showing only the logo and hamburger button. On desktop (> 1292px) the full 76px header with horizontal nav links is displayed.
 
 ### SubNav on Mobile
 
@@ -348,8 +359,8 @@ On mobile, sidebar content is organized into individually toggleable panels acce
 
 **How it works**:
 
-- **Desktop (> 1288px)**: Toolbar uses `display: contents`, buttons are `display: none` — all panels are always visible as a standard 300px sidebar column
-- **Mobile (≤ 1288px)**: A horizontal scrollable button bar appears with icon + label for each panel. All panels are hidden by default. Clicking a button toggles that panel; only one panel can be open at a time
+- **Desktop (> 1292px)**: Toolbar uses `display: contents`, buttons are `display: none` — all panels are always visible as a standard 300px sidebar column
+- **Mobile (≤ 1292px)**: A horizontal scrollable button bar appears with icon + label for each panel. All panels are hidden by default. Clicking a button toggles that panel; only one panel can be open at a time
 
 **Available icons**: `search`, `calendar`, `tags`, `rss`, `toc`, `latest`, `updates`, `filter`
 
@@ -370,8 +381,8 @@ On mobile, sidebar content is organized into individually toggleable panels acce
 
 Mobile navigation styles are in component-scoped CSS:
 
-- **Hamburger + menu panel**: `NavHeader.razor.css` — all mobile styles in `@media (max-width: 1288px)` block
-- **SubNav dropdown**: `SubNav.razor.css` — dropdown toggle and menu at `@media (max-width: 1288px)`
+- **Hamburger + menu panel**: `NavHeader.razor.css` — all mobile styles in `@media (max-width: 1292px)` block
+- **SubNav dropdown**: `SubNav.razor.css` — dropdown toggle and menu at `@media (max-width: 1292px)`
 - **Sidebar toolbar + panels**: `wwwroot/css/sidebar.css` — toolbar button bar visibility, panel show/hide
 - **JS scroll lock**: `wwwroot/js/mobile-nav.js` — `lockScroll()` / `unlockScroll()` for body positioning during menu open
 - **Reduced motion**: All animations respect `prefers-reduced-motion: reduce`

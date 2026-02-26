@@ -15,13 +15,8 @@
     /* Allow dropdown menu to overflow on desktop;
        mobile override below handles the dropdown case */
     overflow: visible;
-}
-
-/* Empty SubNav for homepage - collapsed, only border visible */
-.sub-nav-empty {
-    padding: 0;
-    background: transparent;
-    margin-bottom: var(--spacing-4);
+    /* Reserve height to prevent layout shift before buttons render */
+    min-height: var(--sub-nav-height);
 }
 
 .sub-nav-wrapper {
@@ -41,12 +36,13 @@
 }
 
 /* Mobile: SubNav becomes a dropdown */
-@media (max-width: 1288px) {
+@media (max-width: 1292px) {
     .sub-nav {
         position: sticky;
         top: var(--mobile-nav-height);
         padding: 0;
         margin-bottom: var(--spacing-2);
+        min-height: var(--touch-target-min-size);
     }
 
     .sub-nav-wrapper {
@@ -145,7 +141,7 @@
     }
 }
 
-/* Homepage SubNav: collapse on desktop (like sub-nav-empty),
+/* Homepage SubNav: collapse on desktop,
    only show the mobile dropdown on mobile */
 .sub-nav-homepage {
     padding: 0;
@@ -160,7 +156,7 @@
     display: none;
 }
 
-@media (max-width: 1288px) {
+@media (max-width: 1292px) {
     .sub-nav-homepage {
         padding: 0;
     }

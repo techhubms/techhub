@@ -12,7 +12,7 @@
   /* Sticky header heights for scroll margin calculations */
   --main-nav-height: 76px;        /* Desktop: main navigation bar height */
   --mobile-nav-height: 64px;      /* Mobile: main navigation bar height */
-  --sub-nav-height: 50px;         /* Sub-navigation bar height */
+  --sub-nav-height: 63px;         /* Sub-navigation bar height (with buttons rendered) */
   --sticky-header-height: calc(var(--main-nav-height) + var(--sub-nav-height) + 16px); /* Total sticky height + padding */
 
   --scroll-margin-top: calc(106px + (100vh - 106px) * 0.30); /* Scroll spy: 30% from top of content area (desktop) */
@@ -220,7 +220,7 @@
      ----------------------------------------------------------------------- */
 
   --breakpoint-mobile: 768px;
-  --breakpoint-tablet: 1288px;
+  --breakpoint-tablet: 1292px;
   --breakpoint-desktop: 1280px;
 
   /* -----------------------------------------------------------------------

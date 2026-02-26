@@ -1,4 +1,23 @@
 ﻿@inherits LayoutComponentBase
+@using TechHub.Web.Services
+@inject NavigationManager Navigation
+@inject SectionCache SectionCache
+@implements IDisposable
+
+<SkipLink />
+
+<HeadContent>
+    <link rel="canonical" href="@_canonicalUrl" />
+    @if (!string.IsNullOrEmpty(_currentRssFeedUrl))
+    {
+        <link rel="alternate" type="application/rss+xml" title="@_rssFeedTitle" href="@_currentRssFeedUrl" />
+    }
+</HeadContent>
+
+<Header SectionName="@_currentSectionName"
+        RssFeedUrl="@_currentRssFeedUrl"
+        CustomBannerTitle="@_customBannerTitle"
+        CustomBannerDescription="@_customBannerDescription" />
 
 @Body
 
@@ -28,3 +47,92 @@
         <button class="dismiss-button" aria-label="Dismiss error message">Close</button>
     </div>
 </div>
+
+@code {
+    private string? _currentSectionName;
+    private string? _currentRssFeedUrl;
+    private string? _customBannerTitle;
+    private string? _customBannerDescription;
+    private string? _rssFeedTitle;
+
+    private string _canonicalUrl => GetCanonicalUrl();
+
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += OnLocationChanged;
+        UpdateHeaderState();
+    }
+
+    private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        UpdateHeaderState();
+        StateHasChanged();
+    }
+
+    private void UpdateHeaderState()
+    {
+        var uri = new Uri(Navigation.Uri);
+        var path = uri.AbsolutePath.TrimStart('/');
+        var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
+        var firstSegment = segments.Length > 0 ? segments[0] : string.Empty;
+
+        // Reset all header state
+        _currentSectionName = null;
+        _currentRssFeedUrl = null;
+        _rssFeedTitle = null;
+        _customBannerTitle = null;
+        _customBannerDescription = null;
+
+        // Try to match first URL segment to a known section
+        if (!string.IsNullOrEmpty(firstSegment))
+        {
+            var sectionData = SectionCache.GetSectionByName(firstSegment);
+            if (sectionData != null)
+            {
+                _currentSectionName = sectionData.Name;
+                _currentRssFeedUrl = $"/{sectionData.Name}/feed.xml";
+                _rssFeedTitle = $"Tech Hub - {sectionData.Title} - RSS Feed";
+                return;
+            }
+        }
+
+        // Handle special routes with custom banners
+        switch (firstSegment.ToLowerInvariant())
+        {
+            case "":
+                _customBannerTitle = "Tech Hub";
+                _customBannerDescription = "Your source for Microsoft technology news, tutorials, and community content";
+                _currentRssFeedUrl = "/all/feed.xml";
+                _rssFeedTitle = "Tech Hub - All Content - RSS Feed";
+                break;
+            case "about":
+                _customBannerTitle = "About Us";
+                _customBannerDescription = "Meet the team behind your source for Microsoft technology content";
+                break;
+            case "not-found":
+                _customBannerTitle = "Not Found";
+                _customBannerDescription = "Sorry, the content you are looking for does not exist";
+                break;
+            case "error":
+                _customBannerTitle = "Error";
+                _customBannerDescription = "An error occurred while processing your request";
+                break;
+        }
+    }
+
+    /// <summary>
+    /// Computes the canonical URL from the current URI.
+    /// Strips query parameters and lowercases the path for consistent SEO.
+    /// </summary>
+    private string GetCanonicalUrl()
+    {
+        var uri = new Uri(Navigation.Uri);
+        var normalizedPath = uri.AbsolutePath.ToLowerInvariant();
+        return $"{Navigation.BaseUri.TrimEnd('/')}{normalizedPath}";
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
+    }
+}
