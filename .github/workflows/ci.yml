@@ -213,7 +213,7 @@ jobs:
           API_READY=false
           echo "Waiting for API to be ready (health check must return 200)..."
           for i in $(seq 1 120); do
-            HTTP_CODE=$(curl -sk -o /dev/null -w '%{http_code}' https://localhost:5001/health 2>/dev/null)
+            HTTP_CODE=$(curl -sk -o /dev/null -w '%{http_code}' https://localhost:5001/health 2>/dev/null || true)
             if [ "$HTTP_CODE" = "200" ]; then
               echo ""
               echo "API is ready! (health returned 200)"
