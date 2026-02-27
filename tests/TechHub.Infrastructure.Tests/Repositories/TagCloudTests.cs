@@ -176,14 +176,15 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
     }
 
     /// <summary>
-    /// Test: TagsToCount filters out excluded tags (section/collection titles, high-frequency terms).
-    /// Why: Content items may have tags like "GitHub Copilot" or "AI" which are section titles.
-    ///      These structural tags should be excluded from the tag cloud even when passed via tagsToCount.
+    /// Test: TagsToCount includes structural tags (section/collection titles) so users can deselect them.
+    /// Why: When a user selects a tag filter like "news" (which is also a collection name),
+    ///      the sidebar must show it so the user can deselect it. Structural tags should only be
+    ///      excluded from the popular fill, not from explicitly requested tags.
     /// </summary>
     [Fact]
-    public async Task GetTagCountsAsync_WithTagsToCount_ExcludesStructuralTags()
+    public async Task GetTagCountsAsync_WithTagsToCount_IncludesStructuralTagsForDeselection()
     {
-        // Arrange - include structural tags that should be excluded
+        // Arrange - include structural tags that the user explicitly selected as filters
         var request = new TagCountsRequest(
             sectionName: "all",
             collectionName: "all",
@@ -192,23 +193,58 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
             dateFrom: null,
             dateTo: null,
             tags: null,
-            tagsToCount: ["AI", "Code Review", "GitHub Copilot", "Microsoft"]
+            tagsToCount: ["AI", "Code Review", "GitHub Copilot", "News"]
         );
 
         // Act
         var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
 
-        // Assert - structural/excluded tags should not be in results
-        tagCounts.Should().NotContain(t => t.Tag.Equals("AI", StringComparison.OrdinalIgnoreCase),
-            "Section title 'AI' should be excluded");
-        tagCounts.Should().NotContain(t => t.Tag.Equals("GitHub Copilot", StringComparison.OrdinalIgnoreCase),
-            "Section title 'GitHub Copilot' should be excluded");
-        tagCounts.Should().NotContain(t => t.Tag.Equals("Microsoft", StringComparison.OrdinalIgnoreCase),
-            "High-frequency tag 'Microsoft' should be excluded");
+        // Assert - ALL tagsToCount should be returned (even structural tags)
+        // This allows users to see and deselect them in the sidebar tag cloud
+        tagCounts.Should().Contain(t => t.Tag.Equals("AI", StringComparison.OrdinalIgnoreCase),
+            "Selected structural tag 'AI' must be returned so user can deselect it");
+        tagCounts.Should().Contain(t => t.Tag.Equals("GitHub Copilot", StringComparison.OrdinalIgnoreCase),
+            "Selected structural tag 'GitHub Copilot' must be returned so user can deselect it");
+        tagCounts.Should().Contain(t => t.Tag.Equals("News", StringComparison.OrdinalIgnoreCase),
+            "Selected collection tag 'News' must be returned so user can deselect it");
 
-        // Non-excluded tag should still be present
+        // Non-excluded tag should still be present too
         tagCounts.Should().Contain(t => t.Tag.Equals("Code Review", StringComparison.OrdinalIgnoreCase),
             "Content tag 'Code Review' should be included");
+    }
+
+    /// <summary>
+    /// Test: Structural tags still excluded from popular fill when not explicitly selected.
+    /// Why: The popular tags portion of the UNION should still exclude section/collection titles
+    ///      and high-frequency terms to keep the tag cloud focused on content-specific tags.
+    /// </summary>
+    [Fact]
+    public async Task GetTagCountsAsync_WithTagsToCount_PopularFillStillExcludesStructuralTags()
+    {
+        // Arrange - request only non-structural tag, structural tags should not appear in popular fill
+        var request = new TagCountsRequest(
+            sectionName: "all",
+            collectionName: "all",
+            minUses: 1,
+            maxTags: 50,
+            dateFrom: null,
+            dateTo: null,
+            tags: null,
+            tagsToCount: ["Code Review"]
+        );
+
+        // Act
+        var tagCounts = await _repository.GetTagCountsAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - structural tags should NOT appear in the popular fill portion
+        tagCounts.Should().NotContain(t => t.Tag.Equals("AI", StringComparison.OrdinalIgnoreCase),
+            "Section title 'AI' should not appear in popular fill");
+        tagCounts.Should().NotContain(t => t.Tag.Equals("News", StringComparison.OrdinalIgnoreCase),
+            "Collection name 'News' should not appear in popular fill");
+
+        // The requested tag should be present
+        tagCounts.Should().Contain(t => t.Tag.Equals("Code Review", StringComparison.OrdinalIgnoreCase),
+            "Requested tag 'Code Review' should be present");
     }
 
     /// <summary>

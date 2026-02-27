@@ -574,8 +574,9 @@ public class ContentRepository : IContentRepository
 
     /// <summary>
     /// Get tag counts with aggregation from content_tags_expanded table.
-    /// When TagsToCount is provided: returns counts for those specific tags (excluding structural tags)
-    /// PLUS fills remaining slots (up to MaxTags) with popular tags.
+    /// When TagsToCount is provided: returns counts for those specific tags (including structural tags
+    /// so users can see and deselect them) PLUS fills remaining slots (up to MaxTags) with popular tags
+    /// (which DO exclude structural tags).
     /// When TagsToCount is empty: returns top MaxTags popular tags (standard tag cloud).
     /// </summary>
     protected async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
@@ -587,12 +588,14 @@ public class ContentRepository : IContentRepository
         var (filterClause, parameters) = BuildTagCountFilters(request, Dialect);
         var excludeSet = await GetExcludeTagsSetAsync();
 
-        // Filter tagsToCount against exclusion set (section/collection titles, high-frequency terms)
+        // Pass all tagsToCount through without filtering against excludeSet.
+        // Selected tags must always appear in the tag cloud so users can deselect them,
+        // even if they match section/collection titles (e.g., "News" on /all/news?tags=news).
+        // The excludeSet is still applied to the popular fill portion of the query.
         List<string>? filteredTagsToCount = null;
         if (request.TagsToCount is { Count: > 0 })
         {
             filteredTagsToCount = [.. request.TagsToCount
-                .Where(t => !excludeSet.Contains(t))
                 .Distinct(StringComparer.OrdinalIgnoreCase)];
 
             if (filteredTagsToCount.Count == 0)
