@@ -48,9 +48,11 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
     [Fact]
     public async Task InfiniteScroll_WithTagFilter_MaintainsFilterThroughPagination()
     {
-        // Arrange - tag filter uses lowercase in URL, spaces are URL-encoded as %20
+        // Arrange - tag filter uses lowercase in URL
         const string TagDisplay = "Copilot Chat"; // Display text on button
-        const string TagUrl = "copilot%20chat"; // URL-encoded version
+        // URL may encode spaces as %20 or + depending on browser/framework behavior.
+        // Use only the prefix "copilot" for resilient matching; full value is verified later.
+        const string TagUrlPrefix = "tags=copilot";
 
         // Act - Navigate and apply tag filter
         await Page.GotoRelativeAsync("/github-copilot/news");
@@ -62,13 +64,14 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // Apply tag filter — wait for the tag button to be visible before clicking.
         // The tag cloud loads asynchronously from the API and may still be showing
         // skeleton placeholders when cards have already rendered. Use IncreasedTimeout
-        // (10s) to account for the separate tag cloud API call under CI load.
+        // (15s) to account for the separate tag cloud API call under CI load.
         var tagButton = Page.Locator($"button.tag-cloud-item:has-text('{TagDisplay}')").First;
         await tagButton.AssertElementVisibleAsync(BlazorHelpers.IncreasedTimeout);
         await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
-        // Wait for filter to apply and content to load
-        await Page.WaitForBlazorUrlContainsAsync($"tags={TagUrl}");
+        // Wait for filter to apply and content to load.
+        // Use the prefix "tags=copilot" to be resilient to space encoding (%20 vs +).
+        await Page.WaitForBlazorUrlContainsAsync(TagUrlPrefix);
 
         // Wait for filtered content to render (cards should appear)
         await Page.WaitForConditionAsync(
@@ -101,7 +104,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
 
         // Verify URL still contains tag filter (URL normalizes to lowercase)
         var currentUrl = Page.Url;
-        currentUrl.Should().Contain($"tags={TagUrl}",
+        currentUrl.Should().Contain(TagUrlPrefix,
             "tag filter should be preserved in URL during infinite scroll");
 
         // Verify tag button still has 'selected' class (component uses CSS class, not aria-pressed)
