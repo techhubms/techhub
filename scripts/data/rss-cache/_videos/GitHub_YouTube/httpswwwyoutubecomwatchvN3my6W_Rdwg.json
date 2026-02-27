@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=N3my6W_Rdwg",
+  "PubDate": "2026-02-26T17:00:37+00:00",
+  "FeedName": "GitHub YouTube",
+  "ProcessedDate": "2026-02-26 17:21:58",
+  "Description": "April teaches Python on livestream, but what happens when viewers get stuck on practice exercises offline? To solve this, she built a dedicated learning platform featuring a custom AI tutor. In this video, watch how she uses the GitHub Copilot SDK to create an assistant that gives helpful hints instead of just handing out the answers.\n\nCopilot SDK: https://github.com/github/copilot-sdk?utm\\_source=youtube-description-python-demo-ga-copilot-sdk&utm\\_medium=social&utm\\_campaign=SDK-GA-March-2026\n\n#GitHubCopilot #CopilotSDK #Python\n\n▬▬▬▬▬▬ TIMESTAMPS ⌚ ▬▬▬▬▬▬\n\n00:00 Introduction 00:15 Demo of the platform 01:27 Create the Python tutor with the GitHub Copilot SDK 04:11 Integrate the Python tutor into the platform 08:30 Test the Python tutor integration 10:37 Conclusion\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Tags": [
+    "CopilotSDK",
+    "GitHubCopilot",
+    "Python"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Title": "How I built an AI Python tutor with the GitHub Copilot SDK",
+  "Author": "GitHub",
+  "FeedLevelAuthor": "GitHub"
+}

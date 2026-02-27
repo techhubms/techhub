@@ -29,14 +29,19 @@ jobs:
       GIT_USER_NAME: "RSS Processing Workflow"
     
     steps:
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
+      with:
+        egress-policy: audit
+
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
       with:
         fetch-depth: 0
         token: ${{ github.token }}
 
     - name: Setup PowerShell
-      uses: azure/powershell@v2
+      uses: azure/powershell@53dd145408794f7e80f97cfcca04155c85234709 # v2.0.0
       with:
         azPSVersion: 'latest'
         inlineScript: |
@@ -230,7 +235,7 @@ jobs:
 
     - name: Upload Debug Artifacts
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
       with:
         name: roundup-debug-${{ steps.dates.outputs.start-date }}-to-${{ steps.dates.outputs.end-date }}
         path: |

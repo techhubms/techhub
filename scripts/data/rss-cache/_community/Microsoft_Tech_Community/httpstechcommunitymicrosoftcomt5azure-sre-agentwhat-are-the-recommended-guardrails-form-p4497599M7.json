@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2026-02-26 18:13:25",
+  "Title": "What are the recommended guardrails for...",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Description": "Preventing the agent from making changes to any Azure resource?\n\nCompanies who have heard stories about hallucinations, etc. believe that the agent is a threat their production systems potentially.\n\nFrom what I can tell, the agent can be given a managed identity that has limited rights to Azure resources. Read/list, etc.\n\nWithout guardrails, adoption of this tech will be difficult in some environments.\n\n\"But the hallucinations...\"\n\nI'm not sure it's a great idea to let an agent make changes to a production system... or even suggest doing it \"for\" the benefit of the on-call. It's too easy to screw up.\n\nWhat is the guidance here? Managed identity with RBAC?",
+  "OutputDir": "_community",
+  "PubDate": "2026-02-26T17:58:54+00:00",
+  "EnhancedContent": "Preventing the agent from making changes to any Azure resource?\n\nCompanies who have heard stories about hallucinations, etc. believe that the agent is a threat their production systems potentially.\n\nFrom what I can tell, the agent can be given a managed identity that has limited rights to Azure resources.  Read/list, etc.\n\nWithout guardrails, adoption of this tech will be difficult in some environments.\n\n\"But the hallucinations...\"\n\nI'm not sure it's a great idea to let an agent make changes to a production system... or even suggest doing it \"for\" the benefit of the on-call.  It's too easy to screw up.\n\nWhat is the guidance here?  Managed identity with RBAC?",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-sre-agent/what-are-the-recommended-guardrails-for/m-p/4497599#M7",
+  "Tags": [],
+  "Author": "sultanofsuede",
+  "FeedName": "Microsoft Tech Community"
+}

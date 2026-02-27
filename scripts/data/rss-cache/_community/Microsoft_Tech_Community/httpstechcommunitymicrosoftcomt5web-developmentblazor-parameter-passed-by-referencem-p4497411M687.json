@@ -1,0 +1,14 @@
+{
+  "Title": "Blazor parameter passed by reference",
+  "Tags": [],
+  "PubDate": "2026-02-26T09:58:37+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2026-02-26 10:14:42",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "OutputDir": "_community",
+  "EnhancedContent": "I got the impression that in Blazor parameters are always effectively passed by value which is why you need to use EventCallback for two-way binding to send a change in the parameter value back up to the component that passed it.\n\nBut not so; reference types really are passed by reference.\n\nTherefore if a child component updates a parameter value that is a reference type then the value in the parent is changed and all you need to do is call `StateHasChanged` on the parent.\n\nIs this as intended?\n\nHave I misunderstood the documentation?\n\nExample:\n\nhttps://drive.google.com/file/d/1i1Rh36nHU1Z2voyHDtLVZ9GyziLw9AQq/view?usp=sharing\n\n(Don't seem to be able to attach here and it's not really feasible to inline a whole Blazor project.)",
+  "Link": "https://techcommunity.microsoft.com/t5/web-development/blazor-parameter-passed-by-reference/m-p/4497411#M687",
+  "Author": "RichardB1640",
+  "Description": "I got the impression that in Blazor parameters are always effectively passed by value which is why you need to use EventCallback for two-way binding to send a change in the parameter value back up to the component that passed it.\n\nBut not so; reference types really are passed by reference.\n\nTherefore if a child component updates a parameter value that is a reference type then the value in the parent is changed and all you need to do is call `StateHasChanged` on the parent.\n\nIs this as intended?\n\nHave I misunderstood the documentation?\n\nExample:\n\nhttps://drive.google.com/file/d/1i1Rh36nHU1Z2voyHDtLVZ9GyziLw9AQq/view?usp=sharing\n\n(Don't seem to be able to attach here and it's not really feasible to inline a whole Blazor project.)"
+}

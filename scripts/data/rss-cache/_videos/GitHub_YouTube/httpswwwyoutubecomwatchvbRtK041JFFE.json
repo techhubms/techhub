@@ -1,0 +1,19 @@
+{
+  "Title": "Code & Community with Copilot CLI",
+  "FeedName": "GitHub YouTube",
+  "Description": "GitHub Copilot CLI just went generally available, and we are going live to break it down with Ryan Hecht. This is not just \"ask AI to write a shell command.\" Copilot CLI is an agentic assistant with specialized built-in agents for exploring codebases, running tasks, planning implementations, and reviewing code. It can work step by step with your approval or run autonomously, all without leaving your terminal.\n\n#GitHub #GitHubCopilot #CLI #LiveCoding",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "EnhancedContent": null,
+  "PubDate": "2026-02-26T19:53:26+00:00",
+  "ProcessedDate": "2026-02-26 20:08:44",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "GitHub",
+  "Link": "https://www.youtube.com/watch?v=bRtK041JFFE",
+  "Tags": [
+    "CLI",
+    "GitHub",
+    "GitHubCopilot",
+    "LiveCoding"
+  ],
+  "Author": "GitHub"
+}

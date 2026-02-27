@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-02-26 18:12:26",
+  "Title": "macos-26 is now generally available for GitHub-hosted runners",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "The macOS 26 runner image is now generally available for GitHub Actions. Previously in public preview, macOS 26 runners give you a fully supported environment for building and testing apps…\n\nThe post [macos-26 is now generally available for GitHub-hosted runners](https://github.blog/changelog/2026-02-26-macos-26-is-now-generally-available-for-github-hosted-runners) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "PubDate": "2026-02-26T16:00:59+00:00",
+  "EnhancedContent": "The macOS 26 runner image is now generally available for GitHub Actions. Previously in public preview, macOS 26 runners give you a fully supported environment for building and testing apps with the latest macOS and Xcode tooling.\n\nmacOS 26 runners run natively on Apple Silicon (arm64) and also support Intel (x64). Use the following labels in your workflow files:\n\n- `macos-26`\n– Standard macOS runner for arm64.\n- `macos-26-intel`\n– Standard macOS runner for x64.\n- `macos-26-large`\n– Large runner for x64.\n- `macos-26-xlarge`\n– Extra-large runner for arm64.\n\nTo learn more about GitHub Actions macOS runners and the software included in the macOS 26 image, see the [GitHub-hosted runners documentation](https://docs.github.com/actions/reference/runners/github-hosted-runners).",
+  "Link": "https://github.blog/changelog/2026-02-26-macos-26-is-now-generally-available-for-github-hosted-runners",
+  "Tags": [
+    "actions",
+    "Release"
+  ],
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog"
+}

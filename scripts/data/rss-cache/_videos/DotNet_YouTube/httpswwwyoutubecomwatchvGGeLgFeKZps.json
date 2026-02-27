@@ -1,0 +1,26 @@
+{
+  "Author": "dotnet",
+  "Description": "Today, Mattias show us how to use modern .NET and Cake.Sdk to write DevOps definitions as file-based C# apps, with full IDE and debugging support, Cake APIs, and a clean alternative to traditional build scripts, available wherever .NET can run. Cross platforms, services and environments.\n\n🎙️ Featuring: Mattias Karlsson, Maira Wenzel, Scott Addie, Frank Boucher\n\n#dotnet",
+  "ProcessedDate": "2026-02-26 22:05:29",
+  "FeedName": "DotNet YouTube",
+  "FeedLevelAuthor": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Title": "On .NET Live | dotnet run cake.cs 🍰",
+  "Tags": [
+    "cake",
+    "cake.cs",
+    "demo",
+    "developer",
+    "developercommunity",
+    "dotnet",
+    "dotnet10",
+    "dotnetdeveloper",
+    "dotnetten",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "Link": "https://www.youtube.com/watch?v=GGeLgFeKZps",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "PubDate": "2026-02-26T21:29:27+00:00"
+}
