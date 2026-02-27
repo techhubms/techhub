@@ -45,9 +45,12 @@
 }
 
 .site-logo .logo-text {
+  display: block;
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
+  white-space: nowrap;
   margin: 0;
+  margin-bottom: 3px;
 }
 
 /* Subtle purple underline on homepage logo (desktop only) */
@@ -57,7 +60,6 @@
     background-size: 100% 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    padding-bottom: 3px;
   }
 }
 
@@ -393,6 +395,8 @@
   /* Larger site title on mobile */
   .site-logo .logo-text {
     font-size: var(--font-size-3xl);
+    margin: 0px;
+    padding: 0px;
   }
 
   /* Show mobile menu on mobile (as flex column, positioned fixed, below header) */

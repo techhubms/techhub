@@ -120,28 +120,13 @@ public class TabOrderingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            // Brief wait for focus to settle — don't use IncreasedTimeout per tab press
-            // as that creates huge aggregate timeouts under CI load.
-            // If focus is on body (between interactive regions), just continue tabbing.
-            try
-            {
-                await Page.WaitForConditionAsync(
-                    "() => document.activeElement && document.activeElement !== document.body",
-                    new PageWaitForFunctionOptions { Timeout = 500, PollingInterval = 50 });
-            }
-            catch (TimeoutException)
-            {
-                continue; // Focus on body — just press Tab again
-            }
-
-            var isInMain = await Page.EvaluateAsync<bool>(
-                "() => { const el = document.activeElement; return el.closest('main') !== null || el.closest('.main-content') !== null || el.closest('article') !== null; }"
+            // Tab focus changes are synchronous in the browser — Playwright
+            // guarantees activeElement is updated before returning from PressAsync.
+            // A direct EvaluateAsync is both faster and more reliable than polling
+            // via WaitForConditionAsync, which accumulated timeouts under CI load.
+            foundMainContentElement = await Page.EvaluateAsync<bool>(
+                "() => { const el = document.activeElement; return el !== null && el !== document.body && (el.closest('main') !== null || el.closest('.main-content') !== null || el.closest('article') !== null); }"
             );
-
-            if (isInMain)
-            {
-                foundMainContentElement = true;
-            }
         }
 
         // Assert - Should find focusable elements in main content
@@ -164,26 +149,13 @@ public class TabOrderingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            // Brief wait for focus to settle — if focus is on body just continue tabbing.
-            try
-            {
-                await Page.WaitForConditionAsync(
-                    "() => document.activeElement && document.activeElement !== document.body",
-                    new PageWaitForFunctionOptions { Timeout = 500, PollingInterval = 50 });
-            }
-            catch (TimeoutException)
-            {
-                continue; // Focus on body — just press Tab again
-            }
-
-            var isInSidebar = await Page.EvaluateAsync<bool>(
-                "() => { const el = document.activeElement; return el.closest('.sidebar') !== null || el.closest('aside') !== null; }"
+            // Tab focus changes are synchronous in the browser — Playwright
+            // guarantees activeElement is updated before returning from PressAsync.
+            // A direct EvaluateAsync is both faster and more reliable than polling
+            // via WaitForConditionAsync, which accumulated timeouts under CI load.
+            foundSidebarElement = await Page.EvaluateAsync<bool>(
+                "() => { const el = document.activeElement; return el !== null && el !== document.body && (el.closest('.sidebar') !== null || el.closest('aside') !== null); }"
             );
-
-            if (isInSidebar)
-            {
-                foundSidebarElement = true;
-            }
         }
 
         // Assert - Should find focusable elements in sidebar (TOC links, tag buttons, etc.)
