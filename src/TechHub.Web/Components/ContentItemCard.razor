@@ -1,4 +1,5 @@
 @using TechHub.Core.Models
+@inject NavigationManager Navigation
 
 <div class="card"
    aria-label="@Item.GetAriaLabel()">
@@ -28,15 +29,32 @@
             <div class="card-tags">
                 @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
                 {
-                    <span class="badge-purple-static">@CapitalizeCollection(Item.CollectionName)</span>
+                    <a href="@GetCollectionUrl()" class="badge-purple"
+                       aria-label="View @CapitalizeCollection(Item.CollectionName) collection">
+                        @CapitalizeCollection(Item.CollectionName)
+                    </a>
                 }
-                @foreach (var tag in Item.Tags.Take(5))
-                {
-                    <span class="badge-tag">@tag</span>
+                @{
+                    var visibleTags = _showAllTags ? Item.Tags : Item.Tags.Take(5);
+                    var hiddenCount = Item.Tags.Count - 5;
                 }
-                @if (Item.Tags.Count > 5)
+                @foreach (var tag in visibleTags)
                 {
-                    <span class="badge-grey">+@(Item.Tags.Count - 5) more</span>
+                    <button type="button" class="badge-tag badge-tag-clickable"
+                            @onclick="() => HandleTagClick(tag)"
+                            @onclick:stopPropagation="true"
+                            aria-label="Filter by @tag">
+                        @tag
+                    </button>
+                }
+                @if (!_showAllTags && hiddenCount > 0)
+                {
+                    <button type="button" class="badge-expandable"
+                            @onclick="ExpandTags"
+                            @onclick:stopPropagation="true"
+                            aria-label="Show @hiddenCount more tags">
+                        +@hiddenCount more
+                    </button>
                 }
             </div>
         }
@@ -58,6 +76,54 @@
 
     [Parameter]
     public bool ShowSectionName { get; set; } = true;
+
+    private bool _showAllTags;
+
+    private string GetCollectionUrl()
+    {
+        var section = SectionName ?? Item.PrimarySectionName;
+        return $"/{section}/{Item.CollectionName}";
+    }
+
+    private void HandleTagClick(string tag)
+    {
+        // Navigate to the current page with this tag added to the filter query string.
+        // The SectionCollection page reads ?tags= from URL and applies filters.
+        var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
+        var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
+
+        var tagList = query.TryGetValue("tags", out var existingTags)
+            ? existingTags.ToString().Split(',', StringSplitOptions.RemoveEmptyEntries).ToList()
+            : new List<string>();
+
+        var normalizedTag = tag.Trim().ToLowerInvariant();
+        if (!tagList.Contains(normalizedTag, StringComparer.OrdinalIgnoreCase))
+        {
+            tagList.Add(normalizedTag);
+        }
+
+        var queryParams = new Dictionary<string, object?>
+        {
+            ["tags"] = string.Join(",", tagList)
+        };
+
+        // Preserve existing query parameters
+        if (query.TryGetValue("search", out var search) && !string.IsNullOrEmpty(search))
+            queryParams["search"] = search.ToString();
+        if (query.TryGetValue("from", out var from) && !string.IsNullOrEmpty(from))
+            queryParams["from"] = from.ToString();
+        if (query.TryGetValue("to", out var to) && !string.IsNullOrEmpty(to))
+            queryParams["to"] = to.ToString();
+
+        var basePath = uri.GetLeftPart(UriPartial.Path);
+        var newUrl = Navigation.GetUriWithQueryParameters(basePath, queryParams);
+        Navigation.NavigateTo(newUrl);
+    }
+
+    private void ExpandTags()
+    {
+        _showAllTags = true;
+    }
 
     private string FormatDate(long epochSeconds)
     {

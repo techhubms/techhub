@@ -212,6 +212,25 @@
   font-weight: var(--font-weight-medium);
 }
 
+/* Tag badge - clickable variant (adds tag to filter) */
+.badge-tag.badge-tag-clickable {
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+  position: relative;
+  z-index: 1;
+}
+
+.badge-tag.badge-tag-clickable:hover {
+  background: var(--color-purple-bg-badge);
+  border-color: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
+}
+
+.badge-tag.badge-tag-clickable:active {
+  transform: scale(0.95);
+}
+
 /* Grey badge (overflow indicators, collection names on cards) */
 .badge-grey {
   background: var(--color-bg-emphasis);

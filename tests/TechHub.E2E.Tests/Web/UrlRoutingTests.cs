@@ -207,10 +207,10 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Verify card-tags exists
         await cardTags.AssertElementVisibleAsync();
 
-        // Cards should have tag badges but no collection badge
+        // Cards should have tag badges (clickable buttons) but no collection badge
         // On /all/news, CollectionName is 'news' so collection badges are hidden
-        var tagBadges = await cardTags.Locator(".badge-tag").CountAsync();
-        tagBadges.Should().BeGreaterThan(0, "cards should have tag badges");
+        var tagBadges = await cardTags.Locator("button.badge-tag").CountAsync();
+        tagBadges.Should().BeGreaterThan(0, "cards should have clickable tag badges");
     }
 
     [Fact]
@@ -243,10 +243,10 @@ public class UrlRoutingTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/github-copilot/all");
         await Page.Locator(".card").First.AssertElementVisibleAsync();
 
-        // Assert - Collection badges should be visible on items
+        // Assert - Collection badges should be visible on items (clickable links to collection page)
         var firstCard = Page.Locator(".card").First;
-        // Collection badge is the first .badge-purple-static within .card-tags (before tag badges)
-        var collectionBadge = firstCard.Locator(".card-tags .badge-purple-static").First;
+        // Collection badge is the first .badge-purple link within .card-tags (before tag badges)
+        var collectionBadge = firstCard.Locator(".card-tags a.badge-purple").First;
 
         await collectionBadge.AssertElementVisibleAsync();
 
@@ -254,6 +254,10 @@ public class UrlRoutingTests : PlaywrightTestBase
         var badgeText = await collectionBadge.TextContentWithTimeoutAsync();
         badgeText.Should().MatchRegex("^[A-Z]",
             "collection badge should start with a capital letter (proper capitalization)");
+
+        // Badge should be a link to the collection page
+        var href = await collectionBadge.GetAttributeAsync("href");
+        href.Should().NotBeNullOrEmpty("collection badge should link to the collection page");
     }
 
     [Fact]

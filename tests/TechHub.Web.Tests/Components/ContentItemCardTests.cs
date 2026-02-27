@@ -116,8 +116,8 @@ public class ContentItemCardTests : BunitContext
         var tags = cut.FindAll(".badge-tag");
         tags.Should().HaveCount(5, "should only show first 5 tags");
 
-        var moreIndicator = cut.Find(".badge-grey");
-        moreIndicator.TextContent.Should().Be("+2 more");
+        var moreIndicator = cut.Find(".badge-expandable");
+        moreIndicator.TextContent.Trim().Should().Be("+2 more");
     }
 
     [Fact]
@@ -136,7 +136,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, true));
 
         // Assert
-        var badge = cut.Find(".badge-purple-static");
+        var badge = cut.Find(".badge-purple");
         badge.TextContent.Should().Be("News");
     }
 
@@ -156,7 +156,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, false));
 
         // Assert
-        var badges = cut.FindAll(".badge-purple-static");
+        var badges = cut.FindAll(".badge-purple");
         badges.Should().BeEmpty();
     }
 
@@ -260,7 +260,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, true));
 
         // Assert
-        var badge = cut.Find(".badge-purple-static");
+        var badge = cut.Find(".badge-purple");
         badge.TextContent.Should().Be("Community");
     }
 
@@ -320,7 +320,7 @@ public class ContentItemCardTests : BunitContext
         var cardTags = cut.Find(".card-tags");
         var allBadges = cardTags.Children;
         allBadges.Should().HaveCountGreaterThanOrEqualTo(3, "should have collection badge + 2 tag badges");
-        allBadges[0].ClassList.Should().Contain("badge-purple-static", "collection badge should be first");
+        allBadges[0].ClassList.Should().Contain("badge-purple", "collection badge should be first");
         allBadges[0].TextContent.Should().Be("News");
         allBadges[1].ClassList.Should().Contain("badge-tag", "tag badges should follow collection badge");
     }
@@ -343,15 +343,15 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item)
             .Add(p => p.ShowCollectionBadge, false));
 
-        // Assert - Tag badges should use the badge-tag class (not badge-purple-static)
+        // Assert - Tag badges should use the badge-tag class
         var tagBadges = cut.FindAll(".badge-tag");
         tagBadges.Should().HaveCount(2);
         tagBadges[0].TextContent.Should().Be("ai");
         tagBadges[1].TextContent.Should().Be("copilot");
 
-        // Should NOT have any badge-purple-static (collection badge is hidden)
-        var oldBadges = cut.FindAll(".badge-purple-static");
-        oldBadges.Should().BeEmpty("tag badges should use badge-tag class, not badge-purple-static");
+        // Should NOT have any collection badge (ShowCollectionBadge is false)
+        var collectionBadges = cut.FindAll(".badge-purple");
+        collectionBadges.Should().BeEmpty("collection badge should be hidden when ShowCollectionBadge is false");
     }
 
     [Fact]

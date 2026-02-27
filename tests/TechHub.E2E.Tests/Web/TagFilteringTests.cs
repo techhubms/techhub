@@ -610,4 +610,116 @@ public class TagFilteringTests : PlaywrightTestBase
 
         return 0;
     }
+
+    // ========================================================================
+    // Card Badge Interactivity Tests
+    // ========================================================================
+
+    [Fact]
+    public async Task CardTagBadge_WhenClicked_AddsTagToUrlFilter()
+    {
+        // Arrange - Navigate to a collection page where cards have tag badges
+        await Page.GotoRelativeAsync("/github-copilot/news");
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+
+        // Act - Click the first tag badge button on the first card
+        var firstCard = Page.Locator(".card").First;
+        var tagBadge = firstCard.Locator("button.badge-tag-clickable").First;
+        await tagBadge.AssertElementVisibleAsync();
+
+        var tagText = (await tagBadge.TextContentAsync())!.Trim().ToLowerInvariant();
+
+        await tagBadge.ClickBlazorElementAsync();
+
+        // Assert - URL should contain the tag parameter
+        await Page.WaitForURLAsync(url => url.Contains("tags="));
+        var currentUrl = new Uri(Page.Url);
+        var tagsParam = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(currentUrl.Query);
+        tagsParam.Should().ContainKey("tags");
+        tagsParam["tags"].ToString().Should().Contain(tagText,
+            $"clicking tag badge '{tagText}' should add it to the tags URL parameter");
+    }
+
+    [Fact]
+    public async Task CardCollectionBadge_WhenClicked_NavigatesToCollection()
+    {
+        // Arrange - Navigate to "All" page where collection badges are visible
+        await Page.GotoRelativeAsync("/github-copilot");
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+
+        // Act - Find and click a collection badge link
+        var firstCard = Page.Locator(".card").First;
+        var collectionBadge = firstCard.Locator("a.badge-purple").First;
+        await collectionBadge.AssertElementVisibleAsync();
+
+        var href = await collectionBadge.GetAttributeAsync("href");
+        href.Should().NotBeNullOrEmpty("collection badge should have an href");
+
+        await collectionBadge.ClickBlazorElementAsync();
+
+        // Assert - Should navigate to the collection page
+        await Page.WaitForBlazorUrlContainsAsync(href!);
+        Page.Url.Should().Contain(href!, "should navigate to the collection page");
+    }
+
+    [Fact]
+    public async Task CardMoreBadge_WhenClicked_ExpandsAllTags()
+    {
+        // Arrange - Navigate to a page and find a card with "+X more" badge
+        await Page.GotoRelativeAsync("/github-copilot/community");
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+
+        // Find a card that has a "+X more" expand button
+        var expandButton = Page.Locator("button.badge-expandable");
+        var expandCount = await expandButton.CountAsync();
+
+        if (expandCount == 0)
+        {
+            // No cards with more than 5 tags - try another section
+            await Page.GotoRelativeAsync("/ai/community");
+            await Page.Locator(".card").First.AssertElementVisibleAsync();
+            expandButton = Page.Locator("button.badge-expandable");
+            expandCount = await expandButton.CountAsync();
+        }
+
+        // Skip test if no cards have more than 5 tags
+        if (expandCount == 0)
+        {
+            return;
+        }
+
+        // Identify the card position: find which card-index has the expand button
+        var allCards = Page.Locator(".card");
+        var totalCards = await allCards.CountAsync();
+        int targetCardIndex = -1;
+        for (int i = 0; i < totalCards; i++)
+        {
+            var card = allCards.Nth(i);
+            var btnCount = await card.Locator("button.badge-expandable").CountAsync();
+            if (btnCount > 0)
+            {
+                targetCardIndex = i;
+                break;
+            }
+        }
+
+        if (targetCardIndex < 0)
+        {
+            return; // Could not find a card with expand button
+        }
+
+        var targetCard = allCards.Nth(targetCardIndex);
+        var initialTagCount = await targetCard.Locator("button.badge-tag-clickable").CountAsync();
+
+        // Act - Click "+X more" button (no URL change expected, just UI state)
+        await targetCard.Locator("button.badge-expandable").ClickBlazorElementAsync(waitForUrlChange: false);
+
+        // Wait for Blazor re-render: expand button should disappear from this card
+        await Assertions.Expect(targetCard.Locator("button.badge-expandable")).ToHaveCountAsync(0);
+
+        // Assert - More tags should now be visible
+        var expandedTagCount = await targetCard.Locator("button.badge-tag-clickable").CountAsync();
+        expandedTagCount.Should().BeGreaterThan(initialTagCount,
+            "clicking '+X more' should reveal additional tag badges");
+    }
 }

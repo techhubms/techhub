@@ -119,14 +119,18 @@ public class NavigationTests : PlaywrightTestBase
         // Get first content card
         var firstCard = Page.Locator(".card").First;
 
-        // Assert - Collection badge should exist and be before tags
-        // Collection badge is the first .badge-purple-static in .card-tags
-        var collectionBadge = firstCard.Locator(".card-tags .badge-purple-static").First;
+        // Assert - Collection badge should exist as a clickable link, before tags
+        // Collection badge is the first .badge-purple link in .card-tags
+        var collectionBadge = firstCard.Locator(".card-tags a.badge-purple").First;
         await collectionBadge.AssertElementVisibleAsync();
 
         // Collection badge should have proper capitalization (e.g., "News" not "news")
         var badgeText = await collectionBadge.TextContentWithTimeoutAsync();
         badgeText!.Should().MatchRegex("^[A-Z]"); // Starts with capital letter
+
+        // Badge should be a clickable link to the collection
+        var href = await collectionBadge.GetAttributeAsync("href");
+        href.Should().NotBeNullOrEmpty("collection badge should be a clickable link");
     }
 
     [Fact]
