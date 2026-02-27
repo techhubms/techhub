@@ -231,20 +231,16 @@ public class TabOrderingTests : PlaywrightTestBase
         // Next tab should focus first interactive element within primary content
         await Page.Keyboard.PressAsync("Tab");
 
-        // Wait for focus to stabilize after tab press.
-        // Uses IncreasedTimeout (15s) because this involves multiple async operations:
-        // 1. Tab keypress processed by Chromium
-        // 2. H1 blur event fires (removes tabindex=-1)
-        // 3. Browser recalculates next focusable element
-        // 4. Focus moves to next element in DOM order
-        //
-        // Self-healing: if focus lands on body or outside main content, find and
-        // focus the first interactive element within main. This handles cases where
-        // Blazor re-rendering disrupts the natural tab order.
-        await Page.WaitForFunctionAsync(
+        // Tab focus is synchronous, but the heading's blur handler removes tabindex=-1
+        // which can cause the browser to momentarily lose focus to body. If that happens,
+        // explicitly focus the first interactive element within the main content area.
+        // This is done atomically in a single EvaluateAsync to avoid race conditions
+        // between a WaitForFunctionAsync and a separate assertion (the prior approach
+        // was flaky because focus could shift between the two calls under CI load).
+        var isInPrimaryContent = await Page.EvaluateAsync<bool>(
             @"() => {
                 const el = document.activeElement;
-                if (el && el !== document.body && 
+                if (el && el !== document.body &&
                     (el.closest('main') !== null || el.closest('article') !== null || el.closest('section') !== null)) {
                     return true;
                 }
@@ -252,16 +248,13 @@ public class TabOrderingTests : PlaywrightTestBase
                 const main = document.querySelector('main');
                 if (main) {
                     const focusable = main.querySelector('a[href], button, input, select, textarea, [tabindex]:not([tabindex=""-1""])');
-                    if (focusable) { focusable.focus(); return false; }
+                    if (focusable) {
+                        focusable.focus();
+                        return true;
+                    }
                 }
                 return false;
-            }",
-            null,
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
-
-        var isInPrimaryContent = await Page.EvaluateAsync<bool>(
-            "() => { const el = document.activeElement; return el && (el.closest('main') !== null || el.closest('article') !== null || el.closest('section') !== null); }"
-        );
+            }");
 
         isInPrimaryContent.Should().BeTrue("after skip link, next tab should focus element within primary content");
     }
