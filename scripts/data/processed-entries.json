@@ -27418,5 +27418,29 @@
     "timestamp": "2026-02-27 16:09:43 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-02-25-org-level-metrics-api-now-includes-pull-request-throughput-metric-parity"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'ML' (Machine Learning / Data Science) because the spotlight features data science and analytics engineering content (such as time intelligence in Fabric Notebooks and engineering articles on Direct Lake, Spark, and Power BI semantic models), following ML Category rules 1, 2, and 4. Assigned 'Azure' because Microsoft Fabric is a core Azure-based data/analytics service, and much of the highlighted work (Spark, KQL, DevOps, Databases) takes place within the Azure context (Azure Category rule 1, 4, 5, and 6). Included 'Coding' since the content describes programming (Python/pandas in notebooks, DAX in Power BI, configuration scripting, etc.—Coding Category rules 1, 4, 5). Included 'DevOps' due to substantial coverage of operationalizing deployments, CI/CD with Azure DevOps, and configuration-based deployments chained with Fabric pipelines (DevOps rules 1, 5, 6, 9). Did *not* assign 'AI' because there is no direct focus on Microsoft AI services, Copilot developer tooling, or AI model integration. Omitted 'Security' as none of the articles address security or compliance aspects directly. All sections are technical, educational, and meet multi-platform threshold for primary Microsoft technology use.",
+    "collection": "news",
+    "timestamp": "2026-02-27 17:11:19 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-february-2026/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on Microsoft Research's advancements in AI agents using multimodal reinforcement learning and a novel agentic verifier (AI rules 1, 3, 4, and 5). No other category applies: there is no code or development tutorial (no Coding), no operations or deployment context (no DevOps, Azure), no ML/data science engineering detail (no ML), and security is not discussed. Tags derived from technological terms and core subject matter in the article.",
+    "collection": "news",
+    "timestamp": "2026-02-27 17:11:36 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/corpgen-advances-ai-agents-for-real-work/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure because the core focus is on weekly Azure product and platform updates (Azure rule 1). Assigned DevOps, Security, Coding, and ML because the content covers development tooling (VS Code, Copilot CLI), infrastructure (AKS, storage, App GW), security (SAS, Entra ID, WAF, sensitivity labels), and data platform (PostgreSQL, SQL, Azure AI Search, OpenAI Foundry). Assigned AI and ML because of updates around Azure AI Search and OpenAI Foundry, where new models and data governance features are introduced (AI rules 1, 5; ML rule 1). Assigned GitHub Copilot because it features a segment specifically on GitHub Copilot CLI (GitHub Copilot rule 1), and Coding because of developer tooling mentions. Security is included due to WAF, SAS/Entra ID, and sensitivity label coverage (Security rules 1, 2, 7).",
+    "collection": "videos",
+    "timestamp": "2026-02-27 17:12:25 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Tnq0SmW5TPY"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content centers on Microsoft Azure AI infrastructure, agentic AI, AI Factories, LLM inference, and automation of scientific and enterprise workloads (AI category rules 1, 4, and 5). Assigned Azure category because Azure is the platform underpinning all discussed solutions, including infrastructure, Foundry, and deployment/operations (Azure rules 1, 4, and 5). Did NOT assign ML because the content focuses on AI infrastructure and agentic AI orchestration/platforms rather than custom ML algorithm or data science development. Did NOT assign DevOps because, while there is mention of 'Agentic DevOps,' the dominant focus is on AI and infrastructure, and other DevOps subtopics do not represent a significant proportion. Did NOT assign Coding, GitHub Copilot, or Security as those aspects are mentioned only in passing or within a single session, not as main content. Content is well above all community length/quality thresholds and is primarily technical, not promotional, biographical, or business-only.",
+    "collection": "community",
+    "timestamp": "2026-02-27 17:12:54 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/microsoft-at-nvidia-gtc-2026/ba-p/4497670"
   }
 ]
