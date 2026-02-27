@@ -60,7 +60,7 @@
                     }
                     @foreach (var customPage in sectionItem.Collections.Where(c => c.IsCustom).OrderBy(c => c.Order).ThenBy(c => c.Title))
                     {
-                        <a href="@customPage.Url" class="@(IsActivePage(customPage.Url) ? "active" : "")" @onclick="CloseMenu">@customPage.Title</a>
+                        <a href="@customPage.Url" class="mobile-menu-custom-page @(IsActivePage(customPage.Url) ? "active" : "")" @onclick="CloseMenu">@customPage.Title</a>
                     }
                 </div>
             }

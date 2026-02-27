@@ -773,13 +773,31 @@ jobs:
           echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
 
   # ──────────────────────────────────────────────
+  # Staging gate — OR logic for the two mutually exclusive staging paths
+  # Succeeds if either deploy-staging OR deploy-staging-infra succeeded
+  # ──────────────────────────────────────────────
+  staging-complete:
+    name: Staging Complete
+    runs-on: ubuntu-latest
+    needs: [deploy-staging, deploy-staging-infra]
+    if: always()
+    steps:
+      - name: Verify staging succeeded
+        if: needs.deploy-staging.result != 'success' && needs.deploy-staging-infra.result != 'success'
+        run: |
+          echo "Neither staging path succeeded"
+          echo "deploy-staging: ${{ needs.deploy-staging.result }}"
+          echo "deploy-staging-infra: ${{ needs.deploy-staging-infra.result }}"
+          exit 1
+
+  # ──────────────────────────────────────────────
   # Production infrastructure — only when infra changed
   # Uses GitHub environment protection for approval
   # ──────────────────────────────────────────────
   deploy-production-infra:
     name: Deploy Production Infrastructure
     runs-on: ubuntu-latest
-    needs: [detect-changes, deploy-staging, build-and-push]
+    needs: [detect-changes, staging-complete, build-and-push]
     if: needs.detect-changes.outputs.infra-changed == 'true'
     concurrency:
       group: deploy-production
@@ -811,12 +829,12 @@ jobs:
   deploy-production:
     name: Deploy to Production
     runs-on: ubuntu-latest
-    needs: [build-and-push, deploy-staging, deploy-staging-infra, deploy-production-infra]
+    needs: [build-and-push, staging-complete, deploy-production-infra]
     if: |
       always() &&
       needs.build-and-push.result == 'success' &&
-      (needs.deploy-staging.result == 'success' || needs.deploy-staging-infra.result == 'success') &&
-      needs.deploy-production-infra.result == 'skipped'
+      needs.staging-complete.result == 'success' &&
+      (needs.deploy-production-infra.result == 'success' || needs.deploy-production-infra.result == 'skipped')
     concurrency:
       group: deploy-production
       cancel-in-progress: false

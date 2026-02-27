@@ -1,3 +1,4 @@
+// Shared infrastructure for TechHub — ACR and related resources
 targetScope = 'subscription'
 
 @description('Azure region for shared resources')
