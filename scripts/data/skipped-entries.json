@@ -12573,5 +12573,11 @@
     "reason": "No categories found: All fields except for author, title, type, and promotional links are empty or contain only marketing/about statements. The 'content' field is null, so no substantive technical or educational content is provided. The 'description' contains only promotional material, social links, and a marketing blurb about GitHub. According to the generic exclusion rules (Format and Length Exclusions, Content Quality Exclusions), this content does not qualify for any categories because there is no technical detail, tutorial, implementation, or relevant Microsoft technology focus. The presence of marketing language further confirms exclusion.",
     "timestamp": "2026-02-26 19:18:23 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-02-27 00:13:54 +00:00",
+    "reason": "API call retries failed: All API call retries failed - no response received",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-and-pagerduty-sre-agent-in/ba-p/4497124"
   }
 ]

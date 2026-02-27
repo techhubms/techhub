@@ -27382,5 +27382,17 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned the DevOps category because the content specifically details improvements to GitHub Actions workflow artifact management, a core component of CI/CD pipelines (DevOps inclusion rule 2). No other categories were assigned because the content does not address coding frameworks, AI, ML, Azure, security, or GitHub Copilot features. The decision is based on the technical news about workflow improvements and direct developer impact.",
     "timestamp": "2026-02-26 23:08:36 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories. The content directly concerns GitHub Copilot coding agents (GitHub Copilot rule 1) and their real-time tracking on mobile; per workflow, all GitHub Copilot content also gets the 'AI' category. There is no substantial mention of coding, DevOps, Azure, ML, or Security implementation or practices, so those categories do not apply. All generic exclusion rules were checked and do not apply; the content is about a developer tool (not business productivity), written in English, and not a sales pitch or biographical story.",
+    "timestamp": "2026-02-27 01:32:23 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-26-github-mobile-track-coding-agent-progress-in-real-time-with-live-notifications"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the content focuses on code signing, trusted signing tools, and timestamp server reliability within the context of Microsoft signing and Windows security (Security inclusion rules 1 and 2). Did not assign the Azure, AI, ML, DevOps, Coding, or GitHub Copilot categories, as the content does not address cloud services, development practices, DevOps tooling, AI/ML techniques, or Copilot usage. Focus is on operational and infrastructure security for code distribution in Windows environments.",
+    "timestamp": "2026-02-27 01:33:00 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://weblog.west-wind.com/posts/2026/Feb/26/Dont-use-the-Microsoft-Timestamp-Server-for-Signing"
   }
 ]

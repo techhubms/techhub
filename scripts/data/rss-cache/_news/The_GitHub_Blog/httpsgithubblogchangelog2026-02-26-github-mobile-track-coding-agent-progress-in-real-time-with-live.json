@@ -1,0 +1,18 @@
+{
+  "Title": "GitHub Mobile: Track coding agent progress in real time with Live Notifications",
+  "Description": "Live Coding Agent Notifications are now available on GitHub Mobile, making it easier to stay on top of your Copilot coding agent and supported third-party agent sessions while you’re on…\n\nThe post [GitHub Mobile: Track coding agent progress in real time with Live Notifications](https://github.blog/changelog/2026-02-26-github-mobile-track-coding-agent-progress-in-real-time-with-live-notifications) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "client apps",
+    "copilot",
+    "Release"
+  ],
+  "PubDate": "2026-02-26T10:58:22+00:00",
+  "Link": "https://github.blog/changelog/2026-02-26-github-mobile-track-coding-agent-progress-in-real-time-with-live-notifications",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2026-02-27 01:31:06",
+  "EnhancedContent": "Live Coding Agent Notifications are now available on **GitHub Mobile**, making it easier to stay on top of your **Copilot coding agent** and **supported third-party agent** sessions while you’re on the go. Agent sessions started from GitHub.com, GitHub Mobile, or the CLI can surface real-time updates directly on your phone.\n\nUsing **Live Activities**, you’ll see key session details such as the related pull request title and current status, and you can tap through to the pull request in the app to quickly review changes and keep work moving.\n\n### Supported session states\n\nLive Coding Agent Notifications currently show these states:\n\n- **In progress**\n- **Completed**\n- **Failed**\n- **Cancelled**\n\n### Availability\n\nLive Coding Agent Notifications are currently available for **pull request** agent sessions initiated by:\n\n- **Copilot coding agent**\n- Supported **third-party agents**, such as **Codex** and **Claude**\n\nSupported iOS versions: Live Activities require iOS 17.2+\n\nSupported Android OS versions: Live Update Notifications require Android 16 or later. You will still receive progress notifications for your agents if you are using an older version.\n\n**Only cloud-run sessions** are supported today.\n\n![](https://github.blog/wp-content/uploads/2026/02/2d63c3067a180978c71cad58c56b3f2ae0f46ad4c555762f78e4beeeafdf3d63-2400x1260-1.jpeg?resize=1024%2C538)\n\n### How to disable\n\nIf you’d rather not use Live Activities, you can disable them in **Settings**. The first live notification also includes a **“Disable Live Updates”** button for quick opt-out.\n\nThis is now available on the latest production build of GitHub Mobile on [iOS](https://apps.apple.com/us/app/github/id1477376905) and [Android](https://play.google.com/store/apps/details?id=com.github.android).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}
