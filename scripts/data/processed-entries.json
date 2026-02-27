@@ -27406,5 +27406,17 @@
     "reason": "Succesfully added: Assigned 'AI' category because the content addresses Microsoft's collaboration with OpenAI in artificial intelligence, covering responsible AI advancement and related technologies (AI inclusion rule 1 and 4). Assigned 'Azure' because the statement discusses Azure's exclusive role as the provider for OpenAI stateless APIs and product hosting (Azure rule 1 and 4). Coding, DevOps, ML, GitHub Copilot, and Security categories were not added as the content focuses on partnership, infrastructure, and business development rather than development, deployment, or security practice details.",
     "canonical_url": "https://blogs.microsoft.com/blog/2026/02/27/microsoft-and-openai-joint-statement-on-continuing-partnership/",
     "timestamp": "2026-02-27 14:14:09 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content is about GitHub Copilot CLI (AI rule 2, GitHub Copilot inclusion rules). 'AI' is included alongside 'GitHub Copilot' per the critical rule. Assigned 'Coding' because the post involves creating applications, project scaffolding, running and troubleshooting tests, and making repository-wide code changes (Coding rules 2, 4, and 5). Did not assign 'DevOps' because the primary focus is on individual developer workflows, not CI/CD, infrastructure, or team-level DevOps processes. Did not assign 'Azure', 'ML', or 'Security' as those topics are not addressed. No exclusion rules apply.",
+    "timestamp": "2026-02-27 16:09:25 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the API and metric enhancements are directly tied to GitHub Copilot usage and participation (AI rule 2, GitHub Copilot rules 1-4). Added 'DevOps' because the update supports improved reporting, workflow management, and insights into developer productivity metrics and code review processes (DevOps rules 3, 5, and 7). No other categories qualified as the content does not cover coding patterns, specific Azure/cloud or ML topics, or security concerns.",
+    "timestamp": "2026-02-27 16:09:43 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-25-org-level-metrics-api-now-includes-pull-request-throughput-metric-parity"
   }
 ]

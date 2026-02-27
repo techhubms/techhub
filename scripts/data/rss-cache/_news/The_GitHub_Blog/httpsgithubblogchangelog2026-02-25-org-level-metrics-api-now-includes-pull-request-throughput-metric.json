@@ -1,0 +1,19 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "Description": "We’re expanding the organization-level Copilot Usage Metrics API to include a broader set of pull request activity, including creation volume, throughput and cycle time. This brings the org-level endpoints to…\n\nThe post [Org-level metrics API now includes pull request throughput metric parity](https://github.blog/changelog/2026-02-25-org-level-metrics-api-now-includes-pull-request-throughput-metric-parity) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "account management",
+    "copilot",
+    "enterprise management tools",
+    "Release"
+  ],
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "PubDate": "2026-02-26T00:11:37+00:00",
+  "EnhancedContent": "We’re expanding the organization-level [Copilot Usage Metrics API](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-28) to include a broader set of pull request activity, including creation volume, throughput and cycle time. This brings the org-level endpoints to parity with what was previously available only at the enterprise level.\n\n## What’s new\n\nOrganizations can now retrieve daily aggregated pull request activity and Copilot participation metrics directly from the org-level API, including:\n\n- Baseline pull request activity\n- Total pull requests created\n- Total pull requests reviewed\n- Total pull requests merged\n- Median time to merge (minutes)\n- Copilot participation on pull request throughput + review quality\n- Pull requests created by Copilot (Copilot coding agent)\n- Pull requests reviewed by Copilot (Copilot code review)\n- Total review suggestions and total applied suggestions\n- Copilot suggestions and Copilot applied suggestions\n- Copilot-created pull requests that were merged\n- Median time to merge for Copilot-created pull requests\n\n## Why this matters\n\nWith this update, teams can:\n\n- Standardize reporting at the org level.\n- Quantify Copilot’s impact on the pull request lifecycle, from pull request creation to merge.\n- Track not just suggestion volume but also applied suggestions as a signal of actionable feedback.\n- Improve visibility into non-IDE Copilot usage, including agent-created pull requests and Copilot-authored review activity.\n\n## Important notes\n\n- If your organization belongs to an enterprise, organization-level totals may not match enterprise totals. Users can belong to multiple organizations, so their usage can appear in more than one organization report, while enterprise reporting deduplicates users.\n- If you see the API report is empty for everything but pull request data, it likely means they don’t have any IDE usage, so only pull request data is available.\n- Repo/org transfers can split attribution. If a repository is transferred after a pull request is created (or reviewed) but before it’s merged, events can be attributed to different orgs (e.g., pull request created/reviewed may count under the original org, while pull request merged counts under the new org). If an organization is transferred to a new enterprise, events may be split at the enterprise level, but at the org level, attribution stays with the same org.\n\nFor more information on the new data field definitions, visit [our documentation about Copilot usage metrics](https://docs.github.com/copilot/reference/copilot-usage-metrics/copilot-usage-metrics). Join the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Title": "Org-level metrics API now includes pull request throughput metric parity",
+  "Link": "https://github.blog/changelog/2026-02-25-org-level-metrics-api-now-includes-pull-request-throughput-metric-parity",
+  "ProcessedDate": "2026-02-27 16:07:55",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog"
+}
