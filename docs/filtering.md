@@ -388,7 +388,9 @@ After the quantile algorithm assigns sizes, the number of distinct size groups i
 
 ### Section/Collection Title Exclusion
 
-The tag cloud automatically excludes section and collection titles from the tag list. For example, when viewing the "AI" section, the "AI" tag is filtered out since it's redundant with the section context.
+The tag cloud excludes section and collection titles from the **popular fill** portion of results. For example, when viewing the "AI" section without any tag filters active, the "AI" tag won't appear in the sidebar since it's redundant with the section context.
+
+**Exception for selected tags**: When a user has actively selected a tag that matches a section/collection title (e.g., `?tags=news`), that tag is **always included** in the tag cloud results. This ensures users can deselect any tag they've selected, even if it matches a structural title. Only the popular fill (tags loaded to fill remaining slots) applies the structural exclusion.
 
 ## Tag Cloud UI Behavior
 

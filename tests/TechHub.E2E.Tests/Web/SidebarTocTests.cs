@@ -96,6 +96,13 @@ public class SidebarTocTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(url);
 
+        // Wait for TOC scroll spy JS to finish initialization.
+        // Under full Run load (unit + integration tests running in parallel),
+        // the scroll spy setup can take longer than page load signals.
+        await Page.WaitForConditionAsync(
+            "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+
         // Find a section heading (h2 or h3 with ID)
         var headings = Page.Locator("h2[id], h3[id]");
         var headingCount = await headings.CountAsync();
@@ -116,17 +123,13 @@ public class SidebarTocTests : PlaywrightTestBase
         await Page.WaitForConditionAsync(
             @$"() => Math.abs(window.scrollY - {secondHeadingY}) < 100");
 
-        // Force scroll spy to re-evaluate now that scroll is complete.
-        // The rAF-based handler may not fire reliably in headless Chrome under CI load,
-        // so we explicitly call updateActiveHeading (same pattern as LastSection test).
-        await Page.EvaluateAsync(@"() => {
-            const toc = document.querySelector('[data-toc-scroll-spy]');
-            if (toc && toc._tocScrollSpy) toc._tocScrollSpy.updateActiveHeading();
-        }");
-
-        // Assert - Active TOC link should update
+        // Assert - Active TOC link should update via the scroll spy's own
+        // scroll event → rAF → updateActiveHeading chain. No manual nudge:
+        // we're testing that the mechanism works end-to-end.
+        // Uses IncreasedTimeout (15s) to accommodate rAF throttling + scrollend
+        // delays under CI load.
         var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
-        await activeTocLink.AssertElementVisibleAsync();
+        await activeTocLink.AssertElementVisibleAsync(BlazorHelpers.IncreasedTimeout);
 
         var activeLinkText = await activeTocLink.TextContentAsync();
         activeLinkText.Should().NotBeNullOrEmpty($"Active TOC link should have text on {url}");
@@ -139,6 +142,12 @@ public class SidebarTocTests : PlaywrightTestBase
     {
         // Arrange
         await Page.GotoRelativeAsync(url);
+
+        // Wait for TOC scroll spy JS to finish initialization.
+        // Under full Run load, the scroll spy setup can take longer than page load signals.
+        await Page.WaitForConditionAsync(
+            "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
 
         // Get last heading with ID
         var headings = Page.Locator("h2[id], h3[id]");
@@ -163,20 +172,16 @@ public class SidebarTocTests : PlaywrightTestBase
         await Page.WaitForConditionAsync(
             @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50");
 
-        // Force scroll spy to re-evaluate now that scroll is complete.
-        // The rAF-based handler may fire before layout settles in headless Chrome,
-        // so we explicitly call updateActiveHeading to trigger bottom-of-page detection.
-        await Page.EvaluateAsync(@"() => {
-            const toc = document.querySelector('[data-toc-scroll-spy]');
-            if (toc && toc._tocScrollSpy) toc._tocScrollSpy.updateActiveHeading();
-        }");
-
-        // Get the last TOC link - use href$= to match the end of the href (hash part)
+        // Assert - Last TOC link should become active via the scroll spy's own
+        // scroll event → rAF → updateActiveHeading → bottom-of-page detection chain.
+        // No manual nudge: we're testing that the mechanism works end-to-end.
         var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
-        // Use Playwright's auto-retrying assertion - wait for TOC link to become active.
+        // Use Playwright's auto-retrying assertion with IncreasedTimeout (15s)
+        // to accommodate rAF throttling + scrollend delays under CI load.
         await lastTocLink.AssertHasClassAsync(
-            new System.Text.RegularExpressions.Regex(".*active.*"));
+            new System.Text.RegularExpressions.Regex(".*active.*"),
+            BlazorHelpers.IncreasedTimeout);
     }
 
     #endregion

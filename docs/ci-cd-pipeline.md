@@ -60,6 +60,7 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 **Deployment Jobs** (run only after quality gate passes, never on PRs):
 
 1. **Detect Changes** - Uses `dorny/paths-filter` to check if `infra/**` files changed
+   - Requires full git history (`fetch-depth: 0`) for reliable comparison across multi-commit pushes
    - Manual dispatch also supports `force-infra-deploy` to override detection
 
 2. **Deploy Shared Infrastructure** - Deploys shared resources (ACR) via `Deploy-Infrastructure.ps1`

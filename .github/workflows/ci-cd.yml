@@ -614,7 +614,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          # Full history required: dorny/paths-filter compares github.event.before → HEAD.
+          # With shallow fetch, multi-commit pushes may not include the 'before' commit,
+          # causing false positives (all files reported as changed).
+          fetch-depth: 0
 
       - name: Check for infrastructure changes
         uses: dorny/paths-filter@v3
