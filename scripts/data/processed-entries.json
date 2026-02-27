@@ -27394,5 +27394,11 @@
     "timestamp": "2026-02-27 01:33:00 +00:00",
     "collection": "blogs",
     "canonical_url": "https://weblog.west-wind.com/posts/2026/Feb/26/Dont-use-the-Microsoft-Timestamp-Server-for-Signing"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the core focus is intelligent routing between LLMs using Azure OpenAI (AI rules 1 and 4). Assigned Azure because the solution centers around Azure-hosted AI infrastructure and APIs (Azure rule 1). Coding was not assigned since the article centers more on architecture, configuration, and benchmarking than code design or Microsoft-first frameworks. ML is not included as the main thrust is prompt routing and cost optimization for LLMs, not custom ML/data science engineering. Security and DevOps are not central topics. The content is high-quality, down-to-earth, and meets the inclusion standards.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/optimising-ai-costs-with-microsoft-foundry-model-router/ba-p/4494776",
+    "collection": "community",
+    "timestamp": "2026-02-27 09:14:09 +00:00"
   }
 ]
