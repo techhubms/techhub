@@ -27442,5 +27442,17 @@
     "collection": "community",
     "timestamp": "2026-02-27 17:12:54 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/microsoft-at-nvidia-gtc-2026/ba-p/4497670"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned: 'AI' because the article focuses on engineering solutions for post-training and reinforcement learning of Copilot's modular agentic AI capabilities, directly referencing Microsoft AI production systems (AI Rule 1, 4). 'ML' included because it goes deeply into custom RL algorithmic design, gradient diagnostics, normalization, and sample efficiency at production scale (ML Rules 1, 6, 10). 'Coding', 'Azure', and 'Security' not applied because the article focuses on AI/ML methodology and deployment rather than coding, specific cloud hosting, or security configuration. 'GitHub Copilot' not assigned since the subject is about Copilot agent infrastructure at Microsoft (distinct from GitHub Copilot as a developer tool). No generic exclusions applied, as the content is technical, research-based, and highly relevant to Microsoft AI and ML practice.",
+    "collection": "news",
+    "timestamp": "2026-02-27 18:09:40 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/engineering-at-microsoft/engineering-and-algorithmic-interventions-for-multimodal-post-training-at-microsoft-scale/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category as the entire content is centered around GitHub Copilot usage metrics—a Microsoft AI-powered developer tool (AI inclusion rule 2). Included 'GitHub Copilot' category because the feature set, dashboards, and APIs specifically target GitHub Copilot usage monitoring for enterprises (GitHub Copilot rules 1–6). Did not assign other categories as the content is not about code, deployment, DevOps pipelines, or core Azure features. The content adheres to the quality standards, is technical, descriptive, and about administering Copilot within development organizations—meeting the centrality threshold for Microsoft technologies.",
+    "collection": "news",
+    "timestamp": "2026-02-27 18:10:06 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-02-27-copilot-metrics-is-now-generally-available"
   }
 ]

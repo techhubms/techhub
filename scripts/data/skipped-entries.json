@@ -12585,5 +12585,11 @@
     "canonical_url": "https://www.youtube.com/shorts/0f5qBZpy9No",
     "collection": "videos",
     "reason": "No categories found: No categories assigned. The content is a brief event announcement and highlights for a community competition ('Agents League - Reasoning Agents Battle') hosted by Microsoft. There is no substantive technical explanation, tutorial, or implementation detail present. The description is promotional and focuses on an on-demand video and project registration, without discussion of Microsoft technology features, development techniques, or technical architecture. Per generic exclusion rules, content lacking substantive technical depth or hands-on guidance does not qualify."
+  },
+  {
+    "reason": "No categories found: All categories have been excluded. The content is a general announcement promoting the GitHub Changelog update feed, without substantive technical information or implementation details. It primarily serves as a notification service and social media links to follow GitHub's latest feature releases and updates. There is no educational content about GitHub tool usage, development practices, or any Microsoft technology implementation (DevOps rule 11 requires technical detail for inclusion, which is not present). No content qualifies under AI, Coding, DevOps, Azure, ML, or Security category inclusion rules.",
+    "collection": "videos",
+    "timestamp": "2026-02-27 18:10:41 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/N035cFR3YiY"
   }
 ]
