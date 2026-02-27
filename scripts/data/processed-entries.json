@@ -27400,5 +27400,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/optimising-ai-costs-with-microsoft-foundry-model-router/ba-p/4494776",
     "collection": "community",
     "timestamp": "2026-02-27 09:14:09 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the content addresses Microsoft's collaboration with OpenAI in artificial intelligence, covering responsible AI advancement and related technologies (AI inclusion rule 1 and 4). Assigned 'Azure' because the statement discusses Azure's exclusive role as the provider for OpenAI stateless APIs and product hosting (Azure rule 1 and 4). Coding, DevOps, ML, GitHub Copilot, and Security categories were not added as the content focuses on partnership, infrastructure, and business development rather than development, deployment, or security practice details.",
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/02/27/microsoft-and-openai-joint-statement-on-continuing-partnership/",
+    "timestamp": "2026-02-27 14:14:09 +00:00"
   }
 ]

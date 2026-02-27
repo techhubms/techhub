@@ -12579,5 +12579,11 @@
     "timestamp": "2026-02-27 00:13:54 +00:00",
     "reason": "API call retries failed: All API call retries failed - no response received",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-and-pagerduty-sre-agent-in/ba-p/4497124"
+  },
+  {
+    "timestamp": "2026-02-27 10:12:03 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/0f5qBZpy9No",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is a brief event announcement and highlights for a community competition ('Agents League - Reasoning Agents Battle') hosted by Microsoft. There is no substantive technical explanation, tutorial, or implementation detail present. The description is promotional and focuses on an on-demand video and project registration, without discussion of Microsoft technology features, development techniques, or technical architecture. Per generic exclusion rules, content lacking substantive technical depth or hands-on guidance does not qualify."
   }
 ]
