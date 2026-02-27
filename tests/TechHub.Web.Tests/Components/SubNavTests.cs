@@ -3,7 +3,6 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
-using TechHub.Web.Services;
 
 namespace TechHub.Web.Tests.Components;
 

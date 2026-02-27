@@ -35,12 +35,8 @@ public class SearchTests : PlaywrightTestBase
 
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
 
-        // Act - Type in search box
-        await searchInput.FillAsync("copilot");
-
-        // Wait for debounce + URL update
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('search=')");
+        // Act - Type in search box and wait for URL to reflect the query
+        await searchInput.FillBlazorInputAsync("copilot");
 
         // Assert - URL should contain search parameter
         var currentUrl = Page.Url;
@@ -120,11 +116,7 @@ public class SearchTests : PlaywrightTestBase
 
         // Act 2 - Add search query
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
-        await searchInput.FillAsync("copilot");
-
-        // Wait for debounce + URL update (replaces unreliable Task.Delay)
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('search=')");
+        await searchInput.FillBlazorInputAsync("copilot");
 
         // Assert - URL should contain both search and tags parameters
         var currentUrl = Page.Url;
@@ -193,19 +185,9 @@ public class SearchTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/github-copilot");
 
-        // Act - Search for something that won't exist.
-        // Wait for Blazor interactivity first — the search input renders as SSR HTML
-        // before the SignalR circuit connects and @oninput handlers are attached.
+        // Act - Search for something that won't exist
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
-        await searchInput.WaitForBlazorInteractivityAsync();
-        await searchInput.FillAsync("xyzabc123nonexistent");
-
-        // Wait for debounce + URL update before checking results.
-        // Uses extended timeout (15s) because debounce (300ms) + SignalR round-trip + Blazor
-        // re-render can exceed the default 5s under CI load.
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('search=')",
-            new PageWaitForFunctionOptions { Timeout = 15_000, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+        await searchInput.FillBlazorInputAsync("xyzabc123nonexistent");
 
         // Assert - Should show "no results" message (auto-retries via Expect)
         var noResultsMessage = Page.Locator("text=/no.*results/i").Or(Page.Locator(".no-content"));
@@ -218,20 +200,9 @@ public class SearchTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/github-copilot/blogs");
 
-        // Act - Type in search box.
-        // Wait for Blazor interactivity first — the search input renders as SSR HTML
-        // before the SignalR circuit connects and @oninput handlers are attached.
-        // Without this, FillAsync dispatches input events that Blazor never receives.
+        // Act - Type in search box
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
-        await searchInput.WaitForBlazorInteractivityAsync();
-        await searchInput.FillAsync("copilot");
-
-        // Wait for debounce + URL update.
-        // Uses extended timeout (15s) because debounce + SignalR round-trip + Blazor
-        // re-render can exceed the default 5s under CI load.
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('search=')",
-            new PageWaitForFunctionOptions { Timeout = 15_000, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+        await searchInput.FillBlazorInputAsync("copilot");
 
         // Assert - URL should contain search parameter
         var currentUrl = Page.Url;

@@ -406,6 +406,7 @@ await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 | Lazy-loaded element visible | `loading="eager"` attribute hack | Fix in source: remove `loading="lazy"` for above-fold/hero images (see Pattern 10) |
 | Focus after navigation reset | `Locator(":focus").EvaluateAsync()` | `WaitForConditionAsync` + `Page.EvaluateAsync()` |
 | Custom timeout value | `Timeout = 5000` (hardcoded) | `BlazorHelpers.DefaultTimeout` (10s) |
+| Search input fill + URL update | `FillAsync` + `WaitForConditionAsync` | `searchInput.FillBlazorInputAsync("query")` |
 
 #### Pattern 1: Expand/Collapse Animations
 
@@ -673,6 +674,7 @@ isVisible.Should().BeTrue();
 | `ScrollToEndOfContentAsync()` | Scroll infinite scroll until end-of-content marker | 5s |
 | `ScrollIntoViewAsync()` | Scroll element into viewport via JS `scrollIntoView()` | - |
 | `ScrollIntoViewIfNeededAsync()` | Scroll element into viewport (native Playwright) | - |
+| `FillBlazorInputAsync()` | Fill input + wait for URL query param, with input event retry | 15s |
 
 ### Assertion Style
 

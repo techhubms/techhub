@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 
 namespace TechHub.E2E.Tests.Helpers;
@@ -121,8 +120,6 @@ public static class BlazorHelpers
         this IPage page,
         string expression) =>
         page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
-
-
 
     /// <summary>
     /// Waits for a parameterized JavaScript condition to become truthy.
@@ -626,6 +623,63 @@ public static class BlazorHelpers
 
         // Ensure Blazor is ready - uses its own default navigation timeout (2000ms)
         await locator.Page.WaitForBlazorReadyAsync();
+    }
+
+    /// <summary>
+    /// Fills a Blazor input element and waits for a URL query parameter to appear.
+    ///
+    /// Handles the Blazor Server race condition where <c>FillAsync</c> dispatches an
+    /// <c>input</c> event before Blazor finishes attaching <c>@oninput</c> handlers
+    /// to the DOM. The SignalR circuit may be established (<c>__blazorServerReady</c>)
+    /// while handler attachment is still in progress.
+    ///
+    /// <b>How it works</b>:
+    /// <list type="number">
+    ///   <item>Waits for Blazor interactivity (element visible + circuit ready)</item>
+    ///   <item>Fills the input value via Playwright</item>
+    ///   <item>Polls for the expected URL query parameter, re-dispatching the
+    ///         <c>input</c> event at ≥1 s intervals if the parameter hasn't appeared.
+    ///         Retries are spaced &gt;1 s apart so the 300 ms debounce timer can fire
+    ///         between them.</item>
+    /// </list>
+    ///
+    /// This mirrors the pattern used by <see cref="ScrollToLoadMoreAsync"/> which
+    /// re-dispatches scroll events on each poll iteration.
+    /// </summary>
+    /// <param name="locator">The search input element locator</param>
+    /// <param name="value">The text to fill into the input</param>
+    /// <param name="urlQueryParam">The URL query parameter name to wait for (default: "search")</param>
+    /// <param name="timeoutMs">Maximum time to wait for the URL to update</param>
+    public static async Task FillBlazorInputAsync(
+        this ILocator locator,
+        string value,
+        string urlQueryParam = "search",
+        int timeoutMs = IncreasedTimeout)
+    {
+        // Step 1: Ensure element is visible and Blazor circuit is ready
+        await locator.WaitForBlazorInteractivityAsync(timeoutMs);
+
+        // Step 2: Fill the input value
+        await locator.FillAsync(value);
+
+        // Step 3: Wait for URL query parameter, re-dispatching input event if needed.
+        // The __fillRetryTs variable is scoped per page lifetime; the retry interval
+        // of 1 s ensures the 300 ms debounce timer fires between dispatches.
+        var inputSelector = await locator.EvaluateAsync<string>("el => el.tagName.toLowerCase() + (el.type ? '[type=' + el.type + ']' : '')");
+        await locator.Page.WaitForConditionAsync($@"
+            () => {{
+                if (window.location.href.includes('{urlQueryParam}=')) return true;
+                const now = Date.now();
+                if (!window.__fillRetryTs || (now - window.__fillRetryTs > 1000)) {{
+                    window.__fillRetryTs = now;
+                    const input = document.querySelector('{inputSelector}');
+                    if (input && input.value) {{
+                        input.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                    }}
+                }}
+                return false;
+            }}",
+            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
     }
 
     // ============================================================================

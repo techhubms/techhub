@@ -28,7 +28,7 @@ public enum TagCloudNavigationMode
 /// Supports multiple tag selection with OR logic.
 /// Emits tag selection changes via callback; parent handles URL state.
 /// </summary>
-public partial class SidebarTagCloud : ComponentBase, IDisposable
+public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
 {
     [Inject]
     private ITechHubApiClient ApiClient { get; set; } = default!;

@@ -381,7 +381,7 @@ public class TechHubApiClient : ITechHubApiClient
                 take: 1,
                 cancellationToken: cancellationToken);
 
-            return result?.Items.FirstOrDefault();
+            return result?.Items.Count > 0 ? result.Items[0] : null;
         }
         catch (HttpRequestException ex)
         {
