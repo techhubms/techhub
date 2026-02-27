@@ -614,18 +614,40 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # Full history required: dorny/paths-filter compares github.event.before → HEAD.
-          # With shallow fetch, multi-commit pushes may not include the 'before' commit,
-          # causing false positives (all files reported as changed).
+          # Full history needed so the 'before' commit is available for git diff.
+          # Without it, multi-commit pushes may not include the 'before' commit.
           fetch-depth: 0
 
       - name: Check for infrastructure changes
-        uses: dorny/paths-filter@v3
         id: changes
-        with:
-          filters: |
-            infra:
-              - 'infra/**'
+        run: |
+          BEFORE="${{ github.event.before }}"
+          SHA="${{ github.sha }}"
+
+          if [[ "$BEFORE" == "0000000000000000000000000000000000000000" ]]; then
+            # Force push or new branch: 'before' is unknown.
+            # Compare only the HEAD commit. For multi-commit force pushes with
+            # infra changes in earlier commits, use the force-infra-deploy input.
+            echo "::notice::Force push or new branch — checking HEAD commit only for infra changes."
+            echo "::notice::Use 'force-infra-deploy' workflow input to force infra deployment."
+            INFRA_FILES=$(git diff --name-only HEAD~1 HEAD -- 'infra/' 2>/dev/null || echo "")
+          else
+            # Normal push: compare only the pushed commits (before..after).
+            # dorny/paths-filter uses merge-base on non-default branches, which
+            # compares the ENTIRE branch against main — causing false positives
+            # for infra files changed in earlier (already-deployed) commits.
+            echo "Normal push — comparing $BEFORE..$SHA for infra changes."
+            INFRA_FILES=$(git diff --name-only "$BEFORE" "$SHA" -- 'infra/' 2>/dev/null || echo "")
+          fi
+
+          if [[ -n "$INFRA_FILES" ]]; then
+            echo "Infrastructure files changed:"
+            echo "$INFRA_FILES"
+            echo "infra=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No infrastructure files changed."
+            echo "infra=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Determine infra deployment
         id: result
