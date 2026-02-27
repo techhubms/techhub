@@ -823,7 +823,11 @@ jobs:
     name: Deploy Production Infrastructure
     runs-on: ubuntu-latest
     needs: [detect-changes, staging-complete, build-and-push]
-    if: needs.detect-changes.outputs.infra-changed == 'true'
+    if: |
+      always() &&
+      needs.detect-changes.outputs.infra-changed == 'true' &&
+      needs.staging-complete.result == 'success' &&
+      needs.build-and-push.result == 'success'
     concurrency:
       group: deploy-production
       cancel-in-progress: false

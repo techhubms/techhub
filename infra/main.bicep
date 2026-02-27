@@ -2,6 +2,7 @@ targetScope = 'subscription'
 
 // Infrastructure as Code for Tech Hub Azure resources.
 // Environment-specific deployments (staging, prod) with shared ACR.
+// Trigger: fix deploy-production-infra skip by adding always() guard
 
 @description('Azure region for resources')
 param location string = 'westeurope'
