@@ -12591,5 +12591,11 @@
     "collection": "videos",
     "timestamp": "2026-02-27 18:10:41 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/N035cFR3YiY"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/backing-up-azure-files-high-cost-read-operations/m-p/4497942#M592",
+    "collection": "community",
+    "reason": "No categories found: Content excluded under generic exclusion rules, specifically the 'Question-Only Content' rule. The post is primarily a question about Azure Backup's handling of Azure Files, seeking information on whether Microsoft plans to introduce change block tracking. There is no substantive answer, discussion of implementation, or technical guidance provided—only the author's problem description and a request for any updates. According to the prompt, question-only or help-seeking posts without substantive answers or solutions are not eligible for categorization.",
+    "timestamp": "2026-02-27 21:06:41 +00:00"
   }
 ]

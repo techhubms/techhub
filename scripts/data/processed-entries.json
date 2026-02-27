@@ -27466,5 +27466,11 @@
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The news focuses exclusively on GitHub Copilot and specifically its CLI telemetry for enterprise usage metrics. According to the rules, any content centered on GitHub Copilot (including its CLI features for developers) must include both categories. No other core development, DevOps, Azure, ML, or security aspects are discussed here.",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-02-27-copilot-usage-metrics-now-includes-enterprise-level-github-copilot-cli-activity"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the video focuses on debugging software (Dockerfiles) using Visual Studio Code, a developer tool (Coding rules 2 and 4). The primary topic is how to debug code/configuration within a developer workflow. Azure, DevOps, AI, ML, Security, and GitHub Copilot categories do not apply, as there is no substantive Microsoft cloud or ML/AI content, nor DevOps process or GitHub tooling as central themes.",
+    "timestamp": "2026-02-27 23:05:46 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=G6Nmc4XoZSI",
+    "collection": "videos"
   }
 ]

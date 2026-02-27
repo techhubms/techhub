@@ -1,0 +1,18 @@
+{
+  "FeedName": "Visual Studio Code YouTube",
+  "Author": "Visual Studio Code",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "Step through a Dockerfile build using the Debug Adapter Protocol in VS Code.\n\n🔗Link: https://www.docker.com/blog/debug-docker-builds-with-visual-studio-code/\n\n🎙️ Featuring: Reynald Adolphe (@ReynaldAdolphe) Remy Suen (https://github.com/rcjsuen), Jonathan Sternberg (https://github.com/jsternberg)\n\n#vscode #docker #debugging",
+  "PubDate": "2026-02-27T22:40:42+00:00",
+  "Tags": [
+    "debugging",
+    "docker",
+    "vscode"
+  ],
+  "Title": "🔴 VS Code Live - Debugging Dockerfiles in VS Code",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Visual Studio Code",
+  "ProcessedDate": "2026-02-27 23:04:06",
+  "Link": "https://www.youtube.com/watch?v=G6Nmc4XoZSI",
+  "OutputDir": "_videos"
+}
