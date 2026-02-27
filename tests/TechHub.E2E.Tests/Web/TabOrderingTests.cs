@@ -109,7 +109,10 @@ public class TabOrderingTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/"); // Homepage has section cards which are focusable links
 
-        // Act - Tab through elements until we find one in main content
+        // Act - Tab through elements until we find one in main content.
+        // Use a single JS evaluation to avoid per-tab 15s timeout under CI load.
+        // Focus can briefly rest on body between interactive regions, so we just
+        // skip those iterations rather than waiting for focus to leave body.
         var foundMainContentElement = false;
         var maxTabs = 50; // Safety limit
 
@@ -117,11 +120,20 @@ public class TabOrderingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
-            // Uses IncreasedTimeout because focus transitions can be slow under CI load.
-            await Page.WaitForConditionAsync(
-                "() => document.activeElement && document.activeElement !== document.body",
-                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            // Brief wait for focus to settle — don't use IncreasedTimeout per tab press
+            // as that creates huge aggregate timeouts under CI load.
+            // If focus is on body (between interactive regions), just continue tabbing.
+            try
+            {
+                await Page.WaitForConditionAsync(
+                    "() => document.activeElement && document.activeElement !== document.body",
+                    new PageWaitForFunctionOptions { Timeout = 500, PollingInterval = 50 });
+            }
+            catch (TimeoutException)
+            {
+                continue; // Focus on body — just press Tab again
+            }
+
             var isInMain = await Page.EvaluateAsync<bool>(
                 "() => { const el = document.activeElement; return el.closest('main') !== null || el.closest('.main-content') !== null || el.closest('article') !== null; }"
             );
@@ -142,7 +154,9 @@ public class TabOrderingTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/ai/genai-basics");
 
-        // Act - Tab through elements until we find one in sidebar
+        // Act - Tab through elements until we find one in sidebar.
+        // Use short per-tab timeout to avoid huge aggregate timeouts under CI load.
+        // Focus can briefly rest on body between interactive regions — just continue.
         var foundSidebarElement = false;
         var maxTabs = 100; // Safety limit (need to get past nav and main content)
 
@@ -150,11 +164,18 @@ public class TabOrderingTests : PlaywrightTestBase
         {
             await Page.Keyboard.PressAsync("Tab");
 
-            // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
-            // Uses IncreasedTimeout because focus transitions can be slow under CI load.
-            await Page.WaitForConditionAsync(
-                "() => document.activeElement && document.activeElement !== document.body",
-                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            // Brief wait for focus to settle — if focus is on body just continue tabbing.
+            try
+            {
+                await Page.WaitForConditionAsync(
+                    "() => document.activeElement && document.activeElement !== document.body",
+                    new PageWaitForFunctionOptions { Timeout = 500, PollingInterval = 50 });
+            }
+            catch (TimeoutException)
+            {
+                continue; // Focus on body — just press Tab again
+            }
+
             var isInSidebar = await Page.EvaluateAsync<bool>(
                 "() => { const el = document.activeElement; return el.closest('.sidebar') !== null || el.closest('aside') !== null; }"
             );

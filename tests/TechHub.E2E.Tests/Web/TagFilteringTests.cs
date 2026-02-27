@@ -722,4 +722,71 @@ public class TagFilteringTests : PlaywrightTestBase
         expandedTagCount.Should().BeGreaterThan(initialTagCount,
             "clicking '+X more' should reveal additional tag badges");
     }
+
+    // ========================================================================
+    // Card Badge Active State & Deselect Tests
+    // ========================================================================
+
+    [Fact]
+    public async Task CardTagBadge_WhenFilterActive_ShowsActiveHighlight()
+    {
+        // Arrange - Navigate to a collection page with a tag filter pre-applied
+        // First, get a tag name from a card so we know it exists
+        await Page.GotoRelativeAsync("/github-copilot/news");
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+
+        var firstCard = Page.Locator(".card").First;
+        var tagBadge = firstCard.Locator("button.badge-tag-clickable").First;
+        var tagText = (await tagBadge.TextContentAsync())!.Trim().ToLowerInvariant();
+
+        // Navigate with this tag as an active filter
+        await Page.GotoRelativeAsync($"/github-copilot/news?tags={Uri.EscapeDataString(tagText)}");
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+
+        // Assert - Card tag badges matching the active filter should have the active class
+        var activeBadges = Page.Locator("button.badge-tag-active");
+        var activeCount = await activeBadges.CountAsync();
+        activeCount.Should().BeGreaterThan(0,
+            $"at least one card tag badge should be highlighted for active filter '{tagText}'");
+
+        // Verify the active badge text matches the filter tag
+        var firstActiveBadge = activeBadges.First;
+        var activeBadgeText = (await firstActiveBadge.TextContentAsync())!.Trim().ToLowerInvariant();
+        activeBadgeText.Should().Be(tagText,
+            "highlighted badge text should match the active filter tag");
+    }
+
+    [Fact]
+    public async Task CardTagBadge_WhenActiveClicked_RemovesTagFromFilter()
+    {
+        // Arrange - Navigate with a known tag filter active
+        await Page.GotoRelativeAsync("/github-copilot/news");
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+
+        var firstCard = Page.Locator(".card").First;
+        var tagBadge = firstCard.Locator("button.badge-tag-clickable").First;
+        var tagText = (await tagBadge.TextContentAsync())!.Trim().ToLowerInvariant();
+
+        // Navigate with this tag filter pre-applied
+        await Page.GotoRelativeAsync($"/github-copilot/news?tags={Uri.EscapeDataString(tagText)}");
+        await Page.Locator("button.badge-tag-active").First.AssertElementVisibleAsync();
+
+        // Act - Click the active (highlighted) badge to deselect the filter
+        var activeBadge = Page.Locator("button.badge-tag-active").First;
+        await activeBadge.ClickBlazorElementAsync(waitForUrlChange: false);
+
+        // Wait for Blazor re-render: active badges should disappear
+        await Page.Locator("button.badge-tag-active").AssertCountAsync(0);
+
+        // Assert - URL should no longer contain the tag
+        var currentUrl = new Uri(Page.Url);
+        var tagsParam = System.Web.HttpUtility.ParseQueryString(currentUrl.Query).Get("tags");
+
+        if (!string.IsNullOrEmpty(tagsParam))
+        {
+            tagsParam.Should().NotContain(tagText,
+                $"after clicking active badge, tag '{tagText}' should be removed from URL");
+        }
+        // else: tags param completely removed, which is also correct
+    }
 }

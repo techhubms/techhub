@@ -40,10 +40,18 @@
                 }
                 @foreach (var tag in visibleTags)
                 {
-                    <button type="button" class="badge-tag badge-tag-clickable"
+                    var isActive = IsTagActive(tag);
+                    var tagCssClass = isActive
+                        ? "badge-tag badge-tag-clickable badge-tag-active"
+                        : "badge-tag badge-tag-clickable";
+                    var tagAriaLabel = isActive
+                        ? $"Remove filter: {tag}"
+                        : $"Filter by {tag}";
+
+                    <button type="button" class="@tagCssClass"
                             @onclick="() => HandleTagClick(tag)"
                             @onclick:stopPropagation="true"
-                            aria-label="Filter by @tag">
+                            aria-label="@tagAriaLabel">
                         @tag
                     </button>
                 }
@@ -77,6 +85,13 @@
     [Parameter]
     public bool ShowSectionName { get; set; } = true;
 
+    /// <summary>
+    /// List of currently active filter tags (from URL query string).
+    /// Tags matching these will be highlighted and clicking them will deselect the filter.
+    /// </summary>
+    [Parameter]
+    public IReadOnlyList<string>? ActiveFilterTags { get; set; }
+
     private bool _showAllTags;
 
     private string GetCollectionUrl()
@@ -85,10 +100,21 @@
         return $"/{section}/{Item.CollectionName}";
     }
 
+    private bool IsTagActive(string tag)
+    {
+        if (ActiveFilterTags == null || ActiveFilterTags.Count == 0)
+        {
+            return false;
+        }
+
+        var normalizedTag = tag.Trim().ToLowerInvariant();
+        return ActiveFilterTags.Any(t => string.Equals(t.Trim(), normalizedTag, StringComparison.OrdinalIgnoreCase));
+    }
+
     private void HandleTagClick(string tag)
     {
-        // Navigate to the current page with this tag added to the filter query string.
-        // The SectionCollection page reads ?tags= from URL and applies filters.
+        // Toggle tag in the filter query string.
+        // If the tag is already active, remove it (deselect). Otherwise, add it.
         var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
         var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
 
@@ -97,14 +123,20 @@
             : new List<string>();
 
         var normalizedTag = tag.Trim().ToLowerInvariant();
-        if (!tagList.Contains(normalizedTag, StringComparer.OrdinalIgnoreCase))
+        if (tagList.Contains(normalizedTag, StringComparer.OrdinalIgnoreCase))
         {
+            // Tag is active — remove it (deselect)
+            tagList.RemoveAll(t => string.Equals(t, normalizedTag, StringComparison.OrdinalIgnoreCase));
+        }
+        else
+        {
+            // Tag is not active — add it
             tagList.Add(normalizedTag);
         }
 
         var queryParams = new Dictionary<string, object?>
         {
-            ["tags"] = string.Join(",", tagList)
+            ["tags"] = tagList.Count > 0 ? string.Join(",", tagList) : null
         };
 
         // Preserve existing query parameters

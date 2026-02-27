@@ -231,6 +231,18 @@
   transform: scale(0.95);
 }
 
+/* Tag badge - active filter state (tag matches currently active URL filter) */
+.badge-tag.badge-tag-active {
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+  color: var(--color-text-on-emphasis);
+}
+
+.badge-tag.badge-tag-active:hover {
+  background: var(--color-purple-medium);
+  border-color: var(--color-purple-bright);
+}
+
 /* Grey badge (overflow indicators, collection names on cards) */
 .badge-grey {
   background: var(--color-bg-emphasis);

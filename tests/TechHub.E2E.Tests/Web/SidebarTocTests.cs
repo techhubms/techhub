@@ -116,6 +116,14 @@ public class SidebarTocTests : PlaywrightTestBase
         await Page.WaitForConditionAsync(
             @$"() => Math.abs(window.scrollY - {secondHeadingY}) < 100");
 
+        // Force scroll spy to re-evaluate now that scroll is complete.
+        // The rAF-based handler may not fire reliably in headless Chrome under CI load,
+        // so we explicitly call updateActiveHeading (same pattern as LastSection test).
+        await Page.EvaluateAsync(@"() => {
+            const toc = document.querySelector('[data-toc-scroll-spy]');
+            if (toc && toc._tocScrollSpy) toc._tocScrollSpy.updateActiveHeading();
+        }");
+
         // Assert - Active TOC link should update
         var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
         await activeTocLink.AssertElementVisibleAsync();

@@ -1483,6 +1483,39 @@ The `SidebarTagCloud` component provides interactive tag filtering with toggle b
 
 **E2E Testing**: See [tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs](../../tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs) for comprehensive tag toggle behavior tests.
 
+### Card Tag Badge Active State
+
+**`ContentItemCard` Component - Active Filter Highlighting & Toggle**:
+
+Tag badges on content item cards are aware of the active filter tags from the URL. When a tag matches an active filter, the badge highlights and clicking it deselects (removes) the filter instead of adding it.
+
+**Key Features**:
+
+- **`ActiveFilterTags` parameter**: `IReadOnlyList<string>?` passed from `ContentItemsGrid` (which receives `FilterTags` from the page)
+- **Visual active state**: Matching tags get `.badge-tag-active` CSS class (purple background/border, matching sidebar tag cloud `.selected` state)
+- **Toggle behavior**: `HandleTagClick` toggles tags — adds if not active, removes if active
+- **Accessible labels**: Active badges use "Remove filter: {tag}", inactive use "Filter by {tag}"
+- **Case-insensitive matching**: Uses `ToLowerInvariant()` for comparison
+
+**CSS Active State** (`wwwroot/css/cards.css`):
+
+```css
+.badge-tag.badge-tag-active {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+}
+
+.badge-tag.badge-tag-active:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+}
+```
+
+**Data Flow**: `SectionCollection.razor` → `ContentItemsGrid` (`FilterTags`) → `ContentItemCard` (`ActiveFilterTags`)
+
+**Testing**: bUnit tests in [ContentItemCardTests.cs](../../tests/TechHub.Web.Tests/Components/ContentItemCardTests.cs), E2E tests in [TagFilteringTests.cs](../../tests/TechHub.E2E.Tests/Web/TagFilteringTests.cs).
+
 ## Related Documentation
 
 ### Functional Documentation (docs/)

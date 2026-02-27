@@ -374,6 +374,110 @@ public class ContentItemCardTests : BunitContext
         link.GetAttribute("aria-label").Should().Be("Example Post");
     }
 
+    [Fact]
+    public void ContentItemCard_ActiveFilterTag_ShowsActiveClass()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithTags("ai", "copilot", "dotnet")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        // Act - Pass "ai" as an active filter tag
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.ShowCollectionBadge, false)
+            .Add(p => p.ActiveFilterTags, new List<string> { "ai" }));
+
+        // Assert - The "ai" badge should have the active class
+        var activeBadges = cut.FindAll(".badge-tag-active");
+        activeBadges.Should().HaveCount(1, "only the 'ai' tag matches the active filter");
+        activeBadges[0].TextContent.Should().Be("ai");
+
+        // Other tags should NOT have the active class
+        var inactiveBadges = cut.FindAll(".badge-tag:not(.badge-tag-active)");
+        inactiveBadges.Should().HaveCount(2, "'copilot' and 'dotnet' are not active filters");
+    }
+
+    [Fact]
+    public void ContentItemCard_NoActiveFilterTags_NoActiveClass()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithTags("ai", "copilot")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        // Act - No active filter tags
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.ShowCollectionBadge, false));
+
+        // Assert - No badges should have the active class
+        var activeBadges = cut.FindAll(".badge-tag-active");
+        activeBadges.Should().BeEmpty("no active filter tags are set");
+    }
+
+    [Fact]
+    public void ContentItemCard_ActiveFilterTag_IsCaseInsensitive()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithTags("AI", "GitHub Copilot")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        // Act - Active filters use lowercase (as stored in URL)
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.ShowCollectionBadge, false)
+            .Add(p => p.ActiveFilterTags, new List<string> { "ai", "github copilot" }));
+
+        // Assert - Both should be active despite different casing
+        var activeBadges = cut.FindAll(".badge-tag-active");
+        activeBadges.Should().HaveCount(2, "both tags match active filters (case-insensitive)");
+    }
+
+    [Fact]
+    public void ContentItemCard_ActiveTag_HasDeselectAriaLabel()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithTags("ai", "copilot")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.ShowCollectionBadge, false)
+            .Add(p => p.ActiveFilterTags, new List<string> { "ai" }));
+
+        // Assert - Active tag should have "Remove filter" aria-label
+        var activeTag = cut.Find(".badge-tag-active");
+        activeTag.GetAttribute("aria-label").Should().Be("Remove filter: ai");
+
+        // Inactive tag should keep "Filter by" aria-label
+        var inactiveTag = cut.FindAll(".badge-tag:not(.badge-tag-active)").First();
+        inactiveTag.GetAttribute("aria-label").Should().Be("Filter by copilot");
+    }
+
     private static ContentItem CreateTestContentItem(string title, string date)
     {
         return A.ContentItem

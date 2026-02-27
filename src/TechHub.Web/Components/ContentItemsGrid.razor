@@ -47,7 +47,7 @@
         <div class="content-grid" role="feed" aria-busy="@isLoadingMore">
             @foreach (var item in FilteredContentItems)
             {
-                <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" SectionName="@SectionName" />
+                <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" SectionName="@SectionName" ActiveFilterTags="@FilterTags" />
             }
         </div>
 

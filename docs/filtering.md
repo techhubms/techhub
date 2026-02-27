@@ -438,6 +438,20 @@ Selected tags are highlighted with the `.selected` CSS class:
 
 When viewing a content item detail page, the tag cloud shows the item's tags with real section-level counts from the default 90-day date range. This way, clicking a tag navigates to filtered results that match the count displayed.
 
+### Card Tag Badge Active State
+
+On collection/section pages, tag badges on content item cards are aware of the active filter tags from the URL. When a tag on a card matches one of the active filter tags, the badge is highlighted with the `.badge-tag-active` CSS class (same purple styling as the sidebar tag cloud `.selected` state).
+
+**Behavior**:
+
+- **Visual highlight**: Active filter tags on cards use `--color-purple-dark` background and `--color-purple-bright` border, matching the sidebar tag cloud selected state
+- **Toggle (deselect)**: Clicking a highlighted badge removes that tag from the URL filter (deselects it), instead of adding it again
+- **Toggle (select)**: Clicking a non-highlighted badge adds the tag to the URL filter (existing behavior)
+- **Case-insensitive matching**: Tag comparison uses `ToLowerInvariant()` for both display tags and active filter tags
+- **Aria labels**: Active badges say "Remove filter: {tag}", inactive badges say "Filter by {tag}"
+
+**Data flow**: `SectionCollection.razor` passes `selectedTags` as `FilterTags` to `ContentItemsGrid`, which passes them as `ActiveFilterTags` to each `ContentItemCard`. The card checks each tag against the active filters to determine styling and click behavior.
+
 - `SidebarTagCloud` receives both `Tags` (the content item's tags) and `SectionName`
 - When both are provided, it calls the tag cloud API with `tagsToCount` to fetch real counts
 - If `SectionName` is not available, falls back to displaying each tag with a count of 1
