@@ -27454,5 +27454,17 @@
     "collection": "news",
     "timestamp": "2026-02-27 18:10:06 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-02-27-copilot-metrics-is-now-generally-available"
+  },
+  {
+    "timestamp": "2026-02-27 19:14:21 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' category because the Team Calendar extension is designed specifically for Azure DevOps teams, focusing on collaboration and project management, which fits DevOps inclusion rule 1 (Azure DevOps Services) and rule 3 (Team Collaboration). Assigned 'Azure' category because the extension is for Azure DevOps (Azure inclusion rule 1 and 4). The content is purely about tooling and usability improvements for teams working within the Azure DevOps platform. No other categories were assigned because there is no coverage of coding practices, security, AI, ML, or GitHub Copilot.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/devops/updates-to-team-calendar-extension/"
+  },
+  {
+    "timestamp": "2026-02-27 19:14:43 +00:00",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The news focuses exclusively on GitHub Copilot and specifically its CLI telemetry for enterprise usage metrics. According to the rules, any content centered on GitHub Copilot (including its CLI features for developers) must include both categories. No other core development, DevOps, Azure, ML, or security aspects are discussed here.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-02-27-copilot-usage-metrics-now-includes-enterprise-level-github-copilot-cli-activity"
   }
 ]

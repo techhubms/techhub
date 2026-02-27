@@ -1,0 +1,19 @@
+{
+  "Author": "Allison",
+  "PubDate": "2026-02-27T18:00:19+00:00",
+  "ProcessedDate": "2026-02-27 19:12:37",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-02-27-copilot-usage-metrics-now-includes-enterprise-level-github-copilot-cli-activity",
+  "EnhancedContent": "[Copilot enterprise usage metrics](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-28) coverage has expanded to now include Copilot CLI telemetry.\n\nWith this update, your enterprise metrics can include CLI-specific activity and usage totals, such as:\n\n- Daily active CLI users\n- CLI request and session counts\n- Token usage totals, including average tokens per request\n\n### Why this matters\n\n- Track CLI adoption across your enterprise and spot where enablement or support is needed.\n- Compare usage patterns across environments so you can understand how developers use GitHub Copilot day to day.\n- Use token usage totals to better understand consumption trends and plan for rollout over time.\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "account management",
+    "copilot",
+    "enterprise management tools",
+    "Release"
+  ],
+  "Title": "Copilot usage metrics now includes enterprise-level GitHub Copilot CLI activity",
+  "Description": "Copilot enterprise usage metrics coverage has expanded to now include Copilot CLI telemetry. With this update, your enterprise metrics can include CLI-specific activity and usage totals, such as: Daily active…\n\nThe post [Copilot usage metrics now includes enterprise-level GitHub Copilot CLI activity](https://github.blog/changelog/2026-02-27-copilot-usage-metrics-now-includes-enterprise-level-github-copilot-cli-activity) appeared first on [The GitHub Blog](https://github.blog)."
+}
