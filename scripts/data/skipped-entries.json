@@ -12603,5 +12603,23 @@
     "timestamp": "2026-02-28 00:07:14 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/9PFBf95xbeM"
+  },
+  {
+    "timestamp": "2026-02-28 09:05:35 +00:00",
+    "collection": "blogs",
+    "reason": "No categories found: All content is focused on Microsoft 365 Copilot, Copilot for Microsoft 365, and productivity use-cases (Excel, Teams, meeting summaries, document creation, enterprise adoption) rather than developer or technical maker topics. According to the Non-Development Microsoft Products exclusion and CRITICAL Copilot Product Distinction, business productivity Copilots and Microsoft 365 Copilot are explicitly excluded and do NOT qualify for any categories. While Copilot Studio is mentioned, discussion here is about model flexibility and enterprise AI agent capabilities at the business workflow/assistant level—not technical maker or developer extensibility. There is no technical depth in customizing, building, or developing with Copilot Studio, only strategic and business process perspectives. None of the inclusion criteria for 'AI' or any other category are met, and generic exclusion rules for non-development Microsoft products fully apply.",
+    "canonical_url": "https://dellenny.com/microsoft-365-copilot-copilot-studio-news/"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-02-28 16:04:05 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/k_qunlhXyys",
+    "reason": "No categories found: No categories assigned because the content is primarily an interview excerpt discussing Anders Hejlsberg's perspective on open source development philosophy and processes on GitHub, rather than technical implementation details, development tooling, or specific Microsoft technologies. The description focuses on the cultural and collaborative benefits of open source, not on coding, DevOps, AI, ML, Azure, or security practices. Content about organizational culture and high-level software development processes, even when mentioning GitHub or TypeScript, does not qualify unless it contains actionable technical insights or implementation guidance as required by the inclusion rules."
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-01 13:16:11 +00:00",
+    "reason": "No categories found: No categories were assigned because, according to the Generic Exclusion Rules, this article is primarily about business process change, end-of-support communication, and operational migration guidance (SharePoint workflow migration for business/IT process owners), not technical implementation, development, or architecture for Microsoft developers and consultants. No substantial code, development, architecture, or technical depth on Power Automate development, custom coded solutions, or developer tooling is provided. The article discusses replacing legacy automation with platform tools and promotes a migration governance template, but does not focus on technical implementation, developer guidance, or hands-on engineering. SharePoint development and Power Automate development are mentioned only as recommendations, not with technical depth or step-by-step engineering detail required for inclusion in Coding, DevOps, Azure, or ML categories.",
+    "canonical_url": "https://dellenny.com/sharepoint-2013-workflow-retirement-what-it-means-for-your-business/"
   }
 ]

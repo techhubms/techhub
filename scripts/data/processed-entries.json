@@ -27478,5 +27478,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/genrec-direct-learning-moving-ranking-from-feature-pipelines-to/ba-p/4494252",
     "reason": "Succesfully added: AI category assigned because the content centers on generative modeling and AI-driven ranking (AI rule 1, 4). Azure assigned due to the substantial use of Azure Machine Learning and Azure Exp for training, deployment, and evaluation (Azure rule 1, 4). ML assigned because the entire piece deals with advanced machine learning, deep learning, and sequence modeling architectures (ML rules 1, 6, 11). Coding was NOT assigned because the article focuses on architecture, ML pipelines, and system-level approaches without providing direct coding patterns, language, or SDK details. DevOps and Security were not relevant based on the content focus. The main categorization decisions referenced explicit mentions of AI, Azure ML, PyTorch-based deep learning, and end-to-end ML engineering within Microsoft’s ecosystem."
+  },
+  {
+    "timestamp": "2026-03-01 15:04:24 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=THyiJxOpbJY",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content is centered on Copilot, AI agent adoption, and workflow shifts (AI rules 1, 2, and 4; GitHub Copilot all rules). DevOps is included as the discussion covers workflow transformation and development process optimization (DevOps rule 3 and 9). Azure, ML, Coding, and Security categories are not assigned: Azure and ML are not substantively addressed; Coding is not the main focus; Security is discussed as a concern but does not cover implementation-level details necessary to add the Security category."
   }
 ]
