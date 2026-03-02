@@ -27532,5 +27532,17 @@
     "reason": "Succesfully added: Assigned the 'AI' category because the session centers on streamlining AI workflows using development tools (AI inclusion rules 1 and 4). 'GitHub Copilot' was assigned as the main focus is on GitHub Copilot CLI, a developer AI tool (GitHub Copilot inclusion rules 1 and 2), and per workflow instruction, 'AI' must be included alongside 'GitHub Copilot'. 'Coding' applies as the event involves live coding, code completions, and use of Visual Studio Code for software development (Coding inclusion rules 2 and 5). The content is excluded from all generic exclusion criteria as it is technical, development-focused, and productively demonstrates development tool usage.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=QZxZgHtl5Qw"
+  },
+  {
+    "reason": "Succesfully added: Included the 'AI' and 'GitHub Copilot' categories because the content is centrally about GitHub Copilot, an AI-powered development tool for coders (AI rule 2 and GitHub Copilot inclusion rules). 'Coding' is included because the events focus on hands-on coding, integrating Copilot with Visual Studio, VS Code, and Microsoft developer tech (.NET, etc.), fitting the Coding inclusion rules. No Azure category because, while Azure is mentioned, the primary focus is on Copilot as an AI development tool across Microsoft IDEs. No DevOps, ML, or Security categories are applicable as those topics are not a main focus of the event.",
+    "canonical_url": "https://devblogs.microsoft.com/blog/github-copilot-dev-days",
+    "collection": "news",
+    "timestamp": "2026-03-02 18:09:59 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories: The content covers updates to Copilot's telemetry metrics—a developer-focused, AI-powered tool—meeting AI category rule 2 and GitHub Copilot inclusion rule 1. The content does not mention Microsoft 365 Copilot or end-user productivity tools, so non-development exclusion rules do not apply. No other categories are relevant since the focus is on metrics and telemetry for Copilot usage, not general coding, DevOps, Azure, ML, or Security.",
+    "canonical_url": "https://github.blog/changelog/2026-03-02-copilot-metrics-now-includes-plan-mode",
+    "collection": "news",
+    "timestamp": "2026-03-02 18:10:43 +00:00"
   }
 ]

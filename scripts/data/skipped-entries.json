@@ -12627,5 +12627,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=WiNcWsyENU4",
     "reason": "No categories found: All categories are excluded due to the generic exclusion rule for non-development Microsoft products: the video is focused entirely on M365 Copilot, which is a business productivity tool (Microsoft 365 Copilot). The walkthrough and prompt examples all revolve around helping users be more productive in daily office tasks (e.g., planning meetings, summarizing emails, generating news briefs, and researching information), and not on development or coding with Microsoft technologies. No technical implementation, development, or architecture details are present—just end-user guidance. Per explicit exclusion rules in Chapter 3 (Non-Development Microsoft Products) and the Copilot Product Distinction in Chapter 2, any content about Microsoft 365 Copilot must be excluded and assigned no categories.",
     "timestamp": "2026-03-02 15:14:22 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is primarily a company news post celebrating SharePoint's 25th anniversary and focuses on SharePoint's evolving role as a foundational knowledge management platform. While it references the use of AI (Microsoft 365 Copilot) and the role of SharePoint as a grounding source, the content itself does NOT provide technical implementation details, developer guidance, code, or hands-on Azure/AI/SharePoint development information. The discussion of AI is centered around business productivity and organizational knowledge rather than development or technical integration. Per the generic exclusion rules under 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content,' content focused on Microsoft 365 Copilot in an organizational knowledge activation/business productivity context is excluded from all categories.",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/02/sharepoint-at-25-how-microsoft-is-putting-knowledge-to-work-in-the-ai-era/",
+    "collection": "news",
+    "timestamp": "2026-03-02 18:10:22 +00:00"
   }
 ]
