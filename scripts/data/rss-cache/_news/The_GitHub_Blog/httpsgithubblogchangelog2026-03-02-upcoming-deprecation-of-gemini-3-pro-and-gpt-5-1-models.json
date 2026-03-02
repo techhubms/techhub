@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-03-02 21:07:49",
+  "EnhancedContent": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions):\n\n| Model | Deprecation date | Suggested alternative | | --- | --- | --- | | Gemini 3 Pro | 2026-03-26 | Gemini 3.1 Pro | | GPT-5.1 | 2026-04-01 | GPT-5.3-Codex | | GPT-5.1-Codex | 2026-04-01 | GPT-5.3-Codex | | GPT-5.1-Codex-Mini | 2026-04-01 | GPT-5.3-Codex | | GPT-5.1-Codex-Max | 2026-04-01 | GPT-5.3-Codex |\n\nThe Gemini 3 Pro deprecation date is accelerated due to [provider deprecation](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-pro).\n\nPlease update your workflows and integrations to use supported models before these dates. Copilot Enterprise administrators may need to enable access to alternative models through their model policies in Copilot settings. As an administrator, you can verify availability by checking your individual Copilot settings and confirming that the policy is enabled for the specific model. Once enabled, you’ll see the model in the Copilot Chat model selector in VS Code and on github.com. No action is required to remove the models once they have been deprecated.\n\nGitHub Enterprise customers with questions or concerns are encouraged to reach out to their account manager for further assistance.\n\n### Share your feedback\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) and get started with Copilot today.\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) to share your feedback.",
+  "Title": "Upcoming deprecation of Gemini 3 Pro and GPT-5.1 models",
+  "Tags": [
+    "copilot",
+    "Retired"
+  ],
+  "OutputDir": "_news",
+  "Description": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions): Model Deprecation date Suggested alternative Gemini 3…\n\nThe post [Upcoming deprecation of Gemini 3 Pro and GPT-5.1 models](https://github.blog/changelog/2026-03-02-upcoming-deprecation-of-gemini-3-pro-and-gpt-5-1-models) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "PubDate": "2026-03-02T20:47:00+00:00",
+  "Link": "https://github.blog/changelog/2026-03-02-upcoming-deprecation-of-gemini-3-pro-and-gpt-5-1-models"
+}

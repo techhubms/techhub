@@ -12633,5 +12633,11 @@
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/02/sharepoint-at-25-how-microsoft-is-putting-knowledge-to-work-in-the-ai-era/",
     "collection": "news",
     "timestamp": "2026-03-02 18:10:22 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2026/02/26/copilot-tasks-from-answers-to-actions/",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The post focuses on introducing 'Copilot Tasks', a general-purpose AI-powered productivity feature targeting a broad audience ('for everyone, not just developers or enterprises'), and demonstrates business and personal productivity use cases (email triage, study planning, shopping, logistics). There is no focus on development, coding, Microsoft developer tools, or technical implementation. The features described are for end-users and follow the exclusion for business productivity tools (Microsoft Copilot, Copilot for Microsoft 365, etc.) per Non-Development Microsoft Products exclusion. No qualifying development context or technical depth according to exclusion rules.",
+    "timestamp": "2026-03-02 21:09:07 +00:00"
   }
 ]

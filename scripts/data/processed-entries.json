@@ -27556,5 +27556,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/inference-at-enterprise-scale-architecting-for-cost-latency-and/ba-p/4498754",
     "reason": "Succesfully added: Assigned AI category because the primary topic is designing and optimizing AI model inference systems, with a strong focus on large language models and AI architectures on Microsoft Azure (AI rule 1, 4, 5). Assigned Azure category since all recommendations and optimizations are designed for Azure Kubernetes Service (AKS) with integration of Azure-native infrastructure, VM SKUs, Entra ID, and Key Vault (Azure rules 1, 4, 5). Assigned ML category due to substantial coverage of model selection, quantization, multi-LoRA, and batch/real-time data pipeline design, reflecting ML engineering best practices (ML rules 1, 2, 4, 10). Assigned Security category as best practices for data protection, private clusters, network isolation, RBAC, and Azure governance are discussed in depth throughout the content (Security rules 1, 2, 3, 4, 5, 7, 9). Did not assign Coding or DevOps because the article is focused more on orchestration, optimization, and platform architecture than hands-on coding patterns or classic CI/CD workflows.",
     "timestamp": "2026-03-02 20:08:49 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/02/oauth-redirection-abuse-enables-phishing-malware-delivery/",
+    "collection": "news",
+    "reason": "Succesfully added: The primary focus of this news is technical analysis of OAuth redirection abuse for phishing and malware, specifically using Microsoft identity solutions including Entra ID. This justifies 'Security' (application, identity, and attack mitigation) and 'Azure' (centrality of Entra ID, Azure OAuth endpoints) categories per Chapter 4 rules. The content explains security implementation, detection queries, and mitigations for practitioners. No AI, ML, Coding, DevOps, or GitHub Copilot aspects are present. All inclusion/exclusion decisions followed by strict category/non-category assignment criteria. The article is technical, non-biographical, not a sales pitch, not negative-only, focused on practical identity/app security measures, and entirely in English, meeting all quality and scope requirements.",
+    "timestamp": "2026-03-02 21:09:33 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-02-network-configuration-changes-for-copilot-coding-agent-now-in-effect",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the Copilot coding agent is a developer-oriented AI tool from GitHub, which fits AI inclusion rules 1 and 2. 'GitHub Copilot' category is also assigned as the Copilot coding agent is part of the GitHub Copilot ecosystem (GitHub Copilot inclusion rules 1–3). Not assigning Azure directly as Azure is mentioned only as the private networking environment—not as the main subject. DevOps is present as a tag but not a primary category since the technical focus is on Copilot configuration. Generic exclusion rules do not apply.",
+    "timestamp": "2026-03-02 21:09:54 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-02-upcoming-deprecation-of-gemini-3-pro-and-gpt-5-1-models",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the content is centered on AI model deprecation and alternatives within GitHub Copilot, specifically calling out changes to language model support (AI rule 1 and 2). Assigned 'GitHub Copilot' because the announcement directly concerns Copilot features, usage, and administration (GitHub Copilot rules 1, 2, and 5). 'Coding,' 'DevOps,' 'Azure,' 'ML,' and 'Security' were not assigned as the post is about Copilot model changes rather than coding practices, infrastructure, cloud, machine learning, or security topics. No generic exclusion rules applied as the content is technical, relevant, and not business productivity or career oriented.",
+    "timestamp": "2026-03-02 21:10:11 +00:00"
   }
 ]
