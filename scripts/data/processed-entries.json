@@ -27544,5 +27544,17 @@
     "canonical_url": "https://github.blog/changelog/2026-03-02-copilot-metrics-now-includes-plan-mode",
     "collection": "news",
     "timestamp": "2026-03-02 18:10:43 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/blog/the-javascript-ai-build-a-thon-season-2-starts-today",
+    "reason": "Succesfully added: Content qualifies for the AI category because it centers on hands-on AI learning and development for JavaScript/TypeScript developers using Microsoft technologies, including local AI, RAG, and agentic systems. Multiple sessions involve Microsoft Foundry and Agent Builder, both Microsoft AI platforms (AI inclusion rules 1 and 3). There is no substantive focus on coding with Microsoft frameworks (such as .NET) or Azure-specific implementations, so Coding and Azure are not applied. GitHub Copilot is not mentioned. ML is not used, as the primary emphasis is on using existing platforms and tools for AI application, not building ML solutions from scratch. All generic exclusion rules were checked—this is an official Microsoft developer event announcement with substantial technical educational content.",
+    "timestamp": "2026-03-02 20:07:32 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/inference-at-enterprise-scale-architecting-for-cost-latency-and/ba-p/4498754",
+    "reason": "Succesfully added: Assigned AI category because the primary topic is designing and optimizing AI model inference systems, with a strong focus on large language models and AI architectures on Microsoft Azure (AI rule 1, 4, 5). Assigned Azure category since all recommendations and optimizations are designed for Azure Kubernetes Service (AKS) with integration of Azure-native infrastructure, VM SKUs, Entra ID, and Key Vault (Azure rules 1, 4, 5). Assigned ML category due to substantial coverage of model selection, quantization, multi-LoRA, and batch/real-time data pipeline design, reflecting ML engineering best practices (ML rules 1, 2, 4, 10). Assigned Security category as best practices for data protection, private clusters, network isolation, RBAC, and Azure governance are discussed in depth throughout the content (Security rules 1, 2, 3, 4, 5, 7, 9). Did not assign Coding or DevOps because the article is focused more on orchestration, optimization, and platform architecture than hands-on coding patterns or classic CI/CD workflows.",
+    "timestamp": "2026-03-02 20:08:49 +00:00"
   }
 ]
