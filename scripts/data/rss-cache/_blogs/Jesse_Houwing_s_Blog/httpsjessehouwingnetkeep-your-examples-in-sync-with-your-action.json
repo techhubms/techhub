@@ -1,0 +1,18 @@
+{
+  "FeedUrl": "https://jessehouwing.net/rss/",
+  "Author": "Jesse Houwing",
+  "ProcessedDate": "2026-03-02 10:14:11",
+  "Description": "Last month I added a few more GitHub Actions to the Marketplace and while working on them found that it was easy to forget to update my examples as the implementation of the Action evolved",
+  "Title": "Keep your examples in sync with your Action",
+  "FeedLevelAuthor": "Scrum Bug",
+  "PubDate": "2026-03-02T09:53:49+00:00",
+  "Tags": [
+    "Continuous Integration",
+    "GitHub",
+    "GitHub Actions"
+  ],
+  "Link": "https://jessehouwing.net/keep-your-examples-in-sync-with-your-action/",
+  "EnhancedContent": "Last month I added a few more GitHub Actions to the Marketplace and while working on them found that it was easy to forget to update my examples as the implementation of the Action evolved.\n\nSo, what started as a small script to automatically validate the examples against the `action.yaml` quickly grew into its own action:\n\n[Actions Example Checker - GitHub Marketplace Validate examples in documentation against action.yml schemas !\\[\\](https://jessehouwing.net/content/images/icon/pinned-octocat-093da3e6fa40-5.svg)GitHub !\\[\\](https://jessehouwing.net/content/images/thumbnail/4173387)](https://github.com/marketplace/actions/actions-example-checker?ref=jessehouwing.net)\n## Introducing the Actions Example Checker\n\nThe Actions Example Checker is a simple action you can add to your repository. It will scan for all `action.yaml` files and extract the metadata. It will then search through all markdown files in your repo and extract all YAML script blocks:\n\n``` ```yaml\n- uses: your/action@version\n``` ```\n\nAny examples that reference your action will be checked against the schema.\n\nAdditionally, you can add a `action.schema.yaml` with extended metadata about each input, like: allowed values, datatype, regex. I've got a few more plans with this, but for now it's purely used to check the assigned values in your examples.\n\n## Sample workflow\n\nIn order to add the Actions example checker to your repo, add this workflow:\n\n```yaml name: Validate Documentation\n\non: pull_request: push: branches: [main] workflow_dispatch:\n\npermissions: {}\n\njobs: validate-docs: runs-on: ubuntu-latest steps:\n- uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6\nwith: sparse-checkout: | **/action.yaml **/action.yml **/action.schema.yaml **/action.schema.yml **/*.md sparse-checkout-cone-mode: false\n- uses: jessehouwing/actions-example-checker@ea0821955c7ecf2c98e5b184054ba31486914a7b # v0.0.4\ntoken: ${{ secrets.GITHUB_TOKEN }} ```\n\n## Example schemas\n\nI've already added schema validation to most of my own actions, they may be able to help you setup your own:\n\n- [actions-example-checker/action.schema.yaml](https://github.com/jessehouwing/actions-example-checker/blob/main/action.schema.example.yml?ref=jessehouwing.net)\n- [actions-semver-checker/action.schema.yaml](https://github.com/jessehouwing/actions-semver-checker/blob/main/action.schema.yml?ref=jessehouwing.net)\n- [actions-dependency-submission/action.schema.yaml](https://github.com/jessehouwing/actions-dependency-submission/blob/main/action.schema.yaml?ref=jessehouwing.net)\n- [azdo-marketplace/action.schema.yaml](https://github.com/jessehouwing/azdo-marketplace/blob/main/action.schema.yaml?ref=jessehouwing.net)\n\nLet me know if you find this useful!",
+  "OutputDir": "_blogs",
+  "FeedName": "Jesse Houwing's Blog"
+}

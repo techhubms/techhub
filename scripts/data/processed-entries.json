@@ -27484,5 +27484,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=THyiJxOpbJY",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content is centered on Copilot, AI agent adoption, and workflow shifts (AI rules 1, 2, and 4; GitHub Copilot all rules). DevOps is included as the discussion covers workflow transformation and development process optimization (DevOps rule 3 and 9). Azure, ML, Coding, and Security categories are not assigned: Azure and ML are not substantively addressed; Coding is not the main focus; Security is discussed as a concern but does not cover implementation-level details necessary to add the Security category."
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content is focused on GitHub Actions (DevOps rule 2) and automation of CI/CD documentation validation (DevOps rules 5 and 9). No AI, Coding, Azure, ML, or Security topics are explicitly covered, so those categories are not assigned. The post directly discusses development workflow quality and automation in GitHub, fitting DevOps inclusion.",
+    "canonical_url": "https://jessehouwing.net/keep-your-examples-in-sync-with-your-action/",
+    "collection": "blogs",
+    "timestamp": "2026-03-02 10:15:47 +00:00"
   }
 ]
