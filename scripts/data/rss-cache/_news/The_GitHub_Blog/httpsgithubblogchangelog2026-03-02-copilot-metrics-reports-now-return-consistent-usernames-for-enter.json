@@ -1,0 +1,19 @@
+{
+  "Link": "https://github.blog/changelog/2026-03-02-copilot-metrics-reports-now-return-consistent-usernames-for-enterprise-managed-users",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Author": "Allison",
+  "PubDate": "2026-03-02T16:42:49+00:00",
+  "ProcessedDate": "2026-03-02 17:14:15",
+  "EnhancedContent": "[GitHub Copilot usage metrics reports](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-28) now return a consistent `user_login` value for Enterprise Managed Users (EMU). Previously, some reports could include a suffix in `user_login` , which made it harder to match results across GitHub APIs.",
+  "Description": "GitHub Copilot usage metrics reports now return a consistent user\\_login value for Enterprise Managed Users (EMU). Previously, some reports could include a suffix in user\\_login, which made it harder to…\n\nThe post [Copilot metrics reports now return consistent usernames for Enterprise Managed Users](https://github.blog/changelog/2026-03-02-copilot-metrics-reports-now-return-consistent-usernames-for-enterprise-managed-users) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "Copilot metrics reports now return consistent usernames for Enterprise Managed Users",
+  "Tags": [
+    "account management",
+    "copilot",
+    "enterprise management tools",
+    "Improvement"
+  ]
+}
