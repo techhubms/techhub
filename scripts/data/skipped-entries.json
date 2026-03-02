@@ -12621,5 +12621,11 @@
     "timestamp": "2026-03-01 13:16:11 +00:00",
     "reason": "No categories found: No categories were assigned because, according to the Generic Exclusion Rules, this article is primarily about business process change, end-of-support communication, and operational migration guidance (SharePoint workflow migration for business/IT process owners), not technical implementation, development, or architecture for Microsoft developers and consultants. No substantial code, development, architecture, or technical depth on Power Automate development, custom coded solutions, or developer tooling is provided. The article discusses replacing legacy automation with platform tools and promotes a migration governance template, but does not focus on technical implementation, developer guidance, or hands-on engineering. SharePoint development and Power Automate development are mentioned only as recommendations, not with technical depth or step-by-step engineering detail required for inclusion in Coding, DevOps, Azure, or ML categories.",
     "canonical_url": "https://dellenny.com/sharepoint-2013-workflow-retirement-what-it-means-for-your-business/"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=WiNcWsyENU4",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for non-development Microsoft products: the video is focused entirely on M365 Copilot, which is a business productivity tool (Microsoft 365 Copilot). The walkthrough and prompt examples all revolve around helping users be more productive in daily office tasks (e.g., planning meetings, summarizing emails, generating news briefs, and researching information), and not on development or coding with Microsoft technologies. No technical implementation, development, or architecture details are present—just end-user guidance. Per explicit exclusion rules in Chapter 3 (Non-Development Microsoft Products) and the Copilot Product Distinction in Chapter 2, any content about Microsoft 365 Copilot must be excluded and assigned no categories.",
+    "timestamp": "2026-03-02 15:14:22 +00:00"
   }
 ]

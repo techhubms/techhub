@@ -27490,5 +27490,11 @@
     "canonical_url": "https://jessehouwing.net/keep-your-examples-in-sync-with-your-action/",
     "collection": "blogs",
     "timestamp": "2026-03-02 10:15:47 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/execute-power-query-programmatically-in-microsoft-fabric/",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because Microsoft Fabric is part of the Azure ecosystem and the API is a cloud service (Azure rule 1, 4, 5). 'ML' included because content describes orchestrating and automating data workflows commonly used in data science/analytics engineering, especially with integration to Spark and DataFrames (ML rule 1, 2, 3, 4, 7). 'Coding' included because the article provides code samples (Python, M language), API usage, and programming-centric automation (Coding rules 2, 4, 5). Did not assign 'AI' as article does not describe usage of AI/ML model APIs or AI features; focus is on data transformation automation. Did not assign 'DevOps' as article is about programmatic execution and workflow orchestration in a data engineering context, not DevOps, CI/CD, or version control specifically. 'Security' not assigned as security aspects (roles, gateway) are mentioned only as configuration details, not the focus of the content.",
+    "timestamp": "2026-03-02 15:13:38 +00:00"
   }
 ]
