@@ -27670,5 +27670,23 @@
     "collection": "videos",
     "timestamp": "2026-03-03 21:08:37 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/p21hFYoXxIc"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the content is focused on Azure App Service and its deployment features (Azure rule 1, 4, 5). Assigned 'DevOps' because the news covers deployment automation, CI/CD workflow improvements, and infrastructure management via CLI (DevOps rules 5, 6). Did not assign 'Coding' as there is no focus on programming languages or code. 'AI', 'GitHub Copilot', 'ML', and 'Security' do not apply. Generic exclusion rules do not apply as content is technical, English, and not business/productivity focused.",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azd-appservice-swap/",
+    "timestamp": "2026-03-03 22:05:35 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on Microsoft's Mistral Document AI, a tool for intelligent document understanding (AI inclusion rules 1, 4, and 5). Assigned Azure category because the solution is delivered via Microsoft Foundry, which operates within the Azure ecosystem (Azure inclusion rules 1 and 4). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot categories as the content focuses on usage and deployment of AI-powered services for document understanding and does not engage in code-level development, DevOps practices, custom ML engineering, security implementation, or Copilot features.",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664",
+    "timestamp": "2026-03-03 22:06:22 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the session discusses the use of artificial intelligence to accelerate development (AI rule 4). Assigned Coding category because the focus is on cross-platform application development with .NET MAUI (Coding rules 1 and 4). Did not assign Azure, DevOps, ML, or Security as the content does not focus on those areas based on the description. The video is technical, related to developer tools, and AI is used specifically in a development context, so all rules for inclusion are met.",
+    "canonical_url": "https://www.youtube.com/watch?v=nY74XPjLw0U",
+    "timestamp": "2026-03-03 22:07:03 +00:00",
+    "collection": "videos"
   }
 ]

@@ -12651,5 +12651,11 @@
     "canonical_url": "https://www.devclass.com/development/2026/03/03/generic-methods-arrive-in-golang-but-they-werent-the-top-dev-demand/4093093",
     "collection": "blogs",
     "reason": "No categories found: No categories were assigned because this blog post focuses entirely on recent language features and developer sentiment in the Go programming language, which is not a Microsoft technology. There is no discussion of Microsoft platforms, tools, programming languages, services, or relevant integrations, nor do any parts of the article reference Azure, .NET, Visual Studio, GitHub Copilot, or any other technologies that would trigger inclusion rules for the 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' categories. The generic exclusion rule for Microsoft-centrality (Microsoft technologies must be central or at least 40% of substantive content) applies here, as there is no Microsoft context present."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This news post and its comment thread are primarily announcing the upcoming Microsoft Build event in San Francisco without offering any substantive technical detail, guidance, or hands-on technical discussion about Microsoft products, technologies, or development practices. The bulk of the content consists of short, general statements of anticipation, promotional comments, or high-level remarks about Microsoft’s strategy, AI, platform innovation, or upcoming product rumors, without in-depth exploration of developer-relevant or engineering implementation details. According to the rules in Chapter 3 (e.g., Sales Pitches, Business Strategy and Executive Content), high-level announcements or business-focused content lacking actionable technical insight, architectural discussion, or implementation guidance must be excluded. There is also no code, tutorial, walk-through, or meaningful technical discussion to ground inclusion. Therefore, no categories are assigned.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_counting-down-to-a-new-build-in-san-francisco-activity-7434688896669560833-PqKW",
+    "timestamp": "2026-03-03 22:05:58 +00:00",
+    "collection": "news"
   }
 ]
