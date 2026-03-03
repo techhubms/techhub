@@ -27628,5 +27628,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-to-the-next-generation-of-virtual-nodes-on-azure/ba-p/4496565",
     "timestamp": "2026-03-03 13:25:42 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content discusses the influence of AI on developer security practices, the use of Copilot Autofix, and AI-assisted security workflows (AI rule 1 and rule 4). Assigned Security category based on substantial coverage of vulnerabilities, access control, and secure development practices in GitHub's ecosystem (Security rules 2, 3, and 4). Assigned DevOps category due to the focus on developer workflow improvements (shift left, dependency management, merge queues), collaboration, and security processes integrated into development (DevOps rule 3 and rule 4). Not assigned GitHub Copilot as a category because although Copilot Autofix is mentioned, the core focus is security/AI practices, not Copilot tool usage or best practices. Not assigned Azure or ML as these topics are not covered in the provided material.",
+    "canonical_url": "https://www.youtube.com/watch?v=sJjISI3Li4I",
+    "collection": "videos",
+    "timestamp": "2026-03-03 16:14:16 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The article is technical and developer-focused, describing how to migrate or implement the BizTalk Server Aggregator integration pattern on Azure Logic Apps Standard using Azure Service Bus and reusable flat file schemas. Inclusion of architectural mapping, deployment steps, and open source workflow templates means it qualifies for the 'Azure' category (Azure rule 1, 4), 'DevOps' (deployment via ARM templates, Azure DevOps, and GitHub Actions, DevOps rules 5, 6, 11), and 'Coding' (flat file schema manipulation, XSD reuse, technical integration, Coding rules 1, 4). No ML, AI, Security, or Copilot topics are present. The content is detailed, implementation-oriented, and aimed at technical practitioners.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/implementing-migrating-the-biztalk-server-aggregator-pattern-to/ba-p/4495107",
+    "collection": "community",
+    "timestamp": "2026-03-03 16:14:52 +00:00"
   }
 ]
