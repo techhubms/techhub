@@ -12639,5 +12639,17 @@
     "collection": "news",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The post focuses on introducing 'Copilot Tasks', a general-purpose AI-powered productivity feature targeting a broad audience ('for everyone, not just developers or enterprises'), and demonstrates business and personal productivity use cases (email triage, study planning, shopping, logistics). There is no focus on development, coding, Microsoft developer tools, or technical implementation. The features described are for end-users and follow the exclusion for business productivity tools (Microsoft Copilot, Copilot for Microsoft 365, etc.) per Non-Development Microsoft Products exclusion. No qualifying development context or technical depth according to exclusion rules.",
     "timestamp": "2026-03-02 21:09:07 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: All provided content is focused on general user guidance about removing fake malware browser notifications, not on technical implementation using Microsoft security technologies. There is no substantive technical content, no discussion of Microsoft-specific tools, and the discussion centers on basic end-user browser hygiene (deleting notification permissions). Per generic exclusion rules, this is end-user security advice rather than practitioner/development or IT operations content, so no categories are assigned.",
+    "timestamp": "2026-03-03 17:15:55 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=8kdV9rjFRtg"
+  },
+  {
+    "timestamp": "2026-03-03 18:12:43 +00:00",
+    "canonical_url": "https://www.devclass.com/development/2026/03/03/generic-methods-arrive-in-golang-but-they-werent-the-top-dev-demand/4093093",
+    "collection": "blogs",
+    "reason": "No categories found: No categories were assigned because this blog post focuses entirely on recent language features and developer sentiment in the Go programming language, which is not a Microsoft technology. There is no discussion of Microsoft platforms, tools, programming languages, services, or relevant integrations, nor do any parts of the article reference Azure, .NET, Visual Studio, GitHub Copilot, or any other technologies that would trigger inclusion rules for the 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' categories. The generic exclusion rule for Microsoft-centrality (Microsoft technologies must be central or at least 40% of substantive content) applies here, as there is no Microsoft context present."
   }
 ]

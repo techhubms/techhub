@@ -27640,5 +27640,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/implementing-migrating-the-biztalk-server-aggregator-pattern-to/ba-p/4495107",
     "collection": "community",
     "timestamp": "2026-03-03 16:14:52 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/engineering/architecture-optimization/how-we-rebuilt-the-search-architecture-for-high-availability-in-github-enterprise-server/",
+    "collection": "news",
+    "timestamp": "2026-03-03 19:18:22 +00:00",
+    "reason": "Succesfully added: Assigned only the DevOps category. The content is centered on GitHub Enterprise Server infrastructure, focusing on operational architecture, high availability, cluster management, and reliable data replication. It is about backend search service engineering, system upgrades, and DevOps workflows, aligning with DevOps inclusion rules (Chapter 4, DevOps rules 1, 6, and 7). No AI, Coding, Azure, ML, Security, or GitHub Copilot features are described; the content does not cover development, ML/AI, code, or Microsoft Azure services. Despite being about GitHub, the focus is infrastructure and workflow (DevOps), not Copilot or coding. No generic exclusion rules apply: it is technical, in English, substantial in length, and not biographical or business-oriented."
   }
 ]
