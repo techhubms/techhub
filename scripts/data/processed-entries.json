@@ -27610,5 +27610,17 @@
     "timestamp": "2026-03-03 08:10:01 +00:00",
     "reason": "Succesfully added: Assigned AI category because the content is centered on agent-based AI workflows, leveraging LLMs and skills (AI rules 1 and 4). Assigned Azure category due to multiple references and use cases—Azure Blob Storage is mentioned as a skill storage backend and integration with Microsoft Agent Framework is detailed (Azure rules 1, 2, and 4). Assigned DevOps category because this SDK enables incident response automation, operational escalation, and workflow automation, aligning directly with DevOps practices (DevOps rules 5, 6, and 7). Assigned Coding because the content includes explicit code examples, developer SDK usage, and programming with Python and agent architectures (Coding rules 2, 4, and 5). ML was not assigned as there is no explicit data science, ML platform, or statistical analytics development covered. Category assignment is based on the technical depth, the tool’s open development focus, and developer-centric guidance.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/giving-your-ai-agents-reliable-skills-with-the-agent-skills-sdk/ba-p/4497074"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the entire content focuses on Azure Managed Disks, Premium SSD v2, and Ultra Disk (Azure rule 1). The post discusses Azure snapshot APIs, managed disks, and operational improvements in disk restore and scaling—all core Azure development and operations concerns. The content doesn't involve AI/ML, DevOps practices, security, GitHub, or coding topics, so those categories were not assigned.",
+    "timestamp": "2026-03-03 09:13:12 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Included the 'AI' category as the episode centers on open standards and protocols specifically for agentic AI in enterprise environments, mentioning core Microsoft-advocated technologies and best practices (AI rule 1, 4, 5). Did not assign 'Azure' or other categories, as the main content is about open AI protocols and architectural best practices, not practical Azure or coding specifics. 'ML' was not included because there is no focus on data science/ML engineering. 'Security' is discussed but not in-depth from a practical Microsoft security tooling or implementation standpoint—identity and authorization are presented as requirements, not as hands-on guidance using Microsoft platforms. Therefore, only 'AI' is appropriate according to Chapter 4.",
+    "timestamp": "2026-03-03 09:13:58 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=wGYd_shz-qU",
+    "collection": "videos"
   }
 ]
