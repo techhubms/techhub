@@ -27598,5 +27598,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-1-inference-at-enterprise-scale-why-llm-inference-is-a/ba-p/4498754",
     "reason": "Succesfully added: Assigned AI category because the core focus is on LLM inference optimization using distributed compute frameworks (Ray, Anyscale) on Microsoft Azure, and the article discusses inference strategies, Pareto tradeoffs, and agentic AI systems—all within artificial intelligence topics (AI rule 1, 4, 5). Assigned Azure category because deployment, engineering challenges, and cost analysis are rooted in Azure Kubernetes Service (Azure rule 1, 4, 5). Assigned ML because it covers model selection, fine-tuning, GPU resource management, and inference bottlenecks for large language models (ML rule 1, 2, 4, 5, 6, 10). Did not assign DevOps (no focus on CI/CD, pipelines), Coding (not language/framework level), Security (does not directly address IAM or security implementation), nor GitHub Copilot. The article meets quality standards, is technical, implementation-focused, and is not excluded by any generic rules.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content comprehensively explains a technical migration process for Azure ExpressRoute gateways, focusing on resource upgrades, administrative workflow, and portal tooling (Azure Inclusion rules 1, 2, 4, and 5). No other categories like DevOps, Security, ML, AI, Coding, or GitHub Copilot apply, as the article is exclusively about Azure networking and infrastructure upgrade operations. None of the generic exclusion rules apply since this is technical instructional content meant for Azure administrators and implementers.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/expressroute-gateway-microsoft-initiated-migration/ba-p/4497689",
+    "collection": "community",
+    "timestamp": "2026-03-03 01:33:34 +00:00"
   }
 ]
