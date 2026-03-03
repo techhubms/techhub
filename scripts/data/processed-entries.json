@@ -27622,5 +27622,11 @@
     "timestamp": "2026-03-03 09:13:58 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=wGYd_shz-qU",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for the Azure category due to its deep technical focus on Azure Kubernetes Service (AKS), Azure Container Instances (ACI), and related infrastructure, with detailed CLI commands and Helm usage (Azure rule 1, 2, 4, 5). DevOps is included because the article covers stepwise CI/CD, automation, Helm deployment, permissions, and management workflows (DevOps rules 1, 5, 6, 9). Coding is also assigned as it includes Kubernetes configuration YAML, scripting, node/pod definitions, and implementation instructions (Coding rule 4). No AI or ML was present. The content is fully in English, technically focused, instructional, and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-to-the-next-generation-of-virtual-nodes-on-azure/ba-p/4496565",
+    "timestamp": "2026-03-03 13:25:42 +00:00",
+    "collection": "community"
   }
 ]
