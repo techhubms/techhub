@@ -27646,5 +27646,17 @@
     "collection": "news",
     "timestamp": "2026-03-03 19:18:22 +00:00",
     "reason": "Succesfully added: Assigned only the DevOps category. The content is centered on GitHub Enterprise Server infrastructure, focusing on operational architecture, high availability, cluster management, and reliable data replication. It is about backend search service engineering, system upgrades, and DevOps workflows, aligning with DevOps inclusion rules (Chapter 4, DevOps rules 1, 6, and 7). No AI, Coding, Azure, ML, Security, or GitHub Copilot features are described; the content does not cover development, ML/AI, code, or Microsoft Azure services. Despite being about GitHub, the focus is infrastructure and workflow (DevOps), not Copilot or coding. No generic exclusion rules apply: it is technical, in English, substantial in length, and not biographical or business-oriented."
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content focuses on platform governance, policy management, and operational tooling in GitHub (DevOps rule 11: GitHub content and DevOps rule 3: team organization and ways of working). Assigned Security because GitHub Advanced Security is central to the policy updates, and policy management for code quality/security is discussed (Security rule 1: Microsoft Security Services in development contexts). Coding and AI do not apply because the announcement focuses on policy, not programming or AI/ML features. Azure is not mentioned; the scope is GitHub platform management.",
+    "canonical_url": "https://github.blog/changelog/2026-03-03-github-code-quality-enterprise-policy",
+    "collection": "news",
+    "timestamp": "2026-03-03 20:06:20 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the content focuses on developer workflows and tools in the .NET ecosystem. The video demonstrates how dotConnect and Entity Developer integrate with Entity Framework Core—both core components of .NET development (Coding rule 1 and 2). There is no indication of Azure, AI, DevOps, ML, or Security focus, so those categories were not applied.",
+    "canonical_url": "https://www.youtube.com/watch?v=2QX2qHvGbCE",
+    "collection": "videos",
+    "timestamp": "2026-03-03 20:06:57 +00:00"
   }
 ]
