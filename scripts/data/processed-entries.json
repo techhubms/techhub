@@ -27658,5 +27658,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=2QX2qHvGbCE",
     "collection": "videos",
     "timestamp": "2026-03-03 20:06:57 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The content is a GitHub platform feature announcement about usage notifications for metered services relevant to workflow continuity, administration, and DevOps practices (DevOps rule 11 and overall GitHub platform operations). It focuses on technical product features important for development teams and admins. No other category applies: there's no coding, AI/ML, Azure, or security focus. Exclusion rules do not trigger since the post is technical and product-oriented, not business/HR-related.",
+    "collection": "news",
+    "timestamp": "2026-03-03 21:07:54 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-03-03-email-notifications-for-included-usage-thresholds"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the video focuses on using GitHub Issues and Projects to organize team tasks and manage development workflows, aligning directly with DevOps rule 11 (GitHub content not related to Copilot), rule 3 (team collaboration), and rule 5 (CI/CD and development process organization). No other categories such as Coding or Security are appropriate since the content isn't about code implementation, security, or AI tooling.",
+    "collection": "videos",
+    "timestamp": "2026-03-03 21:08:37 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/p21hFYoXxIc"
   }
 ]
