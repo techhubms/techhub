@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "Dependabot alert assignees are now generally available",
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-03-03 23:03:26",
+  "Tags": [
+    "Improvement",
+    "supply chain security"
+  ],
+  "EnhancedContent": "You can now assign Dependabot alerts to specific users, helping your team track and remediate dependency vulnerabilities more effectively by assigning clear ownership of alerts.\n\n### How it works\n\nFrom the alert detail page, you can now assign any Dependabot alert to users who have `write` access to the repository. Assigning users to Dependabot alerts brings security work into the same workflow you already use for [code scanning](https://github.blog/changelog/2025-12-16-code-scanning-alert-assignees-are-now-generally-available/) and [secret scanning](https://github.blog/changelog/2025-11-25-secret-scanning-alert-assignees-security-campaigns-are-generally-available/) alerts. With assignees, your team can:\n\n- Take clear ownership of specific dependency vulnerabilities.\n- Track remediation work directly within GitHub.\n- Accelerate fixes by making responsibility visible and actionable.\n- Remove and reassign as remediation responsibilities shift.\n\nYou can view assignees on alert detail pages and across repository, organization, and enterprise alert lists. Assignees are also visible in the audit log and get email notifications.\n\n### REST API and webhooks\n\nYou can programmatically view, assign, and unassign users to Dependabot alerts using the [REST API](https://docs.github.com/rest/dependabot/alerts?apiVersion=2022-11-28), enabling bulk operations and custom integrations. Webhook events for assignee changes let you integrate alert assignment into your existing workflows and automation.\n\n### Who can use this feature?\n\nDependabot alert assignees are available to customers with GitHub Advanced Security on github.com and will be available for GitHub Enterprise Server customers starting with version 3.22.\n\nLearn more about [managing Dependabot alerts](https://docs.github.com/code-security/dependabot/dependabot-alerts/viewing-and-updating-dependabot-alerts) and assigning alerts in the documentation.\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "Description": "You can now assign Dependabot alerts to specific users, helping your team track and remediate dependency vulnerabilities more effectively by assigning clear ownership of alerts. How it works From the…\n\nThe post [Dependabot alert assignees are now generally available](https://github.blog/changelog/2026-03-03-dependabot-alert-assignees-are-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2026-03-03T21:58:19+00:00",
+  "Link": "https://github.blog/changelog/2026-03-03-dependabot-alert-assignees-are-now-generally-available"
+}

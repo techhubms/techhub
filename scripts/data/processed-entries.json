@@ -27688,5 +27688,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=nY74XPjLw0U",
     "timestamp": "2026-03-03 22:07:03 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the article focuses on detection, analysis, mitigation, and threat hunting for a sophisticated RMM malware campaign in enterprise environments, using Microsoft Defender technology and controls (Security rule 1, 2, 4, 5). Azure, AI, ML, DevOps, GitHub Copilot, and Coding categories were not applied, as the article does not focus on cloud infrastructure, software coding, developer tooling, DevOps automation, ML engineering, or AI service usage. The content is technical, actionable, and targets security practitioners, fully aligned with the platform's technical quality standards.",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/03/signed-malware-impersonating-workplace-apps-deploys-rmm-backdoors/",
+    "timestamp": "2026-03-03 23:04:50 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The content is an announcement for GitHub Copilot Dev Days, focusing exclusively on workshops and events for developers about AI-assisted coding using GitHub Copilot. Per Chapter 4: Inclusion Rules, content about GitHub Copilot receives both 'AI' and 'GitHub Copilot' categories. There is no reference to business productivity Copilots or other non-developer tools, and the technical depth meets the criteria for AI and GitHub Copilot due to its focus on best practices, training, and real-world workflows. Coding, DevOps, Azure, ML, and Security categories were not added as there are no substantial details on those topics.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/join-or-host-a-github-copilot-dev-days-event-near-you/",
+    "timestamp": "2026-03-03 23:05:12 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the feature targets workflow automation, developer operations, and ownership of security-related tasks in GitHub (DevOps rules 2, 5, 6, 7, and 9). Assigned Security category because it focuses on remediation and management of dependency vulnerabilities, improving supply chain security within repositories (Security rules 1, 5, 8). The content is an official product update, purely technical and process-focused, with detailed guidance for practitioners. No generic exclusions apply. No coding, Azure, or AI/ML-specific content is present, so those categories were not included.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-03-dependabot-alert-assignees-are-now-generally-available",
+    "timestamp": "2026-03-03 23:05:28 +00:00"
   }
 ]
