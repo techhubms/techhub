@@ -27712,5 +27712,11 @@
     "timestamp": "2026-03-04 00:08:00 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4498561",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the MicroHack directly involves configuration and deployment of Azure sovereign services, as detailed in both the introduction and the technical challenges (Azure rules 1, 4, 5). Assigned Security category because multiple challenges involve governance, confidential compute, encryption at rest/in transit, and compliance controls (Security rules 1, 2, 4, 7, 9). Did not assign categories like ML, AI, Coding, DevOps, or GitHub Copilot as there is no focus on application development, AI, ML, DevOps pipelines, or coding practices. The content is both hands-on and architectural, meeting Tech Hub knowledge standards.",
+    "canonical_url": "https://www.thomasmaurer.ch/2026/03/announcing-the-public-release-of-the-sovereign-cloud-microhack/",
+    "timestamp": "2026-03-04 06:11:35 +00:00",
+    "collection": "blogs"
   }
 ]
