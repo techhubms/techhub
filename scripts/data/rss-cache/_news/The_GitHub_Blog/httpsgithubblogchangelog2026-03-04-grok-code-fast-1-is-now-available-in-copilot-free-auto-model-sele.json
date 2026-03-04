@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Grok Code Fast 1 is generally available to Copilot Free plans via Copilot auto model selection. This model is now added to the list of possible models that Copilot might…\n\nThe post [Grok Code Fast 1 is now available in Copilot Free auto model selection](https://github.blog/changelog/2026-03-04-grok-code-fast-1-is-now-available-in-copilot-free-auto-model-selection) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2026-03-04T18:21:02+00:00",
+  "Title": "Grok Code Fast 1 is now available in Copilot Free auto model selection",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2026-03-04-grok-code-fast-1-is-now-available-in-copilot-free-auto-model-selection",
+  "ProcessedDate": "2026-03-04 20:06:11",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "Grok Code Fast 1 is generally available to Copilot Free plans via [Copilot auto model selection](https://docs.github.com/copilot/concepts/auto-model-selection).\n\nThis model is now added to the list of possible models that Copilot might choose in auto model selection. It’s part of **Auto** in GitHub Copilot Chat on Visual Studio Code, Visual Studio, JetBrains IDEs, Xcode, and Eclipse.\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) and get started with Copilot today.\n\n## Share your feedback\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) to share your feedback."
+}

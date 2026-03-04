@@ -27784,5 +27784,11 @@
     "reason": "Succesfully added: Assigned the AI category because the news is focused on a new Microsoft Research AI model (Phi-4-reasoning-vision-15B), training techniques, and multimodal agentic learning, all of which match the AI category's inclusion rules for Microsoft AI research, products, and AI development best practices. Did not assign other categories such as ML, Azure, Coding, or Security, as the content is about AI research models and practices rather than hands-on machine learning engineering, coding, deployment, or security implementation.",
     "canonical_url": "https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/",
     "timestamp": "2026-03-04 19:16:08 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the content is about a model update for GitHub Copilot, directly referencing features and usage (GitHub Copilot inclusion rule 1). Assigned 'AI' category because the update concerns an AI model used for code generation in Copilot (AI rule 2 and 5). No other categories apply, as the content is focused on Copilot's AI features and model selection, not general coding, DevOps, Azure, ML, or Security.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-04-grok-code-fast-1-is-now-available-in-copilot-free-auto-model-selection",
+    "timestamp": "2026-03-04 20:07:42 +00:00"
   }
 ]
