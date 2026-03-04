@@ -27706,5 +27706,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-03-03-dependabot-alert-assignees-are-now-generally-available",
     "timestamp": "2026-03-03 23:05:28 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the entire announcement centers on Azure Arc, an Azure service, and its deployment/features for Kubernetes clusters (Azure inclusion rule 1). Assigned Security because the solution specifically targets firewall/proxy configuration, network security simplification, and mentions enterprise security and Microsoft Defender integration (Security inclusion rules 1, 4, and 5). Assigned DevOps due to the operational improvement for onboarding, cluster management, and consistent operational patterns for Azure infrastructure (DevOps inclusion rules 6 and 9). Coding, AI, ML, and GitHub Copilot do not apply as there is no code development focus or relevant topic coverage in the content.",
+    "timestamp": "2026-03-04 00:08:00 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4498561",
+    "collection": "community"
   }
 ]
