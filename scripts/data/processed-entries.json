@@ -27778,5 +27778,11 @@
     "timestamp": "2026-03-04 18:12:36 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Included the 'AI' category because the article covers a Microsoft vision-language AI model (AI rule 1) focused on reasoning and perception. 'Azure' was assigned because the model is released on Microsoft Foundry (from Azure AI Foundry, which meets Azure rule 1 and 3). 'Coding' is also included: the post provides code snippets and direct guidance on API/programmatic use (Coding rules 2 and 4). Not assigned 'ML' because while visual reasoning is covered, the main use is utilizing a prebuilt AI model (AI/ML rule distinctions apply); there's no direct discussion of custom ML pipelines or data engineering. No DevOps or Security content present."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the news is focused on a new Microsoft Research AI model (Phi-4-reasoning-vision-15B), training techniques, and multimodal agentic learning, all of which match the AI category's inclusion rules for Microsoft AI research, products, and AI development best practices. Did not assign other categories such as ML, Azure, Coding, or Security, as the content is about AI research models and practices rather than hands-on machine learning engineering, coding, deployment, or security implementation.",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/",
+    "timestamp": "2026-03-04 19:16:08 +00:00"
   }
 ]
