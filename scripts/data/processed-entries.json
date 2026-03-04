@@ -27724,5 +27724,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-generative-pages-in-power-platform/ba-p/4494062",
     "timestamp": "2026-03-04 08:07:46 +00:00",
     "reason": "Succesfully added: Included the AI category because the content centers on AI-powered features in Power Platform for building Generative Pages (AI rule 1, rule 4). While developer-oriented practices are discussed, there's no step-by-step programming or custom code samples that qualify for Coding category, and there is no Azure, ML, DevOps, or Security technical depth in this article. The features are centered around using AI and natural language for application UI creation."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-04-copilot-memory-now-on-by-default-for-pro-and-pro-users-in-public-preview",
+    "timestamp": "2026-03-04 12:05:59 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories as the content's focus is on Copilot Memory, a GitHub Copilot feature which enhances AI-driven code assistance (AI rule 1, GitHub Copilot rules 1-4). The update concerns an official product enhancement for the developer Copilot tool, not general productivity tools (CRITICAL Copilot Product Distinction). Excluded other categories as the article does not cover coding practices, DevOps workflows, Azure, ML, or security details. The explanation references the rules, specific product distinctions, and content focus."
   }
 ]
