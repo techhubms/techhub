@@ -27736,5 +27736,23 @@
     "reason": "Succesfully added: Assigned the ML category because the content is about permission updates for semantic models in Microsoft Fabric, which falls under data modeling and business intelligence development—a core aspect of ML/data engineering (ML rule 1 and 4). No AI or Azure categories were assigned, as the update focuses specifically on Fabric's data and permission model, not Azure services or general AI use. The Coding, DevOps, Security, and GitHub Copilot categories do not apply because the content is not about code, development operations, explicit security implementations, or GitHub.",
     "timestamp": "2026-03-04 16:10:41 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/update-to-required-permissions-for-semantic-models-in-fabric-data-agents/"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/03/04/how-a-global-coalition-disrupted-tycoon/",
+    "reason": "Succesfully added: Assigned the Security category because the entire article is centered on cybercrime, credential theft, phishing attacks (targeting Microsoft 365, Azure AD, and others), and the technical processes for disrupting Tycoon 2FA. The content provides actionable insights and technical explanation for security incidents (Security inclusion rule 1), covers application and cloud security with Microsoft technologies (Security rules 2 and 4), and describes threat intelligence, incident response, and global disruption efforts by Microsoft and partners. No other categories were assigned as the focus remains on security incidents broadly rather than coding, DevOps, or AI/ML implementation. Generic exclusion rules do not apply as this is a technical news article about a Microsoft-led security incident.",
+    "collection": "news",
+    "timestamp": "2026-03-04 17:14:34 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/",
+    "reason": "Succesfully added: Assigned Security category because the entire content focuses on phishing, account compromise strategies, and Microsoft-centric security responses (Security rules 1, 5, 7, 9). Assigned Azure category since Azure resources (Azure Blob Storage, authentication flows, Defender for Cloud Apps, Entra ID) are integral to both the attack infrastructure and mitigation strategies (Azure rules 1, 5, 6). AI and ML were not included as the article does not focus on AI/ML development or usage beyond mentioning AI capabilities in Security Copilot for security operations—there is no development or integration context. Coding, DevOps, and GitHub Copilot were not selected as the article does not present application development, CI/CD, or code-centric practices. The tags reflect the heavy technical detail on threat operation, detection, and defense, with emphasis on Microsoft security tooling and services.",
+    "collection": "news",
+    "timestamp": "2026-03-04 17:15:01 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=9uO1rY2aswU",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on using AI agents and specifically emphasizes AI-assisted mobile development (AI Rule 4, 5). Assigned 'GitHub Copilot' as it is directly referenced as the main AI tool, and Copilot is positioned as a developer coding assistant (GitHub Copilot Rule 1–4). Included 'Coding' because the content is focused on constructing a .NET MAUI application, which falls under Microsoft development frameworks and programming (Coding Rule 1, 2). Did not assign 'Azure', 'DevOps', 'ML', or 'Security', as there is no mention or coverage of Azure services, DevOps pipelines, ML/data engineering, or security implementation.",
+    "collection": "videos",
+    "timestamp": "2026-03-04 17:15:57 +00:00"
   }
 ]
