@@ -27730,5 +27730,11 @@
     "timestamp": "2026-03-04 12:05:59 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories as the content's focus is on Copilot Memory, a GitHub Copilot feature which enhances AI-driven code assistance (AI rule 1, GitHub Copilot rules 1-4). The update concerns an official product enhancement for the developer Copilot tool, not general productivity tools (CRITICAL Copilot Product Distinction). Excluded other categories as the article does not cover coding practices, DevOps workflows, Azure, ML, or security details. The explanation references the rules, specific product distinctions, and content focus."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the ML category because the content is about permission updates for semantic models in Microsoft Fabric, which falls under data modeling and business intelligence development—a core aspect of ML/data engineering (ML rule 1 and 4). No AI or Azure categories were assigned, as the update focuses specifically on Fabric's data and permission model, not Azure services or general AI use. The Coding, DevOps, Security, and GitHub Copilot categories do not apply because the content is not about code, development operations, explicit security implementations, or GitHub.",
+    "timestamp": "2026-03-04 16:10:41 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/update-to-required-permissions-for-semantic-models-in-fabric-data-agents/"
   }
 ]

@@ -12657,5 +12657,23 @@
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_counting-down-to-a-new-build-in-san-francisco-activity-7434688896669560833-PqKW",
     "timestamp": "2026-03-03 22:05:58 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-04 13:24:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=x-gt27Zf5d4",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. Content discusses 'Microsoft Dragon Copilot,' which is not a recognized developer tool but appears to be a business productivity/healthcare-focused AI tool. According to the Copilot Product Distinction rule in Chapter 2 and the Non-Development Microsoft Products exclusion in Chapter 3, content about business productivity Copilot offerings (including those not explicitly named GitHub Copilot or Copilot Studio) must be excluded, as they do not pertain to software development or technical implementation for developers. No technical architecture, coding, DevOps, Azure, ML, or Security topics are presented, and the main content is about product integration and go-to-market activities in a business context."
+  },
+  {
+    "timestamp": "2026-03-04 13:24:54 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=eE7PWWV1ykE",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule for sales pitches (Chapter 3: Content Quality Exclusions). The primary focus is on promoting a discount code for Dometrain courses and encouraging engagement (comment, like, subscribe), with only a brief mention of a new mocking library called Imposter. No substantive technical details, implementation, or educational content regarding .NET testing or the Imposter library are present in the provided content or description. The majority of the content is marketing and social media promotion, not technical education."
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules, specifically the 'Non-Development Microsoft Products' rule. The content focuses on 'Copilot Tasks,' describing autonomous task assignment, Agent mode for workflow refinement, and automation in business productivity tools (Excel, task scheduling). There is no technical implementation, development, API integration, coding, or platform architecture content present. Instead, the post highlights the end-user/business value and increases in productivity from Microsoft Copilot Tasks, which is part of Microsoft 365 Copilot/Office Copilot. As per the critical product distinction, content about 'business productivity, document creation, or general office work'—not code development or developer tools—is explicitly excluded from all categories. Therefore, no categories are assigned.",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_ive-been-trying-copilot-tasks-this-week-activity-7434963514328387584-DFfv",
+    "timestamp": "2026-03-04 15:12:02 +00:00"
   }
 ]
