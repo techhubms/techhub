@@ -27754,5 +27754,29 @@
     "reason": "Succesfully added: Assigned 'AI' because the content centers on using AI agents and specifically emphasizes AI-assisted mobile development (AI Rule 4, 5). Assigned 'GitHub Copilot' as it is directly referenced as the main AI tool, and Copilot is positioned as a developer coding assistant (GitHub Copilot Rule 1–4). Included 'Coding' because the content is focused on constructing a .NET MAUI application, which falls under Microsoft development frameworks and programming (Coding Rule 1, 2). Did not assign 'Azure', 'DevOps', 'ML', or 'Security', as there is no mention or coverage of Azure services, DevOps pipelines, ML/data engineering, or security implementation.",
     "collection": "videos",
     "timestamp": "2026-03-04 17:15:57 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/JgbFjTICd3g",
+    "timestamp": "2026-03-04 18:11:24 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the content focuses on transformative AI roles in software development (AI category rule 4 and 5). There is no specific reference to GitHub Copilot, coding tutorials, Azure, ML, DevOps, or Security topics; thus, only the 'AI' category applies. The content discusses Microsoft AI strategy and developer tooling but remains high-level and conceptual, fitting the AI category based on inclusion rules."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=XisVQoz5grw",
+    "timestamp": "2026-03-04 18:11:43 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the focus is on GitHub Copilot and AI-driven automation (AI rules 1 and 2). 'GitHub Copilot' is included because the episode specifically demonstrates how Copilot enables agentic workflows (GitHub Copilot rule 1). 'DevOps' was added due to the emphasis on repository automation, maintenance, and developer workflows (DevOps rules 2, 3, and 5). Not assigning 'Coding' as the content is more about automation and workflow than direct programming tutorials. Not assigning 'Azure', 'ML', or 'Security' because these topics aren't covered. No generic exclusion rules apply; the content is technical, educational, and Copilot is used in a developer context."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-maps-blog/announcing-the-general-availability-of-the-azure-maps-geocode/ba-p/4499242",
+    "timestamp": "2026-03-04 18:12:13 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: The content is a technical announcement targeting developers, focused on the general availability of the Azure Maps Geocode Autocomplete API. It discusses REST API usage, features, developer integration, and includes practical sample requests and workflows. According to inclusion rules, Azure is assigned due to Azure Maps coverage (Azure rule 1), and Coding is assigned for REST API integration, sample code, and development workflow focus (Coding rules 2 and 4). DevOps, Security, AI, ML, and GitHub Copilot do not apply as the content does not cover CI/CD, security configuration, AI/ML, or Copilot-related features. Generic exclusion rules do not apply; the post is in English, of sufficient length, and addresses technical features for developers."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/phi-4-reasoning-vision-15b-use-cases-in-depth/ba-p/4499210",
+    "timestamp": "2026-03-04 18:12:36 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Included the 'AI' category because the article covers a Microsoft vision-language AI model (AI rule 1) focused on reasoning and perception. 'Azure' was assigned because the model is released on Microsoft Foundry (from Azure AI Foundry, which meets Azure rule 1 and 3). 'Coding' is also included: the post provides code snippets and direct guidance on API/programmatic use (Coding rules 2 and 4). Not assigned 'ML' because while visual reasoning is covered, the main use is utilizing a prebuilt AI model (AI/ML rule distinctions apply); there's no direct discussion of custom ML pipelines or data engineering. No DevOps or Security content present."
   }
 ]
