@@ -27802,5 +27802,11 @@
     "timestamp": "2026-03-04 21:09:16 +00:00",
     "reason": "Succesfully added: I assigned the 'AI' category because the video centers on agent features in VS Code, involving AI-driven coding assistants (AI category rule 5). The 'Coding' category applies since the content is tightly focused on developer tooling within Visual Studio Code and how to use these new features for improved coding workflows (Coding rules 4 and 5). There are no direct references to GitHub Copilot or Azure, so those categories are not included. Content is not business productivity, general business, or excluded by any generic rules.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for the AI category based on detailed discussion of LLM inference systems, engineering tradeoffs, and AI-powered workloads at scale on Azure (AI rule 4 and 5). The Azure category applies because Microsoft Azure, Azure Kubernetes Service (AKS), and Azure-native integrations are central to every aspect of the architecture and solution (Azure rules 1, 4, and 5). The ML category is included because the content focuses on machine learning model inference, optimization, GPU engineering, and custom model deployment—specifically on technical aspects of ML operations and performance engineering (ML rules 1, 5, 10, and 11). The article is highly technical, free from generic exclusions, and does not contain biographical, sales, negative, or non-English material.",
+    "timestamp": "2026-03-04 22:06:54 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/inference-at-enterprise-scale-why-llm-inference-is-a-capital/ba-p/4498754"
   }
 ]
