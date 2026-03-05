@@ -27832,5 +27832,11 @@
     "canonical_url": "https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/",
     "timestamp": "2026-03-05 13:27:04 +00:00",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-05-copilot-usage-metrics-now-includes-user-level-github-copilot-cli-activity",
+    "reason": "Succesfully added: Included the 'AI' and 'GitHub Copilot' categories because the content centers on enhancements to GitHub Copilot's telemetry—a developer-focused AI coding tool (AI rules 1 & 2, GitHub Copilot rules 1 & 2). 'DevOps' category is included because the feature supports enterprise usage monitoring, activity analytics, and developer enablement typical for DevOps organizations (DevOps rules 3, 5, 9). Excluded Azure, Coding, ML, and Security categories as there is no focus on those technologies or practices in the content.",
+    "timestamp": "2026-03-05 16:16:41 +00:00"
   }
 ]

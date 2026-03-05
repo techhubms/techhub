@@ -12687,5 +12687,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=5E87X4n8wbg",
     "collection": "videos",
     "timestamp": "2026-03-05 10:13:13 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2026/03/05/unify-simplify-scale-microsoft-dragon-copilot-meets-the-moment-at-himss-2026/",
+    "reason": "No categories found: No categories assigned because the content is excluded by the generic exclusion rule regarding non-development Microsoft products. The 'Microsoft Dragon Copilot' mentioned here is presented in relation to healthcare business productivity and administrative AI, not as a developer tool. The content is a news announcement focusing on 'advancements for healthcare' at a HIMSS conference, which is industry/business-oriented, and contains no developer-focused details, code, architecture, or technical implementation related to Microsoft developer products. Additionally, Microsoft Dragon Copilot is not a recognized development or coding tool within the specified AI or GitHub Copilot development product definitions.",
+    "timestamp": "2026-03-05 16:16:19 +00:00"
   }
 ]

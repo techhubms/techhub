@@ -1,0 +1,19 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2026-03-05-copilot-usage-metrics-now-includes-user-level-github-copilot-cli-activity",
+  "Title": "Copilot usage metrics now includes user-level GitHub Copilot CLI activity",
+  "PubDate": "2026-03-05T15:14:18+00:00",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Tags": [
+    "account management",
+    "copilot",
+    "enterprise management tools",
+    "Release"
+  ],
+  "Description": "As a follow-up to last week’s release of enterprise-level CLI telemetry, we’re expanding coverage to the user-level. You can now view CLI-specific activity and usage totals in order to: Understand…\n\nThe post [Copilot usage metrics now includes user-level GitHub Copilot CLI activity](https://github.blog/changelog/2026-03-05-copilot-usage-metrics-now-includes-user-level-github-copilot-cli-activity) appeared first on [The GitHub Blog](https://github.blog).",
+  "EnhancedContent": "As a follow-up to [last week’s release of enterprise-level CLI telemetry](https://github.blog/changelog/2026-02-27-copilot-usage-metrics-now-includes-enterprise-level-github-copilot-cli-activity/), we’re expanding coverage to the user-level.\n\nYou can now view CLI-specific activity and usage totals in order to:\n\n- Understand which users are active CLI users to spot where enablement or support is needed.\n- View how many CLI requests and session counts are made to understand how developers are using Copilot day to day.\n- Gain visibility into token usage totals to understand consumption trends and plan for expanded rollout.\n\nVisit [our API documentation](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-28#get-copilot-users-usage-metrics-for-a-specific-day) to learn more about the user-level endpoint. Join the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "ProcessedDate": "2026-03-05 16:14:26"
+}
