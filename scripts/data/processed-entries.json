@@ -27820,5 +27820,11 @@
     "canonical_url": "https://devblogs.microsoft.com/all-things-azure/platform-engineering-for-the-agentic-ai-era/",
     "reason": "Succesfully added: Assigned AI category because the article focuses on AI agents transforming platform engineering and DevOps practices, per AI inclusion rules 1 and 4. Assigned GitHub Copilot because the article discusses Copilot Spaces, Copilot Skills, Copilot Coding Agent, and Copilot integrations (GitHub Copilot rules 1, 2, 3). Assigned DevOps because it covers CI/CD, pipeline workflows, compliance automation, and platform engineering operations (DevOps rules 1, 3, 5, and 9). Assigned Azure because of direct coverage of Azure Policy, ARM, Bicep, Defender for Cloud, and Azure SRE Agent (Azure rules 1, 3, 4). Assigned Security because of deep focus on compliance, Defender integrations, policy enforcement, and code-to-cloud security posture (Security rules 1, 4, 5, and 6). ML and Coding categories were not assigned because the main focus is not data/analytics engineering or programming implementation, but rather platform architecture and automation. All included categories are supported by direct references in the content.",
     "timestamp": "2026-03-05 06:13:35 +00:00"
+  },
+  {
+    "timestamp": "2026-03-05 08:09:01 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-high-performance-agentic-systems/ba-p/4497391",
+    "reason": "Succesfully added: The content focuses on building and deploying advanced, production-grade AI agents using Microsoft technologies such as Azure AI Foundry and Copilot Studio. It discusses engineering architecture, tool integration, orchestration, and governance—aligning with the AI category (AI rules 1, 4, 5, 6). Azure category is included because Azure AI Foundry, Azure infrastructure, and integration with Microsoft cloud are central (>40% of the technical content). No additional categories (ML, Coding, DevOps, Security) qualify: while the engineering, orchestration, and security governance aspects are addressed, the article does not cover ML/data engineering from scratch (ML) or write code samples/framework implementation details (Coding), nor is DevOps or Security a primary topic. The author is identified as sgangaramani based on the byline."
   }
 ]
