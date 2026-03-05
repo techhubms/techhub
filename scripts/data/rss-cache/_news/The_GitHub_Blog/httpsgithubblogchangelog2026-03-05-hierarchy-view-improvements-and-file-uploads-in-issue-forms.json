@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Description": "Hierarchy view improvements in GitHub Projects You now have several improvements to hierarchy view in GitHub Projects based on your feedback: Filter sub-issues: You can now filter sub-issues using syntax…\n\nThe post [Hierarchy view improvements and file uploads in issue forms](https://github.blog/changelog/2026-03-05-hierarchy-view-improvements-and-file-uploads-in-issue-forms) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2026-03-05T19:54:12+00:00",
+  "Tags": [
+    "Improvement",
+    "projects & issues"
+  ],
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-03-05 21:08:03",
+  "EnhancedContent": "## Hierarchy view improvements in GitHub Projects\n\nYou now have several improvements to [hierarchy view in GitHub Projects](https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects/) based on your feedback:\n\n- **Filter sub-issues:** You can now filter sub-issues using syntax like `sub-issues.is:open`\nto narrow your view to sub-issues matching specific criteria.\n- **Avoid showing duplicate issues:** Items that appear in multiple places in the hierarchy are now deduplicated in most cases, keeping your views cleaner and easier to scan.\n- **Preserve expand/collapse state:** When you expand or collapse sub-issues, the state is now saved so the hierarchy stays the way you left it when you return to the view.\n\nFor feedback or questions on hierarchy view, join the discussion within [GitHub Community](https://github.com/orgs/community/discussions/184225).\n\n## Issue forms now support a new upload field type\n\nYou can now add an **upload** field in issue forms to require key files like logs, screenshots, and crash reports up front, so issues come in with the context you need.\n\n## Move to next iteration in bulk\n\nIn GitHub Projects, you can now **bulk-move all items from one iteration to another** directly from the group header menu. When your view is grouped by an iteration field, select “Move items to…” to quickly roll over unfinished work or reschedule items to a different sprint.",
+  "Title": "Hierarchy view improvements and file uploads in issue forms",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2026-03-05-hierarchy-view-improvements-and-file-uploads-in-issue-forms"
+}

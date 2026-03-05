@@ -12699,5 +12699,17 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules: The provided video titled 'It's Rubber Duck Thursday! Come learn and cowork and chat with us!' lacks substantive technical content about Microsoft technologies. The description only includes social media links, brand messaging, and generic calls to connect with GitHub, rather than technical education, tutorial material, or substantive discussion of development practices. There is no actual content present within the 'content' field itself either. As per format and content exclusion rules, content without informative or technical substance, and especially content that serves mainly as a social/community meetup or promotional announcement, does not qualify for any category.",
     "canonical_url": "https://www.youtube.com/watch?v=FJglBH_N9hA",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: Content excluded because it focuses on business/productivity features of 'Dragon Copilot' in a healthcare context rather than developer, coding, or technical implementation aspects. Per the rules in Chapter 3 and Chapter 4, business productivity copilot solutions such as Dragon Copilot are not development tools and do not trigger any categories (AI, Coding, etc.). The post discusses workflow improvement and administrative burden reduction for clinicians, not technical integration, development, or architectural content for Microsoft developers or consultants. There are no actionable technical details or developer-focused implementation. Therefore, no categories apply.",
+    "timestamp": "2026-03-05 21:09:35 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_unify-simplify-scale-microsoft-dragon-activity-7435386394988130304-omL1"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because the 'content' field is null. Without any substantive content, there is no technical information to evaluate or categorize according to the workflow rules. Generic exclusion applies: insufficient content provided for assessment.",
+    "timestamp": "2026-03-05 21:11:14 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/DDHT1xj01kE"
   }
 ]

@@ -27874,5 +27874,29 @@
     "reason": "Succesfully added: Assigned the Azure category because the core solution described directly integrates with Azure SQL and Azure EventHub as central elements of data architecture (Azure Inclusion Rule 1 and 2). No AI, ML, Coding, DevOps, GitHub Copilot, or Security categories apply since the content focuses on integration and real-time operational monitoring using Drasi, with Azure services at its core. The Grafana and Blazor mentions are about monitoring and visualization, not development or coding. No Sales Pitch, non-English, or other generic exclusions apply.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/how-netstar-streamlined-fleet-monitoring-and-reduced-custom/ba-p/4499592",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the entire piece centers on Copilot code review—an AI-based developer tool (AI rules 1, 2; Copilot rules 1-4). 'Coding' is included as the content directly discusses code review practices and developer workflows (Coding rule 4, 5). 'DevOps' applies because the article highlights the integration of Copilot into team collaboration and pull request workflows, which are part of DevOps practices (DevOps rules 3, 4, 9, 11). Other categories like Azure, ML, and Security were not assigned as there is no significant content on those topics.",
+    "timestamp": "2026-03-05 21:10:01 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/60-million-copilot-code-reviews-and-counting/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content centers on Copilot Code Review's agentic AI-powered architecture, corresponding with AI and GitHub Copilot inclusion rules (AI 1, 2; GitHub Copilot 1-4). 'DevOps' is included since integration with GitHub Actions and runner setup directly relates to DevOps tooling and workflows (DevOps 2, 5, 9). No other categories qualify: there is no focus on core programming, Azure, ML, or security engineering.",
+    "timestamp": "2026-03-05 21:10:18 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-03-05-copilot-code-review-now-runs-on-an-agentic-architecture"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'DevOps' because the content details new features in GitHub Projects that support project management, issue tracking, and team collaboration—core DevOps topics (DevOps rule 3, 9, and 11). No 'GitHub Copilot', 'Coding', 'Azure', 'AI', 'ML', or 'Security' content present. No generic exclusion rules applied, as the content is news about technical tool enhancements for practitioners.",
+    "timestamp": "2026-03-05 21:10:35 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-03-05-hierarchy-view-improvements-and-file-uploads-in-issue-forms"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned as follows: \n- 'AI' because the post discusses AI agent integration, MCP, and usage of Azure OpenAI for code generation (AI Category rules 1, 4, 5).\n- 'Azure' due to extensive use of Azure Container Apps, Azure-specific authentication, and deployment guidance (Azure Rule 1, 4).\n- 'Coding' because it covers running untrusted code, discusses Python/Node.js/Shell interpreters, and contains code-focused best practices (Coding Rule 1, 2, 4).\n- 'DevOps' for session orchestration, sandbox lifecycle automation, observability with Application Insights, telemetry with OpenTelemetry, and infrastructure as code via Bicep and azd (DevOps Rules 6, 7, 9, 10).\nOther categories were not assigned as the primary focus is not on machine learning engineering or security architecture, but rather safe execution and DevOps integration of AI-generated code with Azure services.",
+    "timestamp": "2026-03-05 21:11:45 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/even-simpler-to-safely-execute-ai-generated-code-with-azure/ba-p/4499795"
   }
 ]
