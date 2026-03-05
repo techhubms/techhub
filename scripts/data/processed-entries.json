@@ -27850,5 +27850,23 @@
     "collection": "news",
     "canonical_url": "https://github.blog/developer-skills/career-growth/scaling-ai-opportunity-across-the-globe-learnings-from-github-and-andela/",
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories: The main content details the structured use of GitHub Copilot (explicitly mentioned multiple times, including impacts on coding, refactoring, and testing) within the context of developer upskilling and AI capability-building (AI rules 1, 2; GitHub Copilot rules 1–6). No Coding, DevOps, Azure, Security, or ML categories were included because the article focuses mostly on AI enablement and GitHub Copilot integration rather than detailed code, DevOps processes, cloud architecture, or machine learning implementation."
+  },
+  {
+    "timestamp": "2026-03-05 18:34:22 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the MCP protocol and its C# SDK are foundational tooling for AI model orchestration, client/server integration, and advanced LLM workflows, as shown by feature support for tool calling with LLMs, authorization for AI operations, and integration guidance (AI category rule 1, 4, and 6). Assigned 'Coding' because the SDK and its documentation are targeted at .NET/C# developers implementing code-level integrations, and most examples, samples, and features involve programming and software architecture (Coding category rule 1 and 2). Did not assign Azure, DevOps, Security, or ML, as the announcement is platform/tooling focused (not Azure-specific DevOps/Cloud, not data science/ML workflows, and not primarily about security implementation).",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/release-v10-of-the-official-mcp-csharp-sdk/"
+  },
+  {
+    "timestamp": "2026-03-05 18:34:58 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Security' category because the entire article addresses organizational and workforce aspects of cybersecurity, including Microsoft Security's approaches, and actionable recommendations for defenders. The 'AI' category is included because the article repeatedly references the intersection of cybersecurity and AI (\"in the era of AI\", \"AI is reshaping defense\"), the importance of preparing for AI-powered threats, and the need for ongoing AI skills development. Did not assign other categories (e.g., 'Coding', 'DevOps', etc.) as there is no discussion of technical implementation, software architecture, or developer tooling. Exclusion rules for business/executive content do not apply here because technical workforces, threat modeling, and defense operations are central, aligning with allowed technical leadership/architecture focus.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/05/womens-history-month-encouraging-women-in-cybersecurity-at-every-career-stage/"
+  },
+  {
+    "timestamp": "2026-03-05 18:35:40 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the video centers on development updates, features, and improvements in ASP.NET Core and Blazor, which are directly related to Microsoft web development technologies (Coding rule 1 and 2). No Azure, AI, ML, DevOps, Security, or GitHub Copilot aspects are indicated in the title, description, tags, or linked resources. There are no generic exclusion criteria met, as the content is technical, developer-focused, and not biographical, negative, or business-only.",
+    "canonical_url": "https://www.youtube.com/watch?v=U95m5dEpqLE"
   }
 ]
