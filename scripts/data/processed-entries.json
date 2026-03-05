@@ -27898,5 +27898,29 @@
     "reason": "Succesfully added: Categories assigned as follows: \n- 'AI' because the post discusses AI agent integration, MCP, and usage of Azure OpenAI for code generation (AI Category rules 1, 4, 5).\n- 'Azure' due to extensive use of Azure Container Apps, Azure-specific authentication, and deployment guidance (Azure Rule 1, 4).\n- 'Coding' because it covers running untrusted code, discusses Python/Node.js/Shell interpreters, and contains code-focused best practices (Coding Rule 1, 2, 4).\n- 'DevOps' for session orchestration, sandbox lifecycle automation, observability with Application Insights, telemetry with OpenTelemetry, and infrastructure as code via Bicep and azd (DevOps Rules 6, 7, 9, 10).\nOther categories were not assigned as the primary focus is not on machine learning engineering or security architecture, but rather safe execution and DevOps integration of AI-generated code with Azure services.",
     "timestamp": "2026-03-05 21:11:45 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/even-simpler-to-safely-execute-ai-generated-code-with-azure/ba-p/4499795"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-05-pick-a-model-for-copilot-in-pull-request-comments",
+    "timestamp": "2026-03-05 22:06:59 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because Copilot coding agent is an AI-powered developer tool (AI rule 2 and 5). Assigned 'GitHub Copilot' because the content is specifically about features and usage scenarios for GitHub Copilot in development workflows (GitHub Copilot inclusion rules 1 and 2). No other category fits as the post is focused on Copilot’s AI-powered PR comment integration, not on coding specifics, DevOps pipelines, Azure, or ML/data engineering."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://code.visualstudio.com/blogs/2026/03/05/making-agents-practical-for-real-world-development",
+    "timestamp": "2026-03-05 22:07:23 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the entire article discusses agent orchestration, workflow integration, and skills—concepts tightly related to Microsoft's AI/agent stack, with practical implementation details for developer use. 'Coding' is assigned because the post is clearly targeted at developers working inside VS Code, describing features supporting real-world software development workflows, including CLI integration, automated hooks, and agent-guided code review and editing. Did not assign 'GitHub Copilot' as the article refers to 'Copilot CLI' as an integrated tool, but does not focus on Copilot's functionality itself (per GitHub Copilot category rules—no direct best practices or setup for Copilot proper). Did not assign 'Azure,' 'ML,' 'Security,' or 'DevOps' because the features discussed are general-purpose developer productivity features within VS Code, not specific to cloud, ML, security services, or DevOps automation."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_111",
+    "timestamp": "2026-03-05 22:07:43 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because several features relate to Copilot integrations (recursive instruction file search, Copilot CLI/agents, Copilot Chat with OpenTelemetry) and mention of Copilot-related agent workflows. Assigned Coding category due to numerous VS Code development, extension, and source control updates relevant for Microsoft-based coding workflows. Azure, DevOps, ML, and Security were not directly addressed in the release notes."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=_b2RvYAlyUQ",
+    "timestamp": "2026-03-05 22:08:21 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centrally features building AI agent architectures using the Microsoft Agent Framework, Foundry, and generative AI within .NET (AI rules 1, 3, 4, 5). Assigned 'Azure' because deployment strategies target Azure Container Apps and use cloud integration (Azure rule 1, 4). Assigned 'Coding' because the session covers practical implementation and production design patterns in .NET (Coding rules 1, 2, 4). Content is presented in professional, actionable format and is development-focused. No ML, DevOps, Security, or GitHub Copilot content is directly addressed."
   }
 ]
