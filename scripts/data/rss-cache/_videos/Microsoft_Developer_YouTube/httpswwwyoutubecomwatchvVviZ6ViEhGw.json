@@ -1,0 +1,18 @@
+{
+  "Title": "SQL to Insights in Minutes with Copilot for Data Factory | Data Exposed",
+  "Description": "In this episode of Data Exposed, see how AI and Copilot in Microsoft Fabric Data Factory help you go from Azure SQL data to insights in minutes. Using simple natural language, Copilot guides you to transform SQL data, load it to any destination, and orchestrate the entire workflow including automation and notifications without complex SQL script. Discover how AI makes data integration faster, simpler, and more intuitive for SQL users.\n\n✅ Chapters: 0:00 Introduction 3:07 Data Factory in Microsoft Fabric 4:07 AI-powered Modern Get Data in Fabric 5:30 Demo 7:46 Demo 9:27 Getting started\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "Tags": [
+    "AzureSQL",
+    "LearnSQL",
+    "SQL"
+  ],
+  "OutputDir": "_videos",
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2026-03-05 23:23:59",
+  "Author": "Microsoft Developer",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2026-03-05T21:54:58+00:00",
+  "Link": "https://www.youtube.com/watch?v=VviZ6ViEhGw",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "EnhancedContent": null
+}

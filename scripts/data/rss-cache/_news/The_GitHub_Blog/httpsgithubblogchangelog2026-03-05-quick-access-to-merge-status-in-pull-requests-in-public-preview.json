@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "collaboration tools",
+    "Release"
+  ],
+  "Title": "Quick access to merge status in pull requests is in public preview",
+  "Description": "We are rolling out the pull request merge status at the top of every pull request page! Check merge readiness from anywhere in the pull request experience, including the new…\n\nThe post [Quick access to merge status in pull requests is in public preview](https://github.blog/changelog/2026-03-05-quick-access-to-merge-status-in-pull-requests-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "EnhancedContent": "We are rolling out the pull request merge status at the top of every pull request page! Check merge readiness from anywhere in the pull request experience, including the new “Files changed” page. Click to open the details so you can quickly identify blockers, missing approvals, and get your pull request ready to merge.\n\nIf you’re still using the classic “Files changed” page, you’ll need to opt into the new experience to view the merge status from this page. Learn more by checking out [our changelog about the new experience](https://github.blog/changelog/2026-01-22-improved-pull-request-files-changed-page-on-by-default/).\n\n### ♥️ Feedback\n\nYour feedback is essential to helping us improve this experience. Please use the [feedback discussion](https://github.com/orgs/community/discussions/188033) to report problems, ask questions, and review known issues.",
+  "Link": "https://github.blog/changelog/2026-03-05-quick-access-to-merge-status-in-pull-requests-in-public-preview",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-03-05T18:20:25+00:00",
+  "Author": "Allison",
+  "ProcessedDate": "2026-03-05 23:23:20"
+}

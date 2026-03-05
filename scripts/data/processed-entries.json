@@ -27922,5 +27922,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=_b2RvYAlyUQ",
     "timestamp": "2026-03-05 22:08:21 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category because the content centrally features building AI agent architectures using the Microsoft Agent Framework, Foundry, and generative AI within .NET (AI rules 1, 3, 4, 5). Assigned 'Azure' because deployment strategies target Azure Container Apps and use cloud integration (Azure rule 1, 4). Assigned 'Coding' because the session covers practical implementation and production design patterns in .NET (Coding rules 1, 2, 4). Content is presented in professional, actionable format and is development-focused. No ML, DevOps, Security, or GitHub Copilot content is directly addressed."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/powering-secure-private-network-streaming-to-fabric-with-eventstream-connectors-preview/",
+    "reason": "Succesfully added: Assigned 'Azure' category because the article centers on Azure virtual network integration, vNet injection, and other Azure-specific networking features (Azure rules 1, 2, 4). Assigned 'ML' because Microsoft Fabric's Real-Time Intelligence and Eventstream connectors are integral to real-time analytics workloads and pipelines—which qualify for the ML category as per ML rules 1, 2, 4, and 9 (data engineering and analytics on Microsoft platforms). Security is included because the entire focus is on secure connectivity, private networking, and compliance for sensitive data (Security rules 1, 4, 7, 9). No AI or Coding: there is no discussion of AI models, Copilot, coding, or application framework development in the article.",
+    "timestamp": "2026-03-05 23:24:43 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview",
+    "reason": "Succesfully added: AI and GitHub Copilot categories are assigned because the content is focused on the GitHub Copilot coding agent (an AI-driven tool) and its workflow integration with Jira. According to AI inclusion rule 2 and GitHub Copilot inclusion rule 1, coverage of Copilot agent usage and automation qualifies for both categories. Though DevOps tools and workflow features are mentioned, the primary technical focus is on the AI agent itself, not on general DevOps methodology or pipelines. No coding, Azure, ML, or Security categories are assigned as there is no deep focus or technical guidance on those areas in this announcement.",
+    "timestamp": "2026-03-05 23:25:05 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-05-quick-access-to-merge-status-in-pull-requests-in-public-preview",
+    "reason": "Succesfully added: The content discusses a new GitHub feature that makes pull request merge status more accessible, focusing on workflow enhancements, merge readiness, and the pull request process. These topics align directly with the 'DevOps' category as they relate to code collaboration, release management, and CI/CD workflows (DevOps rule 2, 5, and 9). Although GitHub is not a Microsoft-exclusive product, its central role and strong integration in Microsoft-oriented DevOps environments (and the lack of other GitHub Copilot or Azure AI references) further justify exclusive use of the 'DevOps' category. No rules for other categories (AI, Coding, Azure, Security, ML) are triggered based on the provided content.",
+    "timestamp": "2026-03-05 23:25:22 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=VviZ6ViEhGw",
+    "reason": "Succesfully added: Assigned AI because the episode foregrounds Copilot (developer/maker tool) and Microsoft Fabric Data Factory's AI-driven features, satisfying AI Inclusion Rule 1 and 4. Assigned Azure because Azure SQL and Azure services are central to the workflow and solution (Azure Rule 1). Did not assign ML: while there's a connection to Microsoft Fabric and data workflows, the content focuses on data integration and insights, not advanced analytics or custom ML engineering. There's no code walkthrough or specific programming focus, so Coding is not assigned. DevOps and Security are not addressed in the available description. Generic exclusion rules do not apply as this is technical, English, practitioner-focused Microsoft content.",
+    "timestamp": "2026-03-05 23:26:05 +00:00",
+    "collection": "videos"
   }
 ]
