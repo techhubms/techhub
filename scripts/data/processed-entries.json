@@ -27838,5 +27838,17 @@
     "canonical_url": "https://github.blog/changelog/2026-03-05-copilot-usage-metrics-now-includes-user-level-github-copilot-cli-activity",
     "reason": "Succesfully added: Included the 'AI' and 'GitHub Copilot' categories because the content centers on enhancements to GitHub Copilot's telemetry—a developer-focused AI coding tool (AI rules 1 & 2, GitHub Copilot rules 1 & 2). 'DevOps' category is included because the feature supports enterprise usage monitoring, activity analytics, and developer enablement typical for DevOps organizations (DevOps rules 3, 5, 9). Excluded Azure, Coding, ML, and Security categories as there is no focus on those technologies or practices in the content.",
     "timestamp": "2026-03-05 16:16:41 +00:00"
+  },
+  {
+    "timestamp": "2026-03-05 17:45:27 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/05/malicious-ai-assistant-extensions-harvest-llm-chat-histories/",
+    "reason": "Succesfully added: Assigned 'Security' because the article centers on malware targeting enterprise AI browser extensions, exfiltrating sensitive LLM chat data and implementing malicious surveillance—matching Security rule 1 (Microsoft Defender, Defender XDR, Purview), and Security rule 5 (monitoring and incident response with Defender). Assigned 'AI' because the entire attack campaign revolves around misuse of AI assistant extensions, collection of LLM chat content, and discusses exposure from AI tools (AI rules 1 and 4). Did not assign Azure, DevOps, Coding, ML, or GitHub Copilot because the focus is not on those aspects, but specifically on browser security, incident detection, and AI data security using Microsoft Defender product family."
+  },
+  {
+    "timestamp": "2026-03-05 17:45:51 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/developer-skills/career-growth/scaling-ai-opportunity-across-the-globe-learnings-from-github-and-andela/",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories: The main content details the structured use of GitHub Copilot (explicitly mentioned multiple times, including impacts on coding, refactoring, and testing) within the context of developer upskilling and AI capability-building (AI rules 1, 2; GitHub Copilot rules 1–6). No Coding, DevOps, Azure, Security, or ML categories were included because the article focuses mostly on AI enablement and GitHub Copilot integration rather than detailed code, DevOps processes, cloud architecture, or machine learning implementation."
   }
 ]
