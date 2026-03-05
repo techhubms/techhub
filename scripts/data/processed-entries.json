@@ -27808,5 +27808,11 @@
     "timestamp": "2026-03-04 22:06:54 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/inference-at-enterprise-scale-why-llm-inference-is-a-capital/ba-p/4498754"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-04-lock-and-unlock-draft-repository-security-advisories",
+    "reason": "Succesfully added: Assigned the Security category because the content focuses on managing repository security advisories and private vulnerability reports, which directly relates to vulnerability management and secure workflows (Security rules 1 and 8). Assigned the DevOps category because repository and workflow management, and security procedures within GitHub are a key part of DevOps practices (DevOps rules 2 and 5). Did not assign other categories since the content does not focus on AI, Coding, Azure, ML, or GitHub Copilot, and there are no indications of those topics in the description, content, or tags.",
+    "timestamp": "2026-03-05 00:08:19 +00:00"
   }
 ]

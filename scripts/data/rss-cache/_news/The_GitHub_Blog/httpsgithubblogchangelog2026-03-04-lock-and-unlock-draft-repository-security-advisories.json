@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "Repository administrators can now lock draft repository security advisories and private vulnerability reports to prevent collaborators from editing advisory content or metadata. When locked, only administrators can make changes; collaborators can still participate through comments.\n\nThis gives you greater control over the triage and publication process for private vulnerability reports. Once you’ve reviewed a report and made decisions on severity or other fields, you can lock the advisory to preserve the integrity of the record and ensure no unintended changes are made while discussions continue.\n\n![Lock and unlock draft and timeline](https://github.com/user-attachments/assets/d554badf-bfd4-416c-9dc7-0c4a9e4aa63b)\n\nTo lock or unlock a draft advisory, navigate to the advisory and select **Lock advisory** from the advisory actions menu on the right side. Only repository administrators can lock or unlock advisories.\n\n[Learn more about repository security advisories](https://docs.github.com/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories) and [managing privately reported security vulnerabilities](https://docs.github.com/code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/managing-privately-reported-security-vulnerabilities).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-03-05 00:06:38",
+  "Title": "Lock and unlock draft repository security advisories",
+  "Description": "Repository administrators can now lock draft repository security advisories and private vulnerability reports to prevent collaborators from editing advisory content or metadata. When locked, only administrators can make changes; collaborators…\n\nThe post [Lock and unlock draft repository security advisories](https://github.blog/changelog/2026-03-04-lock-and-unlock-draft-repository-security-advisories) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-03-04-lock-and-unlock-draft-repository-security-advisories",
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "PubDate": "2026-03-04T21:45:08+00:00",
+  "Tags": [
+    "Improvement",
+    "supply chain security"
+  ],
+  "FeedName": "The GitHub Blog"
+}
