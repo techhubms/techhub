@@ -27814,5 +27814,11 @@
     "canonical_url": "https://github.blog/changelog/2026-03-04-lock-and-unlock-draft-repository-security-advisories",
     "reason": "Succesfully added: Assigned the Security category because the content focuses on managing repository security advisories and private vulnerability reports, which directly relates to vulnerability management and secure workflows (Security rules 1 and 8). Assigned the DevOps category because repository and workflow management, and security procedures within GitHub are a key part of DevOps practices (DevOps rules 2 and 5). Did not assign other categories since the content does not focus on AI, Coding, Azure, ML, or GitHub Copilot, and there are no indications of those topics in the description, content, or tags.",
     "timestamp": "2026-03-05 00:08:19 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/platform-engineering-for-the-agentic-ai-era/",
+    "reason": "Succesfully added: Assigned AI category because the article focuses on AI agents transforming platform engineering and DevOps practices, per AI inclusion rules 1 and 4. Assigned GitHub Copilot because the article discusses Copilot Spaces, Copilot Skills, Copilot Coding Agent, and Copilot integrations (GitHub Copilot rules 1, 2, 3). Assigned DevOps because it covers CI/CD, pipeline workflows, compliance automation, and platform engineering operations (DevOps rules 1, 3, 5, and 9). Assigned Azure because of direct coverage of Azure Policy, ARM, Bicep, Defender for Cloud, and Azure SRE Agent (Azure rules 1, 3, 4). Assigned Security because of deep focus on compliance, Defender integrations, policy enforcement, and code-to-cloud security posture (Security rules 1, 4, 5, and 6). ML and Coding categories were not assigned because the main focus is not data/analytics engineering or programming implementation, but rather platform architecture and automation. All included categories are supported by direct references in the content.",
+    "timestamp": "2026-03-05 06:13:35 +00:00"
   }
 ]
