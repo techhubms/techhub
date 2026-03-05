@@ -12681,5 +12681,11 @@
     "reason": "No categories found: Content is excluded according to the generic exclusion rules for Non-Development Microsoft Products. The article focuses entirely on business productivity enhancements using Windows 11 Copilot and Microsoft 365 Copilot, specifically for executive reporting, data summarization, and presentation preparation. There are no developer, coding, DevOps, security, AI integration, or ML engineering aspects, nor any mention of developer tooling. This matches the CRITICAL Copilot Product Distinction: Microsoft 365 Copilot, Copilot for Microsoft 365, Windows 11 Copilot, and similar end-user/business productivity Copilots must be excluded (see Chapter 3: Non-Development Microsoft Products). No included categories apply.",
     "collection": "blogs",
     "timestamp": "2026-03-04 17:15:25 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to lack of substantive technical content. The description and title reference an 'Enterprise Agents Battle' video that is mainly event highlights, not an educational or tutorial resource. There is no main content to analyze. The provided description is event promotion—not actual technical documentation, tutorial, or implementation discussion. No technical architecture, hands-on guidance, code, or in-depth exploration of Microsoft development topics is present. According to generic exclusion rules and category inclusion rules, this does not meet the substantive threshold for inclusion.",
+    "canonical_url": "https://www.youtube.com/watch?v=5E87X4n8wbg",
+    "collection": "videos",
+    "timestamp": "2026-03-05 10:13:13 +00:00"
   }
 ]

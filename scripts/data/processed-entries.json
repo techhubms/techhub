@@ -27826,5 +27826,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-high-performance-agentic-systems/ba-p/4497391",
     "reason": "Succesfully added: The content focuses on building and deploying advanced, production-grade AI agents using Microsoft technologies such as Azure AI Foundry and Copilot Studio. It discusses engineering architecture, tool integration, orchestration, and governance—aligning with the AI category (AI rules 1, 4, 5, 6). Azure category is included because Azure AI Foundry, Azure infrastructure, and integration with Microsoft cloud are central (>40% of the technical content). No additional categories (ML, Coding, DevOps, Security) qualify: while the engineering, orchestration, and security governance aspects are addressed, the article does not cover ML/data engineering from scratch (ML) or write code samples/framework implementation details (Coding), nor is DevOps or Security a primary topic. The author is identified as sgangaramani based on the byline."
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the article focuses on Azure IaaS resource center, its infrastructure services, and practical architectures (Azure inclusion rules 1, 4, 5, 6). Assigned AI category because the content extensively discusses supporting AI workloads, model training, inference, and operationalizing AI on Azure (AI inclusion rule 1, 4, 5). Assigned Security category because the article covers Azure's multi-layered security, including identity (Microsoft Entra ID), encryption, defense-in-depth, and compliance (Security inclusion rules 1, 2, 3, 4, 9). Did NOT assign DevOps because there's no substantial focus on deployment pipelines, CI/CD, or collaboration methodologies. Did NOT assign ML because the content addresses infrastructure for AI/ML workloads at a platform level, but not custom data science, analytics engineering, or code-level ML implementation. No Content Quality Exclusion rules triggered; article is substantial and technical.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/",
+    "timestamp": "2026-03-05 13:27:04 +00:00",
+    "collection": "news"
   }
 ]
