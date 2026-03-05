@@ -27868,5 +27868,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the video centers on development updates, features, and improvements in ASP.NET Core and Blazor, which are directly related to Microsoft web development technologies (Coding rule 1 and 2). No Azure, AI, ML, DevOps, Security, or GitHub Copilot aspects are indicated in the title, description, tags, or linked resources. There are no generic exclusion criteria met, as the content is technical, developer-focused, and not biographical, negative, or business-only.",
     "canonical_url": "https://www.youtube.com/watch?v=U95m5dEpqLE"
+  },
+  {
+    "timestamp": "2026-03-05 19:28:39 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the core solution described directly integrates with Azure SQL and Azure EventHub as central elements of data architecture (Azure Inclusion Rule 1 and 2). No AI, ML, Coding, DevOps, GitHub Copilot, or Security categories apply since the content focuses on integration and real-time operational monitoring using Drasi, with Azure services at its core. The Grafana and Blazor mentions are about monitoring and visualization, not development or coding. No Sales Pitch, non-English, or other generic exclusions apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/how-netstar-streamlined-fleet-monitoring-and-reduced-custom/ba-p/4499592",
+    "collection": "community"
   }
 ]

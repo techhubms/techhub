@@ -12693,5 +12693,11 @@
     "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2026/03/05/unify-simplify-scale-microsoft-dragon-copilot-meets-the-moment-at-himss-2026/",
     "reason": "No categories found: No categories assigned because the content is excluded by the generic exclusion rule regarding non-development Microsoft products. The 'Microsoft Dragon Copilot' mentioned here is presented in relation to healthcare business productivity and administrative AI, not as a developer tool. The content is a news announcement focusing on 'advancements for healthcare' at a HIMSS conference, which is industry/business-oriented, and contains no developer-focused details, code, architecture, or technical implementation related to Microsoft developer products. Additionally, Microsoft Dragon Copilot is not a recognized development or coding tool within the specified AI or GitHub Copilot development product definitions.",
     "timestamp": "2026-03-05 16:16:19 +00:00"
+  },
+  {
+    "timestamp": "2026-03-05 19:28:11 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The provided video titled 'It's Rubber Duck Thursday! Come learn and cowork and chat with us!' lacks substantive technical content about Microsoft technologies. The description only includes social media links, brand messaging, and generic calls to connect with GitHub, rather than technical education, tutorial material, or substantive discussion of development practices. There is no actual content present within the 'content' field itself either. As per format and content exclusion rules, content without informative or technical substance, and especially content that serves mainly as a social/community meetup or promotional announcement, does not qualify for any category.",
+    "canonical_url": "https://www.youtube.com/watch?v=FJglBH_N9hA",
+    "collection": "videos"
   }
 ]
