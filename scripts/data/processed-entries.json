@@ -28006,5 +28006,17 @@
     "canonical_url": "https://github.blog/changelog/2026-03-06-github-copilot-in-visual-studio-code-v1-110-february-release",
     "timestamp": "2026-03-06 21:06:46 +00:00",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Included the 'AI' category because GitHub Copilot is an AI coding assistant (AI rule 2). Included 'GitHub Copilot' category because the feature centers on Copilot integrations and workflows (GitHub Copilot rules 1 and 3). Included the 'Coding' category because the workflow involves code generation and synchronization with design assets, targeting developers working in VS Code (Coding rule 4). The content is technical, focused on development workflows, and passes all generic and specific inclusion rules.",
+    "canonical_url": "https://github.blog/changelog/2026-03-06-figma-mcp-server-can-now-generate-design-layers-from-vs-code",
+    "timestamp": "2026-03-06 22:05:13 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the core of the article is about applying large language models (LLMs) for security automation (AI category rule 1, 3, 4, 5); 'Security' because the focus is on vulnerability discovery, auditing, and threat modeling in open source repositories (Security rules 1, 2, 3, 5, 9); 'DevOps' because it involves running automated workflows/tools (taskflows) to audit, triage, and apply CI-like security checks using GitHub infrastructure (DevOps rules 2, 5, 6). No 'Coding', 'Azure', or 'ML' categories apply because there is no in-depth focus on Microsoft-specific coding frameworks, cloud service architecture, or custom ML platform engineering. GitHub Copilot is mentioned only as a licensing requirement, not as the implementation focus, so 'GitHub Copilot' category does not apply. All category assignments follow inclusion/exclusion rules as specified.",
+    "canonical_url": "https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/",
+    "timestamp": "2026-03-06 22:05:38 +00:00"
   }
 ]
