@@ -28000,5 +28000,11 @@
     "reason": "Succesfully added: Assigned the 'Coding' category because the announcement is developer-focused, highlighting new programming language features, compiler options, type inference changes, deprecations, and migration steps in TypeScript—Microsoft’s open-source language that extends JavaScript. All discussed features, tools, and breaking changes pertain directly to development workflows. Other categories such as Azure, AI, DevOps, Security, ML, or GitHub Copilot are not relevant here as the content is entirely about core coding and TypeScript language/platform changes, not cloud, AI, or DevOps platforms.",
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/typescript/announcing-typescript-6-0-rc/"
+  },
+  {
+    "reason": "Succesfully added: Included 'GitHub Copilot' because the article explicitly focuses on new Copilot features and agent/programming capabilities in Visual Studio Code. Per rules, 'AI' is always assigned together with GitHub Copilot. Included 'Coding' because the update covers workflows, automation, CLI features, and developer productivity tools directly in the programming environment. Content is technical, developer-focused, and directly about Microsoft dev tools. No generic exclusion rules apply.",
+    "canonical_url": "https://github.blog/changelog/2026-03-06-github-copilot-in-visual-studio-code-v1-110-february-release",
+    "timestamp": "2026-03-06 21:06:46 +00:00",
+    "collection": "news"
   }
 ]
