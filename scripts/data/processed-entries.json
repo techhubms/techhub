@@ -27952,5 +27952,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot",
     "reason": "Succesfully added: Assigned 'AI' because the content is about an advanced OpenAI model (GPT-5.4) now powering development workflows, consistent with the 'Microsoft AI Products/Services' and 'AI Development with Microsoft Technologies' rules. Assigned 'GitHub Copilot' because the entire feature is for GitHub Copilot, matching all GitHub Copilot-specific rules. Content does not qualify for other categories because it does not focus on coding patterns, DevOps practices, or Azure services beyond their use within Copilot. No generic exclusion rules apply."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the news centers on features within GitHub Copilot's Enterprise AI Controls (AI rule 2, GitHub Copilot rules 1–6, and the critical Copilot distinction). 'DevOps' was included since these management features provide enhanced enterprise control, monitoring, and operational oversight—activities directly supporting DevOps practices (DevOps rule 3 and enterprise tool context). Azure, Coding, ML, and Security were not included since there is no direct focus on those technologies or themes.",
+    "canonical_url": "https://github.blog/changelog/2026-03-05-discover-and-manage-agent-activity-with-new-session-filters",
+    "collection": "news",
+    "timestamp": "2026-03-06 01:32:20 +00:00"
   }
 ]

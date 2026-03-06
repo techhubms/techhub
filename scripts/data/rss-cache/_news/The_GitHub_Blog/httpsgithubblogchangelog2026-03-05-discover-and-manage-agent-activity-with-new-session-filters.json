@@ -1,0 +1,18 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "GitHub [Enterprise AI Controls and agent control plane](https://docs.github.com/copilot/concepts/agents/enterprise-management) now includes additional session filters, making it easier to discover and manage agent activity across your enterprise.\n\n## What’s new\n\nIn addition to searching for agentic session activity by agents and by organizations within your enterprise, we’ve now rolled out the following filters:\n\n- **Status**: Search for session by status, such as queued, in progress, completed, failed, idle waiting for user, timed out, and cancelled.\n- **Repository**: Search for sessions by the repository where the agent session occurred.\n- **User**: Search for sessions by the user who initiated the agent session.\n\nTo learn more, see our documentation on [AI controls and the agent control plane](https://docs.github.com/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/monitor-agentic-activity).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/178247).",
+  "Author": "Allison",
+  "Tags": [
+    "copilot",
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "FeedName": "The GitHub Blog",
+  "Title": "Discover and manage agent activity with new session filters",
+  "Description": "GitHub Enterprise AI Controls and agent control plane now includes additional session filters, making it easier to discover and manage agent activity across your enterprise. What’s new In addition to…\n\nThe post [Discover and manage agent activity with new session filters](https://github.blog/changelog/2026-03-05-discover-and-manage-agent-activity-with-new-session-filters) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-03-05-discover-and-manage-agent-activity-with-new-session-filters",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "PubDate": "2026-03-05T22:37:24+00:00",
+  "ProcessedDate": "2026-03-06 01:30:58"
+}

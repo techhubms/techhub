@@ -12717,5 +12717,11 @@
     "canonical_url": "https://github.blog/changelog/2026-03-05-add-images-to-agent-sessions",
     "timestamp": "2026-03-05 22:06:42 +00:00",
     "reason": "No categories found: Applied generic exclusion rules first. The content describes a new feature for agent sessions on GitHub (adding images), but does not provide any technical depth, development information, or actionable details about Microsoft development tools, AI, Coding, DevOps, Azure, ML, or Security. It is a product update about a user interface enhancement for GitHub agents but does not pertain to GitHub Copilot or demonstrate developer-centric features. There are no technical implementation details, programming guidance, or architectural insights relevant to Tech Hub's inclusion categories. The referenced tag 'copilot' appears in the input tags, but the content itself does not discuss GitHub Copilot or any developer AI tooling—only a generic UI feature. Therefore, no categories are assigned."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule – this video is primarily biographical in nature, focusing on John Leider's personal journey as an open source maintainer, as indicated by the phrase 'his incredible journey as an open source maintainer.' The primary topic centers on Vuetify, a UI library that is not Microsoft-related. There's no substantive technical discussion of Microsoft technologies or products present in the title, description, or linked project. Therefore, no categories apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=Q_Ef-JMdAG0",
+    "collection": "videos",
+    "timestamp": "2026-03-06 01:32:55 +00:00"
   }
 ]
