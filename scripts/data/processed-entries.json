@@ -27994,5 +27994,11 @@
     "reason": "Succesfully added: Assigned 'AI' category since the article focuses extensively on how artificial intelligence and machine learning are being utilized by threat actors to scale and enhance cyberattacks, with repeated references to Microsoft AI platforms (AI rule 1, 4, 5, 6). Assigned 'Security' because the report details the security implications, detection methods, and defense strategies for AI-enabled threats using Microsoft technologies (Security rules 1, 5, 7, 9). Did not assign Azure or DevOps categories, as although some Azure services (like Azure AI Content Safety, Defender for Cloud) are mentioned, the main focus is on AI in security rather than Azure implementation or DevOps practices. No Coding or ML categories, since custom development, ML engineering, or coding processes are not the article's central theme. The content is technical, not marketing, biographical, or business-strategy focused, and thus passes all generic exclusion rules.",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/",
     "timestamp": "2026-03-06 19:14:47 +00:00"
+  },
+  {
+    "timestamp": "2026-03-06 20:06:43 +00:00",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the announcement is developer-focused, highlighting new programming language features, compiler options, type inference changes, deprecations, and migration steps in TypeScript—Microsoft’s open-source language that extends JavaScript. All discussed features, tools, and breaking changes pertain directly to development workflows. Other categories such as Azure, AI, DevOps, Security, ML, or GitHub Copilot are not relevant here as the content is entirely about core coding and TypeScript language/platform changes, not cloud, AI, or DevOps platforms.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/typescript/announcing-typescript-6-0-rc/"
   }
 ]
