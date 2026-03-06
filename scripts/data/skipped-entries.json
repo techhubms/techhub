@@ -12723,5 +12723,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=Q_Ef-JMdAG0",
     "collection": "videos",
     "timestamp": "2026-03-06 01:32:55 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "API call retries failed: All API call retries failed - no response received",
+    "timestamp": "2026-03-06 07:21:36 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/decision-matrix-api-vs-mcp-tools-the-great-integration-showdown/ba-p/4499385"
   }
 ]

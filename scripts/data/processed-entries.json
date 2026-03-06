@@ -27964,5 +27964,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=A8LiOBd5AgQ",
     "timestamp": "2026-03-06 02:55:32 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-gpt-5-4-in-microsoft-foundry/4499785",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'AI' category because the article is centered around Microsoft AI products—specifically GPT-5.4 and GPT-5.4 Pro in Microsoft Foundry (AI Inclusion Rule 1). Also assigned the 'Azure' category, as Microsoft Foundry is delivered as part of Azure and integrates with Azure's operational controls and compliance framework (Azure Inclusion Rule 1). The content is not about model development from scratch (so no ML), and there's no significant focus on coding, DevOps, or security implementation details. No generic exclusion rules apply.",
+    "timestamp": "2026-03-06 09:10:47 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-vs-mcp-cli-dynamic-tool-discovery-for-token-efficient-ai/ba-p/4494272",
+    "collection": "community",
+    "reason": "Succesfully added: The content is an in-depth technical comparison between the Model Context Protocol (MCP) and mcp-cli, focusing on architectures and integration techniques for AI agents and tools. The article covers token efficiency strategies, integration with AI agent frameworks, command-line automation, and design patterns relevant to AI agent development. The AI category is assigned because the article specifically discusses technology for connecting AI agents with external tools (AI Rule 1 and 4). While Azure is referenced as an ecosystem context (tags/blog board), core content is agnostic and mostly focuses on open protocols and their CLI implementations. No other categories (Azure, Coding, ML, DevOps, Security) apply because there is no substantial focus on Microsoft-specific developer frameworks, coding patterns, data science/ML, cloud operations, or security practices as defined by the inclusion rules. The post meets all quality standards and contains detailed architectural and implementation guidance for technical practitioners.",
+    "timestamp": "2026-03-06 09:11:43 +00:00"
   }
 ]
