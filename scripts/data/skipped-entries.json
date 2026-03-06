@@ -12729,5 +12729,11 @@
     "reason": "API call retries failed: All API call retries failed - no response received",
     "timestamp": "2026-03-06 07:21:36 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/decision-matrix-api-vs-mcp-tools-the-great-integration-showdown/ba-p/4499385"
+  },
+  {
+    "timestamp": "2026-03-06 17:12:26 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/asia/2026/03/04/islamic-boarding-school-classroomsthat-are-no-longer-the-same/",
+    "reason": "No categories found: No categories assigned due to the generic exclusion rule regarding non-development Microsoft products and business/productivity AI tools. While the article discusses the use of Microsoft Teams Learning Accelerators, Microsoft Copilot, and AI in an educational context, the AI usage here is strictly for classroom efficiency, administration, and pedagogy rather than for coding, software engineering, or technical development. Chapter 3's 'Non-Development Microsoft Products' exclusion specifically calls out Microsoft 365 Copilot, Copilot for Microsoft 365, and Copilot in general, when used for business productivity or education rather than for code development. Additionally, Microsoft Teams Learning Accelerators and classroom-focused AI features fall outside the technical/developer categories (AI, Coding, etc.) defined in Chapter 4. There is also no deep technical implementation, development tooling, software engineering, or DevOps activity described: the content is solely about educational transformation and AI integration in teaching, not technical development.",
+    "collection": "news"
   }
 ]

@@ -27976,5 +27976,11 @@
     "collection": "community",
     "reason": "Succesfully added: The content is an in-depth technical comparison between the Model Context Protocol (MCP) and mcp-cli, focusing on architectures and integration techniques for AI agents and tools. The article covers token efficiency strategies, integration with AI agent frameworks, command-line automation, and design patterns relevant to AI agent development. The AI category is assigned because the article specifically discusses technology for connecting AI agents with external tools (AI Rule 1 and 4). While Azure is referenced as an ecosystem context (tags/blog board), core content is agnostic and mostly focuses on open protocols and their CLI implementations. No other categories (Azure, Coding, ML, DevOps, Security) apply because there is no substantial focus on Microsoft-specific developer frameworks, coding patterns, data science/ML, cloud operations, or security practices as defined by the inclusion rules. The post meets all quality standards and contains detailed architectural and implementation guidance for technical practitioners.",
     "timestamp": "2026-03-06 09:11:43 +00:00"
+  },
+  {
+    "timestamp": "2026-03-06 17:13:16 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=VuXRLdt5dIc",
+    "reason": "Succesfully added: Categories 'Azure' and 'AI' were assigned. The Azure category is justified because the update is centered entirely on Azure cloud platform topics: VM changes, firewall enhancements, Databricks, Azure Arc, and Azure Policy (Azure rules 1, 2, 4, 5). The AI category is included due to extensive discussion of new AI models (Grok, Qwen3.5, GPT-5.3 and 5.4, Phi-4-Reasoning-Vision), integration of GPT models into Azure Foundry, and general model integration within Azure (AI rules 1, 4, 5). No other categories fit, as there is no deep focus on Coding, DevOps, Security, or custom ML platform engineering. The content was in English and follows professional technical update standards with no generic exclusion rules triggered.",
+    "collection": "videos"
   }
 ]
