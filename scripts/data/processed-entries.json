@@ -27982,5 +27982,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=VuXRLdt5dIc",
     "reason": "Succesfully added: Categories 'Azure' and 'AI' were assigned. The Azure category is justified because the update is centered entirely on Azure cloud platform topics: VM changes, firewall enhancements, Databricks, Azure Arc, and Azure Policy (Azure rules 1, 2, 4, 5). The AI category is included due to extensive discussion of new AI models (Grok, Qwen3.5, GPT-5.3 and 5.4, Phi-4-Reasoning-Vision), integration of GPT models into Azure Foundry, and general model integration within Azure (AI rules 1, 4, 5). No other categories fit, as there is no deep focus on Coding, DevOps, Security, or custom ML platform engineering. The content was in English and follows professional technical update standards with no generic exclusion rules triggered.",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the episode explicitly discusses the general availability, features, and events related to GitHub Copilot CLI, which is a developer AI tool (GitHub Copilot rules 1–4 and AI Rules 1–2). Assigned 'DevOps' because the Copilot CLI and new repository dashboard target improvements to coding workflows and continuous integration on GitHub (DevOps rules 2, 9, and 11). Excluded Coding and Azure as there is no detailed focus on application code, frameworks, or Azure-specific technologies. Excluded ML and Security as there are no substantial references to machine learning engineering or security topics. All generic exclusion rules were reviewed and none applied: the content is in English, is not biographical, sales-focused, or negative, and is information-dense.",
+    "timestamp": "2026-03-06 18:09:12 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=1iG8kumbRcs"
   }
 ]
