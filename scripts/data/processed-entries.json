@@ -27946,5 +27946,11 @@
     "reason": "Succesfully added: Assigned AI because the episode foregrounds Copilot (developer/maker tool) and Microsoft Fabric Data Factory's AI-driven features, satisfying AI Inclusion Rule 1 and 4. Assigned Azure because Azure SQL and Azure services are central to the workflow and solution (Azure Rule 1). Did not assign ML: while there's a connection to Microsoft Fabric and data workflows, the content focuses on data integration and insights, not advanced analytics or custom ML engineering. There's no code walkthrough or specific programming focus, so Coding is not assigned. DevOps and Security are not addressed in the available description. Generic exclusion rules do not apply as this is technical, English, practitioner-focused Microsoft content.",
     "timestamp": "2026-03-05 23:26:05 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-03-06 00:13:04 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot",
+    "reason": "Succesfully added: Assigned 'AI' because the content is about an advanced OpenAI model (GPT-5.4) now powering development workflows, consistent with the 'Microsoft AI Products/Services' and 'AI Development with Microsoft Technologies' rules. Assigned 'GitHub Copilot' because the entire feature is for GitHub Copilot, matching all GitHub Copilot-specific rules. Content does not qualify for other categories because it does not focus on coding patterns, DevOps practices, or Azure services beyond their use within Copilot. No generic exclusion rules apply."
   }
 ]
