@@ -28036,5 +28036,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' because GitHub Copilot (an AI-powered developer tool) plays a central role (AI rule 2). Assigned 'GitHub Copilot' per rule that all Copilot-featured developer content must include this category. Assigned 'Coding' because the integration relates to code editors (VS Code), developer workflows, and writing/pushing code (Coding rules 2, 4, and 5). The content is technical and about development-focused workflows, not just design or productivity.",
     "canonical_url": "https://www.youtube.com/watch?v=O1i-Te78-u4"
+  },
+  {
+    "timestamp": "2026-03-07 17:05:12 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/",
+    "reason": "Succesfully added: Assigned the AI category because the article focuses centrally on Microsoft Foundry, an AI platform on Azure, aligning with AI inclusion rules 1, 4, and 5. Assigned Azure because Foundry is an Azure-based product, as identified in both content and linked URLs (Azure rules 1 and 4). Did not assign ML, Security, DevOps, Coding, or GitHub Copilot, as the article addresses the operational and productivity impact of deploying AI platforms, but does not discuss machine learning development, code-level ML engineering, security implementation, DevOps practices, or developer tool integrations. The tone is technical and focused on real-world outcomes for practitioners, not business executives, satisfying inclusion/quality requirements.",
+    "collection": "news"
   }
 ]

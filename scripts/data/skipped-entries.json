@@ -12735,5 +12735,11 @@
     "canonical_url": "https://news.microsoft.com/source/asia/2026/03/04/islamic-boarding-school-classroomsthat-are-no-longer-the-same/",
     "reason": "No categories found: No categories assigned due to the generic exclusion rule regarding non-development Microsoft products and business/productivity AI tools. While the article discusses the use of Microsoft Teams Learning Accelerators, Microsoft Copilot, and AI in an educational context, the AI usage here is strictly for classroom efficiency, administration, and pedagogy rather than for coding, software engineering, or technical development. Chapter 3's 'Non-Development Microsoft Products' exclusion specifically calls out Microsoft 365 Copilot, Copilot for Microsoft 365, and Copilot in general, when used for business productivity or education rather than for code development. Additionally, Microsoft Teams Learning Accelerators and classroom-focused AI features fall outside the technical/developer categories (AI, Coding, etc.) defined in Chapter 4. There is also no deep technical implementation, development tooling, software engineering, or DevOps activity described: the content is solely about educational transformation and AI integration in teaching, not technical development.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-07 16:04:15 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/D944tiUHQzk",
+    "reason": "No categories found: No categories were assigned because the content primarily focuses on the story of the npmx open-source project and its rapid community growth, rather than technical implementation, development methodologies, or Microsoft technology. There are no substantive technical details about coding, DevOps, AI, Azure, ML, or Security, and the primary intent is about community creation, not engineering how-tos or tool usage. The video also does not describe anything unique to Microsoft, and generic exclusion rules require that when in doubt (and if Microsoft technologies aren't central or >=40% of content), no categories are assigned."
   }
 ]
