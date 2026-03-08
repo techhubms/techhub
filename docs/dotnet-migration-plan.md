@@ -153,11 +153,13 @@ This migration follows **Spec-Driven Development (SDD)** using the [spec-kit](ht
 # Tech Hub .NET Migration Constitution
 
 ## Project Identity
+
 - **Name**: Tech Hub .NET
 - **Purpose**: Modern .NET implementation of Tech Hub content platform
 - **Repository**: [current repository]/dotnet
 
 ## Core Principles
+
 1. **SEO Preservation**: All existing URLs must work identically
 2. **Configuration-Driven**: sections.json remains single source of truth
 3. **Server-Side First**: All content rendered server-side
@@ -166,6 +168,7 @@ This migration follows **Spec-Driven Development (SDD)** using the [spec-kit](ht
 6. **Accessibility**: WCAG 2.1 Level AA compliance
 
 ## Technology Stack
+
 - Runtime: .NET 10 (latest)
 - Web Framework: Blazor (Interactive Server)
 - Orchestration: .NET Aspire
@@ -175,6 +178,7 @@ This migration follows **Spec-Driven Development (SDD)** using the [spec-kit](ht
 - Monitoring: OpenTelemetry, Application Insights
 
 ## Constraints
+
 - Must not modify Jekyll source (except shared docs)
 - Must support all existing RSS feed URLs
 - Must maintain identical visual appearance
@@ -214,7 +218,7 @@ For each major feature, create a specification using `/speckit.specify`:
 ```markdown
 # Tech Hub .NET Development Guide
 
-> **AI CONTEXT**: This is the **ROOT** context file for the .NET solution. 
+> **AI CONTEXT**: This is the **ROOT** context file for the .NET solution.
 > For framework-agnostic principles, see the parent [/AGENTS.md](../AGENTS.md).
 
 ## Index
@@ -237,8 +241,8 @@ Follow the 8-step workflow defined in the root AGENTS.md:
 8. Report Completion - Summarize changes
 
 ## Solution Structure
-
 ```text
+
 dotnet/
 ├── AGENTS.md                     # This file - root .NET context
 ├── src/
@@ -251,8 +255,8 @@ dotnet/
 ├── tests/                       # See tests/AGENTS.md
 ├── infra/                       # See infra/AGENTS.md
 └── scripts/                     # See scripts/AGENTS.md
-```
 
+```
 ## Development Principles
 
 All principles from root AGENTS.md apply. Additionally:
@@ -345,29 +349,34 @@ Use `@dotnet` agent for:
 - Tests: `/dotnet/tests/`
 
 ## Commands
-
 ```powershell
+
 # Start development server (both API + Web via Aspire)
+
 dotnet run --project src/TechHub.AppHost
 
 # Run all tests
+
 dotnet test
 
 # Run specific test project
+
 dotnet test tests/TechHub.Core.Tests
 
 # Run E2E tests
+
 ./scripts/run-e2e-tests.ps1
 
 # Build release
-dotnet build -c Release
-```
 
+dotnet build -c Release
+
+```
 ## Patterns
 
 ### Minimal API Endpoints
-
 ```csharp
+
 // Use static methods for endpoint handlers
 public static class SectionEndpoints
 {
@@ -382,11 +391,11 @@ public static class SectionEndpoints
         ISectionRepository repo, CancellationToken ct) =>
         Results.Ok(await repo.GetAllAsync(ct));
 }
+
 ```
-
 ### Blazor Components
-
 ```razor
+
 @* Use code-behind for complex components *@
 @inherits SectionIndexBase
 
@@ -397,8 +406,8 @@ public static class SectionEndpoints
     <SectionHeader Section="@Section" />
     <ContentList Items="@Items" />
 }
-```
 
+```
 See `/dotnet/AGENTS.md` for complete documentation structure.
 ~~~
 
@@ -411,8 +420,8 @@ See `/dotnet/AGENTS.md` for complete documentation structure.
 ### 1.1 Create .NET DevContainer
 
 - [ ] Create `/dotnet/.devcontainer/devcontainer.json`:
-
 ```jsonc
+
 {
   "name": "Tech Hub .NET",
   "image": "mcr.microsoft.com/devcontainers/dotnet:1-10.0",
@@ -517,12 +526,13 @@ See `/dotnet/AGENTS.md` for complete documentation structure.
     "15888": { "label": "Aspire Dashboard" }
   }
 }
+
 ```
-
 - [ ] Create `/dotnet/.devcontainer/post-create.ps1`:
-
 ```powershell
-#!/usr/bin/env pwsh
+
+# !/usr/bin/env pwsh
+
 # Post-create setup script for Tech Hub .NET
 
 $ErrorActionPreference = "Stop"
@@ -530,6 +540,7 @@ $ErrorActionPreference = "Stop"
 Write-Host "Setting up Tech Hub .NET development environment..." -ForegroundColor Cyan
 
 # Ensure Node.js tools are available system-wide
+
 Write-Host "Setting up Node.js tools system-wide..."
 if (Test-Path "/usr/local/share/nvm/current/bin") {
     sudo ln -sf "/usr/local/share/nvm/current/bin/node" /usr/local/bin/node
@@ -538,23 +549,28 @@ if (Test-Path "/usr/local/share/nvm/current/bin") {
 }
 
 # Update npm to latest version
+
 Write-Host "Updating npm..."
 npm install -g npm@latest
 
 # Install PowerShell modules
+
 Write-Host "Installing PowerShell modules..."
 Install-Module Pester -Force -SkipPublisherCheck -MinimumVersion "5.0.0" -Scope CurrentUser
 
 # Install .NET Aspire workload
+
 Write-Host "Installing .NET Aspire workload..."
 dotnet workload install aspire
 
 # Install Entity Framework tools (if needed in future)
+
 Write-Host "Installing .NET global tools..."
 dotnet tool install --global dotnet-ef 2>$null
 dotnet tool install --global dotnet-aspire 2>$null
 
 # Install Playwright browsers for E2E tests and MCP
+
 Write-Host "Installing Playwright system dependencies..."
 sudo npx -y playwright install-deps
 
@@ -562,10 +578,12 @@ Write-Host "Installing Playwright browsers..."
 npx -y playwright@latest install chromium chrome --force
 
 # Restore .NET packages
+
 Write-Host "Restoring .NET packages..."
 dotnet restore
 
 # Trust development certificates
+
 Write-Host "Trusting development certificates..."
 dotnet dev-certs https --trust 2>$null
 
@@ -579,8 +597,8 @@ Write-Host "  dotnet run --project src/TechHub.AppHost  # Start with Aspire"
 Write-Host "  dotnet test                               # Run all tests"
 Write-Host "  ./scripts/run-e2e-tests.ps1              # Run E2E tests"
 Write-Host ""
-```
 
+```
 - [ ] Verify devcontainer builds successfully
 - [ ] Verify MCP servers are accessible (GitHub, Context7, Playwright)
 - [ ] Confirm Playwright browsers installed correctly
@@ -588,8 +606,8 @@ Write-Host ""
 ### 1.2 Configure VS Code Debugging
 
 - [ ] Create `/dotnet/.vscode/launch.json`:
-
 ```json
+
 {
   "version": "0.2.0",
   "configurations": [
@@ -636,11 +654,11 @@ Write-Host ""
     }
   ]
 }
+
 ```
-
 - [ ] Create `/dotnet/.vscode/tasks.json`:
-
 ```json
+
 {
   "version": "2.0.0",
   "tasks": [
@@ -680,11 +698,11 @@ Write-Host ""
     }
   ]
 }
+
 ```
-
 - [ ] Create `/dotnet/.vscode/settings.json`:
-
 ```json
+
 {
   "dotnet.defaultSolution": "TechHub.sln",
   "editor.formatOnSave": true,
@@ -706,8 +724,8 @@ Write-Host ""
     "**/node_modules": true
   }
 }
-```
 
+```
 - [ ] Verify F5 debugging works for each configuration
 - [ ] Verify breakpoints work in C# code
 - [ ] Verify Aspire dashboard opens automatically
@@ -715,8 +733,8 @@ Write-Host ""
 ### 1.3 Initialize Solution Structure
 
 - [ ] Create solution at `/dotnet/TechHub.sln`:
-
 ```text
+
 dotnet/
 ├── .devcontainer/
 ├── src/
@@ -743,8 +761,8 @@ dotnet/
 └── specs/
     ├── .speckit/
     └── features/
-```
 
+```
 - [ ] Run `dotnet new sln -n TechHub` in `/dotnet/`
 - [ ] Create projects:
   - [ ] `dotnet new classlib -n TechHub.Core -o src/TechHub.Core`
@@ -764,8 +782,8 @@ dotnet/
 ### 1.3 Configure Aspire
 
 - [ ] Create `TechHub.AppHost` project:
-
 ```csharp
+
 // Program.cs
 var builder = DistributedApplication.CreateBuilder(args);
 
@@ -779,11 +797,11 @@ var web = builder.AddProject<Projects.TechHub_Web>("web")
     .WithExternalHttpEndpoints();
 
 builder.Build().Run();
+
 ```
-
 - [ ] Configure ServiceDefaults with OpenTelemetry:
-
 ```csharp
+
 // TechHub.ServiceDefaults/Extensions.cs
 public static class Extensions
 {
@@ -800,8 +818,8 @@ public static class Extensions
         return builder;
     }
 }
-```
 
+```
 - [ ] Configure OpenTelemetry in AppHost
 - [ ] Verify Aspire dashboard accessible at port 15888
 - [ ] Verify both API and Web projects start correctly
@@ -814,8 +832,8 @@ public static class Extensions
 
 - [ ] Create `/specs/features/domain-models.md` specification
 - [ ] Implement in `TechHub.Core`:
-
 ```csharp
+
 // Models/Section.cs
 public record Section
 {
@@ -860,7 +878,7 @@ public record ContentItem
     /// Generate URL for this content in a specific section context.
     /// Example: /ai/videos/vs-code-107.html or /github-copilot/videos/vs-code-107.html
     /// </summary>
-    public string GetUrlInSection(string sectionUrl) => 
+    public string GetUrlInSection(string sectionUrl) =>
         $"/{sectionUrl}/{Collection}/{Id}.html";
 }
 
@@ -882,8 +900,8 @@ public record ContentItemDto
     public string? ExternalUrl { get; init; }
     public string? VideoId { get; init; }
 }
-```
 
+```
 - [ ] Write unit tests for models
 - [ ] Verify all tests pass
 
@@ -891,8 +909,8 @@ public record ContentItemDto
 
 - [ ] Create `/specs/features/repository-pattern.md` specification
 - [ ] Define interfaces in `TechHub.Core`:
-
 ```csharp
+
 // Interfaces/ISectionRepository.cs
 public interface ISectionRepository
 {
@@ -911,11 +929,11 @@ public interface ISectionRepository
 public interface IContentRepository
 {
     Task<IReadOnlyList<ContentItem>> GetItemsByCollectionAsync(
-        string collection, 
+        string collection,
         CancellationToken ct = default);
     
     Task<IReadOnlyList<ContentItem>> GetItemsByCategoryAsync(
-        string category, 
+        string category,
         CancellationToken ct = default);
     
     /// <summary>
@@ -923,12 +941,12 @@ public interface IContentRepository
     /// Supports multi-location access: same content viewable from different sections.
     /// </summary>
     Task<ContentItem?> GetItemByIdAsync(
-        string id, 
+        string id,
         string? categoryFilter = null,
         CancellationToken ct = default);
     
     Task<IReadOnlyList<ContentItem>> GetLatestItemsAsync(
-        int count, 
+        int count,
         string? category = null,
         CancellationToken ct = default);
     
@@ -940,11 +958,11 @@ public interface IContentRepository
         string sectionCategory,
         CancellationToken ct = default);
 }
+
 ```
-
 - [ ] Implement file-based repository in `TechHub.Infrastructure`:
-
 ```csharp
+
 // Repositories/FileSectionRepository.cs
 public class FileSectionRepository : ISectionRepository
 {
@@ -967,8 +985,8 @@ public class FileContentRepository : IContentRepository
     // Content items track ALL categories they belong to
     // Supports multi-location access via category filtering
 }
-```
 
+```
 - [ ] Write integration tests for repositories
 - [ ] Verify all tests pass
 
@@ -977,8 +995,8 @@ public class FileContentRepository : IContentRepository
 - [ ] Create `/specs/features/markdown-processing.md` specification
 - [ ] Install Markdig package: `dotnet add package Markdig`
 - [ ] Implement markdown processor:
-
 ```csharp
+
 // Services/MarkdownProcessor.cs
 public class MarkdownProcessor : IMarkdownProcessor
 {
@@ -1001,8 +1019,8 @@ public class MarkdownProcessor : IMarkdownProcessor
         // Return ContentItem
     }
 }
-```
 
+```
 - [ ] Write unit tests for markdown processing
 - [ ] Test with actual content files from collections/
 - [ ] Verify all tests pass
@@ -1010,8 +1028,8 @@ public class MarkdownProcessor : IMarkdownProcessor
 ### 2.4 Configure API Project
 
 - [ ] Set up `TechHub.Api/Program.cs`:
-
 ```csharp
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add Aspire service defaults (OpenTelemetry, health checks, resilience)
@@ -1062,16 +1080,16 @@ if (app.Environment.IsDevelopment())
 }
 
 app.Run();
-```
 
+```
 - [ ] Create `ContentOptions` configuration class
 - [ ] Add configuration to `appsettings.json`
 
 ### 2.5 Configure Web Project (Blazor Frontend)
 
 - [ ] Set up `TechHub.Web/Program.cs`:
-
 ```csharp
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add Aspire service defaults
@@ -1113,31 +1131,31 @@ app.MapRazorComponents<App>()
 app.MapDefaultEndpoints();
 
 app.Run();
+
 ```
-
 - [ ] Create typed API client interface and implementation:
-
 ```csharp
+
 // Services/ITechHubApiClient.cs
 public interface ITechHubApiClient
 {
     Task<IReadOnlyList<SectionDto>> GetSectionsAsync(CancellationToken ct = default);
     Task<SectionDto?> GetSectionAsync(string url, CancellationToken ct = default);
     Task<IReadOnlyList<ContentItemDto>> GetContentAsync(
-        string sectionUrl, 
-        string? collection = null, 
+        string sectionUrl,
+        string? collection = null,
         CancellationToken ct = default);
     Task<ContentItemDto?> GetContentItemAsync(
-        string sectionUrl, 
-        string collection, 
-        string itemId, 
+        string sectionUrl,
+        string collection,
+        string itemId,
         CancellationToken ct = default);
     Task<IReadOnlyList<ContentItemDto>> GetLatestRoundupsAsync(
-        int count, 
+        int count,
         CancellationToken ct = default);
 }
-```
 
+```
 - [ ] Verify DI works correctly
 - [ ] Verify API client can communicate with API
 
@@ -1145,8 +1163,8 @@ public interface ITechHubApiClient
 
 - [ ] Create `/specs/features/api-endpoints.md` specification
 - [ ] Implement section endpoints:
-
 ```csharp
+
 // Endpoints/SectionEndpoints.cs
 public static class SectionEndpoints
 {
@@ -1165,11 +1183,11 @@ public static class SectionEndpoints
                 : Results.NotFound());
     }
 }
+
 ```
-
 - [ ] Implement content endpoints:
-
 ```csharp
+
 // Endpoints/ContentEndpoints.cs
 public static class ContentEndpoints
 {
@@ -1228,11 +1246,11 @@ public static class ContentEndpoints
         });
     }
 }
+
 ```
-
 - [ ] Implement RSS endpoints:
-
 ```csharp
+
 // Endpoints/RssEndpoints.cs
 public static class RssEndpoints
 {
@@ -1254,8 +1272,8 @@ public static class RssEndpoints
         }).WithTags("RSS");
     }
 }
-```
 
+```
 - [ ] Write API integration tests
 - [ ] Verify all endpoints return correct data
 - [ ] Verify OpenAPI documentation is accurate
@@ -1273,8 +1291,8 @@ The API is designed to be MCP-ready. MCP enables AI assistants to interact with 
   - Schema.org alignment for semantic understanding
 
 **MCP Extension Points** (to implement when needed):
-
 ```csharp
+
 // Future: MCP/McpServerExtensions.cs
 public static class McpServerExtensions
 {
@@ -1305,8 +1323,8 @@ public class ContentResource : IMcpResource
     
     // Returns Schema.org-aligned JSON-LD for AI consumption
 }
-```
 
+```
 **Design Decisions for MCP Compatibility**:
 
 1. **Resource-oriented API** - Content accessible via stable URIs
@@ -1331,8 +1349,8 @@ The architecture supports adding authentication without major refactoring:
   - User claims and authorization policies
 
 **Authentication Extension Points** (to implement when needed):
-
 ```csharp
+
 // Future: TechHub.Api/Program.cs additions
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -1343,9 +1361,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("AdminOnly", policy => 
+    options.AddPolicy("AdminOnly", policy =>
         policy.RequireClaim("role", "admin"));
-    options.AddPolicy("ContentEditor", policy => 
+    options.AddPolicy("ContentEditor", policy =>
         policy.RequireClaim("role", "editor", "admin"));
 });
 
@@ -1365,8 +1383,8 @@ builder.Services.AddAuthentication(options =>
     options.ClientId = "techhub-web";
     // ... additional OIDC configuration
 });
-```
 
+```
 **Design Decisions for Auth Compatibility**:
 
 1. **Claims-based authorization** - API endpoints use policy-based auth
@@ -1389,8 +1407,8 @@ builder.Services.AddAuthentication(options =>
 #### Layout Component
 
 - [ ] Create `TechHub.Web/Components/Layout/MainLayout.razor`:
-
 ```razor
+
 @inherits LayoutComponentBase
 
 <!DOCTYPE html>
@@ -1405,13 +1423,13 @@ builder.Services.AddAuthentication(options =>
     <script src="_framework/blazor.web.js"></script>
 </body>
 </html>
-```
 
+```
 #### Header Component
 
 - [ ] Create `Components/Shared/Header.razor` with semantic HTML:
-
 ```razor
+
 <header role="banner">
     <div class="header-container">
         <a href="/" class="logo" aria-label="Tech Hub Home">
@@ -1425,19 +1443,19 @@ builder.Services.AddAuthentication(options =>
         </nav>
     </div>
 </header>
-```
 
+```
 #### Section Navigation Component
 
 - [ ] Create `Components/Shared/SectionNav.razor`:
-
 ```razor
+
 @* Section navigation - links use section-specific URLs *@
 
 <nav class="section-nav" aria-label="Section navigation">
     @foreach (var collection in Section.Collections)
     {
-        <a href="/@SectionUrl/@(collection.Collection).html" 
+        <a href="/@SectionUrl/@(collection.Collection).html"
            class="@(IsActive(collection.Collection) ? "active" : "")">
             @collection.Title
         </a>
@@ -1449,20 +1467,20 @@ builder.Services.AddAuthentication(options =>
     [Parameter] public required string SectionUrl { get; set; }
     [Parameter] public string? ActiveCollection { get; set; }
     
-    private bool IsActive(string collection) => 
+    private bool IsActive(string collection) =>
         string.Equals(ActiveCollection, collection, StringComparison.OrdinalIgnoreCase);
 }
-```
 
+```
 #### Content Item Card Component
 
 - [ ] Create `Components/Content/ItemCard.razor` with Schema.org:
-
 ```razor
+
 @* Item card - URL includes section context from API response *@
 
-<article class="item-card" 
-         itemscope 
+<article class="item-card"
+         itemscope
          itemtype="https://schema.org/Article">
     <a href="@Item.Url" class="item-link">
         <div class="item-content">
@@ -1481,8 +1499,8 @@ builder.Services.AddAuthentication(options =>
 @code {
     [Parameter] public required ContentItemDto Item { get; set; }
 }
-```
 
+```
 - [ ] Write bUnit tests for each component
 - [ ] Verify all tests pass
 
@@ -1491,8 +1509,8 @@ builder.Services.AddAuthentication(options =>
 #### Home Page
 
 - [ ] Create `Components/Pages/Home.razor`:
-
 ```razor
+
 @page "/"
 @inject ITechHubApiClient ApiClient
 
@@ -1538,8 +1556,8 @@ builder.Services.AddAuthentication(options =>
         Roundups = await ApiClient.GetLatestRoundupsAsync(4);
     }
 }
-```
 
+```
 - [ ] Write bUnit tests for all pages
 - [ ] Verify all tests pass
 
@@ -1553,8 +1571,8 @@ builder.Services.AddAuthentication(options =>
 #### Filter State Component
 
 - [ ] Create `Components/Filters/FilterState.razor`:
-
 ```razor
+
 @* Manages client-side filter state synchronized with URL *@
 @inject NavigationManager Navigation
 @implements IDisposable
@@ -1620,27 +1638,27 @@ builder.Services.AddAuthentication(options =>
     
     public void Dispose() => Navigation.LocationChanged -= OnLocationChanged;
 }
-```
 
+```
 #### Filter Controls Component
 
 - [ ] Create `Components/Filters/FilterControls.razor`:
-
 ```razor
+
 <div class="filter-controls" role="search">
     <button class="clear-all" @onclick="ClearFilters">Clear All</button>
     
-    <input type="search" 
-           placeholder="Search" 
-           @bind="SearchText" 
+    <input type="search"
+           placeholder="Search"
+           @bind="SearchText"
            @bind:event="oninput"
            aria-label="Search content" />
     
     <div class="date-filters" role="group" aria-label="Date filters">
         @foreach (var dateFilter in DateFilters)
         {
-            <FilterButton 
-                Label="@dateFilter.Label" 
+            <FilterButton
+                Label="@dateFilter.Label"
                 Count="@dateFilter.Count"
                 IsActive="@(ActiveDateFilter == dateFilter.Value)"
                 OnClick="@(() => SetDateFilter(dateFilter.Value))" />
@@ -1650,16 +1668,16 @@ builder.Services.AddAuthentication(options =>
     <div class="collection-filters" role="group" aria-label="Collection filters">
         @foreach (var collection in CollectionFilters)
         {
-            <FilterButton 
-                Label="@collection.Label" 
+            <FilterButton
+                Label="@collection.Label"
                 Count="@collection.Count"
                 IsActive="@ActiveCollections.Contains(collection.Value)"
                 OnClick="@(() => ToggleCollection(collection.Value))" />
         }
     </div>
 </div>
-```
 
+```
 - [ ] Implement JavaScript interop for URL parameter sync
 - [ ] Implement debounced text search
 - [ ] Implement the "20 + Same-Day" rule for date filtering
@@ -1671,8 +1689,8 @@ builder.Services.AddAuthentication(options =>
 
 - [ ] Create `/specs/features/rss-implementation.md` specification
 - [ ] Create RSS controller:
-
 ```csharp
+
 // Controllers/RssController.cs
 [Route("{section}/feed.xml")]
 [Route("feed.xml")]
@@ -1687,8 +1705,8 @@ public class RssController : Controller
         // Use proper date formatting
     }
 }
-```
 
+```
 - [ ] Implement RSS generation service
 - [ ] Preserve all existing feed URLs
 - [ ] Write integration tests for RSS feeds
@@ -1702,8 +1720,8 @@ public class RssController : Controller
 
 - [ ] Create `/specs/features/styling.md` specification
 - [ ] Port SCSS to CSS (or keep SCSS with build step):
-
 ```text
+
 TechHub.Web/wwwroot/css/
 ├── base.css          # Reset and base styles
 ├── colors.css        # Color variables (CSS custom properties)
@@ -1713,8 +1731,8 @@ TechHub.Web/wwwroot/css/
 ├── cards.css         # Content cards
 ├── responsive.css    # Media queries
 └── main.css          # Import all
-```
 
+```
 - [ ] Match all existing visual styles exactly
 - [ ] Test on mobile, tablet, and desktop viewports
 - [ ] Verify color contrast meets WCAG AA (4.5:1 minimum)
@@ -1725,8 +1743,8 @@ TechHub.Web/wwwroot/css/
 
 - [ ] Create `/specs/features/seo-implementation.md` specification
 - [ ] Implement Schema.org structured data:
-
 ```csharp
+
 // Services/StructuredDataService.cs
 public class StructuredDataService
 {
@@ -1749,8 +1767,8 @@ public class StructuredDataService
         datePublished = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch).ToString("O")
     });
 }
-```
 
+```
 - [ ] Implement sitemap generation
 - [ ] Implement robots.txt
 - [ ] Implement canonical URLs
@@ -1762,19 +1780,19 @@ public class StructuredDataService
 
 - [ ] Create `/specs/features/performance.md` specification
 - [ ] Implement response caching:
-
 ```csharp
+
 // In Program.cs
 builder.Services.AddOutputCache(options =>
 {
     options.AddBasePolicy(builder => builder.Expire(TimeSpan.FromMinutes(10)));
-    options.AddPolicy("ContentPage", builder => 
+    options.AddPolicy("ContentPage", builder =>
         builder.Expire(TimeSpan.FromHours(1)));
-    options.AddPolicy("RssFeed", builder => 
+    options.AddPolicy("RssFeed", builder =>
         builder.Expire(TimeSpan.FromMinutes(30)));
 });
-```
 
+```
 - [ ] Implement static file caching headers
 - [ ] Implement content compression
 - [ ] Implement lazy loading for images
@@ -1787,12 +1805,12 @@ builder.Services.AddOutputCache(options =>
 - [ ] Create `/specs/features/resilience.md` specification
 - [ ] Add Microsoft.Extensions.Resilience package
 - [ ] Implement retry policies for external requests:
-
 ```csharp
+
 builder.Services.AddHttpClient("ExternalContent")
     .AddStandardResilienceHandler();
-```
 
+```
 - [ ] Implement circuit breaker for dependencies
 - [ ] Implement graceful degradation for external links
 - [ ] Write tests for resilience behavior
@@ -1823,8 +1841,8 @@ builder.Services.AddHttpClient("ExternalContent")
 
 - [ ] Create `/specs/testing/integration-tests.md` specification
 - [ ] Use WebApplicationFactory (TestServer):
-
 ```csharp
+
 public class TechHubWebApplicationFactory : WebApplicationFactory<Program>
 {
     protected override void ConfigureWebHost(IWebHostBuilder builder)
@@ -1850,8 +1868,8 @@ public class ContentTests : IClassFixture<TechHubWebApplicationFactory>
         Assert.Contains("GitHub Copilot", content);
     }
 }
-```
 
+```
 - [ ] Write integration tests for:
   - [ ] All page routes return 200
   - [ ] All RSS feeds are valid XML
@@ -1863,8 +1881,8 @@ public class ContentTests : IClassFixture<TechHubWebApplicationFactory>
 
 - [ ] Create `/specs/testing/e2e-tests.md` specification
 - [ ] Configure Playwright:
-
 ```csharp
+
 // TechHub.E2E.Tests/PlaywrightFixture.cs
 public class PlaywrightFixture : IAsyncLifetime
 {
@@ -1878,8 +1896,8 @@ public class PlaywrightFixture : IAsyncLifetime
         Page = await Browser.NewPageAsync();
     }
 }
-```
 
+```
 - [ ] Write E2E tests for:
   - [ ] Navigation flows
   - [ ] Filtering interactions
@@ -1903,8 +1921,8 @@ public class PlaywrightFixture : IAsyncLifetime
 
 - [ ] Create `/specs/infrastructure/azure-resources.md` specification
 - [ ] Create `/dotnet/infra/main.bicep`:
-
 ```bicep
+
 targetScope = 'subscription'
 
 @description('Environment name')
@@ -1962,8 +1980,8 @@ module monitoring 'modules/monitoring.bicep' = {
     location: location
   }
 }
-```
 
+```
 - [ ] Create VNet module with subnets
 - [ ] Create Container Apps Environment module
 - [ ] Create Container App module
@@ -1989,8 +2007,8 @@ module monitoring 'modules/monitoring.bicep' = {
 
 - [ ] Create `/specs/infrastructure/monitoring.md` specification
 - [ ] Configure Application Insights:
-
 ```csharp
+
 // In Program.cs
 builder.Services.AddOpenTelemetry()
     .WithTracing(tracing =>
@@ -2007,8 +2025,8 @@ builder.Services.AddOpenTelemetry()
             .AddHttpClientInstrumentation();
     })
     .UseAzureMonitor();
-```
 
+```
 - [ ] Set up custom metrics for:
   - [ ] Page views per section
   - [ ] Filter usage
@@ -2040,14 +2058,15 @@ builder.Services.AddOpenTelemetry()
 
 - [ ] Create `/specs/cicd/github-actions.md` specification
 - [ ] Create `.github/workflows/dotnet-ci.yml`:
-
 ```yaml
+
 name: .NET CI
 
 on:
   push:
     branches: [main]
     paths:
+
       - 'dotnet/**'
       - '.github/workflows/dotnet-*.yml'
   pull_request:
@@ -2064,6 +2083,7 @@ jobs:
         working-directory: dotnet
     
     steps:
+
       - uses: actions/checkout@v4
       
       - name: Setup .NET
@@ -2088,11 +2108,11 @@ jobs:
         with:
           name: techhub-web
           path: dotnet/publish
+
 ```
-
 - [ ] Create `.github/workflows/dotnet-deploy.yml`:
-
 ```yaml
+
 name: .NET Deploy
 
 on:
@@ -2104,6 +2124,7 @@ on:
         default: 'staging'
         type: choice
         options:
+
           - staging
           - production
 
@@ -2113,6 +2134,7 @@ jobs:
     environment: ${{ github.event.inputs.environment }}
     
     steps:
+
       - uses: actions/checkout@v4
       
       - name: Azure Login
@@ -2129,8 +2151,8 @@ jobs:
         run: |
           pwsh -File ./dotnet/scripts/deploy-app.ps1 `
             -Environment ${{ github.event.inputs.environment }}
-```
 
+```
 - [ ] Create deployment scripts in PowerShell
 - [ ] Configure GitHub secrets
 - [ ] Test CI workflow on PR
@@ -2139,9 +2161,10 @@ jobs:
 ### 7.2 Create PowerShell Deployment Scripts
 
 - [ ] Create `/dotnet/scripts/deploy-infrastructure.ps1`:
-
 ```powershell
-#!/usr/bin/env pwsh
+
+# !/usr/bin/env pwsh
+
 param(
     [Parameter(Mandatory)]
     [ValidateSet('staging', 'production')]
@@ -2153,18 +2176,20 @@ $ErrorActionPreference = "Stop"
 Write-Host "Deploying infrastructure to $Environment..." -ForegroundColor Cyan
 
 # Deploy Bicep
+
 az deployment sub create `
     --location westeurope `
     --template-file ./infra/main.bicep `
     --parameters environmentName=$Environment
 
 Write-Host "✅ Infrastructure deployment complete!" -ForegroundColor Green
+
 ```
-
 - [ ] Create `/dotnet/scripts/deploy-app.ps1`:
-
 ```powershell
-#!/usr/bin/env pwsh
+
+# !/usr/bin/env pwsh
+
 param(
     [Parameter(Mandatory)]
     [ValidateSet('staging', 'production')]
@@ -2176,18 +2201,21 @@ $ErrorActionPreference = "Stop"
 Write-Host "Deploying application to $Environment..." -ForegroundColor Cyan
 
 # Build container image
+
 docker build -t techhub-web:latest ./src/TechHub.Web
 
 # Push to registry
+
 # Deploy to Container Apps
 
 Write-Host "✅ Application deployment complete!" -ForegroundColor Green
+
 ```
-
 - [ ] Create `/dotnet/scripts/test.ps1`:
-
 ```powershell
-#!/usr/bin/env pwsh
+
+# !/usr/bin/env pwsh
+
 param(
     [switch]$Coverage,
     [switch]$E2E
@@ -2198,6 +2226,7 @@ $ErrorActionPreference = "Stop"
 Write-Host "Running tests..." -ForegroundColor Cyan
 
 # Run unit and integration tests
+
 dotnet test --verbosity normal
 
 if ($E2E) {
@@ -2206,8 +2235,8 @@ if ($E2E) {
 }
 
 Write-Host "✅ All tests passed!" -ForegroundColor Green
-```
 
+```
 - [ ] Verify all scripts run correctly
 - [ ] Document script usage
 
@@ -2270,18 +2299,22 @@ Write-Host "✅ All tests passed!" -ForegroundColor Green
 **Multi-Location Content Access**:
 
 The same content can be accessed from multiple section URLs:
-
 ```text
-# Same video accessible from both sections:
+
+# Same video accessible from both sections
+
 /ai/videos/vs-code-107.html
 /github-copilot/videos/vs-code-107.html
 
-# Both URLs serve the same content, with:
-# - Section-specific navigation context
-# - Canonical URL in <head> for SEO
-# - Section-appropriate styling/background
-```
+# Both URLs serve the same content, with
 
+# - Section-specific navigation context
+
+# - Canonical URL in <head> for SEO
+
+# - Section-appropriate styling/background
+
+```
 **Routing Rules**:
 
 1. **Section validation** - URL section must be valid (ai, github-copilot, ml, etc.)
@@ -2291,16 +2324,16 @@ The same content can be accessed from multiple section URLs:
 5. **404 handling** - Invalid section/content combination returns 404
 
 **Canonical URL Strategy**:
-
 ```csharp
+
 // Each content item has a canonical URL for SEO
 // Other URLs redirect via <link rel="canonical">
 
 // Example: VS Code 107 video has categories: ["ai", "github-copilot"]
 // Canonical: /ai/videos/vs-code-107.html (first category)
 // Also accessible: /github-copilot/videos/vs-code-107.html (alternate)
-```
 
+```
 **API URL Structure**:
 
 | Endpoint | URL Pattern | Purpose |
@@ -2317,12 +2350,12 @@ The same content can be accessed from multiple section URLs:
 - **Storage**: Unix epoch timestamps (long/Int64)
 - **Display Format**: `YYYY-MM-DD`
 - **ISO Format**: `DateTimeOffset.ToString("O")`
-
 ```csharp
+
 // DateUtils.cs
 public static class DateUtils
 {
-    private static readonly TimeZoneInfo BrusselsTimeZone = 
+    private static readonly TimeZoneInfo BrusselsTimeZone =
         TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
     
     public static DateTimeOffset FromEpoch(long epoch) =>
@@ -2336,8 +2369,8 @@ public static class DateUtils
             .ToOffset(BrusselsTimeZone.GetUtcOffset(FromEpoch(epoch)))
             .ToString("yyyy-MM-dd");
 }
-```
 
+```
 ### Semantic HTML Elements
 
 Use semantic HTML for NLWeb compatibility:
@@ -2366,8 +2399,8 @@ Use semantic HTML for NLWeb compatibility:
 ---
 
 ## Reference Architecture
-
 ```text
+
 ┌─────────────────────────────────────────────────────────────────┐
 │                         Azure Subscription                       │
 ├─────────────────────────────────────────────────────────────────┤
@@ -2445,8 +2478,8 @@ Data Flow (Frontend/Backend Separation):
                     │  │             │  │ etc.         │  │
                     │  └─────────────┘  └──────────────┘  │
                     └──────────────────────────────────────┘
-```
 
+```
 ---
 
 ## Progress Tracking
