@@ -12741,5 +12741,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/D944tiUHQzk",
     "reason": "No categories found: No categories were assigned because the content primarily focuses on the story of the npmx open-source project and its rapid community growth, rather than technical implementation, development methodologies, or Microsoft technology. There are no substantive technical details about coding, DevOps, AI, Azure, ML, or Security, and the primary intent is about community creation, not engineering how-tos or tool usage. The video also does not describe anything unique to Microsoft, and generic exclusion rules require that when in doubt (and if Microsoft technologies aren't central or >=40% of content), no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-speed-up-windows-11-without-third-party-tools-complete-expert-guide/",
+    "reason": "No categories found: No categories assigned because the content is focused on end-user optimization and troubleshooting for Windows 11 performance, not software development or technical implementation with Microsoft developer technologies. This falls under the generic exclusion rule for 'Non-Development Microsoft Products'—it is a tutorial for general users (not for developers, IT pros, or architects) on speeding up Windows 11 using built-in system tools, not code, scripts, API integrations, or advanced configuration. There are no references to development, coding, DevOps, security, AI, ML, or Azure products/services. Thus, this content is excluded as per the explicit guidance in the prompt.",
+    "collection": "blogs",
+    "timestamp": "2026-03-08 15:04:40 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/understanding-the-new-task-manager-in-windows-11-complete-guide/",
+    "reason": "No categories found: No categories were assigned because the content is an end-user guide about Windows 11 Task Manager, not targeted at developers, architects, or technical practitioners. It focuses on system monitoring, troubleshooting, and user- or admin-level performance optimization, not development, coding, DevOps, security engineering, or deployment with Microsoft technologies. There is no substantial content about programming, DevOps pipelines, security implementations, Azure, AI/ML, Power Platform development, or GitHub tooling. According to the exclusion rules for non-development Microsoft products and content aimed at general users/business productivity, this content does not qualify.",
+    "collection": "blogs",
+    "timestamp": "2026-03-08 15:05:13 +00:00"
   }
 ]

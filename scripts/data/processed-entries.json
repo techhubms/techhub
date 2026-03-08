@@ -28042,5 +28042,11 @@
     "canonical_url": "https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/",
     "reason": "Succesfully added: Assigned the AI category because the article focuses centrally on Microsoft Foundry, an AI platform on Azure, aligning with AI inclusion rules 1, 4, and 5. Assigned Azure because Foundry is an Azure-based product, as identified in both content and linked URLs (Azure rules 1 and 4). Did not assign ML, Security, DevOps, Coding, or GitHub Copilot, as the article addresses the operational and productivity impact of deploying AI platforms, but does not discuss machine learning development, code-level ML engineering, security implementation, DevOps practices, or developer tool integrations. The tone is technical and focused on real-world outcomes for practitioners, not business executives, satisfying inclusion/quality requirements.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://dellenny.com/microservice-architecture-drawbacks-and-how-to-solve-them-a-solution-architects-perspective/",
+    "reason": "Succesfully added: Assigned DevOps category because the article addresses CI/CD pipelines, deployment strategies, containerization, orchestration, and system operations challenges (DevOps rules 5, 6, 9). Assigned Security category due to significant discussion of microservice security patterns, including API Gateway authentication and zero-trust practices (Security rules 1, 3, 4, 9). Assigned Coding because content emphasizes architectural design patterns like Saga, Circuit Breaker, and API Gateway, all of which are actionable at the code and architecture level (Coding rule 4). Azure or AI categories do not apply, as no specific Microsoft platform, Azure service, or AI/ML topic was substantive in the content.",
+    "collection": "blogs",
+    "timestamp": "2026-03-08 15:05:00 +00:00"
   }
 ]
