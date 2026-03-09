@@ -12753,5 +12753,17 @@
     "reason": "No categories found: No categories were assigned because the content is an end-user guide about Windows 11 Task Manager, not targeted at developers, architects, or technical practitioners. It focuses on system monitoring, troubleshooting, and user- or admin-level performance optimization, not development, coding, DevOps, security engineering, or deployment with Microsoft technologies. There is no substantial content about programming, DevOps pipelines, security implementations, Azure, AI/ML, Power Platform development, or GitHub tooling. According to the exclusion rules for non-development Microsoft products and content aimed at general users/business productivity, this content does not qualify.",
     "collection": "blogs",
     "timestamp": "2026-03-08 15:05:13 +00:00"
+  },
+  {
+    "timestamp": "2026-03-08 16:04:15 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/4zSz192sdG4",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The video content focuses on new end-user features of the GitHub repository dashboard, centering on finding, filtering, and organizing repositories. It does not discuss GitHub Copilot, AI, Coding practices, DevOps workflows, Security, Azure, or ML/AI development. The content is about general workspace organization and repository navigation—a user interface update rather than a development tool, API, or workflow. According to DevOps category rules, only content about specific developer workflows, CI/CD, version control practices, or advanced GitHub services qualifies. As this video is not primarily about those technical aspects, no categories fit."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/ABqY09oD484",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the provided input contains no substantive technical content (the 'content' and 'description' fields are empty, and only tags and a vague title exist). There is no material to assess for technical depth or relevance to Microsoft technologies, and there is no evidence this is a technical video rather than a general career/personal advice video, which is also excluded by generic rules. Therefore, no categories are assigned.",
+    "timestamp": "2026-03-09 04:36:26 +00:00"
   }
 ]

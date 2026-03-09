@@ -28048,5 +28048,11 @@
     "reason": "Succesfully added: Assigned DevOps category because the article addresses CI/CD pipelines, deployment strategies, containerization, orchestration, and system operations challenges (DevOps rules 5, 6, 9). Assigned Security category due to significant discussion of microservice security patterns, including API Gateway authentication and zero-trust practices (Security rules 1, 3, 4, 9). Assigned Coding because content emphasizes architectural design patterns like Saga, Circuit Breaker, and API Gateway, all of which are actionable at the code and architecture level (Coding rule 4). Azure or AI categories do not apply, as no specific Microsoft platform, Azure service, or AI/ML topic was substantive in the content.",
     "collection": "blogs",
     "timestamp": "2026-03-08 15:05:00 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/stop-burning-money-in-azure-storage/ba-p/4500208",
+    "collection": "community",
+    "reason": "Succesfully added: Generic exclusion rules do not apply; the content is technical, focused on Azure Storage, and not biographical, sales-oriented, or business-only. The content is not about AI/ML or coding, and does not contain DevOps-focused practices, so only the 'Azure' category is applicable (Azure rule 1, 2, 4, 5). No security or GitHub Copilot elements are present. Tags were chosen for their technical specificity and direct relevance to Azure Storage cost optimization, per output requirements.",
+    "timestamp": "2026-03-09 04:36:52 +00:00"
   }
 ]
