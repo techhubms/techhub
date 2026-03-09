@@ -28060,5 +28060,17 @@
     "canonical_url": "https://www.devclass.com/devops/2026/03/09/npmx-package-browser-released-as-alpha-to-fix-pain-of-using-npmjs/4093605",
     "collection": "blogs",
     "timestamp": "2026-03-09 08:11:18 +00:00"
+  },
+  {
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/agentic-ai-in-it-self-healing-systems-and-smart-incident-response-microsoft-ecosystem-perspective/",
+    "reason": "Succesfully added: Assigned the AI category because the article's core topic is agentic AI and its role in IT operations, specifically within the Microsoft cloud ecosystem (AI rules 1, 4, and 6). Added Azure because Microsoft Azure's native services (Monitor, Automation, Kubernetes, Sentinel, Arc) are central to all technical examples (Azure rules 1, 2, 4, and 5). Included DevOps because the content discusses end-to-end IT operations automation, CI/CD pipeline monitoring, and integrates with tools like Azure DevOps and remediation runbooks (DevOps rules 1, 5, 6, and 9). Included Security as Microsoft Sentinel, Defender, and security incident response are substantial parts of the article (Security rules 1, 5, and 7). ML is not included because while machine learning is mentioned, the focus is on using these capabilities (AI operationalization) rather than building or engineering data science or custom ML solutions (see ML rules and distinction in Chapter 4 and 6). Business productivity Copilots are not the topic (the article refers to Copilot for Azure, which addresses code and infrastructure, not business productivity).",
+    "timestamp": "2026-03-09 10:16:13 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ai-inferencing-in-air-gapped-environments/ba-p/4498594",
+    "reason": "Succesfully added: Assigned AI category because the content is focused on deploying and serving large language model (LLM) inferencing via vLLM and NVIDIA NIM, which are AI workloads (AI inclusion rule 1 and 4). Assigned Azure because Azure Kubernetes Service (AKS), Azure Container Registry, and Azure network/storage services are central to the deployment (Azure inclusion rule 1, 2, 4, 5). Assigned ML category because the content includes model management, deployment, and custom inferencing pipeline setup indicative of hands-on engineering and ML architecture (ML inclusion rule 1, 2, 4, and 9). Assigned Security because strict isolation, prevention of data exfiltration, network configuration, and compliance are core aspects (Security inclusion rule 1, 4, 7, 9). Assigned DevOps because of emphasis on containerization, AKS cluster lifecycle, node pool management, CI/CD-like deployment (DevOps inclusion rule 1, 5, 6). Did not assign Coding or GitHub Copilot: while there is detailed scripting and CLI usage, the primary lens is platform/data/infra operations, not code-level development. No generic exclusion criteria apply. All categories are justified with referenced rules and substantial content coverage.",
+    "timestamp": "2026-03-09 10:17:10 +00:00"
   }
 ]
