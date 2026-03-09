@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Copilot Memory Now Enabled by Default for GitHub Copilot Pro and Pro+ Users"
-description: "This news update covers the automatic enablement of Copilot Memory for all GitHub Copilot Pro and Copilot Pro+ users. The feature allows Copilot to remember repository-specific information, improving coding assistance and code reviews by leveraging persistent understanding of each codebase, while maintaining privacy and user control."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-04-copilot-memory-now-on-by-default-for-pro-and-pro-users-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-04-copilot-memory-now-on-by-default-for-pro-and-pro-users-in-public-preview
+title: Copilot Memory Now Enabled by Default for GitHub Copilot Pro and Pro+ Users
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-04 10:07:12 +00:00
-permalink: "/2026-03-04-Copilot-Memory-Now-Enabled-by-Default-for-GitHub-Copilot-Pro-and-Pro-Users.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Memory", "AI", "AI Development", "Automation", "Code Review", "Codebase Understanding", "Coding Agent", "Copilot", "Copilot CLI", "Copilot Memory", "Developer Tools", "Feature Update", "GitHub Blog", "GitHub Copilot", "Improvement", "News", "Persistent Memory", "Pro", "Pro Plus", "Productivity", "Repository Context", "User Settings"]
-tags_normalized: ["agentic memory", "ai", "ai development", "automation", "code review", "codebase understanding", "coding agent", "copilot", "copilot cli", "copilot memory", "developer tools", "feature update", "github blog", "github copilot", "improvement", "news", "persistent memory", "pro", "pro plus", "productivity", "repository context", "user settings"]
+tags:
+- Agentic Memory
+- AI
+- AI Development
+- Automation
+- Code Review
+- Codebase Understanding
+- Coding Agent
+- Copilot
+- Copilot CLI
+- Copilot Memory
+- Developer Tools
+- Feature Update
+- GitHub Blog
+- GitHub Copilot
+- Improvement
+- News
+- Persistent Memory
+- Pro
+- Pro Plus
+- Productivity
+- Repository Context
+- User Settings
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares updates to GitHub Copilot: Copilot Memory is now enabled by default for all Copilot Pro and Pro+ users. This enhancement gives Copilot agents persistent, repository-level awareness, streamlining coding and review workflows.<!--excerpt_end-->
 
 # Copilot Memory Now Enabled by Default for GitHub Copilot Pro and Pro+ Users

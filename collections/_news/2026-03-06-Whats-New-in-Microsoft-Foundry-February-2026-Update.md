@@ -1,20 +1,53 @@
----
-layout: "post"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-feb-2026/
 title: "What's New in Microsoft Foundry: February 2026 Update"
-description: "This post details the major February 2026 advancements in Microsoft Foundry, including new AI models (Claude Opus 4.6, Sonnet 4.6), audio APIs, Grok 4.0 general availability, the Microsoft Agent Framework (RC), durable agent orchestration with Azure Durable Functions, Foundry Local for sovereign deployments, REST API v1 (GA), and SDK updates across Python, .NET, JavaScript/TypeScript, and Java, along with significant documentation expansions."
-author: "Nick Brady"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-feb-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+author: Nick Brady
+primary_section: ai
+feed_name: Microsoft AI Foundry Blog
 date: 2026-03-06 23:08:31 +00:00
-permalink: "/2026-03-06-Whats-New-in-Microsoft-Foundry-February-2026-Update.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: [".NET", "Agent Framework", "Agent Framework Azure AI", "Agent Framework Core", "Agents", "AI", "AI Toolkit For VS Code", "Anthropic", "Audio", "Azure", "Azure Identity", "Claude Opus 4.6", "Claude Sonnet 4.6", "Coding", "Durable Functions", "FLUX.2 Flex", "Foundry Local", "GPT Audio 1.5", "GPT Realtime 1.5", "Grok 4.0", "Grok 4.1 Fast", "Human in The Loop", "Java", "JavaScript", "Machine Learning", "MCP", "Microsoft Agent Framework", "Microsoft Foundry", "ML", "Model Router", "Models", "News", "Python", "REST API", "REST API V1", "SDK", "SignalR", "TypeScript"]
-tags_normalized: ["dotnet", "agent framework", "agent framework azure ai", "agent framework core", "agents", "ai", "ai toolkit for vs code", "anthropic", "audio", "azure", "azure identity", "claude opus 4dot6", "claude sonnet 4dot6", "coding", "durable functions", "fluxdot2 flex", "foundry local", "gpt audio 1dot5", "gpt realtime 1dot5", "grok 4dot0", "grok 4dot1 fast", "human in the loop", "java", "javascript", "machine learning", "mcp", "microsoft agent framework", "microsoft foundry", "ml", "model router", "models", "news", "python", "rest api", "rest api v1", "sdk", "signalr", "typescript"]
+tags:
+- .NET
+- Agent Framework
+- Agent Framework Azure AI
+- Agent Framework Core
+- Agents
+- AI
+- AI Toolkit For VS Code
+- Anthropic
+- Audio
+- Azure
+- Azure Identity
+- Claude Opus 4.6
+- Claude Sonnet 4.6
+- Durable Functions
+- FLUX.2 Flex
+- Foundry Local
+- GPT Audio 1.5
+- GPT Realtime 1.5
+- Grok 4.0
+- Grok 4.1 Fast
+- Human in The Loop
+- Java
+- JavaScript
+- MCP
+- Microsoft Agent Framework
+- Microsoft Foundry
+- ML
+- Model Router
+- Models
+- News
+- Python
+- REST API
+- REST API V1
+- SDK
+- SignalR
+- TypeScript
+section_names:
+- ai
+- azure
+- dotnet
+- ml
 ---
-
 Nick Brady rounds up February 2026's major Microsoft Foundry updates—including the arrival of frontier AI models, Agent Framework RC, REST API GA, SDK previews, and architectural innovations for developers and machine learning practitioners.<!--excerpt_end-->
 
 # What's New in Microsoft Foundry: February 2026 Update

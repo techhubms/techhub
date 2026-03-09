@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Rebuilding Search Architecture for High Availability in GitHub Enterprise Server"
-description: "David Tippett details the engineering overhaul of GitHub Enterprise Server's search architecture to improve high availability (HA), resilience, and maintenance. The update leverages Elasticsearch’s Cross Cluster Replication (CCR), reducing operational complexity for administrators and enhancing durability and fault tolerance for enterprise users."
-author: "David Tippett"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/architecture-optimization/how-we-rebuilt-the-search-architecture-for-high-availability-in-github-enterprise-server/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+external_url: https://github.blog/engineering/architecture-optimization/how-we-rebuilt-the-search-architecture-for-high-availability-in-github-enterprise-server/
+title: Rebuilding Search Architecture for High Availability in GitHub Enterprise Server
+author: David Tippett
+primary_section: devops
+feed_name: GitHub Engineering Blog
 date: 2026-03-03 18:45:09 +00:00
-permalink: "/2026-03-03-Rebuilding-Search-Architecture-for-High-Availability-in-GitHub-Enterprise-Server.html"
-categories: ["DevOps"]
-tags: ["Architecture & Optimization", "CCR", "Cluster Management", "Cross Cluster Replication", "DevOps", "Distributed Systems", "Elasticsearch", "Engineering", "Engineering Workflow", "Failover", "GitHub Enterprise Server", "High Availability", "Index Replication", "Infrastructure Optimization", "News", "Search Architecture", "Search Engineering", "Server Resilience", "System Administration"]
-tags_normalized: ["architecture and optimization", "ccr", "cluster management", "cross cluster replication", "devops", "distributed systems", "elasticsearch", "engineering", "engineering workflow", "failover", "github enterprise server", "high availability", "index replication", "infrastructure optimization", "news", "search architecture", "search engineering", "server resilience", "system administration"]
+tags:
+- Architecture & Optimization
+- CCR
+- Cluster Management
+- Cross Cluster Replication
+- DevOps
+- Distributed Systems
+- Elasticsearch
+- Engineering
+- Engineering Workflow
+- Failover
+- GitHub Enterprise Server
+- High Availability
+- Index Replication
+- Infrastructure Optimization
+- News
+- Search Architecture
+- Search Engineering
+- Server Resilience
+- System Administration
+section_names:
+- devops
 ---
-
 David Tippett shares the engineering journey behind enhancing GitHub Enterprise Server's search reliability and high availability, focusing on Elasticsearch’s Cross Cluster Replication and resilient workflows.<!--excerpt_end-->
 
 # Rebuilding Search Architecture for High Availability in GitHub Enterprise Server

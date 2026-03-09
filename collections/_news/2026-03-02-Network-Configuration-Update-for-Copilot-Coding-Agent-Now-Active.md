@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Network Configuration Update for Copilot Coding Agent Now Active"
-description: "This update from GitHub announces that new network configuration requirements for the Copilot coding agent are now enforced as of February 27, 2026. The changes specifically affect teams operating Copilot coding agent on self-hosted or Azure private network runners. As a result, teams must update network allowlists to support subscription-based routing endpoints for different Copilot plans."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-02-network-configuration-changes-for-copilot-coding-agent-now-in-effect"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-02-network-configuration-changes-for-copilot-coding-agent-now-in-effect
+title: Network Configuration Update for Copilot Coding Agent Now Active
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-02 20:42:32 +00:00
-permalink: "/2026-03-02-Network-Configuration-Update-for-Copilot-Coding-Agent-Now-Active.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Business", "Copilot", "Copilot Coding Agent", "Enterprise", "GitHub Copilot", "Improvement", "Network Allowlist", "Network Configuration", "News", "Private Networking", "Routing Endpoints", "Self Hosted Runners", "Subscription Plans"]
-tags_normalized: ["ai", "business", "copilot", "copilot coding agent", "enterprise", "github copilot", "improvement", "network allowlist", "network configuration", "news", "private networking", "routing endpoints", "self hosted runners", "subscription plans"]
+tags:
+- AI
+- Business
+- Copilot
+- Copilot Coding Agent
+- Enterprise
+- GitHub Copilot
+- Improvement
+- Network Allowlist
+- Network Configuration
+- News
+- Private Networking
+- Routing Endpoints
+- Self Hosted Runners
+- Subscription Plans
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details recent changes now in effect for the Copilot coding agent's network configuration, impacting teams using self-hosted or Azure private network runners.<!--excerpt_end-->
 
 # Network Configuration Update: Copilot Coding Agent

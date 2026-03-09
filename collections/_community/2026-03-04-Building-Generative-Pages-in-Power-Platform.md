@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Building Generative Pages in Power Platform"
-description: "This article by harshul05 provides a practical guide for developers and makers to create Generative Pages in Power Platform using AI-driven tools. It covers how natural language can be used to automatically generate responsive, data-connected UI in model-driven Power Apps, including setup requirements, design tips, step-by-step workflow, and known limitations compared to traditional development approaches."
-author: "harshul05"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-generative-pages-in-power-platform/ba-p/4494062"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-generative-pages-in-power-platform/ba-p/4494062
+title: Building Generative Pages in Power Platform
+author: harshul05
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-04 08:00:00 +00:00
-permalink: "/2026-03-04-Building-Generative-Pages-in-Power-Platform.html"
-categories: ["AI"]
-tags: ["AI", "AI Powered Development", "App Development", "Application Lifecycle Management", "Community", "Copilot", "Dataverse", "Generative Pages", "Microsoft", "Model Driven Apps", "Natural Language Interface", "Power Apps", "Power Fx", "Power Platform", "Prompt Engineering", "React Components", "UI Design"]
-tags_normalized: ["ai", "ai powered development", "app development", "application lifecycle management", "community", "copilot", "dataverse", "generative pages", "microsoft", "model driven apps", "natural language interface", "power apps", "power fx", "power platform", "prompt engineering", "react components", "ui design"]
+tags:
+- AI
+- AI Powered Development
+- App Development
+- Application Lifecycle Management
+- Community
+- Copilot
+- Dataverse
+- Generative Pages
+- Microsoft
+- Model Driven Apps
+- Natural Language Interface
+- Power Apps
+- Power Fx
+- Power Platform
+- Prompt Engineering
+- React Components
+- UI Design
+section_names:
+- ai
 ---
-
 harshul05 explains how Generative Pages bring AI-powered page design to Power Platform, enabling developers to create model-driven app interfaces by describing requirements in natural language.<!--excerpt_end-->
 
 # Building Generative Pages in Power Platform

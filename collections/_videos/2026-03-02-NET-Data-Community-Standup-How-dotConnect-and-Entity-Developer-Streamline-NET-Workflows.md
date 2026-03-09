@@ -1,20 +1,38 @@
----
-layout: "post"
-title: ".NET Data Community Standup: How dotConnect and Entity Developer Streamline .NET Workflows"
-description: "This video features a panel discussion demonstrating how dotConnect and Entity Developer, two popular tools, can simplify data access and development processes within the .NET ecosystem. The presenters explore how these tools integrate with Entity Framework Core, making database-oriented development more efficient for .NET developers."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2QX2qHvGbCE"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=2QX2qHvGbCE
+title: '.NET Data Community Standup: How dotConnect and Entity Developer Streamline .NET Workflows'
+author: dotnet
+primary_section: dotnet
+feed_name: DotNet YouTube
 date: 2026-03-02 21:37:22 +00:00
-permalink: "/2026-03-02-NET-Data-Community-Standup-How-dotConnect-and-Entity-Developer-Streamline-NET-Workflows.html"
-categories: ["Coding"]
-tags: [".NET", "ADO.NET", "C#", "Coding", "Data", "Data Access", "Data Modeling", "Database Development", "Databases", "Demo", "Devart", "Developer", "Developer Community", "Developer Tools", "Dotconnect", "Dotnetdeveloper", "EF", "EF Core", "Entity Developer", "Microsoft", "ORM", "Software Developer", "Software Development", "Videos", "VS"]
-tags_normalized: ["dotnet", "adodotnet", "csharp", "coding", "data", "data access", "data modeling", "database development", "databases", "demo", "devart", "developer", "developer community", "developer tools", "dotconnect", "dotnetdeveloper", "ef", "ef core", "entity developer", "microsoft", "orm", "software developer", "software development", "videos", "vs"]
+tags:
+- .NET
+- ADO.NET
+- C#
+- Data
+- Data Access
+- Data Modeling
+- Database Development
+- Databases
+- Demo
+- Devart
+- Developer
+- Developer Community
+- Developer Tools
+- Dotconnect
+- Dotnetdeveloper
+- EF
+- EF Core
+- Entity Developer
+- Microsoft
+- ORM
+- Software Developer
+- Software Development
+- Videos
+- VS
+section_names:
+- dotnet
 ---
-
 This community standup hosted by dotnet features Yurii Hryhoriev, Jiri Cincura, and Shay Rojansky discussing how dotConnect and Entity Developer make .NET data development simpler and more productive.<!--excerpt_end-->
 
 {% youtube 2QX2qHvGbCE %}

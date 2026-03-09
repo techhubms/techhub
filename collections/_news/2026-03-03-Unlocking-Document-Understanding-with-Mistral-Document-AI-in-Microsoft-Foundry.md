@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Unlocking Document Understanding with Mistral Document AI in Microsoft Foundry"
-description: "This article explores how Mistral Document AI, offered via Microsoft Foundry, transforms enterprise document workflows by bringing advanced OCR, layout awareness, and multilingual understanding to unstructured documents. It outlines business impacts, technical features, integration with ARGUS accelerator, and steps for deploying scalable, accurate document intelligence."
-author: "Naomi Moneypenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664
+title: Unlocking Document Understanding with Mistral Document AI in Microsoft Foundry
+author: Naomi Moneypenny
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-03-03 16:24:29 +00:00
-permalink: "/2026-03-03-Unlocking-Document-Understanding-with-Mistral-Document-AI-in-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "AI Accelerator", "ARGUS", "Azure", "Cloud AI", "Compliance", "Data Extraction", "Document Automation", "Document Intelligence", "Enterprise AI", "Microsoft Foundry", "Mistral Document AI", "Multilingual AI", "News", "OCR", "Structured Output", "Workflow Automation"]
-tags_normalized: ["ai", "ai plus machine learning", "ai accelerator", "argus", "azure", "cloud ai", "compliance", "data extraction", "document automation", "document intelligence", "enterprise ai", "microsoft foundry", "mistral document ai", "multilingual ai", "news", "ocr", "structured output", "workflow automation"]
+tags:
+- AI
+- AI + Machine Learning
+- AI Accelerator
+- ARGUS
+- Azure
+- Cloud AI
+- Compliance
+- Data Extraction
+- Document Automation
+- Document Intelligence
+- Enterprise AI
+- Microsoft Foundry
+- Mistral Document AI
+- Multilingual AI
+- News
+- OCR
+- Structured Output
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Naomi Moneypenny details how Mistral Document AI in Microsoft Foundry elevates enterprise document processing, focusing on advanced OCR capabilities, document structure extraction, and seamless integration options for developers and data teams.<!--excerpt_end-->
 
 # Unlocking Document Understanding with Mistral Document AI in Microsoft Foundry

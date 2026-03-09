@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Inference at Enterprise Scale: Why LLM Inference Is a Capital Allocation Problem"
-description: "This article explores the five core technical challenges of deploying large language model (LLM) inference at scale in the enterprise, focusing on tradeoffs between accuracy, latency, and cost. It details how Microsoft and Anyscale are integrating Ray with Azure Kubernetes Service, how inference phases create hardware bottlenecks, and how the KV cache, GPU economics, and agentic workloads all drive real-world architecture and capital planning decisions for organizations using AI workloads on Azure."
-author: "bobmital"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/inference-at-enterprise-scale-why-llm-inference-is-a-capital/ba-p/4498754"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/inference-at-enterprise-scale-why-llm-inference-is-a-capital/ba-p/4498754
+title: 'Inference at Enterprise Scale: Why LLM Inference Is a Capital Allocation Problem'
+author: bobmital
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-04 22:04:34 +00:00
-permalink: "/2026-03-04-Inference-at-Enterprise-Scale-Why-LLM-Inference-Is-a-Capital-Allocation-Problem.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic Workloads", "AI", "AKS", "Anyscale Ray", "Azure", "Batch Inference", "Cloud Cost Optimization", "Community", "Context Length", "Enterprise AI", "GPU Optimization", "KV Cache", "Latency Optimization", "LLM Inference", "Microsoft Entra ID", "ML", "Pareto Frontier", "Production AI", "Quantization", "Ray Serve", "Self Hosted AI", "Token Throughput", "Vllm"]
-tags_normalized: ["agentic workloads", "ai", "aks", "anyscale ray", "azure", "batch inference", "cloud cost optimization", "community", "context length", "enterprise ai", "gpu optimization", "kv cache", "latency optimization", "llm inference", "microsoft entra id", "ml", "pareto frontier", "production ai", "quantization", "ray serve", "self hosted ai", "token throughput", "vllm"]
+tags:
+- Agentic Workloads
+- AI
+- AKS
+- Anyscale Ray
+- Azure
+- Batch Inference
+- Cloud Cost Optimization
+- Community
+- Context Length
+- Enterprise AI
+- GPU Optimization
+- KV Cache
+- Latency Optimization
+- LLM Inference
+- Microsoft Entra ID
+- ML
+- Pareto Frontier
+- Production AI
+- Quantization
+- Ray Serve
+- Self Hosted AI
+- Token Throughput
+- Vllm
+section_names:
+- ai
+- azure
+- ml
 ---
-
 bobmital examines the architectural and economic challenges of large language model inference at enterprise scale, with a focus on Azure and Anyscale’s Ray integration for distributed AI workloads.<!--excerpt_end-->
 
 # Inference at Enterprise Scale: Why LLM Inference Is a Capital Allocation Problem

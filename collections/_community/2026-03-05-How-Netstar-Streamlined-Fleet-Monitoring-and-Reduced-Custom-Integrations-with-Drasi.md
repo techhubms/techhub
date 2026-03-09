@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How Netstar Streamlined Fleet Monitoring and Reduced Custom Integrations with Drasi"
-description: "This case study details how Netstar leveraged Drasi’s change-driven architecture to unify fleet monitoring, automate alerts, and reduce engineering overhead. By integrating Azure SQL and EventHub with Drasi, Netstar eliminated fragmented pipelines, enabling real-time visibility and faster incident response. The implementation led to significant reductions in custom development and improved coordination across operations."
-author: "CollinBrian"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/how-netstar-streamlined-fleet-monitoring-and-reduced-custom/ba-p/4499592"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/how-netstar-streamlined-fleet-monitoring-and-reduced-custom/ba-p/4499592
+title: How Netstar Streamlined Fleet Monitoring and Reduced Custom Integrations with Drasi
+author: CollinBrian
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-05 19:23:46 +00:00
-permalink: "/2026-03-05-How-Netstar-Streamlined-Fleet-Monitoring-and-Reduced-Custom-Integrations-with-Drasi.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure EventHub", "Azure SQL", "Blazor", "Change Driven Architecture", "Community", "Continuous Monitoring", "Continuous Queries", "Drasi", "Fleet Monitoring", "Grafana", "Incident Response", "IoT Telemetry", "Logistics", "Operational Data Integration", "Real Time Monitoring", "Supply Chain Visibility"]
-tags_normalized: ["azure", "azure eventhub", "azure sql", "blazor", "change driven architecture", "community", "continuous monitoring", "continuous queries", "drasi", "fleet monitoring", "grafana", "incident response", "iot telemetry", "logistics", "operational data integration", "real time monitoring", "supply chain visibility"]
+tags:
+- Azure
+- Azure EventHub
+- Azure SQL
+- Blazor
+- Change Driven Architecture
+- Community
+- Continuous Monitoring
+- Continuous Queries
+- Drasi
+- Fleet Monitoring
+- Grafana
+- Incident Response
+- IoT Telemetry
+- Logistics
+- Operational Data Integration
+- Real Time Monitoring
+- Supply Chain Visibility
+section_names:
+- azure
 ---
-
 CollinBrian outlines how Netstar improved fleet operations by integrating Drasi with Azure SQL and EventHub, moving from fragmented data pipelines to a unified, real-time monitoring platform.<!--excerpt_end-->
 
 # How Netstar Streamlined Fleet Monitoring and Reduced Custom Integrations with Drasi

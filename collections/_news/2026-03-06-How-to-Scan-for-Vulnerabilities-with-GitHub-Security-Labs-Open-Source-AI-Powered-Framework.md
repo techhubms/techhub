@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How to Scan for Vulnerabilities with GitHub Security Lab's Open Source AI-Powered Framework"
-description: "This article details the use of GitHub Security Lab's Taskflow Agent—an open-source, AI-assisted framework—for finding security vulnerabilities in open source projects. It covers taskflow setup, methodology, logic for threat modeling and auditing, and provides concrete case studies of bugs discovered by the system."
-author: "Man Yue Mo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/
+title: How to Scan for Vulnerabilities with GitHub Security Lab's Open Source AI-Powered Framework
+author: Man Yue Mo
+primary_section: ai
+feed_name: The GitHub Blog
 date: 2026-03-06 21:09:04 +00:00
-permalink: "/2026-03-06-How-to-Scan-for-Vulnerabilities-with-GitHub-Security-Labs-Open-Source-AI-Powered-Framework.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["Access Control", "Agentic AI", "AI", "AI & ML", "AI Powered Security", "Authorization Bypass", "Code Auditing", "CVE", "DevOps", "GitHub Security Lab", "IDOR", "LLM Auditing", "News", "Open Source", "Open Source Security", "Security", "Security Automation", "Security Research", "Static Code Analysis", "Taskflow Agent", "Threat Modeling", "Vulnerability Scanning"]
-tags_normalized: ["access control", "agentic ai", "ai", "ai and ml", "ai powered security", "authorization bypass", "code auditing", "cve", "devops", "github security lab", "idor", "llm auditing", "news", "open source", "open source security", "security", "security automation", "security research", "static code analysis", "taskflow agent", "threat modeling", "vulnerability scanning"]
+tags:
+- Access Control
+- Agentic AI
+- AI
+- AI & ML
+- AI Powered Security
+- Authorization Bypass
+- Code Auditing
+- CVE
+- DevOps
+- GitHub Security Lab
+- IDOR
+- LLM Auditing
+- News
+- Open Source
+- Open Source Security
+- Security
+- Security Automation
+- Security Research
+- Static Code Analysis
+- Taskflow Agent
+- Threat Modeling
+- Vulnerability Scanning
+section_names:
+- ai
+- devops
+- security
 ---
-
 Man Yue Mo presents a deep dive into leveraging the GitHub Security Lab Taskflow Agent—an open-source AI-assisted framework—for automating the discovery of high-impact vulnerabilities, such as auth bypasses and IDORs, across open source repositories.<!--excerpt_end-->
 
 # How to Scan for Vulnerabilities with GitHub Security Lab's Open Source AI-Powered Framework

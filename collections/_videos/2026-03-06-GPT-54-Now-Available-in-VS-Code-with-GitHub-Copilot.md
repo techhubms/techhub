@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GPT-5.4 Now Available in VS Code with GitHub Copilot"
-description: "This video highlights the arrival of OpenAI's GPT-5.4 in Visual Studio Code through GitHub Copilot. It covers enhanced logical reasoning, execution of intricate multi-step processes, and what developers can achieve using the latest Copilot integration. The content focuses on new features, practical improvements, and a demonstration with insights from Olivia Guzzardo McVicker."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=A8LiOBd5AgQ"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=A8LiOBd5AgQ
+title: GPT-5.4 Now Available in VS Code with GitHub Copilot
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-03-06 02:15:16 +00:00
-permalink: "/2026-03-06-GPT-54-Now-Available-in-VS-Code-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "Code Generation", "Coding", "Coding Assistant", "Copilot", "Copilot Chat", "Developer Productivity", "Development Tools", "GitHub Copilot", "GPT 5.4", "Logical Reasoning", "OpenAI", "Task Automation", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai integration", "code generation", "coding", "coding assistant", "copilot", "copilot chat", "developer productivity", "development tools", "github copilot", "gpt 5dot4", "logical reasoning", "openai", "task automation", "videos", "vs code"]
+tags:
+- AI
+- AI Integration
+- Code Generation
+- Coding Assistant
+- Copilot
+- Copilot Chat
+- Developer Productivity
+- Development Tools
+- GitHub Copilot
+- GPT 5.4
+- Logical Reasoning
+- OpenAI
+- Task Automation
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code showcases an update featuring OpenAI's GPT-5.4 in GitHub Copilot. Olivia Guzzardo McVicker demonstrates how developers can leverage new capabilities in VS Code.<!--excerpt_end-->
 
 {% youtube A8LiOBd5AgQ %}

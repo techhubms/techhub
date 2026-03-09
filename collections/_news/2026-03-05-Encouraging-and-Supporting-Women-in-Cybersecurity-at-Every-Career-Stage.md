@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Encouraging and Supporting Women in Cybersecurity at Every Career Stage"
-description: "This article by Vasu Jakkal highlights the importance of supporting women throughout their cybersecurity careers, from early-stage professionals to leadership roles. It emphasizes creating inclusive cultures, investing in mentorship and education, and the critical role that diversity plays in building resilient and innovative security teams, especially given rapid advances in AI and cyberthreats."
-author: "Vasu Jakkal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/03/05/womens-history-month-encouraging-women-in-cybersecurity-at-every-career-stage/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/03/05/womens-history-month-encouraging-women-in-cybersecurity-at-every-career-stage/
+title: Encouraging and Supporting Women in Cybersecurity at Every Career Stage
+author: Vasu Jakkal
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-03-05 17:00:00 +00:00
-permalink: "/2026-03-05-Encouraging-and-Supporting-Women-in-Cybersecurity-at-Every-Career-Stage.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Career Development", "Cybersecurity", "Cybersecurity Careers", "Cybersecurity Education", "Cybersecurity Training", "Diversity And Inclusion", "Leadership", "Mentorship", "Microsoft", "Microsoft Security", "News", "Organizational Culture", "Security", "Security Awareness", "Women in Cybersecurity", "Women in Tech"]
-tags_normalized: ["ai", "ai security", "career development", "cybersecurity", "cybersecurity careers", "cybersecurity education", "cybersecurity training", "diversity and inclusion", "leadership", "mentorship", "microsoft", "microsoft security", "news", "organizational culture", "security", "security awareness", "women in cybersecurity", "women in tech"]
+tags:
+- AI
+- AI Security
+- Career Development
+- Cybersecurity
+- Cybersecurity Careers
+- Cybersecurity Education
+- Cybersecurity Training
+- Diversity And Inclusion
+- Leadership
+- Mentorship
+- Microsoft
+- Microsoft Security
+- News
+- Organizational Culture
+- Security
+- Security Awareness
+- Women in Cybersecurity
+- Women in Tech
+section_names:
+- ai
+- security
 ---
-
 Vasu Jakkal discusses the importance of championing women at every stage of their cybersecurity careers, emphasizing diversity, educational resources, and the evolving intersection of security and AI.<!--excerpt_end-->
 
 # Encouraging and Supporting Women in Cybersecurity at Every Career Stage

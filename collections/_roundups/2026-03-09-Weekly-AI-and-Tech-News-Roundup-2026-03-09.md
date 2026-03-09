@@ -1,17 +1,44 @@
----
-layout: "post"
-title: "GitHub Copilot Updates, Durable AI Agents, and Secure Cloud Features"
-description: "This week's summary covers developments for GitHub Copilot, including new agent functions, the release of GPT-5.4, improved CLI options, and integrations across platforms. You'll find highlights on AI agent frameworks, modular skill toolkits, orchestration options for enterprise deployments on Azure, and updates for secure and hybrid cloud environments. The roundup also features new approaches to security, automation for vulnerability response, supply chain protections, and enhancements in confidential cloud operations."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2026-03-09
+title: GitHub Copilot Updates, Durable AI Agents, and Secure Cloud Features
+author: TechHub
+primary_section: github-copilot
 date: 2026-03-09 09:00:00 +00:00
-permalink: "/2026-03-09-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agentic Workflows", "AI", "AI Agents", "Azure", "CLI Automation", "Cloud Migration", "Coding", "Databricks", "DevOps", "Durable Agent Orchestration", "GitHub Copilot", "GPT 5.4", "Jira Integration", "Logic Apps", "Microsoft Foundry", "ML", "Model Management", "Modular Skills", "Multimodal AI", "Roundups", "Security", "TypeScript", "VS Code", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai agents", "azure", "cli automation", "cloud migration", "coding", "databricks", "devops", "durable agent orchestration", "github copilot", "gpt 5dot4", "jira integration", "logic apps", "microsoft foundry", "ml", "model management", "modular skills", "multimodal ai", "roundups", "security", "typescript", "vs code", "workflow automation"]
+feed_name: TechHub
+tags:
+- Agentic Workflows
+- AI
+- AI Agents
+- Azure
+- CLI Automation
+- Cloud Migration
+- Databricks
+- DevOps
+- Durable Agent Orchestration
+- GitHub Copilot
+- GPT 5.4
+- Jira Integration
+- Logic Apps
+- Microsoft Foundry
+- ML
+- Model Management
+- Modular Skills
+- Multimodal AI
+- Roundups
+- Security
+- TypeScript
+- VS Code
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- dotnet
+- devops
+- security
 ---
-
 Welcome to this week's Tech Roundup. GitHub Copilot continues to broaden its features, with agent automation in VS Code, deeper CLI integration, and finer model management. The AI landscape now includes new agentic frameworks, standardized skill libraries, and orchestration tools for complex deployments. Azure remains central in enabling real-time, AI-powered solutions. Security and DevOps teams further reinforce automation and cloud-native practices, focusing on operational reliability and compliance. Let’s look at the updates influencing development workflows and cloud technology.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -83,7 +110,7 @@ The February 2026 update to VS Code v1.110 includes automation and extensibility
 
 Copilot CLI is now available for all users, letting developers work with Copilot in their terminal. After last week’s general availability announcement, developers can access code suggestions, reviews, and simple automation workflows outside the IDE. CLI users benefit from diff navigation, trusted sync, and snippet-based actions. There are telemetry and user-metrics options for teams to track usage. A free eight-part open source course helps you set up CLI, build custom agents, and run your own MCP server with hands-on labs. User-level metrics help with resource planning. Official dashboards and how-to guides demonstrate how Copilot CLI can help in day-to-day command-line work.
 
-- [GitHub Copilot CLI General Availability and New Repository Dashboard]({{ "/2026-03-06-GitHub-Copilot-CLI-General-Availability-and-New-Repository-Dashboard.html" | relative_url }})
+- [GitHub Copilot CLI General Availability and New Repository Dashboard](/2026-03-06-GitHub-Copilot-CLI-General-Availability-and-New-Repository-Dashboard.html)
 - [Get started with GitHub Copilot CLI: A free, hands-on course](https://devblogs.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course)
 - [Copilot Usage Metrics Expanded to User-Level GitHub Copilot CLI Activity](https://github.blog/changelog/2026-03-05-copilot-usage-metrics-now-includes-user-level-github-copilot-cli-activity)
 
@@ -92,7 +119,7 @@ Copilot CLI is now available for all users, letting developers work with Copilot
 With the release of GPT-5.4, Copilot Pro, Pro+, Business, and Enterprise users in supported IDEs can now access better code generation and improved agent workflow support. It’s available on VS Code (v1.104.1+), Visual Studio (v17.14.19+), JetBrains (v1.5.66+), Xcode, Eclipse, the web, and in the CLI. These updates bring improvements to handling multi-step coding tasks and agent interactions. Enterprise admins must enable GPT-5.4, with guides provided for migration. Tutorials explain changes that improve reasoning and task management in VS Code Copilot.
 
 - [GPT-5.4 is Generally Available in GitHub Copilot](https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot)
-- [GPT-5.4 Now Available in VS Code with GitHub Copilot]({{ "/2026-03-06-GPT-54-Now-Available-in-VS-Code-with-GitHub-Copilot.html" | relative_url }})
+- [GPT-5.4 Now Available in VS Code with GitHub Copilot](/2026-03-06-GPT-54-Now-Available-in-VS-Code-with-GitHub-Copilot.html)
 
 ### Copilot Code Review: Agentic Architecture and Workflow Evolution
 
@@ -119,13 +146,13 @@ Now, you can select specific Copilot AI models such as GPT-5.4 when you use @cop
 Copilot now connects VS Code with the Figma MCP server, allowing developers to import UX/UI content for code or export components as editable frames in Figma. This helps bridge design and engineering tasks. Setup guides are available for continuous integration, with CLI support planned. These updates provide deeper automation across tools, picking up from last week's discussion on design-engineering workflows.
 
 - [Figma MCP Server Integration with GitHub Copilot in VS Code](https://github.blog/changelog/2026-03-06-figma-mcp-server-can-now-generate-design-layers-from-vs-code)
-- [VS Code Live: Code to Canvas with Figma MCP and GitHub Copilot]({{ "/2026-03-06-VS-Code-Live-Code-to-Canvas-with-Figma-MCP-and-GitHub-Copilot.html" | relative_url }})
+- [VS Code Live: Code to Canvas with Figma MCP and GitHub Copilot](/2026-03-06-VS-Code-Live-Code-to-Canvas-with-Figma-MCP-and-GitHub-Copilot.html)
 
 ### Agentic Workflows: Repository Automation and Open Source Bots
 
 Copilot’s agentic workflows allow developers to automate repository tasks using markdown scripts. Tutorials cover safety precautions, scenario-based automation, and best practices for bots that manage issues or maintain projects. Home Assistant and similar open source projects use these workflows to reduce manual work and enable community support. Guidance is provided for setting up safe, effective automations.
 
-- [How to use Agentic Workflows for Your Repos with GitHub Copilot]({{ "/2026-03-04-How-to-use-Agentic-Workflows-for-Your-Repos-with-GitHub-Copilot.html" | relative_url }})
+- [How to use Agentic Workflows for Your Repos with GitHub Copilot](/2026-03-04-How-to-use-Agentic-Workflows-for-Your-Repos-with-GitHub-Copilot.html)
 
 ### Jira Integration: Coding Agent for Issue-Driven PR Automation
 
@@ -161,7 +188,7 @@ GitHub Copilot Dev Days are rolling out worldwide, offering workshops, demos, an
 The Grok Code Fast 1 AI model is now included for automatic model selection in Copilot Free, making updated suggestions accessible in leading IDEs. Developers using .NET MAUI can try a demonstration of Copilot’s effect on their mobile workflow, covering scaffolding, troubleshooting, and deployment.
 
 - [Grok Code Fast 1 is now available in Copilot Free auto model selection](https://github.blog/changelog/2026-03-04-grok-code-fast-1-is-now-available-in-copilot-free-auto-model-selection)
-- [AI-First Mobile Development: Live Coding with Copilot and .NET MAUI]({{ "/2026-03-03-AI-First-Mobile-Development-Live-Coding-with-Copilot-and-NET-MAUI.html" | relative_url }})
+- [AI-First Mobile Development: Live Coding with Copilot and .NET MAUI](/2026-03-03-AI-First-Mobile-Development-Live-Coding-with-Copilot-and-NET-MAUI.html)
 
 ## AI
 
@@ -207,17 +234,17 @@ A Microsoft guide details best practices for enterprise-scale agentic AI enginee
 A separate panel review discusses how open standards (MCP, Agent2Agent, OpenTelemetry, OAuth) help with secure, interoperable agent deployments, as well as how to write requests-for-proposal and select technologies focused on compatibility.
 
 - [Building High-Performance Agentic Systems: From Chatbots to Enterprise Operations](https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-high-performance-agentic-systems/ba-p/4497391)
-- [Open Standards for Enterprise Agents: Architecting Secure and Interoperable Agentic AI]({{ "/2026-03-03-Open-Standards-for-Enterprise-Agents-Architecting-Secure-and-Interoperable-Agentic-AI.html" | relative_url }})
+- [Open Standards for Enterprise Agents: Architecting Secure and Interoperable Agentic AI](/2026-03-03-Open-Standards-for-Enterprise-Agents-Architecting-Secure-and-Interoperable-Agentic-AI.html)
 
 ### Other AI News
 
 VS Code has added five new agent features: skills on demand, message steering, integrated browser, conversation forking, and lifecycle hooks. These updates are aimed at improving productivity and automation for developers.
 
-- [Top 5 New VS Code Agent Features to Improve Your Workflow]({{ "/2026-03-04-Top-5-New-VS-Code-Agent-Features-to-Improve-Your-Workflow.html" | relative_url }})
+- [Top 5 New VS Code Agent Features to Improve Your Workflow](/2026-03-04-Top-5-New-VS-Code-Agent-Features-to-Improve-Your-Workflow.html)
 
 Copilot for Data Factory (Microsoft Fabric) enables low-code data engineering, including natural language SQL transformations and automated pipeline setup.
 
-- [SQL to Insights in Minutes with Copilot for Data Factory]({{ "/2026-03-05-SQL-to-Insights-in-Minutes-with-Copilot-for-Data-Factory.html" | relative_url }})
+- [SQL to Insights in Minutes with Copilot for Data Factory](/2026-03-05-SQL-to-Insights-in-Minutes-with-Copilot-for-Data-Factory.html)
 
 Power Platform developers have new documentation for building Generative Pages with AI, supporting advanced UI features and Dataverse integration.
 
@@ -229,7 +256,7 @@ A new JavaScript AI Build-a-thon season is open, providing hands-on agentic AI a
 
 A GitHub interview with Anders Hejlsberg discusses the shift from AI assistants to more capable agents, including their effect on software tools and interoperability.
 
-- [Anders Hejlsberg Discusses the Evolution from AI Assistant to AI Agent]({{ "/2026-03-04-Anders-Hejlsberg-Discusses-the-Evolution-from-AI-Assistant-to-AI-Agent.html" | relative_url }})
+- [Anders Hejlsberg Discusses the Evolution from AI Assistant to AI Agent](/2026-03-04-Anders-Hejlsberg-Discusses-the-Evolution-from-AI-Assistant-to-AI-Agent.html)
 
 ## ML
 
@@ -255,7 +282,7 @@ Microsoft’s Phi-4-Reasoning-Vision-15B model supports new use cases in image-b
 
 A .NET AI Community Standup session highlights modern agent frameworks, orchestration, and continuous integration/monitoring. It features the Interview Coach sample and introduces MCP and Aspire tooling for production use. The presentation builds on modularization and cloud-native deployment, providing a blueprint for agents in .NET production settings.
 
-- [.NET AI Community Standup: Real-World AI Agent Architecture in .NET]({{ "/2026-03-05-NET-AI-Community-Standup-Real-World-AI-Agent-Architecture-in-NET.html" | relative_url }})
+- [.NET AI Community Standup: Real-World AI Agent Architecture in .NET](/2026-03-05-NET-AI-Community-Standup-Real-World-AI-Agent-Architecture-in-NET.html)
 
 ### Other ML News
 
@@ -272,7 +299,7 @@ This week’s Azure section covers new general availability releases, migration 
 Azure Databricks Lakebase is now generally available, providing a Postgres-compatible, serverless data platform for analytics, operational, and AI workloads. State management, real-time feature serving, and agent memory are supported. Postgres migrations are straightforward, and new AI models (Grok 4.0, Qwen3.5, GPT-5.x) are now supported. AI Foundry simplifies advanced model connections and analytics.
 
 - [Azure Databricks Lakebase: General Availability for Real-Time and AI-Driven Applications](https://techcommunity.microsoft.com/t5/azure-databricks/azure-databricks-lakebase-is-now-generally-available/ba-p/4498779)
-- [Azure Update 6th March 2026]({{ "/2026-03-06-Azure-Update-6th-March-2026.html" | relative_url }})
+- [Azure Update 6th March 2026](/2026-03-06-Azure-Update-6th-March-2026.html)
 
 ### Azure Logic Apps and Integration Modernization
 
@@ -287,7 +314,7 @@ Azure's hybrid cloud now has new training (Sovereign Cloud MicroHack) for govern
 
 - [Announcing the Public Release of the Sovereign Cloud MicroHack](https://www.thomasmaurer.ch/2026/03/announcing-the-public-release-of-the-sovereign-cloud-microhack/)
 - [Azure Arc Gateway for Kubernetes Now Generally Available](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4498561)
-- [Azure Update 6th March 2026]({{ "/2026-03-06-Azure-Update-6th-March-2026.html" | relative_url }})
+- [Azure Update 6th March 2026](/2026-03-06-Azure-Update-6th-March-2026.html)
 
 ### Migration Guides for Azure Networking and Container Workloads
 
@@ -361,15 +388,15 @@ The .NET Data Standup presents dotConnect and Entity Developer tools for streaml
 
 Community guides offer insight into orchestrating advanced workflows in the Microsoft Agent Framework, encouraging modular and graph-based automation.
 
-- [.NET Data Community Standup: How dotConnect and Entity Developer Streamline .NET Workflows]({{ "/2026-03-02-NET-Data-Community-Standup-How-dotConnect-and-Entity-Developer-Streamline-NET-Workflows.html" | relative_url }})
-- [Demystifying Custom Orchestration in Microsoft Agent Framework Workflows]({{ "/2026-03-02-Demystifying-Custom-Orchestration-in-Microsoft-Agent-Framework-Workflows.html" | relative_url }})
+- [.NET Data Community Standup: How dotConnect and Entity Developer Streamline .NET Workflows](/2026-03-02-NET-Data-Community-Standup-How-dotConnect-and-Entity-Developer-Streamline-NET-Workflows.html)
+- [Demystifying Custom Orchestration in Microsoft Agent Framework Workflows](/2026-03-02-Demystifying-Custom-Orchestration-in-Microsoft-Agent-Framework-Workflows.html)
 
 ### .NET MAUI Platform Expansion and Blazor in .NET 11 Preview
 
 This week’s .NET MAUI standup covers expanded platform support (including Linux and macOS), plus AI-driven acceleration for routine app development. Blazor Community Standup discusses productivity, performance, and tooling improvements in .NET 11 Preview 2 for web development.
 
-- [.NET MAUI Community Standup: Expanding to New Platforms and Accelerating with AI]({{ "/2026-03-03-NET-MAUI-Community-Standup-Expanding-to-New-Platforms-and-Accelerating-with-AI.html" | relative_url }})
-- [Blazor Community Standup: What’s New in ASP.NET Core & Blazor for .NET 11 Preview 2]({{ "/2026-03-05-Blazor-Community-Standup-Whats-New-in-ASPNET-Core-and-Blazor-for-NET-11-Preview-2.html" | relative_url }})
+- [.NET MAUI Community Standup: Expanding to New Platforms and Accelerating with AI](/2026-03-03-NET-MAUI-Community-Standup-Expanding-to-New-Platforms-and-Accelerating-with-AI.html)
+- [Blazor Community Standup: What’s New in ASP.NET Core & Blazor for .NET 11 Preview 2](/2026-03-05-Blazor-Community-Standup-Whats-New-in-ASPNET-Core-and-Blazor-for-NET-11-Preview-2.html)
 
 ## DevOps
 
@@ -380,8 +407,8 @@ This week's DevOps updates emphasize better project management, platform changes
 GitHub Projects added a hierarchy view with sub-issue filtering and deduplication, persistent list state, issue forms with file upload, and bulk issue moves. Guides help teams and new users get started with board setup, collaborative features, and automation strategy.
 
 - [GitHub Projects Hierarchy View and Issue Form Enhancements](https://github.blog/changelog/2026-03-05-hierarchy-view-improvements-and-file-uploads-in-issue-forms)
-- [Organizing Work with GitHub Issues and Projects for Beginners]({{ "/2026-03-02-Organizing-Work-with-GitHub-Issues-and-Projects-for-Beginners.html" | relative_url }})
-- [Manage Your Flow with GitHub Issues and Projects]({{ "/2026-03-03-Manage-Your-Flow-with-GitHub-Issues-and-Projects.html" | relative_url }})
+- [Organizing Work with GitHub Issues and Projects for Beginners](/2026-03-02-Organizing-Work-with-GitHub-Issues-and-Projects-for-Beginners.html)
+- [Manage Your Flow with GitHub Issues and Projects](/2026-03-03-Manage-Your-Flow-with-GitHub-Issues-and-Projects.html)
 - [GitHub for Beginners: Mastering Issues and Projects](https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-issues-and-projects/)
 
 ### GitHub Platform and DevOps Tooling Improvements
@@ -455,4 +482,4 @@ Rick Strahl details workflow improvements for code signing using Azure Trusted S
 
 GitHub Octoverse analysis highlights how automation tools like Copilot Autofix and Dependabot speed up vulnerability patching and support a "shift left" approach. Features discussed include merge queues and new access control checks supported by insights, reinforcing the balance between AI-driven automation and human oversight.
 
-- [How AI is Changing the 'Shift Left' Mindset in Security – Insights from GitHub Octoverse 2025]({{ "/2026-03-03-How-AI-is-Changing-the-Shift-Left-Mindset-in-Security-Insights-from-GitHub-Octoverse-2025.html" | relative_url }})
+- [How AI is Changing the 'Shift Left' Mindset in Security – Insights from GitHub Octoverse 2025](/2026-03-03-How-AI-is-Changing-the-Shift-Left-Mindset-in-Security-Insights-from-GitHub-Octoverse-2025.html)

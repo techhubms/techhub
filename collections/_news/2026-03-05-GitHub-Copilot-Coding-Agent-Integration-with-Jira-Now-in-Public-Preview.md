@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Copilot Coding Agent Integration with Jira Now in Public Preview"
-description: "This announcement details the public preview of integrating GitHub Copilot coding agent with Jira. It explains how developers can assign Jira issues to Copilot, leading to AI-generated draft pull requests in GitHub. The integration automates repetitive tasks, maintains existing review workflows, and minimizes context switching between Jira and GitHub. Instructions for getting started and requirements such as enabling Rovo and specific apps are provided, as well as details on data residency and useful documentation links."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview
+title: GitHub Copilot Coding Agent Integration with Jira Now in Public Preview
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-05 19:37:59 +00:00
-permalink: "/2026-03-05-GitHub-Copilot-Coding-Agent-Integration-with-Jira-Now-in-Public-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Agent", "Atlassian Marketplace", "Automation", "Autonomous Agents", "Collaboration Tools", "Copilot", "Data Residency", "DevOps Tools", "GitHub Apps", "GitHub Copilot", "Jira", "News", "Pull Requests", "Workflow Integration"]
-tags_normalized: ["ai", "ai coding agent", "atlassian marketplace", "automation", "autonomous agents", "collaboration tools", "copilot", "data residency", "devops tools", "github apps", "github copilot", "jira", "news", "pull requests", "workflow integration"]
+tags:
+- AI
+- AI Coding Agent
+- Atlassian Marketplace
+- Automation
+- Autonomous Agents
+- Collaboration Tools
+- Copilot
+- Data Residency
+- DevOps Tools
+- GitHub Apps
+- GitHub Copilot
+- Jira
+- News
+- Pull Requests
+- Workflow Integration
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces the public preview of GitHub Copilot coding agent integration with Jira, enabling AI-powered automation of draft pull requests within existing development workflows.<!--excerpt_end-->
 
 # GitHub Copilot Coding Agent for Jira: Public Preview

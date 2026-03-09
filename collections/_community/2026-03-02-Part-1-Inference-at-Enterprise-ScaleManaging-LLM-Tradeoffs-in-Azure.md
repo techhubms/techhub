@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Part 1: Inference at Enterprise Scale—Managing LLM Tradeoffs in Azure"
-description: "This in-depth article explores the complexities of large language model (LLM) inference for enterprise-scale AI workloads on Azure. It presents the critical engineering challenges of balancing accuracy, latency, and cost, discusses technical bottlenecks in GPU-driven inference, and highlights the impact of Microsoft’s Ray/Anyscale partnership for scalable deployment on Azure Kubernetes Service (AKS)."
-author: "bobmital"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-1-inference-at-enterprise-scale-why-llm-inference-is-a/ba-p/4498754"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-1-inference-at-enterprise-scale-why-llm-inference-is-a/ba-p/4498754
+title: 'Part 1: Inference at Enterprise Scale—Managing LLM Tradeoffs in Azure'
+author: bobmital
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-02 23:35:55 +00:00
-permalink: "/2026-03-02-Part-1-Inference-at-Enterprise-ScaleManaging-LLM-Tradeoffs-in-Azure.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "AKS", "Anyscale", "Azure", "Batch Inference", "Cloud Economics", "Community", "Enterprise AI", "Fine Tuning", "GPU Compute", "Infrastructure", "KV Cache", "Latency", "LLM Inference", "ML", "Model Optimization", "Pareto Frontier", "Quantization", "Ray", "Ray Serve", "Token Throughput", "Vllm"]
-tags_normalized: ["agentic ai", "ai", "aks", "anyscale", "azure", "batch inference", "cloud economics", "community", "enterprise ai", "fine tuning", "gpu compute", "infrastructure", "kv cache", "latency", "llm inference", "ml", "model optimization", "pareto frontier", "quantization", "ray", "ray serve", "token throughput", "vllm"]
+tags:
+- Agentic AI
+- AI
+- AKS
+- Anyscale
+- Azure
+- Batch Inference
+- Cloud Economics
+- Community
+- Enterprise AI
+- Fine Tuning
+- GPU Compute
+- Infrastructure
+- KV Cache
+- Latency
+- LLM Inference
+- ML
+- Model Optimization
+- Pareto Frontier
+- Quantization
+- Ray
+- Ray Serve
+- Token Throughput
+- Vllm
+section_names:
+- ai
+- azure
+- ml
 ---
-
 bobmital examines the unique challenges of enterprise-scale LLM inference, focusing on the interplay of accuracy, latency, and cost in Azure deployments using Anyscale Ray and AKS. This article provides actionable insights for architects and engineers deploying AI workloads in the cloud.<!--excerpt_end-->
 
 # Part 1: Inference at Enterprise Scale—Managing LLM Tradeoffs in Azure

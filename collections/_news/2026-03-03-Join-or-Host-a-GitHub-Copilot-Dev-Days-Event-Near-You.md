@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Join or Host a GitHub Copilot Dev Days Event Near You"
-description: "This announcement covers GitHub Copilot Dev Days, a worldwide series of in-person events for developers seeking to explore AI-assisted coding. Participants can expect interactive workshops, live demos, and high-quality training on using GitHub Copilot, including features like Copilot CLI, Cloud Agent, and integration with popular editors such as VS Code and Visual Studio. Events are tailored for all experience levels and focus on real-world workflows to help developers use AI in their daily work."
-author: "Kathleen Ann Savage"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/join-or-host-a-github-copilot-dev-days-event-near-you/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/join-or-host-a-github-copilot-dev-days-event-near-you/
+title: Join or Host a GitHub Copilot Dev Days Event Near You
+author: Kathleen Ann Savage
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-03 16:55:00 +00:00
-permalink: "/2026-03-03-Join-or-Host-a-GitHub-Copilot-Dev-Days-Event-Near-You.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Assisted Coding", "Cloud Agent", "Coding Workshop", "Community Events", "Developer Events", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Stars", "Interactive Training", "Microsoft MVP", "News", "Software Development", "VS", "VS Code"]
-tags_normalized: ["ai", "ai and ml", "ai assisted coding", "cloud agent", "coding workshop", "community events", "developer events", "github copilot", "github copilot cli", "github stars", "interactive training", "microsoft mvp", "news", "software development", "vs", "vs code"]
+tags:
+- AI
+- AI & ML
+- AI Assisted Coding
+- Cloud Agent
+- Coding Workshop
+- Community Events
+- Developer Events
+- GitHub Copilot
+- GitHub Copilot CLI
+- GitHub Stars
+- Interactive Training
+- Microsoft MVP
+- News
+- Software Development
+- VS
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Kathleen Ann Savage introduces GitHub Copilot Dev Days, a global in-person event series providing hands-on training and community connection for developers eager to advance their AI-assisted coding skills.<!--excerpt_end-->
 
 # Join or Host a GitHub Copilot Dev Days Event Near You

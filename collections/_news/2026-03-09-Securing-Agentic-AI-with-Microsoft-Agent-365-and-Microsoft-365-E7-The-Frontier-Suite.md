@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Securing Agentic AI with Microsoft Agent 365 and Microsoft 365 E7: The Frontier Suite"
-description: "This article explores the upcoming Microsoft Agent 365 and Microsoft 365 E7 offerings, focusing on how these tools enable organizations to secure, govern, and monitor agentic AI across their environments. Detailed coverage includes new capabilities for observability, access control, risk management, compliance, and defense against emerging AI threats within the Microsoft ecosystem."
-author: "Vasu Jakkal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/03/09/secure-agentic-ai-for-your-frontier-transformation/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/03/09/secure-agentic-ai-for-your-frontier-transformation/
+title: 'Securing Agentic AI with Microsoft Agent 365 and Microsoft 365 E7: The Frontier Suite'
+author: Vasu Jakkal
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-03-09 13:00:00 +00:00
-permalink: "/2026-03-09-Securing-Agentic-AI-with-Microsoft-Agent-365-and-Microsoft-365-E7-The-Frontier-Suite.html"
-categories: ["AI", "Security"]
-tags: ["Agent Registry", "Agentic AI", "AI", "AI Risk Management", "Audit", "Compliance", "Conditional Access", "Data Loss Prevention", "Frontier Transformation", "Governance", "Identity Management", "Insider Risk Management", "Microsoft 365", "Microsoft 365 E7", "Microsoft Agent 365", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "News", "Observability", "Security"]
-tags_normalized: ["agent registry", "agentic ai", "ai", "ai risk management", "audit", "compliance", "conditional access", "data loss prevention", "frontier transformation", "governance", "identity management", "insider risk management", "microsoft 365", "microsoft 365 e7", "microsoft agent 365", "microsoft defender", "microsoft entra", "microsoft purview", "news", "observability", "security"]
+tags:
+- Agent Registry
+- Agentic AI
+- AI
+- AI Risk Management
+- Audit
+- Compliance
+- Conditional Access
+- Data Loss Prevention
+- Frontier Transformation
+- Governance
+- Identity Management
+- Insider Risk Management
+- Microsoft 365
+- Microsoft 365 E7
+- Microsoft Agent 365
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Purview
+- News
+- Observability
+- Security
+section_names:
+- ai
+- security
 ---
-
 Vasu Jakkal details how Microsoft Agent 365 and Microsoft 365 E7 support organizations with secure, observable, and governable agentic AI, focusing on modern identity, compliance, and AI risk defense.<!--excerpt_end-->
 
 # Securing Agentic AI for Your Frontier Transformation

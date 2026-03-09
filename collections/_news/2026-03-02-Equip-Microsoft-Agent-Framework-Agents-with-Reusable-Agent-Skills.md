@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Equip Microsoft Agent Framework Agents with Reusable Agent Skills"
-description: "This post introduces Agent Skills in Microsoft Agent Framework, allowing .NET and Python agents to gain domain expertise via portable, reusable skill packages. It details the FileAgentSkillsProvider, skill packaging format, integration examples, and use cases like policy compliance, support playbooks, and multi-team skill libraries. Guidance on safe skill management and upcoming features is provided."
-author: "Sergey Menshykh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/give-your-agents-domain-expertise-with-agent-skills-in-microsoft-agent-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/give-your-agents-domain-expertise-with-agent-skills-in-microsoft-agent-framework/
+title: Equip Microsoft Agent Framework Agents with Reusable Agent Skills
+author: Sergey Menshykh
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2026-03-02 16:46:27 +00:00
-permalink: "/2026-03-02-Equip-Microsoft-Agent-Framework-Agents-with-Reusable-Agent-Skills.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agent Development", "Agent Framework", "Agent Skills", "AI", "AI Agents", "Automation", "Azure OpenAI", "Coding", "Context Management", "Domain Expertise", "FileAgentSkillsProvider", "Microsoft Agent Framework", "Microsoft AI", "News", "Python", "Skill Packaging", "SKILL.md"]
-tags_normalized: ["dotnet", "agent development", "agent framework", "agent skills", "ai", "ai agents", "automation", "azure openai", "coding", "context management", "domain expertise", "fileagentskillsprovider", "microsoft agent framework", "microsoft ai", "news", "python", "skill packaging", "skilldotmd"]
+tags:
+- .NET
+- Agent Development
+- Agent Framework
+- Agent Skills
+- AI
+- AI Agents
+- Automation
+- Azure OpenAI
+- Context Management
+- Domain Expertise
+- FileAgentSkillsProvider
+- Microsoft Agent Framework
+- Microsoft AI
+- News
+- Python
+- Skill Packaging
+- SKILL.md
+section_names:
+- ai
+- dotnet
 ---
-
 Sergey Menshykh explores how Agent Skills in Microsoft Agent Framework empower .NET and Python agents with reusable domain expertise, using FileAgentSkillsProvider and open skill formats.<!--excerpt_end-->
 
 # Equip Microsoft Agent Framework Agents with Reusable Agent Skills

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "From Idea to Pull Request: Practical GitHub Copilot CLI Workflow"
-description: "This guide walks developers through a hands-on workflow using GitHub Copilot CLI. It explains how to leverage natural language prompts in the terminal to scaffold projects, iterate on failures, and make mechanical repository changes before handing off to editors and shipping via pull requests. The workflow integrates Copilot’s CLI, IDE, and GitHub capabilities to streamline code creation and review."
-author: "Ari LiVigni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/
+title: 'From Idea to Pull Request: Practical GitHub Copilot CLI Workflow'
+author: Ari LiVigni
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-27 16:00:00 +00:00
-permalink: "/2026-02-27-From-Idea-to-Pull-Request-Practical-GitHub-Copilot-CLI-Workflow.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "Automation", "Code Review", "Code Scaffolding", "Coding", "Continuous Integration", "Copilot", "Copilot CLI", "Developer Workflows", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Skills", "Natural Language Commands", "News", "Node.js", "Pull Request", "Terminal Tools", "Testing"]
-tags_normalized: ["ai", "ai and ml", "automation", "code review", "code scaffolding", "coding", "continuous integration", "copilot", "copilot cli", "developer workflows", "github", "github copilot", "github copilot cli", "github skills", "natural language commands", "news", "nodedotjs", "pull request", "terminal tools", "testing"]
+tags:
+- AI
+- AI & ML
+- Automation
+- Code Review
+- Code Scaffolding
+- Continuous Integration
+- Copilot
+- Copilot CLI
+- Developer Workflows
+- GitHub
+- GitHub Copilot
+- GitHub Copilot CLI
+- GitHub Skills
+- Natural Language Commands
+- News
+- Node.js
+- Pull Request
+- Terminal Tools
+- Testing
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Ari LiVigni provides a practical walkthrough of using GitHub Copilot CLI to translate ideas into code changes, enabling developers to move rapidly from intent to pull requests directly within the terminal.<!--excerpt_end-->
 
 # From Idea to Pull Request: Practical GitHub Copilot CLI Workflow

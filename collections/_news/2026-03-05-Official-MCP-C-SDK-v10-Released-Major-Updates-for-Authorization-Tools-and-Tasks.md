@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Official MCP C# SDK v1.0 Released: Major Updates for Authorization, Tools, and Tasks"
-description: "This in-depth announcement details the v1.0 release of the Model Context Protocol (MCP) C# SDK, covering new features such as enhanced OAuth authorization flows, metadata improvements (including icons for tools and resources), incremental scope consent, URL-based elicitation, advanced tool calling patterns, support for long-running requests, and experimental task primitives for durable operations—all tailored for .NET developers working with AI service integrations."
-author: "Mike Kistler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/release-v10-of-the-official-mcp-csharp-sdk/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/release-v10-of-the-official-mcp-csharp-sdk/
+title: 'Official MCP C# SDK v1.0 Released: Major Updates for Authorization, Tools, and Tasks'
+author: Mike Kistler
+primary_section: ai
+feed_name: Microsoft .NET Blog
 date: 2026-03-05 18:05:00 +00:00
-permalink: "/2026-03-05-Official-MCP-C-SDK-v10-Released-Major-Updates-for-Authorization-Tools-and-Tasks.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "ASP.NET Core", "Authorization", "C#", "Client Capabilities", "Coding", "Distributed Cache", "Durability", "Elicitation", "IChatClient", "JWT", "Long Running Requests", "MCP", "Metadata", "Middleware", "News", "OAuth 2.0", "OpenAI", "Sampling", "SDK", "Tasks", "Tool Calling"]
-tags_normalized: ["dotnet", "ai", "aspdotnet core", "authorization", "csharp", "client capabilities", "coding", "distributed cache", "durability", "elicitation", "ichatclient", "jwt", "long running requests", "mcp", "metadata", "middleware", "news", "oauth 2dot0", "openai", "sampling", "sdk", "tasks", "tool calling"]
+tags:
+- .NET
+- AI
+- ASP.NET Core
+- Authorization
+- C#
+- Client Capabilities
+- Distributed Cache
+- Durability
+- Elicitation
+- IChatClient
+- JWT
+- Long Running Requests
+- MCP
+- Metadata
+- Middleware
+- News
+- OAuth 2.0
+- OpenAI
+- Sampling
+- SDK
+- Tasks
+- Tool Calling
+section_names:
+- ai
+- dotnet
 ---
-
 Mike Kistler presents the v1.0 release of the official MCP C# SDK, highlighting new authorization features, advanced tool integration, support for long-running operations, and experimental durable tasks—all designed for AI and .NET developers.<!--excerpt_end-->
 
 # Official MCP C# SDK v1.0 Released: Major Updates for Authorization, Tools, and Tasks

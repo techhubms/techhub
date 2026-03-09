@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "AI as Tradecraft: Threat Actors Operationalize AI in Cyberattacks"
-description: "This report from Microsoft Threat Intelligence provides an in-depth analysis of how cyber threat actors, including North Korean groups like Jasper Sleet and Coral Sleet, are leveraging AI and machine learning to scale and sustain malicious operations. The article details techniques spanning phishing, infrastructure building, exploitation, persistence, and detection evasion, and offers actionable mitigation guidance for defenders using Microsoft's suite of security tools and AI-specific offerings."
-author: "Microsoft Threat Intelligence"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/
+title: 'AI as Tradecraft: Threat Actors Operationalize AI in Cyberattacks'
+author: Microsoft Threat Intelligence
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-03-06 17:00:00 +00:00
-permalink: "/2026-03-06-AI-as-Tradecraft-Threat-Actors-Operationalize-AI-in-Cyberattacks.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "AI Content Safety", "AI Security", "Coral Sleet", "Cyberattacks", "Data Exfiltration", "Deepfake", "Defender XDR", "Enterprise Security", "Jasper Sleet", "Machine Learning", "Malware", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "News", "North Korea", "Phishing", "Prompt Injection", "Security", "Security Copilot", "Social Engineering", "Threat Intelligence"]
-tags_normalized: ["agentic ai", "ai", "ai content safety", "ai security", "coral sleet", "cyberattacks", "data exfiltration", "deepfake", "defender xdr", "enterprise security", "jasper sleet", "machine learning", "malware", "microsoft defender", "microsoft entra", "microsoft purview", "news", "north korea", "phishing", "prompt injection", "security", "security copilot", "social engineering", "threat intelligence"]
+tags:
+- Agentic AI
+- AI
+- AI Content Safety
+- AI Security
+- Coral Sleet
+- Cyberattacks
+- Data Exfiltration
+- Deepfake
+- Defender XDR
+- Enterprise Security
+- Jasper Sleet
+- Malware
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Purview
+- News
+- North Korea
+- Phishing
+- Prompt Injection
+- Security
+- Security Copilot
+- Social Engineering
+- Threat Intelligence
+section_names:
+- ai
+- security
 ---
-
 Microsoft Threat Intelligence analyzes how North Korean groups and other threat actors leverage AI to accelerate the entire cyberattack lifecycle. The report, authored by Microsoft Threat Intelligence, explores attack methods, operational trends, and defense strategies powered by Microsoft's security ecosystem.<!--excerpt_end-->
 
 # AI as Tradecraft: How Threat Actors Operationalize AI

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Figma MCP Server Integration with GitHub Copilot in VS Code"
-description: "GitHub Copilot now integrates with the Figma MCP server, enabling developers to seamlessly transfer design context between Figma and their code. Developers can generate code from Figma designs, send rendered UIs to Figma as editable frames, and keep everything synchronized within VS Code. This new feature enhances the workflow between UI/UX design and code implementation for developers using GitHub Copilot."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-06-figma-mcp-server-can-now-generate-design-layers-from-vs-code"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-06-figma-mcp-server-can-now-generate-design-layers-from-vs-code
+title: Figma MCP Server Integration with GitHub Copilot in VS Code
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-06 21:20:15 +00:00
-permalink: "/2026-03-06-Figma-MCP-Server-Integration-with-GitHub-Copilot-in-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code Generation", "Coding", "Copilot", "Copilot CLI", "Design Systems", "Design To Code", "Developer Experience", "Developer Tools", "Editable Frames", "Figma Integration", "Figma MCP Server", "GitHub Copilot", "News", "UI Development", "UI Synchronization", "VS Code"]
-tags_normalized: ["ai", "code generation", "coding", "copilot", "copilot cli", "design systems", "design to code", "developer experience", "developer tools", "editable frames", "figma integration", "figma mcp server", "github copilot", "news", "ui development", "ui synchronization", "vs code"]
+tags:
+- AI
+- Code Generation
+- Copilot
+- Copilot CLI
+- Design Systems
+- Design To Code
+- Developer Experience
+- Developer Tools
+- Editable Frames
+- Figma Integration
+- Figma MCP Server
+- GitHub Copilot
+- News
+- UI Development
+- UI Synchronization
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Allison describes how GitHub Copilot users can now connect to the Figma MCP server in VS Code, synchronizing design context and rendered UIs as editable frames—streamlining workflows for developers.<!--excerpt_end-->
 
 # Figma MCP Server Integration with GitHub Copilot in VS Code

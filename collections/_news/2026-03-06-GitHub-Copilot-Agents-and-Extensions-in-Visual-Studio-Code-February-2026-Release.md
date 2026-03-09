@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Copilot Agents and Extensions in Visual Studio Code February 2026 Release"
-description: "This article covers the February 2026 release of Visual Studio Code v1.110, which introduces significant updates to GitHub Copilot, including practical agent workflows for complex tasks, agent lifecycle hooks, enhanced chat features, agent plugins, new CLI integration, and improved context handling across Copilot features. Additional Visual Studio Code productivity improvements are also highlighted."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-06-github-copilot-in-visual-studio-code-v1-110-february-release"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-06-github-copilot-in-visual-studio-code-v1-110-february-release
+title: GitHub Copilot Agents and Extensions in Visual Studio Code February 2026 Release
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-06 19:03:06 +00:00
-permalink: "/2026-03-06-GitHub-Copilot-Agents-and-Extensions-in-Visual-Studio-Code-February-2026-Release.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Plugins", "AI", "Auto Approve", "Automation", "Code Review", "Coding", "Coding Assistants", "Context Management", "Copilot", "Copilot CLI", "Developer Tools", "GitHub Copilot", "News", "Productivity", "Programming Agents", "Prompt Engineering", "Slash Commands", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent plugins", "ai", "auto approve", "automation", "code review", "coding", "coding assistants", "context management", "copilot", "copilot cli", "developer tools", "github copilot", "news", "productivity", "programming agents", "prompt engineering", "slash commands", "vs code", "vs code extensions"]
+tags:
+- Agent Plugins
+- AI
+- Auto Approve
+- Automation
+- Code Review
+- Coding Assistants
+- Context Management
+- Copilot
+- Copilot CLI
+- Developer Tools
+- GitHub Copilot
+- News
+- Productivity
+- Programming Agents
+- Prompt Engineering
+- Slash Commands
+- VS Code
+- VS Code Extensions
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Allison details the latest Visual Studio Code update, emphasizing robust GitHub Copilot agent automation, extensibility, CLI integration, and advanced context management for developers.<!--excerpt_end-->
 
 # GitHub Copilot Agents and Extensions in Visual Studio Code February 2026 Release

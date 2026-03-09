@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Visual Studio Dev Essentials: Unlocking Free Tools and Cloud Credits for Developers"
-description: "An in-depth overview of Visual Studio Dev Essentials, Microsoft’s free developer membership. The article highlights the wide range of tools, cloud services, downloads, and training—such as Visual Studio Community, Visual Studio Code, Azure credits, and learning resources—available at no cost to support developers building apps for any platform."
-author: "Jim Harrer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-dev-essentials-free-practical-tools-for-every-developer/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-dev-essentials-free-practical-tools-for-every-developer/
+title: 'Visual Studio Dev Essentials: Unlocking Free Tools and Cloud Credits for Developers'
+author: Jim Harrer
+primary_section: dotnet
+feed_name: Microsoft VisualStudio Blog
 date: 2026-03-09 15:35:00 +00:00
-permalink: "/2026-03-09-Visual-Studio-Dev-Essentials-Unlocking-Free-Tools-and-Cloud-Credits-for-Developers.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure DevOps", "Azure Free Account", "Cloud Credits", "Coding", "Cross Platform Development", "Dev Essentials", "Developer Tools", "Developer Training", "DevOps", "Microsoft", "News", "Open Source Development", "Pluralsight", "Power Apps Community Plan", "SQL Server Developer Edition", "Visual Studio Dev Essentials", "Visual Studio Subscriptions", "VS", "VS Code"]
-tags_normalized: ["azure", "azure devops", "azure free account", "cloud credits", "coding", "cross platform development", "dev essentials", "developer tools", "developer training", "devops", "microsoft", "news", "open source development", "pluralsight", "power apps community plan", "sql server developer edition", "visual studio dev essentials", "visual studio subscriptions", "vs", "vs code"]
+tags:
+- Azure
+- Azure DevOps
+- Azure Free Account
+- Cloud Credits
+- Cross Platform Development
+- Dev Essentials
+- Developer Tools
+- Developer Training
+- DevOps
+- Microsoft
+- News
+- Open Source Development
+- Pluralsight
+- Power Apps Community Plan
+- SQL Server Developer Edition
+- Visual Studio Dev Essentials
+- Visual Studio Subscriptions
+- VS
+- VS Code
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 Jim Harrer introduces Visual Studio Dev Essentials, Microsoft's free developer program, offering a suite of tools, cloud credits, downloads, and learning resources designed to support every developer.<!--excerpt_end-->
 
 # Visual Studio Dev Essentials: Unlocking Free Tools and Cloud Credits for Developers

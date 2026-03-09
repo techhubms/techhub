@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Inside Tycoon2FA: How a Leading AiTM Phishing Kit Operated at Scale"
-description: "This in-depth analysis by Microsoft Threat Intelligence and Microsoft Defender Security Research Team explores the Tycoon2FA phishing-as-a-service platform, its evasion tactics, and how it enabled large-scale adversary-in-the-middle (AiTM) phishing attacks targeting over 500,000 organizations each month. It details technical methods, defense strategies, and actionable guidance for security practitioners leveraging Microsoft security technologies."
-author: "Microsoft Threat Intelligence and Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/
+title: 'Inside Tycoon2FA: How a Leading AiTM Phishing Kit Operated at Scale'
+author: Microsoft Threat Intelligence and Microsoft Defender Security Research Team
+primary_section: azure
+feed_name: Microsoft Security Blog
 date: 2026-03-04 16:04:24 +00:00
-permalink: "/2026-03-04-Inside-Tycoon2FA-How-a-Leading-AiTM-Phishing-Kit-Operated-at-Scale.html"
-categories: ["Azure", "Security"]
-tags: ["AiTM", "Azure", "Cloud Security", "Defender For Endpoint", "Defender For Office 365", "Email Security", "Incident Response", "MFA Bypass", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Threat Intelligence", "Mitigation", "News", "Phishing as A Service", "Safe Links", "Security", "Security Copilot", "Security Operations", "Threat Hunting", "Token Theft", "Tycoon2FA", "Zero Hour Auto Purge"]
-tags_normalized: ["aitm", "azure", "cloud security", "defender for endpoint", "defender for office 365", "email security", "incident response", "mfa bypass", "microsoft defender", "microsoft entra id", "microsoft threat intelligence", "mitigation", "news", "phishing as a service", "safe links", "security", "security copilot", "security operations", "threat hunting", "token theft", "tycoon2fa", "zero hour auto purge"]
+tags:
+- AiTM
+- Azure
+- Cloud Security
+- Defender For Endpoint
+- Defender For Office 365
+- Email Security
+- Incident Response
+- MFA Bypass
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Threat Intelligence
+- Mitigation
+- News
+- Phishing as A Service
+- Safe Links
+- Security
+- Security Copilot
+- Security Operations
+- Threat Hunting
+- Token Theft
+- Tycoon2FA
+- Zero Hour Auto Purge
+section_names:
+- azure
+- security
 ---
-
 The Microsoft Threat Intelligence and Defender Security Research Team provide a comprehensive overview of Tycoon2FA, a sophisticated phishing-as-a-service platform. This resource offers technical breakdowns, impact analysis, and Microsoft-centric defense recommendations for security professionals.<!--excerpt_end-->
 
 # Inside Tycoon2FA: How a Leading AiTM Phishing Kit Operated at Scale

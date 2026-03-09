@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Building an Interview Coach App with Microsoft Agent Framework, Foundry, MCP, and Aspire"
-description: "This news post introduces a real-world application that brings together Microsoft Agent Framework, Microsoft Foundry, Model Context Protocol (MCP), and Aspire to build a cloud-native AI-powered interview coach. It explains technical patterns, such as multi-agent handoff, tool integration via MCP, and service orchestration using Aspire, providing actionable insights for .NET developers who want to deploy scalable AI agent applications both locally and on Azure."
-author: "Justin Yoo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/build-a-real-world-example-with-microsoft-agent-framework-microsoft-foundry-mcp-and-aspire"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/build-a-real-world-example-with-microsoft-agent-framework-microsoft-foundry-mcp-and-aspire
+title: Building an Interview Coach App with Microsoft Agent Framework, Foundry, MCP, and Aspire
+author: Justin Yoo
+primary_section: ai
+feed_name: Microsoft Blog
 date: 2026-03-09 16:00:42 +00:00
-permalink: "/2026-03-09-Building-an-Interview-Coach-App-with-Microsoft-Agent-Framework-Foundry-MCP-and-Aspire.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: [".NET", "AI", "AI Agents", "Aspire", "Azure", "Azure Container Apps", "Blazor", "C#", "Cloud Native", "Coding", "DevOps Patterns", "IChatClient", "Interview Coach", "MarkItDown", "MCP", "Microsoft Agent Framework", "Microsoft Foundry", "ML", "Multi Agent Systems", "News", "OpenTelemetry", "Sample Application", "Semantic Kernel", "Service Orchestration", "Uncategorized"]
-tags_normalized: ["dotnet", "ai", "ai agents", "aspire", "azure", "azure container apps", "blazor", "csharp", "cloud native", "coding", "devops patterns", "ichatclient", "interview coach", "markitdown", "mcp", "microsoft agent framework", "microsoft foundry", "ml", "multi agent systems", "news", "opentelemetry", "sample application", "semantic kernel", "service orchestration", "uncategorized"]
+tags:
+- .NET
+- AI
+- AI Agents
+- Aspire
+- Azure
+- Azure Container Apps
+- Blazor
+- C#
+- Cloud Native
+- DevOps Patterns
+- IChatClient
+- Interview Coach
+- MarkItDown
+- MCP
+- Microsoft Agent Framework
+- Microsoft Foundry
+- ML
+- Multi Agent Systems
+- News
+- OpenTelemetry
+- Sample Application
+- Semantic Kernel
+- Service Orchestration
+- Uncategorized
+section_names:
+- ai
+- azure
+- dotnet
+- ml
 ---
-
 Justin Yoo details how to build a production-ready AI interview coach using Microsoft Agent Framework, Foundry, MCP, and Aspire, sharing multi-agent orchestration, cloud infrastructure, and .NET integration strategies.<!--excerpt_end-->
 
 # Building an Interview Coach App with Microsoft Agent Framework, Foundry, MCP, and Aspire

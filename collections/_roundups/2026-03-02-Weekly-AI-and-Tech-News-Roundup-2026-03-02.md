@@ -1,17 +1,43 @@
----
-layout: "post"
-title: "Weekly Overview: AI Automation, Cloud Engineering Updates, and Secure DevOps Practices"
-description: "This week's roundup presents developments in AI agent-based workflows and enterprise automation, including updates like GitHub Copilot CLI general availability, improved coding agents, and integration for web-based environments. Microsoft introduces updates for Azure AI infrastructure, vector data support, and scalable machine learning pipelines with Microsoft Fabric. DevOps and Security teams gain new governance tools, enhanced dashboards, better secret management, streamlined artifact automation, and methods for proactive threat detection."
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+﻿---
+external_url: /github-copilot/roundups/Weekly-AI-and-Tech-News-Roundup-2026-03-02
+title: 'Weekly Overview: AI Automation, Cloud Engineering Updates, and Secure DevOps Practices'
+author: TechHub
+primary_section: github-copilot
 date: 2026-03-02 09:00:00 +00:00
-permalink: "/2026-03-02-Weekly-AI-and-Tech-News-Roundup.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agentic Workflows", "AI", "AI Automation", "AI Governance", "Azure", "Cloud Compute", "Coding", "Confidential Compute", "Copilot CLI", "DevOps", "Docker Debugging", "Enterprise Metrics", "GitHub Copilot", "MCP Server", "Microsoft Fabric", "ML", "ML Pipelines", "Prompt Engineering", "Roundups", "Security", "Sovereign Cloud", "SQL Analytics", "Vector Search"]
-tags_normalized: ["agentic workflows", "ai", "ai automation", "ai governance", "azure", "cloud compute", "coding", "confidential compute", "copilot cli", "devops", "docker debugging", "enterprise metrics", "github copilot", "mcp server", "microsoft fabric", "ml", "ml pipelines", "prompt engineering", "roundups", "security", "sovereign cloud", "sql analytics", "vector search"]
+feed_name: TechHub
+tags:
+- Agentic Workflows
+- AI
+- AI Automation
+- AI Governance
+- Azure
+- Cloud Compute
+- Confidential Compute
+- Copilot CLI
+- DevOps
+- Docker Debugging
+- Enterprise Metrics
+- GitHub Copilot
+- MCP Server
+- Microsoft Fabric
+- ML
+- ML Pipelines
+- Prompt Engineering
+- Roundups
+- Security
+- Sovereign Cloud
+- SQL Analytics
+- Vector Search
+- .NET
+section_names:
+- ai
+- github-copilot
+- ml
+- azure
+- dotnet
+- devops
+- security
 ---
-
 This week’s tech roundup explores the latest in AI-driven automation, cloud workflow updates, and secure engineering practices. Both developers and enterprise teams gain new Copilot features, agent-based architecture, and production releases across platforms like Azure, Microsoft Fabric, and SQL. As organizations evolve their approaches to cloud automation, machine learning orchestration, and DevOps security, actionable guides and advanced analytics help teams maintain confidence and agility in daily operations.<!--excerpt_end-->
 
 ## This Week's Overview
@@ -78,9 +104,9 @@ CLI installation is available through npm, Homebrew, WinGet, or shell scripts, w
 Demonstration articles show step-by-step installation, setting up agent workflows, using automated code reviews, and combining terminal and GitHub features with natural language commands. Best-practices guides show project scaffolding, test debugging, batch changes, and seamless CLI/IDE experiences. New enterprise telemetry supports tracking CLI usage, sessions, and tokens for broader organizational metrics. Video guides and documentation are available.
 
 - [GitHub Copilot CLI Now Generally Available for Paid Subscribers](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available)
-- [Exploring GitHub Copilot CLI: Features and Live Demonstration]({{ "/2026-02-26-Exploring-GitHub-Copilot-CLI-Features-and-Live-Demonstration.html" | relative_url }})
+- [Exploring GitHub Copilot CLI: Features and Live Demonstration](/2026-02-26-Exploring-GitHub-Copilot-CLI-Features-and-Live-Demonstration.html)
 - [From Idea to Pull Request: Practical GitHub Copilot CLI Workflow](https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/)
-- [Intro to GitHub Copilot CLI: Boosting Terminal Productivity]({{ "/2026-02-25-Intro-to-GitHub-Copilot-CLI-Boosting-Terminal-Productivity.html" | relative_url }})
+- [Intro to GitHub Copilot CLI: Boosting Terminal Productivity](/2026-02-25-Intro-to-GitHub-Copilot-CLI-Boosting-Terminal-Productivity.html)
 - [Enterprise Metrics for GitHub Copilot CLI Now Available](https://github.blog/changelog/2026-02-27-copilot-usage-metrics-now-includes-enterprise-level-github-copilot-cli-activity)
 
 ### GitHub Copilot Chat: Upgrades, Web Search, and Pull Request Enhancements
@@ -107,7 +133,7 @@ Claude and Codex agents are now also available to Copilot Business and Pro users
 
 - [What’s New in GitHub Copilot Coding Agent: Model Selection, Self-Review, Security Scanning, and More](https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/)
 - [Claude and Codex Now Available as Coding Agents for Copilot Business and Pro Users](https://github.blog/changelog/2026-02-26-claude-and-codex-now-available-for-copilot-business-pro-users)
-- [VS Code Live: Exploring Coding Agents and GitHub Copilot Integration]({{ "/2026-02-23-VS-Code-Live-Exploring-Coding-Agents-and-GitHub-Copilot-Integration.html" | relative_url }})
+- [VS Code Live: Exploring Coding Agents and GitHub Copilot Integration](/2026-02-23-VS-Code-Live-Exploring-Coding-Agents-and-GitHub-Copilot-Integration.html)
 - [GitHub Mobile: Real-Time Notifications for Copilot Coding Agents](https://github.blog/changelog/2026-02-26-github-mobile-track-coding-agent-progress-in-real-time-with-live-notifications)
 
 ### Copilot Usage Metrics APIs: Enterprise and Org-Level Enhancements
@@ -129,7 +155,7 @@ GitHub now supports agent-driven workflows for GitHub Actions, where developers 
 
 This week's guides provide best practices for building robust multi-agent systems, covering typing schemas, action contracts, and MCP-based validation for workflow reliability. MCP remains central to coordination and policy enforcement. Documentation clarifies schema validation and common debugging scenarios, supporting long-term agent scalability.
 
-- [GitHub Introduces Agentic Workflows: Integrating AI Agents with GitHub Actions]({{ "/2026-02-25-GitHub-Introduces-Agentic-Workflows-Integrating-AI-Agents-with-GitHub-Actions.html" | relative_url }})
+- [GitHub Introduces Agentic Workflows: Integrating AI Agents with GitHub Actions](/2026-02-25-GitHub-Introduces-Agentic-Workflows-Integrating-AI-Agents-with-GitHub-Actions.html)
 - [Engineering Reliable Multi-Agent Workflows: Patterns for Success](https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/)
 
 ### Developer Insights, Case Studies, and Copilot SDK Applications
@@ -138,10 +164,10 @@ Case studies and resources outline real Copilot adoption patterns in both startu
 
 These resources follow last week's workflow improvement stories, including prompt engineering trends, WinForms modernization, and real-world Copilot applications. Example case studies show AI helping rebuild business systems after critical failure, demonstrating tools for agent creation and integration with SDKs—including Python AI tutors and Kubernetes sidecar designs for agent and skill server interaction.
 
-- [Tim Rogers on the Future of GitHub Copilot and AI Agents: Octoverse 2025 Insights]({{ "/2026-03-01-Tim-Rogers-on-the-Future-of-GitHub-Copilot-and-AI-Agents-Octoverse-2025-Insights.html" | relative_url }})
+- [Tim Rogers on the Future of GitHub Copilot and AI Agents: Octoverse 2025 Insights](/2026-03-01-Tim-Rogers-on-the-Future-of-GitHub-Copilot-and-AI-Agents-Octoverse-2025-Insights.html)
 - [Measuring Actual AI Impact for Engineering with Apache DevLake and GitHub Copilot](https://devblogs.microsoft.com/all-things-azure/measuring-actual-ai-impact-for-engineering-with-apache-devlake/)
 - [How AI-Driven WinForms Development Saved a Business in Crisis](https://devblogs.microsoft.com/dotnet/the-dongle-died-at-midnight/)
-- [How I built an AI Python tutor with the GitHub Copilot SDK]({{ "/2026-02-26-How-I-built-an-AI-Python-tutor-with-the-GitHub-Copilot-SDK.html" | relative_url }})
+- [How I built an AI Python tutor with the GitHub Copilot SDK](/2026-02-26-How-I-built-an-AI-Python-tutor-with-the-GitHub-Copilot-SDK.html)
 - [Building a Dual Sidecar Pod: Integrating GitHub Copilot SDK and Skill Server on Kubernetes](https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-dual-sidecar-pod-combining-github-copilot-sdk-with/ba-p/4497080)
 
 ### Other GitHub Copilot News
@@ -166,7 +192,7 @@ Copilot’s Next Edit Suggestions for VS Code adds support for complex multi-loc
 
 VS Code 1.110 improves Copilot integration, actionable AI suggestions, UI workflows, and delivers product walkthroughs and live discussions on the latest changes.
 
-- [VS Code v1.110 Release: Highlights and GitHub Copilot Updates]({{ "/2026-02-23-VS-Code-v1110-Release-Highlights-and-GitHub-Copilot-Updates.html" | relative_url }})
+- [VS Code v1.110 Release: Highlights and GitHub Copilot Updates](/2026-02-23-VS-Code-v1110-Release-Highlights-and-GitHub-Copilot-Updates.html)
 
 ## AI
 
@@ -198,7 +224,7 @@ Developers benefit from Microsoft.Extensions.VectorData for .NET, which abstract
 Guides and repo samples support cost-effective architecture and backend integration, building on recent work around affordable, agent-powered .NET workflows. Developers can try full RAG implementations using Azure SQL, OpenAI, and Static Web Apps—with Data API Builder, LangChain support, and hands-on samples for quick prototyping and deployment.
 
 - [Vector Data in .NET – Building Blocks for AI Part 2](https://devblogs.microsoft.com/dotnet/vector-data-in-dotnet-building-blocks-for-ai-part-2/)
-- [Building an Agentic RAG Solution with Azure SQL, OpenAI, and Web Apps]({{ "/2026-02-26-Building-an-Agentic-RAG-Solution-with-Azure-SQL-OpenAI-and-Web-Apps.html" | relative_url }})
+- [Building an Agentic RAG Solution with Azure SQL, OpenAI, and Web Apps](/2026-02-26-Building-an-Agentic-RAG-Solution-with-Azure-SQL-OpenAI-and-Web-Apps.html)
 
 ### Agent Frameworks and Industry Adoption: Telco, Networking, and Public Sector
 
@@ -219,7 +245,7 @@ Prompt engineering discussions introduce persistent context management, prompt c
 
 Microsoft leadership comments on AI’s impact: while senior developers are more productive, there is heightened risk of bugs and limited skill growth for new developers. Recommendations include mentoring, collaborative review, and updated training to maintain quality as code generation increases.
 
-- [Understanding Model Context Protocol (MCP)]({{ "/2026-02-24-Understanding-Model-Context-Protocol-MCP.html" | relative_url }})
+- [Understanding Model Context Protocol (MCP)](/2026-02-24-Understanding-Model-Context-Protocol-MCP.html)
 - [Optimising AI Costs with Microsoft Foundry Model Router](https://techcommunity.microsoft.com/t5/microsoft-developer-community/optimising-ai-costs-with-microsoft-foundry-model-router/ba-p/4494776)
 - [Prompt Engineering That Actually Works](https://hiddedesmet.com/prompt-engineering-that-actually-works)
 - [Microsoft Leaders Warn of AI's Impact on Junior Developers and Engineering Skills](https://www.devclass.com/development/2026/02/26/top-microsoft-execs-fret-about-impact-of-ai-on-software-engineering-profession/4091789)
@@ -283,14 +309,14 @@ Fabric gets broad platform updates, including a VS Code extension, Git integrati
 
 - [Fabric February 2026 Feature Summary](https://blog.fabric.microsoft.com/en-US/blog/fabric-february-2026-feature-summary/)
 - [Fabric Influencers Spotlight: Microsoft Fabric Community Highlights (February 2026)](https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-february-2026/)
-- [One View to Rule Them All: Exploring OneLake Catalog in Microsoft Fabric]({{ "/2026-02-25-One-View-to-Rule-Them-All-Exploring-OneLake-Catalog-in-Microsoft-Fabric.html" | relative_url }})
+- [One View to Rule Them All: Exploring OneLake Catalog in Microsoft Fabric](/2026-02-25-One-View-to-Rule-Them-All-Exploring-OneLake-Catalog-in-Microsoft-Fabric.html)
 
 ### SQL Platform for AI and Modern Analytics
 
 Microsoft SQL and Fabric platforms provide new vector and semantic search features, RAG integration, and real-time mirroring with OneLake. Developers gain T-SQL extensions for similarity and ranking, governance with Purview and row-level security, and AI-powered T-SQL authoring with Copilot. Guides cover migration, dataset creation, and SQL Pool configuration.
 
 - [Preparing Your Data Platform for the AI Revolution: Microsoft SQL and Fabric](https://blog.fabric.microsoft.com/en-US/blog/something-big-is-happening-is-your-data-platform-ready/)
-- [Smarter Queries Start Here: Vector Search in SQL Server & Azure SQL DB]({{ "/2026-02-24-Smarter-Queries-Start-Here-Vector-Search-in-SQL-Server-and-Azure-SQL-DB.html" | relative_url }})
+- [Smarter Queries Start Here: Vector Search in SQL Server & Azure SQL DB](/2026-02-24-Smarter-Queries-Start-Here-Vector-Search-in-SQL-Server-and-Azure-SQL-DB.html)
 
 ### Multi-Cloud Database Integration: Oracle Database@Azure
 
@@ -321,8 +347,8 @@ Updates for Azure Functions in Container Apps streamline background job and even
 
 A new ExpressRoute Gateway SKU delivers dynamic scaling, higher bandwidth, and multi-cloud redundancy. Video guides and technical content help teams migrate and maximize bandwidth.
 
-- [Overview of the New Scalable ExpressRoute Gateway SKU]({{ "/2026-02-26-Overview-of-the-New-Scalable-ExpressRoute-Gateway-SKU.html" | relative_url }})
-- [Scalable ExpressRoute Gateway: New SKU Deep Dive]({{ "/2026-02-25-Scalable-ExpressRoute-Gateway-New-SKU-Deep-Dive.html" | relative_url }})
+- [Overview of the New Scalable ExpressRoute Gateway SKU](/2026-02-26-Overview-of-the-New-Scalable-ExpressRoute-Gateway-SKU.html)
+- [Scalable ExpressRoute Gateway: New SKU Deep Dive](/2026-02-25-Scalable-ExpressRoute-Gateway-New-SKU-Deep-Dive.html)
 
 ### API Management, Observability, and Registry Scaling
 
@@ -337,16 +363,16 @@ Azure API Management sets new service caps, aligning scaling strategies. Azure M
 New central provisioning for Azure Local (using Azure Arc, ARM templates, and FIDO Onboarding) is now in public preview to simplify supply chain management for distributed applications. Migration guides cover VM transfer from VMware/Hyper-V to Azure Local without third-party tools, including synchronized cutover strategies for less downtime.
 
 - [Public Preview: Simplified Machine Provisioning for Azure Local via Azure Arc](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-public-preview-simplified-machine-provisioning-for/ba-p/4496811)
-- [Migrating VMs from VMware or Hyper-V to Azure Local with Azure Migrate]({{ "/2026-02-24-Migrating-VMs-from-VMware-or-Hyper-V-to-Azure-Local-with-Azure-Migrate.html" | relative_url }})
+- [Migrating VMs from VMware or Hyper-V to Azure Local with Azure Migrate](/2026-02-24-Migrating-VMs-from-VMware-or-Hyper-V-to-Azure-Local-with-Azure-Migrate.html)
 
 ### Other Azure News
 
 Recent developer tooling fixes target hosting and integration workflows, following last week's focus on OpenClaw deployment, OneLake/Databricks cross-integration, and troubleshooting. Security enhancements target vulnerability and compliance issues.
 
-- [Azure Update 27th February 2026: Latest Cloud Announcements and Tools]({{ "/2026-02-27-Azure-Update-27th-February-2026-Latest-Cloud-Announcements-and-Tools.html" | relative_url }})
+- [Azure Update 27th February 2026: Latest Cloud Announcements and Tools](/2026-02-27-Azure-Update-27th-February-2026-Latest-Cloud-Announcements-and-Tools.html)
 - [Hosting OpenClaw on Azure App Service: Full Guide](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/you-can-host-openclaw-on-azure-app-service-here-s-how/ba-p/4496563)
 - [Exploring Azure Face API: Facial Landmark Detection and Real-Time Analysis with C#](https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-azure-face-api-facial-landmark-detection-and-real-time/ba-p/4495335)
-- [Agent 365 and Agent ID Overview]({{ "/2026-02-23-Agent-365-and-Agent-ID-Overview.html" | relative_url }})
+- [Agent 365 and Agent ID Overview](/2026-02-23-Agent-365-and-Agent-ID-Overview.html)
 - [Processing CDC Streams Using Microsoft Fabric Eventstreams SQL](https://blog.fabric.microsoft.com/en-US/blog/processing-cdc-streams-using-fabric-eventstreams-sql/)
 - [How to Access a Shared OneDrive Folder in Azure Logic Apps](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-access-a-shared-onedrive-folder-in-azure-logic-apps/ba-p/4484962)
 - [Zero-Copy Access to OneLake Data in Azure Databricks (Preview)](https://blog.fabric.microsoft.com/en-US/blog/zero-copy-access-to-onelake-data-in-azure-databricks-preview/)
@@ -360,7 +386,7 @@ The Coding section offers guides for in-depth debugging and instrumentation, hel
 
 A new tutorial shows how VS Code leverages the Debug Adapter Protocol (DAP) for interactive Dockerfile debugging. Features include setting breakpoints, stepping through build stages, and inspecting commands during image creation. Integration with VS Code extensions and Docker tooling improves the troubleshooting process. Supporting resources are available for hands-on exploration.
 
-- [Debugging Dockerfiles in Visual Studio Code Using the Debug Adapter Protocol]({{ "/2026-02-27-Debugging-Dockerfiles-in-Visual-Studio-Code-Using-the-Debug-Adapter-Protocol.html" | relative_url }})
+- [Debugging Dockerfiles in Visual Studio Code Using the Debug Adapter Protocol](/2026-02-27-Debugging-Dockerfiles-in-Visual-Studio-Code-Using-the-Debug-Adapter-Protocol.html)
 
 ### Recording Metrics In-Process with MeterListener Using System.Diagnostics.Metrics
 
@@ -414,11 +440,11 @@ Actions now support macOS 26 (Apple Silicon and Intel), with new runner labels f
 
 A technical video covers actor-based DevOps migration within VS Code engineering, where agent modules manage distinct jobs and leverage multiple AI models for CI/CD. This modular approach aids rapid adaptation and robust automation.
 
-- [Building Agent-Based Workflows in VS Code: Insights from Kai Maetzel]({{ "/2026-02-23-Building-Agent-Based-Workflows-in-VS-Code-Insights-from-Kai-Maetzel.html" | relative_url }})
+- [Building Agent-Based Workflows in VS Code: Insights from Kai Maetzel](/2026-02-23-Building-Agent-Based-Workflows-in-VS-Code-Insights-from-Kai-Maetzel.html)
 
 On .NET Live highlights Cake.Sdk, which automates C# DevOps tasks in script files, with API-managed dependencies and debugging in IDE or CI.
 
-- [On .NET Live: Using Cake.Sdk for C# DevOps Automation]({{ "/2026-02-26-On-NET-Live-Using-CakeSdk-for-C-DevOps-Automation.html" | relative_url }})
+- [On .NET Live: Using Cake.Sdk for C# DevOps Automation](/2026-02-26-On-NET-Live-Using-CakeSdk-for-C-DevOps-Automation.html)
 
 ### Other DevOps News
 
@@ -428,7 +454,7 @@ Azure DevOps Team Calendar extension receives a new interface, responsive elemen
 
 The “GitHub for Beginners” series offers guided introductions to Issues, Actions, Pages, and VS Code for developers new to GitHub, including setup walkthroughs and collaboration best practices.
 
-- [GitHub for Beginners Season 3: Getting Started with GitHub Issues, Actions, and Pages]({{ "/2026-02-26-GitHub-for-Beginners-Season-3-Getting-Started-with-GitHub-Issues-Actions-and-Pages.html" | relative_url }})
+- [GitHub for Beginners Season 3: Getting Started with GitHub Issues, Actions, and Pages](/2026-02-26-GitHub-for-Beginners-Season-3-Getting-Started-with-GitHub-Issues-Actions-and-Pages.html)
 
 ## Security
 
@@ -452,22 +478,22 @@ CodeQL 2.24.2 introduces support for Go 1.26, Kotlin 2.3.10, and upgrades securi
 Guides detail threat modeling for AI applications, including non-deterministic behavior, prompt controls, and human-in-the-loop review. Secure cloud demos use Entra ID, Key Vault, and least privilege to control agent tools and access, building toward auditable zero trust AI workflows.
 
 - [Threat Modeling AI Applications: Adapting Security Practices for Modern AI Systems](https://www.microsoft.com/en-us/security/blog/2026/02/26/threat-modeling-ai-applications/)
-- [Zero-Trust Security for Autonomous AI Agents in Azure AI Foundry]({{ "/2026-02-24-Zero-Trust-Security-for-Autonomous-AI-Agents-in-Azure-AI-Foundry.html" | relative_url }})
+- [Zero-Trust Security for Autonomous AI Agents in Azure AI Foundry](/2026-02-24-Zero-Trust-Security-for-Autonomous-AI-Agents-in-Azure-AI-Foundry.html)
 
 ### Cloud Identity, Storage, and Access Governance
 
 Azure Storage now previews SAS delegation bound to Entra ID users to enforce fine-grained access and traceability. Entra ID Access Packages simplify onboarding/offboarding, enable just-in-time grants, and improve compliance workflows.
 
 - [Public Preview: Restrict Usage of User Delegation SAS to an Entra ID Identity](https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-restrict-usage-of-user-delegation-sas-to-an-entra/ba-p/4497196)
-- [Simplifying Access Governance with Microsoft Entra ID Access Packages]({{ "/2026-02-24-Simplifying-Access-Governance-with-Microsoft-Entra-ID-Access-Packages.html" | relative_url }})
+- [Simplifying Access Governance with Microsoft Entra ID Access Packages](/2026-02-24-Simplifying-Access-Governance-with-Microsoft-Entra-ID-Access-Packages.html)
 
 ### Security Automation, AI-Assisted Operations, and Data Governance
 
 Security operations centers (SOC) are embracing automation with Defender XDR and agent-based models, supporting expert/hybrid workflows for alerting and policy across Copilot, ChatGPT, and Gemini. Demos show automated incident management and data security policy enforcement.
 
 - [Scaling Security Operations with Microsoft Defender Autonomous Defense and Expert-Led Services](https://www.microsoft.com/en-us/security/blog/2026/02/24/scaling-security-operations-with-microsoft-defender-autonomous-defense-and-expert-led-services/)
-- [Securing AI Adoption with Microsoft's Data Security Posture Management (DSPM) for AI]({{ "/2026-02-24-Securing-AI-Adoption-with-Microsofts-Data-Security-Posture-Management-DSPM-for-AI.html" | relative_url }})
-- [Security Copilot in Action: From Alert to Remediation in 25 Minutes]({{ "/2026-02-24-Security-Copilot-in-Action-From-Alert-to-Remediation-in-25-Minutes.html" | relative_url }})
+- [Securing AI Adoption with Microsoft's Data Security Posture Management (DSPM) for AI](/2026-02-24-Securing-AI-Adoption-with-Microsofts-Data-Security-Posture-Management-DSPM-for-AI.html)
+- [Security Copilot in Action: From Alert to Remediation in 25 Minutes](/2026-02-24-Security-Copilot-in-Action-From-Alert-to-Remediation-in-25-Minutes.html)
 
 ### Other Security News
 

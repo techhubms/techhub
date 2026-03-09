@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How a Global Coalition Disrupted Tycoon 2FA: A Major Impersonation Platform"
-description: "This news article details Microsoft's role in the disruption of Tycoon 2FA, a large-scale phishing-as-a-service operation enabling cybercriminals to bypass MFA protections and impersonate legitimate users. It covers the technical mechanisms behind Tycoon 2FA, the scope of its impact—especially on Microsoft 365 users—and how coordinated public-private sector action globally helped dismantle its infrastructure."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2026/03/04/how-a-global-coalition-disrupted-tycoon/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/on-the-issues/2026/03/04/how-a-global-coalition-disrupted-tycoon/
+title: 'How a Global Coalition Disrupted Tycoon 2FA: A Major Impersonation Platform'
+author: stclarke
+primary_section: security
+feed_name: Microsoft News
 date: 2026-03-04 16:08:44 +00:00
-permalink: "/2026-03-04-How-a-Global-Coalition-Disrupted-Tycoon-2FA-A-Major-Impersonation-Platform.html"
-categories: ["Security"]
-tags: ["Azure AD", "Cloud Security", "Company News", "Credential Theft", "Cybercrime", "Digital Crimes Unit", "Education Security", "Europol", "Healthcare Security", "Identity Protection", "Incident Response", "Microsoft 365", "Microsoft Security", "Multifactor Authentication", "News", "Phishing", "Security", "Threat Intelligence", "Tycoon 2FA"]
-tags_normalized: ["azure ad", "cloud security", "company news", "credential theft", "cybercrime", "digital crimes unit", "education security", "europol", "healthcare security", "identity protection", "incident response", "microsoft 365", "microsoft security", "multifactor authentication", "news", "phishing", "security", "threat intelligence", "tycoon 2fa"]
+tags:
+- Azure AD
+- Cloud Security
+- Company News
+- Credential Theft
+- Cybercrime
+- Digital Crimes Unit
+- Education Security
+- Europol
+- Healthcare Security
+- Identity Protection
+- Incident Response
+- Microsoft 365
+- Microsoft Security
+- Multifactor Authentication
+- News
+- Phishing
+- Security
+- Threat Intelligence
+- Tycoon 2FA
+section_names:
+- security
 ---
-
 stclarke reports on the coordinated international disruption of Tycoon 2FA, highlighting Microsoft's security leadership and the technical, legal, and operational methods used to weaken one of the world’s fastest-growing phishing platforms.<!--excerpt_end-->
 
 # How a Global Coalition Disrupted Tycoon 2FA: A Major Impersonation Platform

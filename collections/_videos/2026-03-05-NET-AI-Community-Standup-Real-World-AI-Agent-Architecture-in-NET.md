@@ -1,20 +1,39 @@
----
-layout: "post"
-title: ".NET AI Community Standup: Real-World AI Agent Architecture in .NET"
-description: "This session explores production-ready patterns for building AI agent systems in .NET, featuring the open-source Interview Coach sample. The discussion covers Microsoft's Agent Framework, Foundry as the model backend, Model Context Protocol for tool integration, and Aspire for orchestration and observability. Key architectural topics include service topologies, agent patterns, telemetry, health checks, and model abstraction using IChatClient, as well as real-world deployment strategies with Azure Container Apps."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_b2RvYAlyUQ"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=_b2RvYAlyUQ
+title: '.NET AI Community Standup: Real-World AI Agent Architecture in .NET'
+author: dotnet
+primary_section: ai
+feed_name: DotNet YouTube
 date: 2026-03-05 21:46:46 +00:00
-permalink: "/2026-03-05-NET-AI-Community-Standup-Real-World-AI-Agent-Architecture-in-NET.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Agent Architecture", "AI Agents", "Aspire", "Azure", "Azure AI", "Azure Container Apps", "Coding", "Generative AI", "GenerativeAI", "IChatClient", "MAF", "MCP", "Microsoft Agent Framework", "Microsoft Foundry", "MicrosoftAI", "Model Abstraction", "Multi Agent Systems", "Observability", "Production Patterns", "Service Topology", "Telemetry", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai agent architecture", "ai agents", "aspire", "azure", "azure ai", "azure container apps", "coding", "generative ai", "generativeai", "ichatclient", "maf", "mcp", "microsoft agent framework", "microsoft foundry", "microsoftai", "model abstraction", "multi agent systems", "observability", "production patterns", "service topology", "telemetry", "videos"]
+tags:
+- .NET
+- AI
+- AI Agent Architecture
+- AI Agents
+- Aspire
+- Azure
+- Azure AI
+- Azure Container Apps
+- Generative AI
+- GenerativeAI
+- IChatClient
+- MAF
+- MCP
+- Microsoft Agent Framework
+- Microsoft Foundry
+- MicrosoftAI
+- Model Abstraction
+- Multi Agent Systems
+- Observability
+- Production Patterns
+- Service Topology
+- Telemetry
+- Videos
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 The .NET team, including Bruno Capuano and Justin Yoo, provides an enterprise-focused walkthrough of AI agent architectures in .NET, showcasing Microsoft's Agent Framework with deployment on Azure.<!--excerpt_end-->
 
 {% youtube _b2RvYAlyUQ %}

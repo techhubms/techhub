@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "npmx Package Browser Released as Alpha to Improve npmjs Experience"
-description: "This article introduces the alpha release of npmx, an alternative, open source browser for the npm package registry. The project, led by Daniel Roe and supported by Netlify and Bluesky, aims to address longstanding developer frustrations with the official npmjs site, including better package discovery, improved UI, and added social features."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/devops/2026/03/09/npmx-package-browser-released-as-alpha-to-fix-pain-of-using-npmjs/4093605"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/devops/2026/03/09/npmx-package-browser-released-as-alpha-to-fix-pain-of-using-npmjs/4093605
+title: npmx Package Browser Released as Alpha to Improve npmjs Experience
+author: DevClass.com
+primary_section: devops
+feed_name: DevClass
 date: 2026-03-09 08:04:50 +00:00
-permalink: "/2026-03-09-npmx-Package-Browser-Released-as-Alpha-to-Improve-npmjs-Experience.html"
-categories: ["DevOps"]
-tags: ["Atproto", "Blogs", "Bluesky", "Code Browser", "Dependency Management", "Developer Tools", "DevOps", "GitHub", "JavaScript", "Module Format", "Netlify", "npm", "Npmx", "Nuxt", "Open Source", "Package Management", "TypeScript", "Vercel"]
-tags_normalized: ["atproto", "blogs", "bluesky", "code browser", "dependency management", "developer tools", "devops", "github", "javascript", "module format", "netlify", "npm", "npmx", "nuxt", "open source", "package management", "typescript", "vercel"]
+tags:
+- Atproto
+- Blogs
+- Bluesky
+- Code Browser
+- Dependency Management
+- Developer Tools
+- DevOps
+- GitHub
+- JavaScript
+- Module Format
+- Netlify
+- npm
+- Npmx
+- Nuxt
+- Open Source
+- Package Management
+- TypeScript
+- Vercel
+section_names:
+- devops
 ---
-
 DevClass.com covers the alpha launch of npmx, an open source alternative browser for the npm registry led by Daniel Roe. The article discusses developer pain points with npmjs and how npmx addresses them.<!--excerpt_end-->
 
 # npmx Package Browser Released as Alpha to Improve npmjs Experience

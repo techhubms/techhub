@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Manage Your Flow with GitHub Issues and Projects"
-description: "This video guides viewers on how to improve team productivity and organization using GitHub Issues and Projects instead of relying solely on chat threads and meetings. It explains proven methods for tracking tasks, collaborating asynchronously, and managing development workflows directly within GitHub."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/p21hFYoXxIc"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/p21hFYoXxIc
+title: Manage Your Flow with GitHub Issues and Projects
+author: GitHub
+primary_section: devops
+feed_name: GitHub YouTube
 date: 2026-03-03 20:30:08 +00:00
-permalink: "/2026-03-03-Manage-Your-Flow-with-GitHub-Issues-and-Projects.html"
-categories: ["DevOps"]
-tags: ["Agile", "Asynchronous Work", "Development Workflow", "DevOps", "GitHub", "GitHub Issues", "GitHub Projects", "GitHubIssues", "GitHubProjects", "Project Tracking", "Software Development", "Task Management", "Team Collaboration", "Videos", "Work Organization"]
-tags_normalized: ["agile", "asynchronous work", "development workflow", "devops", "github", "github issues", "github projects", "githubissues", "githubprojects", "project tracking", "software development", "task management", "team collaboration", "videos", "work organization"]
+tags:
+- Agile
+- Asynchronous Work
+- Development Workflow
+- DevOps
+- GitHub
+- GitHub Issues
+- GitHub Projects
+- GitHubIssues
+- GitHubProjects
+- Project Tracking
+- Software Development
+- Task Management
+- Team Collaboration
+- Videos
+- Work Organization
+section_names:
+- devops
 ---
-
 GitHub presents an overview on leveraging GitHub Issues and Projects for streamlined team task management and asynchronous collaboration. Learn practical strategies to minimize distractions and keep your development process focused.<!--excerpt_end-->
 
 {% youtube p21hFYoXxIc %}

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microsoft Showcases Azure AI Infrastructure and Agentic AI at NVIDIA GTC 2026"
-description: "Microsoft's presence at NVIDIA GTC 2026 highlights Azure AI infrastructure powering AI training, inference, and production at global scale, featuring deep partnerships with NVIDIA. The event includes technical breakout sessions, demos of enterprise AI operations, hands-on agentic AI showcases, and discussions on scaling AI with Azure Foundry, agent-native production, and secure AI data practices."
-author: "Fernando_Aznar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/microsoft-at-nvidia-gtc-2026/ba-p/4497670"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/microsoft-at-nvidia-gtc-2026/ba-p/4497670
+title: Microsoft Showcases Azure AI Infrastructure and Agentic AI at NVIDIA GTC 2026
+author: Fernando_Aznar
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-27 16:47:56 +00:00
-permalink: "/2026-02-27-Microsoft-Showcases-Azure-AI-Infrastructure-and-Agentic-AI-at-NVIDIA-GTC-2026.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Benchmarking", "AI Factories", "AI Inference", "AI Training", "AKS", "Azure", "Azure AI Infrastructure", "Azure Copilot", "Community", "Confidential AI", "Data Orchestration", "Enterprise AI", "High Performance Computing", "LLM Inference", "Microsoft Foundry", "NVIDIA", "Open Source Models", "Robotics"]
-tags_normalized: ["agentic ai", "ai", "ai benchmarking", "ai factories", "ai inference", "ai training", "aks", "azure", "azure ai infrastructure", "azure copilot", "community", "confidential ai", "data orchestration", "enterprise ai", "high performance computing", "llm inference", "microsoft foundry", "nvidia", "open source models", "robotics"]
+tags:
+- Agentic AI
+- AI
+- AI Benchmarking
+- AI Factories
+- AI Inference
+- AI Training
+- AKS
+- Azure
+- Azure AI Infrastructure
+- Azure Copilot
+- Community
+- Confidential AI
+- Data Orchestration
+- Enterprise AI
+- High Performance Computing
+- LLM Inference
+- Microsoft Foundry
+- NVIDIA
+- Open Source Models
+- Robotics
+section_names:
+- ai
+- azure
 ---
-
 Fernando Aznar details Microsoft’s influential role at NVIDIA GTC 2026, highlighting Azure AI advancements, technical sessions on deploying agentic AI, and collaborative solutions with NVIDIA and partners across diverse industries.<!--excerpt_end-->
 
 # Microsoft at NVIDIA GTC 2026: Powering the Future of Scalable AI with Azure

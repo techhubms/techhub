@@ -1,20 +1,30 @@
----
-layout: "post"
+﻿---
+external_url: https://www.youtube.com/watch?v=BDxRhhs36ns
 title: "Getting Started with GitHub Copilot CLI: Beginner's Tutorial"
-description: "This beginner-friendly video walks viewers through installing and using the GitHub Copilot CLI, a terminal-based AI coding assistant. It covers setup steps—including npm installation, authentication with GitHub, and granting permissions—and demonstrates how to prompt the CLI to generate code from your terminal."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BDxRhhs36ns"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-09 16:00:15 +00:00
-permalink: "/2026-03-09-Getting-Started-with-GitHub-Copilot-CLI-Beginners-Tutorial.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Authentication", "Code Generation", "Command Line", "Copilot CLI", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "Installation", "npm", "Terminal", "Tutorial", "Videos"]
-tags_normalized: ["ai", "ai coding assistant", "authentication", "code generation", "command line", "copilot cli", "developer tools", "github", "github copilot", "github copilot cli", "installation", "npm", "terminal", "tutorial", "videos"]
+tags:
+- AI
+- AI Coding Assistant
+- Authentication
+- Code Generation
+- Command Line
+- Copilot CLI
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- GitHub Copilot CLI
+- Installation
+- npm
+- Terminal
+- Tutorial
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a step-by-step guide to setting up and using the GitHub Copilot CLI, showing how to install, authenticate, and start generating code directly from your terminal.<!--excerpt_end-->
 
 {% youtube BDxRhhs36ns %}

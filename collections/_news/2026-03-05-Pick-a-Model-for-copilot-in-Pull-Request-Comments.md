@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Pick a Model for @copilot in Pull Request Comments"
-description: "This update introduces the ability to select a model for the GitHub Copilot coding agent directly within pull request comments. By mentioning @copilot, users trigger a model picker interface, allowing them to choose from supported AI models to assist with coding tasks in PRs. This feature leverages GitHub Actions for automated background operations like building and testing. Currently, this functionality is available only on github.com within pull request comments, with plans for broader rollout."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-05-pick-a-model-for-copilot-in-pull-request-comments"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-05-pick-a-model-for-copilot-in-pull-request-comments
+title: Pick a Model for @copilot in Pull Request Comments
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-05 20:44:19 +00:00
-permalink: "/2026-03-05-Pick-a-Model-for-copilot-in-Pull-Request-Comments.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["@copilot", "AI", "AI Models", "Automation", "Continuous Integration", "Copilot", "Development Tools", "GitHub Actions", "GitHub Copilot", "Improvement", "Model Selection", "News", "PR Comments", "Pull Requests"]
-tags_normalized: ["atcopilot", "ai", "ai models", "automation", "continuous integration", "copilot", "development tools", "github actions", "github copilot", "improvement", "model selection", "news", "pr comments", "pull requests"]
+tags:
+- '@copilot'
+- AI
+- AI Models
+- Automation
+- Continuous Integration
+- Copilot
+- Development Tools
+- GitHub Actions
+- GitHub Copilot
+- Improvement
+- Model Selection
+- News
+- PR Comments
+- Pull Requests
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison explains how developers can now pick a model for GitHub Copilot in pull request comments, allowing flexible AI assistance directly from the PR workflow.<!--excerpt_end-->
 
 # Pick a Model for @copilot in Pull Request Comments

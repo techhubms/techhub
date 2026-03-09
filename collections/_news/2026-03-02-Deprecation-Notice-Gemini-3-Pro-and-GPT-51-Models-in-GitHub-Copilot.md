@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Deprecation Notice: Gemini 3 Pro and GPT-5.1 Models in GitHub Copilot"
-description: "This news update informs GitHub Copilot users and administrators about the upcoming deprecation of several AI models, including Gemini 3 Pro and GPT-5.1, across all Copilot experiences. It outlines deprecation dates, suggested replacement models, steps for updating workflows, and guidance for Copilot Enterprise administrators."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-02-upcoming-deprecation-of-gemini-3-pro-and-gpt-5-1-models"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-02-upcoming-deprecation-of-gemini-3-pro-and-gpt-5-1-models
+title: 'Deprecation Notice: Gemini 3 Pro and GPT-5.1 Models in GitHub Copilot'
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-02 20:47:00 +00:00
-permalink: "/2026-03-02-Deprecation-Notice-Gemini-3-Pro-and-GPT-51-Models-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "AI Models", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Settings", "Enterprise Administration", "Gemini 3 Pro", "GitHub Copilot", "GPT 5.1", "GPT 5.3 Codex", "Model Deprecation", "Model Selector", "News", "Retired", "VS Code", "Workflow Update"]
-tags_normalized: ["ai", "ai integration", "ai models", "copilot", "copilot chat", "copilot enterprise", "copilot settings", "enterprise administration", "gemini 3 pro", "github copilot", "gpt 5dot1", "gpt 5dot3 codex", "model deprecation", "model selector", "news", "retired", "vs code", "workflow update"]
+tags:
+- AI
+- AI Integration
+- AI Models
+- Copilot
+- Copilot Chat
+- Copilot Enterprise
+- Copilot Settings
+- Enterprise Administration
+- Gemini 3 Pro
+- GitHub Copilot
+- GPT 5.1
+- GPT 5.3 Codex
+- Model Deprecation
+- Model Selector
+- News
+- Retired
+- VS Code
+- Workflow Update
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the planned deprecation of Gemini 3 Pro and GPT-5.1 models in GitHub Copilot, providing key dates, alternatives, and guidance for developers and administrators.<!--excerpt_end-->
 
 # Deprecation Notice: Gemini 3 Pro and GPT-5.1 Models in GitHub Copilot

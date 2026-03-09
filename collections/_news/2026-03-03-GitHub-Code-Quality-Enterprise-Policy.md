@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Code Quality Enterprise Policy"
-description: "This announcement details updates to GitHub Advanced Security policies, allowing separate management of GitHub Code Quality and Code Security features. Enterprises can now configure the availability of Code Quality independently, improving governance and flexibility across repositories. The update also introduces a dedicated policy page for streamlined access and configuration."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-03-github-code-quality-enterprise-policy"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-03-github-code-quality-enterprise-policy
+title: GitHub Code Quality Enterprise Policy
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-03 19:07:26 +00:00
-permalink: "/2026-03-03-GitHub-Code-Quality-Enterprise-Policy.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Code Quality", "Code Security", "DevOps", "Enterprise Management Tools", "Enterprise Policy", "Enterprise Security", "GitHub", "GitHub Advanced Security", "News", "Platform Governance", "Policy Management", "Repository Management", "Security", "Security Policy"]
-tags_normalized: ["application security", "code quality", "code security", "devops", "enterprise management tools", "enterprise policy", "enterprise security", "github", "github advanced security", "news", "platform governance", "policy management", "repository management", "security", "security policy"]
+tags:
+- Application Security
+- Code Quality
+- Code Security
+- DevOps
+- Enterprise Management Tools
+- Enterprise Policy
+- Enterprise Security
+- GitHub
+- GitHub Advanced Security
+- News
+- Platform Governance
+- Policy Management
+- Repository Management
+- Security
+- Security Policy
+section_names:
+- devops
+- security
 ---
-
 Allison outlines how enterprises can now independently manage GitHub Code Quality through dedicated policies, enhancing flexibility and governance for development teams.<!--excerpt_end-->
 
 # GitHub Code Quality Enterprise Policy

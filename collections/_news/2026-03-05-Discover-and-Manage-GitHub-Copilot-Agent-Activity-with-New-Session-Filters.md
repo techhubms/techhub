@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Discover and Manage GitHub Copilot Agent Activity with New Session Filters"
-description: "This news update covers enhancements to GitHub Enterprise AI Controls and the agent control plane, which now feature additional session filters. These improvements provide enterprise administrators with more granular tools to search and manage agent activity, filtering by status, repository, and user for comprehensive oversight."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-05-discover-and-manage-agent-activity-with-new-session-filters"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-05-discover-and-manage-agent-activity-with-new-session-filters
+title: Discover and Manage GitHub Copilot Agent Activity with New Session Filters
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-05 22:37:24 +00:00
-permalink: "/2026-03-05-Discover-and-Manage-GitHub-Copilot-Agent-Activity-with-New-Session-Filters.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agent Control Plane", "Agentic Activity", "AI", "AI Controls", "Copilot", "DevOps", "DevOps Tools", "Enterprise AI Controls", "Enterprise Management", "Enterprise Management Tools", "GitHub Copilot", "Improvement", "News", "Repository Monitoring", "Session Filters", "Status Tracking", "User Management"]
-tags_normalized: ["agent control plane", "agentic activity", "ai", "ai controls", "copilot", "devops", "devops tools", "enterprise ai controls", "enterprise management", "enterprise management tools", "github copilot", "improvement", "news", "repository monitoring", "session filters", "status tracking", "user management"]
+tags:
+- Agent Control Plane
+- Agentic Activity
+- AI
+- AI Controls
+- Copilot
+- DevOps
+- DevOps Tools
+- Enterprise AI Controls
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub Copilot
+- Improvement
+- News
+- Repository Monitoring
+- Session Filters
+- Status Tracking
+- User Management
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison highlights improvements to GitHub Enterprise AI Controls, describing new session filters that simplify managing agent activity across organizations for enterprise administrators.<!--excerpt_end-->
 
 # Discover and Manage GitHub Copilot Agent Activity with New Session Filters

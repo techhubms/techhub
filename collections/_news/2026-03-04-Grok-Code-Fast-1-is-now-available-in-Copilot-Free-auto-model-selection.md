@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Grok Code Fast 1 is now available in Copilot Free auto model selection"
-description: "This changelog article announces that the Grok Code Fast 1 model is now generally available to users on Copilot Free plans via Copilot's auto model selection. The update applies to multiple IDEs, including Visual Studio Code, Visual Studio, JetBrains IDEs, Xcode, and Eclipse. Links are provided for more information about supported models and to participate in the GitHub Copilot community."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-04-grok-code-fast-1-is-now-available-in-copilot-free-auto-model-selection"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-04-grok-code-fast-1-is-now-available-in-copilot-free-auto-model-selection
+title: Grok Code Fast 1 is now available in Copilot Free auto model selection
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-04 18:21:02 +00:00
-permalink: "/2026-03-04-Grok-Code-Fast-1-is-now-available-in-Copilot-Free-auto-model-selection.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model", "Auto Model Selection", "Copilot", "Copilot Free", "Eclipse", "GitHub Copilot", "Grok Code Fast 1", "IDE Integration", "JetBrains IDEs", "News", "Software Development", "VS", "VS Code", "Xcode"]
-tags_normalized: ["ai", "ai model", "auto model selection", "copilot", "copilot free", "eclipse", "github copilot", "grok code fast 1", "ide integration", "jetbrains ides", "news", "software development", "vs", "vs code", "xcode"]
+tags:
+- AI
+- AI Model
+- Auto Model Selection
+- Copilot
+- Copilot Free
+- Eclipse
+- GitHub Copilot
+- Grok Code Fast 1
+- IDE Integration
+- JetBrains IDEs
+- News
+- Software Development
+- VS
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares that the Grok Code Fast 1 model is now available in Copilot Free auto model selection, offering developers more choices for AI-assisted coding across major IDEs.<!--excerpt_end-->
 
 # Grok Code Fast 1 is now available in Copilot Free auto model selection

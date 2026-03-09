@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "The LLM Inference Optimization Stack: A Playbook for Enterprise Teams on Azure"
-description: "This article by bobmital presents a prioritized set of optimizations for enterprise LLM inference workloads, focused on Microsoft Azure. It breaks down the inference serving architecture into three layers—AKS infrastructure, Ray Serve orchestration, and vLLM inference engine—then provides practical strategies for maximizing GPU efficiency, partitioning, quantization, inference engine tuning, and selecting open-source models. The guide targets technical leads building scalable, cost-effective LLM inference on Azure infrastructure."
-author: "bobmital"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-llm-inference-optimization-stack-a-prioritized-playbook-for/ba-p/4498818"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-llm-inference-optimization-stack-a-prioritized-playbook-for/ba-p/4498818
+title: 'The LLM Inference Optimization Stack: A Playbook for Enterprise Teams on Azure'
+author: bobmital
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-06 23:29:05 +00:00
-permalink: "/2026-03-06-The-LLM-Inference-Optimization-Stack-A-Playbook-for-Enterprise-Teams-on-Azure.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AKS", "Autoscaling", "Azure", "Community", "Continuous Batching", "DeepSeek", "Enterprise AI", "GPU Optimization", "Llama", "LLM Inference", "MIG", "Mistral", "ML", "Model Optimization", "Multi LoRA", "NVIDIA GPUs", "Open Source Models", "Prefill/Decode Separation", "Quantization", "Qwen", "Ray Serve", "Vllm"]
-tags_normalized: ["ai", "aks", "autoscaling", "azure", "community", "continuous batching", "deepseek", "enterprise ai", "gpu optimization", "llama", "llm inference", "mig", "mistral", "ml", "model optimization", "multi lora", "nvidia gpus", "open source models", "prefillslashdecode separation", "quantization", "qwen", "ray serve", "vllm"]
+tags:
+- AI
+- AKS
+- Autoscaling
+- Azure
+- Community
+- Continuous Batching
+- DeepSeek
+- Enterprise AI
+- GPU Optimization
+- Llama
+- LLM Inference
+- MIG
+- Mistral
+- ML
+- Model Optimization
+- Multi LoRA
+- NVIDIA GPUs
+- Open Source Models
+- Prefill/Decode Separation
+- Quantization
+- Qwen
+- Ray Serve
+- Vllm
+section_names:
+- ai
+- azure
+- ml
 ---
-
 bobmital shares a hands-on playbook for optimizing enterprise LLM inference on Azure, guiding technical teams through architecture, hardware selection, quantization, and model serving best practices across AKS, Ray Serve, and vLLM.<!--excerpt_end-->
 
 # The LLM Inference Optimization Stack: A Prioritized Playbook for Enterprise Teams

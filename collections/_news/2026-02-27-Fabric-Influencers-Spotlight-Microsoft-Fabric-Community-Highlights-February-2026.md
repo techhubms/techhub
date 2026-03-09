@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Fabric Influencers Spotlight: Microsoft Fabric Community Highlights (February 2026)"
-description: "This edition of the Fabric Influencers Spotlight highlights technical blog posts, tutorials, and presentations by Microsoft MVPs and Fabric Super Users. Covered topics include Power BI development, data engineering with Spark, Direct Lake architecture, data science with Python, operationalizing Fabric with Azure DevOps, real-time intelligence dashboards, advanced database mirroring, and insider guidance on Microsoft Fabric certifications."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-february-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-february-2026/
+title: 'Fabric Influencers Spotlight: Microsoft Fabric Community Highlights (February 2026)'
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-27 10:00:00 +00:00
-permalink: "/2026-02-27-Fabric-Influencers-Spotlight-Microsoft-Fabric-Community-Highlights-February-2026.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["Analytics", "Azure", "Azure DevOps", "Certification", "Coding", "Data Engineering", "Data Science", "Database Mirroring", "DAX", "DevOps", "Direct Lake", "DP 600", "Fabric Administration", "Fabric Data Agent", "KQL", "Lakehouse", "Microsoft Fabric", "ML", "News", "Operationalization", "Power BI", "Python", "Real Time Dashboards", "Spark Jobs"]
-tags_normalized: ["analytics", "azure", "azure devops", "certification", "coding", "data engineering", "data science", "database mirroring", "dax", "devops", "direct lake", "dp 600", "fabric administration", "fabric data agent", "kql", "lakehouse", "microsoft fabric", "ml", "news", "operationalization", "power bi", "python", "real time dashboards", "spark jobs"]
+tags:
+- Analytics
+- Azure
+- Azure DevOps
+- Certification
+- Data Engineering
+- Data Science
+- Database Mirroring
+- DAX
+- DevOps
+- Direct Lake
+- DP 600
+- Fabric Administration
+- Fabric Data Agent
+- KQL
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- Operationalization
+- Power BI
+- Python
+- Real Time Dashboards
+- Spark Jobs
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- ml
 ---
-
 The Microsoft Fabric Blog team showcases contributions from MVPs and Super Users, featuring technical insights and practical guides on Microsoft Fabric tools, real-time analytics, Power BI development, Spark automation, and exam readiness. This summary highlights hands-on expertise shared by community leaders.<!--excerpt_end-->
 
 # Fabric Influencers Spotlight: Microsoft Fabric Community Highlights (February 2026)

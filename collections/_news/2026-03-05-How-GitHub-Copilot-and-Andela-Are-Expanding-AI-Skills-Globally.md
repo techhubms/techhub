@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How GitHub Copilot and Andela Are Expanding AI Skills Globally"
-description: "A detailed analysis of GitHub and Andela’s partnership to provide structured AI access and training to developers worldwide. The article explores real-world integration of GitHub Copilot into production workflows, the impact on developer productivity, and how access to AI tools shapes global developer opportunities."
-author: "Admas Kanyagia"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/career-growth/scaling-ai-opportunity-across-the-globe-learnings-from-github-and-andela/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/developer-skills/career-growth/scaling-ai-opportunity-across-the-globe-learnings-from-github-and-andela/
+title: How GitHub Copilot and Andela Are Expanding AI Skills Globally
+author: Admas Kanyagia
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-05 17:00:00 +00:00
-permalink: "/2026-03-05-How-GitHub-Copilot-and-Andela-Are-Expanding-AI-Skills-Globally.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Tools", "AI Skilling", "AI Training", "Andela", "Career Growth", "Developer Productivity", "Developer Skills", "GitHub Copilot", "Global Talent", "Legacy Code", "Mentorship", "News", "Onboarding", "Production Workflows", "Software Engineering", "Technical Enablement", "Unit Testing"]
-tags_normalized: ["ai", "ai coding tools", "ai skilling", "ai training", "andela", "career growth", "developer productivity", "developer skills", "github copilot", "global talent", "legacy code", "mentorship", "news", "onboarding", "production workflows", "software engineering", "technical enablement", "unit testing"]
+tags:
+- AI
+- AI Coding Tools
+- AI Skilling
+- AI Training
+- Andela
+- Career Growth
+- Developer Productivity
+- Developer Skills
+- GitHub Copilot
+- Global Talent
+- Legacy Code
+- Mentorship
+- News
+- Onboarding
+- Production Workflows
+- Software Engineering
+- Technical Enablement
+- Unit Testing
+section_names:
+- ai
+- github-copilot
 ---
-
 Admas Kanyagia shares how GitHub and Andela have partnered to upskill developers globally by training thousands to use GitHub Copilot and integrating AI into real production work.<!--excerpt_end-->
 
 # How GitHub Copilot and Andela Are Expanding AI Skills Globally

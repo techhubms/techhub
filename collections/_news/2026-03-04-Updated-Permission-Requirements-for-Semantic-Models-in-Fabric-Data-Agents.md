@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Updated Permission Requirements for Semantic Models in Fabric Data Agents"
-description: "This announcement details changes to the permission model for interacting with semantic models in Microsoft Fabric data agents. Previously, both creators and consumers needed member-level workspace access and build permission to use semantic models. The updated model now allows interaction with just read permission, simplifying access while maintaining security."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/update-to-required-permissions-for-semantic-models-in-fabric-data-agents/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/update-to-required-permissions-for-semantic-models-in-fabric-data-agents/
+title: Updated Permission Requirements for Semantic Models in Fabric Data Agents
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-03-04 09:00:00 +00:00
-permalink: "/2026-03-04-Updated-Permission-Requirements-for-Semantic-Models-in-Fabric-Data-Agents.html"
-categories: ["ML"]
-tags: ["Access Control", "AI", "BI Development", "Build Permission", "Data Agents", "Data Modeling", "Data Security", "Microsoft Fabric", "ML", "News", "Permissions", "Prep For AI", "Read Permission", "Semantic Models", "Workspace Roles"]
-tags_normalized: ["access control", "ai", "bi development", "build permission", "data agents", "data modeling", "data security", "microsoft fabric", "ml", "news", "permissions", "prep for ai", "read permission", "semantic models", "workspace roles"]
+tags:
+- Access Control
+- AI
+- BI Development
+- Build Permission
+- Data Agents
+- Data Modeling
+- Data Security
+- Microsoft Fabric
+- ML
+- News
+- Permissions
+- Prep For AI
+- Read Permission
+- Semantic Models
+- Workspace Roles
+section_names:
+- ml
 ---
-
 The Microsoft Fabric Blog team explains the updated, simplified permissions required to use semantic models in Fabric data agents, making it easier for users with read access to interact with these models.<!--excerpt_end-->
 
 # Updated Permission Requirements for Semantic Models in Fabric Data Agents

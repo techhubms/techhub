@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Azure Update 27th February 2026: Latest Cloud Announcements and Tools"
-description: "This weekly Azure update by John Savill's Technical Training covers recent changes and new features in Microsoft Azure, highlighting AKS Windows Server retirements, updates to App Gateway WAF Insights, integration of Blob SAS with Entra ID, Azure AI Search sensitivity support, new OpenAI models in Foundry, Azure Monitor pipeline updates, GitHub Copilot CLI news, and more."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Tnq0SmW5TPY"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=Tnq0SmW5TPY
+title: 'Azure Update 27th February 2026: Latest Cloud Announcements and Tools'
+author: John Savill's Technical Training
+primary_section: github-copilot
+feed_name: John Savill's Technical Training
 date: 2026-02-27 16:38:13 +00:00
-permalink: "/2026-02-27-Azure-Update-27th-February-2026-Latest-Cloud-Announcements-and-Tools.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
-tags: ["AI", "AKS", "App Gateway WAF", "Azure", "Azure AI Search", "Azure Cloud", "Azure Monitor", "Blob Storage", "Cloud", "Cloud Updates", "Coding", "Data Backup", "DevOps", "Entra ID", "GitHub Copilot", "GitHub Copilot CLI", "Microsoft", "Microsoft Azure", "ML", "OpenAI Foundry", "Pipeline", "PostgreSQL", "SAS Token", "Security", "Sensitivity Labels", "SQL Server", "Videos", "VS Code", "Windows Server"]
-tags_normalized: ["ai", "aks", "app gateway waf", "azure", "azure ai search", "azure cloud", "azure monitor", "blob storage", "cloud", "cloud updates", "coding", "data backup", "devops", "entra id", "github copilot", "github copilot cli", "microsoft", "microsoft azure", "ml", "openai foundry", "pipeline", "postgresql", "sas token", "security", "sensitivity labels", "sql server", "videos", "vs code", "windows server"]
+tags:
+- AI
+- AKS
+- App Gateway WAF
+- Azure
+- Azure AI Search
+- Azure Cloud
+- Azure Monitor
+- Blob Storage
+- Cloud Updates
+- Data Backup
+- DevOps
+- Entra ID
+- GitHub Copilot
+- GitHub Copilot CLI
+- Microsoft
+- Microsoft Azure
+- ML
+- OpenAI Foundry
+- Pipeline
+- PostgreSQL
+- SAS Token
+- Security
+- Sensitivity Labels
+- SQL Server
+- Videos
+- VS Code
+- Windows Server
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+- ml
+- security
 ---
-
 John Savill's Technical Training shares the top Azure updates for late February 2026, covering new AI features, security changes, cloud infrastructure news, developer tools, and integration highlights.<!--excerpt_end-->
 
 {% youtube Tnq0SmW5TPY %}

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub for Beginners: Mastering Issues and Projects"
-description: "This beginner-friendly guide by Kedasha Kerr explains how to create and manage GitHub Issues and Projects, providing step-by-step instructions for organizing tasks, tracking progress, and improving collaboration using GitHub's core project management features. Learn to integrate issues with project boards and streamline your workflow."
-author: "Kedasha Kerr"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-issues-and-projects/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-issues-and-projects/
+title: 'GitHub for Beginners: Mastering Issues and Projects'
+author: Kedasha Kerr
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-02 17:00:00 +00:00
-permalink: "/2026-03-02-GitHub-for-Beginners-Mastering-Issues-and-Projects.html"
-categories: ["DevOps"]
-tags: ["Agile", "Beginner Tutorial", "Collaboration", "Developer Skills", "Developer Tools", "DevOps", "Documentation", "GitHub", "GitHub For Beginners", "GitHub Issues", "GitHub Projects", "Issue Management", "Kanban", "News", "Open Source", "Project Management", "Task Tracking", "Workflow"]
-tags_normalized: ["agile", "beginner tutorial", "collaboration", "developer skills", "developer tools", "devops", "documentation", "github", "github for beginners", "github issues", "github projects", "issue management", "kanban", "news", "open source", "project management", "task tracking", "workflow"]
+tags:
+- Agile
+- Beginner Tutorial
+- Collaboration
+- Developer Skills
+- Developer Tools
+- DevOps
+- Documentation
+- GitHub
+- GitHub For Beginners
+- GitHub Issues
+- GitHub Projects
+- Issue Management
+- Kanban
+- News
+- Open Source
+- Project Management
+- Task Tracking
+- Workflow
+section_names:
+- devops
 ---
-
 Kedasha Kerr's tutorial guides beginners through setting up and managing GitHub Issues and Projects, empowering teams to organize their workflows and collaborate more effectively.<!--excerpt_end-->
 
 # GitHub for Beginners: Mastering Issues and Projects

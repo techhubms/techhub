@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure IaaS: Building Resilient and Scalable Cloud Infrastructure for the AI Era"
-description: "This article introduces the Azure IaaS (Infrastructure as a Service) Resource Center, providing an in-depth look at best practices, architectures, and strategies for designing, optimizing, and operating scalable, resilient, and secure cloud infrastructure on Azure. The content emphasizes how Azure IaaS supports critical workloads, including the demands of AI adoption, and explores built-in security, flexible scaling, and cost optimization features."
-author: "Maria Bledsoe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/
+title: 'Azure IaaS: Building Resilient and Scalable Cloud Infrastructure for the AI Era'
+author: Maria Bledsoe
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-03-04 17:00:00 +00:00
-permalink: "/2026-03-04-Azure-IaaS-Building-Resilient-and-Scalable-Cloud-Infrastructure-for-the-AI-Era.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Workloads", "Azure", "Azure Firewall", "Azure IaaS", "Cloud Infrastructure", "Cloud Security", "Compliance", "Compute", "Cost Optimization", "DDoS Protection", "Disaster Recovery", "High Availability", "Identity", "Identity And Access Management", "Microsoft Entra ID", "Networking", "News", "Resiliency", "Scalability", "Security", "Storage", "Virtual Machines"]
-tags_normalized: ["ai", "ai workloads", "azure", "azure firewall", "azure iaas", "cloud infrastructure", "cloud security", "compliance", "compute", "cost optimization", "ddos protection", "disaster recovery", "high availability", "identity", "identity and access management", "microsoft entra id", "networking", "news", "resiliency", "scalability", "security", "storage", "virtual machines"]
+tags:
+- AI
+- AI Workloads
+- Azure
+- Azure Firewall
+- Azure IaaS
+- Cloud Infrastructure
+- Cloud Security
+- Compliance
+- Compute
+- Cost Optimization
+- DDoS Protection
+- Disaster Recovery
+- High Availability
+- Identity
+- Identity And Access Management
+- Microsoft Entra ID
+- Networking
+- News
+- Resiliency
+- Scalability
+- Security
+- Storage
+- Virtual Machines
+section_names:
+- ai
+- azure
+- security
 ---
-
 Maria Bledsoe presents an overview of Azure IaaS, highlighting resources and guidance for building secure, scalable, and resilient infrastructure ready for AI and modern workloads.<!--excerpt_end-->
 
 # Azure IaaS: Building Resilient and Scalable Cloud Infrastructure for the AI Era

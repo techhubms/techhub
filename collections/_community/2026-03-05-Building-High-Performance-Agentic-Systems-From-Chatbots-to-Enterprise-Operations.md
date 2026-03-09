@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Building High-Performance Agentic Systems: From Chatbots to Enterprise Operations"
-description: "This in-depth community post explores the engineering realities of building agentic AI—autonomous, tool-integrated, orchestrated, and governed systems that move beyond traditional chatbots. It focuses on Microsoft technologies including Azure AI Foundry and Copilot Studio, discussing architecture, real-world deployments, design challenges, and best practices for deploying agentic AI in production environments."
-author: "sgangaramani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-high-performance-agentic-systems/ba-p/4497391"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-high-performance-agentic-systems/ba-p/4497391
+title: 'Building High-Performance Agentic Systems: From Chatbots to Enterprise Operations'
+author: sgangaramani
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-05 08:00:00 +00:00
-permalink: "/2026-03-05-Building-High-Performance-Agentic-Systems-From-Chatbots-to-Enterprise-Operations.html"
-categories: ["AI", "Azure"]
-tags: ["A2A Interoperability", "Agentic AI", "AI", "AI Agents", "Azure", "Azure AI Foundry", "Community", "Copilot Studio", "Enterprise AI", "Governance", "LLM", "Logic Apps", "MCP", "Memory Management", "Microsoft Graph", "Operational Telemetry", "Orchestration", "Power Automate", "Production Systems", "Retrieval Augmented Generation", "Security Policies", "Semantic Kernel", "Tool Integration"]
-tags_normalized: ["a2a interoperability", "agentic ai", "ai", "ai agents", "azure", "azure ai foundry", "community", "copilot studio", "enterprise ai", "governance", "llm", "logic apps", "mcp", "memory management", "microsoft graph", "operational telemetry", "orchestration", "power automate", "production systems", "retrieval augmented generation", "security policies", "semantic kernel", "tool integration"]
+tags:
+- A2A Interoperability
+- Agentic AI
+- AI
+- AI Agents
+- Azure
+- Azure AI Foundry
+- Community
+- Copilot Studio
+- Enterprise AI
+- Governance
+- LLM
+- Logic Apps
+- MCP
+- Memory Management
+- Microsoft Graph
+- Operational Telemetry
+- Orchestration
+- Power Automate
+- Production Systems
+- Retrieval Augmented Generation
+- Security Policies
+- Semantic Kernel
+- Tool Integration
+section_names:
+- ai
+- azure
 ---
-
 sgangaramani offers a comprehensive guide to building production-ready agentic AI systems, highlighting how Microsoft Azure AI Foundry, Copilot Studio, and related tooling enable scalable and governed enterprise automation beyond chatbots.<!--excerpt_end-->
 
 # Building High-Performance Agentic Systems: From Chatbots to Enterprise Operations

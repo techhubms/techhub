@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How AI is Changing the 'Shift Left' Mindset in Security – Insights from GitHub Octoverse 2025"
-description: "This video features Xavier René-Corail, Senior Director at GitHub Security, as he interprets the key security findings from the Octoverse 2025 report. The discussion highlights advancements in fix times (with Dependabot), the practical risks of broken access control, and the growing influence of AI—especially in accelerating bug fixes and shifting security practices earlier in the development process. Xavier also assesses the continued importance of human code review and practical strategies for developers to navigate modern security risks with the help of AI and GitHub tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=sJjISI3Li4I"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=sJjISI3Li4I
+title: How AI is Changing the 'Shift Left' Mindset in Security – Insights from GitHub Octoverse 2025
+author: GitHub
+primary_section: ai
+feed_name: GitHub YouTube
 date: 2026-03-03 16:01:12 +00:00
-permalink: "/2026-03-03-How-AI-is-Changing-the-Shift-Left-Mindset-in-Security-Insights-from-GitHub-Octoverse-2025.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "Broken Access Control", "Bug Fixing", "Code Review", "Copilot Autofix", "Dependabot", "Developer Security", "DevOps", "GitHub", "Human AI Collaboration", "Octoverse", "Security", "Shift Left", "Videos"]
-tags_normalized: ["ai", "broken access control", "bug fixing", "code review", "copilot autofix", "dependabot", "developer security", "devops", "github", "human ai collaboration", "octoverse", "security", "shift left", "videos"]
+tags:
+- AI
+- Broken Access Control
+- Bug Fixing
+- Code Review
+- Copilot Autofix
+- Dependabot
+- Developer Security
+- DevOps
+- GitHub
+- Human AI Collaboration
+- Octoverse
+- Security
+- Shift Left
+- Videos
+section_names:
+- ai
+- devops
+- security
 ---
-
 GitHub's Xavier René-Corail shares his analysis of Octoverse 2025's security insights, focusing on AI's role in shifting security left, faster remediation with Dependabot, and why code review remains essential.<!--excerpt_end-->
 
 {% youtube sJjISI3Li4I %}

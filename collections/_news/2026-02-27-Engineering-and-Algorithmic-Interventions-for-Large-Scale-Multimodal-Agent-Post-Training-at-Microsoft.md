@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Engineering and Algorithmic Interventions for Large-Scale Multimodal Agent Post-Training at Microsoft"
-description: "This article, authored by Aditya Challapally, details the engineering and algorithmic interventions developed by Microsoft for robust post-training of multimodal agent models at massive production scale. Focusing on Copilot agent capabilities, the post discusses failure modes and the solutions necessary to maintain performance and reliability in real-world, multimodal enterprise settings."
-author: "Aditya Challapally"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/engineering-at-microsoft/engineering-and-algorithmic-interventions-for-multimodal-post-training-at-microsoft-scale/"
-viewing_mode: "external"
-feed_name: "Microsoft Engineering Blog"
-feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/engineering-at-microsoft/engineering-and-algorithmic-interventions-for-multimodal-post-training-at-microsoft-scale/
+title: Engineering and Algorithmic Interventions for Large-Scale Multimodal Agent Post-Training at Microsoft
+author: Aditya Challapally
+primary_section: ai
+feed_name: Microsoft Engineering Blog
 date: 2026-02-27 18:05:59 +00:00
-permalink: "/2026-02-27-Engineering-and-Algorithmic-Interventions-for-Large-Scale-Multimodal-Agent-Post-Training-at-Microsoft.html"
-categories: ["AI", "ML"]
-tags: ["AI", "Algorithmic Interventions", "Content Moderation", "Copilot", "Curriculum Learning", "Deep Learning", "Engineering At Scale", "Engineering@Microsoft", "Enterprise AI", "ESS", "Gradient Normalization", "Microsoft AI", "ML", "Model Training", "Multimodal Agents", "News", "Parallelism", "Performance", "Policy Gradient", "Production Systems", "Reinforcement Learning"]
-tags_normalized: ["ai", "algorithmic interventions", "content moderation", "copilot", "curriculum learning", "deep learning", "engineering at scale", "engineeringatmicrosoft", "enterprise ai", "ess", "gradient normalization", "microsoft ai", "ml", "model training", "multimodal agents", "news", "parallelism", "performance", "policy gradient", "production systems", "reinforcement learning"]
+tags:
+- AI
+- Algorithmic Interventions
+- Content Moderation
+- Copilot
+- Curriculum Learning
+- Deep Learning
+- Engineering At Scale
+- Engineering@Microsoft
+- Enterprise AI
+- ESS
+- Gradient Normalization
+- Microsoft AI
+- ML
+- Model Training
+- Multimodal Agents
+- News
+- Parallelism
+- Performance
+- Policy Gradient
+- Production Systems
+- Reinforcement Learning
+section_names:
+- ai
+- ml
 ---
-
 Aditya Challapally describes Microsoft's post-training research and infrastructure for Copilot agent capabilities, detailing engineering and algorithmic interventions to overcome multimodal agent training challenges at production scale.<!--excerpt_end-->
 
 # Engineering and Algorithmic Interventions for Multimodal Post-Training at Microsoft Scale

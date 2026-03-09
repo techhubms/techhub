@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Platform Engineering for the Agentic AI Era"
-description: "This in-depth analysis explores how AI agents are transforming platform engineering, shifting the interaction model from traditional Infrastructure as Code (IaC) modules and explicit pipelines toward AI-driven intent, compliance, and policy enforcement. The article highlights present practices, the evolving role of IaC, enforcement layers, security, and the impact of Copilot and Defender integrations for Azure DevOps."
-author: "arnaud, davidwright"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/platform-engineering-for-the-agentic-ai-era/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/platform-engineering-for-the-agentic-ai-era/
+title: Platform Engineering for the Agentic AI Era
+author: arnaud, davidwright
+primary_section: github-copilot
+feed_name: Microsoft All Things Azure Blog
 date: 2026-03-05 05:47:29 +00:00
-permalink: "/2026-03-05-Platform-Engineering-for-the-Agentic-AI-Era.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic DevOps", "Agents", "AI", "AI Agents", "API Governance", "ARM", "Azure", "Azure Policy", "Bicep", "Compliance", "Copilot Spaces", "Custom Agents", "Defender", "Defender For Cloud", "DevOps", "GitHub Copilot", "IaC", "Microsoft Defender", "News", "Operations", "Pipeline Automation", "Platform Engineering", "Policy as Code", "Security", "Terraform", "Thought Leadership"]
-tags_normalized: ["agentic devops", "agents", "ai", "ai agents", "api governance", "arm", "azure", "azure policy", "bicep", "compliance", "copilot spaces", "custom agents", "defender", "defender for cloud", "devops", "github copilot", "iac", "microsoft defender", "news", "operations", "pipeline automation", "platform engineering", "policy as code", "security", "terraform", "thought leadership"]
+tags:
+- Agentic DevOps
+- Agents
+- AI
+- AI Agents
+- API Governance
+- ARM
+- Azure
+- Azure Policy
+- Bicep
+- Compliance
+- Copilot Spaces
+- Custom Agents
+- Defender
+- Defender For Cloud
+- DevOps
+- GitHub Copilot
+- IaC
+- Microsoft Defender
+- News
+- Operations
+- Pipeline Automation
+- Platform Engineering
+- Policy as Code
+- Security
+- Terraform
+- Thought Leadership
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+- security
 ---
-
 Arnaud Lheureux and David Wright discuss the evolving role of AI agents, Copilot, and Defender in platform engineering for Azure, outlining how intent-driven workflows and automated compliance are reshaping modern DevOps.<!--excerpt_end-->
 
 # Platform Engineering for the Agentic AI Era

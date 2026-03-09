@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "What's New in Visual Studio Code Insiders 1.111"
-description: "This article details the latest features and improvements in Visual Studio Code Insiders version 1.111. It covers updates to Copilot integrations, source control enhancements, terminal and agent features, and accessibility improvements. Aimed at developers seeking cutting-edge VS Code functionality, these release notes summarize changes made daily through early March 2026."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_111"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/updates/v1_111
+title: What's New in Visual Studio Code Insiders 1.111
+author: Visual Studio Code Team
+primary_section: github-copilot
+feed_name: Visual Studio Code Releases
 date: 2026-04-02 17:00:00 +00:00
-permalink: "/2026-04-02-Whats-New-in-Visual-Studio-Code-Insiders-1111.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Plugins", "Agent Sessions", "AI", "AI CLI", "Chatbots", "Coding", "Copilot Chat", "Copilot CLI", "Custom Agents", "Extensions", "GitHub Copilot", "Keyboard Shortcuts", "Localization", "News", "Observability", "OpenTelemetry", "Release Notes", "Source Control", "Telemetry", "VS Code", "VS Code Insiders"]
-tags_normalized: ["accessibility", "agent plugins", "agent sessions", "ai", "ai cli", "chatbots", "coding", "copilot chat", "copilot cli", "custom agents", "extensions", "github copilot", "keyboard shortcuts", "localization", "news", "observability", "opentelemetry", "release notes", "source control", "telemetry", "vs code", "vs code insiders"]
+tags:
+- Accessibility
+- Agent Plugins
+- Agent Sessions
+- AI
+- AI CLI
+- Chatbots
+- Copilot Chat
+- Copilot CLI
+- Custom Agents
+- Extensions
+- GitHub Copilot
+- Keyboard Shortcuts
+- Localization
+- News
+- Observability
+- OpenTelemetry
+- Release Notes
+- Source Control
+- Telemetry
+- VS Code
+- VS Code Insiders
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code Team summarizes the new features in VS Code Insiders 1.111, including improvements to Copilot integration, source control, agent plugins, and accessibility.<!--excerpt_end-->
 
 # What's New in Visual Studio Code Insiders 1.111

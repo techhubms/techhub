@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Stop Burning Money in Azure Storage"
-description: "A practical guide for engineers, architects, and FinOps teams on optimizing Azure Blob Storage costs. It covers the differences between blob access tiers, using Smart Tier and Lifecycle Management, preventing common cost traps, and provides actionable checklists and real-world tips for reducing unnecessary Azure storage expenses."
-author: "Sabyasachi-Samaddar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/stop-burning-money-in-azure-storage/ba-p/4500208"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/stop-burning-money-in-azure-storage/ba-p/4500208
+title: Stop Burning Money in Azure Storage
+author: Sabyasachi-Samaddar
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-09 03:19:14 +00:00
-permalink: "/2026-03-09-Stop-Burning-Money-in-Azure-Storage.html"
-categories: ["Azure"]
-tags: ["Append Blobs", "Archive Tier", "Azure", "Azure Blob Storage", "Blob Inventory", "Block Blobs", "Cold Tier", "Community", "Cool Tier", "Cost Optimization", "Data Box", "Early Deletion Penalty", "FinOps", "Hot Tier", "Last Access Tracking", "Lifecycle Management", "Monitoring", "Page Blobs", "Smart Tier", "Storage Access Tiers", "Storage Costs", "Tier Transition"]
-tags_normalized: ["append blobs", "archive tier", "azure", "azure blob storage", "blob inventory", "block blobs", "cold tier", "community", "cool tier", "cost optimization", "data box", "early deletion penalty", "finops", "hot tier", "last access tracking", "lifecycle management", "monitoring", "page blobs", "smart tier", "storage access tiers", "storage costs", "tier transition"]
+tags:
+- Append Blobs
+- Archive Tier
+- Azure
+- Azure Blob Storage
+- Blob Inventory
+- Block Blobs
+- Cold Tier
+- Community
+- Cool Tier
+- Cost Optimization
+- Data Box
+- Early Deletion Penalty
+- FinOps
+- Hot Tier
+- Last Access Tracking
+- Lifecycle Management
+- Monitoring
+- Page Blobs
+- Smart Tier
+- Storage Access Tiers
+- Storage Costs
+- Tier Transition
+section_names:
+- azure
 ---
-
 Sabyasachi-Samaddar provides a hands-on breakdown of Azure Blob Storage cost optimization for technical practitioners, covering access tiers, practical strategies, and the pitfalls that lead to sky-high cloud bills.<!--excerpt_end-->
 
 # Stop Burning Money in Azure Storage

@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Anders Hejlsberg Discusses the Evolution from AI Assistant to AI Agent"
-description: "In this video, Anders Hejlsberg discusses the changing landscape of software development as AI transitions from being a simple assistant to taking on more autonomous roles. The conversation covers the future of coding tools, the relevance of IDEs, and the role of the Model Context Protocol (MCP) in connecting disparate development tools and workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/JgbFjTICd3g"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/JgbFjTICd3g
+title: Anders Hejlsberg Discusses the Evolution from AI Assistant to AI Agent
+author: GitHub
+primary_section: ai
+feed_name: GitHub YouTube
 date: 2026-03-04 18:00:16 +00:00
-permalink: "/2026-03-04-Anders-Hejlsberg-Discusses-the-Evolution-from-AI-Assistant-to-AI-Agent.html"
-categories: ["AI"]
-tags: ["AI", "AI Agent", "AI Agents", "AI in Software Development", "Anders Hejlsberg", "AndersHejlsberg", "Autonomous Development", "Developer Tools", "Future Of IDEs", "GitHub", "MCP", "Software Engineering", "Videos"]
-tags_normalized: ["ai", "ai agent", "ai agents", "ai in software development", "anders hejlsberg", "andershejlsberg", "autonomous development", "developer tools", "future of ides", "github", "mcp", "software engineering", "videos"]
+tags:
+- AI
+- AI Agent
+- AI Agents
+- AI in Software Development
+- Anders Hejlsberg
+- AndersHejlsberg
+- Autonomous Development
+- Developer Tools
+- Future Of IDEs
+- GitHub
+- MCP
+- Software Engineering
+- Videos
+section_names:
+- ai
 ---
-
 In this insightful video, GitHub presents Anders Hejlsberg's perspective on the transition from AI as a coding assistant to AI acting as an autonomous agent, with discussion on future developer tooling.<!--excerpt_end-->
 
 {% youtube JgbFjTICd3g %}

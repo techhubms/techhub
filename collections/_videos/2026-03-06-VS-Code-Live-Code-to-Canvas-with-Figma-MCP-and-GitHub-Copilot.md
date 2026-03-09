@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "VS Code Live: Code to Canvas with Figma MCP and GitHub Copilot"
-description: "This video introduces the new bidirectional Figma MCP server, enabling seamless integration between Figma and GitHub Copilot within Visual Studio Code. Viewers will learn how developers can pull Figma design context directly into code and push UI updates from code back to the Figma canvas using VS Code or the CLI."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=O1i-Te78-u4"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=O1i-Te78-u4
+title: 'VS Code Live: Code to Canvas with Figma MCP and GitHub Copilot'
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-03-06 17:14:50 +00:00
-permalink: "/2026-03-06-VS-Code-Live-Code-to-Canvas-with-Figma-MCP-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "Bidirectional Integration", "CLI", "Code", "Code Editor", "Codeeditor", "Coding", "Demo", "Design To Code", "Developer", "Developer Community", "Developer Tools", "Figma", "Figma Integration", "Figma MCP", "Frontend Development", "GitHub Copilot", "Microsoft", "UI Development", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai assisted coding", "bidirectional integration", "cli", "code", "code editor", "codeeditor", "coding", "demo", "design to code", "developer", "developer community", "developer tools", "figma", "figma integration", "figma mcp", "frontend development", "github copilot", "microsoft", "ui development", "videos", "vs code"]
+tags:
+- AI
+- AI Assisted Coding
+- Bidirectional Integration
+- CLI
+- Code
+- Code Editor
+- Codeeditor
+- Demo
+- Design To Code
+- Developer
+- Developer Community
+- Developer Tools
+- Figma
+- Figma Integration
+- Figma MCP
+- Frontend Development
+- GitHub Copilot
+- Microsoft
+- UI Development
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code presents a session featuring Harald Kirschner, Akbar Mirza, and Amy Lima on how developers can use the Figma MCP server and GitHub Copilot for bi-directional code-design workflows.<!--excerpt_end-->
 
 {% youtube O1i-Te78-u4 %}

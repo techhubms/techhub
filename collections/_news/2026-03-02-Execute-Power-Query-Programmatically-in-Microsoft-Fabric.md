@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Execute Power Query Programmatically in Microsoft Fabric"
-description: "This news update from the Microsoft Fabric Blog announces the public preview of a new Execute Query API that allows Power Query M scripts to run programmatically across Microsoft Fabric surfaces. Developers and data engineers can now automate, integrate, and scale data transformations using REST APIs, with capabilities for orchestration, hybrid access, and integration with Spark, SQL, and pipelines."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/execute-power-query-programmatically-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/execute-power-query-programmatically-in-microsoft-fabric/
+title: Execute Power Query Programmatically in Microsoft Fabric
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-03-02 08:00:00 +00:00
-permalink: "/2026-03-02-Execute-Power-Query-Programmatically-in-Microsoft-Fabric.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["Apache Arrow", "Automation", "Azure", "CI/CD", "Coding", "Data Engineering", "Data Pipelines", "Data Transformation", "Dataflow Gen2", "Hybrid Connectivity", "M Language", "Microsoft Fabric", "ML", "News", "Orchestration", "Power Query", "Python", "REST API", "Spark Notebooks"]
-tags_normalized: ["apache arrow", "automation", "azure", "cislashcd", "coding", "data engineering", "data pipelines", "data transformation", "dataflow gen2", "hybrid connectivity", "m language", "microsoft fabric", "ml", "news", "orchestration", "power query", "python", "rest api", "spark notebooks"]
+tags:
+- Apache Arrow
+- Automation
+- Azure
+- CI/CD
+- Data Engineering
+- Data Pipelines
+- Data Transformation
+- Dataflow Gen2
+- Hybrid Connectivity
+- M Language
+- Microsoft Fabric
+- ML
+- News
+- Orchestration
+- Power Query
+- Python
+- REST API
+- Spark Notebooks
+- .NET
+section_names:
+- azure
+- dotnet
+- ml
 ---
-
 Microsoft Fabric Blog introduces a significant update allowing developers to execute Power Query transformations programmatically using a REST API. This article details automation, integration, and best practices for working with Power Query in Fabric.<!--excerpt_end-->
 
 # Execute Power Query Programmatically in Microsoft Fabric

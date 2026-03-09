@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "AI Agents Get Smarter at Juggling Tasks with Microsoft Research Advances"
-description: "This news post highlights advancements in AI agent technology from Microsoft Research, specifically around multimodal reinforcement learning and the use of an agentic verifier. The article discusses how next-generation AI agents can handle complex multi-tasking by integrating various input types and verifiers to ensure accuracy, paving the way for more reliable autonomous systems."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/corpgen-advances-ai-agents-for-real-work/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/research/blog/corpgen-advances-ai-agents-for-real-work/
+title: AI Agents Get Smarter at Juggling Tasks with Microsoft Research Advances
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-27 17:00:55 +00:00
-permalink: "/2026-02-27-AI-Agents-Get-Smarter-at-Juggling-Tasks-with-Microsoft-Research-Advances.html"
-categories: ["AI"]
-tags: ["Agentic Verifier", "AI", "AI Agents", "Autonomous Systems", "Company News", "Innovation", "Machine Learning", "Microsoft Research", "Multimodal Reinforcement Learning", "News", "Research Advances", "Task Automation"]
-tags_normalized: ["agentic verifier", "ai", "ai agents", "autonomous systems", "company news", "innovation", "machine learning", "microsoft research", "multimodal reinforcement learning", "news", "research advances", "task automation"]
+tags:
+- Agentic Verifier
+- AI
+- AI Agents
+- Autonomous Systems
+- Company News
+- Innovation
+- Microsoft Research
+- Multimodal Reinforcement Learning
+- News
+- Research Advances
+- Task Automation
+section_names:
+- ai
 ---
-
 stclarke explores new AI agent technology from Microsoft Research, focusing on multimodal reinforcement learning and agentic verifiers for smarter task management.<!--excerpt_end-->
 
 # AI Agents Get Smarter at Juggling Tasks with Microsoft Research Advances

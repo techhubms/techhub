@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Logic Apps Aviators Newsletter - March 2026"
-description: "This issue of the Logic Apps Aviators Newsletter, curated by WSilveira, features in-depth technical briefs and announcements for Azure Logic Apps practitioners. Highlights include new service limits for Azure API Management, agentic AI workflows, hybrid deployment guides, integration best practices, automation, cost-saving strategies, and community innovations around Logic Apps, MCP, and AIOps."
-author: "WSilveira"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-march-2026/ba-p/4498260"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-march-2026/ba-p/4498260
+title: Logic Apps Aviators Newsletter - March 2026
+author: WSilveira
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-02 16:00:00 +00:00
-permalink: "/2026-03-02-Logic-Apps-Aviators-Newsletter-March-2026.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["Agentic Workflows", "AI", "AI Agents", "API Gateway", "App Service Plan", "Application Insights", "Automation", "Azure", "Azure API Management", "Azure Functions", "Azure Logic Apps Standard", "Coding", "Community", "DevOps", "Enterprise Automation", "Hybrid Cloud", "Integration", "Logic Apps", "Low Code", "MCP", "Microsoft Graph", "Monitoring", "Power Platform", "SAP Integration", "Serverless", "Service Bus", "Workflow"]
-tags_normalized: ["agentic workflows", "ai", "ai agents", "api gateway", "app service plan", "application insights", "automation", "azure", "azure api management", "azure functions", "azure logic apps standard", "coding", "community", "devops", "enterprise automation", "hybrid cloud", "integration", "logic apps", "low code", "mcp", "microsoft graph", "monitoring", "power platform", "sap integration", "serverless", "service bus", "workflow"]
+tags:
+- Agentic Workflows
+- AI
+- AI Agents
+- API Gateway
+- App Service Plan
+- Application Insights
+- Automation
+- Azure
+- Azure API Management
+- Azure Functions
+- Azure Logic Apps Standard
+- Community
+- DevOps
+- Enterprise Automation
+- Hybrid Cloud
+- Integration
+- Logic Apps
+- Low Code
+- MCP
+- Microsoft Graph
+- Monitoring
+- Power Platform
+- SAP Integration
+- Serverless
+- Service Bus
+- Workflow
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
 ---
-
 WSilveira brings together Azure Logic Apps experts, community voices, and technical news in this March 2026 Aviators Newsletter. Learn about advanced automation, updates for API Management, MCP, hybrid deployment, and AI-powered integration strategies across enterprise scenarios.<!--excerpt_end-->
 
 # Logic Apps Aviators Newsletter – March 2026

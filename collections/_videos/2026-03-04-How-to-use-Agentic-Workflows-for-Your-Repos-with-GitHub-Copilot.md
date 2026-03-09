@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How to use Agentic Workflows for Your Repos with GitHub Copilot"
-description: "In this episode of GitHub Checkout, the team demonstrates how developers can use GitHub Copilot and agentic workflows to automate complex repository tasks using plain English. The video showcases building advanced bots, such as a \"super Dependabot,\" and highlights real-world use cases and practical guardrails when applying these workflows to open source projects."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=XisVQoz5grw"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=XisVQoz5grw
+title: How to use Agentic Workflows for Your Repos with GitHub Copilot
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-04 17:14:12 +00:00
-permalink: "/2026-03-04-How-to-use-Agentic-Workflows-for-Your-Repos-with-GitHub-Copilot.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AgenticWorkflows", "AI", "AI Automation", "Astro", "Collaborative Development", "Copilot Integration", "Dependabot", "Developer Productivity", "DevOps", "English To Code", "GitHub Actions", "GitHub Copilot", "Issue Triage", "Open Source Maintenance", "Repository Automation", "Videos"]
-tags_normalized: ["agentic workflows", "agenticworkflows", "ai", "ai automation", "astro", "collaborative development", "copilot integration", "dependabot", "developer productivity", "devops", "english to code", "github actions", "github copilot", "issue triage", "open source maintenance", "repository automation", "videos"]
+tags:
+- Agentic Workflows
+- AgenticWorkflows
+- AI
+- AI Automation
+- Astro
+- Collaborative Development
+- Copilot Integration
+- Dependabot
+- Developer Productivity
+- DevOps
+- English To Code
+- GitHub Actions
+- GitHub Copilot
+- Issue Triage
+- Open Source Maintenance
+- Repository Automation
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 In this GitHub Checkout episode, hosted by Andrea and Idan from GitHub, discover how agentic workflows and GitHub Copilot empower developers to automate complex repository operations, reduce maintainer fatigue, and apply AI-driven solutions to real-world open-source challenges.<!--excerpt_end-->
 
 {% youtube XisVQoz5grw %}

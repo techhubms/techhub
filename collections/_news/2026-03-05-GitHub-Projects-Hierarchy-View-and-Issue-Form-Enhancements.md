@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "GitHub Projects Hierarchy View and Issue Form Enhancements"
-description: "This news post announces major updates to GitHub Projects, including improvements to the hierarchy view (such as sub-issue filtering, deduplication, and state preservation), new issue form file upload capabilities, and bulk iteration movements. The article is targeted toward teams and developers leveraging GitHub for project management."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-05-hierarchy-view-improvements-and-file-uploads-in-issue-forms"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-05-hierarchy-view-improvements-and-file-uploads-in-issue-forms
+title: GitHub Projects Hierarchy View and Issue Form Enhancements
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-05 19:54:12 +00:00
-permalink: "/2026-03-05-GitHub-Projects-Hierarchy-View-and-Issue-Form-Enhancements.html"
-categories: ["DevOps"]
-tags: ["Bulk Actions", "Developer Tools", "DevOps", "File Uploads", "GitHub Projects", "Hierarchy View", "Improvement", "Issue Forms", "Iteration Management", "News", "Project Management", "Projects & Issues", "Sub Issue Filtering", "Team Collaboration"]
-tags_normalized: ["bulk actions", "developer tools", "devops", "file uploads", "github projects", "hierarchy view", "improvement", "issue forms", "iteration management", "news", "project management", "projects and issues", "sub issue filtering", "team collaboration"]
+tags:
+- Bulk Actions
+- Developer Tools
+- DevOps
+- File Uploads
+- GitHub Projects
+- Hierarchy View
+- Improvement
+- Issue Forms
+- Iteration Management
+- News
+- Project Management
+- Projects & Issues
+- Sub Issue Filtering
+- Team Collaboration
+section_names:
+- devops
 ---
-
 Allison details recent enhancements in GitHub Projects, including hierarchy view improvements, issue form file uploads, and streamlined iteration management for development teams.<!--excerpt_end-->
 
 # GitHub Projects Hierarchy View and Issue Form Enhancements

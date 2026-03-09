@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Demystifying Custom Orchestration in Microsoft Agent Framework Workflows"
-description: "This session explores how to design and implement workflows using Microsoft Agent Framework by leveraging low-level building blocks such as executors and edges. It guides developers on composing both high-level and custom orchestration patterns for sophisticated workflow management, demonstrating how to gain granular control over data and decision flows in .NET environments."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2BB9-kWb1Tc"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=2BB9-kWb1Tc
+title: Demystifying Custom Orchestration in Microsoft Agent Framework Workflows
+author: dotnet
+primary_section: dotnet
+feed_name: DotNet YouTube
 date: 2026-03-02 21:58:03 +00:00
-permalink: "/2026-03-02-Demystifying-Custom-Orchestration-in-Microsoft-Agent-Framework-Workflows.html"
-categories: ["Coding"]
-tags: [".NET", "Automation Patterns", "Coding", "Concurrent Workflows", "Custom Orchestration", "Demo", "Developer", "Developer Community", "Developer Session", "Domain Specific Logic", "Dotnet10", "Dotnetdeveloper", "Edges", "Executors", "Graph Based Design", "Microsoft", "Microsoft Agent Framework", "Microsoftagentframework", "Sequential Workflows", "Software Developer", "Software Development", "Videos", "Workflow Orchestration"]
-tags_normalized: ["dotnet", "automation patterns", "coding", "concurrent workflows", "custom orchestration", "demo", "developer", "developer community", "developer session", "domain specific logic", "dotnet10", "dotnetdeveloper", "edges", "executors", "graph based design", "microsoft", "microsoft agent framework", "microsoftagentframework", "sequential workflows", "software developer", "software development", "videos", "workflow orchestration"]
+tags:
+- .NET
+- Automation Patterns
+- Concurrent Workflows
+- Custom Orchestration
+- Demo
+- Developer
+- Developer Community
+- Developer Session
+- Domain Specific Logic
+- Dotnet10
+- Dotnetdeveloper
+- Edges
+- Executors
+- Graph Based Design
+- Microsoft
+- Microsoft Agent Framework
+- Microsoftagentframework
+- Sequential Workflows
+- Software Developer
+- Software Development
+- Videos
+- Workflow Orchestration
+section_names:
+- dotnet
 ---
-
 Presented by dotnet, this session explains how software developers can use Microsoft Agent Framework's low-level primitives and composable workflow patterns for greater flexibility and control in system orchestration.<!--excerpt_end-->
 
 {% youtube 2BB9-kWb1Tc %}

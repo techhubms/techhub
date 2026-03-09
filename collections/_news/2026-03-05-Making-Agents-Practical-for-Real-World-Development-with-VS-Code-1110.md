@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Making Agents Practical for Real-World Development with VS Code 1.110"
-description: "This article details new features in Visual Studio Code 1.110 focused on agent integration for software development workflows. Topics include agent memory, session management, lifecycle hooks, agent skills, integrated browser tools, Copilot CLI integration, and real-world use for complex coding tasks. Developers will learn how agents can become reliable collaborators, how to guide agent behavior, and how to automate or validate typical coding tasks within VS Code."
-author: "VS Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2026/03/05/making-agents-practical-for-real-world-development"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2026/03/05/making-agents-practical-for-real-world-development
+title: Making Agents Practical for Real-World Development with VS Code 1.110
+author: VS Code Team
+primary_section: ai
+feed_name: Visual Studio Code Releases
 date: 2026-03-05 00:00:00 +00:00
-permalink: "/2026-03-05-Making-Agents-Practical-for-Real-World-Development-with-VS-Code-1110.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Extensibility", "Agent Memory", "Agent Skills", "AI", "Automation", "Blog", "Browser Tools", "Chat Forking", "Code Review Automation", "Coding", "Coding Productivity", "Context Compaction", "Copilot CLI Integration", "Developer Tools", "Lifecycle Hooks", "News", "Session Management", "Software Development", "VS Code", "VS Code 1.110"]
-tags_normalized: ["agent extensibility", "agent memory", "agent skills", "ai", "automation", "blog", "browser tools", "chat forking", "code review automation", "coding", "coding productivity", "context compaction", "copilot cli integration", "developer tools", "lifecycle hooks", "news", "session management", "software development", "vs code", "vs code 1dot110"]
+tags:
+- Agent Extensibility
+- Agent Memory
+- Agent Skills
+- AI
+- Automation
+- Blog
+- Browser Tools
+- Chat Forking
+- Code Review Automation
+- Coding Productivity
+- Context Compaction
+- Copilot CLI Integration
+- Developer Tools
+- Lifecycle Hooks
+- News
+- Session Management
+- Software Development
+- VS Code
+- VS Code 1.110
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 VS Code Team presents new agent features in Visual Studio Code 1.110, covering agent memory, skills, extensibility, and session management, aimed at streamlining real-world development workflows.<!--excerpt_end-->
 
 # Making Agents Practical for Real-World Development

@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Microsoft Research Unveils Phi-4-Reasoning-Vision-15B Model and Training Insights"
-description: "This article highlights Microsoft Research’s announcement of the Phi-4-reasoning-vision-15B model, a significant advancement in multimodal AI for reasoning over text, images, and audio. The post also shares best practices learned during the training process, with emphasis on agentic verification methods and reinforcement learning strategies for AI agents."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/
+title: Microsoft Research Unveils Phi-4-Reasoning-Vision-15B Model and Training Insights
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-03-04 18:44:18 +00:00
-permalink: "/2026-03-04-Microsoft-Research-Unveils-Phi-4-Reasoning-Vision-15B-Model-and-Training-Insights.html"
-categories: ["AI"]
-tags: ["Agentic Verifier", "AI", "AI Agents", "AI Research", "Best Practices", "Company News", "Microsoft Research", "Model Training", "Multimodal AI", "News", "Phi 4 Reasoning Vision 15B", "Reinforcement Learning", "Vision Models"]
-tags_normalized: ["agentic verifier", "ai", "ai agents", "ai research", "best practices", "company news", "microsoft research", "model training", "multimodal ai", "news", "phi 4 reasoning vision 15b", "reinforcement learning", "vision models"]
+tags:
+- Agentic Verifier
+- AI
+- AI Agents
+- AI Research
+- Best Practices
+- Company News
+- Microsoft Research
+- Model Training
+- Multimodal AI
+- News
+- Phi 4 Reasoning Vision 15B
+- Reinforcement Learning
+- Vision Models
+section_names:
+- ai
 ---
-
 stclarke summarizes Microsoft Research's unveiling of the Phi-4-reasoning-vision-15B model, emphasizing multimodal reasoning breakthroughs and sharing lessons learned from the training process.<!--excerpt_end-->
 
 # Microsoft Research Announces Phi-4-Reasoning-Vision-15B Model and Shares Training Best Practices

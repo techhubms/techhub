@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Deploying AI Inferencing in Isolated Azure Kubernetes Service (AKS) Clusters"
-description: "This in-depth guide by damocelj demonstrates deploying large language model (LLM) inferencing solutions using vLLM and NVIDIA NIM microservices within air-gapped Azure Kubernetes Service (AKS) clusters. It covers network isolation, GPU node configuration, model artifact management, and practical deployment strategies for highly secured, regulated environments."
-author: "damocelj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ai-inferencing-in-air-gapped-environments/ba-p/4498594"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ai-inferencing-in-air-gapped-environments/ba-p/4498594
+title: Deploying AI Inferencing in Isolated Azure Kubernetes Service (AKS) Clusters
+author: damocelj
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-09 09:18:31 +00:00
-permalink: "/2026-03-09-Deploying-AI-Inferencing-in-Isolated-Azure-Kubernetes-Service-AKS-Clusters.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "Air Gapped", "AKS", "Artifact Cache", "Azure", "Azure Container Registry", "Community", "Container Deployment", "Data Exfiltration", "DevOps", "GPU Node Pool", "Hugging Face", "Kubernetes", "Large Language Models", "LLM", "ML", "Model Weights", "Network Isolation", "NFS", "NVIDIA GPU Operator", "NVIDIA NIM", "Private Cluster", "Security", "Vllm"]
-tags_normalized: ["ai", "air gapped", "aks", "artifact cache", "azure", "azure container registry", "community", "container deployment", "data exfiltration", "devops", "gpu node pool", "hugging face", "kubernetes", "large language models", "llm", "ml", "model weights", "network isolation", "nfs", "nvidia gpu operator", "nvidia nim", "private cluster", "security", "vllm"]
+tags:
+- AI
+- Air Gapped
+- AKS
+- Artifact Cache
+- Azure
+- Azure Container Registry
+- Community
+- Container Deployment
+- Data Exfiltration
+- DevOps
+- GPU Node Pool
+- Hugging Face
+- Kubernetes
+- Large Language Models
+- LLM
+- ML
+- Model Weights
+- Network Isolation
+- NFS
+- NVIDIA GPU Operator
+- NVIDIA NIM
+- Private Cluster
+- Security
+- Vllm
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 damocelj offers a practical walkthrough on securely deploying LLM inferencing with vLLM and NVIDIA NIM microservices in air-gapped Azure Kubernetes Service clusters, tackling network isolation, GPU configuration, and model artifact challenges.<!--excerpt_end-->
 
 # Deploying AI Inferencing in Isolated Azure Kubernetes Service (AKS) Clusters

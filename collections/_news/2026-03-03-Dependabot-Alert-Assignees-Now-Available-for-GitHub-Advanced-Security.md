@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Dependabot Alert Assignees Now Available for GitHub Advanced Security"
-description: "This update introduces the ability to assign Dependabot alerts to specific users with write access on GitHub repositories. It allows teams to designate clear owners for dependency vulnerability remediation, integrates alert assignment into existing security workflows (including code and secret scanning), and supports automation through the REST API and webhooks."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-03-dependabot-alert-assignees-are-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-03-dependabot-alert-assignees-are-now-generally-available
+title: Dependabot Alert Assignees Now Available for GitHub Advanced Security
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-03 21:58:19 +00:00
-permalink: "/2026-03-03-Dependabot-Alert-Assignees-Now-Available-for-GitHub-Advanced-Security.html"
-categories: ["DevOps", "Security"]
-tags: ["Advanced Security", "Alert Assignment", "Automation", "Code Scanning", "Dependabot", "Dependency Management", "DevOps", "DevOps Workflow", "GitHub", "Improvement", "News", "REST API", "Secret Scanning", "Security", "Security Operations", "Supply Chain Security", "Vulnerability Remediation", "Webhooks"]
-tags_normalized: ["advanced security", "alert assignment", "automation", "code scanning", "dependabot", "dependency management", "devops", "devops workflow", "github", "improvement", "news", "rest api", "secret scanning", "security", "security operations", "supply chain security", "vulnerability remediation", "webhooks"]
+tags:
+- Advanced Security
+- Alert Assignment
+- Automation
+- Code Scanning
+- Dependabot
+- Dependency Management
+- DevOps
+- DevOps Workflow
+- GitHub
+- Improvement
+- News
+- REST API
+- Secret Scanning
+- Security
+- Security Operations
+- Supply Chain Security
+- Vulnerability Remediation
+- Webhooks
+section_names:
+- devops
+- security
 ---
-
 Allison details the new GitHub feature enabling teams to assign Dependabot alerts to specific users, streamlining ownership and remediation of dependency vulnerabilities across repositories.<!--excerpt_end-->
 
 # Dependabot Alert Assignees Now Generally Available

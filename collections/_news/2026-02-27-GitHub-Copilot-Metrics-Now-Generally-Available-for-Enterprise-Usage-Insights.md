@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot Metrics Now Generally Available for Enterprise Usage Insights"
-description: "This announcement details the general availability of GitHub Copilot usage metrics for enterprise and organizational management. It highlights new dashboards, granular analytics, robust API access, and fine-grained access controls designed to help organizations track, analyze, and optimize Copilot adoption and performance across teams. Key advancements include organization- and user-level reporting, data residency support, and pathways for measuring engineering impact."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-27-copilot-metrics-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-27-copilot-metrics-is-now-generally-available
+title: GitHub Copilot Metrics Now Generally Available for Enterprise Usage Insights
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-27 17:29:13 +00:00
-permalink: "/2026-02-27-GitHub-Copilot-Metrics-Now-Generally-Available-for-Enterprise-Usage-Insights.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Access Control", "Account Management", "AI", "Copilot", "Copilot Analytics", "Copilot API", "Copilot Features", "Copilot Metrics", "Copilot Usage Trends", "Data Residency", "Developer Productivity", "Enterprise Management", "Enterprise Management Tools", "GitHub Copilot", "GitHub Enterprise", "News", "Organizational Insights", "Reporting", "Usage Dashboard"]
-tags_normalized: ["access control", "account management", "ai", "copilot", "copilot analytics", "copilot api", "copilot features", "copilot metrics", "copilot usage trends", "data residency", "developer productivity", "enterprise management", "enterprise management tools", "github copilot", "github enterprise", "news", "organizational insights", "reporting", "usage dashboard"]
+tags:
+- Access Control
+- Account Management
+- AI
+- Copilot
+- Copilot Analytics
+- Copilot API
+- Copilot Features
+- Copilot Metrics
+- Copilot Usage Trends
+- Data Residency
+- Developer Productivity
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub Copilot
+- GitHub Enterprise
+- News
+- Organizational Insights
+- Reporting
+- Usage Dashboard
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison introduces the general availability of GitHub Copilot usage metrics, offering enterprises detailed dashboards and APIs to track Copilot adoption, usage, and performance.<!--excerpt_end-->
 
 # GitHub Copilot Metrics Now Generally Available for Enterprise Usage Insights
