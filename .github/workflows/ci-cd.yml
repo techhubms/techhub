@@ -402,7 +402,7 @@ jobs:
           dotnet list TechHub.slnx package --vulnerable --include-transitive
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.32.0
+        uses: aquasecurity/trivy-action@0.35.0
         with:
           scan-type: 'fs'
           scan-ref: '.'
@@ -413,7 +413,7 @@ jobs:
           skip-dirs: 'node_modules,.tmp'
 
       - name: Upload Trivy results to GitHub Security
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         if: always()
         with:
           sarif_file: 'trivy-results.sarif'
