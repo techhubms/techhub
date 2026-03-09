@@ -12765,5 +12765,17 @@
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule - the provided input contains no substantive technical content (the 'content' and 'description' fields are empty, and only tags and a vague title exist). There is no material to assess for technical depth or relevance to Microsoft technologies, and there is no evidence this is a technical video rather than a general career/personal advice video, which is also excluded by generic rules. Therefore, no categories are assigned.",
     "timestamp": "2026-03-09 04:36:26 +00:00"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/",
+    "reason": "No categories found: No categories assigned. Content is excluded under the 'Non-Development Microsoft Products' and 'Business Productivity Tools' generic exclusion rules. The entire article is focused on the announcement of new Microsoft 365 Copilot features, Microsoft Agent 365, and Microsoft 365 E7: The Frontier Suite—all targeting business productivity, organizational efficiency, licensing, pricing, and enterprise rollout. There is no substantive technical content related to development, coding, architecture, DevOps, AI/ML engineering, or security implementation details. The use of terms like 'Frontier Transformation', 'Intelligence + Trust', and 'Work IQ' are business/productivity conceptual and not related to technical how-tos or developer tools. While AI is discussed, it is specifically in the context of Microsoft 365 Copilot and business productivity suite features, which are explicitly excluded as per the Copilot Product Distinction and Non-Development Product exclusion rules in Chapter 3 and 4.",
+    "timestamp": "2026-03-09 13:28:44 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_announcing-copilot-cowork-a-new-way-to-complete-activity-7436758383287746560-wDvL",
+    "reason": "No categories found: No categories are assigned because this content is an announcement about Copilot Cowork for Microsoft 365, a business productivity tool. According to the CRITICAL Copilot Product Distinction in Chapter 2 and Generic Exclusion Rules in Chapter 3, all forms of Microsoft 365 Copilot, Copilot for Microsoft 365, and productivity/office-focused Copilot tools are specifically excluded, as they are not developer or maker tools. The entire content and supporting comments revolve around productivity improvements in Microsoft 365, autonomous task execution, and workflow coordination for knowledge work—not about application development, coding, DevOps, or technical implementation with developer tools. No development, technical architecture, or implementation details relevant to the allowed categories are present. Therefore, according to the workflow, this qualifies for exclusion and no categories are assigned.",
+    "timestamp": "2026-03-09 13:28:59 +00:00",
+    "collection": "news"
   }
 ]
