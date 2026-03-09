@@ -28108,5 +28108,23 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centers on the GitHub Copilot CLI, an AI-powered assistant for developers (AI rules 1, 2; GitHub Copilot rule 1). The video details installation, authentication, and usage of Copilot CLI for code generation—clearly fitting the AI and GitHub Copilot categories. The tags are extracted from specific tools, technologies, and processes mentioned in the description and title. No generic exclusion rules apply.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=BDxRhhs36ns"
+  },
+  {
+    "timestamp": "2026-03-09 17:18:40 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: 카테고리 지정 근거:\n- AI: Microsoft Agent Framework, Foundry, 에이전트 오케스트레이션/핸드오프 등 지능적 에이전트 구현과 관련된 설명(Chapter 4 - AI, 1, 3, 4, 5항목).\n- Azure: Foundry, Aspire, Azure Container Apps와 같은 Azure 서비스가 주요 인프라 플랫폼(Chapter 4 - Azure, 1, 4, 5).\n- Coding: .NET, Blazor, IChatClient, 에이전트/도구 개발, C# 코드 예제를 다루며 실제 프로그래밍 지침 제공(Chapter 4 - Coding, 1, 2, 4, 5).\n- ML: AI 에이전트 백엔드(Foundry)의 모델 관리, 멀티 모델 접근, 데이터 흐름(MCP) 활용 등 데이터/분석 요소 여러 항목 포함(Chapter 4 - ML, 1, 2, 5, 6).\n\n'GitHub Copilot' 불포함: 본문은 향후 통합 계획만 언급하고 있으며, 실제 GitHub Copilot 기술 설명/활용법 없음.\n\n'Community', 'Short post' 등 제외 사유 없음: 본문은 200자 이상, 심층적 기술 구현과 실습 내용을 중심으로 함.\n\n기타 비속어나 부정적 내용, 영문 미지원 문제 등 배제 요소 발견되지 않음.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-agent-framework-microsoft-foundry-mcp-aspire%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%8B%A4%EC%A0%84/ba-p/4499869"
+  },
+  {
+    "timestamp": "2026-03-09 19:17:28 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/yXZVNfnAoCk",
+    "reason": "Succesfully added: Assigned the AI category because the content is centered around the GitHub Copilot CLI, an AI-powered development tool, meeting AI rule 2 and 4. Assigned the GitHub Copilot category as the entire series focuses on this developer tool (GitHub Copilot category rules 1 and 2). Did not assign Coding, DevOps, or other categories because the promo and series introduction specifically address Copilot CLI usage and workflows rather than direct coding instruction or DevOps processes."
+  },
+  {
+    "timestamp": "2026-03-09 19:18:07 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-agent-framework-microsoft-foundry-mcp-aspire-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%AE%9F%E8%B7%B5%E7%9A%84%E3%81%AA/ba-p/4499972",
+    "reason": "Succesfully added: カテゴリはAI（Microsoft Agent Framework、Foundry、MCPによるAIアプリの紹介）、Azure（FoundryやAspireによる実運用・Azureデプロイ導線）、Coding（.NET・Blazor・MCP/エージェントコード構成・C#サンプル多数）、ML（複数AIモデル管理・行動評価・エージェントファインチューニング等のMLパターン含）の4つを付与。この記事は開発的・設計的な視座で、エンジニア向けのハンズオン観点が明確。ビジネス職向け汎用AI紹介や単なる業務ユーザ向けOffice機能記事ではなく、実際のサービス開発とアプリ組込みが主眼。Negativityルールやセールス排除、長さ・コミュニティ基準もすべて問題なくクリア。Multi-platformルールについてもMicrosoft環境が中心で >40%要件を満たす。"
   }
 ]
