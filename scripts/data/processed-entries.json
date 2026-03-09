@@ -28138,5 +28138,11 @@
     "canonical_url": "https://devblogs.microsoft.com/dotnet/extend-your-coding-agent-with-dotnet-skills/",
     "reason": "Succesfully added: Assigned 'AI' because the article discusses AI-driven coding agents, agent skills, and their application in development workflows, with specific mention of the AI extensibility ecosystem (AI rule 4 and 5). Assigned 'GitHub Copilot' because the content covers tools like GitHub Copilot CLI and plugin marketplaces specifically supporting Copilot (GitHub Copilot rules 1, 2, and 3); per workflow, 'AI' is always assigned with 'GitHub Copilot'. Assigned 'Coding' because the skills target .NET developer workflows, C# tasks, debugging, performance, and practical programming (Coding rules 1 and 4). Not assigned 'DevOps', 'Azure', 'ML', or 'Security' as the content does not go into those functional areas.",
     "timestamp": "2026-03-09 21:07:39 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned because the session focuses on GitHub Copilot's new AI features (AI rules 1, 2). Per the critical rule, when 'GitHub Copilot' is assigned, 'AI' must be included as well. 'Coding' was included since the context is enhancing the coding workflow and productivity in Visual Studio Code using AI developer tooling (Coding rules 2 and 5). There is no generic exclusion trigger. Azure, DevOps, ML, and Security are not directly discussed or implied in the available details.",
+    "canonical_url": "https://www.youtube.com/watch?v=kLPihq62dO4",
+    "timestamp": "2026-03-09 22:06:09 +00:00",
+    "collection": "videos"
   }
 ]
