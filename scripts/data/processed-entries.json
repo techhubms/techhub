@@ -28084,5 +28084,29 @@
     "timestamp": "2026-03-09 15:19:01 +00:00",
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/09/secure-agentic-ai-for-your-frontier-transformation/"
+  },
+  {
+    "timestamp": "2026-03-09 16:19:43 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because content heavily features Microsoft Agent Framework, Foundry, and AI agent orchestration (AI inclusion rule 1 & 4). 'Azure' is included because Foundry is an Azure service and the application deploys on Azure infrastructure (Azure rule 1, 4, and 5). 'ML' is assigned due to data pipeline and AI agent modeling aspects (ML rules 1, 2, and 9), since the application includes AI/ML workflows and orchestration. 'Coding' qualifies because the solution is built with .NET, C#, and involves code and developer implementation (Coding rule 1 and 2). Did not assign 'DevOps' as the focus was more on service orchestration (via Aspire/azd) rather than CI/CD or operational DevOps practices. Did not assign 'Security' as security features (like identity/governance) are mentioned but not the primary technical focus.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/blog/build-a-real-world-example-with-microsoft-agent-framework-microsoft-foundry-mcp-and-aspire"
+  },
+  {
+    "timestamp": "2026-03-09 16:20:26 +00:00",
+    "reason": "Succesfully added: Included DevOps because the content focuses on developer tools, cloud services, and Azure DevOps (DevOps rule 2, 5, 7, 9). Included Azure because the program offers an Azure Free Account and Azure-related resources (Azure rule 1, 4). Included Coding because it centers on developer tooling (Visual Studio, Visual Studio Code) and software development workflows (Coding rule 2, 5). Did not assign AI, ML, Security, or GitHub Copilot because the article does not cover these domains. None of the generic exclusion rules apply—this is technical, practitioner-focused content about Microsoft developer programs and tools.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-dev-essentials-free-practical-tools-for-every-developer/"
+  },
+  {
+    "timestamp": "2026-03-09 16:20:52 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' and 'GitHub Copilot' because the content directly pertains to AI-powered automation in GitHub, including references to Copilot and LLM-backed agents (AI category rule 1, GitHub Copilot category rules 1 and 2). 'DevOps' is included since Agentic Workflows extend GitHub Actions and CI/CD practices, focusing on development process automation (DevOps rules 2, 5, 6). 'Security' is included due to the heavy emphasis on threat modeling, guardrails, secret management, prompt injection defense, and logging (Security rules 2, 3, 5, 6, 7, 9). Exclusion rules do not apply as this is technical, developer-focused content about Microsoft-adjacent technology (GitHub).",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/"
+  },
+  {
+    "timestamp": "2026-03-09 16:21:30 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centers on the GitHub Copilot CLI, an AI-powered assistant for developers (AI rules 1, 2; GitHub Copilot rule 1). The video details installation, authentication, and usage of Copilot CLI for code generation—clearly fitting the AI and GitHub Copilot categories. The tags are extracted from specific tools, technologies, and processes mentioned in the description and title. No generic exclusion rules apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=BDxRhhs36ns"
   }
 ]

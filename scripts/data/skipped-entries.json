@@ -12789,5 +12789,11 @@
     "timestamp": "2026-03-09 15:19:35 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/windows-app-rdp-channel-crashes-when-printing-on-a-redirected/m-p/4500284#M14023"
+  },
+  {
+    "timestamp": "2026-03-09 16:20:04 +00:00",
+    "reason": "No categories found: No categories assigned. The content is an official Microsoft announcement about architectural and platform changes with the introduction of 'agentic business applications' and integrations with Microsoft 365 Copilot, Dynamics 365, and Power Platform. However, under the critical Copilot Product Distinction rules, anything about Microsoft 365 Copilot, Copilot for Microsoft 365, or productivity features of Copilot is excluded, as these are business productivity tools and not developer tools. Although there is mention of Power Apps and Dynamics 365, the entire focus is on end-user productivity, business workflows, and the unification of experience for business users, not technical implementation, code, or developer/maker tool (e.g. Copilot Studio) use. No substantial discussion of development, APIs, coding, architecture, or developer processes is present. This matches Generic Exclusion rules (Non-Development Microsoft Products, Business Strategy and Executive Content).",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2026/03/09/a-new-way-of-working-is-taking-shape-frontier-transformation/"
   }
 ]
