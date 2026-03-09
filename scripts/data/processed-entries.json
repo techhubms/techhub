@@ -28078,5 +28078,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the entire post concerns Azure Compute API version changes and their effect on Virtual Machines and VM Scale Sets, matching Azure inclusion rule 1 and 4. Assigned Security category because the behavior, values, and scripting revolve around the 'securityType' configuration, which governs security posture of VMs and VMSS—this fits Security inclusion rule 1 (Microsoft Security Services) and 9 (Security architecture). Coding and DevOps categories do not apply as there is no covered code, language, or workflow; the focus is on API usage/configuration rather than programming or operational pipelines. Community content quality and language meet standards. No generic exclusions are met. The explanation covers both inclusion and exclusion rationale.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the article is centrally about agentic AI and Microsoft solutions for governing AI agents (AI category rule 1 and 5). Assigned 'Security' category because it covers security risk management, including identity, compliance, agent protection, and Microsoft Defender integrations (Security category rules 1, 5, 7, and 9). Did not assign Coding, DevOps, Azure, ML, or GitHub Copilot since the article does not focus on code-level development, DevOps practices, core Azure platform services, or ML/analytics engineering. Microsoft 365 Copilot is mentioned as a component of the E7 suite, but the focus is on security, risk management, and AI agent governance rather than productivity features, making it eligible for these categories.",
+    "timestamp": "2026-03-09 15:19:01 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/09/secure-agentic-ai-for-your-frontier-transformation/"
   }
 ]

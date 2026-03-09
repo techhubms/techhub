@@ -12777,5 +12777,17 @@
     "reason": "No categories found: No categories are assigned because this content is an announcement about Copilot Cowork for Microsoft 365, a business productivity tool. According to the CRITICAL Copilot Product Distinction in Chapter 2 and Generic Exclusion Rules in Chapter 3, all forms of Microsoft 365 Copilot, Copilot for Microsoft 365, and productivity/office-focused Copilot tools are specifically excluded, as they are not developer or maker tools. The entire content and supporting comments revolve around productivity improvements in Microsoft 365, autonomous task execution, and workflow coordination for knowledge work—not about application development, coding, DevOps, or technical implementation with developer tools. No development, technical architecture, or implementation details relevant to the allowed categories are present. Therefore, according to the workflow, this qualifies for exclusion and no categories are assigned.",
     "timestamp": "2026-03-09 13:28:59 +00:00",
     "collection": "news"
+  },
+  {
+    "reason": "No categories found: Content is excluded based on the generic exclusion rule for Non-Development Microsoft Products and Copilot Product Distinction. The article focuses entirely on Copilot Cowork, a feature of Microsoft 365 Copilot that automates and coordinates business productivity tasks, such as managing calendars, generating meeting documentation, conducting research summaries, and launch planning—all within the context of Microsoft 365 end-user applications (Outlook, Teams, Excel, etc.). There is no coverage of developer tools, coding, or technical implementation strategies. According to the strict workflow: 'Microsoft 365 Copilot', 'Copilot for Microsoft 365', and other business productivity Copilot products are explicitly excluded and should not be assigned any categories. The content does not cover development topics, technical implementation, or Microsoft developer/maker AI tools, so no categories apply.",
+    "timestamp": "2026-03-09 15:18:36 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/09/copilot-cowork-a-new-way-of-getting-work-done/"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2026-03-09 15:19:35 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/windows-app-rdp-channel-crashes-when-printing-on-a-redirected/m-p/4500284#M14023"
   }
 ]

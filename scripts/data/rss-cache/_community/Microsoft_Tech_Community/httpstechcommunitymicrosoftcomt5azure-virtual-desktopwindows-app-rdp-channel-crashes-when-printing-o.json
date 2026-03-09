@@ -1,0 +1,14 @@
+{
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "PubDate": "2026-03-09T08:06:22+00:00",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "Windows App - RDP channel crashes when printing on a redirected canon printer",
+  "Author": "ChrisDub",
+  "Tags": [],
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/windows-app-rdp-channel-crashes-when-printing-on-a-redirected/m-p/4500284#M14023",
+  "ProcessedDate": "2026-03-09 15:18:05",
+  "Description": "Hey team,\n\nI would like to know, if anyone else struggles with the following scenario:\n\nA canon printer is installed on a **local client**.\n\nThe user is working in the **AVD environment**.\n\nThe printers are redirected into the AVD-Session via \"**printer redirect**\".\n\nSince the users are migrating to the new \"**Windows App**\", the AVD session breaks as soon as the user is printing on a redirected Canon-Printer.\n\nWhen printing on another printer, there is no issue.\n\nAlso: With the \"**Microsoft-Remotedesktop**\" Application, everything works as it should.\n\nA Microsoft ticket is already raised.\n\nI would like to know if there are other environments, which are encountering the same issue.",
+  "EnhancedContent": "Hey team,\n\nI would like to know, if anyone else struggles with the following scenario:\n\nA canon printer is installed on a **local client**.\n\nThe user is working in the **AVD environment**.\n\nThe printers are redirected into the AVD-Session via \"**printer redirect**\".\n\nSince the users are migrating to the new \"**Windows App**\", the AVD session breaks as soon as the user is printing on a redirected Canon-Printer.\n\nWhen printing on another printer, there is no issue.\n\nAlso: With the \"**Microsoft-Remotedesktop**\" Application, everything works as it should.\n\nA Microsoft ticket is already raised.\n\nI would like to know if there are other environments, which are encountering the same issue.",
+  "OutputDir": "_community"
+}
