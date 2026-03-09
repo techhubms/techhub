@@ -28126,5 +28126,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-agent-framework-microsoft-foundry-mcp-aspire-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%AE%9F%E8%B7%B5%E7%9A%84%E3%81%AA/ba-p/4499972",
     "reason": "Succesfully added: カテゴリはAI（Microsoft Agent Framework、Foundry、MCPによるAIアプリの紹介）、Azure（FoundryやAspireによる実運用・Azureデプロイ導線）、Coding（.NET・Blazor・MCP/エージェントコード構成・C#サンプル多数）、ML（複数AIモデル管理・行動評価・エージェントファインチューニング等のMLパターン含）の4つを付与。この記事は開発的・設計的な視座で、エンジニア向けのハンズオン観点が明確。ビジネス職向け汎用AI紹介や単なる業務ユーザ向けOffice機能記事ではなく、実際のサービス開発とアプリ組込みが主眼。Negativityルールやセールス排除、長さ・コミュニティ基準もすべて問題なくクリア。Multi-platformルールについてもMicrosoft環境が中心で >40%要件を満たす。"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/",
+    "timestamp": "2026-03-09 20:06:37 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the content is focused on AI-powered coding agents (GitHub Copilot, Claude Code) and their integration with Azure-specific skills and workflows (AI inclusion rule 1, 4, 5). 'Azure' is included since the entire plugin is about operating, deploying, and optimizing in the Azure ecosystem (Azure inclusion rules 1, 4, 5). 'DevOps' is included because it describes agent-driven infrastructure as code, validation, deployment pipelines, and automated diagnostics—key DevOps practices (DevOps inclusion rules 1, 5, 6). Did not assign 'Coding' as the plugin's focus is operational and workflow automation, not language/framework development. Did not assign 'ML' because although Foundry is mentioned, the post does not detail ML/data science engineering; it's high-level model/agent enablement through Foundry. Did not assign 'Security' as this post covers skills and automation, not security or compliance tooling or architecture."
   }
 ]
