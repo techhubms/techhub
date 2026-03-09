@@ -1,0 +1,27 @@
+{
+  "Title": ".NET Data Community Standup: How dotConnect + Entity Developer simplify your workflow",
+  "Author": "dotnet",
+  "ProcessedDate": "2026-03-03 20:05:30",
+  "EnhancedContent": null,
+  "Description": "Join us for a show where DevArt will show us how dotConnect and Entity Developer simplify your workflow in .NET development.\n\n🎙️ Featuring: Yurii Hryhoriev, Jiri Cincura, Shay Rojansky\n\n#dotnet #databases #data #devart",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=2QX2qHvGbCE",
+  "PubDate": "2026-03-02T21:37:22+00:00",
+  "FeedLevelAuthor": "dotnet",
+  "OutputDir": "_videos",
+  "Tags": [
+    "data",
+    "databases",
+    "demo",
+    "devart",
+    "developer",
+    "developercommunity",
+    "dotnet",
+    "dotnetdeveloper",
+    "efcore",
+    "entityframework",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "FeedName": "DotNet YouTube"
+}

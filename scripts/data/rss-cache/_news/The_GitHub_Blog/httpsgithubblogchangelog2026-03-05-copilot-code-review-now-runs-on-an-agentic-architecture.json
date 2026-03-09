@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Description": "Copilot code review now runs on an agentic tool-calling architecture and is generally available for all users with Copilot Pro, Copilot Pro+, Copilot Business, and Copilot Enterprise. For background, see…\n\nThe post [Copilot code review now runs on an agentic architecture](https://github.blog/changelog/2026-03-05-copilot-code-review-now-runs-on-an-agentic-architecture) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2026-03-05T19:36:13+00:00",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-03-05 21:08:03",
+  "EnhancedContent": "Copilot code review now runs on an agentic tool-calling architecture and is generally available for all users with Copilot Pro, Copilot Pro+, Copilot Business, and Copilot Enterprise. For background, see the [public preview announcement](https://github.blog/changelog/2025-10-28-new-public-preview-features-in-copilot-code-review-ai-reviews-that-see-the-full-picture/).\n\n## What’s new? ✨\n\nCopilot code review now uses agentic tool calling to gather broader repository context as needed (e.g., relevant code, directory structure, and references) so feedback reflects how your changes fit into the larger architecture. With agentic tool-calling, you will now receive:\n\n- Higher-quality findings that prioritize correctness and architectural integrity.\n- Lower noise, helping ensure comments surface meaningful signal rather than volume.\n- More actionable guidance, helping developers resolve issues quickly and confidently.\n\n### Why it matters💡\n\nYou get more targeted, higher-signal review comments with less noise. This helps you merge with confidence and ship cleaner code faster.\n\nNew to Copilot code review? Get started by checking out [our Copilot code review documentation](https://docs.github.com/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review?tool=webui).\n\nRead more about Copilot code review’s agentic architecture in [this blog post](https://github.blog/ai-and-ml/github-copilot/60-million-copilot-code-reviews-and-counting/).\n\n## Self-hosted runners: Setup required 🛠️\n\nAgentic Copilot code review runs on GitHub Actions. If you have opted out of GitHub-hosted runners, you’ll need to complete a [one-time self-hosted runners setup to receive agentic Copilot code reviews on pull requests](https://docs.github.com/copilot/how-tos/use-copilot-agents/request-a-code-review/configure-self-hosted-runners). Otherwise, there is no setup required. If you prefer, Copilot code review can also run on [GitHub-hosted larger runners](https://docs.github.com/actions/concepts/runners/larger-runners#about-larger-runners).\n\n## Share your feedback\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/186303).",
+  "Title": "Copilot code review now runs on an agentic architecture",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2026-03-05-copilot-code-review-now-runs-on-an-agentic-architecture"
+}

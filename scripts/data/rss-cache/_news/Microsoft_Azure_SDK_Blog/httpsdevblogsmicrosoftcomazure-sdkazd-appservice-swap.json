@@ -1,0 +1,18 @@
+{
+  "Tags": [
+    "azd",
+    "Azure SDK",
+    "azure-developer-cli"
+  ],
+  "PubDate": "2026-03-03T21:10:01+00:00",
+  "ProcessedDate": "2026-03-03 22:04:08",
+  "Author": "PuiChee (PC) Chan",
+  "FeedName": "Microsoft Azure SDK Blog",
+  "EnhancedContent": "*Swap deployment slots from your terminal—azd already knows your app.*\n\nAzure App Service [deployment slots](https://learn.microsoft.com/azure/app-service/deploy-staging-slots) let you stage changes and swap them into production with zero downtime. With `azd` , you can [deploy to slots](https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/) and now swap them—all in a single command.\n\n## What’s new?\n\nThe `azure.appservice` extension adds a `swap` command that detects your App Service, lists slots, and prompts you to pick source and destination. The extension installs automatically the first time you run it.\n\n## Why it matters\n\nSlot swaps are key to zero-downtime deployments. This command keeps you in your terminal instead of context-switching to the portal. It integrates with your `azd` project—no extra configuration needed.\n\n## How to use it\n\nRun `azd appservice swap` to start an interactive swap. With only one slot, it skips prompts and swaps directly with production.\n\nFor automation, specify everything upfront. Use `@main` to reference production:\n\n```bash azd appservice swap # Interactive azd appservice swap --src staging --dst @main # Promote staging azd appservice swap --src @main --dst staging # Rollback azd appservice swap --service api --src staging --dst @main # Target a specific service ```\n\n## Feedback\n\nHave ideas? File an issue on [GitHub](https://github.com/Azure/azure-dev) or [sign up for user research](https://aka.ms/azd-user-research-signup).\n\n*This feature was introduced in [PR #6687](https://github.com/Azure/azure-dev/pull/6687).*",
+  "Title": "Azure Developer CLI (azd): One command to swap Azure App Service slots",
+  "Description": "The new azd appservice swap command makes deployment slot swaps fast and intuitive.\n\nThe post [Azure Developer CLI (azd): One command to swap Azure App Service slots](https://devblogs.microsoft.com/azure-sdk/azd-appservice-swap/) appeared first on [Azure SDK Blog](https://devblogs.microsoft.com/azure-sdk).",
+  "Link": "https://devblogs.microsoft.com/azure-sdk/azd-appservice-swap/",
+  "FeedLevelAuthor": "Azure SDK Blog",
+  "OutputDir": "_news",
+  "FeedUrl": "https://devblogs.microsoft.com/azure-sdk/feed/"
+}

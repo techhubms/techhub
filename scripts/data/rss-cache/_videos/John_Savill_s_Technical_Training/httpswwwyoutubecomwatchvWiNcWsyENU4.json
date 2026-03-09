@@ -1,0 +1,24 @@
+{
+  "PubDate": "2026-03-02T14:17:43+00:00",
+  "Title": "Getting Started with M365 Copilot",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Author": "John Savill's Technical Training",
+  "Description": "A walkthrough of some good interactions to start understanding and using M365 Copilot.\n\nSome prompts I used:\n\n💻 Hey Copilot, help me plan my day, including summary of scheduled meetings, outstanding tasks, and important messages (email/chat) that came in overnight.\n\n💻 Goal: Conduct a detailed research analysis on the potential to build a Justice League base on Mars. Context: The justice league are the foremost super heroes primarily protecting the people of Earth but also must consider off world threats.\n\n💻 Create a daily news brief based on trending industry and legislative news relevant to the technology business. Prioritize news where Microsoft or our partners are mentioned.\n\n💻 I vaguely remember someone mentioning a sluggish film about boats and how things move around the world in a meeting. Which meeting was it?\n\n💻 I'm facing a difficult decision around 3 possible options. I want you to interview me, asking one question at a time to gather all information needed to make a recommendation. I want you to stress test my thinking and challenge my thoughts and ensure I'm not only seeing upsides. Point out downsides and also consequences.\n\n💻 Hey Copilot, I would love your help and a consultation with you to help me figure out where I can best leverage AI in my work. As an AI expert, would you please ask me questions—one question at a time until you have enough context about my work, e.g., (my responsibilities, my OKR's and KPI's) that you would make two obvious recommendations and two non-obvious recommendations for how I could leverage AI in my work.\n\n🔎 Looking for content on a particular topic? Search the channel. If I have something it will be there!\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:20 - Interacting with Copilot 01:53 - Web vs Work interactions 02:25 - Knowledge of generative models 04:10 - Adding more knowledge 07:26 - Microsoft CEO favorite prompts 08:52 - Using prompts yourself 09:35 - Plan my day 11:39 - Using / to add context 13:11 - Types of agents 14:01 - Using Analyst 16:08 - Researcher agent 17:49 - Other prompts 18:57 - Scheduling prompts 20:12 - Finding information 22:22 - Using Copilot as a thought partner 23:39 - Viewing researcher output 24:02 - Convert to word and summary 25:19 - Creating an engaging podcast 26:45 - Help with where to start with AI 28:27 - Prompt coach 29:44 - Creating your own agent 36:20 - Summary 36:48 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► M365 Copilot Chat: 🔗 https://m365.cloud.microsoft/chat/ ► Satya top prompts: 🔗 https://www.linkedin.com/pulse/5-prompts-supercharge-your-everyday-workflow-satya-nadella-ryv5c/ ► Example prompts: 🔗 http://aka.ms/copilot-executive\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #Copilot #m365copilot #AI #johnsavillstechnicaltraining #onboardtoazure",
+  "FeedName": "John Savill's Technical Training",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=WiNcWsyENU4",
+  "ProcessedDate": "2026-03-02 15:12:43",
+  "Tags": [
+    "ai",
+    "azure",
+    "azure cloud",
+    "cloud",
+    "copilot",
+    "m365",
+    "m365 copilot",
+    "microsoft",
+    "microsoft azure"
+  ]
+}

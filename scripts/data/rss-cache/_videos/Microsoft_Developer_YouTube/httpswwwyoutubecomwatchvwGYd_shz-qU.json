@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "Title": "Open Standards for Enterprise Agents",
+  "Description": "This episode of Armchair Architects explores the critical role of open standards in agentic AI, focusing on protocols like Model Context Protocol, agent-to-agent communication, observability with Open Telemetry, and agent identity. The architects discuss how these elements enable secure, interoperable, and responsible AI integration in enterprises, and offer practical guidance for architects navigating the rapidly evolving agent ecosystem.\n\nBy the end of this episode, you will …\n- know more about the four key open standards shaping agentic AI: MCP, agent-to-agent protocols, OTEL for observability, and OAuth for identity, and why these are foundational for enterprise adoption.\n- understand the importance of following and contributing to open-source communities and standards to ensure interoperability and responsible AI deployment.\n- gain practical strategies for evaluating, adopting, and requesting these standards in enterprise RFPs to drive market convergence and ensure robust, future-proof agent architectures.\n\nResources\n- Model Context Protocol (MCP) https://modelcontextprotocol.io\n- Agent2Agent (A2A) Protocol https://github.com/a2aproject\n- OpenTelemetry https://opentelemetry.io\n- Web Authorization Protocol (oauth) https://datatracker.ietf.org/wg/oauth/about/\n-Blog: Agent Factory: Designing the open agentic web stack https://azure.microsoft.com/blog/agent-factory-designing-the-open-agentic-web-stack/\n- Agentic AI Foundation https://aaif.io/\n\nRelated Episodes\n- Watch more episodes of Armchair Architects https://aka.ms/ArmchairArchitects\n- Watch more episodes of the Azure Essentials Show https://aka.ms/AzureEssentialsShow\n\nConnect\n- David Blank-Edelman https://www.linkedin.com/in/dnblankedelman/\n- Uli Homann https://www.linkedin.com/in/ulrichhomann/\n- Eric Charran https://www.linkedin.com/in/ericcharran/\n\nChapters 00:00 Hey! Good news! 00:35 Welcome architects 01:10 Challenges for Enterprise 02:20 Model Context Protocol 03:24 Agent-to-agent Protocol 04:37 OpenTelemetry standard 06:20 Web Authorization Protocol (oAuth) 07:53 Holistic approach in three layers 09:08 Layer one: interaction and invocation standards 09:45 Layer two: orchestration and lifecycle patterns 10:33 Layer three: Evaluation, observation, orchestration 11:21 The role of the architect 12:08 Include standards in RFPs and RFIs 13:30 Discussion of open source examples 15:05 Agents as a commodity 16:03 Homework for viewers",
+  "ProcessedDate": "2026-03-03 09:12:25",
+  "EnhancedContent": null,
+  "PubDate": "2026-03-03T08:01:07+00:00",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=wGYd_shz-qU",
+  "Tags": [],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube"
+}

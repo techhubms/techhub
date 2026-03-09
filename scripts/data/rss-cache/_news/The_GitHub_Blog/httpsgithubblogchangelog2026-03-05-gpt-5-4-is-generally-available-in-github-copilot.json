@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "EnhancedContent": "GPT-5.4, OpenAI’s latest agentic coding model, is now rolling out in GitHub Copilot. In our early testing of real-world, agentic, and software development capabilities, GPT-5.4 consistently hits new rates of success. It also shows enhanced logical reasoning and task execution for intricate, multi-step, tool-dependent processes.\n\n[https://github.blog/wp-content/uploads/2026/03/5.4-recording-with-end-card.mp4#t=0.001](https://github.blog/wp-content/uploads/2026/03/5.4-recording-with-end-card.mp4#t=0.001)\n\n### Availability in GitHub Copilot\n\nGPT-5.4 will be available to [Copilot Pro, Pro+, Business, and Enterprise](https://github.com/features/copilot/plans?utm_source=changelog-codex53-cta&amp;utm_medium=changelog&amp;utm_campaign=newmodels) users.\n\nYou’ll be able to select the model in the model picker in:\n\n- Visual Studio Code version v1.104.1 and later in all modes: chat, ask, edit, agent\n- Visual Studio version 17.14.19 and later in all modes: agent, ask\n- JetBrains versions 1.5.66 and later, in all modes: ask, edit, agent\n- Xcode versions 0.48.0 and later in all modes: ask, agent\n- Eclipse versions 0.15.1 and later in all modes: ask, agent\n- github.com\n- GitHub Mobile iOS and Android\n- GitHub CLI\n- GitHub Copilot Coding Agent\n\nWhile the model appears in all versions above, prompting and model parameters work best in the most recent versions of each product, so we highly encourage you to upgrade to the latest version.\n\n### Enabling access\n\nCopilot Enterprise and Copilot Business plan administrators must enable the GPT-5.4 policy in Copilot settings.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see [our documentation on available models](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) and get started with Copilot.\n\n### Share your feedback\n\nJoin the [GitHub Community](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) to share your feedback.",
+  "Author": "Kate Catlin",
+  "OutputDir": "_news",
+  "Title": "GPT-5.4 is generally available in GitHub Copilot",
+  "Description": "GPT-5.4, OpenAI’s latest agentic coding model, is now rolling out in GitHub Copilot. In our early testing of real-world, agentic, and software development capabilities, GPT-5.4 consistently hits new rates of…\n\nThe post [GPT-5.4 is generally available in GitHub Copilot](https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-03-05T23:36:06+00:00",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot",
+  "ProcessedDate": "2026-03-06 00:11:42",
+  "Tags": [
+    "copilot",
+    "Release"
+  ]
+}

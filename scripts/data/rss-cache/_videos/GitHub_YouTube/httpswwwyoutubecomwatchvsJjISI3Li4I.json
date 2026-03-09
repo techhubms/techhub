@@ -1,0 +1,18 @@
+{
+  "Tags": [
+    "GitHub",
+    "Octoverse",
+    "Security"
+  ],
+  "ProcessedDate": "2026-03-03 16:12:50",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Author": "GitHub",
+  "FeedLevelAuthor": "GitHub",
+  "OutputDir": "_videos",
+  "Description": "Join Xavier René-Corail, Senior Director at GitHub Security, as he reacts to the security findings in the Octoverse 2025 report. From improving fix times with Dependabot to the risks of broken access control, Xavier breaks down what the data means for developers. He also discusses the role of AI in shifting security left and why human code review remains critical.\n\n#GitHub #Security #Octoverse\n\n— CHAPTERS —\n\n00:00 - Are fix times improving? 01:21 - The role of Dependabot 02:08 - Understanding broken access control 03:04 - Managing merges with queues 04:07 - How AI learns from your code 04:37 - The importance of human code review 05:05 - Navigating security risks with AI 06:32 - Fixing bugs with Copilot Autofix 06:56 - The shift left mindset in 2025\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "EnhancedContent": null,
+  "Title": "Xavier René-Corail: how AI is changing the \"shift left\" mindset",
+  "FeedName": "GitHub YouTube",
+  "Link": "https://www.youtube.com/watch?v=sJjISI3Li4I",
+  "PubDate": "2026-03-03T16:01:12+00:00"
+}

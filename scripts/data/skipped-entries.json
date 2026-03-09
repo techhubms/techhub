@@ -12585,5 +12585,215 @@
     "canonical_url": "https://www.youtube.com/shorts/0f5qBZpy9No",
     "collection": "videos",
     "reason": "No categories found: No categories assigned. The content is a brief event announcement and highlights for a community competition ('Agents League - Reasoning Agents Battle') hosted by Microsoft. There is no substantive technical explanation, tutorial, or implementation detail present. The description is promotional and focuses on an on-demand video and project registration, without discussion of Microsoft technology features, development techniques, or technical architecture. Per generic exclusion rules, content lacking substantive technical depth or hands-on guidance does not qualify."
+  },
+  {
+    "reason": "No categories found: All categories have been excluded. The content is a general announcement promoting the GitHub Changelog update feed, without substantive technical information or implementation details. It primarily serves as a notification service and social media links to follow GitHub's latest feature releases and updates. There is no educational content about GitHub tool usage, development practices, or any Microsoft technology implementation (DevOps rule 11 requires technical detail for inclusion, which is not present). No content qualifies under AI, Coding, DevOps, Azure, ML, or Security category inclusion rules.",
+    "collection": "videos",
+    "timestamp": "2026-02-27 18:10:41 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/N035cFR3YiY"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/backing-up-azure-files-high-cost-read-operations/m-p/4497942#M592",
+    "collection": "community",
+    "reason": "No categories found: Content excluded under generic exclusion rules, specifically the 'Question-Only Content' rule. The post is primarily a question about Azure Backup's handling of Azure Files, seeking information on whether Microsoft plans to introduce change block tracking. There is no substantive answer, discussion of implementation, or technical guidance provided—only the author's problem description and a request for any updates. According to the prompt, question-only or help-seeking posts without substantive answers or solutions are not eligible for categorization.",
+    "timestamp": "2026-02-27 21:06:41 +00:00"
+  },
+  {
+    "reason": "No categories found: All main content fields ('content' and 'description') are missing. According to the 'Generic Exclusion Rules' and the general guidelines for minimum content, there is no substantive main content available to analyze for technical relevance or category assignment. Without actual content to evaluate, it is impossible to determine if any Microsoft technology categories apply.",
+    "timestamp": "2026-02-28 00:07:14 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/9PFBf95xbeM"
+  },
+  {
+    "timestamp": "2026-02-28 09:05:35 +00:00",
+    "collection": "blogs",
+    "reason": "No categories found: All content is focused on Microsoft 365 Copilot, Copilot for Microsoft 365, and productivity use-cases (Excel, Teams, meeting summaries, document creation, enterprise adoption) rather than developer or technical maker topics. According to the Non-Development Microsoft Products exclusion and CRITICAL Copilot Product Distinction, business productivity Copilots and Microsoft 365 Copilot are explicitly excluded and do NOT qualify for any categories. While Copilot Studio is mentioned, discussion here is about model flexibility and enterprise AI agent capabilities at the business workflow/assistant level—not technical maker or developer extensibility. There is no technical depth in customizing, building, or developing with Copilot Studio, only strategic and business process perspectives. None of the inclusion criteria for 'AI' or any other category are met, and generic exclusion rules for non-development Microsoft products fully apply.",
+    "canonical_url": "https://dellenny.com/microsoft-365-copilot-copilot-studio-news/"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-02-28 16:04:05 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/k_qunlhXyys",
+    "reason": "No categories found: No categories assigned because the content is primarily an interview excerpt discussing Anders Hejlsberg's perspective on open source development philosophy and processes on GitHub, rather than technical implementation details, development tooling, or specific Microsoft technologies. The description focuses on the cultural and collaborative benefits of open source, not on coding, DevOps, AI, ML, Azure, or security practices. Content about organizational culture and high-level software development processes, even when mentioning GitHub or TypeScript, does not qualify unless it contains actionable technical insights or implementation guidance as required by the inclusion rules."
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-01 13:16:11 +00:00",
+    "reason": "No categories found: No categories were assigned because, according to the Generic Exclusion Rules, this article is primarily about business process change, end-of-support communication, and operational migration guidance (SharePoint workflow migration for business/IT process owners), not technical implementation, development, or architecture for Microsoft developers and consultants. No substantial code, development, architecture, or technical depth on Power Automate development, custom coded solutions, or developer tooling is provided. The article discusses replacing legacy automation with platform tools and promotes a migration governance template, but does not focus on technical implementation, developer guidance, or hands-on engineering. SharePoint development and Power Automate development are mentioned only as recommendations, not with technical depth or step-by-step engineering detail required for inclusion in Coding, DevOps, Azure, or ML categories.",
+    "canonical_url": "https://dellenny.com/sharepoint-2013-workflow-retirement-what-it-means-for-your-business/"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=WiNcWsyENU4",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for non-development Microsoft products: the video is focused entirely on M365 Copilot, which is a business productivity tool (Microsoft 365 Copilot). The walkthrough and prompt examples all revolve around helping users be more productive in daily office tasks (e.g., planning meetings, summarizing emails, generating news briefs, and researching information), and not on development or coding with Microsoft technologies. No technical implementation, development, or architecture details are present—just end-user guidance. Per explicit exclusion rules in Chapter 3 (Non-Development Microsoft Products) and the Copilot Product Distinction in Chapter 2, any content about Microsoft 365 Copilot must be excluded and assigned no categories.",
+    "timestamp": "2026-03-02 15:14:22 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is primarily a company news post celebrating SharePoint's 25th anniversary and focuses on SharePoint's evolving role as a foundational knowledge management platform. While it references the use of AI (Microsoft 365 Copilot) and the role of SharePoint as a grounding source, the content itself does NOT provide technical implementation details, developer guidance, code, or hands-on Azure/AI/SharePoint development information. The discussion of AI is centered around business productivity and organizational knowledge rather than development or technical integration. Per the generic exclusion rules under 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content,' content focused on Microsoft 365 Copilot in an organizational knowledge activation/business productivity context is excluded from all categories.",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/02/sharepoint-at-25-how-microsoft-is-putting-knowledge-to-work-in-the-ai-era/",
+    "collection": "news",
+    "timestamp": "2026-03-02 18:10:22 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2026/02/26/copilot-tasks-from-answers-to-actions/",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The post focuses on introducing 'Copilot Tasks', a general-purpose AI-powered productivity feature targeting a broad audience ('for everyone, not just developers or enterprises'), and demonstrates business and personal productivity use cases (email triage, study planning, shopping, logistics). There is no focus on development, coding, Microsoft developer tools, or technical implementation. The features described are for end-users and follow the exclusion for business productivity tools (Microsoft Copilot, Copilot for Microsoft 365, etc.) per Non-Development Microsoft Products exclusion. No qualifying development context or technical depth according to exclusion rules.",
+    "timestamp": "2026-03-02 21:09:07 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: All provided content is focused on general user guidance about removing fake malware browser notifications, not on technical implementation using Microsoft security technologies. There is no substantive technical content, no discussion of Microsoft-specific tools, and the discussion centers on basic end-user browser hygiene (deleting notification permissions). Per generic exclusion rules, this is end-user security advice rather than practitioner/development or IT operations content, so no categories are assigned.",
+    "timestamp": "2026-03-03 17:15:55 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=8kdV9rjFRtg"
+  },
+  {
+    "timestamp": "2026-03-03 18:12:43 +00:00",
+    "canonical_url": "https://www.devclass.com/development/2026/03/03/generic-methods-arrive-in-golang-but-they-werent-the-top-dev-demand/4093093",
+    "collection": "blogs",
+    "reason": "No categories found: No categories were assigned because this blog post focuses entirely on recent language features and developer sentiment in the Go programming language, which is not a Microsoft technology. There is no discussion of Microsoft platforms, tools, programming languages, services, or relevant integrations, nor do any parts of the article reference Azure, .NET, Visual Studio, GitHub Copilot, or any other technologies that would trigger inclusion rules for the 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' categories. The generic exclusion rule for Microsoft-centrality (Microsoft technologies must be central or at least 40% of substantive content) applies here, as there is no Microsoft context present."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This news post and its comment thread are primarily announcing the upcoming Microsoft Build event in San Francisco without offering any substantive technical detail, guidance, or hands-on technical discussion about Microsoft products, technologies, or development practices. The bulk of the content consists of short, general statements of anticipation, promotional comments, or high-level remarks about Microsoft’s strategy, AI, platform innovation, or upcoming product rumors, without in-depth exploration of developer-relevant or engineering implementation details. According to the rules in Chapter 3 (e.g., Sales Pitches, Business Strategy and Executive Content), high-level announcements or business-focused content lacking actionable technical insight, architectural discussion, or implementation guidance must be excluded. There is also no code, tutorial, walk-through, or meaningful technical discussion to ground inclusion. Therefore, no categories are assigned.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_counting-down-to-a-new-build-in-san-francisco-activity-7434688896669560833-PqKW",
+    "timestamp": "2026-03-03 22:05:58 +00:00",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-04 13:24:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=x-gt27Zf5d4",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. Content discusses 'Microsoft Dragon Copilot,' which is not a recognized developer tool but appears to be a business productivity/healthcare-focused AI tool. According to the Copilot Product Distinction rule in Chapter 2 and the Non-Development Microsoft Products exclusion in Chapter 3, content about business productivity Copilot offerings (including those not explicitly named GitHub Copilot or Copilot Studio) must be excluded, as they do not pertain to software development or technical implementation for developers. No technical architecture, coding, DevOps, Azure, ML, or Security topics are presented, and the main content is about product integration and go-to-market activities in a business context."
+  },
+  {
+    "timestamp": "2026-03-04 13:24:54 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=eE7PWWV1ykE",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule for sales pitches (Chapter 3: Content Quality Exclusions). The primary focus is on promoting a discount code for Dometrain courses and encouraging engagement (comment, like, subscribe), with only a brief mention of a new mocking library called Imposter. No substantive technical details, implementation, or educational content regarding .NET testing or the Imposter library are present in the provided content or description. The majority of the content is marketing and social media promotion, not technical education."
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules, specifically the 'Non-Development Microsoft Products' rule. The content focuses on 'Copilot Tasks,' describing autonomous task assignment, Agent mode for workflow refinement, and automation in business productivity tools (Excel, task scheduling). There is no technical implementation, development, API integration, coding, or platform architecture content present. Instead, the post highlights the end-user/business value and increases in productivity from Microsoft Copilot Tasks, which is part of Microsoft 365 Copilot/Office Copilot. As per the critical product distinction, content about 'business productivity, document creation, or general office work'—not code development or developer tools—is explicitly excluded from all categories. Therefore, no categories are assigned.",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_ive-been-trying-copilot-tasks-this-week-activity-7434963514328387584-DFfv",
+    "timestamp": "2026-03-04 15:12:02 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/executive-reporting-made-simple-with-windows-11-copilot/",
+    "reason": "No categories found: Content is excluded according to the generic exclusion rules for Non-Development Microsoft Products. The article focuses entirely on business productivity enhancements using Windows 11 Copilot and Microsoft 365 Copilot, specifically for executive reporting, data summarization, and presentation preparation. There are no developer, coding, DevOps, security, AI integration, or ML engineering aspects, nor any mention of developer tooling. This matches the CRITICAL Copilot Product Distinction: Microsoft 365 Copilot, Copilot for Microsoft 365, Windows 11 Copilot, and similar end-user/business productivity Copilots must be excluded (see Chapter 3: Non-Development Microsoft Products). No included categories apply.",
+    "collection": "blogs",
+    "timestamp": "2026-03-04 17:15:25 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to lack of substantive technical content. The description and title reference an 'Enterprise Agents Battle' video that is mainly event highlights, not an educational or tutorial resource. There is no main content to analyze. The provided description is event promotion—not actual technical documentation, tutorial, or implementation discussion. No technical architecture, hands-on guidance, code, or in-depth exploration of Microsoft development topics is present. According to generic exclusion rules and category inclusion rules, this does not meet the substantive threshold for inclusion.",
+    "canonical_url": "https://www.youtube.com/watch?v=5E87X4n8wbg",
+    "collection": "videos",
+    "timestamp": "2026-03-05 10:13:13 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2026/03/05/unify-simplify-scale-microsoft-dragon-copilot-meets-the-moment-at-himss-2026/",
+    "reason": "No categories found: No categories assigned because the content is excluded by the generic exclusion rule regarding non-development Microsoft products. The 'Microsoft Dragon Copilot' mentioned here is presented in relation to healthcare business productivity and administrative AI, not as a developer tool. The content is a news announcement focusing on 'advancements for healthcare' at a HIMSS conference, which is industry/business-oriented, and contains no developer-focused details, code, architecture, or technical implementation related to Microsoft developer products. Additionally, Microsoft Dragon Copilot is not a recognized development or coding tool within the specified AI or GitHub Copilot development product definitions.",
+    "timestamp": "2026-03-05 16:16:19 +00:00"
+  },
+  {
+    "timestamp": "2026-03-05 19:28:11 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The provided video titled 'It's Rubber Duck Thursday! Come learn and cowork and chat with us!' lacks substantive technical content about Microsoft technologies. The description only includes social media links, brand messaging, and generic calls to connect with GitHub, rather than technical education, tutorial material, or substantive discussion of development practices. There is no actual content present within the 'content' field itself either. As per format and content exclusion rules, content without informative or technical substance, and especially content that serves mainly as a social/community meetup or promotional announcement, does not qualify for any category.",
+    "canonical_url": "https://www.youtube.com/watch?v=FJglBH_N9hA",
+    "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: Content excluded because it focuses on business/productivity features of 'Dragon Copilot' in a healthcare context rather than developer, coding, or technical implementation aspects. Per the rules in Chapter 3 and Chapter 4, business productivity copilot solutions such as Dragon Copilot are not development tools and do not trigger any categories (AI, Coding, etc.). The post discusses workflow improvement and administrative burden reduction for clinicians, not technical integration, development, or architectural content for Microsoft developers or consultants. There are no actionable technical details or developer-focused implementation. Therefore, no categories apply.",
+    "timestamp": "2026-03-05 21:09:35 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_unify-simplify-scale-microsoft-dragon-activity-7435386394988130304-omL1"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because the 'content' field is null. Without any substantive content, there is no technical information to evaluate or categorize according to the workflow rules. Generic exclusion applies: insufficient content provided for assessment.",
+    "timestamp": "2026-03-05 21:11:14 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/DDHT1xj01kE"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-05-add-images-to-agent-sessions",
+    "timestamp": "2026-03-05 22:06:42 +00:00",
+    "reason": "No categories found: Applied generic exclusion rules first. The content describes a new feature for agent sessions on GitHub (adding images), but does not provide any technical depth, development information, or actionable details about Microsoft development tools, AI, Coding, DevOps, Azure, ML, or Security. It is a product update about a user interface enhancement for GitHub agents but does not pertain to GitHub Copilot or demonstrate developer-centric features. There are no technical implementation details, programming guidance, or architectural insights relevant to Tech Hub's inclusion categories. The referenced tag 'copilot' appears in the input tags, but the content itself does not discuss GitHub Copilot or any developer AI tooling—only a generic UI feature. Therefore, no categories are assigned."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule – this video is primarily biographical in nature, focusing on John Leider's personal journey as an open source maintainer, as indicated by the phrase 'his incredible journey as an open source maintainer.' The primary topic centers on Vuetify, a UI library that is not Microsoft-related. There's no substantive technical discussion of Microsoft technologies or products present in the title, description, or linked project. Therefore, no categories apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=Q_Ef-JMdAG0",
+    "collection": "videos",
+    "timestamp": "2026-03-06 01:32:55 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "API call retries failed: All API call retries failed - no response received",
+    "timestamp": "2026-03-06 07:21:36 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/decision-matrix-api-vs-mcp-tools-the-great-integration-showdown/ba-p/4499385"
+  },
+  {
+    "timestamp": "2026-03-06 17:12:26 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/asia/2026/03/04/islamic-boarding-school-classroomsthat-are-no-longer-the-same/",
+    "reason": "No categories found: No categories assigned due to the generic exclusion rule regarding non-development Microsoft products and business/productivity AI tools. While the article discusses the use of Microsoft Teams Learning Accelerators, Microsoft Copilot, and AI in an educational context, the AI usage here is strictly for classroom efficiency, administration, and pedagogy rather than for coding, software engineering, or technical development. Chapter 3's 'Non-Development Microsoft Products' exclusion specifically calls out Microsoft 365 Copilot, Copilot for Microsoft 365, and Copilot in general, when used for business productivity or education rather than for code development. Additionally, Microsoft Teams Learning Accelerators and classroom-focused AI features fall outside the technical/developer categories (AI, Coding, etc.) defined in Chapter 4. There is also no deep technical implementation, development tooling, software engineering, or DevOps activity described: the content is solely about educational transformation and AI integration in teaching, not technical development.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-07 16:04:15 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/D944tiUHQzk",
+    "reason": "No categories found: No categories were assigned because the content primarily focuses on the story of the npmx open-source project and its rapid community growth, rather than technical implementation, development methodologies, or Microsoft technology. There are no substantive technical details about coding, DevOps, AI, Azure, ML, or Security, and the primary intent is about community creation, not engineering how-tos or tool usage. The video also does not describe anything unique to Microsoft, and generic exclusion rules require that when in doubt (and if Microsoft technologies aren't central or >=40% of content), no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-speed-up-windows-11-without-third-party-tools-complete-expert-guide/",
+    "reason": "No categories found: No categories assigned because the content is focused on end-user optimization and troubleshooting for Windows 11 performance, not software development or technical implementation with Microsoft developer technologies. This falls under the generic exclusion rule for 'Non-Development Microsoft Products'—it is a tutorial for general users (not for developers, IT pros, or architects) on speeding up Windows 11 using built-in system tools, not code, scripts, API integrations, or advanced configuration. There are no references to development, coding, DevOps, security, AI, ML, or Azure products/services. Thus, this content is excluded as per the explicit guidance in the prompt.",
+    "collection": "blogs",
+    "timestamp": "2026-03-08 15:04:40 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/understanding-the-new-task-manager-in-windows-11-complete-guide/",
+    "reason": "No categories found: No categories were assigned because the content is an end-user guide about Windows 11 Task Manager, not targeted at developers, architects, or technical practitioners. It focuses on system monitoring, troubleshooting, and user- or admin-level performance optimization, not development, coding, DevOps, security engineering, or deployment with Microsoft technologies. There is no substantial content about programming, DevOps pipelines, security implementations, Azure, AI/ML, Power Platform development, or GitHub tooling. According to the exclusion rules for non-development Microsoft products and content aimed at general users/business productivity, this content does not qualify.",
+    "collection": "blogs",
+    "timestamp": "2026-03-08 15:05:13 +00:00"
+  },
+  {
+    "timestamp": "2026-03-08 16:04:15 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/4zSz192sdG4",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The video content focuses on new end-user features of the GitHub repository dashboard, centering on finding, filtering, and organizing repositories. It does not discuss GitHub Copilot, AI, Coding practices, DevOps workflows, Security, Azure, or ML/AI development. The content is about general workspace organization and repository navigation—a user interface update rather than a development tool, API, or workflow. According to DevOps category rules, only content about specific developer workflows, CI/CD, version control practices, or advanced GitHub services qualifies. As this video is not primarily about those technical aspects, no categories fit."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/ABqY09oD484",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the provided input contains no substantive technical content (the 'content' and 'description' fields are empty, and only tags and a vague title exist). There is no material to assess for technical depth or relevance to Microsoft technologies, and there is no evidence this is a technical video rather than a general career/personal advice video, which is also excluded by generic rules. Therefore, no categories are assigned.",
+    "timestamp": "2026-03-09 04:36:26 +00:00"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/",
+    "reason": "No categories found: No categories assigned. Content is excluded under the 'Non-Development Microsoft Products' and 'Business Productivity Tools' generic exclusion rules. The entire article is focused on the announcement of new Microsoft 365 Copilot features, Microsoft Agent 365, and Microsoft 365 E7: The Frontier Suite—all targeting business productivity, organizational efficiency, licensing, pricing, and enterprise rollout. There is no substantive technical content related to development, coding, architecture, DevOps, AI/ML engineering, or security implementation details. The use of terms like 'Frontier Transformation', 'Intelligence + Trust', and 'Work IQ' are business/productivity conceptual and not related to technical how-tos or developer tools. While AI is discussed, it is specifically in the context of Microsoft 365 Copilot and business productivity suite features, which are explicitly excluded as per the Copilot Product Distinction and Non-Development Product exclusion rules in Chapter 3 and 4.",
+    "timestamp": "2026-03-09 13:28:44 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_announcing-copilot-cowork-a-new-way-to-complete-activity-7436758383287746560-wDvL",
+    "reason": "No categories found: No categories are assigned because this content is an announcement about Copilot Cowork for Microsoft 365, a business productivity tool. According to the CRITICAL Copilot Product Distinction in Chapter 2 and Generic Exclusion Rules in Chapter 3, all forms of Microsoft 365 Copilot, Copilot for Microsoft 365, and productivity/office-focused Copilot tools are specifically excluded, as they are not developer or maker tools. The entire content and supporting comments revolve around productivity improvements in Microsoft 365, autonomous task execution, and workflow coordination for knowledge work—not about application development, coding, DevOps, or technical implementation with developer tools. No development, technical architecture, or implementation details relevant to the allowed categories are present. Therefore, according to the workflow, this qualifies for exclusion and no categories are assigned.",
+    "timestamp": "2026-03-09 13:28:59 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: Content is excluded based on the generic exclusion rule for Non-Development Microsoft Products and Copilot Product Distinction. The article focuses entirely on Copilot Cowork, a feature of Microsoft 365 Copilot that automates and coordinates business productivity tasks, such as managing calendars, generating meeting documentation, conducting research summaries, and launch planning—all within the context of Microsoft 365 end-user applications (Outlook, Teams, Excel, etc.). There is no coverage of developer tools, coding, or technical implementation strategies. According to the strict workflow: 'Microsoft 365 Copilot', 'Copilot for Microsoft 365', and other business productivity Copilot products are explicitly excluded and should not be assigned any categories. The content does not cover development topics, technical implementation, or Microsoft developer/maker AI tools, so no categories apply.",
+    "timestamp": "2026-03-09 15:18:36 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/09/copilot-cowork-a-new-way-of-getting-work-done/"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2026-03-09 15:19:35 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/windows-app-rdp-channel-crashes-when-printing-on-a-redirected/m-p/4500284#M14023"
+  },
+  {
+    "timestamp": "2026-03-09 16:20:04 +00:00",
+    "reason": "No categories found: No categories assigned. The content is an official Microsoft announcement about architectural and platform changes with the introduction of 'agentic business applications' and integrations with Microsoft 365 Copilot, Dynamics 365, and Power Platform. However, under the critical Copilot Product Distinction rules, anything about Microsoft 365 Copilot, Copilot for Microsoft 365, or productivity features of Copilot is excluded, as these are business productivity tools and not developer tools. Although there is mention of Power Apps and Dynamics 365, the entire focus is on end-user productivity, business workflows, and the unification of experience for business users, not technical implementation, code, or developer/maker tool (e.g. Copilot Studio) use. No substantial discussion of development, APIs, coding, architecture, or developer processes is present. This matches Generic Exclusion rules (Non-Development Microsoft Products, Business Strategy and Executive Content).",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2026/03/09/a-new-way-of-working-is-taking-shape-frontier-transformation/"
   }
 ]
