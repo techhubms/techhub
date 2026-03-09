@@ -28132,5 +28132,11 @@
     "timestamp": "2026-03-09 20:06:37 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' because the content is focused on AI-powered coding agents (GitHub Copilot, Claude Code) and their integration with Azure-specific skills and workflows (AI inclusion rule 1, 4, 5). 'Azure' is included since the entire plugin is about operating, deploying, and optimizing in the Azure ecosystem (Azure inclusion rules 1, 4, 5). 'DevOps' is included because it describes agent-driven infrastructure as code, validation, deployment pipelines, and automated diagnostics—key DevOps practices (DevOps inclusion rules 1, 5, 6). Did not assign 'Coding' as the plugin's focus is operational and workflow automation, not language/framework development. Did not assign 'ML' because although Foundry is mentioned, the post does not detail ML/data science engineering; it's high-level model/agent enablement through Foundry. Did not assign 'Security' as this post covers skills and automation, not security or compliance tooling or architecture."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/extend-your-coding-agent-with-dotnet-skills/",
+    "reason": "Succesfully added: Assigned 'AI' because the article discusses AI-driven coding agents, agent skills, and their application in development workflows, with specific mention of the AI extensibility ecosystem (AI rule 4 and 5). Assigned 'GitHub Copilot' because the content covers tools like GitHub Copilot CLI and plugin marketplaces specifically supporting Copilot (GitHub Copilot rules 1, 2, and 3); per workflow, 'AI' is always assigned with 'GitHub Copilot'. Assigned 'Coding' because the skills target .NET developer workflows, C# tasks, debugging, performance, and practical programming (Coding rules 1 and 4). Not assigned 'DevOps', 'Azure', 'ML', or 'Security' as the content does not go into those functional areas.",
+    "timestamp": "2026-03-09 21:07:39 +00:00"
   }
 ]
