@@ -22,8 +22,8 @@ public class ContentSyncService : IContentSyncService
     private readonly ContentSyncOptions _options;
     private readonly ISqlDialect _dialect;
     private readonly string _collectionsPath;
-    private static readonly char[] _tagSplitSeparators = [' ', '-', '_'];
-    private static readonly char[] _excerptSplitSeparators = [' ', '\n', '\r'];
+    private static readonly char[] _tagSplitSeparators = new[] { ' ', '-', '_' };
+    private static readonly char[] _excerptSplitSeparators = new[] { ' ', '\n', '\r' };
 
     private sealed record ParsedContent(
         string CompositeId,
@@ -624,7 +624,7 @@ public class ContentSyncService : IContentSyncService
             }
         });
 
-        return [.. results];
+        return results.ToList();
     }
 
     private async Task<(long deleteMs, long insertContentMs, List<TagWord> tagWords)> WriteToDatabase(ParsedContent parsed, IDbTransaction transaction, bool isNewItem)
@@ -916,30 +916,30 @@ public class ContentSyncService : IContentSyncService
     {
         if (frontMatter.TryGetValue("section_names", out var value) && value is IEnumerable<object> list)
         {
-            return [.. list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s))];
+            return list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)).ToList();
         }
 
-        return ["all"]; // Default section
+        return new List<string> { "all" }; // Default section
     }
 
     private static List<string> GetTagsFromFrontMatter(Dictionary<string, object?> frontMatter)
     {
         if (frontMatter.TryGetValue("tags", out var value) && value is IEnumerable<object> list)
         {
-            return [.. list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s))];
+            return list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)).ToList();
         }
 
-        return [];
+        return new List<string>();
     }
 
     private static List<string> GetPlansFromFrontMatter(Dictionary<string, object?> frontMatter)
     {
         if (frontMatter.TryGetValue("plans", out var value) && value is IEnumerable<object> list)
         {
-            return [.. list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s))];
+            return list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)).ToList();
         }
 
-        return [];
+        return new List<string>();
     }
 
     private static (string excerpt, string content) ExtractExcerptAndContent(string fileContent)

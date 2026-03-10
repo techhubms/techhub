@@ -8,9 +8,9 @@ namespace TechHub.Web.Services;
 /// </summary>
 public class SectionCache
 {
-    private Dictionary<string, Section> _sectionsByName = [];
+    private Dictionary<string, Section> _sectionsByName = new();
 
-    public IReadOnlyList<Section> Sections { get; private set; } = [];
+    public IReadOnlyList<Section> Sections { get; private set; } = Array.Empty<Section>();
 
     public void Initialize(IReadOnlyList<Section> sections)
     {

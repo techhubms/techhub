@@ -53,9 +53,9 @@ public static class RssEndpoints
         // Get only the 50 most recent items for RSS feed (standard RSS practice)
         var searchResult = await contentRepository.SearchAsync(new SearchRequest(
             take: 50,
-            sections: ["all"],
-            collections: ["all"],
-            tags: []
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>()
         ));
 
         // Create a virtual "Everything" section for the feed with a dummy collection
@@ -72,7 +72,7 @@ public static class RssEndpoints
             description: "All content from Tech Hub",
             url: "/",
             tag: "All",
-            collections: [dummyCollection]);
+            collections: new[] { dummyCollection });
 
         var channel = await rssService.GenerateSectionFeedAsync(everythingSection, searchResult.Items);
         var xml = rssService.SerializeToXml(channel);
@@ -98,9 +98,9 @@ public static class RssEndpoints
         // RSS feeds should exclude draft content and show only 50 most recent items
         var searchResult = await contentRepository.SearchAsync(new SearchRequest(
             take: 50,
-            sections: [section.Name],
-            collections: ["all"],
-            tags: []
+            sections: new[] { section.Name },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>()
         ));
 
         var channel = await rssService.GenerateSectionFeedAsync(section, searchResult.Items);
@@ -131,7 +131,7 @@ public static class RssEndpoints
         // Determine which sections to search
         var sectionsToSearch = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
             ? new[] { "all" }
-            : [sectionName];
+            : new[] { sectionName };
 
         // Validate collection exists in the specified section(s)
         var allSections = await contentRepository.GetAllSectionsAsync();
@@ -154,8 +154,8 @@ public static class RssEndpoints
         var searchResult = await contentRepository.SearchAsync(new SearchRequest(
             take: 50,
             sections: sectionsToSearch,
-            collections: [collectionName],
-            tags: []
+            collections: new[] { collectionName },
+            tags: Array.Empty<string>()
         ));
 
         // Create a virtual section for the feed
@@ -173,7 +173,7 @@ public static class RssEndpoints
             description: feedDescription,
             url: collection.Url,
             tag: Core.Models.Collection.GetTagFromName(collectionName),
-            collections: [collection]);
+            collections: new[] { collection });
 
         var channel = await rssService.GenerateSectionFeedAsync(virtualSection, searchResult.Items);
         var xml = rssService.SerializeToXml(channel);

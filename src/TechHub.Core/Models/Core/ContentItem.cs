@@ -21,12 +21,12 @@ public record ContentItem
     /// </summary>
     public string PrimarySectionName { get; }
 
-    public IReadOnlyList<string> Tags { get; private set; } = [];
+    public IReadOnlyList<string> Tags { get; private set; } = Array.Empty<string>();
 
     /// <summary>
     /// List of sections this content belongs to (parsed from database boolean columns).
     /// </summary>
-    public IReadOnlyList<string> Sections { get; private set; } = [];
+    public IReadOnlyList<string> Sections { get; private set; } = Array.Empty<string>();
 
     public string Excerpt { get; }
     public string ExternalUrl { get; }

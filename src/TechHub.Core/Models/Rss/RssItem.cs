@@ -13,6 +13,6 @@ public record RssItem
 #pragma warning restore CA1720
     public required DateTimeOffset PubDate { get; init; }
     public string? Author { get; init; }
-    public IReadOnlyList<string> Categories { get; init; } = [];
+    public IReadOnlyList<string> Categories { get; init; } = Array.Empty<string>();
 
 }

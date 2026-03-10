@@ -120,15 +120,15 @@ public class FrontMatterParser
         ArgumentNullException.ThrowIfNull(frontMatter);
         if (!frontMatter.TryGetValue(key, out var value))
         {
-            return [];
+            return new List<string>();
         }
 
         // Handle various formats: string, List<object>, object[]
         return value switch
         {
-            string str => [str],
-            IEnumerable<object> list => [.. list.Select(x => x.ToString() ?? string.Empty)],
-            _ => []
+            string str => new List<string> { str },
+            IEnumerable<object> list => list.Select(x => x.ToString() ?? string.Empty).ToList(),
+            _ => new List<string>()
         };
     }
 }

@@ -300,7 +300,7 @@ public class DatabasePerformanceTests : IDisposable
             sectionName: "github-copilot",
             collectionName: "all",
             maxTags: 20,
-            tags: ["vs code", "copilot coding agent"],
+            tags: new[] { "vs code", "copilot coding agent" },
             tagsToCount: ["agent mode", "pull requests", "automation", "chat", "edits"]);
 
         var elapsedMs = await MeasureTagCountsAsync(request);
@@ -317,7 +317,7 @@ public class DatabasePerformanceTests : IDisposable
             sectionName: "all",
             collectionName: "all",
             maxTags: 20,
-            tags: ["vs code"],
+            tags: new[] { "vs code" },
             tagsToCount: ["agent mode", "pull requests", "automation", "chat", "edits",
                           "copilot coding agent", "productivity", "testing", "security"]);
 
@@ -395,7 +395,7 @@ public class DatabasePerformanceTests : IDisposable
             maxTags: 20,
             dateFrom: DateTimeOffset.UtcNow.AddDays(-365),
             dateTo: DateTimeOffset.UtcNow,
-            tags: ["vs code"],
+            tags: new[] { "vs code" },
             tagsToCount: ["agent mode", "pull requests", "automation", "chat"]);
 
         var elapsedMs = await MeasureTagCountsAsync(request);
@@ -439,7 +439,7 @@ public class DatabasePerformanceTests : IDisposable
             take: 20,
             sections: [sectionName],
             collections: [collectionName],
-            tags: []);
+            tags: Array.Empty<string>());
 
         var (elapsedMs, result) = await MeasureSearchAsync(request);
 
@@ -454,9 +454,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["ai"],
-            collections: ["all"],
-            tags: []);
+            sections: new[] { "ai" },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>());
 
         var (elapsedMs, result) = await MeasureSearchAsync(request);
 
@@ -473,9 +473,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["ai"],
-            collections: ["all"],
-            tags: ["AI"]);
+            sections: new[] { "ai" },
+            collections: new[] { "all" },
+            tags: new[] { "AI" });
 
         var (elapsedMs, result) = await MeasureSearchAsync(request);
 
@@ -490,9 +490,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["ai"],
-            collections: ["all"],
-            tags: ["AI", "GitHub"]);
+            sections: new[] { "ai" },
+            collections: new[] { "all" },
+            tags: new[] { "AI", "GitHub" });
 
         var (elapsedMs, _) = await MeasureSearchAsync(request);
 
@@ -508,9 +508,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["ai"],
-            collections: ["all"],
-            tags: [],
+            sections: new[] { "ai" },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>(),
             query: "copilot");
 
         var (elapsedMs, result) = await MeasureSearchAsync(request);
@@ -526,9 +526,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["ai"],
-            collections: ["all"],
-            tags: ["AI"],
+            sections: new[] { "ai" },
+            collections: new[] { "all" },
+            tags: new[] { "AI" },
             query: "copilot");
 
         var (elapsedMs, _) = await MeasureSearchAsync(request);
@@ -543,9 +543,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["ai"],
-            collections: ["all"],
-            tags: ["AI"],
+            sections: new[] { "ai" },
+            collections: new[] { "all" },
+            tags: new[] { "AI" },
             query: "copilot",
             dateFrom: DateTimeOffset.UtcNow.AddDays(-90),
             dateTo: DateTimeOffset.UtcNow);
@@ -564,9 +564,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["ai"],
-            collections: ["all"],
-            tags: [],
+            sections: new[] { "ai" },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>(),
             dateFrom: DateTimeOffset.UtcNow.AddDays(-30),
             dateTo: DateTimeOffset.UtcNow);
 
@@ -584,9 +584,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["github-copilot"],
-            collections: ["videos"],
-            tags: [],
+            sections: new[] { "github-copilot" },
+            collections: new[] { "videos" },
+            tags: Array.Empty<string>(),
             subcollection: "ghc-features");
 
         var (elapsedMs, _) = await MeasureSearchAsync(request);
@@ -606,9 +606,9 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: ["ai"],
-            collections: ["all"],
-            tags: [],
+            sections: new[] { "ai" },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>(),
             skip: skip);
 
         var (elapsedMs, _) = await MeasureSearchAsync(request);
@@ -625,7 +625,7 @@ public class DatabasePerformanceTests : IDisposable
 
         // First find a valid slug to look up
         var searchResult = await _repository!.SearchAsync(
-            new SearchRequest(take: 1, sections: ["all"], collections: ["roundups"], tags: []),
+            new SearchRequest(take: 1, sections: new[] { "all" }, collections: new[] { "roundups" }, tags: Array.Empty<string>()),
             TestContext.Current.CancellationToken);
         searchResult.Items.Should().NotBeEmpty("need at least one roundup item to test");
 

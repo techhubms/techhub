@@ -87,7 +87,7 @@ public class ContentRepository : IContentRepository
 
     // High-frequency tags excluded from all tag clouds.
     // These appear on most content items and don't provide filtering value.
-    private static readonly string[] HighFrequencyExcludedTags = ["github", "copilot", "microsoft"];
+    private static readonly string[] HighFrequencyExcludedTags = new[] { "github", "copilot", "microsoft" };
 
     static ContentRepository()
     {
@@ -307,7 +307,7 @@ public class ContentRepository : IContentRepository
             return await SearchInternalAsync(request, ct);
         }) ?? new SearchResults<ContentItem>
         {
-            Items = [],
+            Items = Array.Empty<ContentItem>(),
             TotalCount = 0,
             Facets = new FacetResults { Facets = new Dictionary<string, IReadOnlyList<FacetValue>>(), TotalCount = 0 }
         };
@@ -516,7 +516,7 @@ public class ContentRepository : IContentRepository
                 _logger,
                 _enableQueryLogging);
 
-            facets["tags"] = [.. tags];
+            facets["tags"] = tags.ToList();
         }
 
         // Get collection facets if requested
@@ -534,7 +534,7 @@ public class ContentRepository : IContentRepository
                 _logger,
                 _enableQueryLogging);
 
-            facets["collections"] = [.. collections];
+            facets["collections"] = collections.ToList();
         }
 
         // Get section facets if requested
@@ -562,7 +562,7 @@ public class ContentRepository : IContentRepository
                 _logger,
                 _enableQueryLogging);
 
-            facets["sections"] = [.. sections.Where(s => s.Count > 0)];
+            facets["sections"] = sections.Where(s => s.Count > 0).ToList();
         }
 
         return new FacetResults
@@ -595,8 +595,8 @@ public class ContentRepository : IContentRepository
         List<string>? filteredTagsToCount = null;
         if (request.TagsToCount is { Count: > 0 })
         {
-            filteredTagsToCount = [.. request.TagsToCount
-                .Distinct(StringComparer.OrdinalIgnoreCase)];
+            filteredTagsToCount = request.TagsToCount
+                .Distinct(StringComparer.OrdinalIgnoreCase).ToList();
 
             if (filteredTagsToCount.Count == 0)
             {
@@ -794,7 +794,7 @@ public class ContentRepository : IContentRepository
                 }
             }
 
-            return [.. results.OrderByDescending(t => t.Count).ThenBy(t => t.Tag)];
+            return results.OrderByDescending(t => t.Count).ThenBy(t => t.Tag).ToList();
         }
         else
         {
@@ -836,7 +836,7 @@ public class ContentRepository : IContentRepository
                 _logger,
                 _enableQueryLogging);
 
-            return [.. results];
+            return results.ToList();
         }
     }
 
@@ -1173,7 +1173,7 @@ public class ContentRepository : IContentRepository
         if (request.IncludeFacets)
         {
             facets = await GetFacetsAsync(new FacetRequest(
-                facetFields: ["tags", "collections", "sections"],
+                facetFields: new[] { "tags", "collections", "sections" },
                 tags: request.Tags!,
                 sections: request.Sections!,
                 collections: request.Collections!,
@@ -1184,7 +1184,7 @@ public class ContentRepository : IContentRepository
 
         return new SearchResults<ContentItem>
         {
-            Items = [.. items],
+            Items = items.ToList(),
             TotalCount = totalCount,
             Facets = facets,
             ContinuationToken = null

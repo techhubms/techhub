@@ -50,7 +50,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
             Content = new ContentSettings
             {
                 CollectionsPath = "collections",
-                Sections = []
+                Sections = new Dictionary<string, SectionConfig>()
             },
             BaseUrl = "https://localhost:7245"
         };
@@ -80,7 +80,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().HaveCount(TotalPublishedItems, "Should return exactly 32 published items from TestCollections");
@@ -103,7 +103,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: _blogs/*.md files exist
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: []), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "blogs" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().HaveCount(BlogsCount, "Should return exactly 18 blog posts from TestCollections");
@@ -121,7 +121,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().HaveCount(TotalPublishedItems, "Should return all 32 published items from TestCollections");
@@ -142,7 +142,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: [], includeDraft: false), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "blogs" }, tags: Array.Empty<string>(), includeDraft: false), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotContain(item => item.Slug == "draft-article",
@@ -161,7 +161,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: [], includeDraft: true), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "blogs" }, tags: Array.Empty<string>(), includeDraft: true), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().Contain(item => item.Slug == "draft-article" && item.Draft,
@@ -180,7 +180,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: _ghc-features/*.md and _vscode-updates/*.md exist, and optionally _videos/*.md
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "videos" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotBeEmpty("TestCollections should contain video content");
@@ -206,7 +206,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: Files with section_names: [ai] exist
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "ai" }, collections: new[] { "all" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotBeEmpty("TestCollections should contain AI section content");
@@ -222,7 +222,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Arrange - data already seeded from TestCollections
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotBeEmpty("TestCollections should contain multiple items");
@@ -243,7 +243,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true and section_names: [ai]
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: [], includeDraft: false), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "ai" }, collections: new[] { "all" }, tags: Array.Empty<string>(), includeDraft: false), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().NotContain(item => item.Slug == "draft-article",
@@ -262,7 +262,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true and section_names: [ai]
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: [], includeDraft: true), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "ai" }, collections: new[] { "all" }, tags: Array.Empty<string>(), includeDraft: true), TestContext.Current.CancellationToken);
 
         // Assert
         results.Items.Should().Contain(item => item.Slug == "draft-article" && item.Draft,
@@ -361,7 +361,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: _vscode-updates/2025-01-10-vscode-update.md exists
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "videos" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert: Find the vscode-updates item
         var vscodeItem = results.Items.FirstOrDefault(v => v.SubcollectionName == "vscode-updates");
@@ -383,7 +383,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Expected: _ghc-features/*.md exists
 
         // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["videos"], tags: []), TestContext.Current.CancellationToken);
+        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "videos" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert: Find a ghc-features item
         var ghcFeatureItem = results.Items.FirstOrDefault(v => v.SubcollectionName == "ghc-features");
@@ -405,7 +405,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     public async Task SearchAsync_TagFilter_FiltersCorrectly()
     {
         // Arrange - data already seeded from TestCollections
-        var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: ["AI"]);
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: new[] { "AI" });
 
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
@@ -429,9 +429,9 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     public async Task SearchAsync_SectionFilter_FiltersCorrectly()
     {
         // Arrange - data already seeded from TestCollections
-        // "test-article" has sections: ["ai", "cloud"]
-        // "devops-section" has sections: ["devops"]
-        var request = new SearchRequest(take: 50, sections: ["ai"], collections: ["all"], tags: []);
+        // "test-article" has sections: new[] { "ai", "cloud" }
+        // "devops-section" has sections: new[] { "devops" }
+        var request = new SearchRequest(take: 50, sections: new[] { "ai" }, collections: new[] { "all" }, tags: Array.Empty<string>());
 
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
@@ -453,7 +453,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     {
         // Arrange - data already seeded from TestCollections
         // _blogs/ and _news/ directories exist with different content
-        var request = new SearchRequest(take: 50, sections: ["all"], collections: ["blogs"], tags: []);
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "blogs" }, tags: Array.Empty<string>());
 
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
@@ -480,9 +480,9 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // 2024 items exist, 2023 items exist (old-post), 2025+ items exist
         var request = new SearchRequest(
             take: 50,
-            sections: ["all"],
-            collections: ["all"],
-            tags: [],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>(),
             dateFrom: new DateTimeOffset(2024, 1, 1, 0, 0, 0, TimeSpan.Zero),
             dateTo: new DateTimeOffset(2024, 12, 31, 23, 59, 59, TimeSpan.Zero)
         );
@@ -512,7 +512,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     public async Task SearchAsync_Pagination_ReturnsCorrectCount()
     {
         // Arrange - data already seeded from TestCollections
-        var request = new SearchRequest(take: 3, sections: ["all"], collections: ["all"], tags: []);
+        var request = new SearchRequest(take: 3, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>());
 
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
@@ -531,7 +531,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     public async Task SearchAsync_ExcludesDrafts()
     {
         // Arrange - data already seeded from TestCollections
-        var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []);
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>());
 
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
@@ -553,7 +553,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     public async Task GetFacetsAsync_ReturnsTagCounts()
     {
         // Arrange - data already seeded from TestCollections
-        var request = new FacetRequest(facetFields: ["tags"], tags: [], sections: [], collections: []);
+        var request = new FacetRequest(facetFields: new[] { "tags" }, tags: Array.Empty<string>(), sections: Array.Empty<string>(), collections: Array.Empty<string>());
 
         // Act
         var results = await Repository.GetFacetsAsync(request, TestContext.Current.CancellationToken);
@@ -568,7 +568,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
             f.Value.Equals("AI", StringComparison.OrdinalIgnoreCase));
         if (aiTagFacet != null)
         {
-            var allItemsResult = await Repository.SearchAsync(new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: []), TestContext.Current.CancellationToken);
+            var allItemsResult = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
             // Count PUBLISHED items that have tags containing "ai" as a word (substring match)
             var actualAiCount = allItemsResult.Items.Where(i => !i.Draft).Count(i =>
                 i.Tags.Any(t => t.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries)
@@ -586,7 +586,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     public async Task GetFacetsAsync_ReturnsCollectionCounts()
     {
         // Arrange - data already seeded from TestCollections
-        var request = new FacetRequest(facetFields: ["collections"], tags: [], sections: [], collections: []);
+        var request = new FacetRequest(facetFields: new[] { "collections" }, tags: Array.Empty<string>(), sections: Array.Empty<string>(), collections: Array.Empty<string>());
 
         // Act
         var results = await Repository.GetFacetsAsync(request, TestContext.Current.CancellationToken);
@@ -618,7 +618,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     public async Task GetFacetsAsync_ReturnsSectionCounts()
     {
         // Arrange - data already seeded from TestCollections
-        var request = new FacetRequest(facetFields: ["sections"], tags: [], sections: [], collections: []);
+        var request = new FacetRequest(facetFields: new[] { "sections" }, tags: Array.Empty<string>(), sections: Array.Empty<string>(), collections: Array.Empty<string>());
 
         // Act
         var results = await Repository.GetFacetsAsync(request, TestContext.Current.CancellationToken);
@@ -641,7 +641,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     public async Task GetFacetsAsync_ReturnsTotalCount()
     {
         // Arrange - data already seeded from TestCollections
-        var request = new FacetRequest(facetFields: ["tags"], tags: [], sections: [], collections: []);
+        var request = new FacetRequest(facetFields: new[] { "tags" }, tags: Array.Empty<string>(), sections: Array.Empty<string>(), collections: Array.Empty<string>());
 
         // Act
         var results = await Repository.GetFacetsAsync(request, TestContext.Current.CancellationToken);
@@ -660,7 +660,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     {
         // Arrange - data already seeded from TestCollections
         // Filter by AI tag and check that counts are for AI-filtered content only
-        var filteredRequest = new FacetRequest(facetFields: ["tags"], tags: ["AI"], sections: [], collections: []);
+        var filteredRequest = new FacetRequest(facetFields: new[] { "tags" }, tags: new[] { "AI" }, sections: Array.Empty<string>(), collections: Array.Empty<string>());
 
         // Act
         var filteredResults = await Repository.GetFacetsAsync(filteredRequest, TestContext.Current.CancellationToken);
@@ -994,7 +994,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     {
         // Arrange - data already seeded from TestCollections
         // Expected: _blogs/2024-01-11-fts-test.md contains "TechHubSpecialKeyword"
-        var request = new SearchRequest(take: 50, sections: ["all"], collections: ["all"], tags: [], query: "TechHubSpecialKeyword");
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "TechHubSpecialKeyword");
 
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);

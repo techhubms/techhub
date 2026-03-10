@@ -568,19 +568,8 @@
         padding: var(--spacing-2);
     }
 
-    /* Mermaid: with useMaxWidth:false, mermaid sets a fixed pixel width on each
-       SVG matching its natural diagram dimensions. On narrow screens, remove the
-       max-width:100% cap so diagrams render at full size and the container's
-       overflow-x:auto provides horizontal scrolling instead of shrinking them
-       to unreadably small sizes. */
-    .article-body .mermaid svg {
-        max-width: none !important;
-        max-height: none;
-    }
-
     .article-body .mermaid {
         padding: var(--spacing-2);
-        -webkit-overflow-scrolling: touch;
     }
 }
 

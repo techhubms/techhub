@@ -17,12 +17,12 @@ public class ContentItemBuilder
     private string? _subcollectionName = null;
     private string _primarySectionName = "github-copilot";
     private string _feedName = "Test Feed";
-    private IReadOnlyList<string> _tags = ["AI", "GitHub Copilot", "Test Tag"];
+    private IReadOnlyList<string> _tags = new[] { "AI", "GitHub Copilot", "Test Tag" };
     private string _excerpt = "Test excerpt";
     private string _externalUrl = "https://dummy";
     private string _content = "# Test Content\n\nTest markdown content.";
     private string? _renderedHtml = null;
-    private IReadOnlyList<string>? _plans = [];
+    private IReadOnlyList<string>? _plans = Array.Empty<string>();
     private bool _ghesSupport = false;
     private bool _draft = false;
 

@@ -22,17 +22,17 @@ public class CacheKeyTests
         // Arrange
         var request1 = new SearchRequest(
             take: take1,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["azure"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "azure" },
             skip: skip1
         );
 
         var request2 = new SearchRequest(
             take: take2,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["azure"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "azure" },
             skip: skip2
         );
 
@@ -53,17 +53,17 @@ public class CacheKeyTests
         // Arrange
         var request1 = new SearchRequest(
             take: 10,
-            sections: ["all"],
-            collections: ["all"],
-            tags: [.. tags1.Split(',')],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: tags1.Split(','),
             skip: 0
         );
 
         var request2 = new SearchRequest(
             take: 10,
-            sections: ["all"],
-            collections: ["all"],
-            tags: [.. tags2.Split(',')],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: tags2.Split(','),
             skip: 0
         );
 
@@ -83,17 +83,17 @@ public class CacheKeyTests
         // Arrange
         var request1 = new SearchRequest(
             take: 10,
-            sections: [section1],
-            collections: ["all"],
-            tags: [],
+            sections: new[] { section1 },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>(),
             skip: 0
         );
 
         var request2 = new SearchRequest(
             take: 10,
-            sections: [section2],
-            collections: ["all"],
-            tags: [],
+            sections: new[] { section2 },
+            collections: new[] { "all" },
+            tags: Array.Empty<string>(),
             skip: 0
         );
 
@@ -113,17 +113,17 @@ public class CacheKeyTests
         // Arrange
         var request1 = new SearchRequest(
             take: 10,
-            sections: ["all"],
-            collections: [collection1],
-            tags: [],
+            sections: new[] { "all" },
+            collections: new[] { collection1 },
+            tags: Array.Empty<string>(),
             skip: 0
         );
 
         var request2 = new SearchRequest(
             take: 10,
-            sections: ["all"],
-            collections: [collection2],
-            tags: [],
+            sections: new[] { "all" },
+            collections: new[] { collection2 },
+            tags: Array.Empty<string>(),
             skip: 0
         );
 
@@ -143,18 +143,18 @@ public class CacheKeyTests
     {
         // Arrange
         var request1 = new FacetRequest(
-            facetFields: [.. fields1.Split(',')],
-            tags: [],
-            sections: [],
-            collections: [],
+            facetFields: fields1.Split(','),
+            tags: Array.Empty<string>(),
+            sections: Array.Empty<string>(),
+            collections: Array.Empty<string>(),
             maxFacetValues: 10
         );
 
         var request2 = new FacetRequest(
-            facetFields: [.. fields2.Split(',')],
-            tags: [],
-            sections: [],
-            collections: [],
+            facetFields: fields2.Split(','),
+            tags: Array.Empty<string>(),
+            sections: Array.Empty<string>(),
+            collections: Array.Empty<string>(),
             maxFacetValues: 10
         );
 
@@ -174,18 +174,18 @@ public class CacheKeyTests
     {
         // Arrange
         var request1 = new FacetRequest(
-            facetFields: ["tags"],
-            tags: [],
-            sections: [],
-            collections: [],
+            facetFields: new[] { "tags" },
+            tags: Array.Empty<string>(),
+            sections: Array.Empty<string>(),
+            collections: Array.Empty<string>(),
             maxFacetValues: max1
         );
 
         var request2 = new FacetRequest(
-            facetFields: ["tags"],
-            tags: [],
-            sections: [],
-            collections: [],
+            facetFields: new[] { "tags" },
+            tags: Array.Empty<string>(),
+            sections: Array.Empty<string>(),
+            collections: Array.Empty<string>(),
             maxFacetValues: max2
         );
 

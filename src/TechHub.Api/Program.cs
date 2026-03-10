@@ -21,7 +21,7 @@ builder.Services.AddSingleton<StartupStateService>();
 
 // Add custom health check that waits for startup operations to complete
 builder.Services.AddHealthChecks()
-    .AddCheck<StartupHealthCheck>("startup", tags: ["ready"]);
+    .AddCheck<StartupHealthCheck>("startup", tags: new[] { "ready" });
 
 // Log environment during startup for verification
 using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))

@@ -266,10 +266,10 @@ public static class ContentEndpoints
             take: limit,
             skip: offset,
             query: q,
-            sections: [section.Name],
-            collections: [collectionName],  // Pass "all" through, repo handles it
+            sections: new[] { section.Name },
+            collections: new[] { collectionName },  // Pass "all" through, repo handles it
             tags: string.IsNullOrWhiteSpace(tags)
-                ? []
+                ? Array.Empty<string>()
                 : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
             subcollection: subcollection,
             dateFrom: dateFrom,
@@ -363,14 +363,14 @@ public static class ContentEndpoints
         List<string>? selectedTags = null;
         if (!string.IsNullOrWhiteSpace(tags))
         {
-            selectedTags = [.. tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)];
+            selectedTags = tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).ToList();
         }
 
         // Parse tagsToCount filter (for getting counts of specific baseline tags)
         List<string>? parsedTagsToCount = null;
         if (!string.IsNullOrWhiteSpace(tagsToCount))
         {
-            parsedTagsToCount = [.. tagsToCount.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)];
+            parsedTagsToCount = tagsToCount.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).ToList();
         }
 
         // Get top N tag counts from repository - repository will handle "all" as no filter
@@ -390,11 +390,11 @@ public static class ContentEndpoints
 
         if (tagCounts.Count == 0)
         {
-            return TypedResults.Ok<IReadOnlyList<TagCloudItem>>([]);
+            return TypedResults.Ok<IReadOnlyList<TagCloudItem>>(Array.Empty<TagCloudItem>());
         }
 
         // Apply quantile-based sizing to top N tags
-        var tagCloud = ApplyQuantileSizing([.. tagCounts], options.QuantilePercentiles);
+        var tagCloud = ApplyQuantileSizing(tagCounts.ToList(), options.QuantilePercentiles);
 
         return TypedResults.Ok(tagCloud);
     }
@@ -415,18 +415,18 @@ public static class ContentEndpoints
 
         if (sortedTags.Count == 0)
         {
-            return [];
+            return Array.Empty<TagCloudItem>();
         }
 
         // For 1-2 tags, use consistent sizing
         if (sortedTags.Count <= 2)
         {
-            return [.. sortedTags.Select(tag => new TagCloudItem
+            return sortedTags.Select(tag => new TagCloudItem
             {
                 Tag = tag.Tag,
                 Count = tag.Count,
                 Size = TagSize.Medium
-            })];
+            }).ToList();
         }
 
         // Calculate quantile thresholds based on COUNT VALUES, not positions
@@ -481,7 +481,7 @@ public static class ContentEndpoints
         if (distinctSizes.Count == 1)
         {
             // All tags ended up in the same group → normalize to Medium
-            return [.. result.Select(t => t with { Size = TagSize.Medium })];
+            return result.Select(t => t with { Size = TagSize.Medium }).ToList();
         }
 
         if (distinctSizes.Count == 2)
@@ -491,12 +491,12 @@ public static class ContentEndpoints
             var medianIndex = (int)Math.Ceiling(counts.Count * 0.5);
             var medianThreshold = counts[Math.Min(medianIndex, counts.Count - 1)];
 
-            return [.. sortedTags.Select(tag => new TagCloudItem
+            return sortedTags.Select(tag => new TagCloudItem
             {
                 Tag = tag.Tag,
                 Count = tag.Count,
                 Size = tag.Count >= medianThreshold ? TagSize.Medium : TagSize.Small
-            })];
+            }).ToList();
         }
 
         return result;

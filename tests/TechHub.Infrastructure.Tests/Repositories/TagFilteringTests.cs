@@ -34,7 +34,7 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
             Content = new ContentSettings
             {
                 CollectionsPath = "collections",
-                Sections = []
+                Sections = new Dictionary<string, SectionConfig>()
             },
             BaseUrl = "https://localhost:5001"
         };
@@ -57,9 +57,9 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         // Arrange
         var request = new SearchRequest(
             take: 50,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["ai"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "ai" },
             skip: 0
         );
 
@@ -81,9 +81,9 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         // Arrange - search for items with BOTH "github copilot" AND "collaboration"
         var request = new SearchRequest(
             take: 50,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["github copilot", "collaboration"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "github copilot", "collaboration" },
             skip: 0
         );
 
@@ -110,17 +110,17 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         // Arrange - search for common tag to get multiple pages
         var request1 = new SearchRequest(
             take: 2,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["github copilot"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "github copilot" },
             skip: 0
         );
 
         var request2 = new SearchRequest(
             take: 2,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["github copilot"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "github copilot" },
             skip: 2
         );
 
@@ -149,17 +149,17 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         // Arrange - search with uppercase
         var requestUpper = new SearchRequest(
             take: 50,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["GITHUB COPILOT"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "GITHUB COPILOT" },
             skip: 0
         );
 
         var requestLower = new SearchRequest(
             take: 50,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["github copilot"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "github copilot" },
             skip: 0
         );
 
@@ -185,9 +185,9 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         // Arrange
         var request = new SearchRequest(
             take: 50,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["ai"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "ai" },
             skip: 0
         );
 
@@ -210,9 +210,9 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         // Arrange - search for tags in specific section
         var request = new SearchRequest(
             take: 50,
-            sections: ["github-copilot"],
-            collections: ["all"],
-            tags: ["github copilot"],
+            sections: new[] { "github-copilot" },
+            collections: new[] { "all" },
+            tags: new[] { "github copilot" },
             skip: 0
         );
 
@@ -238,9 +238,9 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         // Arrange - search for tag that doesn't exist
         var request = new SearchRequest(
             take: 50,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["this-tag-definitely-does-not-exist-in-test-data-xyz123"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "this-tag-definitely-does-not-exist-in-test-data-xyz123" },
             skip: 0
         );
 
@@ -261,9 +261,9 @@ public class TagFilteringTests : IClassFixture<DatabaseFixture<TagFilteringTests
         // Arrange
         var request = new SearchRequest(
             take: 5,
-            sections: ["all"],
-            collections: ["all"],
-            tags: ["collaboration"],
+            sections: new[] { "all" },
+            collections: new[] { "all" },
+            tags: new[] { "collaboration" },
             skip: 0
         );
 

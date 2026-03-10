@@ -126,11 +126,11 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
     public string? SearchQuery { get; set; }
 
     private IReadOnlyList<TagCloudItem>? _tags;
-    private HashSet<string> _selectedTagsInternal = [];
+    private HashSet<string> _selectedTagsInternal = new();
     private bool _isLoading = true;
     private bool _hasError;
     private bool _hasInitialized; // Track if we've loaded tags to prevent double-load flicker
-    private HashSet<string> _previousSelectedTags = []; // Track previous state to detect changes
+    private HashSet<string> _previousSelectedTags = new(); // Track previous state to detect changes
     private string? _previousFromDate;
     private string? _previousToDate;
     private string? _previousSearchQuery;
@@ -304,8 +304,8 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
                 }
 
                 // Fallback: no SectionName or API returned empty — show tags with count=1
-                _tags = [.. distinctTags
-                    .Select(t => new TagCloudItem { Tag = t, Count = 1, Size = TagSize.Medium })];
+                _tags = distinctTags
+                    .Select(t => new TagCloudItem { Tag = t, Count = 1, Size = TagSize.Medium }).ToList();
 
                 Logger.LogDebug("Using {Count} provided tags for content item (static count=1)", _tags.Count);
                 return;
@@ -320,7 +320,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
 
             // Create filter list from selected tags (for content filtering)
             List<string>? filterTags = _selectedTagsInternal.Count > 0
-                ? [.. _selectedTagsInternal]
+                ? _selectedTagsInternal.ToList()
                 : null;
 
             // Pass selected tags as tagsToCount to ensure they always appear in results
@@ -357,7 +357,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
                     }
                 }
 
-                _tags = [.. selected, .. rest];
+                _tags = selected.Concat(rest).ToList();
                 Logger.LogDebug("Loaded {SelectedCount} selected + {PopularCount} popular tags",
                     selected.Count, rest.Count);
             }
@@ -428,7 +428,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         await LoadTagsAsync();
 
         // Raise event to notify parent component (parent handles URL state)
-        await OnSelectionChanged.InvokeAsync([.. _selectedTagsInternal]);
+        await OnSelectionChanged.InvokeAsync(_selectedTagsInternal.ToList());
     }
 
     private string GetPersistedStateKey()

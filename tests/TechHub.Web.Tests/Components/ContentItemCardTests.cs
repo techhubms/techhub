@@ -391,7 +391,7 @@ public class ContentItemCardTests : BunitContext
         var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item)
             .Add(p => p.ShowCollectionBadge, false)
-            .Add(p => p.ActiveFilterTags, ["ai"]));
+            .Add(p => p.ActiveFilterTags, new[] { "ai" }));
 
         // Assert - The "ai" badge should have the active class
         var activeBadges = cut.FindAll(".badge-tag-active");
@@ -467,7 +467,7 @@ public class ContentItemCardTests : BunitContext
         var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item)
             .Add(p => p.ShowCollectionBadge, false)
-            .Add(p => p.ActiveFilterTags, ["ai"]));
+            .Add(p => p.ActiveFilterTags, new[] { "ai" }));
 
         // Assert - Active tag should have "Remove filter" aria-label
         var activeTag = cut.Find(".badge-tag-active");

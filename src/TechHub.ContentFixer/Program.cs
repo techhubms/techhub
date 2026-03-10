@@ -183,12 +183,12 @@ public sealed class Program
     {
         if (File.Exists(path))
         {
-            return [path];
+            return new List<string> { path };
         }
 
         if (Directory.Exists(path))
         {
-            return [.. Directory.GetFiles(path, "*.md", SearchOption.AllDirectories).OrderBy(f => f)];
+            return Directory.GetFiles(path, "*.md", SearchOption.AllDirectories).OrderBy(f => f).ToList();
         }
 
         throw new ArgumentException($"Path not found: {path}");
@@ -734,14 +734,15 @@ public sealed class Program
     {
         if (!frontMatter.TryGetValue(key, out var value))
         {
-            return [];
+            return new List<string>();
         }
 
+        // Handle various formats: string, List<object>, object[]
         return value switch
         {
-            string str => [str],
-            IEnumerable<object> list => [.. list.Select(x => x?.ToString() ?? string.Empty)],
-            _ => []
+            string str => new List<string> { str },
+            IEnumerable<object> list => list.Select(x => x?.ToString() ?? string.Empty).ToList(),
+            _ => new List<string>()
         };
     }
 
@@ -844,7 +845,7 @@ public sealed class Program
                 var sectionNames = GetListValue(frontMatter, "section_names");
                 if (sectionNames.Count == 0)
                 {
-                    sectionNames = [.. GetListValue(frontMatter, "categories").Select(NormalizeSectionName)];
+                    sectionNames = GetListValue(frontMatter, "categories").Select(NormalizeSectionName).ToList();
                 }
 
                 // Get collection from file path
