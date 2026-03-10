@@ -157,12 +157,17 @@ public class NavigationTests : PlaywrightTestBase
 
         // Act - Measure banner height on homepage
         await Page.GotoRelativeAsync("/");
-        var homeBanner = Page.Locator(".section-banner.home-banner");
-        await Assertions.Expect(homeBanner).ToBeVisibleAsync();
-        // Ensure element is in viewport before measuring — BoundingBoxAsync can return
-        // null in CI when the element hasn't been scrolled into the visible area yet.
-        await homeBanner.ScrollIntoViewIfNeededAsync();
-        var homeHeaderHeight = await homeBanner.BoundingBoxAsync();
+        // Use JS-based measurement — ScrollIntoViewIfNeededAsync fails intermittently with
+        // "Element is not attached to the DOM" during Blazor hydration because Playwright's
+        // stability check extends the window where element detachment can occur.
+        var homeHeightHandle = await Page.WaitForConditionAsync(@"() => {
+            const el = document.querySelector('.section-banner.home-banner');
+            if (!el || !el.isConnected) return null;
+            el.scrollIntoView({ block: 'center' });
+            const r = el.getBoundingClientRect();
+            return r.height > 0 ? r.height : null;
+        }");
+        var homeBannerHeight = await homeHeightHandle.JsonValueAsync<double>();
 
         // Navigate to section page - use specific selector to avoid matching stale DOM during Blazor navigation
         await Page.GotoRelativeAsync("/github-copilot");
@@ -181,8 +186,7 @@ public class NavigationTests : PlaywrightTestBase
         var sectionBannerHeight = await sectionHeightHandle.JsonValueAsync<double>();
 
         // Assert - Both should have defined heights (not auto)
-        homeHeaderHeight.Should().NotBeNull();
-        homeHeaderHeight!.Height.Should().BeGreaterThan(0);
+        homeBannerHeight.Should().BeGreaterThan(0);
         sectionBannerHeight.Should().BeGreaterThan(0);
     }
 
