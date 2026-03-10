@@ -6,11 +6,6 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      force-infra-deploy:
-        description: 'Force infrastructure deployment even if no infra files changed'
-        type: boolean
-        default: false
 
 # Concurrency strategy:
 # - NO workflow-level concurrency group. Each push starts its own CI run immediately.
@@ -600,72 +595,19 @@ jobs:
 
   # ══════════════════════════════════════════════════════════════════════════════
   # DEPLOYMENT JOBS — Only run on push/manual (NOT on PRs)
-  # All deployment jobs require quality-gate to pass first
+  # All deployment jobs require quality-gate to pass first.
+  # Every deployment runs the full Bicep template — ARM is idempotent and only
+  # redeploys resources whose desired state actually changed.
   # ══════════════════════════════════════════════════════════════════════════════
 
-  detect-changes:
-    name: Detect Changes
-    runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
-    needs: quality-gate
-    outputs:
-      infra-changed: ${{ steps.result.outputs.infra-changed }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          # Full history needed so the 'before' commit is available for git diff.
-          # Without it, multi-commit pushes may not include the 'before' commit.
-          fetch-depth: 0
-
-      - name: Check for infrastructure changes
-        id: changes
-        run: |
-          BEFORE="${{ github.event.before }}"
-          SHA="${{ github.sha }}"
-
-          if [[ "$BEFORE" == "0000000000000000000000000000000000000000" ]]; then
-            # Force push or new branch: 'before' is unknown.
-            # Compare only the HEAD commit. For multi-commit force pushes with
-            # infra changes in earlier commits, use the force-infra-deploy input.
-            echo "::notice::Force push or new branch — checking HEAD commit only for infra changes."
-            echo "::notice::Use 'force-infra-deploy' workflow input to force infra deployment."
-            INFRA_FILES=$(git diff --name-only HEAD~1 HEAD -- 'infra/' 2>/dev/null || echo "")
-          else
-            # Normal push: compare only the pushed commits (before..after).
-            # dorny/paths-filter uses merge-base on non-default branches, which
-            # compares the ENTIRE branch against main — causing false positives
-            # for infra files changed in earlier (already-deployed) commits.
-            echo "Normal push — comparing $BEFORE..$SHA for infra changes."
-            INFRA_FILES=$(git diff --name-only "$BEFORE" "$SHA" -- 'infra/' 2>/dev/null || echo "")
-          fi
-
-          if [[ -n "$INFRA_FILES" ]]; then
-            echo "Infrastructure files changed:"
-            echo "$INFRA_FILES"
-            echo "infra=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "No infrastructure files changed."
-            echo "infra=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Determine infra deployment
-        id: result
-        run: |
-          if [[ "${{ steps.changes.outputs.infra }}" == "true" || "${{ inputs.force-infra-deploy }}" == "true" ]]; then
-            echo "infra-changed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "infra-changed=false" >> "$GITHUB_OUTPUT"
-          fi
-
   # ──────────────────────────────────────────────
-  # Shared infrastructure (ACR) — runs first, only when infra changed
+  # Shared infrastructure (ACR) — always runs
   # ──────────────────────────────────────────────
   deploy-shared-infra:
     name: Deploy Shared Infrastructure
     runs-on: ubuntu-latest
-    needs: detect-changes
-    if: needs.detect-changes.outputs.infra-changed == 'true'
+    if: github.event_name != 'pull_request'
+    needs: quality-gate
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -684,16 +626,12 @@ jobs:
 
   # ──────────────────────────────────────────────
   # Build & push Docker images
-  # Runs after shared infra (ACR must exist), BEFORE env infra
+  # Runs after shared infra (ACR must exist)
   # ──────────────────────────────────────────────
   build-and-push:
     name: Build & Push Docker Images
     runs-on: ubuntu-latest
-    needs: [detect-changes, deploy-shared-infra]
-    if: |
-      always() &&
-      needs.detect-changes.result == 'success' &&
-      (needs.deploy-shared-infra.result == 'success' || needs.deploy-shared-infra.result == 'skipped')
+    needs: deploy-shared-infra
     outputs:
       image-tag: ${{ github.sha }}
     steps:
@@ -714,18 +652,18 @@ jobs:
             -SkipDeploy
 
   # ──────────────────────────────────────────────
-  # Staging infrastructure — only when infra changed
-  # Runs after build so image tag can be passed to Bicep
+  # Deploy to Staging (infra + app in one shot)
   # ──────────────────────────────────────────────
-  deploy-staging-infra:
-    name: Deploy Staging Infrastructure
+  deploy-staging:
+    name: Deploy to Staging
     runs-on: ubuntu-latest
-    needs: [detect-changes, deploy-shared-infra, build-and-push]
-    if: |
-      always() &&
-      needs.detect-changes.outputs.infra-changed == 'true' &&
-      needs.build-and-push.result == 'success' &&
-      (needs.deploy-shared-infra.result == 'success' || needs.deploy-shared-infra.result == 'skipped')
+    needs: build-and-push
+    concurrency:
+      group: deploy-staging
+      cancel-in-progress: false
+    environment:
+      name: staging
+      url: https://${{ steps.deploy.outputs.web-url }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -745,34 +683,7 @@ jobs:
             -Mode deploy `
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
 
-  # ──────────────────────────────────────────────
-  # Deploy application to staging
-  # Waits for both images and staging infra
-  # ──────────────────────────────────────────────
-  deploy-staging:
-    name: Deploy to Staging
-    runs-on: ubuntu-latest
-    needs: [build-and-push, deploy-staging-infra]
-    if: |
-      always() &&
-      needs.build-and-push.result == 'success' &&
-      needs.deploy-staging-infra.result == 'skipped'
-    concurrency:
-      group: deploy-staging
-      cancel-in-progress: false
-    environment:
-      name: staging
-      url: https://${{ steps.deploy.outputs.web-url }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Azure Login
-        uses: azure/login@v2
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Deploy to Staging
+      - name: Deploy staging application
         id: deploy
         shell: pwsh
         run: |
@@ -794,42 +705,16 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "**Image Tag**: ${{ needs.build-and-push.outputs.image-tag }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Infrastructure**: ${{ needs.deploy-staging-infra.result }}" >> $GITHUB_STEP_SUMMARY
           echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
 
   # ──────────────────────────────────────────────
-  # Staging gate — OR logic for the two mutually exclusive staging paths
-  # Succeeds if either deploy-staging OR deploy-staging-infra succeeded
-  # ──────────────────────────────────────────────
-  staging-complete:
-    name: Staging Complete
-    runs-on: ubuntu-latest
-    needs: [deploy-staging, deploy-staging-infra]
-    if: |
-      always() &&
-      (needs.deploy-staging.result != 'skipped' || needs.deploy-staging-infra.result != 'skipped')
-    steps:
-      - name: Verify staging succeeded
-        if: needs.deploy-staging.result != 'success' && needs.deploy-staging-infra.result != 'success'
-        run: |
-          echo "Neither staging path succeeded"
-          echo "deploy-staging: ${{ needs.deploy-staging.result }}"
-          echo "deploy-staging-infra: ${{ needs.deploy-staging-infra.result }}"
-          exit 1
-
-  # ──────────────────────────────────────────────
-  # Production infrastructure — only when infra changed
+  # Deploy to Production (infra + app in one shot)
   # Uses GitHub environment protection for approval
   # ──────────────────────────────────────────────
-  deploy-production-infra:
-    name: Deploy Production Infrastructure
+  deploy-production:
+    name: Deploy to Production
     runs-on: ubuntu-latest
-    needs: [detect-changes, staging-complete, build-and-push]
-    if: |
-      always() &&
-      needs.detect-changes.outputs.infra-changed == 'true' &&
-      needs.staging-complete.result == 'success' &&
-      needs.build-and-push.result == 'success'
+    needs: [build-and-push, deploy-staging]
     concurrency:
       group: deploy-production
       cancel-in-progress: false
@@ -853,33 +738,7 @@ jobs:
             -Mode deploy `
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
 
-  # ──────────────────────────────────────────────
-  # Deploy application to production
-  # Uses GitHub environment protection for approval
-  # ──────────────────────────────────────────────
-  deploy-production:
-    name: Deploy to Production
-    runs-on: ubuntu-latest
-    needs: [build-and-push, staging-complete, deploy-production-infra]
-    if: |
-      always() &&
-      needs.build-and-push.result == 'success' &&
-      needs.staging-complete.result == 'success' &&
-      (needs.deploy-production-infra.result == 'success' || needs.deploy-production-infra.result == 'skipped')
-    concurrency:
-      group: deploy-production
-      cancel-in-progress: false
-    environment: production
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Azure Login
-        uses: azure/login@v2
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Deploy to Production
+      - name: Deploy production application
         id: deploy
         shell: pwsh
         run: |
@@ -901,6 +760,5 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "**Image Tag**: ${{ needs.build-and-push.outputs.image-tag }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Infrastructure**: ${{ needs.deploy-production-infra.result }}" >> $GITHUB_STEP_SUMMARY
           echo "**Deployed By**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
           echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY

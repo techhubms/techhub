@@ -16,7 +16,7 @@ All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infra
 
 - Push to `dotnet-migration` branch (CI + deploy to staging)
 - Pull requests to `main` branch (CI only, no deployment)
-- Manual dispatch (CI + deploy to staging + optional production)
+- Manual dispatch (CI + deploy)
 
 This is a single unified pipeline that runs all quality checks first, and only deploys after they pass. On pull requests, deployment jobs are skipped entirely.
 
@@ -59,32 +59,23 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 
 **Deployment Jobs** (run only after quality gate passes, never on PRs):
 
-1. **Detect Changes** - Uses `dorny/paths-filter` to check if `infra/**` files changed
-   - Requires full git history (`fetch-depth: 0`) for reliable comparison across multi-commit pushes
-   - Manual dispatch also supports `force-infra-deploy` to override detection
+Every deployment runs the full Bicep template. ARM is idempotent and only redeploys resources whose desired state actually changed, so there is no need for change detection logic.
 
-2. **Deploy Shared Infrastructure** - Deploys shared resources (ACR) via `Deploy-Infrastructure.ps1`
-   - Only runs when infrastructure files changed (or force flag set)
+1. **Deploy Shared Infrastructure** - Deploys shared resources (ACR) via `Deploy-Infrastructure.ps1`
 
-3. **Build & Push** - Calls `Deploy-Application.ps1 -SkipDeploy` to build Docker images and push to ACR
-   - Requires **Detect Changes** to have succeeded (ensures quality gate passed)
+2. **Build & Push** - Calls `Deploy-Application.ps1 -SkipDeploy` to build Docker images and push to ACR
    - Waits for shared infrastructure (ACR) to be ready first
    - Tags images with commit SHA and `latest`
    - Images are built once and reused for both staging and production
 
-4. **Deploy Staging Infrastructure** - Deploys staging resources via `Deploy-Infrastructure.ps1`
-   - Only runs when infrastructure files changed (or force flag set)
-
-5. **Deploy to Staging** - Calls `Deploy-Application.ps1 -SkipBuild -SkipPush` to deploy (automatic)
-   - Waits for both image build and staging infrastructure to complete
-   - Updates Azure Container Apps with new images
+3. **Deploy to Staging** - Full infrastructure + application deployment
+   - Runs `Deploy-Infrastructure.ps1` with image tag (ARM no-ops unchanged resources)
+   - Runs `Deploy-Application.ps1 -SkipBuild -SkipPush` to update container apps
    - Runs smoke tests (health, homepage)
 
-6. **Deploy Production Infrastructure** - Deploys production resources via `Deploy-Infrastructure.ps1`
-   - Only runs when infrastructure files changed AND production is approved
+4. **Deploy to Production** - Full infrastructure + application deployment
    - Uses GitHub environment protection for approval
-
-7. **Deploy to Production** - Calls `Deploy-Application.ps1 -SkipBuild -SkipPush` for production
+   - Same flow as staging: infra deployment then app deployment
    - Deploys same images used in staging (no rebuild)
    - Runs smoke tests (health, homepage)
    - **Auto-rollback** on health check failures
@@ -220,14 +211,12 @@ When deploying to a completely new Azure subscription for the first time:
 1. **Deploy Infrastructure + Application** (initial setup)
    - Go to GitHub Actions → "CI/CD Pipeline"
    - Click "Run workflow"
-   - Check **"Force infrastructure deployment"** (since there's no previous commit to detect changes from)
    - This deploys shared infrastructure (ACR), staging infrastructure, builds images, and deploys to staging — all in one run
    - Shared resources: `rg-techhub-shared` with container registry `crtechhub`
    - Staging resources: `rg-techhub-staging` with Container Apps, PostgreSQL, OpenAI, etc.
 
 2. **Deploy Production** (when ready)
-   - Go to GitHub Actions → "CI/CD Pipeline"
-   - Check both **"Deploy to production"** and **"Force infrastructure deployment"**
+   - After staging succeeds, the production deployment awaits approval
    - All CI checks run first, then staging deploys, then after approval, production infrastructure and application deploy
    - Creates separate Azure OpenAI `oai-techhub-prod` (independent from staging)
 
@@ -263,21 +252,19 @@ When deploying to a completely new Azure subscription for the first time:
 1. **Validate staging** - Test staging environment thoroughly
 2. Go to GitHub Actions → "CI/CD Pipeline"
 3. Click "Run workflow"
-4. Check "Deploy to production" checkbox (and optionally "Force infrastructure deployment")
-5. Click "Run workflow"
-6. All CI checks run first, then staging deploys
-7. **Approval required** - Workflow will pause at the production deployment job
+4. All CI checks run first, then staging deploys
+5. **Approval required** - Workflow will pause at the production deployment job
    - Designated approvers receive notification
    - Review staging health, commit details, changes
    - Approve or reject deployment
-8. After approval, deployment proceeds:
+6. After approval, deployment proceeds:
    - Validates staging health one more time
    - Backs up current production configuration
    - Deploys same images used in staging (no rebuild)
    - Runs comprehensive smoke tests
    - Monitors for 5 minutes
    - Auto-rollback if any health check fails
-9. **Deployment complete** - Production is live with new version
+7. **Deployment complete** - Production is live with new version
 
 **Key Points**:
 
