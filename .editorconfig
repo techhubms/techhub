@@ -218,11 +218,14 @@ dotnet_diagnostic.IDE0053.severity = suggestion
 # IDE0200: Remove unnecessary lambda expression (suggestion only)
 dotnet_diagnostic.IDE0200.severity = suggestion
 
-# Collection initialization simplification
-dotnet_diagnostic.IDE0028.severity = warning
-dotnet_diagnostic.IDE0300.severity = warning
-dotnet_diagnostic.IDE0301.severity = warning
-dotnet_diagnostic.IDE0305.severity = warning
+# Collection expression simplification - DISABLED
+# We prefer explicit collection initialization (new[], new List<T>, Array.Empty<T>())
+# over C# 12 collection expressions ([], [.. spread])
+dotnet_style_prefer_collection_expression = false:warning
+dotnet_diagnostic.IDE0028.severity = none
+dotnet_diagnostic.IDE0300.severity = none
+dotnet_diagnostic.IDE0301.severity = none
+dotnet_diagnostic.IDE0305.severity = none
 
 ##############################
 # Code Analysis Rules - Suppressions

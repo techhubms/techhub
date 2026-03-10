@@ -227,7 +227,7 @@ public class TagCloudPerformanceTests : IDisposable
             collectionName: "all",
             maxTags: 20,
             tags: new[] { "vs code", "copilot coding agent" },
-            tagsToCount: ["agent mode", "pull requests", "code review", "collaboration", "developer tools"]);
+            tagsToCount: new[] { "agent mode", "pull requests", "code review", "collaboration", "developer tools" });
 
         // Act
         var elapsedMs = await MeasureTagCountsAsync(request);
@@ -249,8 +249,8 @@ public class TagCloudPerformanceTests : IDisposable
             collectionName: "all",
             maxTags: 20,
             tags: new[] { "vs code" },
-            tagsToCount: ["agent mode", "pull requests", "code review",
-                          "copilot coding agent", "developer tools", "security", "collaboration", "cloud computing", "test tag"]);
+            tagsToCount: new[] { "agent mode", "pull requests", "code review",
+                          "copilot coding agent", "developer tools", "security", "collaboration", "cloud computing", "test tag" });
 
         // Act
         var elapsedMs = await MeasureTagCountsAsync(request);
@@ -271,8 +271,8 @@ public class TagCloudPerformanceTests : IDisposable
             sectionName: "github-copilot",
             collectionName: "blogs",
             maxTags: 20,
-            tags: ["vs code", "copilot coding agent", "agent mode"],
-            tagsToCount: ["pull requests", "code review", "collaboration", "developer tools", "developer productivity"]);
+            tags: new[] { "vs code", "copilot coding agent", "agent mode" },
+            tagsToCount: new[] { "pull requests", "code review", "collaboration", "developer tools", "developer productivity" });
 
         // Act
         var elapsedMs = await MeasureTagCountsAsync(request);
@@ -320,7 +320,7 @@ public class TagCloudPerformanceTests : IDisposable
             dateFrom: DateTimeOffset.UtcNow.AddDays(-365),
             dateTo: DateTimeOffset.UtcNow,
             tags: new[] { "vs code" },
-            tagsToCount: ["agent mode", "pull requests", "code review", "collaboration"]);
+            tagsToCount: new[] { "agent mode", "pull requests", "code review", "collaboration" });
 
         // Act
         var elapsedMs = await MeasureTagCountsAsync(request);
@@ -406,12 +406,12 @@ public class TagCloudPerformanceTests : IDisposable
             sectionName: "github-copilot",
             collectionName: "all",
             maxTags: 50,
-            tagsToCount: [
+            tagsToCount: new[] {
                 "vs code", "agent mode", "pull requests", "code review",
                 "collaboration", "developer tools", "security", "test tag",
                 "copilot coding agent", "cloud computing", "developer productivity",
                 ".net", "copilot", "devops", "azure"
-            ]);
+            });
 
         // Act
         var elapsedMs = await MeasureTagCountsAsync(request);

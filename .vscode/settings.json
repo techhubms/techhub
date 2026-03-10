@@ -191,4 +191,5 @@
     "editor.aiStats.enabled": true,
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "chat.mcp.autostart": "newAndOutdated",
+    "remote.localPortHost": "allInterfaces",
 }

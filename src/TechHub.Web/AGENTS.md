@@ -685,8 +685,7 @@ src/TechHub.Web/
   - `ReconnectModal.razor` - Server connection state UI (Interactive Server/Auto modes)
 - **Pages/**: Routable pages (all have `@page` directive)
   - `Home.razor` - Homepage (`/`) - Shows all sections
-  - `Section.razor` - Section page (`/{sectionName}`) - Shows all content in section
-  - `SectionCollection.razor` - Collection page (`/{sectionName}/{collectionName}`) - Shows filtered content
+  - `SectionCollection.razor` - Section & collection page (`/{sectionName}` and `/{sectionName}/{collectionName}`) - Shows filtered content
   - `ContentItem.razor` - Detail page (`/{sectionName}/{collectionName}/{slug}`) - Shows single content item
   - `About.razor` - About page (`/about`)
   - `NotFound.razor` - 404 page
@@ -1095,8 +1094,7 @@ history.replaceState(null, '', newUrl);
 **Page Components** (with `@page` directive):
 
 - `Home.razor` - Homepage (`/`)
-- `Section.razor` - Section index (`/{sectionName}`)
-- `SectionCollection.razor` - Collection page (`/{sectionName}/{collectionName}`)
+- `SectionCollection.razor` - Section & collection page (`/{sectionName}` and `/{sectionName}/{collectionName}`)
 - `ContentItem.razor` - Detail page (`/{sectionName}/{collectionName}/{slug}`)
 - `About.razor` - About page (`/about`)
 - `NotFound.razor` - 404 page
@@ -1464,7 +1462,7 @@ The `SidebarTagCloud` component provides interactive tag filtering with toggle b
 - Use `Distinct(StringComparer.OrdinalIgnoreCase)`
 
 **See**: [Components/SidebarTagCloud.razor.cs](Components/SidebarTagCloud.razor.cs) for toggle implementation  
-**See**: [Components/Pages/Section.razor](Components/Pages/Section.razor) for URL parameter parsing
+**See**: [Components/Pages/SectionCollection.razor](Components/Pages/SectionCollection.razor) for URL parameter parsing
 
 **CSS Active State** (`SidebarTagCloud.razor.css`):
 

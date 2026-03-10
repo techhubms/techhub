@@ -443,7 +443,7 @@ public class ContentItemCardTests : BunitContext
         var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item)
             .Add(p => p.ShowCollectionBadge, false)
-            .Add(p => p.ActiveFilterTags, ["ai", "github copilot"]));
+            .Add(p => p.ActiveFilterTags, new[] { "ai", "github copilot" }));
 
         // Assert - Both should be active despite different casing
         var activeBadges = cut.FindAll(".badge-tag-active");

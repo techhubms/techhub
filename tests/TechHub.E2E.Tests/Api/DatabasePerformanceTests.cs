@@ -301,7 +301,7 @@ public class DatabasePerformanceTests : IDisposable
             collectionName: "all",
             maxTags: 20,
             tags: new[] { "vs code", "copilot coding agent" },
-            tagsToCount: ["agent mode", "pull requests", "automation", "chat", "edits"]);
+            tagsToCount: new[] { "agent mode", "pull requests", "automation", "chat", "edits" });
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
@@ -318,8 +318,8 @@ public class DatabasePerformanceTests : IDisposable
             collectionName: "all",
             maxTags: 20,
             tags: new[] { "vs code" },
-            tagsToCount: ["agent mode", "pull requests", "automation", "chat", "edits",
-                          "copilot coding agent", "productivity", "testing", "security"]);
+            tagsToCount: new[] { "agent mode", "pull requests", "automation", "chat", "edits",
+                          "copilot coding agent", "productivity", "testing", "security" });
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
@@ -335,8 +335,8 @@ public class DatabasePerformanceTests : IDisposable
             sectionName: "github-copilot",
             collectionName: "blogs",
             maxTags: 20,
-            tags: ["vs code", "copilot coding agent", "agent mode"],
-            tagsToCount: ["pull requests", "automation", "chat", "edits", "productivity"]);
+            tags: new[] { "vs code", "copilot coding agent", "agent mode" },
+            tagsToCount: new[] { "pull requests", "automation", "chat", "edits", "productivity" });
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
@@ -352,12 +352,12 @@ public class DatabasePerformanceTests : IDisposable
             sectionName: "github-copilot",
             collectionName: "all",
             maxTags: 50,
-            tagsToCount: [
+            tagsToCount: new[] {
                 "vs code", "agent mode", "pull requests", "automation",
                 "chat", "edits", "productivity", "testing", "security",
                 "copilot coding agent", "code review", "suggestions",
                 "extensions", "workspace", "terminal"
-            ]);
+            });
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
@@ -396,7 +396,7 @@ public class DatabasePerformanceTests : IDisposable
             dateFrom: DateTimeOffset.UtcNow.AddDays(-365),
             dateTo: DateTimeOffset.UtcNow,
             tags: new[] { "vs code" },
-            tagsToCount: ["agent mode", "pull requests", "automation", "chat"]);
+            tagsToCount: new[] { "agent mode", "pull requests", "automation", "chat" });
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
@@ -437,8 +437,8 @@ public class DatabasePerformanceTests : IDisposable
 
         var request = new SearchRequest(
             take: 20,
-            sections: [sectionName],
-            collections: [collectionName],
+            sections: new[] { sectionName },
+            collections: new[] { collectionName },
             tags: Array.Empty<string>());
 
         var (elapsedMs, result) = await MeasureSearchAsync(request);

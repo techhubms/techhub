@@ -157,7 +157,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
             dateFrom: null,
             dateTo: null,
             tags: null,
-            tagsToCount: ["code review", "collaboration"]  // lowercase input
+            tagsToCount: new[] { "code review", "collaboration" }  // lowercase input
         );
 
         // Act
@@ -193,7 +193,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
             dateFrom: null,
             dateTo: null,
             tags: null,
-            tagsToCount: ["AI", "Code Review", "GitHub Copilot", "News"]
+            tagsToCount: new[] { "AI", "Code Review", "GitHub Copilot", "News" }
         );
 
         // Act
@@ -230,7 +230,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
             dateFrom: null,
             dateTo: null,
             tags: null,
-            tagsToCount: ["Code Review"]
+            tagsToCount: new[] { "Code Review" }
         );
 
         // Act
@@ -264,7 +264,7 @@ public class TagCloudTests : IClassFixture<DatabaseFixture<TagCloudTests>>
             dateFrom: null,
             dateTo: null,
             tags: null,
-            tagsToCount: ["Code Review", "Collaboration"]
+            tagsToCount: new[] { "Code Review", "Collaboration" }
         );
 
         // Act

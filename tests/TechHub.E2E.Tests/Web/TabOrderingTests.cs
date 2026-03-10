@@ -194,6 +194,7 @@ public class TabOrderingTests : PlaywrightTestBase
                 "() => { const el = document.activeElement; return el && el.classList.contains('skip-link'); }",
                 new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
         }
+
         await Page.Keyboard.PressAsync("Enter"); // Activate skip link
 
         // Wait for Blazor to finish any re-rendering triggered by the hash change.

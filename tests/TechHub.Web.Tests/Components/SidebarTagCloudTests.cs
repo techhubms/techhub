@@ -438,7 +438,7 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, new[] { "Security" })
+            .Add(p => p.SelectedTags, new List<string> { "Security" })
             .Add(p => p.SearchQuery, "test query"));
 
         // Assert - Security tag MUST remain visible even though it's not in popular tags for this search
@@ -486,7 +486,7 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, new[] { ".NET" })
+            .Add(p => p.SelectedTags, new List<string> { ".NET" })
             .Add(p => p.FromDate, "2024-01-01")
             .Add(p => p.ToDate, "2024-12-31"));
 
@@ -536,7 +536,7 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, ["Security", "Azure"])
+            .Add(p => p.SelectedTags, new List<string> { "Security", "Azure" })
             .Add(p => p.FromDate, "2024-01-01")
             .Add(p => p.ToDate, "2024-12-31")
             .Add(p => p.SearchQuery, "test"));
@@ -596,7 +596,7 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, ["Security", ".NET"]));
+            .Add(p => p.SelectedTags, new List<string> { "Security", ".NET" }));
 
         // Assert - Selected tags MUST appear first
         cut.WaitForAssertion(() =>
@@ -681,7 +681,7 @@ public class SidebarTagCloudTests : BunitContext
         var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SelectedTags, new[] { "Security" }));
+            .Add(p => p.SelectedTags, new List<string> { "Security" }));
 
         // Assert - Selected tag with 0 count should be visible and NOT disabled
         cut.WaitForAssertion(() =>
