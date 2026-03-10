@@ -1,0 +1,14 @@
+{
+  "Link": "https://techcommunity.microsoft.com/t5/azure-storage/azure-files-manage-access-is-missing/m-p/4500847#M596",
+  "Description": "Good day,\n\nWe have fully and correctly configured an Azure File Share and the associated permissions. All required Azure RBAC roles as well as the necessary data plane permissions are assigned.\n\nHowever, we are observing inconsistent behavior in the Azure Portal regarding the “Manage access” buttons:\n\nAt times, the “Manage access” buttons are visible:\n\n- In the top menu bar of the file share\n\n- In the context menu (three‑dot menu) of individual directories\n\nAt other times, these buttons are not displayed at all, even though:\n\n- The same user with the same permissions is used\n\n- The same storage account and the same file share are accessed\n\nThe behavior is sporadic and not reproducible in a controlled manner.\n\nAlready verified:\n\n- Required Azure RBAC roles are assigned\n- Required permissions for Azure Files are correctly configured\n- Permissions are effective and functional\n- No error messages are shown in the Azure Portal when the buttons are missing\n\nA screenshot showing the state when the functionality was working is here.\n\n![]() We would appreciate your support in investigating this issue.",
+  "ProcessedDate": "2026-03-10 21:07:45",
+  "Title": "Azure Files Manage Access is missing",
+  "Tags": [],
+  "PubDate": "2026-03-10T10:29:27+00:00",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Author": "Andreas-WPH",
+  "EnhancedContent": "Good day,\n\nWe have fully and correctly configured an Azure File Share and the associated permissions. All required Azure RBAC roles as well as the necessary data plane permissions are assigned.\n\nHowever, we are observing inconsistent behavior in the Azure Portal regarding the “Manage access” buttons:\n\nAt times, the “Manage access” buttons are visible:\n\n- In the top menu bar of the file share\n\n- In the context menu (three‑dot menu) of individual directories\n\nAt other times, these buttons are not displayed at all, even though:\n\n- The same user with the same permissions is used\n\n- The same storage account and the same file share are accessed\n\nThe behavior is sporadic and not reproducible in a controlled manner.\n\nAlready verified:\n\n- Required Azure RBAC roles are assigned\n- Required permissions for Azure Files are correctly configured\n- Permissions are effective and functional\n- No error messages are shown in the Azure Portal when the buttons are missing\n\nA screenshot showing the state when the functionality was working is here.\n\nWe would appreciate your support in investigating this issue.",
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedName": "Microsoft Tech Community"
+}

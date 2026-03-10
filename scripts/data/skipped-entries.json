@@ -12843,5 +12843,17 @@
     "collection": "news",
     "timestamp": "2026-03-10 17:16:16 +00:00",
     "reason": "No categories found: All provided content, including the description and main body, centers on AI innovation in healthcare leadership but lacks any substantial technical information about Microsoft developer tools, coding, or platform implementation. The only specific product referenced is 'Microsoft Dragon Copilot,' which based on context appears to target healthcare productivity and documentation, not software development. There are no details of technical architecture, API usage, coding practices, or Microsoft development platforms. As per the workflow, business productivity AI tools like Dragon Copilot and general AI use in sector leadership are excluded (Non-Development Microsoft Products, Business Strategy and Executive Content exclusions). The content is news-style, highly general, and does not meet the inclusion threshold for any developer- or technical-focused category."
+  },
+  {
+    "reason": "No categories found: No categories are assigned because the content is focused on end-user credential management and badge sharing, not on Microsoft technology development, DevOps, or coding. It does not describe developer tools, Azure implementation, AI, ML, coding, DevOps, or Security topics according to any category inclusion rules. The entire post is a practical guide for individuals maintaining certification presence on external sites, fitting under the excluded 'Non-Development Microsoft Products' and 'Workplace and Business Focus' exclusion rules. There is no technical/development or architecture implementation described, and the content targets certification holders, not practitioners building with Microsoft tech.",
+    "timestamp": "2026-03-10 21:09:41 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://devopsjournal.io/blog/2026/02/02/Link-MS-certification-to-Credly"
+  },
+  {
+    "reason": "No categories found: No categories assigned. This is a community post that exclusively asks a question about inconsistent UI behavior without providing substantive information, solutions, or technical depth. According to the 'Question-Only Content' generic exclusion rule in Chapter 3, content that mainly seeks information without including significant answers, troubleshooting steps, or explanations should be excluded. The post asks for support and only lists the observed issue, already-checked configurations, and does not offer helpful technical implementation details, guidance, or analysis that would qualify it for any category.",
+    "timestamp": "2026-03-10 21:10:06 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/azure-files-manage-access-is-missing/m-p/4500847#M596"
   }
 ]

@@ -28270,5 +28270,23 @@
     "timestamp": "2026-03-10 20:07:00 +00:00",
     "reason": "Succesfully added: Assigned 'Security' because CodeQL is a security-focused static analysis tool that helps remediate code vulnerabilities, matching Security rule 1 (Microsoft Security Services: GitHub code scanning, CodeQL). Assigned 'DevOps' because GitHub code scanning and CodeQL are continuous integration/automation tools relevant to secure DevOps pipelines (DevOps rule 2). Did not assign 'Coding' since the article focuses on the tooling, queries, and code analysis, not coding techniques or frameworks themselves. No AI, ML, or Azure, as those technologies are not featured or implied. Java 26 and other multi-language updates do not directly relate to Microsoft-specific coding frameworks.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The content is an official news post from the .NET Team focused on new features, performance improvements, and updates to core Microsoft developer technologies—primarily .NET, .NET MAUI, ASP.NET Core, Blazor, Entity Framework Core, and related tooling. This clearly matches the Coding category, as it is purely about developer tools, frameworks, language improvements, and SDK/runtime updates. No other categories like AI, Azure, DevOps, ML, or Security apply, as the announcement does not cover those domains or their inclusion criteria in any substantive way.",
+    "timestamp": "2026-03-10 21:08:11 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Security' category because the primary focus is on security fixes, including several CVEs and explicit discussion of security updates (Security rules 1, 2). Assigned 'Coding' category as the content covers .NET development tools, release notes for runtime, ASP.NET Core, Entity Framework Core, and maintenance relevant to developers (Coding rules 1, 2, 4). Excluded other categories because there is no significant Azure, AI, ML, or DevOps content present. The content is news type and fits the publishing standards.",
+    "timestamp": "2026-03-10 21:08:31 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-march-2026-servicing-updates/"
+  },
+  {
+    "reason": "Succesfully added: Included the AI and GitHub Copilot categories because the entire article discusses embedding AI-driven agentic workflows using the GitHub Copilot SDK, which is an AI-powered developer tool (AI rule 1, GitHub Copilot rule 1). 'Coding' is also appropriate since the content is focused on integrating this SDK into application architectures, which is a hands-on development topic (Coding rules 2 and 4). Excluded Azure, DevOps, ML, and Security since the content does not specifically discuss Azure services, DevOps pipelines, ML development, or security practices. No generic exclusion rules applied; the content is technical, actionable, and developer-focused.",
+    "timestamp": "2026-03-10 21:09:10 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
   }
 ]
