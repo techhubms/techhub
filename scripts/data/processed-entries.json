@@ -28264,5 +28264,11 @@
     "timestamp": "2026-03-10 19:17:26 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=BviR6Me36gI",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the tutorial centers around GitHub Copilot CLI and demonstrates AI-powered automation (AI rules 1, 2, and 4; GitHub Copilot rules 1-6). Added 'DevOps' because the content is focused on repository maintenance and streamlining software upgrades—activities central to DevOps (DevOps rules 5 and 12). 'Coding' was not assigned as there is no direct programming or code writing guidance. Exclusion rules did not apply: content is technical, not biographical, not a sales pitch, not negative, and closely related to Microsoft developer tooling."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-10-codeql-2-24-3-adds-java-26-support-and-other-improvements",
+    "timestamp": "2026-03-10 20:07:00 +00:00",
+    "reason": "Succesfully added: Assigned 'Security' because CodeQL is a security-focused static analysis tool that helps remediate code vulnerabilities, matching Security rule 1 (Microsoft Security Services: GitHub code scanning, CodeQL). Assigned 'DevOps' because GitHub code scanning and CodeQL are continuous integration/automation tools relevant to secure DevOps pipelines (DevOps rule 2). Did not assign 'Coding' since the article focuses on the tooling, queries, and code analysis, not coding techniques or frameworks themselves. No AI, ML, or Azure, as those technologies are not featured or implied. Java 26 and other multi-language updates do not directly relate to Microsoft-specific coding frameworks.",
+    "collection": "news"
   }
 ]
