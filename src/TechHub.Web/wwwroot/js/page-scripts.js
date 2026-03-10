@@ -110,7 +110,6 @@ export async function initMermaid() {
             const config = {
                 startOnLoad: false,
                 theme: 'dark',
-                useMaxWidth: true,
                 themeVariables: {
                     primaryColor: '#2d2d4a',
                     primaryTextColor: '#e0e0e0',
@@ -135,12 +134,14 @@ export async function initMermaid() {
                     sequenceNumberColor: '#1a1a2e'
                 },
                 flowchart: {
+                    useMaxWidth: false,
                     curve: 'basis',
                     padding: 20,
                     nodeSpacing: 50,
                     rankSpacing: 80
                 },
                 sequence: {
+                    useMaxWidth: false,
                     actorMargin: 50,
                     boxMargin: 10,
                     boxTextMargin: 5,
@@ -148,13 +149,16 @@ export async function initMermaid() {
                     messageMargin: 35
                 },
                 gantt: {
+                    useMaxWidth: false,
                     leftPadding: 75,
                     gridLineStartPadding: 35
                 },
                 class: {
+                    useMaxWidth: false,
                     padding: 20
                 },
                 state: {
+                    useMaxWidth: false,
                     padding: 20
                 }
             };

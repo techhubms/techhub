@@ -568,13 +568,12 @@
         padding: var(--spacing-2);
     }
 
-    /* Mermaid: override mermaid's inline width="100%" so SVGs use their natural
-       dimensions from the viewBox. This prevents diagrams from shrinking to
-       unreadably small sizes on narrow screens. The container's overflow-x: auto
-       provides horizontal scrolling for wider diagrams. */
+    /* Mermaid: with useMaxWidth:false, mermaid sets a fixed pixel width on each
+       SVG matching its natural diagram dimensions. On narrow screens, remove the
+       max-width:100% cap so diagrams render at full size and the container's
+       overflow-x:auto provides horizontal scrolling instead of shrinking them
+       to unreadably small sizes. */
     .article-body .mermaid svg {
-        width: auto !important;
-        height: auto !important;
         max-width: none !important;
         max-height: none;
     }

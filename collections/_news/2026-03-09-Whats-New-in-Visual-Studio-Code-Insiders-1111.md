@@ -4,7 +4,7 @@ title: What's New in Visual Studio Code Insiders 1.111
 author: Visual Studio Code Team
 primary_section: github-copilot
 feed_name: Visual Studio Code Releases
-date: 2026-04-02 17:00:00 +00:00
+date: 2026-03-09 17:00:00 +00:00
 tags:
 - Accessibility
 - Agent Plugins
