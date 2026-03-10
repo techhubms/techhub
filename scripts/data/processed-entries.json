@@ -28288,5 +28288,17 @@
     "timestamp": "2026-03-10 21:09:10 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-10-secret-scanning-pattern-updates-march-2026",
+    "reason": "Succesfully added: I assigned the Security category because the content centers on improvements to secret scanning, credential detection, and push protection in GitHub repositories—directly dealing with application security (Security rule 1, 2, 4, and 5). I assigned the DevOps category due to the impact of these features on repository workflows, CI/CD, and operational practices (DevOps rule 2, 5, 7, and 11). Although Azure credential detectors are mentioned, the main focus is general repository security, so Azure was not included as a primary category. No generic exclusion rules apply: the content is not biographical, not negative, not about business strategy or productivity, and is written in English.",
+    "timestamp": "2026-03-10 22:05:30 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/mpqrdghoj_Y",
+    "reason": "Succesfully added: Assigned the Coding category because the video discusses a feature within Visual Studio Code aimed at improving developer workflows (Coding rule 5: Microsoft development tools). No reference is made to AI, GitHub Copilot, DevOps, Azure, ML, or Security. The feature's purpose—enabling developers to manage conversations and experiment with code-related queries—falls squarely within Microsoft developer tool use cases.",
+    "timestamp": "2026-03-10 22:06:16 +00:00"
   }
 ]

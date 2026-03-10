@@ -12855,5 +12855,11 @@
     "timestamp": "2026-03-10 21:10:06 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/azure-files-manage-access-is-missing/m-p/4500847#M596"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/2026/03/10/microsoft-announces-quarterly-dividend-28/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This news article is a corporate press release announcing a quarterly dividend, which falls under the 'Business Strategy and Executive Content' exclusion and does not have technical depth, implementation details, or developer relevance. There is no coverage of technical products, architectures, or development topics. The AI reference in the 'About Microsoft' section is generic and not substantive or specific to a Microsoft technology or platform.",
+    "timestamp": "2026-03-10 22:05:04 +00:00"
   }
 ]
