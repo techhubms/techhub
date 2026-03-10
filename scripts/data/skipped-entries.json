@@ -12813,5 +12813,17 @@
     "canonical_url": "https://www.youtube.com/shorts/RctUtkfOHoU",
     "timestamp": "2026-03-10 04:33:26 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-03-10 14:17:13 +00:00",
+    "canonical_url": "https://microsoft.ai/news/health-check-how-people-use-copilot-for-health/",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. The content is an analysis and summary of how people use 'Copilot' for health-related conversations, which, based on Chapter 2 and the Section 'CRITICAL: Copilot Product Distinction,' falls under 'Microsoft 365 Copilot' and 'Microsoft Copilot' (general consumer version), both of which are business productivity or consumer tools. The article explicitly addresses consumer health scenarios and use of Copilot and Bing for informational purposes, not for developer, coding, DevOps, AI engineering, or Microsoft technology development. No substantial coverage of developer tools (e.g., GitHub Copilot or Copilot Studio), and the content does not describe technical development, implementation, or integration for Microsoft technology stacks. The central use is personal and health-related, which invokes the exclusion rules under 'Non-Development Microsoft Products' and 'Business Productivity Tools (Exclude).' Therefore, all content is excluded under Generic Exclusion Rules."
+  },
+  {
+    "timestamp": "2026-03-10 14:17:25 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/kerry-group-copilot-knowledge-partner/",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This article is primarily biographical in nature, focusing on Shane McGibney's career roles and responsibilities at Kerry Group, rather than providing substantive technical details or implementation about Microsoft developer or cloud technologies. Additionally, while 'Copilot' is mentioned in the title, the content itself does not discuss GitHub Copilot or technical integration, but rather appears to reference Microsoft's business productivity Copilot or Copilot for Microsoft 365, which is excluded per Non-Development Microsoft Products and Copilot Product Distinction rules."
   }
 ]
