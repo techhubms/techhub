@@ -28150,5 +28150,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/getting-started-with-behave-writing-cucumber-tests-in-vs-code/ba-p/4496865",
     "timestamp": "2026-03-10 07:16:53 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Generic exclusion rules do not apply: content is not biographical, a sales pitch, a question, negative, or business/non-technical. Minimum word count for community content is easily exceeded. Category assignment: Applied 'DevOps' because the core focus is CI/CD pipeline orchestration, deployment automation, workflow design, and best practices (DevOps rules 1, 5, 6). Applied 'Azure' because Azure is a central element for integration, credential management, and resource deployment, meeting the Microsoft ≥40% threshold. Did not assign 'Coding' (no specific language/framework coding discussed), 'AI', 'ML', 'Security' (security is mentioned as a pipeline feature, not a technical implementation focus), or 'GitHub Copilot'.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-create-a-harness-pipeline-and-integrate-with-azure/ba-p/4499862",
+    "timestamp": "2026-03-10 09:14:06 +00:00"
   }
 ]
