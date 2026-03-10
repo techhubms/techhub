@@ -28162,5 +28162,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-europe-2026-amsterdam-nl-march-23-26/ba-p/4500716",
     "collection": "community",
     "reason": "Succesfully added: Categories assigned as follows: AI (multiple sessions focus on AI/ML workloads, use of AI agents, HolmesGPT, and auto-diagnostics on Kubernetes), Azure (AKS, Azure services, and MS project teams are central to almost all event activities), DevOps (sessions and demos cover platform ops, cloud-native, automation, infrastructure as code, observability, and developer workflows), Security (dedicated topics on AKS security, supply chain, confidential containers, encryption, data protection), and ML (machine learning workloads at Wayve, multi-tenant scheduling, and operationalizing AI inference). Assigning all these categories based on explicit content references and event structure. Did not assign 'GitHub Copilot' specifically: Copilot is mentioned once as part of a workshop, but content is not dedicated to it and it is not the main topic of any session. Tags extracted from session titles, technologies, and key technical topics throughout the agenda."
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-10 11:12:15 +00:00",
+    "canonical_url": "https://andrewlock.net/splitting-the-netescapades-enumgenerators-packages-the-road-to-a-stable-release/",
+    "reason": "Succesfully added: Included the Coding category because the post focuses on technical .NET development topics: refactoring a source generator NuGet package, build system configuration, source generator architecture, and performance improvements (Coding rule 3 and 4). There is no content relevant to AI, Azure, ML, DevOps, Security, or GitHub Copilot. The article covers in-depth use and packaging of a C#/.NET library, as well as practical configuration for developers. Exclusion of other categories follows category inclusion rules and content specifics; notably, there is no AI, Cloud, Security, or DevOps content present."
   }
 ]
