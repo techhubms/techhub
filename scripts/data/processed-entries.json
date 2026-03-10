@@ -28222,5 +28222,17 @@
     "timestamp": "2026-03-10 15:20:12 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-sre-agent-in-the-ga-release/ba-p/4500779",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/unpacking-your-top-questions-on-agentic-ai-the-shift-podcast/",
+    "collection": "news",
+    "timestamp": "2026-03-10 16:20:03 +00:00",
+    "reason": "Succesfully added: The content is a podcast launch focused on hands-on and architectural issues in agentic AI, cloud, and data—directly referencing Microsoft Azure, Fabric, and Foundry services. 'AI' is assigned due to repeated focus on agentic AI and related practices (AI inclusion rules 1, 4, 5). 'Azure' is assigned because Azure and its engineering stack are a central podcast theme (Azure rule 1). 'ML' is included because data engineering, data strategies for AI agents, and system-level analytics are covered in depth (ML inclusion rules 1, 2, and 4), with strong focus on Microsoft Fabric and data orchestration for AI. Content does not match exclusion rules: it's not business strategy, career advice, mere news, or a sales pitch, and is primarily in English. Other categories (e.g., Coding, Security) are not assigned because the text doesn't contain specific development tool guidance or security-how-to content."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=KCu3g2_xqzM",
+    "collection": "videos",
+    "timestamp": "2026-03-10 16:21:06 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content demonstrates AI-powered workflows in designer-engineer collaboration, specifically with the Model Context Protocol enabling AI-assisted UI development (AI rule 1, 4, 5). 'GitHub Copilot' is included due to explicit mention of Copilot integration for code development (GitHub Copilot rule 1, 2, 4). 'Coding' is appropriate because the process involves turning Figma wireframes into working code in VS Code using these tools (Coding rule 1, 2, 4, 5). Did not include Azure, DevOps, ML, or Security as those aspects are not central; Azure is mentioned only peripherally as a resource link, not in substantive workflow. No generic exclusion rules apply; the content is technical, English, not biographical, and developer-focused."
   }
 ]

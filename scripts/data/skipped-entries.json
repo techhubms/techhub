@@ -12831,5 +12831,11 @@
     "timestamp": "2026-03-10 15:18:22 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=PQl8v1Uu9oE",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/RynuHhYoap0",
+    "collection": "videos",
+    "timestamp": "2026-03-10 16:20:46 +00:00",
+    "reason": "No categories found: Content cannot be processed because the 'content' field is null. According to the workflow, the actual content must be present for category assignment and metadata extraction. Without substantive content to review, it is not possible to determine the technical depth or central focus of Microsoft technologies. Generic exclusion applies due to lack of processable content."
   }
 ]
