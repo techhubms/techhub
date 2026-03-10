@@ -28234,5 +28234,17 @@
     "collection": "videos",
     "timestamp": "2026-03-10 16:21:06 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because the content demonstrates AI-powered workflows in designer-engineer collaboration, specifically with the Model Context Protocol enabling AI-assisted UI development (AI rule 1, 4, 5). 'GitHub Copilot' is included due to explicit mention of Copilot integration for code development (GitHub Copilot rule 1, 2, 4). 'Coding' is appropriate because the process involves turning Figma wireframes into working code in VS Code using these tools (Coding rule 1, 2, 4, 5). Did not include Azure, DevOps, ML, or Security as those aspects are not central; Azure is mentioned only peripherally as a resource link, not in substantive workflow. No generic exclusion rules apply; the content is technical, English, not biographical, and developer-focused."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/extractlabel-schema-driven-unstructured-data-extraction-with-fabric-ai-functions/",
+    "timestamp": "2026-03-10 18:13:48 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article is focused on leveraging large language models (LLMs) and schema-driven AI extraction in Microsoft Fabric (AI rule 1, 3, and 4). Assigned Azure category as Fabric is a core Azure data platform and the solutions rely on Azure-based infrastructure and services (Azure rule 1). Assigned ML category because the article covers machine learning/data science engineering concepts—extracting structured data from unstructured sources at scale, schema validation, and model guidance (ML rules 1, 2, 5). Did not assign Coding: While code is present in examples, the focus is on schema-driven extraction in data pipelines, not on application or framework-level programming. Did not assign Security or DevOps since the content does not cover security, compliance, or development/deployment practices."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-the-standard-hdd-i-o-unit-size-update-and-what-it/ba-p/4499128",
+    "timestamp": "2026-03-10 18:14:45 +00:00",
+    "reason": "Succesfully added: Assigned only the Azure category because the content exclusively discusses Azure managed disk billing updates, technical details of transaction measurement, and practical guidance for Azure users (Azure rule 1 and 4). No AI, Coding, DevOps, ML, GitHub Copilot, or Security category applies, as the focus is purely on Azure storage billing, not development, ML/analytics, AI integration, or security implementation. Content is technical and implementation-focused, does not trigger generic exclusion rules, and meets the required threshold for Microsoft technology centrality."
   }
 ]

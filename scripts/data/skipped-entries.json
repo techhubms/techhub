@@ -12837,5 +12837,11 @@
     "collection": "videos",
     "timestamp": "2026-03-10 16:20:46 +00:00",
     "reason": "No categories found: Content cannot be processed because the 'content' field is null. According to the workflow, the actual content must be present for category assignment and metadata extraction. Without substantive content to review, it is not possible to determine the technical depth or central focus of Microsoft technologies. Generic exclusion applies due to lack of processable content."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2026/03/10/what-frontier-healthcare-leaders-are-doing-differently-with-ai/",
+    "collection": "news",
+    "timestamp": "2026-03-10 17:16:16 +00:00",
+    "reason": "No categories found: All provided content, including the description and main body, centers on AI innovation in healthcare leadership but lacks any substantial technical information about Microsoft developer tools, coding, or platform implementation. The only specific product referenced is 'Microsoft Dragon Copilot,' which based on context appears to target healthcare productivity and documentation, not software development. There are no details of technical architecture, API usage, coding practices, or Microsoft development platforms. As per the workflow, business productivity AI tools like Dragon Copilot and general AI use in sector leadership are excluded (Non-Development Microsoft Products, Business Strategy and Executive Content exclusions). The content is news-style, highly general, and does not meet the inclusion threshold for any developer- or technical-focused category."
   }
 ]
