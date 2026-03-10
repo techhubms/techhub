@@ -1151,12 +1151,15 @@ function Run {
         Write-Step "Running E2E tests"
         Write-Host ""
             
-        # Thread count is configured in testconfig.json ("2x" = 2× CPU threads)
-        # xUnit v3 uses testconfig.json, not environment variables
-        
-        # Phase 1: Run API Performance tests first (warmup + performance validation)
-        # PostgreSQL is always available (started before AppHost)
+        # Parallelism: testconfig.json = conservative for CI (1x CPU threads)
+        # Local runs use testconfig.localhost.json (2x CPU threads) via --config-file
         $e2eBinaryPath = Get-TestBinaryPath $e2eTestProjectPath
+        $e2eProjectDir = Split-Path $e2eTestProjectPath -Parent
+        $localhostConfig = Join-Path $e2eProjectDir "bin/$configuration/net10.0/testconfig.localhost.json"
+        $configArgs = @()
+        if (Test-Path $localhostConfig) {
+            $configArgs = @("--config-file", $localhostConfig)
+        }
         
         Write-Host ""
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
@@ -1166,7 +1169,7 @@ function Run {
         
         # Run ALL performance tests - validates API endpoints are responsive and within thresholds
         # This also serves as warmup before the full E2E suite runs
-        $apiPerfTestArgs = @(
+        $apiPerfTestArgs = $configArgs + @(
             "--output", "Detailed",
             "--show-live-output", "on",
             "--filter-class", "*PerformanceTests*"
@@ -1202,7 +1205,7 @@ function Run {
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
         Write-Host ""
             
-        $e2eTestArgs = @(
+        $e2eTestArgs = $configArgs + @(
             "--output", "Detailed",
             "--show-live-output", "on",
             "--filter-not-class", "*PerformanceTests*"

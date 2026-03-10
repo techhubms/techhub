@@ -2,6 +2,6 @@
   "$schema": "https://xunit.net/schema/current/testconfig.mtp.schema.json",
   "parallelizeAssembly": true,
   "parallelizeTestCollections": true,
-  "maxParallelThreads": "1x",
+  "maxParallelThreads": "2x",
   "methodDisplay": "classAndMethod"
 }

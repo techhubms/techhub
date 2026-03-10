@@ -15,6 +15,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
     private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
     private IPage? _page;
+    private ICDPSession? _cdpSession;
 
     /// <summary>
     /// Gets the Playwright page for the current test.
@@ -38,6 +39,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
     {
         _context = await _fixture.CreateContextAsync();
         _page = await _context.NewPageWithDefaultsAsync();
+        _cdpSession = await NetworkThrottling.ApplyIfConfiguredAsync(_page);
     }
 
     public virtual async ValueTask DisposeAsync()
@@ -47,6 +49,18 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         // This must happen before Browser.CloseAsync() in the fixture.
         // DisposeAsync() releases underlying resources after graceful close.
         using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        try
+        {
+            if (_cdpSession != null)
+            {
+                await _cdpSession.DetachAsync().WaitAsync(cts.Token);
+            }
+        }
+        catch (Exception)
+        {
+            // Best-effort CDP session cleanup
+        }
+
         try
         {
             if (_page != null)

@@ -100,7 +100,8 @@ tests/TechHub.E2E.Tests/
 │   ├── ApiCollectionFixture.cs         ← Shared WebApplicationFactory for API tests
 │   └── ContentEndpointsE2ETests.cs     ← Content API endpoints (4 tests)
 ├── Helpers/
-│   └── BlazorHelpers.cs                ← Blazor-specific wait patterns
+│   ├── BlazorHelpers.cs                ← Blazor-specific wait patterns
+│   └── NetworkThrottling.cs            ← CDP network/CPU throttling for CI simulation
 ├── PlaywrightCollectionFixture.cs      ← Shared browser (assembly fixture)
 ├── PlaywrightTestBase.cs               ← Abstract base class for Web E2E tests
 └── testconfig.json                     ← Parallel execution settings (xUnit v3)
@@ -287,6 +288,36 @@ All browser launch options are centralized in [PlaywrightCollectionFixture.cs](P
 - **Consistent viewport**: 1920x1080 matches common desktop resolution
 - **Timezone**: Europe/Brussels matches application configuration
 
+### Network Throttling (CI Simulation)
+
+E2E tests can fail on CI runners due to constrained CPU and network resources. To reproduce these conditions locally, set the `E2E_NETWORK_THROTTLE` environment variable before running tests:
+
+```powershell
+# Simulate CI runner conditions (10 Mbps network + 2x CPU throttle)
+$env:E2E_NETWORK_THROTTLE = "ci"
+Run -TestProject E2E
+
+# Simulate slow 3G network
+$env:E2E_NETWORK_THROTTLE = "slow3g"
+Run -TestProject E2E
+
+# Disable throttling (default)
+$env:E2E_NETWORK_THROTTLE = ""
+```
+
+**Available profiles**:
+
+| Profile | Download | Upload | Latency | CPU Throttle |
+|---------|----------|--------|---------|-------------|
+| `ci` | — | — | — | 2x CPU slowdown |
+| `regular4g` | 4 Mbps | 3 Mbps | 20ms | None |
+| `fast3g` | 562 Kbps | 562 Kbps | 150ms | None |
+| `slow3g` | 400 Kbps | 400 Kbps | 400ms | None |
+
+**How it works**: Uses CDP (Chrome DevTools Protocol) `Network.emulateNetworkConditions` and `Emulation.setCPUThrottlingRate` via Playwright's `NewCDPSessionAsync`. Applied automatically in `PlaywrightTestBase.InitializeAsync()` per test page. Chromium-only (which is our default browser).
+
+**See**: [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs) for implementation
+
 ### Performance Optimizations
 
 **1. Shared Test Infrastructure** (faster startup):
@@ -307,7 +338,11 @@ All browser launch options are centralized in [PlaywrightCollectionFixture.cs](P
 **2. Parallel Test Execution** (scales to CPU):
 
 - Test collections run in parallel
-- Configured in [testconfig.json](testconfig.json): `maxParallelThreads: "2x"` (2× CPU threads, auto-scales to machine)
+- Configured via two `testconfig` files:
+  - `testconfig.json` (default): `maxParallelThreads: "1x"` — conservative for CI runners (2 vCPUs)
+  - `testconfig.localhost.json`: `maxParallelThreads: "2x"` — aggressive for local dev machines
+  - The `Run` command automatically uses `testconfig.localhost.json` via `--config-file`
+  - CI (`dotnet test`) uses the default `testconfig.json` with no extra flags
 - Each collection gets isolated resources (browser contexts, HTTP clients)
 
 **3. Optimized Timeouts** (fail fast):
