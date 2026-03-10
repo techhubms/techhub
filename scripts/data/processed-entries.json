@@ -28246,5 +28246,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-the-standard-hdd-i-o-unit-size-update-and-what-it/ba-p/4499128",
     "timestamp": "2026-03-10 18:14:45 +00:00",
     "reason": "Succesfully added: Assigned only the Azure category because the content exclusively discusses Azure managed disk billing updates, technical details of transaction measurement, and practical guidance for Azure users (Azure rule 1 and 4). No AI, Coding, DevOps, ML, GitHub Copilot, or Security category applies, as the focus is purely on Azure storage billing, not development, ML/analytics, AI integration, or security implementation. Content is technical and implementation-focused, does not trigger generic exclusion rules, and meets the required threshold for Microsoft technology centrality."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-10 19:16:28 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-03-10-dependabot-now-supports-pre-commit-hooks",
+    "reason": "Succesfully added: The content is a technical announcement about GitHub Dependabot supporting automated updates for pre-commit hooks by parsing and updating hook versions in .pre-commit-config.yaml via dependabot.yml. Based on category rules, this directly qualifies for the DevOps category (DevOps rule 2: GitHub DevOps tools, and rule 5: CI/CD and deployment). It covers version management, automation, and workflow enhancements in code security contexts. No content pertains to coding (no actual code implementations or programming language focus), AI, Azure, ML, or Security (from a Microsoft-specific security product perspective), so those categories are not included."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-10 19:17:07 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/1npISWbvle4",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content centers on GitHub Copilot CLI (inclusion rule: GitHub Copilot Features/Functionality). 'AI' is required any time the 'GitHub Copilot' category is assigned (critical rule). Added 'DevOps' because automating repository dependency management fits DevOps category (DevOps rule: Infrastructure and Automation, Developer Experience). The content does not qualify for Coding, Azure, ML, or Security as there are no code examples, Microsoft Azure services, machine learning, or security content."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-10 19:17:26 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=BviR6Me36gI",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the tutorial centers around GitHub Copilot CLI and demonstrates AI-powered automation (AI rules 1, 2, and 4; GitHub Copilot rules 1-6). Added 'DevOps' because the content is focused on repository maintenance and streamlining software upgrades—activities central to DevOps (DevOps rules 5 and 12). 'Coding' was not assigned as there is no direct programming or code writing guidance. Exclusion rules did not apply: content is technical, not biographical, not a sales pitch, not negative, and closely related to Microsoft developer tooling."
   }
 ]
