@@ -234,6 +234,10 @@ dotnet_diagnostic.IDE0305.severity = none
 # This ensures VS Code Problems tab, dotnet build, and CI/CD all report the same issues
 ##############################
 
+# CA1861: Constant array arguments - suppressed because converting from collection expressions
+# to explicit arrays creates many of these; arrays are small and allocations are negligible
+dotnet_diagnostic.CA1861.severity = none
+
 # CA1308: ToLowerInvariant - intentional for tag/search normalization (lowercase is conventional)
 dotnet_diagnostic.CA1308.severity = none
 

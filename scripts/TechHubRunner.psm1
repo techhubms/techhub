@@ -217,8 +217,8 @@ function Run {
     .PARAMETER WithoutTests
         Skip all tests and start servers directly (for debugging or interactive development).
 
-    .PARAMETER Rebuild
-        Do a clean rebuild only, then exit (don't run tests or start servers).
+    .PARAMETER BuildOnly
+        Build only, then exit (don't run tests or start servers).
 
     .PARAMETER TestProject
         Scope tests to a specific project (e.g., "TechHub.Web.Tests", "TechHub.Api.Tests", "E2E.Tests", "powershell").
@@ -281,7 +281,7 @@ function Run {
         [switch]$WithoutTests,
     
         [Parameter(Mandatory = $false)]
-        [switch]$Rebuild,
+        [switch]$BuildOnly,
 
         [Parameter(Mandatory = $false)]
         [string]$TestProject,
@@ -1366,8 +1366,8 @@ function Run {
             }
         }
         
-        # Rebuild mode: Clean rebuild only, then EXIT
-        if ($Rebuild) {
+        # BuildOnly mode: Build only, then EXIT
+        if ($BuildOnly) {
             Write-Success "`nBuild completed successfully!"
             return $true
         }

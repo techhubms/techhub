@@ -35,7 +35,7 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Run -TestProject Api` | Run tests with "Api" in the project name. |
 | `Run -TestName Filter` | Run only individual test methods containing "Filter". |
 | `Run -Docker` | Run ALL services (API + Web + PostgreSQL) via docker compose containers (production-like). |
-| `Run -Rebuild` | Perform a clean rebuild only, then exit (no tests/run). |
+| `Run -BuildOnly` | Build only, then exit (no tests, no servers). |
 | `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). |
 | `Stop-Servers` (without Run in front!) | Stops the servers directly. |
 

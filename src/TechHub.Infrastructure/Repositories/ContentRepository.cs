@@ -1040,7 +1040,7 @@ public class ContentRepository : IContentRepository
                 var ftsJoin = Dialect.GetFullTextJoinClause();
                 if (!string.IsNullOrEmpty(ftsJoin))
                 {
-                    sql.Append($@"
+                    sql.Append(CultureInfo.InvariantCulture, $@"
             {ftsJoin}");
                 }
             }
@@ -1060,10 +1060,10 @@ public class ContentRepository : IContentRepository
 
             if (hasQuery)
             {
-                sql.Append($@"
+                sql.Append(CultureInfo.InvariantCulture, $@"
             AND {Dialect.GetFullTextWhereClause("query")}");
                 parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
-                sql.Append($" ORDER BY {Dialect.GetFullTextOrderByClause("query")}");
+                sql.Append(CultureInfo.InvariantCulture, $" ORDER BY {Dialect.GetFullTextOrderByClause("query")}");
                 // LIMIT is applied here because the tag subquery skips it when search is present
                 // (to avoid pruning items before FTS filter runs)
                 sql.Append(" LIMIT @take OFFSET @skip");
@@ -1087,7 +1087,7 @@ public class ContentRepository : IContentRepository
                 var ftsJoin = Dialect.GetFullTextJoinClause();
                 if (!string.IsNullOrEmpty(ftsJoin))
                 {
-                    sql.Append($@"
+                    sql.Append(CultureInfo.InvariantCulture, $@"
             {ftsJoin}");
                 }
             }
@@ -1254,7 +1254,7 @@ public class ContentRepository : IContentRepository
             var ftsJoin = Dialect.GetFullTextJoinClause();
             if (!string.IsNullOrEmpty(ftsJoin))
             {
-                countSql.Append($" {ftsJoin}");
+                countSql.Append(CultureInfo.InvariantCulture, $" {ftsJoin}");
             }
         }
 

@@ -48,7 +48,7 @@ public class StartupBackgroundServiceTests
 
         // Act
         await backgroundService.StartAsync(CancellationToken.None);
-        await Task.Delay(500);
+        await Task.Delay(500, TestContext.Current.CancellationToken);
 
         // Assert
         mockHostLifetime.Verify(l => l.StopApplication(), Times.Once);
@@ -89,7 +89,7 @@ public class StartupBackgroundServiceTests
 
         // Act
         await backgroundService.StartAsync(CancellationToken.None);
-        await Task.Delay(500);
+        await Task.Delay(500, TestContext.Current.CancellationToken);
 
         // Assert
         mockHostLifetime.Verify(l => l.StopApplication(), Times.Once);
@@ -143,7 +143,7 @@ public class StartupBackgroundServiceTests
 
         // Act
         await backgroundService.StartAsync(CancellationToken.None);
-        await Task.Delay(500);
+        await Task.Delay(500, TestContext.Current.CancellationToken);
 
         // Assert
         mockHostLifetime.Verify(l => l.StopApplication(), Times.Never);
