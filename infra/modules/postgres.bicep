@@ -71,10 +71,6 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startHour: 0
       startMinute: 0
     }
-    replica: {
-      role: 'Primary'
-    }
-    replicationRole: 'Primary'
     network: {
       delegatedSubnetResourceId: delegatedSubnetId
       privateDnsZoneArmResourceId: privateDnsZoneId

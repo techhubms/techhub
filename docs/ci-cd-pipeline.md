@@ -69,16 +69,15 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
    - Images are built once and reused for both staging and production
 
 3. **Deploy to Staging** - Full infrastructure + application deployment
-   - Runs `Deploy-Infrastructure.ps1` with image tag (ARM no-ops unchanged resources)
-   - Runs `Deploy-Application.ps1 -SkipBuild -SkipPush` to update container apps
-   - Runs smoke tests (health, homepage)
+   - Runs `Deploy-Infrastructure.ps1` with image tag — Bicep manages everything declaratively (infra config + container image)
+   - ARM is idempotent: unchanged resources are not touched
+   - Runs smoke tests (health check + homepage)
 
 4. **Deploy to Production** - Full infrastructure + application deployment
    - Uses GitHub environment protection for approval
-   - Same flow as staging: infra deployment then app deployment
+   - Same flow as staging: single `Deploy-Infrastructure.ps1` call with image tag
    - Deploys same images used in staging (no rebuild)
-   - Runs smoke tests (health, homepage)
-   - **Auto-rollback** on health check failures
+   - Runs smoke tests (health check + homepage)
 
 **Environments**:
 
@@ -108,9 +107,8 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
 
 **Rollback Strategy**:
 
-- Automatic rollback if smoke tests fail
-- Restores previous container images
-- Manual rollback available via redeployment
+- Manual rollback available via redeployment with a previous image tag
+- Container Apps revision history provides additional rollback options
 
 ## Docker Images
 

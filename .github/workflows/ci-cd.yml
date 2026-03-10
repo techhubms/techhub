@@ -673,7 +673,8 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy staging infrastructure
+      - name: Deploy staging infrastructure and application
+        id: deploy
         shell: pwsh
         env:
           POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ACC_PW }}
@@ -682,15 +683,6 @@ jobs:
             -Environment staging `
             -Mode deploy `
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
-
-      - name: Deploy staging application
-        id: deploy
-        shell: pwsh
-        run: |
-          ./scripts/Deploy-Application.ps1 `
-            -Environment staging `
-            -Tag "${{ needs.build-and-push.outputs.image-tag }}" `
-            -SkipBuild -SkipPush
 
           $customDomains = az containerapp show `
             --name ca-techhub-web-staging `
@@ -704,6 +696,31 @@ jobs:
             -o tsv
           $webUrl = if ($customDomains) { $customDomains.Split()[0] } else { $fqdn }
           "web-url=$webUrl" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+
+      - name: Smoke tests
+        shell: pwsh
+        run: |
+          $webUrl = "https://${{ steps.deploy.outputs.web-url }}"
+          Write-Host "Waiting 30 seconds for deployment to stabilize..."
+          Start-Sleep -Seconds 30
+
+          # Health check
+          $health = try { Invoke-WebRequest -Uri "$webUrl/health" -TimeoutSec 30 -UseBasicParsing } catch { $null }
+          if ($health -and $health.StatusCode -eq 200) {
+            Write-Host "[OK] Health check passed ($webUrl/health)"
+          } else {
+            Write-Host "::error::Health check failed ($webUrl/health)"
+            exit 1
+          }
+
+          # Homepage check
+          $home = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
+          if ($home -and $home.StatusCode -eq 200) {
+            Write-Host "[OK] Homepage accessible ($webUrl)"
+          } else {
+            Write-Host "::error::Homepage not accessible ($webUrl)"
+            exit 1
+          }
 
       - name: Deployment summary
         run: |
@@ -736,7 +753,8 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy production infrastructure
+      - name: Deploy production infrastructure and application
+        id: deploy
         shell: pwsh
         env:
           POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_PROD_PW }}
@@ -745,15 +763,6 @@ jobs:
             -Environment production `
             -Mode deploy `
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
-
-      - name: Deploy production application
-        id: deploy
-        shell: pwsh
-        run: |
-          ./scripts/Deploy-Application.ps1 `
-            -Environment production `
-            -Tag "${{ needs.build-and-push.outputs.image-tag }}" `
-            -SkipBuild -SkipPush
 
           $customDomains = az containerapp show `
             --name ca-techhub-web-prod `
@@ -767,6 +776,31 @@ jobs:
             -o tsv
           $webUrl = if ($customDomains) { $customDomains.Split()[0] } else { $fqdn }
           "web-url=$webUrl" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+
+      - name: Smoke tests
+        shell: pwsh
+        run: |
+          $webUrl = "https://${{ steps.deploy.outputs.web-url }}"
+          Write-Host "Waiting 60 seconds for deployment to stabilize..."
+          Start-Sleep -Seconds 60
+
+          # Health check
+          $health = try { Invoke-WebRequest -Uri "$webUrl/health" -TimeoutSec 30 -UseBasicParsing } catch { $null }
+          if ($health -and $health.StatusCode -eq 200) {
+            Write-Host "[OK] Health check passed ($webUrl/health)"
+          } else {
+            Write-Host "::error::Health check failed ($webUrl/health)"
+            exit 1
+          }
+
+          # Homepage check
+          $home = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
+          if ($home -and $home.StatusCode -eq 200) {
+            Write-Host "[OK] Homepage accessible ($webUrl)"
+          } else {
+            Write-Host "::error::Homepage not accessible ($webUrl)"
+            exit 1
+          }
 
       - name: Deployment summary
         run: |
