@@ -12801,5 +12801,17 @@
     "timestamp": "2026-03-09 18:14:23 +00:00",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/agentic-ai-in-it-self-healing-systems-and-smart-incident/m-p/4500554#M22442"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to missing main content text (the 'content' field is null). Without the actual content, it's not possible to apply the inclusion criteria or accurately categorize the material, as required by the workflow (Chapter 3: Focus on actual content; Chapter 7: Output Format - exclusion if key information is missing).",
+    "canonical_url": "https://www.youtube.com/watch?v=Yd9xDJUvA2o",
+    "timestamp": "2026-03-10 03:45:22 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the 'content' field is null, which means there is no substantive technical material to analyze or categorize. According to the processing rules, categorization must be based on actual content, and without any, it is impossible to determine relevance to Microsoft technology categories. Generic exclusion applies.",
+    "canonical_url": "https://www.youtube.com/shorts/RctUtkfOHoU",
+    "timestamp": "2026-03-10 04:33:26 +00:00",
+    "collection": "videos"
   }
 ]
