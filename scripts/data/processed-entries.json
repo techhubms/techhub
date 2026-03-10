@@ -28168,5 +28168,11 @@
     "timestamp": "2026-03-10 11:12:15 +00:00",
     "canonical_url": "https://andrewlock.net/splitting-the-netescapades-enumgenerators-packages-the-road-to-a-stable-release/",
     "reason": "Succesfully added: Included the Coding category because the post focuses on technical .NET development topics: refactoring a source generator NuGet package, build system configuration, source generator architecture, and performance improvements (Coding rule 3 and 4). There is no content relevant to AI, Azure, ML, DevOps, Security, or GitHub Copilot. The article covers in-depth use and packaging of a C#/.NET library, as well as practical configuration for developers. Exclusion of other categories follows category inclusion rules and content specifics; notably, there is no AI, Cloud, Security, or DevOps content present."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-reusable-custom-images-for-azure-confidential-vms-using/ba-p/4500880",
+    "timestamp": "2026-03-10 13:28:05 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content specifically demonstrates advanced Azure Virtual Machine workflows, with a focus on Confidential VMs, image creation, deployment, and management using Azure Compute Gallery (Azure rule 1 and 4). Assigned the Security category because the entire guide centers around security features, compliance (PMK and CMK), BitLocker, Secure Boot, vTPM, and confidential computing architecture (Security rule 1, 2, 3, 4, and 9). Coding, DevOps, AI, and ML categories were not added because although there are implementation scripts and automation steps, the primary focus is not on code development frameworks, pipelines, software engineering, AI, or data science, but rather on infrastructure, VM image management, and security controls. All generic exclusion rules were checked – the content is in English, is technical, non-biographical, not negative, and exceeds the required length."
   }
 ]
