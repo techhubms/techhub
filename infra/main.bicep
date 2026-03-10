@@ -118,8 +118,7 @@ module containerAppsEnv './modules/containerApps.bicep' = {
   params: {
     location: location
     environmentName: containerAppsEnvName
-    logAnalyticsCustomerId: monitoring.outputs.logAnalyticsCustomerId
-    logAnalyticsSharedKey: monitoring.outputs.logAnalyticsSharedKey
+    logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     infrastructureSubnetId: network.outputs.containerAppsSubnetId
   }
 }

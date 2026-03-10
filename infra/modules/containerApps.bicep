@@ -1,9 +1,6 @@
 param location string
 param environmentName string
-param logAnalyticsCustomerId string
-
-@secure()
-param logAnalyticsSharedKey string
+param logAnalyticsWorkspaceId string
 
 @description('Subnet resource ID for VNet integration')
 param infrastructureSubnetId string
@@ -13,11 +10,7 @@ resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2025-01-01'
   location: location
   properties: {
     appLogsConfiguration: {
-      destination: 'log-analytics'
-      logAnalyticsConfiguration: {
-        customerId: logAnalyticsCustomerId
-        sharedKey: logAnalyticsSharedKey
-      }
+      destination: 'azure-monitor'
     }
     vnetConfiguration: {
       infrastructureSubnetId: infrastructureSubnetId
@@ -27,6 +20,22 @@ resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2025-01-01'
       {
         name: 'Consumption'
         workloadProfileType: 'Consumption'
+      }
+    ]
+  }
+}
+
+// Route container app logs to Log Analytics via diagnostic settings
+// instead of the shared key approach, which triggers redeployments.
+resource diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
+  name: 'logs-to-law'
+  scope: containerAppsEnvironment
+  properties: {
+    workspaceId: logAnalyticsWorkspaceId
+    logs: [
+      {
+        categoryGroup: 'allLogs'
+        enabled: true
       }
     ]
   }

@@ -36,7 +36,3 @@ output appInsightsName string = appInsights.name
 output appInsightsConnectionString string = appInsights.properties.ConnectionString
 output appInsightsInstrumentationKey string = appInsights.properties.InstrumentationKey
 output logAnalyticsWorkspaceId string = logAnalyticsWorkspace.id
-output logAnalyticsCustomerId string = logAnalyticsWorkspace.properties.customerId
-
-#disable-next-line outputs-should-not-contain-secrets // Key passed as parameter to avoid listKeys() inside CAE resource definition
-output logAnalyticsSharedKey string = logAnalyticsWorkspace.listKeys().primarySharedKey
