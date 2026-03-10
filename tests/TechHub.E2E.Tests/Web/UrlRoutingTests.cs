@@ -118,6 +118,9 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/github-copilot/news");
 
+        // Wait for sub-nav to be fully rendered before interacting
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
+
         // Navigate to videos
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
