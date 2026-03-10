@@ -12825,5 +12825,11 @@
     "canonical_url": "https://news.microsoft.com/source/emea/features/kerry-group-copilot-knowledge-partner/",
     "collection": "news",
     "reason": "No categories found: Content excluded due to generic exclusion rules. This article is primarily biographical in nature, focusing on Shane McGibney's career roles and responsibilities at Kerry Group, rather than providing substantive technical details or implementation about Microsoft developer or cloud technologies. Additionally, while 'Copilot' is mentioned in the title, the content itself does not discuss GitHub Copilot or technical integration, but rather appears to reference Microsoft's business productivity Copilot or Copilot for Microsoft 365, which is excluded per Non-Development Microsoft Products and Copilot Product Distinction rules."
+  },
+  {
+    "reason": "No categories found: Content excluded due to the Generic Exclusion Rule: the description is not primarily in English, as it is written in Spanish. According to the Non-English Content exclusion, content not primarily in English (<80% English in main text) is excluded. Additionally, there are no clear technical details about Microsoft technologies, coding, or development topics in the provided metadata.",
+    "timestamp": "2026-03-10 15:18:22 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=PQl8v1Uu9oE",
+    "collection": "videos"
   }
 ]

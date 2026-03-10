@@ -28198,5 +28198,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-on-prem-windows-linux-vms-to-azure-confidential/ba-p/4500898",
     "collection": "community",
     "reason": "Succesfully added: Generic exclusion rules do not apply: the content is technical, not biographical or business/strategy-focused, and does not appear to be a sales pitch or question-only post. The content is a technical whitepaper describing how to migrate on-premises Windows and Linux VMs to Azure Confidential VMs using Azure Migrate. The Azure category was assigned (Azure rule 1 and 4) because Azure Migrate, Azure Confidential Computing, and multiple Azure services are central and recurring throughout the content. The Security category was assigned (Security rules 1, 2, and 4) due to the heavy emphasis on confidential computing, hardware-based encryption, trusted execution, HSM, attestation, Zero Trust, access controls, and governance. DevOps was included because the overall process is a multi-phase cloud migration and operational lifecycle covering orchestration, automation, configuration, policy enforcement, and operational governance (DevOps rules 1, 5, 6, 9, and 11). Coding was not included because there is no code-level or application development focus. AI and ML categories were not assigned, as the scenario has no connection to AI or data science—its focus is on infrastructure security, migration architecture, and secure operations using Azure."
+  },
+  {
+    "reason": "Succesfully added: Content is centrally about Azure SRE Agent, which is an AI-powered service for DevOps automation in Azure environments. 'AI' category was included since the core product leverages agentic AI (AI rule 1), 'Azure' was included as the platform is built for Azure infrastructure (Azure rule 1), and 'DevOps' was included given the automated incident management, root cause analysis, and workflow integration (DevOps rules 1, 5, 6). Not a sales pitch or biographical; content is technical, solution-focused, in English, and directed at practitioners.",
+    "timestamp": "2026-03-10 15:18:52 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-for-the-azure-sre-agent/ba-p/4500682",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI because the post analyzes intelligent agent architectures and describes AI-driven workflows (AI rule 1, 4). Assigned Azure category due to deep coverage of Azure service reliability operations (Azure rule 1). Assigned DevOps because the content centers on SRE, incident management, automated deployments, operational best practices, and continuous improvement of systems (DevOps rules 1, 3, 5, 7). Assigned Security as the article highlights the agent's security analysis (Security rule 1, 5) and addresses vulnerabilities in code. Assigned Coding because it discusses codebase investigation, PR submissions, and developer-centric tool usage (Coding rules 2, 4, 5). The post meets Microsoft-content threshold: Azure and Microsoft-specific agent technology is the centerpiece of the architecture and solution; no exclusion rules apply.",
+    "timestamp": "2026-03-10 15:19:23 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-agent-that-investigates-itself/ba-p/4500073",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: Azure category, because the SRE Agent and setup are deeply integrated with Azure services such as Azure Monitor, Azure Container Apps, Application Insights, and Log Analytics (Azure rules 1, 4, 5, 6). DevOps category, because the post addresses incident response, monitoring, automation, and operational workflows essential to modern DevOps practices (DevOps rules 1, 3, 5, 6, 7, 9, 11). Security category is included due to multiple elements involving RBAC setup, permissions troubleshooting, authentication flow analysis, and secure managed identity practices, which are critical security topics in cloud operations (Security rules 1, 3, 7, 8). AI and ML categories were considered but not included, since although the SRE Agent incorporates some AI troubleshooting (agent reasoning, context discovery), there is no technical depth about AI/ML implementation, development, or Microsoft AI platforms as covered by the explicit category inclusion rules. The post is instructional, operational, and engineering focused, with all content in English, substantial length, and none of the generic exclusion rules apply.",
+    "timestamp": "2026-03-10 15:19:51 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-it-takes-to-give-sre-agent-a-useful-starting-point/ba-p/4500343",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the SRE Agent is an Azure-native tool and the article describes its usage and integration within the Azure ecosystem (Azure rule 1, 4, and 5). Included 'DevOps' as the article focuses on automation, incident management, engineering workflows, and operational improvement, all central to DevOps practices (DevOps rules 1, 5, and 6). Did not assign AI, Coding, ML, Security, or GitHub Copilot categories, as there is no explicit mention of AI services, code-level software development, ML, security-specific features, or GitHub Copilot. Generic exclusion rules do not apply; the article is technical, in English, and has sufficient depth and length.",
+    "timestamp": "2026-03-10 15:20:12 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-sre-agent-in-the-ga-release/ba-p/4500779",
+    "collection": "community"
   }
 ]
