@@ -89,6 +89,12 @@ public class AISDLCTests : PlaywrightTestBase
         var contentClasses = await phaseContent.GetAttributeAsync("class");
         contentClasses.Should().NotContain("expanded", "Phase content should be collapsed by default");
 
+        // Wait for JS event listeners to be attached — initCollapsibleCards() sets data-initialized
+        // on each header. WaitForBlazorReadyAsync only checks __scriptsLoading, which can pass
+        // before OnAfterRenderAsync calls initCustomPages() if pageData wasn't available on first render.
+        await Page.WaitForConditionAsync(
+            "() => document.querySelector('.sdlc-phase-header')?.dataset?.initialized === 'true'");
+
         // Act - Click to expand
         await phaseHeader.ClickBlazorElementAsync(waitForUrlChange: false);
 

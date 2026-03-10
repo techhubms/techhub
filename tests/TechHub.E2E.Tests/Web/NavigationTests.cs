@@ -168,14 +168,22 @@ public class NavigationTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/github-copilot");
         var sectionBanner = Page.Locator(".section-banner.section-banner-bg-github-copilot");
         await Assertions.Expect(sectionBanner).ToBeVisibleAsync();
-        await sectionBanner.ScrollIntoViewIfNeededAsync();
-        var sectionHeaderHeight = await sectionBanner.BoundingBoxAsync();
+        // Use JS-based measurement — ScrollIntoViewIfNeededAsync fails intermittently with
+        // "Element is not attached to the DOM" during Blazor enhanced navigation DOM patching
+        // because Playwright's stability check extends the window where element detachment can occur.
+        var sectionHeightHandle = await Page.WaitForConditionAsync(@"() => {
+            const el = document.querySelector('.section-banner[class*=""section-banner-bg-github-copilot""]');
+            if (!el || !el.isConnected) return null;
+            el.scrollIntoView({ block: 'center' });
+            const r = el.getBoundingClientRect();
+            return r.height > 0 ? r.height : null;
+        }");
+        var sectionBannerHeight = await sectionHeightHandle.JsonValueAsync<double>();
 
         // Assert - Both should have defined heights (not auto)
         homeHeaderHeight.Should().NotBeNull();
-        sectionHeaderHeight.Should().NotBeNull();
         homeHeaderHeight!.Height.Should().BeGreaterThan(0);
-        sectionHeaderHeight!.Height.Should().BeGreaterThan(0);
+        sectionBannerHeight.Should().BeGreaterThan(0);
     }
 
     [Fact]
