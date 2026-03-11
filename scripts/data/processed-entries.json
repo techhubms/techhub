@@ -28348,5 +28348,23 @@
     "collection": "blogs",
     "timestamp": "2026-03-11 16:17:05 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content is focused on Azure Local, Azure Monitor, and managing Azure hybrid cloud infrastructure (Azure category rule 1 and 4). The entire post details technical features, operational use cases, and deployment of a tool built for Azure environments. No other categories apply: there is no AI/ML, custom coding, DevOps pipeline specifics, or deep security implementation discussed. The community-driven nature and open-source aspects further reinforce the operational and Azure-specific technical focus. There are no generic exclusion rules triggered as the blog is technical, educational, in English, and not sales or biographical content."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-11 17:17:51 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides",
+    "reason": "Succesfully added: Categories 'GitHub Copilot' and 'AI' are assigned because the content is entirely focused on new features and improvements for GitHub Copilot, specifically in developer workflows in JetBrains IDEs. Per Chapter 4, including 'AI' is mandatory when GitHub Copilot is assigned. Software development use cases, agent customization, and IDE integrations are central, fitting developer tool (not consumer productivity) criteria. No Coding, DevOps, Azure, ML, or Security categories were added since the article does not cover programming language topics, CI/CD pipelines, Azure specifics, machine learning/data science, or security implementations."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-11 17:18:37 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=JhyBSthgFys",
+    "reason": "Succesfully added: Assigned the Azure category because the content focuses on SQL Server and Azure SQL development within Visual Studio Code, aligning with Azure inclusion rule 1. Assigned the Coding category because it details hands-on usage of the MSSQL Extension, database operations, and development workflows in VS Code (Coding inclusion rules 2, 4, and 5). Did not assign AI, GitHub Copilot, DevOps, ML, or Security because the episode does not address AI, DevOps processes, ML/data science, security practices, or GitHub Copilot functionality."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-11 17:19:01 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent/ba-p/4501292",
+    "reason": "Succesfully added: Assigned the AI category because the Migration Agent leverages AI-driven insights for migration planning and integrates with GitHub Copilot, which is an AI developer tool (AI rules 1 and 2). The GitHub Copilot category is included because the article details how GitHub Copilot is used for automating modernization tasks for developers (GitHub Copilot inclusion rule 1). Azure is assigned because the entire solution is built around Azure migration and modernization (Azure rules 1 and 4). DevOps is included because the article describes orchestrating migration at scale, governance, automation, and developer workflow enablement (DevOps rules 1, 5, 6, and 9). Coding and ML are not included, as the article focuses on orchestration, automation, and tooling, rather than code patterns or custom machine learning development."
   }
 ]
