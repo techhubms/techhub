@@ -28312,5 +28312,11 @@
     "reason": "Succesfully added: Included 'Azure' category as content focuses on Azure API Management and its policy engine (Azure rule 1 and 2). Added 'DevOps' because the article covers API orchestration, policy-driven integrations, governance, and operational best practices (DevOps rules 1, 4, 5, 6). Assigned 'Coding' due to code examples and logic on custom API policy scripts for aggregation and transformation (Coding rules 2, 4). 'AI', 'ML', 'Security', and 'GitHub Copilot' do not apply, as there is no content related to those topics. The detailed nature, substantial word count, English language, and technical focus ensure none of the generic exclusion rules apply.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-the-backend-for-frontend-bff-curated-api-pattern/ba-p/4499880"
+  },
+  {
+    "canonical_url": "https://www.devclass.com/security/2026/03/11/microsoft-azure-cto-set-claude-on-his-1986-apple-ii-code-says-it-found-vulns/5208875",
+    "timestamp": "2026-03-11 10:12:44 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned AI category because the article focuses on the use of Anthropic's Claude Opus 4.6 AI model to discover vulnerabilities in legacy Apple II code, discussing automated and AI-accelerated security analysis (AI inclusion rules 1 and 4). Assigned Security category because the central topic is vulnerability discovery, implications for legacy code security, and the broader impact of AI on cyber defense and vulnerability scanning (Security inclusion rules 2, 5, and 7). Azure is mentioned due to the CTO's title, but there is no discussion of Azure technology usage or services, so Azure category was not added. Coding, DevOps, and ML are not central topics, as the focus is on AI-driven security auditing and its implications, not the development or operationalization of Microsoft technologies."
   }
 ]
