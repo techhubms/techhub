@@ -28372,5 +28372,29 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories, as the content directly focuses on using GitHub Copilot CLI (see AI rule 2 and GitHub Copilot category rules). The video highlights AI-powered automation (the Copilot CLI /fleet command) for code maintenance, and Copilot is a developer tool (not a general business productivity tool), meeting all critical distinctions and inclusion requirements. Did not assign categories like 'Azure', 'Coding', 'DevOps', 'ML', or 'Security' because the content does not focus on Microsoft cloud, programming languages, broader DevOps practices, ML engineering, or security-specific topics.",
     "timestamp": "2026-03-11 18:15:26 +00:00"
+  },
+  {
+    "timestamp": "2026-03-11 19:17:24 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the entire content focuses on AI services, particularly inference and lifecycle management for open models—well-aligned with AI rule 1 (Microsoft AI Products/Services) and rule 4 (AI development with Microsoft Technologies). Assigned the 'Azure' category because Microsoft Foundry operates within Azure, providing deployment, management, and enterprise support for these models (Azure rules 1 and 4). Did not assign ML because content focuses on AI model deployment and inference, not on data science, analytics, or custom ML engineering. Coding, DevOps, Security, and GitHub Copilot are not relevant as the content is about platform capabilities and AI lifecycle, not code development, CI/CD, or security configuration.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/introducing-fireworks-ai-on-microsoft-foundry-bringing-high-performance-low-latency-open-model-inference-to-azure/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-11 19:17:44 +00:00",
+    "reason": "Succesfully added: The content qualifies for the Coding category as it discusses developer-focused features (DirectX, PIX tools, shader programming, developer workflows, new APIs, and developer environment improvements). It also qualifies for the ML category due to the integration of machine learning into graphics pipelines (HLSL linear algebra for ML operations, Windows ML model import for real-time rendering, and general emphasis on ML-driven graphics). Azure and AI categories are not assigned as the focus is on Windows PC/DirectX and not on Azure cloud services or AI as a user-facing application. 'DevOps' is excluded as the article does not cover CI/CD, infrastructure, or operational tools. Security is also not prominent. No exclusion rules apply.",
+    "canonical_url": "https://blogs.windows.com/windowsdeveloper/2026/03/11/gdc-2026-announcing-new-tools-and-platform-updates-for-windows-pc-game-developers/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-11 19:18:06 +00:00",
+    "reason": "Succesfully added: Included the AI and GitHub Copilot categories because the feature directly involves GitHub Copilot (an AI-powered coding assistant) and its integration into the CLI workflow (AI: rule 2; GitHub Copilot: rule 1). DevOps is included since it pertains to automating parts of the code review and pull request process through development tooling (DevOps: rules 2 and 9). No Coding or Azure categories were used, as there is no direct discussion of programming, .NET, or Azure-specific functionality.",
+    "canonical_url": "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-11 19:18:27 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content describes enhancements to Copilot CLI agents, chat-based code analysis, and automation features directly referencing Copilot (AI rule 2, GitHub Copilot rules 1 and 2). 'Coding' category is relevant due to the feature set described (editor improvements, developer workflow), and VS Code is primarily a developer tool (Coding rule 5). Did not assign Azure, ML, Security, or DevOps categories as the article does not detail Azure features, machine learning engineering, security implementation, or CI/CD workflows.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_112",
+    "collection": "news"
   }
 ]
