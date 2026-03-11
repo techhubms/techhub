@@ -12861,5 +12861,17 @@
     "canonical_url": "https://news.microsoft.com/source/2026/03/10/microsoft-announces-quarterly-dividend-28/",
     "reason": "No categories found: Content excluded due to generic exclusion rules. This news article is a corporate press release announcing a quarterly dividend, which falls under the 'Business Strategy and Executive Content' exclusion and does not have technical depth, implementation details, or developer relevance. There is no coverage of technical products, architectures, or development topics. The AI reference in the 'About Microsoft' section is generic and not substantive or specific to a Microsoft technology or platform.",
     "timestamp": "2026-03-10 22:05:04 +00:00"
+  },
+  {
+    "timestamp": "2026-03-11 14:18:51 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=UEugTIvkf90",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content is lacking any substantive technical content or description. The 'description' consists only of social media/promotional links, generic GitHub platform information, and calls to connect. There are no details about any Microsoft technology, developer tool, or technical subject addressed in the content. This violates the 'sales pitches' and 'no technical content' aspects of the Generic Exclusion Rules in Chapter 3. Since the main input fields do not provide any technical specifics, the exclusion is applied."
+  },
+  {
+    "reason": "No categories found: No categories assigned because the article is about JetBrains launching an AI-centered IDE called Air. The content thoroughly explores JetBrains' development tooling, its focus on agentic AI (including support for various AI providers and agent protocols), and the evolution from their Fleet IDE. There is no mention or technical discussion of Microsoft technologies, tools, platforms, services or frameworks. The presence of AI developer tools and industry context does not qualify as a Microsoft-related topic, as required by the workflow. Therefore, this article is outside the scope for Tech Hub categorization.",
+    "collection": "blogs",
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/03/11/jetbrains-launches-ai-agent-ide-built-on-the-corpse-of-abandoned-fleet/5208890",
+    "timestamp": "2026-03-11 15:16:57 +00:00"
   }
 ]

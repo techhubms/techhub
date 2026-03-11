@@ -28318,5 +28318,23 @@
     "timestamp": "2026-03-11 10:12:44 +00:00",
     "collection": "blogs",
     "reason": "Succesfully added: Assigned AI category because the article focuses on the use of Anthropic's Claude Opus 4.6 AI model to discover vulnerabilities in legacy Apple II code, discussing automated and AI-accelerated security analysis (AI inclusion rules 1 and 4). Assigned Security category because the central topic is vulnerability discovery, implications for legacy code security, and the broader impact of AI on cyber defense and vulnerability scanning (Security inclusion rules 2, 5, and 7). Azure is mentioned due to the CTO's title, but there is no discussion of Azure technology usage or services, so Azure category was not added. Coding, DevOps, and ML are not central topics, as the focus is on AI-driven security auditing and its implications, not the development or operationalization of Microsoft technologies."
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category since the content centers around GitHub Copilot, an AI-powered developer assistant (AI rule 2). Assigned the 'GitHub Copilot' category because the announcement is specifically about new features in GitHub Copilot's web chat experience (GitHub Copilot inclusion rule 1). Did not assign other categories because the update does not involve coding, DevOps, Azure, ML, or security technology directly. The content is technical, focuses on developer productivity, is not business/productivity content, and passes all generic exclusion rules.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-11-explore-a-repository-using-copilot-on-the-web",
+    "timestamp": "2026-03-11 15:16:11 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Content focuses on Microsoft Copilot Studio and the architectural principles of building AI agents using Microsoft technologies, qualifying for the 'AI' category (AI inclusion rules 1 and 4). Copilot Studio is recognized as a developer/maker tool, which fits inclusion criteria. There is no technical focus on coding, DevOps, Azure, ML, or security—so no other category applies. Microsoft 365 Copilot is mentioned only as part of related posts, not as the main topic. Generic exclusion rules do not apply: content is technical, English, long-form, and not business productivity focused. Tags emphasize Microsoft AI agent design and architecture.",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/how-copilot-agents-think-goals-memory-tools-and-autonomy/",
+    "timestamp": "2026-03-11 15:16:40 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included AI because content centrally discusses AI-driven automation and software agents for modernization (AI inclusion rule 1). 'GitHub Copilot' category assigned as the article focuses heavily on GitHub Copilot and its agents (GitHub Copilot rule 1 and 2). DevOps included due to content's focus on software lifecycle automation, CI/CD, and operational processes (DevOps rules 1, 4, and 5). Azure assigned because the entire modernization workflow and use cases involve Azure as the central cloud platform (Azure rule 1). Coding is included since code transformation, IDE integration, and upgrades for .NET/Java are central (Coding rules 1, 2, and 4). No ML category, as content doesn't focus on data science/analytics. Security could be argued, but isn't central to technical implementation.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-single-apps-to-scale-solutions-how-ai-agents-scale/ba-p/4500059",
+    "timestamp": "2026-03-11 15:17:39 +00:00"
   }
 ]
