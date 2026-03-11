@@ -4,10 +4,10 @@
     "intro": "Unlock the full potential of GitHub Copilot with these community-built tools, VS Code extensions, and curated resource collections. Whether you want to track your token usage, gain deeper AI insights inside your editor, or discover new ways to integrate Copilot into your workflow, these tool tips will help you get more out of your AI pair programmer.",
     "tools": [
         {
-            "name": "GitHub Copilot Token Usage",
-            "description": "An open-source dashboard for tracking and visualizing your GitHub Copilot token usage across your organization. Monitor consumption patterns, identify trends, and optimize your Copilot investment with detailed usage analytics and reporting.",
-            "url": "https://github.com/rajbos/github-copilot-token-usage",
-            "category": "Analytics"
+            "name": "Copilot Token Tracker",
+            "description": "A VS Code extension that shows your daily and monthly GitHub Copilot estimated token usage in the status bar. Track consumption patterns, view usage analysis dashboards, measure your Copilot Fluency Score, and optionally sync data across devices with an Azure Storage backend for team-wide reporting.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=RobBos.copilot-token-tracker",
+            "category": "VS Code Extension"
         },
         {
             "name": "VS Code Copilot Insights",
@@ -32,6 +32,12 @@
             "description": "The official Microsoft Playwright MCP (Model Context Protocol) server that enables AI agents to interact with web browsers. Automate browser testing, perform web scraping, and build AI-powered end-to-end test workflows with structured browser control.",
             "url": "https://github.com/microsoft/playwright-mcp",
             "category": "MCP Server"
+        },
+        {
+            "name": "Spec Kit",
+            "description": "An open-source toolkit by GitHub for Spec-Driven Development. Instead of vibe coding from scratch, Spec Kit lets you focus on product scenarios and predictable outcomes by turning specifications into executable implementations through a structured multi-step workflow with your AI coding agent.",
+            "url": "https://github.com/github/spec-kit",
+            "category": "AI Workflow"
         }
     ]
 }
