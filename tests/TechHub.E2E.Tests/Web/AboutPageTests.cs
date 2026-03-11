@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
 
@@ -82,5 +83,21 @@ public class AboutPageTests : PlaywrightTestBase
         // Assert
         await Page.WaitForBlazorUrlContainsAsync("/about");
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Reinier van Maanen");
+    }
+
+    [Fact]
+    public async Task AboutPage_ShouldDisplay_DiscordSection()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/about");
+
+        // Assert - Discord section should be visible with heading and invite link
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Discord", level: 2);
+
+        var discordLink = Page.GetByRole(AriaRole.Link).Filter(new() { HasText = "Join our Discord server" });
+        await Assertions.Expect(discordLink.First).ToBeVisibleAsync();
+
+        var href = await discordLink.First.GetAttributeAsync("href");
+        href.Should().Be("https://discord.gg/cURHV9TvFS");
     }
 }
