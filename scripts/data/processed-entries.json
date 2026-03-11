@@ -28396,5 +28396,17 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content describes enhancements to Copilot CLI agents, chat-based code analysis, and automation features directly referencing Copilot (AI rule 2, GitHub Copilot rules 1 and 2). 'Coding' category is relevant due to the feature set described (editor improvements, developer workflow), and VS Code is primarily a developer tool (Coding rule 5). Did not assign Azure, ML, Security, or DevOps categories as the article does not detail Azure features, machine learning engineering, security implementation, or CI/CD workflows.",
     "canonical_url": "https://code.visualstudio.com/updates/v1_112",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-11 22:05:16 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/11/contagious-interview-malware-delivered-through-fake-developer-job-interviews/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security category because the entire article is focused on the attack chain, malware payloads, defensive strategies, and incident response measures within the Microsoft ecosystem, matching Security inclusion rules 1, 2, 3, 4, 5, 9, and 10. Assigned DevOps as the campaign specifically targets developer tools (Visual Studio Code, NPM, Node.js, Python), CI/CD infrastructure, and developer workflows, meeting DevOps inclusion rules 3, 5, 6, and 9. Azure is not directly involved as a platform, nor are custom code implementations a focus, so Coding, Azure, AI, ML, and GitHub Copilot are not assigned. None of the generic exclusion rules, including business productivity, non-English, or content quality issues, apply."
+  },
+  {
+    "timestamp": "2026-03-11 22:05:39 +00:00",
+    "canonical_url": "https://github.blog/news-insights/company-news/addressing-githubs-recent-availability-issues-2/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'DevOps' because the content focuses on engineering infrastructure, site reliability, incident response, CI/CD outages, and developer operations best practices (DevOps rule 5, 6, and 7). Assigned 'Azure' because a key platform improvement is the migration of GitHub infrastructure to Azure, with explicit technical details and performance goals (Azure rule 1, 4, and 5). Did not assign 'AI', 'ML', 'Coding', 'Security', or 'GitHub Copilot' as the article does not cover those technology areas or developer tools. Generic exclusions do not apply as the content is technical, targeted at practitioners, and not business-, personal-, or productivity-focused."
   }
 ]
