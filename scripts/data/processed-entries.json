@@ -28300,5 +28300,11 @@
     "canonical_url": "https://www.youtube.com/shorts/mpqrdghoj_Y",
     "reason": "Succesfully added: Assigned the Coding category because the video discusses a feature within Visual Studio Code aimed at improving developer workflows (Coding rule 5: Microsoft development tools). No reference is made to AI, GitHub Copilot, DevOps, Azure, ML, or Security. The feature's purpose—enabling developers to manage conversations and experiment with code-related queries—falls squarely within Microsoft developer tool use cases.",
     "timestamp": "2026-03-10 22:06:16 +00:00"
+  },
+  {
+    "timestamp": "2026-03-11 02:53:47 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the content is about building games with .NET and MonoGame (Coding rule 1: Microsoft programming languages and frameworks, and rule 4: coding practices with Microsoft technologies). There is no mention of AI, Azure, DevOps, Security, or data/ML topics. MonoGame is a framework used in the Microsoft ecosystem for game development, and the focus is on practical, hands-on programming.",
+    "canonical_url": "https://www.youtube.com/watch?v=y631qBfWk_I"
   }
 ]

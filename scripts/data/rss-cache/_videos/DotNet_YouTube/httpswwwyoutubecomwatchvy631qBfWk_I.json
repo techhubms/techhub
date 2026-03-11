@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Tags": [
+    "dotnet",
+    "dotnet10"
+  ],
+  "ProcessedDate": "2026-03-11 02:52:20",
+  "FeedName": "DotNet YouTube",
+  "OutputDir": "_videos",
+  "PubDate": "2026-03-09T21:09:10+00:00",
+  "Description": ".NET and MonoGame can help you make games for anything! We'll see how this framework can start your game dev journey on Windows and Linux with a simple 2D game. This is an engaging and fun way to learn to code!\n\n🎙️ Featuring: Chris Gomez\n\n#dotnet #dotnet10",
+  "Link": "https://www.youtube.com/watch?v=y631qBfWk_I",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Title": "Make your first game now with .NET and MonoGame",
+  "Author": "dotnet"
+}
