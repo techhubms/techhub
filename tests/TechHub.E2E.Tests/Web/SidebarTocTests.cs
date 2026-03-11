@@ -227,33 +227,37 @@ public class SidebarTocTests : PlaywrightTestBase
         // Arrange - Navigate to page with hash anchor
         await Page.GotoRelativeAsync("/ai/genai-basics#types-of-prompts-and-messages");
 
-        // Wait for browser to scroll to anchor position
+        // Wait for scroll position to fully settle after page load.
+        // Mermaid diagrams render after initial page load, causing layout shifts above the
+        // target heading. Browser scroll anchoring adjusts scrollY to compensate, but this
+        // happens asynchronously. We wait until scrollY is stable across multiple frames.
         await Page.WaitForConditionAsync(
-            "() => window.scrollY > 0");
+            @"() => {
+                if (!window.__scrollCheck) window.__scrollCheck = { lastY: -1, stableFrames: 0 };
+                const c = window.__scrollCheck;
+                if (Math.abs(window.scrollY - c.lastY) < 1) {
+                    c.stableFrames++;
+                } else {
+                    c.stableFrames = 0;
+                }
+                c.lastY = window.scrollY;
+                return c.stableFrames >= 3;
+            }");
 
-        // Get initial scroll position (should already be at anchor)
+        // Get initial scroll position (fully settled after mermaid rendering + scroll anchoring)
         var initialScrollY = await Page.EvaluateAsync<double>("window.scrollY");
 
         // Act - Click the TOC link for the same section (should already be there)
         var tocLink = Page.Locator(".sidebar-toc a[href$='#types-of-prompts-and-messages']");
-        await tocLink.ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Wait for any scroll to settle
-        await Page.WaitForConditionAsync(
-            @"() => {
-                if (!window.__lastScrollY) window.__lastScrollY = window.scrollY;
-                const stable = Math.abs(window.scrollY - window.__lastScrollY) < 2;
-                window.__lastScrollY = window.scrollY;
-                return stable;
-            }");
+        await tocLink.ClickAndWaitForScrollAsync();
 
         // Get final scroll position
         var finalScrollY = await Page.EvaluateAsync<double>("window.scrollY");
 
-        // Assert - Scroll position should be nearly identical (within 200px tolerance for browser differences)
+        // Assert - Scroll position should be identical (hash navigation landed correctly)
         var scrollDifference = Math.Abs(finalScrollY - initialScrollY);
-        scrollDifference.Should().BeLessThan(200,
-            $"Expected minimal scroll change when clicking TOC link for current section. Initial: {initialScrollY}px, Final: {finalScrollY}px");
+        scrollDifference.Should().Be(0,
+            $"Expected zero scroll change when clicking TOC link for current section. Initial: {initialScrollY}px, Final: {finalScrollY}px");
     }
 
     #endregion

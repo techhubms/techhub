@@ -204,9 +204,10 @@ public class TabHighlightingTests : PlaywrightTestBase
             "() => !document.documentElement.classList.contains('keyboard-nav')");
 
         // Assert - Element should NOT have a visible outline (no keyboard-nav class active)
+        // When outline: none is applied, browsers may return "0px" or "" for outlineWidth
         var outlineWidth = await link.EvaluateAsync<string>(
             "el => window.getComputedStyle(el).outlineWidth");
-        outlineWidth.Should().Be("0px",
+        outlineWidth.Should().BeOneOf("0px", "",
             "focused element should not show outline when keyboard-nav class is not active (pointer mode)");
     }
 
@@ -233,9 +234,10 @@ public class TabHighlightingTests : PlaywrightTestBase
             "search input should not show box-shadow ring when focused via pointer");
 
         // Outline should also be suppressed
+        // When outline: none is applied, browsers may return "0px" or "" for outlineWidth
         var outlineWidth = await searchInput.EvaluateAsync<string>(
             "el => window.getComputedStyle(el).outlineWidth");
-        outlineWidth.Should().Be("0px",
+        outlineWidth.Should().BeOneOf("0px", "",
             "search input should not show outline when focused via pointer");
     }
 

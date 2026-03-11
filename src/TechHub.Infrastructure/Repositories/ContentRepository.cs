@@ -87,7 +87,7 @@ public class ContentRepository : IContentRepository
 
     // High-frequency tags excluded from all tag clouds.
     // These appear on most content items and don't provide filtering value.
-    private static readonly string[] HighFrequencyExcludedTags = new[] { "github", "copilot", "microsoft" };
+    private static readonly string[] _highFrequencyExcludedTags = new[] { "github", "copilot", "microsoft" };
 
     static ContentRepository()
     {
@@ -397,7 +397,7 @@ public class ContentRepository : IContentRepository
         }
 
         // Add high-frequency tags (already defined in HighFrequencyExcludedTags array)
-        foreach (var tag in HighFrequencyExcludedTags)
+        foreach (var tag in _highFrequencyExcludedTags)
         {
             excludeSet.Add(tag);
         }

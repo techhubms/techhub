@@ -154,9 +154,9 @@ public static class CdnLibraries
         /// Mermaid version number (pinned for stability)
         /// </summary>
         /// <remarks>
-        /// Latest at time of writing: 11.12.2 (Dec 2, 2025)
+        /// Latest at time of writing: 11.13.0 (Mar 11, 2026)
         /// </remarks>
-        public const string Version = "11.12.2";
+        public const string Version = "11.13.0";
 
         /// <summary>
         /// Full CDN URL for Mermaid (pinned version)

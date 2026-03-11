@@ -535,10 +535,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Arrange - When tags parameter is provided, counts should show intersection
         // (how many items would remain if BOTH the selected tag AND this tag are applied)
-        const string selectedTag = "ai";
+        const string SelectedTag = "ai";
 
         // Act - Get tag cloud with AI tag already selected
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={selectedTag}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={SelectedTag}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -565,11 +565,11 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithMultipleTags_CalculatesIntersection()
     {
         // Arrange - Select multiple tags, counts should show items matching ALL selected tags AND each tag
-        const string tag1 = "ai";
-        const string tag2 = "copilot";
+        const string Tag1 = "ai";
+        const string Tag2 = "copilot";
 
         // Act - Get tag cloud with both AI and Copilot selected
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={tag1},{tag2}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={Tag1},{Tag2}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -616,12 +616,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionTags_WithTagsAndDateRange_CombinesFilters()
     {
         // Arrange - Combine tags and date range filters
-        const string selectedTag = "ai";
+        const string SelectedTag = "ai";
         var fromDate = DateTimeOffset.UtcNow.AddDays(-90).ToString("yyyy-MM-dd");
         var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
 
         // Act - Get tag cloud with both filters
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={selectedTag}&from={fromDate}&to={toDate}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/tags?tags={SelectedTag}&from={fromDate}&to={toDate}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -661,11 +661,11 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // - Both counts should be EQUAL (representing A AND B AND C AND D intersection)
 
         // Arrange - Select two initial tags
-        const string initialTag1 = "copilot coding agent";
-        const string initialTag2 = "vs code";
+        const string InitialTag1 = "copilot coding agent";
+        const string InitialTag2 = "vs code";
 
         // Get tag cloud with initial tags selected
-        var initialResponse = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)}", TestContext.Current.CancellationToken);
+        var initialResponse = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(InitialTag1)},{Uri.EscapeDataString(InitialTag2)}", TestContext.Current.CancellationToken);
         initialResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
         var initialTagCloud = await initialResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
@@ -674,13 +674,13 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Find two additional tags that have counts > 0 in the initial state
         var additionalTag1 = initialTagCloud!
             .FirstOrDefault(t => t.Count > 0 &&
-                               !t.Tag.Equals(initialTag1, StringComparison.OrdinalIgnoreCase) &&
-                               !t.Tag.Equals(initialTag2, StringComparison.OrdinalIgnoreCase));
+                               !t.Tag.Equals(InitialTag1, StringComparison.OrdinalIgnoreCase) &&
+                               !t.Tag.Equals(InitialTag2, StringComparison.OrdinalIgnoreCase));
         var additionalTag2 = initialTagCloud!
             .Skip(1)
             .FirstOrDefault(t => t.Count > 0 &&
-                               !t.Tag.Equals(initialTag1, StringComparison.OrdinalIgnoreCase) &&
-                               !t.Tag.Equals(initialTag2, StringComparison.OrdinalIgnoreCase) &&
+                               !t.Tag.Equals(InitialTag1, StringComparison.OrdinalIgnoreCase) &&
+                               !t.Tag.Equals(InitialTag2, StringComparison.OrdinalIgnoreCase) &&
                                !t.Tag.Equals(additionalTag1?.Tag, StringComparison.OrdinalIgnoreCase));
 
         if (additionalTag1 == null || additionalTag2 == null)
@@ -690,7 +690,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         }
 
         // Path 1: Select additional tag 1, check count for additional tag 2
-        var path1Response = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)},{Uri.EscapeDataString(additionalTag1.Tag)}", TestContext.Current.CancellationToken);
+        var path1Response = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(InitialTag1)},{Uri.EscapeDataString(InitialTag2)},{Uri.EscapeDataString(additionalTag1.Tag)}", TestContext.Current.CancellationToken);
         path1Response.StatusCode.Should().Be(HttpStatusCode.OK);
 
         var path1TagCloud = await path1Response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
@@ -698,7 +698,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
             .FirstOrDefault(t => t.Tag.Equals(additionalTag2.Tag, StringComparison.OrdinalIgnoreCase))?.Count ?? 0;
 
         // Path 2: Select additional tag 2, check count for additional tag 1
-        var path2Response = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(initialTag1)},{Uri.EscapeDataString(initialTag2)},{Uri.EscapeDataString(additionalTag2.Tag)}", TestContext.Current.CancellationToken);
+        var path2Response = await _client.GetAsync($"/api/sections/github-copilot/collections/all/tags?tags={Uri.EscapeDataString(InitialTag1)},{Uri.EscapeDataString(InitialTag2)},{Uri.EscapeDataString(additionalTag2.Tag)}", TestContext.Current.CancellationToken);
         path2Response.StatusCode.Should().Be(HttpStatusCode.OK);
 
         var path2TagCloud = await path2Response.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
@@ -708,8 +708,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert - The intersection counts should be symmetric
         path1Count.Should().Be(path2Count,
             $"Intersection count should be symmetric. " +
-            $"With tags [{initialTag1}, {initialTag2}, {additionalTag1.Tag}] → count for {additionalTag2.Tag} = {path1Count}. " +
-            $"With tags [{initialTag1}, {initialTag2}, {additionalTag2.Tag}] → count for {additionalTag1.Tag} = {path2Count}. " +
+            $"With tags [{InitialTag1}, {InitialTag2}, {additionalTag1.Tag}] → count for {additionalTag2.Tag} = {path1Count}. " +
+            $"With tags [{InitialTag1}, {InitialTag2}, {additionalTag2.Tag}] → count for {additionalTag1.Tag} = {path2Count}. " +
             $"Both represent the intersection of all 4 tags, so counts must be equal.");
     }
 
@@ -1309,31 +1309,31 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Arrange - Use "AI" tag which exists in test data (25 items per TestDataConstants)
         // lastDays=0 bypasses the default 90-day date filter to include all test data
-        const string tag = "AI";
-        const int pageSize = 10;  // Smaller page size to test pagination with test data
+        const string Tag = "AI";
+        const int PageSize = 10;  // Smaller page size to test pagination with test data
 
         // First, get total count by requesting all items with this tag
-        var allItemsResponse = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&take=100&lastDays=0", TestContext.Current.CancellationToken);
+        var allItemsResponse = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={Tag}&take=100&lastDays=0", TestContext.Current.CancellationToken);
         allItemsResponse.StatusCode.Should().Be(HttpStatusCode.OK);
         var allItems = (await allItemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var totalCount = allItems!.Count;
 
         // Verify we have enough items to test pagination
         totalCount.Should().Be(TestDataConstants.FilteredByAiTotalCount, "AI tag should match expected test data count");
-        totalCount.Should().BeGreaterThan(pageSize, "should have enough items to require pagination");
+        totalCount.Should().BeGreaterThan(PageSize, "should have enough items to require pagination");
 
         // Act - Fetch first batch (skip=0, take=10)
-        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip=0&take={pageSize}&lastDays=0", TestContext.Current.CancellationToken);
+        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={Tag}&skip=0&take={PageSize}&lastDays=0", TestContext.Current.CancellationToken);
         batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
         var batch1 = (await batch1Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Act - Fetch second batch (skip=10, take=10)
-        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize}&take={pageSize}&lastDays=0", TestContext.Current.CancellationToken);
+        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={Tag}&skip={PageSize}&take={PageSize}&lastDays=0", TestContext.Current.CancellationToken);
         batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
         var batch2 = (await batch2Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Act - Fetch third batch (skip=20, take=10) to get remaining items
-        var batch3Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&skip={pageSize * 2}&take={pageSize}&lastDays=0", TestContext.Current.CancellationToken);
+        var batch3Response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={Tag}&skip={PageSize * 2}&take={PageSize}&lastDays=0", TestContext.Current.CancellationToken);
         batch3Response.StatusCode.Should().Be(HttpStatusCode.OK);
         var batch3 = (await batch3Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
@@ -1342,15 +1342,15 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         batch2.Should().NotBeNull();
         batch3.Should().NotBeNull();
 
-        batch1!.Should().HaveCount(pageSize, "first batch should contain exactly 10 items");
+        batch1!.Should().HaveCount(PageSize, "first batch should contain exactly 10 items");
         batch1.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
             "all items in batch 1 should have AI in their tags");
 
-        batch2!.Should().HaveCount(pageSize, "second batch should contain exactly 10 items");
+        batch2!.Should().HaveCount(PageSize, "second batch should contain exactly 10 items");
         batch2.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
             "all items in batch 2 should have AI in their tags");
 
-        var expectedBatch3Count = totalCount - (pageSize * 2);
+        var expectedBatch3Count = totalCount - (PageSize * 2);
         batch3!.Should().HaveCount(expectedBatch3Count, $"third batch should contain {expectedBatch3Count} remaining items");
         batch3.Should().OnlyContain(item => item.Tags.Any(t => t.Contains("ai", StringComparison.OrdinalIgnoreCase)),
             "all items in batch 3 should have AI in their tags");
@@ -1471,12 +1471,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetCollectionItems_WithDateRangeAndTags_CombinesFilters()
     {
         // Arrange - Combine tags and date range
-        const string tag = "AI";
+        const string Tag = "AI";
         var fromDate = DateTimeOffset.UtcNow.AddDays(-365).ToString("yyyy-MM-dd");
         var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={tag}&from={fromDate}&to={toDate}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/all/collections/all/items?tags={Tag}&from={fromDate}&to={toDate}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -1493,21 +1493,21 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Arrange
         var fromDate = DateTimeOffset.UtcNow.AddYears(-3).ToString("yyyy-MM-dd");
         var toDate = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
-        const int pageSize = 5;
+        const int PageSize = 5;
 
         // Act - Get first page
-        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip=0&take={pageSize}", TestContext.Current.CancellationToken);
+        var batch1Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip=0&take={PageSize}", TestContext.Current.CancellationToken);
         batch1Response.StatusCode.Should().Be(HttpStatusCode.OK);
         var batch1 = (await batch1Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Act - Get second page
-        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip={pageSize}&take={pageSize}", TestContext.Current.CancellationToken);
+        var batch2Response = await _client.GetAsync($"/api/sections/all/collections/all/items?from={fromDate}&to={toDate}&skip={PageSize}&take={PageSize}", TestContext.Current.CancellationToken);
         batch2Response.StatusCode.Should().Be(HttpStatusCode.OK);
         var batch2 = (await batch2Response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
 
         // Assert
         batch1.Should().NotBeNull();
-        batch1!.Should().HaveCount(pageSize, "first batch should have requested page size");
+        batch1!.Should().HaveCount(PageSize, "first batch should have requested page size");
 
         batch2.Should().NotBeNull();
 
@@ -1583,16 +1583,16 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Multiple newer posts also have the AI tag but do NOT contain "TechHubSpecialKeyword"
         // Bug scenario: tag subquery LIMIT may exclude the older fts-test post before FTS filter runs
         // lastDays=0 bypasses the default 90-day date filter to include older test data
-        const string tag = "ai";
-        const string searchQuery = "TechHubSpecialKeyword";
+        const string Tag = "ai";
+        const string SearchQuery = "TechHubSpecialKeyword";
 
         // Use a small take to ensure the FTS-matching item (date 2024-01-11) falls outside
         // the first N AI-tagged items sorted by date desc (there are 15+ newer AI-tagged items)
-        const int smallTake = 5;
+        const int SmallTake = 5;
 
         // First verify: search without tags finds the item
         var searchOnlyResponse = await _client.GetAsync(
-            $"/api/sections/all/collections/all/items?q={searchQuery}&lastDays=0",
+            $"/api/sections/all/collections/all/items?q={SearchQuery}&lastDays=0",
             TestContext.Current.CancellationToken);
         searchOnlyResponse.StatusCode.Should().Be(HttpStatusCode.OK);
         var searchOnlyItems = (await searchOnlyResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
@@ -1603,7 +1603,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Verify: tag filter without search finds AI-tagged items including fts-test
         var tagOnlyResponse = await _client.GetAsync(
-            $"/api/sections/all/collections/all/items?tags={tag}&take=50&lastDays=0",
+            $"/api/sections/all/collections/all/items?tags={Tag}&take=50&lastDays=0",
             TestContext.Current.CancellationToken);
         tagOnlyResponse.StatusCode.Should().Be(HttpStatusCode.OK);
         var tagOnlyItems = (await tagOnlyResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
@@ -1616,7 +1616,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // The tag subquery returns the top N newest AI-tagged items — fts-test is older
         // and falls outside this window, so FTS finds nothing among the returned items
         var combinedResponse = await _client.GetAsync(
-            $"/api/sections/all/collections/all/items?tags={tag}&q={searchQuery}&take={smallTake}&lastDays=0",
+            $"/api/sections/all/collections/all/items?tags={Tag}&q={SearchQuery}&take={SmallTake}&lastDays=0",
             TestContext.Current.CancellationToken);
 
         // Assert - Combined query should find items matching BOTH tag AND search

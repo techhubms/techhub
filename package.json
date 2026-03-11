@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@playwright/test": "^1.58.1",
-    "markdownlint-cli2": "^0.20.0"
+    "@playwright/test": "^1.58.2",
+    "markdownlint-cli2": "^0.21.0"
   }
 }

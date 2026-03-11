@@ -42,11 +42,11 @@ public class DatabasePerformanceTests : IDisposable
     //
     // CI multiplier: GitHub Actions runners have shared, slower I/O compared to dedicated hardware.
     // Apply a 3x multiplier when CI=true to avoid flaky failures from infrastructure variance.
-    private static readonly bool IsCI = Environment.GetEnvironmentVariable("CI") == "true";
-    private static readonly int CIMultiplier = IsCI ? 3 : 1;
-    private static readonly int MaxAcceptableMs = 100 * CIMultiplier;
-    private static readonly int MaxFtsMs = 200 * CIMultiplier;
-    private static readonly int MaxTagsToCountMs = 250 * CIMultiplier;
+    private static readonly bool _isCI = Environment.GetEnvironmentVariable("CI") == "true";
+    private static readonly int _cIMultiplier = _isCI ? 3 : 1;
+    private static readonly int _maxAcceptableMs = 100 * _cIMultiplier;
+    private static readonly int _maxFtsMs = 200 * _cIMultiplier;
+    private static readonly int _maxTagsToCountMs = 250 * _cIMultiplier;
 
     private readonly ContentRepository? _repository;
     private readonly IDbConnection? _connection;
@@ -190,7 +190,7 @@ public class DatabasePerformanceTests : IDisposable
 
     private void AssertPerformance(long elapsedMs, string operationName, int? overrideThresholdMs = null)
     {
-        var threshold = overrideThresholdMs ?? MaxAcceptableMs;
+        var threshold = overrideThresholdMs ?? _maxAcceptableMs;
         elapsedMs.Should().BeLessThan(threshold,
             $"{operationName} should complete within {threshold}ms on PostgreSQL (actual: {elapsedMs}ms)");
     }
@@ -305,7 +305,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount with selected tags", MaxTagsToCountMs);
+        AssertPerformance(elapsedMs, "TagsToCount with selected tags", _maxTagsToCountMs);
     }
 
     [Fact]
@@ -323,7 +323,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount on homepage with tag filter", MaxTagsToCountMs);
+        AssertPerformance(elapsedMs, "TagsToCount on homepage with tag filter", _maxTagsToCountMs);
     }
 
     [Fact]
@@ -340,7 +340,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount with 3 selected tags", MaxTagsToCountMs);
+        AssertPerformance(elapsedMs, "TagsToCount with 3 selected tags", _maxTagsToCountMs);
     }
 
     [Fact]
@@ -361,7 +361,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount with 15 specific tags", MaxTagsToCountMs);
+        AssertPerformance(elapsedMs, "TagsToCount with 15 specific tags", _maxTagsToCountMs);
     }
 
     // ==================== Tag Cloud: With Date Range ====================
@@ -381,7 +381,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "Tag cloud with 90-day date range", MaxTagsToCountMs);
+        AssertPerformance(elapsedMs, "Tag cloud with 90-day date range", _maxTagsToCountMs);
     }
 
     [Fact]
@@ -400,7 +400,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "TagsToCount with date range and tag filter", MaxTagsToCountMs);
+        AssertPerformance(elapsedMs, "TagsToCount with date range and tag filter", _maxTagsToCountMs);
     }
 
     // ==================== Tag Cloud: With Search Query ====================
@@ -419,7 +419,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "Tag cloud with FTS search query", MaxFtsMs);
+        AssertPerformance(elapsedMs, "Tag cloud with FTS search query", _maxFtsMs);
     }
 
     // ==================== Search: Basic Queries ====================
@@ -516,7 +516,7 @@ public class DatabasePerformanceTests : IDisposable
         var (elapsedMs, result) = await MeasureSearchAsync(request);
 
         result.Items.Should().NotBeEmpty();
-        AssertPerformance(elapsedMs, "Search with FTS query", MaxFtsMs);
+        AssertPerformance(elapsedMs, "Search with FTS query", _maxFtsMs);
     }
 
     [Fact]
@@ -533,7 +533,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var (elapsedMs, _) = await MeasureSearchAsync(request);
 
-        AssertPerformance(elapsedMs, "Search with FTS + tag filter", MaxFtsMs);
+        AssertPerformance(elapsedMs, "Search with FTS + tag filter", _maxFtsMs);
     }
 
     [Fact]
@@ -552,7 +552,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var (elapsedMs, _) = await MeasureSearchAsync(request);
 
-        AssertPerformance(elapsedMs, "Search with FTS + tags + date filter", MaxFtsMs);
+        AssertPerformance(elapsedMs, "Search with FTS + tags + date filter", _maxFtsMs);
     }
 
     // ==================== Search: Date Filtering ====================

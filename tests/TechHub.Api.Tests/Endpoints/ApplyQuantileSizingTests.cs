@@ -12,7 +12,7 @@ namespace TechHub.Api.Tests.Endpoints;
 /// </summary>
 public class ApplyQuantileSizingTests
 {
-    private static readonly QuantilePercentilesOptions DefaultOptions = new()
+    private static readonly QuantilePercentilesOptions _defaultOptions = new()
     {
         SmallToMedium = 0.25,
         MediumToLarge = 0.75
@@ -29,7 +29,7 @@ public class ApplyQuantileSizingTests
         var tags = new List<TagWithCount>();
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert
         result.Should().BeEmpty();
@@ -45,7 +45,7 @@ public class ApplyQuantileSizingTests
         };
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert
         result.Should().HaveCount(1);
@@ -63,7 +63,7 @@ public class ApplyQuantileSizingTests
         };
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert
         result.Should().HaveCount(2);
@@ -93,7 +93,7 @@ public class ApplyQuantileSizingTests
         };
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert - When only 1 distinct size group exists, all tags should be Medium
         result.Should().HaveCount(10);
@@ -115,7 +115,7 @@ public class ApplyQuantileSizingTests
         };
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert
         result.Should().AllSatisfy(t =>
@@ -146,7 +146,7 @@ public class ApplyQuantileSizingTests
         };
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert - With 2 distinct groups, higher group → Medium, lower group → Small
         var distinctSizes = result.Select(t => t.Size).Distinct().ToList();
@@ -193,7 +193,7 @@ public class ApplyQuantileSizingTests
         // Since all counts >= 2, this becomes all Medium
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert - The median-based rebalancing should produce a balanced split
         var distinctSizes = result.Select(t => t.Size).Distinct().ToList();
@@ -224,7 +224,7 @@ public class ApplyQuantileSizingTests
         };
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert - Median-based split: count>=10 → Medium, count<10 → Small
         result.Where(t => t.Count == 10).Should().AllSatisfy(t =>
@@ -255,7 +255,7 @@ public class ApplyQuantileSizingTests
         };
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert - All 3 sizes should be present
         var distinctSizes = result.Select(t => t.Size).Distinct().ToList();
@@ -281,7 +281,7 @@ public class ApplyQuantileSizingTests
         };
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert
         result.Should().HaveCount(3);
@@ -303,7 +303,7 @@ public class ApplyQuantileSizingTests
             .ToList();
 
         // Act
-        var result = ContentEndpoints.ApplyQuantileSizing(tags, DefaultOptions);
+        var result = ContentEndpoints.ApplyQuantileSizing(tags, _defaultOptions);
 
         // Assert - All should be Medium (regular size), not Large
         result.Should().HaveCount(20);

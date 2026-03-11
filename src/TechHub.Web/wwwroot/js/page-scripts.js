@@ -177,6 +177,18 @@ export async function initMermaid() {
                 expandBtn.onclick = () => showMermaidModal(element);
                 element.appendChild(expandBtn);
             });
+
+            // Re-scroll to hash target after mermaid rendering.
+            // Mermaid diagrams change <pre> to <svg> which shifts layout.
+            // The browser's initial hash-scroll happens before mermaid runs,
+            // so the scroll position becomes stale after the layout shift.
+            const hash = window.location.hash;
+            if (hash) {
+                const target = document.querySelector(hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'instant' });
+                }
+            }
         } catch (error) {
             console.error('Mermaid rendering failed:', error);
         }

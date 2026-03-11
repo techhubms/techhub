@@ -60,6 +60,8 @@
     <NoWarn>$(NoWarn);CA1711</NoWarn>
     <!-- CA1515: Make types internal - web application, not a library, public is fine -->
     <NoWarn>$(NoWarn);CA1515</NoWarn>
+    <!-- CA1873: Log argument evaluation guard - already suppressing CA1848 (LoggerMessage), traditional logging is preferred -->
+    <NoWarn>$(NoWarn);CA1873</NoWarn>
   </PropertyGroup>
   
   <!-- REMAINING SUPPRESSIONS DISABLED FOR ANALYSIS -->

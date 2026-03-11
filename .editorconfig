@@ -274,6 +274,9 @@ dotnet_diagnostic.CA1711.severity = none
 # CA1515: Make types internal - web application, not a library, public is fine
 dotnet_diagnostic.CA1515.severity = none
 
+# CA1873: Log argument evaluation guard - already suppressing CA1848 (LoggerMessage), traditional logging is preferred
+dotnet_diagnostic.CA1873.severity = none
+
 # REMAINING SUPPRESSIONS DISABLED FOR ANALYSIS
 # CA1720: Identifier contains type name - 'Guid' in RSS feeds is the RSS standard, not System.Guid
 # dotnet_diagnostic.CA1720.severity = none
