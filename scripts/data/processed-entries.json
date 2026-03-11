@@ -28366,5 +28366,11 @@
     "timestamp": "2026-03-11 17:19:01 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent/ba-p/4501292",
     "reason": "Succesfully added: Assigned the AI category because the Migration Agent leverages AI-driven insights for migration planning and integrates with GitHub Copilot, which is an AI developer tool (AI rules 1 and 2). The GitHub Copilot category is included because the article details how GitHub Copilot is used for automating modernization tasks for developers (GitHub Copilot inclusion rule 1). Azure is assigned because the entire solution is built around Azure migration and modernization (Azure rules 1 and 4). DevOps is included because the article describes orchestrating migration at scale, governance, automation, and developer workflow enablement (DevOps rules 1, 5, 6, and 9). Coding and ML are not included, as the article focuses on orchestration, automation, and tooling, rather than code patterns or custom machine learning development."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/lHtQPImRJSc",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories, as the content directly focuses on using GitHub Copilot CLI (see AI rule 2 and GitHub Copilot category rules). The video highlights AI-powered automation (the Copilot CLI /fleet command) for code maintenance, and Copilot is a developer tool (not a general business productivity tool), meeting all critical distinctions and inclusion requirements. Did not assign categories like 'Azure', 'Coding', 'DevOps', 'ML', or 'Security' because the content does not focus on Microsoft cloud, programming languages, broader DevOps practices, ML engineering, or security-specific topics.",
+    "timestamp": "2026-03-11 18:15:26 +00:00"
   }
 ]

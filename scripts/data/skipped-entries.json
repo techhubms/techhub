@@ -12885,5 +12885,11 @@
     "collection": "community",
     "timestamp": "2026-03-11 16:17:27 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2026/03/11/project-helix-building-next-generation-of-xbox/",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. This content is a high-level company news update and keynote summary about the future of Xbox hardware and gaming ecosystem, focusing on company vision, hardware innovation, cross-device gaming, and developer/player benefits. It does not provide substantive technical depth on software development, programming, DevOps, AI/ML, security, or coding architecture. It is primarily a product/platform news post, not hands-on developer content. Applies the generic exclusion: 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' rules from Chapter 3, as the focus is on hardware product roadmap, strategic partnerships, and general platform features rather than technical implementation guides for developers.",
+    "timestamp": "2026-03-11 18:14:38 +00:00"
   }
 ]
