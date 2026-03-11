@@ -24,7 +24,7 @@ While most content in Tech Hub is standard markdown served via generic item endp
 
 | Section | Custom Pages |
 |---|---|
-| `github-copilot` | Features, Levels of Enlightenment, The GitHub Copilot Handbook, VS Code Updates |
+| `github-copilot` | Features, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, VS Code Updates |
 | `ai` | GenAI Basics, GenAI Advanced, GenAI Applied, AI SDLC |
 | `devops` | DX, SPACE & DORA |
 
@@ -73,6 +73,12 @@ Retrieves the structured data required to render the corresponding custom page.
 **Endpoint**: `GET /api/custom-pages/genai-applied`
 **Data Model**: `GenAIPageData`
 **Description**: Real-world application examples and case study data.
+
+### GitHub Copilot Tool Tips
+
+**Endpoint**: `GET /api/custom-pages/tool-tips`
+**Data Model**: `ToolTipsPageData`
+**Description**: A curated collection of tools, extensions, and resources that enhance the GitHub Copilot experience.
 
 ### SDLC (Software Development Life Cycle)
 

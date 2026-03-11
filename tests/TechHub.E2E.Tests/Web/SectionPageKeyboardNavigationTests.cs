@@ -52,8 +52,8 @@ public class SectionPageKeyboardNavigationTests : PlaywrightTestBase
         var visitedSections = new List<string>();
         var currentSection = "";
 
-        // Tab through page - max 50 tabs to avoid infinite loop
-        for (int i = 0; i < 50; i++)
+        // Tab through page - max 60 tabs to avoid infinite loop
+        for (int i = 0; i < 60; i++)
         {
             await Page.Keyboard.PressAsync("Tab");
             var newSection = await GetFocusedContainer();

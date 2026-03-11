@@ -124,6 +124,14 @@ public static class CustomPagesEndpoints
             .Produces<SDLCPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
+        // Get Tool Tips page data
+        group.MapGet("/tool-tips", GetToolTipsData)
+            .WithName("GetToolTipsData")
+            .WithSummary("Get GitHub Copilot Tool Tips page data")
+            .WithDescription("Returns structured data for the GitHub Copilot Tool Tips custom page")
+            .Produces<ToolTipsPageData>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+
         return endpoints;
     }
 
@@ -274,4 +282,8 @@ public static class CustomPagesEndpoints
     private static Task<Results<Ok<SDLCPageData>, NotFound>> GetSDLCData(
         IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
         => GetPageData<SDLCPageData>("sdlc.json", env, settings, cancellationToken);
+
+    private static Task<Results<Ok<ToolTipsPageData>, NotFound>> GetToolTipsData(
+        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
+        => GetPageData<ToolTipsPageData>("tool-tips.json", env, settings, cancellationToken);
 }

@@ -26,6 +26,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     [InlineData("/api/custom-pages/sdlc")]
     [InlineData("/api/custom-pages/genai-basics")]
     [InlineData("/api/custom-pages/genai-advanced")]
+    [InlineData("/api/custom-pages/tool-tips")]
     public async Task GetSpecificCustomPage_ReturnsOk(string endpoint)
     {
         // Act
@@ -53,5 +54,23 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         data.Space.Dimensions.Should().HaveCount(5);
         data.DevEx.Should().NotBeNull();
         data.BestPractices.Should().NotBeNull();
+    }
+
+    [Fact]
+    public async Task GetToolTipsData_ReturnsStructuredData()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/custom-pages/tool-tips", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var data = await response.Content.ReadFromJsonAsync<ToolTipsPageData>(TestContext.Current.CancellationToken);
+        data.Should().NotBeNull();
+        data!.Title.Should().Be("GitHub Copilot Tool Tips");
+        data.Tools.Should().NotBeEmpty();
+        data.Tools[0].Name.Should().NotBeNullOrWhiteSpace();
+        data.Tools[0].Url.Should().NotBeNullOrWhiteSpace();
+        data.Tools[0].Category.Should().NotBeNullOrWhiteSpace();
     }
 }

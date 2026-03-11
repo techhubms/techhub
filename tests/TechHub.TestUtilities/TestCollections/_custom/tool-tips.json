@@ -1,0 +1,13 @@
+{
+    "title": "GitHub Copilot Tool Tips",
+    "description": "A curated collection of tools and resources",
+    "intro": "Test intro for tool tips page.",
+    "tools": [
+        {
+            "name": "Test Tool",
+            "description": "A test tool description",
+            "url": "https://example.com/test-tool",
+            "category": "Testing"
+        }
+    ]
+}

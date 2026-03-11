@@ -570,6 +570,14 @@ public class TechHubApiClient : ITechHubApiClient
         return await GetCustomPageDataAsync<SDLCPageData>("/api/custom-pages/sdlc", "SDLC", cancellationToken);
     }
 
+    /// <summary>
+    /// Get Tool Tips page data
+    /// </summary>
+    public virtual async Task<ToolTipsPageData?> GetToolTipsDataAsync(CancellationToken cancellationToken = default)
+    {
+        return await GetCustomPageDataAsync<ToolTipsPageData>("/api/custom-pages/tool-tips", "Tool Tips", cancellationToken);
+    }
+
     // ================================================================
     // Helper methods
     // ================================================================
