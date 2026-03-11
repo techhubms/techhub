@@ -382,21 +382,19 @@
    Mermaid Diagrams
    ================================================================= */
 
-.article-body .mermaid {
-    position: relative;
-    margin: var(--spacing-3) 0 0 0;
-    text-align: center;
-    background: var(--color-bg-emphasis);
-    padding: var(--spacing-3);
-    border-radius: var(--radius-md);
-    overflow-x: auto;
-}
-
-.article-body .mermaid svg {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    max-height: 500px;
+/* Neutralize ALL global or article "pre" styling for mermaid blocks 
+   so the diagram behaves like the raw HTML test page */
+pre.mermaid, .article-body pre.mermaid {
+    all: unset !important;
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: var(--spacing-2) 0 0 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
 }
 
 .article-body .mermaid-caption,
@@ -430,6 +428,13 @@
     transition: all 0.2s;
     z-index: 10;
     box-shadow: var(--shadow-sm);
+}
+
+/* Hide expand button on mobile/tablet - diagrams are already full-width */
+@media (max-width: 768px) {
+    .mermaid-expand-btn {
+        display: none;
+    }
 }
 
 .mermaid-expand-btn svg {
@@ -483,38 +488,33 @@
     padding: 2rem;
 }
 
-
-
 .mermaid-modal-close {
     position: fixed;
     top: 1rem;
     right: 1rem;
     z-index: 10001;
-    /* Same styling as expand button */
-    background: var(--color-overlay-strong);
-    border: 2px solid var(--color-purple-dark);
-    border-radius: 6px;
-    padding: 0.5rem 0.75rem;
+    background: var(--color-purple-dark);
+    border: 1px solid var(--color-purple-bright);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2) var(--spacing-4);
     cursor: pointer;
-    color: var(--color-text-primary);
+    color: var(--color-text-on-emphasis);
     font-size: var(--font-size-sm);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    opacity: 0.9;
-    transition: all 0.2s;
-    box-shadow: var(--shadow-md);
+    gap: var(--spacing-2);
+    transition: all var(--duration-fast) var(--easing-ease);
+    text-decoration: none;
 }
 
 .mermaid-modal-close:hover {
-    background: var(--color-bg-emphasis);
-    border-color: var(--color-text-secondary);
-    box-shadow: var(--shadow-md);
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
 }
 
 .mermaid-modal-close:active {
-    background: var(--color-bg-emphasis);
+    background: var(--color-purple-medium);
 }
 
 .mermaid-modal-close svg {
@@ -534,17 +534,13 @@
     position: relative;
     padding: var(--spacing-3);
     margin: 0;
-    max-width: none !important;
-    width: auto;
-    height: auto;
 }
 
-.mermaid-modal-diagram svg {
+.mermaid-modal-diagram .mermaid svg {
     max-width: none !important;
-}
-
-.mermaid-modal-diagram svg {
-    max-width: none !important;
+    max-height: 85vh;
+    width: 85vw;
+    height: auto !important;
 }
 
 /* =================================================================
@@ -570,20 +566,6 @@
         padding: var(--spacing-2);
     }
 
-    /* Mermaid: override mermaid's inline max-width style to guarantee SVGs
-       fit the container on real mobile devices. Without !important, the inline
-       style wins and can cause SVGs to overflow, creating a square grey
-       background with tiny content in the top-left corner. The existing
-       Expand button provides full-size viewing in a scrollable modal. */
-    .article-body .mermaid svg {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    .article-body .mermaid {
-        padding: var(--spacing-2);
-        overflow-x: hidden;
-    }
 }
 
 /* =================================================================

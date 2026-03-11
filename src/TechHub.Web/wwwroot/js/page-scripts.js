@@ -126,35 +126,12 @@ export async function initMermaid() {
                     textColor: '#e0e0e0',
                     titleColor: '#e0e0e0',
                     edgeLabelBackground: '#2d2d4a',
-                    clusterBkg: '#16162a',
+                    clusterBkg: '#161b22',
                     clusterBorder: '#e0e0e0',
                     defaultLinkColor: '#e0e0e0',
                     activationBorderColor: '#e0e0e0',
                     activationBkgColor: '#2d2d4a',
                     sequenceNumberColor: '#1a1a2e'
-                },
-                flowchart: {
-                    curve: 'basis',
-                    padding: 20,
-                    nodeSpacing: 50,
-                    rankSpacing: 80
-                },
-                sequence: {
-                    actorMargin: 50,
-                    boxMargin: 10,
-                    boxTextMargin: 5,
-                    noteMargin: 10,
-                    messageMargin: 35
-                },
-                gantt: {
-                    leftPadding: 75,
-                    gridLineStartPadding: 35
-                },
-                class: {
-                    padding: 20
-                },
-                state: {
-                    padding: 20
                 }
             };
 
@@ -244,15 +221,6 @@ function showMermaidModal(diagramElement) {
         closeMermaidModal();
     };
     modal.appendChild(closeBtn);
-
-    const svg = clonedDiagram.querySelector('svg');
-    if (svg) {
-        svg.removeAttribute('width');
-        svg.removeAttribute('height');
-        svg.style.width = 'min(1200px, 85vw)';
-        svg.style.height = 'auto';
-        svg.style.maxHeight = '75vh';
-    }
 
     modalDiagram.appendChild(clonedDiagram);
     modal.classList.add('active');
