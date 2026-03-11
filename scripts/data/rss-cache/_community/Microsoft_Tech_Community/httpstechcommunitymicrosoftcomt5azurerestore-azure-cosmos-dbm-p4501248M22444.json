@@ -1,0 +1,14 @@
+{
+  "Title": "Restore Azure Cosmos DB",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedName": "Microsoft Tech Community",
+  "Author": "aurora95",
+  "Description": "Recently, I accidentally deleted an azure cosmos db database, how can be restored? It is possible to recover if it was more than 7 days ago?",
+  "ProcessedDate": "2026-03-11 16:15:37",
+  "OutputDir": "_community",
+  "PubDate": "2026-03-11T14:31:53+00:00",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Tags": [],
+  "EnhancedContent": "Recently, I accidentally deleted an azure cosmos db database, how can be restored? It is possible to recover if it was more than 7 days ago?",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/restore-azure-cosmos-db/m-p/4501248#M22444"
+}

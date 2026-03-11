@@ -12873,5 +12873,17 @@
     "collection": "blogs",
     "canonical_url": "https://www.devclass.com/ai-ml/2026/03/11/jetbrains-launches-ai-agent-ide-built-on-the-corpse-of-abandoned-fleet/5208890",
     "timestamp": "2026-03-11 15:16:57 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=G1LN2TQGI1M",
+    "collection": "videos",
+    "timestamp": "2026-03-11 16:17:23 +00:00",
+    "reason": "No categories found: Content excluded due to insufficient substantive information. The provided input consists only of a preview/announcement for a video series without any actual technical content or details regarding implementation, architecture, or practical use of Microsoft technologies. According to the instructions, actionable and substantive content is required for categorization; announcements or invitations to events/series without technical content do not qualify."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/restore-azure-cosmos-db/m-p/4501248#M22444",
+    "collection": "community",
+    "timestamp": "2026-03-11 16:17:27 +00:00",
+    "reason": "Insufficient content length"
   }
 ]

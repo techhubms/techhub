@@ -28336,5 +28336,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-single-apps-to-scale-solutions-how-ai-agents-scale/ba-p/4500059",
     "timestamp": "2026-03-11 15:17:39 +00:00"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/",
+    "collection": "news",
+    "timestamp": "2026-03-11 16:16:19 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the core content discusses the application of agentic AI solutions, as well as Azure Copilot and GitHub Copilot (AI category rule 1). 'Azure' category is included because Azure services and modernization solutions are the foundation of the announcements (Azure rule 1). 'GitHub Copilot' category is assigned due to detailed discussion of GitHub Copilot's modernization capabilities and public preview (GitHub Copilot rules 1 and 2). 'DevOps' is included for the focus on developer/IT team workflows, migration pipelines, automation, and continuous modernization practices (DevOps rules 1, 5, 9). 'Coding' is assigned because application code assessment, modernization, code upgrades (.NET, Java), and developer-centric automation are prominent (Coding rules 1, 2, 4). ML and Security are not assigned as primary focus is not on data science/analytics engineering or detailed security strategies. Generic exclusion rules do not apply; the content is technical, in English, and not business/strategy or sales-focused."
+  },
+  {
+    "canonical_url": "https://www.thomasmaurer.ch/2026/03/azure-local-lens-workbook-fleet-level-insights-at-a-glance/",
+    "collection": "blogs",
+    "timestamp": "2026-03-11 16:17:05 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is focused on Azure Local, Azure Monitor, and managing Azure hybrid cloud infrastructure (Azure category rule 1 and 4). The entire post details technical features, operational use cases, and deployment of a tool built for Azure environments. No other categories apply: there is no AI/ML, custom coding, DevOps pipeline specifics, or deep security implementation discussed. The community-driven nature and open-source aspects further reinforce the operational and Azure-specific technical focus. There are no generic exclusion rules triggered as the blog is technical, educational, in English, and not sales or biographical content."
   }
 ]
