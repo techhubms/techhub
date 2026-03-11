@@ -714,8 +714,8 @@ jobs:
           }
 
           # Homepage check
-          $home = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
-          if ($home -and $home.StatusCode -eq 200) {
+          $homepage = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
+          if ($homepage -and $homepage.StatusCode -eq 200) {
             Write-Host "[OK] Homepage accessible ($webUrl)"
           } else {
             Write-Host "::error::Homepage not accessible ($webUrl)"
@@ -794,8 +794,8 @@ jobs:
           }
 
           # Homepage check
-          $home = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
-          if ($home -and $home.StatusCode -eq 200) {
+          $homepage = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
+          if ($homepage -and $homepage.StatusCode -eq 200) {
             Write-Host "[OK] Homepage accessible ($webUrl)"
           } else {
             Write-Host "::error::Homepage not accessible ($webUrl)"

@@ -393,7 +393,9 @@
 }
 
 .article-body .mermaid svg {
+    display: block;
     max-width: 100%;
+    height: auto;
     max-height: 500px;
 }
 
@@ -568,8 +570,19 @@
         padding: var(--spacing-2);
     }
 
+    /* Mermaid: override mermaid's inline max-width style to guarantee SVGs
+       fit the container on real mobile devices. Without !important, the inline
+       style wins and can cause SVGs to overflow, creating a square grey
+       background with tiny content in the top-left corner. The existing
+       Expand button provides full-size viewing in a scrollable modal. */
+    .article-body .mermaid svg {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
     .article-body .mermaid {
         padding: var(--spacing-2);
+        overflow-x: hidden;
     }
 }
 
