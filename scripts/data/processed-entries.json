@@ -28306,5 +28306,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the content is about building games with .NET and MonoGame (Coding rule 1: Microsoft programming languages and frameworks, and rule 4: coding practices with Microsoft technologies). There is no mention of AI, Azure, DevOps, Security, or data/ML topics. MonoGame is a framework used in the Microsoft ecosystem for game development, and the focus is on practical, hands-on programming.",
     "canonical_url": "https://www.youtube.com/watch?v=y631qBfWk_I"
+  },
+  {
+    "timestamp": "2026-03-11 07:18:31 +00:00",
+    "reason": "Succesfully added: Included 'Azure' category as content focuses on Azure API Management and its policy engine (Azure rule 1 and 2). Added 'DevOps' because the article covers API orchestration, policy-driven integrations, governance, and operational best practices (DevOps rules 1, 4, 5, 6). Assigned 'Coding' due to code examples and logic on custom API policy scripts for aggregation and transformation (Coding rules 2, 4). 'AI', 'ML', 'Security', and 'GitHub Copilot' do not apply, as there is no content related to those topics. The detailed nature, substantial word count, English language, and technical focus ensure none of the generic exclusion rules apply.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-the-backend-for-frontend-bff-curated-api-pattern/ba-p/4499880"
   }
 ]
