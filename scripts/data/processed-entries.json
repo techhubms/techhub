@@ -28426,5 +28426,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-multi-agent-on-call-copilot-with-microsoft-agent/ba-p/4499962",
     "reason": "Succesfully added: Categories assigned as follows: AI (the article demonstrates architecting an AI-powered solution using Azure OpenAI and multi-agent orchestration, aligning with AI category rule 1, 3, and 4), Azure (central usage of Azure infrastructure, Foundry Hosted Agents, Azure OpenAI—see Azure rule 1 and 4), DevOps (the tool and process target on-call engineering, SRE automation, incident management, deployment pipelines—see DevOps rule 1, 5, 6, and 7), Coding (the post contains substantial details and code examples of orchestrating agents, Python code, and architectural patterns—see Coding rule 2 and 5). ML category is not assigned because the core focus is on operational AI orchestration and automation rather than custom ML frameworks, model training, or advanced analytics engineering. Security is not primary focus. Content is in English, technical, detailed, and well above minimum length. None of the generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2026-03-12 12:05:57 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/general/2026/03/11/modernizing-regulated-industries-with-cloud-and-agentic-ai/",
+    "reason": "Succesfully added: Assigned AI category because the article centers on agentic AI, high-level Microsoft AI strategies, and applications in regulated industries (AI inclusion rule 1 and 5). Assigned Azure because it is published on the Microsoft Azure Blog and discusses cloud modernization explicitly related to Azure (Azure rule 1). Did not assign ML, Coding, DevOps, Security, or GitHub Copilot, as there is no evidence of in-depth machine learning development, code-level detail, deployment, or security implementations in the provided content."
   }
 ]
