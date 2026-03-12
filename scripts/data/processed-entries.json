@@ -28582,5 +28582,17 @@
     "collection": "news",
     "timestamp": "2026-03-12 22:10:13 +00:00",
     "reason": "Succesfully added: The content specifically discusses multi-agent orchestration and the Microsoft Agent Framework—a Microsoft AI development platform/framework. It demonstrates architectural design, technical workflow patterns, and advanced observability for building and running AI agent systems. As these topics are directly related to enterprise-focused AI using Microsoft technologies, and revolve around technical agent orchestration and developer-centric implementation, the content qualifies for the 'AI' category per AI inclusion rule 1 and 4. The 'Agent Framework' is a Microsoft AI framework and the content repeatedly references Azure OpenAI, LLMs, and orchestration strategies core to technical AI projects. While .NET and Python are referenced, the primary focus is cross-platform AI system architecture, not language-specific coding, so Coding category is not assigned. No generic exclusion rules apply."
+  },
+  {
+    "collection": "blogs",
+    "canonical_url": "https://www.devclass.com/development/2026/03/12/microsoft-ships-vs-code-weekly-adds-autopilot-mode-so-ai-can-wreak-havoc-without-bothering-you/5208978",
+    "reason": "Succesfully added: Assigned the 'AI' category because the piece centers on AI-powered agentic features (Autopilot in Copilot Chat) and their technical/security implications (AI rule 1, 2, 4). 'Coding' category is included, as all discussed features are focused on developer workflows, VS Code usage, and programmers’ day-to-day tooling (Coding rules 2, 5). Did not assign 'DevOps' as the DevOps aspects (release management, process) are context but not the technical core. Did not assign 'GitHub Copilot' since the main focus is VS Code Copilot Chat/Autopilot rather than GitHub Copilot as a service. 'Azure', 'ML', and 'Security' categories are not included as Azure/ML are not the main topics and Security, though discussed, is from a risk/mitigation standpoint rather than focused security architecture content.",
+    "timestamp": "2026-03-12 23:06:45 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-health-monitoring-and-auto-communication-now-available/ba-p/4501378",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the article focuses entirely on Azure services (specifically Azure Container Registry and Azure Service Health; Azure rule 1 and 4). 'DevOps' is relevant since the primary audience includes platform teams, SREs, and the content discusses integration with CI/CD pipelines and observability/incident workflows (DevOps rules 1, 3, 5, 6). 'Security' is included due to the impact on operational reliability and proactive incident management, which is integral to platform security posture, especially with discussion around audit logs and incident response (Security rules 2, 5, 9). No other categories meet inclusion rules. The content is technical, does not trigger any generic exclusion, is in English, and meets length/quality thresholds.",
+    "timestamp": "2026-03-12 23:07:26 +00:00"
   }
 ]
