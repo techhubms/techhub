@@ -12927,5 +12927,11 @@
     "timestamp": "2026-03-12 19:18:59 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/yekV395Rn8U",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_congrats-shantanu-on-a-legendary-run-at-activity-7437966653801320448-HL0x",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:06:24 +00:00",
+    "reason": "No categories found: All categories are excluded because this content is primarily a congratulatory message about Shantanu Narayen's leadership at Adobe and Adobe's business evolution, rather than technical content related to Microsoft development, AI, Azure, coding, security, ML, or DevOps. It falls under generic exclusion rules for biographical focus, business strategy/executive content, and business/productivity rather than technical implementation. There is no substantive Microsoft technology focus or technical implementation detail present."
   }
 ]

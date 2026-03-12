@@ -1,49 +1,49 @@
 ---
 layout: "post"
 title: "Build AI Agents with GitHub Copilot SDK and Microsoft Agent Framework"
-description: "This news post announces and details the integration of Microsoft Agent Framework with the GitHub Copilot SDK, enabling developers to build sophisticated AI agents in .NET and Python. The article covers agent abstractions, multi-agent workflows, ecosystem integration, custom tool development, permissions handling, and example code snippets for both platforms."
+description: "This article introduces the integration between Microsoft Agent Framework and GitHub Copilot SDK, showing how developers can build powerful AI agents using consistent abstractions and Copilot capabilities across .NET and Python. Topics include installation, orchestration, multi-agent workflows, streaming, permissions, function tools, and real-world code examples."
 author: "Dmytro Struk"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/build-ai-agents-with-github-copilot-sdk-and-microsoft-agent-framework/"
+canonical_url: "https://devblogs.microsoft.com/agent-framework/build-ai-agents-with-github-copilot-sdk-and-microsoft-agent-framework/"
 viewing_mode: "external"
 feed_name: "Microsoft Semantic Kernel Blog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2026-01-27 21:37:26 +00:00
 permalink: "/2026-01-27-Build-AI-Agents-with-GitHub-Copilot-SDK-and-Microsoft-Agent-Framework.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agent Abstraction", "Agent Framework", "AI", "AI Agents", "Azure OpenAI", "Coding", "Custom Tools", "File Operations", "Function Calling", "GitHub Copilot", "GitHub Copilot SDK", "MCP", "Microsoft Agent Framework", "Multi Agent Workflow", "News", "Orchestrators", "Python", "Session Management", "Shell Commands", "Streaming Responses"]
-tags_normalized: ["dotnet", "agent abstraction", "agent framework", "ai", "ai agents", "azure openai", "coding", "custom tools", "file operations", "function calling", "github copilot", "github copilot sdk", "mcp", "microsoft agent framework", "multi agent workflow", "news", "orchestrators", "python", "session management", "shell commands", "streaming responses"]
+tags: [".NET", "Agent Framework", "AI", "AI Agents", "Coding", "Copilot Integration", "File Operations", "Function Calling", "GitHub Copilot", "GitHub Copilot SDK", "MCP", "Multi Agent Workflow", "News", "Orchestration", "Python", "Session Management", "Shell Command Execution", "Streaming Responses"]
+tags_normalized: ["dotnet", "agent framework", "ai", "ai agents", "coding", "copilot integration", "file operations", "function calling", "github copilot", "github copilot sdk", "mcp", "multi agent workflow", "news", "orchestration", "python", "session management", "shell command execution", "streaming responses"]
 ---
 
-Dmytro Struk explains the new integration between Microsoft Agent Framework and the GitHub Copilot SDK, showing developers how to build AI agents in .NET and Python that leverage Copilot’s powerful features.<!--excerpt_end-->
+Dmytro Struk explains how to harness the integration between GitHub Copilot SDK and Microsoft Agent Framework, enabling developers to build AI agents with rich capabilities using consistent interfaces in .NET and Python.<!--excerpt_end-->
 
 # Build AI Agents with GitHub Copilot SDK and Microsoft Agent Framework
 
-Microsoft has announced that the Agent Framework now integrates seamlessly with the [GitHub Copilot SDK](https://github.com/github/copilot-sdk), making it easier for developers to build AI agents that are powered by Copilot's capabilities. This integration is available in both .NET and Python, allowing for broad cross-platform support.
+Microsoft Agent Framework now integrates with the [GitHub Copilot SDK](https://github.com/github/copilot-sdk), allowing developers to build AI agents powered by Copilot's capabilities. This brings consistent agent abstractions to both .NET and Python and unlocks features like function calling, streaming responses, context management, multi-turn conversations, shell command execution, file operations, URL fetching, and Model Context Protocol (MCP) server integration.
 
-## Key Features of the Integration
+## Why Use Agent Framework with Copilot SDK?
 
-- **Consistent Agent Abstraction**: Developers can implement GitHub Copilot agents using the same interface (`AIAgent` in .NET, `BaseAgent` in Python) as other frameworks, making agents interchangeable and composable.
-- **Multi-Agent Workflows**: Use Copilot agents with other provider agents (like Azure OpenAI, Anthropic, OpenAI) in sequential, concurrent, handoff, or group chat workflows.
-- **Ecosystem Integration**: Tap into the Agent Framework ecosystem, benefiting from declarative agent definitions, built-in orchestrators, and support for function tools, streaming, and session management.
+- **Consistent agent abstraction:** Use unified interfaces (`AIAgent` in .NET, `BaseAgent` in Python), so you can easily swap or combine providers.
+- **Multi-agent workflows:** Compose GitHub Copilot agents alongside Azure OpenAI, OpenAI, Anthropic, and more within advanced orchestrated workflows.
+- **Ecosystem integration:** Access declarative agent definitions, A2A protocol support, function tools, session and streaming support across all providers.
 
 ## Installation
 
-- **.NET**:
+**.NET:**
 
-  ```shell
-  dotnet add package Microsoft.Agents.AI.GithubCopilot --prerelease
-  ```
+```shell
+dotnet add package Microsoft.Agents.AI.GitHub.Copilot --prerelease
+```
 
-- **Python**:
+**Python:**
 
-  ```shell
-  pip install agent-framework-github-copilot --pre
-  ```
+```shell
+pip install agent-framework-github-copilot --pre
+```
 
-## Getting Started: Creating a Copilot Agent
+## Creating Copilot Agents
 
-### .NET Example
+**.NET Example:**
 
 ```csharp
 using GitHub.Copilot.SDK;
@@ -55,46 +55,68 @@ AIAgent agent = copilotClient.AsAIAgent();
 Console.WriteLine(await agent.RunAsync("What is Microsoft Agent Framework?"));
 ```
 
-### Python Example
+**Python Example:**
 
 ```python
-from agent_framework.github import GithubCopilotAgent
+from agent_framework.github import GitHubCopilotAgent
 
 async def main():
-    agent = GithubCopilotAgent(default_options={"instructions": "You are a helpful assistant."})
+    agent = GitHubCopilotAgent(default_options={"instructions": "You are a helpful assistant."})
     async with agent:
         result = await agent.run("What is Microsoft Agent Framework?")
         print(result)
 ```
 
-## Extending Agents with Custom Function Tools
+## Adding Function Tools
 
-- You can supply custom function tools for domain-specific enhancements. Example tools show both C# and Python approaches to adding weather data capabilities to an agent.
+Custom function tools can be added to give agents additional domain-specific capabilities:
 
-## Advanced Features
+**.NET:**
 
-- **Streaming Responses**: Stream output as Copilot generates it, enhancing UX.
-- **Multi-Turn Conversations**: Agents can maintain conversation threads, supporting context-aware dialogue.
-- **Permission Handling**: Developers can grant or deny agent requests for sensitive actions (shell, file, URLs) by implementing permission handlers.
+```csharp
+AIFunction weatherTool = AIFunctionFactory.Create((string location) =>
+    $"The weather in {location} is sunny with a high of 25C.",
+    "GetWeather",
+    "Get the weather for a given location.");
+// ... create and use agent as shown above
+```
 
-## Integrations: MCP Servers and More
+**Python:**
 
-- Agents can connect to local or remote MCP (Model Context Protocol) servers for extended capabilities, such as file system or external API access.
+```python
+def get_weather(location):
+    return f"The weather in {location} is sunny with a high of 25C."
 
-## Multi-Agent Workflows Example
+# Pass `tools=[get_weather]` to your Copilot agent
+```
 
-- Demonstrates combining Azure OpenAI and GitHub Copilot agents in a sequential workflow for content creation and review tasks, all orchestrated within the Agent Framework.
+## Streaming and Multi-Turn Conversations
+
+- **Stream responses** for real-time user experiences.
+- Maintain **conversation context** across multiple interactions using sessions (in .NET) or threads (in Python).
+
+## Permissions and Security
+
+Agents can execute shell commands, read/write files, or fetch URLs if explicitly permitted by the developer. Example permission handlers are provided in both .NET and Python.
+
+## MCP Server Integration
+
+Copilot agents can connect to local or remote MCP servers for advanced external tool and data integrations (e.g., accessing Microsoft Learn search).
+
+## Multi-Agent Workflows
+
+Combine GitHub Copilot agents with other providers like Azure OpenAI within complex workflows (sequencing, concurrent, or group chat patterns). Example code is shown for both .NET and Python, including sequential workflows where agents perform different roles (writer, reviewer, etc.).
 
 ## More Resources
 
 - [GitHub Copilot SDK](https://github.com/github/copilot-sdk)
 - [Microsoft Agent Framework on GitHub](https://github.com/microsoft/agent-framework)
-- [Getting Started Tutorials](https://learn.microsoft.com/agent-framework/tutorials/overview)
+- [Agent Framework Tutorials](https://learn.microsoft.com/agent-framework/tutorials/overview)
 
 ## Summary
 
-This integration allows developers to efficiently create advanced, flexible AI agent systems by leveraging both GitHub Copilot and the Microsoft Agent Framework features. Full code samples and best practices are provided for .NET and Python scenarios.
+The integration empowers developers to craft powerful agentic applications capable of interacting with code, files, shell commands, external APIs, and more, using both .NET and Python environments. Multiple orchestration patterns, function tool extensibility, security controls, and ecosystem integrations make this a flexible foundation for advanced AI development.
 
-For questions or further discussion, join the [Microsoft Agent Framework community discussions](https://github.com/microsoft/agent-framework/discussions).
+If you have feedback or want to discuss further, visit the [discussion boards](https://github.com/microsoft/agent-framework/discussions) or give the project a star on [GitHub](https://github.com/microsoft/agent-framework).
 
-This post appeared first on "Microsoft Semantic Kernel Blog". [Read the entire article here](https://devblogs.microsoft.com/semantic-kernel/build-ai-agents-with-github-copilot-sdk-and-microsoft-agent-framework/)
+This post appeared first on "Microsoft Semantic Kernel Blog". [Read the entire article here](https://devblogs.microsoft.com/agent-framework/build-ai-agents-with-github-copilot-sdk-and-microsoft-agent-framework/)

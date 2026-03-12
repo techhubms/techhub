@@ -28522,5 +28522,65 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-insight-to-action-bringing-fabric-activator-into-ontology-with-rules/",
     "timestamp": "2026-03-12 21:08:36 +00:00",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/agent-harness-in-agent-framework/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:06:50 +00:00",
+    "reason": "Succesfully added: Assigned \"AI\" category because the content is about building agent systems that connect model reasoning to real execution using Microsoft's Agent Framework (AI inclusion rule 1 and 4). Assigned \"Coding\" since the article provides implementation patterns, sample code in Python and .NET, and discusses programming practices (Coding rules 1, 2, and 4). Did not assign \"Azure\", as the content, while integrating with OpenAI services, does not focus on Azure-specific platforms or deployment. Did not assign \"ML\", as content is not focused on data science or custom ML engineering, but rather on agent orchestration and execution patterns. Did not assign \"DevOps\" or \"Security\" as a primary category, since while it discusses approval and context management, the focus is not on operational pipelines or in-depth security tooling."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/build-ai-agents-with-claude-agent-sdk-and-microsoft-agent-framework/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:07:14 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content is focused on building AI agents using Microsoft Agent Framework and Claude Agent SDK (AI inclusion rules 1 and 4). The article demonstrates integration with agents like Azure OpenAI but is primarily about agent orchestration, not directly coding (i.e., not deeply focused on Microsoft-centric language constructs or app code), so 'Coding' is not assigned. 'Azure' is mentioned in the context of multi-agent workflows, but Azure components do not comprise ≥40% of the content nor are they central (multi-agent orchestration is the main focus, not Azure itself), so 'Azure' is not assigned. The content does not feature GitHub Copilot, DevOps, ML, or Security as primary or substantial topics. All technical implementation relates to AI agent composition, hybrid agent systems, and orchestration, directly aligning with 'AI'."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/build-ai-agents-with-github-copilot-sdk-and-microsoft-agent-framework/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:07:35 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the piece is focused on building AI agents with the Microsoft Agent Framework and GitHub Copilot SDK, a developer AI tool (AI inclusion rule 1 and 2). Assigned GitHub Copilot category since the article details Copilot's specific SDK and capabilities, with usage examples and APIs (GitHub Copilot inclusion rules 1, 2, 3, and 4). Assigned Coding because it includes extensive .NET and Python code examples, SDK installation, API usage, and programming best practices (Coding inclusion rules 1, 2, and 4). Did not assign Azure or ML since the focus is not on Azure platform deployment or data science/ML workflow, and no Security/DevOps content was central."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/encoding-changes-for-template-arguments-in-semantic-kernel/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:07:55 +00:00",
+    "reason": "Succesfully added: Assigned AI category because Semantic Kernel is a Microsoft AI SDK (AI rule 3 and 6). Assigned Coding category due to the strong focus on .NET and Python code examples, SDK usage, and argument handling practices (Coding rule 1, 2, and 4). Did not assign Azure—there's no direct Azure service use, and no DevOps/ML/Security focus. This is a deep-dive technical update for developers integrating Semantic Kernel. Content is in English, technically detailed, meets all inclusion criteria, and has no exclusion triggers."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/from-local-models-to-agent-workflows-building-a-deep-research-solution-with-microsoft-agent-framework-on-microsoft-foundry-local/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:08:19 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centrally discusses Microsoft agent systems, model orchestration, and model safety evaluation using Microsoft Foundry Local and the Agent Framework, as defined by AI inclusion rule 1, 3, and 4. Other categories (Azure, ML, Coding, etc.) were not assigned as the main focus is on local AI agent orchestration and privacy-preserving frameworks rather than Microsoft cloud, coding practices, or pure ML model development. The tags emphasize Microsoft technology, agent framework, security, evaluation, and orchestration topics."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/give-your-agents-domain-expertise-with-agent-skills-in-microsoft-agent-framework/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:08:47 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the core topic is equipping agents with skills for dynamic domain expertise, which is an AI agent capability (AI rule 1). Assigned Coding category due to explicit focus on integrating, configuring, and extending agents in both .NET and Python—including code samples and package usage (Coding rules 1, 2). Did not assign Azure because while Azure OpenAI is referenced, the primary focus is the agent skill system and its .NET/Python integrations, not direct Azure service configuration (Azure rule 1 not central). ML is not assigned as the article does not focus on data science or ML engineering topics. GitHub Copilot, DevOps, and Security are not relevant to the main content."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/migrate-your-semantic-kernel-and-autogen-projects-to-microsoft-agent-framework-release-candidate/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:09:09 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content describes a Microsoft AI development framework (AI rule 1), as well as agent-oriented programming and AI orchestration. Assigned Azure category because the framework supports Azure OpenAI integration and Azure identity management (Azure rule 1 and 3). Assigned Coding because the article features usage in both .NET and Python with substantial code examples and covers developer concepts (Coding rules 1 and 2). Content also details migration and orchestration, but does not meet ML (focus is agent orchestration and general AI, not data analytics/ML engines) or DevOps (not focused on pipelines/team workflow) or Security (not a primary topic) inclusion rules."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:09:29 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content is fully about AI agent development, specifically Microsoft's new open-source Agent Framework, its features, and transition from Semantic Kernel and AutoGen (AI category rule 1, 3, 4). Did not assign ML: while there are tangential mentions of features for developers and languages (C#/.NET, Python), the focus remains on pre-built AI frameworks and the platform rather than custom ML engineering or analytics (AI not ML). No other categories fit, as there's no code-level deep dive, DevOps pipeline, Azure deployment specifics, or security content. The announcement is developer-focused, not business or end-user productivity. All generic exclusions were checked and do not apply."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:09:51 +00:00",
+    "reason": "Succesfully added: Categories assigned: 'AI' because the article focuses on developing agentic AI applications using Microsoft's Agent Framework with heavy emphasis on large language models, reasoning, and AI design patterns (AI rules 1 and 4). 'Coding' is included because it contains substantial practical code examples in both Python and .NET (Coding rules 1 and 2), covering SDK usage, agent definition, and system setup. 'DevOps', 'Azure', 'ML', and 'Security' are not included: DevOps is not central—the main focus is on agent logic, not CI/CD or release management. Azure is mentioned as a possible production target, but not essential to the workflow demonstrated. ML is not appropriate—this is about using/preparing agent workflows and not about custom model training or data pipelines. Security is not a core topic. The code and tools (DevUI, AG-UI, OpenTelemetry) are central to Microsoft developer/AI toolkits—not business productivity or end-user products. Category choices strictly follow the rules in Chapter 4."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/unlocking-enterprise-ai-complexity-multi-agent-orchestration-with-the-microsoft-agent-framework/",
+    "collection": "news",
+    "timestamp": "2026-03-12 22:10:13 +00:00",
+    "reason": "Succesfully added: The content specifically discusses multi-agent orchestration and the Microsoft Agent Framework—a Microsoft AI development platform/framework. It demonstrates architectural design, technical workflow patterns, and advanced observability for building and running AI agent systems. As these topics are directly related to enterprise-focused AI using Microsoft technologies, and revolve around technical agent orchestration and developer-centric implementation, the content qualifies for the 'AI' category per AI inclusion rule 1 and 4. The 'Agent Framework' is a Microsoft AI framework and the content repeatedly references Azure OpenAI, LLMs, and orchestration strategies core to technical AI projects. While .NET and Python are referenced, the primary focus is cross-platform AI system architecture, not language-specific coding, so Coding category is not assigned. No generic exclusion rules apply."
   }
 ]
