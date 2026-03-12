@@ -28516,5 +28516,11 @@
     "timestamp": "2026-03-12 20:07:21 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-03-12-actions-oidc-tokens-now-support-repository-custom-properties"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because Fabric IQ, Ontology, and Activator reflect Microsoft’s move towards operational intelligence and AI-powered automation (AI inclusion rule 1 and 5). Assigned Azure because Microsoft Fabric (under which Fabric IQ, Ontology, and Activator fall) is an Azure-based enterprise data platform (Azure inclusion rule 1 and 4). Did not assign ML: While the content discusses enabling AI-powered operations, there is no substantive information about custom machine learning, data science, or analytics engineering. Coding, DevOps, Security were not assigned as there is no code, dev processes, or security-oriented implementation discussed.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-insight-to-action-bringing-fabric-activator-into-ontology-with-rules/",
+    "timestamp": "2026-03-12 21:08:36 +00:00",
+    "collection": "news"
   }
 ]
