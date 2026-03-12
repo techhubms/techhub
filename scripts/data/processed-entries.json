@@ -28474,5 +28474,29 @@
     "timestamp": "2026-03-12 17:18:49 +00:00",
     "reason": "Succesfully added: The content focuses on the release and upgrade guidance of the GitHub REST API, specifically addressing developers and teams maintaining integrations with GitHub's APIs. This aligns with DevOps category rules: it relates directly to developer tools, API versioning, and integration maintenance (DevOps rules 2 and 5). There's no coverage of AI, Coding (as a topic in itself), Azure, Security, or ML. The content is technical, actionable, and targets practitioners rather than end users or business executives.",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-10-0-5-oob-release-macos-debugger-fix/",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content focuses on a technical issue (debugger regression) impacting .NET development workflows on macOS with Visual Studio Code. The article gives specific instructions for developers to resolve the problem, details affected software versions, and provides links to official SDK downloads and release notes. No other categories were added, as the content does not deal with Azure, AI, DevOps, ML, Security, or GitHub Copilot. All generic exclusion rules were checked and did not apply: the content is technical, not biographical, not business productivity, and is entirely relevant for Microsoft-focused development work.",
+    "timestamp": "2026-03-12 18:13:56 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/deploy-sql-databases-in-fabric-from-vs-code-no-more-context-switching/",
+    "reason": "Succesfully added: Assigned Coding because the post describes development with SQL Database Projects in VS Code, template-based SQL authoring, and integration with code tools (Coding rule 1, 2, and 4). Assigned DevOps because the workflow emphasizes version control, CI/CD-like review/deployment flows, and deployment automation (DevOps rules 1, 4, 5, 9). Assigned Azure because Microsoft Fabric is a cloud data platform built as part of Azure and all described workflows relate to Azure services (Azure rule 1, 4, and 6). Assigned ML because SQL database development in Fabric is part of the platform's data engineering and analytics workflows (ML rule 1 and 2), especially as Fabric targets data, BI, and analytics workloads even if explicit ML isn't detailed—the scenario fits the broader data development context described in the ML rules.",
+    "timestamp": "2026-03-12 18:14:29 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/12/from-transparency-to-action-what-the-latest-microsoft-email-security-benchmark-reveals/",
+    "reason": "Succesfully added: Assigned the Security category because the content is centered on email threat detection, remediation, layered security, and Microsoft Defender for Office 365, matching Security inclusion rules 1, 4, 5, and 7. Did not assign categories like AI, Azure, ML, Coding, DevOps, or GitHub Copilot, as the article does not cover development, programming, machine learning, AI services, DevOps practices, or GitHub Copilot. The focus is on security products, benchmarking results, and multi-vendor integration from an operational security perspective.",
+    "timestamp": "2026-03-12 18:14:51 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-12-copilot-auto-model-selection-is-generally-available-in-jetbrains-ides",
+    "reason": "Succesfully added: I assigned both 'AI' and 'GitHub Copilot' because the announcement focuses on GitHub Copilot's auto model selection feature—a core developer tool leveraging AI technology. The feature applies to code completions inside JetBrains IDEs, clearly fitting the inclusion rules for both categories (AI Rule 2, GitHub Copilot Rules 1-6). The main content is technical, describing how models are selected dynamically, how premium billing works, and implementation details for developers. No exclusion rules are triggered; the content is technical, English, and not business/productivity–focused.",
+    "timestamp": "2026-03-12 18:15:13 +00:00"
   }
 ]
