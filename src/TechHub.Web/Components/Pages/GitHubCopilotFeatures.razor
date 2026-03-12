@@ -22,12 +22,8 @@
 
             <div class="custom-page-container">
                 <div class="custom-page-intro">
-                    <p>@pageData.Intro</p>
+                    <p>@pageData.Intro For the most current pricing, visit <a href="@pageData.Links.Pricing" target="_blank" rel="noopener">GitHub's official pricing page</a>. For the most recent plan details, view the <a href="@pageData.Links.PlanDetails" target="_blank" rel="noopener">official documentation</a>.</p>
                     <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
-                    <div class="custom-page-links">
-                        <a href="@pageData.Links.Pricing" class="btn" target="_blank" rel="noopener">View Pricing</a>
-                        <a href="@pageData.Links.PlanDetails" class="btn" target="_blank" rel="noopener">Plan Details</a>
-                    </div>
                 </div>
 
                 <section class="features-tiers">
@@ -47,7 +43,7 @@
                                     <li>@feature</li>
                                 }
                             </ul>
-                            <a href="#@freeTier.VideoAnchor" class="features-tier-link">View Features ↓</a>
+                            <a href="/github-copilot/features#@freeTier.VideoAnchor" class="features-tier-link">View Features ↓</a>
                         </div>
                     }
                     <div class="features-paid-tiers-grid">
@@ -62,7 +58,7 @@
                                         <li>@feature</li>
                                     }
                                 </ul>
-                                <a href="#@tier.VideoAnchor" class="features-tier-link">View Features ↓</a>
+                                <a href="/github-copilot/features#@tier.VideoAnchor" class="features-tier-link">View Features ↓</a>
                             </div>
                         }
                     </div>
@@ -73,11 +69,11 @@
                     // Get videos that belong to this tier's plans
                     var sectionVideos = videoItems.Where(v =>
                         featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
+                        .OrderBy(v => v.Title)
                         .ToList();
 
                     <div class="features-video-section">
                         <h2 id="@featureSection.Id">@featureSection.Title</h2>
-                        <p class="features-section-plans">Available in: @string.Join(", ", featureSection.Plans)</p>
                         <div class="features-section-filters">
                             <button type="button" class="features-filter-btn" data-filter="ghes">GHES Support</button>
                             <button type="button" class="features-filter-btn" data-filter="videos">With videos</button>
@@ -87,35 +83,34 @@
                             <div class="features-cards-grid">
                                 @foreach (var feature in sectionVideos)
                                 {
-                                    var isAvailable = !feature.Draft;
                                     var featureId = $"feature-{feature.Slug}";
                                     var videoId = GetYouTubeVideoId(feature.ExternalUrl);
 
-                                    @if (isAvailable)
-                                    {
-                                        <a href="@feature.GetHref(SectionName)" class="card feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="true">
+                                    <a href="@feature.GetHref(SectionName)" class="card feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="@(!string.IsNullOrEmpty(videoId) ? "true" : "false")">
+                                        @if (!string.IsNullOrEmpty(videoId))
+                                        {
+                                            <div class="feature-card-thumbnail">
+                                                <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="" loading="lazy" />
+                                                <div class="feature-card-play-icon">
+                                                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+                                                </div>
+                                            </div>
+                                        }
+                                        <div class="card-header">
+                                            <h3 id="@featureId" class="card-title">@feature.Title</h3>
+                                        </div>
+                                        <p class="card-description">@feature.Excerpt</p>
+                                        <div class="card-badges">
+                                            @if (feature.GhesSupport)
+                                            {
+                                                <span class="badge-success">✓ GHES</span>
+                                            }
                                             @if (!string.IsNullOrEmpty(videoId))
                                             {
-                                                <div class="feature-card-thumbnail">
-                                                    <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="" loading="lazy" />
-                                                    <div class="feature-card-play-icon">
-                                                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
-                                                    </div>
-                                                </div>
-                                            }
-                                            <div class="card-header">
-                                                <h3 id="@featureId" class="card-title">@feature.Title</h3>
-                                            </div>
-                                            <p class="card-description">@feature.Excerpt</p>
-                                            <div class="card-badges">
-                                                @if (feature.GhesSupport)
-                                                {
-                                                    <span class="badge-success">✓ GHES</span>
-                                                }
                                                 <span class="badge-info">▶ Video</span>
-                                            </div>
-                                        </a>
-                                    }
+                                            }
+                                        </div>
+                                    </a>
                                 }
                             </div>
                         }

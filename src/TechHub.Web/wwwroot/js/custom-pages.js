@@ -84,34 +84,56 @@ export function initCollapsibleCards() {
 /**
  * Initialize feature card filters
  */
-function initFeatureFilters() {
-    const filterContainer = document.querySelector('[data-feature-filters]');
-    if (!filterContainer) return;
+export function initFeatureFilters() {
+    const sections = document.querySelectorAll('.features-video-section');
+    if (!sections.length) return;
 
-    const ghesFilter = document.getElementById('filter-ghes');
-    const videosFilter = document.getElementById('filter-videos');
-    const featureCards = document.querySelectorAll('.feature-card');
-
-    if (!ghesFilter || !videosFilter || featureCards.length === 0) return;
+    const allButtons = document.querySelectorAll('.features-filter-btn');
+    const allCards = document.querySelectorAll('.features-video-section .feature-card');
 
     function applyFilters() {
-        const showGhesOnly = ghesFilter.checked;
-        const showVideosOnly = videosFilter.checked;
+        // Collect active filters from any section (they're synced)
+        const activeFilters = [];
+        const seen = new Set();
+        allButtons.forEach(b => {
+            if (b.classList.contains('active') && !seen.has(b.dataset.filter)) {
+                activeFilters.push(b.dataset.filter);
+                seen.add(b.dataset.filter);
+            }
+        });
 
-        featureCards.forEach(card => {
-            const hasGhes = card.dataset.ghes === 'true';
-            const hasVideo = card.dataset.hasVideo === 'true';
-
-            let show = true;
-            if (showGhesOnly && !hasGhes) show = false;
-            if (showVideosOnly && !hasVideo) show = false;
-
-            card.style.display = show ? '' : 'none';
+        allCards.forEach(card => {
+            if (!activeFilters.length) {
+                card.style.display = '';
+                return;
+            }
+            const matchesAll = activeFilters.every(f => {
+                if (f === 'ghes') return card.dataset.ghes === 'true';
+                if (f === 'videos') return card.dataset.hasVideo === 'true';
+                return true;
+            });
+            card.style.display = matchesAll ? '' : 'none';
         });
     }
 
-    ghesFilter.addEventListener('change', applyFilters);
-    videosFilter.addEventListener('change', applyFilters);
+    allButtons.forEach(btn => {
+        if (btn.dataset.initialized) return;
+        btn.dataset.initialized = 'true';
+
+        btn.addEventListener('click', function () {
+            const filter = this.dataset.filter;
+            const isActive = !this.classList.contains('active');
+
+            // Sync all buttons with the same filter across all sections
+            allButtons.forEach(b => {
+                if (b.dataset.filter === filter) {
+                    b.classList.toggle('active', isActive);
+                }
+            });
+
+            applyFilters();
+        });
+    });
 }
 
 /**

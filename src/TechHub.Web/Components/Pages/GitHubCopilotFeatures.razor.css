@@ -4,6 +4,12 @@
    Page-specific layout only - cards inherit from global cards.css
    ============================================================================ */
 
+/* No link underlines on features page */
+.custom-page-container a,
+.custom-page-container a:hover {
+  text-decoration: none;
+}
+
 /* Intro Section */
 .custom-page-container {
   max-width: 100%;
@@ -182,6 +188,12 @@
   outline-offset: var(--focus-outline-offset);
 }
 
+.features-filter-btn.active {
+  border-color: var(--color-purple-bright);
+  color: var(--color-purple-bright);
+  background: var(--color-purple-bg);
+}
+
 /* Feature Cards Grid - 3 per row */
 .features-cards-grid {
   display: grid;
@@ -192,10 +204,9 @@
 /* Feature Card Thumbnails */
 .feature-card-thumbnail {
   position: relative;
-  border-radius: var(--radius-md);
   overflow: hidden;
-  margin-bottom: var(--spacing-2);
   aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
 }
 
 .feature-card-thumbnail img {
@@ -203,6 +214,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  margin: 0;
 }
 
 .feature-card-play-icon {

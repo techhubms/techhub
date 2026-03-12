@@ -262,7 +262,8 @@ export async function initTocScrollSpy() {
 export async function initCustomPages() {
     const collapsibleElements = document.querySelector('[data-collapsible]');
     const expandableElements = document.querySelector('[data-expand-target]');
-    if (!collapsibleElements && !expandableElements) return;
+    const featureSections = document.querySelector('.features-video-section');
+    if (!collapsibleElements && !expandableElements && !featureSections) return;
 
     try {
         const module = await import('./custom-pages.js');
@@ -272,6 +273,9 @@ export async function initCustomPages() {
         }
         if (expandableElements) {
             module.initExpandableBadges();
+        }
+        if (featureSections) {
+            module.initFeatureFilters();
         }
     } catch (error) {
         console.error('Failed to load custom pages:', error);

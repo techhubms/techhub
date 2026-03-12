@@ -122,7 +122,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             var link = tierCards.Nth(i).Locator(".features-tier-link");
             await Assertions.Expect(link).ToBeVisibleAsync();
             var href = await link.GetAttributeAsync("href");
-            href.Should().StartWith("#", "View Features link should point to an anchor on the page");
+            href.Should().StartWith("/github-copilot/features#", "View Features link should use full page path with anchor");
         }
     }
 
@@ -235,8 +235,8 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var noteText = await note.TextContentAsync();
         noteText.Should().Contain("Note:", "Expected note section to be clearly marked");
 
-        // Should have links to pricing and plan details
-        var links = intro.Locator(".custom-page-links a");
+        // Should have links to pricing and plan details (inline in text)
+        var links = intro.Locator("p >> a[href]");
         var linkCount = await links.CountAsync();
         linkCount.Should().BeGreaterThanOrEqualTo(2, "Expected links to pricing and plan details");
     }
