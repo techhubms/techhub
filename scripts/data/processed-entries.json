@@ -28414,5 +28414,11 @@
     "collection": "news",
     "timestamp": "2026-03-12 00:07:21 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/devops/temporary-rollback-build-identities-can-access-advanced-security-read-alerts-again/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-12 03:48:00 +00:00",
+    "canonical_url": "https://github.blog/news-insights/company-news/github-availability-report-february-2026/",
+    "reason": "Succesfully added: DevOps category assigned due to central discussion of service reliability, CI/CD, incident management, and developer workflow disruptions (DevOps rules 1, 5, 7, 9). GitHub Copilot category included because Copilot (the AI coding assistant) is specifically listed as a service impacted by these incidents, with detailed descriptions of Copilot disruptions and mitigations (GitHub Copilot rules 1, 2, 4). AI category is also included, as per the rule that 'GitHub Copilot' always includes 'AI'. Azure and Security categories are not assigned, as incidents do not reference Azure-specific service implementation or security architecture. ML and Coding are not primary focus; incidents relate to service operations, infrastructure, and developer tooling, rather than code or machine learning development."
   }
 ]

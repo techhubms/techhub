@@ -12891,5 +12891,11 @@
     "collection": "news",
     "reason": "No categories found: No categories assigned. This content is a high-level company news update and keynote summary about the future of Xbox hardware and gaming ecosystem, focusing on company vision, hardware innovation, cross-device gaming, and developer/player benefits. It does not provide substantive technical depth on software development, programming, DevOps, AI/ML, security, or coding architecture. It is primarily a product/platform news post, not hands-on developer content. Applies the generic exclusion: 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' rules from Chapter 3, as the focus is on hardware product roadmap, strategic partnerships, and general platform features rather than technical implementation guides for developers.",
     "timestamp": "2026-03-11 18:14:38 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=StWXcesvGj4",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The description is primarily in Spanish, which triggers the Non-English Content exclusion (language is less than 80% English). Additionally, the content focuses on community, conferences, and general technology culture in Latin America rather than Microsoft technical topics or development/deployment, which does not qualify for any technical category per the inclusion rules.",
+    "timestamp": "2026-03-12 02:57:10 +00:00"
   }
 ]
