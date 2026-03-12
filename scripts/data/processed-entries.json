@@ -28432,5 +28432,11 @@
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/industry/blog/general/2026/03/11/modernizing-regulated-industries-with-cloud-and-agentic-ai/",
     "reason": "Succesfully added: Assigned AI category because the article centers on agentic AI, high-level Microsoft AI strategies, and applications in regulated industries (AI inclusion rule 1 and 5). Assigned Azure because it is published on the Microsoft Azure Blog and discusses cloud modernization explicitly related to Azure (Azure rule 1). Did not assign ML, Coding, DevOps, Security, or GitHub Copilot, as there is no evidence of in-depth machine learning development, code-level detail, deployment, or security implementations in the provided content."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-12-issue-fields-structured-issue-metadata-is-in-public-preview",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is focused on GitHub's issue management improvements, structured workflow, and automation features (DevOps rules 2, 5, 6, 9). No other Microsoft technology or AI/ML topics are present. No generic exclusion rules are triggered: the content is technical (not business/career/biographical), in English, and of sufficient detail.",
+    "timestamp": "2026-03-12 13:27:06 +00:00",
+    "collection": "news"
   }
 ]
