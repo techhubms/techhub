@@ -1232,7 +1232,9 @@ public class ContentRepository : IContentRepository
             sql.Append(@"
                     ) AS tag_results
                 )
-                AND c.draft = ").Append(Dialect.GetBooleanLiteral(false));
+                AND c.draft = ").Append(request.IncludeDraft
+                    ? $"{Dialect.GetBooleanLiteral(false)} OR c.draft = {Dialect.GetBooleanLiteral(true)}"
+                    : Dialect.GetBooleanLiteral(false).ToString());
 
             if (hasQuery)
             {
@@ -1240,7 +1242,7 @@ public class ContentRepository : IContentRepository
                 AND ").Append(Dialect.GetFullTextWhereClause("query"));
             }
 
-            // Apply section/collection/date filters
+            // Apply section/collection/date/subcollection filters
             AppendContentItemFilters(sql, request, hasSections);
 
             return sql.ToString();
@@ -1258,7 +1260,12 @@ public class ContentRepository : IContentRepository
             }
         }
 
-        var whereClauses = new List<string> { $"c.draft = {Dialect.GetBooleanLiteral(false)}" };
+        var whereClauses = new List<string>
+        {
+            request.IncludeDraft
+                ? $"(c.draft = {Dialect.GetBooleanLiteral(false)} OR c.draft = {Dialect.GetBooleanLiteral(true)})"
+                : $"c.draft = {Dialect.GetBooleanLiteral(false)}"
+        };
 
         if (hasQuery)
         {
@@ -1286,6 +1293,12 @@ public class ContentRepository : IContentRepository
             {
                 whereClauses.Add($"c.collection_name {Dialect.GetListFilterClause("collections", request.Collections.Count)}");
             }
+        }
+
+        if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
+            !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            whereClauses.Add("c.subcollection_name = @subcollection");
         }
 
         if (request.DateFrom.HasValue)
@@ -1331,6 +1344,12 @@ public class ContentRepository : IContentRepository
                 // Note: Uses same parameter names as BuildTagsTableQuery
                 sql.Append(" AND c.collection_name = ANY(@collections)");
             }
+        }
+
+        if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
+            !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            sql.Append(" AND c.subcollection_name = @subcollection");
         }
 
         if (request.DateFrom.HasValue)

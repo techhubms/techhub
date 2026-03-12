@@ -397,13 +397,38 @@ public class TechHubApiClient : ITechHubApiClient
     public virtual async Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(
         CancellationToken cancellationToken = default)
     {
-        var result = await GetCollectionItemsAsync(
-            "github-copilot",
-            "videos",
-            subcollection: "ghc-features",
-            includeDraft: true,
-            cancellationToken: cancellationToken);
-        return result?.Items;
+        const int pageSize = 50;
+        var allItems = new List<ContentItem>();
+        var skip = 0;
+
+        while (true)
+        {
+            var result = await GetCollectionItemsAsync(
+                "github-copilot",
+                "videos",
+                subcollection: "ghc-features",
+                includeDraft: true,
+                lastDays: 0,
+                take: pageSize,
+                skip: skip,
+                cancellationToken: cancellationToken);
+
+            if (result?.Items == null || result.Items.Count == 0)
+            {
+                break;
+            }
+
+            allItems.AddRange(result.Items);
+
+            if (allItems.Count >= result.TotalCount)
+            {
+                break;
+            }
+
+            skip += result.Items.Count;
+        }
+
+        return allItems;
     }
 
     /// <summary>

@@ -14,38 +14,10 @@
 
 @if (pageData != null)
 {
-    <main class="page-with-sidebar">
-        <aside class="sidebar">
-            <MobileSidebarToolbar>
-            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
-            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
-            </MobileSidebarPanel>
-
-            <MobileSidebarPanel Label="Filters" Icon="filter">
-            <div class="sidebar-section">
-                <h3 class="sidebar-heading">Filters</h3>
-                <div class="filter-controls" data-feature-filters>
-                    <label class="filter-toggle">
-                        <input type="checkbox" id="filter-ghes" />
-                        <span>Show GHES Support Only</span>
-                    </label>
-                    <label class="filter-toggle">
-                        <input type="checkbox" id="filter-videos" />
-                        <span>Show Features with Videos Only</span>
-                    </label>
-                </div>
-            </div>
-            </MobileSidebarPanel>
-            </MobileSidebarToolbar>
-        </aside>
-
+    <main class="page-without-sidebar">
         <article class="article-body">
             <div class="content-detail-header">
                 <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
-                @if (!string.IsNullOrWhiteSpace(pageData.Description))
-                {
-                    <p class="page-description">@pageData.Description</p>
-                }
             </div>
 
             <div class="custom-page-container">
@@ -60,36 +32,37 @@
 
                 <section class="features-tiers">
                     <h2>Subscription Tiers</h2>
-                    <div class="features-tiers-grid">
-                        @foreach (var tier in pageData.SubscriptionTiers)
+                    @{
+                        var freeTier = pageData.SubscriptionTiers.FirstOrDefault(t => t.Id == "free");
+                        var paidTiers = pageData.SubscriptionTiers.Where(t => t.Id != "free").ToList();
+                    }
+                    @if (freeTier != null)
+                    {
+                        <div id="tier-@freeTier.Id" class="features-tier-card features-tier-card-full">
+                            <h3>@freeTier.Name</h3>
+                            <p class="features-tier-tagline">@freeTier.Tagline</p>
+                            <ul class="features-tier-features">
+                                @foreach (var feature in freeTier.Features)
+                                {
+                                    <li>@feature</li>
+                                }
+                            </ul>
+                            <a href="#@freeTier.VideoAnchor" class="features-tier-link">View Features ↓</a>
+                        </div>
+                    }
+                    <div class="features-paid-tiers-grid">
+                        @foreach (var tier in paidTiers)
                         {
                             <div id="tier-@tier.Id" class="features-tier-card">
                                 <h3>@tier.Name</h3>
                                 <p class="features-tier-tagline">@tier.Tagline</p>
-                                @if (tier.Price != null)
-                                {
-                                    <div class="features-tier-price">
-                                        <span class="price-amount">$@tier.Price.Monthly</span>
-                                        <span class="price-period">@tier.Price.Currency @(tier.Price.PerUser ? "per user " :
-                                                                            "")per month</span>
-                                        @if (tier.Price.Yearly.HasValue)
-                                        {
-                                            <span class="price-yearly">or $@tier.Price.Yearly per year</span>
-                                        }
-                                    </div>
-                                }
-                                else
-                                {
-                                    <div class="features-tier-price">
-                                        <span class="price-amount">Free</span>
-                                    </div>
-                                }
                                 <ul class="features-tier-features">
                                     @foreach (var feature in tier.Features)
                                     {
                                         <li>@feature</li>
                                     }
                                 </ul>
+                                <a href="#@tier.VideoAnchor" class="features-tier-link">View Features ↓</a>
                             </div>
                         }
                     </div>
@@ -105,17 +78,31 @@
                     <div class="features-video-section">
                         <h2 id="@featureSection.Id">@featureSection.Title</h2>
                         <p class="features-section-plans">Available in: @string.Join(", ", featureSection.Plans)</p>
+                        <div class="features-section-filters">
+                            <button type="button" class="features-filter-btn" data-filter="ghes">GHES Support</button>
+                            <button type="button" class="features-filter-btn" data-filter="videos">With videos</button>
+                        </div>
                         @if (sectionVideos.Any())
                         {
-                            <div class="cards-grid">
+                            <div class="features-cards-grid">
                                 @foreach (var feature in sectionVideos)
                                 {
                                     var isAvailable = !feature.Draft;
                                     var featureId = $"feature-{feature.Slug}";
+                                    var videoId = GetYouTubeVideoId(feature.ExternalUrl);
 
                                     @if (isAvailable)
                                     {
                                         <a href="@feature.GetHref(SectionName)" class="card feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="true">
+                                            @if (!string.IsNullOrEmpty(videoId))
+                                            {
+                                                <div class="feature-card-thumbnail">
+                                                    <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="" loading="lazy" />
+                                                    <div class="feature-card-play-icon">
+                                                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+                                                    </div>
+                                                </div>
+                                            }
                                             <div class="card-header">
                                                 <h3 id="@featureId" class="card-title">@feature.Title</h3>
                                             </div>
@@ -123,26 +110,11 @@
                                             <div class="card-badges">
                                                 @if (feature.GhesSupport)
                                                 {
-                                                    <span class="badge-success">✓ GHES Support</span>
+                                                    <span class="badge-success">✓ GHES</span>
                                                 }
-                                                <span class="badge-info">View Video</span>
+                                                <span class="badge-info">▶ Video</span>
                                             </div>
                                         </a>
-                                    }
-                                    else
-                                    {
-                                        <div class="card-static feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="false">
-                                            <div class="card-header">
-                                                <h3 id="@featureId" class="card-title">@feature.Title</h3>
-                                            </div>
-                                            <p class="card-description">@feature.Excerpt</p>
-                                            <div class="card-badges">
-                                                @if (feature.GhesSupport)
-                                                {
-                                                    <span class="badge-success">✓ GHES Support</span>
-                                                }
-                                            </div>
-                                        </div>
                                     }
                                 }
                             </div>
@@ -159,6 +131,32 @@
     private FeaturesPageData? pageData;
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
     private PersistingComponentStateSubscription? _persistSubscription;
+
+    /// <summary>
+    /// Extract YouTube video ID from a URL (supports youtu.be and youtube.com formats).
+    /// </summary>
+    private static string? GetYouTubeVideoId(string? url)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+            return null;
+
+        // youtu.be/VIDEO_ID
+        if (url.Contains("youtu.be/", StringComparison.OrdinalIgnoreCase))
+        {
+            var uri = new Uri(url);
+            return uri.AbsolutePath.TrimStart('/').Split('?')[0];
+        }
+
+        // youtube.com/watch?v=VIDEO_ID
+        if (url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase))
+        {
+            var uri = new Uri(url);
+            var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+            return query["v"];
+        }
+
+        return null;
+    }
 
     /// <summary>
     /// Generate HTML content for TOC extraction.

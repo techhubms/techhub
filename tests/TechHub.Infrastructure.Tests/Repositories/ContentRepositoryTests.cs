@@ -83,7 +83,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
-        results.Items.Should().HaveCount(TotalPublishedItems, "Should return exactly 32 published items from TestCollections");
+        results.Items.Should().HaveCount(TotalPublishedItems, $"Should return exactly {TotalPublishedItems} published items from TestCollections");
         results.Items.Should().OnlyContain(item => !item.Draft, "SearchAsync should exclude drafts by default");
         results.Items.Should().BeInDescendingOrder(item => item.DateEpoch, "Items should be sorted by date descending");
     }
@@ -124,7 +124,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
-        results.Items.Should().HaveCount(TotalPublishedItems, "Should return all 32 published items from TestCollections");
+        results.Items.Should().HaveCount(TotalPublishedItems, $"Should return all {TotalPublishedItems} published items from TestCollections");
         results.Items.Should().NotContain(item => item.Draft, "Should exclude drafts by default");
         // Should contain items from different collections
         var collections = results.Items.Select(r => r.CollectionName).Distinct().ToList();

@@ -6,7 +6,6 @@ namespace TechHub.Core.Models;
 public record SDLCPageData
 {
     public required string Title { get; init; }
-    public required string Description { get; init; }
     public required string Intro { get; init; }
     public required List<SDLCPhase> Phases { get; init; }
     public required List<SDLCPrecondition> Preconditions { get; init; }

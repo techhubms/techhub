@@ -1,6 +1,5 @@
 {
     "title": "GitHub Copilot Tool Tips",
-    "description": "A curated collection of tools, extensions, and resources that enhance your GitHub Copilot experience",
     "intro": "Unlock the full potential of GitHub Copilot with these community-built tools, VS Code extensions, and curated resource collections. Whether you want to track your token usage, gain deeper AI insights inside your editor, or discover new ways to integrate Copilot into your workflow, these tool tips will help you get more out of your AI pair programmer.",
     "tools": [
         {

@@ -6,7 +6,6 @@ namespace TechHub.Core.Models;
 public record LevelsPageData
 {
     public required string Title { get; init; }
-    public required string Description { get; init; }
     public required string Intro { get; init; }
     public required LevelsOverview Overview { get; init; }
     public required List<EnlightenmentLevel> Levels { get; init; }

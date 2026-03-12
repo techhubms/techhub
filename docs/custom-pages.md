@@ -131,7 +131,11 @@ This subfolder is treated as a specialized collection for GitHub Copilot feature
 
 - Automatically identified as "Features" content based on directory location
 - Populates the features page at `/github-copilot/features` (via `/api/custom-pages/features`)
-- Supports filtering by subscription plan and GHES support
+- Fetches content with `lastDays=0` to bypass the default 90-day date filter, since this is a curated collection that should show all items regardless of publication date
+- Supports per-section filtering by GHES support and video availability
+- Layout: "Free" tier displayed full-width, four paid tiers displayed side-by-side in a grid
+- Published items with YouTube URLs display video thumbnails and link to the video page
+- Draft items display as "Coming Soon" cards without video thumbnails
 
 ### VS Code Updates
 

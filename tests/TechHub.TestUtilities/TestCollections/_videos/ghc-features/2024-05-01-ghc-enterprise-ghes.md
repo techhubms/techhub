@@ -1,16 +1,17 @@
 ---
-title: "GHC Features Video"
-date: 2024-01-01
+title: "Enterprise Feature With GHES"
+date: 2024-05-01
 primary_section: github-copilot
 section_names: [github-copilot, videos]
 tags: ["Test Tag"]
 draft: false
-external_url: https://youtu.be/dQw4w9WgXcQ
+external_url: https://youtu.be/abc123test4
 author: Test Author
 feed_name: Test Feed
 plans:
-- Free
+- Pro+
+- Enterprise
 ghes_support: true
 ---
 
-Video in ghc-features subcollection for testing videos collection aggregation.
+Enterprise tier feature with GHES support.

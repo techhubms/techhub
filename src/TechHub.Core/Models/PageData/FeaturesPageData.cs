@@ -6,7 +6,6 @@ namespace TechHub.Core.Models;
 public record FeaturesPageData
 {
     public required string Title { get; init; }
-    public required string Description { get; init; }
     public required string Intro { get; init; }
     public required string Note { get; init; }
     public required FeaturesLinks Links { get; init; }

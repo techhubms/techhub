@@ -1068,8 +1068,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     [Fact]
     public async Task GetCollectionTags_WithSearchQuery_ReducesTagCounts()
     {
-        // Arrange - Get unfiltered tag cloud first
-        var unfilteredResponse = await _client.GetAsync("/api/sections/all/collections/all/tags", TestContext.Current.CancellationToken);
+        // Arrange - Get unfiltered tag cloud with lastDays=0 to disable date filtering.
+        // This ensures the test uses ALL test data (including older items without "copilot")
+        // and isn't affected by the default 90-day window as test data ages.
+        var unfilteredResponse = await _client.GetAsync("/api/sections/all/collections/all/tags?lastDays=0", TestContext.Current.CancellationToken);
         unfilteredResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
         var unfilteredTags = await unfilteredResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);
@@ -1079,8 +1081,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Build tagsToCount from unfiltered tags so we compare same set
         var tagsToCountParam = string.Join(",", unfilteredTags!.Select(t => Uri.EscapeDataString(t.Tag)));
 
-        // Act - Get tag cloud with a specific search query + tagsToCount
-        var filteredResponse = await _client.GetAsync($"/api/sections/all/collections/all/tags?q=copilot&tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
+        // Act - Get tag cloud with a specific search query + tagsToCount (also lastDays=0)
+        var filteredResponse = await _client.GetAsync($"/api/sections/all/collections/all/tags?q=copilot&lastDays=0&tagsToCount={tagsToCountParam}", TestContext.Current.CancellationToken);
         filteredResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
         var filteredTags = await filteredResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(TestContext.Current.CancellationToken);

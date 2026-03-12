@@ -724,7 +724,7 @@ public class ContentSyncService : IContentSyncService
                     ExternalUrl = parsed.FrontMatter.GetValueOrDefault("external_url", "")?.ToString() ?? "",
                     Author = parsed.FrontMatter.GetValueOrDefault("author", null)?.ToString(),
                     FeedName = parsed.FrontMatter.GetValueOrDefault("feed_name", null)?.ToString(),
-                    GhesSupport = _dialect.ConvertBooleanParameter(parsed.FrontMatter.GetValueOrDefault("ghes_support", false) is bool ghesSupport && ghesSupport),
+                    GhesSupport = _dialect.ConvertBooleanParameter(ConvertBoolToBool(parsed.FrontMatter, "ghes_support")),
                     Draft = _dialect.ConvertBooleanParameter(ConvertBoolToBool(parsed.FrontMatter, "draft")),
                     Plans = parsed.Plans.Count > 0 ? string.Join(",", parsed.Plans) : null,
                     TagsCsv = tagsCsv,

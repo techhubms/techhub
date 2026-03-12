@@ -9,23 +9,23 @@ namespace TechHub.TestUtilities;
 /// Last updated: 2026-02-09 after adding tag symmetry test data (4 new blog files).
 /// 
 /// Test data composition:
-/// - 36 published items total (was 32, added 4 for tag symmetry bug test)
-/// - 3 draft items (not counted in published totals)
-/// - Collections: blogs (22), news (7), videos (4), community (2), roundups (1)
+/// - 40 published items total (was 36, added 4 published ghc-features videos + 1 draft)
+/// - 4 draft items (not counted in published totals)
+/// - Collections: blogs (22), news (7), videos (8), community (2), roundups (1)
 /// - Tag distributions: AI (12 items), DevOps (1 item), GitHub Copilot (4 tag symmetry test items)
-/// - Date ranges: 2024 items (17), 2026 items (19)
+/// - Date ranges: 2024 items (21), 2026 items (19)
 /// </remarks>
 public static class TestDataConstants
 {
     // Total counts
-    public const int TotalPublishedItems = 36;
-    public const int TotalDraftItems = 3;
+    public const int TotalPublishedItems = 40;
+    public const int TotalDraftItems = 4;
     public const int TotalItems = TotalPublishedItems + TotalDraftItems;
 
     // Collection counts (published only)
     public const int BlogsCount = 22;
     public const int NewsCount = 7;
-    public const int VideosCount = 4;  // Includes root videos + subcollections
+    public const int VideosCount = 8;  // Includes root videos + subcollections (2 root + 5 ghc-features + 1 vscode-updates)
     public const int CommunityCount = 2;
     public const int RoundupsCount = 1;
 
@@ -36,7 +36,7 @@ public static class TestDataConstants
     public const int DevOpsTagCount = 1;
 
     // Date range counts (published items only)
-    public const int Items2024Count = 17;
+    public const int Items2024Count = 21;
     public const int Items2026Count = 19;
 
     // Facet-specific counts (context-dependent based on filtering)
