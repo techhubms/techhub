@@ -28498,5 +28498,17 @@
     "canonical_url": "https://github.blog/changelog/2026-03-12-copilot-auto-model-selection-is-generally-available-in-jetbrains-ides",
     "reason": "Succesfully added: I assigned both 'AI' and 'GitHub Copilot' because the announcement focuses on GitHub Copilot's auto model selection feature—a core developer tool leveraging AI technology. The feature applies to code completions inside JetBrains IDEs, clearly fitting the inclusion rules for both categories (AI Rule 2, GitHub Copilot Rules 1-6). The main content is technical, describing how models are selected dynamically, how premium billing works, and implementation details for developers. No exclusion rules are triggered; the content is technical, English, and not business/productivity–focused.",
     "timestamp": "2026-03-12 18:15:13 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the content centers on a cybercrime campaign targeting VPN credential theft through malware, code-signing abuse, and advanced social engineering, all involving Microsoft Defender products, security TTPs, and guidance (Security rules 1, 5, 7, 9). Did not assign Azure, AI, ML, Coding, DevOps, or GitHub Copilot because the post does not focus on those technologies, services, or developer/DevOps/code content. GitHub appears only as a payload hosting location, not as part of a development or DevOps workflow. Microsoft Defender and Security Copilot features are discussed in a security context. The content is technical, hands-on, and actionable for practitioners.",
+    "timestamp": "2026-03-12 19:18:00 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/12/storm-2561-uses-seo-poisoning-to-distribute-fake-vpn-clients-for-credential-theft/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the content specifically covers GitHub Copilot CLI—a developer tool designed to provide AI-assisted coding suggestions in the terminal (AI category rule 2; GitHub Copilot category rules 1, 2, 4). This is a beginner tutorial for developers, directly relevant to Microsoft technology practitioners. Coding and DevOps categories were not included because there is no substantive focus on language-specific programming or CI/CD/automation practices—this tutorial is about the usage of a specific developer-oriented AI tool.",
+    "timestamp": "2026-03-12 19:18:43 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=bdIJkGr2NV0",
+    "collection": "videos"
   }
 ]

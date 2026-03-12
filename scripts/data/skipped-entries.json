@@ -12921,5 +12921,11 @@
     "timestamp": "2026-03-12 17:19:23 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule. The provided content (title: 'Rubber Duck Thursdays!', description: 'Come hang with us!') contains no technical content, is purely an event or social invitation, and does not provide any substantive information about Microsoft technologies, development, or engineering topics. There is no content to evaluate for category inclusion. Therefore, no categories are assigned.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The input does not contain substantive technical content; the 'content' field is null and the description is simply an announcement for an event, which is promotional in nature and lacks technical depth or implementation detail. According to the rules in Chapter 3 (Sales Pitches and Announcements without Technical Depth), this qualifies for exclusion and no categories are assigned.",
+    "timestamp": "2026-03-12 19:18:59 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/yekV395Rn8U",
+    "collection": "videos"
   }
 ]
