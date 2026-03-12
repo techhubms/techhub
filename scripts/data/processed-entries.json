@@ -28510,5 +28510,11 @@
     "timestamp": "2026-03-12 19:18:43 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=bdIJkGr2NV0",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Included the DevOps category because the content is focused on GitHub Actions, which is a major DevOps automation and CI/CD platform (DevOps Rule 2, 5, 6). Included the Security category because the changes pertain to authorization and identity management, enabling improved attribute-based access control (Security Rule 1, 3, 5). Azure is mentioned as a supported cloud but is not central to the feature itself; the content applies broadly across cloud providers, so Azure category is not assigned. No Coding, AI, GitHub Copilot, or ML content present.",
+    "timestamp": "2026-03-12 20:07:21 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-12-actions-oidc-tokens-now-support-repository-custom-properties"
   }
 ]
