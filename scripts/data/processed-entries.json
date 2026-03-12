@@ -28444,5 +28444,17 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned AI category because the content tackles AI application security, focusing on prompt injection and mitigation playbooks using Microsoft tools (AI inclusion rule 1, 4, 5). Assigned Security category as it discusses threat modeling, detection, investigation, and response to prompt abuse using Defender, Purview, Entra ID, and Sentinel, all directly related to Microsoft security services (Security inclusion rules 1, 3, 4, 5). Did not assign other categories (like Coding, ML, Azure) because the post is not about code development, ML engineering, or Azure platform specifics. GitHub Copilot, DevOps, and ML are not discussed. The post passes all generic exclusion checks as it contains technical, implementation-focused content in English, and is not a biographical, career, or sales article.",
     "timestamp": "2026-03-12 15:18:34 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/",
+    "timestamp": "2026-03-12 16:20:38 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the article extensively details both GitHub Copilot and broader AI-driven workflows for automating feedback handling (AI Category rule 1–4). 'GitHub Copilot' is directly discussed as a key technical enabler, requiring that category (GitHub Copilot rule 1–4). 'DevOps' is included since the workflow covers automation of issue triage, event-driven patterns, CI/CD-pipeline practices, and operational process efficiency (DevOps rules 1, 2, 5, 6). 'Coding' is included for the focus on accessibility in code, issue templates for developers, and how the workflows are built and maintained (Coding rules 3–5). Did NOT assign Azure, ML, or Security because the cloud or data science aspects are not central; focus remains on GitHub platform/AI automation for developer experience and accessibility."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=FzoXP4P8OAY",
+    "timestamp": "2026-03-12 16:21:55 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on building AI agents using Copilot Studio, a Microsoft AI service (AI rule 1). Azure category is assigned because Azure SQL Database and Azure portal are central to the architecture (Azure rules 1 and 4). The GitHub Copilot category is NOT assigned because Copilot Studio is a distinct developer/maker AI tool, not GitHub Copilot. Coding and ML categories are not assigned because the solution is specifically described as low-code/no-code, not focused on custom coding or machine learning engineering from scratch. Security and DevOps are not central topics based on the provided description and tags. The content meets all requirements for professional clarity, technical accuracy, and technical depth, and no generic exclusion rules apply."
   }
 ]

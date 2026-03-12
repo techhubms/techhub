@@ -1,0 +1,22 @@
+{
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "Use Your Data to Build an AI Agent for Under $10 a Month!",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Link": "https://www.youtube.com/watch?v=FzoXP4P8OAY",
+  "PubDate": "2026-03-12T16:00:21+00:00",
+  "ProcessedDate": "2026-03-12 16:20:06",
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "🚀Visit the Repo: https://aka.ms/budgetbytes 🚀Get started for FREE: https://aka.ms/budgetbytes/freeoffer\n\nMeet Bob Ward, Principal Architect on the Azure Data team. Bob walks through building a simple AI Application that 'knows' your data using CoPilot Studio and Azure SQL Database to help custom shoppers in a real-life use case. And then scale that to build more AI Agents for more use cases - for only $10, of course, with no coding skills required!\n\nChapters 0:00 - Introduction 0:07 - What are we learning today? 0:36 - The Blueprint / Overview 1:58 - AdventureWorks Scenario 3:30 - What do I need? Use Azure SQL Database free of charge 5:05 - Low-code AI Agents with CoPilot Studio 5:25 - This is cool... 6:53 - The Build 7:04 - Starting with the Azure portal 9:27 - Testing the agent 13:04 - What's the final result look like? 13:05 - Budget Breakdown - how much did this really cost?\n\n🔔 Subscribe now so you don't miss an episode!"
+}
