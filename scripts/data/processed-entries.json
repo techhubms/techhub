@@ -28456,5 +28456,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=FzoXP4P8OAY",
     "timestamp": "2026-03-12 16:21:55 +00:00",
     "reason": "Succesfully added: Assigned the AI category because the content focuses on building AI agents using Copilot Studio, a Microsoft AI service (AI rule 1). Azure category is assigned because Azure SQL Database and Azure portal are central to the architecture (Azure rules 1 and 4). The GitHub Copilot category is NOT assigned because Copilot Studio is a distinct developer/maker AI tool, not GitHub Copilot. Coding and ML categories are not assigned because the solution is specifically described as low-code/no-code, not focused on custom coding or machine learning engineering from scratch. Security and DevOps are not central topics based on the provided description and tags. The content meets all requirements for professional clarity, technical accuracy, and technical depth, and no generic exclusion rules apply."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/",
+    "timestamp": "2026-03-12 17:17:53 +00:00",
+    "reason": "Succesfully added: Included 'AI' and 'GitHub Copilot' categories because the core functionality heavily leverages GitHub Copilot and its agentic/automation capabilities (AI rules 1, 2, 3; GitHub Copilot rules 1-6). 'Coding' is appropriate as the article is about modernizing, analyzing, and transforming .NET applications with programmatic tools (Coding rule 1, 2, 4). Included 'DevOps' because workflows involve CI/CD environments, repository management, and coordination across team development tools and automation pipelines (DevOps rules 2, 5, 8, 9). Did NOT include 'Azure', 'ML', or 'Security' because although Azure and cloud migration are mentioned, there is no deep coverage or technical focus on those platforms or workloads in this article.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/operationalizing-agentic-applications-with-microsoft-fabric/",
+    "timestamp": "2026-03-12 17:18:25 +00:00",
+    "reason": "Succesfully added: Assigned AI category as the article focuses on agentic applications, multi-agent orchestration, and the operational use of AI in production (AI rule 4). Assigned ML category because the content covers data science/evaluation workflows, model monitoring, and analytics using Microsoft tools (ML rules 1, 2, 4, 5, 9). Assigned Azure category because Microsoft Fabric and related services (OneLake, Cosmos DB, Power BI, Eventstream) are Azure-backed and central to the solutions discussed (Azure rule 1). Coding was not assigned because the focus is on architecture and operationalization rather than code or framework specifics.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-12-rest-api-version-2026-03-10-is-now-available",
+    "timestamp": "2026-03-12 17:18:49 +00:00",
+    "reason": "Succesfully added: The content focuses on the release and upgrade guidance of the GitHub REST API, specifically addressing developers and teams maintaining integrations with GitHub's APIs. This aligns with DevOps category rules: it relates directly to developer tools, API versioning, and integration maintenance (DevOps rules 2 and 5). There's no coverage of AI, Coding (as a topic in itself), Azure, Security, or ML. The content is technical, actionable, and targets practitioners rather than end users or business executives.",
+    "collection": "news"
   }
 ]
