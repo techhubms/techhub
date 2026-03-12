@@ -12897,5 +12897,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=StWXcesvGj4",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The description is primarily in Spanish, which triggers the Non-English Content exclusion (language is less than 80% English). Additionally, the content focuses on community, conferences, and general technology culture in Latin America rather than Microsoft technical topics or development/deployment, which does not qualify for any technical category per the inclusion rules.",
     "timestamp": "2026-03-12 02:57:10 +00:00"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/03/12/microsoft-announces-experiences-devices-leadership-changes/",
+    "collection": "news",
+    "reason": "No categories found: All generic exclusion rules were applied first. This content is a leadership/organizational announcement regarding executive transitions at Microsoft (Rajesh Jha's retirement and leadership changes). The full text is focused on executive career movement, corporate strategy, and internal culture, with no substantive technical, developer, or implementation content and no details about Microsoft technology, products, or services from a practitioner's perspective. The only mentions of technical initiatives (e.g., SFI, QEI, Copilot) are high-level and lack any technical depth or implementation detail. This matches the business strategy/executive content and workplace/business focus exclusions from Chapter 3, so no categories are assigned.",
+    "timestamp": "2026-03-12 15:17:54 +00:00"
+  },
+  {
+    "canonical_url": "https://microsoft.ai/news/introducing-copilot-health/",
+    "collection": "news",
+    "reason": "No categories found: No categories are assigned because the content is focused on Copilot Health, a consumer/business productivity tool aimed at end-users managing their health information and not a developer tool or development-related service. According to the critical workflow, Copilot Health is not included under the allowed 'AI' or 'GitHub Copilot' developer categories, and is excluded along with Microsoft 365 Copilot and other similar products per the Non-Development Microsoft Products exclusion and the Copilot Product Distinction rules. There is no coverage of development, coding, DevOps, Azure, ML engineering, or security implementation. The article clearly targets consumers and patients, not technical practitioners. Generic exclusion thus applies.",
+    "timestamp": "2026-03-12 15:18:08 +00:00"
   }
 ]
