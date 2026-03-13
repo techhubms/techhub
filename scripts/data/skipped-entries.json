@@ -12987,5 +12987,17 @@
     "reason": "Insufficient content length",
     "timestamp": "2026-03-13 18:10:06 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/net/m-p/4502061#M1284"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2026-03-13 19:14:21 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure/hi-everyone/m-p/4502058#M2208"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is a help-seeking community post mainly asking for advice regarding a tenant quota issue ('Hoping someone here can advise or escalate'). It lacks substantive technical analysis, solution steps, or implementation guidance beyond sharing the error received and a short PowerShell snippet to check quota. According to the Generic Exclusion Rules (Question-Only Content), posts that are primarily seeking help or answers without substantial answers or technical solutions should be excluded. While the post references Microsoft 365, Entra ID/Azure AD, and a command, the main body is a request for support/escalation rather than a technical how-to, guidance, or deep-dive.",
+    "timestamp": "2026-03-13 19:14:34 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/registering-an-application-return-quota-limit-error/m-p/4501786#M22446"
   }
 ]

@@ -1,0 +1,14 @@
+{
+  "Author": "dhansenfatbrandscom",
+  "EnhancedContent": "I have a brand new Microsoft 365 Business Premium tenant with approximately 490 users and 137 service principals. I am a Global Admin with a Business Premium license assigned. I have verified a custom domain. The \"Users can register applications\" setting is enabled.\n\nWhen attempting to register an application I receive: *\"The directory object quota limit for the Principal has been exceeded.\"*\n\nI ran the following PowerShell to check the tenant quota:\n\nConnect-MgGraph -Scopes \"Organization.Read.All\" $org = Get-MgOrganization $org.AdditionalProperties[\"directorySizeQuota\"]\n\nThe total value returned is 500.\n\nThis appears to be a provisioning issue where the tenant's directorySizeQuota has not been updated to the standard 300,000 object limit despite having a verified domain and Business Premium licensing.\n\nM365 support directed me to Azure support, and Azure support only allows billing tickets without a paid support plan.  Paid support plan options do not populate and the portal goes non-responsive.  Hoping someone here can advise or escalate.",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "FeedName": "Microsoft Tech Community",
+  "Title": "Registering an application return quota limit error.",
+  "PubDate": "2026-03-12T22:22:51+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/registering-an-application-return-quota-limit-error/m-p/4501786#M22446",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Description": "I have a brand new Microsoft 365 Business Premium tenant with approximately 490 users and 137 service principals. I am a Global Admin with a Business Premium license assigned. I have verified a custom domain. The \"Users can register applications\" setting is enabled.\n\nWhen attempting to register an application I receive: *\"The directory object quota limit for the Principal has been exceeded.\"*\n\nI ran the following PowerShell to check the tenant quota:\n\nConnect-MgGraph -Scopes \"Organization.Read.All\" $org = Get-MgOrganization $org.AdditionalProperties[\"directorySizeQuota\"]\n\nThe total value returned is 500.\n\nThis appears to be a provisioning issue where the tenant's directorySizeQuota has not been updated to the standard 300,000 object limit despite having a verified domain and Business Premium licensing.\n\nM365 support directed me to Azure support, and Azure support only allows billing tickets without a paid support plan. Paid support plan options do not populate and the portal goes non-responsive. Hoping someone here can advise or escalate.",
+  "ProcessedDate": "2026-03-13 19:13:14",
+  "OutputDir": "_community"
+}

@@ -1,0 +1,17 @@
+{
+  "Author": "Allison",
+  "EnhancedContent": "When [Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) opens a pull request or pushes changes, Copilot is [treated like an outside contributor in an open source project](https://docs.github.com/enterprise-cloud@latest/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise#fork-pull-request-workflows-from-outside-collaborators). GitHub Actions workflows do not run until approved by a human with the **Approve and run workflows** button.\n\nThis helps protect you from security risks, given that GitHub Actions workflows may have access to tokens, secrets, or repository permissions, depending on your configuration. However, it slows down the feedback loop for validating Copilot’s work and finding out if tests pass.\n\nIn some repositories, you may want GitHub Actions workflows to run automatically so you can iterate more quickly, despite the risks.\n\n**We’ve added a new repository setting to allow repository administrators to skip the human approval so workflows run immediately.** By default, as before, we’ll require approval from a human before workflows run.\n\nTo learn more, see [“Configuring settings for GitHub Copilot coding agent”](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/configuring-agent-settings) in the GitHub Docs.",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "FeedName": "The GitHub Blog",
+  "Title": "Optionally skip approval for Copilot coding agent Actions workflows",
+  "PubDate": "2026-03-13T18:14:48+00:00",
+  "Link": "https://github.blog/changelog/2026-03-13-optionally-skip-approval-for-copilot-coding-agent-actions-workflows",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "When Copilot coding agent opens a pull request or pushes changes, Copilot is treated like an outside contributor in an open source project. GitHub Actions workflows do not run until…\n\nThe post [Optionally skip approval for Copilot coding agent Actions workflows](https://github.blog/changelog/2026-03-13-optionally-skip-approval-for-copilot-coding-agent-actions-workflows) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2026-03-13 19:11:56",
+  "OutputDir": "_news"
+}
