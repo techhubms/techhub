@@ -28600,5 +28600,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-feb-2026-forum-recap/ba-p/4501793",
     "reason": "Succesfully added: Applied the 'Azure' category because the content centers on Azure Arc—a core Azure management service—and provides technical forum updates about Azure Arc-enabled servers (Azure category rule 1). There is no focus on AI, ML, Coding, DevOps, Security, or GitHub Copilot, as the discussions are on server management, dashboards, deployment previews, and ESU enablement through Azure Arc. The entry is not a sales pitch, not biographical, not negative, not business strategy, and is clearly above the minimum length threshold for community content. All rules were followed step-by-step and category inclusion/exclusion justified per Chapter 4.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=JDhs-5wVTnw",
+    "timestamp": "2026-03-13 01:32:56 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the content is focused on new APIs, developer usage patterns, and implementation details for Zstandard compression in .NET 11 and ASP.NET Core (Coding rules 1, 2, and 4). No Azure, DevOps, ML, Security, or AI aspects are discussed. The video is explicitly developer-focused and highlights technical improvements in the core Microsoft developer ecosystem.",
+    "collection": "videos"
   }
 ]
