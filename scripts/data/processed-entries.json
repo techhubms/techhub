@@ -28684,5 +28684,17 @@
     "reason": "Succesfully added: Assigned AI category because the content focuses on debugging hosted AI agents and references Microsoft's AI agent technology via the azure.ai.agents extension (AI inclusion rule 1). Assigned Azure category as it covers Azure Developer CLI (azd), an Azure SDK tool, and the Azure service context is central (Azure inclusion rule 1). Assigned DevOps because the content emphasizes deployment monitoring, development tooling, and operational practices relevant to software engineering teams managing AI agents (DevOps inclusion rules 1, 6, and 7). Coding was not assigned since the content is about CLI usage and operations rather than actual code development. No generic exclusion rules apply as the content is technical, relevant, and entirely in English.",
     "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azd-ai-agent-logs-status/",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/the-human-scale-problem-in-platform-engineering/",
+    "timestamp": "2026-03-13 21:08:51 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category due to the core topic of platform engineering, infrastructure as code, deployment pipelines, tool coordination, and collaboration across roles—directly mapping to multiple DevOps inclusion rules. Assigned AI category because the text explicitly discusses the emerging role of AI assistants in managing complexity, preserving institutional memory, and enabling more natural interfaces for engineers (AI inclusion rule 5: high-level AI usage, and rule 6: Microsoft-provided AI context). Assigned Azure category as the content references Azure Monitor and situates the discussion within the Azure ecosystem (Azure inclusion rule 1 and 5: Azure services and architecture). Did not assign Coding, ML, or Security: while coding and security roles are mentioned, the focus is not on specific coding practices, security architectures, or direct ML/data engineering. The content is well within technical practitioner scope and avoids all generic exclusion triggers."
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_were-the-first-cloud-to-bring-up-an-nvidia-activity-7438280341322334208-Vw2c",
+    "timestamp": "2026-03-13 21:09:23 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: The content qualifies for the 'AI' category because it focuses on the validation and deployment of advanced hardware specifically for AI workloads on the Microsoft Azure cloud (AI Rule 1 and Rule 4). The 'Azure' category is included because the announcement pertains to Azure as the platform enabling and deploying the NVIDIA Vera Rubin NVL72 system (Azure Rule 1 and Rule 4). There is no substantive mention of development tools/frameworks (Coding), ML/data analytics development (ML), DevOps practices (DevOps), or security aspects (Security). The main focus is strategic hardware and AI infrastructure, not business productivity or end-user business apps. The announcement is technical, addresses the practitioner audience, and avoids exclusion due to biographical, sales, or high-level non-technical focus. All generic exclusions were considered and do not apply."
   }
 ]
