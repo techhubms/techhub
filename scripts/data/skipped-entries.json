@@ -12939,5 +12939,17 @@
     "canonical_url": "https://www.youtube.com/shorts/GrzR4HYc8i4",
     "reason": "No categories found: Content excluded due to lack of substantive technical information in the title, description, and tags. While the title mentions 'Autopilot' in VS Code and the description references workflow automation, there is insufficient detail to determine if Microsoft technologies (such as GitHub Copilot, Azure, or specific AI services) are involved, or if substantive developer-focused content is present. The content field is null, which prevents any further technical categorization. As per the rules, if the actual content cannot be evaluated and there is not enough information to confidently assign a Microsoft developer category, no categories are assigned.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-03-13 02:55:29 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Gi3-4jYmos4",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content is missing (content field is null), which means there is no substantive information to evaluate for Microsoft relevance or category assignment. According to the processing rules, only the title and description are available and neither provide clear evidence of Microsoft technology being a central focus. Although the event is hosted by GitHub and references an open-source Node.js project (Piscina), there is no indication in the metadata that Piscina is specifically related to Microsoft technologies or developer tools tied to Microsoft infrastructure. Without actual content or concrete references to compliance with inclusion rules (e.g., use of Azure, .NET, or GitHub Actions in a technical context), the necessary threshold for category assignment is not met."
+  },
+  {
+    "reason": "No categories found: Content is excluded due to generic exclusion rule: 'Question-Only Content.' The title and description indicate the video is an 'Ask Me Anything' (AMA) session, which is primarily interactive Q&A with the audience. There is no substantive, structured technical content provided, nor is there any indication of a focused tutorial, implementation guide, or in-depth discussion on a specific Microsoft technology. Since the primary purpose is audience questions and responses rather than informative technical content, no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=-agWE4TNPD0",
+    "timestamp": "2026-03-13 10:09:58 +00:00",
+    "collection": "videos"
   }
 ]

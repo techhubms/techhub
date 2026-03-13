@@ -28606,5 +28606,17 @@
     "timestamp": "2026-03-13 01:32:56 +00:00",
     "reason": "Succesfully added: Assigned the Coding category because the content is focused on new APIs, developer usage patterns, and implementation details for Zstandard compression in .NET 11 and ASP.NET Core (Coding rules 1, 2, and 4). No Azure, DevOps, ML, Security, or AI aspects are discussed. The video is explicitly developer-focused and highlights technical improvements in the core Microsoft developer ecosystem.",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the article focuses on agent-driven automation, dynamic skills, and script execution in the Microsoft Agent Framework, which is an AI-based toolkit for building intelligent agents (AI inclusion rule 1 and 4). Assigned Coding category because the examples and architecture heavily emphasize Python SDK usage, code-defined resources, decorators, and best practices for scripting and development (Coding inclusion rules 1, 2, and 4). Did not assign DevOps, Azure, ML, or Security categories as the article, while touching on enterprise and operational use cases, is centered on agent architecture, SDK usage, and safety controls—not specific Azure services, DevOps workflows, or ML/data science implementation details. Security is mentioned as a best practice, but the focus remains on SDK features and approval mechanics, not security architecture or specific Microsoft security tools.",
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/whats-new-in-agent-skills-code-skills-script-execution-and-approval-for-python/",
+    "timestamp": "2026-03-13 11:10:48 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because the content is centered on Azure Blob Storage and its platform capabilities (Azure inclusion rule 1, 4, 5). Assigned 'Security' due to strong focus on identity management, authentication, MFA, Conditional Access, and permission models within the Microsoft ecosystem (Security inclusion rules 1, 3, 4, 5, 7, 9). Content does not qualify for AI, ML, DevOps, Coding, or GitHub Copilot—no focus on coding, developer tools, data analytics, machine learning, or DevOps practices. No generic exclusion rules apply as the content is technical, solution-oriented, and not biographical or business strategy focused.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/enterprise-identity-meets-secure-file-transfer-entra-id-public/ba-p/4501937",
+    "timestamp": "2026-03-13 11:11:46 +00:00"
   }
 ]
