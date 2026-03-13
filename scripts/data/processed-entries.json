@@ -28696,5 +28696,11 @@
     "timestamp": "2026-03-13 21:09:23 +00:00",
     "collection": "news",
     "reason": "Succesfully added: The content qualifies for the 'AI' category because it focuses on the validation and deployment of advanced hardware specifically for AI workloads on the Microsoft Azure cloud (AI Rule 1 and Rule 4). The 'Azure' category is included because the announcement pertains to Azure as the platform enabling and deploying the NVIDIA Vera Rubin NVL72 system (Azure Rule 1 and Rule 4). There is no substantive mention of development tools/frameworks (Coding), ML/data analytics development (ML), DevOps practices (DevOps), or security aspects (Security). The main focus is strategic hardware and AI infrastructure, not business productivity or end-user business apps. The announcement is technical, addresses the practitioner audience, and avoids exclusion due to biographical, sales, or high-level non-technical focus. All generic exclusions were considered and do not apply."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-13 22:06:33 +00:00",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the news centers on Azure DevOps Server, a core DevOps tool (DevOps inclusion rule 1). Added the 'Azure' category because the product is part of the Microsoft Azure ecosystem (Azure rule 1). Did not assign other categories (e.g., Security) as the content focuses on operational patching, not security features or architecture. The content is technical, operational, and specifically targets practitioners, meeting all inclusion criteria and not triggering any generic exclusion rules.",
+    "canonical_url": "https://devblogs.microsoft.com/devops/march-patches-for-azure-devops-server-4/"
   }
 ]

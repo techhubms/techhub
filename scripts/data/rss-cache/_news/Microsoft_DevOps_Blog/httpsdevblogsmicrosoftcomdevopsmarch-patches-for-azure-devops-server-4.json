@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "We are releasing patches for our self‑hosted product, [Azure DevOps Server](https://azure.microsoft.com/services/devops/server/). We strongly recommend that all customers stay on the latest, most secure version of Azure DevOps Server. The latest release, Azure DevOps Server, is available from the [download page](https://learn.microsoft.com/azure/devops/server/download/azuredevopsserver?view=azure-devops).\n\nThis patch addresses an issue introduced in the original Azure DevOps Server release that, under certain conditions, could cause group memberships to become deactivated.\n\n**Who should install this patch**\n\nThis patch applies to customers who installed Azure DevOps Server prior to the March 13, 2026 re‑published release. If you previously applied the mitigation described in earlier guidance, installing Patch 2 completes the remediation. Customers who have not run the mitigation script do not need to do so, installing Patch 2 is sufficient.\n\n**Who does not need this patch**\n\nCustomers performing new installations or upgrades using the re‑published release available as of March 13, 2026.\n\n⬇️**Azure DevOps Server Patch Download**\n\n| Version | Patch Download | Release Notes | | --- | --- | --- | | Azure DevOps Server | [Download Patch 2](https://aka.ms/devopsserverpatch2) | [Release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevopsserver?view=azure-devops#azure-devops-server-patch-2-release-date-march-13-2026) |\n\n✅**Verifying Installation**\n\nTo verify that the patch is installed, run the following command on the Azure DevOps Server machine using the patch installer you downloaded:\n\n``` <patch-installer>.exe CheckInstall\n\n```\n\nReplace `<patch-installer>` with the name of the patch file you downloaded. The command output will indicate whether the patch is installed.",
+  "Author": "Gloridel Morales",
+  "Description": "We are releasing patches for our self‑hosted product, Azure DevOps Server. We strongly recommend that all customers stay on the latest, most secure version of Azure DevOps Server. The latest release, Azure DevOps Server, is available from the download page. This patch addresses an issue introduced in the original Azure DevOps Server release that, under […]\n\nThe post [March Patches for Azure DevOps Server](https://devblogs.microsoft.com/devops/march-patches-for-azure-devops-server-4/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "OutputDir": "_news",
+  "Link": "https://devblogs.microsoft.com/devops/march-patches-for-azure-devops-server-4/",
+  "FeedName": "Microsoft DevOps Blog",
+  "ProcessedDate": "2026-03-13 22:04:48",
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "PubDate": "2026-03-13T21:41:24+00:00",
+  "Tags": [
+    "Azure DevOps Server",
+    "Patches"
+  ],
+  "Title": "March Patches for Azure DevOps Server"
+}
