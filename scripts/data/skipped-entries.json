@@ -12951,5 +12951,35 @@
     "canonical_url": "https://www.youtube.com/watch?v=-agWE4TNPD0",
     "timestamp": "2026-03-13 10:09:58 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-03-13 16:09:23 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2026/03/13/idxbox-gdc-2026-indie-developers-at-the-heart-of-great-games/",
+    "reason": "No categories found: The content focuses on game industry trends, developer relations, indie game success stories, and Xbox platform policies, not specific technical implementation, development tools, coding, or Microsoft developer platforms. According to the generic exclusion rules, it is business/general industry news relevant to gaming, not technical knowledge, code, DevOps, Azure, AI, ML, security, or developer tooling. No qualifying categories apply."
+  },
+  {
+    "timestamp": "2026-03-13 16:09:52 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/03/13/users-protest-as-google-antigravity-price-floats-upward/5209219",
+    "reason": "No categories found: No categories are assigned because the content is about Google's Antigravity AI tool and pricing changes, not Microsoft technologies or ecosystems. The article's focus is on Google's services (Gemini, Claude, OpenAI's GPT-OSS) and user reactions, with no substantial mention or feature of Microsoft products, platforms, or development tools. Per Rule Chapter 2 and the multi-platform threshold, Microsoft technology must be central or ≥40% of content, which does not apply here. No generic exclusion was needed; this content simply does not qualify by inclusion."
+  },
+  {
+    "timestamp": "2026-03-13 16:10:17 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/etxDqah7Ipg",
+    "reason": "No categories found: No categories were assigned because the 'content' field is null, providing no technical or substantive information to evaluate. According to generic exclusion rules, if the actual content is missing or unavailable, no categories can be assigned, as categorization requires content-based evidence. The description references a high-level perspective about Microsoft's approach and user experience philosophy in relation to Java and Visual J++, but without the main content, there is insufficient technical detail to determine appropriate categories or relevance to Microsoft developer technologies."
+  },
+  {
+    "timestamp": "2026-03-13 16:10:30 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=17uHDPjdkto",
+    "reason": "No categories found: No categories assigned because the input 'content' field is null. According to core processing rules, if the full original content text is not present or is missing (content: null), categorization cannot be performed as there is no substantive material to analyze for inclusion or exclusion. Additionally, with only metadata and no actual technical detail, it is not possible to confirm which, if any, category inclusion rules are met. This strictly adheres to the guideline: 'Never fabricate information - Base decisions only on provided content.'"
+  },
+  {
+    "timestamp": "2026-03-13 16:10:49 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/directorysizequota-not-updated-on-new-business-premium-tenant/m-p/4501788#M22447",
+    "reason": "No categories found: Excluded all categories based on the Generic Exclusion Rules. This post is a community help request that primarily asks for advice or escalation assistance to resolve a Microsoft Entra quota issue. There is no substantial technical solution, tutorial, or implementation detail provided—it's mainly a question seeking support. According to the 'Question-Only Content' exclusion, help-seeking posts without substantive answers or solutions are not categorized."
   }
 ]

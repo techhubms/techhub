@@ -28642,5 +28642,23 @@
     "reason": "Succesfully added: Applied the Azure category as the content directly addresses migrating applications to Azure, discusses core Azure services (Azure App Service, Azure Container Apps, Azure Monitor, Azure Database for PostgreSQL), and presents cloud-native architectures (Azure rules 1, 2, 4, 5). Applied DevOps due to extensive discussion of GitHub integration, CI/CD automation, and operational practices with GitHub Actions and SRE agent (DevOps rules 2, 5, 7, 9). Applied AI and GitHub Copilot because GitHub Copilot is positioned as a developer tool for application modernization, and Microsoft Foundry along with AI deployment patterns are covered throughout (AI rule 2, 5, 6). Content meets the threshold for multi-category assignment and is written for technical practitioners regarding hands-on migration and modernization, not for business or executive audiences; no generic exclusion rules apply.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-practical-path-forward-for-heroku-customers-with-azure/ba-p/4501797",
     "timestamp": "2026-03-13 15:15:34 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned only the DevOps category: The announcement is about GitHub Actions, which falls under DevOps (DevOps rule 2 and 5) as it relates to continuous integration (CI), deployment, and workflow automation. There is no direct focus on Microsoft-specific technologies (Azure, AI, Security, ML, etc.), nor does it concern GitHub Copilot or Coding (no programming language or framework implementation is discussed). None of the generic exclusion rules apply: the content is technical, focused on automation tooling, and not a sales pitch, biographical, or management/executive content.",
+    "timestamp": "2026-03-13 17:12:29 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-03-13-self-hosted-runner-minimum-version-enforcement-paused"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the article deeply discusses the use of AI agents and Copilot in the development workflow, matching AI inclusion rules 1 and 2. 'GitHub Copilot' is included because of specific references to Copilot CLI, Copilot SDK, and Copilot-based code review (GitHub Copilot inclusion rules 1–4). 'DevOps' is assigned as significant parts of the article cover workflow automation, release pipelines, issue triage, CI/CD practices, and code validation (DevOps inclusion rules 1, 2, 5, 6). 'Coding' is relevant since the article discusses code review practices, prototyping, PR workflows, and development tooling (Coding inclusion rules 1–5). Did not assign 'Azure', 'ML', or 'Security' as the content does not center on those services or practices. No generic exclusion rules applied; content is technical, in English, and relevant to practitioner audiences.",
+    "timestamp": "2026-03-13 17:12:57 +00:00",
+    "collection": "news",
+    "canonical_url": "https://code.visualstudio.com/blogs/2026/03/13/how-VS-Code-Builds-with-AI"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the entire post is centered on Azure Managed Grafana and integration with Azure services (Azure rule 1, 4, 5). Added 'Security' because of the detailed focus on current-user Entra ID (Azure Active Directory) authentication and least-privilege access enforcement for data source queries (Security rule 1, 3). Assigned 'DevOps' as this content is directly related to monitoring, observability, CI/CD operations, and operational metrics for Azure-based environments, as well as tooling and workflow improvements for teams (DevOps rules 3, 6, 7). Excluded 'AI', 'ML', 'Coding', and 'GitHub Copilot' because there is no mention of AI services, machine learning, coding practices, or GitHub Copilot features.",
+    "timestamp": "2026-03-13 17:13:44 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-managed-grafana-12/ba-p/4500673"
   }
 ]
