@@ -1,0 +1,18 @@
+{
+  "FeedName": "Visual Studio Code YouTube",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/shorts/GrzR4HYc8i4",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "EnhancedContent": null,
+  "Author": "Visual Studio Code",
+  "ProcessedDate": "2026-03-13 00:06:48",
+  "Title": "🤖 Try Autopilot (Preview) in #VSCode!",
+  "PubDate": "2026-03-12T23:00:32+00:00",
+  "Description": "With Autopilot enabled, the agent stays in control of the workflow. It can run tools, retry on errors, and continue working until the task is complete.\n\nLearn more: https://aka.ms/VSCode/Autopilot"
+}
