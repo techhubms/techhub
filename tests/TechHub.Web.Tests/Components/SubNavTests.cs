@@ -221,7 +221,7 @@ public class SubNavTests : BunitContext
         // Assert - Clicking Roundups on the exact same page should scroll to top
         var roundupsLink = cut.Find("a.btn-subnav[href='/all/roundups']");
         roundupsLink.Click();
-        JSInterop.Invocations.Should().Contain(i => i.Identifier == "window.scrollTo",
+        JSInterop.Invocations.Should().Contain(i => i.Identifier == "TechHub.scrollToTopAndClearHash",
             "clicking a collection link when already on that page should scroll to top");
     }
 
@@ -251,13 +251,10 @@ public class SubNavTests : BunitContext
         var roundupsLink = cut.Find("a.btn-subnav[href='/all/roundups']");
         roundupsLink.Click();
 
-        // Assert - Should scroll to top
-        JSInterop.Invocations.Should().Contain(i => i.Identifier == "window.scrollTo",
-            "clicking the active link should scroll to top");
-
-        // Assert - Hash should be removed (NavigateTo called with path without hash)
-        var lastNavUri = navMan.Uri;
-        lastNavUri.Should().NotContain("#",
-            "the hash should be cleared from the URL after clicking the active subnav link");
+        // Assert - Should scroll to top and clear hash via JS
+        // Hash clearing is handled by the JS function TechHub.scrollToTopAndClearHash,
+        // not by Blazor's NavigationManager, so we verify the JS call was made.
+        JSInterop.Invocations.Should().Contain(i => i.Identifier == "TechHub.scrollToTopAndClearHash",
+            "clicking the active link should scroll to top and clear the hash");
     }
 }

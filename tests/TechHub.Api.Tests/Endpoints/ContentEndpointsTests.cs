@@ -128,7 +128,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var collections = await response.Content.ReadFromJsonAsync<List<Collection>>(TestContext.Current.CancellationToken);
         collections.Should().NotBeNull();
-        collections!.Should().HaveCount(9);
+        collections!.Should().HaveCount(10);
         collections.Should().Contain(c => c.Name == "news");
         collections.Should().Contain(c => c.Name == "blogs");
         collections.Should().Contain(c => c.Name == "videos");
@@ -138,6 +138,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         collections.Should().Contain(c => c.Name == "levels-of-enlightenment");
         collections.Should().Contain(c => c.Name == "handbook");
         collections.Should().Contain(c => c.Name == "tool-tips");
+        collections.Should().Contain(c => c.Name == "getting-started");
     }
 
     [Fact]

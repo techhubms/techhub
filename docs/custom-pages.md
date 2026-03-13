@@ -24,7 +24,7 @@ While most content in Tech Hub is standard markdown served via generic item endp
 
 | Section | Custom Pages |
 |---|---|
-| `github-copilot` | Features, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, VS Code Updates |
+| `github-copilot` | Features, Getting Started, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, VS Code Updates |
 | `ai` | GenAI Basics, GenAI Advanced, GenAI Applied, AI SDLC |
 | `devops` | DX, SPACE & DORA |
 
@@ -37,6 +37,12 @@ Retrieves the structured data required to render the corresponding custom page.
 **Endpoint**: `GET /api/custom-pages/dx-space`
 **Data Model**: `DXSpacePageData`
 **Description**: Data for the landing page of the Developer Experience Space.
+
+### Getting Started
+
+**Endpoint**: `GET /api/custom-pages/getting-started`
+**Data Model**: `GettingStartedPageData`
+**Description**: A step-by-step onboarding guide for GitHub Copilot covering license acquisition, VS Code setup, custom instructions, MCP servers, model selection, context management, and prompting tips. Markdown content in each section is rendered to HTML.
 
 ### GitHub Copilot Handbook
 
@@ -193,7 +199,7 @@ Add the `Order` property to custom page collections in `appsettings.json`:
 }
 ```
 
-All 9 custom page collections across 3 sections (`github-copilot`, `ai`, `devops`) use this pattern.
+All 10 custom page collections across 3 sections (`github-copilot`, `ai`, `devops`) use this pattern.
 
 ### Ordering Rules
 

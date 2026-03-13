@@ -258,4 +258,16 @@
         }
     }
     trySetupBlazorListeners();
+
+    // Expose scroll-to-top + hash clearing for Blazor JS interop.
+    // Used by SubNav when clicking the already-active page link (e.g., clicking "Features"
+    // while on /github-copilot/features#videos-pro). Must be in JS because Blazor Server's
+    // NavigationManager.Uri doesn't include the hash fragment (fragments are client-side only).
+    window.TechHub = window.TechHub || {};
+    window.TechHub.scrollToTopAndClearHash = function () {
+        window.scrollTo(0, 0);
+        if (window.location.hash) {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+    };
 })();

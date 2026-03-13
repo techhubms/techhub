@@ -54,10 +54,10 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var tiersSection = sidebar.Locator(".features-tiers-sidebar");
         await tiersSection.AssertElementVisibleAsync();
 
-        // Should have 5 tier cards (Free, Pro, Business, Pro+, Enterprise)
+        // Should have 6 tier cards (Free, Student, Pro, Business, Pro+, Enterprise)
         var tierCards = sidebar.Locator(".features-tier-card");
         var tierCardCount = await tierCards.CountAsync();
-        tierCardCount.Should().Be(5, "Expected 5 subscription tiers (Free, Pro, Business, Pro+, Enterprise)");
+        tierCardCount.Should().Be(6, "Expected 6 subscription tiers (Free, Student, Pro, Business, Pro+, Enterprise)");
 
         // Each tier card should have key elements
         var firstTier = tierCards.First;
@@ -91,7 +91,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var sidebar = Page.Locator("aside.sidebar");
         var tierCards = sidebar.Locator(".features-tier-card");
         var count = await tierCards.CountAsync();
-        count.Should().Be(5, "Expected 5 tier cards stacked in the sidebar");
+        count.Should().Be(6, "Expected 6 tier cards stacked in the sidebar");
     }
 
     [Fact]
@@ -116,7 +116,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var sidebar = Page.Locator("aside.sidebar");
         var tierCards = sidebar.Locator("a.features-tier-card");
         var tierCount = await tierCards.CountAsync();
-        tierCount.Should().Be(5, "Expected 5 clickable tier cards in the sidebar");
+        tierCount.Should().Be(6, "Expected 6 clickable tier cards in the sidebar");
 
         for (var i = 0; i < tierCount; i++)
         {
@@ -257,7 +257,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
 
         var tierCards = sidebar.Locator(".features-tier-card");
         var count = await tierCards.CountAsync();
-        count.Should().Be(5, "All tier cards should be inside the sidebar");
+        count.Should().Be(6, "All tier cards should be inside the sidebar");
     }
 
     [Fact]
@@ -273,7 +273,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Sidebar should contain all 5 tier cards
         var sidebarTierCards = sidebar.Locator(".features-tier-card");
         var tierCount = await sidebarTierCards.CountAsync();
-        tierCount.Should().Be(5, "Expected 5 subscription tiers in the sidebar");
+        tierCount.Should().Be(6, "Expected 6 subscription tiers in the sidebar");
     }
 
     [Fact]

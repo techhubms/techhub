@@ -40,7 +40,7 @@
    Headings
    ================================================================= */
 
-.article-body h1,
+.article-body h1:not(.page-h1),
 .article-body h2,
 .article-body h3,
 .article-body h4,
@@ -57,7 +57,7 @@
     margin-top: 0;
 }
 
-.article-body h1 {
+.article-body h1:not(.page-h1) {
     padding-bottom: var(--spacing-2);
 }
 

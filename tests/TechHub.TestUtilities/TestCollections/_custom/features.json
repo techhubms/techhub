@@ -14,11 +14,27 @@
             "tagline": "A fast way to get started with GitHub Copilot",
             "price": null,
             "features": [
-                "50 agent mode or chat requests per month",
+                "50 premium requests per month",
                 "2,000 completions per month",
-                "Access to Haiku 4.5, GPT-4.1, and more"
+                "Access to Claude Haiku 4.5, GPT-4.1, GPT-5 mini, and more"
             ],
             "videoAnchor": "videos-free"
+        },
+        {
+            "id": "student",
+            "name": "Student",
+            "tagline": "Free access for verified students",
+            "price": null,
+            "features": [
+                "Everything in Free",
+                "Coding agent",
+                "Unlimited agent mode and chats with GPT-5 mini",
+                "Unlimited code completions",
+                "Access to code review, Claude Sonnet 4/4.5, GPT-5, Gemini 2.5 Pro, and more",
+                "300 premium requests per month",
+                "Free for verified students"
+            ],
+            "videoAnchor": "videos-pro"
         },
         {
             "id": "pro",
@@ -36,7 +52,7 @@
                 "Unlimited code completions",
                 "Access to code review, Claude Sonnet 4/4.5, GPT-5, Gemini 2.5 Pro, and more",
                 "300 premium requests to use latest models, with option to buy more",
-                "Free for verified students, teachers, and maintainers of popular open source projects"
+                "Free for verified teachers and maintainers of popular open source projects"
             ],
             "videoAnchor": "videos-pro"
         },
@@ -52,12 +68,13 @@
             "features": [
                 "Everything in Pro",
                 "Coding agent for organizations",
+                "Organization custom instructions",
                 "Usage metrics and analytics",
                 "Data excluded from training by default",
                 "User management and policies",
                 "Content exclusions",
                 "Audit logs",
-                "300 premium requests per month"
+                "300 premium requests per user per month"
             ],
             "videoAnchor": "videos-pro"
         },
@@ -72,10 +89,11 @@
             },
             "features": [
                 "Everything in Pro",
-                "Access to all models, including Claude Opus 4.1 and more",
-                "1500 Premium Requests per month, with option to buy more",
+                "Access to all models, including Claude Opus 4.5/4.6 and more",
+                "1,500 premium requests per month, with option to buy more",
+                "Third-party coding agents",
                 "Access to GitHub Spark",
-                "Codex IDE extension support in VS Code"
+                "Increased GitHub Models rate limits"
             ],
             "videoAnchor": "videos-proplus"
         },
@@ -90,12 +108,11 @@
             },
             "features": [
                 "Everything in Business",
-                "1000 premium requests per month",
+                "1,000 premium requests per user per month",
+                "Third-party coding agents",
+                "Access to GitHub Spark",
                 "Copilot knowledge bases",
-                "Advanced compliance and security features",
-                "Custom policies and content exclusions",
-                "Enterprise-grade audit logs",
-                "SAML SSO integration"
+                "Advanced compliance and security features"
             ],
             "videoAnchor": "videos-proplus"
         }
@@ -110,8 +127,9 @@
         },
         {
             "id": "videos-pro",
-            "title": "Pro & Business Features",
+            "title": "Student, Pro & Business Features",
             "plans": [
+                "Student",
                 "Pro",
                 "Business"
             ]

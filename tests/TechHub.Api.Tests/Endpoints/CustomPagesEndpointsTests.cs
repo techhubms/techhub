@@ -27,6 +27,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     [InlineData("/api/custom-pages/genai-basics")]
     [InlineData("/api/custom-pages/genai-advanced")]
     [InlineData("/api/custom-pages/tool-tips")]
+    [InlineData("/api/custom-pages/getting-started")]
     public async Task GetSpecificCustomPage_ReturnsOk(string endpoint)
     {
         // Act
@@ -75,6 +76,23 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     }
 
     [Fact]
+    public async Task GetGettingStartedData_ReturnsStructuredData()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/custom-pages/getting-started", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var data = await response.Content.ReadFromJsonAsync<GettingStartedPageData>(TestContext.Current.CancellationToken);
+        data.Should().NotBeNull();
+        data!.Title.Should().Be("Getting Started with GitHub Copilot");
+        data.Sections.Should().NotBeEmpty();
+        data.Sections[0].Title.Should().NotBeNullOrWhiteSpace();
+        data.Sections[0].Content.Should().Contain("<", "Content should be rendered as HTML");
+    }
+
+    [Fact]
     public async Task GetFeaturesData_ReturnsStructuredData()
     {
         // Act
@@ -86,13 +104,14 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         var data = await response.Content.ReadFromJsonAsync<FeaturesPageData>(TestContext.Current.CancellationToken);
         data.Should().NotBeNull();
         data!.Title.Should().Be("GitHub Copilot Features");
-        data.SubscriptionTiers.Should().HaveCount(5);
+        data.SubscriptionTiers.Should().HaveCount(6);
         data.SubscriptionTiers[0].Name.Should().Be("Free");
         data.SubscriptionTiers[0].Price.Should().BeNull();
         data.SubscriptionTiers[0].VideoAnchor.Should().NotBeNullOrWhiteSpace();
         data.FeatureSections.Should().HaveCount(3);
         data.FeatureSections[0].Title.Should().Be("Free Features");
         data.FeatureSections[0].Plans.Should().Contain("Free");
+        data.FeatureSections[1].Plans.Should().Contain("Student");
         data.VideoCollection.Should().Be("ghc-features");
     }
 
@@ -112,7 +131,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         result!.Items.Should().NotBeEmpty("ghc-features collection should have video items");
 
         // Verify videos have plans that match feature section plan names
-        var validPlanNames = new[] { "Free", "Pro", "Business", "Pro+", "Enterprise" };
+        var validPlanNames = new[] { "Free", "Student", "Pro", "Business", "Pro+", "Enterprise" };
         var nonDraftItems = result.Items.Where(i => !i.Draft).ToList();
         nonDraftItems.Should().NotBeEmpty("Should have non-draft videos");
 

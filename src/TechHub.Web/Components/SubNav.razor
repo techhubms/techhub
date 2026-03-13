@@ -219,13 +219,11 @@ else if (Sections != null && Sections.Any())
 
     private async Task ScrollToTopAndClearHash()
     {
-        await JS.InvokeVoidAsync("window.scrollTo", 0, 0);
-        // Remove hash from URL so refreshing doesn't jump back down
-        var uri = new Uri(Navigation.Uri);
-        if (!string.IsNullOrEmpty(uri.Fragment))
-        {
-            Navigation.NavigateTo(uri.GetLeftPart(UriPartial.Query), forceLoad: false, replace: true);
-        }
+        // Scroll to top and remove hash from URL so refreshing doesn't jump back down.
+        // Uses a single JS call to handle both operations atomically.
+        // Must check window.location.hash in JS because Blazor's NavigationManager.Uri
+        // may not include the fragment (hash fragments are client-side only in Blazor Server).
+        await JS.InvokeVoidAsync("TechHub.scrollToTopAndClearHash");
     }
 
     protected override void OnInitialized()

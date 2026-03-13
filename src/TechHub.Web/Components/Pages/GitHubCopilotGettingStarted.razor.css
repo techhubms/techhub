@@ -1,0 +1,54 @@
+/* =================================================================
+   Getting Started Page - More Information Blocks
+   Reuses the established pattern from GenAI pages
+   ================================================================= */
+
+.getting-started-more-info {
+    background: var(--color-purple-bg-subtle);
+    border: 1px solid var(--color-purple-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-3);
+    margin: var(--spacing-4) 0;
+}
+
+.getting-started-more-info-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-emphasis);
+}
+
+.getting-started-more-info-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.getting-started-more-info ul {
+    margin: 0;
+    padding-left: var(--spacing-4);
+    list-style: disc;
+}
+
+.getting-started-more-info li {
+    margin-bottom: var(--spacing-1);
+    color: var(--color-text-primary);
+}
+
+.getting-started-more-info li:last-child {
+    margin-bottom: 0;
+}
+
+.getting-started-more-info a {
+    color: var(--color-purple-medium);
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    .getting-started-more-info a:hover {
+        color: var(--color-purple-bright);
+        text-decoration: underline;
+    }
+}

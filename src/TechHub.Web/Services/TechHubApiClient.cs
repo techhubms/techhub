@@ -603,6 +603,14 @@ public class TechHubApiClient : ITechHubApiClient
         return await GetCustomPageDataAsync<ToolTipsPageData>("/api/custom-pages/tool-tips", "Tool Tips", cancellationToken);
     }
 
+    /// <summary>
+    /// Get Getting Started page data
+    /// </summary>
+    public virtual async Task<GettingStartedPageData?> GetGettingStartedDataAsync(CancellationToken cancellationToken = default)
+    {
+        return await GetCustomPageDataAsync<GettingStartedPageData>("/api/custom-pages/getting-started", "Getting Started", cancellationToken);
+    }
+
     // ================================================================
     // Helper methods
     // ================================================================

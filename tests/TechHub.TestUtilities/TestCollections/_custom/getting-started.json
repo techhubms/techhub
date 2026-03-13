@@ -1,0 +1,24 @@
+{
+    "title": "Getting Started with GitHub Copilot",
+    "description": "A practical guide to setting up GitHub Copilot.",
+    "sections": [
+        {
+            "title": "Getting a GitHub Copilot License",
+            "content": "Before you can use GitHub Copilot, you need an active subscription.\n\n### Free Tier\n\nGitHub offers a **free tier** of GitHub Copilot.",
+            "moreInfo": [
+                {
+                    "text": "GitHub Copilot plans and pricing",
+                    "url": "https://github.com/features/copilot#pricing"
+                }
+            ]
+        },
+        {
+            "title": "Installing Visual Studio Code",
+            "content": "Visual Studio Code is the recommended editor for GitHub Copilot.\n\n### Why VS Code?\n\n- First-class Copilot support\n- Built-in Copilot Chat"
+        },
+        {
+            "title": "Writing Effective Prompts",
+            "content": "How you phrase your request to Copilot impacts the quality of what you get back.\n\n### Be Specific\n\nVague prompts produce vague results."
+        }
+    ]
+}

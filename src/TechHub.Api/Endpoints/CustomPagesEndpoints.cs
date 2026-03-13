@@ -132,6 +132,14 @@ public static class CustomPagesEndpoints
             .Produces<ToolTipsPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
+        // Get Getting Started page data
+        group.MapGet("/getting-started", GetGettingStartedData)
+            .WithName("GetGettingStartedData")
+            .WithSummary("Get GitHub Copilot Getting Started page data")
+            .WithDescription("Returns structured data for the GitHub Copilot Getting Started guide")
+            .Produces<GettingStartedPageData>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+
         return endpoints;
     }
 
@@ -286,4 +294,36 @@ public static class CustomPagesEndpoints
     private static Task<Results<Ok<ToolTipsPageData>, NotFound>> GetToolTipsData(
         IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
         => GetPageData<ToolTipsPageData>("tool-tips.json", env, settings, cancellationToken);
+
+    private static async Task<Results<Ok<GettingStartedPageData>, NotFound>> GetGettingStartedData(
+        IWebHostEnvironment env,
+        IOptions<AppSettings> settings,
+        IMarkdownService markdownService,
+        CancellationToken cancellationToken)
+    {
+        var collectionsPath = ResolveCollectionsPath(settings.Value.Content.CollectionsPath, env.ContentRootPath);
+        var jsonPath = Path.Combine(collectionsPath, "_custom", "getting-started.json");
+
+        if (!File.Exists(jsonPath))
+        {
+            return TypedResults.NotFound();
+        }
+
+        var jsonContent = await File.ReadAllTextAsync(jsonPath, cancellationToken);
+        var data = JsonSerializer.Deserialize<GettingStartedPageData>(jsonContent, _jsonOptions);
+
+        if (data == null)
+        {
+            return TypedResults.NotFound();
+        }
+
+        var processedSections = data.Sections.Select(section =>
+        {
+            var htmlContent = markdownService.RenderToHtml(section.Content);
+            return section with { Content = htmlContent };
+        }).ToList();
+
+        var processedData = data with { Sections = processedSections };
+        return TypedResults.Ok(processedData);
+    }
 }
