@@ -28630,5 +28630,17 @@
     "timestamp": "2026-03-13 12:07:51 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=zr_DuUzFEd4",
     "reason": "Succesfully added: Assigned 'AI' category because the video explains computer use agents, their functionality, concepts, and types, clearly situating the topic within Microsoft's AI agent landscape (AI rules 1, 4, and 6). Also assigned 'Security' because there is a dedicated segment on security concerns and risks linked to agent deployment and operation (Security rules 1 and 4). Did not assign 'Azure' because, while Azure is mentioned in tags and examples, the video content centers more generally on AI agent fundamentals, not on specific Azure service architecture or implementation (see Multi-Platform Content guidelines). No 'Coding', 'DevOps', or 'ML' category assigned due to absence of hands-on code, ML-specific workflows, or DevOps/tooling focus in either the title or description."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Included the 'GitHub Copilot' category because the content is exclusively focused on updates to GitHub Copilot (GitHub Copilot rule 1). Per critical instructions, 'AI' must be included whenever 'GitHub Copilot' is assigned (GitHub Copilot rule 2). No other categories qualify since the content does not discuss topics covered by Coding, DevOps, Azure, ML, or Security rules. No generic exclusions apply.",
+    "canonical_url": "https://github.blog/changelog/2026-03-13-updates-to-github-copilot-for-students",
+    "timestamp": "2026-03-13 15:14:38 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Applied the Azure category as the content directly addresses migrating applications to Azure, discusses core Azure services (Azure App Service, Azure Container Apps, Azure Monitor, Azure Database for PostgreSQL), and presents cloud-native architectures (Azure rules 1, 2, 4, 5). Applied DevOps due to extensive discussion of GitHub integration, CI/CD automation, and operational practices with GitHub Actions and SRE agent (DevOps rules 2, 5, 7, 9). Applied AI and GitHub Copilot because GitHub Copilot is positioned as a developer tool for application modernization, and Microsoft Foundry along with AI deployment patterns are covered throughout (AI rule 2, 5, 6). Content meets the threshold for multi-category assignment and is written for technical practitioners regarding hands-on migration and modernization, not for business or executive audiences; no generic exclusion rules apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-practical-path-forward-for-heroku-customers-with-azure/ba-p/4501797",
+    "timestamp": "2026-03-13 15:15:34 +00:00"
   }
 ]
