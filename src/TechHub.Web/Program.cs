@@ -68,6 +68,9 @@ if (!builder.Environment.IsDevelopment())
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
 
+// HTTP context accessor for reading cookies during SSR (e.g. sidebar collapsed state)
+builder.Services.AddHttpContextAccessor();
+
 // Favicon service for base64-encoded favicon (eliminates HTTP requests)
 builder.Services.AddSingleton<FaviconService>();
 

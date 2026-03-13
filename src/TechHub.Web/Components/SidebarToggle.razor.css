@@ -1,0 +1,60 @@
+/* ============================================================================
+   Sidebar Toggle Button
+   
+   Desktop-only button to collapse/expand the sidebar.
+   Hidden on mobile where MobileSidebarToolbar handles sidebar display.
+   ============================================================================ */
+
+.sidebar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+  position: absolute;
+  top: calc(var(--spacing-1) / 2);
+  right: 0;
+  z-index: 1;
+}
+
+/* Desktop only - show toggle button */
+@media (min-width: 1293px) {
+  .sidebar-toggle {
+    display: flex;
+  }
+}
+
+.sidebar-toggle:hover {
+  background: var(--color-purple-dark);
+  color: var(--color-text-on-emphasis);
+  border-color: var(--color-purple-bright);
+}
+
+.sidebar-toggle:focus-visible {
+  outline: 2px solid var(--color-purple-bright);
+  outline-offset: 2px;
+}
+
+/* In collapsed state, switch to static positioning so it stays centered in the 48px column */
+html.sidebar-collapsed .sidebar-toggle {
+  position: static;
+  margin: calc(var(--spacing-1) / 2) auto 0;
+}
+
+.sidebar-toggle-icon {
+  flex-shrink: 0;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-toggle {
+    transition: none;
+  }
+}

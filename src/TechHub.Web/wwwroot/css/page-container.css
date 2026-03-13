@@ -16,14 +16,32 @@
 
 /* Standard page container with sidebar */
 .page-with-sidebar {
+  --sidebar-width: 300px;
+  --section-grid-columns: 2;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: var(--sidebar-width) 1fr;
   gap: var(--spacing-5);
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);
   flex: 1;
+  transition: grid-template-columns var(--duration-normal) var(--easing-ease-in-out),
+              gap var(--duration-normal) var(--easing-ease-in-out);
+}
+
+/* Desktop: 3 columns for section cards grid */
+@media (min-width: 1293px) {
+  .page-with-sidebar {
+    --section-grid-columns: 3;
+  }
+}
+
+/* Collapsed sidebar state - class on <html> set server-side from cookie */
+html.sidebar-collapsed .page-with-sidebar {
+  --sidebar-width: 48px;
+  --section-grid-columns: 4;
+  gap: var(--spacing-1);
 }
 
 /* Main content area - ensure it maintains width during loading */
@@ -47,8 +65,16 @@
 /* Responsive - Single column on smaller screens */
 @media (max-width: 1292px) {
   .page-with-sidebar {
+    --section-grid-columns: 2;
     grid-template-columns: 1fr;
     gap: var(--spacing-3);
+    transition: none;
+  }
+
+  /* Disable collapsed state on mobile */
+  html.sidebar-collapsed .page-with-sidebar {
+    --sidebar-width: 300px;
+    --section-grid-columns: 2;
   }
 }
 

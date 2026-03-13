@@ -1,0 +1,37 @@
+@inject IJSRuntime JS
+@inject IHttpContextAccessor HttpContextAccessor
+
+<button class="sidebar-toggle"
+        @onclick="Toggle"
+        aria-expanded="@(isExpanded ? "true" : "false")"
+        aria-label="@(isExpanded ? "Collapse sidebar" : "Expand sidebar")"
+        title="@(isExpanded ? "Collapse sidebar" : "Expand sidebar")">
+    <svg class="sidebar-toggle-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        @if (isExpanded)
+        {
+            @* Chevron left (collapse) *@
+            <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        }
+        else
+        {
+            @* Chevron right (expand) *@
+            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        }
+    </svg>
+</button>
+
+@code {
+    private bool isExpanded = true;
+
+    protected override void OnInitialized()
+    {
+        var collapsed = HttpContextAccessor.HttpContext?.Request.Cookies["sidebar-collapsed"] == "true";
+        isExpanded = !collapsed;
+    }
+
+    private async Task Toggle()
+    {
+        isExpanded = !isExpanded;
+        await JS.InvokeVoidAsync("TechHub.sidebar.toggle");
+    }
+}

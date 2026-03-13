@@ -16,10 +16,11 @@
 {
     <main class="page-with-sidebar">
         <aside class="sidebar">
+            <SidebarToggle />
             <MobileSidebarToolbar>
-                <MobileSidebarPanel Label="Subscription Tiers" Icon="filter">
-                    <nav class="sidebar-section features-tiers-sidebar" aria-label="Subscription Tiers">
-                        <h2 class="sidebar-h2">Subscription Tiers</h2>
+                <MobileSidebarPanel Label="Subscriptions" Icon="filter">
+                    <nav class="sidebar-section features-tiers-sidebar" aria-label="Subscriptions">
+                        <h2 class="sidebar-h2">Subscriptions</h2>
                         <div class="features-tiers-scroll">
                             @foreach (var tier in pageData.SubscriptionTiers)
                             {

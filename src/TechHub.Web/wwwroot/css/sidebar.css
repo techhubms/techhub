@@ -23,6 +23,7 @@
   /* Plain block container - no flex/grid, just natural height from children
      align-self: stretch allows sidebar to match main content height for sticky to work */
   align-self: stretch;
+  position: relative;
 }
 
 /* Spacing between sidebar sections */
@@ -46,6 +47,21 @@
 /* Spacing between latest roundup and the first panel on desktop */
 .latest-roundup + .sidebar-panel > :first-child {
   margin-top: var(--spacing-2);
+}
+
+/* ============================================================================
+   Sidebar Collapsed State (Desktop only)
+   When .sidebar-collapsed is on the parent <main>, hide all sidebar content
+   except the toggle button. The sidebar column shrinks to 48px via page-container.css.
+   ============================================================================ */
+
+html.sidebar-collapsed .sidebar {
+  overflow: hidden;
+}
+
+/* Hide all sidebar children except the toggle button when collapsed */
+html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle) {
+  display: none;
 }
 
 /* ============================================================================

@@ -12,14 +12,14 @@
 /* Grid Layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Fixed 2 columns - no auto-calculation */
+  grid-template-columns: repeat(var(--section-grid-columns, 2), 1fr);
   gap: var(--spacing-4);
 }
 
-/* Desktop - 3 columns */
+/* Desktop - uses inherited --section-grid-columns from .page-with-sidebar */
 @media (min-width: 1293px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(var(--section-grid-columns, 3), 1fr);
   }
 }
 

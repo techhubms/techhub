@@ -1,9 +1,10 @@
 ﻿@using TechHub.Web.Services
 @inject FaviconService FaviconService
 @inject IConfiguration Configuration
+@inject IHttpContextAccessor HttpContextAccessor
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="@HtmlClass">
 
 <head>
     <meta charset="utf-8" />
@@ -146,6 +147,10 @@
     <!-- Uses @Assets for fingerprinted URL (cache busting). See Configuration/JsFiles.cs -->
     <script src="@Assets["js/mobile-nav.js"]" defer></script>
 
+    <!-- Sidebar Toggle - Desktop sidebar collapse/expand with cookie persistence -->
+    <!-- Uses @Assets for fingerprinted URL (cache busting). See Configuration/JsFiles.cs -->
+    <script src="@Assets["js/sidebar-toggle.js"]" defer></script>
+
     <!-- CDN Configuration - bridges C# version management to JavaScript -->
     <!-- CDN versions configured in Configuration/CdnLibraries.cs -->
     <script>
@@ -182,6 +187,16 @@
     /// ensuring browsers fetch the new bundle after each deployment.
     /// </summary>
     private static readonly string BundleVersion = typeof(App).Assembly.ManifestModule.ModuleVersionId.ToString("N")[..8];
+
+    /// <summary>
+    /// CSS class(es) applied to the &lt;html&gt; element.
+    /// Reads the 'sidebar-collapsed' cookie server-side during SSR so the collapsed
+    /// state is rendered in the initial HTML — no FOUC, no inline script needed.
+    /// </summary>
+    private string HtmlClass =>
+        HttpContextAccessor.HttpContext?.Request.Cookies["sidebar-collapsed"] == "true"
+            ? "sidebar-collapsed"
+            : string.Empty;
 }
 
 </html>

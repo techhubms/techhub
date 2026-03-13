@@ -1,6 +1,7 @@
 using Bunit;
 using FluentAssertions;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -22,6 +23,9 @@ public class SectionTests : BunitContext
     {
         // Section renders child components (DateRangeSlider, ContentItemsGrid) that use JS interop
         JSInterop.Mode = JSRuntimeMode.Loose;
+
+        // SidebarToggle requires IHttpContextAccessor to read cookie during SSR
+        Services.AddSingleton<IHttpContextAccessor>(new HttpContextAccessor { HttpContext = new DefaultHttpContext() });
     }
     [Fact]
     public void Section_RendersWithPageStructure()
