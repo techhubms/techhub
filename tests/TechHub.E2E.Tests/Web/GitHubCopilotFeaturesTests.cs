@@ -293,8 +293,8 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Sidebar toolbar should have a button for tiers
-        var toolbarButton = Page.Locator(".sidebar-toolbar-btn:has-text('Tiers')");
+        // Assert - Sidebar toolbar should have a button for subscriptions
+        var toolbarButton = Page.Locator(".sidebar-toolbar-btn:has-text('Subscriptions')");
         // On desktop the toolbar buttons are hidden (display: none), but the element exists
         await Assertions.Expect(toolbarButton).ToHaveCountAsync(1);
     }
