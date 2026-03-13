@@ -12981,5 +12981,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/directorysizequota-not-updated-on-new-business-premium-tenant/m-p/4501788#M22447",
     "reason": "No categories found: Excluded all categories based on the Generic Exclusion Rules. This post is a community help request that primarily asks for advice or escalation assistance to resolve a Microsoft Entra quota issue. There is no substantial technical solution, tutorial, or implementation detail provided—it's mainly a question seeking support. According to the 'Question-Only Content' exclusion, help-seeking posts without substantive answers or solutions are not categorized."
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2026-03-13 18:10:06 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/net/m-p/4502061#M1284"
   }
 ]
