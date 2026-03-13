@@ -164,8 +164,10 @@
     justify-content: center;
 }
 
-.banner-rss-link:hover {
-    opacity: 1;
+@media (hover: hover) {
+    .banner-rss-link:hover {
+        opacity: 1;
+    }
 }
 
 .banner-rss-link svg {

@@ -41,9 +41,11 @@
     transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.nav-helper-btn:hover {
+@media (hover: hover) {
+  .nav-helper-btn:hover {
     background: var(--color-purple-medium);
     box-shadow: var(--shadow-xl);
+  }
 }
 
 .nav-helper-btn:active {

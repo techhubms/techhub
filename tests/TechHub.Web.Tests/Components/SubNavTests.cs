@@ -1,5 +1,6 @@
 using Bunit;
 using FluentAssertions;
+using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
@@ -157,5 +158,106 @@ public class SubNavTests : BunitContext
         // Assert - Should not render any markup when sections list is empty
         cut.Markup.Trim().Should().BeEmpty(
             "SubNav with empty Sections list should collapse and render no HTML");
+    }
+
+    [Fact]
+    public void SubNav_OnDetailPage_CollectionLinkDoesNotPreventDefault()
+    {
+        // Arrange - Navigate to a content detail page under the roundups collection
+        var navMan = Services.GetRequiredService<NavigationManager>();
+        navMan.NavigateTo("/all/roundups/weekly-ai-roundup-2026-03-09");
+
+        var section = new Section(
+            "all",
+            "All Content",
+            "All content",
+            "/all",
+            "All",
+            [
+                new Collection("roundups", "Roundups", "/all/roundups", "Weekly roundups", "Roundups"),
+                new Collection("news", "News", "/all/news", "Latest news", "News")
+            ]
+        );
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Section, section));
+
+        // Assert - The Roundups link should have "active" class (visual highlight)
+        var roundupsLink = cut.Find("a.btn-subnav[href='/all/roundups']");
+        roundupsLink.ClassList.Should().Contain("active",
+            "the parent collection link should be visually highlighted on a detail page");
+
+        // Assert - Clicking Roundups should NOT call scrollTo (should navigate instead)
+        // When preventDefault is true, OnSubNavClick calls ScrollToTopAndClearHash which invokes window.scrollTo
+        roundupsLink.Click();
+        JSInterop.Invocations.Should().NotContain(i => i.Identifier == "window.scrollTo",
+            "clicking a collection link from a detail page should navigate, not scroll to top");
+    }
+
+    [Fact]
+    public void SubNav_OnExactCollectionPage_CollectionLinkScrollsToTop()
+    {
+        // Arrange - Navigate to the exact collection page
+        var navMan = Services.GetRequiredService<NavigationManager>();
+        navMan.NavigateTo("/all/roundups");
+
+        var section = new Section(
+            "all",
+            "All Content",
+            "All content",
+            "/all",
+            "All",
+            [
+                new Collection("roundups", "Roundups", "/all/roundups", "Weekly roundups", "Roundups"),
+                new Collection("news", "News", "/all/news", "Latest news", "News")
+            ]
+        );
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Section, section));
+
+        // Assert - Clicking Roundups on the exact same page should scroll to top
+        var roundupsLink = cut.Find("a.btn-subnav[href='/all/roundups']");
+        roundupsLink.Click();
+        JSInterop.Invocations.Should().Contain(i => i.Identifier == "window.scrollTo",
+            "clicking a collection link when already on that page should scroll to top");
+    }
+
+    [Fact]
+    public void SubNav_OnExactPageWithHash_ClickClearsHashAndScrollsToTop()
+    {
+        // Arrange - Navigate to a page with a hash fragment
+        var navMan = Services.GetRequiredService<NavigationManager>();
+        navMan.NavigateTo("/all/roundups#some-section");
+
+        var section = new Section(
+            "all",
+            "All Content",
+            "All content",
+            "/all",
+            "All",
+            [
+                new Collection("roundups", "Roundups", "/all/roundups", "Weekly roundups", "Roundups"),
+                new Collection("news", "News", "/all/news", "Latest news", "News")
+            ]
+        );
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Section, section));
+
+        var roundupsLink = cut.Find("a.btn-subnav[href='/all/roundups']");
+        roundupsLink.Click();
+
+        // Assert - Should scroll to top
+        JSInterop.Invocations.Should().Contain(i => i.Identifier == "window.scrollTo",
+            "clicking the active link should scroll to top");
+
+        // Assert - Hash should be removed (NavigateTo called with path without hash)
+        var lastNavUri = navMan.Uri;
+        lastNavUri.Should().NotContain("#",
+            "the hash should be cleared from the URL after clicking the active subnav link");
     }
 }

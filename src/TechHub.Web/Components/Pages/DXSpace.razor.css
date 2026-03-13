@@ -57,8 +57,10 @@
     transition: background-color 0.2s ease;
 }
 
-.dx-card-header:hover {
-    background: var(--color-bg-emphasis);
+@media (hover: hover) {
+    .dx-card-header:hover {
+        background: var(--color-bg-emphasis);
+    }
 }
 
 .dx-card-header:focus-visible {

@@ -6,7 +6,9 @@
 
 /* No link underlines on features page */
 .custom-page-container a,
-.custom-page-container a:hover {
+.custom-page-container a:hover,
+.features-tiers-sidebar a,
+.features-tiers-sidebar a:hover {
   text-decoration: none;
 }
 
@@ -46,44 +48,66 @@
   flex-wrap: wrap;
 }
 
-/* Subscription Tiers */
-.features-tiers {
-  margin-bottom: var(--spacing-6);
+/* Subscription Tiers - Sidebar */
+.features-tiers-sidebar {
+  display: flex;
+  flex-direction: column;
+  /* Stretch to full sidebar height so sticky child has room to work */
+  flex: 1;
+  min-height: 100%;
 }
 
-.features-tiers h2 {
-  font-size: var(--font-size-3xl);
-  margin-bottom: var(--spacing-3);
-  color: var(--color-text-emphasis);
+/* Scrollable area for tier cards only (sticky + scrollbar starts below heading) */
+.features-tiers-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  position: sticky;
+  top: calc(var(--sticky-header-height) + var(--spacing-2));
+  max-height: calc(100vh - var(--sticky-header-height) - var(--spacing-6));
+  overflow-y: auto;
+  padding-right: var(--spacing-1);
+  min-height: 0;
+  /* Thin scrollbar */
+  scrollbar-width: thin;
 }
 
-/* Free tier: full width */
-.features-tier-card-full {
-  margin-bottom: var(--spacing-3);
+.features-tiers-scroll::-webkit-scrollbar {
+  width: 4px;
 }
 
-/* Paid tiers: side by side */
-.features-paid-tiers-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-3);
-  margin-bottom: var(--spacing-4);
+.features-tiers-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.features-tiers-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border-default);
+  border-radius: var(--radius-sm);
+}
+
+.features-tiers-sidebar .sidebar-h2 {
+  margin-bottom: var(--spacing-5);
 }
 
 .features-tier-card {
   background: var(--color-bg-default);
   border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2);
   display: flex;
   flex-direction: column;
   transition: border-color var(--duration-normal) var(--easing-ease-out), 
               box-shadow var(--duration-normal) var(--easing-ease-out);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.features-tier-card:hover {
-  border-color: var(--color-purple-medium);
-  box-shadow: var(--shadow-md);
+@media (hover: hover) {
+  .features-tier-card:hover {
+    border-color: var(--color-purple-medium);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 .features-tier-card h3 {
@@ -93,9 +117,9 @@
 }
 
 .features-tier-tagline {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-xs);
   color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-2);
+  margin-bottom: var(--spacing-1);
   line-height: var(--line-height-normal);
 }
 
@@ -103,15 +127,17 @@
 .features-tier-link {
   display: inline-block;
   margin-top: auto;
-  padding-top: var(--spacing-2);
-  font-size: var(--font-size-sm);
+  padding-top: var(--spacing-1);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--color-purple-bright);
   text-decoration: none;
 }
 
-.features-tier-link:hover {
-  text-decoration: none;
+@media (hover: hover) {
+  .features-tier-link:hover {
+    text-decoration: none;
+  }
 }
 
 .features-tier-features {
@@ -178,9 +204,11 @@
               color var(--duration-normal) var(--easing-ease-out);
 }
 
-.features-filter-btn:hover {
-  border-color: var(--color-purple-medium);
-  color: var(--color-text-emphasis);
+@media (hover: hover) {
+  .features-filter-btn:hover {
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-emphasis);
+  }
 }
 
 .features-filter-btn:focus-visible {
@@ -207,6 +235,7 @@
   overflow: hidden;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-3);
 }
 
 .feature-card-thumbnail img {
@@ -229,36 +258,51 @@
   transition: opacity var(--duration-normal) var(--easing-ease-out);
 }
 
-.feature-card:hover .feature-card-play-icon {
-  opacity: 1;
+@media (hover: hover) {
+  .feature-card:hover .feature-card-play-icon {
+    opacity: 1;
+  }
 }
 
 ::deep .feature-card {
   min-height: auto;
 }
 
-/* Responsive */
+::deep .feature-card h3 {
+  margin-top: 0;
+}
+
+/* Non-clickable cards (no video) */
+::deep .feature-card-static {
+  cursor: default;
+}
+
+@media (hover: hover) {
+  ::deep .feature-card-static:hover {
+    border-color: var(--color-border-default);
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+/* Responsive - disable sticky sidebar when layout becomes single-column */
+@media (max-width: 1292px) {
+  .features-tiers-scroll {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+}
+
 @media (max-width: 1200px) {
   .features-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 900px) {
-  .features-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .features-paid-tiers-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
-  .features-paid-tiers-grid {
-    grid-template-columns: 1fr;
-  }
-
   .features-cards-grid {
     grid-template-columns: 1fr;
   }

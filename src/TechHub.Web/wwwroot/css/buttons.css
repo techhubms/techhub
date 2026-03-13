@@ -35,12 +35,14 @@
   text-align: center;
 }
 
-.btn:hover,
-.button:hover {
-  background: var(--color-purple-medium);
-  border-color: var(--color-purple-bright);
-  color: var(--color-text-on-emphasis) !important;
-  text-decoration: none !important;
+@media (hover: hover) {
+  .btn:hover,
+  .button:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis) !important;
+    text-decoration: none !important;
+  }
 }
 
 .btn:active,
@@ -77,24 +79,12 @@
   transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.btn-subnav:hover {
-  background: var(--color-bg-hover-subtle);
-  box-shadow: 0 0 0 1px var(--color-purple-bright) inset;
-  color: var(--color-text-emphasis);
-  text-decoration: none;
-}
-
-/* Prevent sticky hover on touch devices */
-@media (hover: none) {
-  .btn-subnav:hover:not(.active) {
-    background: transparent;
-    box-shadow: none;
-    color: var(--color-text-primary);
-  }
-
-  .btn-subnav.active:hover {
-    background: var(--color-purple-dark);
-    color: var(--color-text-on-emphasis);
+@media (hover: hover) {
+  .btn-subnav:hover {
+    background: var(--color-bg-hover-subtle);
+    box-shadow: 0 0 0 1px var(--color-purple-bright) inset;
+    color: var(--color-text-emphasis);
+    text-decoration: none;
   }
 }
 
@@ -105,10 +95,12 @@
   text-decoration: none;
 }
 
-.btn-subnav.active:hover {
-  background: var(--color-purple-medium);
-  color: var(--color-text-on-emphasis);
-  text-decoration: none;
+@media (hover: hover) {
+  .btn-subnav.active:hover {
+    background: var(--color-purple-medium);
+    color: var(--color-text-on-emphasis);
+    text-decoration: none;
+  }
 }
 
 .btn-subnav:focus-visible {
@@ -135,8 +127,10 @@
   top: -0.35em;
 }
 
-.btn-subnav-custom:hover::after {
-  opacity: 0.8;
+@media (hover: hover) {
+  .btn-subnav-custom:hover::after {
+    opacity: 0.8;
+  }
 }
 
 .btn-subnav-custom.active::after {
@@ -165,9 +159,11 @@
   text-align: center;
 }
 
-.btn-secondary:hover {
-  background: var(--color-bg-emphasis);
-  border-color: var(--color-purple-medium);
+@media (hover: hover) {
+  .btn-secondary:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+  }
 }
 
 .btn-secondary:active {
@@ -199,9 +195,11 @@
   transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.btn-link:hover {
-  color: var(--color-purple-bright);
-  background: var(--color-bg-emphasis);
+@media (hover: hover) {
+  .btn-link:hover {
+    color: var(--color-purple-bright);
+    background: var(--color-bg-emphasis);
+  }
 }
 
 .btn-link:focus-visible {

@@ -43,16 +43,10 @@
     transition: all 0.2s ease;
 }
 
-.date-slider__preset-btn:hover {
-    background-color: var(--color-bg-elevated);
-    border-color: var(--color-purple-bright);
-}
-
-/* Prevent sticky hover on touch devices */
-@media (hover: none) {
-    .date-slider__preset-btn:hover:not(.date-slider__preset-btn--active) {
-        background-color: var(--color-bg-emphasis);
-        border-color: var(--color-border-default);
+@media (hover: hover) {
+    .date-slider__preset-btn:hover {
+        background-color: var(--color-bg-elevated);
+        border-color: var(--color-purple-bright);
     }
 }
 
@@ -104,9 +98,11 @@
     z-index: 10;
 }
 
-.date-slider__handle:hover {
-    transform: translate(-50%, -50%);
-    box-shadow: var(--shadow-md);
+@media (hover: hover) {
+    .date-slider__handle:hover {
+        transform: translate(-50%, -50%);
+        box-shadow: var(--shadow-md);
+    }
 }
 
 .date-slider__handle:active {
@@ -196,10 +192,12 @@
     transition: all 0.2s ease;
 }
 
-.date-slider__clear-btn:hover {
-    background-color: var(--color-bg-emphasis);
-    border-color: var(--color-purple-bright);
-    color: var(--color-purple-bright);
+@media (hover: hover) {
+    .date-slider__clear-btn:hover {
+        background-color: var(--color-bg-emphasis);
+        border-color: var(--color-purple-bright);
+        color: var(--color-purple-bright);
+    }
 }
 
 /* Mobile responsive */

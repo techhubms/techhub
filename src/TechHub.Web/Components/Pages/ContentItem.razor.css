@@ -24,10 +24,12 @@
     transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.sidebar-section.article-tags .sidebar-tag:hover {
-    background: var(--color-purple-dark);
-    border-color: var(--color-purple-bright);
-    color: var(--color-text-on-emphasis);
+@media (hover: hover) {
+    .sidebar-section.article-tags .sidebar-tag:hover {
+        background: var(--color-purple-dark);
+        border-color: var(--color-purple-bright);
+        color: var(--color-text-on-emphasis);
+    }
 }
 
 /* Content Navigation Buttons */
@@ -59,10 +61,12 @@
     border: 2px solid var(--color-purple-bright);
 }
 
-.nav-button.primary:hover {
-    background: var(--color-purple-bright);
-    border-color: var(--color-purple-bright);
-    box-shadow: var(--shadow-md);
+@media (hover: hover) {
+    .nav-button.primary:hover {
+        background: var(--color-purple-bright);
+        border-color: var(--color-purple-bright);
+        box-shadow: var(--shadow-md);
+    }
 }
 
 .nav-button.secondary {
@@ -71,10 +75,12 @@
     border: 2px solid var(--color-border-default);
 }
 
-.nav-button.secondary:hover {
-    background: var(--color-bg-default);
-    border-color: var(--color-purple-bright);
-    color: var(--color-purple-bright);
+@media (hover: hover) {
+    .nav-button.secondary:hover {
+        background: var(--color-bg-default);
+        border-color: var(--color-purple-bright);
+        color: var(--color-purple-bright);
+    }
 }
 
 /* Loading and Error States */
@@ -103,8 +109,10 @@
     transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.error button:hover {
-    background: var(--color-purple-bright);
+@media (hover: hover) {
+    .error button:hover {
+        background: var(--color-purple-bright);
+    }
 }
 
 /* Responsive Design */

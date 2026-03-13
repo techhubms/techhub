@@ -101,8 +101,10 @@
     transition: background-color 0.2s ease;
 }
 
-#components-reconnect-modal button:hover {
-    background-color: var(--color-purple-medium);
+@media (hover: hover) {
+    #components-reconnect-modal button:hover {
+        background-color: var(--color-purple-medium);
+    }
 }
 
 #components-reconnect-modal button:active {

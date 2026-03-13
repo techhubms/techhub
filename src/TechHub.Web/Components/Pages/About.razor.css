@@ -79,10 +79,12 @@
     transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.team-links a:hover {
-    background: var(--color-purple-dark);
-    border-color: var(--color-purple-bright);
-    color: var(--color-text-on-emphasis);
+@media (hover: hover) {
+    .team-links a:hover {
+        background: var(--color-purple-dark);
+        border-color: var(--color-purple-bright);
+        color: var(--color-text-on-emphasis);
+    }
 }
 
 .team-links .icon {
@@ -124,7 +126,9 @@
     transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.discord-link:hover {
-    background: var(--color-purple-medium);
-    border-color: var(--color-purple-bright);
+@media (hover: hover) {
+    .discord-link:hover {
+        background: var(--color-purple-medium);
+        border-color: var(--color-purple-bright);
+    }
 }

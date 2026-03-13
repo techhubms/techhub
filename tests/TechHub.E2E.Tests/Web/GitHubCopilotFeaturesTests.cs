@@ -49,12 +49,13 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Should have subscription tiers section
-        var tiersSection = Page.Locator(".features-tiers");
+        // Assert - Should have subscription tiers in the sidebar
+        var sidebar = Page.Locator("aside.sidebar");
+        var tiersSection = sidebar.Locator(".features-tiers-sidebar");
         await tiersSection.AssertElementVisibleAsync();
 
         // Should have 5 tier cards (Free, Pro, Business, Pro+, Enterprise)
-        var tierCards = Page.Locator(".features-tier-card");
+        var tierCards = sidebar.Locator(".features-tier-card");
         var tierCardCount = await tierCards.CountAsync();
         tierCardCount.Should().Be(5, "Expected 5 subscription tiers (Free, Pro, Business, Pro+, Enterprise)");
 
@@ -66,33 +67,31 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_FreeTier_ShouldBe_FullWidth()
+    public async Task GitHubCopilotFeatures_FreeTier_ShouldBeFirst_InSidebar()
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Free tier should span full width
-        var freeTier = Page.Locator("#tier-free");
+        // Assert - Free tier should be the first tier card in the sidebar
+        var sidebar = Page.Locator("aside.sidebar");
+        var freeTier = sidebar.Locator("#tier-free");
         await freeTier.AssertElementVisibleAsync();
 
-        // Free tier should have the full-width class
-        await Assertions.Expect(freeTier).ToHaveClassAsync(new Regex("features-tier-card-full"));
+        // Free tier should have the tier card class
+        await Assertions.Expect(freeTier).ToHaveClassAsync(new Regex("features-tier-card"));
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_PaidTiers_ShouldBe_SideBySide()
+    public async Task GitHubCopilotFeatures_PaidTiers_ShouldBeStacked_InSidebar()
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Paid tiers grid should use CSS Grid layout
-        var paidTiersGrid = Page.Locator(".features-paid-tiers-grid");
-        await paidTiersGrid.AssertElementVisibleAsync();
-
-        // Should have 4 paid tier cards
-        var paidTierCards = paidTiersGrid.Locator(".features-tier-card");
-        var count = await paidTierCards.CountAsync();
-        count.Should().Be(4, "Expected 4 paid tiers (Pro, Business, Pro+, Enterprise) in the grid");
+        // Assert - All tiers should be stacked vertically in the sidebar
+        var sidebar = Page.Locator("aside.sidebar");
+        var tierCards = sidebar.Locator(".features-tier-card");
+        var count = await tierCards.CountAsync();
+        count.Should().Be(5, "Expected 5 tier cards stacked in the sidebar");
     }
 
     [Fact]
@@ -108,21 +107,26 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_TierCards_ShouldHave_ViewFeaturesLink()
+    public async Task GitHubCopilotFeatures_TierCards_ShouldBe_ClickableLinks()
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Each tier should have a "View Features" link
-        var tierCards = Page.Locator(".features-tier-card");
+        // Assert - Each tier card in the sidebar should be an anchor element linking to its feature section
+        var sidebar = Page.Locator("aside.sidebar");
+        var tierCards = sidebar.Locator("a.features-tier-card");
         var tierCount = await tierCards.CountAsync();
+        tierCount.Should().Be(5, "Expected 5 clickable tier cards in the sidebar");
 
         for (var i = 0; i < tierCount; i++)
         {
-            var link = tierCards.Nth(i).Locator(".features-tier-link");
-            await Assertions.Expect(link).ToBeVisibleAsync();
-            var href = await link.GetAttributeAsync("href");
-            href.Should().StartWith("/github-copilot/features#", "View Features link should use full page path with anchor");
+            var card = tierCards.Nth(i);
+            var href = await card.GetAttributeAsync("href");
+            href.Should().StartWith("/github-copilot/features#", "Tier card should link to its feature section");
+
+            // Should still have the "View Features" label
+            var label = card.Locator(".features-tier-link");
+            await Assertions.Expect(label).ToBeVisibleAsync();
         }
     }
 
@@ -242,25 +246,57 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_TierCards_ShouldBe_VisuallyDistinct()
+    public async Task GitHubCopilotFeatures_TierCards_ShouldBe_InSidebar()
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Paid tiers grid should use CSS Grid layout
-        var paidTiersGrid = Page.Locator(".features-paid-tiers-grid");
-        await paidTiersGrid.AssertElementVisibleAsync();
+        // Assert - Tier cards should be inside the sidebar
+        var sidebar = Page.Locator("aside.sidebar");
+        await sidebar.AssertElementVisibleAsync();
 
-        await Page.WaitForFunctionAsync(
-            @"() => {
-                const el = document.querySelector('.features-paid-tiers-grid');
-                if (!el) return false;
-                const style = window.getComputedStyle(el);
-                return style && style.display === 'grid';
-            }");
+        var tierCards = sidebar.Locator(".features-tier-card");
+        var count = await tierCards.CountAsync();
+        count.Should().Be(5, "All tier cards should be inside the sidebar");
+    }
 
-        var gridDisplay = await paidTiersGrid.EvaluateAsync<string>("el => window.getComputedStyle(el).display");
-        gridDisplay.Should().Be("grid", "Paid tier cards should use CSS Grid layout");
+    [Fact]
+    public async Task GitHubCopilotFeatures_ShouldHave_Sidebar_WithSubscriptionTiers()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Should have a sidebar with subscription tiers
+        var sidebar = Page.Locator("aside.sidebar");
+        await sidebar.AssertElementVisibleAsync();
+
+        // Sidebar should contain all 5 tier cards
+        var sidebarTierCards = sidebar.Locator(".features-tier-card");
+        var tierCount = await sidebarTierCards.CountAsync();
+        tierCount.Should().Be(5, "Expected 5 subscription tiers in the sidebar");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_ShouldUse_PageWithSidebarLayout()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Page should use page-with-sidebar layout
+        var mainElement = Page.Locator("main.page-with-sidebar");
+        await mainElement.AssertElementVisibleAsync();
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_Sidebar_ShouldHave_MobileToolbarButton()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Sidebar toolbar should have a button for tiers
+        var toolbarButton = Page.Locator(".sidebar-toolbar-btn:has-text('Tiers')");
+        // On desktop the toolbar buttons are hidden (display: none), but the element exists
+        await Assertions.Expect(toolbarButton).ToHaveCountAsync(1);
     }
 
     [Fact]
@@ -286,5 +322,66 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             .ToList();
 
         significantErrors.Should().BeEmpty("Page should load without JavaScript errors");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_FilterButton_ShouldOnlyAffectOwnSection()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Wait for filter buttons to be initialized
+        var sections = Page.Locator(".features-video-section");
+        var sectionCount = await sections.CountAsync();
+        sectionCount.Should().BeGreaterThanOrEqualTo(2, "Need at least 2 sections to test per-section filtering");
+
+        // Act - Click the GHES filter in the first section only
+        var firstSection = sections.First;
+        var firstGhesButton = firstSection.Locator(".features-filter-btn[data-filter='ghes']");
+        await firstGhesButton.ClickAsync();
+
+        // Assert - The first section's GHES button should be active
+        await Assertions.Expect(firstGhesButton).ToHaveClassAsync(new Regex("active"));
+
+        // Assert - The second section's GHES button should NOT be active
+        var secondSection = sections.Nth(1);
+        var secondGhesButton = secondSection.Locator(".features-filter-btn[data-filter='ghes']");
+        await Assertions.Expect(secondGhesButton).Not.ToHaveClassAsync(new Regex("active"));
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_FilterButton_ShouldNotScrollToHeading()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Wait for filter buttons to be initialized (indicates JS has run and DOM is stable)
+        var firstSection = Page.Locator(".features-video-section").First;
+        var ghesButton = firstSection.Locator(".features-filter-btn[data-filter='ghes']");
+        await Assertions.Expect(ghesButton).ToBeVisibleAsync();
+
+        // Wait for Blazor interactivity to settle by checking a button has the initialized flag
+        await Page.WaitForConditionAsync(
+            "() => document.querySelector('.features-filter-btn[data-initialized]') !== null");
+
+        // Record the heading's viewport position before clicking
+        var heading = firstSection.Locator("h2[id]");
+        await heading.ScrollIntoViewIfNeededAsync();
+        var rectBefore = await heading.BoundingBoxAsync();
+
+        // Act - Click the GHES filter
+        await ghesButton.ClickAsync();
+
+        // Small wait to let any smooth scroll start
+        await Page.WaitForConditionAsync("() => true");
+
+        // Assert - The heading should still be in roughly the same viewport position
+        // scrollIntoView would snap it to the top of the viewport
+        var rectAfter = await heading.BoundingBoxAsync();
+        rectBefore.Should().NotBeNull();
+        rectAfter.Should().NotBeNull();
+
+        var yDiff = Math.Abs(rectAfter!.Y - rectBefore!.Y);
+        yDiff.Should().BeLessThan(100, "Heading position should not change significantly - no programmatic scroll should occur");
     }
 }

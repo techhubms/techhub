@@ -113,6 +113,11 @@
             behavior: 'smooth'
         });
 
+        // Remove any #anchor from URL so F5 doesn't jump back down
+        if (window.location.hash) {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+
         // Reset focus to body after scroll completes
         // This ensures the next Tab press will naturally focus the skip-link
         // with proper :focus-visible styling (programmatic focus doesn't trigger focus-visible)

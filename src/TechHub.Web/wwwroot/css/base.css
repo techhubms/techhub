@@ -83,8 +83,10 @@ body {
     border-radius: 8px;
   }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-border-hover);
+  @media (hover: hover) {
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-border-hover);
+    }
   }
 
   /* Tablet and below: thinner scrollbar to save screen space */
@@ -189,8 +191,10 @@ a {
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
-a:hover {
-  color: var(--color-purple-bright);
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-purple-bright);
+  }
 }
 
 /* Focus States (WCAG 2.1 AA) - Accessibility Requirement */

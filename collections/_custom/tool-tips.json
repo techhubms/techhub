@@ -37,6 +37,12 @@
             "description": "An open-source toolkit by GitHub for Spec-Driven Development. Instead of vibe coding from scratch, Spec Kit lets you focus on product scenarios and predictable outcomes by turning specifications into executable implementations through a structured multi-step workflow with your AI coding agent.",
             "url": "https://github.com/github/spec-kit",
             "category": "AI Workflow"
+        },
+        {
+            "name": "Napkin",
+            "description": "A Copilot CLI plugin that opens a visual whiteboard in your browser, letting you draw, sketch, and add sticky notes, then share everything back with Copilot for analysis and suggestions. Built for anyone who thinks better visually, including PMs, designers, and developers. Works offline with no extra software or accounts required.",
+            "url": "https://github.com/github/awesome-copilot/tree/main/plugins/napkin",
+            "category": "Copilot CLI Plugin"
         }
     ]
 }

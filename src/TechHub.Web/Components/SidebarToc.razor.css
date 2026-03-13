@@ -68,9 +68,11 @@
     transition: all var(--duration-fast) var(--easing-ease);
 }
 
-::deep .toc-link:hover {
-    color: var(--color-text-primary);
-    background: var(--color-bg-emphasis);
+@media (hover: hover) {
+    ::deep .toc-link:hover {
+        color: var(--color-text-primary);
+        background: var(--color-bg-emphasis);
+    }
 }
 
 /* Active state for current section (scroll-spy) */

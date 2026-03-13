@@ -69,9 +69,11 @@
     z-index: 10;
 }
 
-.search-clear-button:hover {
-    color: var(--color-text-primary);
-    background-color: var(--color-purple-bg-subtle);
+@media (hover: hover) {
+    .search-clear-button:hover {
+        color: var(--color-text-primary);
+        background-color: var(--color-purple-bg-subtle);
+    }
 }
 
 /* Keyboard users get the global html.keyboard-nav :focus-visible outline */

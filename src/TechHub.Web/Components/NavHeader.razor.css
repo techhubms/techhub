@@ -39,9 +39,11 @@
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
-.site-logo:hover {
-  color: var(--color-purple-bright);
-  text-decoration: none;
+@media (hover: hover) {
+  .site-logo:hover {
+    color: var(--color-purple-bright);
+    text-decoration: none;
+  }
 }
 
 .site-logo .logo-text {
@@ -84,10 +86,12 @@
   line-height: 1;
 }
 
-.nav-link:hover {
-  background: var(--color-bg-hover-subtle);
-  box-shadow: 0 0 0 1px var(--color-purple-bright) inset;
-  text-decoration: none;
+@media (hover: hover) {
+  .nav-link:hover {
+    background: var(--color-bg-hover-subtle);
+    box-shadow: 0 0 0 1px var(--color-purple-bright) inset;
+    text-decoration: none;
+  }
 }
 
 .nav-link.active {
@@ -97,9 +101,11 @@
   text-decoration: none;
 }
 
-.nav-link.active:hover {
-  background: var(--color-purple-medium);
-  text-decoration: none;
+@media (hover: hover) {
+  .nav-link.active:hover {
+    background: var(--color-purple-medium);
+    text-decoration: none;
+  }
 }
 
 .about-link {
@@ -128,8 +134,10 @@
   margin-right: var(--spacing-1);
 }
 
-.hamburger-btn:hover {
-  background: var(--color-bg-hover-subtle);
+@media (hover: hover) {
+  .hamburger-btn:hover {
+    background: var(--color-bg-hover-subtle);
+  }
 }
 
 .hamburger-btn:focus-visible {
@@ -209,8 +217,10 @@
   border-radius: 3px;
 }
 
-.mobile-menu::-webkit-scrollbar-thumb:hover {
-  background: var(--color-border-hover);
+@media (hover: hover) {
+  .mobile-menu::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-hover);
+  }
 }
 
 .mobile-menu.open {
@@ -238,8 +248,10 @@
   text-align: left;
 }
 
-.mobile-menu-section-header:hover {
-  background: var(--color-bg-hover-subtle);
+@media (hover: hover) {
+  .mobile-menu-section-header:hover {
+    background: var(--color-bg-hover-subtle);
+  }
 }
 
 .mobile-menu-section-header:focus-visible {
@@ -291,10 +303,12 @@
   border-top: none;
 }
 
-.mobile-menu-sub-items a:hover {
-  background: var(--color-bg-hover-subtle);
-  color: var(--color-text-primary);
-  text-decoration: none;
+@media (hover: hover) {
+  .mobile-menu-sub-items a:hover {
+    background: var(--color-bg-hover-subtle);
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
 }
 
 .mobile-menu-sub-items a.active {
@@ -318,8 +332,10 @@
   top: -0.35em;
 }
 
-.mobile-menu-sub-items a.mobile-menu-custom-page:hover {
-  border-left-color: var(--color-purple-medium);
+@media (hover: hover) {
+  .mobile-menu-sub-items a.mobile-menu-custom-page:hover {
+    border-left-color: var(--color-purple-medium);
+  }
 }
 
 .mobile-menu-sub-items a.mobile-menu-custom-page.active {
@@ -344,9 +360,11 @@
   transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.mobile-menu-link:hover {
-  background: var(--color-bg-hover-subtle);
-  text-decoration: none;
+@media (hover: hover) {
+  .mobile-menu-link:hover {
+    background: var(--color-bg-hover-subtle);
+    text-decoration: none;
+  }
 }
 
 .mobile-menu-link.active {

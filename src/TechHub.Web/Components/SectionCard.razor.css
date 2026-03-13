@@ -17,9 +17,11 @@
   /* Note: No overflow:hidden - allows focus outlines to be visible */
 }
 
-.section-card-container:hover {
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-purple-medium);
+@media (hover: hover) {
+  .section-card-container:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-purple-medium);
+  }
 }
 
 /* Section Card - Clickable link area stretched over full container */
@@ -134,8 +136,10 @@
 }
 
 /* Light up heading when hovering anywhere on container */
-.section-card-container:hover .section-card h2 {
-  color: var(--color-purple-bright);
+@media (hover: hover) {
+  .section-card-container:hover .section-card h2 {
+    color: var(--color-purple-bright);
+  }
 }
 
 .section-body {
@@ -149,8 +153,10 @@
 }
 
 /* Light up description when hovering anywhere on container */
-.section-card-container:hover .section-description {
-  color: var(--color-text-primary);
+@media (hover: hover) {
+  .section-card-container:hover .section-description {
+    color: var(--color-text-primary);
+  }
 }
 
 .section-collections {

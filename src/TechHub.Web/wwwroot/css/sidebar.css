@@ -124,11 +124,13 @@
   transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.sidebar-section-tag:hover,
-.sidebar-content-tag:hover {
-  background: var(--color-bg-emphasis);
-  border-color: var(--color-purple-medium);
-  color: var(--color-text-primary);
+@media (hover: hover) {
+  .sidebar-section-tag:hover,
+  .sidebar-content-tag:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-primary);
+  }
 }
 
 .section-tags,
@@ -246,25 +248,11 @@
     flex-shrink: 0;
   }
 
-  .sidebar-toolbar-btn:hover {
-    background: var(--color-bg-default);
-    border-color: var(--color-purple-medium);
-    color: var(--color-text-primary);
-  }
-
-  /* Prevent sticky hover on touch devices */
-  @media (hover: none) {
-    .sidebar-toolbar-btn:hover:not(.active):not(.has-active-filter) {
-      background: var(--color-bg-emphasis);
-      border-color: var(--color-border-default);
-      color: var(--color-text-secondary);
-    }
-
-    /* Buttons with active filters keep their indicator styling when hover sticks */
-    .sidebar-toolbar-btn.has-active-filter:hover:not(.active) {
-      background: var(--color-bg-emphasis);
+  @media (hover: hover) {
+    .sidebar-toolbar-btn:hover {
+      background: var(--color-bg-default);
       border-color: var(--color-purple-medium);
-      color: var(--color-text-secondary);
+      color: var(--color-text-primary);
     }
   }
 
@@ -358,9 +346,11 @@
   text-align: left;
 }
 
-.sidebar-link-button:hover {
-  background: var(--color-bg-emphasis);
-  border-color: var(--color-purple-medium);
+@media (hover: hover) {
+  .sidebar-link-button:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+  }
 }
 
 .sidebar-link-button.active {
@@ -370,9 +360,11 @@
   font-weight: var(--font-weight-semibold);
 }
 
-.sidebar-link-button.active:hover {
-  background: var(--color-purple-medium);
-  border-color: var(--color-purple-bright);
+@media (hover: hover) {
+  .sidebar-link-button.active:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+  }
 }
 
 .sidebar-link-button svg {
@@ -393,9 +385,11 @@
   border-radius: var(--radius-md);
 }
 
-.sidebar-content-button:hover {
-  background: var(--color-bg-emphasis);
-  border-color: var(--color-purple-medium);
+@media (hover: hover) {
+  .sidebar-content-button:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+  }
 }
 
 .sidebar-content-button.active {
@@ -403,9 +397,11 @@
   border-color: var(--color-purple-bright);
 }
 
-.sidebar-content-button.active:hover {
-  background: var(--color-purple-medium);
-  border-color: var(--color-purple-bright);
+@media (hover: hover) {
+  .sidebar-content-button.active:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+  }
 }
 
 .sidebar-content-button.active .sidebar-content-button-title {
@@ -451,9 +447,11 @@
   transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.sidebar-featured-link:hover {
-  background: var(--color-bg-emphasis);
-  border-color: var(--color-purple-medium);
+@media (hover: hover) {
+  .sidebar-featured-link:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+  }
 }
 
 .sidebar-featured-title {

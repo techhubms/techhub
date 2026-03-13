@@ -77,11 +77,16 @@ builder.Services.AddScoped<ErrorService>();
 // Configure SignalR for Blazor Server with increased timeouts for reliability
 builder.Services.AddSignalR(options =>
 {
-    // Increase timeouts to prevent premature disconnections during initialization
-    // and when switching between apps on mobile/tablet
+    // Increase timeouts to prevent premature disconnections during initialization,
+    // when switching between apps on mobile/tablet, or when browser throttles
+    // background tabs (timers/network processing delayed in unfocused tabs).
+    //
+    // Relationship: each side's timeout must be > 2× the other side's keep-alive.
+    //   Server KeepAliveInterval (15s) × 2 < Client serverTimeout (120s) ✓
+    //   Client keepAliveInterval (15s) × 2 < Server ClientTimeout (120s) ✓
     options.ClientTimeoutInterval = TimeSpan.FromSeconds(120);
     options.HandshakeTimeout = TimeSpan.FromSeconds(30);
-    options.KeepAliveInterval = TimeSpan.FromSeconds(30);
+    options.KeepAliveInterval = TimeSpan.FromSeconds(15);
     // Increase max message size to handle large prerendered content during hydration
     // Default is 32KB, but with many content items the state can exceed this
     options.MaximumReceiveMessageSize = 256 * 1024; // 256KB

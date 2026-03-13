@@ -20,8 +20,8 @@
     <nav class="sub-nav" aria-label="@Section.Title navigation">
         @* Desktop: horizontal button bar *@
         <div class="sub-nav-wrapper">
-            <a href="/@Section.Name/all" class="btn-subnav @(IsActive($"/{Section.Name}/all") ? "active" : "")"
-               @onclick="@(() => OnSubNavClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsActive($"/{Section.Name}/all")">
+<a href="/@Section.Name/all" class="btn-subnav @(IsActive($"/{Section.Name}/all") ? "active" : "")"
+               @onclick="@(() => OnSubNavClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsCurrentPage($"/{Section.Name}/all")">
                 All
             </a>
 
@@ -29,7 +29,7 @@
             {
                 var url = $"/{Section.Name}/{collection.Name}";
                 <a href="@url" class="btn-subnav @(IsActive(url) ? "active" : "")"
-                   @onclick="@(() => OnSubNavClick(url))" @onclick:preventDefault="@IsActive(url)">
+                   @onclick="@(() => OnSubNavClick(url))" @onclick:preventDefault="@IsCurrentPage(url)">
                     @collection.Title
                 </a>
             }
@@ -37,7 +37,7 @@
             @foreach (var customPage in CustomPages)
             {
                 <a href="@customPage.Url" class="btn-subnav btn-subnav-custom @(IsActive(customPage.Url) ? "active" : "")"
-                   @onclick="@(() => OnSubNavClick(customPage.Url))" @onclick:preventDefault="@IsActive(customPage.Url)">
+                   @onclick="@(() => OnSubNavClick(customPage.Url))" @onclick:preventDefault="@IsCurrentPage(customPage.Url)">
                     @customPage.Title
                 </a>
             }
@@ -53,21 +53,21 @@
             {
                 <div class="sub-nav-dropdown-menu">
                     <a href="/@Section.Name/all" class="sub-nav-dropdown-item @(IsActive($"/{Section.Name}/all") ? "active" : "")"
-                       @onclick="@(() => OnSubNavDropdownClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsActive($"/{Section.Name}/all")">
+                       @onclick="@(() => OnSubNavDropdownClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsCurrentPage($"/{Section.Name}/all")">
                         All
                     </a>
                     @foreach (var collection in RegularCollections)
                     {
                         var url = $"/{Section.Name}/{collection.Name}";
                         <a href="@url" class="sub-nav-dropdown-item @(IsActive(url) ? "active" : "")"
-                           @onclick="@(() => OnSubNavDropdownClick(url))" @onclick:preventDefault="@IsActive(url)">
+                           @onclick="@(() => OnSubNavDropdownClick(url))" @onclick:preventDefault="@IsCurrentPage(url)">
                             @collection.Title
                         </a>
                     }
                     @foreach (var customPage in CustomPages)
                     {
                         <a href="@customPage.Url" class="sub-nav-dropdown-item sub-nav-dropdown-custom @(IsActive(customPage.Url) ? "active" : "")"
-                           @onclick="@(() => OnSubNavDropdownClick(customPage.Url))" @onclick:preventDefault="@IsActive(customPage.Url)">
+                           @onclick="@(() => OnSubNavDropdownClick(customPage.Url))" @onclick:preventDefault="@IsCurrentPage(customPage.Url)">
                             @customPage.Title
                         </a>
                     }
@@ -195,12 +195,13 @@ else if (Sections != null && Sections.Any())
 
     /// <summary>
     /// When clicking the already-active subnav item, scroll to top instead of staying in place.
+    /// Also clears any URL hash so F5 doesn't jump back down.
     /// </summary>
     private async Task OnSubNavClick(string url)
     {
-        if (IsActive(url))
+        if (IsCurrentPage(url))
         {
-            await JS.InvokeVoidAsync("window.scrollTo", 0, 0);
+            await ScrollToTopAndClearHash();
         }
     }
 
@@ -210,9 +211,20 @@ else if (Sections != null && Sections.Any())
     private async Task OnSubNavDropdownClick(string url)
     {
         CloseDropdown();
-        if (IsActive(url))
+        if (IsCurrentPage(url))
         {
-            await JS.InvokeVoidAsync("window.scrollTo", 0, 0);
+            await ScrollToTopAndClearHash();
+        }
+    }
+
+    private async Task ScrollToTopAndClearHash()
+    {
+        await JS.InvokeVoidAsync("window.scrollTo", 0, 0);
+        // Remove hash from URL so refreshing doesn't jump back down
+        var uri = new Uri(Navigation.Uri);
+        if (!string.IsNullOrEmpty(uri.Fragment))
+        {
+            Navigation.NavigateTo(uri.GetLeftPart(UriPartial.Query), forceLoad: false, replace: true);
         }
     }
 
@@ -233,9 +245,13 @@ else if (Sections != null && Sections.Any())
         Navigation.LocationChanged -= OnLocationChanged;
     }
 
+    /// <summary>
+    /// Determines if the given URL should be visually highlighted in the subnav.
+    /// Matches both exact pages and content detail pages under a collection.
+    /// Used for CSS active class only.
+    /// </summary>
     private bool IsActive(string url)
     {
-        // Get current path directly from NavigationManager
         var currentUri = new Uri(Navigation.Uri);
         var currentPath = currentUri.AbsolutePath.TrimEnd('/');
         var targetPath = url.TrimEnd('/');
@@ -260,5 +276,27 @@ else if (Sections != null && Sections.Any())
         }
 
         return false;
+    }
+
+    /// <summary>
+    /// Determines if the user is on the exact page matching the URL.
+    /// Used for preventDefault and scroll-to-top behavior — only triggers
+    /// when already on the target page, not on child/detail pages.
+    /// </summary>
+    private bool IsCurrentPage(string url)
+    {
+        var currentUri = new Uri(Navigation.Uri);
+        var currentPath = currentUri.AbsolutePath.TrimEnd('/');
+        var targetPath = url.TrimEnd('/');
+
+        // For section root (e.g., /ai), also match /{sectionName}/all
+        if (targetPath.EndsWith("/all", StringComparison.OrdinalIgnoreCase))
+        {
+            var sectionPath = targetPath[..^4]; // Remove "/all"
+            return currentPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase) ||
+                   currentPath.Equals(sectionPath, StringComparison.OrdinalIgnoreCase);
+        }
+
+        return currentPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase);
     }
 }

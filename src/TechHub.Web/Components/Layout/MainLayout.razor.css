@@ -36,9 +36,11 @@
   text-decoration: none;
 }
 
-.footer-content p a:hover {
-  color: var(--color-purple-bright);
-  text-decoration: none;
+@media (hover: hover) {
+  .footer-content p a:hover {
+    color: var(--color-purple-bright);
+    text-decoration: none;
+  }
 }
 
 .footer-nav {
@@ -52,9 +54,11 @@
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
-.footer-nav a:hover {
-  color: var(--color-text-primary);
-  text-decoration: none;
+@media (hover: hover) {
+  .footer-nav a:hover {
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
 }
 
 /* Responsive */
@@ -151,11 +155,13 @@
   display: inline-block;
 }
 
-#blazor-error-ui .reload-button:hover {
-  background: var(--color-purple-medium);
-  border-color: var(--color-purple-bright);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+@media (hover: hover) {
+  #blazor-error-ui .reload-button:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 #blazor-error-ui .dismiss-button {
@@ -175,11 +181,13 @@
   white-space: nowrap;
 }
 
-#blazor-error-ui .dismiss-button:hover {
-  background: var(--color-purple-medium);
-  border-color: var(--color-purple-bright);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+@media (hover: hover) {
+  #blazor-error-ui .dismiss-button:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 /* Responsive */

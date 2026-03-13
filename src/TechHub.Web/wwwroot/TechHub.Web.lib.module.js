@@ -17,6 +17,26 @@
  */
 
 /**
+ * Called before the Blazor Web App starts.
+ * Configures the SignalR connection to tolerate background tab throttling.
+ * 
+ * Browsers throttle timers/network in unfocused tabs, so the default 30s
+ * serverTimeout can fire before the next server keep-alive (also 30s) arrives.
+ * Setting serverTimeout to 120s (4x the 30s KeepAliveInterval) prevents
+ * spurious "connection lost" overlays.
+ * 
+ * @param {Object} options - Blazor startup options
+ */
+export function beforeWebStarted(options) {
+    options.circuit = {
+        configureSignalR: function (builder) {
+            builder.serverTimeoutInMilliseconds = 120_000;
+            builder.keepAliveIntervalInMilliseconds = 15_000;
+        }
+    };
+}
+
+/**
  * Called after the Blazor Web App has started (both SSR and interactive modes).
  * This is the main entry point for initialization after Blazor is ready.
  * 

@@ -32,9 +32,11 @@
   cursor: pointer;
 }
 
-.card:hover {
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-purple-medium);
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-purple-medium);
+  }
 }
 
 /* Stretched link - covers entire card, making it fully clickable */
@@ -71,9 +73,11 @@
   flex-direction: column;
 }
 
-.card-static:hover {
-  border-color: var(--color-purple-medium);
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) {
+  .card-static:hover {
+    border-color: var(--color-purple-medium);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 /* =======================================================================
@@ -113,10 +117,12 @@
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
-/* Light up title when hovering anywhere on card */
-.card:hover .card-title,
-.card-static:hover .card-title {
-  color: var(--color-purple-bright);
+@media (hover: hover) {
+  /* Light up title when hovering anywhere on card */
+  .card:hover .card-title,
+  .card-static:hover .card-title {
+    color: var(--color-purple-bright);
+  }
 }
 
 /* Card metadata (dates, authors, source, etc.) */
@@ -138,10 +144,12 @@
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
-/* Light up description when hovering anywhere on card */
-.card:hover .card-description,
-.card-static:hover .card-description {
-  color: var(--color-text-primary);
+@media (hover: hover) {
+  /* Light up description when hovering anywhere on card */
+  .card:hover .card-description,
+  .card-static:hover .card-description {
+    color: var(--color-text-primary);
+  }
 }
 
 /* Card footer section */
@@ -185,11 +193,13 @@
   z-index: 1;
 }
 
-.badge-purple:hover {
-  background: var(--color-purple-bg-badge-hover);
-  border-color: var(--color-purple-medium);
-  color: var(--color-text-on-emphasis);
-  text-decoration: none;
+@media (hover: hover) {
+  .badge-purple:hover {
+    background: var(--color-purple-bg-badge-hover);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-on-emphasis);
+    text-decoration: none;
+  }
 }
 
 /* Purple badge - non-clickable variant (decorative tags on cards) */
@@ -221,10 +231,12 @@
   z-index: 1;
 }
 
-.badge-tag.badge-tag-clickable:hover {
-  background: var(--color-purple-bg-badge);
-  border-color: var(--color-purple-medium);
-  color: var(--color-text-on-emphasis);
+@media (hover: hover) {
+  .badge-tag.badge-tag-clickable:hover {
+    background: var(--color-purple-bg-badge);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-on-emphasis);
+  }
 }
 
 .badge-tag.badge-tag-clickable:active {
@@ -238,9 +250,11 @@
   color: var(--color-text-on-emphasis);
 }
 
-.badge-tag.badge-tag-active:hover {
-  background: var(--color-purple-medium);
-  border-color: var(--color-purple-bright);
+@media (hover: hover) {
+  .badge-tag.badge-tag-active:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+  }
 }
 
 /* Grey badge (overflow indicators, collection names on cards) */
@@ -274,10 +288,12 @@
   z-index: 1;
 }
 
-.badge-expandable:hover {
-  background: var(--color-bg-elevated);
-  border-color: var(--color-border-emphasis);
-  color: var(--color-text-on-emphasis);
+@media (hover: hover) {
+  .badge-expandable:hover {
+    background: var(--color-bg-elevated);
+    border-color: var(--color-border-emphasis);
+    color: var(--color-text-on-emphasis);
+  }
 }
 
 .badge-expandable:active {
@@ -312,10 +328,12 @@
   z-index: 1;
 }
 
-.badge-custom:hover {
-  background: var(--color-purple-bg-dark-hover);
-  border-color: var(--color-purple-medium);
-  color: var(--color-text-on-emphasis);
+@media (hover: hover) {
+  .badge-custom:hover {
+    background: var(--color-purple-bg-dark-hover);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-on-emphasis);
+  }
 }
 
 /* Status badges for feature flags, warnings, etc. */

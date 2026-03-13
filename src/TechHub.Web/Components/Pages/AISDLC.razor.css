@@ -37,8 +37,10 @@
     font-family: inherit;
 }
 
-::deep .sdlc-phase-header:hover {
-    background: var(--color-bg-emphasis);
+@media (hover: hover) {
+    ::deep .sdlc-phase-header:hover {
+        background: var(--color-bg-emphasis);
+    }
 }
 
 ::deep .sdlc-phase-header h2,
@@ -274,8 +276,10 @@
     transition: background 0.2s ease;
 }
 
-::deep .sdlc-card-header:hover {
-    background: var(--color-bg-elevated);
+@media (hover: hover) {
+    ::deep .sdlc-card-header:hover {
+        background: var(--color-bg-elevated);
+    }
 }
 
 ::deep .sdlc-card-icon {

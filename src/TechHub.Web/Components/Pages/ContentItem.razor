@@ -169,15 +169,4 @@
         _persistSubscription?.Dispose();
         GC.SuppressFinalize(this);
     }
-
-    private void ScrollToTop()
-    {
-        Navigation.NavigateTo(Navigation.Uri.Split('#')[0], forceLoad: false);
-    }
-
-    private string FormatDate(long epochSeconds)
-    {
-        var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
-        return dateTime.ToString("MMMM d, yyyy");
-    }
 }

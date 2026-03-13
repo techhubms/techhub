@@ -14,7 +14,33 @@
 
 @if (pageData != null)
 {
-    <main class="page-without-sidebar">
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <MobileSidebarToolbar>
+                <MobileSidebarPanel Label="Subscription Tiers" Icon="filter">
+                    <nav class="sidebar-section features-tiers-sidebar" aria-label="Subscription Tiers">
+                        <h2 class="sidebar-h2">Subscription Tiers</h2>
+                        <div class="features-tiers-scroll">
+                            @foreach (var tier in pageData.SubscriptionTiers)
+                            {
+                                <a href="/github-copilot/features#@tier.VideoAnchor" id="tier-@tier.Id" class="features-tier-card">
+                                    <h3>@tier.Name</h3>
+                                    <p class="features-tier-tagline">@tier.Tagline</p>
+                                    <ul class="features-tier-features">
+                                        @foreach (var feature in tier.Features)
+                                        {
+                                            <li>@feature</li>
+                                        }
+                                    </ul>
+                                    <span class="features-tier-link">View Features →</span>
+                                </a>
+                            }
+                        </div>
+                    </nav>
+                </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+
         <article class="article-body">
             <div class="content-detail-header">
                 <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
@@ -25,44 +51,6 @@
                     <p>@pageData.Intro For the most current pricing, visit <a href="@pageData.Links.Pricing" target="_blank" rel="noopener">GitHub's official pricing page</a>. For the most recent plan details, view the <a href="@pageData.Links.PlanDetails" target="_blank" rel="noopener">official documentation</a>.</p>
                     <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
                 </div>
-
-                <section class="features-tiers">
-                    <h2>Subscription Tiers</h2>
-                    @{
-                        var freeTier = pageData.SubscriptionTiers.FirstOrDefault(t => t.Id == "free");
-                        var paidTiers = pageData.SubscriptionTiers.Where(t => t.Id != "free").ToList();
-                    }
-                    @if (freeTier != null)
-                    {
-                        <div id="tier-@freeTier.Id" class="features-tier-card features-tier-card-full">
-                            <h3>@freeTier.Name</h3>
-                            <p class="features-tier-tagline">@freeTier.Tagline</p>
-                            <ul class="features-tier-features">
-                                @foreach (var feature in freeTier.Features)
-                                {
-                                    <li>@feature</li>
-                                }
-                            </ul>
-                            <a href="/github-copilot/features#@freeTier.VideoAnchor" class="features-tier-link">View Features ↓</a>
-                        </div>
-                    }
-                    <div class="features-paid-tiers-grid">
-                        @foreach (var tier in paidTiers)
-                        {
-                            <div id="tier-@tier.Id" class="features-tier-card">
-                                <h3>@tier.Name</h3>
-                                <p class="features-tier-tagline">@tier.Tagline</p>
-                                <ul class="features-tier-features">
-                                    @foreach (var feature in tier.Features)
-                                    {
-                                        <li>@feature</li>
-                                    }
-                                </ul>
-                                <a href="/github-copilot/features#@tier.VideoAnchor" class="features-tier-link">View Features ↓</a>
-                            </div>
-                        }
-                    </div>
-                </section>
 
                 @foreach (var featureSection in pageData.FeatureSections)
                 {
@@ -86,31 +74,43 @@
                                     var featureId = $"feature-{feature.Slug}";
                                     var videoId = GetYouTubeVideoId(feature.ExternalUrl);
 
-                                    <a href="@feature.GetHref(SectionName)" class="card feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="@(!string.IsNullOrEmpty(videoId) ? "true" : "false")">
-                                        @if (!string.IsNullOrEmpty(videoId))
-                                        {
+                                    @if (!string.IsNullOrEmpty(videoId))
+                                    {
+                                        <a href="@feature.GetHref(SectionName)" class="card feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="true">
                                             <div class="feature-card-thumbnail">
                                                 <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="" loading="lazy" />
                                                 <div class="feature-card-play-icon">
                                                     <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
                                                 </div>
                                             </div>
-                                        }
-                                        <div class="card-header">
-                                            <h3 id="@featureId" class="card-title">@feature.Title</h3>
-                                        </div>
-                                        <p class="card-description">@feature.Excerpt</p>
-                                        <div class="card-badges">
-                                            @if (feature.GhesSupport)
-                                            {
-                                                <span class="badge-success">✓ GHES</span>
-                                            }
-                                            @if (!string.IsNullOrEmpty(videoId))
-                                            {
+                                            <div class="card-header">
+                                                <h3 id="@featureId" class="card-title">@feature.Title</h3>
+                                            </div>
+                                            <p class="card-description" title="@feature.Excerpt">@TruncateText(feature.Excerpt, 135)</p>
+                                            <div class="card-badges">
+                                                @if (feature.GhesSupport)
+                                                {
+                                                    <span class="badge-success">✓ GHES</span>
+                                                }
                                                 <span class="badge-info">▶ Video</span>
-                                            }
+                                            </div>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <div class="card feature-card feature-card-static" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="false">
+                                            <div class="card-header">
+                                                <h3 id="@featureId" class="card-title">@feature.Title</h3>
+                                            </div>
+                                            <p class="card-description" title="@feature.Excerpt">@feature.Excerpt</p>
+                                            <div class="card-badges">
+                                                @if (feature.GhesSupport)
+                                                {
+                                                    <span class="badge-success">✓ GHES</span>
+                                                }
+                                            </div>
                                         </div>
-                                    </a>
+                                    }
                                 }
                             </div>
                         }
@@ -153,40 +153,12 @@
         return null;
     }
 
-    /// <summary>
-    /// Generate HTML content for TOC extraction.
-    /// SidebarToc will extract headings from this HTML automatically.
-    /// </summary>
-    private string GetRenderedContent()
+    private static string TruncateText(string? text, int maxLength)
     {
-        if (pageData == null)
-            return string.Empty;
+        if (string.IsNullOrEmpty(text) || text.Length <= maxLength)
+            return text ?? string.Empty;
 
-        var sb = new System.Text.StringBuilder();
-
-        // Subscription tiers
-        foreach (var tier in pageData.SubscriptionTiers)
-        {
-            sb.Append($"<h2 id=\"tier-{tier.Id}\">{tier.Name}</h2>");
-        }
-
-        // Feature sections with individual feature titles
-        foreach (var featureSection in pageData.FeatureSections)
-        {
-            sb.Append($"<h2 id=\"{featureSection.Id}\">{featureSection.Title}</h2>");
-
-            var sectionVideos = videoItems.Where(v =>
-                featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
-                .ToList();
-
-            foreach (var feature in sectionVideos)
-            {
-                var featureId = $"feature-{feature.Slug}";
-                sb.Append($"<h3 id=\"{featureId}\">{feature.Title}</h3>");
-            }
-        }
-
-        return sb.ToString();
+        return text[..maxLength] + "...";
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -195,7 +167,6 @@
         {
             await JS.InvokeVoidAsync("markScriptsLoading");
             await JS.InvokeVoidAsync("initCustomPages");
-            await JS.InvokeVoidAsync("initTocScrollSpy");
             await JS.InvokeVoidAsync("markScriptsReady");
         }
     }

@@ -88,50 +88,40 @@ export function initFeatureFilters() {
     const sections = document.querySelectorAll('.features-video-section');
     if (!sections.length) return;
 
-    const allButtons = document.querySelectorAll('.features-filter-btn');
-    const allCards = document.querySelectorAll('.features-video-section .feature-card');
+    sections.forEach(section => {
+        const buttons = section.querySelectorAll('.features-filter-btn');
+        const cards = section.querySelectorAll('.feature-card');
 
-    function applyFilters() {
-        // Collect active filters from any section (they're synced)
-        const activeFilters = [];
-        const seen = new Set();
-        allButtons.forEach(b => {
-            if (b.classList.contains('active') && !seen.has(b.dataset.filter)) {
-                activeFilters.push(b.dataset.filter);
-                seen.add(b.dataset.filter);
-            }
-        });
-
-        allCards.forEach(card => {
-            if (!activeFilters.length) {
-                card.style.display = '';
-                return;
-            }
-            const matchesAll = activeFilters.every(f => {
-                if (f === 'ghes') return card.dataset.ghes === 'true';
-                if (f === 'videos') return card.dataset.hasVideo === 'true';
-                return true;
-            });
-            card.style.display = matchesAll ? '' : 'none';
-        });
-    }
-
-    allButtons.forEach(btn => {
-        if (btn.dataset.initialized) return;
-        btn.dataset.initialized = 'true';
-
-        btn.addEventListener('click', function () {
-            const filter = this.dataset.filter;
-            const isActive = !this.classList.contains('active');
-
-            // Sync all buttons with the same filter across all sections
-            allButtons.forEach(b => {
-                if (b.dataset.filter === filter) {
-                    b.classList.toggle('active', isActive);
+        function applyFilters() {
+            const activeFilters = [];
+            buttons.forEach(b => {
+                if (b.classList.contains('active')) {
+                    activeFilters.push(b.dataset.filter);
                 }
             });
 
-            applyFilters();
+            cards.forEach(card => {
+                if (!activeFilters.length) {
+                    card.style.display = '';
+                    return;
+                }
+                const matchesAll = activeFilters.every(f => {
+                    if (f === 'ghes') return card.dataset.ghes === 'true';
+                    if (f === 'videos') return card.dataset.hasVideo === 'true';
+                    return true;
+                });
+                card.style.display = matchesAll ? '' : 'none';
+            });
+        }
+
+        buttons.forEach(btn => {
+            if (btn.dataset.initialized) return;
+            btn.dataset.initialized = 'true';
+
+            btn.addEventListener('click', function () {
+                this.classList.toggle('active');
+                applyFilters();
+            });
         });
     });
 }

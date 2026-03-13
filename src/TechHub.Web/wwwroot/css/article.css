@@ -113,10 +113,12 @@
     text-decoration: none;
 }
 
-.article-body a:hover {
+@media (hover: hover) {
+  .article-body a:hover {
     text-decoration: underline;
     text-decoration-color: var(--color-purple-bright);
     text-underline-offset: 2px;
+  }
 }
 
 .article-body a:focus-visible {
@@ -263,8 +265,10 @@
     background: var(--color-bg-emphasis);
 }
 
-.article-body tr:hover {
+@media (hover: hover) {
+  .article-body tr:hover {
     background: var(--color-purple-bg-subtle) !important;
+  }
 }
 
 /* =================================================================
@@ -441,11 +445,13 @@ pre.mermaid, .article-body pre.mermaid {
     flex-shrink: 0;
 }
 
-.mermaid-expand-btn:hover {
+@media (hover: hover) {
+  .mermaid-expand-btn:hover {
     background: var(--color-purple-dark);
     border-color: var(--color-purple-bright);
     color: var(--color-text-on-emphasis);
     box-shadow: var(--shadow-md);
+  }
 }
 
 .mermaid-expand-btn:active {
@@ -508,9 +514,11 @@ pre.mermaid, .article-body pre.mermaid {
     text-decoration: none;
 }
 
-.mermaid-modal-close:hover {
+@media (hover: hover) {
+  .mermaid-modal-close:hover {
     background: var(--color-purple-medium);
     border-color: var(--color-purple-bright);
+  }
 }
 
 .mermaid-modal-close:active {

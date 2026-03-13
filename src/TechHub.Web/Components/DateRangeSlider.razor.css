@@ -88,9 +88,11 @@
     margin-top: -7px;
 }
 
-.slider-input::-webkit-slider-thumb:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 0 4px var(--color-purple-bg-subtle);
+@media (hover: hover) {
+    .slider-input::-webkit-slider-thumb:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 4px var(--color-purple-bg-subtle);
+    }
 }
 
 .slider-input:focus-visible::-webkit-slider-thumb {
@@ -111,9 +113,11 @@
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.slider-input::-moz-range-thumb:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 0 4px var(--color-purple-bg-subtle);
+@media (hover: hover) {
+    .slider-input::-moz-range-thumb:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 4px var(--color-purple-bg-subtle);
+    }
 }
 
 .slider-input:focus-visible::-moz-range-thumb {
@@ -169,18 +173,11 @@
     text-align: center;
 }
 
-.date-preset-button:hover {
-    background: var(--color-purple-bg-subtle);
-    border-color: var(--color-purple-border-subtle);
-    color: var(--color-text-primary);
-}
-
-/* Prevent sticky hover on touch devices */
-@media (hover: none) {
-    .date-preset-button:hover:not(.active) {
-        background: var(--color-bg-default);
-        border-color: var(--color-border-default);
-        color: var(--color-text-secondary);
+@media (hover: hover) {
+    .date-preset-button:hover {
+        background: var(--color-purple-bg-subtle);
+        border-color: var(--color-purple-border-subtle);
+        color: var(--color-text-primary);
     }
 }
 
