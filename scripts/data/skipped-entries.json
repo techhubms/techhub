@@ -12999,5 +12999,11 @@
     "timestamp": "2026-03-13 19:14:34 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/registering-an-application-return-quota-limit-error/m-p/4501786#M22446"
+  },
+  {
+    "timestamp": "2026-03-13 20:07:04 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This video is an announcement about Visual Studio Code's YouTube subscriber milestone ('Our YouTube is almost at 1M subscribers! Built something fun so you can watch it happen 👀'), not technical content. It has no substantial technical details, implementation information, or educational value related to Microsoft development technologies. This is closer to an organizational milestone/sales pitch (announcing their achievement and promoting a video to watch the subscriber count), and there is no relevant content for any predefined category.",
+    "canonical_url": "https://www.youtube.com/shorts/feNp9Bgu-XI",
+    "collection": "videos"
   }
 ]

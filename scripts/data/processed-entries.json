@@ -28678,5 +28678,11 @@
     "timestamp": "2026-03-13 19:13:53 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-03-13-optionally-skip-approval-for-copilot-coding-agent-actions-workflows"
+  },
+  {
+    "timestamp": "2026-03-13 20:06:11 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on debugging hosted AI agents and references Microsoft's AI agent technology via the azure.ai.agents extension (AI inclusion rule 1). Assigned Azure category as it covers Azure Developer CLI (azd), an Azure SDK tool, and the Azure service context is central (Azure inclusion rule 1). Assigned DevOps because the content emphasizes deployment monitoring, development tooling, and operational practices relevant to software engineering teams managing AI agents (DevOps inclusion rules 1, 6, and 7). Coding was not assigned since the content is about CLI usage and operations rather than actual code development. No generic exclusion rules apply as the content is technical, relevant, and entirely in English.",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azd-ai-agent-logs-status/",
+    "collection": "news"
   }
 ]
