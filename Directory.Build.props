@@ -62,6 +62,9 @@
     <NoWarn>$(NoWarn);CA1515</NoWarn>
     <!-- CA1873: Log argument evaluation guard - already suppressing CA1848 (LoggerMessage), traditional logging is preferred -->
     <NoWarn>$(NoWarn);CA1873</NoWarn>
+    <!-- CA1861: Constant array arguments - suppressed because converting from collection expressions
+         to explicit arrays creates many of these; arrays are small and allocations are negligible -->
+    <NoWarn>$(NoWarn);CA1861</NoWarn>
   </PropertyGroup>
   
   <!-- REMAINING SUPPRESSIONS DISABLED FOR ANALYSIS -->
