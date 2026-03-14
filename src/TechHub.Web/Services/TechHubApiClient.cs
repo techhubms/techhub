@@ -397,7 +397,7 @@ public class TechHubApiClient : ITechHubApiClient
     public virtual async Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(
         CancellationToken cancellationToken = default)
     {
-        const int pageSize = 50;
+        const int PageSize = 50;
         var allItems = new List<ContentItem>();
         var skip = 0;
 
@@ -409,7 +409,7 @@ public class TechHubApiClient : ITechHubApiClient
                 subcollection: "ghc-features",
                 includeDraft: true,
                 lastDays: 0,
-                take: pageSize,
+                take: PageSize,
                 skip: skip,
                 cancellationToken: cancellationToken);
 
