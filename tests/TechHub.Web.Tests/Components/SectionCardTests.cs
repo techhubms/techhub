@@ -110,7 +110,7 @@ public class SectionCardTests : BunitContext
     }
 
     [Fact]
-    public void SectionCard_DisplaysAllRegularCollections_AndFirstCustomPage()
+    public void SectionCard_DisplaysAllRegularCollections_AndFirstTwoCustomPages()
     {
         // Arrange - 4 regular collections + 2 custom pages
         var collections = new List<Collection>
@@ -128,28 +128,54 @@ public class SectionCardTests : BunitContext
         var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
-        // Assert - Should show 4 regular collections + 1 custom page = 5 total badges
+        // Assert - Should show 4 regular collections + 2 custom pages = 6 total badges
         var regularBadges = cut.FindAll(".badge-purple");
         regularBadges.Should().HaveCount(4, "should show all regular collections");
 
-        // Find visible custom badges (not inside the hidden expanded container)
+        // Both custom pages should be directly visible (not inside hidden container)
         var visibleCustomBadges = cut.FindAll(".section-collections > .badge-custom");
-        visibleCustomBadges.Should().HaveCount(1, "should show first custom page (by order)");
+        visibleCustomBadges.Should().HaveCount(2, "should show first 2 custom pages by default");
         visibleCustomBadges[0].TextContent.Should().Be("Features", "Features has Order=1, should appear first");
+        visibleCustomBadges[1].TextContent.Should().Be("Handbook", "Handbook has Order=2, should appear second");
 
-        // Should show "+1 more" button for remaining custom page
+        // Should NOT show "+X more" button since there are only 2 custom pages
+        var moreButtons = cut.FindAll(".badge-expandable");
+        moreButtons.Should().BeEmpty("2 custom pages fits within the default visible count of 2");
+    }
+
+    [Fact]
+    public void SectionCard_ShowsExpandButton_WhenMoreThanTwoCustomPages()
+    {
+        // Arrange - 2 regular collections + 3 custom pages
+        var collections = new List<Collection>
+        {
+            new("news", "News", "/github-copilot/news", "News", "News", false, 0),
+            new("blogs", "Blogs", "/github-copilot/blogs", "Blogs", "Blogs", false, 0),
+            new("features", "Features", "/github-copilot/features", "Features", "Features", true, 1),
+            new("handbook", "Handbook", "/github-copilot/handbook", "Handbook", "Handbook", true, 2),
+            new("levels", "Levels", "/github-copilot/levels", "Levels", "Levels", true, 3)
+        };
+        var section = new Section("github-copilot", "GitHub Copilot", "Description", "/github-copilot", "GitHub Copilot", collections);
+
+        // Act
+        var cut = Render<SectionCard>(parameters => parameters
+            .Add(p => p.Section, section));
+
+        // Assert - First 2 custom pages should be visible
+        var visibleCustomBadges = cut.FindAll(".section-collections > .badge-custom");
+        visibleCustomBadges.Should().HaveCount(2, "should show first 2 custom pages by default");
+        visibleCustomBadges[0].TextContent.Should().Be("Features");
+        visibleCustomBadges[1].TextContent.Should().Be("Handbook");
+
+        // Should show "+1 more" button for the remaining custom page
         var moreButton = cut.Find(".badge-expandable");
         var normalizedText = System.Text.RegularExpressions.Regex.Replace(moreButton.TextContent.Trim(), @"\s+", " ");
         normalizedText.Should().Be("+1 more");
 
-        // Check that the hidden custom pages container exists and has the remaining custom page
-        var expandableContainer = cut.Find(".custom-pages-expanded");
-        expandableContainer.Should().NotBeNull();
-        expandableContainer.GetAttribute("hidden").Should().NotBeNull("container should be initially hidden");
-
+        // Hidden container should have the 3rd custom page
         var hiddenCustomBadges = cut.FindAll(".custom-pages-expanded .badge-custom");
-        hiddenCustomBadges.Should().HaveCount(1, "should have 1 custom page in hidden container");
-        hiddenCustomBadges[0].TextContent.Should().Be("Handbook", "Handbook has Order=2, should be in hidden area");
+        hiddenCustomBadges.Should().HaveCount(1);
+        hiddenCustomBadges[0].TextContent.Should().Be("Levels");
     }
 
     [Fact]

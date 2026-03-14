@@ -1129,7 +1129,7 @@ history.replaceState(null, '', newUrl);
 
 **Expand Badge Behavior**:
 
-- **First custom page**: Always visible with `.badge-custom` styling
+- **First 2 custom pages**: Always visible with `.badge-custom` styling (controlled by `DefaultVisibleCustomPages` constant)
 - **Additional custom pages**: Hidden behind "+X more" button
 - **Click behavior**: Clicking "+X more" permanently reveals remaining custom pages inline
   - Button is removed after click
@@ -1163,23 +1163,26 @@ history.replaceState(null, '', newUrl);
 **Code Example** (SectionCard.razor):
 
 ```razor
-@* Show first custom page (ordered by Order, then Title) *@
+@* Show first 2 custom pages (ordered by Order, then Title) *@
 @if (CustomPages.Any())
 {
-    var firstCustom = CustomPages.First();
-    <a href="@firstCustom.Url" class="badge-custom">
-        @firstCustom.Title
-    </a>
-    
-    @* Show "+X more" button if additional custom pages exist *@
-    @if (CustomPages.Count > 1)
+    @foreach (var customPage in CustomPages.Take(DefaultVisibleCustomPages))
     {
+        <a href="@customPage.Url" class="badge-custom">
+            @customPage.Title
+        </a>
+    }
+    
+    @* Show "+X more" button if additional custom pages exist beyond the default visible *@
+    @if (CustomPages.Count > DefaultVisibleCustomPages)
+    {
+        var remainingCount = CustomPages.Count - DefaultVisibleCustomPages;
         <button class="badge-grey badge-expandable" data-expand-target="custom-pages-@Section.Name">
-            +@(CustomPages.Count - 1) more
+            +@remainingCount more
         </button>
         
         <span id="custom-pages-@Section.Name" class="custom-pages-expanded" hidden>
-            @foreach (var customPage in CustomPages.Skip(1))
+            @foreach (var customPage in CustomPages.Skip(DefaultVisibleCustomPages))
             {
                 <a href="@customPage.Url" class="badge-custom">@customPage.Title</a>
             }
@@ -1188,6 +1191,8 @@ history.replaceState(null, '', newUrl);
 }
 
 @code {
+    private const int DefaultVisibleCustomPages = 2;
+    
     private IReadOnlyList<Collection> CustomPages => 
         Section.Collections
             .Where(c => c.IsCustom)

@@ -24,30 +24,33 @@
                 </a>
             }
             
-            @* Show first custom page if exists *@
+            @* Show first 2 custom pages if they exist *@
             @if (CustomPages.Any())
             {
-                var firstCustom = CustomPages.First();
-                <a href="@firstCustom.Url" class="badge-custom"
-                    aria-label="View @firstCustom.Title custom page">
-                    @firstCustom.Title
-                </a>
+                @foreach (var customPage in CustomPages.Take(DefaultVisibleCustomPages))
+                {
+                    <a href="@customPage.Url" class="badge-custom"
+                        aria-label="View @customPage.Title custom page">
+                        @customPage.Title
+                    </a>
+                }
                 
-                @* Show "+X more" button if there are additional custom pages *@
-                @if (CustomPages.Count > 1)
+                @* Show "+X more" button if there are additional custom pages beyond the default visible *@
+                @if (CustomPages.Count > DefaultVisibleCustomPages)
                 {
                     var expandId = $"custom-pages-{Section.Name}";
+                    var remainingCount = CustomPages.Count - DefaultVisibleCustomPages;
                     <button type="button" 
                             class="badge-grey badge-expandable" 
                             data-expand-target="@expandId"
                             aria-expanded="false"
-                            aria-label="Show @(CustomPages.Count - 1) more custom pages">
-                        +@(CustomPages.Count - 1) more
+                            aria-label="Show @remainingCount more custom pages">
+                        +@remainingCount more
                     </button>
                     
                     @* Hidden custom pages - revealed when button clicked *@
                     <span id="@expandId" class="custom-pages-expanded" hidden>
-                        @foreach (var customPage in CustomPages.Skip(1))
+                        @foreach (var customPage in CustomPages.Skip(DefaultVisibleCustomPages))
                         {
                             <a href="@customPage.Url" class="badge-custom"
                                 aria-label="View @customPage.Title custom page">
@@ -67,6 +70,8 @@
     
     private IEnumerable<Collection> RegularCollections => 
         Section.Collections.Where(c => !c.IsCustom);
+    
+    private const int DefaultVisibleCustomPages = 2;
     
     private IReadOnlyList<Collection> CustomPages => 
         Section.Collections
