@@ -50,7 +50,7 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
+  overflow: clip;
   /* Rounded top corners to match container */
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   /* Background images are set via CSS classes (e.g., .section-bg-ai) */

@@ -2,7 +2,11 @@ namespace TechHub.Web.Configuration;
 
 /// <summary>
 /// Single source of truth for CSS file configuration.
-/// Used by both App.razor (for development individual files) and Program.cs (for production bundling).
+/// App.razor references these files via @Assets["path"] for fingerprinted URLs (cache busting).
+/// This array is used by tests to verify all CSS files are referenced in App.razor.
+/// <para>
+/// IMPORTANT: When adding a CSS file, also add the @Assets["path"] reference in App.razor.
+/// </para>
 /// </summary>
 public static class CssFiles
 {
@@ -20,8 +24,6 @@ public static class CssFiles
         "css/sidebar.css",
         "css/page-container.css",
         "css/loading.css",
-        "css/nav-helpers.css",
-        "css/date-slider.css",
-        "css/tag-dropdown.css"
+        "css/nav-helpers.css"
     ];
 }

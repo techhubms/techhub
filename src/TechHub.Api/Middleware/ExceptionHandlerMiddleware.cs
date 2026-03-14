@@ -64,7 +64,7 @@ internal sealed class ExceptionHandlerMiddleware
         var response = new ErrorResponse
         {
             Status = context.Response.StatusCode,
-            Message = exception.Message,
+            Message = _environment.IsDevelopment() ? exception.Message : GetSafeMessage(context.Response.StatusCode),
             Detail = _environment.IsDevelopment() ? exception.StackTrace : null,
             Path = context.Request.Path,
             Timestamp = DateTimeOffset.UtcNow
@@ -72,6 +72,14 @@ internal sealed class ExceptionHandlerMiddleware
 
         await context.Response.WriteAsync(JsonSerializer.Serialize(response, _jsonOptions));
     }
+
+    private static string GetSafeMessage(int statusCode) => statusCode switch
+    {
+        (int)HttpStatusCode.BadRequest => "Bad request.",
+        (int)HttpStatusCode.NotFound => "Resource not found.",
+        (int)HttpStatusCode.Unauthorized => "Unauthorized.",
+        _ => "An unexpected error occurred."
+    };
 
     private sealed record ErrorResponse
     {

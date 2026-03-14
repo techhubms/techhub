@@ -220,7 +220,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
         Mock Get-SourceRoot { return $global:TempPath }
         
         # Mock the centralized config functions
-        Mock Get-AzureOpenAIEndpoint { return "https://oai-techhub-staging.services.ai.azure.com/models/gpt-4.1/chat/completions" }
+        Mock Get-AzureOpenAIEndpoint { return "https://oai-techhub-staging.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions" }
         Mock Get-AzureOpenAIModelName { return "gpt-4.1" }
     }
     
@@ -1379,6 +1379,166 @@ Content
             # Should not add anything to skipped entries
             $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $skippedEntries | Should -HaveCount 0
+        }
+
+        It "Should preserve dollar signs in content without regex substitution corruption" {
+            # Regression test: PowerShell code with $ variables in AI-generated content
+            # was corrupted by -replace treating $ as regex substitution patterns.
+            # $_ means "entire input string" in regex replacement, $& means "matched text",
+            # $' means "text after match" - all common in PowerShell code examples.
+            $contentWithDollarSigns = @'
+## PowerShell Pipeline Example
+
+```pwsh
+Get-ChildItem | ForEach-Object { $_.Name }
+$items | Where-Object { $_.Length -gt 1KB }
+```
+
+## Variable Examples
+
+```pwsh
+$result = gh api graphql -H "GraphQL-Features: sub_issues"
+```
+'@
+
+            Mock Invoke-ProcessWithAiModel {
+                return [PSCustomObject]@{
+                    title       = "Dollar Sign Test"
+                    description = "Testing dollar signs"
+                    content     = $contentWithDollarSigns
+                    excerpt     = 'Excerpt with $variable reference'
+                    categories  = @("DevOps")
+                    tags        = @("PowerShell", "GitHub CLI")
+                }
+            }
+            
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
+            
+            ($result | Measure-Object).Count | Should -Be 1
+            
+            # Find the created file and verify content is not corrupted
+            $createdFile = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" -ErrorAction SilentlyContinue | Select-Object -First 1
+            $createdFile | Should -Not -BeNullOrEmpty
+            
+            $fileContent = Get-Content -Path $createdFile.FullName -Raw
+            
+            # Content should contain the dollar sign variables literally
+            $fileContent | Should -Match '\$_\.Name'
+            $fileContent | Should -Match '\$_\.Length'
+            $fileContent | Should -Match '\$result'
+            
+            # Content must NOT contain template placeholders (proves {{CONTENT}} was replaced)
+            $fileContent | Should -Not -Match '{{CONTENT}}'
+            $fileContent | Should -Not -Match '{{EXCERPT}}'
+            $fileContent | Should -Not -Match '{{FRONTMATTER}}'
+            
+            # Frontmatter should appear exactly once (not duplicated by regex substitution)
+            $frontmatterMatches = [regex]::Matches($fileContent, '^---\s*$', [System.Text.RegularExpressions.RegexOptions]::Multiline)
+            $frontmatterMatches.Count | Should -Be 2  # Opening and closing --- only
+        }
+    }
+
+    Context "Primary Section Computation" {
+        It "Should include primary_section in generated frontmatter" {
+            Mock Invoke-ProcessWithAiModel {
+                return [PSCustomObject]@{
+                    title       = "Test Article"
+                    description = "Test description"
+                    content     = "# Test\n\nContent."
+                    excerpt     = "Test excerpt"
+                    categories  = @("AI")
+                    tags        = @("Tag1")
+                }
+            }
+
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
+            $result | Should -Be 1
+
+            $createdFile = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" | Select-Object -First 1
+            $fileContent = Get-Content -Path $createdFile.FullName -Raw
+            $fileContent | Should -Match 'primary_section: ai'
+        }
+
+        It "Should select highest priority section when multiple sections exist" {
+            # categories ["AI", ".NET"] → section_names ["ai", "dotnet"] → primary_section "ai"
+            Mock Invoke-ProcessWithAiModel {
+                return [PSCustomObject]@{
+                    title       = "Multi Section Article"
+                    description = "Test description"
+                    content     = "# Test\n\nContent."
+                    excerpt     = "Test excerpt"
+                    categories  = @("AI", ".NET")
+                    tags        = @("Tag1")
+                }
+            }
+
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
+            $result | Should -Be 1
+
+            $createdFile = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" | Select-Object -First 1
+            $fileContent = Get-Content -Path $createdFile.FullName -Raw
+            $fileContent | Should -Match 'primary_section: ai'
+        }
+
+        It "Should select github-copilot as primary when present with other sections" {
+            # github-copilot has highest priority
+            Mock Invoke-ProcessWithAiModel {
+                return [PSCustomObject]@{
+                    title       = "Copilot Article"
+                    description = "Test description"
+                    content     = "# Test\n\nContent."
+                    excerpt     = "Test excerpt"
+                    categories  = @("DevOps", "GitHub Copilot", "AI")
+                    tags        = @("Tag1")
+                }
+            }
+
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
+            $result | Should -Be 1
+
+            $createdFile = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" | Select-Object -First 1
+            $fileContent = Get-Content -Path $createdFile.FullName -Raw
+            $fileContent | Should -Match 'primary_section: github-copilot'
+        }
+
+        It "Should select dotnet as primary over devops and security" {
+            Mock Invoke-ProcessWithAiModel {
+                return [PSCustomObject]@{
+                    title       = "DotNet Article"
+                    description = "Test description"
+                    content     = "# Test\n\nContent."
+                    excerpt     = "Test excerpt"
+                    categories  = @("Security", "DevOps", ".NET")
+                    tags        = @("Tag1")
+                }
+            }
+
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
+            $result | Should -Be 1
+
+            $createdFile = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" | Select-Object -First 1
+            $fileContent = Get-Content -Path $createdFile.FullName -Raw
+            $fileContent | Should -Match 'primary_section: dotnet'
+        }
+
+        It "Should fall back to first section when no priority match" {
+            Mock Invoke-ProcessWithAiModel {
+                return [PSCustomObject]@{
+                    title       = "Coding Article"
+                    description = "Test description"
+                    content     = "# Test\n\nContent."
+                    excerpt     = "Test excerpt"
+                    categories  = @("Coding")
+                    tags        = @("Tag1")
+                }
+            }
+
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Environment "staging"
+            $result | Should -Be 1
+
+            $createdFile = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" | Select-Object -First 1
+            $fileContent = Get-Content -Path $createdFile.FullName -Raw
+            $fileContent | Should -Match 'primary_section: coding'
         }
     }
 }

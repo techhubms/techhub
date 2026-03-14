@@ -5,7 +5,7 @@ targetScope = 'subscription'
 // Trigger: deleted westeurope resources, redeploy to swedencentral
 
 @description('Azure region for resources')
-param location string = 'westeurope'
+param location string = 'swedencentral'
 
 @description('Environment name (staging, prod)')
 @allowed(['staging', 'prod'])
@@ -151,6 +151,7 @@ module apiApp './modules/api.bicep' = {
     imageTag: apiImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require;Trust Server Certificate=true'
+    webFqdn: webCustomDomain != '' ? webCustomDomain : '${webAppName}.${containerAppsEnv.outputs.defaultDomain}'
   }
 }
 

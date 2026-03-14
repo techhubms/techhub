@@ -33,74 +33,7 @@
     color: var(--color-text-secondary);
 }
 
-/* Section Cards (Expandable) */
-.dx-section-card {
-    border: 1px solid var(--color-border-default);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    background: var(--color-bg-default);
-}
-
-.dx-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 1.25rem;
-    background: var(--color-bg-default);
-    border: none;
-    cursor: pointer;
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-align: left;
-    transition: background-color 0.2s ease;
-}
-
-@media (hover: hover) {
-    .dx-card-header:hover {
-        background: var(--color-bg-emphasis);
-    }
-}
-
-.dx-card-header:focus-visible {
-    outline: 2px solid var(--color-purple-bright);
-    outline-offset: -2px;
-}
-
-.dx-card-icon {
-    transition: transform 0.3s ease;
-    font-size: 0.875rem;
-}
-
-.dx-card-icon.expanded {
-    transform: rotate(180deg);
-}
-
-.dx-card-content {
-    display: none;
-    padding: 1.5rem;
-}
-
-.dx-card-content.expanded {
-    display: block;
-}
-
-/* Section Intro */
-.dx-section-intro {
-    margin-bottom: 1.5rem;
-}
-
-.dx-section-intro h3 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: var(--color-text-primary);
-}
-
-.dx-section-intro p {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-}
+/* Section Cards (no longer expandable) */
 
 /* DORA Metrics Grid */
 .dx-metrics-grid {

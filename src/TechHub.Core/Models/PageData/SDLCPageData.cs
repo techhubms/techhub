@@ -7,6 +7,9 @@ public record SDLCPageData
 {
     public required string Title { get; init; }
     public required string Intro { get; init; }
+    public required string PhasesHeading { get; init; }
+    public required string PreconditionsHeading { get; init; }
+    public required string PreconditionsIntro { get; init; }
     public required List<SDLCPhase> Phases { get; init; }
     public required List<SDLCPrecondition> Preconditions { get; init; }
     public required SDLCAdditionalInfo AdditionalInfo { get; init; }
@@ -63,10 +66,15 @@ public record SDLCPrecondition
 
 public record SDLCAdditionalInfo
 {
+    public required string BenefitsHeading { get; init; }
     public required List<SDLCBenefit> Benefits { get; init; }
-    public required SDLCMetrics Metrics { get; init; }
+    public required string ChallengesHeading { get; init; }
     public required List<SDLCChallenge> Challenges { get; init; }
+    public required string MethodologiesHeading { get; init; }
+    public required List<string> MethodologiesIntro { get; init; }
     public required List<SDLCMethodology> Methodologies { get; init; }
+    public required string MetricsHeading { get; init; }
+    public required SDLCMetrics Metrics { get; init; }
 }
 
 public record SDLCBenefit
@@ -81,6 +89,8 @@ public record SDLCMetrics
     public required string Intro { get; init; }
     public required List<MetricsFramework> Frameworks { get; init; }
     public required SeeAlsoLink SeeAlso { get; init; }
+    public required string PracticeHeading { get; init; }
+    public required List<string> PracticeItems { get; init; }
 }
 
 public record MetricsFramework

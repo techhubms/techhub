@@ -49,7 +49,7 @@ Describe "Invoke-ProcessWithAiModel" {
         Set-Content -Path $script:TestSkippedEntriesPath -Value "[]"
         
         # Mock the centralized config functions
-        Mock Get-AzureOpenAIEndpoint { return "https://oai-techhub-staging.services.ai.azure.com/models/gpt-4.1/chat/completions" }
+        Mock Get-AzureOpenAIEndpoint { return "https://oai-techhub-staging.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions" }
         Mock Get-AzureOpenAIModelName { return "gpt-4.1" }
     }
     

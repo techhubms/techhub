@@ -232,7 +232,7 @@
 /* Feature Card Thumbnails */
 .feature-card-thumbnail {
   position: relative;
-  overflow: hidden;
+  overflow: clip;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
   margin-bottom: var(--spacing-3);

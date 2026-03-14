@@ -1,6 +1,9 @@
 {
     "title": "AI SDLC",
     "intro": "The Software Development Lifecycle (SDLC) is a structured process for building high-quality software. AI transforms each phase by augmenting human capabilities with automation, analysis, and intelligent assistance.",
+    "phasesHeading": "SDLC Phases",
+    "preconditionsHeading": "Preconditions for AI-Augmented Development",
+    "preconditionsIntro": "Before AI can consistently deliver high-quality output across the SDLC, these foundational elements must be in place. As noted in <a href=\"#methodologies\">Methodologies</a>, automation underpins every methodology — the preconditions below ensure your team is ready to move fast with confidence:",
     "phases": [
         {
             "id": "ideation",
@@ -423,6 +426,7 @@
         }
     ],
     "additionalInfo": {
+        "benefitsHeading": "Benefits of a Structured SDLC",
         "benefits": [
             {
                 "icon": "✓",
@@ -460,6 +464,7 @@
                 "description": "Engineers evolve from writing all code to orchestrating AI agents, focusing on architecture and quality."
             }
         ],
+        "metricsHeading": "Measuring & Feedback",
         "metrics": {
             "intro": "AI changes the speed of delivery, but it does not automatically improve outcomes. Use a small set of metrics as trend signals.",
             "frameworks": [
@@ -487,8 +492,15 @@
             "seeAlso": {
                 "text": "DX, SPACE & DORA",
                 "url": "/devops/dx-space"
-            }
+            },
+            "practiceHeading": "How to use this in practice",
+            "practiceItems": [
+                "Review DORA trends per service or team on a regular cadence (e.g., monthly), and discuss changes in retrospectives.",
+                "Run lightweight DX and satisfaction checks (short surveys + a few operational signals like CI times) and prioritize the biggest sources of friction.",
+                "When you adopt a new AI workflow (agentic PRs, test generation, prompt standards), treat it like any other change: define success criteria, measure, then iterate."
+            ]
         },
+        "challengesHeading": "Common Challenges",
         "challenges": [
             {
                 "title": "Scope Creep",
@@ -511,11 +523,16 @@
                 "description": "Blindly accepting AI suggestions leads to bugs. Always review and validate AI-generated code."
             }
         ],
+        "methodologiesHeading": "SDLC and Development Methodologies",
+        "methodologiesIntro": [
+            "The SDLC phases shown above define <strong>what work needs to happen</strong>. Development methodologies define <strong>how that work is organized and executed</strong>. Every methodology uses these same phases—the difference is in timing, iteration, and flow.",
+            "Regardless of which methodology you choose, every phase should be automated as much as possible — CI/CD pipelines, automated testing, infrastructure as code, and automated deployments are not a separate methodology but a <strong>foundation that all methodologies benefit from</strong>. The more frequently you deploy, the more critical this automation becomes. See <a href=\"#preconditions\">Preconditions</a> for what needs to be in place."
+        ],
         "methodologies": [
             {
                 "name": "Waterfall",
                 "type": "Sequential",
-                "description": "Each SDLC phase completes fully before the next begins.",
+                "description": "A sequential approach where each SDLC phase completes fully before the next begins. Requirements are locked in upfront, and the project moves through design, implementation, testing, and deployment in a single pass. This predictability comes at the cost of flexibility — changes late in the process are expensive.",
                 "bestFor": "Stable requirements, regulated industries",
                 "cycleTime": "Months to years",
                 "flexibility": "Low"
@@ -523,7 +540,7 @@
             {
                 "name": "Agile / Scrum",
                 "type": "Iterative",
-                "description": "All SDLC phases happen within each sprint (2-4 weeks).",
+                "description": "An iterative approach where all SDLC phases happen within short time-boxed sprints of 2\u20134 weeks. Each sprint delivers a potentially shippable increment, and priorities are reassessed between sprints. This tight feedback loop allows teams to adapt quickly to changing requirements and stakeholder input.",
                 "bestFor": "Evolving requirements, customer collaboration",
                 "cycleTime": "2-4 weeks per sprint",
                 "flexibility": "High"
@@ -531,18 +548,10 @@
             {
                 "name": "Kanban",
                 "type": "Continuous Flow",
-                "description": "Work items flow continuously through SDLC phases without fixed iterations.",
+                "description": "A continuous-flow approach where work items move through SDLC phases without fixed iterations or sprints. Work-in-progress limits prevent bottlenecks, and new work is pulled as capacity becomes available. This makes Kanban especially suited for teams that handle a mix of planned work and unplanned requests.",
                 "bestFor": "Continuous delivery, support/maintenance teams",
                 "cycleTime": "Continuous",
                 "flexibility": "Very High"
-            },
-            {
-                "name": "DevOps / CI/CD",
-                "type": "Automated",
-                "description": "DevOps automates the handovers between SDLC phases.",
-                "bestFor": "Frequent releases, automation-ready teams",
-                "cycleTime": "Hours to days",
-                "flexibility": "High"
             }
         ]
     }

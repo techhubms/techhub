@@ -11,6 +11,20 @@
   font-size: 0.7em;
 }
 
+/* Content Loading Transition */
+.collection-content {
+  opacity: 1;
+  transition: opacity var(--duration-fast) var(--easing-ease-in-out);
+}
+
+.collection-content.loading {
+  pointer-events: none;
+}
+
+.collection-content.loading .content-grid {
+  opacity: 0.5;
+}
+
 /* Error state */
 .collection-content .error {
   padding: var(--spacing-6);

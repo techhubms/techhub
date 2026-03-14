@@ -9,7 +9,7 @@
     margin: var(--spacing-6) 0;
     border-radius: var(--radius-lg);
     background: var(--color-bg-default);
-    overflow: hidden;
+    overflow: clip;
 }
 
 ::deep .levels-video iframe {

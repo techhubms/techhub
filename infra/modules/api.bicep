@@ -15,7 +15,7 @@ param databaseConnectionString string
 
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
 
-resource api 'Microsoft.App/containerApps@2025-01-01' = {
+resource api 'Microsoft.App/containerApps@2025-07-01' = {
   name: containerAppName
   location: location
   identity: {

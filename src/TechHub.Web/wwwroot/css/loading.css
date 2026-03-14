@@ -62,20 +62,6 @@
   color: var(--color-text-secondary);
 }
 
-/* Content Loading Transition */
-.collection-content {
-  opacity: 1;
-  transition: opacity var(--duration-fast) var(--easing-ease-in-out);
-}
-
-.collection-content.loading {
-  pointer-events: none;
-}
-
-.collection-content.loading .content-grid {
-  opacity: 0.5;
-}
-
 /* Error States */
 .error {
   color: var(--color-red);

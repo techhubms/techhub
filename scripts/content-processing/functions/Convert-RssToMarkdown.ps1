@@ -281,26 +281,47 @@ function Convert-RssToMarkdown {
             $fileNameTitle = (ConvertTo-SafeFilename -Title $response.title -MaxLength 200)
             $filename = "$fileNamePubDate-$fileNameTitle.md"
 
+            # Compute primary_section from section_names using priority order
+            # Priority: github-copilot > ai > ml > dotnet > azure > devops > security
+            # Must match ContentItem.ComputePrimarySectionName() in C#
+            $sectionPriorityOrder = @("github-copilot", "ai", "ml", "dotnet", "azure", "devops", "security")
+            $primary_section = "all"
+            if ($section_names.Count -gt 0) {
+                foreach ($prioritySection in $sectionPriorityOrder) {
+                    if ($section_names -contains $prioritySection) {
+                        $primary_section = $prioritySection
+                        break
+                    }
+                }
+                if ($primary_section -eq "all") {
+                    $primary_section = $section_names[0].ToLowerInvariant()
+                }
+            }
+
             # Build frontmatter hashtable
             $frontMatter = @{
-                title         = $response.title
-                author        = $item.Author
-                external_url  = $item.Link
-                feed_name     = $item.FeedName
-                date          = $dateFormatted
-                tags          = @($tags)
-                section_names = @($section_names)
+                title           = $response.title
+                author          = $item.Author
+                external_url    = $item.Link
+                feed_name       = $item.FeedName
+                date            = $dateFormatted
+                tags            = @($tags)
+                section_names   = @($section_names)
+                primary_section = $primary_section
             }
             
             # Convert frontmatter to YAML using YamlDotNet (same library as ContentFixer)
             $yamlFrontMatter = ConvertTo-YamlFrontMatter -FrontMatter $frontMatter
 
             # Load template and replace placeholders
+            # CRITICAL: Use .Replace() (literal) instead of -replace (regex) because
+            # AI-generated content contains $ characters (PowerShell code) that would be
+            # interpreted as regex substitution patterns ($_ = entire input, $& = match, etc.)
             $markdownContent = Get-Content $templatePath -Raw
-            $markdownContent = $markdownContent -replace '{{FRONTMATTER}}', $yamlFrontMatter
-            $markdownContent = $markdownContent -replace '{{EXTERNAL_URL}}', $item.Link
-            $markdownContent = $markdownContent -replace '{{CONTENT}}', $response.content
-            $markdownContent = $markdownContent -replace '{{EXCERPT}}', $response.excerpt
+            $markdownContent = $markdownContent.Replace('{{FRONTMATTER}}', $yamlFrontMatter)
+            $markdownContent = $markdownContent.Replace('{{EXTERNAL_URL}}', $item.Link)
+            $markdownContent = $markdownContent.Replace('{{CONTENT}}', $response.content)
+            $markdownContent = $markdownContent.Replace('{{EXCERPT}}', $response.excerpt)
 
             # Create the file
             $filePath = Join-Path $item.OutputDir $filename

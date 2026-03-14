@@ -64,11 +64,9 @@ The `StaticFilesCacheMiddleware` provides centralized cache control for all stat
 | `.css`, `.js` (non-fingerprinted) | Short cache with revalidation |
 | Fingerprinted files (any type) | Forever immutable |
 
-### CSS Bundle (WebOptimizer)
+### CSS Files
 
-The CSS bundle (`css/bundle.css`) is generated at runtime by WebOptimizer, which sets its own aggressive cache headers (`max-age=10 years`). Since WebOptimizer middleware runs before `StaticFilesCacheMiddleware` and short-circuits the request, our middleware cannot override these headers.
-
-**Cache busting**: `App.razor` appends the assembly MVID as a query parameter (`?v=...`) to the bundle URL. This value changes on every build, ensuring browsers fetch the new bundle after each deployment.
+All global CSS files use `@Assets["path"]` in App.razor, which produces fingerprinted URLs (content hash in filename, e.g., `base.e3opgp91n1.css`). When CSS content changes, the URL changes, forcing browsers to fetch the new version automatically. `MapStaticAssets()` serves these with proper cache headers, and `StaticFilesCacheMiddleware` sets `immutable` caching for fingerprinted files.
 
 ## Performance Benefits
 

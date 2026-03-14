@@ -75,47 +75,28 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 **App.razor** - Uses CssFiles array in Development, bundle in Production:
 
 ```html
-@if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
-{
-    <!-- Development: Individual files for debugging -->
-    @foreach (var cssFile in TechHub.Web.Configuration.CssFiles.All)
-    {
-        <link rel="stylesheet" href="@cssFile" />
-    }
-}
-else
-{
-    <!-- Production: Bundled and minified -->
-    <!-- Cache busting: WebOptimizer sets max-age=10y so we append assembly MVID -->
-    <link rel="stylesheet" href="css/bundle.css?v=@BundleVersion" />
-}
-<!-- Component-scoped styles (all modes) -->
+<!-- Global CSS: @Assets produces fingerprinted URLs (content hash in filename) -->
+<!-- Fingerprinting ensures browsers automatically fetch new versions after deployments -->
+<!-- IMPORTANT: When adding CSS files, also update Configuration/CssFiles.cs -->
+<link rel="stylesheet" href="@Assets["css/design-tokens.css"]" />
+<link rel="stylesheet" href="@Assets["css/base.css"]" />
+<!-- ... more CSS files ... -->
+
+<!-- Component-scoped styles -->
 <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
 ```
 
-**Program.cs** - WebOptimizer bundle uses same CssFiles array:
+**CSS Fingerprinting Pattern**:
 
-```csharp
-if (!builder.Environment.IsDevelopment())
-{
-    builder.Services.AddWebOptimizer(pipeline =>
-    {
-        pipeline.AddCssBundle("/css/bundle.css", CssFiles.All);
-    });
-}
-```
+- CSS files defined in `Configuration/CssFiles.cs` (single source of truth for file list)
+- App.razor uses `@Assets["path"]` for each CSS file — produces fingerprinted URLs (e.g., `base.e3opgp91n1.css`)
+- `@Assets` requires string literals (not variables) for compile-time fingerprint resolution
+- `MapStaticAssets()` handles serving, compression, and ETags
+- When file content changes, the URL changes — browsers automatically fetch new versions
 
-**CSS Bundling Pattern**:
+**See**: [Configuration/CssFiles.cs](Configuration/CssFiles.cs) for the CSS file list
 
-- CSS files defined ONCE in `Configuration/CssFiles.cs`
-- `AddWebOptimizer()` in Program.cs references `CssFiles.All`
-- App.razor loops through `CssFiles.All` in Development
-- Bundle path MUST match App.razor `<link>` reference
-- **Cache busting**: Bundle URL includes `?v=@BundleVersion` (assembly MVID) — WebOptimizer sets aggressive `max-age=10y` cache headers, so the query parameter ensures browsers fetch the new bundle after deployment
-
-**See**: [Configuration/CssFiles.cs](Configuration/CssFiles.cs) for the single source of truth
-
-**CRITICAL**: Add new CSS files to `CssFiles.All` array - App.razor and Program.cs automatically stay in sync.
+**CRITICAL**: When adding new CSS files, add both: (1) the file to `CssFiles.All` array, and (2) an `@Assets` reference in App.razor.
 
 ### JavaScript Architecture
 
@@ -669,8 +650,6 @@ src/TechHub.Web/
 │   │   ├── page-container.css
 │   │   ├── nav-helpers.css
 │   │   ├── loading.css
-│   │   ├── tag-dropdown.css
-│   │   ├── date-slider.css
 │   │   └── article.css
 │   └── images/             # Static images
 │       └── section-backgrounds/ # Section header images

@@ -1,95 +1,100 @@
-/* AI-SDLC Page Styles - Converted from _sdlc.scss */
-/* Phase-specific collapsible sections with distinct colors */
+/* AI-SDLC Page Styles */
 
-/* Phase blocks container */
+/* ─── SDLC Phases ─────────────────────────────────────────────────────────── */
+
 ::deep .sdlc-phases {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 24px;
+    margin-top: 24px;
 }
 
-/* Base phase block */
-::deep .sdlc-phase-block {
-    background: var(--color-bg-elevated);
+::deep .sdlc-phase-card {
+    background: var(--color-bg-default);
     border: 1px solid var(--color-purple-border-subtle);
-    border-radius: 8px;
-    overflow: hidden;
-    width: 100%;
+    border-radius: 10px;
+    overflow: clip;
 }
 
-/* Phase headers */
+/* Phase header - always visible, not clickable */
 ::deep .sdlc-phase-header {
-    padding: 15px;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
     gap: 12px;
     background: var(--color-bg-section);
-    border: none;
-    border-bottom: 1px solid var(--color-purple-border-very-subtle);
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.2s ease;
-    position: relative;
-    width: 100%;
-    text-align: left;
-    color: inherit;
-    font-family: inherit;
 }
 
-@media (hover: hover) {
-    ::deep .sdlc-phase-header:hover {
-        background: var(--color-bg-emphasis);
-    }
-}
-
-::deep .sdlc-phase-header h2,
 ::deep .sdlc-phase-header h3 {
     margin: 0;
-    font-size: 18px;
-    font-weight: 600;
+    padding: 0;
     color: var(--color-text-on-emphasis);
     flex: 1;
 }
 
-::deep .sdlc-phase-header h2::after,
 ::deep .sdlc-phase-header h3::after {
     display: none;
 }
 
-/* Toggle chevron */
-::deep .sdlc-phase-toggle {
-    font-size: 16px;
-    color: var(--color-text-muted);
-    transition: transform 0.25s ease;
-}
-
-::deep .sdlc-phase-toggle.expanded {
-    transform: rotate(180deg);
-}
-
-/* Phase icon */
 ::deep .sdlc-phase-icon {
-    font-size: 20px;
+    font-size: 22px;
 }
 
-/* Phase content - collapsible */
-::deep .sdlc-phase-content {
-    display: none;
-    overflow: hidden;
-    padding: 0 20px;
+/* Phase body - always visible */
+::deep .sdlc-phase-body {
+    padding: 16px 20px;
 }
 
-::deep .sdlc-phase-content.expanded {
-    display: block;
-    padding: 20px;
+/* h4 subtitles inside phases */
+::deep .sdlc-phase-body h4 {
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--color-purple-border-very-subtle);
 }
 
-/* Phase-specific colors with left border */
+::deep .sdlc-phase-body > div:first-child > h4:first-child {
+    margin-top: 0;
+}
+
+/* Tool badges */
+::deep .sdlc-tool-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-1);
+}
+
+::deep .sdlc-tool-badge {
+    display: inline-block;
+    padding: 0.25rem var(--spacing-2);
+    border-radius: var(--radius-full);
+    background: var(--color-purple-bg-badge);
+    border: 1px solid transparent;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: all var(--duration-fast) var(--easing-ease);
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    ::deep .sdlc-tool-badge:hover {
+        background: var(--color-purple-bg-badge-hover);
+        border-color: var(--color-purple-medium);
+        color: var(--color-text-on-emphasis);
+        text-decoration: none;
+    }
+}
+
+/* Handover */
+::deep .sdlc-phase-handover {
+    margin-top: 16px;
+}
+
+/* Phase-specific colors */
 ::deep .sdlc-phase-ideation {
     border-left: 4px solid var(--color-yellow);
 }
-
 ::deep .sdlc-phase-ideation .sdlc-phase-header {
     background: var(--color-yellow-bg);
 }
@@ -97,7 +102,6 @@
 ::deep .sdlc-phase-planning {
     border-left: 4px solid var(--color-blue);
 }
-
 ::deep .sdlc-phase-planning .sdlc-phase-header {
     background: var(--color-blue-bg);
 }
@@ -105,7 +109,6 @@
 ::deep .sdlc-phase-design {
     border-left: 4px solid var(--color-magenta);
 }
-
 ::deep .sdlc-phase-design .sdlc-phase-header {
     background: var(--color-magenta-bg);
 }
@@ -113,7 +116,6 @@
 ::deep .sdlc-phase-implementation {
     border-left: 4px solid var(--color-green);
 }
-
 ::deep .sdlc-phase-implementation .sdlc-phase-header {
     background: var(--color-green-bg);
 }
@@ -121,7 +123,6 @@
 ::deep .sdlc-phase-testing {
     border-left: 4px solid var(--color-orange);
 }
-
 ::deep .sdlc-phase-testing .sdlc-phase-header {
     background: var(--color-orange-bg);
 }
@@ -129,7 +130,6 @@
 ::deep .sdlc-phase-deployment {
     border-left: 4px solid var(--color-pink);
 }
-
 ::deep .sdlc-phase-deployment .sdlc-phase-header {
     background: var(--color-pink-bg);
 }
@@ -137,184 +137,238 @@
 ::deep .sdlc-phase-maintenance {
     border-left: 4px solid var(--color-teal);
 }
-
 ::deep .sdlc-phase-maintenance .sdlc-phase-header {
     background: var(--color-teal-bg);
 }
 
-/* Info sections */
-::deep .sdlc-info-section {
-    margin-bottom: 24px;
+/* ─── Methodologies Section ───────────────────────────────────────────────── */
+
+::deep .sdlc-methodologies-section {
+    margin-top: 40px;
 }
 
-::deep .sdlc-info-section:last-child {
-    margin-bottom: 0;
+
+
+::deep .sdlc-methodology-type {
+    display: none;
 }
 
-::deep .sdlc-info-label {
-    font-weight: 700;
-    color: var(--color-purple-medium);
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--color-purple-border-subtle);
-}
-
-::deep .sdlc-info-text {
-    color: var(--color-text-primary);
-    line-height: 1.7;
-}
-
-::deep .sdlc-info-text h4 {
-    color: var(--color-text-muted);
-    font-size: 14px;
-    font-weight: 600;
-    margin: 16px 0 8px 0;
-}
-
-::deep .sdlc-info-text h4:first-child {
-    margin-top: 0;
-}
-
-::deep .sdlc-info-text p {
-    margin: 0 0 12px 0;
-}
-
-::deep .sdlc-info-text p:last-child {
-    margin-bottom: 0;
-}
-
-::deep .sdlc-info-text ul {
-    margin: 8px 0;
-    padding-left: 20px;
-}
-
-::deep .sdlc-info-text ul li {
-    margin-bottom: 6px;
-}
-
-/* Handover section within phases */
-::deep .sdlc-handover-section {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px dashed var(--color-purple-border);
-}
-
-::deep .sdlc-handover-header {
-    font-weight: 600;
-    color: var(--color-purple-medium);
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
-}
-
-/* Benefits grid */
-::deep .sdlc-benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-@media (max-width: 900px) {
-    ::deep .sdlc-benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    ::deep .sdlc-benefits-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-::deep .sdlc-benefit-card {
+/* Methodology meta info */
+::deep .sdlc-methodology-meta {
     display: flex;
-    gap: 12px;
-    padding: 18px;
-    background: var(--color-green-bg);
-    border-radius: 6px;
-    border: 1px solid var(--color-green-border);
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin: 8px 0 0;
+    color: var(--color-text-secondary);
 }
 
-::deep .sdlc-benefit-card > div {
-    flex: 1;
-}
-
-::deep .sdlc-benefit-card strong {
-    display: block;
-    color: var(--color-green-light);
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-/* Collapsible cards */
-::deep .sdlc-section-card {
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-purple-border-subtle);
-    border-radius: 6px;
-    margin-bottom: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease, box-shadow 0.5s ease;
-    border-left: 4px solid var(--color-border-emphasis);
-}
-
-::deep .sdlc-card-header {
-    padding: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+/* Methodology Mermaid Diagrams */
+::deep .sdlc-methodology-diagram {
+    margin: 16px 0 0;
+    padding: 20px;
     background: var(--color-bg-section);
+    border: 1px solid var(--color-purple-border-very-subtle);
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+::deep .sdlc-methodology-diagram pre.mermaid {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+
+::deep .sdlc-methodology-diagram svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Methodology comparison table */
+::deep .sdlc-methodology-comparison {
+    margin-top: 16px;
+    overflow-x: auto;
+}
+
+::deep .sdlc-methodology-comparison table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+::deep .sdlc-methodology-comparison th {
+    background: var(--color-bg-section);
+    color: var(--color-text-on-emphasis);
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 2px solid var(--color-purple-border);
     font-weight: 600;
-    user-select: none;
-    position: relative;
-    font-size: 16px;
-    transition: background 0.2s ease;
+}
+
+::deep .sdlc-methodology-comparison td {
+    padding: 12px 16px;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid var(--color-purple-border-very-subtle);
+}
+
+::deep .sdlc-methodology-comparison tr:last-child td {
+    border-bottom: none;
 }
 
 @media (hover: hover) {
-    ::deep .sdlc-card-header:hover {
+    ::deep .sdlc-methodology-comparison tr:hover td {
         background: var(--color-bg-elevated);
     }
 }
 
-::deep .sdlc-card-icon {
-    font-size: 20px;
-    transition: transform 0.25s ease;
-    position: absolute;
-    right: 15px;
+/* ─── Preconditions Section ───────────────────────────────────────────────── */
+
+::deep .sdlc-preconditions-section {
+    margin-top: 40px;
 }
 
-::deep .sdlc-card-icon.expanded {
-    transform: rotate(180deg);
+::deep .sdlc-preconditions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
 }
 
-::deep .sdlc-card-content {
-    max-height: 0;
+::deep .sdlc-precondition-item {
+    border: 1px solid var(--color-purple-border-very-subtle);
+    border-radius: 8px;
     overflow: hidden;
-    transition: max-height 0.25s ease, padding 0.25s ease;
-    padding: 0 15px;
 }
 
-::deep .sdlc-card-content.expanded {
-    max-height: 1500px;
-    padding: 15px;
-}
-
-/* Intro section */
-::deep .sdlc-intro {
-    margin-bottom: 20px;
-    padding: 15px;
+::deep .sdlc-precondition-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-4);
     background: var(--color-bg-elevated);
-    border-radius: 6px;
-    border: 1px solid var(--color-purple-border-subtle);
+    border-bottom: 1px solid var(--color-purple-border-very-subtle);
 }
 
-::deep .sdlc-intro p {
+::deep .sdlc-precondition-header h3 {
     margin: 0;
-    line-height: 1.6;
+    padding: 0;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-primary);
 }
+
+::deep .sdlc-precondition-header h3::after {
+    display: none;
+}
+
+::deep .sdlc-precondition-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+::deep .sdlc-precondition-body {
+    padding: var(--spacing-3) var(--spacing-4);
+}
+
+
+
+/* Metrics grid */
+::deep .sdlc-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 16px 0;
+}
+
+@media (max-width: 600px) {
+    ::deep .sdlc-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+::deep .sdlc-metric-card {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 16px;
+    background: var(--color-bg-default);
+    border-radius: 8px;
+    border: 1px solid var(--color-purple-border-very-subtle);
+}
+
+::deep .sdlc-metric-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+::deep .sdlc-metric-card strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* ─── Benefits ────────────────────────────────────────────────────────────── */
+
+::deep .sdlc-benefit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+::deep .sdlc-benefit-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border-left: 3px solid var(--color-green);
+    background: var(--color-bg-default);
+}
+
+::deep .sdlc-benefit-icon {
+    color: var(--color-green);
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1.5;
+}
+
+::deep .sdlc-benefit-item strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+::deep .sdlc-benefit-item p {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+/* ─── Challenges ──────────────────────────────────────────────────────────── */
+
+::deep .sdlc-challenge-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+::deep .sdlc-challenge-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border-left: 3px solid var(--color-orange);
+    background: var(--color-bg-default);
+}
+
+::deep .sdlc-challenge-icon {
+    flex-shrink: 0;
+    line-height: 1.5;
+}
+
+::deep .sdlc-challenge-item strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+::deep .sdlc-challenge-item p {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+

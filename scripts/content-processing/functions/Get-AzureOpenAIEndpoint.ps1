@@ -4,8 +4,8 @@ function Get-AzureOpenAIEndpoint {
     Gets the Azure OpenAI endpoint URL for the specified environment.
 
     .DESCRIPTION
-    Returns the fully qualified Azure AI Services endpoint URL for the specified environment.
-    The endpoint follows the modern AI Services format and includes the model name in the path.
+    Returns the fully qualified Azure OpenAI endpoint URL for the specified environment.
+    The endpoint follows the Azure Cognitive Services format used by AI Foundry.
 
     .PARAMETER Environment
     The environment to get the endpoint for. Valid values are 'staging' or 'prod'.
@@ -16,11 +16,11 @@ function Get-AzureOpenAIEndpoint {
 
     .EXAMPLE
     $endpoint = Get-AzureOpenAIEndpoint -Environment 'prod'
-    # Returns: https://oai-techhub-prod.services.ai.azure.com/models/gpt-5.2/chat/completions
+    # Returns: https://oai-techhub-prod.cognitiveservices.azure.com/openai/deployments/gpt-5.2/chat/completions
 
     .EXAMPLE
     $endpoint = Get-AzureOpenAIEndpoint
-    # Returns: https://oai-techhub-staging.services.ai.azure.com/models/gpt-5.2/chat/completions
+    # Returns: https://oai-techhub-staging.cognitiveservices.azure.com/openai/deployments/gpt-5.2/chat/completions
     #>
     [CmdletBinding()]
     param(
@@ -31,5 +31,5 @@ function Get-AzureOpenAIEndpoint {
     
     $modelName = Get-AzureOpenAIModelName
     $resourceName = "oai-techhub-$Environment"
-    return "https://$resourceName.services.ai.azure.com/models/$modelName/chat/completions"
+    return "https://$resourceName.cognitiveservices.azure.com/openai/deployments/$modelName/chat/completions"
 }

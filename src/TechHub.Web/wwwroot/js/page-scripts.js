@@ -159,11 +159,15 @@ export async function initMermaid() {
             // Mermaid diagrams change <pre> to <svg> which shifts layout.
             // The browser's initial hash-scroll happens before mermaid runs,
             // so the scroll position becomes stale after the layout shift.
+            // Use scrollTo with scroll-margin-top offset so the heading lands
+            // at the same position as native anchor navigation.
             const hash = window.location.hash;
             if (hash) {
                 const target = document.querySelector(hash);
                 if (target) {
-                    target.scrollIntoView({ behavior: 'instant' });
+                    const scrollMarginTop = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+                    const targetTop = target.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({ top: targetTop - scrollMarginTop, behavior: 'instant' });
                 }
             }
         } catch (error) {

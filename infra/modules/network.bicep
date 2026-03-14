@@ -68,13 +68,13 @@ resource privateDnsZoneLink 'Microsoft.Network/privateDnsZones/virtualNetworkLin
   properties: {
     registrationEnabled: false
     virtualNetwork: {
-      id: vnet.id
+      id: resourceId('Microsoft.Network/virtualNetworks', vnetName)
     }
   }
 }
 
 // Outputs
 output vnetId string = vnet.id
-output containerAppsSubnetId string = vnet.properties.subnets[0].id
-output postgresSubnetId string = vnet.properties.subnets[1].id
-output privateDnsZoneId string = privateDnsZone.id
+output containerAppsSubnetId string = resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, containerAppsSubnetName)
+output postgresSubnetId string = resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, postgresSubnetName)
+output privateDnsZoneId string = resourceId('Microsoft.Network/privateDnsZones', '${vnetName}.private.postgres.database.azure.com')

@@ -287,8 +287,8 @@ if ($Mode -in @('validate', 'whatif', 'deploy')) {
     }
 }
 
-# Step 2: What-If
-if ($Mode -in @('whatif', 'deploy')) {
+# Step 2: What-If (skipped in deploy mode — adds ~1-2 min overhead with no benefit in CI)
+if ($Mode -eq 'whatif') {
     Write-Step "Running What-If analysis"
 
     az deployment sub what-if `

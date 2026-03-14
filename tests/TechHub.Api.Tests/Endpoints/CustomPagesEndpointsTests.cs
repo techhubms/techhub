@@ -38,6 +38,36 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     }
 
     [Fact]
+    public async Task GetSDLCData_ReturnsStructuredData()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/custom-pages/sdlc", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var data = await response.Content.ReadFromJsonAsync<SDLCPageData>(TestContext.Current.CancellationToken);
+        data.Should().NotBeNull();
+        data!.Title.Should().Be("AI SDLC");
+        data.PhasesHeading.Should().NotBeNullOrWhiteSpace();
+        data.PreconditionsHeading.Should().NotBeNullOrWhiteSpace();
+        data.PreconditionsIntro.Should().NotBeNullOrWhiteSpace();
+        data.Phases.Should().HaveCountGreaterThanOrEqualTo(5);
+        data.Preconditions.Should().NotBeEmpty();
+        data.AdditionalInfo.BenefitsHeading.Should().NotBeNullOrWhiteSpace();
+        data.AdditionalInfo.Benefits.Should().NotBeEmpty();
+        data.AdditionalInfo.ChallengesHeading.Should().NotBeNullOrWhiteSpace();
+        data.AdditionalInfo.Challenges.Should().NotBeEmpty();
+        data.AdditionalInfo.MethodologiesHeading.Should().NotBeNullOrWhiteSpace();
+        data.AdditionalInfo.MethodologiesIntro.Should().NotBeEmpty();
+        data.AdditionalInfo.Methodologies.Should().NotBeEmpty();
+        data.AdditionalInfo.MetricsHeading.Should().NotBeNullOrWhiteSpace();
+        data.AdditionalInfo.Metrics.Frameworks.Should().NotBeEmpty();
+        data.AdditionalInfo.Metrics.PracticeHeading.Should().NotBeNullOrWhiteSpace();
+        data.AdditionalInfo.Metrics.PracticeItems.Should().NotBeEmpty();
+    }
+
+    [Fact]
     public async Task GetDXSpaceData_ReturnsStructuredData()
     {
         // Act

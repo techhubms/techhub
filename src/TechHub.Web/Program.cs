@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.StaticFiles;
 using TechHub.Core.Logging;
 using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
-using TechHub.Web.Configuration;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
 
@@ -54,16 +53,6 @@ builder.Services.Configure<RouteOptions>(options =>
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
-// Configure CSS bundling and minification for production only
-if (!builder.Environment.IsDevelopment())
-{
-    builder.Services.AddWebOptimizer(pipeline =>
-    {
-        // Bundle all CSS files into a single minified bundle for production
-        pipeline.AddCssBundle("/css/bundle.css", CssFiles.All);
-    });
-}
 
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
@@ -119,19 +108,22 @@ builder.Services.AddHttpClient<TechHubApiClient>(client =>
     client.BaseAddress = new Uri(apiBaseUrl);
     client.Timeout = TimeSpan.FromSeconds(100); // Allow extra time beyond resilience timeout
 })
-.ConfigurePrimaryHttpMessageHandler(() =>
+.ConfigurePrimaryHttpMessageHandler(sp =>
 {
-    // Allow invalid certificates in development (Docker uses self-signed certs)
-    var handler = new SocketsHttpHandler
+    var handler = new SocketsHttpHandler();
+
+    // Only bypass SSL validation in Development (Docker uses self-signed certs)
+    var env = sp.GetRequiredService<IHostEnvironment>();
+    if (env.IsDevelopment())
     {
 #pragma warning disable CA5359 // Required for Docker inter-container HTTPS communication in development
-        // In Docker, accept any certificate for inter-container communication
-        SslOptions = new System.Net.Security.SslClientAuthenticationOptions
+        handler.SslOptions = new System.Net.Security.SslClientAuthenticationOptions
         {
             RemoteCertificateValidationCallback = (_, _, _, _) => true
-        }
+        };
 #pragma warning restore CA5359
-    };
+    }
+
     return handler;
 })
 .AddStandardResilienceHandler(options =>
@@ -167,19 +159,15 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Security headers (XSS, clickjacking, MIME sniffing protection)
+app.UseSecurityHeaders();
+
 // Reject old date-prefixed URLs (YYYY-MM-DD-slug) before routing
 app.UseRejectDatePrefixedSlugs();
 
 // Status code pages middleware: converts 404 status codes to /not-found page
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
-
-// Enable WebOptimizer middleware for CSS bundling/minification in production
-// Note: MapStaticAssets() handles compression/fingerprinting, WebOptimizer provides bundling
-if (!app.Environment.IsDevelopment())
-{
-    app.UseWebOptimizer();
-}
 
 app.UseAntiforgery();
 

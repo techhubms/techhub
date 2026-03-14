@@ -5,7 +5,7 @@ param logAnalyticsWorkspaceId string
 @description('Subnet resource ID for VNet integration')
 param infrastructureSubnetId string
 
-resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2025-01-01' = {
+resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2025-07-01' = {
   name: environmentName
   location: location
   properties: {

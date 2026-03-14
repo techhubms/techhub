@@ -7,7 +7,7 @@ Describe "Invoke-AiApiCall" {
         $script:TestModel = "gpt-4.1"
         $script:TestSystemMessage = "You are a helpful assistant."
         $script:TestUserMessage = "Hello, world!"
-        $script:TestEndpoint = "https://oai-techhub-staging.services.ai.azure.com/models/gpt-4.1/chat/completions"
+        $script:TestEndpoint = "https://oai-techhub-staging.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions"
     }
 
     BeforeEach {

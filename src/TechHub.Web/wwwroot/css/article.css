@@ -119,6 +119,12 @@
     text-decoration-color: var(--color-purple-bright);
     text-underline-offset: 2px;
   }
+
+  .article-body a[class*="badge"]:hover,
+  .article-body a[class*="btn"]:hover,
+  .article-body a.button:hover {
+    text-decoration: none;
+  }
 }
 
 .article-body a:focus-visible {
@@ -588,7 +594,7 @@ pre.mermaid, .article-body pre.mermaid {
     margin: var(--spacing-6) 0;
     border-radius: var(--radius-lg);
     background: var(--color-bg-default);
-    overflow: hidden;
+    overflow: clip;
 }
 
 .article-body .video-container iframe {

@@ -163,7 +163,7 @@ RSS Download → Per-Entry Content Fetching → AI Analysis (Azure AI Foundry) �
 
 The system uses Azure AI Foundry for content processing:
 
-- **Endpoint**: `https://<resource>.services.ai.azure.com/models/chat/completions`
+- **Endpoint**: `https://<resource>.cognitiveservices.azure.com/openai/deployments/<model>/chat/completions`
 - **Authentication**: Azure API Key
 - **Models**: Deployment names configured in Azure resource
 - **Rate Limiting**: 15-second delays between API calls
@@ -171,7 +171,7 @@ The system uses Azure AI Foundry for content processing:
 **Configuration Example**:
 
 ```powershell
-./scripts/content-processing/process-rss-to-markdown.ps1 "owner/repo" "api_key123" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -Model "gpt-4.1"
+./scripts/content-processing/process-rss-to-markdown.ps1 "owner/repo" "api_key123" -Endpoint "https://myresource.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions" -Model "gpt-4.1"
 ```
 
 ### Branch Strategy

@@ -73,9 +73,12 @@ All output must follow these principles:
 Handle Microsoft's evolving product names consistently:
 
 - **Azure Active Directory = Microsoft Entra ID** - Treat as same service
+- **Azure Cognitive Services = Azure AI Services** - Treat as same suite
+- **Azure Form Recognizer = Azure Document Intelligence** - Treat as same service
 - **Power BI → Microsoft Fabric** - Include relevant categories for evolution content
 - **Office 365 → Microsoft 365** - Focus on development aspects only
 - **Azure DevOps ↔ GitHub** - Consider specific context and services discussed
+- **Bing Chat = Microsoft Copilot** (consumer version) - Both names refer to the same excluded product
 
 ### CRITICAL: Copilot Product Distinction
 
@@ -91,8 +94,7 @@ Handle Microsoft's evolving product names consistently:
 - **Microsoft 365 Copilot** → No categories (excluded as non-development Microsoft 365 product)
 - **Copilot for Microsoft 365** → No categories (excluded as non-development Microsoft 365 product)  
 - **Office Copilot** → No categories (excluded as non-development Microsoft 365 product)
-- **Bing Chat** → No categories (excluded as consumer productivity tool)
-- **Microsoft Copilot** (general consumer version) → No categories (excluded as consumer productivity tool)
+- **Microsoft Copilot** (general consumer version, formerly Bing Chat) → No categories (excluded as consumer productivity tool)
 
 **Key Rule**: If content is about business productivity, document creation, or general office work → Exclude. If content is about code development → Include.
 
@@ -201,17 +203,9 @@ Handle Microsoft's evolving product names consistently:
 
 ❌ **Non-Development Microsoft Products**
 
-- Content primarily about workplace culture, office politics, or management issues
-- Salary discussions, compensation negotiations, or career advancement topics
-- General business advice or organizational behavior content
-- Content focusing on "what it's like to work as X" rather than technical implementation
-- Management/leadership content without substantial technical architecture focus
-
-**Exception**: Technical leadership content focusing on engineering architecture, technical decision-making, or technology strategy is allowed.
-
 - Office 365/Microsoft 365 (unless development-focused)
 - Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot (business productivity - NOT developer tools)
-- Bing Chat, Microsoft Copilot (consumer productivity tools - NOT developer tools)
+- Microsoft Copilot consumer version, formerly Bing Chat (consumer productivity tool - NOT a developer tool)
 - Dynamics 365 (unless development-focused)
 - Microsoft Intune, Exchange (unless development-focused)
 - SharePoint (unless SharePoint development)
@@ -230,16 +224,17 @@ Include "AI" if ANY of these rules apply:
 1. **Microsoft AI Products/Services**
    - Azure OpenAI Service
    - Microsoft Copilot Studio, Copilot Studio (developer/maker tools)
-   - Azure AI Foundry, Azure Cognitive Services, Azure Machine Learning
+   - Azure AI Foundry (formerly Azure AI Studio), Azure AI Services (formerly Azure Cognitive Services), Azure Machine Learning
    - Azure AI Search, Azure Document Intelligence, Azure AI Content Safety
+   - Azure AI Agent Service
    - Azure Quantum
-   - **Note**: Microsoft 365 Copilot and Bing Chat are excluded (see Non-Development Products exclusion)
+   - **Note**: Microsoft 365 Copilot and Microsoft Copilot (consumer) are excluded (see Non-Development Products exclusion)
 
 2. **GitHub Copilot Content**
    - **CRITICAL**: Always include both "AI" AND "GitHub Copilot" categories together
 
 3. **Microsoft AI Frameworks/Tools**
-   - Semantic Kernel, AI Builder, Power Platform AI features
+   - Microsoft Agent Framework (successor to Semantic Kernel and AutoGen), Semantic Kernel, AutoGen, AI Builder, Power Platform AI features
 
 4. **AI Development with Microsoft Technologies**
    - Coding applications that integrate AI capabilities using Microsoft platforms
@@ -249,22 +244,22 @@ Include "AI" if ANY of these rules apply:
    - Using pre-built AI services and APIs
    - Building custom applications with Microsoft AI services
    - AI-powered development tools and productivity applications
-   - Platform-assisted model fine-tuning (Azure AI Studio GUI)
+   - Platform-assisted model fine-tuning (Azure AI Foundry)
    - Platform-managed model deployment (Azure AI Foundry)
    - Prompt engineering and AI interaction techniques
    - Business applications of AI and AI strategy
 
 6. **Microsoft-Provided AI Content**
-   - Content from Microsoft about AI technologies (including MCP)
+   - Content from Microsoft about AI technologies and protocols adopted by the Microsoft ecosystem (e.g., MCP)
 
 **AI Category Examples:**
 
 - ✅ "Azure OpenAI Service integration tutorial" → AI
 - ✅ "Building chatbots with Copilot Studio" → AI  
 - ✅ "Building chatbots with Azure AI Foundry" → AI
-- ✅ "Semantic Kernel framework development" → AI, Coding
+- ✅ "Semantic Kernel framework development" → AI, .NET
 - ❌ "Microsoft 365 Copilot for Office productivity" → No categories (excluded as non-development Microsoft 365 product)
-- ❌ "Using Bing Chat for research" → No categories (excluded as consumer productivity tool)
+- ❌ "Using Microsoft Copilot for research" → No categories (excluded as consumer productivity tool)
 
 ### GitHub Copilot Category
 
@@ -276,13 +271,18 @@ Include "AI" if ANY of these rules apply:
 Include "GitHub Copilot" if ANY of these rules apply:
 
 1. **GitHub Copilot Specific Content**
-   - Any GitHub Copilot edition (Individual, Business, Enterprise)
+   - Any GitHub Copilot edition (Free, Pro, Pro+Student, Business, Enterprise)
 
 2. **GitHub Copilot Features/Functionality**
    - Code completion, chat, voice, CLI capabilities
+   - Coding agent / agentic coding (autonomous PR-based coding)
+   - GitHub Copilot Workspace
+   - GitHub Models (model playground on GitHub)
 
 3. **GitHub Copilot Integrations**
    - Development tool integrations and environment setup
+   - GitHub Copilot Extensions (third-party extensions ecosystem)
+   - GitHub Copilot for Azure and other platform-specific extensions
 
 4. **GitHub Copilot Usage/Best Practices**
    - Usage patterns, implementation strategies, best practices
@@ -299,7 +299,7 @@ Include "GitHub Copilot" if ANY of these rules apply:
 
 - ✅ "GitHub Copilot Enterprise setup guide" → GitHub Copilot, AI
 - ✅ "GitHub Copilot Chat best practices" → GitHub Copilot, AI
-- ✅ "GitHub Copilot for C# development" → GitHub Copilot, AI, Coding
+- ✅ "GitHub Copilot for C# development" → GitHub Copilot, AI, .NET
 
 **CRITICAL DISTINCTION Examples:**
 
@@ -307,15 +307,16 @@ Include "GitHub Copilot" if ANY of these rules apply:
 - ❌ "Microsoft 365 Copilot helps users create PowerPoint presentations" → No categories (excluded)
 - ❌ "Copilot for Microsoft 365 improves productivity in Word and Excel" → No categories (excluded)
 - ❌ "How AI power users achieve more with Microsoft 365 Copilot" → No categories (excluded)
-- ❌ "Using Bing Chat to summarize documents" → No categories (excluded)
+- ❌ "Using Microsoft Copilot to summarize documents" → No categories (excluded)
 
 ### .NET Category
 
 Include ".NET" if ANY of these rules apply:
 
 1. **Microsoft Programming Languages**
-   - C#, F#, VB.NET, TypeScript
-   - .NET, ASP.NET Core, Blazor, MAUI, WinUI frameworks
+   - C#, F#, VB.NET
+   - TypeScript — only when used with .NET technologies (e.g., TypeScript in Blazor, ASP.NET Core, or Azure Functions); standalone TypeScript/Node.js content does not qualify
+   - .NET, ASP.NET Core, Blazor, MAUI, WinUI, .NET Aspire frameworks
 
 2. **Microsoft Development Frameworks/Tools**
    - Entity Framework, SignalR, Minimal APIs
@@ -327,7 +328,7 @@ Include ".NET" if ANY of these rules apply:
    - Coding patterns, architectures in Microsoft context
 
 5. **Microsoft Development Tools**
-   - Visual Studio, Visual Studio Code, .NET CLI, NuGet
+   - Visual Studio, Visual Studio Code (C# Dev Kit), .NET CLI, NuGet
 
 **.NET Examples:**
 
@@ -377,17 +378,17 @@ Include "DevOps" if ANY of these rules apply:
 - ✅ "Azure DevOps Pipelines for .NET" → DevOps, Azure, .NET
 - ✅ "GitHub Actions CI/CD workflow" → DevOps
 - ✅ "Agile team transformation" → DevOps
-- ✅ "Infrastructure as Code with Terraform" → DevOps, .NET
+- ✅ "Infrastructure as Code with Terraform on Azure" → DevOps, Azure
 
 ### Azure Category
 
 Include "Azure" if ANY of these rules apply:
 
 1. **Any Azure Service/Technology**
-   - Azure App Service, Functions, Storage, etc.
+   - Azure App Service, Functions, Container Apps, Storage, etc.
 
 2. **Azure Management Tools**
-   - Terraform, ARM templates, Bicep for Azure resources
+   - Terraform, ARM templates, Bicep, Azure Developer CLI (azd) for Azure resources
 
 3. **Azure AI Services**
    - Also include "AI" category
@@ -413,7 +414,7 @@ Include "Azure" if ANY of these rules apply:
 **Azure Examples:**
 
 - ✅ "Azure Functions serverless development" → Azure
-- ✅ "ARM template best practices" → Azure, DevOps, .NET
+- ✅ "ARM template best practices" → Azure, DevOps
 - ✅ "Azure OpenAI Service integration" → Azure, AI
 - ✅ "Azure SQL Database performance tuning" → Azure
 - ✅ "Azure Application Insights data ingestion best practices" → Azure
@@ -496,7 +497,7 @@ Include "ML" if ANY of these rules apply:
 - ✅ "Building a data science platform on Azure Databricks" → ML
 - ❌ "Azure Application Insights data ingestion" → Azure (operational data, not data science)
 - ❌ "Azure SQL Database backup strategies" → Azure (operational, not analytics)
-- ❌ "Basic Power BI report creation" → Azure (basic usage, not development)
+- ❌ "Basic Power BI report creation" → No categories (basic end-user usage, not development)
 
 ### Security Category
 
@@ -541,41 +542,19 @@ Include "Security" if ANY of these rules apply:
 - ✅ "Zero Trust architecture with Microsoft" → Security
 - ✅ "Secure .NET application development" → Security, .NET
 
-## Chapter 5: Input Format
-
-You will receive a JSON object with these 6 fields:
-
-- `title`: The original content title
-- `description`: A description of the original content (sometimes the first portion of the content)
-- `content`: The full original content text
-- `author`: The author's name or names
-- `tags`: The tags the author assigned to the content
-- `type`: Content type (news, blog, community, videos, etc.)
-
-### Input Example
-
-```json
-{
-  "title": "Getting Started with Azure OpenAI Service in C#",
-  "description": "A comprehensive guide to integrating Azure OpenAI Service into your C# applications",
-  "content": "In this tutorial, we'll explore how to use Azure OpenAI Service with C# applications. We'll cover authentication, making API calls, and handling responses. Azure OpenAI Service provides REST API access to OpenAI's powerful language models including GPT-4. First, you'll need to create an Azure OpenAI resource in your Azure subscription...",
-  "author": "Jane Smith",
-  "tags": ["azure", "openai", "csharp", "api"],
-  "type": "blog"
-}
-```
-
-## Chapter 6: Clarifications and Edge Cases
+## Chapter 5: Clarifications and Edge Cases
 
 ### Rule Hierarchy Clarification
 
-**CRITICAL HIERARCHY PRINCIPLE**: Once content qualifies for ANY category, exclusion rules for OTHER categories no longer apply. Only generic exclusion rules continue to apply.
+**CRITICAL HIERARCHY PRINCIPLE**: Once content qualifies for ANY category via Microsoft-related technology, the ≥40% Microsoft content threshold no longer blocks other categories. Non-Microsoft technologies mentioned alongside qualifying Microsoft content can receive their relevant categories too. Generic exclusion rules (language, quality, etc.) always still apply.
+
+**Important constraint**: This hierarchy only activates when at least one category qualifies through a Microsoft technology. It does not allow content with zero Microsoft relevance to receive categories.
 
 **Example Scenario:**
 A video about "Suricata Network Security" deployed through GitHub workflows:
 
-1. Content qualifies for DevOps category (GitHub workflows)
-2. Since DevOps qualifies, "Microsoft-only" exclusion rules for other categories no longer apply
+1. Content qualifies for DevOps category (GitHub workflows — a Microsoft/GitHub technology)
+2. Since DevOps qualifies via Microsoft tech, the ≥40% threshold is relaxed for other categories
 3. Content now also qualifies for Security category (network security context)
 4. **Result**: Assign both DevOps and Security categories
 5. **Note**: Generic exclusions (English language, etc.) still apply
@@ -590,8 +569,8 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 
 #### Power Platform Evolution
 
-- Power BI content → Data category (if data analysis focused)
-- Power BI + Microsoft Fabric migration → Data category
+- Power BI content → ML category (if data analysis focused)
+- Power BI + Microsoft Fabric migration → ML category
 - Power Automate business processes → No categories (business automation, not development)
 
 #### Microsoft 365 vs Office 365
@@ -647,7 +626,7 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 - ✅ **Educational**: "Lessons learned building a .NET monitoring solution with insights for others"
 - ❌ **Sales Pitch**: "My new .NET monitoring product launches today - special pricing!"
 
-### AI vs Data Category Distinctions
+### AI vs ML Category Distinctions
 
 #### Use AI Category For
 
@@ -657,7 +636,7 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 - AI-powered application development
 - Platform-assisted model fine-tuning (GUI tools)
 
-#### Use Data Category For
+#### Use ML Category For
 
 - Writing PyTorch/TensorFlow training loops from scratch
 - Implementing custom neural network architectures
@@ -689,6 +668,30 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 - ✅ Include when showing Microsoft tool implementation for compliance
 - ✅ Include when covering Microsoft-specific compliance features
 - ❌ Exclude general compliance guidance without Microsoft technology focus
+
+## Chapter 6: Input Format
+
+You will receive a JSON object with these 6 fields:
+
+- `title`: The original content title
+- `description`: A description of the original content (sometimes the first portion of the content)
+- `content`: The full original content text
+- `author`: The author's name or names
+- `tags`: The tags the author assigned to the content
+- `type`: Content type (news, blog, community, videos, etc.)
+
+### Input Example
+
+```json
+{
+  "title": "Getting Started with Azure OpenAI Service in C#",
+  "description": "A comprehensive guide to integrating Azure OpenAI Service into your C# applications",
+  "content": "In this tutorial, we'll explore how to use Azure OpenAI Service with C# applications. We'll cover authentication, making API calls, and handling responses. Azure OpenAI Service provides REST API access to OpenAI's powerful language models including GPT-4. First, you'll need to create an Azure OpenAI resource in your Azure subscription...",
+  "author": "Jane Smith",
+  "tags": ["azure", "openai", "csharp", "api"],
+  "type": "blog"
+}
+```
 
 ## Chapter 7: Output Format
 
@@ -777,7 +780,7 @@ Return a JSON object with these 6 fields:
   4. **Exclude generic terms**: Avoid "news", "update", "announcement" unless central
   5. **Ensure technical depth**: Tags should reflect content's technical sophistication
 - Only include tags that genuinely fit the content
-- NEVER add namespaces, full package names or other long strings with a dotted notation as tags
+- NEVER add namespaces, full package names, versioned package identifiers, or other long strings with a dotted notation as tags (e.g., "Microsoft.Extensions.DependencyInjection 8.0.1" is wrong; ".NET 9" or "Entity Framework Core" is fine)
 
 **excerpt** (string, target 50 words)
 

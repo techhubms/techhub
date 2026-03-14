@@ -15,20 +15,18 @@
     <ImportMap />
     <HeadOutlet @rendermode="InteractiveServer" />
 
-    @if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
-    {
-        <!-- Development: Individual files for easy debugging -->
-        @foreach (var cssFile in TechHub.Web.Configuration.CssFiles.All)
-        {
-            <link rel="stylesheet" href="@cssFile" />
-        }
-    }
-    else
-    {
-        <!-- Production: Bundled and minified CSS for optimal performance -->
-        <!-- Cache busting: WebOptimizer sets max-age=10y so we append assembly MVID to force re-fetch on deploy -->
-        <link rel="stylesheet" href="css/bundle.css?v=@BundleVersion" />
-    }
+    <!-- Global CSS: @Assets produces fingerprinted URLs (content hash in filename) -->
+    <!-- Fingerprinting ensures browsers automatically fetch new versions after deployments -->
+    <!-- IMPORTANT: When adding CSS files, also update Configuration/CssFiles.cs -->
+    <link rel="stylesheet" href="@Assets["css/design-tokens.css"]" />
+    <link rel="stylesheet" href="@Assets["css/base.css"]" />
+    <link rel="stylesheet" href="@Assets["css/buttons.css"]" />
+    <link rel="stylesheet" href="@Assets["css/cards.css"]" />
+    <link rel="stylesheet" href="@Assets["css/article.css"]" />
+    <link rel="stylesheet" href="@Assets["css/sidebar.css"]" />
+    <link rel="stylesheet" href="@Assets["css/page-container.css"]" />
+    <link rel="stylesheet" href="@Assets["css/loading.css"]" />
+    <link rel="stylesheet" href="@Assets["css/nav-helpers.css"]" />
 
     <!-- Scoped Component Styles -->
     <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
@@ -181,13 +179,6 @@
 </body>
 
 @code {
-    /// <summary>
-    /// Cache-busting version for the CSS bundle.
-    /// Uses the assembly's Module Version ID (MVID) which changes on every compilation,
-    /// ensuring browsers fetch the new bundle after each deployment.
-    /// </summary>
-    private static readonly string BundleVersion = typeof(App).Assembly.ManifestModule.ModuleVersionId.ToString("N")[..8];
-
     /// <summary>
     /// CSS class(es) applied to the &lt;html&gt; element.
     /// Reads the 'sidebar-collapsed' cookie server-side during SSR so the collapsed

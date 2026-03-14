@@ -36,3 +36,5 @@ output appInsightsName string = appInsights.name
 output appInsightsConnectionString string = appInsights.properties.ConnectionString
 output appInsightsInstrumentationKey string = appInsights.properties.InstrumentationKey
 output logAnalyticsWorkspaceId string = logAnalyticsWorkspace.id
+// Note: appInsightsConnectionString uses reference() — unavoidable since it's a runtime property.
+// This may cause what-if false positives on resources that consume it.

@@ -36,8 +36,8 @@ This is a single unified pipeline that runs all quality checks first, and only d
 
 - All tests must pass (unit, integration, E2E, PowerShell)
 - No linting errors
-- Build succeeds
-- Security scan completes (warnings allowed)
+- Build succeeds with zero warnings (`TreatWarningsAsErrors` enabled)
+- Security scan passes (Trivy fails the build on CRITICAL or HIGH vulnerabilities)
 
 **PR-Specific Features**:
 
@@ -48,6 +48,11 @@ When running on pull requests, the Quality Gate provides:
 - Ready-for-review confirmation when all checks pass
 - Links to documentation for help
 - **No deployment** — PR runs stop after the quality gate
+
+**Supply Chain Security**:
+
+- All GitHub Actions are SHA-pinned to specific commit hashes (not mutable tags) to prevent supply chain attacks
+- Action versions are annotated with comments (e.g., `# v4.3.1`) for readability
 
 Jobs run in parallel for faster feedback (~5-10 minutes total).
 
