@@ -21,8 +21,7 @@
                     @if (!string.IsNullOrEmpty(LastException.StackTrace))
                     {
                         <h3>Stack Trace</h3>
-                        <pre
-                            style="background: #f5f5f5; padding: 1rem; overflow-x: auto; border-radius: 4px;">@LastException.StackTrace</pre>
+                        <pre class="stack-trace">@LastException.StackTrace</pre>
                     }
 
                     @if (LastException.InnerException != null)
@@ -32,8 +31,7 @@
                         <p><strong>Message:</strong> @LastException.InnerException.Message</p>
                         @if (!string.IsNullOrEmpty(LastException.InnerException.StackTrace))
                         {
-                            <pre
-                                style="background: #f5f5f5; padding: 1rem; overflow-x: auto; border-radius: 4px;">@LastException.InnerException.StackTrace</pre>
+                            <pre class="stack-trace">@LastException.InnerException.StackTrace</pre>
                         }
                     }
                 </div>
@@ -47,13 +45,12 @@
 
             @if (ShowRequestId)
             {
-                <p style="margin-top: 2rem;">
+                <p class="request-id">
                     <strong>Request ID:</strong> <code>@RequestId</code>
                 </p>
             }
 
-            <div
-                style="margin-top: 2rem; padding: 1rem; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;">
+            <div class="dev-mode-notice">
                 <h3>⚠️ Development/Test Mode</h3>
                 <p>
                     You're seeing detailed exception information because the application is running in
@@ -80,7 +77,7 @@
 
                 @if (ShowRequestId)
                 {
-                    <p style="margin-top: 2rem; font-size: 0.875rem; color: #666;">
+                    <p class="request-id request-id-muted">
                         If you need to contact support, please reference this Request ID: <code>@RequestId</code>
                     </p>
                 }

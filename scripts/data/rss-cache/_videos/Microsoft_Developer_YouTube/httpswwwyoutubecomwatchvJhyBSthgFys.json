@@ -1,0 +1,22 @@
+{
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Title": "Next-Level SQL in VS Code: Edit Data, DACPAC Import/Export, and More | Data Exposed",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "EnhancedContent": null,
+  "Description": "In this episode of Data Exposed, we highlight the latest updates to the MSSQL Extension for Visual Studio Code (v1.40). Come learn about new features such as Edit Data, which lets you view and modify table data directly in a grid interface, along with Database Object Search, DACPAC export/import, and flat file import from .csv and .txt files.\n\n✅ Chapters: 0:00 Introduction 1:11 Demo 2:03 MSSQL extension for VS Code - What's new 2:49 Demo 5:21 Demo 9:35 Demo 15:42 Future Initiatives ✔️Resources: View the links below to get a closer look at the extension, watch all of our demos, and view our detailed roadmap: • aka.ms/vscode-mssql • aka.ms/vscode-mssql-demos • aka.ms/vscode-mssql-blogs • aka.ms/vscode-mssql-roadmap\n\n📌 Let's connect: LinkedIn - Yo-Lei Chen, https://www.linkedin.com/in/yoleichen/ LinkedIn - Tauseef Siddique, https://www.linkedin.com/in/tauseefsiddique/ Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "Link": "https://www.youtube.com/watch?v=JhyBSthgFys",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "ProcessedDate": "2026-03-11 17:17:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2026-03-11T16:47:52+00:00"
+}

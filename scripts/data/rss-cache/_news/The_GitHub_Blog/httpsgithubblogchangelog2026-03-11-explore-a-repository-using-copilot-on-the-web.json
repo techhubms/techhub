@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "We’ve made it easier to explore a repository’s file structure when you chat with Copilot on the web.\n\n## What’s changed\n\nDevelopers can now ask Copilot to show a file, then browse the file tree alongside file contents. With a deeper view into how files relate to the broader codebase, it’s never been easier to jump between files and ask Copilot the right questions in context.\n\n## Seamlessly add references to chat\n\nAs you navigate the file explorer, files you select get automatically added to your current chat as temporary references. You can choose to add these as permanent references by clicking the reference token or double clicking the file preview tab.\n\n## Try it out\n\nThis feature is now available in public preview.\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/189235).",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Title": "Explore a repository using Copilot on the web",
+  "FeedName": "The GitHub Blog",
+  "Description": "We’ve made it easier to explore a repository’s file structure when you chat with Copilot on the web. What’s changed Developers can now ask Copilot to show a file, then…\n\nThe post [Explore a repository using Copilot on the web](https://github.blog/changelog/2026-03-11-explore-a-repository-using-copilot-on-the-web) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-03-11-explore-a-repository-using-copilot-on-the-web",
+  "ProcessedDate": "2026-03-11 15:14:42",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-03-11T13:43:49+00:00"
+}
